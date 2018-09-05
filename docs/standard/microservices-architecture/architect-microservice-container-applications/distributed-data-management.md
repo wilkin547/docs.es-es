@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998689"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480670"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -43,7 +43,7 @@ Pero si el diseño de la aplicación implica agregar constantemente información
 
 Como se mencionó anteriormente, los datos que pertenecen a cada microservicio son exclusivos de ese microservicio y solo se puede acceder a ellos mediante la API del microservicio. Por lo tanto, un desafío es cómo implementar procesos empresariales de extremo a extremo manteniendo la coherencia entre varios microservicios.
 
-Para analizar este problema, veamos un ejemplo de la [aplicación de referencia eShopOnContainers](http://aka.ms/eshoponcontainers). El microservicio de catálogo (Catalog) mantiene información sobre todos los productos, incluido su nivel de inventario. El microservicio de pedidos (Ordering) administra los pedidos y comprueba que los pedidos nuevos no superen las existencias de un producto del catálogo. (O el escenario puede implicar la lógica que controla los productos pendientes). En una hipotética versión monolítica de esta aplicación, el subsistema que realiza el pedido simplemente podría utilizar una transacción ACID para comprobar las existencias disponibles, crear el pedido en la tabla de pedidos y actualizar el inventario disponible en la tabla de productos.
+Para analizar este problema, veamos un ejemplo de la [aplicación de referencia eShopOnContainers](https://aka.ms/eshoponcontainers). El microservicio de catálogo (Catalog) mantiene información sobre todos los productos, incluido su nivel de inventario. El microservicio de pedidos (Ordering) administra los pedidos y comprueba que los pedidos nuevos no superen las existencias de un producto del catálogo. (O el escenario puede implicar la lógica que controla los productos pendientes). En una hipotética versión monolítica de esta aplicación, el subsistema que realiza el pedido simplemente podría utilizar una transacción ACID para comprobar las existencias disponibles, crear el pedido en la tabla de pedidos y actualizar el inventario disponible en la tabla de productos.
 
 Pero en una aplicación basada en microservicios, las tablas de pedidos y productos pertenecen a sus respectivos microservicios. Ningún microservicio debería incluir en sus propias transacciones o consultas las bases de datos que pertenecen a otro microservicio, tal como se muestra en la figura 4-9.
 
@@ -51,7 +51,7 @@ Pero en una aplicación basada en microservicios, las tablas de pedidos y produc
 
 **Figura 4-9**. Un microservicio no puede acceder directamente a una tabla en otra microservicio
 
-El microservicio de pedidos no debe actualizar directamente la tabla de productos, dado que esta pertenece al microservicio de catálogo. Para realizar una actualización en el microservicio de catálogo, el microservicio de pedidos únicamente debe usar comunicación asincrónica como eventos de integración (comunicación basada en mensajes y eventos). Así es como la aplicación de referencia [eShopOnContainers](http://aka.ms/eshoponcontainers) lleva a cabo este tipo de actualización.
+El microservicio de pedidos no debe actualizar directamente la tabla de productos, dado que esta pertenece al microservicio de catálogo. Para realizar una actualización en el microservicio de catálogo, el microservicio de pedidos únicamente debe usar comunicación asincrónica como eventos de integración (comunicación basada en mensajes y eventos). Así es como la aplicación de referencia [eShopOnContainers](https://aka.ms/eshoponcontainers) lleva a cabo este tipo de actualización.
 
 Como indica el [teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem), debe elegir entre disponibilidad y coherencia ACID. La mayoría de los escenarios basados en microservicios exigen disponibilidad y escalabilidad elevada en lugar de coherencia fuerte. Las aplicaciones críticas deben permanecer activas y en ejecución, y los desarrolladores pueden solucionar el problema de coherencia mediante el uso de técnicas de trabajo con coherencia débil o eventual. Este es el enfoque adoptado por la mayoría de las arquitecturas basadas en microservicios.
 

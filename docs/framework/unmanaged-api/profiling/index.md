@@ -8,41 +8,31 @@ helpviewer_keywords:
 ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75df075cd39375084a7d5a4489694ec937e15d99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455577"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404467"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Generación de perfiles (Referencia de la API no administrada)
-La API de generación de perfiles permite a un generador de perfiles supervisar la ejecución de un programa por common language runtime (CLR).  
-  
-## <a name="in-this-section"></a>En esta sección  
- [Información general sobre la generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
- Describe los servicios e interfaces que proporciona CLR para admitir la generación de perfiles en el entorno de .NET Framework.  
-  
- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- Describe las interfaces no administradas que utiliza la API de generación de perfiles.  
-  
- [Configuración de un entorno de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
- Describe los pasos que debe seguir para generar perfiles de una aplicación de .NET Framework.  
-  
- [Aplicaciones de la Tienda Windows y generador de perfiles CLR](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
- Describe cómo migrar las herramientas de diagnóstico que utilizan la API de generación de perfiles de CLR para que funcione correctamente con aplicaciones de la tienda de Windows.  
-  
- [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE (HRESULT)](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  
- Documenta las condiciones en las que una llamada al método devuelve el `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.  
-  
- [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
- Describe las funciones estáticas globales no administradas que utiliza la API de generación de perfiles.  
-  
- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
- Describe las enumeraciones no administradas que utiliza la API de generación de perfiles.  
-  
- [Estructuras para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  
- Describe las estructuras no administradas que utiliza la API de generación de perfiles.  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
- [Tutorial: identificar problemas de rendimiento](/visualstudio/profiling/walkthrough-identifying-performance-problems)  
- Explica cómo utilizar las herramientas de generación de perfiles integradas en Microsoft Visual Studio 2005 Team System. Estas herramientas proporcionan una alternativa al uso de la API de generación de perfiles.
+
+La API de generación de perfiles permite que un generador de perfiles supervise la ejecución de un programa por parte de Common Language Runtime (CLR).
+
+## <a name="in-this-section"></a>En esta sección
+
+ En [Información general sobre la generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md), se describen los servicios y las interfaces que CLR proporciona para admitir la generación de perfiles en el entorno de .NET Framework.
+
+ En [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md), se describen las interfaces no administradas que usa la API de generación de perfiles.
+
+ En [Configurar un entorno de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md), se describen los pasos que debe seguir para generar perfiles de una aplicación de .NET Framework.
+
+ En [Los generadores de perfiles CLR y aplicaciones de la tienda de Windows](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md), se explica cómo portar herramientas de diagnóstico que consumen la API de generación de perfiles de CLR para que funcionen correctamente con las aplicaciones de Microsoft Store.
+
+ En [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md), se recopilan las condiciones en las que una llamada de método devuelve el valor HRESULT de `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE`.
+
+ En [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md), se describen las funciones estáticas globales no administradas que usa la API de generación de perfiles.
+
+ En [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md), se describen las enumeraciones no administradas que usa la API de generación de perfiles.
+
+ En [Estructuras para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md), se describen las estructuras no administradas que usa la API de generación de perfiles.

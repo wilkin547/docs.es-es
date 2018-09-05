@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
-ms.translationtype: HT
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753871"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403194"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
@@ -33,8 +33,10 @@ Las cadenas de formato numérico estándar se utilizan para dar formato a tipos 
   
 -   `xx` es un entero opcional denominado *especificador de precisión*. El especificador de precisión está comprendido entre el 0 y el 99 y afecta al número de dígitos del resultado. Observe que el especificador de precisión controla el número de dígitos en la representación de cadena de un número. No redondea el número en sí. Para realizar una operación de redondeo, use el método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
-     Cuando el *especificador de precisión<xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> controla el número de dígitos fraccionarios en la cadena de resultados, las cadenas de resultados reflejan números que se redondean alejándose de cero (es decir, usando* ).  
-  
+    Cuando el *especificador de precisión* controla el número de dígitos fraccionarios de la cadena de resultado, esta refleja un número redondeado al resultado representable más cercano al resultado de precisión infinita. En el caso de que haya dos resultados representables igualmente cercanos:
+    - **En .NET Framework y .NET Core (hasta la versión 2.0)**, el runtime selecciona el resultado con el dígito menos significativo más elevado (es decir, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+    - **En .NET Core 2.1 y versiones posteriores**, el runtime selecciona el resultado con un dígito menos significativo par (es decir, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>). 
+
     > [!NOTE]
     >  El especificador de precisión determina el número de dígitos de la cadena de resultado. Para rellenar una cadena de resultado con espacios iniciales o finales, use la característica [formatos compuestos](../../../docs/standard/base-types/composite-formatting.md) y defina un *componente de alineación* en el elemento de formato.  
   

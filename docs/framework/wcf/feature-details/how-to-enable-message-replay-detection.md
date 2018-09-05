@@ -10,23 +10,23 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 5c761a23d2560f40a0121d684dcb411a716de5a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: df56d3f2bfe351c38ca2e64539de13e4cc556d2a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497144"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405050"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Cómo: Habilitar la detección de repetición de mensajes
 Un ataque de reproducción se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
   
- Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](http://go.microsoft.com/fwlink/?LinkId=88536).  
+ Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](https://go.microsoft.com/fwlink/?LinkId=88536).  
   
- El siguiente procedimiento muestra varias propiedades que puede usar para controlar la detección de reproducción mediante Windows Communication Foundation (WCF).  
+ El procedimiento siguiente muestra varias propiedades que puede usar para controlar la detección de reproducción mediante Windows Communication Foundation (WCF).  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Para controlar la detección de reproducción en el cliente utilizando código  
   
-1.  Cree <xref:System.ServiceModel.Channels.SecurityBindingElement> para utilizar en <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información, consulte [Cómo: crear un personalizado de enlace con SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). En el siguiente ejemplo se utiliza <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> creado con <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+1.  Cree <xref:System.ServiceModel.Channels.SecurityBindingElement> para utilizar en <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información, consulte [Cómo: crear un personalizado de enlace mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). En el siguiente ejemplo se utiliza <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> creado con <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
 2.  Utilizar la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> para devolver una referencia a la clase <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> y establecer cualquiera de las propiedades siguientes, según corresponda:  
   

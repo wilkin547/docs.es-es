@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo compilar .NET Core y la CLI de .NE
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 55a35223a4bc11156e056cceb7f86365c4906222
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216033"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468803"
 ---
 # <a name="build-net-core-from-source"></a>Compilar .NET Core desde el código fuente
 
@@ -21,6 +21,7 @@ En este artículo, se proporcionan instrucciones para los desarrolladores que qu
 El código fuente de CLR de .NET Core puede encontrarse en el repositorio [dotnet/coreclr](https://github.com/dotnet/coreclr/) en GitHub.
 
 Actualmente, la compilación depende de los siguientes requisitos previos:
+
 * [Git](https://git-scm.com/)
 * [CMake](https://cmake.org/)
 * [Python](https://www.python.org/)
@@ -30,35 +31,35 @@ Para compilar CLR después de instalar estos requisitos previos, invoque el scri
 
 La instalación de los componentes varía según el sistema operativo (SO). Consulte las instrucciones de compilación de su sistema operativo específico:
 
- * [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
- * [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
- * [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
- * [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md) 
- * [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
+* [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
+* [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
+* [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+* [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
+* [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
 No hay ninguna compilación cruzada entre SO (solo para ARM, que se basa en X64).  
 Debe estar en la plataforma concreta para compilar esa plataforma.  
 
 La compilación tiene dos `buildTypes` principales:
 
- * Debug (valor predeterminado): compila el runtime con las optimizaciones mínimas y las comprobaciones (aserciones) en tiempo de ejecución adicionales. Aunque esta reducción en el nivel de optimización y las comprobaciones adicionales ralentizan la ejecución en tiempo de ejecución, resultan útiles para realizar la depuración. Este es el valor recomendado para los entornos de desarrollo y pruebas.
- * Release: compila el runtime con las optimizaciones completas y sin las comprobaciones en tiempo de ejecución adicionales. Aunque el rendimiento en tiempo de ejecución será mucho más rápido, el runtime puede tardar un poco más en compilarse y no será tan sencillo realizar la depuración. Pase `release` al script de compilación para seleccionar este tipo de compilación.
+* Debug (valor predeterminado): compila el runtime con las optimizaciones mínimas y las comprobaciones (aserciones) en tiempo de ejecución adicionales. Aunque esta reducción en el nivel de optimización y las comprobaciones adicionales ralentizan la ejecución en tiempo de ejecución, resultan útiles para realizar la depuración. Este es el valor recomendado para los entornos de desarrollo y pruebas.
+* Release: compila el runtime con las optimizaciones completas y sin las comprobaciones en tiempo de ejecución adicionales. Aunque el rendimiento en tiempo de ejecución será mucho más rápido, el runtime puede tardar un poco más en compilarse y no será tan sencillo realizar la depuración. Pase `release` al script de compilación para seleccionar este tipo de compilación.
 
 Además, de forma predeterminada, la compilación no solo crea los archivos ejecutables en tiempo de ejecución, sino que también compila todas las pruebas.
 Hay bastantes pruebas, lo que exige una cantidad considerable de tiempo que no es necesario si tan solo se quiere experimentar con los cambios.
 Para omitir las compilaciones de pruebas, agregue el argumento `skiptests` al script de compilación, como en el ejemplo siguiente (reemplace `.\build` con `./build.sh` en los equipos Unix):
 
 ```bat
-    .\build skiptests 
+    .\build skiptests
 ```
 
 En el ejemplo anterior, se ha mostrado cómo compilar el tipo `Debug`, que tiene las comprobaciones (aserciones) en tiempo de desarrollo habilitadas y las optimizaciones deshabilitadas. Para compilar el tipo de versión (velocidad máxima), haga lo siguiente:
 
-```bat 
+```bat
     .\build release skiptests
 ```
 
-Puede encontrar más opciones de compilación con build si usa el calificador -? o -help.   
+Puede encontrar más opciones de compilación con build si usa el calificador -? o -help.
 
 ### <a name="using-your-build"></a>Usar la compilación
 
@@ -71,7 +72,7 @@ Aunque el resultado de la compilación "sin procesar" a veces resulta útil, nor
 Hay dos técnicas básicas para usar el nuevo tiempo de ejecución:
 
  1. **Use dotnet.exe y NuGet para crear una aplicación**.
-    Vea [Using Your Build](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) (Usar la compilación) para obtener instrucciones sobre cómo crear un programa que use el nuevo tiempo de ejecución mediante paquetes de NuGet que acaba de crear y la interfaz de línea de comandos (CLI) de "dotnet". Esta técnica es la forma probable en que los desarrolladores que no usan el tiempo de ejecución van a consumir el nuevo tiempo de ejecución.    
+    Vea [Using Your Build](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) (Usar la compilación) para obtener instrucciones sobre cómo crear un programa que use el nuevo tiempo de ejecución mediante paquetes de NuGet que acaba de crear y la interfaz de línea de comandos (CLI) de "dotnet". Esta técnica es la forma probable en que los desarrolladores que no usan el tiempo de ejecución van a consumir el nuevo tiempo de ejecución.
 
  2. **Use corerun.exe para ejecutar una aplicación con archivos DLL sin empaquetar**.
     Este repositorio también define un host simple denominado corerun.exe que NO tiene ninguna dependencia en NuGet.
@@ -86,11 +87,11 @@ El código fuente de la CLI de .NET Core puede encontrarse en el repositorio [do
 Para compilar la CLI de .NET Core, necesita tener lo siguiente instalado en su equipo.
 
 * Windows y Linux:
-    - GIT en la ruta de acceso
+  * GIT en la ruta de acceso
 * macOS:
-    - GIT en la ruta de acceso
-    - Xcode
-    - OpenSSL
+  * GIT en la ruta de acceso
+  * Xcode
+  * OpenSSL
 
 Para compilar, ejecute `build.cmd` en Windows, o `build.sh` en Linux y macOS desde la raíz. Si no quiere ejecutar pruebas, ejecute `build.cmd /t:Compile` o `./build.sh /t:Compile`. Para compilar la CLI en macOS Sierra, debe ejecutar `export DOTNET_RUNTIME_ID=osx.10.11-x64` para establecer la variable de entorno DOTNET_RUNTIME_ID.
 

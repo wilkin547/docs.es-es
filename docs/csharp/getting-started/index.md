@@ -7,14 +7,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 8c9b2803819b4ffcf0edce7994b9fdbc1c6c6951
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212634"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398072"
 ---
-# <a name="get-started-with-c"></a>Introducción a C# #
+# <a name="get-started-with-c"></a>Introducción a C\#
 
 Esta sección proporciona breves y sencillos tutoriales simples que permiten compilar una aplicación con rapidez mediante C# y .NET Core. Incluye temas de introducción a Visual Studio 2017 y Visual Studio Code. Puede crear una aplicación Hola mundo sencilla o, si tiene Visual Studio 2017, una biblioteca de clases sencilla que se puede utilizar con otras aplicaciones.
 
@@ -63,4 +63,5 @@ Los siguientes temas se encuentran disponibles:
     Proporciona vínculos a los tutoriales de programación que usan C# y una breve descripción de cada uno.
 
 ## <a name="see-also"></a>Vea también
- [Introducción a Visual C# y Visual Basic con Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
+* [Introducción a Visual C# y Visual Basic con Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
