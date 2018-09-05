@@ -3,11 +3,11 @@ title: Envío de formulario
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
 ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464939"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672142"
 ---
 # <a name="form-post"></a>Envío de formulario
 Este ejemplo muestra cómo extender el modelo de programación REST de WCF para admitir los nuevos formatos de solicitudes entrantes. El ejemplo también incluye una implementación de un formateador que puede deserializar una solicitud de un envío de formulario HTML en un tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Además, el ejemplo utiliza una plantilla T4 para devolver una página HTML, que proporciona el formulario HTML que los usuarios pueden devolver al servicio REST de WCF.  

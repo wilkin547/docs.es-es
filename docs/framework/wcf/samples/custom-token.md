@@ -2,12 +2,12 @@
 title: Token personalizado
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 03472f76310fa99568f13f0aa49d9e2a3453ac30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671104"
 ---
 # <a name="custom-token"></a>Token personalizado
 Este ejemplo muestra cómo agregar una implementación de token personalizada en una aplicación de Windows Communication Foundation (WCF). El ejemplo utiliza `CreditCardToken` para pasar de manera segura información sobre las tarjetas de crédito del cliente al servicio. El token se pasa en el encabezado de mensaje WS-Security y se firma y cifra utilizando el elemento de enlace de seguridad simétrico junto con el cuerpo del mensaje y otros encabezados del mensaje. Esto es útil en casos donde los tokens integrados no son suficiente. Este ejemplo muestra cómo proporcionar un token de seguridad personalizado a un servicio en lugar de utilizar uno de los tokens integrados. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
@@ -21,7 +21,7 @@ Este ejemplo muestra cómo agregar una implementación de token personalizada en
   
 -   Cómo el servicio puede utilizar y validar un token de seguridad personalizado.  
   
--   Cómo el código del servicio WCF puede obtener la información acerca de los tokens de seguridad recibidos incluyendo el token de seguridad personalizado.  
+-   Cómo el código del servicio WCF puede obtener la información sobre los tokens de seguridad recibidos incluyendo el token de seguridad personalizado.  
   
 -   Cómo el certificado X.509 del servidor se utiliza para proteger la clave simétrica utilizada para el cifrado y firma de mensajes.  
   
@@ -115,9 +115,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Implementación de token de seguridad personalizada  
- Para habilitar un token de seguridad personalizado de WCF, cree una representación de objeto del token de seguridad personalizado. El ejemplo tiene esta representación en la clase `CreditCardToken`. La representación de objeto es responsable de contener toda la información pertinente del token de seguridad y de proporcionar una lista de claves de seguridad contenida en el token de seguridad. En este caso, el token de seguridad de la tarjeta de crédito no contiene ninguna clave de seguridad.  
+ Para habilitar un token de seguridad personalizados en WCF, cree una representación de objeto del token de seguridad personalizado. El ejemplo tiene esta representación en la clase `CreditCardToken`. La representación de objeto es responsable de contener toda la información pertinente del token de seguridad y de proporcionar una lista de claves de seguridad contenida en el token de seguridad. En este caso, el token de seguridad de la tarjeta de crédito no contiene ninguna clave de seguridad.  
   
- La siguiente sección describe lo que debe hacer para permitir un token personalizado para su transmisión a través de la conexión y utilizado por un extremo de WCF.  
+ La siguiente sección describe lo que debe hacer para permitir un token personalizado que se transmitan a través del cable y consumir un extremo de WCF.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -155,7 +155,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Obtener el token de la tarjeta de crédito personalizado en y desde el mensaje  
- Serializadores de tokens de seguridad en WCF están responsables de crear una representación de objeto de tokens de seguridad del archivo XML en el mensaje y la creación de una forma XML de los tokens de seguridad. También son responsables de otras funcionalidades, como leer y escribir identificadores de clave que señalan a token de seguridad, pero este ejemplo solo utiliza funcionalidad relacionada con token de seguridad. Para habilitar un token personalizado, debe implementar su propio serializador de tokens de seguridad. Para ello, en este ejemplo se utiliza la clase `CreditCardSecurityTokenSerializer`.  
+ Los serializadores de tokens de seguridad en WCF son responsables de la creación de una representación de objeto de tokens de seguridad desde el código XML en el mensaje y la creación de una forma XML de los tokens de seguridad. También son responsables de otras funcionalidades, como leer y escribir identificadores de clave que señalan a token de seguridad, pero este ejemplo solo utiliza funcionalidad relacionada con token de seguridad. Para habilitar un token personalizado, debe implementar su propio serializador de tokens de seguridad. Para ello, en este ejemplo se utiliza la clase `CreditCardSecurityTokenSerializer`.  
   
  En el servicio, el serializador personalizado lee la forma en XML del token personalizado y crea la representación de objeto del token personalizada a partir de ella.  
   
@@ -593,9 +593,9 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
@@ -606,7 +606,7 @@ string GetCallerCreditCardNumber()
   
 1.  Inicie Client.exe desde el directorio \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-2.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -628,7 +628,7 @@ string GetCallerCreditCardNumber()
   
 9. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema.  
   
-10. Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

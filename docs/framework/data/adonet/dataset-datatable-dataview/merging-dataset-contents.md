@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763675"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672266"
 ---
 # <a name="merging-dataset-contents"></a>Combinar contenido de DataSet
 Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar el contenido de <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o matriz de <xref:System.Data.DataRow> en un `DataSet` existente. Hay varios factores y opciones que afectan a cómo se combinan los datos nuevos en un `DataSet` existente.  
@@ -31,7 +31,7 @@ Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar e
 >  Este comportamiento ha cambiado en la versión 2.0 de .NET Framework. En la versión 1.1, se admitían los espacios de nombres pero eran pasados por alto durante las operaciones de combinación. Por ello, un <xref:System.Data.DataSet> que utiliza valores de propiedad <xref:System.Data.DataTable.Namespace%2A> tendrá diferentes comportamientos en función de la versión de .NET Framework que se ejecute. Por ejemplo, suponga que tiene dos `DataSets` que contienen `DataTables` con los mismos valores de propiedad <xref:System.Data.DataTable.TableName%2A> pero distintos valores de propiedad <xref:System.Data.DataTable.Namespace%2A>. En la versión 1.1 de .NET Framework, los nombres <xref:System.Data.DataTable.Namespace%2A> distintos serán pasados por alto cuando se combinen dos objetos <xref:System.Data.DataSet>. Sin embargo, a partir de la versión 2.0 de .NET Framework, la combinación produce dos nuevos `DataTables` para crearse en el <xref:System.Data.DataSet> de destino. El `DataTables` original no se verá afectado por la combinación.  
   
 ## <a name="preservechanges"></a>PreserveChanges  
- Cuando se pasa una matriz de `DataSet`, `DataTable` o `DataRow` al método `Merge`, es posible incluir parámetros opcionales que especifiquen si se conservarán o no los cambios en el `DataSet` existente y cómo tratar los nuevos elementos de esquema de los datos entrantes. El primero de estos parámetros después de los datos entrantes es una marca booleana, <xref:System.Data.LoadOption.PreserveChanges>, que especifica si se conservarán o no los cambios en el `DataSet` existente. Si la marca `PreserveChanges` está establecida en `true`, los valores entrantes no sobrescriben los existentes en la versión de fila `Current` de la fila existente. Si la marca `PreserveChanges` está establecida en `false`, los valores entrantes sobrescriben los existentes en la versión de fila `Current` de la fila existente. Si la marca `PreserveChanges` no está especificado, de forma predeterminada se establece en `false`. Para obtener más información acerca de las versiones de fila, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Cuando se pasa una matriz de `DataSet`, `DataTable` o `DataRow` al método `Merge`, es posible incluir parámetros opcionales que especifiquen si se conservarán o no los cambios en el `DataSet` existente y cómo tratar los nuevos elementos de esquema de los datos entrantes. El primero de estos parámetros después de los datos entrantes es una marca booleana, <xref:System.Data.LoadOption.PreserveChanges>, que especifica si se conservarán o no los cambios en el `DataSet` existente. Si la marca `PreserveChanges` está establecida en `true`, los valores entrantes no sobrescriben los existentes en la versión de fila `Current` de la fila existente. Si la marca `PreserveChanges` está establecida en `false`, los valores entrantes sobrescriben los existentes en la versión de fila `Current` de la fila existente. Si la marca `PreserveChanges` no está especificado, de forma predeterminada se establece en `false`. Para obtener más información acerca de las versiones de fila, vea [Estados de fila y las versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
  Cuando `PreserveChanges` es `true`, los datos de la fila existente se mantienen en la versión de fila <xref:System.Data.DataRowVersion.Current> de la fila existente, mientras que los datos de la versión de fila <xref:System.Data.DataRowVersion.Original> de la fila existente se sobrescriben con los datos de la versión de fila `Original` de la fila entrante. El <xref:System.Data.DataRow.RowState%2A> de la fila existente se establece en <xref:System.Data.DataRowState.Modified>. Se aplican las excepciones siguientes:  
   
@@ -63,7 +63,7 @@ Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar e
  Tomemos como ejemplo un caso en el que una fila existente de un `DataSet` es una fila `Unchanged` con un valor de clave principal de 1. Durante una operación de combinación con una fila entrante `Modified` cuyo valor de clave principal `Original` es 2 y de clave principal `Current` es 1, la fila existente y la fila entrante no se consideran coincidentes porque los valores de clave principal `Original` son diferentes. Sin embargo, cuando se completa la combinación y se comprueban las restricciones, se iniciará una excepción porque los valores de clave principal `Current` infringen la restricción única de la columna de clave principal.  
   
 > [!NOTE]
->  Cuando las filas están insertadas en una base de datos con columnas de incremento automático como puede ser una columna de identidad, el valor de columna de identidad devuelto por la inserción no coincide con el valor de `DataSet`, lo que da lugar a que las filas devueltas se agreguen en lugar de combinarse. Para obtener más información, consulte [recuperar identidad o valores Autonuméricos](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+>  Cuando las filas están insertadas en una base de datos con columnas de incremento automático como puede ser una columna de identidad, el valor de columna de identidad devuelto por la inserción no coincide con el valor de `DataSet`, lo que da lugar a que las filas devueltas se agreguen en lugar de combinarse. Para obtener más información, consulte [recuperar la identidad o valores de autonumeración](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
  En el siguiente ejemplo de código se combinan dos objetos `DataSet` con esquemas diferentes en un `DataSet` con los esquemas combinados de los dos objetos `DataSet` entrantes.  
   
@@ -84,4 +84,4 @@ Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar e
  [Objetos DataAdapter y DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Recuperación de valores autonuméricos y de identidad](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

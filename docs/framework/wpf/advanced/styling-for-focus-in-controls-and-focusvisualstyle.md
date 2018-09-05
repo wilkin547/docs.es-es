@@ -6,15 +6,15 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 6c73c8bbfcf7631094ddf89641de9af38f86f88e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549521"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672636"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Aplicar estilo a los controles al recibir el foco y FocusVisualStyle
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona dos mecanismos paralelos para cambiar el aspecto visual de un control cuando recibe el foco de teclado. El primer mecanismo consiste en utilizar los establecedores de propiedad para las propiedades como <xref:System.Windows.UIElement.IsKeyboardFocused%2A> en el estilo o la plantilla que se aplica al control. El segundo mecanismo es proporcionar un estilo independiente como el valor de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad; la "estilo visual de foco" crea un árbol visual independiente para un adorno que dibuja en la parte superior del control, en lugar de cambiar el árbol visual del control u otra interfaz de usuario elemento reemplazándolo. En este tema se describen los escenarios en los que es apropiado cada uno de estos mecanismos.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona dos mecanismos paralelos para cambiar el aspecto visual de un control cuando recibe el foco de teclado. El primer mecanismo consiste en usar establecedores de propiedad para propiedades como <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dentro del estilo o plantilla que se aplica al control. El segundo mecanismo consiste en proporcionar un estilo independiente como el valor de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad; el "estilo visual de foco" crea un árbol visual independiente para un adorno que dibuja encima del control, en lugar de cambiar el árbol visual del control u otras interfaces de usuario elemento reemplazándola. En este tema se describen los escenarios en los que es apropiado cada uno de estos mecanismos.  
    
   
 <a name="Purpose"></a>   
@@ -31,7 +31,7 @@ ms.locfileid: "33549521"
   
  En los temas, el estilo visual de foco predeterminado suele ser muy simple. A continuación se muestra una aproximación sin detallar:  
   
-```  
+```xaml  
 <Style x:Key="{x:Static SystemParameters.FocusVisualStyleKey}">  
   <Setter Property="Control.Template">  
     <Setter.Value>  
@@ -50,15 +50,15 @@ ms.locfileid: "33549521"
 ## <a name="when-to-use-focus-visual-styles"></a>Cuándo usar estilos visuales de foco  
  Conceptualmente, el aspecto de los estilos visuales de foco aplicados a los controles debe ser coherente para todos los controles. Una manera de asegurar la coherencia es cambiar el estilo visual de foco únicamente si se está creando un tema completo, donde cada control que se defina obtendrá exactamente el mismo estilo visual de foco, o bien una variación de un estilo que guarde una relación visual en todos los controles. Como alternativa, se puede usar el mismo estilo (o estilos similares) para aplicárselos a todos los elementos que pueden recibir el foco del teclado de una página o una interfaz de usuario.  
   
- Establecer <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> en los estilos de control individual que no forman parte de un tema es no el uso previsto del foco estilos visuales. Esto se debe a que un comportamiento visual incoherente en los distintos controles puede dar lugar a una experiencia del usuario confusa con respecto al foco de teclado. Si tiene previsto comportamientos específicos del control el foco de teclado que deliberadamente no son coherentes en todo el tema, un enfoque mucho mejor es usar desencadenadores en los estilos para las propiedades de estado de entradas individuales, como <xref:System.Windows.UIElement.IsFocused%2A> o <xref:System.Windows.UIElement.IsKeyboardFocused%2A>.  
+ Establecer <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> en estilos de controles individuales que no forman parte de un tema es no, el uso previsto del enfoque de estilos visuales. Esto se debe a que un comportamiento visual incoherente en los distintos controles puede dar lugar a una experiencia del usuario confusa con respecto al foco de teclado. Si tiene previsto comportamientos específicos de control para el foco de teclado que deliberadamente no son coherentes en todo el tema, un enfoque mucho mejor es usar desencadenadores en estilos para las propiedades de estado de entrada individuales, como <xref:System.Windows.UIElement.IsFocused%2A> o <xref:System.Windows.UIElement.IsKeyboardFocused%2A>.  
   
- Los estilos visuales de foco actúan exclusivamente para el foco de teclado. Como tales, los estilos visuales de foco son un tipo de característica de accesibilidad. Si quiere efectuar cambios en la interfaz de usuario para cualquier tipo de foco, ya sea mediante el mouse, el teclado o programación, no debe usar los estilos visuales de foco sino establecedores y desencadenadores de estilos o plantillas que funcionen partiendo del valor de las propiedades de foco generales, `IsFocused` o `IsFocusWithin`.  
+ Los estilos visuales de foco actúan exclusivamente para el foco de teclado. Como tales, los estilos visuales de foco son un tipo de característica de accesibilidad. Si quiere efectuar cambios en la interfaz de usuario para cualquier tipo de foco, ya sea mediante el mouse, el teclado o programación, no debe usar los estilos visuales de foco sino establecedores y desencadenadores de estilos o plantillas que funcionen partiendo del valor de las propiedades de foco generales, <xref:System.Windows.UIElement.IsFocused%2A> o <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>.  
   
 <a name="How"></a>   
 ## <a name="how-to-create-a-focus-visual-style"></a>Cómo crear un estilo visual de foco  
- El estilo que cree para un estilo visual del foco siempre debe tener la <xref:System.Windows.Style.TargetType%2A> de <xref:System.Windows.Controls.Control>. El estilo debe constar principalmente de un <xref:System.Windows.Controls.ControlTemplate>. No se especifica el tipo de destino para que sea el tipo que se asigna el estilo visual del foco a la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>.  
+ El estilo de creación de un estilo visual de foco siempre debe tener la <xref:System.Windows.Style.TargetType%2A> de <xref:System.Windows.Controls.Control>. El estilo debe consistir principalmente un <xref:System.Windows.Controls.ControlTemplate>. No se especifica el tipo de destino para que sea el tipo que se asigna el estilo visual de foco a la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>.  
   
- Dado que el tipo de destino es siempre <xref:System.Windows.Controls.Control>, debe aplicar los estilos mediante las propiedades que son comunes a todos los controles (mediante las propiedades de la <xref:System.Windows.Controls.Control> clase y sus clases base). Debe crear una plantilla que funcione correctamente como una superposición a un elemento de la interfaz de usuario y que no oculte áreas funcionales del control. En general, esto significa que la información visual debe aparecer fuera de los márgenes del control, o en forma de efectos temporales o discretos que no bloqueen las pruebas de posicionamiento del control al que se aplica el estilo visual de foco. Las propiedades que puede usar en el enlace de plantilla que son útiles para determinar el tamaño y la posición de la plantilla de superposición incluyen <xref:System.Windows.FrameworkElement.ActualHeight%2A>, <xref:System.Windows.FrameworkElement.ActualWidth%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, y <xref:System.Windows.Controls.Control.Padding%2A>.  
+ Dado que el tipo de destino es siempre <xref:System.Windows.Controls.Control>, deben aplicar los estilos mediante las propiedades que son comunes a todos los controles (mediante las propiedades de la <xref:System.Windows.Controls.Control> clase y sus clases bases). Debe crear una plantilla que funcione correctamente como una superposición a un elemento de la interfaz de usuario y que no oculte áreas funcionales del control. En general, esto significa que la información visual debe aparecer fuera de los márgenes del control, o en forma de efectos temporales o discretos que no bloqueen las pruebas de posicionamiento del control al que se aplica el estilo visual de foco. Las propiedades que puede usar en el enlace de plantilla que son útiles para determinar el tamaño y la posición de la plantilla de superposición incluyen <xref:System.Windows.FrameworkElement.ActualHeight%2A>, <xref:System.Windows.FrameworkElement.ActualWidth%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, y <xref:System.Windows.Controls.Control.Padding%2A>.  
   
 <a name="Alternatives"></a>   
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>Alternativas al uso de un estilo visual de foco  
@@ -67,14 +67,14 @@ ms.locfileid: "33549521"
  Los desencadenadores, establecedores y establecedores de eventos se describen con detalle en [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md). El control de eventos enrutados se describe en [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
- Si está interesado en concreto en el foco del teclado, el <xref:System.Windows.UIElement.IsKeyboardFocused%2A> propiedad de dependencia puede utilizarse para una propiedad <xref:System.Windows.Trigger>. Un desencadenador de propiedad de un estilo o plantilla constituye una técnica más adecuada para definir el comportamiento de foco de teclado más específico para un único control y que no coincida visualmente con el comportamiento de foco de teclado de los demás controles.  
+ Si está interesado en concreto en el foco de teclado, el <xref:System.Windows.UIElement.IsKeyboardFocused%2A> propiedad de dependencia puede utilizarse para una propiedad <xref:System.Windows.Trigger>. Un desencadenador de propiedad de un estilo o plantilla constituye una técnica más adecuada para definir el comportamiento de foco de teclado más específico para un único control y que no coincida visualmente con el comportamiento de foco de teclado de los demás controles.  
   
- Otra propiedad de dependencia similar es <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>, que podría ser adecuado utilizar si desea indicar visualmente que foco del teclado está en alguna parte dentro de la composición o dentro del área funcional del control. Por ejemplo, podría colocar un <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> desencadenador tal que un panel que agrupe varios controles aparezca distinto, aunque el foco del teclado con mayor precisión puede estar en un elemento individual dentro de dicho panel.  
+ Otra propiedad de dependencia similar es <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A>, que podría ser adecuada si desea indicar visualmente que el foco de teclado está en algún lugar dentro de la composición o dentro del área funcional del control. Por ejemplo, podría colocar un <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> desencadenador tal que un panel que agrupe varios controles aparezca de forma diferente, incluso aunque el foco de teclado con mayor precisión puede ser un elemento individual dentro de ese panel.  
   
- También puede utilizar los eventos <xref:System.Windows.UIElement.GotKeyboardFocus> y <xref:System.Windows.UIElement.LostKeyboardFocus> (así como sus equivalentes de vista previa). Puede usar estos eventos como base para un <xref:System.Windows.EventSetter>, o puede escribir controladores para los eventos de código subyacente.  
+ También puede usar los eventos <xref:System.Windows.UIElement.GotKeyboardFocus> y <xref:System.Windows.UIElement.LostKeyboardFocus> (así como sus equivalentes de vista previa). Puede usar estos eventos como base para un <xref:System.Windows.EventSetter>, o bien puede escribir controladores para los eventos en el código subyacente.  
   
 ### <a name="other-focus-properties"></a>Otras propiedades de foco  
- Si desea que todas las posibles causas del cambio de foco para generar un comportamiento visual, debe basar un establecedor o desencadenador en el <xref:System.Windows.UIElement.IsFocused%2A> propiedad de dependencia, o bien en el <xref:System.Windows.UIElement.GotFocus> o <xref:System.Windows.UIElement.LostFocus> eventos que se usa para un <xref:System.Windows.EventSetter>.  
+ Si desea que todas las posibles causas del cambio de foco para producir un comportamiento visual, debe basar un establecedor o desencadenador en el <xref:System.Windows.UIElement.IsFocused%2A> propiedad de dependencia, o bien en el <xref:System.Windows.UIElement.GotFocus> o <xref:System.Windows.UIElement.LostFocus> los eventos se usa para un <xref:System.Windows.EventSetter>.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  

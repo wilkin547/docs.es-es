@@ -2,18 +2,18 @@
 title: Inferir columnas
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: da98bcbc4537e08a6f8565b36f8b84b476efd027
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 56de4b4d6cf704473ec46957625ad1c376f595c2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761082"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671415"
 ---
 # <a name="inferring-columns"></a>Inferir columnas
-Una vez que ADO.NET determina a partir de un documento XML los elementos que se van a inferir como tablas para un <xref:System.Data.DataSet>, se deducen las columnas para dichas tablas. ADO.NET 2.0 incorporó un nuevo motor de inferencia de esquemas que deduce un tipo de datos fuertemente tipados para cada **simpleType** elemento. En versiones anteriores, el tipo de datos de un deducido **simpleType** elemento siempre era **xsd: String**.  
+Una vez que ADO.NET determina a partir de un documento XML los elementos que se van a inferir como tablas para un <xref:System.Data.DataSet>, se deducen las columnas para dichas tablas. ADO.NET 2.0 incorporó un nuevo motor de inferencia de esquemas que deduce un tipo de datos fuertemente tipado para cada **simpleType** elemento. En versiones anteriores, el tipo de datos de un deducido **simpleType** elemento siempre ha sido **xsd: String**.  
   
 ## <a name="migration-and-backward-compatibility"></a>Migración y compatibilidad con versiones anteriores  
- El **ReadXml** método toma un argumento de tipo **InferSchema**. Este argumento le permite especificar un comportamiento de inferencia compatible con versiones anteriores. Los valores disponibles para la **InferSchema** enumeración se muestran en la tabla siguiente.  
+ El **ReadXml** método toma un argumento de tipo **InferSchema**. Este argumento le permite especificar un comportamiento de inferencia compatible con versiones anteriores. Los valores disponibles para el **InferSchema** enumeración se muestran en la tabla siguiente.  
   
  <xref:System.Data.XmlReadMode.InferSchema>  
  Proporciona compatibilidad con versiones anteriores al deducir siempre un tipo simple como <xref:System.String>.  
@@ -25,7 +25,7 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
  Omite cualquier esquema alineado y lee los datos del esquema del <xref:System.Data.DataSet> existente.  
   
 ## <a name="attributes"></a>Atributos  
- Tal como se define en [deducir tablas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), un elemento con atributos se deducirá como una tabla. Los atributos de dicho elemento se deducirán como columnas de la tabla. El **ColumnMapping** propiedad de las columnas se establecerá en **MappingType.Attribute**para asegurarse de que los nombres de columna se escribirán como atributos si el esquema se vuelve a escribir XML. Los valores de los atributos se almacenan en una fila de la tabla. Por ejemplo, tomemos el siguiente código XML:  
+ Tal como se define en [deducir tablas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), un elemento con atributos se deducirá como una tabla. Los atributos de dicho elemento se deducirán como columnas de la tabla. El **ColumnMapping** propiedad de las columnas se establecerá en **MappingType.Attribute**para asegurarse de que los nombres de columna se escribirán como atributos si el esquema se escribe en XML. Los valores de los atributos se almacenan en una fila de la tabla. Por ejemplo, tomemos el siguiente código XML:  
   
 ```xml  
 <DocumentElement>  
@@ -71,4 +71,4 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
  [Carga de información del esquema de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

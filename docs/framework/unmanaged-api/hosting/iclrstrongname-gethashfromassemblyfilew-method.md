@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36e4f07f04968579be2e42efad666b0453cc4796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a7686a84759f8ac40a123d2c9a7b8f1b9b8096cb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434796"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672605"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW (Método)
-Genera un hash sobre el contenido del archivo especificado por una cadena Unicode.  
+Genera un hash del contenido del archivo especificado por una cadena Unicode.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ HRESULT GetHashFromAssemblyFileW (
  [in] La ruta de acceso al archivo que se aplica un algoritmo hash. Este parámetro debe ser una cadena Unicode.  
   
  `piHashAlg`  
- [entrada, salida] Una constante que especifica el algoritmo hash. Utilice un cero para el algoritmo hash predeterminado.  
+ [in, out] Una constante que especifica el algoritmo hash. Usar cero para el algoritmo hash predeterminado.  
   
  `pbHash`  
  [out] El búfer hash devuelto.  
@@ -53,19 +53,19 @@ HRESULT GetHashFromAssemblyFileW (
  [in] El tamaño máximo solicitado de `pbHash`.  
   
  `pchHash`  
- [out] La devuelve el tamaño, en bytes, de `pbHash`.  
+ [out] La ha devuelto el tamaño, en bytes, de `pbHash`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** MetaHost.h  
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [GetHashFromAssemblyFile (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)  

@@ -5,11 +5,11 @@ ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 169a16126df395eabecfa969f63a004b9e27cb41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385347"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670683"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidad basado en notificaciones
 Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario, otra podría ser una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
