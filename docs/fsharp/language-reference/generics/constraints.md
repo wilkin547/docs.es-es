@@ -2,12 +2,12 @@
 title: Restricciones (F#)
 description: 'Obtenga información sobre restricciones de F # que se aplican a los parámetros de tipo genérico para especificar los requisitos para un argumento de tipo en una función o tipo genérico.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7af064159d2722256f0db8286a99fc02435a99cd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936870"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525610"
 ---
 # <a name="constraints"></a>Restricciones
 
@@ -35,7 +35,7 @@ Hay varias restricciones diferentes que puede aplicar para limitar los tipos que
 |Restricción de delegado|: delegar&lt;*tupla de tipo de parámetro*, *tipo de valor devuelto*&gt;|El tipo proporcionado debe ser un tipo de delegado que tiene los argumentos especificados y devuelve el valor; no se ha diseñado para su uso común.|
 |Restricción de comparación|: comparación|El tipo proporcionado debe admitir la comparación.|
 |Restricción de igualdad|: igualdad|El tipo proporcionado debe admitir la igualdad.|
-|Restricción no administrada|: no administrado|El tipo proporcionado debe ser un tipo no administrado. Los tipos no administrados son cualquier ciertos tipos primitivos (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, o `decimal`), tipos de enumeración, `nativeptr&lt;_&gt;`, o una estructura no genérica cuyos campos son todos los tipos no administrados.|
+|Restricción no administrada|: no administrado|El tipo proporcionado debe ser un tipo no administrado. Los tipos no administrados son cualquier ciertos tipos primitivos (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, o `decimal`), tipos de enumeración, `nativeptr<_>`, o una estructura no genérica cuyos campos son todos los tipos no administrados.|
 Tendrá que agregar una restricción cuando el código tiene que usar una característica que está disponible en el tipo de restricción, pero no en los tipos en general. Por ejemplo, si utiliza la restricción de tipo para especificar un tipo de clase, puede usar cualquiera de los métodos de esa clase en la función o tipo genérico.
 
 Especificar restricciones a veces es necesario al escribir los parámetros de tipo explícitamente, porque sin una restricción, el compilador no tiene ninguna manera de comprobar que las características que está usando estará disponibles en cualquier tipo que se puede proporcionar en tiempo de ejecución para el tipo parámetro.

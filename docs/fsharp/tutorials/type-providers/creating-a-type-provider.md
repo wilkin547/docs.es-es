@@ -592,7 +592,7 @@ for group in r.GetGroupNames() do
 
 Una vez más, observe que se está agregando la documentación XML a la propiedad proporcionada. También observe que una propiedad puede leerse si se proporciona una función `GetterCode` y puede escribirse si se proporciona una función `SetterCode`, por lo que la propiedad resultante es de solo lectura.
 
-Now you can create an instance method that returns a value of this `Match` type:
+Ahora puede crear un método de instancia que devuelve un valor de este `Match` tipo:
 
 ```fsharp
 let matchMethod = 
