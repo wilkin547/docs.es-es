@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3b6cdffdaab508d898e7caa8c93ac0f7b1365d01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fdbb220cd856fd7309d54c41a39f91a9316fe434
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408885"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805161"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 Una interfaz contiene las definiciones de un grupo de funcionalidades relacionadas que una [clase](../../../csharp/language-reference/keywords/class.md) o una [estructura](../../../csharp/language-reference/keywords/struct.md) pueden implementar.  
@@ -93,6 +93,7 @@ Una interfaz contiene las definiciones de un grupo de funcionalidades relacionad
 ## <a name="featured-book-chapter"></a>Capítulo destacado del libro  
  [Interfaces](https://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) (Interfaces) en [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx) (Aprendizaje de C# 3.0: Dominar los conceptos fundamentales de C# 3.0)  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
