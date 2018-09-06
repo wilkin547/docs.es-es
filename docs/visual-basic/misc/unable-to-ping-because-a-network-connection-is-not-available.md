@@ -5,21 +5,21 @@ f1_keywords:
 - vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
 ms.openlocfilehash: f8659c1ef21dc61680d5de37f9de2b37732b06f9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555069"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787638"
 ---
-# <a name="unable-to-ping-because-a-network-connection-is-not-available"></a><span data-ttu-id="94df6-102">No se puede ejecutar el comando ping porque no hay disponible ninguna conexión de red.</span><span class="sxs-lookup"><span data-stu-id="94df6-102">Unable to ping because a network connection is not available</span></span>
-<span data-ttu-id="94df6-103">No es posible realizar la operación porque no hay ninguna conexión de red disponible.</span><span class="sxs-lookup"><span data-stu-id="94df6-103">The operation cannot be performed because no network connection is available.</span></span>  
+# <a name="unable-to-ping-because-a-network-connection-is-not-available"></a><span data-ttu-id="b52e0-102">No se puede ejecutar el comando ping porque no hay disponible ninguna conexión de red.</span><span class="sxs-lookup"><span data-stu-id="b52e0-102">Unable to ping because a network connection is not available</span></span>
+<span data-ttu-id="b52e0-103">No es posible realizar la operación porque no hay ninguna conexión de red disponible.</span><span class="sxs-lookup"><span data-stu-id="b52e0-103">The operation cannot be performed because no network connection is available.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="94df6-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="94df6-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b52e0-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="b52e0-104">To correct this error</span></span>  
   
--   <span data-ttu-id="94df6-105">Conéctese a la red y vuelva a intentar la operación.</span><span class="sxs-lookup"><span data-stu-id="94df6-105">Connect to the network and reattempt the operation.</span></span>  
+-   <span data-ttu-id="b52e0-105">Conéctese a la red y vuelva a intentar la operación.</span><span class="sxs-lookup"><span data-stu-id="b52e0-105">Connect to the network and reattempt the operation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94df6-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="94df6-106">See Also</span></span>  
- [<span data-ttu-id="94df6-107">My.Computer.Network.Ping</span><span class="sxs-lookup"><span data-stu-id="94df6-107">My.Computer.Network.Ping</span></span>](xref:Microsoft.VisualBasic.Devices.Network.Ping%2A)  
- [<span data-ttu-id="94df6-108">My.Computer.Network.IsAvailable</span><span class="sxs-lookup"><span data-stu-id="94df6-108">My.Computer.Network.IsAvailable</span></span>](xref:Microsoft.VisualBasic.Devices.Network.IsAvailable)  
- [<span data-ttu-id="94df6-109">Operaciones de red en .NET Framework con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="94df6-109">Network Operations in the .NET Framework with Visual Basic</span></span>](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)  
- [<span data-ttu-id="94df6-110">My.Computer.Network</span><span class="sxs-lookup"><span data-stu-id="94df6-110">My.Computer.Network</span></span>](xref:Microsoft.VisualBasic.Devices.Network)
+## <a name="see-also"></a><span data-ttu-id="b52e0-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="b52e0-106">See Also</span></span>  
+ [<span data-ttu-id="b52e0-107">My.Computer.Network.Ping</span><span class="sxs-lookup"><span data-stu-id="b52e0-107">My.Computer.Network.Ping</span></span>](xref:Microsoft.VisualBasic.Devices.Network.Ping%2A)  
+ [<span data-ttu-id="b52e0-108">My.Computer.Network.IsAvailable</span><span class="sxs-lookup"><span data-stu-id="b52e0-108">My.Computer.Network.IsAvailable</span></span>](xref:Microsoft.VisualBasic.Devices.Network.IsAvailable)  
+ [<span data-ttu-id="b52e0-109">Operaciones de red en .NET Framework con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b52e0-109">Network Operations in the .NET Framework with Visual Basic</span></span>](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)  
+ [<span data-ttu-id="b52e0-110">My.Computer.Network</span><span class="sxs-lookup"><span data-stu-id="b52e0-110">My.Computer.Network</span></span>](xref:Microsoft.VisualBasic.Devices.Network)
