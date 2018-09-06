@@ -2,12 +2,12 @@
 title: Extensiones de tipo (F#)
 description: 'Obtenga información sobre cómo las extensiones de tipo de F # permiten que agregar a nuevos miembros a un tipo de objeto previamente definido.'
 ms.date: 07/20/2018
-ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33566891"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855066"
 ---
 # <a name="type-extensions"></a>Extensiones de tipo
 
@@ -169,6 +169,5 @@ Por último, si existen varias extensiones de tipo intrínsecas para un tipo, to
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje F#](index.md)
-
-[Miembros](members/index.md)
+- [Referencia del lenguaje F#](index.md)
+- [Miembros](members/index.md)

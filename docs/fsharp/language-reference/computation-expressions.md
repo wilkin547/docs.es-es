@@ -2,12 +2,12 @@
 title: Expresiones de cálculo (F#)
 description: 'Obtenga información sobre cómo crear una sintaxis adecuada para escribir cálculos en F # que se pueden secuenciar y combinar mediante enlaces y construcciones de flujo de control.'
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207438"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800922"
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 En el código anterior, las llamadas a `Run` y `Delay` se omite si no están definidos en la clase de generador de expresiones de cálculo. El cuerpo de la expresión de cálculo, aquí se indica como `{| cexpr |}`, se convierten en llamadas que implican los métodos de la clase de generador por las traducciones se describe en la tabla siguiente. La expresión de cálculo `{| cexpr |}` está definido de forma recursiva según estas traducciones donde `expr` es una expresión de F # y `cexpr` es una expresión de cálculo.
 
-
-
 |Expresión|Conversión|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 Una expresión de cálculo tiene un tipo subyacente, que devuelve la expresión. El tipo subyacente puede representar un resultado calculado o un cálculo diferido que se puede realizar, o puede proporcionar una manera de recorrer en iteración a través de algún tipo de colección. En el ejemplo anterior, el tipo subyacente era **finalmente**. Una expresión de secuencia, el tipo subyacente es <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Una expresión de consulta, el tipo subyacente es <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Para un flujo de trabajo asincrónico, el tipo subyacente es [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). La `Async` objeto representa el trabajo que se realizará para calcular el resultado. Por ejemplo, se llama [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) para ejecutar un cálculo y devolver el resultado.
 
 ## <a name="custom-operations"></a>Operaciones personalizadas
+
 Puede definir una operación personalizada en una expresión de cálculo y utilizar una operación personalizada como un operador en una expresión de cálculo. Por ejemplo, puede incluir un operador de consulta en una expresión de consulta. Al definir una operación personalizada, debe definir el rendimiento y para los métodos en la expresión de cálculo. Para definir una operación personalizada, colocarlo en una clase de generador para la expresión de cálculo y, a continuación, aplique el [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Este atributo toma una cadena como argumento, que es el nombre que se usará en una operación personalizada. Este nombre entra en el ámbito del principio de la llave de apertura de la expresión de cálculo. Por lo tanto, no debería utilizar identificadores que tienen el mismo nombre que una operación personalizada de este bloque. Por ejemplo, evite el uso de identificadores como `all` o `last` en expresiones de consulta.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Extender los generadores de existentes con nuevas operaciones personalizadas
+
 Si ya tiene una clase de generador, se pueden ampliar sus operaciones personalizadas desde fuera de esta clase de generador. Las extensiones se deben declarar en módulos. Los espacios de nombres no pueden contener a miembros de extensión, excepto en el mismo archivo y el mismo grupo de declaración de espacio de nombres donde se define el tipo.
 
 El ejemplo siguiente muestra la extensión de la existente `Microsoft.FSharp.Linq.QueryBuilder` clase.
@@ -402,10 +402,8 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 ```
 
 ## <a name="see-also"></a>Vea también
-[Referencia del lenguaje F#](index.md)
 
-[Flujos de trabajo asincrónicos](asynchronous-workflows.md)
-
-[Secuencias](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[Expresiones de consulta](query-expressions.md)
+- [Referencia del lenguaje F#](index.md)
+- [Flujos de trabajo asincrónicos](asynchronous-workflows.md)
+- [Secuencias](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [Expresiones de consulta](query-expressions.md)
