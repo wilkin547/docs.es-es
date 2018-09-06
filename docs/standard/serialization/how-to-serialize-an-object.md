@@ -8,26 +8,26 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: b979d63132b44ee2e05fcc55cfdd4c79309a159b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581451"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875754"
 ---
-# <a name="how-to-serialize-an-object"></a><span data-ttu-id="968fc-102">Cómo: Serializar un objeto</span><span class="sxs-lookup"><span data-stu-id="968fc-102">How to: Serialize an Object</span></span>
-<span data-ttu-id="968fc-103">Para serializar un objeto, primero cree el objeto que será serializado y establezca</span><span class="sxs-lookup"><span data-stu-id="968fc-103">To serialize an object, first create the object that is to be serialized and set its public properties and fields.</span></span> <span data-ttu-id="968fc-104">Debe determinar el formato de transporte en el que la secuencia XML estará almacenada, o como una secuencia o como un archivo, para ello.</span><span class="sxs-lookup"><span data-stu-id="968fc-104">To do this, you must determine the transport format in which the XML stream is to be stored, either as a stream or as a file.</span></span> <span data-ttu-id="968fc-105">Por ejemplo, si la secuencia XML debe estar guardada en un formulario permanente, cree un objeto <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="968fc-105">For example, if the XML stream must be saved in a permanent form, create a <xref:System.IO.FileStream> object.</span></span>  
+# <a name="how-to-serialize-an-object"></a><span data-ttu-id="8175c-102">Cómo: Serializar un objeto</span><span class="sxs-lookup"><span data-stu-id="8175c-102">How to: Serialize an Object</span></span>
+<span data-ttu-id="8175c-103">Para serializar un objeto, primero cree el objeto que será serializado y establezca</span><span class="sxs-lookup"><span data-stu-id="8175c-103">To serialize an object, first create the object that is to be serialized and set its public properties and fields.</span></span> <span data-ttu-id="8175c-104">Debe determinar el formato de transporte en el que la secuencia XML estará almacenada, o como una secuencia o como un archivo, para ello.</span><span class="sxs-lookup"><span data-stu-id="8175c-104">To do this, you must determine the transport format in which the XML stream is to be stored, either as a stream or as a file.</span></span> <span data-ttu-id="8175c-105">Por ejemplo, si la secuencia XML debe estar guardada en un formulario permanente, cree un objeto <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="8175c-105">For example, if the XML stream must be saved in a permanent form, create a <xref:System.IO.FileStream> object.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="968fc-106">Para obtener más ejemplos de serialización XML, vea [Ejemplos de serialización XML](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="968fc-106">For more examples of XML serialization, see [Examples of XML Serialization](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span></span>  
+>  <span data-ttu-id="8175c-106">Para obtener más ejemplos de serialización XML, vea [Ejemplos de serialización XML](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="8175c-106">For more examples of XML serialization, see [Examples of XML Serialization](../../../docs/standard/serialization/examples-of-xml-serialization.md).</span></span>  
   
-### <a name="to-serialize-an-object"></a><span data-ttu-id="968fc-107">Serializar un objeto</span><span class="sxs-lookup"><span data-stu-id="968fc-107">To serialize an object</span></span>  
+### <a name="to-serialize-an-object"></a><span data-ttu-id="8175c-107">Serializar un objeto</span><span class="sxs-lookup"><span data-stu-id="8175c-107">To serialize an object</span></span>  
   
-1.  <span data-ttu-id="968fc-108">Cree el objeto y establezca sus campos públicos y propiedades.</span><span class="sxs-lookup"><span data-stu-id="968fc-108">Create the object and set its public fields and properties.</span></span>  
+1.  <span data-ttu-id="8175c-108">Cree el objeto y establezca sus campos públicos y propiedades.</span><span class="sxs-lookup"><span data-stu-id="8175c-108">Create the object and set its public fields and properties.</span></span>  
   
-2.  <span data-ttu-id="968fc-109">Construya un <xref:System.Xml.Serialization.XmlSerializer> utilizando el tipo de objeto.</span><span class="sxs-lookup"><span data-stu-id="968fc-109">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object.</span></span> <span data-ttu-id="968fc-110">Para obtener más información, vea los constructores de clase <xref:System.Xml.Serialization.XmlSerializer> .</span><span class="sxs-lookup"><span data-stu-id="968fc-110">For more information, see the <xref:System.Xml.Serialization.XmlSerializer> class constructors.</span></span>  
+2.  <span data-ttu-id="8175c-109">Construya un <xref:System.Xml.Serialization.XmlSerializer> utilizando el tipo de objeto.</span><span class="sxs-lookup"><span data-stu-id="8175c-109">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object.</span></span> <span data-ttu-id="8175c-110">Para obtener más información, vea los constructores de clase <xref:System.Xml.Serialization.XmlSerializer> .</span><span class="sxs-lookup"><span data-stu-id="8175c-110">For more information, see the <xref:System.Xml.Serialization.XmlSerializer> class constructors.</span></span>  
   
-3.  <span data-ttu-id="968fc-111">Llame al método <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> para generar o una secuencia XML o una representación del archivo de las propiedades públicas del objeto y campos.</span><span class="sxs-lookup"><span data-stu-id="968fc-111">Call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method to generate either an XML stream or a file representation of the object's public properties and fields.</span></span> <span data-ttu-id="968fc-112">En el ejemplo siguiente se crea un archivo.</span><span class="sxs-lookup"><span data-stu-id="968fc-112">The following example creates a file.</span></span>  
+3.  <span data-ttu-id="8175c-111">Llame al método <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> para generar o una secuencia XML o una representación del archivo de las propiedades públicas del objeto y campos.</span><span class="sxs-lookup"><span data-stu-id="8175c-111">Call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method to generate either an XML stream or a file representation of the object's public properties and fields.</span></span> <span data-ttu-id="8175c-112">En el ejemplo siguiente se crea un archivo.</span><span class="sxs-lookup"><span data-stu-id="8175c-112">The following example creates a file.</span></span>  
   
     ```vb  
     Dim myObject As MySerializableClass = New MySerializableClass()  
@@ -50,6 +50,7 @@ ms.locfileid: "33581451"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="968fc-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="968fc-113">See Also</span></span>  
- [<span data-ttu-id="968fc-114">Introducción a la serialización XML</span><span class="sxs-lookup"><span data-stu-id="968fc-114">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [<span data-ttu-id="968fc-115">Cómo: Deserializar un objeto</span><span class="sxs-lookup"><span data-stu-id="968fc-115">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a><span data-ttu-id="8175c-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="8175c-113">See also</span></span>
+
+- [<span data-ttu-id="8175c-114">Introducción a la serialización XML</span><span class="sxs-lookup"><span data-stu-id="8175c-114">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [<span data-ttu-id="8175c-115">Cómo: Deserializar un objeto</span><span class="sxs-lookup"><span data-stu-id="8175c-115">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
