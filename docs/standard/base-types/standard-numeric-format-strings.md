@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7906426d76cb50f2539593094e87fb325227c411
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565747"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863474"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
@@ -359,10 +359,11 @@ Para los valores <xref:System.Double>, el especificador de formato "R", en algun
  [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Globalization.NumberFormatInfo>  
- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
- [Rellenar un número con ceros a la izquierda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
- [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Globalization.NumberFormatInfo>  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
+- [Rellenar un número con ceros a la izquierda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+- [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)
