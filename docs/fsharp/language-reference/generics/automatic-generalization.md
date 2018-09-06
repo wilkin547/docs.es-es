@@ -1,64 +1,64 @@
 ---
 title: Generalización automática (F#)
-description: 'Obtenga información acerca de cómo F # generaliza automáticamente los argumentos y los tipos de funciones para que funcionen con varios tipos cuando sea posible.'
+description: 'Obtenga información sobre cómo F # generaliza automáticamente los argumentos y tipos de funciones para que funcionen con varios tipos cuando sea posible.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 858c8bab4a1a37f44a700744e70ebfa8a5abf12c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565080"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855782"
 ---
 # <a name="automatic-generalization"></a>Generalización automática
 
-F # utiliza la inferencia para evaluar los tipos de funciones y expresiones. Este tema describe cómo F # generaliza automáticamente los argumentos y los tipos de funciones para que funcionen con varios tipos cuando sea posible.
-
+F # usa la inferencia para evaluar los tipos de funciones y expresiones. Este tema describe cómo F # generaliza automáticamente los argumentos y tipos de funciones para que funcionen con varios tipos cuando sea posible.
 
 ## <a name="automatic-generalization"></a>Generalización automática
-El compilador de F #, mientras se realiza la inferencia de tipo en una función, determina si un parámetro determinado puede ser genérico. El compilador examina cada parámetro y determina si la función tiene una dependencia en el tipo específico de ese parámetro. Si no es así, el tipo se deduce para ser genérico.
 
-En el ejemplo de código siguiente se muestra una función que el compilador deduce para ser genérico.
+El compilador de F #, cuando realiza la inferencia de tipos en una función, determina si un parámetro determinado puede ser genérico. El compilador examina cada parámetro y determina si la función tiene una dependencia en el tipo específico de ese parámetro. Si no es así, el tipo se infiere para ser genérico.
+
+En el ejemplo de código siguiente se muestra una función que el compilador infiere para ser genérico.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet101.fs)]
 
-El tipo se deduce como `'a -> 'a -> 'a`.
+El tipo se infiere para ser `'a -> 'a -> 'a`.
 
-El tipo indica que se trata de una función que toma dos argumentos del mismo tipo desconocido y devuelve un valor de ese mismo tipo. Uno de los motivos que la función anterior puede ser genérica es que el mayor-que (operador) (`>`) es genérico. La mayor-de operador tiene la firma `'a -> 'a -> bool`. No todos los operadores son genéricos, y si el código de una función usa un tipo de parámetro junto con un operador o función no genérica, no se puede generalizar ese tipo de parámetro.
+El tipo indica que se trata de una función que toma dos argumentos del mismo tipo desconocido y devuelve un valor de ese mismo tipo. Una de las razones que la función anterior puede ser genérica es que la mayor-que (operador) (`>`) es genérico. La mayor-de operador tiene la firma `'a -> 'a -> bool`. No todos los operadores son genéricos y, si el código en una función utiliza un tipo de parámetro junto con una función genérica u operador, no se puede generalizar ese tipo de parámetro.
 
-Dado que `max` es genérico, se puede utilizar con tipos como `int`, `float`, y así sucesivamente, tal como se muestra en los ejemplos siguientes.
+Dado que `max` es genérico, se puede usar con tipos como `int`, `float`, y así sucesivamente, tal como se muestra en los ejemplos siguientes.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet102.fs)]
 
-Sin embargo, los dos argumentos deben ser del mismo tipo. La firma es `'a -> 'a -> 'a`, no `'a -> 'b -> 'a`. Por lo tanto, el código siguiente genera un error porque los tipos no coinciden.
+Sin embargo, los dos argumentos deben ser del mismo tipo. La firma es `'a -> 'a -> 'a`, no `'a -> 'b -> 'a`. Por lo tanto, el código siguiente produce un error porque los tipos no coinciden.
 
 ```fsharp
 // Error: type mismatch.
 let biggestIntFloat = max 2.0 3
 ```
 
-El `max` función también funciona con cualquier tipo que admita la mayor-que el operador. Por lo tanto, se puede también usarla en una cadena, como se muestra en el código siguiente.
+El `max` función también funciona con cualquier tipo que admita la mayor-que el operador. Por lo tanto, se puede también utilizar en una cadena, como se muestra en el código siguiente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet104.fs)]
-    
+
 ## <a name="value-restriction"></a>Restricción de valor
-El compilador realiza la generalización automática sólo en las definiciones de función completa que tienen argumentos explícitos y en valores inmutables simples.
 
-Esto significa que el compilador emite un error si intenta compilar el código que no es lo suficientemente restringirse para que sea un tipo específico, pero también no es generalizable. El mensaje de error para este problema se refiere a esta restricción de la generalización automática para los valores como el *valor restricción*.
+El compilador realiza la generalización automática sólo en las definiciones de función completo que tienen argumentos explícitos y en valores inmutables simples.
 
-Normalmente, se produce el error de restricción de valor cuando se desea una construcción sea genérica pero el compilador tiene información suficiente para generalizarla, o cuando se omite involuntariamente suficiente información de tipo en una construcción no genérica. La solución para el error de restricción de valor es proporcionar información más explícita para limitar detalla el problema de inferencia de tipo en una de las maneras siguientes:
+Esto significa que el compilador emite un error si intenta compilar el código que no está lo suficientemente restringido a ser un tipo determinado, pero también no es sea generalizable. El mensaje de error para este problema se refiere a esta restricción en la generalización automática para los valores como el *restricción de valor*.
 
+Normalmente, se produce el error de restricción de valor cuando se desea una construcción para ser genérico pero el compilador tiene información suficiente para generalizarla o cuando se omite involuntariamente suficiente información de tipo en una construcción no genérica. La solución para el error de restricción de valor es proporcionar información más explícita para limitar el problema de inferencia de tipo en una de las maneras siguientes:
 
-- Restringir un tipo para que no sea genérico agregando una anotación de tipo explícita a un valor o parámetro.
+- Restringir un tipo para que no sea genérico mediante la adición de una anotación de tipo explícita a un valor o un parámetro.
 
-- Si el problema está usando una construcción no generalizable para definir una función genérica, como una composición de funciones o argumentos de funciones currificadas no se han aplicado, intente volver a escribir la función como una definición de función ordinaria.
+- Si el problema está usando una construcción no generalizable para definir una función genérica, como una composición de funciones o no se han aplicado los argumentos de función currificada, intente volver a escribir la función como una definición de función normal.
 
-- Si el problema es una expresión que es demasiado compleja para generalizarla, conviértala en una función mediante la adición de un parámetro adicional no utilizado.
+- Si el problema es una expresión que es demasiado compleja para generalizarla, convertirlo en una función mediante la adición de un parámetro adicional no utilizado.
 
-- Agregar parámetros de tipo genérico explícitos. Esta opción se usa con poca frecuencia.
+- Agregar parámetros de tipo genérico explícita. Esta opción se usa con poca frecuencia.
 
-- Los ejemplos de código siguiente muestran cada uno de estos escenarios.
+- Los ejemplos de código siguientes muestran cada uno de estos escenarios.
 
-Caso 1: Expresión demasiado compleja. En este ejemplo, la lista `counter` está diseñada para ser `int option ref`, pero no está definido como un valor inmutable simple.
+Caso 1: Expresión demasiado compleja. En este ejemplo, la lista `counter` está pensado para ser `int option ref`, pero no está definido como un valor inmutable simple.
 
 ```fsharp
 let counter = ref None
@@ -90,7 +90,7 @@ let arrayOf10Lists = Array.create 10 []
 let arrayOf10Lists<'T> = Array.create 10 ([]:'T list)
 ```
 
-En el último caso, el valor se convierte en una función de tipo, que puede utilizarse para crear valores de muchos tipos diferentes, por ejemplo como se indica a continuación:
+En el último caso, el valor se convierte en una función de tipo, que puede utilizarse para crear valores de muchos tipos diferentes, por ejemplo como sigue:
 
 ```fsharp
 let intLists = arrayOf10Lists<int>
@@ -98,11 +98,8 @@ let floatLists = arrayOf10Lists<float>
 ```
 
 ## <a name="see-also"></a>Vea también
-[Inferencia de tipos](../type-inference.md)
 
-[Genéricos](index.md)
-
-[Parámetros de tipo resueltos estáticamente](statically-resolved-type-parameters.md)
-
-[Restricciones](constraints.md)
-
+- [Inferencia de tipos](../type-inference.md)
+- [Genéricos](index.md)
+- [Parámetros de tipo resueltos estáticamente](statically-resolved-type-parameters.md)
+- [Restricciones](constraints.md)

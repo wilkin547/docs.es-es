@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589810"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869998"
 ---
 # <a name="cryptographic-signatures"></a>Firmas criptográficas
 <a name="top"></a> Las firmas digitales criptográficas usan algoritmos de clave pública para mantener la integridad de los datos. Si firma datos con una firma digital, otra persona puede comprobar la firma y confirmar que los datos provienen de usted y que no se han modificado después de ser firmados. Para más información sobre firmas digitales, vea [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  
@@ -105,7 +105,7 @@ class Class1
 ### <a name="signing-xml-files"></a>Firma de archivos XML  
  .NET Framework proporciona el espacio de nombres <xref:System.Security.Cryptography.Xml> , que permite firmar XML. Es importante firmar XML cuando se desea comprobar su procedencia. Por ejemplo, si usa un servicio de cotización de acciones que utiliza XML firmado, puede comprobar el origen del XML.  
   
- Las clases de este espacio de nombres siguen la [recomendación XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/) del World Wide Web Consortium.  
+ Las clases de este espacio de nombres siguen la [recomendación de XML-Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/) del World Wide Web Consortium.  
   
  [Volver al principio](#top)  
   
@@ -121,7 +121,7 @@ class Class1
   
 -   El algoritmo de hash usado por el firmante.  
   
- Para comprobar una firma realizada por la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , use la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . A la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> debe proporcionársele la clave pública del firmante. Necesitará los valores del módulo y el exponente para especificar la clave pública. (Estos valores debe suministrarlos la parte que generó el par de claves pública y privada). Cree primero un <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto que contenga la clave pública que comprobará la firma y, a continuación, inicialice una <xref:System.Security.Cryptography.RSAParameters> estructura a los valores del módulo y del exponente que especifican la clave pública.  
+ Para comprobar una firma realizada por la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , use la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . A la clase <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> debe proporcionársele la clave pública del firmante. Necesitará los valores del módulo y el exponente para especificar la clave pública. (Estos valores debe suministrarlos la parte que generó el par de claves pública y privada). En primer lugar cree un <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto para contener la clave pública que comprobará la firma y, a continuación, inicialice una <xref:System.Security.Cryptography.RSAParameters> a los valores de módulo y del exponente que especifican la clave pública.  
   
  En el código siguiente se muestra la creación de una estructura <xref:System.Security.Cryptography.RSAParameters> . La propiedad `Modulus` se establece en el valor de una matriz de bytes denominada `ModulusData` y la propiedad `Exponent` se establece en el valor de una matriz de bytes denominada `ExponentData`.  
   
@@ -172,5 +172,6 @@ else
   
  Este fragmento de código mostrará "`The signature is valid`" si la firma es válida y "`The signature is not valid`" si no lo es.  
   
-## <a name="see-also"></a>Vea también  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vea también
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

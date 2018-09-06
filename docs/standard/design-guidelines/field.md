@@ -9,40 +9,41 @@ helpviewer_keywords:
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d47934c3fed17f75a97ef5da0397c6ceba53d68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571123"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873947"
 ---
 # <a name="field-design"></a>Diseño de campos
-El principio de encapsulación es uno de los conceptos más importantes en el diseño orientado a objetos. Este principio indica que los datos almacenados dentro de un objeto deben estar accesibles sólo para ese objeto.  
+El principio de encapsulación es una de las nociones más importantes en el diseño orientado a objetos. Este principio afirma que los datos almacenados dentro de un objeto deben ser accesibles solo a ese objeto.  
   
- Una forma útil de interpretar el principio consiste en indicar que un tipo debe diseñarse de modo que se pueden realizar cambios en los campos de ese tipo (cambios de nombre o tipo) sin interrumpir el código distinto para los miembros del tipo. Esta interpretación inmediatamente implica que todos los campos deben ser privados.  
+ Una manera útil para interpretar el principio es decir que un tipo debe diseñarse para que se pueden realizar cambios a los campos de ese tipo (cambios de nombre o tipo) sin interrumpir el código que no sea para los miembros del tipo. Esta interpretación inmediatamente implica que todos los campos deben ser privados.  
   
- Campos de solo lectura de constantes y estáticas se excluirán de esta restricción estricta, porque esos campos, casi por definición, nunca deben cambiar.  
+ Campos de solo lectura estáticos y constantes se excluyen de esta restricción estricta, porque esos campos, casi por definición, nunca deben cambiar.  
   
  **X DO NOT** incluyen campos de instancia que son públicos o protegidos.  
   
- Debe proporcionar propiedades para tener acceso a campos en lugar de hacerlos público o protegido.  
+ Debe proporcionar propiedades para tener acceso a los campos en lugar de hacerlos públicos o protegidos.  
   
  **✓ DO** usar los campos constantes para las constantes que no cambia nunca.  
   
- El compilador lo grabe los valores de los campos const directamente en el código de llamada. Por lo tanto, los valores constantes nunca se pueden cambiar sin el riesgo de interrumpir la compatibilidad.  
+ El compilador quema los valores de campos constantes directamente en el código de llamada. Por lo tanto, los valores const nunca pueden cambiarse sin correr el riesgo de interrumpir la compatibilidad.  
   
  **✓ DO** usar estáticos públicos `readonly` campos para instancias de objetos predefinidas.  
   
- Si no hay instancias predefinidas del tipo, declárelos como public campos estáticos de sólo lectura del tipo en Sí.  
+ Si no hay instancias predefinidas del tipo, declarar campos estáticos de sólo lectura como públicos del tipo en Sí.  
   
  **X DO NOT** asignar instancias de tipos mutables a `readonly` campos.  
   
- Un tipo que mutable es un tipo con instancias que pueden modificarse después de que se crean instancias. Por ejemplo, secuencias, mayoría de las colecciones y matrices son tipos mutables, pero <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, y <xref:System.String?displayProperty=nameWithType> todos son inmutables. El modificador de solo lectura en un campo de tipo de referencia impide que la instancia almacenada en el campo se reemplace, pero no impide que los datos de instancia del campo que se está modificando los miembros que realiza la llamada del cambio de la instancia.  
+ Un tipo mutable es un tipo con instancias que puede modificarse una vez que se crean instancias. Por ejemplo, secuencias, mayoría de las colecciones y matrices son tipos mutables, pero <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, y <xref:System.String?displayProperty=nameWithType> todos son inmutables. El modificador de solo lectura en un campo de tipo de referencia impide que la instancia almacenada en el campo que se reemplace, pero no impide que los datos de instancia del campo que se va a modificar llamando a los miembros que cambiar la instancia.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

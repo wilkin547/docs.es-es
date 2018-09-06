@@ -2,12 +2,12 @@
 title: Mappings1 de tipo de datos de Oracle
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
-ms.openlocfilehash: 2b5a3a90c704dd6edf32e6fb77b551e6fc0f78ec
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9057a19abb1abc22924b5542f06e21a57a36ed94
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759626"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856340"
 ---
 # <a name="oracle-data-type-mappings"></a>Asignaciones de tipos de datos de Oracle
 En la siguiente tabla se enumeran los tipos de datos de Oracle y sus asignaciones al <xref:System.Data.OracleClient.OracleDataReader>.  
@@ -19,55 +19,55 @@ En la siguiente tabla se enumeran los tipos de datos de Oracle y sus asignacione
 |**CHAR**|**String**|<xref:System.Data.OracleClient.OracleString>||  
 |**CLOB**|**String**|<xref:System.Data.OracleClient.OracleLob>||  
 |**DATE**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
-|**FLOAT**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|Este tipo de datos es un alias para la **número** tipo de datos y está diseñado para que la <xref:System.Data.OracleClient.OracleDataReader> devuelve un **System.Decimal** o <xref:System.Data.OracleClient.OracleNumber> en lugar de un valor de punto flotante. El uso del tipo de datos de .NET Framework puede ocasionar un desbordamiento.|  
-|**ENTERO**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|Este tipo de datos es un alias para la **Number (38)** tipo de datos y está diseñado para que la <xref:System.Data.OracleClient.OracleDataReader> devuelve un **System.Decimal** o <xref:System.Data.OracleClient.OracleNumber> en lugar de un valor entero. El uso del tipo de datos de .NET Framework puede ocasionar un desbordamiento.|  
-|**AÑO DEL INTERVALO AL MES**|**Int32**|<xref:System.Data.OracleClient.OracleMonthSpan>||  
-|**DÍA DE INTERVALO EN SEGUNDOS**|**TimeSpan**|<xref:System.Data.OracleClient.OracleTimeSpan>||  
+|**FLOAT**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|Este tipo de datos es un alias para el **número** tipo de datos y está diseñado para que la <xref:System.Data.OracleClient.OracleDataReader> devuelve un **System.Decimal** o <xref:System.Data.OracleClient.OracleNumber> en lugar de un valor de punto flotante. El uso del tipo de datos de .NET Framework puede ocasionar un desbordamiento.|  
+|**ENTERO**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|Este tipo de datos es un alias para el **Number (38)** tipo de datos y está diseñado para que la <xref:System.Data.OracleClient.OracleDataReader> devuelve un **System.Decimal** o <xref:System.Data.OracleClient.OracleNumber> en lugar de un valor entero. El uso del tipo de datos de .NET Framework puede ocasionar un desbordamiento.|  
+|**INTERVAL YEAR TO MONTH**|**Int32**|<xref:System.Data.OracleClient.OracleMonthSpan>||  
+|**INTERVAL DAY TO SECOND**|**TimeSpan**|<xref:System.Data.OracleClient.OracleTimeSpan>||  
 |**LONG**|**String**|<xref:System.Data.OracleClient.OracleString>||  
 |**LONG RAW**|**Byte]**|<xref:System.Data.OracleClient.OracleBinary>||  
 |**NCHAR**|**String**|<xref:System.Data.OracleClient.OracleString>||  
 |**NCLOB**|**String**|<xref:System.Data.OracleClient.OracleLob>||  
 |**NÚMERO**|**Decimal**|<xref:System.Data.OracleClient.OracleNumber>|El uso del tipo de datos de .NET Framework puede ocasionar un desbordamiento.|  
 |**NVARCHAR2**|**String**|<xref:System.Data.OracleClient.OracleString>||  
-|**SIN FORMATO**|**Byte]**|<xref:System.Data.OracleClient.OracleBinary>||  
+|**SIN PROCESAR**|**Byte]**|<xref:System.Data.OracleClient.OracleBinary>||  
 |**REF CURSOR**|||Oracle **REF CURSOR** tipo de datos no es compatible con la <xref:System.Data.OracleClient.OracleDataReader> objeto.|  
 |**ROWID**|**String**|<xref:System.Data.OracleClient.OracleString>||  
 |**MARCA DE TIEMPO**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
 |**MARCA DE TIEMPO CON LA ZONA HORARIA LOCAL**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
 |**MARCA DE TIEMPO CON LA ZONA HORARIA**|**DateTime**|<xref:System.Data.OracleClient.OracleDateTime>||  
-|**ENTERO SIN SIGNO**|**Número**|<xref:System.Data.OracleClient.OracleNumber>|Este tipo de datos es un alias para la **Number (38)** tipo de datos y está diseñado para que la <xref:System.Data.OracleClient.OracleDataReader> devuelve un **System.Decimal** o <xref:System.Data.OracleClient.OracleNumber> en lugar de un valor entero sin signo. El uso del tipo de datos de .NET Framework puede ocasionar un desbordamiento.|  
+|**ENTERO SIN SIGNO**|**Número**|<xref:System.Data.OracleClient.OracleNumber>|Este tipo de datos es un alias para el **Number (38)** tipo de datos y está diseñado para que la <xref:System.Data.OracleClient.OracleDataReader> devuelve un **System.Decimal** o <xref:System.Data.OracleClient.OracleNumber> en lugar de un valor entero sin signo. El uso del tipo de datos de .NET Framework puede ocasionar un desbordamiento.|  
 |**VARCHAR2**|**String**|<xref:System.Data.OracleClient.OracleString>||  
   
- En la tabla siguiente se enumera los tipos de datos de Oracle y los tipos de datos de .NET Framework (**System.Data.DbType** y <xref:System.Data.OracleClient.OracleType>) para utilizar cuando se enlacen como parámetros.  
+ En la tabla siguiente se enumera los tipos de datos de Oracle y los tipos de datos de .NET Framework (**System.Data.DbType** y <xref:System.Data.OracleClient.OracleType>) que se usará cuando se enlacen como parámetros.  
   
 |Tipo de datos de Oracle|Enumeración DbType para enlazar como un parámetro|Enumeración OracleType para enlazar como un parámetro|Comentarios|  
 |----------------------|-----------------------------------------------|---------------------------------------------------|-------------|  
-|**BFILE**||**BFile**|Oracle sólo permite enlazar un **BFILE** como un **BFILE** parámetro. El proveedor de datos de .NET para Oracle no construye uno automáticamente automáticamente si intenta enlazar no**BFILE** valor, como **byte []** o <xref:System.Data.OracleClient.OracleBinary>.|  
-|**BLOB**||**BLOB**|Oracle sólo permite enlazar un **BLOB** como un **BLOB** parámetro. El proveedor de datos de .NET para Oracle no construye uno automáticamente automáticamente si intenta enlazar no**BLOB** valor, como **byte []** o <xref:System.Data.OracleClient.OracleBinary>.|  
+|**BFILE**||**BFile**|Oracle solo permite enlazar un **BFILE** como un **BFILE** parámetro. El proveedor de datos .NET para Oracle no construye uno automáticamente para usted si intenta enlazar que no es**BFILE** valor, como **byte []** o <xref:System.Data.OracleClient.OracleBinary>.|  
+|**BLOB**||**BLOB**|Oracle solo permite enlazar un **BLOB** como un **BLOB** parámetro. El proveedor de datos .NET para Oracle no construye uno automáticamente para usted si intenta enlazar que no es**BLOB** valor, como **byte []** o <xref:System.Data.OracleClient.OracleBinary>.|  
 |**CHAR**|**AnsiStringFixedLength**|**Char**||  
-|**CLOB**||**CLOB**|Oracle sólo permite enlazar un **CLOB** como un **CLOB** parámetro. El proveedor de datos de .NET para Oracle no construye uno automáticamente automáticamente si intenta enlazar no**CLOB** valor, como **System.String** o <xref:System.Data.OracleClient.OracleString>.|  
+|**CLOB**||**CLOB**|Oracle solo permite enlazar un **CLOB** como un **CLOB** parámetro. El proveedor de datos .NET para Oracle no construye uno automáticamente para usted si intenta enlazar que no es**CLOB** valor, como **System.String** o <xref:System.Data.OracleClient.OracleString>.|  
 |**DATE**|**DateTime**|**DateTime**||  
-|**FLOAT**|**Single, Double o Decimal**|**Float, Double, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> Determina la **System.Data.DBType** y <xref:System.Data.OracleClient.OracleType>.|  
-|**ENTERO**|**SByte, Int16, Int32, Int64, Decimal**|**SByte, Int16, Int32, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> Determina la **System.Data.DBType** y <xref:System.Data.OracleClient.OracleType>.|  
-|**AÑO DEL INTERVALO AL MES**|**Int32**|**IntervalYearToMonth**|<xref:System.Data.OracleClient.OracleType> solo está disponible cuando se usa el software de cliente y servidor de Oracle 9i.|  
-|**DÍA DE INTERVALO EN SEGUNDOS**|**Objeto**|**IntervalDayToSecond**|<xref:System.Data.OracleClient.OracleType> solo está disponible cuando se usa el software de cliente y servidor de Oracle 9i.|  
+|**FLOAT**|**Single, Double o Decimal**|**Float, Double, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> Determina el **System.Data.DBType** y <xref:System.Data.OracleClient.OracleType>.|  
+|**ENTERO**|**SByte, Int16, Int32, Int64, Decimal**|**SByte, Int16, Int32, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> Determina el **System.Data.DBType** y <xref:System.Data.OracleClient.OracleType>.|  
+|**INTERVAL YEAR TO MONTH**|**Int32**|**IntervalYearToMonth**|<xref:System.Data.OracleClient.OracleType> solo está disponible cuando se usa el software de cliente y servidor de Oracle 9i.|  
+|**INTERVAL DAY TO SECOND**|**Objeto**|**IntervalDayToSecond**|<xref:System.Data.OracleClient.OracleType> solo está disponible cuando se usa el software de cliente y servidor de Oracle 9i.|  
 |**LONG**|**AnsiString**|**LongVarChar**||  
 |**LONG RAW**|**Binary**|**LongRaw**||  
 |**NCHAR**|**StringFixedLength**|**NChar**||  
-|**NCLOB**||**NClob**|Oracle sólo permite enlazar un **NCLOB** como un **NCLOB** parámetro. El proveedor de datos de .NET para Oracle no construye uno automáticamente automáticamente si intenta enlazar no**NCLOB** valor, como **System.String** o <xref:System.Data.OracleClient.OracleString>.|  
+|**NCLOB**||**NClob**|Oracle solo permite enlazar un **NCLOB** como un **NCLOB** parámetro. El proveedor de datos .NET para Oracle no construye uno automáticamente para usted si intenta enlazar que no es**NCLOB** valor, como **System.String** o <xref:System.Data.OracleClient.OracleString>.|  
 |**NÚMERO**|**VarNumeric**|**Número**||  
 |**NVARCHAR2**|**String**|**NVarChar**||  
-|**SIN FORMATO**|**Binary**|**Sin formato**||  
-|**REF CURSOR**||**Cursor**|Para obtener más información, consulte [cursores REF cursor de Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md).|  
+|**SIN PROCESAR**|**Binary**|**Sin procesar**||  
+|**REF CURSOR**||**cursor**|Para obtener más información, consulte [cursores REF cursor de Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md).|  
 |**ROWID**|**AnsiString**|**ROWID**||  
 |**MARCA DE TIEMPO**|**DateTime**|**Marca de tiempo**|<xref:System.Data.OracleClient.OracleType> solo está disponible cuando se usa el software de cliente y servidor de Oracle 9i.|  
 |**MARCA DE TIEMPO CON LA ZONA HORARIA LOCAL**|**DateTime**|**TimestampLocal**|<xref:System.Data.OracleClient.OracleType> solo está disponible cuando se usa el software de cliente y servidor de Oracle 9i.|  
 |**MARCA DE TIEMPO CON LA ZONA HORARIA**|**DateTime**|**TimestampWithTz**|<xref:System.Data.OracleClient.OracleType> solo está disponible cuando se usa el software de cliente y servidor de Oracle 9i.|  
-|**ENTERO SIN SIGNO**|**Byte, UInt16, UInt32, UInt64, Decimal**|**Byte, UInt16, Uint32, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> Determina la **System.Data.DBType** y <xref:System.Data.OracleClient.OracleType>.|  
+|**ENTERO SIN SIGNO**|**Byte, UInt16, UInt32, UInt64, Decimal**|**Byte, UInt16, Uint32, número**|<xref:System.Data.OracleClient.OracleParameter.Size%2A> Determina el **System.Data.DBType** y <xref:System.Data.OracleClient.OracleType>.|  
 |**VARCHAR2**|**AnsiString**|**VarChar**||  
   
- El **InputOutput**, **salida**, y **ReturnValue** **ParameterDirection** valores utilizados por la <xref:System.Data.OracleClient.OracleParameter.Value%2A> propiedad de la <xref:System.Data.OracleClient.OracleParameter> objeto son tipos de datos de .NET Framework, a menos que el valor de entrada sea un tipo de datos de Oracle (por ejemplo, <xref:System.Data.OracleClient.OracleNumber> o <xref:System.Data.OracleClient.OracleString>). Esto no se aplica a **REF CURSOR**, **BFILE**, o **LOB** tipos de datos.  
+ El **InputOutput**, **salida**, y **ReturnValue** **ParameterDirection** valores utilizados por el <xref:System.Data.OracleClient.OracleParameter.Value%2A> propiedad de la <xref:System.Data.OracleClient.OracleParameter> objeto son tipos de datos de .NET Framework, a menos que el valor de entrada es un tipo de datos de Oracle (por ejemplo, <xref:System.Data.OracleClient.OracleNumber> o <xref:System.Data.OracleClient.OracleString>). Esto no es aplicable a **REF CURSOR**, **BFILE**, o **LOB** tipos de datos.  
   
 ## <a name="see-also"></a>Vea también  
  [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

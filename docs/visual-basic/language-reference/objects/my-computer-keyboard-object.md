@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
 ms.openlocfilehash: a7b3627a22a8e9e5de5ee022836f477fdef00cec
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198865"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875673"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard (Objeto)
 Proporciona propiedades para obtener acceso al estado actual del teclado, como las teclas que se han presionado, y proporciona un método para enviar pulsaciones de teclas a la ventana activa.  

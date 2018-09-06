@@ -1,18 +1,17 @@
 ---
 title: Sobrecarga de operadores (F#)
-description: 'Obtenga información acerca de cómo sobrecargar los operadores aritméticos en una clase o tipo de registro y en el nivel global en F #.'
+description: 'Obtenga información sobre cómo sobrecargar los operadores aritméticos en una clase o tipo de registro y en el nivel global en F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: fc9b7311aa746fd758930365972a187ffdfff0d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564370"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798744"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operadores
 
 En este tema se describe cómo sobrecargar los operadores aritméticos de un tipo de clase o registro, así como en el nivel global.
-
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,9 +24,10 @@ let [inline] (operator-symbols) parameter-list = function-body
 ```
 
 ## <a name="remarks"></a>Comentarios
-En la sintaxis anterior, el *símbolo del operador* es uno de los `+`, `-`, `*`, `/`, `=`, y así sucesivamente. El *lista de parámetros* especifica los operandos en el orden que aparecen en la sintaxis habitual para ese operador. El *cuerpo del método* construye el valor resultante.
 
-Las sobrecargas de operador para los operadores deben ser estáticas. Las sobrecargas de operador para los operadores unarios, como `+` y `-`, debe utilizar una tilde (`~`) en el *símbolo del operador* para indicar que el operador es un operador unario y no es un operador binario, tal y como se muestra en el declaración siguiente.
+En la sintaxis anterior, el *símbolo de operador* es uno de `+`, `-`, `*`, `/`, `=`, y así sucesivamente. El *lista de parámetros* especifica los operandos en el orden que aparecen en la sintaxis habitual para ese operador. El *cuerpo del método* construye el valor resultante.
+
+Las sobrecargas de operador para los operadores deben ser estáticas. Las sobrecargas de operador para los operadores unarios, como `+` y `-`, debe utilizar una tilde (`~`) en el *símbolo de operador* para indicar que el operador es un operador unario y no es un operador binario, como se muestra en el declaración siguiente.
 
 ```fsharp
 static member (~-) (v : Vector)
@@ -38,7 +38,8 @@ En el código siguiente se muestra una clase vectorial que solo tiene dos operad
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4001.fs)]
 
 ## <a name="creating-new-operators"></a>Crear operadores nuevos
-Se pueden sobrecargar todos los operadores estándar, pero también se pueden crear otros nuevos mediante secuencias de determinados caracteres. Permitidos son caracteres de operador `!`, `%`, `&`, `*`, `+`, `-`, `.`, `/`, `<`, `=`, `>`, `?`, `@`, `^`, `|`, y `~`. El carácter `~` tiene el significado especial de convertir en unario un operador y no forma parte de la secuencia de caracteres de operador. Pueden convertir en no todos los operadores unarios.
+
+Se pueden sobrecargar todos los operadores estándar, pero también se pueden crear otros nuevos mediante secuencias de determinados caracteres. Permitidos son caracteres de operador `!`, `%`, `&`, `*`, `+`, `-`, `.`, `/`, `<`, `=`, `>`, `?`, `@`, `^`, `|`, y `~`. El carácter `~` tiene el significado especial de convertir en unario un operador y no forma parte de la secuencia de caracteres de operador. No todos los operadores se pueden realizar unario.
 
 Según la secuencia de caracteres exacta utilizada, el operador tendrá una prioridad y una asociatividad determinadas. La asociatividad puede ser de izquierda a derecha o de derecha a izquierda, y se utiliza siempre que aparecen en secuencia y sin paréntesis operadores que tienen el mismo nivel de prioridad.
 
@@ -46,15 +47,13 @@ El carácter operador `.` no afecta a la prioridad, de modo que, por ejemplo, pa
 
 Solo los operadores `?` y `?<-` puede empezar por `?`.
 
-Se encuentra en una tabla que muestra la prioridad de todos los operadores en F # [Symbol and Operator Reference](symbol-and-operator-reference/index.md).
-
+Puede encontrar en una tabla que muestra la prioridad de todos los operadores en F # [referencia de símbolos y operador](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Nombres de operador sobrecargados
+
 Cuando el compilador de F# compila una expresión de operador, genera un método que tiene un nombre generado por compilador para ese operador. Este es el nombre que aparece en el Lenguaje Intermedio de Microsoft (MSIL) para el método y también en reflexión e IntelliSense. Normalmente, no es necesario utilizar estos nombres en el código de F#.
 
 En la tabla siguiente se muestran los operadores estándar y sus nombres generados correspondientes.
-
-
 
 |Operador|Nombre generado|
 |--------|--------------|
@@ -95,9 +94,8 @@ En la tabla siguiente se muestran los operadores estándar y sus nombres generad
 |`/=`|`op_DivisionAssignment`|
 |`..`|`op_Range`|
 |`.. ..`|`op_RangeStep`|
+
 Hay otras combinaciones de caracteres de operador que no se muestran en este texto y que se pueden utilizar como operadores; sus nombres se crean a partir de la concatenación de los nombres de los caracteres individuales según la tabla siguiente. Por ejemplo, +! se convierte en `op_PlusBang`.
-
-
 
 |Carácter de operador|nombre|
 |------------------|----|
@@ -124,7 +122,8 @@ Hay otras combinaciones de caracteres de operador que no se muestran en este tex
 |`]`|`RBrack`|
 
 ## <a name="prefix-and-infix-operators"></a>Operadores de prefijo e infijo
-*Prefijo* operadores se esperan que se coloquen delante de un operando o los operandos, como una función. *Infijo* operadores se esperan que se coloquen entre los dos operandos.
+
+*Prefijo* operadores se esperan que se coloca delante de un operando o los operandos, como una función. *Infijo* operadores se esperan que se coloquen entre los dos operandos.
 
 Solo se pueden usar determinados operadores como operadores de prefijo. Algunos operadores siempre son operadores de prefijo, otros pueden ser de infijo o de prefijo, y el resto son siempre operadores de infijo. Los operadores que comienzan por `!`, excepto `!=`, el operador `~` y las secuencias repetidas de `~`, son siempre operadores de prefijo. Los operadores `+`, `-`, `+.`, `-.`, `&`, `&&`, `%` y `%%` pueden ser operadores de prefijo u operadores de infijo. La versión prefija de estos operadores se distingue de su versión infija agregando `~` al principio de un operador de prefijo cuando se define. `~` no se usa al utilizar el operador, solo al definirlo.
 
@@ -145,6 +144,7 @@ En el código siguiente se muestra el uso de la sobrecarga de operadores para im
 ```
 
 ## <a name="operators-at-the-global-level"></a>Operadores en el nivel global
+
 También se pueden definir operadores en el nivel global. El código siguiente define un operador `+?`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4003.fs)]
@@ -153,7 +153,8 @@ La salida del código anterior es `12`.
 
 De esta forma, es posible redefinir los operadores aritméticos normales porque las reglas de ámbito para F# dictan que los operadores recién definidos tienen prioridad respecto de los operadores integrados.
 
-La palabra clave `inline` se suele utilizar con los operadores globales, que a menudo son pequeñas funciones que se integran mejor en el código de llamada. Hacer que las funciones de operador sean inline permite que se puedan usar con los parámetros de tipo que se resuelven estáticamente a fin de generar código genérico resuelto estáticamente. Para obtener más información, consulte [funciones Inline](functions/inline-functions.md) y [resuelto estáticamente los parámetros de tipo](generics/statically-resolved-type-parameters.md).
+La palabra clave `inline` se suele utilizar con los operadores globales, que a menudo son pequeñas funciones que se integran mejor en el código de llamada. Hacer que las funciones de operador sean inline permite que se puedan usar con los parámetros de tipo que se resuelven estáticamente a fin de generar código genérico resuelto estáticamente. Para obtener más información, consulte [funciones Inline](functions/inline-functions.md) y [parámetros tipo resueltos estáticamente](generics/statically-resolved-type-parameters.md).
 
 ## <a name="see-also"></a>Vea también
-[Miembros](members/index.md)
+
+- [Miembros](members/index.md)

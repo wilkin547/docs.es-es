@@ -15,11 +15,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a02c26b72fc7039a5050ee369043f081c32cd7ec
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786023"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869985"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind (Enumeración)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  

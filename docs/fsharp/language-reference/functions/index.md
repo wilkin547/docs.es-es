@@ -1,19 +1,19 @@
 ---
 title: Funciones (F#)
-description: 'Obtenga información acerca de las funciones en F # y cómo F # admite construcciones comunes de programación funcionales.'
+description: 'Obtenga información acerca de las funciones en F # y cómo F # admite construcciones de programación funcionales comunes.'
 ms.date: 05/16/2016
-ms.openlocfilehash: c96dddb07ca671a9e823fb25f6f6c3788fe32fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803917"
 ---
 # <a name="functions"></a>Funciones
 
 Las funciones son la unidad fundamental de la ejecución del programa en cualquier lenguaje de programación. Al igual que en otros lenguajes, una función de F# tiene un nombre, puede tener parámetros y tomar argumentos, y tiene un cuerpo. F# también admite construcciones de programación funcional como el tratamiento de las funciones como valores, el uso de funciones sin nombre en expresiones, la composición de funciones para crear nuevas funciones, funciones currificadas y la definición implícita de funciones mediante la aplicación parcial de argumentos de función.
 
 Las funciones se definen mediante la palabra clave `let`, o bien, si la función es recursiva, la combinación de palabras clave `let rec`.
-
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,6 +25,7 @@ let rec function-name parameter-list = recursive-function-body
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 El *nombre de la función* es un identificador que representa la función. La *lista de parámetros* consta de parámetros sucesivos separados por espacios. Se puede especificar un tipo explícito para cada parámetro, tal como se describe en la sección Parámetros. Si no se especifica un tipo de argumento concreto, el compilador intenta deducir el tipo del cuerpo de la función. El *cuerpo de la función* consta de una expresión. La expresión que forma el cuerpo de la función suele ser una expresión compuesta formada por varias expresiones que culminan en una expresión final que es el valor devuelto. El *tipo de valor devuelto* es un signo de dos puntos seguido de un tipo y es opcional. Si no se especifica explícitamente el tipo del valor devuelto, el compilador determina el tipo de valor devuelto a partir de la expresión final.
 
 Una definición de función simple es similar a la siguiente:
@@ -37,8 +38,8 @@ En el ejemplo anterior, el nombre de función es `f`, el argumento es `x`, que t
 
 Las funciones se pueden marcar como `inline`. Para más información sobre `inline`, vea [Inline Functions](../functions/inline-functions.md) (Funciones insertadas).
 
-
 ## <a name="scope"></a>Ámbito
+
 En cualquier nivel de ámbito distinto al ámbito de módulo, no es un error volver a usar un nombre de función o valor. Si se vuelve a usar un nombre, el último nombre declarado prevalece sobre el declarado anteriormente. Pero en el ámbito de nivel superior en un módulo, los nombres deben ser únicos. Por ejemplo, el código siguiente produce un error cuando aparece en el ámbito de módulo, pero no cuando aparece dentro de una función:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
@@ -46,8 +47,9 @@ En cualquier nivel de ámbito distinto al ámbito de módulo, no es un error vol
 Pero el código siguiente es aceptable en cualquier nivel de ámbito:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
-    
-#### <a name="parameters"></a>Parámetros
+
+### <a name="parameters"></a>Parámetros
+
 Los nombres de los parámetros aparecen después del nombre de función. Se puede especificar un tipo para un parámetro, como se muestra en el ejemplo siguiente:
 
 ```fsharp
@@ -68,16 +70,16 @@ let f x = (x, x)
 
 La función crea una tupla a partir de un argumento de cualquier tipo. Dado que no se especifica el tipo, la función se puede usar con cualquier tipo de argumento. Para más información, vea [Automatic Generalization](../generics/automatic-generalization.md) (Generalización automática).
 
-
 ## <a name="function-bodies"></a>Cuerpos de función
+
 El cuerpo de una función puede contener definiciones de variables locales y funciones. Estas variables y funciones están en ámbito en el cuerpo de la función actual, pero no fuera de ella. Una vez habilitada la opción de sintaxis ligera, se debe usar sangría para indicar que es una definición de un cuerpo de función, como se muestra en el ejemplo siguiente:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 Para más información, vea [Code Formatting Guidelines](../code-formatting-guidelines.md) (Instrucciones de formato de código) y [Verbose Syntax](../verbose-syntax.md) (Sintaxis detallada).
 
-
 ## <a name="return-values"></a>Valores devueltos
+
 El compilador usa la expresión final en el cuerpo de una función para determinar el tipo y el valor devuelto. Es posible que el compilador deduzca el tipo de la expresión final a partir las expresiones anteriores. En la función `cylinderVolume`, como se muestra en la sección anterior, el tipo de `pi` se determina a partir del tipo del literal `3.14159` como `float`. El compilador usa el tipo de `pi` para determinar el tipo de la expresión `h * pi * r * r` como `float`. Por tanto, el tipo de valor devuelto global de la función es `float`.
 
 Para especificar explícitamente el valor devuelto, escriba el código de esta forma:
@@ -91,6 +93,7 @@ let cylinderVolume (radius : float) (length : float) : float
 ```
 
 ## <a name="calling-a-function"></a>Llamar a una función
+
 Las funciones se llaman especificando el nombre de la función seguido de un espacio y, después, los argumentos separados por espacios. Por ejemplo, para llamar a la función **cylinderVolume** y asignar el resultado al valor **vol**, se escribe el código siguiente:
 
 ```fsharp
@@ -98,6 +101,7 @@ let vol = cylinderVolume 2.0 3.0
 ```
 
 ## <a name="partial-application-of-arguments"></a>Aplicación parcial de argumentos
+
 Si se proporcionan menos argumentos que los especificados, se crea una nueva función que espera los argumentos restantes. Este método de control de argumentos se conoce como *currificación* y es una característica de los lenguajes de programación funcionales como F#. Por ejemplo, supongamos que está trabajando con dos tamaños de canalización: una tiene un radio de **2,0** y la otra tiene un radio de **3,0**. Se podrían crear funciones que determinen el volumen de canalización de esta forma:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
@@ -105,16 +109,17 @@ Si se proporcionan menos argumentos que los especificados, se crea una nueva fun
 Después, se proporcionaría el argumento adicional según sea necesario para las distintas longitudes de canalización de los dos tamaños diferentes:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
-    
+
 ## <a name="recursive-functions"></a>Funciones recursivas
+
 Las *funciones recursivas* son funciones que se llaman a sí mismas. Requieren que se especifique la palabra clave **rec** después de la palabra clave **let**. La función recursiva se invoca desde el interior del cuerpo de la función de la misma forma que se invocaría cualquier llamada de función. La siguiente función recursiva calcula el número *n* de Fibonacci. La secuencia de números de Fibonacci se conoce desde la antigüedad y es una secuencia en la que cada número sucesivo es la suma de los dos números anteriores en la secuencia.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 Es posible que algunas funciones recursivas desborden la pila del programa o tengan un rendimiento ineficaz si no se escriben con cuidado y con el conocimiento de determinadas técnicas especiales, como el uso de acumuladores y continuaciones.
 
-
 ## <a name="function-values"></a>Valores de función
+
 En F#, todas las funciones se consideran valores, de hecho, se conocen como *valores de función*. Dado que las funciones son valores, se pueden usar como argumentos de otras funciones o en otros contextos donde se usan los valores. El siguiente ejemplo muestra una función que toma un valor de función como argumento:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
@@ -131,16 +136,16 @@ Si hay varios argumentos, se separan por sucesivos tokens `->`, como se muestra 
 
 El resultado es 200.
 
-
 ## <a name="lambda-expressions"></a>Expresiones lambda
+
 Una *expresión lambda* es una función sin nombre. En los ejemplos anteriores, en lugar de definir las funciones con nombre **increment** y **mul**, se podrían usar expresiones lambda de esta forma:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
 Las expresiones lambda se definen mediante la palabra clave `fun`. Una expresión lambda es similar a una definición de función, salvo que en lugar del token `=` se usa el token `->` para separar la lista de argumentos del cuerpo de la función. Al igual que en una definición de función normal, se pueden deducir o especificar explícitamente los tipos de argumento, y el tipo de valor devuelto de la expresión lambda se deduce del tipo de la última expresión en el cuerpo. Para más información, vea [Lambda Expressions: The `fun` Keyword](../functions/lambda-expressions-the-fun-keyword.md) (Expresiones lambda: la palabra clave `fun`).
 
-
 ## <a name="function-composition-and-pipelining"></a>Composición de funciones y canalización
+
 En F#, las funciones se pueden componer a partir de otras funciones. La composición de dos funciones **función1** y **función2** es otra función que representa la aplicación de **función1** seguida de la aplicación de **función2**:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
@@ -194,10 +199,10 @@ let result4 = Pipeline2 2
 ```
 
 ## <a name="overloading-functions"></a>Sobrecargar funciones
+
 Los métodos de un tipo se pueden sobrecargar, pero no las funciones. Para más información, vea [Métodos](../members/methods.md).
 
-
 ## <a name="see-also"></a>Vea también
-[Valores](../values/index.md)
 
-[Referencia del lenguaje F#](../index.md)
+- [Valores](../values/index.md)
+- [Referencia del lenguaje F#](../index.md)

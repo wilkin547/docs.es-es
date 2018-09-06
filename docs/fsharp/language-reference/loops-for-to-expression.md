@@ -1,18 +1,17 @@
 ---
 title: 'Bucles: expresión for...to (F#)'
-description: 'Vea cómo la estructura de F # for.. en expresión se usa para iterar en un bucle en un intervalo de valores de una variable de bucle.'
+description: 'Vea cómo la estructura de F # for … para la expresión se utiliza para iterar en un bucle a través de un intervalo de valores de una variable de bucle.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 841c7d557abc11e0253cb87ab8081cc77671b44b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563407"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800474"
 ---
 # <a name="loops-forto-expression"></a>Bucles: expresión for...to
 
-El `for...to` expresión se usa para iterar en un bucle en un intervalo de valores de una variable de bucle.
-
+El `for...to` expresión se utiliza para iterar en un bucle a través de un intervalo de valores de una variable de bucle.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -22,9 +21,10 @@ for identifier = start [ to | downto ] finish do
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 El tipo del identificador se deduce del tipo de la *iniciar* y *finalizar* expresiones. Tipos de estas expresiones deben ser enteros de 32 bits.
 
-Aunque técnicamente es una expresión, `for...to` más parecido a una instrucción en un lenguaje de programación imperativo tradicional. El tipo de valor devuelto para la *cuerpo-expression* debe ser `unit`. Los ejemplos siguientes muestran varios usos de la `for...to` expresión.
+Aunque técnicamente es una expresión, `for...to` es más parecido a una instrucción en un lenguaje de programación imperativo tradicional. El tipo de valor devuelto para la *cuerpo de expresión* debe ser `unit`. Los ejemplos siguientes muestran varios usos de la `for...to` expresión.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
 
@@ -37,8 +37,7 @@ La salida del código anterior es la siguiente.
 ```
 
 ## <a name="see-also"></a>Vea también
-[Referencia del lenguaje F#](index.md)
 
-[Bucles: expresión `for...in`](loops-for-in-expression.md)
-
-[Bucles: expresión `while...do`](loops-while-do-expression.md)
+- [Referencia del lenguaje F#](index.md)
+- [Bucles: expresión `for...in`](loops-for-in-expression.md)
+- [Bucles: expresión `while...do`](loops-while-do-expression.md)

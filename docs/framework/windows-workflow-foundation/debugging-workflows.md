@@ -3,11 +3,11 @@ title: Depurar flujos de trabajo
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
 ms.openlocfilehash: 17cee1f1b509e777edd3f08c55d473d768b19b55
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660014"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861388"
 ---
 # <a name="debugging-workflows"></a>Depurar flujos de trabajo
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias opciones para depurar los flujos de trabajo en ejecución del entorno de desarrollo. Los flujos de trabajo se pueden depurar en el diseñador, en XAML y en el código.  

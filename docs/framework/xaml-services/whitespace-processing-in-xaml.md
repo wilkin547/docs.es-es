@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478135"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870242"
 ---
 # <a name="white-space-processing-in-xaml"></a>Espacio en blanco en XAML de procesamiento
 Las reglas de lenguaje de XAML indican que espacio en blanco significativo debe ser procesada por una [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementación del procesador. En este tema se documentan estas reglas del lenguaje XAML. También se documenta el control de espacio en blanco adicional definida por el [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementación del procesador XAML y el escritor XAML para la serialización.  

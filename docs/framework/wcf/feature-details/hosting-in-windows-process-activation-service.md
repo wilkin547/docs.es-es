@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534714"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877929"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedaje en Servicio de activación de procesos de Windows
 El servicio de activación de procesos de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen aplicaciones que hospedar servicios de Windows Communication Foundation (WCF). El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios WCF usar HTTP y protocolos no HTTP, tales como Net.TCP, en un entorno de hospedaje que admite la activación basada en mensajes y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  

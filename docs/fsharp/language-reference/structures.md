@@ -1,17 +1,17 @@
 ---
 title: Estructuras (F#)
-description: 'Obtenga información acerca de la estructura de F #, un tipo de objeto compact a menudo más eficaz que una clase para los tipos con una pequeña cantidad de datos y un comportamiento simple.'
+description: 'Obtenga información sobre la estructura de F #, un tipo de objeto compacto a menudo más eficaz que una clase para los tipos con una pequeña cantidad de datos y un comportamiento simple.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172469"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799676"
 ---
 # <a name="structures"></a>Estructuras
 
-A *estructura* es un tipo de objeto compacto que puede ser más eficaz que una clase para tipos que tienen una pequeña cantidad de datos y un comportamiento simple.
+Un *estructura* es un tipo de objeto compacto que puede ser más eficaz que una clase para tipos que tienen una pequeña cantidad de datos y un comportamiento simple.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,7 +29,8 @@ type [accessibility-modifier] type-name =
 ```
 
 ## <a name="remarks"></a>Comentarios
-Las estructuras son *los tipos de valor*, lo que significa que se almacenan directamente en la pila o, cuando se usan como campos o elementos de matriz, en línea en el elemento primario del tipo. A diferencia de los registros y las clases, las estructuras tienen semántica de paso por valor. Esto significa que son útiles principalmente para pequeños agregados de datos a los que accede y que se copian con frecuencia.
+
+Las estructuras son *los tipos de valor*, lo que significa que se almacenan directamente en la pila o, cuando se usan como campos o los elementos de matriz, alineados en el elemento primario del tipo. A diferencia de los registros y las clases, las estructuras tienen semántica de paso por valor. Esto significa que son útiles principalmente para pequeños agregados de datos a los que accede y que se copian con frecuencia.
 
 En la sintaxis anterior, se muestran dos formularios. La primera no es la sintaxis ligera; sin embargo, se utiliza frecuentemente porque, cuando se usan las palabras clave `struct` y `end`, se puede omitir el atributo `StructAttribute`, que aparece en el segundo formulario. `StructAttribute` se puede abreviar como `Struct`.
 
@@ -41,7 +42,7 @@ Dado que las estructuras no permiten enlaces `let`, debe declarar campos en estr
 
 Los constructores explícitos podrían implicar la inicialización de los valores de campo. Cuando se tiene una estructura con un constructor explícito, se admite la inicialización en cero; sin embargo, no se utiliza el atributo `DefaultValue` en las declaraciones `val` porque entra en conflicto con el constructor explícito. Para obtener más información acerca de `val` declaraciones, vea [campos explícitos: el `val` palabra clave](members/explicit-fields-the-val-keyword.md).
 
-Los atributos y modificadores de accesibilidad están permitidos en las estructuras y siguen las mismas reglas que las de otros tipos. Para obtener más información, consulte [atributos](attributes.md) y [el Control de acceso](access-control.md).
+Los atributos y modificadores de accesibilidad están permitidos en las estructuras y siguen las mismas reglas que las de otros tipos. Para obtener más información, consulte [atributos](attributes.md) y [Control de acceso](access-control.md).
 
 Los siguientes ejemplos de código ilustran las definiciones de la estructura.
 
@@ -49,13 +50,11 @@ Los siguientes ejemplos de código ilustran las definiciones de la estructura.
 
 ## <a name="struct-records-and-discriminated-unions"></a>Struct registros y uniones discriminadas
 
-A partir de F # 4.1, puede representar [registros](records.md) y [uniones discriminadas](discriminated-unions.md) como estructuras con el `[<Struct>]` atributo.  Vea cada artículo para obtener más información.
-    
+A partir de F # 4.1, puede representar [registros](records.md) y [uniones discriminadas](discriminated-unions.md) como structs con el `[<Struct>]` atributo.  Vea cada artículo para obtener más información.
+
 ## <a name="see-also"></a>Vea también
-[Referencia del lenguaje F#](index.md)
 
-[Clases](classes.md)
-
-[Registros](records.md)
-
-[Miembros](members/index.md)
+- [Referencia del lenguaje F#](index.md)
+- [Clases](classes.md)
+- [Registros](records.md)
+- [Miembros](members/index.md)

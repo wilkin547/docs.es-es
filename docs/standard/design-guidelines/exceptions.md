@@ -10,23 +10,24 @@ helpviewer_keywords:
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b27615ef16aa69e18d82cb97f4751dc92d2ec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570608"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876640"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instrucciones de diseño de excepciones
-Control de excepciones tiene muchas ventajas comparado con informe de errores basada en valores de retorno. Diseño de buena framework ayuda al desarrollador de aplicaciones tenga en cuenta las ventajas de las excepciones. En esta sección se describe las ventajas de las excepciones y se presenta las directrices para usar de forma eficaz.  
+Control de excepciones presenta muchas ventajas respecto a los informes de errores basado en el valor de retorno. Diseño de buen marco ayuda a los desarrolladores de aplicaciones aprovechar las ventajas de las excepciones. En esta sección se describe las ventajas de las excepciones y se muestra instrucciones para usar de forma eficaz.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Inicio de excepción](../../../docs/standard/design-guidelines/exception-throwing.md)  
  [Uso de tipos de excepciones estándar](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
  [Excepciones y rendimiento](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

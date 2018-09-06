@@ -11,11 +11,11 @@ helpviewer_keywords:
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
 ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534852"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867623"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl (Control, formularios Windows Forms)
 El control `TabControl` de Windows Forms muestra múltiples fichas, similares a los divisores de un cuaderno o a las etiquetas de un conjunto de carpetas de un archivador. Las fichas pueden contener imágenes y otros controles. Use `TabControl` para crear páginas de propiedades.  

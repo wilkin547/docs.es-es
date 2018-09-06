@@ -2,12 +2,12 @@
 title: Clave del registro &#39; &lt;keyname&gt; &#39; no se pudo encontrar
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
-ms.openlocfilehash: 473c92b780de34286b47d71a23831961883d8481
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640637"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805707"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a>Clave del registro &#39; &lt;keyname&gt; &#39; no se pudo encontrar
 No encontró ninguna clave de registro.  
@@ -20,4 +20,4 @@ No encontró ninguna clave de registro.
   
 ## <a name="see-also"></a>Vea también  
  [Resumen del Registro](../../visual-basic/language-reference/keywords/registry-summary.md)  
- [Cambios de acceso del registro en Visual Basic .NET](http://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)
+ [Cambios de acceso del registro en Visual Basic .NET](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)

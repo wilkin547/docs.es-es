@@ -3,11 +3,11 @@ title: Propiedades del almacén de instancias de flujo de trabajo de SQL
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539255"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869080"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Propiedades del almacén de instancias de flujo de trabajo de SQL
 Los temas de esta sección proporcionan información sobre las propiedades del almacén de instancias del flujo de trabajo de SQL.  

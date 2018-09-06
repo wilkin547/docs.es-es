@@ -3,11 +3,11 @@ title: Sincronización de subprocesos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
 ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406629"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862999"
 ---
 # <a name="thread-synchronization-visual-basic"></a>Sincronización de subprocesos (Visual Basic)
 En las secciones siguientes se describen las características y clases que se pueden usar para sincronizar el acceso a recursos en aplicaciones multiproceso.  

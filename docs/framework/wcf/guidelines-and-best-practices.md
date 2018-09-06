@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803684"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804284"
 ---
 # <a name="guidelines-and-best-practices"></a>Instrucciones y procedimientos recomendados
 Esta sección contiene temas que proporcionan instrucciones para crear aplicaciones de Windows Communication Foundation (WCF).  
@@ -46,6 +46,6 @@ Esta sección contiene temas que proporcionan instrucciones para crear aplicacio
   
 ## <a name="see-also"></a>Vea también  
  [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)  
- [Ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Ejemplos de Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)  
  [Creación de clientes](../../../docs/framework/wcf/building-clients.md)

@@ -2,17 +2,16 @@
 title: 'Campos explícitos: palabra clave val (F#)'
 description: "Obtenga información sobre F # 'val' palabra clave, que se utiliza para declarar una ubicación para almacenar un valor en un tipo de clase o estructura sin inicializar el tipo."
 ms.date: 05/16/2016
-ms.openlocfilehash: 2bd1aae24a5823ddcd6bb8f121d8110f4a211a6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565826"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876244"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campos explícitos: palabra clave val
 
-La palabra clave `val` se usa para declarar una ubicación para almacenar un valor en un tipo de clase o estructura sin inicializarlo. Ubicaciones de almacenamiento que se declaran de esta manera se denominan *campos explícitos*. Otra manera de usar la palabra clave `val` es conjuntamente con la palabra clave `member` para declarar una propiedad implementada automáticamente. Para obtener más información sobre las propiedades implementadas automáticamente, vea [propiedades](properties.md).
-
+La palabra clave `val` se usa para declarar una ubicación para almacenar un valor en un tipo de clase o estructura sin inicializarlo. Ubicaciones de almacenamiento que se declaran de esta manera se denominan *campos explícitos*. Otra manera de usar la palabra clave `val` es conjuntamente con la palabra clave `member` para declarar una propiedad implementada automáticamente. Para obtener más información sobre las propiedades autoimplementadas, vea [propiedades](properties.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,6 +20,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 La forma más habitual de definir campos en un tipo de clase o estructura es usar un enlace `let`. Sin embargo, los enlaces `let` deben inicializarse como parte del constructor de clase, lo que no siempre es posible, necesario o deseable. Puede usar la palabra clave `val` cuando quiera un campo que no se haya inicializado.
 
 Los campos explícitos pueden ser estáticos o no estáticos. El *modificador de acceso* puede ser `public`, `private`, o `internal`. De forma predeterminada, los campos explícitos son públicos. Esto difiere de los enlaces `let` de las clases, que siempre son privados.
@@ -35,15 +35,12 @@ El [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245
 
 - Una estructura cuyos campos admitan el valor cero predeterminado.
 
-
 Por ejemplo, un campo inmutable denominado `someField` tiene un campo de respaldo en la representación compilada de .NET con el nombre `someField@` y el usuario accede al valor almacenado con una propiedad denominada `someField`.
 
 Para un campo mutable, la representación compilada de .NET es un campo .NET.
 
-
->[!WARNING] 
+>[!WARNING]
 `Note` El espacio de nombres de .NET Framework `System.ComponentModel` contiene un atributo que tiene el mismo nombre. Para obtener más información sobre el atributo, vea `System.ComponentModel.DefaultValueAttribute`.
-
 
 El código siguiente muestra el uso de campos explícitos y, para la comparación, un `let` de enlace en una clase que tiene un constructor primario. Tenga en cuenta que el campo enlazado a `let``myInt1` es privado. Si se hace referencia al campo enlazado a `let` `myInt1` desde un método de miembro, el identificador propio `this` no es necesario. Pero si hace referencia a los campos explícitos `myInt2` y `myString`, se requiere el identificador propio.
 
@@ -72,10 +69,8 @@ Los campos explícitos no están pensados para un uso rutinario. En general, sie
 
 Cuando las palabras clave `member val` aparecen juntas en una definición de tipo, se trata de la definición de una propiedad implementada automáticamente. Para obtener más información, consulte [propiedades](properties.md).
 
-
 ## <a name="see-also"></a>Vea también
-[Propiedades](properties.md)
 
-[Miembros](index.md)
-
-[`let` Bindings in Classes](let-bindings-in-classes.md) (Enlaces `let` en clases)
+- [Propiedades](properties.md)
+- [Miembros](index.md)
+- [`let` Bindings in Classes](let-bindings-in-classes.md) (Enlaces `let` en clases)

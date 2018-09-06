@@ -1,35 +1,32 @@
 ---
 title: Seguridad del proveedor de tipos
-description: 'Obtenga información acerca de la seguridad del proveedor de tipo de F #, incluida la forma de cambiar la configuración de confianza de un proveedor de tipos.'
+description: 'Obtenga información sobre la seguridad del proveedor de tipos en F #, incluida la forma de cambiar la configuración de confianza de un proveedor de tipos.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 66a873a32029d706f1f6fab50dd4f93bc29bca03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563550"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861912"
 ---
 # <a name="type-provider-security"></a>Seguridad del proveedor de tipos
 
-Proveedores de tipo son ensamblados (archivos DLL) al que hace referencia el proyecto de F # o el script que contienen código para conectarse a orígenes de datos externos y esta información de tipo de superficie para el entorno de tipo de F #. Por lo general, solo se ejecuta código en los ensamblados que se hace referencia, al compilar y, a continuación, ejecute el código (o en el caso de una secuencia de comandos, envíe el código de F # Interactive). Sin embargo, un ensamblado de proveedor de tipo se ejecutará dentro de Visual Studio cuando simplemente se explora el código en el editor. Esto sucede porque los proveedores de tipo que deba ejecutar para agregar información adicional para el editor, por ejemplo, información rápida sobre herramientas, finalización de IntelliSense y así sucesivamente. Como resultado, hay consideraciones de seguridad adicionales para el tipo de proveedor ensamblados, ya que se ejecutan automáticamente en el proceso de Visual Studio.
-
+Los proveedores de tipos son ensamblados (DLL) al que hace referencia su proyecto de F # o script que contienen código para conectarse a orígenes de datos externos y la información de este tipo de superficie para el entorno de tipo de F #. Normalmente, solo se ejecuta código en ensamblados de referencia, cuando compile y, a continuación, ejecute el código (o en el caso de una secuencia de comandos, envíe el código de F # Interactive). Sin embargo, un ensamblado de proveedor de tipo se ejecutará dentro de Visual Studio cuando simplemente se puede examinar el código en el editor. Esto sucede porque los proveedores de tipos deben ejecutar para agregar información adicional en el editor, como información rápida sobre herramientas, las finalizaciones de IntelliSense y así sucesivamente. Como resultado, hay consideraciones de seguridad adicional para el tipo de ensamblados de proveedor, ya que se ejecutan automáticamente dentro del proceso de Visual Studio.
 
 ## <a name="security-warning-dialog"></a>Cuadro de diálogo de advertencia de seguridad
-Cuando se usa un ensamblado de proveedor de tipo concreto por primera vez, Visual Studio muestra un cuadro de diálogo de seguridad que le advierte que el proveedor de tipo está a punto de ejecutarse. Antes de Visual Studio carga el proveedor de tipos, ofrece la oportunidad de decidir si confiar en este proveedor determinado. Si confía en el origen del proveedor de tipo, a continuación, seleccione "confiar en este proveedor de tipo". Si no confía en el origen del proveedor de tipo, a continuación, seleccione "no confiar en este proveedor de tipo." Confiar en el proveedor permite que se ejecuta dentro de Visual Studio y proporcionar IntelliSense y compilar características. Pero si el propio proveedor de tipo es malintencionado, al ejecutar su código pueda poner en peligro el equipo.
 
-Si el proyecto contiene código que hace referencia a proveedores de tipos que eligió en el cuadro de diálogo no confía, a continuación, en tiempo de compilación, el compilador notificará un error que indica que el proveedor de tipos no es de confianza. Los tipos que son depende del proveedor de tipo no es de confianza se indican mediante un subrayado ondulado rojo. Es seguro examinar el código en el editor.
+Cuando se usa un ensamblado de proveedor de tipo concreto por primera vez, Visual Studio muestra un cuadro de diálogo de seguridad que le advierte que el proveedor de tipos está a punto de ejecutarse. Antes de Visual Studio carga el proveedor de tipos, ofrece la oportunidad de decidir si confiar en este proveedor determinado. Si confía en el origen del proveedor de tipo, a continuación, seleccione "confiar en este proveedor de tipo". Si no confía en el origen del proveedor de tipo, a continuación, seleccione "no confíe este proveedor de tipo". Confiar en el proveedor le permite ejecutar dentro de Visual Studio y proporcionar IntelliSense y generar características. Pero si el propio proveedor de tipo es malintencionado, ejecuta su código podría poner en peligro el equipo.
+
+Si el proyecto contiene código que hace referencia a los proveedores de tipos que eligió en el cuadro de diálogo no debe confiar en, a continuación, en tiempo de compilación, el compilador notificará un error que indica que el proveedor de tipos no es de confianza. Los tipos que son dependientes en el proveedor de tipos de confianza se indican mediante subrayados ondulados rojos. Es seguro examinar el código en el editor.
 
 Si decide cambiar la configuración de confianza directamente en Visual Studio, realice los pasos siguientes.
 
-
-#### <a name="to-change-the-trust-settings-for-type-providers"></a>Para cambiar la configuración de confianza para los proveedores de tipo
+### <a name="to-change-the-trust-settings-for-type-providers"></a>Para cambiar la configuración de confianza para los proveedores de tipos
 
 1. En el `Tools` menú, seleccione `Options`y expanda el `F# Tools` nodo.
-<br />
 
-2. Seleccione `Type Providers`, en la lista de proveedores de tipo, seleccione la casilla de verificación para los proveedores de tipo confía y desactive la casilla de verificación para los que no confías.
-<br />
-
+2. Seleccione `Type Providers`, en la lista de proveedores de tipos, seleccione la casilla de verificación para los proveedores de tipos que confía y desactive la casilla de verificación para aquellos que no confía.
 
 ## <a name="see-also"></a>Vea también
-[Proveedores de tipos](index.md)
+
+- [Proveedores de tipos](index.md)

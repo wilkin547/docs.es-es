@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
 ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000022"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802527"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
 
@@ -32,8 +32,7 @@ La tabla siguiente resume las varias funcionalidades proporcionadas por esta her
 |Exporta documentos de metadatos a partir del código compilado.|[Uso de Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|
 |Valida el código de servicio compilado.|[Uso de Svcutil.exe para validar el código del servicio compilado](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|
 |Descarga los documentos de metadatos de los servicios en ejecución.|[Uso de Svcutil.exe para descargar los documentos de metadatos](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|
-|Genera el código de serialización.|
-  [Mejora del tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
+|Genera el código de serialización.|[Mejora del tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|
 
 > [!CAUTION]
 > Svcutil sobrescribirá los archivos existentes en un disco si los nombres proporcionados como parámetros son idénticos. Esto puede incluir archivos de código, configuración o archivos de metadatos. Para evitar esto al generar archivos de código y configuración, utilice el modificador `/mergeConfig`.
