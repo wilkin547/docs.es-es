@@ -1,17 +1,17 @@
 ---
 title: Funciones externas (F#)
-description: 'Obtenga información sobre la compatibilidad de idioma de F # para llamar a funciones en código nativo.'
+description: 'Obtenga información sobre la compatibilidad del lenguaje F # para llamar a funciones en código nativo.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 398697c5e0deab7f8d81ec5198ab1918bd865e13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564487"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747387"
 ---
 # <a name="external-functions"></a>Funciones externas
 
-Este tema describe la compatibilidad de idioma de F # para llamar a funciones en código nativo.
+Este tema describe la compatibilidad del lenguaje F # para llamar a funciones en código nativo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -22,7 +22,7 @@ extern declaration
 
 ## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, *argumentos* representa los argumentos que se proporcionan para el `System.Runtime.InteropServices.DllImportAttribute` atributo. El primer argumento es una cadena que representa el nombre de la DLL que contiene esta función, sin la extensión. dll. Se pueden proporcionar argumentos adicionales para cualquiera de las propiedades públicas de la `System.Runtime.InteropServices.DllImportAttribute` (clase), por ejemplo, la convención de llamada.
+En la sintaxis anterior, *argumentos* representa los argumentos que se suministran a la `System.Runtime.InteropServices.DllImportAttribute` atributo. El primer argumento es una cadena que representa el nombre del archivo DLL que contiene esta función, sin la extensión. dll. Se pueden proporcionar argumentos adicionales para cualquiera de las propiedades públicas de la `System.Runtime.InteropServices.DllImportAttribute` (clase), por ejemplo, la convención de llamada.
 
 Suponga que tiene un archivo DLL de C++ que contiene la siguiente función exportada nativo.
 
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-Puede llamar a esta función de F # mediante el siguiente código.
+Puede llamar a esta función de F # con el código siguiente.
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -48,7 +48,6 @@ InteropWithNative.HelloWorld()
 
 Interoperabilidad con código nativo se conoce como *de invocación de plataforma* y es una característica de CLR. Para más información, consulte [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado) La información de esa sección es aplicable a F #.
 
-
 ## <a name="see-also"></a>Vea también
 
-[Funciones](index.md)
+- [Funciones](index.md)

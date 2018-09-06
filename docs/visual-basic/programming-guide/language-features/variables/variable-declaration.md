@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 6890ddfd8b463cd731ab3d8f39565b50a31a1192
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332738"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43737560"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaración de variable en Visual Basic
 Declare una variable para especificar su nombre y las características. La instrucción de declaración de variables es el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Su ubicación y contenido determinan las características de la variable.  
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Para obtener más información sobre los tipos de datos, vea [tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Para obtener más información sobre los objetos, consulte [objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) y [programar con componentes](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
+ Para obtener más información sobre los tipos de datos, vea [tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Para obtener más información sobre los objetos, consulte [objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) y [programar con componentes](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
   
 ## <a name="local-type-inference"></a>Inferencia de tipo de variable local  
  *Inferencia de tipo* se usa para determinar los tipos de datos de variables locales declaradas sin un `As` cláusula. El compilador deduce el tipo de la variable del tipo de la expresión de inicialización. Esto le permite declarar variables sin especificar explícitamente un tipo. En el ejemplo siguiente, ambos `num1` y `num2` están fuertemente tipados como enteros.  
@@ -80,7 +80,7 @@ Dim l, m As Long, x, y As Single
 ## <a name="see-also"></a>Vea también  
  [Crear una variable nueva](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
  [Introducir y extraer los datos de una variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)  
  [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
  [Static](../../../../visual-basic/language-reference/modifiers/static.md)  

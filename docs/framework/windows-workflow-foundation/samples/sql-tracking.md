@@ -3,11 +3,11 @@ title: Seguimiento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
 ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402678"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779148"
 ---
 # <a name="sql-tracking"></a>Seguimiento de SQL
 Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona el flujo de trabajo de seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información acerca del seguimiento de flujo de trabajo, consulte [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  

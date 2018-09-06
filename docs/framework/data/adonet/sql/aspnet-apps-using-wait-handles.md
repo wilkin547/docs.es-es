@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
 ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386287"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738971"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Aplicaciones ASP.NET que usan identificadores de espera
 Los modelos de devolución de llamada y sondeo para el control de operaciones asincrónicas resultan de utilidad cuando la aplicación procesa una sola operación asincrónica cada vez. Los modelos Wait ofrecen una manera más flexible de procesar varias operaciones asincrónicas. Existen dos modelos Wait, cuyo nombre se debe a los métodos <xref:System.Threading.WaitHandle> usados para implementarlos: el modelo Wait (Any) y el modelo Wait (All).  

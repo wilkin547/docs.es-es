@@ -1,24 +1,23 @@
 ---
 title: Propiedades indizadas (F#)
-description: 'Obtenga información acerca de las propiedades indizadas de F #, que son propiedades que proporcionan acceso de matriz a los datos ordenados.'
+description: 'Obtenga información acerca de las propiedades indizadas en F #, que son propiedades que proporcionan acceso a datos ordenados.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 503cef9693cfe5e13d4e2d19a721d65bff1ce749
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235946"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749600"
 ---
 # <a name="indexed-properties"></a>Propiedades indizadas
 
-*Propiedades indizadas* propiedades que proporcionan acceso de la matriz a se ordenan los datos. Provienen de tres formas:
+*Las propiedades indizadas* se ordenan de propiedades que proporcionan acceso a datos. Vienen en tres formas:
 
 * `Item`
 * `Ordinal`
 * `Cardinal`
 
-Un miembro de F # debe denominarse uno de estos tres nombres para proporcionar acceso a la matriz. `IndexerName` se utiliza para representar cualquiera de las tres opciones siguientes:
-
+Un miembro de F # debe tener nombres uno de estos tres nombres para proporcionar acceso de tipo matriz. `IndexerName` se utiliza para representar cualquiera de las tres opciones siguientes:
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,17 +45,18 @@ member self-identifier.IndexerName
 ```
 
 ## <a name="remarks"></a>Comentarios
-Las formas de la sintaxis anterior muestran cómo definir propiedades indizadas que tienen tanto una `get` y un `set` método, tienen un `get` método únicamente, o tiene un `set` método solo. También puede combinar ambos la sintaxis mostrada para get únicamente y la sintaxis mostrada para set únicamente y generar una propiedad que tenga get y set. Esta última forma permite colocar los atributos y modificadores de accesibilidad diferente en la operación get y establecer métodos.
 
-Cuando el *IndexerName* es `Item`, el compilador trata la propiedad como una propiedad indizada predeterminada. A *propiedad indizada predeterminada* es una propiedad que se puede tener acceso mediante sintaxis parecida a la matriz en la instancia del objeto. Por ejemplo, si `obj` es un objeto del tipo que define esta propiedad, la sintaxis `obj.[index]` se usa para tener acceso a la propiedad.
+Los formularios de la sintaxis anterior muestran cómo definir las propiedades indizadas con las dos un `get` y un `set` método, tiene un `get` solo, método o tiene un `set` solo método. También puede combinar la sintaxis que se muestra para solo get y la sintaxis mostrada para el conjunto solo y generar una propiedad que tiene get y set. Esta última forma permite colocar los atributos y modificadores de accesibilidad diferente en la operación get y establecer los métodos.
 
-La sintaxis para tener acceso a una propiedad indizada no predeterminada consiste en proporcionar el nombre de la propiedad y el índice entre paréntesis. Por ejemplo, si la propiedad es `Ordinal`, se escribe `obj.Ordinal(index)` para tener acceso a él.
+Cuando el *IndexerName* es `Item`, el compilador trata la propiedad como una propiedad indizada predeterminada. Un *propiedad indizada predeterminada* es una propiedad que puede tener acceso utilizando la sintaxis de matriz en la instancia del objeto. Por ejemplo, si `obj` es un objeto del tipo que define esta propiedad, la sintaxis `obj.[index]` se usa para acceder a la propiedad.
 
-Independientemente de qué forma utilice, debe utilizar siempre el formulario currificado para el `set` método en una propiedad indizada. Para obtener información acerca de las funciones currificadas, vea [funciones](../functions/index.md).
+La sintaxis para tener acceso a una propiedad indizada no predeterminada consiste en proporcionar el nombre de la propiedad y el índice entre paréntesis. Por ejemplo, si la propiedad es `Ordinal`, escribe `obj.Ordinal(index)` para acceder a él.
+
+Independientemente del formulario que utilice, debe usar siempre la currificada. para el `set` método en una propiedad indizada. Para obtener información acerca de las funciones currificadas, vea [funciones](../functions/index.md).
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo de código siguiente se muestra la definición y el uso del valor predeterminado y las propiedades indizadas no predeterminadas que tienen get y set métodos.
+El ejemplo de código siguiente muestra la definición y uso de predeterminado y las propiedades indizadas no predeterminado que tienen get y establecer los métodos.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
@@ -69,11 +69,13 @@ seven seventh eight eighth nine ninth ten tenth
 ```
 
 ## <a name="indexed-properties-with-multiple-index-variables"></a>Propiedades indizadas con varias Variables de índice
-Propiedades indizadas pueden tener más de una variable de índice. En ese caso, las variables están separadas por comas cuando se utiliza la propiedad. El método set de esta propiedad debe tener dos argumentos currificadas, el primero de los cuales es una tupla que contiene las claves y el segundo de los cuales es el valor que se va a establecer.
+
+Las propiedades indizadas pueden tener más de una variable de índice. En ese caso, las variables están separadas por comas, cuando se usa la propiedad. El método set de esta propiedad debe tener dos argumentos currificados, el primero de los cuales es una tupla que contiene las claves y el segundo de los cuales es el valor que se va a establecer.
 
 El código siguiente muestra el uso de una propiedad indizada con varias variables de índice.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
-    
+
 ## <a name="see-also"></a>Vea también
-[Miembros](index.md)
+
+- [Miembros](index.md)

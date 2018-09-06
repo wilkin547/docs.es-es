@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
 ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466274"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732980"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Definir un evento en los controles de formularios Windows Forms
 Para obtener más información acerca de cómo definir eventos personalizados, vea [eventos](../../../../docs/standard/events/index.md). Si define un evento que no tiene datos asociados, use el tipo base de datos de evento, <xref:System.EventArgs>, y use <xref:System.EventHandler> como delegado de evento. Todo lo que queda por hacer es definir un miembro de evento y protegido `On` *EventName* método que genera el evento.  

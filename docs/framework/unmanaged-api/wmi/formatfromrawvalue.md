@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542172"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779928"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue (función)
-Convierte un valor de datos de rendimiento sin procesar al formato especificado o dos valores de datos de rendimiento sin procesar si la conversión de formato está basado en el tiempo.   
+Convierte un valor de datos de rendimiento sin procesar al formato especificado, o bien dos valores de datos de rendimiento sin procesar si la conversión de formato es de duración definida.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

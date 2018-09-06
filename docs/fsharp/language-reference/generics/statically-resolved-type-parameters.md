@@ -1,18 +1,17 @@
 ---
 title: Parámetros de tipo resueltos estáticamente (F#)
-description: 'Obtenga información acerca de cómo usar F # parámetros de tipo resueltos estáticamente, que se sustituyan por un tipo real en tiempo de compilación en lugar de en tiempo de ejecución.'
+description: 'Obtenga información sobre cómo usar F # parámetro de tipo resueltos estáticamente, que se reemplaza con un tipo real en tiempo de compilación en lugar de en tiempo de ejecución.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 12c2af4d9df7ae1e5e77efc9413eb8777459a83c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233787"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777878"
 ---
 # <a name="statically-resolved-type-parameters"></a>Parámetros de tipo resueltos estáticamente
 
-A *parámetro de tipo resueltos estáticamente* es un parámetro de tipo que se reemplaza con un tipo real en tiempo de compilación en lugar de en tiempo de ejecución. Va precedido por el símbolo de intercalación (^).
-
+Un *parámetro de tipo resueltos estáticamente* es un parámetro de tipo que se reemplaza con un tipo real en tiempo de compilación en lugar de en tiempo de ejecución. Va precedido por el símbolo de intercalación (^).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,6 +20,7 @@ A *parámetro de tipo resueltos estáticamente* es un parámetro de tipo que se 
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 En el lenguaje F#, hay dos clases de parámetros de tipo. En primer lugar está el parámetro de tipo genérico estándar. Estos parámetros se indican mediante un apóstrofo ('), como en `'T` y `'U`. Equivalen a los parámetros de tipo genérico de otros lenguajes .NET Framework. El otro tipo de parámetro se resuelve estáticamente y se indica mediante el símbolo de intercalación, como en `^T` y `^U`.
 
 Los parámetros de tipo resueltos estáticamente son sobre todo útiles cuando se usan con restricciones de miembro, que son restricciones que permiten especificar que un argumento de tipo debe tener uno o varios miembros determinados. Este tipo de restricción no se puede crear mediante un parámetro de tipo genérico normal.
@@ -57,7 +57,7 @@ La salida es la siguiente.
 1.500000
 ```
 
-A partir de F # 4.1, también puede especificar nombres de tipo concreto en firmas de parámetro de tipo resueltos estáticamente.  En versiones anteriores del lenguaje, el nombre de tipo realmente se pudo inferir el compilador, pero no se podía realmente especificar en la firma.  A partir de F # 4.1, también puede especificar nombres de tipo concreto en firmas de parámetro de tipo resueltos estáticamente. Por ejemplo:
+A partir de F # 4.1, también puede especificar los nombres de tipo concreto en las firmas de parámetro de tipo resueltos estáticamente.  En versiones anteriores del lenguaje, el nombre de tipo se pudo inferir realmente por el compilador, pero no se puede especificar realmente en la firma.  A partir de F # 4.1, también puede especificar los nombres de tipo concreto en las firmas de parámetro de tipo resueltos estáticamente. Por ejemplo:
 
 ```fsharp
 let inline konst x _ = x
@@ -86,12 +86,9 @@ let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member r
 ```
 
 ## <a name="see-also"></a>Vea también
-[Genéricos](index.md)
 
-[Inferencia de tipos](../type-inference.md)
-
-[Generalización automática](automatic-generalization.md)
-
-[Restricciones](constraints.md)
-
-[Funciones insertadas](../functions/inline-functions.md)
+- [Genéricos](index.md)
+- [Inferencia de tipos](../type-inference.md)
+- [Generalización automática](automatic-generalization.md)
+- [Restricciones](constraints.md)
+- [Funciones insertadas](../functions/inline-functions.md)

@@ -15,11 +15,11 @@ ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553069"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742649"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>MDA de fatalExecutionError
 El Ayudante para la depuración administrada (MDA) de `fatalExecutionEngineError` se activa cuando se detecta un error grave en Common Language Runtime (CLR). Esto finaliza el proceso.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
 ms.openlocfilehash: 519f9073954e8f7710c9e73b61f40b4fcfefd25b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560237"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740317"
 ---
 # <a name="query-expression-syntax-examples-grouping"></a>Ejemplos de sintaxis de expresiones de consulta: agrupación
 Los ejemplos de este tema muestran cómo usar el `GroupBy` método para consultar el [modelo AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) con la sintaxis de expresión de consulta. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo AdventureWorks.  

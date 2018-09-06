@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482927"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747072"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalización de fuentes (Data Services de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer datos como una fuente. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite los formatos Atom y JavaScript Object Notation (JSON) para las fuentes de datos. Cuando se usa una fuente Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] proporciona un método estándar para serializar los datos, como entidades y relaciones en un formato XML que puede incluirse en el cuerpo del mensaje HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define una asignación de entidad-propiedad predeterminada entre los datos que se encuentra en las entidades y elementos Atom. Para obtener más información, consulte [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  

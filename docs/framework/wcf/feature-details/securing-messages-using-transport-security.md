@@ -5,11 +5,11 @@ ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 0ab04326404a4b90e30036594a7152e6118c2138
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556343"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777888"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protección de mensajes utilizando la seguridad de transporte
 En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ) que puede utilizar para proteger los mensajes enviados a una cola.  

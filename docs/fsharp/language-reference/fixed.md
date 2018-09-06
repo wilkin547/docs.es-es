@@ -1,17 +1,17 @@
 ---
-title: 'La palabra clave fija (F #)'
-description: "Obtenga información acerca de cómo puede 'pin' local en la pila para evitar que la colección con F # 'fixed' palabra clave."
+title: 'La palabra clave Fixed (F #)'
+description: "Obtenga información sobre cómo puede 'pin' local en la pila para evitar que la colección con F # 'fixed' palabra clave."
 ms.date: 04/24/2017
-ms.openlocfilehash: 913ee4d7b0f6b2437793d4788e53556d6be6c4db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563881"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779254"
 ---
 # <a name="the-fixed-keyword"></a>La palabra clave Fixed
 
-F # 4.1 presenta el `fixed` palabra clave, que le permite "fijar" una variable local en la pila para evitar que se recopilan o se mueve durante la recolección de elementos no utilizados.  Se usa para escenarios de programación de bajo nivel.
+F # 4.1 presenta el `fixed` palabra clave, lo que permite que una variable local en la pila para evitar que se recopilan o movido durante la recolección de elementos no utilizados "anclar".  Se usa para escenarios de programación de bajo nivel.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,13 +21,13 @@ use ptr = fixed expression
 
 ## <a name="remarks"></a>Comentarios
 
-Este comando extiende la sintaxis de expresiones para permitir la extracción de un puntero y se enlaza a un nombre que ha impedido que se recopilan o se mueve durante la recolección de elementos no utilizados.  
+Esto amplía la sintaxis de expresiones para permitir que un puntero de extracción y se enlaza a un nombre que ha impedido que se recopilan o movido durante la recolección de elementos no utilizados.  
 
-Un puntero desde una expresión es fijo a través de la `fixed` palabra clave está enlazado a un identificador a través de la `use` (palabra clave).  La semántica de esto es similar a la administración de recursos a través de la `use` (palabra clave).  El puntero se fija mientras esté dentro del ámbito, y una vez que está fuera del ámbito, ya no es fijo.  `fixed` no se puede usar fuera del contexto de un `use` enlace.  Debe enlazar el puntero a un nombre con `use`.
+Un puntero de una expresión que se ha corregido a través de la `fixed` palabra clave está enlazado a un identificador a través de la `use` palabra clave.  La semántica de esto es similar a la administración de recursos a través de la `use` palabra clave.  El puntero se fija mientras esté dentro del ámbito, y una vez que esté fuera del ámbito, ya no es fijo.  `fixed` no se puede usar fuera del contexto de un `use` enlace.  Debe enlazar el puntero a un nombre con `use`.
 
-El uso de `fixed` debe producirse dentro de una expresión en una función o un método.  No puede utilizarse en un ámbito de nivel de script o el nivel de módulo.
+El uso de `fixed` debe producirse dentro de una expresión en una función o un método.  No se puede usar en un ámbito de nivel de módulo o script.
 
-Al igual que todo el código de puntero, esto es una característica no segura y emitirá una advertencia cuando se utiliza.
+Como todo el código de puntero, esto es una característica no segura y emitirá una advertencia cuando se usa.
 
 ## <a name="example"></a>Ejemplo
 
@@ -63,4 +63,4 @@ doPointerWork()
 
 ## <a name="see-also"></a>Vea también
 
-[NativePtr (módulo)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [NativePtr (módulo)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

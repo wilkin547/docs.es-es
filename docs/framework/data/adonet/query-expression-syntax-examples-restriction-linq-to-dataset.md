@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
 ms.openlocfilehash: 556b1cc31f42cecc19492412120b31da83eff609
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397453"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733841"
 ---
 # <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Ejemplos de sintaxis de expresiones de consulta: Restricción (LINQ to DataSet)
 Los ejemplos de este tema muestran cómo utilizar el método <xref:System.Linq.Enumerable.Where%2A> para consultar <xref:System.Data.DataSet> utilizando sintaxis de expresión de consultas.  

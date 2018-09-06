@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: b4434d6f66ea8329903c92fe664d9704bce19625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584207"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748494"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Desarrollo de aplicaciones con Visual Basic
 En esta sección se trata la documentación conceptual del lenguaje Visual Basic.  
@@ -28,13 +28,13 @@ En esta sección se trata la documentación conceptual del lenguaje Visual Basic
  [Crear y usar componentes en Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Se define el término *componente* y se habla de cómo y cuándo crear componentes.  
   
- [Impresión y creación de informes](../../visual-basic/developing-apps/printing/printing-and-reporting.md)  
+ [Impresión y creación de informes](../../visual-basic/developing-apps/printing/index.md)  
  Proporciona información general y vínculos a documentación pertinente relacionada con la impresión y los informes.  
   
- [Fundamentos de las aplicaciones de Windows Forms](../../visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)  
+ [Fundamentos de las aplicaciones de Windows Forms](../../visual-basic/developing-apps/windows-forms/index.md)  
  Proporciona información sobre cómo crear aplicaciones de Windows Forms usando Visual Studio.  
   
- [Personalizar proyectos y ampliar My](../../visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)  
+ [Personalizar proyectos y ampliar My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
  Describe cómo personalizar plantillas de proyecto para proporcionar objetos de `My` adicionales.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

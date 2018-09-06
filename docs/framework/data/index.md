@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 4ad0b287aa37104e01015ef0a44cf500bc885c29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356765"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724011"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Datos y modelado en .NET Framework
 En esta sección se proporciona información sobre cómo tener acceso a los datos utilizando ADO.NET, Language Integrated Query (LINQ), Data Services de WCF y XML.  
@@ -20,7 +20,7 @@ En esta sección se proporciona información sobre cómo tener acceso a los dato
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Describe la arquitectura de ADO.NET y la forma de utilizar las clases de ADO.NET para administrar datos de aplicaciones e interactuar con orígenes de datos, por ejemplo orígenes de datos de OLE DB, Microsoft SQL Server y XML.  
   
- [LINQ Portal](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ Portal](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  Proporciona vínculos a la documentación pertinente para Language Integrated Query (LINQ).  
   
  [Procesar transacciones](../../../docs/framework/data/transactions/index.md)  
@@ -32,11 +32,11 @@ En esta sección se proporciona información sobre cómo tener acceso a los dato
  [Documentos y datos XML](../../../docs/standard/data/xml/index.md)  
  Proporciona información general sobre un conjunto completo e integrado de clases que funcionan con documentos XML y datos en .NET Framework.  
   
- [Referencia de los estándares XML](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
+ [Referencia de los estándares XML](https://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Proporciona información de referencia sobre los estándares XML admitidos por Microsoft.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Tecnologías de modelado de Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=193039)  
+ [Tecnologías de modelado de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=193039)  
  Describe un conjunto de tecnologías que permiten diseñar y desarrollar aplicaciones basadas en datos rápidas y personalizadas.  
   
  [Guía de desarrollo](../../../docs/framework/development-guide.md)  

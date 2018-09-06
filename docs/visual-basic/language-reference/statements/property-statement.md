@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
 ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420386"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738151"
 ---
 # <a name="property-statement"></a>Property Statement
 Declara el nombre de una propiedad y los procedimientos de propiedad que se utiliza para almacenar y recuperar el valor de la propiedad.  

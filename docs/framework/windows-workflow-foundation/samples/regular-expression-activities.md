@@ -2,15 +2,15 @@
 title: Actividades de expresión normales
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-ms.openlocfilehash: 34b1f18f26f0b79c4b8711d65da5707a85cf3bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519839"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743169"
 ---
 # <a name="regular-expression-activities"></a>Actividades de expresión normales
-En este ejemplo se muestra cómo crear un conjunto de actividades que exponen la funcionalidad de expresión regular del espacio de nombres <xref:System.Text.RegularExpressions>. Estas actividades personalizadas se pueden usar en una aplicación de flujo de trabajo. Para obtener más información sobre las expresiones regulares, vea [System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
+En este ejemplo se muestra cómo crear un conjunto de actividades que exponen la funcionalidad de expresión regular del espacio de nombres <xref:System.Text.RegularExpressions>. Estas actividades personalizadas se pueden usar en una aplicación de flujo de trabajo. Para obtener más información sobre las expresiones regulares, vea [System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
   
  En la siguiente tabla se detallan las actividades personalizadas de este ejemplo.  
   
@@ -29,7 +29,7 @@ En este ejemplo se muestra cómo crear un conjunto de actividades que exponen la
 |------------------------------|-----------------|  
 |Pattern (necesario)|La expresión regular con la que buscar.|  
 |Input (necesario)|La cadena de entrada que se va a buscar.|  
-|RegexOptions|Combinación OR bit a bit de [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) valores de enumeración.|  
+|RegexOptions|Combinación OR bit a bit de [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) valores de enumeración.|  
 |Valor devuelto|`true` si la entrada encuentra una coincidencia en el patrón proporcionado; de lo contrario, `false`.|  
   
  En el siguiente ejemplo de código se muestra cómo utilizar la actividad personalizada `IsMatch`.  
@@ -51,7 +51,7 @@ new IsMatch
 |------------------------------|-----------------|  
 |Pattern (necesario)|La expresión regular con la que buscar.|  
 |Input (necesario)|La cadena de entrada que se va a buscar.|  
-|RegexOptions|Combinación OR bit a bit de [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) valores de enumeración.|  
+|RegexOptions|Combinación OR bit a bit de [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) valores de enumeración.|  
 |Valor devuelto|Un objeto <xref:System.Text.RegularExpressions.MatchCollection> que contiene la colección de coincidencias correctas.|  
   
  En el siguiente ejemplo de código se muestra cómo utilizar la actividad personalizada `Matches`.  
@@ -75,7 +75,7 @@ new Matches
 |Input (necesario)|La cadena de entrada que se va a buscar.|  
 |Replacement|La cadena de reemplazo.<br /><br /> Si se establece `Replacement`, se omite la propiedad `MatchEvaluator`. Es necesario establecer la propiedad `Replacement` o `MatchEvaluator`.|  
 |MatchEvaluator|Un método personalizado que examina cada coincidencia y devuelve la cadena coincidente original o una cadena de reemplazo.<br /><br /> Si se establece `Replacement`, se omite la propiedad `MatchEvaluator`. Es necesario establecer la propiedad `Replacement` o `MatchEvaluator`.|  
-|RegexOptions|Combinación OR bit a bit de [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) valores de enumeración.|  
+|RegexOptions|Combinación OR bit a bit de [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) valores de enumeración.|  
 |Valor devuelto|Un objeto <xref:System.Text.RegularExpressions.MatchCollection> que contiene la colección de coincidencias correctas.|  
   
  En el siguiente ejemplo de código se muestra cómo utilizar la actividad personalizada `Replace`.  
@@ -111,6 +111,6 @@ new Replace
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Regex`

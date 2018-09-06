@@ -2,12 +2,12 @@
 title: Problemas conocidos en SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 99d4c5c1cf7275936cc7a13bb545321ec8407e43
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c1353444415ddd2305a73d14bacf1bb33a931929
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765664"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740187"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conocidos en SqlClient para Entity Framework
 En esta sección se describen problemas conocidos relacionados con el proveedor de datos .NET Framework para SQL Server (SqlClient).  
@@ -36,19 +36,19 @@ En esta sección se describen problemas conocidos relacionados con el proveedor 
 -   Una consulta que tiene una construcción DEREF sobre una construcción REF.  
   
 ## <a name="skip-operator"></a>Operador SKIP  
- Si utilizas [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], uso de SKIP con ORDER BY en columnas sin clave podría devolver resultados incorrectos. Se puede omitir un número superior al número especificado de filas si la columna sin clave tiene datos duplicados en ella. Esto se debe a cómo se convierte SKIP en [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Por ejemplo, en la siguiente consulta, más de cinco filas pueden omitirse si `E.NonKeyColumn` tiene valores duplicados:  
+ Si usas [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], uso de SKIP con ORDER BY en columnas sin clave podría devolver resultados incorrectos. Se puede omitir un número superior al número especificado de filas si la columna sin clave tiene datos duplicados en ella. Esto se debe a cómo se convierte SKIP en [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Por ejemplo, en la siguiente consulta, más de cinco filas pueden omitirse si `E.NonKeyColumn` tiene valores duplicados:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Cuál es la versión correcta de SQL Server  
- El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] destinos el [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] consulta basada en la versión de SQL Server que se especifica en el `ProviderManifestToken` atributo del elemento Schema en el archivo de almacenamiento (SSDL) del modelo. Esta versión podría diferir de la versión de SQL Server real al que está conectado. Por ejemplo, si usa SQL Server 2005, pero el atributo `ProviderManifestToken` está establecido en 2008, la consulta de [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] generada podría no ejecutarse en el servidor. Por ejemplo, una consulta que use los nuevos tipos de fecha y hora que se incluyeron en SQL Server 2008 no se ejecutará en las versiones anteriores de SQL Server. Si usa SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2000, generado [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] consulta podría ser optimizar menos o se podría obtener una excepción que indicara que la consulta no se admite. Para obtener más información, vea la sección Operadores CROSS APPLY y OUTER APPLY, anteriormente en este tema.  
+ El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] destinos el [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] consulta según la versión de SQL Server que se especifica en el `ProviderManifestToken` atributo del elemento Schema en el archivo de almacenamiento (.ssdl) del modelo. Esta versión podría diferir de la versión de SQL Server real al que está conectado. Por ejemplo, si usa SQL Server 2005, pero el atributo `ProviderManifestToken` está establecido en 2008, la consulta de [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] generada podría no ejecutarse en el servidor. Por ejemplo, una consulta que use los nuevos tipos de fecha y hora que se incluyeron en SQL Server 2008 no se ejecutará en las versiones anteriores de SQL Server. Si usa SQL Server 2005, pero su `ProviderManifestToken` atributo está establecido en 2000, generado [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] consulta podría ser optimizar menos o podría obtener una excepción que indica que no se admite la consulta. Para obtener más información, vea la sección Operadores CROSS APPLY y OUTER APPLY, anteriormente en este tema.  
   
  Ciertos comportamientos de las bases de datos dependen del nivel de compatibilidad establecida en la base de datos. Si el atributo `ProviderManifestToken` está establecido en 2005 y la versión de SQL Server es 2005, pero el nivel de compatibilidad de una base de datos está establecido en "80" (SQL Server 2000), el código [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] generado estará destinado a SQL Server 2005, pero podría no ejecutarse tal y como se esperaba debido a la configuración del nivel de compatibilidad. Por ejemplo, podría perder la información de los pedidos si un nombre de columna de la lista ORDER BY coincide con un nombre de columna en el selector.  
   
 ## <a name="nested-queries-in-projection"></a>Consultas anidadas en proyección  
- Las consultas anidadas en una cláusula de proyección se podrían traducir en consultas de producto cartesiano en el servidor. En algunos servidores back-end, incluido SLQ Server, esto puede hacer que la tabla TempDB crezca demasiado. Esto puede hacer que disminuya el rendimiento del servidor.  
+ Las consultas anidadas en una cláusula de proyección se podrían traducir en consultas de producto cartesiano en el servidor. En algunos servidores back-end, incluido SLQ Server, esto puede causar la tabla TempDB bastante grande. Esto puede hacer que disminuya el rendimiento del servidor.  
   
  El siguiente es un ejemplo de una consulta anidada en una cláusula de proyección:  
   
@@ -57,7 +57,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Valores de identidad de GUID generados por el servidor  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con los valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir a su vez la devolución de dichos valores después de la inserción de una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos de SQL Server a través de la [cláusula OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con los valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir a su vez la devolución de dichos valores después de la inserción de una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos de SQL Server a través de la [cláusula OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Vea también  
  [SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

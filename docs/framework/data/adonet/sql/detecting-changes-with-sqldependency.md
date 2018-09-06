@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
 ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405439"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724781"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Detectar cambios con SqlDependency
 Un objeto <xref:System.Data.SqlClient.SqlDependency> se puede asociar a <xref:System.Data.SqlClient.SqlCommand> para detectar si los resultados de consulta son diferentes de los recuperados originalmente. También puede asignar un delegado al evento `OnChange`, que se activará cuando los resultados cambien en un comando asociado. Para poder ejecutar el comando, debe asociar <xref:System.Data.SqlClient.SqlDependency> con el comando. La propiedad `HasChanges` de <xref:System.Data.SqlClient.SqlDependency> se puede utilizar también para determinar si los resultados de la consulta han cambiado desde que los datos se recuperaron por primera vez.  

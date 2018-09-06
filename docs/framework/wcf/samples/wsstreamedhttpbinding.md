@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d2111639266612183630231dbd51be55ef9c1ee4
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807181"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779343"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 El ejemplo muestra cómo crear un enlace diseñado para admitir escenarios de transmisión por secuencias cuando se usa el transporte HTTP.  
@@ -20,7 +20,7 @@ El ejemplo muestra cómo crear un enlace diseñado para admitir escenarios de tr
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
@@ -28,7 +28,7 @@ El ejemplo muestra cómo crear un enlace diseñado para admitir escenarios de tr
   
 1.  Crear un nuevo enlace estándar  
   
-     Los enlaces estándar en Windows Communication Foundation (WCF), como basicHttpBinding y netTcpBinding configuran los transportes subyacentes y la pila de canal para los requisitos específicos. En este ejemplo, `WSStreamedHttpBinding` configura la pila del canal para permitir el vertido. De forma predeterminada, la seguridad del WS y la mensajería de confianza no se agregan a la pila del canal porque ambas características no se admiten en el vertido. El nuevo enlace se implementa en la clase `WSStreamedHttpBinding` que deriva de <xref:System.ServiceModel.Channels.Binding>. El `WSStreamedHttpBinding` contiene los siguientes elementos de enlace: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, y <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. La clase proporciona un método `CreateBindingElements()` para configurar la pila de enlace resultante, como se muestra en el código muestra siguiente.  
+     Los enlaces estándar en Windows Communication Foundation (WCF), como basicHttpBinding y netTcpBinding configuración los transportes subyacentes y la pila de canales para requisitos específicos. En este ejemplo, `WSStreamedHttpBinding` configura la pila del canal para permitir el vertido. De forma predeterminada, la seguridad del WS y la mensajería de confianza no se agregan a la pila del canal porque ambas características no se admiten en el vertido. El nuevo enlace se implementa en la clase `WSStreamedHttpBinding` que deriva de <xref:System.ServiceModel.Channels.Binding>. El `WSStreamedHttpBinding` contiene los siguientes elementos de enlace: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, y <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. La clase proporciona un método `CreateBindingElements()` para configurar la pila de enlace resultante, como se muestra en el código muestra siguiente.  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -52,7 +52,7 @@ El ejemplo muestra cómo crear un enlace diseñado para admitir escenarios de tr
   
 2.  Añadir la compatibilidad de configuración  
   
-     Para exponer el transporte a través de la configuración, el ejemplo implementa dos clases más, `WSStreamedHttpBindingConfigurationElement` y `WSStreamedHttpBindingSection`. La clase `WSStreamedHttpBindingSection` es un <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> que expone `WSStreamedHttpBinding` en el sistema de configuración de WCF. El volumen de la implementación se delega a `WSStreamedHttpBindingConfigurationElement`, lo cual deriva de <xref:System.ServiceModel.Configuration.StandardBindingElement>. La clase `WSStreamedHttpBindingConfigurationElement` tiene propiedades que corresponden a las propiedades de `WSStreamedHttpBinding`y funciones para asignar cada elemento de configuración a un enlace.  
+     Para exponer el transporte a través de la configuración, el ejemplo implementa dos clases más, `WSStreamedHttpBindingConfigurationElement` y `WSStreamedHttpBindingSection`. La clase `WSStreamedHttpBindingSection` es un <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> que expone `WSStreamedHttpBinding` al sistema de configuración de WCF. El volumen de la implementación se delega a `WSStreamedHttpBindingConfigurationElement`, lo cual deriva de <xref:System.ServiceModel.Configuration.StandardBindingElement>. La clase `WSStreamedHttpBindingConfigurationElement` tiene propiedades que corresponden a las propiedades de `WSStreamedHttpBinding`y funciones para asignar cada elemento de configuración a un enlace.  
   
      Registre este controlador con el sistema de configuración, agregando la siguiente sección al archivo de configuración pertinente.  
   
@@ -92,13 +92,13 @@ El ejemplo muestra cómo crear un enlace diseñado para admitir escenarios de tr
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha llevado a cabo los pasos enumerados en [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Asegúrese de que ha realizado los pasos enumerados en [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Asegúrese de que ha llevado a cabo la [instrucciones de instalación de certificado de servidor de Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3.  Asegúrese de que ha realizado la [instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
   
-4.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Para ejecutar el ejemplo en una configuración de varios equipos, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  Para ejecutar el ejemplo en una configuración de equipos cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 6.  Cuando se muestre la ventana de cliente, escriba "Sample.txt." Debería encontrar una "Copy of Sample.txt" en su directorio.  
   
@@ -134,7 +134,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>Cliente de muestra WSStreamedHttpBinding   
- El cliente que se utiliza para interactuar con el servicio mediante `WSStreamedHttpBinding` se encuentra en el subdirectorio del cliente. Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, una alerta de seguridad se muestra cuando se intenta acceder a una dirección HTTPS en el explorador como https://localhost/servicemodelsamples/service.svc. Para permitir que el cliente de WCF para que funcione con un certificado de prueba en su lugar, se ha añadido código adicional al cliente para suprimir la alerta de seguridad. El código y la clase que lo acompaña no son necesarios cuando se usan certificados de producción.  
+ El cliente que se utiliza para interactuar con el servicio mediante `WSStreamedHttpBinding` se encuentra en el subdirectorio del cliente. Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, una alerta de seguridad se muestra cuando se intenta obtener acceso a una dirección HTTPS en el explorador como https://localhost/servicemodelsamples/service.svc. Para permitir que el cliente de WCF para que funcione con un certificado de prueba en su lugar, se agregó código adicional al cliente para suprimir la alerta de seguridad. El código y la clase que lo acompaña no son necesarios cuando se usan certificados de producción.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

@@ -2,12 +2,12 @@
 title: 'Tipos básicos (F #)'
 description: 'Descubra los tipos básicos fundamentales que se usan en el lenguaje F #.'
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937202"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777212"
 ---
 # <a name="basic-types"></a>Tipos básicos
 
@@ -38,4 +38,5 @@ En este tema se enumera los tipos básicos que se definen en el lenguaje F #. Es
 Puede realizar cálculos con números enteros demasiado grandes para el tipo de entero de 64 bits mediante el [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` no se considera un tipo básico; es la abreviatura de `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Vea también
-[Referencia del lenguaje F#](index.md)
+
+- [Referencia del lenguaje F#](index.md)

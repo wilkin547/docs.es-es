@@ -6,15 +6,15 @@ helpviewer_keywords:
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2e0440aadcad7c4297cdc6e6489ca004480420ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 60aa4da95666de01daa087c4c8e826c8cf72ba85
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497417"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734934"
 ---
 # <a name="securing-services-and-clients"></a>Protección de servicios y clientes
-La información de esta sección se centra en programar la seguridad de Windows Communication Foundation (WCF). Generalmente, esto incluye la selección de un enlace proporcionado por el sistema adecuado, el establecimiento de las propiedades del elemento de seguridad y, a continuación, el establecimiento de las propiedades de los comportamientos del servicio que rigen la recuperación de las credenciales utilizadas por el servicio o el cliente. Estas técnicas cubran los requisitos de seguridad de la mayoría de los usuarios para la mayoría de los escenarios, como se muestra en [escenarios comunes de seguridad](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Si su escenario requiere más capacidades, primero vea [capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); si no es evidente, una solución, consulte [extender seguridad](../../../../docs/framework/wcf/extending/extending-security.md). Si está creando (o interoperar con) un sistema que utiliza notificaciones completo, vea los temas de [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+La información de esta sección se centra en programar la seguridad en Windows Communication Foundation (WCF). Generalmente, esto incluye la selección de un enlace proporcionado por el sistema adecuado, el establecimiento de las propiedades del elemento de seguridad y, a continuación, el establecimiento de las propiedades de los comportamientos del servicio que rigen la recuperación de las credenciales utilizadas por el servicio o el cliente. Estas técnicas abarcan los requisitos de seguridad de la mayoría de los usuarios para la mayoría de los escenarios, como se muestra en [escenarios comunes de seguridad](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Si su escenario requiere más capacidades, consulte primero [capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); si una solución no es evidente, consulte [extender seguridad](../../../../docs/framework/wcf/extending/extending-security.md). Si está creando (o interopera con) un sistema que utiliza notificaciones enriquecidas, vea los temas de [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
@@ -24,7 +24,7 @@ La información de esta sección se centra en programar la seguridad de Windows 
  Información general de cómo proteger los mensajes en el nivel de transporte.  
   
  [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- Resume las razones para usar seguridad de nivel de mensaje en Windows Communication Foundation (WCF).  
+ Se resumen las razones para usar seguridad de nivel de mensaje en Windows Communication Foundation (WCF).  
   
  [Sesiones seguras](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
  Una explicación de las consideraciones necesarias para proteger una sesión WCF.  
@@ -56,4 +56,4 @@ La información de esta sección se centra en programar la seguridad de Windows 
   
 ## <a name="see-also"></a>Vea también  
  [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

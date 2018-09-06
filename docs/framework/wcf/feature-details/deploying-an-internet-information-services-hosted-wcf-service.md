@@ -3,11 +3,11 @@ title: Implementación de un servicio WFC hospedado en Internet Information Serv
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: b2b58de703a0864ac0666cb4738a95726e28bcaf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395520"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740106"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implementación de un servicio WFC hospedado en Internet Information Services
 Desarrollar e implementar un servicio de Windows Communication Foundation (WCF) que se hospeda en Internet Information Services (IIS) consta de las siguientes tareas:  

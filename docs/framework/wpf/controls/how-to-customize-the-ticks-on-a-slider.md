@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
 ms.openlocfilehash: 045a2f540a37cdea84d2bf2f3ed1e74e122bdbb5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43674437"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746115"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>Cómo: Personalizar las marcas de paso en un control Slider
 En este ejemplo se muestra cómo crear un <xref:System.Windows.Controls.Slider> control que contiene las marcas de graduación.  

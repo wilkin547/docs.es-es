@@ -3,11 +3,11 @@ title: Colecciones de esquemas de ODBC
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 ms.openlocfilehash: bdedbb11960f02b99dcca6388abf663635238f74
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479985"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43750014"
 ---
 # <a name="odbc-schema-collections"></a>Colecciones de esquemas de ODBC
 En esta sección se describe la compatibilidad de las colecciones de esquemas con los controladores ODBC de Microsoft SQL Server, Oracle y Microsoft Jet.  

@@ -5,25 +5,25 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: 547ff9fcaca8b9af7a7559a11ef4c4a8b5996174
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505526"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734124"
 ---
 # <a name="metadata-publishing-behavior"></a>Comportamiento de publicación de metadatos
-El ejemplo de comportamiento de publicación de metadatos muestra cómo controlar las características de publicación de metadatos de un servicio. Para evitar la divulgación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada para los servicios de Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración.  
+El ejemplo de comportamiento de publicación de metadatos muestra cómo controlar las características de publicación de metadatos de un servicio. Para evitar la divulgación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada para servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración.  
   
 > [!IMPORTANT]
->  Para mostrar más claridad, este ejemplo muestra cómo crear un extremo de publicación de metadatos no se seguros. Tales puntos de conexión pueden estar disponibles para los consumidores anónimos no autenticados y se debe tener cuidado antes de implementar tales puntos de conexión para garantizar que la revelación pública de un metadato del servicio sea la adecuada. Consulte la [personalizado extremo de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo para obtener un ejemplo que protege un extremo de metadatos.  
+>  Para mostrar más claridad, este ejemplo muestra cómo crear un extremo de publicación de metadatos no se seguros. Tales puntos de conexión pueden estar disponibles para los consumidores anónimos no autenticados y se debe tener cuidado antes de implementar tales puntos de conexión para garantizar que la revelación pública de un metadato del servicio sea la adecuada. Consulte la [extremo de metadatos personalizada Secure](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) muestra un ejemplo que protege un extremo de metadatos.  
   
  El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa el `ICalculator` contrato de servicio. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- Para que un servicio exponga los metadatos, se debe configurar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> en el servicio. Cuando este comportamiento está presente, puede publicar los metadatos configurando un extremo para exponer el contrato <xref:System.ServiceModel.Description.IMetadataExchange> como una implementación de un protocolo WS-MetadataExchange (MEX). Para su comodidad, se ha proporcionado al contrato el nombre de configuración abreviado de "IMetadataExchange." Este ejemplo utiliza `mexHttpBinding`, que es un enlace estándar de conveniencia que es equivalente a `wsHttpBinding` con el modo de seguridad establecido en `None`. Se utiliza una dirección relativa de "mex" en el punto de conexión, que, cuando se resuelve con los servicios de base dirección resulta en una dirección de punto de conexión de http://localhost/servicemodelsamples/service.svc/mex. A continuación, se muestra la configuración del comportamiento:  
+ Para que un servicio exponga los metadatos, se debe configurar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> en el servicio. Cuando este comportamiento está presente, puede publicar los metadatos configurando un extremo para exponer el contrato <xref:System.ServiceModel.Description.IMetadataExchange> como una implementación de un protocolo WS-MetadataExchange (MEX). Para su comodidad, se ha proporcionado al contrato el nombre de configuración abreviado de "IMetadataExchange." Este ejemplo utiliza `mexHttpBinding`, que es un enlace estándar de conveniencia que es equivalente a `wsHttpBinding` con el modo de seguridad establecido en `None`. Se usa una dirección relativa de "mex" en el punto de conexión, que cuando se resuelve con los servicios de bases dirección da como resultado una dirección de punto de conexión de http://localhost/servicemodelsamples/service.svc/mex. A continuación, se muestra la configuración del comportamiento:  
   
 ```xml  
 <behaviors>  
@@ -57,13 +57,13 @@ El ejemplo de comportamiento de publicación de metadatos muestra cómo controla
   
  Este ejemplo establece la propiedad <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> en `true`, que también expone los metadatos del servicio mediante HTTP GET. Para habilitar un extremo de metadatos HTTP GET, el servicio debe tener una dirección base HTTP. Se utiliza `?wsdl` de la cadena de consulta en la dirección base del servicio para tener acceso a los metadatos. Por ejemplo, para ver el WSDL para el servicio en un explorador Web usaría la dirección http://localhost/servicemodelsamples/service.svc?wsdl. De manera alternativa, puede usar este comportamiento para exponer metadatos sobre HTTPS estableciendo <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> en `true`. Esto requiere una dirección base HTTPS.  
   
- Para obtener acceso a la utilice de extremo MEX del servicio el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Para obtener acceso a uso de punto de conexión MEX del servicio la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
  `svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs`  
   
  Esto genera un cliente basado en los metadatos del servicio.  
   
- Para obtener acceso a los metadatos del servicio mediante HTTP GET, diríjase a http://localhost/servicemodelsamples/service.svc?wsdl.  
+ Para obtener acceso a los metadatos del servicio mediante HTTP GET, dirija el explorador http://localhost/servicemodelsamples/service.svc?wsdl.  
   
  Si quita este comportamiento e intenta abrir el servicio, obtendrá una excepción. Este error se produce porque sin el comportamiento, el extremo configurado con el contrato `IMetadataExchange` no tiene ninguna implementación.  
   
@@ -71,18 +71,18 @@ El ejemplo de comportamiento de publicación de metadatos muestra cómo controla
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Metadata`  
   

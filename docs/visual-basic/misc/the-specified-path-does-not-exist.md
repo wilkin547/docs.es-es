@@ -3,11 +3,11 @@ title: La ruta de acceso especificada no existe
 ms.date: 07/20/2015
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
 ms.openlocfilehash: 0166ced8b64c5e0366b90fa649a4a4f7222a5744
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552936"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747569"
 ---
 # <a name="the-specified-path-does-not-exist"></a>La ruta de acceso especificada no existe
 No existe una ruta de acceso especificada, quizás debido a un error en la combinación de cadenas.  

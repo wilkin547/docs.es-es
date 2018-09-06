@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2cf517e3bd10dbed51c8a98d150bafcb023e438b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365948"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742527"
 ---
 # <a name="table-valued-parameters"></a>Parámetros con valores de tabla
 Los parámetros con valores de tabla proporcionan un método sencillo para calcular las referencias de varias filas de datos procedentes de una aplicación cliente en SQL Server sin necesidad de efectuar viajes de ida y vuelta (round trip) ni de crear lógica especial de servidor para procesar los datos. Puede usar los parámetros con valores de tabla para encapsular las filas de datos de una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos de entrada se almacenan en una variable de tabla en la que se puede operar usando [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -24,8 +24,8 @@ Los parámetros con valores de tabla proporcionan un método sencillo para calcu
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Parámetros con valores de tabla (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkId=98363) en libros en pantalla de SQL Server|Describe cómo se crean y se usan los parámetros con valores de tabla.|  
-|[Tipos de tabla definidos por el usuario](http://go.microsoft.com/fwlink/?LinkId=98364) en libros en pantalla de SQL Server|Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla.|  
+|[Parámetros con valores de tabla (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=98363) en los libros en pantalla de SQL Server|Describe cómo se crean y se usan los parámetros con valores de tabla.|  
+|[Tipos de tabla definido por el usuario](https://go.microsoft.com/fwlink/?LinkId=98364) en los libros en pantalla de SQL Server|Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Pasar varias filas de versiones previas de SQL Server  
  Antes de que los parámetros con valores de tabla se introdujeron en SQL Server 2008, las opciones para pasar varias filas de datos a un procedimiento almacenado o un comando SQL con parámetros eran limitadas. Un programador podía elegir entre las siguientes opciones para pasar varias filas al servidor:  
@@ -39,7 +39,7 @@ Los parámetros con valores de tabla proporcionan un método sencillo para calcu
 -   Usar la utilidad `bcp` o el objeto <xref:System.Data.SqlClient.SqlBulkCopy> para cargar muchas filas de datos en una tabla. Aunque esta técnica sea muy eficaz, no es compatible con el procesamiento de servidor a menos que los datos se carguen en una tabla temporal o en una variable de tabla.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Crear tipos de parámetros con valores de tabla  
- Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Debe crear un tipo de tabla y definir la estructura en SQL Server antes de poder usar los parámetros con valores de tabla en las aplicaciones cliente. Para obtener más información acerca de cómo crear tipos de tabla, vea [tipos de tabla definidos por el usuario](http://go.microsoft.com/fwlink/?LinkID=98364) en libros en pantalla de SQL Server.  
+ Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Debe crear un tipo de tabla y definir la estructura en SQL Server antes de poder usar los parámetros con valores de tabla en las aplicaciones cliente. Para obtener más información acerca de cómo crear tipos de tabla, vea [tipos de tabla definidos por el usuario](https://go.microsoft.com/fwlink/?LinkID=98364) en libros en pantalla de SQL Server.  
   
  La siguiente instrucción crea un tipo de tabla denominado CategoryTableType formada por las columnas CategoryID y CategoryName:  
   
@@ -77,7 +77,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>Limitaciones de los parámetros con valores de tabla  
  Existen varias limitaciones en los parámetros con valores de tabla:  
   
--   No se puede pasar parámetros con valores de tabla para [funciones CLR definidas por el usuario](http://msdn.microsoft.com/library/ms131077.aspx).  
+-   No se puede pasar parámetros con valores de tabla para [funciones definidas por el usuario CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
 -   Los parámetros con valores de tabla solo se pueden indizar para admitir restricciones UNIQUE o PRIMARY KEY. SQL Server no mantiene estadísticas de parámetros con valores de tabla.  
   
@@ -275,4 +275,4 @@ insertCommand.ExecuteNonQuery()
  [Comandos y parámetros](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Parámetros de DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Operaciones de datos de SQL Server en ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

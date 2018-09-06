@@ -2,12 +2,12 @@
 title: 'Tutorial: Crear un proveedor de tipos (F #)'
 description: 'Obtenga información sobre cómo crear sus propios proveedores de tipo de F # en F # 3.0 mediante el examen de varios proveedores de tipo simple para ilustrar los conceptos básicos.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499333"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745731"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
 
@@ -24,7 +24,6 @@ El ecosistema de F # contiene una variedad de proveedores de tipos de servicios 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) es un conjunto anterior de proveedores de tipos para su uso únicamente con la programación de .NET Framework para tener acceso a servicios de datos SQL, Entity Framework, OData y WSDL.
 
 En caso necesario, se pueden crear proveedores de tipo personalizados o se puede hacer referencia a proveedores de tipo creados por otros. Por ejemplo, una organización podría tener un servicio de datos que proporcionara un número elevado y creciente de conjuntos de datos con nombre, cada uno con su propio esquema de datos estable. Se puede crear un proveedor de tipos que lea los esquemas y presente los conjuntos de datos actuales al programador de una manera fuertemente tipada.
-
 
 ## <a name="before-you-start"></a>Antes de empezar
 
@@ -51,7 +50,6 @@ Antes de comenzar, debería hacerse las siguientes preguntas:
 - ¿Cambiará durante la ejecución del programa?
 
 Los proveedores de tipo son más adecuados en situaciones en las que el esquema es estable en tiempo de ejecución y durante el tiempo de vida del código compilado.
-
 
 ## <a name="a-simple-type-provider"></a>Un proveedor de tipos simple
 
@@ -93,8 +91,7 @@ type Type100 =
 
 Observe que el conjunto de tipos y miembros proporcionados se conoce de forma estática. Este ejemplo no aprovecha la capacidad de los proveedores para proporcionar tipos que dependen de un esquema. La implementación del proveedor de tipos se muestra en el código siguiente y sus detalles se tratan en secciones posteriores de este tema.
 
-
->[!WARNING] 
+>[!WARNING]
 Puede haber diferencias entre este código y los ejemplos en línea.
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 Como alternativa, abra Visual Studio, abra el menú Depurar, elija `Debug/Attach to process…`y asociarlo a otro `devenv` proceso donde esté editando el script. Con este método, le resultará más fácil centrarse en la lógica particular del proveedor de tipos escribiendo interactivamente expresiones en la segunda instancia (con IntelliSense completo y otras características).
 
 Puede deshabilitar la depuración "Solo mi código" para identificar mejor los errores en el código generado. Para obtener información acerca de cómo habilitar o deshabilitar esta característica, consulte [desplazarse por el código con el depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger). Además, también puede establecer excepciones de primera oportunidad detectar abriendo el `Debug` menú y, a continuación, elija `Exceptions` o eligiendo las teclas Ctrl + Alt + E para abrir el `Exceptions` cuadro de diálogo. Este cuadro de diálogo, bajo `Common Language Runtime Exceptions`, seleccione el `Thrown` casilla de verificación.
-
 
 ### <a name="implementation-of-the-type-provider"></a>Implementación del proveedor de tipos
 
@@ -376,7 +372,6 @@ El ejemplo de esta sección se proporciona sólo *tipos proporcionados borrados*
 
 En este ejemplo, se borra cada tipo proporcionado para el tipo `obj` y todos los usos del tipo aparecen como tipo `obj` en el código compilado. De hecho, los objetos subyacentes de estos ejemplos son cadenas, pero el tipo aparecerá como `System.Object` en el código compilado de .NET. Como con todos los usos del borrado de tipos, se puede utilizar la conversión boxing explícita, la conversión unboxing y la conversión para trastocar los tipos borrados. En este caso, puede producirse una excepción de conversión no válida cuando se utiliza el objeto. Un runtime de un proveedor puede definir su propio tipo de representación privado para ayudar a protegerse contra representaciones falsas. No se pueden definir tipos borrados en F#. Solo se pueden borrar los tipos proporcionados. Se deben entender las implicaciones, tanto prácticas como semánticas, de utilizar los tipos borrados para el proveedor de tipo o un proveedor que proporcione tipos borrados. Un tipo borrado no tiene un tipo real de .NET. Por consiguiente, no se puede hacer una reflexión precisa sobre el tipo y se podrían trastocar los tipos borrados si se utilizan conversiones en tiempo de ejecución y otras técnicas que dependen de semánticas exactas de tipos en tiempo de ejecución. El trastocamiento de tipos borrados frecuentemente da lugar a excepciones de conversión de tipos en tiempo de ejecución.
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>Elegir representaciones para los tipos proporcionados borrados
 
 Para algunos usos de los tipos proporcionados borrados, no se requiere ninguna representación. Por ejemplo, el tipo proporcionado borrado podría contener únicamente propiedades y miembros estáticos y ningún constructor, por lo que ningún método ni propiedad devolvería ninguna instancia del tipo. Si puede tener acceso a instancias de un tipo proporcionado borrado, considere las preguntas siguientes:
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 En la sección anterior se explicó cómo crear un proveedor de tipos de borrado simple que proporciona una serie de tipos, propiedades y métodos. En dicha sección se explicó también el concepto de borrado de tipos, incluidas algunas de las ventajas y desventajas de proporcionar tipos borrados desde un proveedor de tipos, y se explicaron las representaciones de los tipos borrados.
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>Un proveedor de tipos que usa parámetros estáticos
 
 La capacidad de parametrizar los proveedores de tipos mediante datos estáticos permite muchos escenarios interesantes, incluso en los casos en que el proveedor no necesita tener acceso a ningún dato local o remoto. En esta sección, aprenderá algunas técnicas básicas para construir tales proveedores.
-
 
 ### <a name="type-checked-regex-provider"></a>Proveedor de tipo de comprobación de expresiones regulares
 
@@ -737,16 +730,13 @@ do ()
 
 En esta sección se ha explicado cómo crear un proveedor de tipos que opera con sus parámetros estáticos. El proveedor comprueba el parámetro estático y proporciona operaciones basadas en su valor.
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>Un proveedor de tipo que está respaldado por datos locales
 
 Con frecuencia se requiere que los proveedores de tipos muestren API basadas no solo en parámetros estáticos sino también en información procedente de sistemas locales o remotos. Esta sección trata sobre los proveedores de tipo basados en datos locales, como los archivos de datos locales.
 
-
 ### <a name="simple-csv-file-provider"></a>Proveedor simple de archivos CSV
 
 Como ejemplo sencillo, considere un proveedor de tipo para tener acceso a datos científicos con el formato de valores separados por comas (CSV). En esta sección se supone que los archivos CSV contienen una fila de encabezado seguida de datos en coma flotante, como se muestra en la tabla siguiente:
-
 
 |Distancia (metros)|Tiempo (segundos)|
 |----------------|-------------|
@@ -893,11 +883,9 @@ Tenga en cuenta las siguientes observaciones sobre la implementación:
 
 En esta sección se ha explicado cómo crear un proveedor de tipos para un origen de datos local con un esquema simple que está contenido en el propio origen de datos.
 
-
 ## <a name="going-further"></a>Ampliar conocimientos
 
 En las secciones siguientes se incluyen sugerencias para ampliar conocimientos sobre el tema.
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Un vistazo al código compilado de los tipos borrados
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 Como muestra el ejemplo, se han borrado todas las menciones del tipo `Type1` y la propiedad `InstanceProperty`, y quedan solo las operaciones para los tipos de tiempo de ejecución relacionados.
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Diseño y convenciones de nomenclatura para los proveedores de tipos
+
 Respete las convenciones siguientes al crear proveedores de tipos.
 
 **Los proveedores para protocolos de conectividad** en general, los nombres de la mayoría de archivos DLL de proveedores para protocolos de conectividad de datos y servicios, como OData o conexiones SQL, deben terminar en `TypeProvider` o `TypeProviders`. Por ejemplo, utilice un nombre de DLL similar a la siguiente cadena:
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 Para obtener más información, vea la convención de diseño `GetConnection` que se describe más adelante en este tema.
 
-
 ### <a name="design-patterns-for-type-providers"></a>Patrones de diseño para los proveedores de tipos
 
 En las secciones siguientes se describen los patrones de diseño que se pueden usar cuando se crean los proveedores de tipo.
 
-
 #### <a name="the-getconnection-design-pattern"></a>El patrón de diseño GetConnection
+
 La mayoría de los proveedores de tipo se deben escribir para que usen el patrón `GetConnection` utilizado por los proveedores de tipo en FSharp.Data.TypeProviders.dll, como se muestra en el ejemplo siguiente:
 
 ```fsharp
@@ -1147,10 +1134,7 @@ A menudo, lo más fácil es depurar los proveedores de tipo mediante fsc.exe en 
 
   Puede usar print-to-stdout como registro.
 
-
 ## <a name="see-also"></a>Vea también
 
-* [Proveedores de tipos](index.md)
-
-* [El SDK del proveedor de tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [Proveedores de tipos](index.md)
+- [El SDK del proveedor de tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

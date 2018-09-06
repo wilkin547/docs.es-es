@@ -1,18 +1,17 @@
 ---
 title: Identificadores de línea, archivo y ruta de acceso de código fuente (F#)
-description: 'Obtenga información acerca de cómo usar F # identificador valores integrados que permiten acceder al número de línea de origen y el directorio y el nombre de archivo en el código.'
+description: 'Obtenga información sobre cómo usar F # identificador valores integrados que permiten acceder al número de línea de código fuente, directorio y el nombre de archivo en el código.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 76b705fec0d951b12655edbe69e7c9212f50779d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565222"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777434"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Identificadores de línea, archivo y ruta de acceso de origen
 
-Los identificadores de `__LINE__`, `__SOURCE_DIRECTORY__` y `__SOURCE_FILE__` son valores integrados que permiten obtener acceso al nombre de número, el directorio y el archivo de la línea de origen en el código.
-
+Los identificadores `__LINE__`, `__SOURCE_DIRECTORY__` y `__SOURCE_FILE__` son valores integrados que permiten tener acceso al nombre de directorio y archivo número de línea de origen en el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,16 +22,17 @@ __SOURCE_FILE__
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 Cada uno de estos valores tiene tipo `string`.
 
-En la tabla siguiente se resume los identificadores de ruta de acceso que están disponibles en F #, de archivo y la línea de código fuente. Estos identificadores no son macros de preprocesador; son valores integrados que son reconocidos por el compilador.
+En la tabla siguiente se resume la línea de código fuente, archivos y los identificadores de ruta de acceso que están disponibles en F #. Estos identificadores no son macros de preprocesador; son valores integrados que son reconocidos por el compilador.
 
 |Identificador predefinido|Descripción|
 |---------------------|-----------|
 |`__LINE__`|Se evalúa como el número de línea actual, teniendo en cuenta `#line` directivas.|
 |`__SOURCE_DIRECTORY__`|Se evalúa como la ruta de acceso completa actual del directorio de origen, teniendo en cuenta `#line` directivas.|
 |`__SOURCE_FILE__`|Se evalúa como el nombre de archivo de origen actual y su ruta de acceso, teniendo en cuenta `#line` directivas.|
-Para obtener más información sobre la `#line` directiva, consulte [directivas de compilador](compiler-directives.md).
+Para obtener más información sobre la `#line` la directiva, consulte [directivas de compilador](compiler-directives.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -49,6 +49,6 @@ Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\
 ```
 
 ## <a name="see-also"></a>Vea también
-[Directivas de compilador](compiler-directives.md)
 
-[Referencia del lenguaje F#](index.md)
+- [Directivas de compilador](compiler-directives.md)
+- [Referencia del lenguaje F#](index.md)

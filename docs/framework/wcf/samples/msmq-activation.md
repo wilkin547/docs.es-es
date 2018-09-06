@@ -3,11 +3,11 @@ title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
 ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559587"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779317"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación del proceso de Windows (WAS) que se lee en una cola de mensajes. Este ejemplo se utiliza el `netMsmqBinding` y se basa en el [comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md) ejemplo. El servicio en este caso es una aplicación hospedada en web y el cliente es autohospedado y proporciona resultados a la consola para observar el estado de pedidos de compra enviados.  

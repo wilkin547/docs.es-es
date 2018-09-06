@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: ef6dc80bc00e2582b514bff7fe3e9c5d6d5770e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420989"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776679"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Cómo: Establecer opciones de cuadrícula para todos los formularios Windows Forms
 Como que se convierten en acostumbrado a trabajar en el entorno de desarrollo de Visual Studio, puede establecer preferencias para todos los formularios y trabajar con los proyectos en el Diseñador de Windows Forms.  

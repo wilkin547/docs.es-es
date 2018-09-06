@@ -9,15 +9,15 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: ab097e11490fda7a8e3b23c8749204f091271919
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559688"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733386"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Cómo: Hacer una prueba de posicionamiento en Viewport3D
-Este ejemplo muestra cómo se alcanza la prueba para los objetos visuales 3D en una <xref:System.Windows.Controls.Viewport3D>.  
+En este ejemplo se muestra cómo la objetos visuales 3D de prueba de posicionamiento un <xref:System.Windows.Controls.Viewport3D>.  
   
  Dado que <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> devuelve información de 2D y 3D, es posible recorrer en iteración los resultados de pruebas para leer los resultados solo 3D.  
   
@@ -30,4 +30,4 @@ Este ejemplo muestra cómo se alcanza la prueba para los objetos visuales 3D en 
  [!code-vb[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplo de prueba de aciertos de 3D](http://go.microsoft.com/fwlink/?LinkID=159959)
+ [Ejemplo de pruebas de posicionamiento de 3D](https://go.microsoft.com/fwlink/?LinkID=159959)

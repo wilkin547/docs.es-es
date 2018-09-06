@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
 ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405808"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723417"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Ejecución de SqlCommand Execution con SqlNotificationRequest
 Los objetos <xref:System.Data.SqlClient.SqlCommand> se pueden configurar para generar una notificación si, después de capturar datos del servidor, éstos generasen un conjunto de resultados diferente en caso de que se ejecutase de nuevo la consulta. Esto resulta útil si desea usar colas de notificaciones personalizadas en el servidor o si no desea mantener objetos activos.  
