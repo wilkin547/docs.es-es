@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 8f4490edfc06fcc3ec06daffdb0966ac9ee72e23
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36298180"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892183"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -160,4 +160,4 @@ Puede ver el conjunto de perfiles de PCL que son compatibles con .NET Standard:
 
 ## <a name="see-also"></a>Vea también
 
-[Versiones de .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [Versiones de .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
