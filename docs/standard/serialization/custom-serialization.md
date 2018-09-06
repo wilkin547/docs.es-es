@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 79cb7a2a0706cb06cbd444f4a2e1ae87cb701101
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6151bf670a455d4c9862e80fd06314e4e1621080
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592111"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881920"
 ---
 # <a name="custom-serialization"></a>Serialización personalizada
 La serialización personalizada es el proceso de controlar la serialización y deserialización de un tipo. Controlando la serialización, es posible asegurarse compatibilidad de la serialización, que es la capacidad para serializar y deserializar entre las versiones de un tipo sin interrumpir la función básica del tipo. En la primera versión de un tipo, puede haber por ejemplo, solo dos campos. En la versión siguiente de un tipo, se agregan varios campos más. Todavía la segunda versión de una aplicación debe poder serializar y deserializar ambos tipos. En las secciones siguientes se describe cómo controlar la serialización.
@@ -184,7 +184,8 @@ End Class
   
  Los objetos se reconstruyen al revés; y llamar a los métodos durante la deserialización puede tener efectos secundarios indeseables, porque los métodos llamados podrían hacer referencia a las referencias que no se han deserializado cuando se realiza la llamada. Si la clase deserializada implementa <xref:System.Runtime.Serialization.IDeserializationCallback>, se llama al método <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*> automáticamente cuando se ha deserializado el gráfico de objetos completo. Se han restaurado todos los objetos secundarios hechos referencia totalmente en este punto. Una tabla hash es un ejemplo típico de una clase que es difícil de deserializar sin utilizar el agente de escucha de evento. Es fácil de recuperar los pares de valor y clave durante la deserialización, pero volver a agregar estos objetos a la tabla hash puede producir los problemas, porque no hay ninguna garantía de que se hayan deserializado las clases que derivaron de la tabla hash. Llamar a los métodos en una tabla hash en esta copia intermedia no es, por consiguiente, aconsejable.  
   
-## <a name="see-also"></a>Vea también  
- [Serialización binaria](binary-serialization.md)  
- [Serialización SOAP y XML](xml-and-soap-serialization.md)  
- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>Vea también
+
+- [Serialización binaria](binary-serialization.md)  
+- [Serialización SOAP y XML](xml-and-soap-serialization.md)  
+- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd078b6be9dbcdfc03e34285d70a6bfe42d87b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581783"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035592"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Cómo: Crear objetos GenericPrincipal y GenericIdentity
-Puede usar el <xref:System.Security.Principal.GenericIdentity> clase junto con la <xref:System.Security.Principal.GenericPrincipal> clase para crear un esquema de autorización que sea independiente de un dominio de Windows.  
+Puede usar el <xref:System.Security.Principal.GenericIdentity> clase junto con el <xref:System.Security.Principal.GenericPrincipal> clase para crear un esquema de autorización que sea independiente de un dominio de Windows.  
   
 ### <a name="to-create-a-genericprincipal-object"></a>Para crear un objeto GenericPrincipal  
   
@@ -47,7 +47,7 @@ Puede usar el <xref:System.Security.Principal.GenericIdentity> clase junto con l
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  Utilice el código siguiente para asociar la entidad de seguridad al subproceso actual. Esto es útil en situaciones donde la entidad de seguridad debe validarse varias veces, debe ser validado por otro código que se ejecuta en la aplicación o debe ser validado por un <xref:System.Security.Permissions.PrincipalPermission> objeto. Todavía puede realizar la validación basada en roles en el objeto principal sin asociarlo al subproceso. Para más información, consulte [Reemplazar un objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md).  
+3.  Utilice el código siguiente para asociar la entidad de seguridad al subproceso actual. Esto resulta útil en situaciones donde la entidad de seguridad debe validarse varias veces, debe ser validado por otro código que se ejecuta en la aplicación o debe ser validado por un <xref:System.Security.Permissions.PrincipalPermission> objeto. Todavía puede realizar la validación basada en roles en el objeto principal sin asociarlo al subproceso. Para más información, consulte [Reemplazar un objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md).  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -140,9 +140,10 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Security.Principal.GenericIdentity>  
- <xref:System.Security.Principal.GenericPrincipal>  
- <xref:System.Security.Permissions.PrincipalPermission>  
- [Reemplazar un objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
- [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Security.Principal.GenericIdentity>  
+- <xref:System.Security.Principal.GenericPrincipal>  
+- <xref:System.Security.Permissions.PrincipalPermission>  
+- [Reemplazar un objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
+- [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)

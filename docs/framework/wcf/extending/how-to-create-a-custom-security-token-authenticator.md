@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un autenticador de tokens de seguridad personalizado'
+title: 'Cómo: crear un autenticador de tokens de seguridad personalizado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: cbd45580e84a0723d28bab538bc0ffe388899d61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8cbc22be68aae976e939520383995652e896d529
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724427"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892326"
 ---
-# <a name="how-to-create-a-custom-security-token-authenticator"></a>Cómo: Crear un autenticador de tokens de seguridad personalizado
+# <a name="how-to-create-a-custom-security-token-authenticator"></a>Cómo: crear un autenticador de tokens de seguridad personalizado
 En este tema se muestra cómo crear un autenticador de tokens de seguridad personalizado y cómo integrarlo con un administrador de tokens de seguridad personalizado. Un autenticador de tokens de seguridad valida el contenido de un token de seguridad proporcionado con un mensaje entrante. Si la validación es correcta, el autenticador devuelve una colección de instancias <xref:System.IdentityModel.Policy.IAuthorizationPolicy> que, cuando se evalúa, devuelve un conjunto de notificaciones.  
   
  Para utilizar un autenticador de tokens de seguridad personalizado en Windows Communication Foundation (WCF), primero debe crear credenciales personalizadas y seguridad las implementaciones del Administrador de tokens. Para obtener más información acerca de cómo crear credenciales personalizadas y la seguridad de un administrador de tokens, consulte [Tutorial: creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Para obtener más información acerca de las credenciales de administrador de tokens de seguridad y las clases de proveedor y autenticador, vea [arquitectura de seguridad](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
@@ -46,9 +46,9 @@ En este tema se muestra cómo crear un autenticador de tokens de seguridad perso
   
 4.  Implemente el método <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Este método rellena una instancia de la clase <xref:System.IdentityModel.Policy.EvaluationContext> (pasadas como argumento) con notificaciones basadas en el contenido del token de seguridad entrante. El método devuelve `true` cuando se hace con la evaluación. En los casos en los que la implementación confía en la presencia de otras directivas de autorización que proporcionan información adicional al contexto de la evaluación, este método puede devolver `false` si la información necesaria no se encuentra todavía en el contexto de la evaluación. En ese caso, WCF llamará al método nuevo después de evaluar todas las demás directivas de autorización que genera para el mensaje entrante si al menos una de esas directivas de autorización puede modificar el contexto de evaluación.  
   
-     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
-     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
+     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
+
  [Tutorial: Creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) se describe cómo crear credenciales personalizadas y seguridad personalizado, Administrador de tokens. Para utilizar el autenticador de tokens de seguridad personalizado creado aquí, se modificará una implementación del administrador de tokens de seguridad para devolver el autenticador personalizado desde el método <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. El método devuelve un autenticador cuando se pasa un requisito de token de seguridad adecuado.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Para integrar un autenticador de tokens de seguridad personalizado con un administrador de tokens de seguridad personalizado  
@@ -57,9 +57,9 @@ En este tema se muestra cómo crear un autenticador de tokens de seguridad perso
   
 2.  Agregue la lógica al método para habilitarlo con objeto de devolver su autenticador de tokens de seguridad personalizado basado en el parámetro <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. El ejemplo siguiente devuelve un autenticador de tokens de seguridad personalizado si el tipo de token de requisitos de token es un nombre de usuario (representado por la propiedad <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A>) y la dirección del mensaje para la que se solicita el autenticador de tokens de seguridad es la entrada (representada por el campo <xref:System.ServiceModel.Description.MessageDirection.Input>).  
   
-     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
-     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
+     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
+ 
 ## <a name="see-also"></a>Vea también  
  <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  

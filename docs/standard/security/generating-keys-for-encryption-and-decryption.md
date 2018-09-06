@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb506ee4e9dde8fcc58e92dfcecd9b896a78401e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587617"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036095"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generar claves para cifrado y descifrado
 La creación y administración de claves es una parte importante del proceso criptográfico. Los algoritmos simétricos requieren la creación de una clave y un IV (Initialization Vector, vector de inicialización). La clave debe mantenerse en secreto y a salvo de quienes no deban descifrar los datos. No es necesario que el vector de inicialización sea secreto, pero debe cambiarse para cada sesión. Los algoritmos asimétricos requieren la creación de una clave pública y una clave privada. La clave pública puede revelarse a cualquiera, mientras que la privada debe conocerla sólo la parte que descifrará los datos cifrados con la clave pública. En esta sección se describe cómo generar y administrar claves para algoritmos simétricos y asimétricos.  
@@ -88,8 +88,9 @@ RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
 RSAParameters RSAKeyInfo = RSA.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Cifrar datos](../../../docs/standard/security/encrypting-data.md)  
- [Descifrar datos](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- [Almacenar claves asimétricas en un contenedor de claves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+## <a name="see-also"></a>Vea también
+
+- [Cifrar datos](../../../docs/standard/security/encrypting-data.md)  
+- [Descifrar datos](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
+- [Almacenar claves asimétricas en un contenedor de claves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

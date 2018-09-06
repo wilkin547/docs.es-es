@@ -3,11 +3,11 @@ title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
 ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408770"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032814"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 En este ejemplo se muestran el uso y la configuración de propiedades promovidas en el almacén de instancias de flujo de trabajo de SQL. El almacén de instancias de flujo de trabajo de SQL es una implementación basada en SQL de un almacén de instancias. Permite a una instancia guardar y cargar su estado en y desde una base de datos SQL Server o SQL Server Express. La característica de extensibilidad del almacén permite al usuario definir propiedades que se guardan en el almacén de instancias. Estas propiedades se muestran en una vista de propiedades promovidas que permite al usuario consultarlas.  

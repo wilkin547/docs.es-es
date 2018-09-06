@@ -3,11 +3,11 @@ title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661196"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891202"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 Al enviar mensajes de gran tamaño mediante Windows Communication Foundation (WCF), suele ser deseable para limitar la cantidad de memoria utilizada para almacenar en búfer esos mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.  

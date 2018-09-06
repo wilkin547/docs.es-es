@@ -3,11 +3,11 @@ title: 'Cómo: buscar anteriores del mismo nivel (XPath-LINQ to XML) (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
 ms.openlocfilehash: 1b8c73f266cc618660b59e76e46420c08b5299d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641952"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878826"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar anteriores del mismo nivel (XPath-LINQ to XML) (Visual Basic)
 En este tema se compara el eje XPath `preceding-sibling` con el eje secundario de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  

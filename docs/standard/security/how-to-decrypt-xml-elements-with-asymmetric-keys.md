@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 329569ea148542ff596057d9eb9efe2e95768341
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96bee90c7cb3847f9c7059e1a0b1d737209b924f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589076"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877838"
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Cómo: Descifrar elementos XML con claves asimétricas
-Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información acerca del estándar de cifrado XML, vea la recomendación de World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
+Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, vea la recomendación de World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
  El ejemplo de este procedimiento descifra un elemento XML que se cifró mediante los métodos descritos en [Cómo: cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Busca un elemento <`EncryptedData`>, lo descifra y lo reemplaza por el elemento XML de texto sin formato original.  
   
@@ -81,6 +81,7 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
   
  Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  A veces, las claves criptográficas se pueden leer desde la memoria con un depurador o desde un disco duro si la ubicación de memoria se pagina en el disco.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Security.Cryptography.Xml>  
- [Cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

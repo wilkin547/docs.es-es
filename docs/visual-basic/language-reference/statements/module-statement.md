@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
 ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535690"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876695"
 ---
 # <a name="module-statement"></a>Module (Instrucción)
 Declara el nombre de un módulo e introduce la definición de las variables, propiedades, eventos y procedimientos que incluye el módulo.  

@@ -3,11 +3,11 @@ title: '&lt;Personalizado&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
 ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776228"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031993"
 ---
 # <a name="ltcustomgt"></a>&lt;Personalizado&gt;
 Especifica la configuración concreta para un servicio de resolución del mismo nivel personalizado.  

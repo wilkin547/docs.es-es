@@ -9,11 +9,11 @@ helpviewer_keywords:
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
 ms.openlocfilehash: 3dcdf6cfe8631ae0b7b1472e22d027cf9288a1db
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749741"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886144"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Cómo: Animar un objeto a lo largo de una trayectoria (animación doble)
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> clase para mover un objeto a lo largo de un trazado definido por un <xref:System.Windows.Media.PathGeometry>.  

@@ -3,11 +3,11 @@ title: Ejemplo de proxy de detección
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
 ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747918"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892378"
 ---
 # <a name="discovery-proxy-sample"></a>Ejemplo de proxy de detección
 En este ejemplo se muestra cómo crear una implementación de un proxy de detección para almacenar información acerca de los servicios existentes y el modo en que los clientes pueden consultar información en ese proxy. Este ejemplo consta de tres proyectos:  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
 ms.openlocfilehash: 4327aacf4cb7ec8b30c2f46696e2a19b1b3ae18c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740395"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878959"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>Cómo: Navegar por las relaciones con el operador Navigate
 En este tema se muestra cómo ejecutar un comando contra un modelo conceptual usando un objeto <xref:System.Data.EntityClient.EntityCommand>, y cómo recuperar los resultados de <xref:System.Data.Metadata.Edm.RefType> usando un <xref:System.Data.EntityClient.EntityDataReader>.  

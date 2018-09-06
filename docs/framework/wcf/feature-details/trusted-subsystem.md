@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
 ms.openlocfilehash: ac789ba81d728c067be515479e749440bb5809d4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779398"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042469"
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confianza
 Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de una red. Los servicios Web están diseñados para que el acceso a recursos adicionales (como bases de datos u otros servicios Web) se encapsule en la lógica empresarial del servicio Web. Estos recursos deben protegerse frente al acceso no autorizado. La siguiente ilustración describe un proceso de subsistema de confianza.  

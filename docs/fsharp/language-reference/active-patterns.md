@@ -2,12 +2,12 @@
 title: Modelos activos (F#)
 description: 'Obtenga información sobre cómo usar los patrones activos para definir particiones con nombre que subdividen los datos de entrada en el lenguaje de programación F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 964ae8eb6db0191fab1e5a816e29bd0819605f2c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786506"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881881"
 ---
 # <a name="active-patterns"></a>Patrones activos
 
@@ -44,7 +44,7 @@ El resultado de este programa es como sigue:
 
 Es otro uso de modelos activos descomponer los tipos de datos de varias formas, por ejemplo, cuando los mismos datos subyacentes tienen varias representaciones posibles. Por ejemplo, un `Color` objeto se puede descomponer en una representación RGB o HSB.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
 La salida del programa anterior es como sigue:
 
@@ -72,9 +72,9 @@ Las expresiones de coincidencia de patrón resultante permiten a los datos se es
 
 ## <a name="partial-active-patterns"></a>Modelos activos parciales
 
-En ocasiones, necesitará sólo una parte del espacio de entrada de partición. En ese caso, escribe un conjunto de modelos parciales cada que coinciden con algunas entradas pero no coincide con otras entradas. Modelos activos que no generan un valor siempre se denominan *modelos activos parciales*; tienen un valor devuelto que es un tipo de opción. Para definir un modelo activo parcial, usa un carácter comodín (_) al final de la lista de modelos dentro de los clips plátano. El código siguiente muestra el uso de un modelo activo parcial.
+En ocasiones, necesitará sólo una parte del espacio de entrada de partición. En ese caso, escribe un conjunto de modelos parciales cada que coinciden con algunas entradas pero no coincide con otras entradas. Modelos activos que no generan un valor siempre se denominan *modelos activos parciales*; tienen un valor devuelto que es un tipo de opción. Para definir un modelo activo parcial, se utiliza un carácter comodín (\_) al final de la lista de modelos dentro de lo delimitadores de modelo activo. El código siguiente muestra el uso de un modelo activo parcial.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
 La salida del ejemplo anterior es el siguiente:
 
@@ -88,7 +88,7 @@ Something else : Not matched.
 
 Al usar patrones activos parciales, en ocasiones, las opciones individuales pueden ser separados o mutuamente excluyentes, pero no se necesita. En el ejemplo siguiente, el cuadrado de patrón y el modelo del cubo no son separados, porque algunos números son cuadrados y cubos, como los 64. El siguiente programa imprime todos los enteros hasta 1000000 que son cuadrados y cubos.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 La salida es la siguiente:
 
@@ -109,7 +109,7 @@ La salida es la siguiente:
 
 Modelos activos siempre tienen al menos un argumento para el elemento que se coteja, pero es posible que tarden argumentos adicionales, en cuyo caso el nombre *modelo activo parametrizado* se aplica. Argumentos adicionales permiten un patrón general estar especializados. Por ejemplo, los patrones activos que utilizan expresiones regulares para analizar cadenas suelen incluyen la expresión regular como un parámetro adicional, como se muestra en el código siguiente, que también usa el patrón activo parcial `Integer` definido en el ejemplo de código anterior. En este ejemplo, se proporcionan las cadenas que usan expresiones regulares para varios formatos de fecha para personalizar el activo ParseRegex general. El modelo activo de entero se utiliza para convertir las cadenas coincidentes en enteros que se pueden pasar al constructor DateTime.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
 La salida del código anterior es el siguiente:
 
@@ -119,7 +119,7 @@ La salida del código anterior es el siguiente:
 
 Modelos activos no se limitan únicamente a las expresiones de coincidencia de patrones, también puede usar en enlaces de let.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
 La salida del código anterior es el siguiente:
 

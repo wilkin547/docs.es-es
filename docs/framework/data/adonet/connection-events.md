@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
 ms.openlocfilehash: c1ef9ff9cc4d77e4951e99ed74c96cf78eb71506
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805866"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037742"
 ---
 # <a name="connection-events"></a>Eventos de Connection
 Todos los proveedores de datos de .NET Framework tienen **conexión** objetos con dos eventos que puede usar para recuperar mensajes informativos de un origen de datos o para determinar si el estado de un **conexión** tiene puede cambiar. En la tabla siguiente se describe los eventos de la **conexión** objeto.  

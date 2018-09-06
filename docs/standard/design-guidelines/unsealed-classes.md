@@ -9,27 +9,28 @@ helpviewer_keywords:
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 672d36c6b888ee9a89a76d5d417a7a7e92dd8f36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0f1c4c9b2d1928d6f96d62ab12df9786756498
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571666"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891382"
 ---
 # <a name="unsealed-classes"></a>Clases no selladas
-No se puede heredar clases selladas de e impiden que extensibilidad. En cambio, las clases que se pueden heredar de se denominan clases no selladas.  
+Clases selladas no se puede heredar de y evitar la extensibilidad. En cambio, las clases que se pueden heredar se denominan clases no selladas.  
   
  **✓ CONSIDER** usar clases no selladas con no agrega los miembros virtuales o protegidos como una excelente manera de proporcionar económicos pero muy valiosa extensibilidad para un marco de trabajo.  
   
- Los desarrolladores a menudo desean heredar de clases no selladas con el fin de agregar a miembros de comodidad como constructores personalizados, nuevos métodos o las sobrecargas del método. Por ejemplo, `System.Messaging.MessageQueue` no está sellado y, por tanto, permite a los usuarios para crear colas personalizadas este comportamiento predeterminado para una ruta de acceso de cola determinado o para agregar métodos personalizados que simplifican la API de escenarios concretos.  
+ Los desarrolladores a menudo desean heredar de clases no selladas con el fin de agregar a miembros de conveniencia como constructores personalizados, nuevos métodos o las sobrecargas del método. Por ejemplo, `System.Messaging.MessageQueue` está sellado y, por tanto, permite a los usuarios para crear colas personalizadas el valor predeterminado para una ruta de acceso de cola determinada o para agregar métodos personalizados que simplifican la API para escenarios específicos.  
   
- Las clases están selladas de forma predeterminada en los lenguajes de programación más y también es el valor predeterminado recomendado para la mayoría de las clases en marcos de trabajo. La extensibilidad ofrecida por los tipos no sellados se valora mucho por los usuarios de framework y bastante económica proporcionar debido a los costos de prueba relativamente baja asociados con tipos no sellados.  
+ Las clases están sellados o sin sellar de forma predeterminada en los lenguajes de programación más y esto también es el valor predeterminado recomendado para la mayoría de las clases de marcos de trabajo. La extensibilidad ofrecida por los tipos no sellados es mucho más valorados por los usuarios de plataformas y bastante económica proporcionar debido a los costos de prueba relativamente baja asociados con tipos no sellados.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [Sellado](../../../docs/standard/design-guidelines/sealing.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Sellado](../../../docs/standard/design-guidelines/sealing.md)

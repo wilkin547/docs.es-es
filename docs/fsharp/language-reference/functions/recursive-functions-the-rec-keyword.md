@@ -1,18 +1,17 @@
 ---
 title: 'Funciones recursivas: palabra clave rec (F#)'
-description: "Obtenga información acerca de cómo se utiliza la palabra clave 'rec' de F # con la palabra clave 'let' para definir una función recursiva."
+description: "Obtenga información sobre cómo se usa la palabra clave 'rec' de F # con la palabra clave 'let' para definir una función recursiva."
 ms.date: 05/16/2016
-ms.openlocfilehash: 6039a48eae2b16aa1d82617176460d727a878d87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562926"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879271"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funciones recursivas: palabra clave rec
 
 El `rec` palabra clave se utiliza junto con el `let` palabra clave para definir una función recursiva.
-
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,25 +29,26 @@ function2-body
 ```
 
 ## <a name="remarks"></a>Comentarios
-Funciones recursivas, las funciones que llaman a sí mismos, se identifican explícitamente en el lenguaje F #. Esto hace que el identificador que se está definiendo estén disponibles en el ámbito de la función.
 
-El código siguiente muestra una función recursiva que calcula el *n*número de Fibonacci.
+Funciones recursivas, las funciones que llaman a sí mismos, se identifican explícitamente en el lenguaje F #. Esto hace que el identificador que se está definiendo disponibles en el ámbito de la función.
+
+El código siguiente muestra una función recursiva que calcula el *n*<sup>th</sup> número de Fibonacci.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 >[!NOTE]
-En la práctica, código similar anterior es desperdicia memoria y tiempo de procesador, ya que implica el cálculo de valores previamente calculados.
+En la práctica, el código como ese anterior es un desperdicio de tiempo de procesador y memoria, ya que implica el cálculo de valores calculados previamente.
 
-
-Los métodos son implícitamente recursivos dentro del tipo; no es necesario agregar el `rec` palabra clave. Enlaces let en clases no son implícitamente recursivos.
-
+Los métodos son implícitamente recursivos dentro del tipo; no es necesario para agregar el `rec` palabra clave. Enlaces let en clases no son implícitamente recursivos.
 
 ## <a name="mutually-recursive-functions"></a>Funciones mutuamente recursivas
-A veces, las funciones son *mutuamente recursivas*, lo que significa que las llamadas forman un círculo, donde una función llama a otro que a su vez llama a la primera, con cualquier número de llamadas en medio. Debe definir estas funciones juntas en el `let` enlace, usando la `and` palabra clave que se va a vincular todos estos elementos.
 
-En el ejemplo siguiente se muestra dos mutuamente las funciones recursivas.
+A veces, las funciones son *mutuamente recursivas*, lo que significa que las llamadas forman un círculo, donde una función llama a otro que a su vez llama a la primera, con cualquier número de llamadas entre ellos. Debe definir estas funciones juntas en una `let` enlace, mediante el `and` palabra clave para vincularlas.
+
+El ejemplo siguiente muestra dos mutuamente las funciones recursivas.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
 ## <a name="see-also"></a>Vea también
-[Funciones](index.md)
+
+- [Funciones](index.md)

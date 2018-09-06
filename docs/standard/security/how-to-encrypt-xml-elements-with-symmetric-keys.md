@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9fa06ed0befd82a3efdd46deaa2362b1f10fa35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5c221dc05787c6d76d998977069ad327a3dfa83
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586080"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881228"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Cómo: Cifrar elementos XML con claves simétricas
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML le permite almacenar o transportar información XML confidencial, sin preocuparse de que los datos se puedan leer con facilidad.  Este procedimiento descifra un elemento XML mediante el algoritmo AES (Estándar de cifrado avanzado), también conocido como Rijndael.  
   
- Para obtener información sobre cómo descifrar un elemento XML que se cifró mediante este procedimiento, consulte [Cómo: descifrar elementos XML con claves simétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md).  
+ Para obtener información acerca de cómo descifrar un elemento XML cifrado mediante este procedimiento, consulte [Cómo: descifrar elementos XML con claves simétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md).  
   
  Al usar un algoritmo simétrico como AES para cifrar datos XML, debe usar la misma clave para cifrar y descifrar los datos XML.  En el ejemplo de este procedimiento se supone que el código XML cifrado se descifrará con la misma clave y que las partes de cifrado y descifrado están de acuerdo en el algoritmo y la clave que se van a usar.  En este ejemplo no se almacena ni se cifra la clave AES dentro del código XML cifrado.  
   
@@ -101,6 +101,7 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
   
  Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Security.Cryptography.Xml>  
- [Descifrar elementos XML con claves simétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Descifrar elementos XML con claves simétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: c292c9f7827e86d48f2006c05f6012ad95da1485
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757910"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885099"
 ---
 # <a name="managing-dataviews"></a>Administrar objetos DataView
 Puede utilizar un <xref:System.Data.DataViewManager> para administrar la configuración de vista para todas las tablas de un <xref:System.Data.DataView>. Si tiene un control que desea enlazar a varias tablas, como una cuadrícula que navega por relaciones, un **DataViewManager** es ideal.  
   
- El **DataViewManager** contiene una colección de <xref:System.Data.DataViewSetting> objetos que se utilizan para establecer la configuración de vista de las tablas en el <xref:System.Data.DataSet>. El <xref:System.Data.DataViewSettingCollection> contiene un <xref:System.Data.DataViewSetting> objeto para cada tabla en un **conjunto de datos**. Puede establecer el valor predeterminado **ApplyDefaultSort**, **ordenación**, **RowFilter**, y **RowStateFilter** propiedades de la tabla que se hace referencia por con su **DataViewSetting**. Puede hacer referencia a la **DataViewSetting** para una tabla determinada por nombre o referencia ordinal, o si se pasa una referencia a dicho objeto de tabla. Puede tener acceso a la colección de **DataViewSetting** objetos en un **DataViewManager** mediante el uso de la **DataViewSettings** propiedad.  
+ El **DataViewManager** contiene una colección de <xref:System.Data.DataViewSetting> objetos que se utilizan para establecer la configuración de la vista de las tablas de la <xref:System.Data.DataSet>. El <xref:System.Data.DataViewSettingCollection> contiene uno <xref:System.Data.DataViewSetting> objeto para cada tabla en un **DataSet**. Puede establecer el valor predeterminado **ApplyDefaultSort**, **ordenación**, **RowFilter**, y **RowStateFilter** propiedades de la tabla que se hace referencia por mediante su **DataViewSetting**. Puede hacer referencia a la **DataViewSetting** para una tabla determinada por nombre o referencia ordinal, o pasando una referencia a dicho objeto de tabla. Puede obtener acceso a la colección de **DataViewSetting** objetos en un **DataViewManager** utilizando el **DataViewSettings** propiedad.  
   
- El siguiente código en el ejemplo se llena un **conjunto de datos** con SQL Server **Northwind** tablas de base de datos **clientes**, **pedidos**y  **Detalles del pedido**, crea las relaciones entre las tablas, utiliza un **DataViewManager** para establecer el valor predeterminado **DataView** configuración y enlaza un **DataGrid**  a la **DataViewManager**. En el ejemplo se establece el valor predeterminado **DataView** configuración para todas las tablas de la **conjunto de datos** para ordenar por la clave principal de la tabla (**ApplyDefaultSort**  =  **true**) y, a continuación, modifica el criterio de ordenación de la **clientes** tabla para ordenar por **CompanyName**.  
+ El siguiente código de ejemplo se llena un **conjunto de datos** con SQL Server **Northwind** tablas de base de datos **clientes**, **pedidos**y  **Detalles de pedidos**, crea las relaciones entre las tablas, utiliza un **DataViewManager** para establecer el valor predeterminado **DataView** configuración y se enlaza un **DataGrid**  a la **DataViewManager**. El ejemplo establece el valor predeterminado **DataView** configuración para todas las tablas de la **DataSet** para ordenar por la clave principal de la tabla (**ApplyDefaultSort**  =  **true**) y, a continuación, modifica el criterio de ordenación de la **clientes** tabla para ordenar por **CompanyName**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,4 +125,4 @@ grid.SetDataBinding(viewManager, "Customers");
  <xref:System.Data.DataViewSetting>  
  <xref:System.Data.DataViewSettingCollection>  
  [Objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

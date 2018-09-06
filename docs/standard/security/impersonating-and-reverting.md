@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40fef0ccbdf73580c5662fc76ed4335e587b9fbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582179"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891751"
 ---
 # <a name="impersonating-and-reverting"></a>Suplantar y revertir
 En ocasiones es posible que deba obtener un token de cuenta de Windows para suplantar una cuenta de Windows. Por ejemplo, la aplicación basada en ASP.NET podría tener que actuar en nombre de varios usuarios en momentos distintos. La aplicación podría aceptar un token que represente un administrador de Internet Information Services (IIS), suplantar al usuario, realizar una operación y revertir a la identidad anterior. A continuación, podría aceptar un token de IIS que represente a un usuario con menos derechos, realizar alguna operación y revertir de nuevo.  
@@ -56,12 +56,13 @@ En ocasiones es posible que deba obtener un token de cuenta de Windows para supl
     MyImpersonation.Undo()  
     ```  
   
- Si el código de confianza ya asoció un <xref:System.Security.Principal.WindowsPrincipal> objeto al subproceso, puede llamar al método de instancia **Impersonate**, que no toma un token de cuenta. Tenga en cuenta que esto solo es útil cuando el objeto **WindowsPrincipal** del subproceso representa a un usuario que no es en el que se está ejecutando el proceso. Por ejemplo, podría encontrarse con esta situación si usa ASP.NET con la autenticación de Windows activada y la suplantación desactivada. En este caso, el proceso se ejecuta en una cuenta configurada en Internet Information Services (IIS) mientras la entidad de seguridad actual representa al usuario de Windows que está accediendo a la página.  
+ Si ya ha asociado el código de confianza un <xref:System.Security.Principal.WindowsPrincipal> objeto al subproceso, puede llamar al método de instancia **Impersonate**, que no toma un token de cuenta. Tenga en cuenta que esto solo es útil cuando el objeto **WindowsPrincipal** del subproceso representa a un usuario que no es en el que se está ejecutando el proceso. Por ejemplo, podría encontrarse con esta situación si usa ASP.NET con la autenticación de Windows activada y la suplantación desactivada. En este caso, el proceso se ejecuta en una cuenta configurada en Internet Information Services (IIS) mientras la entidad de seguridad actual representa al usuario de Windows que está accediendo a la página.  
   
- Tenga en cuenta que ninguna de las dos **Impersonate** ni **deshacer** cambios el **Principal** objeto (<xref:System.Security.Principal.IPrincipal>) asociado al contexto de llamada actual. En su lugar, la suplantación y la reversión cambian el token asociado con el proceso de sistema operativo actual.  
+ Tenga en cuenta que ni **Impersonate** ni **deshacer** cambios el **Principal** objeto (<xref:System.Security.Principal.IPrincipal>) asociado al contexto de llamada actual. En su lugar, la suplantación y la reversión cambian el token asociado con el proceso de sistema operativo actual.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Security.Principal.WindowsIdentity>  
- <xref:System.Security.Principal.WindowsImpersonationContext>  
- [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)  
- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Security.Principal.WindowsIdentity>  
+- <xref:System.Security.Principal.WindowsImpersonationContext>  
+- [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)  
+- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)

@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5f25777402fa31e72cbbf36f58a6c4cc65542979
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660988"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039480"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo (función)
-Recupera información de error de la llamada de función anterior.  
+Recupera información sobre el error de la llamada de función anterior.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

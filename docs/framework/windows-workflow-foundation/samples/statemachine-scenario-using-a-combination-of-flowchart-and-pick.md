@@ -3,11 +3,11 @@ title: Escenario StateMachine utilizando una combinación de actividades FlowCha
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
 ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558071"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032338"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Escenario StateMachine utilizando una combinación de actividades FlowChart y Pick
 En este ejemplo se muestra cómo implementar un escenario de cronómetro simple mediante una combinación de actividades <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Pick>. Utiliza actividades Receive y Send dentro de la actividad Pick para escuchar eventos de cronómetro.  

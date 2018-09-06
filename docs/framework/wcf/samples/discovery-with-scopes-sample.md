@@ -3,11 +3,11 @@ title: Ejemplo de detección con ámbitos
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: d9adc33d73642a42a8ba948b3c5bf75bd4bc1f5c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733783"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877497"
 ---
 # <a name="discovery-with-scopes-sample"></a>Ejemplo de detección con ámbitos
 Este ejemplo muestra cómo utilizar los ámbitos para clasificar los extremos detectables además de cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> para realizar una búsqueda asincrónica de los extremos. En el servicio, este ejemplo muestra cómo personalizar la detección de cada punto de conexión agregando un comportamiento de detección de punto de conexión y utilizándolo para agregar un ámbito al punto de conexión así como controlando la detectabilidad del punto de conexión. En el cliente, el ejemplo revisa el modo en que los clientes pueden crear un <xref:System.ServiceModel.Discovery.DiscoveryClient> y ajustar los parámetros de búsqueda para incluir ámbitos agregándolos a <xref:System.ServiceModel.Discovery.FindCriteria>. Este ejemplo también muestra el modo en que los clientes pueden restringir las respuestas agregando un criterio de terminación.  

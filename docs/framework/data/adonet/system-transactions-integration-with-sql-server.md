@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481688"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884187"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integración de System.Transactions con SQL Server
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 2.0 incorporó un nuevo marco de trabajo de transacciones al que se puede obtener acceso a través del espacio de nombres <xref:System.Transactions> . Este marco de trabajo expone las transacciones de tal forma que se integra completamente en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluyendo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  

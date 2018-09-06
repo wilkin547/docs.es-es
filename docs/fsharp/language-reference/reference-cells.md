@@ -1,17 +1,17 @@
 ---
 title: Celdas de referencia (F#)
-description: 'Obtenga información acerca de cómo las celdas de referencia de F # son ubicaciones de almacenamiento que le permiten crear valores mutables con semántica de referencias.'
+description: 'Obtenga información sobre cómo las celdas de referencia de F # son ubicaciones de almacenamiento que le permiten crear valores mutables con semántica de referencia.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149067"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892431"
 ---
 # <a name="reference-cells"></a>Celdas de referencia
 
-*Hacer referencia a las celdas* son ubicaciones de almacenamiento que le permiten crear valores mutables con semántica de referencias.
+*Celdas de referencia* son ubicaciones de almacenamiento que le permiten crear valores mutables con semántica de referencia.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -20,6 +20,7 @@ ref expression
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 Se utiliza el operador `ref` antes de un valor para crear una nueva celda de referencia que encapsula el valor. A continuación, se puede cambiar el valor subyacente, porque es mutable.
 
 Una celda de referencia contiene un valor real; no una mera dirección. Al crear una celda de referencia mediante el operador `ref`, se crea una copia del valor subyacente como valor mutable encapsulado.
@@ -73,21 +74,21 @@ La salida es la siguiente.
 
 El campo `contents` se proporciona por motivos de compatibilidad con otras versiones de ML y generará una advertencia durante la compilación. Para deshabilitar la advertencia, utilice la opción `--mlcompatibility` del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).
 
-El código siguiente muestra el uso de celdas de referencia al pasar parámetros. El tipo de Incrementor tiene un método Increment que toma un parámetro que incluye byref en el tipo de parámetro. Byref en el tipo de parámetro indica que los llamadores deben pasar una celda de referencia o la dirección de una variable típica del tipo especificado, en este caso int El resto del código muestra cómo llamar a incremento con ambos tipos de argumentos y muestra el uso del operador ref en una variable para crear una celda de referencia (ref myDelta1). A continuación, se muestra el uso del operador de dirección de (&amp;) para generar un argumento adecuado. Por último, el método Increment se llama de nuevo mediante el uso de una celda de referencia que se declara mediante un enlace let. La última línea del código muestra el uso de la! operador a fin de desreferenciar la celda de referencia para su impresión.
+El código siguiente muestra el uso de celdas de referencia al pasar parámetros. El tipo de Incrementor tiene un incremento que toma un parámetro que incluye byref en el tipo de parámetro de método. En el tipo de parámetro byref indica que los llamadores deben pasar una celda de referencia o la dirección de una variable típica del tipo especificado, en este caso int El código restante ilustra cómo llamar al incremento con ambos tipos de argumentos y muestra el uso del operador ref en una variable para crear una celda de referencia (ref myDelta1). A continuación, se muestra el uso del operador de dirección de (&amp;) para generar un argumento adecuado. Por último, el método Increment se llama de nuevo mediante el uso de una celda de referencia que se declara mediante un enlace let. La última línea de código muestra el uso de la. operador que se va a desreferenciar la celda de referencia para la impresión.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
 
 Para obtener más información sobre cómo pasar por referencia, vea [parámetros y argumentos](parameters-and-arguments.md).
 
 >[!NOTE]
-Programadores de C# deben saber que ref funciona forma distinta en F # que en C#. Por ejemplo, el uso de ref cuando se pasa un argumento no tiene el mismo efecto en F # como ocurre en C#.
+Los programadores de C# deben saber que ref funciona forma distinta en F # que en C#. Por ejemplo, el uso de ref al pasar un argumento no tiene el mismo efecto en F # como lo hace en C#.
 
 >[!NOTE]
 `mutable` las variables se pueden promover automáticamente a `'a ref` si captura una clausura; vea [valores](values/index.md).
 
 ## <a name="consuming-c-ref-returns"></a>Utilizar en C# `ref` devuelve
 
-A partir de F # 4.1, puedes utilizar `ref` devuelve generado en C#.  El resultado de una llamada de este tipo es un `byref<_>` puntero.
+A partir de F # 4.1, pueden consumir `ref` devuelve generado en C#.  El resultado de esta llamada es un `byref<_>` puntero.
 
 El siguiente método de C#:
 
@@ -112,7 +113,7 @@ namespace RefReturns
 }
 ```
 
-Puede ser transparente llama F # con ninguna sintaxis especial:
+Puede ser llamar transparente por F # con ninguna sintaxis especial:
 
 ```fsharp
 open RefReturns
@@ -128,13 +129,11 @@ También puede declarar funciones que pueden durar un `ref` devolver como entrad
 let f (x: byref<int>) = &x
 ```
 
-Actualmente no hay ninguna manera de generar un `ref` devuelto en F # que en C# que pueden consumir.
+Actualmente no hay ninguna manera de generar un `ref` devuelto en F # que podría utilizarse en C#.
 
 ## <a name="see-also"></a>Vea también
-[Referencia del lenguaje F#](index.md)
 
-[Parámetros y argumentos](parameters-and-arguments.md)
-
-[Referencia de símbolos y operadores](symbol-and-operator-reference/index.md)
-
-[Valores](values/index.md)
+- [Referencia del lenguaje F#](index.md)
+- [Parámetros y argumentos](parameters-and-arguments.md)
+- [Referencia de símbolos y operadores](symbol-and-operator-reference/index.md)
+- [Valores](values/index.md)

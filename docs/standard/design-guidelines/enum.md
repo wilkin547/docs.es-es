@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544f617ca3a352814504125d7a61d70db5a81566
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579254"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891238"
 ---
 # <a name="enum-design"></a>Diseño de enumeraciones
-Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumeraciones: las enumeraciones simples de enumeraciones y marca.  
+Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumeraciones: enumeraciones simples de enumeraciones y marca.  
   
- Las enumeraciones simples representan pequeños conjuntos cerrados de opciones. Un ejemplo común de la enumeración simple es un conjunto de colores.  
+ Enumeraciones simples representan conjuntos cerrados pequeño de opciones. Un ejemplo común de la enumeración simple es un conjunto de colores.  
   
- Las enumeraciones de indicador están diseñadas para admitir las operaciones bit a bit de los valores de enumeración. Un ejemplo común de la enumeración de marcas es una lista de opciones.  
+ Marca enumeraciones están diseñadas para admitir las operaciones bit a bit de los valores de enumeración. Un ejemplo común de la enumeración de marcas es una lista de opciones.  
   
  **✓ DO** utilizar una enumeración para establecimiento inflexible de tipos, parámetros, propiedades y valores que representan conjuntos de valores devueltos.  
   
@@ -33,11 +33,11 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  **X DO NOT** proporcionar valores de enumeración reservado que se han diseñado para un uso futuro.  
   
- Solo puede siempre tiene que agregar valores a la enumeración existente en una fase posterior. Vea [agregar valores a las enumeraciones](#add_value) para obtener más información sobre cómo agregar valores a las enumeraciones. Valores reservados simplemente contamina el conjunto de valores reales y suelen dar lugar a errores de usuario.  
+ Simplemente siempre puede agregar valores a la enumeración existente en una etapa posterior. Consulte [agregar valores a enumeraciones](#add_value) para obtener más información sobre cómo agregar valores a las enumeraciones. Los valores de reservado simplemente contaminen el conjunto de valores reales y tienden a producir errores de usuario.  
   
  **X AVOID** exponer públicamente las enumeraciones con un único valor.  
   
- Es una práctica común para garantizar la extensibilidad futura de API de C agregar parámetros reservados para las firmas de método. Estos parámetros reservados se pueden expresar como enumeraciones con un valor único. No debe realizarse en las API administradas. Sobrecarga de métodos permite agregar parámetros en versiones futuras.  
+ Es una práctica común para garantizar la futura extensibilidad de C API agregar parámetros reservados para las firmas de método. Estos parámetros reservados pueden expresarse como enumeraciones con un valor predeterminado único. No debe realizarse en las API administradas. Sobrecarga de métodos permite agregar parámetros en futuras versiones.  
   
  **X DO NOT** incluir los valores de centinela en las enumeraciones.  
   
@@ -45,58 +45,59 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  **✓ DO** proporcionar un valor de cero en enumeraciones simples.  
   
- Tenga en cuenta el valor de llamada algo parecido a "Ninguno". Si este valor no es adecuado para esta enumeración determinada, el valor predeterminado más común para la enumeración debe tener asignado el valor subyacente de cero.  
+ Considere la posibilidad de llamar a algo parecido a "None". el valor Si este valor no es adecuado para esta enumeración determinada, el valor predeterminado más común para la enumeración debe asignarse el valor subyacente cero.  
   
  **✓ CONSIDER** con <xref:System.Int32> (el valor predeterminado en la mayoría de lenguajes de programación) como el tipo subyacente de una enumeración, a menos que cualquiera de las acciones siguientes es verdadera:  
   
 -   La enumeración es una enumeración de marcas y dispone de más de 32 indicadores o espera tener más en el futuro.  
   
--   El tipo subyacente debe ser diferente de <xref:System.Int32> para facilitar la interoperabilidad con código no administrado que espera las enumeraciones de tamaño diferente.  
+-   El tipo subyacente debe ser diferente de <xref:System.Int32> para facilitar la interoperabilidad con código no administrado espera las enumeraciones de diferente tamaño.  
   
--   Un tipo subyacente de menor tamaño daría como resultado un ahorro sustancial en el espacio. Si espera que la enumeración se utiliza principalmente como un argumento para el flujo de control, el tamaño hace poca diferencia. El ahorro de tamaño podría ser importante si:  
+-   Un tipo subyacente de menor tamaño daría lugar a importantes ahorros de espacio. Si espera que la enumeración se utiliza principalmente como un argumento para el flujo de control, el tamaño hace poca diferencia. El ahorro de tamaño puede ser considerable si:  
   
-    -   Se espera que la enumeración que se usará como un campo en una estructura muy a menudo se ha creado una instancia o clase.  
+    -   Esperar la enumeración que se usará como un campo en una estructura con instancias con mucha frecuencia o clase.  
   
-    -   Se espera que los usuarios para crear matrices de gran tamaño o colecciones de las instancias de enumeración.  
+    -   Se espera que los usuarios para crear matrices de gran tamaño o colecciones de las instancias de la enumeración.  
   
     -   Espera un gran número de instancias de la enumeración que se va a serializar.  
   
- Para el uso de memoria, tenga en cuenta que los objetos administrados son siempre `DWORD`-alineados, por lo que necesita eficazmente varias enumeraciones u otras estructuras pequeños en una instancia para empaquetar una enumeración con menor para marcar la diferencia, porque el tamaño de la instancia total es siempre Si va a redondear hasta un `DWORD`.  
+ Para el uso de memoria, tenga en cuenta que los objetos administrados son siempre `DWORD`-alineadas, por lo que necesita de forma eficaz varias enumeraciones u otras estructuras pequeño en una instancia para empaquetar una enumeración con más pequeña para marcar la diferencia, porque el tamaño total de instancias siempre es Si va a redondear hasta un `DWORD`.  
   
  **✓ DO** nombre enumeraciones de indicador con nombres plurales o sintagmas nominales y enumeraciones simples con nombres simples o frases.  
   
  **X DO NOT** extender <xref:System.Enum?displayProperty=nameWithType> directamente.  
   
- <xref:System.Enum?displayProperty=nameWithType> es un tipo especial que CLR usa para crear enumeraciones definidas por el usuario. La mayoría de lenguajes de programación proporcionan un elemento de programación que proporciona acceso a esta funcionalidad. Por ejemplo, en C# el `enum` palabra clave se utiliza para definir una enumeración.  
+ <xref:System.Enum?displayProperty=nameWithType> es un tipo especial que CLR usa para crear enumeraciones definidas por el usuario. La mayoría de lenguajes de programación proporcionan un elemento de programación que proporciona acceso a esta funcionalidad. Por ejemplo, en C# el `enum` palabra clave se usa para definir una enumeración.  
   
 <a name="design"></a>   
-### <a name="designing-flag-enums"></a>Diseñar enumeraciones de indicador  
- **✓ DO** aplicar el <xref:System.FlagsAttribute?displayProperty=nameWithType> para las enumeraciones de indicador. No se aplican este atributo a las enumeraciones simples.  
+### <a name="designing-flag-enums"></a>Diseño de las enumeraciones de marca  
+ **✓ DO** aplicar el <xref:System.FlagsAttribute?displayProperty=nameWithType> para las enumeraciones de indicador. No se aplique este atributo a las enumeraciones simples.  
   
  **✓ DO** use potencias de dos para los valores de enumeración de marca para que puedan combinarse libremente utilizando la operación OR bit a bit.  
   
  **✓ CONSIDER** proporcionar valores de enumeración especiales para normalmente usa combinaciones de marcas.  
   
- Operaciones bit a bit son un concepto avanzado y no deberían ser necesarias para tareas sencillas. <xref:System.IO.FileAccess.ReadWrite> es un ejemplo de este tipo de valor especial.  
+ Operaciones bit a bit son un concepto avanzado y no debería requerirse para tareas sencillas. <xref:System.IO.FileAccess.ReadWrite> es un ejemplo de este tipo en un valor especial.  
   
  **X AVOID** crear enumeraciones de indicador que ciertas combinaciones de valores no son válidos.  
   
  **X AVOID** utilizando marca los valores de enumeración de cero a menos que el valor representa "se borran todas las marcas" y se denomina de forma adecuada, según lo prescrito por la instrucción siguiente.  
   
- **✓ DO** nombre al valor cero de enumeraciones de marca `None`. Para una enumeración de marca, el valor siempre debe significar "se borran todos los indicadores".  
+ **✓ DO** nombre al valor cero de enumeraciones de marca `None`. Para una enumeración de marca, el valor siempre debe significar "se borran todas las marcas".  
   
 <a name="add_value"></a>   
 ### <a name="adding-value-to-enums"></a>Agregar valor a las enumeraciones  
- Es muy común para detectar que deba agregar valores a una enumeración después de que ya ha enviado. Hay un posible problema de compatibilidad de aplicaciones cuando el valor recién agregado se devuelve desde una API existente, porque las aplicaciones mal escritas no pueden controlar el nuevo valor correctamente.  
+ Es muy común que detecte que son necesarias agregar valores a una enumeración después de que ya se han enviado. Hay un posible problema de compatibilidad de la aplicación cuando el valor recién agregado se devuelve desde una API existente, porque las aplicaciones mal escritas no podrían controlar correctamente el nuevo valor.  
   
  **✓ CONSIDER** agregar valores a las enumeraciones, a pesar de que un pequeño riesgo de compatibilidad.  
   
- Si tiene datos reales sobre incompatibilidades causadas por las adiciones a una enumeración, considere la posibilidad de agregar una nueva API que devuelve los valores antiguos y nuevos y dejar de utilizar la API antigua, que debería devolver solo los valores anteriores. Esto garantizará que las aplicaciones existentes siguen siendo compatibles.  
+ Si tiene datos reales sobre las incompatibilidades de la aplicación causadas por las adiciones a una enumeración, considere la posibilidad de agregar una nueva API que devuelve los valores nuevos y antiguos y dejar de utilizar la API antigua, que debe continuar devolviendo simplemente los valores anteriores. Esto garantizará que las aplicaciones existentes siguen siendo compatibles.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

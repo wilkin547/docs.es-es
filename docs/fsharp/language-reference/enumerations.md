@@ -2,17 +2,16 @@
 title: Enumeraciones (F#)
 description: 'Obtenga información sobre cómo usar las enumeraciones de F # en lugar de literales para hacer que el código más legible y fácil de mantener.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518842"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891647"
 ---
 # <a name="enumerations"></a>Enumeraciones
 
 *Enumeraciones*, también conocida como *enumeraciones*,, son tipos enteros donde las etiquetas se asignan a un subconjunto de los valores. Se pueden usar en lugar de los literales para que el código sea más fácil de leer y mantener.
-
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,6 +23,7 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 Una enumeración se parece mucho a una unión discriminada que tiene valores simples, salvo que se pueden especificar los valores. Normalmente, los valores son enteros que comienzan en 0 o 1 o enteros que representan las posiciones de bits. Si una enumeración está pensada para representar las posiciones de bits, también se debe utilizar el [marcas](xref:System.FlagsAttribute) atributo.
 
 El tipo subyacente de la enumeración se determina a partir del literal que se usa, por lo que, por ejemplo, puede usar literales con sufijo, como `1u`, `2u`, y así sucesivamente, para un entero sin signo (`uint32`) tipo.
@@ -49,8 +49,8 @@ El valor predeterminado `enum` función funciona con el tipo `int32`. Por lo tan
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
 Además, los casos, para las enumeraciones siempre se emiten como `public`. Esto es para que se alineen con C# y el resto de la plataforma. NET.
-    
-## <a name="see-also"></a>Vea también
-[Referencia del lenguaje F#](index.md)
 
-[Conversiones](casting-and-conversions.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia del lenguaje F#](index.md)
+- [Conversiones](casting-and-conversions.md)

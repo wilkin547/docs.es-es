@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1635276465dd58028c8a5e4b7e69a307664a4c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580762"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031700"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Crear un esquema criptográfico
 Los componentes criptográficos de .NET Framework se pueden combinar para crear distintos esquemas para cifrar y descifrar datos.  
@@ -30,7 +30,8 @@ Los componentes criptográficos de .NET Framework se pueden combinar para crear 
   
 5.  Después, las partes inician una conversación mediante el cifrado simétrico.  
   
- Crear un esquema criptográfico no es una tarea trivial. Para obtener más información sobre el uso de criptografía, vea el tema criptografía de la documentación de Platform SDK en http://msdn.microsoft.com/library.  
+ Crear un esquema criptográfico no es una tarea trivial. Para obtener más información sobre el uso de criptografía, vea el tema criptografía en la documentación de Platform SDK en http://msdn.microsoft.com/library.  
   
-## <a name="see-also"></a>Vea también  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vea también
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

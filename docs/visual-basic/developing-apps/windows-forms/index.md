@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417717"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881997"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)
 Una parte importante de Visual Basic es la capacidad para crear aplicaciones de Windows Forms que se ejecutan localmente en los equipos de usuarios. Puede usar Visual Studio para crear la aplicación e interfaz de usuario con Windows Forms. Una aplicación de Windows Forms se basa en las clases desde el <xref:System.Windows.Forms> espacio de nombres.  

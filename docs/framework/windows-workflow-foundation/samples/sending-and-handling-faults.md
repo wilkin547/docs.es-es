@@ -3,11 +3,11 @@ title: Envío y control de errores
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
 ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801000"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037716"
 ---
 # <a name="sending-and-handling-faults"></a>Envío y control de errores
 En este ejemplo se muestra cómo utilizar las actividades de mensajería <xref:System.ServiceModel.Activities.SendReply> y <xref:System.ServiceModel.Activities.ReceiveReply> para enviar y recibir errores esperados e inesperados. En este escenario, la primera solicitud de cliente genera un error esperado que se ha incluido en su colección <xref:System.ServiceModel.Activities.Send.KnownTypes%2A>. Las siguientes solicitudes de cliente producen la recepción de errores inesperados, antes de que la solicitud final se realice correctamente.  

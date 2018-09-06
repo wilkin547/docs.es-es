@@ -3,11 +3,11 @@ title: Autorización y permisos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661939"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037781"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorización y permisos en SQL Server
 Al crear objetos de base de datos, se deben conceder permisos de forma explícita para que los usuarios tengan acceso a ellos. Cada objeto susceptible de protegerse tiene permisos que se pueden otorgar a una entidad de seguridad mediante instrucciones de permiso.  

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
 ms.openlocfilehash: f73dea640bc2059353b2a250188b901f360ea750
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736236"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037274"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Cómo: Determinar qué tecla modificadora se presionó
 Cuando se crea una aplicación que acepte las pulsaciones del usuario, también puede supervisar las teclas modificadoras como las teclas MAYÚS, ALT y CTRL. Cuando se presiona una tecla modificadora en combinación con otras claves, o con clics del mouse, la aplicación puede responder adecuadamente. Por ejemplo, si se presiona la letra S, simplemente puede provocar una "s" en la pantalla, pero si se presionan las teclas CTRL + S, es posible que se puede guardar el documento actual. Si controla el <xref:System.Windows.Forms.Control.KeyDown> eventos, el <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> propiedad de la <xref:System.Windows.Forms.KeyEventArgs> recibidos por el evento de controlador especifica se presionan las teclas modificadoras que. Como alternativa, el <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> propiedad de <xref:System.Windows.Forms.KeyEventArgs> especifica el carácter que se presionó, así como las teclas modificadoras que se combina con una operación OR bit a bit. Sin embargo, si está controlando el <xref:System.Windows.Forms.Control.KeyPress> evento o un evento del mouse, el controlador de eventos no recibe esta información. En este caso, debe usar el <xref:System.Windows.Forms.Control.ModifierKeys%2A> propiedad de la <xref:System.Windows.Forms.Control> clase. En cualquier caso, debe realizar una operación AND bit a bit de adecuado <xref:System.Windows.Forms.Keys> valor y el valor que se está probando. El <xref:System.Windows.Forms.Keys> enumeración ofrece las variaciones de cada clave de modificador, por lo que es importante que realice el bit a bit y con el valor correcto. Por ejemplo, la tecla MAYÚS está representado por <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> y <xref:System.Windows.Forms.Keys.LShiftKey> el valor correcto para probar la ya es una tecla modificadora MAYÚS <xref:System.Windows.Forms.Keys.Shift>. De forma similar, debe usar probar para CTRL y ALT como modificadores del <xref:System.Windows.Forms.Keys.Control> y <xref:System.Windows.Forms.Keys.Alt> valores, respectivamente.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: e5a07e5264c715f568121403721a3c844b903d99
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553082"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886323"
 ---
 # <a name="getting-started-tutorial"></a>Tutorial de introducción
 Los temas contenidos en esta sección están diseñados para proporcionarle una visión rápida a la Windows Communication Foundation (WCF) experiencia de programación. Están diseñados para ser completados en el orden en que aparecen en la lista incluida al final de este tema. Este tutorial le ofrece una introducción a los pasos necesarios para la creación de aplicaciones cliente y el servicio WCF. Un servicio expone uno o más puntos de conexión, donde cada uno de ellos expone una o más operaciones de servicio. El *extremo* especifica una dirección donde se puede encontrar el servicio, un enlace que contiene la información que describe cómo un cliente debe comunicar con el servicio y un contrato que define la funcionalidad de un servicio proporciona el servicio a sus clientes.  

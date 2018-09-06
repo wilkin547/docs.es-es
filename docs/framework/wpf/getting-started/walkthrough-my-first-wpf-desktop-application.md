@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38f6e16616ad931641539d3ae164381ddd9ad941
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931730"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885186"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio WPF
 
@@ -38,7 +38,7 @@ En este tutorial incluye los siguientes pasos:
 Al final del tutorial, habrá creado una aplicación de Windows que permite a los usuarios ver los informes de gastos para personas seleccionadas independiente. La aplicación se compone de varias páginas WPF que se hospedan en una ventana del explorador de estilo.
 
 > [!TIP]
-> El código de ejemplo que se usa para crear este tutorial está disponible para Visual Basic y C# en [Introduction to Building WPF Applications](http://go.microsoft.com/fwlink/?LinkID=160008).
+> El código de ejemplo que se usa para crear este tutorial está disponible para Visual Basic y C# en [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -326,7 +326,7 @@ La ilustración siguiente muestra los resultados de lo que acaba de agregar:
 
 1. Abra *`ExpenseItHome.xaml`*.
 
-2. Agregar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controlador de eventos para el <xref:System.Windows.Controls.Button> elemento. Para obtener más información, consulte [Cómo: crear un controlador de eventos simple](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Agregar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controlador de eventos para el <xref:System.Windows.Controls.Button> elemento. Para obtener más información, consulte [Cómo: crear un controlador de eventos simple](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -464,7 +464,7 @@ En esta sección, actualizará la interfaz de usuario para cada elemento en las 
 
     [!code-xaml[ExpenseIt#30](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#30)]
 
-4. Aplicar las plantillas para el <xref:System.Windows.Controls.DataGrid> datos de informe de las columnas que muestran el gasto.
+4. Reemplace el <xref:System.Windows.Controls.DataGridTextColumn> elementos con <xref:System.Windows.Controls.DataGridTemplateColumn> bajo el <xref:System.Windows.Controls.DataGrid> elemento y aplicar las plantillas.
 
     [!code-xaml[ExpenseIt#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 

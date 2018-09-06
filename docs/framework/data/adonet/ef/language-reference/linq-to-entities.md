@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 7e04155c3129fd3b70977dd2960ccdc99c194cab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760783"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037024"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities proporciona la capacidad de realizar consultas integradas en lenguajes (LINQ) que permite a los desarrolladores de software escribir consultas contra el modelo conceptual de Entity Framework mediante Visual Basic o Visual C#. Las consultas con Entity Framework se representan mediante consultas de árboles de comandos, que se ejecutan en el contexto del objeto. LINQ to Entities convierte las consultas de Language-Integrated Queries (LINQ) en consultas de árboles de comandos, ejecuta las consultas en Entity Framework y devuelve objetos que se pueden usar tanto en Entity Framework como en LINQ. A continuación se muestra el proceso para crear y ejecutar una consulta de LINQ to Entities.  
@@ -39,18 +39,18 @@ LINQ to Entities proporciona la capacidad de realizar consultas integradas en le
   
  En Entity Framework, tanto los operadores como las expresiones se representan mediante una jerarquía de tipos simple, que después se coloca en un árbol de comandos. Entity Framework usa el árbol de comandos para ejecutar la consulta. Si la consulta de LINQ no se puede expresar como un árbol de comandos, se producirá una excepción cuando se convierta la consulta. La conversión de las consultas de LINQ to Entities implica dos conversiones más: la de los operadores de consulta estándar y la de las expresiones.  
   
- Hay varios operadores de consulta estándar de LINQ que no tienen una conversión válida en LINQ to Entities. Si se intenta usar estos operadores, se producirá una excepción al convertir la consulta. Para obtener una lista de LINQ compatible a los operadores de entidades, vea [admitidas y métodos de LINQ no admitidos (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md).  
+ Hay varios operadores de consulta estándar de LINQ que no tienen una conversión válida en LINQ to Entities. Si se intenta usar estos operadores, se producirá una excepción al convertir la consulta. Para obtener una lista de LINQ admitido a los operadores de entidades, vea [admitidas y los métodos de LINQ no admitidos (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md).  
   
- Para obtener más información acerca del uso de los operadores de consulta estándar en LINQ to Entities, vea [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md).  
+ Para obtener más información sobre cómo usar los operadores de consulta estándar en LINQ to Entities, vea [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md).  
   
  En general, las expresiones de LINQ to Entities se evalúan en el servidor, de modo que es previsible que el comportamiento de la expresión no siga la semántica de CLR. Para obtener más información, consulte [expresiones en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).  
   
- Para obtener información sobre cómo se asignan las llamadas al método CLR a funciones canónicas en el origen de datos, vea [método CLR a la asignación de función canónica](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
+ Para obtener información sobre cómo se asignan llamadas a métodos CLR a funciones canónicas del origen de datos, vea [método CLR a la asignación de función canónica](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- Para obtener información acerca de cómo llamar a canónica, la base de datos y funciones personalizadas desde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] de las consultas, vea [llamar a funciones en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ Para obtener información acerca de cómo llamar a canónica, la base de datos y funciones personalizadas desde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, vea [llamar a funciones en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Ejecución de la consulta  
- Una vez que el usuario crea una consulta de LINQ, esta se convierte en una representación compatible con Entity Framework (en forma de árboles de comandos), que después se ejecuta en el origen de datos. En el momento de ejecutar la consulta, todas las expresiones de consulta (o sus componentes) se evalúan en el cliente o en el servidor. Esto incluye las expresiones que se usan en la materialización resultante o en las proyecciones de entidades. Para obtener más información, consulte [ejecución de la consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Para obtener información sobre cómo mejorar el rendimiento si se compila una consulta una vez y, a continuación, ejecuta varias veces con parámetros diferentes, consulte [consultas compiladas (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+ Una vez que el usuario crea una consulta de LINQ, esta se convierte en una representación compatible con Entity Framework (en forma de árboles de comandos), que después se ejecuta en el origen de datos. En el momento de ejecutar la consulta, todas las expresiones de consulta (o sus componentes) se evalúan en el cliente o en el servidor. Esto incluye las expresiones que se usan en la materialización resultante o en las proyecciones de entidades. Para obtener más información, consulte [ejecución de la consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Para obtener información sobre cómo mejorar el rendimiento compilando una consulta una vez y ejecutándola después varias veces con parámetros diferentes, consulte [consultas compiladas (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
 ## <a name="materialization"></a>Materialización  
  La materialización es el proceso por el que se devuelven los resultados de la consulta al cliente en forma de tipos de CLR. En LINQ to Entities, los registros de datos de los resultados de las consultas no se devuelven nunca; siempre hay un tipo de CLR correspondiente, definido por el usuario o por Entity Framework, o generado por el compilador (tipos anónimos). Entity Framework realiza la materialización de todos los objetos. Los errores derivados de la incapacidad de encontrar una correspondencia entre Entity Framework y CLR hará que se produzcan excepciones durante la materialización de los objetos.  
@@ -90,6 +90,6 @@ LINQ to Entities proporciona la capacidad de realizar consultas integradas en le
   
 ## <a name="see-also"></a>Vea también  
  [Problemas conocidos y consideraciones en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ y ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

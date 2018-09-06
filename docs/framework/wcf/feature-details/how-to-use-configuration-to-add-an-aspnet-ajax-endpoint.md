@@ -3,11 +3,11 @@ title: Uso de la configuración para agregar un extremo AJAX de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748283"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878888"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Uso de la configuración para agregar un punto de conexión AJAX de ASP.NET
 Windows Communication Foundation (WCF) le permite crear un servicio que hace que sea un punto de conexión compatible con AJAX de ASP.NET disponible que se puede llamar desde JavaScript en un sitio Web del cliente. Para crear este tipo de extremo, puede usar un archivo de configuración, al igual que con todos los demás extremos de Windows Communication Foundation (WCF) o usar un método que no requiera ningún elemento de configuración. En este tema se muestra el enfoque de configuración.  

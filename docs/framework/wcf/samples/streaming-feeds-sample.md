@@ -3,11 +3,11 @@ title: Ejemplo de suministros de transmisión por secuencias
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
 ms.openlocfilehash: 17639273ece804dc531cbbc3ab9135c814ea632d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800033"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041553"
 ---
 # <a name="streaming-feeds-sample"></a>Ejemplo de suministros de transmisión por secuencias
 Este ejemplo muestra cómo administrar las fuentes de sindicación que contienen grandes cantidades de elementos. En el servidor, el ejemplo muestra cómo retrasar la creación de objetos <xref:System.ServiceModel.Syndication.SyndicationItem> individuales dentro de la fuente hasta justo antes de que el elemento se escriba en el flujo de red.  

@@ -3,11 +3,11 @@ title: Ejemplos de consultas
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
 ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464359"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882053"
 ---
 # <a name="query-examples"></a>Ejemplos de consultas
 En esta sección se proporciona ejemplos de Visual Basic y C# típicas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Los desarrolladores que usan Visual Studio pueden encontrar muchos más ejemplos en una solución de ejemplo disponible en la sección de ejemplos. Para obtener más información, consulte [ejemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  

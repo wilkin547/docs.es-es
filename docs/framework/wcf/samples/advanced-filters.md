@@ -3,11 +3,11 @@ title: Filtros avanzados
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
 ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805447"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042600"
 ---
 # <a name="advanced-filters"></a>Filtros avanzados
 Este ejemplo muestra un servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita la tarea debe incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de calculadora de WCF estándar para comunicarse con el servicio de enrutamiento. En este ejemplo se muestra cómo definir la lógica de enrutamiento basado en contenido a través del uso de filtros de mensajes y tablas de filtro de mensajes.  
