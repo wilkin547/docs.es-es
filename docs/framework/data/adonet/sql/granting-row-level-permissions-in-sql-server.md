@@ -2,12 +2,12 @@
 title: Conceder permisos de nivel de fila en SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 5f777b47c9b2f92c40fec01b4ff0c35fc28dbd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361311"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749160"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Conceder permisos de nivel de fila en SQL Server
 En algunos casos, existe un requisito para controlar el acceso a los datos a un nivel más detallado que el que se deriva simplemente de conceder, revocar o denegar permisos. Por ejemplo, una aplicación de bases de datos de hospital puede requerir que se restrinja el acceso a los médicos individuales solo a la información relacionada con sus pacientes. Requisitos similares se producen en muchos ámbitos, como en aplicaciones financieras, legales, gubernamentales y militares. Para ayudar a resolver estos escenarios, SQL Server 2016 ofrece una característica de [seguridad por filas](https://msdn.microsoft.com/library/dn765131.aspx) que simplifica y centraliza la lógica de acceso por filas en una directiva de seguridad. Para las versiones anteriores de SQL Server, se puede lograr una funcionalidad similar con vistas para aplicar el filtrado por filas.  
@@ -21,7 +21,7 @@ En algunos casos, existe un requisito para controlar el acceso a los datos a un 
   
 -   Habilite el filtrado por filas:  
   
-    -   Si usa SQL Server 2016 o posterior, o [base de datos de SQL Azure](https://docs.microsoft.com/azure/sql-database/), crear una directiva de seguridad que agrega un predicado en la tabla restringir las filas devueltas a aquellas que coinciden con cualquiera al usuario de base de datos actual (usando el CURRENT_USER) función integrada) o el nombre de inicio de sesión actual (mediante la función integrada de SUSER_SNAME ()):  
+    -   Si usa SQL Server 2016 o posterior, o [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/), crear una directiva de seguridad que agrega un predicado en la tabla restringiendo las filas devueltas a aquellas que coinciden con cualquiera del usuario de base de datos actual (con el CURRENT_USER) función integrada) o el nombre de inicio de sesión actual (mediante la función integrada de SUSER_SNAME ()):  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -64,7 +64,7 @@ En algunos casos, existe un requisito para controlar el acceso a los datos a un 
   
 |||  
 |-|-|  
-|[Implementar la seguridad de nivel de fila y de celda en bases de datos clasificadas mediante SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=98227) en el sitio de SQL Server TechCenter.|Describe cómo utilizar seguridad por filas y celdas para satisfacer los requisitos de seguridad de bases de datos clasificadas.|  
+|[Implementar la seguridad de nivel de fila y celda en clasificadas bases de datos mediante SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=98227) en el sitio de SQL Server TechCenter.|Describe cómo utilizar seguridad por filas y celdas para satisfacer los requisitos de seguridad de bases de datos clasificadas.|  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de nivel de fila](https://msdn.microsoft.com/library/dn765131.aspx)  
@@ -73,4 +73,4 @@ En algunos casos, existe un requisito para controlar el acceso a los datos a un 
  [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [Administración de permisos con procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Escritura de código SQL dinámico y seguro en SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

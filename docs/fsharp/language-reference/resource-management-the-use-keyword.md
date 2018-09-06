@@ -1,51 +1,54 @@
 ---
 title: 'Administración de recursos: palabra clave use (F#)'
-description: "Obtenga información acerca de la F # palabra clave 'use' y la función 'con', que puede controlar la inicialización y la liberación de recursos."
+description: "Obtenga información acerca de la F # palabra clave 'use' y la función \"using\", que puede controlar la inicialización y la liberación de recursos."
 ms.date: 05/16/2016
-ms.openlocfilehash: c75783080d1d87c6ee75aede500d3d0b3fdf8355
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564903"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784707"
 ---
 # <a name="resource-management-the-use-keyword"></a>Administración de recursos: palabra clave use
 
 Este tema describe la palabra clave `use` y `using` función, que puede controlar la inicialización y la liberación de recursos.
 
 ## <a name="resources"></a>Recursos
-El término *recursos* se utiliza en más de una forma. Sí, los recursos pueden ser datos que utiliza una aplicación, como cadenas, gráficos y similares, pero en este contexto, *recursos* hace referencia a los recursos de software o sistema operativo, como los contextos de dispositivo de gráficos, identificadores de archivo, red y las conexiones, objetos de simultaneidad, como los identificadores de espera etc. de la base de datos. El uso de estos recursos en aplicaciones implica la adquisición del recurso desde el sistema operativo u otro proveedor de recursos, seguido de la versión posterior del recurso para el grupo de manera que puede asignarse a otra aplicación. Se producen problemas cuando las aplicaciones no liberan recursos del grupo común.
+
+El término *recursos* se usa en más de una forma. Sí, los recursos pueden ser datos que utiliza una aplicación, como cadenas, gráficos y similares, pero en este contexto, *recursos* hace referencia a los recursos de software o del sistema operativo, como los contextos de dispositivo de gráficos, identificadores de archivo, red y las conexiones, los objetos de simultaneidad como identificadores de espera etc. de la base de datos. El uso de estos recursos por aplicaciones implica la adquisición de recursos del sistema operativo o de otro proveedor de recursos, seguida de la versión posterior del recurso en el grupo para que se puede proporcionar a otra aplicación. Se producen problemas cuando las aplicaciones no liberan recursos al grupo comunes.
 
 ## <a name="managing-resources"></a>Administrar recursos
-Para responsable y eficazmente administrar recursos en una aplicación, debe liberar recursos inmediatamente y de una manera predecible. .NET Framework le ayuda a hacer esto proporcionando la `System.IDisposable` interfaz. Un tipo que implementa `System.IDisposable` tiene la `System.IDisposable.Dispose` método, que libera los recursos correctamente. Aplicaciones bien programadas garantizan que `System.IDisposable.Dispose` se llama inmediatamente cuando ya no es necesario ningún objeto que contiene un recurso limitado. Afortunadamente, la mayoría de los lenguajes de .NET proporciona compatibilidad para facilitar esta tarea, y F # no es ninguna excepción. Hay dos construcciones de lenguaje útiles que admiten el patrón de dispose: el `use` enlace y la `using` (función).
 
-## <a name="use-binding"></a>utilizar el enlace
+Para forma responsable y eficazmente administrar recursos en una aplicación, se deben liberar los recursos de una manera predecible y con prontitud. .NET Framework le ayuda a hacer esto proporcionando la `System.IDisposable` interfaz. Un tipo que implementa `System.IDisposable` tiene la `System.IDisposable.Dispose` método, que libera los recursos correctamente. Las aplicaciones bien escritas garantizar que `System.IDisposable.Dispose` se llama con prontitud cuando ya no se necesita cualquier objeto que contiene un recurso limitado. Afortunadamente, la mayoría de los lenguajes de .NET proporciona compatibilidad para facilitar esta tarea, y F # no es ninguna excepción. Hay dos construcciones de lenguaje útiles que admiten el patrón de dispose: el `use` enlace y el `using` función.
+
+## <a name="use-binding"></a>Usar el enlace
+
 El `use` palabra clave tiene un formato similar de la `let` enlace:
 
 usar *valor* = *expresión*
 
-Proporciona la misma funcionalidad que un `let` enlace pero agrega una llamada a `Dispose` en el valor cuando el valor se sale del ámbito. Tenga en cuenta que el compilador inserta una comprobación de valores null en el valor, por lo que si el valor es `null`, la llamada a `Dispose` no se intenta realizar.
+Proporciona la misma funcionalidad que un `let` enlace pero agrega una llamada a `Dispose` en el valor cuando el valor se sale del ámbito. Tenga en cuenta que el compilador inserta una comprobación de null en el valor, por lo que si el valor es `null`, la llamada a `Dispose` no se ha intentado.
 
-En el ejemplo siguiente se muestra cómo cerrar un archivo automáticamente mediante el uso de la `use` (palabra clave).
+El ejemplo siguiente muestra cómo cerrar un archivo automáticamente con el `use` palabra clave.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
 >[!NOTE]
-Puede usar `use` en las expresiones de cálculo, en cuyo caso una versión personalizada de la `use` se utiliza la expresión. Para obtener más información, consulte [secuencias](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md), y [expresiones de cálculo](computation-expressions.md).
-
+Puede usar `use` en expresiones de cálculo, en cuyo caso una versión personalizada de la `use` se usa la expresión. Para obtener más información, consulte [secuencias](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md), y [expresiones de cálculo](computation-expressions.md).
 
 ## <a name="using-function"></a>uso de la función
-El `using` función tiene la forma siguiente:
+
+El `using` función tiene el formato siguiente:
 
 `using` (*expression1*) *función o expresión lambda*
 
-En un `using` expresión, *expression1* crea el objeto que se debe eliminar. El resultado de *expression1* (es decir, el objeto que se debe eliminar) se convierte en un argumento, *valor*a *función o expresión lambda*, que es una función que espera un único restante argumento de tipo que coincide con el valor generado por *expression1*, o una expresión lambda que espera un argumento de ese tipo. Al final de la ejecución de la función, el runtime llama a `Dispose` y libera los recursos (a menos que el valor es `null`, en cuyo caso no se intenta realizar la llamada a Dispose).
+En un `using` expresión, *expression1* crea el objeto que debe eliminarse. El resultado de *expression1* (el objeto que se debe eliminar) se convierte en un argumento, *valor*a *función o lambda*, que es una función que espera un único restante de argumento de un tipo que coincide con el valor generado por *expression1*, o una expresión lambda que espera un argumento de ese tipo. Al final de la ejecución de la función, el runtime llama a `Dispose` y libera los recursos (a menos que el valor es `null`, en cuyo caso no se intenta realizar la llamada a Dispose).
 
 En el ejemplo siguiente se muestra el `using` expresión con una expresión lambda.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6302.fs)]
 
-El siguiente ejemplo se muestra la `using` expresión con una función.
+El ejemplo siguiente se muestra el `using` expresión con una función.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
@@ -53,8 +56,8 @@ Tenga en cuenta que la función podría ser una función que tiene algunos argum
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 
-El `using` función y el `use` enlace son maneras casi equivalentes para lograr lo mismo. El `using` palabra clave proporciona mayor control sobre cuándo `Dispose` se llama. Cuando usas `using`, `Dispose` se llama al final de la función o expresión lambda; cuando se usa el `use` palabra clave, `Dispose` se llama al final del bloque de código que lo contiene. En general, debería prefieren usar `use` en lugar de la `using` (función).
-
+El `using` función y el `use` enlace son prácticamente equivalentes formas de conseguir lo mismo. El `using` palabra clave proporciona más control sobre cuándo `Dispose` se llama. Cuando usas `using`, `Dispose` se llama al final de la función o expresión lambda; cuando se usa el `use` palabra clave, `Dispose` se llama al final del bloque de código que lo contiene. En general, es preferible usar `use` en lugar de la `using` función.
 
 ## <a name="see-also"></a>Vea también
-[Referencia del lenguaje F#](index.md)
+
+- [Referencia del lenguaje F#](index.md)

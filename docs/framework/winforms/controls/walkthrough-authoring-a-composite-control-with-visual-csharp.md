@@ -8,18 +8,18 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1c669860b545150e75777b8c8cc434f47675ec5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f8384140b813400e106ad959684264304541c93
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541799"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740630"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Tutorial: Crear un control compuesto con Visual C# #
 Los controles compuestos proporcionan una forma de crear y reutilizar interfaces gráficas personalizadas. Un control compuesto es esencialmente un componente con una representación visual. Como tal, puede constar de uno o varios controles de Windows Forms, componentes o bloques de código que pueden extender funcionalidad al validar la entrada del usuario, modificar propiedades de presentación o realizar otras tareas requeridas por el autor. Los controles compuestos se pueden colocar en Windows Forms de la misma manera que otros controles. En la primera parte de este tutorial, creará un control compuesto simple denominado `ctlClock`. En la segunda parte, extenderá la funcionalidad de `ctlClock` mediante herencia.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  Cuando cree un proyecto, especifique su nombre para establecer el espacio de nombres raíz, el nombre de ensamblado y el nombre del proyecto, y asegúrese de que el componente predeterminado estará en el espacio de nombres correcto.  
@@ -28,14 +28,14 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 1.  En el menú **Archivo**, elija **Nuevo** y haga clic en **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**.  
   
-2.  En la lista de proyectos de Visual C#, seleccione la **biblioteca de controles de Windows Forms** plantilla de proyecto, escriba `ctlClockLib` en el **nombre** cuadro y, a continuación, haga clic en **Aceptar**.  
+2.  En la lista de proyectos de Visual C#, seleccione el **biblioteca de controles de Windows Forms** plantilla de proyecto, escriba `ctlClockLib` en el **nombre** cuadro y, a continuación, haga clic en **Aceptar**.  
   
      El nombre del proyecto, `ctlClockLib` también se asigna de forma predeterminada al espacio de nombres raíz. El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado. Por ejemplo, si dos ensamblados proporcionan componentes denominados `ctlClock`, puede especificar su componente `ctlClock` mediante `ctlClockLib.ctlClock.`  
   
 3.  En el Explorador de soluciones, haga clic con el botón derecho en **UserControl1.cs** y haga clic en **Cambiar nombre**. Cambie el nombre del archivo a `ctlClock.cs`. Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "UserControl1".  
   
     > [!NOTE]
-    >  De forma predeterminada, un control compuesto hereda de la <xref:System.Windows.Forms.UserControl> clase proporcionada por el sistema. La <xref:System.Windows.Forms.UserControl> clase proporciona la funcionalidad requerida por los controles compuestos todos los e implementa métodos estándares y las propiedades.  
+    >  De forma predeterminada, un control compuesto hereda el <xref:System.Windows.Forms.UserControl> clase proporcionada por el sistema. La <xref:System.Windows.Forms.UserControl> clase proporciona la funcionalidad requerida por todos los controles compuestos e implementa los métodos y propiedades estándar.  
   
 4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
   
@@ -48,7 +48,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 2.  En el **cuadro de herramientas**, expanda el nodo **Controles comunes** y haga doble clic en **Label**.  
   
-     A <xref:System.Windows.Forms.Label> control denominado `label1` se agrega al control en la superficie del diseñador.  
+     Un <xref:System.Windows.Forms.Label> control denominado `label1` se agrega al control en la superficie del diseñador.  
   
 3.  En el diseñador, haga clic en **label1**. En la ventana Propiedades, establezca las propiedades siguientes.  
   
@@ -61,11 +61,11 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 4.  En el **cuadro de herramientas**, expanda el nodo **Componentes** y haga doble clic en **Temporizador**.  
   
-     Dado que un <xref:System.Windows.Forms.Timer> es un componente, no tiene ninguna representación visual en tiempo de ejecución. Por lo tanto, no aparece con los controles en la superficie del diseñador, sino en el **Diseñador de componentes** (una bandeja en la parte inferior de la superficie del diseñador).  
+     Dado que un <xref:System.Windows.Forms.Timer> es un componente, no tiene representación visual en tiempo de ejecución. Por lo tanto, no aparece con los controles en la superficie del diseñador, sino en el **Diseñador de componentes** (una bandeja en la parte inferior de la superficie del diseñador).  
   
-5.  En el **Diseñador de componentes**, haga clic en **timer1**y, a continuación, establezca el <xref:System.Windows.Forms.Timer.Interval%2A> propiedad `1000` y <xref:System.Windows.Forms.Timer.Enabled%2A> propiedad a `true`.  
+5.  En el **Component Designer**, haga clic en **timer1**y, a continuación, establezca el <xref:System.Windows.Forms.Timer.Interval%2A> propiedad `1000` y el <xref:System.Windows.Forms.Timer.Enabled%2A> propiedad `true`.  
   
-     El <xref:System.Windows.Forms.Timer.Interval%2A> propiedad controla la frecuencia con que el <xref:System.Windows.Forms.Timer> pasos de componente. Cada vez que `timer1` hace tic, se ejecuta el código en el evento `timer1_Tick`. El intervalo representa el número de milisegundos entre tics.  
+     El <xref:System.Windows.Forms.Timer.Interval%2A> propiedad controla la frecuencia con que el <xref:System.Windows.Forms.Timer> tics del componente. Cada vez que `timer1` hace tic, se ejecuta el código en el evento `timer1_Tick`. El intervalo representa el número de milisegundos entre tics.  
   
 6.  En el **Diseñador de componentes**, haga doble clic en **timer1** para ir al evento `timer1_Tick` para `ctlClock`.  
   
@@ -241,7 +241,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
     > [!NOTE]
     >  Si desea que los posteriores usuarios de su control compuesto tengan acceso a sus controles internos, declárelos como `public` o `protected`. Esto le permitirá establecer y modificar las propiedades de los controles contenidos en el control compuesto mediante el código adecuado.  
   
-3.  Agregar un <xref:System.Windows.Forms.Label> hasta su control compuesto.  
+3.  Agregar un <xref:System.Windows.Forms.Label> control al control compuesto.  
   
 4.  Con el mouse, arrastre el <xref:System.Windows.Forms.Label> control inmediatamente debajo del cuadro de visualización. En la ventana Propiedades, establezca las propiedades siguientes.  
   
@@ -359,7 +359,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 6.  Haga doble clic en **ctlAlarmClock** para agregar una copia de `ctlAlarmClock` al formulario.  
   
-7.  En el **cuadro de herramientas**, busque y haga doble clic en **DateTimePicker** para agregar una <xref:System.Windows.Forms.DateTimePicker> control al formulario y, a continuación, agregue un <xref:System.Windows.Forms.Label> control haciendo doble clic en **etiqueta**.  
+7.  En el **cuadro de herramientas**, busque y haga doble clic en **DateTimePicker** para agregar un <xref:System.Windows.Forms.DateTimePicker> control al formulario y, a continuación, agregue un <xref:System.Windows.Forms.Label> control haciendo doble clic en **etiqueta**.  
   
 8.  Use el mouse para colocar los controles en un lugar adecuado en el formulario.  
   
@@ -392,7 +392,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 13. En el menú **Depurar**, haga clic en **Iniciar depuración**.  
   
-     Se inicia el programa de prueba. Tenga en cuenta que la hora actual se actualiza en la `ctlAlarmClock` control y que la hora de inicio se muestra en el <xref:System.Windows.Forms.DateTimePicker> control.  
+     Se inicia el programa de prueba. Tenga en cuenta que la hora actual se actualiza en el `ctlAlarmClock` control y que se muestra la hora de inicio en el <xref:System.Windows.Forms.DateTimePicker> control.  
   
 14. Haga clic en el <xref:System.Windows.Forms.DateTimePicker> donde se muestran los minutos de la hora.  
   
@@ -406,7 +406,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
 ## <a name="see-also"></a>Vea también  
  [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Programar con componentes](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [Tutoriales sobre la creación de componentes](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ [Programar con componentes](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+ [Tutoriales sobre la creación de componentes](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
  [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [Tutorial: Heredar de un control de Windows Forms con Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

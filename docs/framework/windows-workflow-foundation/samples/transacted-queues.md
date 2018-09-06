@@ -3,11 +3,11 @@ title: Colas de transacción
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
 ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535509"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785409"
 ---
 # <a name="transacted-queues"></a>Colas de transacción
 Este ejemplo muestra cómo integrar colas y transacciones en Windows Workflow Foundation (WF) para crear servicios escalables y fiables. Un <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` se usa en el flujo de trabajo de cliente para enviar mensajes a una cola en una transacción mediante la <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> se utiliza en el servidor para recibir mensajes de la cola y actualizar el estado del flujo de trabajo en la misma transacción.  

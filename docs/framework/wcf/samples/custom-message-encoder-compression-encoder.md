@@ -2,12 +2,12 @@
 title: 'Codificador de mensaje personalizado: codificador de compresión'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808746"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735879"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensaje personalizado: codificador de compresión
 Este ejemplo muestra cómo implementar un codificador personalizado mediante la plataforma de Windows Communication Foundation (WCF).  
@@ -17,7 +17,7 @@ Este ejemplo muestra cómo implementar un codificador personalizado mediante la 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
@@ -57,13 +57,13 @@ Este ejemplo muestra cómo implementar un codificador personalizado mediante la 
   
 5.  El nivel del codificador se implementa como un generador de clases. Sólo se debe exponer públicamente el generador de clases del codificador para el codificador personalizado. El elemento de enlace devuelve el objeto del generador cuando se crea el objeto <xref:System.ServiceModel.ServiceHost> o <xref:System.ServiceModel.ChannelFactory%601>. Los codificadores de mensaje pueden funcionar en un modo almacenado en búfer o en un modo de transmisión por secuencias. Este ejemplo muestra ambos modos.  
   
- Para cada modo hay un método `ReadMessage` y `WriteMessage` acompañante en la clase `MessageEncoder` abstracta. Una mayoría del trabajo de codificación tiene lugar en estos métodos. El ejemplo ajusta el texto existente y los codificadores de mensaje binarios. Esto permite al ejemplo delegar la lectura y escritura de la representación de la conexión de mensajes en el codificador interno y permite al codificador de compresión comprimir o descomprimir los resultados. Porque no hay ningún conductor para la codificación de mensajes, éste es el único modelo para utilizar varios codificadores en WCF. Una vez descomprimido el mensaje, el mensaje resultante se pasa a la pila para que lo gestione la pila de canales. Durante la compresión, el mensaje comprimido resultante se escribe directamente en la secuencia proporcionada.  
+ Para cada modo hay un método `ReadMessage` y `WriteMessage` acompañante en la clase `MessageEncoder` abstracta. Una mayoría del trabajo de codificación tiene lugar en estos métodos. El ejemplo ajusta el texto existente y los codificadores de mensaje binarios. Esto permite al ejemplo delegar la lectura y escritura de la representación de la conexión de mensajes en el codificador interno y permite al codificador de compresión comprimir o descomprimir los resultados. Dado que no hay ningún conductor para la codificación de mensajes, este es el único modelo para utilizar varios codificadores en WCF. Una vez descomprimido el mensaje, el mensaje resultante se pasa a la pila para que lo gestione la pila de canales. Durante la compresión, el mensaje comprimido resultante se escribe directamente en la secuencia proporcionada.  
   
  Este ejemplo utiliza los métodos auxiliares (`CompressBuffer` y `DecompressBuffer`) para realizar la conversión de los búferes a secuencias para utilizar la clase `GZipStream`.  
   
  Las clases `ReadMessage` y `WriteMessage` almacenadas en búfer hacen uso de la clase `BufferManager`. Sólo se puede acceder al codificador mediante el generador de codificadores. La clase `MessageEncoderFactory` abstracta proporciona una propiedad denominada `Encoder` para tener acceso al codificador actual y a un método denominado `CreateSessionEncoder` para crear un codificador que admite sesiones. Este tipo de codificador se puede utilizar en el escenario donde el canal admite las sesiones, se ordena y es confiable. Este escenario permite la optimización en cada sesión de los datos escritos en la conexión. Si no es esto lo que se desea, no se debería sobrecargar el método base. La propiedad `Encoder` proporciona un mecanismo para tener acceso al codificador sin sesión. La implementación predeterminada del método `CreateSessionEncoder` devuelve el valor de la propiedad. Dado que el ejemplo ajusta un codificador existente para proporcionar la compresión, la implementación `MessageEncoderFactory` acepta `MessageEncoderFactory` que representa el generador de codificadores interno.  
   
- Ahora que se definición el codificador y el generador de codificador, puede usarse con un cliente de WCF y el servicio. Sin embargo, se deben agregar estos codificadores a la pila de canales. Puede derivar las clases <xref:System.ServiceModel.ServiceHost> y <xref:System.ServiceModel.ChannelFactory%601> e invalidar los métodos `OnInitialize` para agregar manualmente este generador de codificadores. También puede exponer el generador de codificadores a través de un elemento de enlace personalizado.  
+ Ahora que el codificador y el generador de codificadores se definen, se puede usar con un cliente y servicio WCF. Sin embargo, se deben agregar estos codificadores a la pila de canales. Puede derivar las clases <xref:System.ServiceModel.ServiceHost> y <xref:System.ServiceModel.ChannelFactory%601> e invalidar los métodos `OnInitialize` para agregar manualmente este generador de codificadores. También puede exponer el generador de codificadores a través de un elemento de enlace personalizado.  
   
  Para crear un nuevo elemento de enlace personalizado, derive una clase desde la clase <xref:System.ServiceModel.Channels.BindingElement>. Hay, sin embargo, varios tipos de elementos de enlace. Para garantizar que el elemento de enlace personalizado se reconozca como un elemento de enlace de la codificación de mensajes, debe implementar también <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> expone un método para crear un nuevo generador de codificadores de mensajes (`CreateMessageEncoderFactory`), que se implementa para devolver una instancia del generador de codificadores de mensajes correspondiente. Además, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> tiene una propiedad para indicar la versión de direccionamiento. Dado que este ejemplo ajusta los codificadores existentes, la implementación del ejemplo también ajusta los elementos de enlace del codificador existentes y lleva un elemento de enlace del codificador interno como un parámetro al constructor y lo expone mediante una propiedad. El código de ejemplo siguiente muestra la implementación de la clase `GZipMessageEncodingBindingElement`.  
   
@@ -293,7 +293,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />  
 ```  
   
- Para usar este controlador de configuración, debe estar registrado en el [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, tal como se muestra en el siguiente ejemplo de configuración.  
+ Para utilizar este controlador de configuración, debe registrarse en el [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, como se muestra en el siguiente ejemplo de configuración.  
   
 ```xml  
 <extensions>  
@@ -340,18 +340,18 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   

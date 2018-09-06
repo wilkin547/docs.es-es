@@ -3,11 +3,11 @@ title: Imprimir y crear informes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
 ms.openlocfilehash: 926526a64cd0b70db4864329454fbc42f3e34b1e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539045"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787134"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Imprimir y crear informes (Visual Basic)
 Visual Basic ofrece varias opciones para imprimir y crear informes. Los temas siguientes proporcionan información general y vínculos a la documentación pertinente relacionada con imprimir y crear informes.  

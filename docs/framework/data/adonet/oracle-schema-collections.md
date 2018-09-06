@@ -2,12 +2,12 @@
 title: Colecciones de esquemas de Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766860"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745351"
 ---
 # <a name="oracle-schema-collections"></a>Colecciones de esquemas de Oracle
 El proveedor de datos Microsoft .NET Framework para Oracle admite, además de las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
@@ -380,4 +380,4 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |CHAR_USED|String|Indica si el límite de bytes (B) o el límite de caracteres (C) es oficial para la cadena.|  
   
 ## <a name="see-also"></a>Vea también  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
