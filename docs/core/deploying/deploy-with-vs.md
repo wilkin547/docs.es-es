@@ -4,12 +4,12 @@ description: Obtenga información sobre la implementación de aplicaciones de .N
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: dedf04a872faf1b35a05f9da0c61b80713fdce51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218682"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407454"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -72,11 +72,11 @@ La implementación de una implementación dependiente de la plataforma con una o
 
 1. Si `Newtonsoft.Json` ya está instalado en el sistema, agréguelo al proyecto seleccionando el proyecto en el panel derecho de la pestaña **Administrar paquetes para la solución**.
 
-Tenga en cuenta que una implementación dependiente de la plataforma con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md) que admita la dependencia nativa (y que exista en su paquete de NuGet).
+Tenga en cuenta que una implementación dependiente de la plataforma con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md) que admita la dependencia nativa (y que exista en su paquete de NuGet).
 
 ## <a name="simpleSelf"></a> Implementación independiente sin dependencias de terceros
 
-La implementación de una implementación independiente sin dependencias de terceros implica crear el proyecto, modificar el archivo *csproj* y compilar, probar y publicar la aplicación. Un sencillo ejemplo escrito en C# ilustra el proceso. 
+La implementación de una implementación independiente sin dependencias de terceros implica crear el proyecto, modificar el archivo *csproj* y compilar, probar y publicar la aplicación. Un sencillo ejemplo escrito en C# ilustra el proceso.
 
 1. Crear el proyecto.
 
@@ -92,7 +92,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
    1. Haga clic con el botón derecho en el proyecto (no en la solución) en el **Explorador de soluciones** y seleccione **Editar SCD.csproj**.
 
-   1. Cree una etiqueta `<RuntimeIdentifiers>` en la sección `<PropertyGroup>` del archivo *csproj* que defina las plataformas a las que se destina la aplicación y especifique el identificador en tiempo de ejecución (RID) de cada una. Tenga en cuenta que también debe agregar un punto y coma para separar los RID. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../rid-catalog.md). 
+   1. Cree una etiqueta `<RuntimeIdentifiers>` en la sección `<PropertyGroup>` del archivo *csproj* que defina las plataformas a las que se destina la aplicación y especifique el identificador en tiempo de ejecución (RID) de cada una. Tenga en cuenta que también debe agregar un punto y coma para separar los RID. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../rid-catalog.md).
 
    Por ejemplo, el ejemplo siguiente indica que la aplicación se ejecuta en sistemas operativos Windows 10 de 64 bits y OS X versión 10.11 de 64 bits.
 
@@ -101,6 +101,7 @@ La implementación de una implementación independiente sin dependencias de terc
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
+
    Tenga en cuenta que el elemento `<RuntimeIdentifiers>` puede ir en cualquier `<PropertyGroup>` que tenga en el archivo *csproj*. Más adelante en esta sección aparece un ejemplo completo del archivo *csproj*.
 
 1. Crear una versión de depuración de la aplicación.
@@ -115,7 +116,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
       1. Cambie la configuración de la solución de **Depurar** a **Versión** en la barra de herramientas para compilar una compilación de versión (en lugar de depuración) de la aplicación.
 
-      1. Haga clic con el botón derecho en el proyecto (no en la solución) en el **Explorador de soluciones** y seleccione **Publicar**. 
+      1. Haga clic con el botón derecho en el proyecto (no en la solución) en el **Explorador de soluciones** y seleccione **Publicar**.
 
       1. En la pestaña **Publicar**, seleccione **Publicar**. Visual Studio escribe los archivos que componen la aplicación en el sistema de archivos local.
 
@@ -180,6 +181,7 @@ Al implementar la aplicación, los archivos de aplicación también contienen la
 
 Tenga en cuenta que solo puede implementar una implementación autocontenida con una biblioteca de terceros en plataformas compatibles con esa biblioteca. Esto es similar a tener dependencias de terceros con dependencias nativas en la implementación dependiente de la plataforma, donde las dependencias nativas no existirán en la plataforma de destino a menos que se hayan instalado allí previamente.
 
-# <a name="see-also"></a>Vea también
-[Implementación de aplicaciones .NET Core](index.md)   
-[Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)   
+## <a name="see-also"></a>Vea también
+
+* [Implementación de aplicaciones .NET Core](index.md)
+* [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)

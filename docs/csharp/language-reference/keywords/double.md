@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 8e3a94bb79d46f2815e46b86f1aca92acc73e5c2
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027855"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401329"
 ---
 # <a name="double-c-reference"></a>double (Referencia de C#)
 
@@ -34,9 +34,9 @@ double x = 3D;
 
 Puede combinar tipos numéricos enteros y tipos de punto flotante en una expresión. En este caso, los tipos enteros se convierten a tipos de punto flotante. La evaluación de la expresión se realiza según las reglas siguientes:
 
-- Si uno de los tipos de punto flotante es `double`, la expresión se evalúa como `double`, o [bool](../../../csharp/language-reference/keywords/bool.md) en expresiones relacionales o booleanas.
+- Si uno de los tipos de punto flotante es `double`, la expresión se evalúa como `double` o [bool](../../../csharp/language-reference/keywords/bool.md) en comparaciones relacionales y de igualdad.
 
-- Si no hay ningún tipo `double` en la expresión se evalúa como [float](../../../csharp/language-reference/keywords/float.md), o [bool](../../../csharp/language-reference/keywords/bool.md) en expresiones relacionales o booleanas.
+- Si no hay ningún tipo `double` en la expresión, se evalúa como [float](../../../csharp/language-reference/keywords/float.md) o [bool](../../../csharp/language-reference/keywords/bool.md) en comparaciones relacionales y de igualdad.
 
  Una expresión de punto flotante puede contener los siguientes conjuntos de valores:
 
@@ -62,11 +62,11 @@ En el ejemplo siguiente, se agregan [int](../../../csharp/language-reference/key
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de C#](../../../csharp/language-reference/index.md)  
-[Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
-[Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md)  
-[Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Tabla de tipos de punto flotante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-[Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabla de tipos de punto flotante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

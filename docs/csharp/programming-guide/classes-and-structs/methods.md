@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: d3fc4107c10d098d40e4021bef9f6acd06311fab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c6315daf08ce9931263aa5fb27c80a0bf41ef79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336403"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473991"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
 Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método. El método Main es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa.  
@@ -24,7 +24,7 @@ Un método es un bloque de código que contiene una serie de instrucciones. Un p
 > [!NOTE]
 >  Un tipo de valor devuelto de un método no forma parte de la firma del método con el objetivo de sobrecargar el método. Sin embargo, forma parte de la firma del método al determinar la compatibilidad entre un delegado y el método que señala.  
   
- Los parámetros de método se encierran entre paréntesis y se separan por comas. Los paréntesis vacíos indican que el método no requiere parámetros. Esta clase contiene tres métodos:  
+ Los parámetros de método se encierran entre paréntesis y se separan por comas. Los paréntesis vacíos indican que el método no requiere parámetros. Esta clase contiene cuatro métodos:  
   
  [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
@@ -88,23 +88,23 @@ ref int distance = plant
 Devolver una matriz multidimensional de un método, `M`, que modifica el contenido de la matriz no es necesario si la función de llamada ha pasado la matriz a `M`.  Puede devolver la matriz resultante de `M` para obtener un estilo correcto o un flujo funcional de valores, pero no es necesario porque C# pasa todos los tipos de referencia mediante valor, y el valor de una referencia de matriz es el puntero de la matriz. En el método `M`, los cambios en el contenido de la matriz los puede observar cualquier código que tenga una referencia a la matriz, como se muestra en el ejemplo siguiente.  
   
 ```csharp  
-static void Main(string[] args)  
-        {  
-            int[,] matrix = new int[2, 2];  
-            FillMatrix(matrix);  
-            // matrix is now full of -1  
-        }  
-  
-        public static void FillMatrix(int[,] matrix)  
-        {  
-            for (int i = 0; i < matrix.GetLength(0); i++)  
-            {  
-                for (int j = 0; j < matrix.GetLength(1); j++)  
-                {  
-                    matrix[i, j] = -1;  
-                }  
-            }  
-        }  
+static void Main(string[] args)
+{
+    int[,] matrix = new int[2, 2];
+    FillMatrix(matrix);
+    // matrix is now full of -1
+}
+
+public static void FillMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = -1;
+        }
+    }
+}
 ```  
   
  Para obtener más información, consulta [return](../../../csharp/language-reference/keywords/return.md).  
@@ -150,7 +150,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Para obtener más información, consulta [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Para obtener más información, consulta [Iteradores](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

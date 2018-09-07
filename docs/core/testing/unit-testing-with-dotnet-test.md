@@ -4,12 +4,12 @@ description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 6f3b041bf690183f60b687699d878a4d5006be6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213335"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43404300"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Prueba unitaria de C# en .NET Core mediante pruebas de dotnet y xUnit
 
@@ -134,7 +134,7 @@ namespace Prime.UnitTests.Services
 
 El atributo `[Fact]` indica un método de prueba que el ejecutor de pruebas ejecuta. Para la carpeta *PrimeService.Tests*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
 
-La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba escribiendo el código más simple en la clase `PrimeService` que funciona. Reemplace la implementación de método existente de `IsPrime` por el código siguiente:
+La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba que se supera escribiendo el código más simple en la clase `PrimeService` que funciona. Reemplace la implementación de método existente de `IsPrime` por el código siguiente:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -171,4 +171,4 @@ Puede continuar recorriendo en iteración agregando más pruebas, más teorías 
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-[Probar la lógica del controlador en ASP.NET Core](/aspnet/core/mvc/controllers/testing)
+- [Probar la lógica del controlador en ASP.NET Core](/aspnet/core/mvc/controllers/testing)

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104574"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395681"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validación del lado cliente (validación de los niveles de presentación)
 
@@ -23,7 +23,7 @@ Incluso cuando se usa la validación del lado cliente, siempre debe validar sus 
 
 Por tanto, normalmente se validan los ViewModels en el código del lado cliente. También puede validar los DTO o los comandos de salida del cliente antes de enviarlos a los servicios.
 
-La implementación de la validación del lado cliente depende del tipo de aplicación cliente que esté creando. Será diferente si valida los datos en una aplicación web de web MVC con la mayor parte del código en .NET, una aplicación web SPA en que la validación se codifique en JavaScript o TypeScript o una aplicación móvil codificada con Xamarin y C\#.
+La implementación de la validación del lado cliente depende del tipo de aplicación cliente que esté creando. Será diferente si valida los datos en una aplicación web MVC con la mayor parte del código en .NET, una aplicación web SPA en la que la validación se codifique en JavaScript o TypeScript, o bien una aplicación móvil codificada con Xamarin y C#.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
@@ -42,8 +42,8 @@ La implementación de la validación del lado cliente depende del tipo de aplica
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validación en aplicaciones SPA Web (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation (Validación de formularios de Angular 2)** **
-    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Angular 2 Form Validation (Validación de formularios de Angular 2)**
+    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **Form Validation (Validación de formularios)**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
@@ -53,16 +53,15 @@ La implementación de la validación del lado cliente depende del tipo de aplica
 
 En resumen, estos son los conceptos más importantes en lo que respecta a la validación:
 
--   Las entidades y los agregados deben aplicar su propia coherencia y ser "siempre válidos". Las raíces agregadas son responsables de la coherencia de varias entidades dentro del mismo agregado.
+- Las entidades y los agregados deben aplicar su propia coherencia y ser "siempre válidos". Las raíces agregadas son responsables de la coherencia de varias entidades dentro del mismo agregado.
 
--   Si cree que una entidad debe entrar en un estado no válido, considere el uso de un modelo de objetos diferente: por ejemplo, usando un DTO temporal hasta que cree la entidad de dominio final.
+- Si cree que una entidad debe entrar en un estado no válido, considere el uso de un modelo de objetos diferente: por ejemplo, usando un DTO temporal hasta que cree la entidad de dominio final.
 
--   Si necesita crear varios objetos relacionados, como un agregado, y solo son válidos una vez que todos ellos se han creado, considere la posibilidad de usar el patrón Factory.
+- Si necesita crear varios objetos relacionados, como un agregado, y solo son válidos una vez que todos ellos se han creado, considere la posibilidad de usar el patrón Factory.
 
--   Los marcos de validación son más útiles en niveles específicos, como el nivel de presentación o el nivel de aplicación/servicio, pero normalmente no en el nivel de modelo de dominio, ya que es necesario tomar una dependencia fuerte en un marco de infraestructura.
+- Los marcos de validación son más útiles en niveles específicos, como el nivel de presentación o el nivel de aplicación/servicio, pero normalmente no en el nivel de modelo de dominio, ya que es necesario tomar una dependencia fuerte en un marco de infraestructura.
 
--   En la mayoría de los casos, tener validación redundante en el lado cliente es adecuado, porque la aplicación puede ser proactiva.
-
+- En la mayoría de los casos, tener validación redundante en el lado cliente es adecuado, porque la aplicación puede ser proactiva.
 
 >[!div class="step-by-step"]
 [Anterior](domain-model-layer-validations.md)

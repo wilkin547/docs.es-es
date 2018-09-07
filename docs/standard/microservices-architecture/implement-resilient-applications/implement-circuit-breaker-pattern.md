@@ -4,18 +4,18 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: d5902c5a0744d74ae5086a4df3aee606b24b6030
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875172"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403532"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
-Como se indicó anteriormente, debe controlar los errores que puedan comportar un tiempo variable de recuperación, como es posible que suceda al intentar conectarse a un recurso o servicio remoto. Controlar este tipo de error puede mejorar la estabilidad y la resistencia de una aplicación.
+Tal y como se indicó anteriormente, debe controlar los errores que pueden comportar un tiempo variable de recuperación, como puede suceder al intentar conectarse a un recurso o servicio remoto. Controlar este tipo de error puede mejorar la estabilidad y la resistencia de una aplicación.
 
-En un entorno distribuido, las llamadas a servicios y recursos remotos pueden producir errores causados por errores transitorios, como tiempos de espera y conexiones de red lentas, o si los recursos van lentos o no están disponibles temporalmente. Estos errores suelen corregirse solos pasado un tiempo, y una aplicación en la nube sólida debería estar preparada para controlarlos mediante el uso de una estrategia como el "Patrón de reintento". 
+En un entorno distribuido, las llamadas a servicios y recursos remotos pueden producir errores causados por errores transitorios, como tiempos de espera y conexiones de red lentas, o si los recursos responden de forma lenta o no están disponibles temporalmente. Estos errores suelen corregirse solos pasado un tiempo, y una aplicación en la nube sólida debería estar preparada para controlarlos mediante el uso de una estrategia como el "Patrón de reintento". 
 
 Pero también puede haber situaciones en que los errores se deban a eventos imprevistos que pueden tardar mucho más tiempo en corregirse. La gravedad de estos errores puede ir desde una pérdida parcial de conectividad hasta el fallo total del servicio. En estas situaciones, no tiene sentido que una aplicación reintente continuamente una operación que es probable que no se lleve a cabo correctamente. 
 
@@ -23,7 +23,7 @@ Lo que debe hacer la aplicación es codificarse para aceptar que la operación h
 
 El uso de los reintentos HTTP de forma descuidada podría crear ataques por denegación de servicio ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) dentro de su propio software. Cuando se produce un error en un microservicio o se ejecuta lentamente, es posible que varios clientes reintenten solicitudes con error de forma repetida. Eso genera un riesgo peligroso de que el tráfico destinado al servicio con errores aumente de manera exponencial.
 
-Por tanto, se necesita algún tipo de barrera de defensa para que los reintentos detengan las solicitudes cuando ya no tiene sentido seguir intentándolo. Esa barrera de defensa es precisamente el interruptor.
+Por tanto, se necesita algún tipo de barrera de defensa para que se detengan las solicitudes excesivas cuando ya no tiene sentido seguir intentándolo. Esa barrera de defensa es precisamente el interruptor.
 
 El patrón de interruptor tiene una finalidad distinta a la del "patrón de reintento". El "patrón de reintento" permite que una aplicación reintente una operación con la expectativa de que finalmente se realice correctamente. El patrón de interruptor impide que una aplicación realice una operación que es probable que falle. Una aplicación puede combinar estos dos patrones. Pero la lógica de reintento debe ser sensible a las excepciones devueltas por el interruptor, y debe dejar de intentar repetir la operación si el interruptor indica que un error no es transitorio.
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-En el ejemplo de código anterior, la directiva de interruptor se configura para que interrumpa o abra el circuito cuando se hayan producido cinco excepciones al reintentar las solicitudes HTTP. Después, la duración o interrupción será de 30 segundos.
+En el ejemplo de código anterior, la directiva de interruptor se configura para que interrumpa o abra el circuito cuando se hayan producido cinco fallos consecutivos al reintentar las solicitudes HTTP. Cuando esto ocurre, el circuito se interrumpirá durante 30 segundos. En ese período, las llamadas no se podrán realizar debido al interruptor del circuito.  La directiva interpreta automáticamente las [excepciones relevantes y los códigos de estado HTTP](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) como errores.  
 
 Los interruptores también se deben usar para redirigir las solicitudes a una infraestructura de reserva siempre que haya tenido problemas en un recurso concreto implementado en otro entorno que no sea el de la aplicación cliente o del servicio que realiza la llamada HTTP. De este modo, si se produce una interrupción en el centro de datos que afecta solo a los microservicios de back-end, pero no a las aplicaciones cliente, estas aplicaciones pueden redirigir a los servicios de reserva. Polly está creando una directiva nueva para automatizar este escenario de [directiva de conmutación por error](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy). 
 
@@ -65,7 +65,6 @@ Todas estas características sirven para los casos en los que se administra la c
 Desde un punto de vista del uso, al utilizar HttpClient no hay necesidad de agregar nada nuevo aquí porque el código es el mismo que cuando se usa HttpClient con HttpClientFactory, como se mostró en las secciones anteriores. 
 
 ## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Prueba de reintentos HTTP e interruptores en eShopOnContainers
-
 
 Cada vez que inicie la solución eShopOnContainers en un host Docker, debe iniciar varios contenedores. Algunos de los contenedores tardan más en iniciarse e inicializarse, como el contenedor de SQL Server. Esto sucede especialmente la primera vez que implementa la aplicación eShopOnContainers en Docker, porque las imágenes y la base de datos se tienen que configurar. El hecho de que algunos contenedores se inicien más lentamente que otros puede provocar que el resto de servicios lancen inicialmente excepciones HTTP, aunque configure las dependencias entre contenedores en el nivel de Docker Compose, como se ha explicado en las secciones anteriores. Las dependencias de Docker Compose entre contenedores solo se dan en el nivel de proceso. El proceso de punto de entrada del contenedor se puede iniciar, pero podría ser que SQL Server no estuviera listo para las consultas. El resultado puede ser una cascada de errores y la aplicación puede obtener una excepción al intentar utilizar dicho contenedor. 
 

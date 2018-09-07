@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 19283a795f8cfc444dfcb186dcecc0ea86eb27fd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961450"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467437"
 ---
 # <a name="-operator-c-reference"></a>Operador [] (Referencia de C#)
 Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se pueden usar con punteros.  
@@ -30,7 +30,7 @@ Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se
   
  Se produce una excepción si el índice de una matriz está fuera del intervalo.  
   
- No se puede sobrecargar el operador de indexación de la matriz. En cambio, los tipos pueden definir indexadores y propiedades que aceptan uno o varios parámetros. Los parámetros del indexador van entre corchetes, al igual que los índices de matriz, pero se pueden declarar para que sean de cualquier tipo, a diferencia de los índices de matriz, que deben ser números enteros.  
+ No se puede sobrecargar el operador de indexación de la matriz. En cambio, los tipos pueden definir indexadores que aceptan uno o varios parámetros. Los parámetros del indexador van entre corchetes, al igual que los índices de matriz, pero se pueden declarar para que sean de cualquier tipo, a diferencia de los índices de matriz, que deben ser números enteros.  
   
  Por ejemplo, .NET Framework define un tipo `Hashtable` que asocia claves y valores de tipo arbitrario:  
   
@@ -49,11 +49,12 @@ Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Operadores de C#](../../../csharp/language-reference/operators/index.md)  
- [Matrices](../../../csharp/programming-guide/arrays/index.md)  
- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed (instrucción)](../../../csharp/language-reference/keywords/fixed-statement.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Operadores de C#](../../../csharp/language-reference/operators/index.md)  
+- [Matrices](../../../csharp/programming-guide/arrays/index.md)  
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed (instrucción)](../../../csharp/language-reference/keywords/fixed-statement.md)

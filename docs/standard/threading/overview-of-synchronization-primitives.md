@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592020"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485539"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Información general sobre los primitivos de sincronización
 <a name="top"></a> .NET Framework proporciona un intervalo de primitivas de sincronización para controlar las interacciones de subprocesos y evitar las condiciones de carrera. En líneas generales, estas pueden dividirse en tres categorías: operaciones de bloqueos, de señalización y de interbloqueos.  
@@ -40,7 +40,7 @@ ms.locfileid: "33592020"
  Los bloqueos proporcionan el control de un recurso a un subproceso a la vez o a un número especificado de subprocesos. Un subproceso que solicita un bloqueo exclusivo cuando el bloqueo está en uso se bloquea hasta que el bloqueo esté disponible.  
   
 ### <a name="exclusive-locks"></a>Bloqueos exclusivos  
- La forma más sencilla de bloqueo es la instrucción `lock` en C# y la instrucción `SyncLock` en Visual Basic, que controlan el acceso a un bloque de código. Con frecuencia, estos bloques se conocen como una sección crítica. La instrucción `lock` se implementa mediante los métodos <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> y <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, y usa el bloqueo `try…catch…finally` para asegurarse de que se libere el bloqueo.  
+ La forma más sencilla de bloqueo es la instrucción `lock` en C# y la instrucción `SyncLock` en Visual Basic, que controlan el acceso a un bloque de código. Con frecuencia, estos bloques se conocen como una sección crítica. La instrucción `lock` se implementa mediante los métodos <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> y <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, y usa un bloqueo `try…finally` para asegurarse de que se libere el bloqueo.  
   
  En general, la mejor forma de usar la clase <xref:System.Threading.Monitor> consiste en usar la instrucción `lock` o `SyncLock` para proteger pequeños bloques de código, sin abarcar más de un método. Aunque eficaz, la clase <xref:System.Threading.Monitor> es propensa a bloqueos huérfanos e interbloqueos.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33592020"
   
  La clase <xref:System.Threading.Monitor> no es instanciable. Sus métodos son estáticos (`Shared` en Visual Basic) y actúan sobre un objeto de bloqueo instanciable.  
   
- Para información conceptual, consulte [Monitores](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Para información conceptual, consulte [Monitores](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 #### <a name="mutex-class"></a>Mutex (Clase)  
  Los subprocesos solicitan <xref:System.Threading.Mutex> llamando a una sobrecarga de su método <xref:System.Threading.WaitHandle.WaitOne%2A>. Se proporcionan sobrecargas con tiempos de espera, para permitir que los subprocesos renuncien a la espera. A diferencia de la clase <xref:System.Threading.Monitor>, una exclusión mutua puede ser local o global. Las exclusiones mutuas globales, también denominadas exclusiones mutuas, son visibles en todo el sistema operativo y se pueden usar para sincronizar subprocesos en varios procesos o dominios de aplicación. Las exclusiones mutuas locales derivan de <xref:System.MarshalByRefObject> y se pueden usar en los límites del dominio de aplicación.  
@@ -109,7 +109,7 @@ ms.locfileid: "33592020"
   
  Los subprocesos se bloquean en los identificadores de espera llamando al método de instancia <xref:System.Threading.WaitHandle.WaitOne%2A> o a uno de los métodos estáticos <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> o <xref:System.Threading.WaitHandle.SignalAndWait%2A>. La manera en que se liberan depende del método que se llamase y del tipo de identificadores de espera.  
   
- Para información conceptual, consulte [Identificadores de espera](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
+ Para información conceptual, consulte [Identificadores de espera](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
   
 #### <a name="event-wait-handles"></a>Identificadores de espera de evento  
  Los identificadores de espera de evento incluyen la clase <xref:System.Threading.EventWaitHandle> y sus clases derivadas, <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent>. Los subprocesos se liberan desde un identificador de espera de evento cuando este se señaliza llamando a su método <xref:System.Threading.EventWaitHandle.Set%2A> o mediante el método <xref:System.Threading.WaitHandle.SignalAndWait%2A>.  
@@ -167,11 +167,11 @@ ms.locfileid: "33592020"
   
 ## <a name="see-also"></a>Vea también  
  [Sincronizar datos para subprocesamiento múltiple](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Monitors](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) (Clases Monitor)  
+ [Monitors](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) (Clases Monitor)  
  [Mutexes](../../../docs/standard/threading/mutexes.md) (Clases Mutex)  
  [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md) (Clases Semaphore y SemaphoreSlim)  
  [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [Wait Handles](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489) (Clases WaitHandle)  
+ [Wait Handles](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489) (Clases WaitHandle)  
  [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md) (Operaciones Interlocked)  
  [Reader-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md) (Clase ReaderWriterLockSlim)  
  [Barrier](../../../docs/standard/threading/barrier.md) (Barrera)  

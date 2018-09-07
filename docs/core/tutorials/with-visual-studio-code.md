@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear y depurar su primera aplicac
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213622"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484673"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -50,7 +50,7 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
 
 4. Ejecutar el programa "Hola mundo":
 
-    * Escriba `dotnet run`. 
+    * Escriba `dotnet run`.
 
       ![El comando de ejecución de dotnet](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
     ![Abrir el archivo Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code debe pedirle que agregue los recursos que faltan para compilar y depurar la aplicación. Seleccione **Sí**. 
+2. Visual Studio Code debe pedirle que agregue los recursos que faltan para compilar y depurar la aplicación. Seleccione **Sí**.
 
     ![Solicitud de los recursos que faltan](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
     ![Selección de .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Agregue un punto de interrupción al proyecto; para ello, haga clic en el **margen del editor**, que es el espacio a la izquierda de los números de línea del editor, junto a la línea 9.
+5. Agregue un punto de interrupción al proyecto; para ello, haga clic en el **margen del editor**, que es el espacio a la izquierda de los números de línea del editor, junto a la línea 9 o mueva el cursor del texto de la línea 9 en el editor y presione <kbd>F9</kbd>.
 
     ![Establecer un punto de interrupción](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 7. Seleccione la flecha verde en la parte superior para continuar la depuración o seleccione el cuadrado rojo que se encuentra arriba para detenerla.
 
-> [!TIP] 
+> [!TIP]
 > Para obtener más información y sugerencias sobre solución de problemas en relación con la depuración de .NET Core con OmniSharp en Visual Studio Code, vea [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Instrucciones para configurar el depurador de .NET Core).
 
+## <a name="faq"></a>Preguntas más frecuentes
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Me faltan los recursos necesarios para compilar y depurar C# en Visual Studio Code. Mi depurador dice "Sin configuración".
+
+La extensión C# de Visual Studio Code puede generar recursos para compilar y depurar por usted. Visual Studio Code le pedirá que genere estos recursos al abrir un proyecto de C#. Aunque no genere los recursos, podrá seguir ejecutando este comando abriendo la paleta de comandos (**Vista > Paleta de comandos**) y escribiendo ">.NET: Generate Assets for Build and Debug". Al seleccionar esta opción se generan los archivos de configuración .vscode, launch.json y tasks.json que necesita.
+
 ## <a name="see-also"></a>Vea también
-[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)  (Configuración de Visual Studio Code)  
-[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)
+
+* [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Configuración de Visual Studio Code)
+* [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)

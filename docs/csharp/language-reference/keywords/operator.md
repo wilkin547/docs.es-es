@@ -1,26 +1,37 @@
 ---
 title: Palabra clave operator (Referencia de C#)
-ms.date: 07/20/2015
+description: Cómo sobrecargar un operador de C# integrado
+ms.date: 08/27/2018
 f1_keywords:
 - operator_CSharpKeyword
 - operator
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: c3bfada235993670bf158fe9803a09707b2b3251
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929877"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480657"
 ---
 # <a name="operator-c-reference"></a>operator (Referencia de C#)
 
 Use la palabra clave `operator` para sobrecargar un operador integrado o proporcionar una conversión definida por el usuario en una declaración de clase o estructura.
 
+Para sobrecargar un operador en una clase o estructura personalizadas, puede crear una declaración de operador en el tipo correspondiente. La declaración del operador que sobrecarga un operador de C# integrado debe cumplir las reglas siguientes:
+
+- Incluye los modificadores `public` y `static`.
+- Incluye `operator X`, donde `X` es el nombre o símbolo del operador que está sobrecargado.
+- Los operadores unarios tienen un parámetro y los operadores binarios tienen dos parámetros. En cada caso, por lo menos un parámetro debe ser del mismo tipo que la clase o estructura que declara el operador.
+
+Para obtener información sobre cómo definir operadores de conversión, vea los artículos sobre las palabras clave [explicit](explicit.md) e [implicit](implicit.md).
+
+Para obtener información general sobre los operadores C# que se pueden sobrecargar, vea el artículo [Operadores sobrecargables](../../programming-guide/statements-expressions-operators/overloadable-operators.md).
+
 ## <a name="example"></a>Ejemplo
 
-La siguiente es una clase muy simplificada para números fraccionarios. Sobrecarga los operadores `+` y `*` para realizar multiplicaciones y sumas fraccionarias, y también proporciona un operador de conversión que convierte un tipo `Fraction` en un tipo `double`.
+En el ejemplo siguiente se define un tipo `Fraction` que representa números fraccionarios. Sobrecarga los operadores `+` y `*` para realizar multiplicaciones y sumas fraccionarias, y también proporciona un operador de conversión que convierte un tipo `Fraction` en un tipo `double`.
 
 [!code-csharp[csrefKeywordsConversion#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#6)]
 
@@ -35,4 +46,5 @@ La siguiente es una clase muy simplificada para números fraccionarios. Sobrecar
 - [Palabras clave de C#](index.md)
 - [implicit](implicit.md)
 - [explicit](explicit.md)
+- [Operadores sobrecargables](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [Cómo: Implementar conversiones definidas por el usuario entre structs](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

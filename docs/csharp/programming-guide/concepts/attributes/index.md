@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: fe94f0ee778f14581fd7949f705cc22f12058b27
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956077"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892391"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -75,7 +75,7 @@ La lista de posibles valores `target` se muestra en la tabla siguiente.
 |`event`|evento|
 |`method`|Método o descriptores de acceso de propiedad `get` y `set`|
 |`param`|Parámetros de método o parámetros de descriptor de acceso de propiedad `set`|
-|`property`|Property|
+|`property`|Propiedad.|
 |`return`|Valor devuelto de un método, indexador de propiedad o descriptor de acceso de propiedad `get`|
 |`type`|Estructura, clase, interfaz, enumeración o delegado|
 
@@ -101,8 +101,8 @@ En el ejemplo siguiente, se muestra cómo aplicar atributos a métodos, parámet
 
 La lista siguiente incluye algunos de los usos comunes de atributos en el código:
 
-- Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para obtener más información, consulta <xref:System.Web.Services.WebMethodAttribute>.
-- Describir cómo serializar parámetros de método al interoperar con código nativo. Para obtener más información, consulta <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
+- Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para obtener más información, vea <xref:System.Web.Services.WebMethodAttribute>.
+- Describir cómo serializar parámetros de método al interoperar con código nativo. Para obtener más información, vea <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
 - Describir las propiedades COM para clases, métodos e interfaces.
 - Llamar al código no administrado mediante la clase <xref:System.Runtime.InteropServices.DllImportAttribute>.
 - Describir los ensamblados en cuanto a título, versión, descripción o marca.
@@ -125,7 +125,7 @@ Para obtener más información, consulte:
 
 ## <a name="see-also"></a>Vea también
 
- [Guía de programación de C#](../../index.md)  
- [Reflexión (C#)](../reflection.md)  
- [Atributos](../../../../standard/attributes/index.md)  
- [Uso de atributos en C#](../../../tutorials/attributes.md)  
+- [Guía de programación de C#](../../index.md)  
+- [Reflexión (C#)](../reflection.md)  
+- [Atributos](../../../../standard/attributes/index.md)  
+- [Uso de atributos en C#](../../../tutorials/attributes.md)  

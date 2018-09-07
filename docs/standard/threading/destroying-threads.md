@@ -1,5 +1,5 @@
 ---
-title: Destruir subprocesos
+title: Destrucción de subprocesos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e6eff0caa76349ce441a662428e37e25e2a6518
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd6e85dca7c4c32361b964573f318b165e8d683
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582948"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385024"
 ---
-# <a name="destroying-threads"></a>Destruir subprocesos
-El método <xref:System.Threading.Thread.Abort%2A> se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime produce una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para obtener más información, consulta <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
+# <a name="destroying-threads"></a>Destrucción de subprocesos
+El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime produce una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para obtener más información, vea <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
 >  Si un subproceso ejecuta código no administrado al llamar a su método <xref:System.Threading.Thread.Abort%2A>, el tiempo de ejecución lo marca como <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. La excepción se produce cuando el subproceso vuelve al código administrado.  

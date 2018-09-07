@@ -3,14 +3,14 @@ title: Información general de global.json
 description: Obtenga información sobre cómo usar el archivo global.json para establecer la versión del SDK de .NET Core al ejecutar comandos de la CLI de .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/02/2018
+ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: a7c9301e1beea49eebace5c8f8a7d159a8c12466
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936976"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252965"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
@@ -103,8 +103,8 @@ Esta advertencia indica que el proyecto se está compilando con una versión pre
 > [!WARNING]
 > El proyecto de inicio "{proyectoDeInicio}" está destinado a la versión "{versiónPlataformaDeDestino}" de ".NETCoreApp". Esta versión de las herramientas de línea de comandos de Entity Framework Core .NET solo admite la versión 2.0 o superior. Para obtener información sobre el uso de las versiones anteriores de las herramientas, vea https://go.microsoft.com/fwlink/?linkid=871254
 
-A partir de .NET Core SDK 2.1 (v. 2.1.300), el comando `dotnet ef` se incluye en el SDK. Esta advertencia indica que el proyecto tiene como destino EF Core 1.0 ó 1.1, que no es compatible con .NET Core SDK 2.1 y versiones posteriores. Para compilar el proyecto, instale el SDK de .NET Core 2.0 (v. 2.1.201) y versiones anteriores en el equipo. Para obtener más información, vea [EF Core .NET Command-line Tools](/ef/core/miscellaneous/cli/dotnet) (Herramienta de la línea de comandos de .NET de EF Core).
+A partir de .NET Core SDK 2.1 (v. 2.1.300), el comando `dotnet ef` se incluye en el SDK. Esta advertencia indica que el proyecto tiene como destino EF Core 1.0 ó 1.1, que no es compatible con .NET Core SDK 2.1 y versiones posteriores. Para compilar el proyecto, instale el SDK de .NET Core 2.0 (v. 2.1.201) y versiones anteriores en el equipo y defina la versión SDK deseada mediante el archivo *global.json*. Para obtener más información sobre el comando `dotnet ef`, vea [EF Core .NET Command-line Tools](/ef/core/miscellaneous/cli/dotnet) (Herramientas de línea de comandos de EF Core .NET).
 
 ## <a name="see-also"></a>Vea también
 
-[Resolución de los SDK de proyecto](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+* [Resolución de los SDK de proyecto](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

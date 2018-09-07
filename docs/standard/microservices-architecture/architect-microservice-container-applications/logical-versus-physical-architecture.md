@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d675ba753903e181c67712e34eea82fed72df0d7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105441"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238421"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Arquitectura lógica frente a arquitectura física
 
@@ -31,7 +31,7 @@ Como se muestra en la figura 4-8, el microservicio empresarial de catálogo podr
 
 **Figura 4-8**. Microservicio empresarial con varios servicios físicos
 
-Los servicios del ejemplo comparten el mismo modelo de datos porque el servicio Web API tiene como destino los mismos datos que el servicio Search. Por tanto, en la implementación física del microservicio empresarial, debe dividir esa función de manera que pueda escalar cada uno de esos servicios internos horizontal o verticalmente según sea necesario. Quizá el servicio Web API normalmente necesita más instancias que el servicio Search, o viceversa.
+Los servicios del ejemplo comparten el mismo modelo de datos porque el servicio Web API tiene como destino los mismos datos que el servicio Search. Por tanto, en la implementación física del microservicio empresarial, debe dividir esa función de manera que pueda escalar cada uno de esos servicios internos horizontal o verticalmente según sea necesario. Es posible que el servicio Web API normalmente necesite más instancias que el servicio Search, o viceversa.
 
 En resumen, la arquitectura lógica de los microservicios no siempre tiene que coincidir con la arquitectura de implementación física. En esta guía, siempre que se mencione un microservicio, se entiende que es un microservicio empresarial o lógico que se puede asignar a uno o más servicios. En la mayoría de los casos, se trata de un servicio único, pero puede que sean más.
 

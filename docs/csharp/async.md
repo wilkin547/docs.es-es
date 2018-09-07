@@ -4,12 +4,12 @@ description: Obtenga información sobre el modelo de programación asincrónico 
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b753b887da6f8836e0f4363a479c12c7364ea770
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312071"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484972"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -118,7 +118,7 @@ En los ejemplos siguientes se muestran distintas maneras en las que puede escrib
 
 ### <a name="extracting-data-from-a-network"></a>Extraer datos de una red
 
-Este fragmento de código descarga el HTML desde www.dotnetfoundation.org y cuenta el número de veces que aparece la cadena ".NET" en el código HTML.  Usa ASP.NET MVC para definir un método de controlador web que realiza esta tarea y devuelve el número.
+Este fragmento de código descarga el HTML desde la página principal en [www.dotnetfoundation.org](https://www.dotnetfoundation.org) y cuenta el número de veces que aparece la cadena ".NET" en el código HTML.  Usa ASP.NET MVC para definir un método de controlador web que realiza esta tarea y devuelve el número.
 
 > [!NOTE]
 > Si tiene previsto realizar un análisis HTML en el código de producción, no use expresiones regulares. Use una biblioteca de análisis en su lugar.

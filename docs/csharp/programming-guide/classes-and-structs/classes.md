@@ -6,30 +6,34 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245726"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467047"
 ---
 # <a name="classes-c-programming-guide"></a>Clases (Guía de programación de C#)
 Una *class* es una construcción que le permite crear sus propios tipos personalizados agrupando las variables de otros tipos, métodos y eventos. Una clase es como un plano. Define los datos y el comportamiento de un tipo. Si la clase no se declara como estática, el código de cliente puede crear *instancias* de ella. Estas instancias son *objetos* que se asignan a una variable. La instancia de una clase permanece en memoria hasta que todas las referencias a ella están fuera del ámbito. En ese momento, CLR la marca como apta para la recolección de elementos no utilizados. Si la clase se declara como [estática](../../../csharp/language-reference/keywords/static.md), no puede crear instancias y el código de cliente solo puede tener acceso a ella a través de la propia clase. Para más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
 
 ## <a name="reference-types"></a>Tipos de referencia  
-Un tipo que se define como una [clase](../../../csharp/language-reference/keywords/class.md), es un *tipo de referencia*. Al declarar una variable de un tipo de referencia en tiempo de ejecución, esta contendrá el valor [null](../../../csharp/language-reference/keywords/null.md) hasta que se cree expresamente una instancia de la clase mediante el operador [new](../../../csharp/language-reference/keywords/new.md) o que se le asigne un objeto creado en otro lugar, tal y como se muestra en el ejemplo siguiente:
+Un tipo que se define como una [clase](../../../csharp/language-reference/keywords/class.md), es un *tipo de referencia*. Al declarar una variable de un tipo de referencia en tiempo de ejecución, esta contendrá el valor [null](../../../csharp/language-reference/keywords/null.md) hasta que se cree expresamente una instancia de la clase mediante el operador [new](../../../csharp/language-reference/keywords/new.md) o se le asigne un objeto de un tipo compatible que se ha creado en otro lugar, tal y como se muestra en el ejemplo siguiente:
 
 ```csharp
+//Declaring a object of type MyClass.
 MyClass mc = new MyClass();
+
+//Declaring another object of the same type, assigning it the value of the first object.
 MyClass mc2 = mc;
 ```
 
-Cuando se crea el objeto, se asigna la memoria en el montón administrado y la variable solo contiene una referencia a la ubicación del objeto. Los tipos del montón administrado producen sobrecarga cuando se asignan y cuando los reclama la función de administración de memoria automática de CLR, conocida como *recolección de elementos no utilizados*. En cambio, la recolección de elementos no utilizados también está muy optimizada y no crea problemas de rendimiento en la mayoría de los escenarios. Para obtener más información sobre la recolección de elementos no utilizados, vea [Administración automática de la memoria y recolección de elementos no utilizados](../../../standard/garbage-collection/gc.md).  
+Cuando se crea el objeto, se asigna suficiente memoria en el montón administrado para ese objeto específico y la variable solo contiene una referencia a la ubicación de dicho objeto. Los tipos del montón administrado producen sobrecarga cuando se asignan y cuando los reclama la función de administración de memoria automática de CLR, conocida como *recolección de elementos no utilizados*. En cambio, la recolección de elementos no utilizados también está muy optimizada y no crea problemas de rendimiento en la mayoría de los escenarios. Para obtener más información sobre la recolección de elementos no utilizados, vea [Administración automática de la memoria y recolección de elementos no utilizados](../../../standard/garbage-collection/gc.md).  
   
 ## <a name="declaring-classes"></a>Declarar clases  
- Las clases se declaran mediante la palabra clave [class](../../../csharp/language-reference/keywords/class.md), como se muestra en el siguiente ejemplo:
+ Las clases se declaran mediante la palabra clave [class](../../../csharp/language-reference/keywords/class.md) seguida por un identificador único, como se muestra en el siguiente ejemplo:
 
  ```csharp
+//[access modifier] - [class] - [identifier]
  public class Customer
  {
     // Fields, properties, methods and events go here...

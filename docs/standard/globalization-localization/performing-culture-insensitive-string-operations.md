@@ -1,6 +1,6 @@
 ---
 title: Realizar operaciones de cadenas que no distinguen entre referencias culturales
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - case mappings
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9500550fe415d77bacb44011622ddd83ffc8a9ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575380"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254651"
 ---
-# <a name="performing-culture-insensitive-string-operations"></a>Realizar operaciones de cadenas que no distinguen entre referencias culturales
+# <a name="performing-culture-insensitive-string-operations"></a>Realizar operaciones de cadena que no distinguen entre referencias culturales
 La mayoría de los métodos de .NET Framework que realizan operaciones de cadenas que no distinguen entre referencias culturales de manera predeterminada proporcionan sobrecargas de método que permiten especificar explícitamente la referencia cultural que se usará para pasar un parámetro <xref:System.Globalization.CultureInfo>. Estas sobrecargas permiten eliminar variaciones de referencia cultural en reglas de ordenación y asignaciones de mayúsculas y minúsculas y garantizan resultados que no distinguen entre referencias culturales.  
   
  En esta sección se proporcionan los temas siguientes para mostrar cómo realizar operaciones de cadenas que no distinguen entre referencias culturales con métodos de .NET Framework que tienen en cuenta las referencias culturales de manera predeterminada.  
@@ -41,3 +41,7 @@ La mayoría de los métodos de .NET Framework que realizan operaciones de cadena
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Operaciones de cadenas que no distinguen referencias culturales](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
  Describe por qué debe tomar en cuenta la referencia cultural cuando realiza operaciones en cadenas y proporciona guías que indiquen cuándo realizar operaciones que tienen en cuenta las referencias culturales y cuándo las que no distinguen entre referencias culturales.
+
+## <a name="see-also"></a>Vea también
+
+- [Ordenación de tablas de pesos](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

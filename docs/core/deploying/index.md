@@ -4,12 +4,12 @@ description: Implementación de una aplicación .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792431"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562011"
 ---
 # <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core
 
@@ -21,7 +21,7 @@ Puede crear dos tipos de implementaciones para aplicaciones .NET Core:
 
 ## <a name="framework-dependent-deployments-fdd"></a>Implementaciones dependientes de Framework (FDD)
 
-En una FDD, solo se implementa su aplicación y cualquier dependencia de terceros. No tiene que implementar .NET Core, puesto que la aplicación usará la versión de .NET Core que esté presente en el sistema de destino. Este es el modelo de implementación predeterminado para aplicaciones .NET Core.
+En una implementación dependiente del marco de trabajo, solo se implementa la aplicación y las dependencias de terceros. No tiene que implementar .NET Core, puesto que la aplicación usará la versión de .NET Core que esté presente en el sistema de destino. Este es el modelo de implementación predeterminado para las aplicaciones .NET Core y ASP.NET Core que tienen como destino .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>¿Por qué crear una implementación dependiente del marco?
 
@@ -70,9 +70,9 @@ Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core co
 - Implementación autocontenida
 - Implementación autocontenida con dependencias de terceros
 
-# <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
 
-[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)  (Implementación de aplicaciones de .NET Core con herramientas de la CLI)  
-[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)  (Implementación de aplicaciones de .NET Core con Visual Studio)  
-[Paquetes, metapaquetes y marcos de trabajo](../packages.md)   
-[Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)
+* [Implementación de aplicaciones .NET Core con herramientas de la CLI](deploy-with-cli.md)
+* [Implementación de aplicaciones de .NET Core con Visual Studio](deploy-with-vs.md)
+* [Paquetes, metapaquetes y marcos de trabajo](../packages.md)
+* [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)

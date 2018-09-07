@@ -1,5 +1,5 @@
 ---
-title: foreach, in (Referencia de C#)
+title: Instrucción foreach de C#
 ms.date: 06/29/2018
 f1_keywords:
 - foreach
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: a6397cdc9d1e36423a14158a57ca2c1b3fe9df17
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: d84c68eb102d55b31ba20a6b6b5c01b96963924d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874967"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405855"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referencia de C#)
 
@@ -47,10 +47,10 @@ A partir de C# 7.3, si la propiedad `Current` del enumerador devuelve un [valor 
 
 ## <a name="see-also"></a>Vea también
 
-[La instrucción foreach (especificación del lenguaje C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
-[Utilizar foreach con matrices](../../programming-guide/arrays/using-foreach-with-arrays.md)  
-[for](for.md)  
-[Instrucciones de iteración](iteration-statements.md)  
-[Palabras clave de C#](index.md)  
-[Referencia de C#](../index.md)  
-[Guía de programación de C#](../../programming-guide/index.md)  
+- [La instrucción foreach (especificación del lenguaje C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
+- [Utilizar foreach con matrices](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [for](for.md)
+- [Instrucciones de iteración](iteration-statements.md)
+- [Palabras clave de C#](index.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298349"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43883786"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Controlar y generar excepciones en .NET
 
@@ -48,7 +48,7 @@ Las excepciones ofrecen ventajas sobre otros métodos de notificación de errore
 
 En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las causas que las originan.
 
-| Tipo de excepción | Description | Ejemplo |
+| Tipo de excepción | Descripción | Ejemplo |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | Clase base de todas las excepciones. | Ninguno (utilice una clase derivada de esta excepción). |
 | <xref:System.IndexOutOfRangeException> | El tiempo de ejecución la genera solo cuando una matriz no está correctamente indexada. | La indexación de una matriz fuera de su intervalo válido: <br /> `arr[arr.Length+1]` |
@@ -60,13 +60,13 @@ En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las
 
 ## <a name="see-also"></a>Vea también
 
-[Clase Exception y propiedades](exception-class-and-properties.md)  
-[Utilizar el bloque Try/Catch para detectar excepciones](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-[Cómo: Utilizar excepciones específicas en un bloque Catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
-[Cómo: Iniciar excepciones explícitamente](how-to-explicitly-throw-exceptions.md)  
-[Cómo crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md)  
-[Utilizar controladores de excepciones filtradas por el usuario](using-user-filtered-exception-handlers.md)  
-[Utilizar bloques Finally](how-to-use-finally-blocks.md)  
-[Controlar excepciones de interoperabilidad COM](handling-com-interop-exceptions.md)  
-[Procedimientos recomendados para excepciones](best-practices-for-exceptions.md)  
-[¿Qué necesitan saber todos los desarrolladores acerca de las excepciones producidas en el runtime?](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)
+- [Clase Exception y propiedades](exception-class-and-properties.md)  
+- [Utilizar el bloque Try/Catch para detectar excepciones](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+- [Cómo: Utilizar excepciones específicas en un bloque Catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
+- [Cómo: Iniciar excepciones explícitamente](how-to-explicitly-throw-exceptions.md)  
+- [Cómo crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md)  
+- [Utilizar controladores de excepciones filtradas por el usuario](using-user-filtered-exception-handlers.md)  
+- [Utilizar bloques Finally](how-to-use-finally-blocks.md)  
+- [Controlar excepciones de interoperabilidad COM](handling-com-interop-exceptions.md)  
+- [Procedimientos recomendados para excepciones](best-practices-for-exceptions.md)  
+- [¿Qué necesitan saber todos los desarrolladores acerca de las excepciones producidas en el runtime?](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)

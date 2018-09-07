@@ -6,15 +6,15 @@ helpviewer_keywords:
 - as operator [C#]
 - is operator [C#]
 ms.assetid: c1176cea-1426-4a44-8570-3eadafa58863
-ms.openlocfilehash: 6e02675a2a895add245d3c2e40305a0417fdf429
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de59fb49ca5dbe1282cd828f7d6995dda449d31b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325103"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257306"
 ---
 # <a name="how-to-safely-cast-by-using-as-and-is-operators-c-programming-guide"></a>Cómo: Realizar conversiones seguras usando los operadores is y as (Guía de programación de C#)
-Dado que los objetos son polimórficos, es posible que una variable de un tipo de clase base contenga un tipo derivado. Para tener acceso al método del tipo derivado, es necesario volver a convertir el valor al tipo derivado. En cambio, el intento de realizar una conversión de tipos sencilla en estos casos conlleva el riesgo de producir una excepción <xref:System.InvalidCastException>. Por esa razón, C# proporciona los operadores [is](../../../csharp/language-reference/keywords/is.md) y [as](../../../csharp/language-reference/keywords/as.md). Puede usar estos operadores para comprobar si una conversión de tipo se realizará correctamente sin hacer que se produzca una excepción. En general, el operador `as` suele ser más eficaz, ya que devuelve el valor de la conversión de tipo si esta puede realizarse correctamente. El operador `is` devuelve solamente un valor Boolean. Así, puede usarse cuando simplemente quiera determinar el tipo de un objeto pero no tenga que realizar una conversión de tipo del mismo.  
+Dado que los objetos son polimórficos, es posible que una variable de un tipo de clase base contenga un tipo derivado. Para acceder a los métodos de la instancia del tipo derivado, es necesario volver a convertir el valor al tipo derivado. En cambio, el intento de realizar una conversión de tipos sencilla en estos casos conlleva el riesgo de producir una excepción <xref:System.InvalidCastException>. Por esa razón, C# proporciona los operadores [is](../../../csharp/language-reference/keywords/is.md) y [as](../../../csharp/language-reference/keywords/as.md). Puede usar estos operadores para comprobar si una conversión de tipo se realizará correctamente sin hacer que se produzca una excepción. En general, el operador `as` suele ser más eficaz, ya que devuelve el valor de la conversión de tipo si esta puede realizarse correctamente. El operador `is` devuelve solamente un valor Boolean. Así, puede usarse cuando simplemente quiera determinar el tipo de un objeto pero no tenga que realizar una conversión de tipo del mismo.  
   
 ## <a name="example"></a>Ejemplo  
  En los ejemplos siguientes se muestra cómo usar los operadores `is` y `as` para realizar una conversión de un tipo de referencia a otro sin el riesgo de que se produzca una excepción. En el ejemplo también se muestra cómo usar el operador `as` con tipos de valor que aceptan valores NULL.  

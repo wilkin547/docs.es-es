@@ -1,6 +1,6 @@
 ---
 title: Objetos y características de subprocesos
-ms.date: 03/30/2017
+ms.date: 08/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], features
@@ -8,68 +8,39 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 2d56d962279120a03a6e4b89154ac1429ea5479e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874792"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483663"
 ---
 # <a name="threading-objects-and-features"></a>Objetos y características de subprocesos
-.NET Framework proporciona varios objetos que le ayudarán a crear y administrar aplicaciones multiproceso. Los subprocesos administrados se representan mediante la clase <xref:System.Threading.Thread>. La clase <xref:System.Threading.ThreadPool> permite crear y administrar fácilmente tareas multiproceso en segundo plano. La clase <xref:System.ComponentModel.BackgroundWorker> hace lo mismo para las tareas que interactúan con la interfaz de usuario. La clase <xref:System.Threading.Timer> ejecuta tareas en segundo plano a intervalos de tiempo definidos.  
-  
- Además, hay varias clases que sincronizan las actividades de los subprocesos, incluidas las clases <xref:System.Threading.Semaphore> y <xref:System.Threading.EventWaitHandle> que se incorporaron en la versión 2.0 de .NET Framework. Las características de estas clases se comparan en [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización).  
-  
-## <a name="in-this-section"></a>En esta sección  
- [The Managed Thread Pool](../../../docs/standard/threading/the-managed-thread-pool.md) (Clase ThreadPool administrada)  
- Explica la clase **ThreadPool**, que permite solicitar a un subproceso que ejecute una tarea sin tener que realizar ninguna tarea de administración de subprocesos.  
-  
- [Timers](../../../docs/standard/threading/timers.md) (Temporizadores)  
- Describe los temporizadores que se pueden usar en un entorno multiproceso.  
-  
- [Monitors](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) (Clases Monitor)  
- Explica cómo usar la clase **Monitor** para sincronizar el acceso a un miembro o para crear sus propios tipos de administración de subprocesos.  
-  
- [Wait Handles](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489) (Clases WaitHandle)  
- Describe la clase <xref:System.Threading.WaitHandle>, que es la clase base abstracta para los controladores de espera de eventos, exclusiones mutuas y semáforos, y que habilita la espera para varios eventos de sincronización.  
-  
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- Describe los identificadores de espera de eventos administrados, que se usan para sincronizar las actividades del subproceso mediante señalización y señales de espera.  
-  
- [Mutexes](../../../docs/standard/threading/mutexes.md) (Clases Mutex)  
- Explica cómo usar una clase <xref:System.Threading.Mutex> para sincronizar el acceso a un objeto o para crear sus propios mecanismos de sincronización.  
-  
- [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md) (Operaciones Interlocked)  
- Explica cómo usar la clase <xref:System.Threading.Interlocked> para aumentar o reducir un valor y almacenarlo en una única operación atómica.  
-  
- [Reader-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md) (Clase ReaderWriterLockSlim)  
- Define un bloqueo que implementa la semántica de un único escritor y varios lectores.  
-  
- [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md) (Clases Semaphore y SemaphoreSlim)  
- Describe los objetos <xref:System.Threading.Semaphore> y explica cómo usarlos para controlar el acceso a recursos limitados.  
-  
- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)  
- Compara las características de las clases de .NET Framework proporcionadas para bloquear y sincronizar los subprocesos administrados.  
-  
- [Barrier](../../../docs/standard/threading/barrier.md) (Barrera)  
- Describe los objetos <xref:System.Threading.Barrier> que implementan el modelo de barrera para coordinar los subprocesos en las operaciones por fases.  
-  
- [SpinLock](../../../docs/standard/threading/spinlock.md)  
- Describe <xref:System.Threading.SpinLock>, una alternativa ligera a la clase Monitor para algunos escenarios de bajo nivel.  
-  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- Describe <xref:System.Threading.SpinWait>, un primitivo de sincronización de bajo nivel que realiza giros de ocupado antes de iniciar una espera basada en kernel.  
-  
-## <a name="reference"></a>Referencia  
- <xref:System.Threading.Thread>  
- Proporciona documentación de referencia para la clase **Thread**, que representa un subproceso administrado, independientemente de que provenga de código no administrado o que se creara en una aplicación administrada.  
-  
- <xref:System.ComponentModel.BackgroundWorker>  
- Habilita tareas en segundo plano que interactúan con la interfaz de usuario, y se comunican mediante eventos generados en el subproceso de la interfaz de usuario.  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)  
- Describe cómo los puertos de finalización asincrónica de E/S usan el grupo de subprocesos para solicitar procesamiento solo cuando finaliza una operación de entrada/salida.  
-  
- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- Describe el enfoque recomendado para la programación multiproceso en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] y versiones posteriores.
+
+Junto con la clase <xref:System.Threading.Thread?displayProperty=nameWithType>, .NET proporciona una serie de clases que le ayudarán a desarrollar aplicaciones multiproceso. En los siguientes artículos encontrará información general sobre estas clases:
+
+|Title|Descripción|  
+|-----------|-----------------|  
+|[Grupo de subprocesos administrado](the-managed-thread-pool.md)|Describe cómo usar la clase <xref:System.Threading.ThreadPool?displayProperty=nameWithType>, que proporciona un grupo de subprocesos de trabajo administrados por .NET.|  
+|[Timers](timers.md) (Temporizadores)|Describe los temporizadores que se pueden usar en un entorno multiproceso.|
+|[Información general sobre las primitivas de sincronización](overview-of-synchronization-primitives.md)|Describe las clases que se pueden usar para sincronizar el acceso a la interacción del subproceso de control o de datos.|
+|[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Describe los identificadores de espera de eventos administrados, que se usan para sincronizar las actividades del subproceso mediante señalización y señales de espera.|
+|[Mutexes](mutexes.md) (Clases Mutex)|Describe cómo usar una clase <xref:System.Threading.Mutex?displayProperty=nameWithType> para sincronizar el acceso a un objeto o para crear sus propios mecanismos de sincronización.|
+|[Operaciones de bloqueo](interlocked-operations.md)|Describe la clase <xref:System.Threading.Interlocked?displayProperty=nameWithType>, que proporciona operaciones atómicas para las variables compartidas por varios subprocesos.|
+|[Reader-Writer Locks](reader-writer-locks.md) (Clase ReaderWriterLockSlim)|Describe la clase <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType>, que proporciona la semántica de único escritor y varios lectores.|
+|[Semaphore and SemaphoreSlim](semaphore-and-semaphoreslim.md) (Clases Semaphore y SemaphoreSlim)|Describe la clase <xref:System.Threading.Semaphore?displayProperty=nameWithType> y explica cómo usarla para controlar el acceso a recursos limitados.|
+|[Barrier](barrier.md) (Barrera)|Describe la clase <xref:System.Threading.Barrier?displayProperty=nameWithType> que implementa el modelo de barrera para coordinar los subprocesos en las operaciones por fases.|
+|[SpinLock](spinlock.md)|Describe la clase <xref:System.Threading.SpinLock?displayProperty=nameWithType>, que es una alternativa ligera a la clase <xref:System.Threading.Monitor?displayProperty=nameWithType> para algunos escenarios de bajo nivel.|
+|[SpinWait](spinwait.md)|Describe la clase <xref:System.Threading.SpinWait?displayProperty=nameWithType>, que es una primitiva de sincronización de bajo nivel que realiza giros de ocupado antes de iniciar una espera basada en kernel.|
+
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- [Uso de subprocesos y subprocesamiento](using-threads-and-threading.md)
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)
+- [Programación en paralelo](../parallel-programming/index.md)
+- [Biblioteca TPL](../parallel-programming/task-parallel-library-tpl.md)

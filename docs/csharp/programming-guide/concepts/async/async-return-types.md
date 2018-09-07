@@ -2,12 +2,12 @@
 title: Tipos de valor devueltos asincrónicos (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 9b0ee1c2e9925a1caffca6b7fb83eff34003246b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143562"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43387584"
 ---
 # <a name="async-return-types-c"></a>Tipos de valor devueltos asincrónicos (C#)
 Los métodos asincrónicos pueden tener los siguientes tipos de valor devuelto:
@@ -33,7 +33,7 @@ En el ejemplo siguiente, el método asincrónico `GetLeisureHours` contiene una 
 
 Cuando se llama a `GetLeisureHours` desde una expresión await en el método `ShowTodaysInfo`, esta recupera el valor entero (el valor de `leisureHours`) que está almacenado en la tarea que devuelve el método `GetLeisureHours`. Para más información sobre las expresiones await, vea [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Comprenderá mejor cómo sucede esto separando la llamada a `GetLeisureHours` de la aplicación de `await`, como se muestra en el código siguiente. Una llamada al método `TaskOfT_MethodAsync` que no se espera inmediatamente devuelve `Task<int>`, como se podría esperar de la declaración del método. La tarea se asigna a la variable `integerTask` en el ejemplo. Dado que `integerTask` es <xref:System.Threading.Tasks.Task%601>, contiene una propiedad <xref:System.Threading.Tasks.Task%601.Result> de tipo `TResult`. En este caso, TResult representa un tipo entero. Cuando `await` se aplica a `integerTask`, la expresión await se evalúa en el contenido de la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> de `integerTask`. El valor se asigna a la variable `result2`.  
+Comprenderá mejor cómo sucede esto separando la llamada a `GetLeisureHours` de la aplicación de `await`, como se muestra en el código siguiente. Una llamada al método `GetLeisureHours` que no se espera inmediatamente devuelve `Task<int>`, como se podría esperar de la declaración del método. La tarea se asigna a la variable `infoTask` en el ejemplo. Dado que `infoTask` es <xref:System.Threading.Tasks.Task%601>, contiene una propiedad <xref:System.Threading.Tasks.Task%601.Result> de tipo `TResult`. En este caso, `TResult` representa un tipo entero. Cuando `await` se aplica a `infoTask`, la expresión await se evalúa en el contenido de la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> de `infoTask`. El valor se asigna a la variable `ret`.  
   
 > [!IMPORTANT]
 >  La propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> es una propiedad de bloqueo. Si se intenta acceder a ella antes de que termine su tarea, se bloquea el subproceso que está activo actualmente hasta que finaliza la tarea y el valor está disponible. En la mayoría de los casos, se debe tener acceso al valor usando `await` en lugar de tener acceso directamente a la propiedad. <br/> En el ejemplo anterior se ha recuperado el valor de la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> para bloquear el subproceso principal de manera que el método `ShowTodaysInfo` pueda terminar la ejecución antes de que finalice la aplicación.  
@@ -49,20 +49,21 @@ En el ejemplo siguiente, el método asincrónico `WaitAndApologize` no contiene 
   
 Se espera a `WaitAndApologize` mediante una instrucción await en lugar de una expresión await, similar a la instrucción de llamada para un método sincrónico que devuelve void. En este caso, la aplicación de un operador await no genera un valor.  
   
-Igual que en el ejemplo <xref:System.Threading.Tasks.Task%601> anterior, puede separar la llamada a `Task_MethodAsync` desde la aplicación de un operador await, como muestra el código siguiente. Pero recuerde que una `Task` no tiene una propiedad `Result` y que no se genera ningún valor cuando se aplica un operador await a una `Task`.  
+Igual que en el ejemplo <xref:System.Threading.Tasks.Task%601> anterior, puede separar la llamada a `WaitAndApologize` desde la aplicación de un operador await, como muestra el código siguiente. Pero recuerde que una `Task` no tiene una propiedad `Result` y que no se genera ningún valor cuando se aplica un operador await a una `Task`.  
   
 El código siguiente separa la llamada del método `WaitAndApologize` de la espera de la tarea que el método devuelve.  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Tipo de valor devuelto Void  
+##  <a name="BKMK_VoidReturnType"></a> Tipo de valor devuelto Void
+
 Usa el tipo de valor devuelto `void` en controladores de eventos asincrónicos, que necesitan un tipo de valor devuelto `void`. Para métodos que no sean controladores de eventos que no devuelven un valor, debe devolver <xref:System.Threading.Tasks.Task> en su lugar, porque no se espera a un método asincrónico que devuelva `void`. Cualquier llamador de este método debe poder continuar hasta completarse sin esperar a que finalice el método asincrónico llamado y el llamador debe ser independiente de los valores o las excepciones que genera el método asincrónico.  
   
 El llamador de un método asincrónico que devuelve void no puede capturar las excepciones emitidas desde el método y dichas excepciones no controladas pueden provocar un error de la aplicación. Si se produce una excepción en un método asincrónico que devuelve <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>, la excepción se almacena en la tarea devuelta y se vuelve a emitir cuando se espera la tarea. Por tanto, asegúrese de que cualquier método asincrónico que puede producir una excepción tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> y que se esperan llamadas al método.  
   
 Para obtener más información sobre cómo capturar excepciones en métodos asincrónicos, vea la sección [Excepciones en métodos asincrónicos](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) del tema [try-catch](../../../language-reference/keywords/try-catch.md).  
   
-El ejemplo siguiente define un controlador de eventos asincrónico.  
+En el ejemplo siguiente se muestra el comportamiento de un controlador de eventos asincrónicos. Tenga en cuenta que en el código de ejemplo, un controlador de eventos asincrónicos debe informar de que ha terminado al subproceso principal. Después, el subproceso principal puede esperar a que un controlador de eventos asincrónicos finalice antes de salir del programa.
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  

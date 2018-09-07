@@ -10,11 +10,11 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776532"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44047797"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrucciones, expresiones y operadores (Guía de programación de C#)
 El código de C# que conforma una aplicación consta de instrucciones basadas en palabras clave, expresiones y operadores. Esta sección contiene información sobre los elementos fundamentales de un programa de C#.  

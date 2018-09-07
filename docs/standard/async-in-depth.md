@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577432"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43385701"
 ---
 # <a name="async-in-depth"></a>Async en profundidad
 
@@ -114,7 +114,7 @@ Sobre todo, ya que el trabajo enlazado a E/S no invierte prácticamente ningún 
 
 Además, es muy sencillo enviar trabajo al subproceso de interfaz de usuario (como actualizar una interfaz de usuario) con métodos `async` y no requiere trabajo adicional (como llamar a un delegado seguro para subprocesos).
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Task y Task<T> para una operación enlazada a la CPU en profundidad
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Task y Task&lt;T&gt; para una operación enlazada a la CPU en profundidad
 
 El código `async` enlazado a la CPU es un poco diferente del código `async` enlazado a E/S.  Ya que el trabajo se realiza en la CPU, no hay ninguna forma de evitar dedicar un subproceso al cálculo.  El uso de `async` y `await` le proporciona una manera clara de interactuar con subprocesos en segundo plano y mantener al llamador del método asincrónico dinámico.  Tenga en cuenta que esto no proporciona ninguna protección para datos compartidos.  Si usa datos compartidos, aún tendrá que aplicar una estrategia de sincronización adecuada.
 

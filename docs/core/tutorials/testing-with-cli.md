@@ -4,12 +4,12 @@ description: En este tutorial se explica cómo organizar y probar proyectos .NET
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960988"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400288"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organización y prueba de proyectos con la línea de comandos de .NET Core
 
@@ -162,7 +162,7 @@ public class PetTests
 Ejercicio opcional: si ha agregado un tipo `Bird` anteriormente que da como resultado `Tweet!` para el propietario, agregue un método de prueba al archivo *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, para comprobar que el método `TalkToOwner` funciona correctamente para el tipo `Bird`.
 
 > [!NOTE]
-> Aunque espere que los valores `expected` y `actual` sean iguales, las aserciones iniciales con las comprobaciones `Assert.NotEqual` especifican que *no son iguales*. Cree siempre inicialmente sus pruebas para que produzcan un error una vez para comprobar la lógica de las pruebas. Este es un paso importante en la metodología de diseño controlado por pruebas (TDD). Después de que confirme que las pruebas producen errores, ajuste las aserciones para permitir que las puedan pasar.
+> Aunque espere que los valores `expected` y `actual` sean iguales, la aserción inicial con la comprobación `Assert.NotEqual` especifica que estos valores *no son iguales*. Cree siempre inicialmente una prueba que resulte fallida para comprobar la lógica de la prueba. Después de confirmar que la prueba falla, ajuste la aserción para permitir que se supere la prueba.
 
 A continuación se muestra la estructura del proyecto completo:
 

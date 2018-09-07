@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 84e016e4620b73444f800b02076489012ea5e844
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5738b81c90c886aff48451742881807dc09a9ff9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43001445"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464900"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Usar Azure Key Vault para proteger secretos en tiempo de producción
 
@@ -71,8 +71,8 @@ En este ejemplo, la llamada a AddAzureKeyVault se incluye al final del registro 
 -   **Key management and lifetime**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings) (Administración y duración de las claves)
 
--   **Microsoft.Extensions.Configuration.DockerSecrets.** Repositorio de GitHub.
-    [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
+-   Repositorio de GitHub **Microsoft.Extensions.Configuration.KeyPerFile**.
+    [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
 [Anterior](developer-app-secrets-storage.md)
