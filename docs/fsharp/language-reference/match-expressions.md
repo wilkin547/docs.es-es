@@ -1,13 +1,13 @@
 ---
-title: 'Expresiones Match (F #)'
-description: 'Obtenga información acerca de cómo la expresión de coincidencia de F # proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.'
+title: 'Expresiones de coincidencia (F #)'
+description: 'Obtenga información sobre cómo la expresión de coincidencia en F # proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.'
 ms.date: 04/19/2018
-ms.openlocfilehash: 22cc4b7a87a60d8a5dcbe05ac5abec5560a37516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565183"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44047680"
 ---
 # <a name="match-expressions"></a>Expresiones de coincidencia.
 
@@ -31,9 +31,9 @@ function
 
 ## <a name="remarks"></a>Comentarios
 
-Las expresiones de búsqueda de coincidencias de patrón permiten bifurcaciones complejas basadas en la comparación de una expresión de prueba con un conjunto de patrones. En el `match` expresión, el *expresión de prueba* se compara con cada modelo a su vez, y cuando se encuentra una coincidencia, la correspondiente *expresión de resultado* se evalúa y el valor resultante es se devuelve como el valor de la expresión match.
+Las expresiones de coincidencia de patrón permiten bifurcaciones complejas basadas en la comparación de una expresión de prueba con un conjunto de patrones. En el `match` expresión, el *expresión de prueba* se compara con cada modelo a su vez, y cuando se encuentra una coincidencia, la correspondiente *expresión de resultado* se evalúa y el valor resultante es se devuelve como el valor de la expresión de coincidencia.
 
-El patrón de coincidencia de función que se muestra en la sintaxis anterior es una expresión lambda en qué modelo de búsqueda de coincidencias se realiza inmediatamente en el argumento. La coincidencia de función que se muestra en la sintaxis anterior es equivalente a la siguiente.
+El patrón de coincidencia de función que se muestra en la sintaxis anterior es una expresión lambda en el patrón de coincidencia se realiza inmediatamente en el argumento. El patrón de coincidencia de función que se muestra en la sintaxis anterior es equivalente a la siguiente.
 
 ```fsharp
 fun arg ->
@@ -45,25 +45,25 @@ fun arg ->
 
 Para obtener más información sobre las expresiones lambda, vea [expresiones Lambda: la `fun` palabra clave](functions/lambda-expressions-the-fun-keyword.md).
 
-El conjunto de modelos debe cubrir a todas las posibles coincidencias de la variable de entrada. Con frecuencia, puede usar el patrón de carácter comodín (`_`) como el último modelo para que coincida con los valores de entrada anteriormente no coincidentes.
+El conjunto completo de patrones debe cubrir a todas las coincidencias de la variable de entrada. Con frecuencia, puede usar el patrón de carácter comodín (`_`) como el último patrón para que coincida con los valores de entrada anteriormente no coincidentes.
 
-El código siguiente muestra algunas de las formas en que el `match` se utiliza la expresión. Para obtener una referencia y ejemplos de todos los posibles modelos que se pueden usar, vea [coincidencia de patrones](pattern-matching.md).
+El código siguiente muestra algunas de las formas en que el `match` se usa la expresión. Para obtener una referencia y ejemplos de todos los posibles modelos que se pueden usar, consulte [coincidencia de patrones](pattern-matching.md).
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
 
 ## <a name="guards-on-patterns"></a>Protecciones en los modelos
 
-Puede usar un `when` cláusula para especificar una condición adicional que la variable debe cumplir para que coincida con un patrón. Una cláusula de ese tipo se conoce como un *protegerse*. La expresión que sigue el `when` palabra clave no se evalúa a menos que se encuentre una coincidencia con el modelo asociado a esa protección.
+Puede usar un `when` cláusula para especificar una condición adicional que la variable debe cumplir para que coincida con un patrón. Una cláusula de ese tipo se conoce como un *protegerse*. La expresión que sigue el `when` palabra clave no se evalúa a menos que se realiza una coincidencia para el modelo asociado a esa restricción.
 
-En el ejemplo siguiente se muestra el uso de una restricción para especificar un intervalo numérico para un variable (modelo). Tenga en cuenta que se combinan varias condiciones mediante operadores booleanos.
+El ejemplo siguiente muestra el uso de una restricción para especificar un intervalo numérico para un modelo de variable. Tenga en cuenta que se combinan varias condiciones mediante operadores booleanos.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Tenga en cuenta que dado que no se puede usar valores distintos de literales en el modelo, debe utilizar un `when` cláusula si tiene alguna parte de la entrada con un valor de comparación. Esto se muestra en el código siguiente:
+Tenga en cuenta que dado que no se puede usar valores distintos de literales en el patrón, debe usar un `when` cláusula si tiene alguna parte de la entrada con un valor de comparación. Esto se muestra en el código siguiente:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-Tenga en cuenta que cuando un patrón de unión está cubierto por una restricción, la protección se aplica a **todos los** de los patrones, no solo la última de ellas. Por ejemplo, dado el código siguiente, la protección del `when a > 12` se aplica a los `A a` y `B a`:
+Tenga en cuenta que cuando un patrón de unión está cubierto por una restricción, la protección se aplica a **todas** de los patrones, no solo la última de ellas. Por ejemplo, dado el código siguiente, el guardián `when a > 12` se aplica a ambos `A a` y `B a`:
 
 ```fsharp
 type Union =
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje F#](index.md)  
-[Patrones activos](active-patterns.md)  
-[Coincidencia de patrones](pattern-matching.md)  
+- [Referencia del lenguaje F#](index.md)  
+- [Patrones activos](active-patterns.md)  
+- [Coincidencia de patrones](pattern-matching.md)  

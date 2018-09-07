@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2cfc93e1c8d3d9e878d96de164b0d646e62c0998
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583973"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44046780"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Seguridad y generación de código inmediata
 Algunas bibliotecas funcionan generando código y ejecutándolo para realizar algunas operaciones para el llamador. El problema fundamental es generar código en nombre de código de menor confianza y ejecutarlo con una confianza superior. El problema empeora cuando el llamador puede influir en la generación de código, por lo que debe asegurarse de generar solo código que considere seguro.  
@@ -26,5 +26,6 @@ Algunas bibliotecas funcionan generando código y ejecutándolo para realizar al
   
  Al compilar el código, tenga en cuenta si hay alguna manera de que un programa malintencionado lo modifique. ¿Existe algún momento, por breve que sea, durante el cual un código malintencionado puede cambiar el código fuente en el disco antes de que el compilador lo lea o antes de que el código cargue el archivo .dll? Si es así, debe proteger el directorio que contiene estos archivos usando una lista de control de acceso en el sistema de archivos, según corresponda.  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)

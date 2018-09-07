@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60a2283c01d0dc2665dafaa99ea52000aa3bc47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784694"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064795"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nombres de clases, estructuras e interfaces
 Sigan las instrucciones de nomenclatura se aplican a los nombres de tipo general.  
@@ -101,6 +101,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

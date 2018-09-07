@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
 ms.openlocfilehash: eb05627925534820544edc15e1fe06bf57f0ae84
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740967"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087182"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer (Control)
 Los controles <xref:System.Windows.Forms.ToolStrip> presentan espacio compartido integrado (uso compartido del espacio horizontal o vertical dentro del área de la herramienta cuando se acopla) utilizando <xref:System.Windows.Forms.ToolStripContainer>.  
