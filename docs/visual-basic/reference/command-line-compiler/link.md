@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 91eba53eb8094e55af09d406515dad16fc71937d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 833c0c017d0a9b758dc18273c1fc48fddc1c261d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891832"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083255"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Hace que el compilador facilite al proyecto que se está compilando información de tipos COM en los ensamblados especificados.  
@@ -36,7 +36,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
 |`fileList`|Requerido. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
 ## <a name="remarks"></a>Comentarios  
- La opción `-link` permite implementar una aplicación que tiene información de tipo incrustada. La aplicación puede usar los tipos de un ensamblado en tiempo de ejecución que implementan la información de tipo incrustada sin necesidad de una referencia al ensamblado en tiempo de ejecución. Si hay varias versiones del ensamblado en tiempo de ejecución publicadas, la aplicación que contiene la información de tipo incrustada puede trabajar con las distintas versiones sin tener que volver a compilar. Para obtener un ejemplo, vea [Tutorial: Incrustar los tipos de los ensamblados administrados](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+ La opción `-link` permite implementar una aplicación que tiene información de tipo incrustada. La aplicación puede usar los tipos de un ensamblado en tiempo de ejecución que implementan la información de tipo incrustada sin necesidad de una referencia al ensamblado en tiempo de ejecución. Si hay varias versiones del ensamblado en tiempo de ejecución publicadas, la aplicación que contiene la información de tipo incrustada puede trabajar con las distintas versiones sin tener que volver a compilar. Para obtener un ejemplo, vea [Tutorial: Incrustar los tipos de los ensamblados administrados](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md).  
   
  La opción `-link` resulta de especial utilidad cuando se trabaja con la interoperabilidad COM. Puede incrustar tipos COM para que la aplicación ya no necesite un ensamblado de interoperabilidad primario (PIA) en el equipo de destino. La opción `-link` indica al compilador que incruste la información de tipo COM del ensamblado de interoperabilidad al que se hace referencia en el código compilado resultante. El tipo COM se identifica mediante el valor de CLSID (GUID). Como resultado, la aplicación se puede ejecutar en un equipo de destino que tenga instalados los mismos tipos COM con los mismos valores de CLSID. Las aplicaciones que automatizan Microsoft Office son un buen ejemplo. Dado que las aplicaciones como Office suelen mantener el mismo valor de CLSID en las distintas versiones, la aplicación puede usar los tipos COM a los que se hace referencia siempre que .NET Framework 4 o posterior esté instalado en el equipo de destino y la aplicación emplee métodos, propiedades o eventos que estén incluidos en los tipos COM a los que se hace referencia.  
   
@@ -85,11 +85,12 @@ Hace que el compilador facilite al proyecto que se está compilando información
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Tutorial: Incrustación de los tipos de los ensamblados administrados](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [-referencia (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)  
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Introducción a la interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+## <a name="see-also"></a>Vea también
+
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [Tutorial: Incrustación de los tipos de los ensamblados administrados](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [-referencia (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)  
+- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+- [Introducción a la interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

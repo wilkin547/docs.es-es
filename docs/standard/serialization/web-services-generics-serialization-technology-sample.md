@@ -2,12 +2,12 @@
 title: Ejemplo de Web Services Generics Serialization Technology
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 799206b1bd86e98c87441771174441d07074a325
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b233ed4374231c7e7ff2b6617a63c4e4c94612c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936781"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060390"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Ejemplo de Web Services Generics Serialization Technology
 [Descargar ejemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -63,9 +63,10 @@ ms.locfileid: "37936781"
 ## <a name="remarks"></a>Comentarios  
  En el ejemplo se muestra una página ASP.NET predeterminada que contiene los vínculos a la definición del servicio Web. Puede personalizar la presentación además de modificar el código fuente del servicio Web. Para obtener más información, vea [Building XML Web Service Clients](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c) (Crear clientes de servicios Web XML).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Generic>  
- <xref:System.Web.Services>  
- <xref:System.Xml.Serialization>  
- [Serialización](../../../docs/standard/serialization/index.md)  
- [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Collections.Generic>  
+- <xref:System.Web.Services>  
+- <xref:System.Xml.Serialization>  
+- [Serialización](../../../docs/standard/serialization/index.md)  
+- [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

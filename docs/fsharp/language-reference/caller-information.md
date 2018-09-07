@@ -1,13 +1,13 @@
 ---
 title: 'Información del llamador (F #)'
-description: Describe cómo utilizar atributos de argumento de información del autor de la llamada para obtener información del llamador de un método.
+description: Describe cómo utilizar atributos de argumento de información del autor de llamada para obtener información del llamador de un método.
 ms.date: 04/25/2017
-ms.openlocfilehash: 6fd80213cdaf2c4662fd4c2ed9eaf8949e397efe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564810"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048683"
 ---
 # <a name="caller-information"></a>Información del llamador
 
@@ -19,11 +19,11 @@ Para obtener esta información, se usan los atributos que se aplican a los pará
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Número de línea en el archivo de código fuente en el que se llama al método.|`Integer`|
-|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Método o nombre de propiedad del llamador. Vea la sección nombres de miembro más adelante en este tema.|`String`|
+|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Método o nombre de propiedad del llamador. Consulte la sección de los nombres de miembro más adelante en este tema.|`String`|
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo puede usar estos atributos para realizar el seguimiento de un autor de llamada.
+El ejemplo siguiente muestra cómo puede usar estos atributos para realizar un seguimiento de un autor de llamada.
 
 ```fsharp
 open System.Diagnostics
@@ -45,20 +45,20 @@ type Tracer() =
 
 ## <a name="remarks"></a>Comentarios
 
-Atributos de información del autor de llamada solo pueden aplicarse a los parámetros opcionales. Debe proporcionar un valor explícito para cada parámetro opcional. Los atributos de información del llamador que el compilador escribir el valor adecuado para cada parámetro opcional decorada con un atributo de información del llamador.
+Atributos de información del autor de llamada solo pueden aplicarse a los parámetros opcionales. Debe proporcionar un valor explícito para cada parámetro opcional. Los atributos de información del llamador que el compilador escribir el valor adecuado para cada parámetro opcional representado con un atributo de información del llamador.
 
-Los valores de información del llamador se emiten como literales en el lenguaje intermedio (IL) en tiempo de compilación. A diferencia de los resultados de la [StackTrace](/dotnet/api/system.diagnostics.stacktrace) propiedad para las excepciones, los resultados no se ven afectados por confusión.
+Los valores de información del llamador se emiten como literales en el lenguaje intermedio (IL) en tiempo de compilación. A diferencia de los resultados de la [StackTrace](/dotnet/api/system.diagnostics.stacktrace) propiedad para las excepciones, los resultados no se ven afectados por ofuscación.
 
 Puede proporcionar explícitamente los argumentos opcionales para controlar la información del llamador u ocultarla.
 
 ## <a name="member-names"></a>Nombres de miembro
 
-Puede usar el [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar el nombre de miembro como un `String` argumento para el método llamado. Mediante esta técnica, se evita el problema que cambiar el nombre de refactorización no cambia el `String` valores. Esta ventaja es especialmente útil para las siguientes tareas:
+Puede usar el [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar el nombre de miembro como un `String` argumento al método llamado. Mediante esta técnica, se evita el problema que cambiar el nombre de refactorización no cambia el `String` valores. Esta ventaja es especialmente útil para las siguientes tareas:
 
 * Usar el seguimiento y las rutinas de diagnóstico.
-* Implementar la [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) interfaz cuando se enlazan datos. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo, debe especificar el nombre de propiedad como un literal.
+* Implementar el [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) al enlazar datos de la interfaz. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo, debe especificar el nombre de propiedad como un literal.
 
-El siguiente gráfico muestra al miembro nombres que se devuelven cuando se usa el atributo CallerMemberName.
+El siguiente gráfico muestra al miembro de los nombres que se devuelven cuando se usa el atributo CallerMemberName.
 
 |Las llamadas se producen en|Resultado del nombre de miembro|
 |-------------------|------------------|
@@ -71,6 +71,7 @@ El siguiente gráfico muestra al miembro nombres que se devuelven cuando se usa 
 |Ningún miembro contenedor (por ejemplo, nivel de ensamblado o atributos que se aplican a tipos)|El valor predeterminado del parámetro opcional.|
 
 ## <a name="see-also"></a>Vea también
- [Atributos](attributes.md)  
- [Argumentos con nombre](parameters-and-arguments.md#named-arguments)  
- [Parámetros opcionales](parameters-and-arguments.md#optional-parameters)  
+
+- [Atributos](attributes.md)  
+- [Argumentos con nombre](parameters-and-arguments.md#named-arguments)  
+- [Parámetros opcionales](parameters-and-arguments.md#optional-parameters)  

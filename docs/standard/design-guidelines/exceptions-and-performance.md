@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfffc2a1c0f607541194a7f51717d5bf8a8537f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d664b7b61394bd9bfe6d0abd7130f9f0191e7a03
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575341"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083551"
 ---
 # <a name="exceptions-and-performance"></a>Excepciones y rendimiento
-Una preocupación comunes relacionados con las excepciones es que si las excepciones se utilizan para el código que produce errores repetidamente, el rendimiento de la implementación es inaceptable. Se trata de una preocupación válida. Cuando un miembro produce una excepción, su rendimiento puede ser órdenes de magnitud más lento. Sin embargo, es posible lograr un buen rendimiento al estrictamente siguiendo las directrices de excepción que no permitir el uso de códigos de error. Dos patrones que se describen en esta sección ofrecen sugerencias para hacer esto.  
+Una preocupación comunes relacionados con las excepciones es que si las excepciones se utilizan para el código que habitualmente se produce un error, el rendimiento de la implementación será aceptable. Esto es una preocupación válida. Cuando un miembro produce una excepción, su rendimiento puede ser órdenes de magnitud más lentas. Sin embargo, es posible lograr un buen rendimiento al estrictamente siguiendo las instrucciones de la excepción que no permitir el uso de códigos de error. Dos patrones descritos en esta sección sugieren formas para hacer esto.  
   
  **X DO NOT** usar códigos de error debido a problemas que las excepciones pueden afectar negativamente al rendimiento.  
   
- Para mejorar el rendimiento, es posible utilizar el patrón de acción de la herramienta de comprobación o el patrón de Try-análisis, se describe en las dos secciones siguientes.  
+ Para mejorar el rendimiento, es posible usar Tester-Doer (modelo) o el patrón de Try Parse, se describe en las dos secciones siguientes.  
   
-## <a name="tester-doer-pattern"></a>Patrón de acción de la herramienta de comprobación  
- A veces se puede mejorar el rendimiento de un miembro que inicie excepciones dividiendo el miembro en dos. Echemos un vistazo a la <xref:System.Collections.Generic.ICollection%601.Add%2A> método de la <xref:System.Collections.Generic.ICollection%601> interfaz.  
+## <a name="tester-doer-pattern"></a>Tester-Doer (modelo)  
+ A veces se puede mejorar el rendimiento de un miembro de inicio de excepción dividiendo el miembro en dos. Echemos un vistazo a la <xref:System.Collections.Generic.ICollection%601.Add%2A> método de la <xref:System.Collections.Generic.ICollection%601> interfaz.  
   
 ```  
 ICollection<int> numbers = ...   
 numbers.Add(1);  
 ```  
   
- El método `Add` produce si la colección es de solo lectura. Esto puede ser un problema de rendimiento en escenarios donde se espera que la llamada al método producirá un error con frecuencia. Uno de los métodos para mitigar el problema es probar si la colección es de escritura antes de intentar agregar un valor.  
+ El método `Add` se produce si la colección es de solo lectura. Esto puede ser un problema de rendimiento en escenarios donde se espera que la llamada al método producirá un error con frecuencia. Una de las formas de mitigar el problema es comprobar si la colección es de escritura antes de intentar agregar un valor.  
   
 ```  
 ICollection<int> numbers = ...   
@@ -43,12 +43,12 @@ if(!numbers.IsReadOnly){
 }  
 ```  
   
- El miembro que se usa para probar una condición, que en nuestro ejemplo es la propiedad `IsReadOnly`, se conoce como la herramienta de comprobación. El miembro que se usa para realizar una operación potencialmente produce, la `Add` método en nuestro ejemplo, se conoce como la acción.  
+ El miembro que se usa para probar una condición, que en nuestro ejemplo es la propiedad `IsReadOnly`, se conoce como la herramienta de comprobación. El miembro que se usa para realizar una operación potencialmente produce, la `Add` método en nuestro ejemplo, se conoce como parte de la acción.  
   
  **✓ CONSIDER** el patrón de acción de la herramienta de comprobación para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.  
   
-## <a name="try-parse-pattern"></a>Patrón de try-análisis  
- Para las API de rendimiento es sumamente importante, debe utilizarse un patrón aun más rápido que el patrón de acción de la herramienta de comprobación se describe en la sección anterior. El patrón de las llamadas para ajustar el nombre del miembro para realizar una prueba bien definida caso una parte de la semántica de miembro. Por ejemplo, <xref:System.DateTime> define un <xref:System.DateTime.Parse%2A> método que produce una excepción si el análisis de una cadena se produce un error. También define un correspondiente <xref:System.DateTime.TryParse%2A> método que intenta analizar, pero devuelve false si el análisis es incorrecto y devuelve el resultado de una correcta con análisis un `out` parámetro.  
+## <a name="try-parse-pattern"></a>Patrón de try Parse  
+ Para las API extremadamente sensibles al rendimiento, se debe usar un patrón aún más rápido que el patrón de Tester-Doer descrito en la sección anterior. El patrón se llama para ajustar el nombre de miembro para realizar una prueba bien definida caso una parte de la semántica de miembro. Por ejemplo, <xref:System.DateTime> define un <xref:System.DateTime.Parse%2A> método que produce una excepción si el análisis de una cadena se produce un error. También define correspondiente <xref:System.DateTime.TryParse%2A> método que intenta analizar, pero devuelve false si el análisis es correcta y devuelve el resultado de una correcta con análisis un `out` parámetro.  
   
 ```  
 public struct DateTime {  
@@ -61,7 +61,7 @@ public struct DateTime {
 }  
 ```  
   
- Al utilizar este patrón, es importante definir la funcionalidad de try en términos estrictos. Si se produce un error en el miembro por cualquier razón distinta a la instrucción try bien definida, el miembro todavía debe producir una excepción correspondiente.  
+ Al utilizar este patrón, es importante definir la funcionalidad de try en términos estrictos. Si el miembro falla por alguna razón distinta try bien definida, el miembro todavía debe producir una excepción correspondiente.  
   
  **✓ CONSIDER** el patrón de Try-análisis para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.  
   
@@ -69,10 +69,11 @@ public struct DateTime {
   
  **✓ DO** proporcionan un miembro que inicie excepciones para cada miembro utilizando el modelo de análisis de Try.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Instrucciones de diseño de excepciones](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instrucciones de diseño de excepciones](../../../docs/standard/design-guidelines/exceptions.md)

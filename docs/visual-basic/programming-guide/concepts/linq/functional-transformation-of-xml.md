@@ -3,11 +3,11 @@ title: Transformación funcional de XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 25e5d743b983badaefa3012b8839e4b039419ee9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800708"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070568"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>Transformación funcional de XML (Visual Basic)
 Este tema trata acerca de la aproximación enfocada a la transformación funcional pura para modificar documentos XML, comparándola con la aproximación basada en procedimientos.  

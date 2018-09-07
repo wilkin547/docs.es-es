@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2621aa96cf89b453d5faec3357d0890ca36251d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572741"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067456"
 ---
 # <a name="struct-design"></a>Diseño de structs
-El tipo de valor de uso general más a menudo se conoce como un struct, la palabra clave de C#. Esta sección proporciona instrucciones para el diseño de la estructura general.  
+El tipo de valor de uso general más a menudo se conoce como una estructura, su palabra clave de C#. Esta sección proporciona instrucciones para el diseño de la estructura general.  
   
  **X DO NOT** proporcionar un constructor predeterminado para un struct.  
   
- Seguir esta directriz permite matrices de structs crearse sin tener que ejecutar el constructor en cada elemento de la matriz. Tenga en cuenta que C# no permite estructuras tengan constructores predeterminados.  
+ Seguir esta directriz permite que las matrices de structs crearse sin tener que ejecutar el constructor en cada elemento de la matriz. Tenga en cuenta que C# no permite que las estructuras tienen constructores predeterminados.  
   
  **X DO NOT** definir tipos de valor mutable.  
   
- Tipos de valor mutable tienen varios problemas. Por ejemplo, cuando un captador de propiedad devuelve un tipo de valor, el llamador recibe una copia. Dado que la copia se crea implícitamente, los desarrolladores no sea consciente de que se Muta la copia y no el valor original. Además, algunos lenguajes (lenguajes dinámicos, en particular) tienen problemas al utilizar tipos de valor mutable porque incluso las variables locales, cuando se desreferencia, hacer una copia en realizarse.  
+ Tipos de valor mutable tienen varios problemas. Por ejemplo, un captador de propiedad que devuelve un tipo de valor, el llamador recibe una copia. Dado que la copia se crea implícitamente, los desarrolladores podrían no ser consciente de que son una mutación de la copia y no el valor original. Además, algunos lenguajes (lenguajes dinámicos, en particular) tienen problemas con los tipos de valor mutable porque incluso las variables locales, cuando se desreferencia, hacer una copia en realizarse.  
   
  **✓ DO** asegurarse de que un estado donde todos los datos de la instancia se establece en cero, false o null (según corresponda) es válido.  
   
@@ -37,17 +37,18 @@ El tipo de valor de uso general más a menudo se conoce como un struct, la palab
   
  **✓ DO** implementar <xref:System.IEquatable%601> en tipos de valor.  
   
- El <xref:System.Object.Equals%2A?displayProperty=nameWithType> método en tipos de valor provoca conversión boxing y la implementación predeterminada no es muy eficaz, ya que usa la reflexión. <xref:System.IEquatable%601.Equals%2A> puede tener un rendimiento mucho mejor y se puede implementar para que no producirá la conversión boxing.  
+ El <xref:System.Object.Equals%2A?displayProperty=nameWithType> boxing hace que el método en tipos de valor y su implementación predeterminada no es muy eficaz, porque usa la reflexión. <xref:System.IEquatable%601.Equals%2A> puede tener un rendimiento mucho mejor y se puede implementar para que no provocará la conversión boxing.  
   
  **X DO NOT** extender explícitamente <xref:System.ValueType>. De hecho, la mayoría de los lenguajes evitar esto.  
   
- En general, las estructuras pueden ser muy útiles, pero solo deben usarse para los valores pequeños, únicos e inmutable que no se realizar la conversión boxing con frecuencia.  
+ En general, los structs pueden ser muy útiles pero solo debe usarse para valores pequeños, únicos, inmutable que no se copia por boxing con frecuencia.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Elección entre clase y estructura](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Elección entre clase y estructura](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

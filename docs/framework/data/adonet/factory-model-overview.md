@@ -3,11 +3,11 @@ title: Información general sobre el modelo de fábrica
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
 ms.openlocfilehash: 618a7c6d82facdda05517e4c201c266b84ac889c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855196"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083977"
 ---
 # <a name="factory-model-overview"></a>Información general sobre el modelo de fábrica
 ADO.NET 2.0 incorporó nuevas clases base en el espacio de nombres <xref:System.Data.Common>. No se pueden crear instancias directamente de las clases base debido a que son abstractas. Entre ellas se incluyen <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand> y <xref:System.Data.Common.DbDataAdapter>, y las utilizan los proveedores de datos .NET Framework como <xref:System.Data.SqlClient> y <xref:System.Data.OleDb>. El aumento de clases base simplifica la agregación de funcionalidades a los proveedores de datos .NET Framework sin necesidad de crear nuevas interfaces.  

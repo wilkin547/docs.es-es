@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 51d561009a2f497cf4cf720abd5a414cbbbb2e64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592098"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060338"
 ---
 # <a name="serialization-guidelines"></a>Directrices de serialización
 Este documento enumera las instrucciones que se deben tener en cuenta al diseñar una API para su serialización.  
@@ -104,7 +104,7 @@ Este documento enumera las instrucciones que se deben tener en cuenta al diseña
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2.  CONSIDERE la posibilidad de implementar la interfaz <xref:System.Xml.Serialization.IXmlSerializable> si desea un mayor control sobre la forma del XML serializado del que se proporciona aplicando los atributos de serialización XML. Dos métodos de la interfaz, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> y <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, le permiten controlar completamente la secuencia XML serializada. También puede controlar el esquema XML que se genera para el tipo aplicando el atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
+2.  CONSIDERE la posibilidad de implementar la interfaz <xref:System.Xml.Serialization.IXmlSerializable> si desea un mayor control sobre la forma del XML serializado del que se proporciona aplicando los atributos de serialización XML. Dos métodos de la interfaz, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> y <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, le permiten controlar totalmente la secuencia XML serializada. También puede controlar el esquema XML que se genera para el tipo aplicando el atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
   
 #### <a name="supporting-runtime-serialization"></a>Admitir la serialización en tiempo de ejecución  
  La *serialización en tiempo de ejecución* es una tecnología usada por .NET Remoting. Si piensa que sus tipos se transportarán mediante .NET Remoting, debe asegurarse de que admitan la serialización en tiempo de ejecución.  
@@ -138,11 +138,12 @@ Este documento enumera las instrucciones que se deben tener en cuenta al diseña
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>Vea también  
- [Utilización de contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Serializador de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [Tipos admitidos por el serializador de contratos de datos](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [Serialización binaria](binary-serialization.md)  
- [Objetos remotos](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- [Serialización SOAP y XML](xml-and-soap-serialization.md)  
- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>Vea también
+
+- [Utilización de contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+- [Serializador de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+- [Tipos admitidos por el serializador de contratos de datos](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+- [Serialización binaria](binary-serialization.md)  
+- [Objetos remotos](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+- [Serialización SOAP y XML](xml-and-soap-serialization.md)  
+- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
 ms.openlocfilehash: 7d6514c679187e9ec193f6dda8336c8bd56fac81
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039204"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078426"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Cómo: Agregar controles ActiveX a formularios Windows Forms
 Aunque el Diseñador de Windows Forms está optimizado para hospedar controles de Windows Forms, también puede colocar controles ActiveX en Windows Forms.  

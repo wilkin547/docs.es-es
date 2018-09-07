@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872587"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076558"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipos de datos de resultados de operador (Visual Basic)
 Visual Basic determina el tipo de datos de resultado de una operación basada en los tipos de datos de los operandos. En algunos casos, esto podría ser un tipo de datos con un intervalo mayor que el de alguno de los operandos.  

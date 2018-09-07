@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488214"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059686"
 ---
 # <a name="spawninstance-function"></a>Función SpawnInstance
-Crea una nueva instancia de una clase.    
+Crea una instancia a partir de una clase.    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

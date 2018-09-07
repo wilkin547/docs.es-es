@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
 ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733386"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047169"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Cómo: Hacer una prueba de posicionamiento en Viewport3D
 En este ejemplo se muestra cómo la objetos visuales 3D de prueba de posicionamiento un <xref:System.Windows.Controls.Viewport3D>.  

@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28052cc6848d77acbdf8e9381146ca6fb06c15d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5b9dacc4995a126e1ee3f6062dca796194d4882
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570574"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059672"
 ---
 # <a name="abstract-class-design"></a>Diseño de clases abstractas
 **X DO NOT** definir constructores internos públicos o protegidos en tipos abstractos.  
   
- Los constructores deberían ser públicos sólo si los usuarios deberán crear instancias del tipo. Dado que no se puede crear instancias de un tipo abstracto, un tipo abstracto con un constructor público es incorrectamente se ha diseñado y puede inducir a error a los usuarios.  
+ Los constructores deberían ser públicos solo si los usuarios tendrán que crear instancias del tipo. Dado que no se puede crear instancias de un tipo abstracto, un tipo abstracto con un constructor público está incorrectamente diseñado y puede inducir a error a los usuarios.  
   
  **✓ DO** definir un constructor interno o protegidos en las clases abstractas.  
   
@@ -32,12 +32,13 @@ ms.locfileid: "33570574"
   
  **✓ DO** proporcionar al menos un tipo concreto que herede de cada clase abstracta que realiza el envío.  
   
- Haciendo esto ayuda a validar el diseño de la clase abstracta. Por ejemplo, <xref:System.IO.FileStream?displayProperty=nameWithType> es una implementación de la <xref:System.IO.Stream?displayProperty=nameWithType> clase abstracta.  
+ Si hace esto ayuda a validar el diseño de la clase abstracta. Por ejemplo, <xref:System.IO.FileStream?displayProperty=nameWithType> es una implementación de la <xref:System.IO.Stream?displayProperty=nameWithType> clase abstracta.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

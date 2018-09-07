@@ -3,11 +3,11 @@ title: 'Bucles: expresión for...in (F#)'
 description: 'Vea cómo la estructura de F # for.. en expresión de construcción de bucle se utiliza para recorrer en iteración las coincidencias de un patrón en una colección enumerable.'
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869131"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075577"
 ---
 # <a name="loops-forin-expression"></a>Bucles: expresión for...in
 

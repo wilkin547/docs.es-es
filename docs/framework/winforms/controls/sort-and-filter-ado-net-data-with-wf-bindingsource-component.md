@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 3b58c4f3a53156ab01fb0c0c46b9a9b8d3fea84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 932d30d356225d88d7ef149561cc4c5cc8ac4dd0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538079"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067943"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Cómo: Ordenar y filtrar datos ADO.NET con el componente BindingSource de formularios Windows Forms
-Puede exponer la ordenación y filtrado de capacidad de <xref:System.Windows.Forms.BindingSource> controlar a través de la <xref:System.Windows.Forms.BindingSource.Sort%2A> y <xref:System.Windows.Forms.BindingSource.Filter%2A> propiedades. Puede aplicar la ordenación simple si el origen de datos subyacente es una <xref:System.ComponentModel.IBindingList>, y se puede aplicar el filtrado y ordenación cuando el origen de datos es avanzada un <xref:System.ComponentModel.IBindingListView>. El <xref:System.Windows.Forms.BindingSource.Sort%2A> propiedad requiere estándar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sintaxis: seguido de una cadena que representa el nombre de una columna de datos en el origen de datos `ASC` o `DESC` para indicar si se debe ordenar la lista en orden ascendente o descendente. Puede establecer una ordenación avanzada o varias columnas de ordenación, separe cada columna con un separador de coma. El <xref:System.Windows.Forms.BindingSource.Filter%2A> propiedad toma una expresión de cadena.  
+Puede exponer la ordenación y filtrado de capacidad de <xref:System.Windows.Forms.BindingSource> controlar a través de la <xref:System.Windows.Forms.BindingSource.Sort%2A> y <xref:System.Windows.Forms.BindingSource.Filter%2A> propiedades. Puede aplicar la ordenación simple si el origen de datos subyacente es un <xref:System.ComponentModel.IBindingList>, y puede aplicar el filtrado y ordenación cuando el origen de datos es avanzada un <xref:System.ComponentModel.IBindingListView>. El <xref:System.Windows.Forms.BindingSource.Sort%2A> propiedad requiere estándar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sintaxis: una cadena que representa el nombre de una columna de datos del origen de datos seguida `ASC` o `DESC` para indicar si la lista debe ordenarse en orden ascendente o descendente. Puede establecer la ordenación avanzada o varias columnas de ordenación separando cada columna con un separador de coma. El <xref:System.Windows.Forms.BindingSource.Filter%2A> propiedad toma una expresión de cadena.  
   
 > [!NOTE]
 >  Almacenar información confidencial, como una contraseña, en la cadena de conexión puede afectar a la seguridad de la aplicación. El uso de la autenticación de Windows (también conocida como seguridad integrada) es un modo más seguro de controlar el acceso a una base de datos. Para más información, consulte [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -30,14 +30,14 @@ Puede exponer la ordenación y filtrado de capacidad de <xref:System.Windows.For
   
 -   Establecer el <xref:System.Windows.Forms.BindingSource.Filter%2A> propiedad a la expresión que desea.  
   
-     En el ejemplo de código siguiente, la expresión es un nombre de columna seguido de valor que desea para la columna.  
+     En el ejemplo de código siguiente, la expresión es un nombre de columna seguido de valor que desee para la columna.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#11)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#11)]  
   
 ### <a name="to-sort-data-with-the-bindingsource"></a>Para ordenar los datos con el componente BindingSource  
   
-1.  Establecer el <xref:System.Windows.Forms.BindingSource.Sort%2A> propiedad para el nombre de columna que desee seguido `ASC` o `DESC` para indicar el orden ascendente o descendente.  
+1.  Establecer el <xref:System.Windows.Forms.BindingSource.Sort%2A> propiedad en el nombre de columna que desee seguido `ASC` o `DESC` para indicar el orden ascendente o descendente.  
   
 2.  Separe varias columnas con una coma.  
   
@@ -45,7 +45,7 @@ Puede exponer la ordenación y filtrado de capacidad de <xref:System.Windows.For
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se carga datos de la tabla Customers de la base de datos de ejemplo Northwind en un <xref:System.Windows.Forms.DataGridView> controlar y filtra y ordena los datos mostrados.  
+ El siguiente ejemplo de código carga los datos de la tabla Customers de la base de datos de ejemplo Northwind en un <xref:System.Windows.Forms.DataGridView> controlar y filtra y ordena los datos mostrados.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#1)]  
@@ -56,5 +56,5 @@ Puede exponer la ordenación y filtrado de capacidad de <xref:System.Windows.For
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Forms.BindingSource.Sort%2A>  
  <xref:System.Windows.Forms.BindingSource.Filter%2A>  
- [Cómo: Instalar bases de datos de ejemplo](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
+ [Cómo: Instalar bases de datos de ejemplo](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
  [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)

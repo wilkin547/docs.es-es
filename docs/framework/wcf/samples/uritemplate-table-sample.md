@@ -3,11 +3,11 @@ title: Ejemplo de tabla UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 6cd02e5cdf4137efd3254ff1071e5a4a79c2e88a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883754"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077215"
 ---
 # <a name="uritemplate-table-sample"></a>Ejemplo de tabla UriTemplate
 La clase <xref:System.UriTemplateTable> proporciona una estructura de tabla asociativa similar a un diccionario para trabajar con un conjunto de instancias de `UriTemplate`. Se puede hacer coincidir los identificadores uniformes de recursos (URI) concretos de manera eficaz con todas las plantillas de la tabla y se pueden recuperar los datos asociados con la plantilla con la que coincide.  

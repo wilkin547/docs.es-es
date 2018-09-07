@@ -13,11 +13,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 05f9359aa055019b517abb1b7c86ca386d630e41
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43859811"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080145"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Acceso a objetos incrustados mediante la UI Automation
 > [!NOTE]

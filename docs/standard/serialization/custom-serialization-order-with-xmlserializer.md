@@ -2,12 +2,12 @@
 title: Orden de serialización personalizada con XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
-ms.openlocfilehash: 8480644aacf128b430da9881560595bb4b0d3ad5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1dc9a73b45d8e62902ec8c6b7d810154a8a92566
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580970"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071952"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>Orden de serialización personalizada con XmlSerializer
 [Descargar ejemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
@@ -32,10 +32,11 @@ ms.locfileid: "33580970"
   
 4.  La aplicación de ejemplo se generará en el subdirectorio predeterminado \bin o \bin\Debug.  
   
-## <a name="see-also"></a>Vea también  
- [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)  
- [Serialización binaria](../../../docs/standard/serialization/binary-serialization.md)  
- [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Serialización](../../../docs/standard/serialization/index.md)  
- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+## <a name="see-also"></a>Vea también
+
+- [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)  
+- [Serialización binaria](../../../docs/standard/serialization/binary-serialization.md)  
+- [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [Serialización](../../../docs/standard/serialization/index.md)  
+- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)

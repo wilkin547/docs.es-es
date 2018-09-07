@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
 ms.openlocfilehash: e04234b4f2f18738567c3f9846d8ae0c94780fcb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788225"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075912"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Cómo: Cambiar los bordes de formularios Windows Forms
 Puede elegir varios estilos de borde para determinar la apariencia y el comportamiento de sus Windows Forms. Puede cambiar la propiedad <xref:System.Windows.Forms.Form.FormBorderStyle%2A> para controlar el comportamiento de cambio de tamaño del formulario. Además, establecer el <xref:System.Windows.Forms.Form.FormBorderStyle%2A> afecta a cómo se muestra la barra de título y qué botones pueden aparecer en ella. Para obtener más información, consulta <xref:System.Windows.Forms.FormBorderStyle>.  

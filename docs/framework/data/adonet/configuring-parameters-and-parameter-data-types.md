@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659394"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081280"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurar parámetros y tipos de datos de parámetros
 Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o procedimientos almacenados que permiten realizar operaciones de comprobación de tipos y validación. A diferencia del texto de comando, la entrada de parámetros se trata como un valor literal, y no como código ejecutable. De esta forma, se protege contra ataques por "inyección de código SQL", en los que un atacante inserta un comando que pone en peligro la seguridad del servidor en una instrucción SQL.  

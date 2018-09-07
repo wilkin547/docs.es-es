@@ -3,11 +3,11 @@ title: Características de SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.openlocfilehash: 2747af4ee2937f5b5d26217df5eb45c806606ac5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885391"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085243"
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
 En los temas de esta sección se describen las características de SQL Server orientadas al desarrollo de aplicaciones de base de datos con ADO.NET.  

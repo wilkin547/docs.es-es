@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802585"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097274"
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
 Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para demostrar el uso de la `TransactionFlowAttribute` con el **TransactionFlowOption** enumeración para determinar a qué grado de transacción está habilitado el flujo. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: ca3b31c1d60770a6b9db5e92275d9840036ee0b0
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42753913"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075288"
 ---
 # <a name="xml-and-soap-serialization"></a>Serialización de SOAP y XML
 
@@ -92,4 +92,4 @@ Proporciona los temas que describen y explican cómo programar los servicios Web
 
 ## <a name="see-also"></a>Vea también
 
-[Serialización binaria](binary-serialization.md)  
+- [Serialización binaria](binary-serialization.md)

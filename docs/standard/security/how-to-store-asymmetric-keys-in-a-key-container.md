@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3db4afb00367f719391193ebce4053cc5da16164
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588861"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061213"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Cómo: Almacenar claves asimétricas en un contenedor de claves
 Las claves privadas asimétricas nunca deben almacenarse literalmente o en texto sin formato en el equipo local. Si debe almacenar una clave privada, utilice un contenedor de claves. Para más información sobre contenedores de claves, consulte [Descripción de los contenedores de claves RSA en el nivel de equipo y de usuario](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Para crear una clave asimétrica y guardarla en un contenedor de claves  
   
-1.  Crear una nueva instancia de un <xref:System.Security.Cryptography.CspParameters> clase y pase el nombre que quiera darle al contenedor de claves para el <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
+1.  Crear una nueva instancia de un <xref:System.Security.Cryptography.CspParameters> clase y pase el nombre que desee darle al contenedor de claves para el <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
   
-2.  Crear una nueva instancia de una clase que deriva de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> clase (normalmente **RSACryptoServiceProvider** o **DSACryptoServiceProvider**) y pasar creado previamente  **CspParameters** objeto a su constructor.  
+2.  Crear una nueva instancia de una clase que deriva el <xref:System.Security.Cryptography.AsymmetricAlgorithm> clase (normalmente **RSACryptoServiceProvider** o **DSACryptoServiceProvider**) y pase creado previamente  **CspParameters** objeto a su constructor.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Para eliminar la clave de un contenedor de claves  
   
@@ -223,8 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Cifrar datos](../../../docs/standard/security/encrypting-data.md)  
- [Descifrar datos](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vea también
+
+- [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Cifrar datos](../../../docs/standard/security/encrypting-data.md)  
+- [Descifrar datos](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

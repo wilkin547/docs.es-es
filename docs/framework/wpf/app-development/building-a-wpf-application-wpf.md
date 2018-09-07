@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: 89ceb39b08250bc400eed6ca8f8c24013446b453
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732240"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084090"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilar una aplicación de WPF (WPF)
 Se pueden crear aplicaciones de Windows Presentation Foundation (WPF) como [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] archivos ejecutables (.exe), bibliotecas (.dll) o una combinación de ambos tipos de ensamblados. En este tema se ofrece una introducción a la compilación de aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describen los pasos clave del proceso de compilación.  

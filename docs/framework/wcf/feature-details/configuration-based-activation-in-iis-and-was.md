@@ -3,11 +3,11 @@ title: Activación basada en la configuración en IIS y WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
 ms.openlocfilehash: d15202a7d34f3246cd7679687b6a510252fe3541
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541349"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081600"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Activación basada en la configuración en IIS y WAS
 Normalmente al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS) o servicio de activación de proceso de Windows (WAS), debe proporcionar un archivo .svc. El archivo .svc contiene el nombre del servicio y un generador de host de servicio personalizado opcional. Este archivo adicional agrega una sobrecarga de administración. La característica de activación basada en la configuración elimina el requisito de tener un archivo .svc y, por lo tanto, la sobrecarga asociada.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
 ms.openlocfilehash: 5838422b1f7c4b0b88a6085e5120d5e3b85b0abb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744951"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080064"
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
 Windows Communication Foundation (WCF) es un marco para crear aplicaciones orientadas a servicios. Con WCF, puede enviar datos como mensajes asincrónicos de un extremo de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:  

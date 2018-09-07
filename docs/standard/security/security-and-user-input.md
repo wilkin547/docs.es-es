@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 858ee30479c959f30673725b4ba8088fcc2d8f3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581760"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066521"
 ---
 # <a name="security-and-user-input"></a>Seguridad e introducción de datos por el usuario
 Los datos de usuario, que consisten en cualquier tipo de entrada (datos de una solicitud web o dirección URL, entrada a los controles de una aplicación de Microsoft Windows Forms etc.), pueden afectar negativamente al código, porque a menudo se utilizan esos datos directamente como parámetros para llamar a otro código. Esta situación es análoga al código malintencionado que llama a su código con parámetros extraños, y se deben tomar las mismas precauciones. La entrada del usuario es en realidad más difícil de proteger, porque no hay ningún marco de pila para realizar el seguimiento de la presencia de datos que no sean de confianza.  
@@ -58,5 +58,6 @@ Los datos de usuario, que consisten en cualquier tipo de entrada (datos de una s
   
 -   Tenga cuidado con los nombres de usuario que pueden tener más de un formato canónico. Por ejemplo, a menudo puede utilizar cualquier forma de MIDOMINIO\\*nombreUsuario* o de *nombreUsuario*@mydomain.example.com.  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)

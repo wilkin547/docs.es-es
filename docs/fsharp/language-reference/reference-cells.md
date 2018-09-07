@@ -2,12 +2,12 @@
 title: Celdas de referencia (F#)
 description: 'Obtenga información sobre cómo las celdas de referencia de F # son ubicaciones de almacenamiento que le permiten crear valores mutables con semántica de referencia.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892431"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079301"
 ---
 # <a name="reference-cells"></a>Celdas de referencia
 
@@ -74,62 +74,9 @@ La salida es la siguiente.
 
 El campo `contents` se proporciona por motivos de compatibilidad con otras versiones de ML y generará una advertencia durante la compilación. Para deshabilitar la advertencia, utilice la opción `--mlcompatibility` del compilador. Para obtener más información, consulte [Opciones del compilador](compiler-options.md).
 
-El código siguiente muestra el uso de celdas de referencia al pasar parámetros. El tipo de Incrementor tiene un incremento que toma un parámetro que incluye byref en el tipo de parámetro de método. En el tipo de parámetro byref indica que los llamadores deben pasar una celda de referencia o la dirección de una variable típica del tipo especificado, en este caso int El código restante ilustra cómo llamar al incremento con ambos tipos de argumentos y muestra el uso del operador ref en una variable para crear una celda de referencia (ref myDelta1). A continuación, se muestra el uso del operador de dirección de (&amp;) para generar un argumento adecuado. Por último, el método Increment se llama de nuevo mediante el uso de una celda de referencia que se declara mediante un enlace let. La última línea de código muestra el uso de la. operador que se va a desreferenciar la celda de referencia para la impresión.
+Los programadores de C# deben saber que `ref` en C# no es lo mismo que `ref` en F #. Las construcciones de F # equivalente son [zkratka](byrefs.md), que son un concepto diferente de las celdas de referencia.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
-
-Para obtener más información sobre cómo pasar por referencia, vea [parámetros y argumentos](parameters-and-arguments.md).
-
->[!NOTE]
-Los programadores de C# deben saber que ref funciona forma distinta en F # que en C#. Por ejemplo, el uso de ref al pasar un argumento no tiene el mismo efecto en F # como lo hace en C#.
-
->[!NOTE]
-`mutable` las variables se pueden promover automáticamente a `'a ref` si captura una clausura; vea [valores](values/index.md).
-
-## <a name="consuming-c-ref-returns"></a>Utilizar en C# `ref` devuelve
-
-A partir de F # 4.1, pueden consumir `ref` devuelve generado en C#.  El resultado de esta llamada es un `byref<_>` puntero.
-
-El siguiente método de C#:
-
-```csharp
-namespace RefReturns
-{
-    public static class RefClass
-    {
-        public static ref int Find(int val, int[] vals)
-        {
-            for (int i = 0; i < vals.Length; i++)
-            {
-                if (vals[i] == val)
-                {
-                    return ref numbers[i]; // Returns the location, not the value
-                }
-            }
-
-            throw new IndexOutOfRangeException($"{nameof(number)} not found");
-        }
-    }
-}
-```
-
-Puede ser llamar transparente por F # con ninguna sintaxis especial:
-
-```fsharp
-open RefReturns
-
-let consumeRefReturn() =
-    let result = RefClass.Find(3, [| 1; 2; 3; 4; 5 |]) // 'result' is of type 'byref<int>'.
-    ()
-```
-
-También puede declarar funciones que pueden durar un `ref` devolver como entrada, por ejemplo:
-
-```fsharp
-let f (x: byref<int>) = &x
-```
-
-Actualmente no hay ninguna manera de generar un `ref` devuelto en F # que podría utilizarse en C#.
+Los valores marcan como `mutable`se pueden promover automáticamente a `'a ref` si captura una clausura; vea [valores](values/index.md).
 
 ## <a name="see-also"></a>Vea también
 

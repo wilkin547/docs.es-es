@@ -3,11 +3,11 @@ title: 'Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 ms.openlocfilehash: a7f6b49e8389108528c44d7464a2e68149dfa940
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738225"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062902"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic)
 Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la mayoría de los programas sencillos constan de un ensamblado privado porque no se diseñaron para ser usados por otras aplicaciones.  

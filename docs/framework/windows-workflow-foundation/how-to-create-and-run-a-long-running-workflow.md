@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 2c3368bc73d54f2848cad3c1086b1d9733205d2b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747790"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44048696"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Cómo: Crear y ejecutar un flujo de trabajo de larga ejecución
 Una de las características principales de Windows Workflow Foundation (WF) es la capacidad del tiempo de ejecución para conservar y descargar flujos de trabajo inactivos a una base de datos. Los pasos descritos en [Cómo: ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) muestra los aspectos básicos de hospedaje de flujo de trabajo mediante una aplicación de consola. Se mostraron ejemplos de cómo iniciar flujos de trabajo, de los controladores de ciclo de vida de los flujos de trabajo y de los marcadores de reanudación. Para demostrar la persistencia del flujo de trabajo con efectividad, es necesario un host de flujo de trabajo más complejo que admita el inicio y la reanudación de varias instancias de flujo de trabajo. En este paso del tutorial se muestra cómo crear una aplicación host de Windows Forms que admita iniciar y reanudar varias instancias de flujo de trabajo o la persistencia del flujo de trabajo, y que proporcione una base para características avanzadas como el seguimiento y el control de versiones mostrado en los siguientes pasos del tutorial.  

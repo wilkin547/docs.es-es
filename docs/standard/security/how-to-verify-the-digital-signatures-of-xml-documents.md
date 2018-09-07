@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b2cb61f2cc7129153a71398c6fb219c4e3990a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590655"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067622"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Cómo: Comprobar las firmas digitales de documentos XML
-Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para comprobar datos XML firmados con una firma digital.  Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos.  Para obtener más información sobre el estándar XMLDSIG, vea la especificación de World Wide Web Consortium (W3C) en http://www.w3.org/TR/xmldsig-core/.  
+Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para comprobar datos XML firmados con una firma digital.  Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos.  Para obtener más información sobre el estándar XMLDSIG, consulte la especificación de World Wide Web Consortium (W3C) en http://www.w3.org/TR/xmldsig-core/.  
   
  En el ejemplo de código de este procedimiento se muestra cómo comprobar una firma digital XML que se encuentra en un elemento <`Signature`>.  En el ejemplo se recupera una clave pública RSA de un contenedor de claves y se usa la clave para comprobar la firma.  
   
@@ -82,8 +82,9 @@ Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Nunca almacene ni transfiera la clave privada de un par de claves asimétricas en texto sin formato.  Para obtener más información acerca de las claves criptográficas simétricas y asimétricas, vea [generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- No inserte nunca una clave privada directamente en el código fuente.  Las claves insertadas se pueden leer fácilmente desde un ensamblado con el [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como Bloc de notas.  
+ No inserte nunca una clave privada directamente en el código fuente.  Las claves insertadas se pueden leer fácilmente desde un ensamblado mediante la [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como Bloc de notas.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Security.Cryptography.Xml>  
- [Firmar documentos XML con firmas digitales](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Firmar documentos XML con firmas digitales](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

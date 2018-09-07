@@ -3,11 +3,11 @@ title: 'punto de conexión: Errores en llamadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
 ms.openlocfilehash: f1b2997a0f1e16c897fc319d1833313141f5c4bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874685"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44082088"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>punto de conexión: Errores en llamadas por segundo
 Nombre del contador: Errores de llamadas por segundo.  

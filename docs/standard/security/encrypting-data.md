@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39dd7bfe4e5dd3405e24bf044723dbd92ccc65a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589833"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070386"
 ---
 # <a name="encrypting-data"></a>Cifrar datos
 El cifrado simétrico y el cifrado asimétrico se efectúan mediante procesos distintos. El cifrado simétrico se realiza en secuencias y, por tanto, resulta útil para cifrar grandes cantidades de datos. El cifrado asimétrico se realiza en un pequeño número de bytes y, por tanto, solo resulta útil para pequeñas cantidades de datos.  
@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>Cifrado asimétrico  
  Los algoritmos asimétricos suelen usarse para cifrar pequeñas cantidades de datos, como el cifrado de una clave simétrica y un IV. Normalmente, cuando se realiza un cifrado asimétrico, se usa la clave pública generada por terceros. .NET Framework proporciona la clase <xref:System.Security.Cryptography.RSACryptoServiceProvider> necesaria para este propósito.  
   
- En el ejemplo siguiente se usa la información de clave pública para cifrar una clave simétrica y un IV. Se inicializan dos matrices de bytes que representan la clave pública de un tercero. Se inicializa un objeto <xref:System.Security.Cryptography.RSAParameters> en estos valores. Después, el **RSAParameters** objeto (junto con la clave pública que representa) se importa a una **RSACryptoServiceProvider** mediante el <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> método. Por último, se cifran la clave privada y el IV creados por una clase <xref:System.Security.Cryptography.RijndaelManaged> . Este ejemplo requiere sistemas que tengan instalado el cifrado de 128 bits.  
+ En el ejemplo siguiente se usa la información de clave pública para cifrar una clave simétrica y un IV. Se inicializan dos matrices de bytes que representan la clave pública de un tercero. Se inicializa un objeto <xref:System.Security.Cryptography.RSAParameters> en estos valores. A continuación, el **RSAParameters** objeto (junto con la clave pública que representa) se importa en un **RSACryptoServiceProvider** utilizando el <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> método. Por último, se cifran la clave privada y el IV creados por una clase <xref:System.Security.Cryptography.RijndaelManaged> . Este ejemplo requiere sistemas que tengan instalado el cifrado de 128 bits.  
   
 ```vb  
 Imports System  
@@ -262,7 +262,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Descifrar datos](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vea también
+
+- [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Descifrar datos](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

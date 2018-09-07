@@ -1,23 +1,21 @@
 ---
 title: Sintaxis detallada (F#)
-description: 'Obtenga información acerca de la diferencia entre la sintaxis ligera y detallado en el lenguaje de programación de F #.'
+description: 'Obtenga información sobre la diferencia entre la sintaxis ligera y detallado en el lenguaje de programación F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563789"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063123"
 ---
 # <a name="verbose-syntax"></a>Sintaxis detallada
 
-Hay dos formas de sintaxis disponibles para muchas construcciones del lenguaje F #: *sintaxis detallada* y *sintaxis ligera*. La sintaxis detallada no se utiliza normalmente, pero tiene la ventaja de ser menos sensible a la sangría. La sintaxis ligera es más corta y utiliza la sangría para señalar el principio y final de las construcciones, en lugar de como palabras clave adicionales `begin`, `end`, `in`, y así sucesivamente. La sintaxis predeterminada es la sintaxis ligera. Este tema describe la sintaxis para las construcciones de F # cuando no está habilitada la sintaxis ligera. Sintaxis detallada siempre está habilitada, de modo que aunque se habilite la sintaxis ligera, todavía puede utilizar la sintaxis detallada para algunas construcciones. Sintaxis ligera se pueden deshabilitar mediante la `#light "off"` directiva.
+Hay dos formas de sintaxis disponibles para muchas construcciones del lenguaje F #: *sintaxis detallada* y *sintaxis ligera*. La sintaxis detallada no se utiliza normalmente, pero tiene la ventaja de ser menos sensible a la sangría. La sintaxis ligera es más corta y utiliza la sangría para señalar el principio y final de las construcciones, en lugar de palabras clave adicionales como `begin`, `end`, `in`, y así sucesivamente. La sintaxis predeterminada es la sintaxis ligera. Este tema describe la sintaxis de construcciones de F # cuando no está habilitada la sintaxis ligera. Sintaxis detallada siempre está habilitada, por lo que incluso si habilita la sintaxis ligera, todavía puede utilizar la sintaxis detallada para algunas construcciones. Sintaxis ligera se puede deshabilitar mediante la `#light "off"` directiva.
 
+## <a name="table-of-constructs"></a>Tabla de construcciones
 
-## <a name="table-of-constructs"></a>Tabla de construcciones.
-En la tabla siguiente muestra la sintaxis ligera y detallada para construcciones del lenguaje F # en contextos donde hay una diferencia entre las dos formas. En esta tabla, están entre corchetes angulares (&lt;&gt;) encerrar los elementos de sintaxis proporcionados por el usuario. Consulte la documentación de cada construcción de lenguaje para obtener más información acerca de la sintaxis utilizada dentro de estas construcciones.
-
-
+En la tabla siguiente muestra la sintaxis ligera y detallada para construcciones del lenguaje F # en contextos donde hay una diferencia entre las dos formas. En esta tabla, los corchetes angulares (&lt;&gt;) incluya los elementos de la sintaxis proporcionada por el usuario. Consulte la documentación de cada construcción de lenguaje para obtener más información sobre la sintaxis usada dentro de estas construcciones.
 
 <table>
 <tr>
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
-
-
 ## <a name="see-also"></a>Vea también
-[Referencia del lenguaje F#](index.md)
 
-[Directivas de compilador](compiler-directives.md)
-
-[Instrucciones de formato de código](code-formatting-guidelines.md)
+- [Referencia del lenguaje F#](index.md)
+- [Directivas de compilador](compiler-directives.md)
+- [Instrucciones de formato de código](code-formatting-guidelines.md)

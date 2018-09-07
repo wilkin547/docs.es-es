@@ -2,25 +2,25 @@
 title: Parámetros y argumentos (F#)
 description: 'Obtenga información sobre la compatibilidad del lenguaje F # para definir parámetros y pasar argumentos a funciones, métodos y propiedades.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471986"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062642"
 ---
 # <a name="parameters-and-arguments"></a>Parámetros y argumentos
 
 Este tema describe la compatibilidad con lenguajes para definir parámetros y pasar argumentos a funciones, métodos y propiedades. Incluye información acerca de cómo pasar por referencia y cómo definir y usar los métodos que pueden tomar un número variable de argumentos.
 
-
 ## <a name="parameters-and-arguments"></a>Parámetros y argumentos
+
 El término *parámetro* se usa para describir los nombres de los valores que se esperan que se proporcione. El término *argumento* se usa para los valores proporcionados para cada parámetro.
 
 Los parámetros pueden especificarse en la tupla o currificada, o en alguna combinación de ambos. Puede pasar argumentos mediante el uso de un nombre de parámetro explícito. Parámetros de métodos pueden especificarse como opcionales y proporcionado un valor predeterminado.
 
-
 ## <a name="parameter-patterns"></a>Patrones de parámetros
+
 En general, los parámetros proporcionados a las funciones y métodos son patrones separados por espacios. Esto significa que, en principio, cualquiera de los patrones descritos en [expresiones de coincidencia](match-expressions.md) puede usarse en una lista de parámetros para una función o miembro.
 
 Métodos usan normalmente la forma de pasar argumentos de tupla. Dado que la forma de tupla coincide con la forma en que se pasan argumentos en los métodos de .NET se consigue un resultado más claro desde la perspectiva de otros lenguajes. NET.
@@ -90,6 +90,7 @@ En ocasiones, los patrones que implican coincidencias incompletas son útiles, p
 El uso de patrones que tienen coincidencias incompletas mejor está reservado para el desarrollo rápido de prototipos y otros usos temporales. El compilador emitirá una advertencia para dicho código. Estos patrones no pueden cubrir el caso general de todas las entradas posibles y, por tanto, no son adecuados para las API de componentes.
 
 ## <a name="named-arguments"></a>Argumentos con nombre
+
 Posición en una lista de argumentos separados por comas se pueden especificar argumentos de métodos o se pueden pasar a un método explícitamente proporcionando el nombre, seguido por un signo igual y el valor que se pasarán en. Si se especifica al proporcionar el nombre, pueden aparecer en un orden diferente del que se utiliza en la declaración.
 
 Argumentos con nombre pueden que el código sea más legible y más adaptable para ciertos tipos de cambios en la API, como la reordenación de parámetros del método.
@@ -107,6 +108,7 @@ En una llamada a un constructor de clase, puede establecer los valores de propie
 Para obtener más información, consulte [constructores (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Parámetros opcionales
+
 Puede especificar un parámetro opcional para un método mediante un signo de interrogación junto al nombre del parámetro. Los parámetros opcionales se interpretan como el tipo de opción de F #, por lo que puede consultar en la que se consultan los tipos de opciones mediante el uso de manera regular un `match` expresión con `Some` y `None`. Los parámetros opcionales solo se permiten en los miembros, no en las funciones creadas mediante `let` enlaces.
 
 También puede usar una función `defaultArg`, que establece un valor predeterminado de un argumento opcional. El `defaultArg` función toma el parámetro opcional como el primer argumento y el valor predeterminado como el segundo.
@@ -124,6 +126,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>Pasar por referencia
+
 Pasar un valor de F # por referencia implica la `byref` palabra clave, que especifica que el parámetro es un puntero al valor que se pasa por referencia. Cualquier valor que se pasa a un método con un `byref` como el argumento debe ser `mutable`.
 
 Dado que el parámetro es un puntero y el valor es mutable, cualquier cambio en el valor se conserva después de la ejecución de la función.
@@ -139,6 +142,7 @@ Puede utilizar una tupla como valor devuelto para almacenarlas `out` parámetros
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Matrices de parámetros
+
 En ocasiones, es necesario definir una función que toma un número arbitrario de parámetros de tipo heterogéneo. No sería práctico volver a crear todos los métodos sobrecargados posible para tener en cuenta para todos los tipos que se pueda usar. Las implementaciones de .NET proporcionan compatibilidad para dichos métodos a través de la característica de la matriz de parámetros. Con un número arbitrario de parámetros se puede proporcionar un método que toma una matriz de parámetros en la firma. Los parámetros se colocan en una matriz. El tipo de elementos de la matriz determina los tipos de parámetro que se pueden pasar a la función. Si define la matriz de parámetros con `System.Object` como el tipo de elemento, a continuación, el código de cliente puede pasar valores de cualquier tipo.
 
 En F #, las matrices de parámetros solo se pueden definir en métodos. No se usaron en las funciones que se definen en módulos o funciones independientes.
@@ -162,4 +166,5 @@ true
 ```
 
 ## <a name="see-also"></a>Vea también
-[Miembros](members/index.md)
+
+- [Miembros](members/index.md)

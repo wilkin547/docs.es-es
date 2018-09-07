@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 829be8663068d4eb492631ccc4194b4e4c3000aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590304"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061681"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Cómo: Firmar documentos XML con firmas digitales
 Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para firmar un documento XML o parte de un documento XML con una firma digital.  Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos.  Para obtener más información sobre el estándar XMLDSIG, consulte la recomendación de World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
@@ -116,8 +116,9 @@ Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Nunca almacene ni transfiera la clave privada de un par de claves asimétricas en texto sin formato.  Para obtener más información acerca de las claves criptográficas simétricas y asimétricas, vea [generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- No inserte nunca una clave privada directamente en el código fuente.  Las claves insertadas se pueden leer fácilmente desde un ensamblado con el [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como Bloc de notas.  
+ No inserte nunca una clave privada directamente en el código fuente.  Las claves insertadas se pueden leer fácilmente desde un ensamblado mediante la [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como Bloc de notas.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Security.Cryptography.Xml>  
- [Comprobar las firmas digitales de documentos XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Comprobar las firmas digitales de documentos XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

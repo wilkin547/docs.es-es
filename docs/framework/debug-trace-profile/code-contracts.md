@@ -10,11 +10,11 @@ ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879850"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080613"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Los contratos de código proporcionan una manera de especificar condiciones previas, condiciones posteriores e invariantes de objeto en el código. Las condiciones previas son requisitos que deben cumplirse al escribir un método o propiedad. Las condiciones posteriores describen las expectativas en el momento en que se cierra el código del método o propiedad. Las invariantes de objeto describen el estado esperado de una clase que está en buen estado.  

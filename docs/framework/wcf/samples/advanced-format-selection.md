@@ -3,11 +3,11 @@ title: Selección avanzada de formato
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
 ms.openlocfilehash: e5c396ce22e9021d453a70f3826b0bd3cc6aaf42
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535095"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44082218"
 ---
 # <a name="advanced-format-selection"></a>Selección avanzada de formato
 Este ejemplo muestra cómo extender el modelo de programación REST de Windows Communication Foundation (WCF) para admitir los nuevos formatos de respuesta saliente. Además, el ejemplo utiliza una plantilla T4 para devolver la respuesta como una página XHTML y muestra cómo se puede implementar un modelo de programación del estilo de vista.  

@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a712414163446606cbc93154bc821d3b1166fe8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800091"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44059656"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) (Método)
 
@@ -76,5 +76,5 @@ Se admite en: Windows 8.1
 
 ## <a name="see-also"></a>Vea también
 
-[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)  
-[Convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
+-[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
+-[Cómo: convertir entre secuencias .NET Framework y secuencias de Windows en tiempo de ejecución](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

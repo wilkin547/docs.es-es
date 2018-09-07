@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741164"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065385"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Procedimiento para hospedar y ejecutar un servicio básico de Windows Communication Foundation
 Esta es la tercera de las seis tareas necesarias para crear una aplicación de Windows Communication Foundation (WCF). Para obtener información general de las seis tareas, vea el tema [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  

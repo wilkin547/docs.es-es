@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
 ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786172"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076506"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Hospedaje de un servicio WCF en un servicio administrado de Windows
 
