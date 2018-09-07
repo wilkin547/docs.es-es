@@ -8,21 +8,21 @@ helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
 ms.openlocfilehash: 8546ed0a5032d93bcf7320c96424b02b3b6d5fa3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553856"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078300"
 ---
-# <a name="xml-axis-properties-do-not-support-late-binding"></a><span data-ttu-id="68231-102">Las propiedades del eje XML no admiten enlace en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="68231-102">XML axis properties do not support late binding</span></span>
-<span data-ttu-id="68231-103">Se ha hecho referencia a una propiedad de eje XML para un objeto sin tipo.</span><span class="sxs-lookup"><span data-stu-id="68231-103">An XML axis property has been referenced for an untyped object.</span></span>  
+# <a name="xml-axis-properties-do-not-support-late-binding"></a><span data-ttu-id="0f79d-102">Las propiedades del eje XML no admiten enlace en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="0f79d-102">XML axis properties do not support late binding</span></span>
+<span data-ttu-id="0f79d-103">Se ha hecho referencia a una propiedad de eje XML para un objeto sin tipo.</span><span class="sxs-lookup"><span data-stu-id="0f79d-103">An XML axis property has been referenced for an untyped object.</span></span>  
   
- <span data-ttu-id="68231-104">**Identificador de error:** BC31168</span><span class="sxs-lookup"><span data-stu-id="68231-104">**Error ID:** BC31168</span></span>  
+ <span data-ttu-id="0f79d-104">**Identificador de error:** BC31168</span><span class="sxs-lookup"><span data-stu-id="0f79d-104">**Error ID:** BC31168</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="68231-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="68231-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0f79d-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="0f79d-105">To correct this error</span></span>  
   
--   <span data-ttu-id="68231-106">Asegúrese de que el objeto es un tipo seguro <xref:System.Xml.Linq.XElement> objeto antes de hacer referencia a la propiedad de eje XML.</span><span class="sxs-lookup"><span data-stu-id="68231-106">Ensure that the object is a strong-typed <xref:System.Xml.Linq.XElement> object before referencing the XML axis property.</span></span>  
+-   <span data-ttu-id="0f79d-106">Asegúrese de que el objeto es un tipo seguro <xref:System.Xml.Linq.XElement> objeto antes de hacer referencia a la propiedad de eje XML.</span><span class="sxs-lookup"><span data-stu-id="0f79d-106">Ensure that the object is a strong-typed <xref:System.Xml.Linq.XElement> object before referencing the XML axis property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68231-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="68231-107">See Also</span></span>  
- [<span data-ttu-id="68231-108">Propiedades del eje XML</span><span class="sxs-lookup"><span data-stu-id="68231-108">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)  
- [<span data-ttu-id="68231-109">XML</span><span class="sxs-lookup"><span data-stu-id="68231-109">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="0f79d-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="0f79d-107">See Also</span></span>  
+ [<span data-ttu-id="0f79d-108">Propiedades del eje XML</span><span class="sxs-lookup"><span data-stu-id="0f79d-108">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)  
+ [<span data-ttu-id="0f79d-109">XML</span><span class="sxs-lookup"><span data-stu-id="0f79d-109">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
