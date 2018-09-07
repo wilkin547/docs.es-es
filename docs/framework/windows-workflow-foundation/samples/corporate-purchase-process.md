@@ -2,12 +2,12 @@
 title: Proceso de compra corporativa
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 34d9280fb1d4009aa729cb2eba55b817db9fff56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520047"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802916"
 ---
 # <a name="corporate-purchase-process"></a>Proceso de compra corporativa
 En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.  
@@ -43,12 +43,12 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Descripción del proceso  
- Este ejemplo muestra una implementación de un programa de Windows Workflow Foundation (WF) para recopilar las propuestas de los proveedores para una compañía genérica.  
+ En este ejemplo se muestra una implementación de un programa de Windows Workflow Foundation (WF) para recopilar las propuestas de los proveedores para una compañía genérica.  
   
 1.  Un empleado de la compañía X crea una solicitud de propuestas (RFP).  
   
@@ -127,7 +127,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 |Form|Descripción|  
 |-|-|  
 |NewRfp|Crea y envía nuevas solicitudes de propuestas.|  
-|ShowProposals|Muestra todas las solicitudes de propuestas activas y finalizadas. **Nota:** debe hacer clic en el **actualizar** botón en la interfaz de usuario para ver los cambios en la pantalla después de crear o modificar una solicitud de propuesta.|  
+|ShowProposals|Muestra todas las solicitudes de propuestas activas y finalizadas. **Nota:** que deba hacer clic el **actualizar** botón en la interfaz de usuario para ver los cambios en esa pantalla después de crear o modificar una solicitud de propuesta.|  
 |SubmitProposal|Recibe una propuesta de un proveedor en una solicitud de propuestas concreta. Esta ventana solo la usan los proveedores.|  
 |ViewRfp|Muestra toda la información sobre una solicitud de propuestas (propuestas recibidas, fechas, valores y otra información). Esta ventana solo la usa el creador de la solicitud de propuestas.|  
   
@@ -145,7 +145,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 1.  Abra el archivo de solución PurchaseProcess.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Para ejecutar el proyecto de cliente Web, abra **el Explorador de soluciones** y haga clic en el **cliente Web** proyecto. Seleccione **establecer como proyecto de inicio**.  
+2.  Para ejecutar el proyecto de cliente Web, abra **el Explorador de soluciones** y haga clic en el **Web cliente** proyecto. Seleccione **establecer como proyecto de inicio**.  
   
 3.  Para ejecutar el proyecto de cliente de WinForms, abra **el Explorador de soluciones** y haga clic en el **cliente de WinForms** proyecto. Seleccione **establecer como proyecto de inicio**.  
   
@@ -155,7 +155,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 ### <a name="web-client-options"></a>Opciones del cliente web  
   
--   **Crear un nuevo RFP**: crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo del proceso de compra.  
+-   **Crear un nuevo RFP**: crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
   
 -   **Actualizar**: actualiza la lista de activas y finalizadas en la ventana principal.  
   
@@ -165,7 +165,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 ### <a name="winforms-client-options"></a>Opciones del cliente de WinForms  
   
--   **Crear solicitud de propuestas**: crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo del proceso de compra.  
+-   **Crear RFP**: crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
   
 -   **Actualizar**: actualiza la lista de activas y finalizadas en la ventana principal.  
   

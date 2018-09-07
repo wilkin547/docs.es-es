@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404572"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855720"
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección de punto de conexión se representa en el modelo de programación de Windows Communication Foundation (WCF) mediante el <xref:System.ServiceModel.EndpointAddress> (clase), que contiene un elemento opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad que habilita la autenticación del punto de conexión por otros extremos que intercambiar mensajes con él y un conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propiedades, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
