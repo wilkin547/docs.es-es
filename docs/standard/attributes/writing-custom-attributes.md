@@ -19,11 +19,11 @@ ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44072173"
+ms.locfileid: "44087396"
 ---
 # <a name="writing-custom-attributes"></a>Escribir atributos personalizados
 Para diseñar sus propios atributos personalizados, no necesitará dominar muchos conceptos nuevos. Si está familiarizado con la programación orientada a objetos y sabe cómo diseñar clases, ya tiene la mayoría de los conocimientos necesarios. Los atributos personalizados son esencialmente clases tradicionales que se derivan directa o indirectamente de <xref:System.Attribute?displayProperty=nameWithType>. Como sucede con las clases tradicionales, los atributos personalizados contienen métodos que almacenan y recuperan datos.  
