@@ -3,11 +3,11 @@ title: TargetFilePath especifica una carpeta existente.
 ms.date: 07/20/2015
 ms.assetid: 2334f49e-d080-4ee2-b036-f95c7f76c3ec
 ms.openlocfilehash: 037ec38255cc63cf4e34d7679a1fb2ae8fb247a3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747371"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085694"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a>TargetFilePath especifica una carpeta existente.
 El parámetro `TargetFilePath` especifica un directorio existente pero debe especificar el nombre del nuevo directorio.  

@@ -3,11 +3,11 @@ title: Operadores que aceptan valores NULL (F#)
 description: 'Obtenga información sobre los operadores que aceptan valores null que están disponibles en el lenguaje de programación F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036784"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086288"
 ---
 # <a name="nullable-operators"></a>Operadores que aceptan valores NULL
 
