@@ -1,5 +1,5 @@
 ---
-title: Cancelar subprocesos de manera cooperativa
+title: Cancelación de subprocesos de manera cooperativa
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,20 @@ helpviewer_keywords:
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3edd0f9c991df8d8d70b14f4439c5c477e8f1401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24cacf0323c96f6959442dea94b0540633661bce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581347"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485604"
 ---
-# <a name="canceling-threads-cooperatively"></a><span data-ttu-id="cd2c5-102">Cancelar subprocesos de manera cooperativa</span><span class="sxs-lookup"><span data-stu-id="cd2c5-102">Canceling Threads Cooperatively</span></span>
-<span data-ttu-id="cd2c5-103">Antes de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)],.NET Framework no ofrecía ningún medio integrado para cancelar un subproceso de forma cooperativa después de su inicio.</span><span class="sxs-lookup"><span data-stu-id="cd2c5-103">Prior to the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided no built-in way to cancel a thread cooperatively after it was started.</span></span> <span data-ttu-id="cd2c5-104">Sin embargo, en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede utilizar tokens de cancelación para cancelar subprocesos, de la misma forma que puede utilizarlos para cancelar objetos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o consultas PLINQ.</span><span class="sxs-lookup"><span data-stu-id="cd2c5-104">However, in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use cancellation tokens to cancel threads, just as you can use them to cancel <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objects or PLINQ queries.</span></span> <span data-ttu-id="cd2c5-105">Aunque la clase <xref:System.Threading.Thread?displayProperty=nameWithType> no ofrece compatibilidad integrada para tokens de cancelación, puede pasar un token a un procedimiento de subproceso con el constructor <xref:System.Threading.Thread> que toma un delegado <xref:System.Threading.ParameterizedThreadStart>.</span><span class="sxs-lookup"><span data-stu-id="cd2c5-105">Although the <xref:System.Threading.Thread?displayProperty=nameWithType> class does not offer built-in support for cancellation tokens, you can pass a token to a thread procedure by using the <xref:System.Threading.Thread> constructor that takes a <xref:System.Threading.ParameterizedThreadStart> delegate.</span></span> <span data-ttu-id="cd2c5-106">En el ejemplo siguiente se muestra cómo hacerlo:</span><span class="sxs-lookup"><span data-stu-id="cd2c5-106">The following example demonstrates how to do this.</span></span>  
+# <a name="canceling-threads-cooperatively"></a><span data-ttu-id="188df-102">Cancelación de subprocesos de manera cooperativa</span><span class="sxs-lookup"><span data-stu-id="188df-102">Canceling threads cooperatively</span></span>
+
+<span data-ttu-id="188df-103">Antes de .NET Framework 4, .NET Framework no ofrecía ningún medio integrado para cancelar un subproceso de forma cooperativa después de su inicio.</span><span class="sxs-lookup"><span data-stu-id="188df-103">Prior to the .NET Framework 4, the .NET Framework provided no built-in way to cancel a thread cooperatively after it was started.</span></span> <span data-ttu-id="188df-104">Pero a partir de .NET Framework 4, puede usar <xref:System.Threading.CancellationToken?displayProperty=nameWithType> para cancelar subprocesos, de la misma forma que puede utilizarlos para cancelar objetos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o consultas PLINQ.</span><span class="sxs-lookup"><span data-stu-id="188df-104">However, starting with the .NET Framework 4, you can use a <xref:System.Threading.CancellationToken?displayProperty=nameWithType> to cancel threads, just as you can use them to cancel <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objects or PLINQ queries.</span></span> <span data-ttu-id="188df-105">Aunque la clase <xref:System.Threading.Thread?displayProperty=nameWithType> no ofrece compatibilidad integrada para tokens de cancelación, puede pasar un token a un procedimiento de subproceso con el constructor <xref:System.Threading.Thread> que toma un delegado <xref:System.Threading.ParameterizedThreadStart>.</span><span class="sxs-lookup"><span data-stu-id="188df-105">Although the <xref:System.Threading.Thread?displayProperty=nameWithType> class does not offer built-in support for cancellation tokens, you can pass a token to a thread procedure by using the <xref:System.Threading.Thread> constructor that takes a <xref:System.Threading.ParameterizedThreadStart> delegate.</span></span> <span data-ttu-id="188df-106">En el ejemplo siguiente se muestra cómo hacerlo:</span><span class="sxs-lookup"><span data-stu-id="188df-106">The following example demonstrates how to do this.</span></span>  
   
  [!code-csharp[Cancellation#14](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/CooperativeThreads.cs#14)]
  [!code-vb[Cancellation#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/CooperativeThreads.vb#14)]  
   
-## <a name="see-also"></a><span data-ttu-id="cd2c5-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="cd2c5-107">See Also</span></span>  
- [<span data-ttu-id="cd2c5-108">Usar subprocesos y subprocesamiento</span><span class="sxs-lookup"><span data-stu-id="cd2c5-108">Using Threads and Threading</span></span>](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a><span data-ttu-id="188df-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="188df-107">See also</span></span>
+
+ [<span data-ttu-id="188df-108">Usar subprocesos y subprocesamiento</span><span class="sxs-lookup"><span data-stu-id="188df-108">Using Threads and Threading</span></span>](using-threads-and-threading.md)  

@@ -13,21 +13,21 @@ ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7cc105b335069635791e9e558fe6f9a28eba8b60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787589"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884710"
 ---
-# <a name="c-special-characters"></a><span data-ttu-id="ce388-102">Caracteres especiales de C#</span><span class="sxs-lookup"><span data-stu-id="ce388-102">C# Special Characters</span></span>
+# <a name="c-special-characters"></a><span data-ttu-id="e1621-102">Caracteres especiales de C#</span><span class="sxs-lookup"><span data-stu-id="e1621-102">C# Special Characters</span></span>
 
-<span data-ttu-id="ce388-103">Los caracteres especiales son caracteres contextuales predefinidos que modifican el elemento de programa (una cadena literal, un identificador o un nombre de atributo) para que se antepongan.</span><span class="sxs-lookup"><span data-stu-id="ce388-103">Special characters are predefined, contextual characters that modify the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="ce388-104">C# admite los siguientes caracteres especiales:</span><span class="sxs-lookup"><span data-stu-id="ce388-104">C# supports the following special characters:</span></span> 
+<span data-ttu-id="e1621-103">Los caracteres especiales son caracteres contextuales predefinidos que modifican el elemento de programa (una cadena literal, un identificador o un nombre de atributo) para que se antepongan.</span><span class="sxs-lookup"><span data-stu-id="e1621-103">Special characters are predefined, contextual characters that modify the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="e1621-104">C# admite los siguientes caracteres especiales:</span><span class="sxs-lookup"><span data-stu-id="e1621-104">C# supports the following special characters:</span></span> 
 
-- <span data-ttu-id="ce388-105">[@](../../../csharp/language-reference/tokens/verbatim.md), el carácter de identificador textual.</span><span class="sxs-lookup"><span data-stu-id="ce388-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
+- <span data-ttu-id="e1621-105">[@](../../../csharp/language-reference/tokens/verbatim.md), el carácter de identificador textual.</span><span class="sxs-lookup"><span data-stu-id="e1621-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
 
-- <span data-ttu-id="ce388-106">[$](../../../csharp/language-reference/tokens/interpolated.md), el carácter de cadena interpolada.</span><span class="sxs-lookup"><span data-stu-id="ce388-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
+- <span data-ttu-id="e1621-106">[$](../../../csharp/language-reference/tokens/interpolated.md), el carácter de cadena interpolada.</span><span class="sxs-lookup"><span data-stu-id="e1621-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ce388-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="ce388-107">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1621-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="e1621-107">See Also</span></span>
 
-- [<span data-ttu-id="ce388-108">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="ce388-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="ce388-109">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="ce388-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="e1621-108">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="e1621-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="e1621-109">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="e1621-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
