@@ -14,11 +14,11 @@ ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873752"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187960"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalización y localización de aplicaciones .NET
 El desarrollo de una [aplicación de uso internacional](https://msdn.microsoft.com/goglobal/bb978433.aspx), incluida una aplicación que se pueda localizar en uno o varios idiomas, implica tres pasos: globalización, revisión de localizabilidad y localización.  

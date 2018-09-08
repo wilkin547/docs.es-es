@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579813"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207647"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 Una cadena de formato de fecha y hora estándar usa un único especificador de formato para definir la representación de texto de un valor de fecha y hora. Cualquier cadena con formato de fecha y hora que contenga más de un carácter, incluido un espacio en blanco, se interpreta como una cadena con formato de fecha y hora personalizado; para obtener más información, consulte [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una cadena de formato estándar o personalizado se puede usar de dos maneras:  
@@ -413,9 +413,10 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
 ### <a name="datetimeformatinfo-properties"></a>Propiedades de DateTimeFormatInfo  
  El formato se ve influenciado por las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> actual, proporcionado implícitamente por la referencia cultural del subproceso actual o explícitamente por el parámetro <xref:System.IFormatProvider> del método que invoca el formato. En el parámetro <xref:System.IFormatProvider>, la aplicación debe especificar un objeto <xref:System.Globalization.CultureInfo>, que representa una referencia cultural, o un objeto <xref:System.Globalization.DateTimeFormatInfo>, que representa las convenciones de formato de fecha y hora de una determinada referencia cultural. Muchos de los especificadores de formato de fecha y hora estándar son alias de patrones de formato definidos en las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> actual. La aplicación puede modificar el resultado generado por algunos especificadores de formato de fecha y hora estándar al cambiar los patrones de formato de fecha y hora correspondientes de la propiedad <xref:System.Globalization.DateTimeFormatInfo> apropiada.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

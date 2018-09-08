@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 1469336bf034fd22c9d7355b2f8dd8be32721fdf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0ed2d678363a29bb870a496846fc6f054769a4b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510643"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181607"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrices (Guía de programación de C#)
 
@@ -48,8 +48,6 @@ Puede almacenar varias variables del mismo tipo en una estructura de datos de ma
   
 -   [Pasar matrices como argumentos](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [Pasar matrices mediante Ref y Out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
-  
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -57,5 +55,5 @@ Puede almacenar varias variables del mismo tipo en una estructura de datos de ma
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Colecciones](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+- [Colecciones](../../../csharp/programming-guide/concepts/collections.md)  
 - [Tipo de colección de matrices](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
