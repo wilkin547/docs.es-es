@@ -7,11 +7,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
 ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066833"
+ms.locfileid: "44130081"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Implementación de ClickOnce para formularios Windows Forms
 Los temas siguientes describen [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnología que se usa para implementar fácilmente aplicaciones de Windows Forms en equipos cliente.  

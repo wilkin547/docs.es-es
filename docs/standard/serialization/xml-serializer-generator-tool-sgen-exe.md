@@ -2,12 +2,12 @@
 title: Herramienta Generador de serializador XML (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 54afa99af3365c3be8a9662905467fbcaf4e8aa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589184"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44136997"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Herramienta Generador de serializador XML (Sgen.exe)
 El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado especificado a fin de mejorar el rendimiento en el inicio de <xref:System.Xml.Serialization.XmlSerializer> cuando serializa o deserializa objetos de los tipos especificados.  
@@ -22,7 +22,7 @@ sgen [options]
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/a**[**ssembly**] **: *** filename*|Genera código de serialización para todos los tipos incluidos en el ensamblado o la aplicación ejecutable especificados por *filename*. Solo se puede proporcionar un nombre de archivo. Si se repite este argumento, se utilizará el último nombre.|  
+|**/a**[**samblado**] **: *** nombre de archivo*|Genera código de serialización para todos los tipos incluidos en el ensamblado o la aplicación ejecutable especificados por *filename*. Solo se puede proporcionar un nombre de archivo. Si se repite este argumento, se utilizará el último nombre.|  
 |**/c[ompiler]:** *options*|Especifica las opciones que se deben pasar al compilador de C#. Todas las opciones de csc.exe se admiten tal como se pasan al compilador. Esto puede servir para especificar que se debería firmar el ensamblado, así como para especificar el archivo de clave.|  
 |**/d**[**ebug**]|Genera un imagen que se puede utilizar con un depurador.|  
 |**/f[orce]**|Exige que se sobrescriba un ensamblado existente que tenga el mismo nombre. El valor predeterminado es **false**.|  
@@ -38,7 +38,7 @@ sgen [options]
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando no se utiliza el Generador de serializador XML, un objeto <xref:System.Xml.Serialization.XmlSerializer> genera código de serialización y un ensamblado de serialización para cada tipo siempre que se ejecuta una aplicación. Para mejorar el rendimiento de inicio de la serialización XML, utilice la herramienta Sgen.exe para generar los ensamblados de antemano. Estos ensamblados se podrán implementar después con la aplicación.  
+ Cuando no se utiliza el Generador de serializador XML, un objeto <xref:System.Xml.Serialization.XmlSerializer> genera código de serialización y un ensamblado de serialización para cada tipo siempre que se ejecuta una aplicación. Para mejorar el rendimiento de inicio de la serialización XML, utilice la herramienta Sgen.exe para generar de antemano esos ensamblados. Estos ensamblados se podrán implementar después con la aplicación.  
   
  El Generador de serializador XML también puede mejorar el rendimiento de los clientes que utilizan proxy de servicio Web XML para comunicarse con los servidores, dado que no se verá afectado el rendimiento del proceso de serialización la primera vez que se carga el tipo.  
   
@@ -55,7 +55,8 @@ sgen Data.dll
   
  Se puede hacer referencia al ensamblado Data.XmlSerializers.dll desde código cuando se necesite serializar y deserializar los tipos en Data.dll.  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)  
- [Introducción a servicios Web XML](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vea también
+
+- [Herramientas](../../../docs/framework/tools/index.md)  
+- [Introducción a servicios Web XML](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

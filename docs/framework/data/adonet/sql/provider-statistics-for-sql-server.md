@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
 ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745029"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44139350"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Estadísticas de proveedor de SQL Server
 Desde .NET Framework versión 2.0, el proveedor de datos .NET Framework para servidor SQL Server admite estadísticas en tiempo de ejecución. Para habilitar las estadísticas, establezca la propiedad <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> del objeto <xref:System.Data.SqlClient.SqlConnection> en `True` después de que haya creado un objeto de conexión válido. Una vez habilitadas las estadísticas, puede revisarlas como una "instantánea en el tiempo" si recupera una referencia <xref:System.Collections.IDictionary> mediante el método <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> del objeto <xref:System.Data.SqlClient.SqlConnection>. La enumeración tiene lugar a través de la lista como un conjunto de entradas de diccionario de pares de nombre y valor. Estos pares de nombre y valor están sin ordenar. En cualquier momento, puede llamar al método <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> del objeto <xref:System.Data.SqlClient.SqlConnection> para restablecer los contadores. Si la recopilación de estadísticas no se ha habilitado, no se genera una excepción. Además, si se llama a <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> sin haber llamado primero a <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, los valores recuperados son los valores iniciales de cada entrada. Si habilita las estadísticas, ejecuta la aplicación durante un rato y, a continuación, deshabilita las estadísticas, los valores recuperados reflejarán los valores recopilados hasta el momento en que se deshabilitaron las estadísticas. Todos los valores estadísticos recuperados son por cada conexión.  

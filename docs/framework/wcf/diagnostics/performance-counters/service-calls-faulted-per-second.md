@@ -3,11 +3,11 @@ title: 'Servicio: Errores en las llamadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
 ms.openlocfilehash: b4a8a1eeec13195e4f8fe088da14dff7c06ecdb3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032220"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127938"
 ---
 # <a name="service-calls-faulted-per-second"></a>Servicio: Errores en las llamadas por segundo
 Nombre del contador: Errores de llamadas por segundo.  

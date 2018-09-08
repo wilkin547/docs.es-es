@@ -2,17 +2,17 @@
 title: Información general sobre los ejes de LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: d7d881564abfdaba6cb7efa8fb92849e48c6fa4c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 43649800869f4829d56977f1e6e62d30192b0604
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804271"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128805"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Información general sobre los ejes de LINQ to XML (Visual Basic)
 Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, puede realizar consultas sobre él para encontrar elementos y atributos, así como para recuperar sus valores. Las colecciones se recuperan mediante los *métodos de eje*, también denominados *ejes*. Algunos de los ejes son métodos de las clases <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument>, que devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601>. Algunos de los métodos Axes son métodos de extensión de la clase <xref:System.Xml.Linq.Extensions>. Los ejes que se han implementado como métodos de extensión trabajan colecciones y devuelven colecciones.  
   
- Como se describe en [Información general acerca de la clase XElement](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), un objeto <xref:System.Xml.Linq.XElement> representa un nodo de elemento único. El contenido de un elemento puede ser complejo (a veces conocido como contenido estructurado) o puede ser un elemento simple. Un elemento simple puede estar vacío o contener un valor. Si el nodo incluye contenido estructurado, puede utilizar diferentes métodos del eje para recuperar enumeraciones con los elementos descendientes. Los métodos de ejes que se utilizan con más frecuencia son <xref:System.Xml.Linq.XContainer.Elements%2A> y <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Como se describe en [Información general acerca de la clase XElement](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md), un objeto <xref:System.Xml.Linq.XElement> representa un nodo de elemento único. El contenido de un elemento puede ser complejo (a veces conocido como contenido estructurado) o puede ser un elemento simple. Un elemento simple puede estar vacío o contener un valor. Si el nodo incluye contenido estructurado, puede utilizar diferentes métodos del eje para recuperar enumeraciones con los elementos descendientes. Los métodos de ejes que se utilizan con más frecuencia son <xref:System.Xml.Linq.XContainer.Elements%2A> y <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
  Además de los métodos de eje, que devuelven colecciones, existen otros dos métodos que usará con regularidad en consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. El método <xref:System.Xml.Linq.XContainer.Element%2A> devuelve un único <xref:System.Xml.Linq.XElement>. El método <xref:System.Xml.Linq.XElement.Attribute%2A> devuelve un único <xref:System.Xml.Linq.XAttribute>.  
   
@@ -54,5 +54,6 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Devuelve el <xref:System.Xml.Linq.XAttribute> que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   
-## <a name="see-also"></a>Vea también  
- [Ejes de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Vea también
+
+- [Ejes de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

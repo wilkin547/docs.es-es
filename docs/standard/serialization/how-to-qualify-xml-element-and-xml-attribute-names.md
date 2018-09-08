@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785497"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133287"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Cómo: Calificar el elemento XML y los nombres del atributo XML
 
@@ -171,11 +171,11 @@ public class Book
 
 ## <a name="see-also"></a>Vea también
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[La herramienta de definición de esquemas XML y serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md)
-[introducir la serialización XML](introducing-xml-serialization.md)
-[clase XmlSerializer](xref:System.Xml.Serialization.XmlSerializer) 
- [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
-[Cómo: especificar un nombre de elemento alternativo para un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[Cómo: serializar un objeto](how-to-serialize-an-object.md) 
- [Cómo: deserializar un objeto](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Herramienta de definición de esquema XML y serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [Introducción a la serialización XML](introducing-xml-serialization.md)
+- [XmlSerializer (clase)](xref:System.Xml.Serialization.XmlSerializer)
+- [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
+- [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)
+- [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)

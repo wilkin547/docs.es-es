@@ -12,11 +12,11 @@ ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891238"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137218"
 ---
 # <a name="enum-design"></a>Diseño de enumeraciones
 Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumeraciones: enumeraciones simples de enumeraciones y marca.  

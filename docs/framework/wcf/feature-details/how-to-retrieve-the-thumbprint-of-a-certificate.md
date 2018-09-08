@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: d827c2c5f407c3041a31efbc06fcfed205bef458
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f520e897ad467686e0dc151548a61ea8370eb07a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492439"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133235"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Cómo recuperar la huella digital de un certificado
-Al escribir una aplicación de Windows Communication Foundation (WCF) que usa un certificado X.509 para la autenticación, a menudo es necesario especificar notificaciones encontraron en el certificado. Por ejemplo, debe proporcionar una demanda de huella digital al utilizar la enumeración <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> en el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Se requieren dos pasos a la hora de buscar un valor de demanda. Primero, abra el complemento de Microsoft Management Console (MMC) para certificados. (Vea [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Segundo, como se describe aquí, busque un certificado adecuado y copie su huella digital (u otros valores de demanda).  
+Al escribir una aplicación de Windows Communication Foundation (WCF) que usa un certificado X.509 para la autenticación, a menudo es necesario especificar demandas se encuentran en el certificado. Por ejemplo, debe proporcionar una demanda de huella digital al utilizar la enumeración <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> en el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Se requieren dos pasos a la hora de buscar un valor de demanda. Primero, abra el complemento de Microsoft Management Console (MMC) para certificados. (Vea [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Segundo, como se describe aquí, busque un certificado adecuado y copie su huella digital (u otros valores de demanda).  
   
  Si usa un certificado para la autenticación del servicio, es importante apuntar el valor de la columna **Emitido para** (la primera columna en la consola). Al utilizar Capa de sockets seguros (SSL) como seguridad de transporte, una de las primeras comprobaciones es la comparación de la dirección base Identificador uniforme de recursos (URI) de un servicio con el valor **Emitido para** . Los valores deben coincidir o se detiene el proceso de autenticación.  
   
- También puede usar la herramienta Makecert.exe de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de SDK para crear certificados temporales para el uso durante el desarrollo. Una entidad de certificación no emite, sin embargo, de forma predeterminada, este tipo de certificado, y no se puede usar para propósitos de producción. Para obtener más información, consulte [Cómo: crear certificados temporales para el uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+ También puede usar el cmdlet de Powershell New-SelfSignedCertificate para crear certificados temporales para su uso durante el desarrollo. De forma predeterminada, sin embargo, este tipo de certificado no está emitido por una entidad de certificación y no podrá usarse para fines de producción. Para obtener más información, consulte [Cómo: crear certificados temporales para uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>Para recuperar una huella digital de un certificado  
   

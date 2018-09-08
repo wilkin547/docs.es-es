@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c77f08cd573dc40083718b783ae01233ca00766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573560"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129807"
 ---
 # <a name="member-overloading"></a>Sobrecarga de miembro
-Sobrecarga de miembro significa crear dos o más miembros en el mismo tipo que solo difieren en el número o tipo de parámetros, pero tienen el mismo nombre. Por ejemplo, en la siguiente tabla, el `WriteLine` método está sobrecargado:  
+Sobrecarga de miembro significa crear dos o más miembros en el mismo tipo que solo difieren en el número o tipo de parámetros, pero tienen el mismo nombre. Por ejemplo, en la siguiente, el `WriteLine` método está sobrecargado:  
   
 ```  
 public static class Console {  
@@ -32,11 +32,11 @@ public static class Console {
   
  Dado que solo los métodos, constructores y propiedades indizadas pueden tener parámetros, solo los miembros se pueden sobrecargar.  
   
- La sobrecarga es una de las técnicas más importantes para mejorar la facilidad de uso, productividad y mejorar la legibilidad de bibliotecas reutilizables. Sobrecarga en el número de parámetros permite proporcionar versiones más sencillas de métodos y constructores. Sobrecarga en el tipo de parámetro permite usar el mismo nombre de miembro para realizar operaciones idénticas en un conjunto seleccionado de diferentes tipos de miembros.  
+ La sobrecarga es una de las técnicas más importantes para mejorar la facilidad de uso, la productividad y mejorar la legibilidad de bibliotecas reutilizables. La sobrecarga en el número de parámetros hace posible proporcionar versiones más sencillas de métodos y constructores. La sobrecarga en el tipo de parámetro permite usar el mismo nombre de miembro para realizar operaciones idénticas en un conjunto seleccionado de diferentes tipos de miembros.  
   
  **✓ DO** intenta utilizar nombres de parámetros descriptivos para indicar el valor predeterminado utilizado por las sobrecargas más cortas.  
   
- **X AVOID** variar arbitrariamente los nombres de parámetro en las sobrecargas. Si un parámetro de una sobrecarga representa la misma entrada como un parámetro de otra sobrecarga, los parámetros deben tener el mismo nombre.  
+ **X AVOID** variar arbitrariamente los nombres de parámetro en las sobrecargas. Si un parámetro de una sobrecarga representa la misma entrada como un parámetro en la otra sobrecarga, los parámetros deben tener el mismo nombre.  
   
  **X AVOID** incoherente en el orden de los parámetros en sobrecarga los miembros. Parámetros con el mismo nombre deberían aparecer en la misma posición en todas las sobrecargas.  
   
@@ -44,7 +44,7 @@ public static class Console {
   
  **X DO NOT** usar `ref` o `out` modificadores para sobrecargar los miembros.  
   
- Algunos lenguajes no pueden resolver llamadas a sobrecargas similar al siguiente. Además, estas sobrecargas normalmente tienen una semántica completamente diferente y probablemente no debería sobrecargas pero dos métodos independientes en su lugar.  
+ Algunos lenguajes no pueden resolver llamadas a sobrecargas similar al siguiente. Además, estas sobrecargas normalmente tienen una semántica completamente diferente y no deben ser las sobrecargas, pero dos métodos independientes en su lugar.  
   
  **X DO NOT** tienen sobrecargas con parámetros en la misma posición que él y los tipos similares pero con una semántica diferente.  
   
@@ -52,12 +52,13 @@ public static class Console {
   
  **✓ DO** usar miembro sobrecarga en lugar de definir miembros con argumentos predeterminados.  
   
- Argumentos predeterminados no son compatibles con CLS.  
+ Argumentos predeterminados no son conformes a CLS.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
