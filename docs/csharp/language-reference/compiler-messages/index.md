@@ -7,32 +7,32 @@ helpviewer_keywords:
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
 ms.openlocfilehash: 2edd47682223dd94fc8dd7448465613236e67e27
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134745"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209232"
 ---
-# <a name="c-compiler-errors"></a><span data-ttu-id="80de4-102">Errores del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="80de4-102">C# Compiler Errors</span></span>
+# <a name="c-compiler-errors"></a><span data-ttu-id="afd35-102">Errores del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="afd35-102">C# Compiler Errors</span></span>
 
-<span data-ttu-id="80de4-103">Algunos errores del compilador de C# tienen temas correspondientes que explican por qué se genera el error y, en algunos casos, cómo corregirlo.</span><span class="sxs-lookup"><span data-stu-id="80de4-103">Some C# compiler errors have corresponding topics that explain why the error is generated, and, in some cases, how to fix the error.</span></span> <span data-ttu-id="80de4-104">Utilice uno de los siguientes pasos para ver si la Ayuda está disponible para un mensaje de error concreto.</span><span class="sxs-lookup"><span data-stu-id="80de4-104">Use one of the following steps to see whether help is available for a particular error message.</span></span>  
+<span data-ttu-id="afd35-103">Algunos errores del compilador de C# tienen temas correspondientes que explican por qué se genera el error y, en algunos casos, cómo corregirlo.</span><span class="sxs-lookup"><span data-stu-id="afd35-103">Some C# compiler errors have corresponding topics that explain why the error is generated, and, in some cases, how to fix the error.</span></span> <span data-ttu-id="afd35-104">Utilice uno de los siguientes pasos para ver si la Ayuda está disponible para un mensaje de error concreto.</span><span class="sxs-lookup"><span data-stu-id="afd35-104">Use one of the following steps to see whether help is available for a particular error message.</span></span>  
   
-- <span data-ttu-id="80de4-105">Busque el número de error (por ejemplo, CS0029) en la [Ventana de salida](/visualstudio/ide/reference/output-window) y después búsquelo en Microsoft Docs.</span><span class="sxs-lookup"><span data-stu-id="80de4-105">Find the error number (for example, CS0029) in the [Output Window](/visualstudio/ide/reference/output-window), and then search for it on Microsoft Docs.</span></span>  
+- <span data-ttu-id="afd35-105">Busque el número de error (por ejemplo, CS0029) en la [Ventana de salida](/visualstudio/ide/reference/output-window) y después búsquelo en Microsoft Docs.</span><span class="sxs-lookup"><span data-stu-id="afd35-105">Find the error number (for example, CS0029) in the [Output Window](/visualstudio/ide/reference/output-window), and then search for it on Microsoft Docs.</span></span>  
   
-- <span data-ttu-id="80de4-106">Seleccione el número de error (por ejemplo, CS0029) en la [Ventana de salida](/visualstudio/ide/reference/output-window) y después presione la tecla F1.</span><span class="sxs-lookup"><span data-stu-id="80de4-106">Choose the error number (for example, CS0029) in the [Output Window](/visualstudio/ide/reference/output-window), and then choose the F1 key.</span></span>  
+- <span data-ttu-id="afd35-106">Seleccione el número de error (por ejemplo, CS0029) en la [Ventana de salida](/visualstudio/ide/reference/output-window) y después presione la tecla F1.</span><span class="sxs-lookup"><span data-stu-id="afd35-106">Choose the error number (for example, CS0029) in the [Output Window](/visualstudio/ide/reference/output-window), and then choose the F1 key.</span></span>  
   
-- <span data-ttu-id="80de4-107">En el índice, especifique el número de error en el cuadro **Buscar**.</span><span class="sxs-lookup"><span data-stu-id="80de4-107">In the Index, enter the error number in the **Look for** box.</span></span>  
+- <span data-ttu-id="afd35-107">En el índice, especifique el número de error en el cuadro **Buscar**.</span><span class="sxs-lookup"><span data-stu-id="afd35-107">In the Index, enter the error number in the **Look for** box.</span></span>  
   
- <span data-ttu-id="80de4-108">Si ninguno de estos pasos conduce a información sobre el error, vaya al final de esta página y envíe comentarios con el número o el texto del error.</span><span class="sxs-lookup"><span data-stu-id="80de4-108">If none of these steps leads to information about your error, go to the end of this page, and send feedback that includes the number or text of the error.</span></span>  
+ <span data-ttu-id="afd35-108">Si ninguno de estos pasos conduce a información sobre el error, vaya al final de esta página y envíe comentarios con el número o el texto del error.</span><span class="sxs-lookup"><span data-stu-id="afd35-108">If none of these steps leads to information about your error, go to the end of this page, and send feedback that includes the number or text of the error.</span></span>  
   
- <span data-ttu-id="80de4-109">Para obtener información sobre cómo configurar las opciones de advertencia y error en C#, vea [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span><span class="sxs-lookup"><span data-stu-id="80de4-109">For information about how to configure error and warning options in C#, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
+ <span data-ttu-id="afd35-109">Para obtener información sobre cómo configurar las opciones de advertencia y error en C#, vea [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span><span class="sxs-lookup"><span data-stu-id="afd35-109">For information about how to configure error and warning options in C#, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="80de4-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="80de4-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="afd35-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="afd35-110">See Also</span></span>
 
-- [<span data-ttu-id="80de4-111">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="80de4-111">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="80de4-112">No tenemos detalles sobre este error de C#</span><span class="sxs-lookup"><span data-stu-id="80de4-112">Sorry, we don't have specifics on this C# error</span></span>](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
-- [<span data-ttu-id="80de4-113">Página Compilar (Diseñador de proyectos) (C#)</span><span class="sxs-lookup"><span data-stu-id="80de4-113">Build Page, Project Designer (C#)</span></span>](/visualstudio/ide/reference/build-page-project-designer-csharp)  
-- [<span data-ttu-id="80de4-114">/warn (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="80de4-114">/warn (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
-- [<span data-ttu-id="80de4-115">/nowarn (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="80de4-115">/nowarn (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
+- [<span data-ttu-id="afd35-111">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="afd35-111">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="afd35-112">No tenemos detalles sobre este error de C#</span><span class="sxs-lookup"><span data-stu-id="afd35-112">Sorry, we don't have specifics on this C# error</span></span>](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
+- [<span data-ttu-id="afd35-113">Página Compilar (Diseñador de proyectos) (C#)</span><span class="sxs-lookup"><span data-stu-id="afd35-113">Build Page, Project Designer (C#)</span></span>](/visualstudio/ide/reference/build-page-project-designer-csharp)  
+- [<span data-ttu-id="afd35-114">/warn (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="afd35-114">/warn (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
+- [<span data-ttu-id="afd35-115">/nowarn (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="afd35-115">/nowarn (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
