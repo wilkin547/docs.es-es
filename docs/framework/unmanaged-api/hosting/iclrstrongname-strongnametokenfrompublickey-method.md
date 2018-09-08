@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 98c0dbbbe65d8f8c0b0196c82db1a8fd2b0ee3dd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134498"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209334"
 ---
-# <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a><span data-ttu-id="615df-102">ICLRStrongName::StrongNameTokenFromPublicKey (Método)</span><span class="sxs-lookup"><span data-stu-id="615df-102">ICLRStrongName::StrongNameTokenFromPublicKey Method</span></span>
-<span data-ttu-id="615df-103">Obtiene un token que representa una clave pública.</span><span class="sxs-lookup"><span data-stu-id="615df-103">Gets a token that represents a public key.</span></span> <span data-ttu-id="615df-104">Un token de nombre seguro es la forma abreviada de una clave pública.</span><span class="sxs-lookup"><span data-stu-id="615df-104">A strong name token is the shortened form of a public key.</span></span>  
+# <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a><span data-ttu-id="7ed4c-102">ICLRStrongName::StrongNameTokenFromPublicKey (Método)</span><span class="sxs-lookup"><span data-stu-id="7ed4c-102">ICLRStrongName::StrongNameTokenFromPublicKey Method</span></span>
+<span data-ttu-id="7ed4c-103">Obtiene un token que representa una clave pública.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-103">Gets a token that represents a public key.</span></span> <span data-ttu-id="7ed4c-104">Un token de nombre seguro es la forma abreviada de una clave pública.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-104">A strong name token is the shortened form of a public key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="615df-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="615df-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ed4c-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7ed4c-105">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameTokenFromPublicKey (   
@@ -38,35 +38,35 @@ HRESULT StrongNameTokenFromPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="615df-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="615df-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7ed4c-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7ed4c-106">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="615df-107">[in] Una estructura de tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="615df-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="7ed4c-107">[in] Una estructura de tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-107">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="615df-108">[in] El tamaño, en bytes, de `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="615df-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="7ed4c-108">[in] El tamaño, en bytes, de `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-108">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="615df-109">[out] Pasa el token de nombre seguro correspondiente a la clave `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="615df-109">[out] The strong name token corresponding to the key passed in `pbPublicKeyBlob`.</span></span> <span data-ttu-id="615df-110">Common language runtime asigna la memoria en el que se va a devolver el token.</span><span class="sxs-lookup"><span data-stu-id="615df-110">The common language runtime allocates the memory in which to return the token.</span></span> <span data-ttu-id="615df-111">El llamador debe liberar esta memoria utilizando la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="615df-111">The caller must free this memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
+ <span data-ttu-id="7ed4c-109">[out] Pasa el token de nombre seguro correspondiente a la clave `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-109">[out] The strong name token corresponding to the key passed in `pbPublicKeyBlob`.</span></span> <span data-ttu-id="7ed4c-110">Common language runtime asigna la memoria en el que se va a devolver el token.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-110">The common language runtime allocates the memory in which to return the token.</span></span> <span data-ttu-id="7ed4c-111">El llamador debe liberar esta memoria utilizando la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-111">The caller must free this memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="615df-112">[out] El tamaño, en bytes, del token de nombre seguro devuelto.</span><span class="sxs-lookup"><span data-stu-id="615df-112">[out] The size, in bytes, of the returned strong name token.</span></span>  
+ <span data-ttu-id="7ed4c-112">[out] El tamaño, en bytes, del token de nombre seguro devuelto.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-112">[out] The size, in bytes, of the returned strong name token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="615df-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="615df-113">Return Value</span></span>  
- <span data-ttu-id="615df-114">`S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).</span><span class="sxs-lookup"><span data-stu-id="615df-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7ed4c-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="7ed4c-113">Return Value</span></span>  
+ <span data-ttu-id="7ed4c-114">`S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).</span><span class="sxs-lookup"><span data-stu-id="7ed4c-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="615df-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="615df-115">Remarks</span></span>  
- <span data-ttu-id="615df-116">Un token de nombre seguro es la forma abreviada de una clave pública que se utiliza para ahorrar espacio al almacenar la información de clave en los metadatos.</span><span class="sxs-lookup"><span data-stu-id="615df-116">A strong name token is the shortened form of a public key that is used to save space when storing key information in metadata.</span></span> <span data-ttu-id="615df-117">En concreto, los tokens de nombre seguro se usan en las referencias de ensamblado para hacer referencia al ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="615df-117">Specifically, strong name tokens are used in assembly references to refer to the dependent assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7ed4c-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7ed4c-115">Remarks</span></span>  
+ <span data-ttu-id="7ed4c-116">Un token de nombre seguro es la forma abreviada de una clave pública que se utiliza para ahorrar espacio al almacenar la información de clave en los metadatos.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-116">A strong name token is the shortened form of a public key that is used to save space when storing key information in metadata.</span></span> <span data-ttu-id="7ed4c-117">En concreto, los tokens de nombre seguro se usan en las referencias de ensamblado para hacer referencia al ensamblado dependiente.</span><span class="sxs-lookup"><span data-stu-id="7ed4c-117">Specifically, strong name tokens are used in assembly references to refer to the dependent assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="615df-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="615df-118">Requirements</span></span>  
- <span data-ttu-id="615df-119">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="615df-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ed4c-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7ed4c-118">Requirements</span></span>  
+ <span data-ttu-id="7ed4c-119">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7ed4c-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="615df-120">**Encabezado:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="615df-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="7ed4c-120">**Encabezado:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7ed4c-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="615df-121">**Biblioteca:** incluye como recurso en mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="615df-121">**Library:** Included as a resource in mscoree.dll</span></span>  
+ <span data-ttu-id="7ed4c-121">**Biblioteca:** incluye como recurso en mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="7ed4c-121">**Library:** Included as a resource in mscoree.dll</span></span>  
   
- <span data-ttu-id="615df-122">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="615df-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7ed4c-122">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ed4c-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="615df-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="615df-123">See Also</span></span>  
- [<span data-ttu-id="615df-124">StrongNameGetPublicKey (método)</span><span class="sxs-lookup"><span data-stu-id="615df-124">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
- [<span data-ttu-id="615df-125">PublicKeyBlob (estructura)</span><span class="sxs-lookup"><span data-stu-id="615df-125">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- [<span data-ttu-id="615df-126">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="615df-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7ed4c-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="7ed4c-123">See Also</span></span>  
+ [<span data-ttu-id="7ed4c-124">StrongNameGetPublicKey (método)</span><span class="sxs-lookup"><span data-stu-id="7ed4c-124">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
+ [<span data-ttu-id="7ed4c-125">PublicKeyBlob (estructura)</span><span class="sxs-lookup"><span data-stu-id="7ed4c-125">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [<span data-ttu-id="7ed4c-126">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7ed4c-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

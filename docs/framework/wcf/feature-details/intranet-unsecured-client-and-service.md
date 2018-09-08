@@ -8,42 +8,42 @@ ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e44b7af6581e6c5abdcb2f82b02d152dd22d0b3b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131356"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214555"
 ---
-# <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="0b5c1-102">Cliente y servicio de intranet no protegidos</span><span class="sxs-lookup"><span data-stu-id="0b5c1-102">Intranet Unsecured Client and Service</span></span>
-<span data-ttu-id="0b5c1-103">La siguiente ilustración muestra un servicio de Windows Communication Foundation (WCF) sencillo desarrollado para proporcionar información sobre una red privada segura a una aplicación de WCF.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="0b5c1-104">No se requiere seguridad porque los datos son de poca importancia, espera que la red es intrínsecamente segura o una capa debajo de la infraestructura de WCF proporciona seguridad.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  
+# <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="e9247-102">Cliente y servicio de intranet no protegidos</span><span class="sxs-lookup"><span data-stu-id="e9247-102">Intranet Unsecured Client and Service</span></span>
+<span data-ttu-id="e9247-103">La siguiente ilustración muestra un servicio de Windows Communication Foundation (WCF) sencillo desarrollado para proporcionar información sobre una red privada segura a una aplicación de WCF.</span><span class="sxs-lookup"><span data-stu-id="e9247-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="e9247-104">No se requiere seguridad porque los datos son de poca importancia, espera que la red es intrínsecamente segura o una capa debajo de la infraestructura de WCF proporciona seguridad.</span><span class="sxs-lookup"><span data-stu-id="e9247-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  
   
- <span data-ttu-id="0b5c1-105">![Escenario de servicio y cliente de intranet segura](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")</span><span class="sxs-lookup"><span data-stu-id="0b5c1-105">![Intranet unsecured client and service scenario](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")</span></span>  
+ <span data-ttu-id="e9247-105">![Escenario de servicio y cliente de intranet segura](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")</span><span class="sxs-lookup"><span data-stu-id="e9247-105">![Intranet unsecured client and service scenario](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")</span></span>  
   
-|<span data-ttu-id="0b5c1-106">Característica</span><span class="sxs-lookup"><span data-stu-id="0b5c1-106">Characteristic</span></span>|<span data-ttu-id="0b5c1-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="0b5c1-107">Description</span></span>|  
+|<span data-ttu-id="e9247-106">Característica</span><span class="sxs-lookup"><span data-stu-id="e9247-106">Characteristic</span></span>|<span data-ttu-id="e9247-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="e9247-107">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="0b5c1-108">Modo de seguridad</span><span class="sxs-lookup"><span data-stu-id="0b5c1-108">Security Mode</span></span>|<span data-ttu-id="0b5c1-109">Ninguna</span><span class="sxs-lookup"><span data-stu-id="0b5c1-109">None</span></span>|  
-|<span data-ttu-id="0b5c1-110">Transporte</span><span class="sxs-lookup"><span data-stu-id="0b5c1-110">Transport</span></span>|<span data-ttu-id="0b5c1-111">TCP</span><span class="sxs-lookup"><span data-stu-id="0b5c1-111">TCP</span></span>|  
-|<span data-ttu-id="0b5c1-112">Enlaces</span><span class="sxs-lookup"><span data-stu-id="0b5c1-112">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
-|<span data-ttu-id="0b5c1-113">Interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="0b5c1-113">Interoperability</span></span>|<span data-ttu-id="0b5c1-114">WCF solo</span><span class="sxs-lookup"><span data-stu-id="0b5c1-114">WCF only</span></span>|  
-|<span data-ttu-id="0b5c1-115">Autenticación</span><span class="sxs-lookup"><span data-stu-id="0b5c1-115">Authentication</span></span>|<span data-ttu-id="0b5c1-116">Ninguna</span><span class="sxs-lookup"><span data-stu-id="0b5c1-116">None</span></span>|  
-|<span data-ttu-id="0b5c1-117">Integridad</span><span class="sxs-lookup"><span data-stu-id="0b5c1-117">Integrity</span></span>|<span data-ttu-id="0b5c1-118">Ninguna</span><span class="sxs-lookup"><span data-stu-id="0b5c1-118">None</span></span>|  
-|<span data-ttu-id="0b5c1-119">Confidencialidad</span><span class="sxs-lookup"><span data-stu-id="0b5c1-119">Confidentiality</span></span>|<span data-ttu-id="0b5c1-120">Ninguna</span><span class="sxs-lookup"><span data-stu-id="0b5c1-120">None</span></span>|  
+|<span data-ttu-id="e9247-108">Modo de seguridad</span><span class="sxs-lookup"><span data-stu-id="e9247-108">Security Mode</span></span>|<span data-ttu-id="e9247-109">Ninguna</span><span class="sxs-lookup"><span data-stu-id="e9247-109">None</span></span>|  
+|<span data-ttu-id="e9247-110">Transporte</span><span class="sxs-lookup"><span data-stu-id="e9247-110">Transport</span></span>|<span data-ttu-id="e9247-111">TCP</span><span class="sxs-lookup"><span data-stu-id="e9247-111">TCP</span></span>|  
+|<span data-ttu-id="e9247-112">Enlaces</span><span class="sxs-lookup"><span data-stu-id="e9247-112">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="e9247-113">Interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="e9247-113">Interoperability</span></span>|<span data-ttu-id="e9247-114">WCF solo</span><span class="sxs-lookup"><span data-stu-id="e9247-114">WCF only</span></span>|  
+|<span data-ttu-id="e9247-115">Autenticación</span><span class="sxs-lookup"><span data-stu-id="e9247-115">Authentication</span></span>|<span data-ttu-id="e9247-116">Ninguna</span><span class="sxs-lookup"><span data-stu-id="e9247-116">None</span></span>|  
+|<span data-ttu-id="e9247-117">Integridad</span><span class="sxs-lookup"><span data-stu-id="e9247-117">Integrity</span></span>|<span data-ttu-id="e9247-118">Ninguna</span><span class="sxs-lookup"><span data-stu-id="e9247-118">None</span></span>|  
+|<span data-ttu-id="e9247-119">Confidencialidad</span><span class="sxs-lookup"><span data-stu-id="e9247-119">Confidentiality</span></span>|<span data-ttu-id="e9247-120">Ninguna</span><span class="sxs-lookup"><span data-stu-id="e9247-120">None</span></span>|  
   
-## <a name="service"></a><span data-ttu-id="0b5c1-121">Servicio</span><span class="sxs-lookup"><span data-stu-id="0b5c1-121">Service</span></span>  
- <span data-ttu-id="0b5c1-122">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-122">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="0b5c1-123">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="0b5c1-123">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="e9247-121">Servicio</span><span class="sxs-lookup"><span data-stu-id="e9247-121">Service</span></span>  
+ <span data-ttu-id="e9247-122">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="e9247-122">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="e9247-123">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="e9247-123">Do one of the following:</span></span>  
   
--   <span data-ttu-id="0b5c1-124">Cree un servicio independiente mediante el código sin configuración.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-124">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="e9247-124">Cree un servicio independiente mediante el código sin configuración.</span><span class="sxs-lookup"><span data-stu-id="e9247-124">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="0b5c1-125">Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-125">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="e9247-125">Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.</span><span class="sxs-lookup"><span data-stu-id="e9247-125">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="0b5c1-126">Código</span><span class="sxs-lookup"><span data-stu-id="0b5c1-126">Code</span></span>  
- <span data-ttu-id="0b5c1-127">El siguiente código muestra cómo crear un extremo sin seguridad:</span><span class="sxs-lookup"><span data-stu-id="0b5c1-127">The following code shows how to create an endpoint with no security:</span></span>  
+### <a name="code"></a><span data-ttu-id="e9247-126">Código</span><span class="sxs-lookup"><span data-stu-id="e9247-126">Code</span></span>  
+ <span data-ttu-id="e9247-127">El siguiente código muestra cómo crear un extremo sin seguridad:</span><span class="sxs-lookup"><span data-stu-id="e9247-127">The following code shows how to create an endpoint with no security:</span></span>  
   
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="0b5c1-128">Configuración</span><span class="sxs-lookup"><span data-stu-id="0b5c1-128">Configuration</span></span>  
- <span data-ttu-id="0b5c1-129">El código siguiente establece el mismo extremo utilizando la configuración.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-129">The following code sets up the same endpoint using configuration:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="e9247-128">Configuración</span><span class="sxs-lookup"><span data-stu-id="e9247-128">Configuration</span></span>  
+ <span data-ttu-id="e9247-129">El código siguiente establece el mismo extremo utilizando la configuración.</span><span class="sxs-lookup"><span data-stu-id="e9247-129">The following code sets up the same endpoint using configuration:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -72,24 +72,24 @@ ms.locfileid: "44131356"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="0b5c1-130">Cliente</span><span class="sxs-lookup"><span data-stu-id="0b5c1-130">Client</span></span>  
- <span data-ttu-id="0b5c1-131">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-131">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="0b5c1-132">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="0b5c1-132">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="e9247-130">Cliente</span><span class="sxs-lookup"><span data-stu-id="e9247-130">Client</span></span>  
+ <span data-ttu-id="e9247-131">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="e9247-131">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="e9247-132">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="e9247-132">Do one of the following:</span></span>  
   
--   <span data-ttu-id="0b5c1-133">Cree un cliente independiente mediante el código (y el código de cliente).</span><span class="sxs-lookup"><span data-stu-id="0b5c1-133">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="e9247-133">Cree un cliente independiente mediante el código (y el código de cliente).</span><span class="sxs-lookup"><span data-stu-id="e9247-133">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="0b5c1-134">Cree un cliente que no defina direcciones de extremo.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-134">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="0b5c1-135">En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-135">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="0b5c1-136">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="0b5c1-136">For example:</span></span>  
+-   <span data-ttu-id="e9247-134">Cree un cliente que no defina direcciones de extremo.</span><span class="sxs-lookup"><span data-stu-id="e9247-134">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="e9247-135">En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento.</span><span class="sxs-lookup"><span data-stu-id="e9247-135">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="e9247-136">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="e9247-136">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="0b5c1-137">Código</span><span class="sxs-lookup"><span data-stu-id="0b5c1-137">Code</span></span>  
- <span data-ttu-id="0b5c1-138">El código siguiente muestra a un cliente WCF básico que tiene acceso a un punto de conexión no segura mediante el protocolo TCP.</span><span class="sxs-lookup"><span data-stu-id="0b5c1-138">The following code shows a basic WCF client that accesses an unsecured endpoint using the TCP protocol.</span></span>  
+### <a name="code"></a><span data-ttu-id="e9247-137">Código</span><span class="sxs-lookup"><span data-stu-id="e9247-137">Code</span></span>  
+ <span data-ttu-id="e9247-138">El código siguiente muestra a un cliente WCF básico que tiene acceso a un punto de conexión no segura mediante el protocolo TCP.</span><span class="sxs-lookup"><span data-stu-id="e9247-138">The following code shows a basic WCF client that accesses an unsecured endpoint using the TCP protocol.</span></span>  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="0b5c1-139">Configuración</span><span class="sxs-lookup"><span data-stu-id="0b5c1-139">Configuration</span></span>  
- <span data-ttu-id="0b5c1-140">El código de configuración siguiente se aplica al cliente:</span><span class="sxs-lookup"><span data-stu-id="0b5c1-140">The following configuration code applies to the client:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="e9247-139">Configuración</span><span class="sxs-lookup"><span data-stu-id="e9247-139">Configuration</span></span>  
+ <span data-ttu-id="e9247-140">El código de configuración siguiente se aplica al cliente:</span><span class="sxs-lookup"><span data-stu-id="e9247-140">The following configuration code applies to the client:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -114,7 +114,7 @@ ms.locfileid: "44131356"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0b5c1-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="0b5c1-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e9247-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9247-141">See Also</span></span>  
  <xref:System.ServiceModel.NetTcpBinding>  
- [<span data-ttu-id="0b5c1-142">Información general sobre seguridad</span><span class="sxs-lookup"><span data-stu-id="0b5c1-142">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="0b5c1-143">Modelo de seguridad de Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="0b5c1-143">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [<span data-ttu-id="e9247-142">Información general sobre seguridad</span><span class="sxs-lookup"><span data-stu-id="e9247-142">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="e9247-143">Modelo de seguridad de Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="e9247-143">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
