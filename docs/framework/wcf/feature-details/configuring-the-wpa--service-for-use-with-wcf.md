@@ -3,11 +3,11 @@ title: Configuración del Servicio de activación de procesos de Windows para el
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
 ms.openlocfilehash: 6e74c81aa26ba7f8d093b8b3ec52f19eb3519905
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128123"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216072"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Configuración del Servicio de activación de procesos de Windows para el uso con Windows Communication Foundation
 En este tema se describe los pasos necesarios para configurar Windows Process Activation Service (también conocido como WAS) en [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar servicios de Windows Communication Foundation (WCF) protocolos de red de servicios que no se comunican a través de HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:  

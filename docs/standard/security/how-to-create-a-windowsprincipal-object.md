@@ -14,11 +14,11 @@ ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 016f19c7141ebaf9b5c1f03adc263b689489119b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128227"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198041"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Cómo: Crear un objeto WindowsPrincipal
 Hay dos maneras de crear un objeto <xref:System.Security.Principal.WindowsPrincipal>, dependiendo de si el código debe realizar la validación basada en rol una sola vez o varias veces.  

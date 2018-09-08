@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
 ms.openlocfilehash: acaa8f2ff6611f2f0beb07b74193341edfa2a428
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097478"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195769"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

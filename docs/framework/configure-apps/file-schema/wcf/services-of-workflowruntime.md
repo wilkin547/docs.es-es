@@ -3,11 +3,11 @@ title: '&lt;services&gt; de &lt;workflowRuntime&gt;'
 ms.date: 03/30/2017
 ms.assetid: 219a05b1-f573-45c9-849b-e86bc373b62f
 ms.openlocfilehash: 44da735ab1aa2391fe882dfba6e1afc47be746ff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138128"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217521"
 ---
 # <a name="ltservicesgt-of-ltworkflowruntimegt"></a>&lt;services&gt; de &lt;workflowRuntime&gt;
 Representa la colección de servicios que se agregarán al motor <xref:System.Workflow.Runtime.WorkflowRuntime>. Los elementos son de tipo <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  El motor en tiempo de ejecución del flujo de trabajo inicializará y agregará los servicios especificados en la colección a sus servicios cuando se llame al constructor <xref:System.Workflow.Runtime.WorkflowRuntime> adecuado. Por consiguiente los servicios especificados en la colección deben seguir ciertas reglas sobre las firmas de sus constructores. Vea <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.  

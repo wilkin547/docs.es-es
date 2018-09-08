@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
 ms.openlocfilehash: da9e5bd39cebce27dbaf89ac020c2bf8f154adcc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44071705"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211845"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Consultas en LINQ to DataSet
 Una consulta es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consulta especializado, como SQL para bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que consultan. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] ofrece un modelo coherente y más sencillo para trabajar con los datos de varios formatos y orígenes de datos. En una consulta de [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] siempre se trabaja con objetos de programación.  

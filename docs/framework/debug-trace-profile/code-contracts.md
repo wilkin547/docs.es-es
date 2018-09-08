@@ -1,6 +1,6 @@
 ---
 title: Contratos de código
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080613"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222128"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Los contratos de código proporcionan una manera de especificar condiciones previas, condiciones posteriores e invariantes de objeto en el código. Las condiciones previas son requisitos que deben cumplirse al escribir un método o propiedad. Las condiciones posteriores describen las expectativas en el momento en que se cierra el código del método o propiedad. Las invariantes de objeto describen el estado esperado de una clase que está en buen estado.  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- Las invariantes se definen condicionalmente mediante el símbolo de preprocesador CONTRACTS_FULL. Durante la comprobación en tiempo de ejecución, las invariantes se comprueban al final de cada método público. Si una invariante menciona un método público en la misma clase, se deshabilita la comprobación de invariante que normalmente se produciría normalmente al final de ese método público. En su lugar, la comprobación se produce solo al final de la llamada de método más externo a esa clase. Esto también ocurre si la clase se vuelve a escribir debido a una llamada a un método en otra clase. En las invariantes no se comprueban los finalizadores de objeto ni los métodos que implementan el método <xref:System.IDisposable.Dispose%2A>.  
+ Las invariantes se definen condicionalmente mediante el símbolo de preprocesador CONTRACTS_FULL. Durante la comprobación en tiempo de ejecución, las invariantes se comprueban al final de cada método público. Si una invariante menciona un método público en la misma clase, se deshabilita la comprobación de invariante que normalmente se produciría normalmente al final de ese método público. En su lugar, la comprobación se produce solo al final de la llamada de método más externo a esa clase. Esto también ocurre si la clase se vuelve a escribir debido a una llamada a un método en otra clase. Las invariantes no se comprueban para un finalizador del objeto y un <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementación.  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>Instrucciones de uso  

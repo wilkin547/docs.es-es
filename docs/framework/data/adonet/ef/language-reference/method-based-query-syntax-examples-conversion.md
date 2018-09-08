@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
 ms.openlocfilehash: 5f1ef8680bc6826f4e8b1beb1e49fce3a15c40c9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884161"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212573"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>Ejemplos de sintaxis de consultas basadas en métodos: conversión
 Los ejemplos de este tema muestran cómo usar el <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> y <xref:System.Linq.Enumerable.ToList%2A> métodos para consultar el [modelo AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) utilizando sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  

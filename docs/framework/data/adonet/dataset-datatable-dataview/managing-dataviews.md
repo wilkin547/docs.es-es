@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
 ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44082274"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201990"
 ---
 # <a name="managing-dataviews"></a>Administrar objetos DataView
 Puede utilizar un <xref:System.Data.DataViewManager> para administrar la configuración de vista para todas las tablas de un <xref:System.Data.DataView>. Si tiene un control que desea enlazar a varias tablas, como una cuadrícula que navega por relaciones, un **DataViewManager** es ideal.  

@@ -13,11 +13,11 @@ ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bfcd912fc16aa8d4b89a4f455d65b0294593cead
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886531"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205859"
 ---
 # <a name="replacing-a-principal-object"></a>Reemplazar un objeto Principal
 Las aplicaciones que ofrecen servicios de autenticación deben poder reemplazar el objeto **Principal** (<xref:System.Security.Principal.IPrincipal>) de un subproceso determinado. Además, el sistema de seguridad debe ayudar a proteger la capacidad de reemplazar objetos **Principal** , porque un objeto **Principal** incorrecto asociado de forma malintencionada pone en peligro la seguridad de la aplicación mediante la notificación de una identidad o un rol falsos. Por lo tanto, las aplicaciones que requieren la capacidad de reemplazar **Principal** objetos deben concederse el <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> objeto para el control principal. (Tenga en cuenta que este permiso no se requiere para realizar comprobaciones de seguridad basada en roles o para crear objetos **Principal** ).  

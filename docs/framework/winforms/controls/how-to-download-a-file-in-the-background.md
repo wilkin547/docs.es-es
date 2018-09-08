@@ -15,11 +15,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
 ms.openlocfilehash: 2396516a0e6c9aeb9b2d64a0bf6e3974d64a5cc5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137075"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214646"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Cómo: Descargar un archivo en segundo plano
 Descargar un archivo es una tarea común y, por lo general, resulta útil ejecutar esta operación que puede requerir mucho tiempo en un subproceso independiente. Use el componente <xref:System.ComponentModel.BackgroundWorker> para realizar esta tarea con muy poco código.  

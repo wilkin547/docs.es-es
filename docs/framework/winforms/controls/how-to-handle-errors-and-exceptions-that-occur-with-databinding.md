@@ -14,11 +14,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
 ms.openlocfilehash: d0bb41da69bf1cb87f052c11d3a7d1f1783320ad
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080171"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44196860"
 ---
 # <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Cómo: Controlar errores y excepciones que se producen con el enlace de datos
 A menudo, las excepciones y los errores se producen en los objetos comerciales subyacentes cuando se enlazan a controles. Puede interceptar estos errores y excepciones y, después, recuperar o pasar la información de error al usuario controlando el evento <xref:System.Windows.Forms.Binding.BindingComplete> para un componente <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource> o <xref:System.Windows.Forms.CurrencyManager> determinado.  

@@ -3,11 +3,11 @@ title: Ejemplo de detección de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
 ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069756"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198028"
 ---
 # <a name="workflow-discovery-sample"></a>Ejemplo de detección de flujo de trabajo
 En este ejemplo se muestra cómo hacer que un servicio de flujo de trabajo se pueda detectar y cómo crear una actividad de código personalizada que busque un servicio determinado.  

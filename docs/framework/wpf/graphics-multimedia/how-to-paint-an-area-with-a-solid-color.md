@@ -7,11 +7,11 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: 017c685139979ec3aa411be6e6b5fdf0e91657de
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075553"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213519"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>Cómo: Pintar un área con un color sólido
 Para pintar un área con un color sólido, puede usar un pincel del sistema predefinidos, como <xref:System.Windows.Media.Brushes.Red%2A> o <xref:System.Windows.Media.Brushes.Blue%2A>, o bien puede crear un nuevo <xref:System.Windows.Media.SolidColorBrush> y describir su <xref:System.Windows.Media.SolidColorBrush.Color%2A> mediante valores alfabéticos, rojos, verde y azules. En XAML, también puede pintar un área con un color sólido utilizando la notación hexadecimal.  

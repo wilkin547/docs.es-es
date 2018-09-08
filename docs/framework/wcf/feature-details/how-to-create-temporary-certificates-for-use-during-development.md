@@ -5,58 +5,49 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ca495c23b30144013b8efe22b7bf6f3cf38b16cd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524370"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195720"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo
-Al desarrollar un servicio seguro o cliente mediante Windows Communication Foundation (WCF), a menudo es necesario proporcionar un certificado X.509 que se usará como una credencial. El certificado forma normalmente parte de una cadena de certificados con una entidad emisora raíz situada en el almacén de las Entidades emisoras de certificados raíz de confianza del equipo. Tener una cadena de certificados le permite establecer un conjunto de certificados donde normalmente la entidad emisora raíz pertenece a su organización o unidad del negocio. Para emularlo en el momento de desarrollo, puede crear dos certificados para satisfacer los requisitos de seguridad. El primero es un certificado con firma automática que se coloca en el almacén de las Entidades emisoras de certificados raíz de confianza y el segundo certificado se crea a partir del primero y se coloca en el almacén personal de la ubicación del equipo local o en el almacén personal de la ubicación del usuario actual. En este tema se describe los pasos para crear estos dos certificados mediante el [herramienta de creación de certificados (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185), proporcionado por el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
+Al desarrollar un servicio seguro o cliente mediante Windows Communication Foundation (WCF), a menudo es necesario proporcionar un certificado X.509 que se usará como una credencial. El certificado forma normalmente parte de una cadena de certificados con una entidad emisora raíz situada en el almacén de las Entidades emisoras de certificados raíz de confianza del equipo. Tener una cadena de certificados le permite establecer un conjunto de certificados donde normalmente la entidad emisora raíz pertenece a su organización o unidad del negocio. Para emularlo en el momento de desarrollo, puede crear dos certificados para satisfacer los requisitos de seguridad. El primero es un certificado con firma automática que se coloca en el almacén de las Entidades emisoras de certificados raíz de confianza y el segundo certificado se crea a partir del primero y se coloca en el almacén personal de la ubicación del equipo local o en el almacén personal de la ubicación del usuario actual. En este tema se describe los pasos para crear estos dos certificados mediante el Powershell [New-SelfSignedCertificate)](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) cmdlet.  
   
 > [!IMPORTANT]
->  Los certificados generados por la herramienta de creación de certificados sólo se proporcionan para pruebas. Al implementar un servicio o cliente, asegúrese de usar un certificado adecuado proporcionado por una entidad de certificación. Esto podría ser de un servidor de certificado [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] en su organización o de un tercero.  
+>  Los certificados que genera el cmdlet New-SelfSignedCertificate se proporcionan únicamente con fines de prueba. Al implementar un servicio o cliente, asegúrese de usar un certificado adecuado proporcionado por una entidad de certificación. Esto podría ser de un servidor de certificados de Windows Server en su organización o un tercero.  
 >   
->  De forma predeterminada, el [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crea certificados cuya entidad de certificación raíz se denomina "Agencia raíz **."** Dado que la "Agencia raíz" no está en el almacén Entidades emisoras de certificados raíz de confianza, estos certificados no son seguros. Crear un certificado con firma automática que se coloca en el almacén Entidades emisoras de certificados raíz de confianza le permite crear un entorno de desarrollo que simula su entorno de distribución.  
+>  De forma predeterminada, el [New-SelfSignedCertificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) cmdlet crea certificados autofirmados y estos certificados no son seguros. Almacén de colocación de los certificados autofirmados en las entidades de certificación raíz de confianza permite crear un entorno de desarrollo que simula el entorno de implementación.  
   
  Para obtener más información sobre la creación y uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Para obtener más información sobre el uso de un certificado como credencial, vea [proteger servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para ver un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [información general de Authenticode y tutoriales](https://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Para crear un certificado de la entidad de certificación raíz firmado automáticamente y exportar la clave privada  
   
-1.  Utilice la herramienta MakeCert.exe con los modificadores siguientes:  
-  
-    1.  `-n` `subjectName`. Especifica el nombre del sujeto. La convención es prefijar el nombre sujeto con "CN = " para "Nombre Común."  
-  
-    2.  `-r`. Especifica que el certificado se firmará automáticamente.  
-  
-    3.  `-sv` `privateKeyFile`. Especifica el archivo que contiene el contenedor de clave privada.  
-  
-     Por ejemplo, el comando siguiente crea un certificado firmado automáticamente con un nombre sujeto de "CN=TempCA."  
-  
-    ```  
-    makecert -n "CN=TempCA" -r -sv TempCA.pvk TempCA.cer  
-    ```  
-  
-     Le solicitarán que proporcione una contraseña para proteger la clave privada. Esta contraseña es necesaria para crear un certificado firmado por este certificado raíz.  
-  
+El siguiente comando crea un certificado autofirmado con un nombre de sujeto de "RootCA" en el almacén Personal de usuario actual. 
+```
+PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+```
+Es necesario exportar el certificado a un archivo PFX, por lo que puede importarse a cuando sea necesario en un paso posterior. Al exportar un certificado con la clave privada, se necesita una contraseña para protegerla. Se guarda la contraseña en un `SecureString` y usar el [Export-PfxCertificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps) cmdlet para exportar el certificado con la clave privada asociada a un archivo PFX. También guardamos simplemente el certificado público en un archivo de CRT mediante el [Exportar certificado](https://docs.microsoft.com/en-us/powershell/module/pkiclient/export-certificate?view=win10-ps) cmdlet.
+```
+PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+```
+
 ### <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Crear un nuevo certificado firmado por un certificado de la entidad emisora raíz  
   
-1.  Utilice la herramienta MakeCert.exe con los modificadores siguientes:  
-  
-    1.  `-sk` `subjectKey`. La ubicación del contenedor de la clave del sujeto que contiene la clave privada. Si no existe un contenedor de claves, se creará uno. Si no se utiliza ninguna de las opciones - sk o - sv, se crea un contenedor de claves llamado JoeSoft de forma predeterminada.  
-  
-    2.  `-n` `subjectName`. Especifica el nombre del sujeto. La convención es prefijar el nombre sujeto con "CN = " para "Nombre Común."  
-  
-    3.  `-iv` `issuerKeyFile`. Especifica el archivo de clave privada .del emisor.  
-  
-    4.  `-ic` `issuerCertFile`. Especifica la ubicación del certificado del emisor.  
-  
-     Por ejemplo, el comando siguiente crea un certificado firmado por el certificado de entidad emisora raíz `TempCA` con un nombre sujeto de `"CN=SignedByCA"` utilizando la clave privada del emisor.  
-  
-    ```  
-    makecert -sk SignedByCA -iv TempCA.pvk -n "CN=SignedByCA" -ic TempCA.cer SignedByCA.cer -sr currentuser -ss My  
-    ```  
+El siguiente comando crea un certificado firmado por la `RootCA` con un nombre de sujeto de "SignedByRootCA" mediante la clave privada del emisor.
+```
+PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert 
+```
+De forma similar, guardamos el certificado de firma con la clave privada en un archivo PFX y solo la clave pública en un archivo de CRT.
+```
+PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword 
+PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt        
+```
   
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>Instalar un certificado en el almacén de entidades de certificación raíz de confianza  
  Una vez creado un certificado firmado automáticamente, puede instalarlo en el almacén Entidades emisoras de certificados raíz de confianza. El equipo confía en todos los certificados firmados con el certificado en este punto. Por esta razón, elimine el certificado del almacén en cuanto ya no lo necesite. Cuando elimine este certificado de entidad emisora raíz, se desautorizan el resto de certificados que firmó con él. Los certificados de entidad emisora raíz simplemente son un mecanismo con el que se pueden incluir un grupo de certificados, cuando sea necesario. Por ejemplo, en aplicaciones punto a punto, normalmente no es necesario una entidad emisora raíz porque usted simplemente confía en la identidad de un individuo mediante el certificado proporcionado por él.  

@@ -12,11 +12,11 @@ ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129807"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208236"
 ---
 # <a name="member-overloading"></a>Sobrecarga de miembro
 Sobrecarga de miembro significa crear dos o más miembros en el mismo tipo que solo difieren en el número o tipo de parámetros, pero tienen el mismo nombre. Por ejemplo, en la siguiente, el `WriteLine` método está sobrecargado:  

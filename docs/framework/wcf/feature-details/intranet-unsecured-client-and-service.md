@@ -8,11 +8,11 @@ ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: e44b7af6581e6c5abdcb2f82b02d152dd22d0b3b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131356"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214555"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente y servicio de intranet no protegidos
 La siguiente ilustración muestra un servicio de Windows Communication Foundation (WCF) sencillo desarrollado para proporcionar información sobre una red privada segura a una aplicación de WCF. No se requiere seguridad porque los datos son de poca importancia, espera que la red es intrínsecamente segura o una capa debajo de la infraestructura de WCF proporciona seguridad.  

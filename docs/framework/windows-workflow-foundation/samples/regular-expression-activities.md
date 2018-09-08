@@ -3,11 +3,11 @@ title: Actividades de expresión normales
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
 ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079687"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201015"
 ---
 # <a name="regular-expression-activities"></a>Actividades de expresión normales
 En este ejemplo se muestra cómo crear un conjunto de actividades que exponen la funcionalidad de expresión regular del espacio de nombres <xref:System.Text.RegularExpressions>. Estas actividades personalizadas se pueden usar en una aplicación de flujo de trabajo. Para obtener más información sobre las expresiones regulares, vea [System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  

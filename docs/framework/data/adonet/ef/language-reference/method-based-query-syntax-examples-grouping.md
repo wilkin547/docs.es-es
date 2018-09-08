@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
 ms.openlocfilehash: 2fd64cb16224290d76efe327978083b1e834d6cb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738552"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213230"
 ---
 # <a name="method-based-query-syntax-examples-grouping"></a>Ejemplos de sintaxis de consultas basadas en métodos: agrupación
 Los ejemplos de este tema muestran cómo usar el `GroupBy` método para consultar el [modelo AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) utilizando sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail de la base de datos de ejemplo AdventureWorks.  

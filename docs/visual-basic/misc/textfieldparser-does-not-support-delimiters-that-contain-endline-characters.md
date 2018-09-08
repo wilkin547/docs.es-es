@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_EndCharsInDelimiter
 ms.assetid: 0701f3b6-635b-468e-b908-867df00dd5db
-ms.openlocfilehash: f17c8fd16868950a30656657e60fabda94d7b57d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b76e7f26d7d8cebb1ebddfdd5e53a5c399abea1f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804018"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201873"
 ---
 # <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a>TextFieldParser no admite delimitadores que contengan caracteres de fin de línea
 Se ha proporcionado un delimitador que contiene un carácter de fin de línea, pero la `TextFieldParser` no admite delimitadores que contengan caracteres de fin de línea.  
@@ -18,8 +18,9 @@ Se ha proporcionado un delimitador que contiene un carácter de fin de línea, p
   
 -   Proporcione un delimitador correcto.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad TextFieldParser.Delimiters](https://msdn.microsoft.com/library/4eb18f4d-3011-40a9-b668-be93eed0444f)  
- [Método TextFieldParser.SetDelimiters](https://msdn.microsoft.com/library/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)  
- [Análisis de archivos de texto con el objeto TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- [TextFieldParser (objeto)](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+## <a name="see-also"></a>Vea también
+
+- [Propiedad TextFieldParser.Delimiters](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A)  
+- [Método TextFieldParser.SetDelimiters](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A)  
+- [Análisis de archivos de texto con el objeto TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+- [TextFieldParser (objeto)](../../visual-basic/language-reference/objects/textfieldparser-object.md)

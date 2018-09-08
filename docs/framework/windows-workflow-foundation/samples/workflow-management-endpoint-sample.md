@@ -3,11 +3,11 @@ title: Ejemplo de punto de conexión de administración de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
 ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130518"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206502"
 ---
 # <a name="workflow-management-endpoint-sample"></a>Ejemplo de punto de conexión de administración de flujo de trabajo
 En este ejemplo se muestra cómo un punto de conexión de control de flujo de trabajo se puede utilizar para crear y ejecutar flujos de trabajo de forma local y remota. En el ejemplo se muestra cómo hospedar un extremo de control y cómo escribir clientes que llamen al extremo de control para crear y ejecutar la instancia de un flujo de trabajo. El flujo de trabajo no es un servicio.  

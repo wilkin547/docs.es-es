@@ -14,11 +14,11 @@ ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138947"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210499"
 ---
 # <a name="security-and-race-conditions"></a>Seguridad y condiciones de carrera
 Otra área de preocupación es la posibilidad de vulnerabilidades de seguridad utilizado por las condiciones de carrera. Hay varias maneras en que esto puede ocurrir. Los subtemas siguientes describen algunas de las dificultades principales que debe evitar el programador.  

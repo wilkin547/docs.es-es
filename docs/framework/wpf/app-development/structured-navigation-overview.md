@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 2264686f34123e74bf7d24ce80877742d952f35d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44133680"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205056"
 ---
 # <a name="structured-navigation-overview"></a>Información general sobre la navegación estructurada
 Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, o un <xref:System.Windows.Navigation.NavigationWindow> se compone de páginas que se pueden identificar por módulo [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] y navegar mediante hipervínculos. La estructura de páginas y las formas en que se puede navegar por ellas, tal como se define mediante hipervínculos, se conoce como topología de navegación. Esta topología se adapta a diversos tipos de aplicaciones, especialmente a aquéllas que navegan por documentos. Con estas aplicaciones, el usuario puede navegar de una página a otra sin necesidad de saber nada sobre la otra.  

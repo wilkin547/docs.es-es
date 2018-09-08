@@ -12,11 +12,11 @@ ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131940"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210356"
 ---
 # <a name="capitalization-conventions"></a>Normas referentes al uso de minúsculas y mayúsculas
 Las directrices descritas en este capítulo disponer un método sencillo para el uso de caso de que, cuando se aplica de forma coherente, asegúrese de identificadores para los tipos, miembros y parámetros fáciles de leer.  

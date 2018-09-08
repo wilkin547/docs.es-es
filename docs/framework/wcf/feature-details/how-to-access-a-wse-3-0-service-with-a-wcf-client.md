@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098246"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210538"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Cómo: Obtener acceso al servicio WSE 3.0 con un cliente WCF
 Los clientes de Windows Communication Foundation (WCF) son compatibles con Web Services Enhancements (WSE) 3.0 en el nivel de conexión de servicios de Microsoft .NET cuando se configuran los clientes de WCF para usar la versión de agosto de 2004 de la especificación WS-Addressing. Sin embargo, los servicios WSE 3.0 no admiten el protocolo de intercambio (MEX) de metadatos, así que cuando se usa el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear una clase de cliente WCF, la configuración de seguridad no se aplica a generado Cliente WCF. Por lo tanto, debe especificar la configuración de seguridad que el servicio de WSE 3.0 requiere una vez generado el cliente de WCF.  

@@ -3,11 +3,11 @@ title: Ejemplo de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
 ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128886"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212534"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Ejemplo de uso compartido de puertos Net.TCP
 El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para diferenciar las conexiones en varias aplicaciones de red que se ejecutan en el mismo equipo. Si una aplicación está realizando escuchas en un puerto, todo el tráfico TCP para ese puerto se dirige a esa aplicación. Otras aplicaciones no pueden realizar escuchas en ese puerto al mismo tiempo.  

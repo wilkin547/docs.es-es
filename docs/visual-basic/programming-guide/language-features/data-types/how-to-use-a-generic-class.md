@@ -21,12 +21,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 3bcf7b0556ef2c5d9b8f82442815672b2b3cde86
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 108532e5b765fa918fa894199ef710a9f52db4e4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520662"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207140"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Cómo: Usar clases genéricas (Visual Basic)
 Las clases que toman *parámetros de tipo* se denominan *clases genéricas*. Si usa una clase genérica, puede generar una *clase construida* a partir de ella proporcionando un *argumento de tipo* para cada uno de estos parámetros. Después, puede declarar una variable del tipo de clase construida, crear una instancia de la clase construida y asignarla a esa variable.  
@@ -45,11 +45,12 @@ Las clases que toman *parámetros de tipo* se denominan *clases genéricas*. Si 
   
      [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Tipos genéricos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Independencia del lenguaje y componentes independientes del lenguaje](../../../../standard/language-independence-and-language-independent-components.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [Imports (instrucción), espacio de nombres y tipo .NET](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
- [Iteradores](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a>Vea también
+
+- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+- [Tipos genéricos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+- [Independencia del lenguaje y componentes independientes del lenguaje](../../../../standard/language-independence-and-language-independent-components.md)  
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
+- [Imports (instrucción), espacio de nombres y tipo .NET](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+- [Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
+- [Iteradores](../../../../visual-basic/programming-guide/concepts/iterators.md)

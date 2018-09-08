@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
 ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876348"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199913"
 ---
 # <a name="xname-directive"></a>x:Name (Directiva)
 Identifica los elementos definidos por XAML en un ámbito de nombres XAML. Ámbitos de nombres XAML y sus modelos de unicidad pueden aplicarse a los objetos con instancias, cuando marcos proporcionan API o implementan comportamientos que tienen acceso al gráfico de objetos creados por XAML en tiempo de ejecución.  

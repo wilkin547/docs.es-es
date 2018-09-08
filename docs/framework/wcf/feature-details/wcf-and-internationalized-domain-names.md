@@ -3,11 +3,11 @@ title: WCF y nombres de dominio internacionalizados
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
 ms.openlocfilehash: 8431f5d47aa32d1c928190abdd3079831ca48618
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44033246"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208431"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF y nombres de dominio internacionalizados
 Se ha agregado compatibilidad para permitir servicios WCF con nombres de dominio internacionalizados (IDN). Un nombre de dominio internacionalizado es un nombre de dominio que contiene caracteres no ASCII. Esta compatibilidad incluye tanto la capacidad para hospedar un servicio de WCF con un nombre IDN y un cliente de WCF para comunicarse con un servicio web con un nombre IDN.  
