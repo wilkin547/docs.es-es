@@ -5,32 +5,32 @@ ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: fb0d4fdebf07dacfa7f33d8645332348270128e4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081799"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179512"
 ---
-# <a name="service-security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="5e662-102">Servicio: Errores por segundo en la validación de seguridad y en la autenticación</span><span class="sxs-lookup"><span data-stu-id="5e662-102">Service: Security Validation and Authentication Failures Per Second</span></span>
-<span data-ttu-id="5e662-103">Nombre del contador: Errores de validación de seguridad y de autenticación por segundo</span><span class="sxs-lookup"><span data-stu-id="5e662-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
+# <a name="service-security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="c0497-102">Servicio: Errores por segundo en la validación de seguridad y en la autenticación</span><span class="sxs-lookup"><span data-stu-id="c0497-102">Service: Security Validation and Authentication Failures Per Second</span></span>
+<span data-ttu-id="c0497-103">Nombre del contador: Errores de validación de seguridad y de autenticación por segundo</span><span class="sxs-lookup"><span data-stu-id="c0497-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5e662-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="5e662-104">Description</span></span>  
- <span data-ttu-id="5e662-105">Este contador se incrementa siempre que se rechaza un mensaje debido a un problema de seguridad que no abarca el contador "Llamadas de seguridad no autorizadas".</span><span class="sxs-lookup"><span data-stu-id="5e662-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="5e662-106">Entre estos problemas se incluyen:</span><span class="sxs-lookup"><span data-stu-id="5e662-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="c0497-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="c0497-104">Description</span></span>  
+ <span data-ttu-id="c0497-105">Este contador se incrementa siempre que se rechaza un mensaje debido a un problema de seguridad que no abarca el contador "Llamadas de seguridad no autorizadas".</span><span class="sxs-lookup"><span data-stu-id="c0497-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="c0497-106">Entre estos problemas se incluyen:</span><span class="sxs-lookup"><span data-stu-id="c0497-106">Such problems include:</span></span>  
   
--   <span data-ttu-id="5e662-107">No se puede leer el token de cliente en el mensaje.</span><span class="sxs-lookup"><span data-stu-id="5e662-107">Client token cannot be read from the message.</span></span>  
+-   <span data-ttu-id="c0497-107">No se puede leer el token de cliente en el mensaje.</span><span class="sxs-lookup"><span data-stu-id="c0497-107">Client token cannot be read from the message.</span></span>  
   
--   <span data-ttu-id="5e662-108">El token del cliente ha producido un error en la autenticación (por ejemplo, contraseña incorrecta).</span><span class="sxs-lookup"><span data-stu-id="5e662-108">Client token has failed authentication (for example, bad password).</span></span>  
+-   <span data-ttu-id="c0497-108">El token del cliente ha producido un error en la autenticación (por ejemplo, contraseña incorrecta).</span><span class="sxs-lookup"><span data-stu-id="c0497-108">Client token has failed authentication (for example, bad password).</span></span>  
   
--   <span data-ttu-id="5e662-109">Error en la comprobación de la firma (por ejemplo, el mensaje ha sido alterado).</span><span class="sxs-lookup"><span data-stu-id="5e662-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
+-   <span data-ttu-id="c0497-109">Error en la comprobación de la firma (por ejemplo, el mensaje ha sido alterado).</span><span class="sxs-lookup"><span data-stu-id="c0497-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
--   <span data-ttu-id="5e662-110">El mensaje es un duplicado de uno anterior, que puede producirse durante un ataque de reproducción.</span><span class="sxs-lookup"><span data-stu-id="5e662-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+-   <span data-ttu-id="c0497-110">El mensaje es un duplicado de uno anterior, que puede producirse durante un ataque de reproducción.</span><span class="sxs-lookup"><span data-stu-id="c0497-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   <span data-ttu-id="5e662-111">Error de descifrado.</span><span class="sxs-lookup"><span data-stu-id="5e662-111">A decryption failure has occurred.</span></span>  
+-   <span data-ttu-id="c0497-111">Error de descifrado.</span><span class="sxs-lookup"><span data-stu-id="c0497-111">A decryption failure has occurred.</span></span>  
   
--   <span data-ttu-id="5e662-112">Faltan algunos elementos necesarios (por ejemplo, la marca de tiempo o el bloque de datos cifrados) en el mensaje.</span><span class="sxs-lookup"><span data-stu-id="5e662-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+-   <span data-ttu-id="c0497-112">Faltan algunos elementos necesarios (por ejemplo, la marca de tiempo o el bloque de datos cifrados) en el mensaje.</span><span class="sxs-lookup"><span data-stu-id="c0497-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   <span data-ttu-id="5e662-113">Errores durante el protocolo de enlace TLSNEGO/SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="5e662-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
+-   <span data-ttu-id="c0497-113">Errores durante el protocolo de enlace TLSNEGO/SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="c0497-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
   
- <span data-ttu-id="5e662-114">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula mediante la fórmula siguiente,</span><span class="sxs-lookup"><span data-stu-id="5e662-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula,</span></span>  
+ <span data-ttu-id="c0497-114">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula mediante la fórmula siguiente,</span><span class="sxs-lookup"><span data-stu-id="c0497-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula,</span></span>  
   
- <span data-ttu-id="5e662-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="5e662-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="c0497-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="c0497-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
