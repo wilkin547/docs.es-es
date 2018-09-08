@@ -5,11 +5,11 @@ f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
 ms.openlocfilehash: ee04ed880f8aa24bbd155c5658ad6de856e2c388
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870255"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189811"
 ---
 # <a name="no-mouse-is-present"></a>No hay un mouse presente.
 Se llamó a una de las propiedades del objeto `My.Computer.Mouse` , pero el equipo no tiene ningún mouse o puerto de mouse instalado.  

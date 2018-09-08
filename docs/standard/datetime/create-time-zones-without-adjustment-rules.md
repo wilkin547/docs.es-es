@@ -12,58 +12,58 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 214e3bca811f87f4b8367b459564449d16e7c289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e06232a4e262b13439516114e65c81c07ba24ab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572907"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192969"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>Cómo: crear zonas horarias sin reglas de ajuste
 
-La información de zona horaria exacta requerida por una aplicación no puede estar presente en un determinado sistema por varias razones:
+La información de zona horaria exacta requerida por una aplicación puede no encontrarse en un sistema determinado por varias razones:
 
-* La zona horaria nunca se ha definido en el registro del sistema local.
+* Nunca se definió la zona horaria en el registro del sistema local.
 
 * Datos sobre la zona horaria se ha modificado o quitado del registro.
 
 * La zona horaria existe pero no tiene información precisa sobre los ajustes de zona horaria para un período histórico determinado.
 
-En estos casos, puede llamar a la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método para definir la zona horaria requerida por la aplicación. Puede utilizar las sobrecargas de este método para crear una zona horaria con o sin reglas de ajuste. Si la zona horaria admite el horario de verano, puede definir ajustes con cualquier reglas de ajuste fijas o flotantes. (Para obtener definiciones de estos términos, vea la sección "Terminología de zonas horarias" en [información general de la zona horaria](../../../docs/standard/datetime/time-zone-overview.md).)
+En estos casos, puede llamar a la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método para definir la zona horaria requerida por la aplicación. Puede utilizar las sobrecargas de este método para crear una zona horaria con o sin reglas de ajuste. Si la zona horaria admite el horario de verano, puede definir los ajustes con cualquier reglas de ajuste fija o flotante. (Para obtener definiciones de estos términos, vea la sección "Terminología de zona horaria" en [Introducción a zona horaria](../../../docs/standard/datetime/time-zone-overview.md).)
 
 > [!IMPORTANT]
-> Zonas horarias personalizadas creadas mediante una llamada a la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método no se agregan al registro. En su lugar, puede tener acceso solo mediante la referencia de objeto devuelta por la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> llamada al método.
+> Zonas horarias personalizadas creadas mediante una llamada a la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método no se agregan al registro. En su lugar, puede obtenerse únicamente a través de la referencia de objeto devuelta por la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> llamada al método.
 
-Este tema muestra cómo crear una zona horaria sin reglas de ajuste. Para crear una zona horaria que es compatible con las reglas de ajuste del horario de verano, vea [Cómo: crear zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+En este tema se muestra cómo crear una zona horaria sin reglas de ajuste. Para crear una zona horaria que es compatible con las reglas de ajuste al horario de verano, vea [Cómo: crear zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-without-adjustment-rules"></a>Para crear una zona horaria sin reglas de ajuste
 
-1. Definir nombre para mostrar de la zona horaria.
+1. Definir el nombre para mostrar de la zona horaria.
 
-   El nombre para mostrar sigue un formato bastante estándar en el que se encierra entre paréntesis desplazamiento de la zona horaria de hora Universal coordinada (UTC) y va seguido de una cadena que identifica la zona horaria, uno o más de las ciudades de la zona horaria, o uno o varios de lo cou movimientos o regiones de la zona horaria.
+   El nombre para mostrar sigue un formato bastante estándar en el que se encierra entre paréntesis el desplazamiento de la zona horaria de hora Universal coordinada (UTC) y seguido de una cadena que identifica la zona horaria, uno o más de las ciudades de la zona horaria o uno o varios de lo cou movimientos o regiones en la zona horaria.
 
-2. Defina el nombre de hora estándar de la zona horaria. Normalmente, esta cadena también se utiliza como identificador de la zona horaria.
+2. Defina el nombre de la hora de la zona horaria estándar. Normalmente, esta cadena también se utiliza como identificador de la zona horaria.
 
-3. Si desea utilizar un identificador diferente que el nombre de la zona horaria estándar, defina el identificador de zona horaria.
+3. Si desea utilizar un identificador diferente que el nombre de la zona horaria estándar, definir el identificador de zona horaria.
 
-4. Crear una instancia de un <xref:System.TimeSpan> objeto que define el desplazamiento de la zona horaria a la hora UTC. Zonas horarias con horas posteriores a la hora UTC tienen un desplazamiento positivo. Zonas horarias con tiempos anteriores a la hora UTC tienen una diferencia negativa.
+4. Crear una instancia de un <xref:System.TimeSpan> objeto que define el desplazamiento de la zona horaria a la hora UTC. Zonas horarias con horas posteriores a la hora UTC tienen una diferencia positiva. Zonas horarias con tiempos anteriores a la hora UTC tienen una diferencia negativa.
 
 5. Llame a la <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> método para crear una instancia de la nueva zona horaria.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se define una zona horaria personalizada para Mawson, Antártida, que no tiene ninguna regla de ajuste.
+El ejemplo siguiente define una zona horaria personalizada para Mawson, Antártida, que no tiene ninguna regla de ajuste.
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#1)]
 [!code-vb[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#1)]
 
-La cadena asignada a la <xref:System.TimeZoneInfo.DisplayName%2A> propiedad sigue un formato estándar en el que el desplazamiento de la zona horaria a la hora UTC va seguido de una descripción de la zona horaria.
+La cadena asignada a la <xref:System.TimeZoneInfo.DisplayName%2A> propiedad sigue un formato estándar en que el desplazamiento de la zona horaria a la hora UTC va seguido de una descripción detallada de la zona horaria.
 
 ## <a name="compiling-the-code"></a>Compilación del código
 
 Para este ejemplo se necesita:
 
-* Que se agregará al proyecto una referencia a System.Core.dll.
+* Que se agregarán al proyecto una referencia a System.Core.dll.
 
 * Que se importarán los espacios de nombres siguientes:
 
@@ -72,6 +72,6 @@ Para este ejemplo se necesita:
 
 ## <a name="see-also"></a>Vea también
 
-[Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
-[información general de la zona horaria](../../../docs/standard/datetime/time-zone-overview.md)
-[Cómo: crear zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+* [Información general sobre zonas horarias](../../../docs/standard/datetime/time-zone-overview.md)
+* [Creación de zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)

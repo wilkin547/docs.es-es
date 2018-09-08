@@ -3,11 +3,11 @@ title: Funciones externas (F#)
 description: 'Obtenga información sobre la compatibilidad del lenguaje F # para llamar a funciones en código nativo.'
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037232"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181424"
 ---
 # <a name="external-functions"></a>Funciones externas
 

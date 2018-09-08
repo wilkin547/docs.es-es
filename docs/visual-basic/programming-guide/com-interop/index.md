@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871064"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183176"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidad COM (Visual Basic)
 El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. Esta sección tratan algunos de los problemas relacionados con la creación y uso de objetos COM con Visual Basic.  
@@ -50,10 +50,10 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
  [Interoperating with Unmanaged Code](../../../framework/interop/index.md) (Interoperar con código no administrado)  
  Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.  
   
- [Exponer componentes COM en .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Exponer componentes COM en .NET Framework](../../../framework/interop/exposing-com-components.md)  
  Describe el proceso de llamar a tipos COM mediante la interoperabilidad COM.  
   
- [Exponer componentes de .NET Framework en COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Exponer componentes de .NET Framework en COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Describe la preparación y el uso de tipos administrados desde COM.  
   
  [Aplicar atributos de interoperabilidad](../../../framework/interop/applying-interop-attributes.md)  

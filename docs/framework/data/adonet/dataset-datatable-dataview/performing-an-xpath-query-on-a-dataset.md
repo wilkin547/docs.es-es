@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039532"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187421"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Realizar una consulta XPath en un objeto DataSet
 La relación entre un sincronizada <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> le permite hacer uso de XML servicios, como la consulta XML Path Language (XPath), que tienen acceso a la **XmlDataDocument** y puede realizar ciertas funciones una manera más conveniente que el acceso a la **DataSet** directamente. Por ejemplo, en lugar de usar el **seleccione** método de un <xref:System.Data.DataTable> para navegar por relaciones con otras tablas en un **DataSet**, puede realizar una consulta XPath en un **XmlDataDocument**  que está sincronizada con la **DataSet**, para obtener una lista de elementos XML en forma de un <xref:System.Xml.XmlNodeList>. Los nodos en el **XmlNodeList**, convierta como <xref:System.Xml.XmlElement> nodos, a continuación, se puede pasar a la **GetRowFromElement** método de la **XmlDataDocument**para devolver la coincidencia <xref:System.Data.DataRow> referencias a las filas de la tabla en sincronizado **DataSet**.  

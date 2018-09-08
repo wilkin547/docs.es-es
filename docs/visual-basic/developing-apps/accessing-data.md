@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44098542"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185746"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Obtener acceso a datos en aplicaciones de Visual Basic
 Visual Basic incluye varias características nuevas que ayudan en el desarrollo de aplicaciones que acceden a datos. Los formularios enlazados a datos para aplicaciones Windows se crean arrastrando elementos desde la [ventana Orígenes de datos](/visualstudio/data-tools/add-new-data-sources) hasta el formulario. Se puede enlazar controles a datos arrastrando elementos desde la **ventana de orígenes de datos** a los controles existentes.  

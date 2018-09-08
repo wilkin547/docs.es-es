@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036199"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180467"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal (Tipo de datos, Visual Basic)
 Contiene con signo de valores de 128 bits (16 bytes) que representan números enteros de 96 bits (12 bytes) escalados por una potencia variable de 10. El factor de escala especifica el número de dígitos a la derecha del separador decimal; que va desde 0 a 28. Con una escala de 0 (sin decimales), el mayor valor posible es +/-79,228,162,514,264,337,593,543,950,335 (+/-7. 9228162514264337593543950335E + 28). El valor más grande es +/-7,9228162514264337593543950335 con 28 posiciones decimales, y el valor más pequeño distinto de cero es +/-0,0000000000000000000000000001 (+/-1E-28).  

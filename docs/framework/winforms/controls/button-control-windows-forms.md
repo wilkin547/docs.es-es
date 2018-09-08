@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
 ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134966"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183228"
 ---
 # <a name="button-control-windows-forms"></a>Button (Control, formularios Windows Forms)
 El control `Button` de Windows Forms permite al usuario hacer clic en él para llevar a cabo una acción. El control `Button` puede mostrar texto e imágenes. Al hacer clic en el botón, parece como si se hubiera presionado y soltado.  
