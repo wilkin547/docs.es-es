@@ -3,13 +3,13 @@ title: Implementación de aplicaciones .NET Core
 description: Implementación de una aplicación .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562011"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891316"
 ---
 # <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core
 
@@ -43,6 +43,8 @@ Hay también algunas desventajas:
 
 En una implementación autocontenida, implementa su aplicación y cualquier dependencia de terceros junto con la versión de .NET Core que ha usado para compilar la aplicación. La creación de una SCD no incluye las [dependencias nativas de .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) en diversas plataformas, así que es necesario que estén presentes antes de ejecutar la aplicación. Para obtener más información sobre el enlace de versiones en un entorno de ejecución, vea el artículo sobre [enlace de versiones de .NET Core](../versions/selection.md).
 
+A partir del SDK de .NET Core 2.1 (versión 2.1.300), .NET Core es compatible con la *puesta al día de la revisión de versiones*. Cuando se crea una implementación autocontenida, las herramientas de .NET Core incluyen automáticamente el último tiempo de ejecución con mantenimiento de la versión de .NET Core a la que se dirige su aplicación. (El último tiempo de ejecución con mantenimiento incluye revisiones de seguridad y otras correcciones de errores). El tiempo de ejecución con mantenimiento no tiene que estar presente en el sistema de compilación; se descarga automáticamente de NuGet.org. Para más información, incluidas las instrucciones sobre cómo dejar de recibir la puesta al día de la revisión de versiones, vea [Puesta al día del tiempo de ejecución de implementación autocontenida](runtime-patch-selection.md).
+
 Las implementaciones de FDD y SCD usan ejecutables de host independientes, por lo que puede firmar un host ejecutable de un SCD con su firma de publicador.
 
 ### <a name="why-deploy-a-self-contained-deployment"></a>¿Por qué realizar una implementación autocontenida?
@@ -58,6 +60,8 @@ También tiene algunos inconvenientes:
 - Como .NET Core se incluye en el paquete de implementación, debe seleccionar por adelantado las plataformas de destino en las que se compilan los paquetes de implementación.
 
 - El tamaño de su paquete de implementación es relativamente grande, ya que tendrá que incluir .NET Core, así como la aplicación y sus dependencias de terceros.
+
+  A partir de .NET Core 2.0, puede reducir el tamaño de la implementación en sistemas Linux en 28 MB aproximadamente con el [*modo invariable global*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) de .NET Core. Normalmente, .NET Core en Linux se basa en las [bibliotecas ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) para la compatibilidad global. En modo invariable, las bibliotecas no se incluyen con la implementación y todas las referencias culturales se comportan como la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - La implementación de numerosas aplicaciones .NET Core autocontenidas en un sistema puede consumir importantes cantidades de espacio en disco, puesto que cada aplicación duplica archivos de .NET Core.
 
