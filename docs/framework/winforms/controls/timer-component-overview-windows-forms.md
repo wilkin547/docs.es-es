@@ -8,11 +8,11 @@ helpviewer_keywords:
 - timers [Windows Forms], about timers
 ms.assetid: e672c05b-a8b6-4b26-9e4d-9223aa9e3873
 ms.openlocfilehash: 6e453f6b7718c6c5be3109f51153a3f5e4b5b6f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44136464"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44228005"
 ---
 # <a name="timer-component-overview-windows-forms"></a>Información general sobre el componente Timer (formularios Windows Forms)
 El componente <xref:System.Windows.Forms.Timer> de Windows Forms produce un evento a intervalos regulares. Este componente está diseñado para un entorno de Windows Forms. Si necesita un temporizador que sea adecuado para un entorno de servidor, consulte [Introducción a los temporizadores basados en servidor](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  

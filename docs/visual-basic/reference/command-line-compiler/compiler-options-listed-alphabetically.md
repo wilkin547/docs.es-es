@@ -7,11 +7,11 @@ ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f24759d68f007caf5f79096c6d4cebb7c050851
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44174567"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252439"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opciones del compilador de Visual Basic alfabético
 El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. La siguiente es una lista de las opciones del compilador de línea de comandos de Visual Basic ordenadas alfabéticamente.  

@@ -3,11 +3,11 @@ title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048356"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251789"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por WCF. Service Trace Viewer proporciona una manera de combinar fácilmente, ver y filtrar los mensajes de seguimiento en el registro de modo que puede diagnosticar, reparar y comprobar los problemas de servicio WCF.  

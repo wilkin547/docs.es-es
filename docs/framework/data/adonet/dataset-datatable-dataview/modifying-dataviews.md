@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
 ms.openlocfilehash: 3b1e0cbfc6118ad9ca670f5d91183b78b2c99d89
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870437"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225651"
 ---
 # <a name="modifying-dataviews"></a>Modificar objetos DataView
 Puede utilizar <xref:System.Data.DataView> para agregar, eliminar o modificar filas de datos de la tabla subyacente. La capacidad para usar el **DataView** modificar datos en la tabla subyacente se controla estableciendo una de las tres propiedades booleanas de la **DataView**. Dichas propiedades son <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> y <xref:System.Data.DataView.AllowDelete%2A>. Se establecen en **true** de forma predeterminada.  

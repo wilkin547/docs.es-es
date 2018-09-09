@@ -7,11 +7,11 @@ ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 11cf225ca30117484cdc3bbcb6910e615e91f5ef
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777943"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253317"
 ---
 # <a name="message-security-user-name"></a>Nombre de usuario de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de nombre de usuario para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor. Todos los mensajes de la aplicación entre el cliente y el servidor se firman y se cifran. De forma predeterminada, el nombre de usuario y contraseña proporcionadas por el cliente se utilizan para iniciar una sesión con una cuenta de Windows válida. En este ejemplo se basa en el [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Este ejemplo está compuesto de un programa de consola de cliente (Client.exe) y una biblioteca de servicios (Service.dll) hospedada por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
