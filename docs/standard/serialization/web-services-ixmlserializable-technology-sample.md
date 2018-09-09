@@ -3,46 +3,46 @@ title: Ejemplo de tecnología de servicios Web IXmlSerializable
 ms.date: 03/30/2017
 ms.assetid: 0202d3f1-a50b-427d-a5bb-79208b8f1c22
 ms.openlocfilehash: 343755c062fc13891d84131a5f7682e2e1466a5a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866543"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252797"
 ---
-# <a name="web-services-ixmlserializable-technology-sample"></a><span data-ttu-id="eac0c-102">Ejemplo de tecnología de servicios Web IXmlSerializable</span><span class="sxs-lookup"><span data-stu-id="eac0c-102">Web Services IXmlSerializable Technology Sample</span></span>
-[<span data-ttu-id="eac0c-103">Descargar ejemplo</span><span class="sxs-lookup"><span data-stu-id="eac0c-103">Download Sample</span></span>](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
+# <a name="web-services-ixmlserializable-technology-sample"></a><span data-ttu-id="12363-102">Ejemplo de tecnología de servicios Web IXmlSerializable</span><span class="sxs-lookup"><span data-stu-id="12363-102">Web Services IXmlSerializable Technology Sample</span></span>
+[<span data-ttu-id="12363-103">Descargar ejemplo</span><span class="sxs-lookup"><span data-stu-id="12363-103">Download Sample</span></span>](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/IXmlSerializable.zip.exe)  
   
- <span data-ttu-id="eac0c-104">En este ejemplo se muestra cómo utilizar <xref:System.Xml.Serialization.IXmlSerializable> para controlar la serialización de tipos personalizados en servicios Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="eac0c-104">This sample shows how to use <xref:System.Xml.Serialization.IXmlSerializable> to control the serialization of custom types in ASP.NET Web Services.</span></span>  
+ <span data-ttu-id="12363-104">En este ejemplo se muestra cómo utilizar <xref:System.Xml.Serialization.IXmlSerializable> para controlar la serialización de tipos personalizados en servicios Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="12363-104">This sample shows how to use <xref:System.Xml.Serialization.IXmlSerializable> to control the serialization of custom types in ASP.NET Web Services.</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="eac0c-105">Para compilar el ejemplo con Visual Studio</span><span class="sxs-lookup"><span data-stu-id="eac0c-105">To build the sample using Visual Studio</span></span>  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="12363-105">Para compilar el ejemplo con Visual Studio</span><span class="sxs-lookup"><span data-stu-id="12363-105">To build the sample using Visual Studio</span></span>  
   
-1.  <span data-ttu-id="eac0c-106">Abra [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] y seleccione **Nuevo sitio web** en el menú **Archivo**.</span><span class="sxs-lookup"><span data-stu-id="eac0c-106">Open [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] and select **New Web Site** from the **File** menu.</span></span>  
+1.  <span data-ttu-id="12363-106">Abra [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] y seleccione **Nuevo sitio web** en el menú **Archivo**.</span><span class="sxs-lookup"><span data-stu-id="12363-106">Open [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] and select **New Web Site** from the **File** menu.</span></span>  
   
-2.  <span data-ttu-id="eac0c-107">En el panel izquierdo del cuadro de diálogo **Nuevo sitio web**, seleccione el lenguaje de programación deseado y, en el panel derecho, seleccione **Servicio Web ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="eac0c-107">In the left pane of the **New Web Site** dialog, select your desired programming language, then from the right pane, select **ASP.NET Web Service**.</span></span>  
+2.  <span data-ttu-id="12363-107">En el panel izquierdo del cuadro de diálogo **Nuevo sitio web**, seleccione el lenguaje de programación deseado y, en el panel derecho, seleccione **Servicio Web ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="12363-107">In the left pane of the **New Web Site** dialog, select your desired programming language, then from the right pane, select **ASP.NET Web Service**.</span></span>  
   
-3.  <span data-ttu-id="eac0c-108">Escriba **IXmlSerializable** como el nombre del nuevo servicio web.</span><span class="sxs-lookup"><span data-stu-id="eac0c-108">Type **IXmlSerializable** as the name of the new Web service.</span></span>  
+3.  <span data-ttu-id="12363-108">Escriba **IXmlSerializable** como el nombre del nuevo servicio web.</span><span class="sxs-lookup"><span data-stu-id="12363-108">Type **IXmlSerializable** as the name of the new Web service.</span></span>  
   
-4.  <span data-ttu-id="eac0c-109">En la ventana Explorador de soluciones, haga clic con el botón derecho en el icono de Service.asmx y seleccione **Eliminar**; repita este paso para el archivo Service.asmx codebehind.</span><span class="sxs-lookup"><span data-stu-id="eac0c-109">In the Solution Explorer window, right-click the icon for Service.asmx and select **Delete**; repeat this step for the Service.asmx codebehind file.</span></span>  
+4.  <span data-ttu-id="12363-109">En la ventana Explorador de soluciones, haga clic con el botón derecho en el icono de Service.asmx y seleccione **Eliminar**; repita este paso para el archivo Service.asmx codebehind.</span><span class="sxs-lookup"><span data-stu-id="12363-109">In the Solution Explorer window, right-click the icon for Service.asmx and select **Delete**; repeat this step for the Service.asmx codebehind file.</span></span>  
   
-5.  <span data-ttu-id="eac0c-110">Haga clic con el botón derecho en el directorio de proyecto y seleccione **Agregar elemento existente**.</span><span class="sxs-lookup"><span data-stu-id="eac0c-110">Right-click the project directory and select **Add Existing Item**.</span></span> <span data-ttu-id="eac0c-111">En el cuadro de diálogo, navegue hasta el subdirectorio Servicio del directorio del lenguaje específico.</span><span class="sxs-lookup"><span data-stu-id="eac0c-111">In the dialog, navigate to the Service subdirectory of the language-specific directory.</span></span>  
+5.  <span data-ttu-id="12363-110">Haga clic con el botón derecho en el directorio de proyecto y seleccione **Agregar elemento existente**.</span><span class="sxs-lookup"><span data-stu-id="12363-110">Right-click the project directory and select **Add Existing Item**.</span></span> <span data-ttu-id="12363-111">En el cuadro de diálogo, navegue hasta el subdirectorio Servicio del directorio del lenguaje específico.</span><span class="sxs-lookup"><span data-stu-id="12363-111">In the dialog, navigate to the Service subdirectory of the language-specific directory.</span></span>  
   
-6.  <span data-ttu-id="eac0c-112">Seleccione Service.asmx y, a continuación, repita este paso para el archivo Service.asmx codebehind.</span><span class="sxs-lookup"><span data-stu-id="eac0c-112">Select Service.asmx, then repeat this step for the Service.asmx codebehind file.</span></span>  
+6.  <span data-ttu-id="12363-112">Seleccione Service.asmx y, a continuación, repita este paso para el archivo Service.asmx codebehind.</span><span class="sxs-lookup"><span data-stu-id="12363-112">Select Service.asmx, then repeat this step for the Service.asmx codebehind file.</span></span>  
   
-7.  <span data-ttu-id="eac0c-113">Abra [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] y navegue hasta el directorio que contiene el directorio IXmlSerializable que creó anteriormente en el paso 3.</span><span class="sxs-lookup"><span data-stu-id="eac0c-113">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the directory that contains IXmlSerializable directory that you created in step 3 above.</span></span>  
+7.  <span data-ttu-id="12363-113">Abra [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] y navegue hasta el directorio que contiene el directorio IXmlSerializable que creó anteriormente en el paso 3.</span><span class="sxs-lookup"><span data-stu-id="12363-113">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the directory that contains IXmlSerializable directory that you created in step 3 above.</span></span>  
   
-8.  <span data-ttu-id="eac0c-114">Haga clic con el botón derecho en el icono del directorio IXmlSerializable y seleccione **Compartir y seguridad**.</span><span class="sxs-lookup"><span data-stu-id="eac0c-114">Right-click the icon for the IXmlSerializable directory and select **Sharing and Security**.</span></span>  
+8.  <span data-ttu-id="12363-114">Haga clic con el botón derecho en el icono del directorio IXmlSerializable y seleccione **Compartir y seguridad**.</span><span class="sxs-lookup"><span data-stu-id="12363-114">Right-click the icon for the IXmlSerializable directory and select **Sharing and Security**.</span></span>  
   
-9. <span data-ttu-id="eac0c-115">En la pestaña Uso compartido de web, seleccione **Compartir esta carpeta** y confirme la configuración predeterminada, incluido el nombre IXmlSerializable.</span><span class="sxs-lookup"><span data-stu-id="eac0c-115">In the Web Sharing tab, select **Share this Folder**, and confirm the default settings, including the name IXmlSerializable.</span></span>  
+9. <span data-ttu-id="12363-115">En la pestaña Uso compartido de web, seleccione **Compartir esta carpeta** y confirme la configuración predeterminada, incluido el nombre IXmlSerializable.</span><span class="sxs-lookup"><span data-stu-id="12363-115">In the Web Sharing tab, select **Share this Folder**, and confirm the default settings, including the name IXmlSerializable.</span></span>  
   
-10. <span data-ttu-id="eac0c-116">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="eac0c-116">Click **OK**.</span></span>  
+10. <span data-ttu-id="12363-116">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="12363-116">Click **OK**.</span></span>  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="eac0c-117">Para ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="eac0c-117">To run the sample</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="12363-117">Para ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="12363-117">To run the sample</span></span>  
   
-1.  <span data-ttu-id="eac0c-118">Abra una ventana del explorador y seleccione su barra de direcciones.</span><span class="sxs-lookup"><span data-stu-id="eac0c-118">Open a browser window and select its address bar.</span></span>  
+1.  <span data-ttu-id="12363-118">Abra una ventana del explorador y seleccione su barra de direcciones.</span><span class="sxs-lookup"><span data-stu-id="12363-118">Open a browser window and select its address bar.</span></span>  
   
-2.  <span data-ttu-id="eac0c-119">Tipo **http://localhost/IXmlSerializable/Service.asmx**.</span><span class="sxs-lookup"><span data-stu-id="eac0c-119">Type **http://localhost/IXmlSerializable/Service.asmx**.</span></span>  
+2.  <span data-ttu-id="12363-119">Tipo **http://localhost/IXmlSerializable/Service.asmx**.</span><span class="sxs-lookup"><span data-stu-id="12363-119">Type **http://localhost/IXmlSerializable/Service.asmx**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eac0c-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="eac0c-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12363-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="12363-120">See also</span></span>
 
 - <xref:System.Xml.Serialization.IXmlSerializable>  
 - <xref:System.Xml.Serialization>  
