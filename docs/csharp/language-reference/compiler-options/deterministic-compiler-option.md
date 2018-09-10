@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb45ea6ed5c5795c910b2f6c3575b12f8189cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f9aca20a3ff65d061c04a21e31db3fb5eab62ba
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213917"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252621"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -55,5 +55,6 @@ El compilador tiene en cuenta las entradas siguientes con el fin de garantizar e
 Cuando los orígenes están disponibles públicamente, se puede usar la compilación determinista para establecer si un archivo binario se compila a partir de una fuente de confianza. También puede ser útil en un sistema de compilación continua para determinar si es necesario ejecutar pasos de compilación que dependen de los cambios realizados en un archivo binario. 
 
 ## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

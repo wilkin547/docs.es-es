@@ -3,11 +3,11 @@ title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
 ms.openlocfilehash: 62075cccfa8ff2c6a181d633756a5f9bc8969932
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858982"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210239"
 ---
 # <a name="srmp"></a>SRMP
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ) a través de HTTP.  
