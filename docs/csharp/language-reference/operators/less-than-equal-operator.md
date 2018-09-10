@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
 ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180701"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270213"
 ---
-# <a name="lt-operator-c-reference"></a><span data-ttu-id="34299-102">Operador &lt;= (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="34299-102">&lt;= Operator (C# Reference)</span></span>
-<span data-ttu-id="34299-103">Todos los tipos de enumeración y numéricos definen un operador relacional "menor o igual que" (`<=`), que devuelve `true` si el primer operando es menor o igual que el segundo; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="34299-103">All numeric and enumeration types define a "less than or equal" relational operator (`<=`) that returns `true` if the first operand is less than or equal to the second, `false` otherwise.</span></span>  
+# <a name="lt-operator-c-reference"></a><span data-ttu-id="0a336-102">Operador &lt;= (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="0a336-102">&lt;= Operator (C# Reference)</span></span>
+<span data-ttu-id="0a336-103">Todos los tipos de enumeración y numéricos definen un operador relacional "menor o igual que" (`<=`), que devuelve `true` si el primer operando es menor o igual que el segundo; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="0a336-103">All numeric and enumeration types define a "less than or equal" relational operator (`<=`) that returns `true` if the first operand is less than or equal to the second, `false` otherwise.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="34299-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="34299-104">Remarks</span></span>  
- <span data-ttu-id="34299-105">Los tipos definidos por el usuario pueden sobrecargar el operador `<=`.</span><span class="sxs-lookup"><span data-stu-id="34299-105">User-defined types can overload the `<=` operator.</span></span> <span data-ttu-id="34299-106">Para obtener más información, vea [operator (Referencia de C#)](../../../csharp/language-reference/keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="34299-106">For more information, see [operator](../../../csharp/language-reference/keywords/operator.md).</span></span> <span data-ttu-id="34299-107">Si `<=` está sobrecargado, [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) también debe estar sobrecargado.</span><span class="sxs-lookup"><span data-stu-id="34299-107">If `<=` is overloaded, [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) must also be overloaded.</span></span> <span data-ttu-id="34299-108">Las operaciones de tipos enteros suelen estar permitidas en la enumeración.</span><span class="sxs-lookup"><span data-stu-id="34299-108">Operations on integral types are generally allowed on enumeration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a336-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0a336-104">Remarks</span></span>  
+ <span data-ttu-id="0a336-105">Los tipos definidos por el usuario pueden sobrecargar el operador `<=`.</span><span class="sxs-lookup"><span data-stu-id="0a336-105">User-defined types can overload the `<=` operator.</span></span> <span data-ttu-id="0a336-106">Para obtener más información, vea [operator (Referencia de C#)](../../../csharp/language-reference/keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="0a336-106">For more information, see [operator](../../../csharp/language-reference/keywords/operator.md).</span></span> <span data-ttu-id="0a336-107">Si `<=` está sobrecargado, [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) también debe estar sobrecargado.</span><span class="sxs-lookup"><span data-stu-id="0a336-107">If `<=` is overloaded, [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) must also be overloaded.</span></span> <span data-ttu-id="0a336-108">Las operaciones de tipos enteros suelen estar permitidas en la enumeración.</span><span class="sxs-lookup"><span data-stu-id="0a336-108">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="34299-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="34299-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0a336-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0a336-109">Example</span></span>  
  [!code-csharp[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-equal-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="34299-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="34299-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a336-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="0a336-110">See Also</span></span>
 
-- [<span data-ttu-id="34299-111">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="34299-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="34299-112">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="34299-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="34299-113">Operadores de C#</span><span class="sxs-lookup"><span data-stu-id="34299-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="34299-114">explicit</span><span class="sxs-lookup"><span data-stu-id="34299-114">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)
+- [<span data-ttu-id="0a336-111">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="0a336-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="0a336-112">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="0a336-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="0a336-113">Operadores de C#</span><span class="sxs-lookup"><span data-stu-id="0a336-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
+- [<span data-ttu-id="0a336-114">explicit</span><span class="sxs-lookup"><span data-stu-id="0a336-114">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)
