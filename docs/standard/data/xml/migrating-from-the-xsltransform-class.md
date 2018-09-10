@@ -9,11 +9,11 @@ ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190993"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272454"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migración desde la clase XslTransform
 En la versión de [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] se ha rediseñado la arquitectura XSLT. La clase <xref:System.Xml.Xsl.XslTransform> se ha reemplazado por la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -63,7 +63,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>Opción de depuración  
- La clase <xref:System.Xml.Xsl.XslCompiledTransform> puede generar información de depuración, lo que le permite depurar la hoja de estilos con el depurador de Microsoft Visual Studio. Vea <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29> para obtener más información.  
+ La clase <xref:System.Xml.Xsl.XslCompiledTransform> puede generar información de depuración, lo que le permite depurar la hoja de estilos con el depurador de Microsoft Visual Studio. Para obtener más información, consulta <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
   
 ## <a name="behavioral-differences"></a>Diferencias de funcionamiento  
   

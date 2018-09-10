@@ -1,5 +1,5 @@
 ---
-title: Automatic Memory Management
+title: Administración de memoria automática
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f81db46c20b27517968078c96f9eb484a1aedec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572078"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275319"
 ---
-# <a name="automatic-memory-management"></a>Automatic Memory Management
+# <a name="automatic-memory-management"></a>Administración de memoria automática
 La administración de memoria automática es uno de los servicios que proporciona Common Language Runtime durante la [ejecución administrada](../../docs/standard/managed-execution-process.md). El recolector de elementos no utilizados de Common Language Runtime administra la asignación y liberación de la memoria de una aplicación. Esto significa que los programadores no tienen que escribir código para realizar tareas de administración de memoria al programar aplicaciones administradas. La administración automática de la memoria puede eliminar problemas frecuentes, como olvidar liberar un objeto y causar una pérdida de memoria, o intentar tener acceso a la memoria de un objeto que ya se ha liberado. En esta sección se describe cómo asigna y libera memoria el recolector de elementos no utilizados.  
   
 ## <a name="allocating-memory"></a>Asignar memoria  
@@ -51,7 +51,8 @@ La administración de memoria automática es uno de los servicios que proporcion
 ## <a name="releasing-memory-for-unmanaged-resources"></a>Liberar memoria para recursos no administrados  
  En el caso de la mayoría de los objetos creados por la aplicación, puede utilizar el recolector de elementos no utilizados para realizar automáticamente las tareas de administración de memoria. Sin embargo, los recursos no administrados requieren una limpieza explícita. El tipo más habitual de recurso no administrado es un objeto que contiene un recurso del sistema operativo, como un identificador de archivo, identificador de ventana o conexión de red. Aunque el recolector de elementos no utilizados puede realizar el seguimiento del período de duración de un objeto administrado que encapsula un recurso no administrado, no tiene un conocimiento específico de cómo limpiar el recurso. Cuando se crea un objeto que encapsula un recurso no administrado, es recomendable proporcionar el código necesario para limpiar dicho recurso en un método público **Dispose**. Si se proporciona un método **Dispose**, se permite que los usuarios del objeto liberen su memoria de manera explícita cuando hayan terminado de usarlo. Si se utiliza un objeto que encapsula un recurso no administrado, se debe conocer la existencia de **Dispose** y llamarlo cuando sea necesario. Para más información sobre la limpieza de recursos no administrados y el ejemplo de un modelo de diseño para implementar **Dispose**, consulte [Recolección de elementos no utilizados](../../docs/standard/garbage-collection/index.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.GC>  
- [Recolección de elementos no utilizados](../../docs/standard/garbage-collection/index.md)  
- [Proceso de ejecución administrada](../../docs/standard/managed-execution-process.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.GC>  
+- [Recolección de elementos no utilizados](../../docs/standard/garbage-collection/index.md)  
+- [Proceso de ejecución administrada](../../docs/standard/managed-execution-process.md)

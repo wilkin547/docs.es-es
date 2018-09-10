@@ -8,17 +8,17 @@ ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201405"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272129"
 ---
 # <a name="parallel-diagnostic-tools"></a>Herramientas de diagnóstico paralelo
 Visual Studio proporciona amplia compatibilidad para depurar aplicaciones de varios subprocesos y generar perfiles de estas.  
   
 ## <a name="debugging"></a>Depuración  
- El depurador de Visual Studio agrega ventanas nuevas para la depuración de aplicaciones paralelas. Para obtener más información, vea los temas siguientes:  
+ El depurador de Visual Studio agrega ventanas nuevas para la depuración de aplicaciones paralelas. Para obtener más información, consulta los temas siguientes:  
   
 -   [Uso de la ventana Pilas paralelas](/visualstudio/debugger/using-the-parallel-stacks-window)  
   

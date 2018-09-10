@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53fd4ee63d49b3943fa0b1164591aaddaa764abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579423"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277749"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
-<a name="Top"></a> Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  
+<a name="Top"></a> Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement`.  
   
  .NET Framework define los elementos de sustitución que se enumeran en la siguiente tabla.  
   
@@ -31,12 +31,12 @@ ms.locfileid: "33579423"
 |------------------|-----------------|  
 |`$` *número*|Incluye la última subcadena coincidente por el grupo capturado que identifica *number*, donde *number* es un valor decimal, en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo numerado](#Numbered).|  
 |`${` *name* `}`|Incluye la última subcadena coincidente por el grupo con nombre que designa `(?<`*name*`> )` en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo con nombre](#Named).|  
-|`$$`|Incluye un literal "$" único en la cadena de reemplazo. Para obtener más información, vea [Sustituir un símbolo "$"](#DollarSign).|  
-|`$&`|Incluye una copia de la coincidencia completa en la cadena de reemplazo. Para obtener más información, vea [Sustituir toda la coincidencia](#EntireMatch).|  
+|`$$`|Incluye un literal "$" único en la cadena de reemplazo. Para obtener más información, consulte [Sustituir un símbolo "$"](#DollarSign).|  
+|`$&`|Incluye una copia de la coincidencia completa en la cadena de reemplazo. Para obtener más información, consulte [Sustituir toda la coincidencia](#EntireMatch).|  
 |<code>$\`</code>|Incluye todo el texto de la cadena de entrada delante de la coincidencia en la cadena de reemplazo. Para obtener más información, vea [Sustituir el texto delante de la coincidencia](#BeforeMatch).|  
-|`$'`|Incluye todo el texto de la cadena de entrada detrás de la coincidencia en la cadena de reemplazo. Para obtener más información, vea [Sustituir el texto detrás de la coincidencia](#AfterMatch).|  
+|`$'`|Incluye todo el texto de la cadena de entrada detrás de la coincidencia en la cadena de reemplazo. Para obtener más información, consulte [Sustituir el texto detrás de la coincidencia](#AfterMatch).|  
 |`$+`|Incluye el último grupo capturado en la cadena de reemplazo. Para obtener más información, vea [Sustituir el último grupo capturado](#LastGroup).|  
-|`$_`|Incluye la cadena de entrada completa en la cadena de reemplazo. Para obtener más información, vea [Sustituir toda la cadena de entrada](#EntireString).|  
+|`$_`|Incluye la cadena de entrada completa en la cadena de reemplazo. Para obtener más información, consulte [Sustituir toda la cadena de entrada](#EntireString).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Elementos de sustitución y patrones de reemplazo  
  Las sustituciones son las únicas construcciones especiales reconocidas en un patrón de reemplazo. No se admiten otros elementos de lenguaje de expresiones regulares, incluidos los escapes de caracteres y el punto (`.`), que coincidan con cualquier carácter. De igual forma, los elementos de lenguaje de sustitución se reconocen únicamente en patrones de reemplazo y no son válidos en patrones de expresiones regulares.  
@@ -44,13 +44,13 @@ ms.locfileid: "33579423"
  El único carácter que puede aparecer en un patrón de expresión regular o en una sustitución es el carácter `$` , aunque tiene un significado diferente en cada contexto. En un patrón de expresión regular, `$` es un delimitador que coincide con el final de la cadena. En un patrón de reemplazo, `$` indica el principio de una sustitución.  
   
 > [!NOTE]
->  Para obtener una funcionalidad similar a la de un patrón de reemplazo dentro de una expresión regular, use una referencia inversa. Para obtener más información acerca de las referencias inversas, vea [Construcciones de referencia inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+>  Para obtener una funcionalidad similar a la de un patrón de reemplazo dentro de una expresión regular, use una referencia inversa. Para obtener más información acerca de las referencias inversas, consulte [Construcciones de referencia inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>Sustituir un grupo numerado  
  El elemento de lenguaje `$`*number* incluye la última subcadena coincidente por el grupo de captura *number* en la cadena de reemplazo, donde *number* es el índice del grupo de captura. Por ejemplo, el patrón de reemplazo `$1` indica que el primer grupo capturado reemplazará la subcadena coincidente. Para más información sobre los grupos de captura numerados, vea [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- Todos los dígitos después del símbolo `$` se interpretan como que pertenecen al grupo *number* . Si esto no es lo que pretende, puede sustituir un grupo con nombre en su lugar. Por ejemplo, puede utilizar la cadena de reemplazo `${1}1` en lugar de `$11` para definir la cadena de reemplazo como el valor del primer grupo capturado junto con el número "1". Para obtener más información, vea [Sustituir un grupo con nombre](#Named).  
+ Todos los dígitos después del símbolo `$` se interpretan como que pertenecen al grupo *number* . Si esto no es lo que pretende, puede sustituir un grupo con nombre en su lugar. Por ejemplo, puede utilizar la cadena de reemplazo `${1}1` en lugar de `$11` para definir la cadena de reemplazo como el valor del primer grupo capturado junto con el número "1". Para obtener más información, consulte [Sustituir un grupo con nombre](#Named).  
   
  Los grupos de captura que no tienen nombres asignados explícitamente mediante la sintaxis `(?<`*name*`>)` se enumeran de izquierda a derecha a partir de uno. Los grupos con nombre también se numeran de izquierda a derecha, comenzando por uno mayor que el índice del último grupo sin nombre. Por ejemplo, en la expresión regular `(\w)(?<digit>\d)`, el índice del grupo con nombre `digit` es 2.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "33579423"
   
 <a name="AfterMatch"></a>   
 ## <a name="substituting-the-text-after-the-match"></a>Sustituir el texto detrás de la coincidencia  
- La sustitución `$'` reemplaza la cadena coincidente por la cadena de entrada completa después de la coincidencia. Es decir, duplica la cadena de entrada después de la coincidencia quitando el texto coincidente. Cualquier texto que anteceda al texto coincidente no cambia en la cadena de resultado. Si no hay ninguna coincidencia, la sustitución  `$'` no tiene ningún efecto.  
+ La sustitución `$'` reemplaza la cadena coincidente por la cadena de entrada completa después de la coincidencia. Es decir, duplica la cadena de entrada después de la coincidencia quitando el texto coincidente. Cualquier texto que anteceda al texto coincidente no cambia en la cadena de resultado. Si no hay ninguna coincidencia, la sustitución `$'` no tiene ningún efecto.  
   
  En el ejemplo siguiente, se usa el patrón de expresión regular `\d+` para que coincida con una secuencia de uno o más dígitos decimales en la cadena de entrada. La cadena de reemplazo `$'` reemplaza estos dígitos por el texto que sigue a la coincidencia.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "33579423"
   
  El patrón de expresión regular `\b(\w+)\s\1\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -219,5 +219,6 @@ ms.locfileid: "33579423"
 |1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>Vea también  
- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Vea también
+
+- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
