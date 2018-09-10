@@ -9,11 +9,11 @@ helpviewer_keywords:
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
 ms.openlocfilehash: beb54cf6c4e6dc87b9a08b81586b24d72f92b84b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505947"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (Referencia de C#)
 Mediante el uso de un bloque `finally`, puede limpiar todos los recursos asignados en un bloque [try](../../../csharp/language-reference/keywords/try-catch.md) y ejecutar código incluso si se produce una excepción en el bloque `try`. Normalmente, las instrucciones de un bloque `finally` se ejecutan cuando el control abandona una instrucción `try`. La transferencia de control se puede producir como resultado de la ejecución normal, de la ejecución de una instrucción `break`, `continue`, `goto` o `return`, o de la propagación de una excepción fuera de la instrucción `try`.  

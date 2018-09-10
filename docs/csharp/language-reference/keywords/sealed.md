@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
 ms.openlocfilehash: 674c7e1cd87b95318f739ab22876f4bfe5ae73d8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43386645"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514034"
 ---
 # <a name="sealed-c-reference"></a>sealed (Referencia de C#)
 Cuando se aplica a una clase, el modificador `sealed` impide que otras clases hereden de ella. En el ejemplo siguiente, la clase `B` hereda de la clase `A`, pero ninguna clase puede heredar de la clase `B`.  

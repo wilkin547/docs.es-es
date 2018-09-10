@@ -2,12 +2,12 @@
 title: Información general sobre operadores de consulta estándar (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 36bd5927e64ffacb97beac28b8e7790204e08c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 397d1368a3c4e0b20a0bc9c694421ed60119d1aa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337329"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502444"
 ---
 # <a name="standard-query-operators-overview-c"></a>Información general sobre operadores de consulta estándar (C#)
 Los *operadores de consulta estándar* son los métodos que constituyen el modelo LINQ. La mayoría de estos métodos funciona en secuencias; donde una secuencia es un objeto cuyo tipo implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601> o la interfaz <xref:System.Linq.IQueryable%601>. Los operadores de consulta estándar ofrecen funcionalidades de consulta, como las funciones de filtrado, proyección, agregación y ordenación, entre otras.  
@@ -103,10 +103,11 @@ foreach (var obj in query)
   
  [Aggregation Operations (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md) (Operaciones de agregación [C#])  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [Introducción a las consultas LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [Clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Linq.Enumerable>  
+- <xref:System.Linq.Queryable>  
+- [Introducción a las consultas LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+- [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+- [Clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
+- [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

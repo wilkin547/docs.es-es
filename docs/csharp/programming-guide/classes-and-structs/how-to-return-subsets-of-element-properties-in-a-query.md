@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 3b43e7e3aafda5ee5b6a49f271f725fb8eeeca59
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 22b6cc8fc8c8d9ffd1c2cf4063994ce94cea8e45
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198174"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520848"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Cómo: Devolver subconjuntos de propiedades de elementos en una consulta (Guía de programación de C#)
 Use un tipo anónimo en una expresión de consulta cuando se cumplan estas dos condiciones:  
@@ -45,7 +45,8 @@ Console.WriteLine(student.First + " " + student.Last);
   
 -   Para ejecutar este código, copie y pegue la clase en un proyecto de aplicación de consola de Visual C# creado en Visual Studio. De forma predeterminada, este proyecto tiene como destino la versión 3.5 de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], y tendrá una referencia a System.Core.dll y una directiva `using` para System.Linq. Si faltan uno o varios de estos requisitos del proyecto, se pueden agregar manualmente.   
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

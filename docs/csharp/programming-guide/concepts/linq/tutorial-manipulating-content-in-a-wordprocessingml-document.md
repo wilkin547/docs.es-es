@@ -2,12 +2,12 @@
 title: 'Tutorial: Manipular contenido en un documento WordprocessingML (C#)'
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 948363fcf3392a6258bb05e448dfb4ee37549304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64749bfda88b3bf9473fef08d5aef6490d2c37c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340117"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514787"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Tutorial: Manipular contenido en un documento WordprocessingML (C#)
 En este tutorial se muestra cómo aplicar el enfoque de transformación funcional y LINQ to XML para manipular documentos XML. Los ejemplos de C# consultan y manipulan información en documentos WordprocessingML de Office Open XML que guarda Microsoft Word.  
@@ -16,7 +16,7 @@ En este tutorial se muestra cómo aplicar el enfoque de transformación funciona
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Forma de documentos WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|Proporciona una explicación rápida de los detalles de un documento WordprocessingML.|  
 |[Crear el documento de origen de Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|Proporciona instrucciones paso a paso para crear el documento de origen para consultas de este tutorial.|  
@@ -29,6 +29,7 @@ En este tutorial se muestra cómo aplicar el enfoque de transformación funciona
 |[Buscar texto en documentos de Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Utiliza las consultas anteriores para buscar en un documento una cadena de texto especificada.|  
 |[Detalles de los documentos de WordprocessingML de Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Proporciona algunos detalles de los documentos WordprocessingML XML abierto de Office.|  
   
-## <a name="see-also"></a>Vea también  
- [Transformaciones funcionales puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+## <a name="see-also"></a>Vea también
+
+- [Transformaciones funcionales puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

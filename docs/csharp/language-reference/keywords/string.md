@@ -11,11 +11,11 @@ helpviewer_keywords:
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
 ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929278"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513105"
 ---
 # <a name="string-c-reference"></a>string (Referencia de C#)
 El tipo `string` representa una secuencia de cero o más caracteres Unicode. `string` es un alias de <xref:System.String> en .NET.  

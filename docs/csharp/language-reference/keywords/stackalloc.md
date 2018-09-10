@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - stackalloc keyword [C#]
 ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484059"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508585"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Referencia de C#)
 La palabra clave `stackalloc` se usa en un contexto de código no seguro para asignar un bloque de memoria a la pila.

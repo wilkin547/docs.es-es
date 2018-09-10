@@ -2,12 +2,12 @@
 title: Ensamblados de confianza (C#)
 ms.date: 07/20/2015
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-ms.openlocfilehash: c9265a6ce53d97f1d0b8aaeb0f1aae3b7b75f2cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8c295fe23685e39e20a14ff23139339f24564c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510090"
 ---
 # <a name="friend-assemblies-c"></a>Ensamblados de confianza (C#)
 Un *ensamblado de confianza* puede acceder a los tipos y miembros [internal](../../../../csharp/language-reference/keywords/internal.md) de otro ensamblado. Si identifica un ensamblado como ensamblado de confianza, ya no hay que marcar los tipos y miembros como públicos para que otros ensamblados accedan a ellos. Esto resulta especialmente útil en los siguientes escenarios:  
@@ -70,10 +70,11 @@ public class ClassWithFriendMethod
   
  Para obtener información sobre cómo acceder a los tipos y métodos `internal` de un ensamblado desde un archivo de módulo (un archivo con la extensión .netmodule), vea [/moduleassemblyname (C#)](../../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
- [Cómo: Crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [Cómo: Crear ensamblados de confianza con signo (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
+- [Cómo: Crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [Cómo: Crear ensamblados de confianza con signo (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)

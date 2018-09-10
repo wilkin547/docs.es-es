@@ -2,12 +2,12 @@
 title: 'Cómo: Serializar con DataContractSerializer (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 1b2ec431698f23ea0c3e690cd57261bad8b1e4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c0324b1eeeab9f6cf9223e2a3e201771b188749
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329289"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510996"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>Cómo: Serializar con DataContractSerializer (C#)
 Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -91,5 +91,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Serializar gráficos de objeto que contienen objetos XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a>Vea también
+
+- [Serializar gráficos de objeto que contienen objetos XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bitwise complement operator [C#]
 ms.assetid: 11bc078a-50e2-4d7e-9896-67ef669dc602
 ms.openlocfilehash: 8af25217f9e7e66796192783a0b8e3415604dc90
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933187"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510116"
 ---
 # <a name="-operator-c-reference"></a>Operador ~ (Referencia de C#)
 El operador `~` realiza una operación de complemento bit a bit en su operando, lo que tiene el efecto de invertir cada bit. Los operadores de complemento bit a bit están predefinidos para [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) y [ulong](../../../csharp/language-reference/keywords/ulong.md).  

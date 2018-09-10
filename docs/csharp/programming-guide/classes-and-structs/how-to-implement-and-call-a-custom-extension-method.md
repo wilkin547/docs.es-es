@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 6b349876a60ad277ca933a4b4fbcbfffed2bd188
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7a09fa34b88c024bdaa0197bf82471a6bd6c2ae8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452682"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43739238"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Cómo: Implementar e invocar un método de extensión personalizado (Guía de programación de C#)
 En este tema se muestra cómo implementar sus propios métodos de extensión para cualquier tipo de .NET. El código de cliente puede usar los métodos de extensión agregando una referencia a la DLL que los contiene y agregando una directiva [using](../../../csharp/language-reference/keywords/using-directive.md) que especifique el espacio de nombres en el que se definen los métodos de extensión.  
@@ -41,13 +41,14 @@ En este tema se muestra cómo implementar sus propios métodos de extensión par
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Los métodos de extensión no presentan ninguna vulnerabilidad de seguridad específica. No se pueden usar nunca para suplantar los métodos existentes en un tipo, porque todos los conflictos de nombres se resuelven a favor de la instancia o del método estático definido por el tipo en cuestión. Los métodos de extensión no pueden tener acceso a los datos privados de la clase extendida.  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [LINQ (Language Integrated Query)](../../../csharp/linq/linq-in-csharp.md)  
- [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [this](../../../csharp/language-reference/keywords/this.md)  
- [namespace](../../../csharp/language-reference/keywords/namespace.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+- [LINQ (Language Integrated Query)](../../../csharp/linq/linq-in-csharp.md)  
+- [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)  
+- [internal](../../../csharp/language-reference/keywords/internal.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [this](../../../csharp/language-reference/keywords/this.md)  
+- [namespace](../../../csharp/language-reference/keywords/namespace.md)

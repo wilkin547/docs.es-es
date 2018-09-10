@@ -2,12 +2,12 @@
 title: Agregar elementos, atributos y nodos a un árbol XML (C#)
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 2996b4f24b421e7a818381817e598804f9199d38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ebc300d74f8dbf0ec746a14f19b5cf0c7ffa51b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316327"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517064"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Agregar elementos, atributos y nodos a un árbol XML (C#)
 Puede agregar contenidos (elementos, atributos, comentarios, instrucciones de procesamiento, texto y bloques CDATA) a un árbol XML existente.  
@@ -15,21 +15,21 @@ Puede agregar contenidos (elementos, atributos, comentarios, instrucciones de pr
 ## <a name="methods-for-adding-content"></a>Métodos para agregar contenidos  
  Los métodos siguientes agregan contenidos secundarios a un <xref:System.Xml.Linq.XElement> o a un <xref:System.Xml.Linq.XDocument>:  
   
-|Método|Description|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Add%2A>|Agrega un contenido al final de los contenidos secundarios del <xref:System.Xml.Linq.XContainer>.|  
 |<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Agrega un contenido al comienzo de los contenidos secundarios del <xref:System.Xml.Linq.XContainer>.|  
   
  Los métodos siguientes agregan contenidos como nodos relacionados de un <xref:System.Xml.Linq.XNode>. El nodo al que se agregan habitualmente contenidos relacionados es <xref:System.Xml.Linq.XElement>, aunque es posible agregar contenidos relacionados válidos a otros tipos de nodos, como por ejemplo, al nodo <xref:System.Xml.Linq.XText> o al nodo <xref:System.Xml.Linq.XComment>.  
   
-|Método|Description|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Añade un contenido detrás de <xref:System.Xml.Linq.XNode>.|  
 |<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Agrega contenido antes de <xref:System.Xml.Linq.XNode>.|  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  El siguiente ejemplo crear dos árboles XML y, a continuación, modifica uno de ellos.  
   
 ### <a name="code"></a>Código  
@@ -77,5 +77,6 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 91020886e381d8410358cae9511107e28c51452a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2e678886162196c3a0fe4762bf766596cdc02225
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464913"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501408"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variables locales con asignación implícita de tipos (Guía de programación de C#)
 Las variables locales pueden declararse sin proporcionar un tipo explícito. La palabra clave `var` indica al compilador que infiera el tipo de la variable a partir de la expresión de la derecha de la instrucción de inicialización. El tipo inferido puede ser un tipo integrado, un tipo anónimo, un tipo definido por el usuario o un tipo definido en la biblioteca de clases .NET Framework. Para obtener más información sobre cómo inicializar las matrices con `var`, vea [Matrices con tipo implícito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
@@ -73,15 +73,16 @@ Las variables locales pueden declararse sin proporcionar un tipo explícito. La 
   
  Pero el uso de `var` supone al menos la posibilidad de que el código sea más difícil de comprender para otros programadores. Por ese motivo, la documentación de C# por lo general solo usa `var` cuando es necesario.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Matrices con tipo implícito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
- [Cómo: Usar matrices y variables locales con tipo implícito en expresiones de consulta](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
- [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Inicializadores de objeto y colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [var](../../../csharp/language-reference/keywords/var.md)  
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [LINQ (Language Integrated Query)](../../../csharp/linq/index.md)  
- [for](../../../csharp/language-reference/keywords/for.md)  
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
- [using (instrucción)](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Matrices con tipo implícito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
+- [Cómo: Usar matrices y variables locales con tipo implícito en expresiones de consulta](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
+- [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Inicializadores de objeto y colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [var](../../../csharp/language-reference/keywords/var.md)  
+- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [LINQ (Language Integrated Query)](../../../csharp/linq/index.md)  
+- [for](../../../csharp/language-reference/keywords/for.md)  
+- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+- [using (instrucción)](../../../csharp/language-reference/keywords/using-statement.md)

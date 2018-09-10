@@ -2,12 +2,12 @@
 title: Atributos comunes (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332535"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504400"
 ---
 # <a name="common-attributes-c"></a>Atributos comunes (C#)
 En este tema se describen los atributos que más se usan en los programas de C#.  
@@ -221,7 +221,7 @@ class SampleClass
   
  Para obtener la información del llamador del miembro, use los atributos que se aplican a los parámetros opcionales. Cada parámetro opcional especifica un valor predeterminado. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Atributo|Description|Tipo|  
+|Atributo|Descripción|Tipo|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea del archivo de código fuente desde el que se llama al método.|`Integer`|  
@@ -229,10 +229,11 @@ class SampleClass
   
  Para obtener más información sobre los atributos de información del llamador, vea [Caller Information (C#)](../../../../csharp/programming-guide/concepts/caller-information.md) (Información del llamador (C#)).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
- [Atributos](../../../../../docs/standard/attributes/index.md)  
- [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Acceder a atributos mediante reflexión (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
+- [Atributos](../../../../../docs/standard/attributes/index.md)  
+- [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [Acceder a atributos mediante reflexión (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

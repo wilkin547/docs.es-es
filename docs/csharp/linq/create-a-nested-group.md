@@ -3,12 +3,12 @@ title: Crear un grupo anidado (LINQ en C#)
 description: Obtenga información sobre cómo crear un grupo anidado en una expresión de consulta LINQ en C#.
 ms.date: 12/1/2016
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
-ms.openlocfilehash: c973048d0859f61596c62c294131b8c00d0039f8
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 82b07c303215200fa974ce614a2d5a77882dcf4c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404754"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509973"
 ---
 # <a name="create-a-nested-group"></a>Crear un grupo anidado
 
@@ -25,4 +25,4 @@ Tenga en cuenta que se necesitan tres bucles `foreach` anidados para recorrer en
 
 ## <a name="see-also"></a>Vea también
 
-[Language-Integrated Query (LINQ)](index.md)
+- [Language-Integrated Query (LINQ)](index.md)

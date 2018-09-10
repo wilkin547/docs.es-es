@@ -2,12 +2,12 @@
 title: Objetos XName y XNamespace atomizados (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: 85799741246f484bcb17a1ae7e320bd477872238
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ffeaac6d893b70c2c0d49d8d52d0372879cdf37
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323214"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526402"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>Objetos XName y XNamespace atomizados (LINQ to XML) (C#)
 Los objetos <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> se *atomizan*; es decir, si contienen el mismo nombre completo, hacen referencia al mismo objeto. De esta forma, se incrementan los beneficios de rendimiento de las consultas: cuando compare la igualdad de dos nombres atomizados, el lenguaje intermedio subyacente solo debe determinar si los dos puntos de referencia apuntan al mismo objeto. El código subyacente no debe hacer comparaciones de cadenas, ya que sería un proceso muy lento.  
@@ -74,5 +74,6 @@ foreach (var z in query)
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Rendimiento (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Rendimiento (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

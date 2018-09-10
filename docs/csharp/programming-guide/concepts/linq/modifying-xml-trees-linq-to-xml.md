@@ -2,12 +2,12 @@
 title: Modificar árboles XML (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8ec47e6d-2363-4694-be46-8d5ca4d15fc9
-ms.openlocfilehash: 4afb071b5229b3a585ea032effc2985c9a9f7c3a
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 55e75762772a071b97eecb7d6d78e28c3002a179
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198541"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505724"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-c"></a>Modificar árboles XML (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es el almacén de datos en memoria para un árbol XML. Una vez haya cargado o analizado un árbol XML a partir de un origen, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] le permitirá modificarlo en el momento, para luego serializarlo, quizá con el objetivo de guardarlo en un archivo o de enviarlo a un servidor remoto.  
@@ -27,5 +27,6 @@ ms.locfileid: "39198541"
 |[Mantener pares nombre-valor (C#)](../../../../csharp/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|Describe cómo mantener aquella información de la aplicación que es mejor guardar en forma de pares nombre/valor, como por ejemplo, información sobre configuración o valores globales.|  
 |[Cómo: Cambiar el espacio de nombres de todo un árbol XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Muestra cómo mover un árbol XML de un espacio de nombres a otro.|  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

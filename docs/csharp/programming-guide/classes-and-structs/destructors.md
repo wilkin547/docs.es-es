@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 5d1860a5703c79bd77331cfd821c3bff69f317ff
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925823"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526040"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
 Los finalizadores se usan para destruir instancias de clases.  
@@ -85,8 +85,9 @@ protected override void Finalize()
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IDisposable>  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.IDisposable>  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)

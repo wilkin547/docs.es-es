@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#region directive [C#]'
 ms.assetid: 672c87d1-9771-4f64-ab3f-0ad3d4ffb2b4
 ms.openlocfilehash: 3edc4fe757ab1f5cbf42e67ab74cd8032a82d853
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463278"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518283"
 ---
 # <a name="region-c-reference"></a>#region (Referencia de C#)
 `#region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de [esquematización](/visualstudio/ide/outlining) del editor de código de Visual Studio. En archivos de código más largos, es conveniente poder contraer u ocultar una o varias regiones para poder centrarse en la parte del archivo en la que se está trabajando actualmente. En el ejemplo siguiente se muestra cómo definir una región:  

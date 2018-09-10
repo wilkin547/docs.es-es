@@ -2,12 +2,12 @@
 title: Controlar el flujo en los programas asincrónicos (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 7367b55a665a911a4d94f7b235cdc559a69854cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b05bfbd231745caf9e8b6031ce8e063469d8898b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336628"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502507"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Controlar el flujo en los programas asincrónicos (C#)
 Puede escribir y mantener los programas asincrónicos más fácilmente usando las palabras clave `async` y `await`. Aun así, los resultados pueden sorprenderle si no sabe cómo funciona el programa. En este tema se hace un seguimiento del flujo de control a través de un programa asincrónico simple en el que se muestra cuándo se mueve el control de un método a otro y qué información se transfiere cada vez.  
@@ -379,8 +379,9 @@ int contentLength = await getLengthTask;
   
  ![Paso SEIS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
-## <a name="see-also"></a>Vea también  
- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])  
- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])  
- [Ejemplo de Async: Controlar el flujo en los programas asincrónicos (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+## <a name="see-also"></a>Vea también
+
+- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])  
+- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])  
+- [Ejemplo de Async: Controlar el flujo en los programas asincrónicos (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

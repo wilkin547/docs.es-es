@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 43012ec1190117b1905b5e44010d5f57a1e543aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b60ad4ce20a1977d309b275b530d03cbb8e1f7d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339831"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514691"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Usar excepciones (Guía de programación de C#)
 En C#, los errores del programa en tiempo de ejecución se propagan a través del programa mediante un mecanismo denominado excepciones. Las excepciones las inicia el código que encuentra un error y las detecta el código que puede corregir dicho error. Las excepciones puede iniciarlas .NET Framework Common Language Runtime o el código de un programa. Una vez iniciada, una excepción se propaga hasta la pila de llamadas hasta que encuentra una instrucción `catch` para la excepción. Las excepciones no detectadas se controlan mediante un controlador de excepciones que ofrece el sistema y muestra un cuadro de diálogo.  
@@ -43,6 +43,7 @@ En C#, los errores del programa en tiempo de ejecución se propagan a través de
   
 -   Si se llega al comienzo del subproceso, este finaliza.  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)

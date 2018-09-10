@@ -2,12 +2,12 @@
 title: 'Cómo: Crear y usar ensamblados desde la línea de comandos (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: ef872992f17eaaeacf451fa10ef792c47445df80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0cb964991cdbcdb3fa528ac96a0e883a37439099
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319649"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514560"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Cómo: Crear y usar ensamblados desde la línea de comandos (C#)
 Un ensamblado, o una biblioteca de vínculos dinámicos (DLL), se vincula al programa en tiempo de ejecución. Para ilustrar la creación y uso de una DLL, considere el siguiente escenario:  
@@ -122,7 +122,8 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
   
  Para más información sobre la compilación desde la línea de comandos, vea [Compilación de línea de comandos con csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
- [Creación de una clase para contener funciones de archivos DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
+- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
+- [Creación de una clase para contener funciones de archivos DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

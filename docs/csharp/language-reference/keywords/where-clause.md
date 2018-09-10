@@ -8,11 +8,11 @@ helpviewer_keywords:
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
 ms.openlocfilehash: 8607c79a8b1e9a9fd999e4f5b77ecfac786161b3
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003156"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499866"
 ---
 # <a name="where-clause-c-reference"></a>where (Cláusula, Referencia de C#)
 La cláusula `where` se usa en una expresión de consulta para especificar los elementos del origen de datos que se devuelven en dicha expresión. Aplica una condición booleana (*predicate*) a cada elemento de origen (al que hace referencia la variable de rango) y devuelve aquellos en los que la condición especificada se cumple. Puede que una sola expresión de consulta contenga varias cláusulas `where` y que una sola cláusula contenga varias subexpresiones de predicado.  

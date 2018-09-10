@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 18924abefb85012fc6c61073603c594de906b58d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961201"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506524"
 ---
 # <a name="decimal-c-reference"></a>decimal (Referencia de C#)
 
@@ -20,7 +20,7 @@ La palabra clave `decimal` indica un tipo de datos de 128 bits. Comparado con ot
 
 |Tipo|Intervalo aproximado|Precisión|Tipo de .NET|
 |----------|-----------------------|---------------|-------------------------|
-|`decimal`|(-7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> a 10<sup>28</sup>)|28-29 dígitos significativos|<xref:System.Decimal?displayProperty=nameWithType>|
+|`decimal`|De ±1,0 x 10<sup>-28</sup> to ±7,9228 x 10<sup>28</sup>|28-29 dígitos significativos|<xref:System.Decimal?displayProperty=nameWithType>|
 
 El valor predeterminado de un `decimal` es 0m.
 
@@ -96,12 +96,12 @@ En este ejemplo, se da formato a los resultados mediante la cadena de formato de
 
 ## <a name="see-also"></a>Vea también
 
-<xref:System.Decimal>  
-[Referencia de C#](../../../csharp/language-reference/index.md)  
-[Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
-[Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-[Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)
+- <xref:System.Decimal>  
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)

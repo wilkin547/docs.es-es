@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f253f31a7376bf0429784a031188b91cc070df
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269666"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515832"
 ---
 # <a name="statement-keywords-c-reference"></a>Palabras clave de instrucciones (Referencia de C#)
 Las instrucciones son instrucciones de programa. A excepción de como se describe en los temas a los que se hace referencia en la tabla siguiente, las instrucciones se ejecutan en secuencia. En la tabla siguiente, se enumeran las palabras claves de instrucción de C#. Para obtener más información sobre las instrucciones que no se expresan con ninguna palabra clave, consulte [Instrucciones](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
@@ -25,7 +25,8 @@ Las instrucciones son instrucciones de programa. A excepción de como se describ
 [fixed (instrucción)](../../../csharp/language-reference/keywords/fixed-statement.md)|[fixed](../../../csharp/language-reference/keywords/fixed-statement.md)|  
 |[lock (instrucción)](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Instrucciones](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Instrucciones](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)

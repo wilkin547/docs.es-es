@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 8222985e803972fb8d19159cfeaad93c9b08954d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244819"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515766"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Cómo: Recorrer en iteración un árbol de directorio (Guía de programación de C#)
 La frase "recorrer en iteración un árbol de directorios" significa obtener acceso a cada uno de los archivos de todos los subdirectorios anidados bajo una carpeta raíz especificada hasta un nivel de profundidad cualquiera. No es necesario abrir cada archivo. Simplemente puede recuperar el nombre del archivo o subdirectorio como un `string`, o puede recuperar información adicional en el formato de un objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -56,7 +56,8 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>Programación sólida  
  Un código eficaz de iteración de archivos debe tener en cuenta las numerosas dificultades del sistema de archivos. Para más información sobre el sistema de archivos de Windows, vea [NTFS Technical Reference](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4) (Referencia técnica de NTFS).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO>  
- [LINQ y directorios de archivos](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.IO>  
+- [LINQ y directorios de archivos](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)

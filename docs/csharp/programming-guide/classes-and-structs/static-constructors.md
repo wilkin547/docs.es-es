@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 52c52f68bc3612807b810047044aedbd2c457cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22be72547e96c66df3be115dac30a16559b23659
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315716"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502773"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Constructores estáticos (Guía de programación de C#)
 Un constructor estático se usa para inicializar cualquier dato [estático](../../../csharp/language-reference/keywords/static.md) o realizar una acción determinada que solo debe realizarse una vez. Es llamado automáticamente antes de crear la primera instancia o de hacer referencia a cualquier miembro estático.  
@@ -38,9 +38,10 @@ Un constructor estático se usa para inicializar cualquier dato [estático](../.
   
  [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)

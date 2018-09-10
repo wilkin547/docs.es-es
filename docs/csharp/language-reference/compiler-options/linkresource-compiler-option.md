@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
 ms.openlocfilehash: feca4713fe0e704799e2abbae3818edd0f3a5c84
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43407742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523180"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (Opciones del compilador de C#)
 Crea un vínculo con un recurso de .NET Framework en el archivo de salida. El archivo de recursos no se agrega al archivo de salida. Esta opción difiere de la opción [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), la cual sí inserta un archivo de recursos en el archivo de salida.  
