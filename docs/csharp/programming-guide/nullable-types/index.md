@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39245600"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43885053"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que aceptan valores NULL (Guía de programación de C#)
 
@@ -38,7 +38,7 @@ Los tipos que aceptan valores NULL tienen la siguientes características:
   
 - También puede utilizar los operadores `==` y `!=` con un tipo que acepta valores NULL, como se muestra en el ejemplo siguiente: `if (x != null) y = x.Value;`. Si `a` y `b` son ambos NULL, `a == b` se evalúa como `true`.  
 
-- A partir de C# 7.0, puede usar la coincidencia de patrones tanto para examinar como para obtener un valor de un tipo que acepta valores NULL: `if (x is int xValue) y = xValue;`.
+- A partir de C# 7.0, se puede usar la [coincidencia de patrones](../../pattern-matching.md#the-is-type-pattern-expression) tanto para examinar como para obtener un valor de un tipo que acepta valores NULL: `if (x is int valueOfX) y = valueOfX;`.
   
 - El valor predeterminado de `T?` es una instancia cuya propiedad <xref:System.Nullable%601.HasValue%2A> devuelve `false`.  
 
@@ -56,10 +56,10 @@ Para obtener más información, consulte los temas [Uso de tipos que aceptan val
   
 ## <a name="see-also"></a>Vea también
 
- <xref:System.Nullable%601?displayProperty=nameWithType>  
- <xref:System.Nullable?displayProperty=nameWithType>  
- [Operador !](../../language-reference/operators/null-coalescing-operator.md)  
- [Guía de programación de C#](../index.md)  
- [Guía de C#](../../index.md)  
- [Referencia de C#](../../language-reference/index.md)  
- [Tipos de valores que aceptan valores NULL (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>  
+- <xref:System.Nullable?displayProperty=nameWithType>  
+- [Operador !](../../language-reference/operators/null-coalescing-operator.md)  
+- [Guía de programación de C#](../index.md)  
+- [Guía de C#](../../index.md)  
+- [Referencia de C#](../../language-reference/index.md)  
+- [Tipos de valores que aceptan valores NULL (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
