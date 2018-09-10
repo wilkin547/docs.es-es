@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43394535"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208801"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Información general sobre interoperabilidad (Guía de programación de C#)
 En el tema se describen métodos para habilitar la interoperabilidad entre el código administrado y el código no administrado de C#.  
@@ -57,10 +57,11 @@ En el tema se describen métodos para habilitar la interoperabilidad entre el c�
   
  Para obtener más información, vea [Exponer componentes de .NET Framework en COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) y [Clase COM de ejemplo](../../../csharp/programming-guide/interop/example-com-class.md).  
   
-## <a name="see-also"></a>Vea también  
- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx) (Mejorar el rendimiento interoperativo)  
- [Introducción a la interoperabilidad entre COM y .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
- [Información general sobre la interoperabilidad COM (Visual Basic)](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- [Marshaling between Managed and Unmanaged Code](../../../../docs/framework/interop/interop-marshaling.md) (Calcular las referencias entre el código administrado y el código no administrado)  
- [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx) (Mejorar el rendimiento interoperativo)  
+- [Introducción a la interoperabilidad entre COM y .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Información general sobre la interoperabilidad COM (Visual Basic)](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+- [Marshaling between Managed and Unmanaged Code](../../../../docs/framework/interop/interop-marshaling.md) (Calcular las referencias entre el código administrado y el código no administrado)  
+- [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)

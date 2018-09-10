@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6262822e0916e142c7c543d2e2546c8540cb73a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f52d1067a8aa907c8f1cf8b550eec82d1133b3f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568581"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261751"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Cómo: Agregar la funcionalidad de límite y bloqueo a una colección
 En este ejemplo se muestra cómo agregar la funcionalidad de límite y bloqueo a una clase de colección personalizada. Para ello, se implementa la interfaz <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> en la clase y, después, se usa una instancia de clase como mecanismo de almacenamiento interno para <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Para obtener más información acerca de la funcionalidad de límite y bloqueo, consulte [Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
@@ -28,5 +28,6 @@ En este ejemplo se muestra cómo agregar la funcionalidad de límite y bloqueo a
   
  De forma predeterminada, el almacenamiento de <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> es <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- [Colecciones seguras para subprocesos](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Colecciones seguras para subprocesos](../../../../docs/standard/collections/thread-safe/index.md)

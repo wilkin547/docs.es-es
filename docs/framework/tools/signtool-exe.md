@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409820"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197464"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
@@ -29,7 +29,7 @@ signtool [command] [options] [file_name | ...]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |`command`|Uno de los cuatro comandos (`catdb`, `sign`, `Timestamp` o `Verify`) que especifica una operación para realizar en un archivo. Para obtener una descripción de cada comando, vea la tabla siguiente.|  
 |`options`|Una opción que modifica un comando. Además de las opciones globales `/q` y `/v`, cada comando admite un conjunto único de opciones.|  
@@ -37,7 +37,7 @@ signtool [command] [options] [file_name | ...]
   
  La herramienta Firmar admite los siguientes comandos. Cada comando se utiliza con conjuntos distintos de opciones, que se enumeran en las secciones respectivas.  
   
-|Comando|Description|  
+|Comando|Descripción|  
 |-------------|-----------------|  
 |`catdb`|Agrega un archivo de catálogo a una base de datos de catálogo o bien lo quita de esta. Las bases de datos de catálogo se utilizan para la búsqueda automática de archivos de catálogo y se identifican mediante un GUID. Para obtener una lista de las opciones admitidas por el comando `catdb`, vea [Opciones del comando catdb](../../../docs/framework/tools/signtool-exe.md#catdb).|  
 |`sign`|Firma archivos digitalmente. Las signaturas digitales protegen los archivos contra la manipulación y permiten a los usuarios comprobar el firmante en función de un certificado de firma. Para obtener una lista de las opciones admitidas por el comando `sign`, vea [Opciones del comando sign](../../../docs/framework/tools/signtool-exe.md#sign).|  
@@ -46,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  Las opciones siguientes se aplican a todos los comandos de la herramienta Firmar.  
   
-|Opción global|Description|  
+|Opción global|Descripción|  
 |-------------------|-----------------|  
 |**/q**|No muestra ninguna salida si el comando se ejecuta correctamente y muestra el resultado mínimo si se produce un error en el comando.|  
 |**/v**|Muestra resultados detallados independientemente de si el comando se ejecuta correctamente o no y muestra mensajes de advertencia.|  
@@ -56,7 +56,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>Opciones del comando catdb  
  En la tabla siguiente se enumeran las opciones que se pueden utilizar con el comando `catdb`.  
   
-|Opción de catdb|Description|  
+|Opción de catdb|Descripción|  
 |------------------|-----------------|  
 |`/d`|Especifica que se actualiza la base de datos de catálogo predeterminada. Si no se utiliza la opción `/d` ni la opción `/g`, la herramienta Firmar actualiza el componente del sistema y la base de datos del controlador.|  
 |`/g` *GUID*|Especifica que se actualiza la base de datos de catálogo identificada por el identificador único global *GUID*.|  
@@ -67,7 +67,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>Opciones del comando sign  
  En la tabla siguiente se enumeran las opciones que se pueden utilizar con el comando `sign`.  
   
-|Opción del comando sign|Description|  
+|Opción del comando sign|Descripción|  
 |-------------------------|-----------------|  
 |`/a`|Selecciona automáticamente el mejor certificado de firma. La herramienta Firmar encuentra todos los certificados válidos que cumplan todas las condiciones especificadas y selecciona el que sea válido durante más tiempo. Si esta opción no está presente, la herramienta Firmar solo espera encontrar un certificado de firma válido.|  
 |`/ac`  *file*|Agrega un certificado adicional desde *file* al bloque de signatura.|  
@@ -97,13 +97,13 @@ signtool [command] [options] [file_name | ...]
 |`/u`  *Usage*|Especifica el uso mejorado de clave (EKU) que debe encontrarse en el certificado de firma. El valor de uso se puede especificar mediante un identificador de objetos (OID) o una cadena. El uso predeterminado es "Firma de código" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Especifica el uso de "Comprobación de componentes del sistema de Windows" (1.3.6.1.4.1.311.10.3.6).|  
   
- Para obtener ejemplos de uso, vea [Using SignTool to Sign a File](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx) (Usar SignTool para firmar un archivo).  
+ Para obtener ejemplos de uso, vea [Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file) (Usar SignTool para firmar un archivo).  
   
 <a name="TimeStamp"></a>   
 ## <a name="timestamp-command-options"></a>Opciones del comando TimeStamp  
  En la tabla siguiente se enumeran las opciones que se pueden utilizar con el comando `TimeStamp`.  
   
-|Opción de TimeStamp|Description|  
+|Opción de TimeStamp|Descripción|  
 |----------------------|-----------------|  
 |`/p7`|Agrega marcas de tiempo a archivos PKCS #7.|  
 |`/t`  *URL*|Especifica la dirección URL del servidor con marca de tiempo. El archivo al que se va a agregar la marca de tiempo se debe haber firmado previamente. Se requiere la opción `/t` o `/tr`.|  
@@ -111,12 +111,12 @@ signtool [command] [options] [file_name | ...]
 |`/tp` *index*|Agrega una marca de tiempo a la signatura en *index*.|  
 |`/tr`  *URL*|Especifica la dirección URL del servidor con marca de tiempo RFC 3161. El archivo al que se va a agregar la marca de tiempo se debe haber firmado previamente. Se requiere la opción `/tr` o `/t`.|  
   
- Para obtener un ejemplo de uso, vea [Adding Time Stamps to Previously Signed Files](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx) (Agregar marcas de tiempo a archivos ya firmados).  
+ Para obtener un ejemplo de uso, vea [Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files) (Agregar marcas de tiempo a archivos ya firmados).  
   
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Opciones del comando Verify  
   
-|Opción de Verify|Description|  
+|Opción de Verify|Descripción|  
 |-------------------|-----------------|  
 |`/a`|Especifica que todos los métodos se puedan utilizar para comprobar el archivo. Primero, se buscan las bases de datos de catálogo para determinar si el archivo se firma en un catálogo. Si el archivo no se firma en un catálogo, la herramienta Firmar intenta comprobar la signatura incrustada del archivo. Se recomienda esta opción a la hora de comprobar si se pueden firmar o no archivos en un catálogo. Algunos ejemplos de estos archivos son los archivos o controladores de Windows.|  
 |`/ad`|Busca el catálogo utilizando la base de datos de catálogo predeterminada.|  
@@ -128,7 +128,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|Comprueba la signatura en una posición especificada.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica un algoritmo hash opcional que se usará al buscar un archivo en un catálogo.|  
 |`/kp`|Especifica que la comprobación debe realizarse con la directiva de firma de controladores en modo kernel.|  
-|`/ms`|Utiliza la semántica de comprobación múltiple. Este es el comportamiento predeterminado de una llamada [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) en [!INCLUDE[win8](../../../includes/win8-md.md)] y versiones posteriores.|  
+|`/ms`|Utiliza la semántica de comprobación múltiple. Este es el comportamiento predeterminado de una llamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) en [!INCLUDE[win8](../../../includes/win8-md.md)] y versiones posteriores.|  
 |`/o` *Version*|Comprueba el archivo por versión del sistema operativo. *Version* tiene el siguiente formato: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa el valor subyacente de un miembro de enumeración <xref:System.PlatformID>. **Importante:** Se recomienda el uso del modificador `/o`. Si no se especifica `/o`, SignTool.exe puede devolver resultados inesperados. Por ejemplo, si no incluye el modificador `/o`, los catálogos del sistema que se validan correctamente en un sistema operativo anterior pueden no validarse correctamente en un sistema operativo más reciente.|  
 |`/p7`|Comprueba los archivos PKCS #7. No se usa ninguna directiva existente para la validación de PKCS #7. Se comprueba la signatura y se genera una cadena para el certificado de firma.|  
 |`/pa`|Especifica que se debe usar la directiva de comprobación de Authenticode predeterminada. Si no se especifica la opción `/pa`, la herramienta Firmar utiliza la directiva de comprobación de controladores de Windows. Esta opción no se puede combinar con la opción `catdb`.|  
@@ -137,12 +137,12 @@ signtool [command] [options] [file_name | ...]
 |`/r` *RootSubjectName*|Especifica el nombre del sujeto del certificado raíz al que el certificado de firma debe encadenarse. Este valor puede corresponder a una subcadena del nombre del sujeto completo del certificado raíz.|  
 |`/tw`|Especifica que se debe generar una advertencia si la signatura no tiene marca de tiempo.|  
   
- Para obtener ejemplos de uso, vea [Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx) (Usar SignTool para comprobar una firma de archivo).  
+ Para obtener ejemplos de uso, vea [Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature) (Usar SignTool para comprobar una firma de archivo).  
   
 ## <a name="return-value"></a>Valor devuelto  
  La herramienta Firmar devuelve uno de los siguientes códigos de salida al finalizar.  
   
-|Código de salida|Description|  
+|Código de salida|Descripción|  
 |---------------|-----------------|  
 |0|La ejecución se realizó correctamente.|  
 |1|Error en la ejecución.|  

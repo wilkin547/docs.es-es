@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a382dbea239b66e60d666a0e2e7add01d6d7bd54
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 811a75c9f0350eefc98c32181e859b7583ff74ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753831"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186297"
 ---
 # <a name="scheduling-threads"></a>Programación de subprocesos
 
@@ -21,6 +21,7 @@ Cada subproceso tiene una prioridad de subproceso asignada a él. A los subproce
   
  Los subprocesos están programados para ejecutarse según su prioridad. Aunque los subprocesos se ejecutan durante el tiempo de ejecución, el sistema operativo asigna intervalos de tiempo de procesador a todos los subprocesos. Los detalles del algoritmo de programación utilizado para determinar el orden en que se ejecutan los subprocesos varían en función de cada sistema operativo. En algunos sistemas operativos, el subproceso con la prioridad más alta (de entre los subprocesos que se pueden ejecutar) está programado siempre para que se ejecute primero. Si hay disponibles varios subprocesos con la misma prioridad, el programador recorre los subprocesos con dicha prioridad, dando a cada subproceso un intervalo de tiempo fijo para su ejecución. Siempre que un subproceso con una prioridad más alta esté disponible para su ejecución, los subprocesos con menor prioridad no se llegan a ejecutar. Si no hay más subprocesos ejecutables con una prioridad determinada, el programador pasa a la siguiente prioridad más baja y programa la ejecución de los subprocesos que tienen esa prioridad. Si un subproceso de prioridad superior se convierte en ejecutable, se relega el subproceso de menor prioridad y el subproceso con mayor prioridad se puede ejecutar una vez más. Sobre todo, el sistema operativo también puede ajustar las prioridades de los subprocesos de forma dinámica como una interfaz de usuario de la aplicación se mueve entre el primer y segundo plano. Otros sistemas operativos puede optar por utilizar un algoritmo de programación diferente.  
   
-## <a name="see-also"></a>Vea también  
- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)  
- [Subprocesamiento administrado y no administrado en Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+## <a name="see-also"></a>Vea también
+
+- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Subprocesamiento administrado y no administrado en Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

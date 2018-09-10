@@ -2,12 +2,12 @@
 title: 'Cómo: Ordenar elementos (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: a49b4fea8410075ca8b28f2ef7792738d063e256
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7548f183736ac9ed0ed09d3be775b3ffde6cb255
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319772"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042613"
 ---
 # <a name="how-to-sort-elements-c"></a>Cómo: Ordenar elementos (C#)
 Este ejemplo muestra cómo escribir una consulta que ordene sus resultados.  
@@ -67,6 +67,7 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sorting Data (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md) (Ordenación de datos [C#])  
- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Sorting Data (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md) (Ordenación de datos [C#])  
+- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -5,12 +5,12 @@ ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d3a26d6c3fc500691fa007abfe9c8fd069f9e812
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d26b6df5d26a96bb8fa41dd3a8151fcb4a08b75
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398097"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43773662"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Aislamiento de red para aplicaciones de la Tienda Windows
 Es posible usar las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Http> y <xref:System.Net.Http.Headers> para desarrollar aplicaciones de la Tienda Windows o aplicaciones de escritorio. Cuando se usan en una aplicación de la Tienda Windows, las clases de estos espacios de nombres se ven afectadas por el aislamiento de red, que forma parte del modelo de seguridad para las aplicaciones usado por [!INCLUDE[win8](../../../includes/win8-md.md)]. Las funcionalidades de red correspondientes deben estar habilitadas en el manifiesto de la aplicación de la Tienda Windows para que el sistema permita el acceso a la red.  
@@ -26,12 +26,12 @@ Es posible usar las clases de los espacios de nombres <xref:System.Net>, <xref:S
   
 4.  Implemente y ejecute la aplicación para probarla mediante las herramientas de aislamiento de red proporcionadas para la solución de problemas.  
   
- Para obtener más información sobre cómo configurar las funcionalidades de red y las herramientas de aislamiento que se usan para la solución de problemas de aislamiento de red, vea [Cómo configurar las funcionalidades de aislamiento de red](http://go.microsoft.com/fwlink/?LinkID=228265) en la documentación para desarrolladores de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ Para obtener más información sobre cómo configurar las funcionalidades de red y las herramientas de aislamiento que se usan para la solución de problemas de aislamiento de red, vea [Cómo configurar las funcionalidades de aislamiento de red](https://go.microsoft.com/fwlink/?LinkID=228265) en la documentación para desarrolladores de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Conectar con un servicio web](http://go.microsoft.com/fwlink/?LinkID=245696)  
- [Directrices y lista de comprobación para el aislamiento de red](http://go.microsoft.com/fwlink/?LinkID=228265)  
- [Inicio rápido: conectarse mediante HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
- [Cómo usar controladores HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)  
- [Cómo proteger conexiones HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)  
- [Ejemplo de HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)
+ [Conectar con un servicio web](https://go.microsoft.com/fwlink/?LinkID=245696)  
+ [Directrices y lista de comprobación para el aislamiento de red](https://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Inicio rápido: conectarse mediante HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Cómo usar controladores HttpClient](https://go.microsoft.com/fwlink/?LinkId=245699)  
+ [Cómo proteger conexiones HttpClient](https://go.microsoft.com/fwlink/?LinkId=245698)  
+ [Ejemplo de HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)

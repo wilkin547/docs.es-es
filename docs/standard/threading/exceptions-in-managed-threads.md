@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b3c36f040b506c23315d40d76642b09c0f362b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591578"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865184"
 ---
 # <a name="exceptions-in-managed-threads"></a>Excepciones en subprocesos administrados
 A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente. En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.  
@@ -78,5 +78,6 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
 ## <a name="host-override"></a>Invalidación de host  
  En la versión 2.0 de .NET Framework, un host no administrado puede usar la interfaz [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) de la API de hospedaje para invalidar la directiva de excepciones no controladas predeterminada de Common Language Runtime. Se usa la función [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) para establecer la directiva de excepciones no controladas.  
   
-## <a name="see-also"></a>Vea también  
- [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Vea también
+
+- [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af6e4e8d0d754b97478788422b4dd84eeddc6491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcb2fbf5e0a310156fdc6fac5fe736692e8ec133
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583284"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209217"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Cómo: Usar SpinWait para implementar una operación de espera de dos fases
 En el ejemplo siguiente se muestra cómo utilizar un objeto <xref:System.Threading.SpinWait?displayProperty=nameWithType> para implementar una operación de espera de dos fases. En la primera fase, el objeto de sincronización, `Latch`, gira durante unos ciclos mientras comprueba si el bloqueo está disponible. En la segunda fase, si el bloqueo está disponible, el método `Wait` realiza la devolución sin usar <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> para la espera; en caso contrario, `Wait` realiza la espera.  
@@ -30,6 +30,7 @@ En el ejemplo siguiente se muestra cómo utilizar un objeto <xref:System.Threadi
   
  La salida del registro muestra la frecuencia con que el bloqueo temporal pudo aumentar el rendimiento mediante la adquisición del bloqueo sin usar <xref:System.Threading.ManualResetEvent>.  
   
-## <a name="see-also"></a>Vea también  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vea también
+
+- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)

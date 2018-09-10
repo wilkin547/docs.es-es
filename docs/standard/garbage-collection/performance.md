@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b2102c4e33f551cf3dc71cf83539cdc494e5379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579800"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265174"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 <a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  
@@ -778,5 +778,6 @@ ms.locfileid: "33579800"
   
      Si el valor de `% Time in GC` tiene un pico a la vez que el tiempo de proceso, la recolección de elementos no utilizados está provocando un uso de CPU elevado. De lo contrario, genere un perfil de la aplicación para averiguar dónde se está produciendo el uso elevado.  
   
-## <a name="see-also"></a>Vea también  
- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)

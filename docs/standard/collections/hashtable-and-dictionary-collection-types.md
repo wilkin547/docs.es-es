@@ -12,11 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f682ba370e364629d6b79c5cedd28b4af834e58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4dde57e03e26085d19099e749afd50ba14874a5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195379"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de las colecciones Hashtable y Dictionary
 La clase <xref:System.Collections.Hashtable?displayProperty=nameWithType> y las clases genéricas <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementan la interfaz <xref:System.Collections.IDictionary?displayProperty=nameWithType>. La clase genérica <xref:System.Collections.Generic.Dictionary%602> también implementa la interfaz genérica <xref:System.Collections.Generic.IDictionary%602>. Por lo tanto, cada elemento de esta colección es un par de clave y valor.  
@@ -35,11 +36,12 @@ La clase <xref:System.Collections.Hashtable?displayProperty=nameWithType> y las 
   
  Las clases <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602> tienen la misma funcionalidad que la clase <xref:System.Collections.Hashtable>. Una clase <xref:System.Collections.Generic.Dictionary%602> de un tipo específico (distinto de <xref:System.Object>) proporciona un rendimiento mejor que una clase <xref:System.Collections.Hashtable> para tipos de valor. Esto se debe a que los elementos de <xref:System.Collections.Hashtable> son del tipo <xref:System.Object> y, por lo tanto, las conversiones boxing y unboxing se suelen producir al almacenar o recuperar un tipo de valor. La clase <xref:System.Collections.Concurrent.ConcurrentDictionary%602> debe usarse cuando varios subprocesos puedan tener acceso a la colección simultáneamente.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Hashtable>  
- <xref:System.Collections.IDictionary>  
- <xref:System.Collections.IHashCodeProvider>  
- <xref:System.Collections.Generic.Dictionary%602>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
- [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Collections.Hashtable>  
+- <xref:System.Collections.IDictionary>  
+- <xref:System.Collections.IHashCodeProvider>  
+- <xref:System.Collections.Generic.Dictionary%602>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
+- [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)

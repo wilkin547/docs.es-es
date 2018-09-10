@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4dd3e16edae6e30d93083694a2d2d18c0815933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579540"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192697"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 <a name="top"></a> En el Common Language Runtime (CLR), el recolector de elementos no utilizados actúa como administrador de memoria automático. Proporciona las siguientes ventajas:  
@@ -296,5 +296,6 @@ Recolección de elementos no utilizados de estación de trabajo en segundo plano
  ![Recolección de elementos no utilizados de servidor en segundo plano](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
 Recolección de elementos no utilizados de servidor en segundo plano  
   
-## <a name="see-also"></a>Vea también  
- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)

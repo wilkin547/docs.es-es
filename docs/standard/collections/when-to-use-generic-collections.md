@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ea40542b235dd51bfec38aae9718b2278d7073b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572650"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264602"
 ---
 # <a name="when-to-use-generic-collections"></a>Cuándo utilizar colecciones genéricas
 Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ventaja inmediata de la seguridad de tipos sin necesidad de derivar de un tipo de colección base ni de implementar miembros específicos de tipo. Los tipos de colección genéricos también suelen funcionan mejor que los correspondientes tipos de colección no genéricos (y mejor que los tipos que se derivan de los tipos de colección base no genéricos) cuando los elementos de la colección son tipos de valor; esto se debe a que con los genéricos no es necesario realizar una conversión boxing de los elementos.  
@@ -53,7 +53,8 @@ Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ven
   
  La clase <xref:System.Collections.Generic.List%601> permite especificar sus propias implementaciones de interfaz genérica <xref:System.Collections.Generic.IComparer%601> para la ordenación y búsqueda en la lista. Las clases <xref:System.Collections.Generic.SortedDictionary%602> y <xref:System.Collections.Generic.SortedList%602> también tienen esta capacidad. Además, estas clases le permiten especificar los comparadores cuando se crea la colección. De forma similar, las clases <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.ObjectModel.KeyedCollection%602> le permiten especificar sus propios comparadores de igualdad.  
   
-## <a name="see-also"></a>Vea también  
- [Colecciones y estructuras de datos](../../../docs/standard/collections/index.md)  
- [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)  
- [Genéricos](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Colecciones y estructuras de datos](../../../docs/standard/collections/index.md)  
+- [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [Genéricos](../../../docs/standard/generics/index.md)

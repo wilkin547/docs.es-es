@@ -2,12 +2,12 @@
 title: Refactorización mediante una función pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: ac0cd63790d5600a96c868a8c7f446ceda737eb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340689"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266445"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactorización mediante una función pura (C#)
 En el siguiente ejemplo se refactoriza el ejemplo anterior, [Refactorizar mediante un método de extensión (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar una función pura. En este ejemplo, el código encargado de buscar el texto de un párrafo pasa a formar parte del método estático puro `ParagraphText`.  
@@ -179,7 +179,8 @@ StyleName:Code >Hello World<
   
 -   [Proyectar XML en una forma distinta (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Refactorizar mediante un método de extensión (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
- [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Vea también
+
+- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Refactorizar mediante un método de extensión (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

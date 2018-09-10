@@ -2,12 +2,12 @@
 title: Buscar un atributo del elemento principal (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: 6f796bfb8f8b0051af4e31f6e82a503dbfbbc334
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a6a4724c7e22b15a247622c8afdd592ee4893ab
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318804"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856418"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Buscar un atributo del elemento principal (XPath-LINQ to XML) (C#)
 En este tema se muestra cómo desplazarse hasta el elemento primario y buscar un atributo en él.  
@@ -53,5 +53,6 @@ Results are identical
 id="bk101"  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Vea también
+
+- [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

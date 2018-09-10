@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43452799"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086769"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Tutoriales del lenguaje Visual Basic
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
@@ -62,7 +62,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  [Crear agentes de escucha de registro personalizados](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  Muestra cómo crear un agente de escucha de registro personalizado y configurarlo para escuchar la salida del objeto `My.Application.Log`.  
   
- [Insertar los tipos de los ensamblados administrados ](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Insertar los tipos de los ensamblados administrados ](../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  Describe cómo crear un ensamblado y un programa cliente que inserte tipos desde el mismo.  
   
  [Validar la complejidad de las contraseñas (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,7 +77,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  [Manipulating Files Using .NET Framework Methods](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md) (Manipular archivos usando métodos de .NET Framework)  
  Muestra cómo usar métodos de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para determinar información sobre un archivo, buscar una cadena en un archivo y escribir en un archivo.  
   
- [Conservar un objeto en Visual Basic](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Conservar un objeto en Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Muestra cómo crear un objeto simple y conservar sus datos en un archivo.  
   
  [Compatibilidad del desarrollo de pruebas en primer lugar con la característica de generación a partir del uso](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  

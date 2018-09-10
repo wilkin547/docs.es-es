@@ -2,12 +2,12 @@
 title: 'Cómo: Leer datos de objetos de un archivo XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 59110a5bd0fe738239c0ca8b177a8c775db99ccf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336159"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083941"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Cómo: Leer datos de objetos de un archivo XML (C#)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -61,8 +61,9 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Compruebe siempre las entradas y nunca deserialice datos de un origen que no sea de confianza. El objeto que se ha vuelto a crear se ejecuta en un equipo local con los permisos del código que lo ha deserializado. Compruebe todas las entradas antes de utilizar los datos en la aplicación.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO.StreamWriter>  
- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Escritura de datos de objeto en un archivo XML [C#])  
- [Serialización (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.IO.StreamWriter>  
+- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Escritura de datos de objeto en un archivo XML [C#])  
+- [Serialización (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)

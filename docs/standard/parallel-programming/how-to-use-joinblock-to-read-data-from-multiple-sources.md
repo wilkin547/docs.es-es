@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00c91daf2811ecba01b77d51a74740027ced5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581591"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227628"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Cómo: Usar JoinBlock para leer datos de diferentes orígenes
 En este documento se explica cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> para realizar una operación cuando los datos están disponibles en varios orígenes. También se demuestra cómo usar el modo no expansivo para habilitar varios bloques de combinación para compartir un origen de datos más eficazmente.
@@ -46,5 +46,6 @@ En este documento se explica cómo utilizar la clase <xref:System.Threading.Task
 ## <a name="robust-programming"></a>Programación sólida  
  El uso de las combinaciones no expansivas también puede ayudar a evitar el interbloqueo en la aplicación. En una aplicación de software, el *interbloqueo* se produce cuando dos o más procesos mantienen un recurso y esperan mutuamente a que el otro proceso libere algún otro recurso. Considere una aplicación que define dos objetos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Ambos objetos leen datos de dos bloques de origen compartidos. En modo expansivo, si un bloque de combinación lee desde el primer origen y el segundo bloque de combinación lee desde el segundo origen, se podría producir un interbloqueo de la aplicación porque los dos bloques de combinación esperan a que el otro libere su recurso. En el modo no expansivo, cada bloque de combinación lee de sus orígenes solo cuando todos los datos están disponibles y, por tanto, se elimina el riesgo del interbloqueo.  
   
-## <a name="see-also"></a>Vea también  
- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Vea también
+
+- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

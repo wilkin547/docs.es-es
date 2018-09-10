@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 919dc097d32451c6123e68f8bf4b8f41808f89da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49935c471d10e438763e41b07944047b0924af09
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591682"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864675"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Tutorial: Usar flujos de datos en aplicaciones de Windows Forms
 Este documento muestra cómo crear una red de bloques de flujo de datos que realizan el procesamiento de imágenes en una aplicación de Windows Forms.  
@@ -86,7 +86,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
  En la tabla siguiente se describen los miembros de la red.  
   
-|Miembro|Tipo|Description|  
+|Miembro|Tipo|Descripción|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Acepta una ruta de carpeta como entrada y genera una colección de objetos <xref:System.Drawing.Bitmap> como salida.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Acepta una colección de objetos <xref:System.Drawing.Bitmap> como entrada y produce un mapa de bits compuesto como salida.|  
@@ -131,5 +131,6 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
  ![Aplicación de Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
-## <a name="see-also"></a>Vea también  
- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Vea también
+
+- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

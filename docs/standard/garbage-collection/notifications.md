@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579163"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084954"
 ---
 # <a name="garbage-collection-notifications"></a>Notificaciones de recolección de elementos no utilizados
 Hay situaciones en que una colección de elementos no utilizados completa (es decir, una colección de generación 2) de Common Language Runtime puede afectar negativamente al rendimiento. Esto puede ser un problema especialmente con servidores que procesan grandes volúmenes de solicitudes; en este caso, una recolección grande de elementos no utilizados puede causar un tiempo de espera en la solicitud. Para evitar una recolección grande durante un período crítico, puede recibir una notificación de la proximidad de una recolección grande de elementos no utilizados y adoptar las medidas pertinentes para redirigir la carga de trabajo a otra instancia del servidor. También puede incluir una recolección por su cuenta, siempre que la instancia de servidor actual no necesite procesar solicitudes.  
@@ -54,7 +54,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
 ## <a name="notification-threshold-parameters"></a>Parámetros del umbral de notificación  
  El método <xref:System.GC.RegisterForFullGCNotification%2A> tiene dos parámetros para especificar los valores de umbral de los objetos de generación 2 y del montón de objetos grandes. Cuando se alcanza dichos valores, debe generarse una notificación de recolección de elementos no utilizados. En la siguiente tabla se describen estos parámetros.  
   
-|Parámetro|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Número comprendido entre 1 y 99 que especifica cuándo debe emitirse la notificación basándose en los objetos promocionados en la generación 2.|  
 |`largeObjectHeapThreshold`|Un número comprendido entre 1 y 99 que especifica cuándo debe emitirse la notificación basándose en los objetos asignados en el montón de objetos grandes.|  
@@ -65,7 +65,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  En el ejemplo siguiente, un grupo de solicitudes web entrantes del servicio de servidores. Para simular la carga de trabajo de procesamiento de solicitudes, se agregan matrices de bytes a una colección <xref:System.Collections.Generic.List%601>. Cada servidor registra una notificación de la recolección de elementos no utilizados y luego inicia un subproceso en el método del usuario `WaitForFullGCProc` para supervisar continuamente la enumeración <xref:System.GCNotificationStatus> devuelta por los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A>.  
   
  Los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A> llaman a sus respectivos métodos de usuario de control de eventos cuando se emite una notificación:  
@@ -122,5 +122,6 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)

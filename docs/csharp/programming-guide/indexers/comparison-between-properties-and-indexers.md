@@ -5,17 +5,17 @@ helpviewer_keywords:
 - properties [C#], vs. indexers
 - indexers [C#], vs. properties
 ms.assetid: 3358a89f-44a0-4a4d-bf8c-07237a90af39
-ms.openlocfilehash: a8b347be33ea6acbdf8a78a7af45fd3d0c27f8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a78b97f2cac1f2c49be03bc351d9b6f4b6438e6
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330377"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861447"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>Comparación entre propiedades e indizadores (Guía de programación de C#)
 Los indexadores son como propiedades. Excepto por las diferencias que se muestran en la tabla siguiente, todas las reglas que se definen para los descriptores de acceso de propiedad se aplican también a los descriptores de acceso de indexador.  
   
-|Property|Indexador|  
+|Propiedad.|Indexador|  
 |--------------|-------------|  
 |Permite que los métodos se llamen como si fueran miembros de datos públicos.|Permite que se pueda tener acceso a los elementos de una colección interna de un objeto mediante la notación de matriz en el propio objeto.|  
 |Se ha tenido acceso mediante un nombre simple.|Se ha tenido acceso mediante un índice.|  
@@ -24,7 +24,8 @@ Los indexadores son como propiedades. Excepto por las diferencias que se muestra
 |Un descriptor de acceso [set](../../../csharp/language-reference/keywords/set.md) de una propiedad contiene el parámetro `value` implícito.|Un descriptor de acceso `set` de un indexador tiene la misma lista de parámetros formales que el indexador, y también para el parámetro [value](../../../csharp/language-reference/keywords/value.md).|  
 |Admite la sintaxis abreviada con [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).|No admite la sintaxis abreviada.|  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)

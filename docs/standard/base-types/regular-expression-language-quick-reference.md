@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948610"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041621"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 <a name="top"></a> Una expresión regular es un patrón con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras.  Para obtener una breve introducción, consulte [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "36948610"
 ## <a name="character-escapes"></a>Escapes de carácter  
  El carácter de barra diagonal inversa (\\) en una expresión regular indica que el carácter que le sigue es un carácter especial (como se muestra en la tabla siguiente) o que se debe interpretar literalmente. Para más información, consulte [Escapes de carácter](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
-|Carácter de escape|Description|Modelo|Coincidencias|  
+|Carácter de escape|Descripción|Modelo|Coincidencias|  
 |-----------------------|-----------------|-------------|-------------|  
 |`\a`|Coincide con un carácter de campana, \u0007.|`\a`|"\u0007" en "¡Error!" + '\u0007'|  
 |`\b`|En una clase de caracteres, coincide con un retroceso, \u0008.|`[\b]{3,}`|"\b\b\b\b" en "\b\b\b\b"|  
@@ -70,7 +70,7 @@ ms.locfileid: "36948610"
 ## <a name="character-classes"></a>Clases de caracteres  
  Una clase de caracteres coincide con cualquiera de un juego de caracteres. Las clases de caracteres incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
-|Clase de carácter|Description|Modelo|Coincidencias|  
+|Clase de carácter|Descripción|Modelo|Coincidencias|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *grupo_caracteres* `]`|Coincide con cualquier carácter individual de *grupo_caracteres*. De forma predeterminada, la coincidencia distingue entre mayúsculas y minúsculas.|`[ae]`|"a" en "casa"<br /><br /> "a", "e" en "ave"|  
 |`[^` *grupo_caracteres* `]`|Negación: coincide con cualquier carácter individual que no esté en *grupo_caracteres*. De forma predeterminada, los caracteres de *grupo_caracteres* distinguen entre mayúsculas y minúsculas.|`[^aei]`|"r", "n", "o" en "reino"|  
@@ -91,7 +91,7 @@ ms.locfileid: "36948610"
 ## <a name="anchors"></a>Delimitadores  
  Los delimitadores, o aserciones atómicas de ancho cero, hacen que una coincidencia tenga éxito o no dependiendo de la posición actual en la cadena, pero no hacen que el motor avance por la cadena ni consuma caracteres. Los metacaracteres enumerados en la tabla siguiente son delimitadores. Para obtener más información, consulta [Delimitadores](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
-|Aserción|Description|Modelo|Coincidencias|  
+|Aserción|Descripción|Modelo|Coincidencias|  
 |---------------|-----------------|-------------|-------------|  
 |`^`|De forma predeterminada, la coincidencia debe comenzar al principio de la cadena; en el modo multilínea, debe comenzar al principio de la línea.|`^\d{3}`|"901" en<br /><br /> "901-333-"|  
 |`$`|De forma predeterminada, la coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena; en el modo multilínea, se debe producir antes del final de la línea o antes de `\n` al final de la línea.|`-\d{3}$`|"-333" en<br /><br /> "-901-333"|  
@@ -108,7 +108,7 @@ ms.locfileid: "36948610"
 ## <a name="grouping-constructs"></a>Construcciones de agrupamiento  
  Las construcciones de agrupamiento definen subexpresiones de una expresión regular y, normalmente, capturan subcadenas de una cadena de entrada. Las construcciones de agrupamiento incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
-|Construcción de agrupamiento|Description|Modelo|Coincidencias|  
+|Construcción de agrupamiento|Descripción|Modelo|Coincidencias|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *subexpresión* `)`|Captura la subexpresión coincidente y le asigna un número ordinal basado en uno.|`(\w)\1`|"aa" en "aarón"|  
 |`(?<` *name* `>` *subexpresión* `)`|Captura la subexpresión coincidente en un grupo con nombre.|`(?<double>\w)\k<double>`|"aa" en "aarón"|  
@@ -127,7 +127,7 @@ ms.locfileid: "36948610"
 ## <a name="quantifiers"></a>Cuantificadores  
  Un cuantificador especifica cuántas instancias del elemento anterior (que puede ser un carácter, un grupo o una clase de caracteres) debe haber en la cadena de entrada para que se encuentre una coincidencia. Los cuantificadores incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Quantifiers](quantifiers-in-regular-expressions.md).  
   
-|Cuantificador|Description|Modelo|Coincidencias|  
+|Cuantificador|Descripción|Modelo|Coincidencias|  
 |----------------|-----------------|-------------|-------------|  
 |`*`|Coincide con el elemento anterior cero o más veces.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Coincide con el elemento anterior una o más veces.|`"be+"`|"caí" en "caída", "be" en "bebé"|  
@@ -148,7 +148,7 @@ ms.locfileid: "36948610"
 ## <a name="backreference-constructs"></a>Construcciones de referencia inversa  
  Una referencia inversa permite identificar una subexpresión coincidente previamente más adelante en la misma expresión regular. En la tabla siguiente se enumeran las construcciones de referencia inversa admitidas en las expresiones regulares de .NET. Para obtener más información, consulta [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
   
-|Construcción de referencias inversas|Description|Modelo|Coincidencias|  
+|Construcción de referencias inversas|Descripción|Modelo|Coincidencias|  
 |-----------------------------|-----------------|-------------|-------------|  
 |`\` *número*|Referencia inversa. Coincide con el valor de una subexpresión numerada.|`(\w)\1`|"aa" en "aarón"|  
 |`\k<` *name* `>`|Referencia inversa con nombre Coincide con el valor de una expresión con nombre.|`(?<char>\w)\k<char>`|"aa" en "aarón"|  
@@ -159,7 +159,7 @@ ms.locfileid: "36948610"
 ## <a name="alternation-constructs"></a>Construcciones de alternancia  
  Las estructuras de alternancia modifican una expresión regular para habilitar o no la coincidencia. Estas construcciones incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
   
-|Construcciones de alternancia|Description|Modelo|Coincidencias|  
+|Construcciones de alternancia|Descripción|Modelo|Coincidencias|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Coincide con cualquier elemento separado por el carácter de barra vertical (*&#124;).|<code>th(e&#124;is&#124;at)</code>|"el", "este" en "este es el día. "|  
 |`(?(` *expresión* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si el patrón de expresión regular designado por *expresión* coincide; de lo contrario, coincide con la parte opcional *no* . *expresión* se interpreta como una aserción de ancho cero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" en "A10 C103 910"|  
@@ -171,7 +171,7 @@ ms.locfileid: "36948610"
 ## <a name="substitutions"></a>Sustituciones  
  Las sustituciones son elementos del lenguaje de expresiones regulares que se admiten en modelos de reemplazo. Para obtener más información, consulta [Substitutions](substitutions-in-regular-expressions.md). Los metacaracteres enumerados en la tabla siguiente son aserciones atómicas de ancho cero.  
   
-|Carácter|Description|Modelo|Modelo de reemplazo|Cadena de entrada|Cadena de resultado|  
+|Carácter|Descripción|Modelo|Modelo de reemplazo|Cadena de entrada|Cadena de resultado|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
 |`$` *número*|Sustituye la subcadena que coincide con el grupo *número*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
 |`${` *name* `}`|Sustituye la subcadena que coincide con el grupo con nombre *nombre*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
@@ -196,7 +196,7 @@ ms.locfileid: "36948610"
   
  El motor de expresiones regulares de .NET admite las siguientes opciones insertadas.  
   
-|Opción|Description|Modelo|Coincidencias|  
+|Opción|Descripción|Modelo|Coincidencias|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Usa la coincidencia sin distinción entre mayúsculas y minúsculas.|`\b(?i)a(?-i)a\w+\b`|"aardvark", "aaaAuto" en "aardvark AAAuto aaaAuto Adam breakfast"|  
 |`m`|Usa el modo multilínea. `^` y `$` coinciden con el principio y el final de una línea, en lugar del principio y el final de una cadena.|Para obtener un ejemplo, consulte la sección "Modo multilínea" en [Regular Expression Options](regular-expression-options.md).||  
@@ -216,11 +216,12 @@ ms.locfileid: "36948610"
 |`(?#` *comentario* `)`|Comentario alineado. El comentario termina en el primer paréntesis de cierre.|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [hasta el final de la línea]|Comentario en modo X. El comentario comienza en un carácter `#` sin escape y continúa hasta el final de la línea.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
- <xref:System.Text.RegularExpressions.Regex>  
- [Expresiones regulares](regular-expressions.md)  
- [Clases de expresiones regulares](the-regular-expression-object-model.md)  
- [Ejemplos de expresiones regulares](regular-expression-examples.md)  
- [Expresiones regulares: referencia rápida (descarga en formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Expresiones regulares: referencia rápida (descarga en formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+- <xref:System.Text.RegularExpressions.Regex>  
+- [Expresiones regulares](regular-expressions.md)  
+- [Clases de expresiones regulares](the-regular-expression-object-model.md)  
+- [Ejemplos de expresiones regulares](regular-expression-examples.md)  
+- [Expresiones regulares: referencia rápida (descarga en formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- [Expresiones regulares: referencia rápida (descarga en formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

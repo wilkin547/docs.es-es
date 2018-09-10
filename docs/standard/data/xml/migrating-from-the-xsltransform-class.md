@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bac8d1496463d1224021270347c9480e7ce391e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577403"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190993"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migración desde la clase XslTransform
 En la versión de [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] se ha rediseñado la arquitectura XSLT. La clase <xref:System.Xml.Xsl.XslTransform> se ha reemplazado por la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -117,6 +117,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   Funciones de extensión de XPath relacionadas con el esquema: <xref:System.Xml.Xsl.XslCompiledTransform> no admite estas funciones de forma nativa. No obstante, es posible implementarlas como funciones de extensión.  
   
-## <a name="see-also"></a>Vea también  
- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+## <a name="see-also"></a>Vea también
+
+- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

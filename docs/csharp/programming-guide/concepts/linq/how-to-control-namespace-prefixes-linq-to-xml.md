@@ -2,12 +2,12 @@
 title: 'Cómo: Controlar prefijos de espacio de nombres (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: af864139d56bd3ebb22cca6369b82539b9d007da
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417376"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44182146"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Cómo: Controlar prefijos de espacio de nombres (C#) (LINQ to XML)
 En este tema se describe cómo puede controlar los prefijos de espacios de nombres al serializar un árbol XML.  
@@ -54,5 +54,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Vea también
+
+- [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

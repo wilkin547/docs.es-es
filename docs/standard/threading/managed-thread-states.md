@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4266aea9bf206d127e2837955dcc00cc23f4119b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587728"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207335"
 ---
 # <a name="managed-thread-states"></a>Estados de subprocesos administrados
 La propiedad <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> proporciona una máscara de bits que indica el estado del subproceso actual. Un subproceso está siempre en al menos uno de los estados posibles en la enumeración <xref:System.Threading.ThreadState> y puede estar en varios estados al mismo tiempo.  
@@ -48,8 +48,9 @@ if ((state & (Unstarted | Stopped)) == 0)   // implies Running
   
  Una vez que un subproceso abandona el estado <xref:System.Threading.ThreadState.Unstarted> como resultado de una llamada a <xref:System.Threading.Thread.Start%2A>, nunca puede volver al estado <xref:System.Threading.ThreadState.Unstarted> . Un subproceso nunca puede abandonar el estado <xref:System.Threading.ThreadState.Stopped> .  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadState>  
- [Subprocesamiento](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadState>  
+- [Subprocesamiento](../../../docs/standard/threading/index.md)

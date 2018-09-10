@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
 ms.openlocfilehash: cf6fa0e87654d0f9d61f34ea9b29ad80921a5720
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43401711"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084860"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (Opciones del compilador de C#)
 La opción **-checked** especifica si una instrucción aritmética de enteros que produce un valor fuera del intervalo del tipo de datos y que no está en el ámbito de las palabras clave [checked](../../../csharp/language-reference/keywords/checked.md) o [unchecked](../../../csharp/language-reference/keywords/unchecked.md) provocará una excepción en tiempo de ejecución.  

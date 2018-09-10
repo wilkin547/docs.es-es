@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf18fb7238eb35b5ceb1624c14b83486485ddc1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90b3e7246046a979f3ee02e332fbb6a843ea9e8c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579631"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864792"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 .NET Framework. es independiente del lenguaje. Esto significa que, como desarrollador, puede utilizar uno de los muchos lenguajes que tienen como destino .NET Framework; por ejemplo, C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL y Windows PowerShell. Puede acceder a los tipos y miembros de las bibliotecas de clases desarrolladas para .NET Framework sin necesidad de conocer el lenguaje en el que se escribieron originalmente y sin necesidad de seguir ninguna de las convenciones del lenguaje original. Si es un desarrollador de componentes, podrá acceder a su componente desde cualquier aplicación de .NET Framework, con independencia del lenguaje.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579631"
   
  El [sistema de tipos común](../../docs/standard/base-types/common-type-system.md) de .NET Framework incluye varios tipos integrados que se admiten directamente en Common Language Runtime y que se codifican de forma especial en los metadatos de un ensamblado. De estos tipos intrínsecos, los tipos enumerados en la tabla siguiente son conformes a CLS.  
   
-|Tipo conforme a CLS|Description|  
+|Tipo conforme a CLS|Descripción|  
 |-------------------------|-----------------|  
 |<xref:System.Byte>|Entero de 8 bits sin signo|  
 |<xref:System.Int16>|Entero de 16 bits con signo|  
@@ -185,7 +185,7 @@ ms.locfileid: "33579631"
   
  Los tipos intrínsecos enumerados en la tabla siguiente no son conformes a CLS.  
   
-|Tipo no conforme|Description|Alternativa conforme a CLS|  
+|Tipo no conforme|Descripción|Alternativa conforme a CLS|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|Tipo de datos enteros de 8 bits con signo|<xref:System.Int16>|  
 |<xref:System.TypedReference>|Puntero a un objeto y su tipo en tiempo de ejecución|Ninguna|  
@@ -585,5 +585,6 @@ vbc example.vb /r:UtilityLib.dll
 csc example.cs /r:UtilityLib.dll  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.CLSCompliantAttribute>
+## <a name="see-also"></a>Vea también
+
+- <xref:System.CLSCompliantAttribute>

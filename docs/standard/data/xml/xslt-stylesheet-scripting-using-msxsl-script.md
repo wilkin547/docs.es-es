@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b1fb13e33f759c44e090a9294548c224e10344e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577181"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264849"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Escritura de scripts de hojas de estilos XSLT mediante &lt;msxsl:script&gt;
 Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`.  
@@ -49,7 +49,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  Las funciones se pueden declarar dentro del elemento `msxsl:script`. La tabla siguiente muestra los espacios de nombres que se admiten de forma predeterminada. Es posible utilizar clases fuera de los espacios de nombres enumerados. Sin embargo, el nombre de las clases debe estar completo.  
   
-|Espacios de nombres predeterminados|Description|  
+|Espacios de nombres predeterminados|Descripción|  
 |------------------------|-----------------|  
 |Sistema|Clase del sistema.|  
 |System.Collection|Clases de colección|  
@@ -229,5 +229,6 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>Vea también  
- [La clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Vea también
+
+- [La clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

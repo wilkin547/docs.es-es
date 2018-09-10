@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 173efcf485d5eb019b22a329a9d96b5cbe6a2f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592306"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879759"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
 ## <a name="what-is-a-parallel-query"></a>¿Qué es una consulta en paralelo?  
@@ -37,7 +37,7 @@ ms.locfileid: "33592306"
   
  Además de los operadores de consulta estándar, la clase <xref:System.Linq.ParallelEnumerable> contiene un conjunto de métodos que permiten comportamientos específicos de la ejecución en paralelo. Estos métodos específicos de PLINQ se muestran en la tabla siguiente.  
   
-|Operador ParallelEnumerable|Description|  
+|Operador ParallelEnumerable|Descripción|  
 |---------------------------------|-----------------|  
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Punto de entrada de PLINQ. Especifica que el resto de la consulta se debe ejecutar en paralelo, si es posible.|  
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Especifica que el resto de la consulta se debe ejecutar en secuencia, como una consulta LINQ no en paralelo.|  
@@ -120,6 +120,7 @@ ms.locfileid: "33592306"
 ## <a name="measuring-plinq-performance"></a>Medición del rendimiento de PLINQ  
  En muchos casos, una consulta se puede ejecutar en paralelo, pero la sobrecarga que implica configurar la consulta en paralelo supera el beneficio obtenido en el rendimiento. Si una consulta no realiza mucho cálculo o si el origen de datos es pequeño, una consulta PLINQ podría ser más lenta que una consulta LINQ to Objects secuencial. Puede usar el analizador de rendimiento en paralelo en Visual Studio Team Server para comparar el rendimiento de diversas consultas, ubicar cuellos de botella en el procesamiento y determinar si la consulta se ejecuta en paralelo o secuencialmente. Para más información, consulte [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) y el artículo sobre [cómo medir el rendimiento de las consultas PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
-## <a name="see-also"></a>Vea también  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)
+## <a name="see-also"></a>Vea también
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

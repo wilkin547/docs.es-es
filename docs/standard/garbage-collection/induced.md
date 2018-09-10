@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436953782049800e89298932278af4e450fc10de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575868"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192553"
 ---
 # <a name="induced-collections"></a>Colecciones inducidas
 En la mayoría de los casos, el recolector de elementos no utilizados puede determinar cuál es el mejor momento para realizar una recolección y se debe permitir su ejecución de forma independiente. Hay ocasiones excepcionales en que una recolección forzada puede mejorar el rendimiento de la aplicación. En estos casos, se puede inducir la recolección de elementos no utilizados utilizando el método <xref:System.GC.Collect%2A?displayProperty=nameWithType> para forzar una recolección de elementos no utilizados.  
@@ -22,7 +22,7 @@ En la mayoría de los casos, el recolector de elementos no utilizados puede dete
 ## <a name="gc-collection-mode"></a>Modo de colección de GC  
  Puede usar una de las sobrecargas del método <xref:System.GC.Collect%2A?displayProperty=nameWithType>, que incluye un valor <xref:System.GCCollectionMode> para especificar el comportamiento de una colección forzada, como se indica a continuación.  
   
-|Valor de `GCCollectionMode`|Description|  
+|Valor de `GCCollectionMode`|Descripción|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|Usa el valor predeterminado de la recolección de elementos no utilizados para la versión de .NET en ejecución.|  
 |<xref:System.GCCollectionMode.Forced>|Obliga a que la recolección de elementos no utilizados se produzca inmediatamente. Esto equivale a llamar a la sobrecarga <xref:System.GC.Collect?displayProperty=nameWithType>. Tiene como consecuencia una recolección completa de bloqueo de todas las generaciones.<br /><br /> También puede compactar el montón de objetos grandes si establece la propiedad <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> en <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> antes de forzar una recolección de elementos no utilizados de bloqueo completa inmediata.|  
@@ -36,6 +36,7 @@ En la mayoría de los casos, el recolector de elementos no utilizados puede dete
 |<xref:System.GCCollectionMode.Forced> o <xref:System.GCCollectionMode.Default>|Se realiza una recolección de bloqueo lo antes posible. Si una colección en segundo plano está en curso y la generación es 0 o 1, el método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> desencadena inmediatamente una colección de bloqueo y vuelve cuando la colección finaliza. Si una colección en segundo plano está en curso y el parámetro `generation` es 2, el método espera hasta que finaliza la colección en segundo plano, desencadena una generación de bloqueo 2 y luego vuelve.|Se realiza una recolección lo antes posible. El método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> solicita una colección en segundo plano, pero esto no se garantiza; puede que aún se realice una colección de bloqueo, dependiendo de las circunstancias. Si una colección en segundo plano ya está en curso, el método vuelve inmediatamente.|  
 |<xref:System.GCCollectionMode.Optimized>|Se puede realizar una recolección de bloqueo, dependiendo del estado del recolector de elementos no utilizados y del parámetro `generation`. El recolector de elementos no utilizados intenta proporcionar un rendimiento óptimo.|Se puede realizar una recolección, según el estado del recolector de elementos no utilizados. El método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> solicita una colección en segundo plano, pero esto no se garantiza; puede que aún se realice una colección de bloqueo, dependiendo de las circunstancias. El recolector de elementos no utilizados intenta proporcionar un rendimiento óptimo. Si una colección en segundo plano ya está en curso, el método vuelve inmediatamente.|  
   
-## <a name="see-also"></a>Vea también  
- [Modos de latencia](../../../docs/standard/garbage-collection/latency.md)  
- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Modos de latencia](../../../docs/standard/garbage-collection/latency.md)  
+- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)

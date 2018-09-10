@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b16cfeda88b8e700c4d473962155a8510ce7df2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574613"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262378"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 Las referencias inversas proporcionan una forma cómoda de identificar un carácter o subcadena repetidos dentro de una cadena. Por ejemplo, si la cadena de entrada contiene varias apariciones de una subcadena arbitraria, puede buscar una coincidencia con la primera aparición con un grupo de captura y después usar una referencia inversa para buscar una coincidencia con las siguientes apariciones de la subcadena.  
@@ -49,7 +49,7 @@ Las referencias inversas proporcionan una forma cómoda de identificar un carác
   
  En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una cadena. Define una expresión regular, `(\w)\1`, que consta de los siguientes elementos.  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`(\w)`|Coincide con un carácter que se usa para formar palabras y se lo asigna al primer grupo de captura.|  
 |`\1`|Coincide con el siguiente carácter que sea igual que el valor del primer grupo de captura.|  
@@ -70,7 +70,7 @@ Las referencias inversas proporcionan una forma cómoda de identificar un carác
   
  En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una cadena. Define una expresión regular, `(?<char>\w)\k<char>`, que consta de los siguientes elementos.  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |`(?<char>\w)`|Coincide con un carácter que se usa para formar palabras y se lo asigna a un grupo de captura denominado `char`.|  
 |`\k<char>`|Coincide con el siguiente carácter que sea igual que el valor del grupo de captura `char`.|  
@@ -100,7 +100,7 @@ En cambio, si *nombre* es la representación de cadena de un número y al grupo 
   
  En el ejemplo siguiente, se incluye un patrón de expresión regular, `(?<1>a)(?<1>\1b)*`, que redefine el grupo con nombre \1. En la tabla siguiente, se describe cada patrón de la expresión regular.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`(?<1>a)`|Coincide con el carácter "a" y asigna el resultado al grupo de captura denominado `1`.|  
 |`(?<1>\1b)*`|Coincide con 0 o 1 apariciones del grupo denominado `1` junto con una "b" y asigna el resultado al grupo de captura denominado `1`.|  
@@ -120,7 +120,7 @@ En cambio, si *nombre* es la representación de cadena de un número y al grupo 
   
  Si un grupo no ha capturado ninguna subcadena, no se define una referencia inversa a ese grupo y no coincide nunca. Así lo ilustra el patrón de expresión regular `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` que se define de la siguiente forma:  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Comienza la búsqueda de coincidencias en un límite de palabras.|  
 |`(\p{Lu}{2})`|Coincide con dos letras mayúsculas. Este es el primer grupo de captura.|  
@@ -133,5 +133,6 @@ En cambio, si *nombre* es la representación de cadena de un número y al grupo 
  [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
  [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  
   
-## <a name="see-also"></a>Vea también  
- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Vea también
+
+- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7d1d95030d2bc9f9288ae134471c150a37291b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bd2468c7b68a9c79e7418a32294676fb468e1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582264"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042639"
 ---
 # <a name="spinlock"></a>SpinLock
 La estructura <xref:System.Threading.SpinLock> es un primitivo de sincronización de exclusión mutua y de bajo nivel que itera mientras espera a que se adquiera un bloqueo. En los equipos con varios núcleos, cuando se prevea que los tiempos de espera van ser breves y si la contención es mínima, <xref:System.Threading.SpinLock> puede funcionar mejor que otros tipos de bloqueos. Sin embargo, se recomienda usar <xref:System.Threading.SpinLock> solo cuando determine mediante la generación de perfiles que el método <xref:System.Threading.Monitor?displayProperty=nameWithType> o los métodos <xref:System.Threading.Interlocked> reducen significativamente el rendimiento del programa.  
@@ -25,5 +25,6 @@ La estructura <xref:System.Threading.SpinLock> es un primitivo de sincronizació
   
  <xref:System.Threading.SpinLock> admite un modo *thread*-*tracking* que puede usar durante la fase de desarrollo para ayudar a realizar un seguimiento del subproceso que está reteniendo el bloqueo en un momento determinado. El modo de seguimiento de subprocesos es muy útil para la depuración, pero se recomienda apagarlo en la versión de lanzamiento del programa porque puede ralentizar el rendimiento. Para más información, vea [Habilitar el modo de seguimiento de subproceso en el bloqueo SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
-## <a name="see-also"></a>Vea también  
- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vea también
+
+- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390618"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864555"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Subprocesamiento administrado y no administrado en Windows
 La administración de todos los subprocesos se realiza mediante la clase <xref:System.Threading.Thread> , incluidos los subprocesos creados por Common Language Runtime y los creados fuera del runtime que entran en el entorno administrado para ejecutar código. El runtime supervisa todos los subprocesos del proceso que han ejecutado alguna vez código en el entorno de ejecución administrado. No realiza un seguimiento de ningún otro subproceso. Los subprocesos pueden acceder al entorno de ejecución administrado a través de la interoperabilidad COM (porque el runtime expone los objetos administrados como objetos COM a los entornos no administrados), la función COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) y la invocación de plataforma.  
@@ -63,9 +63,10 @@ La administración de todos los subprocesos se realiza mediante la clase <xref:S
 ## <a name="blocking-issues"></a>Problemas de bloqueo  
  Si un subproceso realiza una llamada no administrada al sistema operativo que ha bloqueado el subproceso en código no administrado, el runtime no tomará el control de él para <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. En el caso de <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, el tiempo de ejecución marca el subproceso para **Abort** y toma el control de él cuando vuelve a introducir código administrado. Lo preferible para usted es usar un bloqueo administrado en vez de no administrado. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> y demás responden todos a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> y <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Además, si su subproceso está en un contenedor uniproceso, todas estas operaciones de bloqueo administrado suministrarán correctamente mensajes en su contenedor mientras el subproceso está bloqueado.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
- <xref:System.Threading.ThreadState>  
- <xref:System.EnterpriseServices.ServicedComponent>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.ThreadState>  
+- <xref:System.EnterpriseServices.ServicedComponent>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Monitor>

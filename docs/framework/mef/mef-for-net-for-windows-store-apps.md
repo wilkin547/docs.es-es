@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c2c6cd701f15ca950d399cf3074ee229534d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388864"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227420"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF de .NET para aplicaciones de la Tienda Windows
 <xref:System.Composition?displayProperty=nameWithType> y sus espacios de nombres secundarios contiene tipos para desarrollar aplicaciones [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] extensibles con Managed Extensibility Framework (MEF). Estos espacios de nombres forman parte del subconjunto [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] del sistema operativo [!INCLUDE[win8](../../../includes/win8-md.md)].  
@@ -24,9 +24,9 @@ ms.locfileid: "33388864"
   
 -   <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> proporciona los tipos MEF utilizados internamente por el motor de composición.  
   
- Para más información acerca de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y una lista de espacios de nombres y tipos que contiene, consulte [Información general de .NET para aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312) en el Centro de desarrollo de Windows.  
+ Para más información acerca de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y una lista de espacios de nombres y tipos que contiene, consulte [Información general de .NET para aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312) en el Centro de desarrollo de Windows.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de .NET para aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312)  
- [.NET para aplicaciones de la Tienda Windows: API admitidas](http://go.microsoft.com/fwlink/p/?LinkID=247912)  
+ [Información general de .NET para aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312)  
+ [.NET para aplicaciones de la Tienda Windows: API admitidas](https://go.microsoft.com/fwlink/p/?LinkID=247912)  
  [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

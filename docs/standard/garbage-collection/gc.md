@@ -4,12 +4,12 @@ description: Obtenga información sobre por qué la administración de memoria a
 ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-ms.openlocfilehash: b9ce8b1fec5c6fc0808b86f06408c3f5d612e492
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578149"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194448"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Administración automática de la memoria y recolección de elementos no utilizados
 
@@ -47,7 +47,5 @@ En el caso de la mayoría de los objetos creados por la aplicación, puede utili
 
 ## <a name="see-also"></a>Vea también
 
-[System.GC](xref:System.GC)
-
-[Recolección de elementos no utilizados en .NET](index.md)
-
+- [System.GC](xref:System.GC)
+- [Recolección de elementos no utilizados en .NET](index.md)

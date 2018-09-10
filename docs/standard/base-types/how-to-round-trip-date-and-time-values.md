@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a1cafc7ed6e497e5aab9cd33654f3aa3d4d98c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573191"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193268"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Cómo: Aplicar acciones de ida y vuelta a valores de fecha y hora
 En muchas aplicaciones, un valor de fecha y hora sirve para identificar inequívocamente un único punto en el tiempo. Este tema muestra cómo guardar y restaurar un valor <xref:System.DateTime>, un valor <xref:System.DateTimeOffset> y un valor de fecha y hora con información sobre la zona horaria, de manera que el valor restaurado identifique la misma hora que el valor guardado.  
@@ -99,7 +99,8 @@ En muchas aplicaciones, un valor de fecha y hora sirve para identificar inequív
   
 -   Cada ejemplo de código, excepto la clase `DateInTimeZone`, debe incluirse en una clase o en módulo de Visual Basic, ajustado en métodos y con una llamada al método `Main`.  
   
-## <a name="see-also"></a>Vea también  
- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+## <a name="see-also"></a>Vea también
+
+- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

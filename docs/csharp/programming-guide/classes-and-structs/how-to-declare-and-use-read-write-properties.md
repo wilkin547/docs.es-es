@@ -8,12 +8,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: d6a7083e1c0cf0dc5c076a69dee15fc39e234d53
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 77db2841d6ef9af21d38736f39e6041699ca13d5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172334"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180267"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Cómo: Declarar y usar propiedades de lectura y escritura (Guía de programación de C#)
 Las propiedades proporcionan la comodidad de los miembros de datos públicos sin los riesgos que provienen del acceso sin comprobar, sin controlar y sin proteger a los datos de un objeto. Esto se consigue mediante los *descriptores de acceso*: métodos especiales que asignan y recuperan valores del miembro de datos subyacente. El descriptor de acceso [set](../../../csharp/language-reference/keywords/set.md) permite que los miembros de datos se asignen, y el descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md) recupera los valores de los miembros de datos.  
@@ -54,7 +54,8 @@ person.SetAge(person.GetAge() + 1);
   
  Tenga en cuenta que `ToString` no se usa explícitamente en el programa. Se invoca de manera predeterminada mediante las llamadas a `WriteLine`.  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)

@@ -2,12 +2,12 @@
 title: Proyecciones y transformaciones (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
-ms.openlocfilehash: dfd10011646fb758215c8d472dacf7e16296493f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 835383e472362d38ded3862042609eaaa508efbe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929800"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43747839"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>Proyecciones y transformaciones (LINQ to XML) (C#)
 En esta sección se proporcionan ejemplos de proyecciones y transformaciones [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -25,5 +25,6 @@ En esta sección se proporcionan ejemplos de proyecciones y transformaciones [!I
 |[Cómo: Generar archivos de texto a partir de XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|Muestra cómo transformar un archivo XML en un archivo de texto no XML.|  
 |[Cómo: Generar XML a partir de archivos CSV (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Muestra cómo usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para analizar un archivo CSV y generar XML a partir de él.|  
   
-## <a name="see-also"></a>Vea también  
- [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Vea también
+
+- [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

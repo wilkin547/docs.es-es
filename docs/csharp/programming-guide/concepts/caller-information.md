@@ -2,19 +2,19 @@
 title: Información del llamador (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 6f0cd4d9d8fc85cb15431ccb4c76eee14b3f67c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 048e91ad337f74ef04a2a03412a44a0be0ef9506
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320695"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212456"
 ---
 # <a name="caller-information-c"></a>Información del llamador (C#)
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea en el código fuente y el nombre de miembro del llamador. Esta información resulta útil para el seguimiento y la depuración, así como para crear herramientas de diagnóstico.  
   
  Para obtener esta información, se usan los atributos que se aplican a los parámetros opcionales, que tienen valores predeterminados. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Atributo|Description|Tipo|  
+|Atributo|Descripción|Tipo|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea en el archivo de código fuente en el que se llama al método.|`Integer`|  
@@ -75,8 +75,9 @@ public void TraceMessage(string message,
 |Constructor de atributo|Nombre del miembro al que se aplica el atributo. Si el atributo es cualquier elemento dentro de un miembro (como un parámetro, un valor devuelto o un parámetro de tipo genérico), el resultado es el nombre del miembro asociado a este elemento.|  
 |Ningún miembro contenedor (por ejemplo, nivel de ensamblado o atributos que se aplican a tipos)|El valor predeterminado del parámetro opcional.|  
   
-## <a name="see-also"></a>Vea también  
- [Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Atributos comunes (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
- [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Conceptos de programación (C#)](../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Atributos comunes (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+- [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Conceptos de programación (C#)](../../../csharp/programming-guide/concepts/index.md)

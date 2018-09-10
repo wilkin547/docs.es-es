@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4402bf58ea853d8a373592eec274a8bf75e7e90c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 956dc7daad91d9daa3ac950d7f5897404dd314c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925747"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041270"
 ---
 # <a name="enumeration-format-strings"></a>Cadenas de formato de enumeración
 Puede usar el método <xref:System.Enum.ToString%2A?displayProperty=nameWithType> para crear un objeto de cadena que represente el valor de cadena, numérico o hexadecimal del miembro de una enumeración. Este método toma una de las cadenas de formato de enumeración para especificar el valor que quiere que se devuelva.
@@ -50,4 +50,4 @@ Luego se puede usar el método `Color.ToString(System.String)` para mostrar el v
 
 ## <a name="see-also"></a>Vea también
 
-[Aplicación de formato a tipos](formatting-types.md)
+- [Aplicación de formato a tipos](formatting-types.md)

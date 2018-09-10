@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbe0178033338754c9e412dfcac993f042d943d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4bdf31b34a60e29c3b406bb996c52462cd1207d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575501"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084886"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Llamar a métodos sincrónicos de forma asincrónica
 .NET Framework permite llamar a cualquier método de forma asincrónica. Para ello, es necesario que defina un delegado con la misma firma que el método al que desea llamar. Common Language Runtime definirá automáticamente los métodos `BeginInvoke` y `EndInvoke` para este delegado, con las firmas adecuadas.  
@@ -110,6 +110,7 @@ ms.locfileid: "33575501"
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
  [!code-vb[AsyncDelegateExamples#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/callback.vb#5)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Delegate>  
- [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Delegate>  
+- [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579579"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221914"
 ---
 # <a name="globalization"></a>Globalización
 La globalización implica diseñar y desarrollar una aplicación de uso internacional que admita interfaces localizadas y datos regionales para usuarios de varias referencias culturales. Antes de comenzar la fase de diseño, debe determinar qué referencias culturales admitirá la aplicación. Aunque una aplicación se dirige a una sola referencia cultural o región de forma predeterminada, puede diseñarla y escribirla de tal forma que se pueda ampliar fácilmente a los usuarios de otras referencias culturales o regiones.  
@@ -369,6 +369,7 @@ La globalización implica diseñar y desarrollar una aplicación de uso internac
   
 -   El usuario puede personalizar la configuración específica de la referencia cultural mediante la aplicación **Región e idioma** del Panel de control. Al crear una instancia de un objeto <xref:System.Globalization.CultureInfo>, puede determinar si muestra estas personalizaciones de usuario mediante una llamada al constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, para las aplicaciones de usuario final, debe respetar las preferencias del usuario para que se le presenten los datos en un formato que espera.  
   
-## <a name="see-also"></a>Vea también  
- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)  
- [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>Vea también
+
+- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)  
+- [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md)

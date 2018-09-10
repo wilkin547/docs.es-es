@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24016ea68e17aa66432928c43d1de970fc13a55b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571919"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204960"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Cómo: Convertir en números datos numéricos proporcionados por el usuario en controles web
 Dado que una página web puede mostrarse en cualquier lugar del mundo, los usuarios pueden proporcionar datos numéricos en un control <xref:System.Web.UI.WebControls.TextBox> en un número casi ilimitado de formatos. Como resultado, es muy importante determinar la configuración regional y la referencia cultural del usuario de la página web. Al analizar las entradas del usuario, puede aplicar las convenciones de formato definidas por la configuración regional y la referencia cultural del usuario.  
@@ -71,6 +71,7 @@ Dado que una página web puede mostrarse en cualquier lugar del mundo, los usuar
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Para evitar que un usuario inserte el script en la secuencia HTML, la entrada del usuario nunca debe devolverse directamente en la respuesta del servidor. En su lugar, debe codificarse con el método <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Análisis de cadenas numéricas](../../../docs/standard/base-types/parsing-numeric.md)
+## <a name="see-also"></a>Vea también
+
+- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Análisis de cadenas numéricas](../../../docs/standard/base-types/parsing-numeric.md)

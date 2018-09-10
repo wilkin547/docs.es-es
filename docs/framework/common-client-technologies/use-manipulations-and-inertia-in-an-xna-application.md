@@ -3,11 +3,11 @@ title: Usar manipulaciones e inercia en una aplicación XNA
 ms.date: 03/30/2017
 ms.assetid: b7c18905-850c-4da4-8977-a074406a4263
 ms.openlocfilehash: 70b8d0c5c098089b6f16ef817ff86698f68cf7c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478148"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44248909"
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>Usar manipulaciones e inercia en una aplicación XNA
 En este artículo se describe cómo usar manipulaciones y procesamiento de inercia en una aplicación Microsoft XNA para controlar el movimiento de las piezas de juego. Antes de leer este artículo, debe estar familiarizado con el tema [Manipulations and Inertia Overview](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md) (Información general sobre manipulaciones e inercia) y estar familiarizado con los conceptos básicos de programación con XNA.  

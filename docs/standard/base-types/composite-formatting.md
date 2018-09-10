@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579189"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264927"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 La característica de formato compuesto de .NET toma una lista de objetos y una cadena de formato compuesto como entrada. Una cadena de formato compuesto está formada por texto fijo combinado con marcadores de posición indizados, que reciben el nombre de elementos de formato, y que se corresponden con los objetos de la lista. La operación de formato genera una cadena de resultado compuesta por el texto fijo original combinado con la representación de cadena de los objetos de la lista.  
@@ -156,16 +156,17 @@ La característica de formato compuesto de .NET toma una lista de objetos y una 
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Console.WriteLine%2A>  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- [Interpolación de cadenas en C#](../../csharp/language-reference/tokens/interpolated.md)  
- [Interpolated Strings (Visual Basic Reference)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) [Cadenas interpoladas (referencia de Visual Basic)]  
- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
- [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
- [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Console.WriteLine%2A>  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>  
+- [Interpolación de cadenas en C#](../../csharp/language-reference/tokens/interpolated.md)  
+- [Interpolated Strings (Visual Basic Reference)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) [Cadenas interpoladas (referencia de Visual Basic)]  
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
+- [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Cadenas de formato TimeSpan estándar](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
+- [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

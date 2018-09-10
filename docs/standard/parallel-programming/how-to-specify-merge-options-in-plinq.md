@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f30245b398ae894e7226d1e94046fc9111dcf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8914d3c443971f73e6f3fa366c26567bae60dbe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580450"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189473"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>Cómo: Especificar opciones de fusión mediante combinación en PLINQ
 En este ejemplo se muestra cómo especificar las opciones de combinación que se aplicarán a todos los operadores subsiguientes en una consulta PLINQ. No es necesario establecer las opciones de combinación explícitamente, pero, en caso de establecerlas, se puede mejorar el rendimiento. Para más información sobre las opciones de combinación, consulte las [opciones de combinación en PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
@@ -31,6 +31,7 @@ En este ejemplo se muestra cómo especificar las opciones de combinación que se
   
  En casos donde la opción <xref:System.Linq.ParallelMergeOptions.AutoBuffered> incurre en una latencia indeseable antes de que se produzca el primer elemento, pruebe la opción <xref:System.Linq.ParallelMergeOptions.NotBuffered> para proporcionar elementos de resultados más rápido y sin problemas.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq.ParallelMergeOptions>  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Linq.ParallelMergeOptions>  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

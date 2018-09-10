@@ -5,19 +5,19 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 61818b153bb74c5c0da053f381fd1ed9132c066b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318229"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087564"
 ---
 # <a name="members-c-programming-guide"></a>Miembros (Guía de programación de C#)
 Las clases y structs tienen miembros que representan sus datos y comportamiento. Los miembros de una clase incluyen todos los miembros declarados en la clase, junto con todos los miembros (excepto constructores y finalizadores) declarados en todas las clases de su jerarquía de herencia. Los miembros privados de clases base se heredan en las clases derivadas, pero estas no pueden tener acceso a ellos.  
   
  En la tabla siguiente se enumeran los tipos de miembros que puede contener una clase o struct:  
   
-|Miembro|Description|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |[Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)|Los campos son variables declaradas en el ámbito de clase. Un campo puede ser un tipo numérico integrado o una instancia de otra clase. Por ejemplo, una clase de calendario puede tener un campo con la fecha actual.|  
 |[Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)|Las constantes son campos o propiedades cuyo valor se establece en tiempo de compilación y no se puede cambiar.|  
@@ -30,16 +30,17 @@ Las clases y structs tienen miembros que representan sus datos y comportamiento.
 |[Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)|En C#, los finalizadores se usan en raras ocasiones. Son métodos a los que llama el motor de ejecución del runtime cuando el objeto está a punto de quitarse de la memoria. Generalmente se utilizan para asegurarse de que los recursos que se deben liberar se controlan apropiadamente.|  
 |[Tipos anidados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Los tipos anidados son tipos declarados dentro de otro tipo. Los tipos anidados se usan a menudo para describir objetos utilizados únicamente por los tipos que los contienen.|  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
- [Eventos](../../../csharp/programming-guide/events/index.md)  
- [Tipos anidados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [Operadores sobrecargables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Eventos](../../../csharp/programming-guide/events/index.md)  
+- [Tipos anidados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operadores sobrecargables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

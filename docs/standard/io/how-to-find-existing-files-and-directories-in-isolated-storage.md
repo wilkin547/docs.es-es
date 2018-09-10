@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 866be7970c43051dd7e2bf8d45ae779aca130a45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574883"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197817"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Cómo: Buscar archivos y directorios existentes en almacenamiento aislado
 Para buscar un directorio en el almacenamiento aislado, use el método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Este método adopta una cadena que representa un patrón de búsqueda. Puede usar caracteres comodín de un solo carácter (?) y de varios caracteres (*) en el patrón de búsqueda, pero los caracteres comodín deben aparecer en la parte final del nombre. Por ejemplo, `directory1/*ect*` es una cadena de búsqueda válida, pero `*ect*/directory2` no lo es.  
@@ -40,6 +40,7 @@ Para buscar un directorio en el almacenamiento aislado, use el método <xref:Sys
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)

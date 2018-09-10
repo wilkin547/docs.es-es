@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aef49f70f3a60151aa053a1a94a06bc71401531e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575445"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262235"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilador XSLT (xsltc.exe)
 El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. La hoja de estilos compilada se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. No se pueden generar ensamblados firmados con xsltc.exe.  
@@ -25,13 +25,13 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
 ## <a name="argument"></a>Argumento  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |`sourceFile`|Especifica el nombre de la hoja de estilos. La hoja de estilos debe ser un archivo local o bien estar ubicada en la intranet.|  
   
 ## <a name="options"></a>Opciones  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Especifica el nombre de la clase para la hoja de estilos siguiente. El nombre de la clase puede ser completo.<br /><br /> De forma predeterminada, el nombre de la clase es igual al de la hoja de estilos. Por ejemplo, si se compila la hoja de estilos customer.xsl, el nombre predeterminado de la clase será customers.|  
 |`/debug[`+&#124;-`]`|Especifica si se debe generar o no información de depuración.<br /><br /> Si se especifica la opción `+` o `/debug`, el compilador generará información de depuración y la almacenará en el archivo de base de datos del programa (PDB). El nombre del archivo PDB generado será `assemblyName`.pdb.<br /><br /> Si se especifica la opción `-`, que será la utilizada en caso de que no especifique `/debug`, no se generará información de depuración. Se genera un ensamblado listo para ser distribuido. **Nota:** Si se compila en modo de depuración, es posible que ello afecte significativamente al rendimiento del XSLT.|  
@@ -82,7 +82,8 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [Realización de una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [Realización de una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

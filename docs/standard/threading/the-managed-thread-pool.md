@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33592423"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268765"
 ---
 # <a name="the-managed-thread-pool"></a>Grupo de subprocesos administrado
 
@@ -87,12 +87,12 @@ Hay varios escenarios en los que es adecuado crear y administrar sus propios sub
   
 ## <a name="see-also"></a>Vea también
 
- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
- [Biblioteca TPL](../parallel-programming/task-parallel-library-tpl.md)  
- [Devolver un valor a partir de una tarea](../parallel-programming/how-to-return-a-value-from-a-task.md)  
- [Objetos y características de subprocesos](threading-objects-and-features.md)  
- [Subprocesos y subprocesamiento](threads-and-threading.md)  
- [Asynchronous File I/O](../io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)  
- [Timers](timers.md) (Temporizadores)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
+- [Biblioteca TPL](../parallel-programming/task-parallel-library-tpl.md)  
+- [Devolver un valor a partir de una tarea](../parallel-programming/how-to-return-a-value-from-a-task.md)  
+- [Objetos y características de subprocesos](threading-objects-and-features.md)  
+- [Subprocesos y subprocesamiento](threads-and-threading.md)  
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)  
+- [Timers](timers.md) (Temporizadores)  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 847d25ae760a2ec91c4ad5979f6b2e4de5dbc5cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ed8614e1af3a52b9519c82a4b5c169c2fa3188f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568789"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221641"
 ---
 # <a name="inferring-an-xml-schema"></a>Deducción de esquema XML
 Describe cómo utilizar la clase del Modelo de objetos de esquema (SOM) <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML a partir de la estructura de un documento XML.  
@@ -27,7 +27,8 @@ Describe cómo utilizar la clase del Modelo de objetos de esquema (SOM) <xref:Sy
  [Reglas para deducir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)  
  Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el tipo de datos para atributos y elementos.  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a>Vea también
+
+- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

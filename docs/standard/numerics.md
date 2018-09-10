@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a795fb52c123840c1ba7b82f77d6745feba89b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588702"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209502"
 ---
 # <a name="numerics-in-the-net-framework"></a>Valores numéricos en .NET Framework
 .NET Framework admite los tipos primitivos estándar de entero numérico y de punto flotante, así como <xref:System.Numerics.BigInteger>, un tipo entero sin límite inferior ni superior teórico, <xref:System.Numerics.Complex>, un tipo que representa números complejos y un conjunto de tipos de vector habilitados para SIMD en el espacio de nombres <xref:System.Numerics>.  
@@ -77,5 +77,6 @@ ms.locfileid: "33588702"
   
  También se puede descargar SIMD como un [paquete NuGet](https://www.nuget.org/packages/System.Numerics.Vectors).  El paquete NuGET también incluye una estructura <xref:System.Numerics.Vector%601> genérica que le permite crear un vector de cualquier tipo numérico primitivo. (Los tipos numéricos primitivos incluyen todos los tipos numéricos en el espacio de nombres <xref:System>, salvo para <xref:System.Decimal>). Además, la estructura <xref:System.Numerics.Vector%601> ofrece una biblioteca de métodos útiles a los que se puede llamar cuando se trabaja con vectores.  
   
-## <a name="see-also"></a>Vea también  
- [Elementos esenciales de aplicaciones](../../docs/standard/application-essentials.md)
+## <a name="see-also"></a>Vea también
+
+- [Elementos esenciales de aplicaciones](../../docs/standard/application-essentials.md)

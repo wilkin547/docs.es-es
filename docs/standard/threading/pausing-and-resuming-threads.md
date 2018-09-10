@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77dcdc95e0ca9d570c896fb036e0577f0475e164
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753829"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137530"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausa e interrupción de subprocesos
 
@@ -49,10 +49,11 @@ Las maneras más habituales de sincronizar las actividades de los subprocesos so
   
 -   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> activa un subproceso de cualquier tipo de espera que pueda haber y hace que se genere <xref:System.Threading.ThreadAbortException> en el subproceso. Para detalles, consulte [Destrucción de subprocesos](../../../docs/standard/threading/destroying-threads.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadInterruptedException>  
- <xref:System.Threading.ThreadAbortException>  
- [Subprocesamiento](../../../docs/standard/threading/index.md)  
- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)  
- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadInterruptedException>  
+- <xref:System.Threading.ThreadAbortException>  
+- [Subprocesamiento](../../../docs/standard/threading/index.md)  
+- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)

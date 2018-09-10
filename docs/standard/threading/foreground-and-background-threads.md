@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476dc75a569224db405eb7498ecb35eb6bda24d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583084"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081334"
 ---
 # <a name="foreground-and-background-threads"></a>Subprocesos de primer y segundo plano
 Un subproceso administrado es un subproceso en segundo plano o un subproceso en primer plano. Los subprocesos en segundo plano son idénticos a los subprocesos en primer plano con una excepción: un subproceso en segundo plano no mantiene el entorno de ejecución administrado en ejecución. Una vez que todos los subprocesos en primer plano se han detenido en un proceso administrado (donde el archivo .exe es un ensamblado administrado), el sistema detiene todos los subprocesos en segundo plano y se cierra.  
@@ -32,7 +32,8 @@ Un subproceso administrado es un subproceso en segundo plano o un subproceso en 
   
  Si utiliza un subproceso para controlar una actividad, como una conexión de socket, establezca su propiedad <xref:System.Threading.Thread.IsBackground%2A> en `true` para que el subproceso no impida la terminación del proceso.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadAbortException>
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadAbortException>

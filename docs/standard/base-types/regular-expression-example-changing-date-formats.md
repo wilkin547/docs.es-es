@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d2d5bf67368e445123fce43afe07065a31b1f30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568074"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262677"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Ejemplo de expresiones regulares: Cambiar formatos de fecha
 En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para reemplazar las fechas con el formato *mm*/*dd*/*aa* con fechas que tienen el formato *dd*-*mm*-*aa*.  
@@ -37,7 +37,7 @@ En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularE
 ## <a name="comments"></a>Comentarios  
  El patrón de la expresión regular `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(?<month>\d{1,2})`|Buscar coincidencias con uno o dos dígitos decimales. Es el grupo `month` capturado.|  
@@ -49,7 +49,7 @@ En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularE
   
  El patrón `${day}-${month}-${year}` define la cadena de reemplazo como se muestra en la siguiente tabla.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`$(day)`|Agregar la cadena capturada por el grupo de captura `day`.|  
 |`-`|Agregar un guión.|  
@@ -57,5 +57,6 @@ En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularE
 |`-`|Agregar un guión.|  
 |`$(year)`|Agregar la cadena capturada por el grupo de captura `year`.|  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vea también
+
+- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)

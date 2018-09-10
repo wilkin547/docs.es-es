@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592189"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188545"
 ---
 # <a name="threads-and-threading"></a>Subprocesos y subprocesamiento
 Los sistemas operativos usan procesos para separar las distintas aplicaciones que ejecutan. Los subprocesos son la unidad básica a la que el sistema operativo asigna tiempo de procesador, y más de un subproceso puede ejecutar código dentro de ese proceso. Cada subproceso mantiene controladores de excepciones, una prioridad de programación y un conjunto de estructuras que el sistema usa para guardar el contexto del subproceso hasta que esté programado. El contexto del subproceso incluye toda la información que el subproceso necesita para reanudar sin problemas la ejecución, incluido el conjunto de pila y registros de CPU del subproceso, en el espacio de direcciones del proceso de host del subproceso.  
@@ -89,8 +89,9 @@ Los sistemas operativos usan procesos para separar las distintas aplicaciones qu
 > [!NOTE]
 >  En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime intercepta silenciosamente algunas excepciones, por ejemplo, en los subprocesos del grupo de subprocesos. Esto puede dañar el estado de la aplicación y puede acabar haciendo que las aplicaciones no respondan, lo cual puede ser muy difícil de depurar.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.ThreadPool>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Sincronizar datos para subprocesamiento múltiple](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [The Managed Thread Pool](../../../docs/standard/threading/the-managed-thread-pool.md) (Clase ThreadPool administrada)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.ThreadPool>  
+- <xref:System.ComponentModel.BackgroundWorker>  
+- [Sincronizar datos para subprocesamiento múltiple](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [The Managed Thread Pool](../../../docs/standard/threading/the-managed-thread-pool.md) (Clase ThreadPool administrada)

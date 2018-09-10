@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579371"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087198"
 ---
 # <a name="xml-document-object-model-dom"></a>Modelo de objetos de documento (DOM) XML
 La clase Modelo de objetos de documento XML (DOM) es una representación en la memoria de un documento XML. DOM permite leer, manipular y modificar un documento XML mediante programación. La clase **XmlReader** también lee XML, aunque proporciona acceso de solo avance y de solo lectura sin almacenamiento en memoria caché. Esto significa que no hay funciones para editar los valores de un atributo o contenido de un elemento, ni la posibilidad de agregar y quitar nodos con **XmlReader**. La edición es la función principal de DOM. Es la forma común y estructurada mediante la que se representan datos XML en la memoria, aunque los datos XML reales se almacenan de forma lineal cuando se encuentran en un archivo o proceden de otro objeto. A continuación se muestran datos XML:  
@@ -76,6 +76,7 @@ Estructura de documentos XML
   
  DOM resulta más útil para leer datos XML en la memoria y cambiar su estructura, agregar o quitar nodos, o modificar los datos mantenidos en un nodo como en el texto contenido en un elemento. No obstante, hay otras clases disponibles que son más rápidas que DOM en otros escenarios. Para tener un acceso rápido, solo hacia delante y sin almacenamiento en caché a secuencias de XML, utilice **XmlReader** y **XmlWriter**. Si necesita acceso aleatorio con un modelo de cursor y **XPath**, utilice la clase **XPathNavigator**.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de nodos XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [Asignación de la jerarquía de objetos a datos XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a>Vea también
+
+- [Tipos de nodos XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Asignación de la jerarquía de objetos a datos XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

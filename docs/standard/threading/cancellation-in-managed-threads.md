@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 088faaf454d3b188cff681fb7c41f3966b2e93fd
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592176"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44228109"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelación en subprocesos administrados
 A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework usa un modelo unificado para la cancelación cooperativa de operaciones asincrónicas o sincrónicas de ejecución prolongada. Este modelo se basa en un objeto ligero denominado token de cancelación. El objeto que invoca una o más operaciones cancelables, por ejemplo creando un nuevo subproceso o tarea, pasa el token a cada operación. Las operaciones individuales pueden pasar a su vez copias del token a otras operaciones. En algún momento posterior, el objeto que creó el token puede usarlo para solicitar que las operaciones se detengan. Solo el objeto solicitante puede emitir la solicitud de cancelación y cada agente de escucha es responsable de observar la solicitud y responder a ella de manera puntual.  
@@ -54,7 +54,7 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET
 ## <a name="cancellation-types"></a>Tipos de cancelación  
  El marco de cancelación se implementa como un conjunto de tipos relacionados. Estos tipos se enumeran en la tabla siguiente.  
   
-|Nombre de tipo|Description|  
+|Nombre de tipo|Descripción|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|Objeto que se crea un token de cancelación y también emite la solicitud de cancelación para todas las copias de ese token.|  
 |<xref:System.Threading.CancellationToken>|Tipo de valor ligero pasado a uno o varios agentes de escucha, normalmente como un parámetro de método. Los agentes de escucha supervisan el valor de la propiedad `IsCancellationRequested` del token mediante sondeo, devolución de llamada o identificador de espera.|  
@@ -148,5 +148,6 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> son ejemplos de clases que siguen estas instrucciones. Para obtener más información, consulte [Cancelación de tareas](../../../docs/standard/parallel-programming/task-cancellation.md) y [Cómo: Cancelar una consulta PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
-## <a name="see-also"></a>Vea también  
- [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Vea también
+
+- [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)

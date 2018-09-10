@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590778"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188272"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tareas secundarias asociadas y desasociadas
 Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que se crea en el delegado de usuario de otra tarea, conocida como *tarea primaria*. Una tarea secundaria puede estar desasociada o asociada. Una *tarea secundaria desasociada* es una tarea que se ejecuta independientemente de su elemento principal. Una *tarea secundaria asociada* es una tarea anidada que se crea con la opción <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> y cuyo elemento primario no le prohíbe asociarse de forma explícita o predeterminada. Una tarea puede crear cualquier número de tareas secundarias asociadas y desasociadas, con la única limitación de los recursos del sistema.  
@@ -78,6 +78,7 @@ Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Thread
   
  Puede que también desee evitar que una tarea secundaria se adjunte a su tarea primaria cuando la tarea secundaria no finaliza a tiempo. Dado que una tarea primaria no finaliza hasta que finalizan todas las tareas secundarias, una tarea secundaria que se ejecute durante mucho tiempo puede provocar que el rendimiento general de la aplicación sea mediocre. Para obtener un ejemplo que muestra cómo mejorar el rendimiento de la aplicación impidiendo que una tarea se asocie a su tarea primaria, consulte [Cómo: Evitar que una tarea secundaria se asocie a su elemento primario](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
-## <a name="see-also"></a>Vea también  
- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+## <a name="see-also"></a>Vea también
+
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
+- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)

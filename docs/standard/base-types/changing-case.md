@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f29a92c0d0b8961c178b7a92ea5964a1575a48db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570553"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262536"
 ---
 # <a name="changing-case-in-net"></a>Cambiar mayúsculas y minúsculas en .NET
 Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá estar seguro de si usará mayúsculas o minúsculas para escribir los datos. Normalmente querrá que las cadenas usen mayúsculas y minúsculas de forma coherente, especialmente si se van a mostrar en la interfaz de usuario. En la tabla siguiente se describen tres métodos para cambiar las mayúsculas y minúsculas. Los dos primeros métodos proporcionan una sobrecarga que acepta una referencia cultural.  
@@ -70,6 +70,7 @@ Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá est
   
  Recuerde que, aunque tiene en cuenta la referencia cultural, el método <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> no proporciona reglas de mayúsculas y minúsculas lingüísticamente correctas. En el ejemplo anterior, el método convierte "a tale of two cities" en "A Tale Of Two Cities". Sin embargo, el uso lingüísticamente correcto de las mayúsculas y minúsculas de título para la referencia cultural en-US es "A Tale of Two Cities".  
   
-## <a name="see-also"></a>Vea también  
- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)  
- [Realizar operaciones de cadenas que no distinguen entre referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>Vea también
+
+- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Realizar operaciones de cadenas que no distinguen entre referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

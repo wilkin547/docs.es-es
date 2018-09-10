@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5757a3a0175fc1ba65f0d2e29b3b24714e460ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b5ff264f9a781c95ccf9bdbabf4b29806016362
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570432"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890846"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>Transformaciones XSLT en distintos almacenes
 > [!NOTE]
@@ -20,5 +20,6 @@ ms.locfileid: "33570432"
   
  El DOM de XML proporciona acceso a los datos de documentos XML y clases adicionales para leer, escribir y navegar por documentos XML. Estas clases son compatibles en el espacio de nombres <xref:System.Xml>, que también unifica el DOM de XML con los servicios de acceso a los datos proporcionados por ADO.NET. <xref:System.Xml.XmlDataDocument> proporciona acceso relacional a los datos. <xref:System.Xml.XmlDataDocument> asigna código XML a los datos relacionales en un <xref:System.Data.DataSet> de ADO.NET. Cualquier aplicación basada en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] puede utilizar las clases del espacio de nombres <xref:System.Xml> para tener acceso y manipular documentos XML y datos relacionales en <xref:System.Xml.XmlDataDocument>. Esta implementación permite el uso de arquitecturas en varias capas para recopilar y distribuir datos. Para obtener más información, vea [Integración de XML con datos relacionales y ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).  
   
-## <a name="see-also"></a>Vea también  
- [La clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Vea también
+
+- [La clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

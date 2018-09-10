@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf91aa52b03f5b843a11147d8f5c28ce6f7a2e83
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 730c6abfe9d49c319d1438a0821ad47e19fc0638
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999185"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192734"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 
@@ -47,7 +47,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  En la tabla siguiente se describen los especificadores de formato de fecha y hora personalizados, y se muestra la cadena de resultado producida por cada especificador de formato. De forma predeterminada, las cadenas de resultado reflejan las convenciones de formato de la referencia cultural en-us. Si un especificador de formato determinado genera una cadena de resultado localizada, el ejemplo también indica la referencia cultural a la que se aplica dicha cadena. Vea la sección Notas para obtener información adicional sobre cómo usar cadenas de formato de fecha y hora personalizado.
 
 | Especificador de formato | Descripción | Ejemplos |
-|----------------------|-----------------|--------------|
+| ---------------------- | ----------------- | -------------- |
 |"d"|El día del mes, de 1 a 31.<br /><br /> Más información: [El especificador de formato personalizado "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|El día del mes, de 01 a 31.<br /><br /> Más información: [El especificador de formato personalizado "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"ddd"|El nombre abreviado del día de la semana.<br /><br /> Más información: [El especificador de formato personalizado "ddd"](#dddSpecifier).|2009-06-15T13:45:30 -> Mon (en-US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lun. (fr-FR)|
@@ -100,6 +100,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  En las secciones siguientes se proporciona información adicional sobre cada especificador de formato de fecha y hora personalizado. A menos que se indique lo contrario, cada especificador genera una representación de cadena idéntica independientemente de que se use con un valor <xref:System.DateTime> o <xref:System.DateTimeOffset>.
 
 <a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>Especificador de formato personalizado "d"
  El especificador de formato personalizado "d" representa el día del mes como un número de 1 a 31. Un día con un solo dígito tiene un formato sin un cero inicial.
 
@@ -113,6 +114,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-custom-format-specifier"></a>Especificador de formato personalizado "dd"
  La cadena de formato personalizado "dd" representa el día del mes como un número de 01 a 31. Un día con un solo dígito tiene un formato con un cero inicial.
 
@@ -124,6 +126,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="dddSpecifier"></a> 
+
 ## <a name="the-ddd-custom-format-specifier"></a>Especificador de formato personalizado "ddd"
  El especificador de formato personalizado "ddd" representa el nombre abreviado del día de la semana. El nombre abreviado adaptado del día de la semana se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada.
 
@@ -135,6 +138,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="ddddSpecifier"></a> 
+
 ## <a name="the-dddd-custom-format-specifier"></a>Especificador de formato personalizado "dddd"
  El especificador de formato personalizado "dddd" (más cualquier número de especificadores "d" adicionales) representa el nombre completo del día de la semana. El nombre adaptado del día de la semana se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada.
 
@@ -146,6 +150,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>Especificador de formato personalizado "f"
  El especificador de formato personalizado "f" representa el dígito más significativo de la fracción de segundos; es decir, representa las décimas de segundo de un valor de fecha y hora.
 
@@ -161,6 +166,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Especificador de formato personalizado "ff"
  El especificador de formato personalizado "ff" representa los dos dígitos más significativos de la fracción de segundos; es decir, representa las centésimas de segundo de un valor de fecha y hora.
 
@@ -172,6 +178,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="fffSpecifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Especificador de formato personalizado "fff"
  El especificador de formato personalizado "fff" representa los tres dígitos más significativos de la fracción de segundos; es decir, representa los milisegundos de un valor de fecha y hora.
 
@@ -183,6 +190,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="ffffSpecifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Especificador de formato personalizado "ffff"
  El especificador de formato personalizado "ffff" representa los cuatro dígitos más significativos de la fracción de segundos; es decir, representa las diezmilésimas de segundo de un valor de fecha y hora.
 
@@ -191,6 +199,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="fffffSpecifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Especificador de formato personalizado "fffff"
  El especificador de formato personalizado "fffff" representa los cinco dígitos más significativos de la fracción de segundo; es decir, representa las cienmilésimas de segundo de un valor de fecha y hora.
 
@@ -199,6 +208,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="ffffffSpecifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Especificador de formato personalizado "ffffff"
  El especificador de formato personalizado "ffffff" representa los seis dígitos más significativos de la fracción de segundos; es decir, representa las millonésimas de segundo de un valor de fecha y hora.
 
@@ -207,6 +217,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="fffffffSpecifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Especificador de formato personalizado "fffffff"
  El especificador de formato personalizado "fffffff" representa los siete dígitos más significativos de la fracción de segundos; es decir, representa las diezmillonésimas de segundo de un valor de fecha y hora.
 
@@ -215,6 +226,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>Especificador de formato personalizado "F"
  El especificador de formato personalizado "F" representa el dígito más significativo de la fracción de segundos; es decir, representa las décimas de segundo de un valor de fecha y hora. Si el dígito es cero, no se muestra nada.
 
@@ -230,6 +242,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Especificador de formato personalizado "FF"
  El especificador de formato personalizado "FF" representa los dos dígitos más significativos de la fracción de segundos; es decir, representa las centésimas de segundo de un valor de fecha y hora. Sin embargo, no se muestran los ceros finales ni los dígitos de dos ceros.
 
@@ -241,6 +254,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="FFF_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Especificador de formato personalizado "FFF"
  El especificador de formato personalizado "FFF" representa los tres dígitos más significativos de la fracción de segundos; es decir, representa los milisegundos de un valor de fecha y hora. Sin embargo, no se muestran los ceros finales ni los dígitos de tres ceros.
 
@@ -252,6 +266,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="FFFF_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Especificador de formato personalizado "FFFF"
  El especificador de formato personalizado "FFFF" representa los cuatro dígitos más significativos de la fracción de segundos; es decir, representa las diezmilésimas de segundo de un valor de fecha y hora. Sin embargo, no se muestran los ceros finales ni los dígitos de cuatro ceros.
 
@@ -260,6 +275,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="FFFFF_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Especificador de formato personalizado "FFFFF"
  El especificador de formato personalizado "FFFFF" representa los cinco dígitos más significativos de la fracción de segundos; es decir, representa las cienmilésimas de segundo de un valor de fecha y hora. Sin embargo, no se muestran los ceros finales ni los dígitos de cinco ceros.
 
@@ -268,6 +284,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="FFFFFF_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Especificador de formato personalizado "FFFFFF"
  El especificador de formato personalizado "FFFFFF" representa los seis dígitos más significativos de la fracción de segundos; es decir, representa las millonésimas de segundo de un valor de fecha y hora. Sin embargo, no se muestran los ceros finales ni los dígitos de seis ceros.
 
@@ -276,6 +293,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="FFFFFFF_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Especificador de formato personalizado "FFFFFFF"
  El especificador de formato personalizado "FFFFFFF" representa los siete dígitos más significativos de la fracción de segundos; es decir, representa las diezmillonésimas de segundo de un valor de fecha y hora. Sin embargo, no se muestran los ceros finales ni los dígitos de siete ceros.
 
@@ -284,6 +302,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="gSpecifier"></a> 
+
 ## <a name="the-g-or-gg-custom-format-specifier"></a>Especificador de formato personalizado "g" o "gg"
  Los especificadores de formato personalizado "g" o "gg" (más cualquier número de especificadores "g" adicionales) representan el período o la era, como d.C. La operación de formato hace caso omiso de este especificador si la fecha a la que se va a dar formato no tiene una cadena de período o de era asociada.
 
@@ -296,7 +315,8 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
 
  [Volver a la tabla](#table)
 
-<a name="hSpecifier"></a>
+<a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>Especificador de formato personalizado "h"
  El especificador de formato personalizado "h" representa la hora como un número del 1 al 12; es decir, la hora se representa como en un reloj de 12 horas que cuenta las horas enteras desde medianoche o mediodía. Una hora determinada después de la medianoche no se distingue de la misma hora después del mediodía. No se redondea la hora y las horas con un solo dígito no tienen un cero inicial. Por ejemplo, dada una hora de 5:43 de la mañana o de la tarde, este especificador de formato personalizado muestra "5".
 
@@ -310,6 +330,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>Especificador de formato personalizado "hh"
  El especificador de formato personalizado "hh" (más cualquier número de especificadores "h" adicionales) representa la hora como un número del 01 al 12; es decir, la hora se representa como en un reloj de 12 horas que cuenta las horas enteras desde medianoche o mediodía. Una hora determinada después de la medianoche no se distingue de la misma hora después del mediodía. No se redondea la hora y las horas con un solo dígito tienen un cero inicial. Por ejemplo, dada una hora de 5:43 de la mañana o de la tarde, este especificador de formato muestra "05".
 
@@ -321,6 +342,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="H_Specifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>Especificador de formato personalizado "H"
  El especificador de formato personalizado "H" representa la hora como un número del 0 al 23; es decir, la hora se representa como en un reloj de 24 horas de base cero que cuenta las horas desde medianoche. Una hora con un solo dígito tiene un formato sin un cero inicial.
 
@@ -334,6 +356,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="HH_Specifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>Especificador de formato personalizado "HH"
  El especificador de formato personalizado "HH" (más cualquier número de especificadores "H" adicionales) representa la hora como un número del 00 al 23; es decir, la hora se representa como en un reloj de 24 horas de base cero que cuenta las horas desde medianoche. Una hora con un solo dígito tiene un formato con un cero inicial.
 
@@ -345,6 +368,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="KSpecifier"></a> 
+
 ## <a name="the-k-custom-format-specifier"></a>Especificador de formato personalizado "K"
  El especificador de formato personalizado "K" representa la información de zona horaria de un valor de fecha y hora. Cuando este formato se usa con valores <xref:System.DateTime>, el valor de la propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> define la cadena de resultado.
 
@@ -366,6 +390,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>Especificador de formato personalizado "m"
  El especificador de formato personalizado "m" representa el minuto como un número de 0 a 59. El minuto representa los minutos enteros que han transcurrido desde la última hora. Un minuto con un solo dígito tiene un formato sin un cero inicial.
 
@@ -379,6 +404,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>Especificador de formato personalizado "mm"
  El especificador de formato personalizado "mm" (más cualquier número de especificadores "m" adicionales) representa el minuto como un número de 00 a 59. El minuto representa los minutos enteros que han transcurrido desde la última hora. Un minuto con un solo dígito tiene un formato con un cero inicial.
 
@@ -390,6 +416,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="M_Specifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>Especificador de formato personalizado "M"
  El especificador de formato personalizado "M" representa el mes como un número del 1 al 12 (o del 1 al 13 para los calendarios con 13 meses). Un mes con un solo dígito tiene un formato sin un cero inicial.
 
@@ -403,6 +430,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="MM_Specifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>Especificador de formato personalizado "MM"
  El especificador de formato personalizado "MM" representa el mes como un número del 01 al 12 (o del 1 al 13 para los calendarios con 13 meses). Un mes con un solo dígito tiene un formato con un cero inicial.
 
@@ -414,6 +442,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="MMM_Specifier"></a> 
+
 ## <a name="the-mmm-custom-format-specifier"></a>Especificador de formato personalizado "MMM"
  El especificador de formato personalizado "MMM" representa el nombre abreviado del mes. El nombre abreviado adaptado del mes se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada.
 
@@ -425,6 +454,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="MMMM_Specifier"></a> 
+
 ## <a name="the-mmmm-custom-format-specifier"></a>Especificador de formato personalizado "MMMM"
  El especificador de formato personalizado "MMMM" representa el nombre completo del mes. El nombre adaptado del mes se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada.
 
@@ -436,6 +466,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>Especificador de formato personalizado "s"
  El especificador de formato personalizado "s" representa los segundos como un número de 0 a 59. El resultado representa los segundos enteros que han transcurrido desde el último minuto. Un segundo con un solo dígito tiene un formato sin un cero inicial.
 
@@ -449,6 +480,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>Especificador de formato personalizado "ss"
  El especificador de formato personalizado "ss" (más cualquier número de especificadores "s" adicionales) representa los segundos como un número de 00 a 59. El resultado representa los segundos enteros que han transcurrido desde el último minuto. Un segundo con un solo dígito tiene un formato con un cero inicial.
 
@@ -460,6 +492,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="tSpecifier"></a> 
+
 ## <a name="the-t-custom-format-specifier"></a>Especificador de formato personalizado "t"
  El especificador de formato personalizado "t" representa el primer carácter del designador AM/PM. El designador adaptado adecuado se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> o <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada. El designador AM se usa para todas las horas de 0:00:00 (medianoche) a 11:59:59.999. El designador PM se usa para todas las horas de 12:00:00 (mediodía) a 23:59:59.999.
 
@@ -473,6 +506,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="ttSpecifier"></a> 
+
 ## <a name="the-tt-custom-format-specifier"></a>Especificador de formato personalizado "tt"
  El especificador de formato personalizado "tt" (más cualquier número de especificadores "t" adicionales) representa designador AM/PM completo. El designador adaptado adecuado se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> o <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada. El designador AM se usa para todas las horas de 0:00:00 (medianoche) a 11:59:59.999. El designador PM se usa para todas las horas de 12:00:00 (mediodía) a 23:59:59.999.
 
@@ -486,6 +520,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="ySpecifier"></a> 
+
 ## <a name="the-y-custom-format-specifier"></a>Especificador de formato personalizado "y"
  El especificador de formato personalizado "y" representa el año como un número de uno o dos dígitos. Si el año tiene más de dos dígitos, en el resultado sólo aparecen los dos dígitos de orden inferior. Si el primer dígito de un año de dos dígitos comienza con un cero (por ejemplo, 2008), se aplica formato al número sin el cero inicial.
 
@@ -499,6 +534,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="yySpecifier"></a> 
+
 ## <a name="the-yy-custom-format-specifier"></a>Especificador de formato personalizado "yy"
  El especificador de formato personalizado "yy" representa el año como un número de dos dígitos. Si el año tiene más de dos dígitos, en el resultado sólo aparecen los dos dígitos de orden inferior. Si el año de dos dígitos tiene menos de dos dígitos significativos, el número se rellenará con ceros iniciales hasta obtener dos dígitos.
 
@@ -515,6 +551,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="yyySpecifier"></a> 
+
 ## <a name="the-yyy-custom-format-specifier"></a>Especificador de formato personalizado "yyy"
  El especificador de formato personalizado "yyy" representa el año con un mínimo de tres dígitos. Si el año tiene más de tres dígitos significativos, se incluyen en la cadena de resultado. Si el año tiene menos de tres dígitos, el número se rellenará con ceros iniciales hasta obtener tres dígitos.
 
@@ -529,6 +566,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="yyyySpecifier"></a> 
+
 ## <a name="the-yyyy-custom-format-specifier"></a>Especificador de formato personalizado "yyyy"
  El especificador de formato personalizado "Yyyy" representa el año con un mínimo de cuatro dígitos. Si el año tiene más de cuatro dígitos significativos, se incluyen en la cadena resultante. Si el año tiene menos de cuatro dígitos, el número se completa con ceros iniciales hasta obtener cuatro dígitos.
 
@@ -543,6 +581,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="yyyyySpecifier"></a> 
+
 ## <a name="the-yyyyy-custom-format-specifier"></a>Especificador de formato personalizado "yyyyy"
  El especificador de formato personalizado "yyyyy" (más cualquier número de especificadores "y" adicionales) representa el año con un mínimo de cinco dígitos. Si el año tiene más de cinco dígitos significativos, se incluyen en la cadena resultante. Si el año tiene menos de cinco dígitos, el número se rellenará con ceros iniciales hasta obtener cinco dígitos.
 
@@ -556,6 +595,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="zSpecifier"></a> 
+
 ## <a name="the-z-custom-format-specifier"></a>Especificador de formato personalizado "z"
  Con valores <xref:System.DateTime>, el especificador de formato personalizado "z" representa el desfase con signo de la zona horaria del sistema operativo local respecto a la hora universal coordinada (UTC), medido en horas. No refleja el valor de la propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> de una instancia. Por esta razón, no se recomienda usar el especificador de formato "z" con valores <xref:System.DateTime>.
 
@@ -573,6 +613,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="zzSpecifier"></a> 
+
 ## <a name="the-zz-custom-format-specifier"></a>Especificador de formato personalizado "zz"
  Con valores <xref:System.DateTime>, el especificador de formato personalizado "zz" representa el desfase con signo de la zona horaria del sistema operativo local respecto a la hora UTC, medido en horas. No refleja el valor de la propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> de una instancia. Por esta razón, no se recomienda usar el especificador de formato "zz" con valores <xref:System.DateTime>.
 
@@ -588,6 +629,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="zzzSpecifier"></a> 
+
 ## <a name="the-zzz-custom-format-specifier"></a>Especificador de formato personalizado "zzz"
  Con valores <xref:System.DateTime>, el especificador de formato personalizado "zzz" representa el desfase con signo de la zona horaria del sistema operativo local respecto a la hora UTC, medido en horas y minutos. No refleja el valor de la propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> de una instancia. Por esta razón, no se recomienda usar el especificador de formato "zzz" con valores <xref:System.DateTime>.
 
@@ -603,6 +645,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="timeSeparator"></a> 
+
 ## <a name="the--custom-format-specifier"></a>Especificador de formato personalizado ":"
  El especificador de formato personalizado ":" representa el separador de hora, que se usa para diferenciar horas, minutos y segundos. El separador de hora adaptado adecuado se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada.
 
@@ -614,6 +657,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="dateSeparator"></a> 
+
 ## <a name="the--custom-format-specifier"></a>Especificador de formato personalizado "/"
  El especificador de formato personalizado "/" representa el separador de fecha, que se usa para diferenciar años, meses y días. El separador de fecha adaptado adecuado se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada.
 
@@ -625,6 +669,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [Volver a la tabla](#table)
 
 <a name="Literals"></a> 
+
 ## <a name="character-literals"></a>Literales de carácter
  Los siguientes caracteres de una cadena de formato de fecha y hora personalizado están reservados y siempre se interpretan como caracteres de formato o, en el caso de ", ', / y \\, como caracteres especiales.
 
@@ -644,22 +689,24 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
 
  Hay dos formas de indicar que los caracteres se han de interpretar como caracteres literales y no como caracteres de reserva, para que se puedan incluir en una cadena de resultado o analizarse correctamente en una cadena de entrada:
 
--   Al incluir un escape con cada carácter reservado. Para obtener más información, consulte [Usar el carácter de escape](#escape).
+- Al incluir un escape con cada carácter reservado. Para obtener más información, consulte [Usar el carácter de escape](#escape).
+  
+  En el ejemplo siguiente se incluyen los caracteres literales "pst" (para hora estándar del Pacífico) para representar la zona horaria local en una cadena de formato. Como "s" y "t" son cadenas de formato personalizado, ambos caracteres deben incluir un escape para interpretarse como literales de carácter.
+  
+  [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+  [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
-     En el ejemplo siguiente se incluyen los caracteres literales "pst" (para hora estándar del Pacífico) para representar la zona horaria local en una cadena de formato. Como "s" y "t" son cadenas de formato personalizado, ambos caracteres deben incluir un escape para interpretarse como literales de carácter.
-
-     [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
-     [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
-
--   Al incluir toda la cadena literal entre comillas o apóstrofes. El siguiente ejemplo es igual al anterior, excepto que "pst" se incluye entre comillas para indicar que toda la cadena delimitada debe interpretarse como literales de carácter.
-
-     [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
-     [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
+- Al incluir toda la cadena literal entre comillas o apóstrofes. El siguiente ejemplo es igual al anterior, excepto que "pst" se incluye entre comillas para indicar que toda la cadena delimitada debe interpretarse como literales de carácter.
+  
+  [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+  [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 <a name="Notes"></a> 
+
 ## <a name="notes"></a>Notas
 
 <a name="UsingSingleSpecifiers"></a> 
+
 ### <a name="using-single-custom-format-specifiers"></a>Usar especificadores de formato personalizado únicos
  Una cadena con formato de fecha y hora personalizado se compone de dos o más caracteres. Los métodos de formato de fecha y hora interpretan cualquier cadena de un único carácter como una cadena de formato de fecha y hora estándar. Si no reconocen el carácter como un especificador de formato válido, producen una excepción <xref:System.FormatException>. Por ejemplo, una cadena de formato que solo se compone del especificador "h" se interpreta como una cadena de formato de fecha y hora estándar. Sin embargo, en este caso concreto, se produce una excepción porque no existe ningún especificador de formato de fecha y hora estándar "h".
 
@@ -671,6 +718,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  [!code-vb[Formatting.DateAndTime.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
 <a name="escape"></a> 
+
 ### <a name="using-the-escape-character"></a>Usar el carácter de escape
  Los caracteres "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" o "/" en una cadena de formato se interpretan como especificadores de formato personalizado en lugar de como caracteres literales. Para evitar que un carácter se interprete como un especificador de formato, puede precederlo de una barra diagonal inversa (\\), que es el carácter de escape. El carácter de escape significa que el siguiente carácter es un carácter literal que se debe incluir en la cadena de resultado sin modificar.
 
@@ -695,5 +743,9 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
  La cadena de resultado generada por muchos de los especificadores de formato de fecha y hora personalizado también depende de las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> actual. La aplicación puede modificar el resultado generado por algunos de los especificadores de formato de fecha y hora personalizado al cambiar la propiedad <xref:System.Globalization.DateTimeFormatInfo> correspondiente. Por ejemplo, el especificador de formato "ddd" agrega a la cadena de resultado el nombre abreviado de un día de la semana que se encuentra en la matriz de cadenas <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>. De igual forma, el especificador de formato "MMMM" agrega a la cadena de resultado el nombre completo de un mes que se encuentra en la matriz de cadenas <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>.
 
 ## <a name="see-also"></a>Vea también
- <xref:System.DateTime?displayProperty=nameWithType> <xref:System.IFormatProvider?displayProperty=nameWithType>
- [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md) [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.IFormatProvider?displayProperty=nameWithType>
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

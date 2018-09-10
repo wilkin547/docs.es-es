@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c0ea6590a53748c9ed85a6d13f67b260ce23af5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e0572d2f4afb2b8637d2411102e466b25b2b703
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390291"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856821"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework y versiones fuera de banda
 .NET Framework ha evolucionado para adaptarse a distintas plataformas, como aplicaciones de Windows Phone, de la Tienda Windows y aplicaciones de escritorio y web tradicionales, y para maximizar la reutilización de código. Además de las versiones de .NET Framework periódicas, publicamos nuevas características fuera de banda (OOB) para mejorar el desarrollo multiplataforma o para incluir una nueva funcionalidad. En este tema se trata la dirección que seguirá en el futuro .NET Framework y sus versiones OOB.  
@@ -48,7 +48,7 @@ Las versiones OOB para componentes básicos de Common Language Runtime (CLR) se 
  Tal como se ha mencionado, al implementar una aplicación que utiliza un paquete de OOB, los ensamblados de OOB se distribuirán con el paquete de aplicación.  
   
 ## <a name="types-of-oob-releases"></a>Tipos de versiones de OOB  
- Normalmente, un paquete de OOB tiene una o varias versiones preliminares y una versión estable. La licencia que acompaña a una versión preliminar no suele permitir la redistribución, pero permite probar un paquete y proporcionar comentarios. Los comentarios se incorporan en las actualizaciones realizadas en el paquete. NuGet se distribuye con una versión final como un paquete estable e incluye una licencia que permite redistribuir el paquete de NuGet con la aplicación. Microsoft admite los paquetes estables. Microsoft proporciona compatibilidad con IntelliSense y otros tipos de documentación (por ejemplo, entradas de blog y respuestas en foros) para todos los paquetes. Además, el código fuente puede estar disponible con algunos paquetes, pero no todos. Si quiere recibir anuncios relacionados con paquetes nuevos y actualizados, suscríbase al [Blog de .NET Framework](http://blogs.msdn.com/b/dotnet/).  
+ Normalmente, un paquete de OOB tiene una o varias versiones preliminares y una versión estable. La licencia que acompaña a una versión preliminar no suele permitir la redistribución, pero permite probar un paquete y proporcionar comentarios. Los comentarios se incorporan en las actualizaciones realizadas en el paquete. NuGet se distribuye con una versión final como un paquete estable e incluye una licencia que permite redistribuir el paquete de NuGet con la aplicación. Microsoft admite los paquetes estables. Microsoft proporciona compatibilidad con IntelliSense y otros tipos de documentación (por ejemplo, entradas de blog y respuestas en foros) para todos los paquetes. Además, el código fuente puede estar disponible con algunos paquetes, pero no todos. Si quiere recibir anuncios relacionados con paquetes nuevos y actualizados, suscríbase al [Blog de .NET Framework](https://blogs.msdn.com/b/dotnet/).  
   
  Si quiere encontrar paquetes tanto de versiones preliminares como estables, elija **Incluir versión preliminar** en el Administrador de paquetes NuGet.  
   

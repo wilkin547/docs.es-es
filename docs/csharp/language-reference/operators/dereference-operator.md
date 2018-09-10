@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
 ms.openlocfilehash: fb95e508ce1339868723bcc3178851e8c1355c1f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930309"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190233"
 ---
 # <a name="-gt-operator-c-reference"></a>Operador -&gt; (Referencia de C#)
 El operador `->` combina la desreferenciación del puntero y el acceso a miembros.  

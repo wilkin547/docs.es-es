@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334839"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207465"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Cómo: Crear archivos o carpetas (Guía de programación de C#)
 Puede crear una carpeta en el equipo mediante programación, crear una subcarpeta, crear un archivo en la subcarpeta y escribir datos en el archivo.  
@@ -67,7 +67,8 @@ Puede crear una carpeta en el equipo mediante programación, crear una subcarpet
   
  Si no tiene permiso para crear la carpeta, el ejemplo devuelve una instancia de la clase <xref:System.UnauthorizedAccessException>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO?displayProperty=nameWithType>  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)

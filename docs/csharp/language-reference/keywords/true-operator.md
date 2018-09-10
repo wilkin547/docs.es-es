@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - true operator [C#]
 ms.assetid: acaba817-5da5-4364-b3b2-2e5c75ec1839
-ms.openlocfilehash: 71f522b3860f7461f5c52dd77bb424f7ba0f9bf5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 54b8d764dc673598474d6adbbee82e0223a16b93
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960122"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197804"
 ---
 # <a name="true-operator-c-reference"></a>true (Operador, Referencia de C#)
 Devuelve el valor [bool](../../../csharp/language-reference/keywords/bool.md) `true` para indicar que un operando es true y, en caso contrario, devuelve `false`.  
@@ -29,9 +29,10 @@ Devuelve el valor [bool](../../../csharp/language-reference/keywords/bool.md) `t
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
- [Operadores de C#](../../../csharp/language-reference/operators/index.md)  
- [false](../../../csharp/language-reference/keywords/false.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Operadores de C#](../../../csharp/language-reference/operators/index.md)  
+- [false](../../../csharp/language-reference/keywords/false.md)

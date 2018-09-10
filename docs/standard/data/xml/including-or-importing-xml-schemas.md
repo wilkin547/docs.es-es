@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2f83128f47a687e75a7db9bb36c487fa1f5bb6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26ebfa327d849f75b1ac5295b66600aeb377e1e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573072"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266049"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusión o importación de esquemas XML
 Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs:redefine />`. Estos elementos de esquema hacen referencia a otros esquemas XML que se pueden utilizar para complementar la estructura del esquema que los incluye o importa. Las clases <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> y <xref:System.Xml.Schema.XmlSchemaRedefine> se asignan estos elementos en la API del modelo de objetos de esquema (SOM).  
@@ -100,10 +100,11 @@ Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs
   
  Para obtener más información sobre los elementos `<xs:import />`, `<xs:include />` y `<xs:redefine />`, y sobre las clases <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> y <xref:System.Xml.Schema.XmlSchemaRedefine>, vea [W3C XML Schema](https://www.w3.org/XML/Schema) y la documentación de referencia sobre las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+## <a name="see-also"></a>Vea también
+
+- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

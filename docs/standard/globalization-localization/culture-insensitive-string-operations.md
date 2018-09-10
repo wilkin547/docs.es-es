@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 212aa3f00967c04631b80305289c46d818106c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c1e1b476a1de1f0c348e264c9dc6b42ceb81eff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574055"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869346"
 ---
 # <a name="culture-insensitive-string-operations"></a>Operaciones de cadenas que no distinguen entre referencias culturales
 Las operaciones de cadena que tienen en cuenta la referencia cultural pueden resultar ventajosas si va a crear aplicaciones diseñadas para mostrar los resultados en función de la referencia cultural. De manera predeterminada, los métodos que tienen en cuenta las referencias culturales obtienen la referencia cultural que van a usar de la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A> del subproceso actual.  
@@ -32,5 +32,6 @@ Las operaciones de cadena que tienen en cuenta la referencia cultural pueden res
   
  Independientemente de si está desarrollando o no una aplicación que incluye código para controlar cuestiones de localización y globalización, debería conocer los métodos de .NET Framework que recuperan resultados que tienen en cuenta las referencias culturales de manera predeterminada. El propósito de este tema es ilustrar la forma correcta de que la aplicación utilice esos métodos cuando se desea obtener resultados que no tengan en cuenta las referencias culturales.  
   
-## <a name="see-also"></a>Vea también  
- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)

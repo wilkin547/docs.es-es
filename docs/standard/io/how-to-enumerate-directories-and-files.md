@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cd7b7542e5cf9352e965717368399dcf4a9ecd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575855"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207699"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Cómo: Enumerar directorios y archivos
 Puede enumerar directorios y archivos utilizando métodos que devuelven una colección enumerable de cadenas de sus nombres. También puede utilizar métodos que devuelven una colección enumerable de objetos <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> o <xref:System.IO.FileSystemInfo>. Las colecciones enumerables ofrecen mayor rendimiento que las matrices cuando se trabaja con colecciones grandes de directorios y archivos.  
@@ -65,5 +65,6 @@ Puede enumerar directorios y archivos utilizando métodos que devuelven una cole
      [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
      [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>Vea también
+
+- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)

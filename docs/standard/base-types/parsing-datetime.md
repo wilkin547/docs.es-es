@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576108"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207621"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizar cadenas de fecha y hora en .NET
 
@@ -87,9 +87,10 @@ En el ejemplo siguiente, se pasa al método <xref:System.DateTime.ParseExact%2A?
 
 Cada sobrecarga de los métodos <xref:System.DateTime.Parse%2A> y <xref:System.DateTime.ParseExact%2A> tiene también un parámetro <xref:System.IFormatProvider> que proporciona información específica de la referencia cultural sobre el formato de la cadena. Este objeto <xref:System.IFormatProvider> es un objeto <xref:System.Globalization.CultureInfo> que representa una referencia cultural estándar o un objeto <xref:System.Globalization.DateTimeFormatInfo> devuelto por la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> usa también una cadena o un argumento de matriz de cadena adicional que define uno o más formatos de fecha y hora personalizados.  
 
-## <a name="see-also"></a>Vea también  
- [Analizar cadenas](parsing-strings.md)  
- [Aplicación de formato a tipos](formatting-types.md)  
- [Conversión de tipos en .NET](type-conversion.md)  
- [Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)  
- [Cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>Vea también
+
+- [Analizar cadenas](parsing-strings.md)  
+- [Aplicación de formato a tipos](formatting-types.md)  
+- [Conversión de tipos en .NET](type-conversion.md)  
+- [Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)  
+- [Cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md)

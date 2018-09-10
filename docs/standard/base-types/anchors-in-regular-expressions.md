@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948594"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085191"
 ---
 # <a name="anchors-in-regular-expressions"></a>Delimitadores en expresiones regulares
 <a name="top"></a> Los delimitadores, o aserciones atómicas de ancho cero, especifican la posición de la cadena en que se debe producir una coincidencia. Cuando se usa un delimitador en una expresión de búsqueda, el motor de expresiones regulares no avanza por la cadena o ni consume caracteres, sino que solo busca una coincidencia en la posición especificada. Por ejemplo, `^` especifica que la coincidencia debe empezar al principio de una cadena o línea. Por consiguiente, la expresión regular `^http:` coincide con "http": solo cuando se encuentra al principio de una línea. En la tabla siguiente, se enumeran los delimitadores que admiten las expresiones regulares de .NET.  
   
-|Delimitador|Description|  
+|Delimitador|Descripción|  
 |------------|-----------------|  
 |`^`|De forma predeterminada, la coincidencia se debe producir al principio de la cadena. Por su parte, en el modo multilínea, se debe producir al principio de la línea. Para obtener más información, vea [Principio de cadena o línea](#Start).|  
 |`$`|De forma predeterminada, la coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena. Por su parte, en el modo multilínea, se debe producir al final de la línea o antes de `\n` al final de la línea. Para obtener más información, vea [Final de cadena o línea](#End).|  
@@ -53,7 +53,7 @@ ms.locfileid: "36948594"
   
  El patrón de expresión regular `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Comienza la búsqueda de coincidencias al principio de la cadena de entrada (o al principio de la línea si se llama al método con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
 |`((\w+(\s?)){2,}`|Coincide con uno o varios caracteres que se usan para formar palabras seguidos de cero o un espacio, exactamente dos veces. Este es el primer grupo de captura. Esta expresión también define un segundo y un tercer grupo de capturas: el segundo está compuesto por la palabra capturada y el tercero está compuesto por los espacios capturados.|  
@@ -126,7 +126,7 @@ ms.locfileid: "36948594"
   
  La expresión regular `\G(\w+\s?\w*),?` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\G`|Comienza donde finalizó la última coincidencia.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -148,7 +148,7 @@ ms.locfileid: "36948594"
   
  El patrón de la expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`are`|Coincide con la subcadena "are".|  
@@ -168,12 +168,13 @@ ms.locfileid: "36948594"
   
  El patrón de la expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\B`|La búsqueda de coincidencias no comienza en un límite de palabras.|  
 |`qu`|Coincide con la subcadena "qu".|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
   
-## <a name="see-also"></a>Vea también  
- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>Vea también
+
+- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)

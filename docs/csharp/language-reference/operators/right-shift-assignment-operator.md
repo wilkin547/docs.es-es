@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
 ms.openlocfilehash: f2bac6a4320980d80a9b6c2597dcf8dc6f08ac70
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43423476"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865028"
 ---
 # <a name="gtgt-operator-c-reference"></a>Operador &gt;&gt;= (Referencia de C#)
 Operador de asignación de desplazamiento a la derecha.  

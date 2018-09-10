@@ -2,12 +2,12 @@
 title: Diferencias entre la programación funcional y La programación imperativa (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 85e0e4bf287157f2d4f952996cbb2e5a4ff6ac89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334904"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178343"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Diferencias entre la programación funcional y La programación imperativa (C#)
 Este tema compara y contrasta la programación funcional y la programación imperativa (orientada a procedimientos) más tradicional.  
@@ -50,7 +50,8 @@ Este tema compara y contrasta la programación funcional y la programación impe
   
  Afortunadamente, C# no requiere un salto completo a la programación funcional, ya que admite enfoques de programación imperativos y funcionales. Un desarrollador puede elegir el enfoque más adecuado para una escenario específico. En realidad, los programas suelen combinar ambos enfoques.  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Transformaciones XSLT](../../../../standard/data/xml/xslt-transformations.md)  
- [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Vea también
+
+- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Transformaciones XSLT](../../../../standard/data/xml/xslt-transformations.md)  
+- [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdc464234871fc07feeeb8dd02635ebdd151d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573202"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216547"
 ---
 # <a name="exception-class-and-properties"></a>Clase Exception y propiedades
 
@@ -28,7 +28,7 @@ Object
 
 La clase <xref:System.Exception> tiene las siguientes propiedades que facilitan la comprensión de una excepción.
 
-| Nombre de la propiedad | Description |
+| Nombre de la propiedad | Descripción |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | Un <xref:System.Collections.IDictionary> que contiene datos arbitrarios en pares de clave y valor. |
 | <xref:System.Exception.HelpLink> | Puede contener una dirección URL (o URN) a un archivo de ayuda que proporciona amplia información sobre la causa de una excepción. |
@@ -41,5 +41,6 @@ La mayoría de las clases que heredan de <xref:System.Exception> no implementan 
 
 Se recomienda iniciar y detectar solo los objetos que se derivan de <xref:System.Exception>, pero puede iniciar cualquier objeto que se deriva de la clase <xref:System.Object> como una excepción. Tenga en cuenta que no todos los lenguajes admiten iniciar y detectar objetos que no se derivan de <xref:System.Exception>.
   
-## <a name="see-also"></a>Vea también  
-[Excepciones](index.md)
+## <a name="see-also"></a>Vea también
+
+- [Excepciones](index.md)

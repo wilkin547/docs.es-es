@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578312"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085272"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadenas de formato TimeSpan estándar
 <a name="Top"></a> Una cadena de formato estándar <xref:System.TimeSpan> utiliza un único especificador de formato para definir la representación de texto de un valor <xref:System.TimeSpan> resultante de una operación de formato. Cualquier cadena de formato que contenga más de un carácter, incluido el espacio en blanco, se interpreta como una cadena de formato <xref:System.TimeSpan> personalizado. Para más información, consulte [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) (Cadenas de formato TimeSpan personalizadas).  
@@ -41,7 +41,7 @@ ms.locfileid: "33578312"
   
 <a name="top"></a> En la tabla siguiente se muestran los especificadores de formato de intervalo de tiempo estándar.  
   
-|Especificador de formato|nombre|Description|Ejemplos|  
+|Especificador de formato|nombre|Descripción|Ejemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Formato constante (invariable)|Este especificador no tiene en cuenta la referencia cultural. Toma la forma `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> (Las cadenas de formato "t" y "T" producen los mismos resultados).<br /><br /> Más información: [Especificador de formato de constante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Formato corto general|Este especificador solo genera lo necesario. Tiene en cuenta la referencia cultural y su forma es `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Más información: [Especificador de formato general corto ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -55,7 +55,7 @@ ms.locfileid: "33578312"
   
  Los elementos de los corchetes ([ y ]) son opcionales. El punto (.) y los dos puntos (:) son símbolos literales. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número opcional de días, sin ceros a la izquierda.|  
@@ -84,7 +84,7 @@ ms.locfileid: "33578312"
   
  Los elementos de los corchetes ([ y ]) son opcionales. Los dos puntos (:) son un símbolo literal. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número opcional de días, sin ceros a la izquierda.|  
@@ -111,7 +111,7 @@ ms.locfileid: "33578312"
   
  Los elementos de los corchetes ([ y ]) son opcionales. Los dos puntos (:) son un símbolo literal. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número de días, sin ceros a la izquierda.|  
@@ -130,7 +130,8 @@ ms.locfileid: "33578312"
   
  [Volver a la tabla](#Top)  
   
-## <a name="see-also"></a>Vea también  
- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
- [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a>Vea también
+
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
+- [Cadenas de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b652adb27c3bb075fe86c09d7c9ab33511371279
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241ff40448c3dca2846f9e420dc7df41427dc79d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570457"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266896"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lectura y escritura de esquemas XML
 La API del Modelo de objetos de esquema (SOM) se puede utilizar para leer y escribir esquemas del lenguaje de definición de esquemas XML (XSD) desde archivos u otros orígenes y compilar esquemas XML en memoria, utilizando las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> que se asignan a las estructuras definidas en la recomendación de esquemas XML del W3C (World Wide Web Consortium).  
@@ -47,12 +47,13 @@ La API del Modelo de objetos de esquema (SOM) se puede utilizar para leer y escr
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
- [Administrar espacios de nombres en un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)
+## <a name="see-also"></a>Vea también
+
+- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Recorrido de esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
+- [Administrar espacios de nombres en un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)

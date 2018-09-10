@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357f380a7103f186f7a66ea92a1a8b7930adead8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cac7e0fca4a009b7f5b6f677abed70cf2519052d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579722"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200477"
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 Los caracteres son entidades abstractas que se pueden representar de muchas maneras diferentes. Una codificación de caracteres es un sistema que empareja cada carácter de un juego de caracteres compatible con algún valor que representa ese carácter. Por ejemplo, el código Morse es una codificación de caracteres que empareja cada carácter del alfabeto latino con un patrón de puntos y guiones que son adecuados para la transmisión a través de las líneas de telégrafo. Una codificación de caracteres para los equipos empareja cada carácter de un juego de caracteres compatible con un valor numérico que representa ese carácter. Una codificación de caracteres tiene dos componentes distintos:  
@@ -64,7 +64,7 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
   
  Se puede recuperar información sobre todas las codificaciones disponibles en .NET llamando al método <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. .NET admite los sistemas de codificación de caracteres que se muestran en la tabla siguiente.  
   
-|Codificación|Clase|Description|Ventajas y desventajas|  
+|Codificación|Clase|Descripción|Ventajas y desventajas|  
 |--------------|-----------|-----------------|-------------------------------|  
 |ASCII|<xref:System.Text.ASCIIEncoding>|Codifica un intervalo limitado de caracteres usando los siete bits inferiores de un byte.|Como esta codificación solo admite valores de caracteres de U+0000 a U+007F, en la mayoría de los casos no resulta suficiente para aplicaciones de uso internacional.|  
 |UTF-7|<xref:System.Text.UTF7Encoding>|Representa los caracteres como secuencias de caracteres ASCII de 7 bits. Los caracteres Unicode no ASCII se representan con una secuencia de escape de caracteres ASCII.|UTF-7 admite protocolos como los protocolos de correo electrónico y de grupos de noticias. Sin embargo, la codificación UTF-7 no es particularmente segura ni sólida. En algunos casos, cambiar un bit puede modificar radicalmente la interpretación de toda una cadena UTF-7. En otros casos, diferentes cadenas UTF-7 pueden codificar el mismo texto. Para las secuencias que incluyen caracteres no ASCII, UTF-7 necesita más espacio que UTF-8, y la codificación y descodificación son más lentas. Por tanto, debe usar UTF-8 en lugar de UTF-7 si es posible.|  
@@ -263,10 +263,11 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
  [!code-csharp[Conceptual.Encoding#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#7)]
  [!code-vb[Conceptual.Encoding#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#7)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Text.Encoder>  
- <xref:System.Text.Decoder>  
- <xref:System.Text.DecoderFallback>  
- <xref:System.Text.Encoding>  
- <xref:System.Text.EncoderFallback>  
- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Text.Encoder>  
+- <xref:System.Text.Decoder>  
+- <xref:System.Text.DecoderFallback>  
+- <xref:System.Text.Encoding>  
+- <xref:System.Text.EncoderFallback>  
+- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)

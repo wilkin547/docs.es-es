@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79ca0b92cf79ca9be023925f064c1c7c16b3c9ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567723"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208171"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Seguridad para subprocesos en expresiones regulares
 La clase <xref:System.Text.RegularExpressions.Regex> es en sí misma segura para subprocesos e inmutable (de solo lectura). Es decir, se pueden crear objetos **Regex** en cualquier subproceso y compartirlos entre varios subprocesos; los métodos de coincidencia pueden llamarse desde cualquier subproceso y no modifican nunca el estado global.  
@@ -27,5 +27,6 @@ La clase <xref:System.Text.RegularExpressions.Regex> es en sí misma segura para
   
  Los enumeradores son la única excepción. Las aplicaciones debe serializar las llamadas a enumeradores de colecciones. La regla es que, si una colección puede enumerarse simultáneamente en más de un subproceso, se deben sincronizar los métodos de enumerador en el objeto raíz de la colección que recorre el enumerador.  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vea también
+
+- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b9a9331f62ba9655c20a2e27b3a94dac1903472
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582693"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865636"
 ---
 # <a name="task-cancellation"></a>Cancelación de tareas
 Las clases <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> admiten la cancelación a través del uso de tokens de cancelación en .NET Framework. Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md). En las clases Task, la cancelación implica la cooperación entre el delegado de usuario, que representa una operación que se puede cancelar y el código que solicitó la cancelación.  Una cancelación correcta significa que el código que la solicita llama al método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> y que el delegado de usuario finaliza la operación a tiempo. Puede finalizar la operación a través de una de estas opciones:  
@@ -40,6 +40,7 @@ Las clases <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xr
   
  Es posible que una tarea continúe procesando algunos elementos una vez solicitada la cancelación.  
   
-## <a name="see-also"></a>Vea también  
- [Cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- [Cancelar una tarea y los elementos secundarios](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+## <a name="see-also"></a>Vea también
+
+- [Cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+- [Cancelar una tarea y los elementos secundarios](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

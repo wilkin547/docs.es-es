@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b0f8293b41d42114b189c3ebe917a4f64c4f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578335"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208762"
 ---
 # <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación
 La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts supervisar el uso de CPU y de memoria por parte del dominio de aplicación. Esto es útil para los hosts como ASP.NET que utilizan varios dominios de aplicación en un proceso de ejecución prolongada. El host puede descargar el dominio de aplicación de una aplicación que afecta negativamente al rendimiento de todo el proceso, pero solo si puede identificar la aplicación problemática. ARM proporciona información que puede usarse para ayudar a tomar estas decisiones.  
@@ -29,7 +29,7 @@ La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts 
   
  En cuanto se habilita ARM, comienza a recopilar datos en todos los dominios de aplicación del proceso. Si un dominio de aplicación se creó antes de habilitar ARM, los datos acumulativos se inician cuando se habilita ARM, no cuando se creó el dominio de aplicación. Una vez habilitado ARM, no se puede deshabilitar.  
   
--   Puede habilitar ARM al iniciar el CLR agregando el elemento [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) al archivo de configuración y estableciendo el atributo `enabled` en `true`. Un valor de `false` (el valor predeterminado) solo significa que no se habilita ARM durante el inicio; puede activarlo posteriormente mediante uno de los otros mecanismos de activación.  
+-   Puede habilitar ARM al iniciar el CLR agregando el elemento [\<appDomainResourceMonitoring&gt;](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) al archivo de configuración y estableciendo el atributo `enabled` en `true`. Un valor de `false` (el valor predeterminado) solo significa que no se habilita ARM durante el inicio; puede activarlo posteriormente mediante uno de los otros mecanismos de activación.  
   
 -   El host puede habilitar ARM solicitando la interfaz de hospedaje [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md). Una vez que esta interfaz se obtiene correctamente, se habilita ARM.  
   
@@ -83,8 +83,9 @@ La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts 
 #### <a name="hosting-api"></a>API de hospedaje  
  Si utiliza la API de hospedaje no administrada, el host debe pasar al CLR una implementación de la interfaz [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md). El CLR llama al método [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) cuando reanuda la ejecución de los subprocesos suspendidos durante la ocurrencia de una colección. El CLR pasa la generación de la colección completada como un parámetro del método, por lo que el host puede determinar si la colección se completó de forma total o parcial. La implementación del método [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) puede consultar la memoria de duración superior, a fin de garantizar la recuperación de los recuentos en cuando se actualizan.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [ICLRAppDomainResourceMonitor (interfaz)](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [ICLRAppDomainResourceMonitor (interfaz)](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41a3f729a6be1cf9e803af306d1d6015f0afbdc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90b4214e244bc1f9c5f8e71782e604bd6c7b619
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395939"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180116"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Generación y compilación dinámicas de código fuente
 .NET Framework incluye un mecanismo denominado Code Document Object Model (CodeDOM) que permite que los desarrolladores de programas que emiten código de origen generen código fuente en varios lenguajes de programación en tiempo de ejecución, en función de un único modelo que representa el código que se va a representar.  
@@ -51,5 +51,5 @@ ms.locfileid: "33395939"
  Define las interfaces para generar y compilar código en tiempo de ejecución.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Referencia rápida de CodeDOM](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ [Referencia rápida de CodeDOM](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
  Proporciona una forma rápida para que los desarrolladores busquen los elementos CodeDOM que representan elementos de código fuente.

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576398"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249171"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Reglas para deducir tipos simples
 Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el tipo de datos para atributos y elementos.  
@@ -24,7 +24,7 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
   
  La siguiente tabla enumera los tipos deducidos posibles para el esquema resultante.  
   
-|Tipo simple|Description|  
+|Tipo simple|Descripción|  
 |-----------------|-----------------|  
 |booleano|True, false, 0, 1.|  
 |byte|Enteros en un intervalo de -128 a 127.|  
@@ -68,14 +68,15 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
 ### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Atributos omitidos del espacio de nombres http://www.w3.org/2001/XMLSchema-instance  
  Los siguientes son atributos que definen el esquema que son omitidos durante la deducción del sistema.  
   
-|Atributo|Description|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`xsi:type`|Si un elemento se encuentra con tipo `xsi:type` especificado, el `xsi:type` es omitido.|  
 |`xsi:nil`|Si se encuentra un elemento con un atributo `xsi:nil`, su declaración de elemento en el esquema deducido tiene el valor de `nillable="true"`. Un elemento con un atributo `xsi:nil` establecido en `true` no puede tener elementos secundarios.|  
 |`xsi:schemaLocation`|Si se encuentra `xsi:schemaLocation`, se omite.|  
 |`xsi:noNamespaceSchemaLocation`|Si se encuentra `xsi:noNamespaceSchemaLocation`, se omite.|  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a>Vea también
+
+- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

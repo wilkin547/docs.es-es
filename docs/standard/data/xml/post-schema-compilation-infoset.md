@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db1c952003e73beb756567be74ed4eb72612c989
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569634"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083824"
 ---
 # <a name="post-schema-compilation-infoset"></a>Conjunto de información posterior a la compilación de esquemas
 La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](https://www.w3.org/XML/Schema) trata acerca del conjunto de información que debe presentarse para la validación del esquema previo y para la compilación del esquema posterior. El Modelo de objetos de esquema XML (SOM) consulta esta información antes y después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -23,7 +23,7 @@ La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](https://
   
  El SOM es el modelo de objetos que representa los conjuntos de información previos a la validación del esquema y posteriores a la compilación del esquema; consta de las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType>. Todas las propiedades de lectura y escritura de las clases del espacio de nombres <xref:System.Xml.Schema> pertenecen al conjunto de información previo a la validación del esquema, mientras que todas las propiedades de solo lectura de las clases del espacio de nombres <xref:System.Xml.Schema> pertenecen al conjunto de información posterior a la compilación del esquema. Las siguientes propiedades son la excepción a esta norma, ya que se trata de propiedades del conjunto de información previo a la validación del esquema y del conjunto de información posterior a la compilación del esquema.  
   
-|Clase|Property|  
+|Clase|Propiedad.|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
@@ -40,5 +40,6 @@ La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](https://
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+## <a name="see-also"></a>Vea también
+
+- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

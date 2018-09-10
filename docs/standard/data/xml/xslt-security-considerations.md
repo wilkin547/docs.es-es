@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e369f570adf51355d02c73bde5d4b1a462e59870
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43422798"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210963"
 ---
 # <a name="xslt-security-considerations"></a>Consideraciones de seguridad de XSLT
 El lenguaje XSLT posee un amplio conjunto de características que aportan gran potencia y flexibilidad. Incluye muchas características que, aunque son útiles, también se podrían aprovechar desde orígenes externos. Para poder utilizar XSLT con seguridad, debe conocer los tipos de problemas de seguridad que surgen al utilizar XSLT y las estrategias básicas que puede emplear para mitigar estos riesgos.  
@@ -56,7 +56,8 @@ El lenguaje XSLT posee un amplio conjunto de características que aportan gran p
   
 -   Si desea asegurarse de que no se tiene acceso a ningún recurso externo, puede especificar `null` para el argumento <xref:System.Xml.XmlResolver>.  
   
-## <a name="see-also"></a>Vea también  
- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Resolución de recursos externos durante el procesamiento XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
- [Seguridad de acceso del código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+## <a name="see-also"></a>Vea también
+
+- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Resolución de recursos externos durante el procesamiento XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
+- [Seguridad de acceso del código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)

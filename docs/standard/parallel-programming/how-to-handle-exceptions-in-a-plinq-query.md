@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 162ef3849f025cae9196c2f595634f82cfc782df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580749"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266727"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Cómo: Controlar excepciones en una consulta PLINQ
 El primer ejemplo de este tema muestra cómo controlar la clase <xref:System.AggregateException?displayProperty=nameWithType> que se puede iniciar desde una consulta PLINQ cuando se ejecuta. El segundo ejemplo muestra cómo colocar bloques try-catch dentro de los delegados, lo más cerca posible de donde se producirá la excepción. De este modo, se pueden detectar en cuanto se producen y posiblemente continuar con la ejecución de la consulta. Cuando las excepciones pueden propagarse de nuevo al subproceso de unión, es posible que una consulta continúe procesando algunos elementos después de que se haya producido la excepción.  
@@ -48,6 +48,7 @@ El primer ejemplo de este tema muestra cómo controlar la clase <xref:System.Agg
 ## <a name="robust-programming"></a>Programación sólida  
  No se detecta ninguna excepción a menos que sepa cómo controlarla para que no se dañe el estado del programa.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq.ParallelEnumerable>  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

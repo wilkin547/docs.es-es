@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7795b25ca8e9337a53fc67ebc6f56130237d0764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582761"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44190707"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Cómo: Utilizar SpinLock para la sincronización de bajo nivel
 En el siguiente ejemplo se muestra cómo usar <xref:System.Threading.SpinLock>.  
@@ -32,5 +32,6 @@ En el siguiente ejemplo se muestra cómo usar <xref:System.Threading.SpinLock>.
   
  Tenga en cuenta el uso de `false` (`False` en Visual Basic) en la llamada a <xref:System.Threading.SpinLock.Exit%2A>. Esto proporciona el mejor rendimiento. Especifique `true` (`True`) en las arquitecturas IA64 para usar la barrera de memoria, que vacía los búferes de escritura para garantizar que ahora el bloqueo esté disponible para que salgan otros subprocesos.  
   
-## <a name="see-also"></a>Vea también  
- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vea también
+
+- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)

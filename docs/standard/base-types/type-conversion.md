@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c542a38152a21a62208bee81e123923fb05d0e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579488"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211961"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversión de tipos en .NET Framework
 <a name="top"></a> Cada valor tiene un tipo asociado, que define los atributos como la cantidad de espacio asignado al valor, el intervalo de valores posibles que puede tener y los miembros que ofrece. Muchos valores se pueden expresar como más de un tipo. Por ejemplo, el valor 4 se puede expresar como un entero o como un valor de punto flotante. La conversión de tipo crea un valor en un nuevo tipo que es equivalente al valor de un tipo antiguo, pero no conserva necesariamente la identidad (o valor exacto) del objeto original.  
@@ -206,7 +206,8 @@ ms.locfileid: "33579488"
   
  Para obtener más información sobre cómo usar convertidores de tipos para realizar conversiones, vea <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Convert?displayProperty=nameWithType>  
- <xref:System.IConvertible>  
- [Tablas de conversión de tipos](../../../docs/standard/base-types/conversion-tables.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Convert?displayProperty=nameWithType>  
+- <xref:System.IConvertible>  
+- [Tablas de conversión de tipos](../../../docs/standard/base-types/conversion-tables.md)

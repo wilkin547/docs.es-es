@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79005c69e8c125e78573a44f34740632676faf59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568815"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261975"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilar aplicaciones de consola en .NET Framework
 Las aplicaciones de .NET Framework pueden usar la clase <xref:System.Console?displayProperty=nameWithType> para leer y escribir caracteres en la consola. Los datos de la consola se leen desde el flujo de entrada estándar, los datos de la consola se escriben en el flujo de salida estándar y los datos de error de la consola se escriben en el flujo de salida de error estándar. Estos flujos se asocian automáticamente a la consola cuando se inicia la aplicación y se presentan como las propiedades <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> y <xref:System.Console.Error%2A>, respectivamente.  
@@ -32,6 +32,7 @@ Las aplicaciones de .NET Framework pueden usar la clase <xref:System.Console?dis
   
  La clase **System.Console** tiene métodos que pueden leer caracteres individuales o líneas enteras de la consola. Otros métodos convierten datos y cadenas de formato y, después, escriben las cadenas con formato en la consola. Para obtener más información sobre cómo dar formato a las cadenas, vea [Formatting Types](../../docs/standard/base-types/formatting-types.md) (Aplicar formato a tipos).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Console?displayProperty=nameWithType>  
- [Aplicación de formato a tipos](../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Console?displayProperty=nameWithType>  
+- [Aplicación de formato a tipos](../../docs/standard/base-types/formatting-types.md)

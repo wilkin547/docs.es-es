@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f291bc91575ccde346f16552636d44951a0e6eac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574860"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202406"
 ---
 # <a name="how-to-implement-an-observer"></a>Cómo: Implementar un observador
 El modelo de diseño de observador requiere una división entre un observador, que registra notificaciones, y un proveedor, que controla los datos y envía notificaciones a uno o varios observadores. En este tema se describe cómo crear un observador. En un tema relacionado, [Cómo: Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md), se describe cómo crear un proveedor.  
@@ -49,8 +49,9 @@ El modelo de diseño de observador requiere una división entre un observador, q
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IObserver%601>  
- [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)  
- [Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)  
- [Procedimientos recomendados para modelos de diseño de observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.IObserver%601>  
+- [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)  
+- [Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)  
+- [Procedimientos recomendados para modelos de diseño de observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)

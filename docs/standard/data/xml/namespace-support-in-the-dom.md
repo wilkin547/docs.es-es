@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e91ce2b36462780925dcaef701583a966c5f59b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569456"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208775"
 ---
 # <a name="namespace-support-in-the-dom"></a>Compatibilidad con los espacios de nombres en DOM
 El modelo de objetos de documento XML (DOM) tiene en cuenta completamente al espacio de nombres. Sólo se admiten documentos XML que tengan en cuenta los espacios de nombres. El W3C especifica que las aplicaciones DOM que implementan el nivel 1 pueden no tener en cuenta los espacios de nombres, a diferencia de las características de nivel 2 de DOM, que sí los tienen en cuenta. No obstante, todas las características de DOM XML tienen en cuenta los espacios de nombres, independientemente de si el método proviene del nivel 1 o del nivel 2 de la recomendación de DOM.  
@@ -25,5 +25,6 @@ El modelo de objetos de documento XML (DOM) tiene en cuenta completamente al esp
   
 -   Si se encuentra un signo de dos puntos, el nombre se divide en dos partes en función de la posición del primer signo de dos puntos. El prefijo se establece según la cadena que se encuentre antes del signo de dos puntos mientras que el nombre local se establece según la cadena que se encuentre después. Para los métodos que no aceptan un valor de URI de espacio de nombres, éste no se resuelve y sigue establecido como una cadena vacía. De lo contrario, el URI de espacio de nombres se establece como la cadena pasada al método. Si el prefijo no se define, el método **Save** y las propiedades **InnerXml** y **OuterXml** generan un error.  
   
-## <a name="see-also"></a>Vea también  
- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vea también
+
+- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

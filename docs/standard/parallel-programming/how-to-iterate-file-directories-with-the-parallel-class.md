@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43a7ac57e90b60679f29e9a5635be6ee8b8f8d93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580723"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189373"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Cómo: Recorrer en iteración directorios con la clase paralela
 En muchos casos, la iteración de archivo es una operación que se puede paralelizar fácilmente. El tema [Cómo: Recorrer en iteración directorios con PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) muestra la manera más fácil de realizar esta tarea para muchos escenarios. Sin embargo, pueden surgir complicaciones cuando el código tiene que tratar con los muchos tipos de excepciones que pueden surgir al obtener acceso al sistema de archivos. En el ejemplo siguiente se muestra un enfoque para el problema. Usa una iteración basada en la pila para recorrer todos los archivos y carpetas en un directorio especificado y habilita el código para detectar y controlar diversas excepciones. Por supuesto, la forma de controlar las excepciones depende de usted.  
@@ -32,5 +32,6 @@ En muchos casos, la iteración de archivo es una operación que se puede paralel
   
  Tenga en cuenta que si se produce una excepción en el subproceso principal, los subprocesos que inicia el método <xref:System.Threading.Tasks.Parallel.ForEach%2A> podrían seguir ejecutándose. Para detener estos subprocesos, puede establecer una variable booleana en los controladores de excepciones y comprobar su valor en cada iteración del bucle paralelo. Si el valor indica que se ha iniciado una excepción, use la variable <xref:System.Threading.Tasks.ParallelLoopState> para detener o interrumpir el bucle. Para más información, vea [Cómo: Detener o interrumpir un bucle Parallel.For](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).  
   
-## <a name="see-also"></a>Vea también  
- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+## <a name="see-also"></a>Vea también
+
+- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)

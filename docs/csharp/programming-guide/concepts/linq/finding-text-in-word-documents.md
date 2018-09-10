@@ -2,12 +2,12 @@
 title: Buscar texto en documentos de Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: bd9f128fd50587b88fd899d0180e3d2ca8a8df6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333933"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135152"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Buscar texto en documentos de Word (C#)
 En este tema se amplían las consultas vistas anteriormente para conseguir algo muy útil: encontrar todas las apariciones de una cierta cadena en el documento.  
@@ -327,7 +327,8 @@ StyleName:Code ><
   
 -   [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Detalles de los documentos de WordprocessingML de Office Open XML [C#])  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Refactorizar mediante una función pura (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
- [Ejecución aplazada y evaluación diferida en LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Refactorizar mediante una función pura (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Ejecución aplazada y evaluación diferida en LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1593f703f1f8b4465b46d3b22b763d35c582744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a518df5b016552de25091e7a9d89f737a1a66151
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578240"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087663"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Reglas para deducir los tipos de nodo de esquema y estructura
 Este tema describe cómo el proceso de deducción del esquema traduce los tipos de nodo de un documento XML a una estructura de lenguaje de definición de esquema XML (XSD).  
@@ -146,9 +146,10 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Schema.XmlSchemaInference>  
- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Deducción de esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Reglas para deducir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Xml.Schema.XmlSchemaInference>  
+- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Deducción de esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Reglas para deducir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

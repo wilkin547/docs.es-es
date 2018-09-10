@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bb6262b32201207853ef702ae38002c2ded252
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585416"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210005"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> es un tipo de sincronización ligero que puede usar en escenarios de bajo nivel para evitar los costosos cambios de contexto y las transiciones de kernel que se requieren para los eventos de kernel. En los equipos con varios núcleos, cuando no se espera que un recurso se mantenga durante largos períodos de tiempo, puede resultar más eficaz que un subproceso en espera itere en modo de usuario en unas docenas o centenas de ciclos y que luego vuelva a intentar adquirir el recurso. Si el recurso está disponible después de girar, entonces habrá guardado varios miles de ciclos. Si el recurso aún no está disponible, habrá empleado solo algunos ciclos y podrá activar aún una espera basada en el kernel. A esta combinación de giro y espera se le denomina a veces una *operación de espera de dos fases*.  
@@ -29,6 +29,7 @@ ms.locfileid: "33585416"
  [!code-csharp[CDS_SpinWait#05](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait.cs#05)]
  [!code-vb[CDS_SpinWait#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/cds_spinwait1.vb#05)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Thread.SpinWait%2A>  
- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Thread.SpinWait%2A>  
+- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)

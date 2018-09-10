@@ -4,11 +4,11 @@ description: Cómo agrupar resultados por claves con LINQ en C#.
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484007"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209347"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Agrupar resultados por claves contiguas
 

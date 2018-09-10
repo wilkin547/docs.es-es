@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43396479"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180311"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estructuras de datos para la programación paralela
 .NET Framework 4 incorpora varios tipos nuevos que son útiles en la programación paralela, incluido un conjunto de clases de colecciones simultáneas, primitivos de sincronización ligera y tipos para la inicialización diferida. Puede usar estos tipos con cualquier código de aplicación multiproceso, como la biblioteca TPL y PLINQ.  
@@ -68,7 +68,8 @@ ms.locfileid: "43396479"
 ## <a name="aggregate-exceptions"></a>Agregar excepciones  
  El tipo <xref:System.AggregateException?displayProperty=nameWithType> puede usarse para capturar varias excepciones que se producen simultáneamente en subprocesos independientes y devolverlas al subproceso combinado como una única excepción. Los tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y PLINQ usan <xref:System.AggregateException> de forma amplia para este propósito. Para obtener más información, vea [Control de excepciones](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) y [Cómo: Controlar excepciones en una consulta PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- <xref:System.Threading?displayProperty=nameWithType>  
- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Threading?displayProperty=nameWithType>  
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)

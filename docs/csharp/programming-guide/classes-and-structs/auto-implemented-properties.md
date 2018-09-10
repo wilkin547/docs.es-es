@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 756e235dacc3fcb2bf741d1d426e8dfcb53bf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d32dfd626cb8484e935dd0e8608c2e29d3ecbde
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313805"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44228083"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Propiedades autoimplementadas (Guía de programación de C#)
 En C# 3.0 y versiones posteriores, las propiedades implementadas automáticamente hacen que la declaración de propiedades sea más concisa cuando no es necesaria ninguna lógica adicional en los descriptores de acceso de la propiedad. También permite que el código de cliente cree objetos. Cuando se declara una propiedad tal como se muestra en el ejemplo siguiente, el compilador crea un campo de respaldo privado y anónimo al que solo se puede acceder con los descriptores de acceso de propiedad `get` y `set`.  
@@ -30,6 +30,7 @@ public string FirstName { get; set; } = "Jane";
   
  Los atributos se permiten en propiedades implementadas automáticamente, pero obviamente no en los campos de respaldo, ya que no se puede acceder a ellos desde el código fuente. Si necesita usar un atributo en el campo de respaldo de una propiedad, cree una propiedad normal.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a>Vea también
+
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)

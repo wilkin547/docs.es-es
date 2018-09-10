@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6446145d34d22503697bbca59bc2cb2cd2619cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fd937d6ce2edf0c47fce78d48a90ec1aa409eef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580369"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44196652"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Cómo: Recorrer un árbol binario con tareas paralelas
 En el ejemplo siguiente se muestran dos formas de usar las tareas paralelas para recorrer una estructura de datos en árbol. La creación del árbol se deja como un ejercicio.  
@@ -26,5 +26,6 @@ En el ejemplo siguiente se muestran dos formas de usar las tareas paralelas para
   
  Los dos métodos que se muestran son funcionalmente equivalentes. Con el uso del método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> para crear y ejecutar las tareas, estas devuelven un identificador que puede usarse para esperar las tareas y controlar excepciones.  
   
-## <a name="see-also"></a>Vea también  
- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Vea también
+
+- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

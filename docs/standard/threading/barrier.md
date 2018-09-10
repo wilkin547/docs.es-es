@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584303"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212404"
 ---
 # <a name="barrier-net-framework"></a>Barrier (.NET Framework)
 Una *barrera* es un primitivo de sincronización definido por el usuario que permite que varios subprocesos (conocidos como *participantes*) trabajen simultáneamente en un algoritmo por fases. Cada participante se ejecuta hasta que alcanza el punto de barrera en el código. La barrera representa el final de una fase de trabajo. Cuando un participante alcanza la barrera, se bloquea hasta que todos los participantes alcancen la misma barrera. Cuando todos los participantes alcanzan la barrera, opcionalmente puede invocar una acción posterior a la fase. Esta acción posterior a la fase puede usarse para realizar acciones con un solo subproceso mientras todos los demás subprocesos siguen bloqueados. Una vez ejecutada la acción, se desbloquean todos los participantes.  
@@ -49,6 +49,7 @@ Una *barrera* es un primitivo de sincronización definido por el usuario que per
   
  Para más información, consulte [Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md) (Encadenar tareas mediante tareas de continuación).  
   
-## <a name="see-also"></a>Vea también  
- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Sincronizar operaciones simultáneas con una clase Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+## <a name="see-also"></a>Vea también
+
+- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Sincronizar operaciones simultáneas con una clase Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

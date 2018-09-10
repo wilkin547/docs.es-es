@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1f3df40a468c7c0f7da0b559ea9b01703cd200a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590031"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44079180"
 ---
 # <a name="mutexes"></a>Mutexes
 Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso exclusivo a un recurso. La clase <xref:System.Threading.Mutex> usa más recursos del sistema que la clase <xref:System.Threading.Monitor>, pero se pueden calcular sus referencias a través de los límites de dominio de aplicación, se puede usar con varias esperas y se puede usar para sincronizar subprocesos en distintos procesos. Para ver una comparación de los mecanismos de sincronización administrados, consulte [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -49,12 +49,13 @@ Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso excl
   
  Para obtener información sobre la seguridad de control de acceso para las exclusiones mutuas, vea las clases <xref:System.Security.AccessControl.MutexSecurity> y <xref:System.Security.AccessControl.MutexAccessRule>, la enumeración <xref:System.Security.AccessControl.MutexRights>, los métodos <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> y <xref:System.Threading.Mutex.OpenExisting%2A> de la clase <xref:System.Threading.Mutex> y el constructor <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.Mutex.%23ctor%2A>  
- <xref:System.Security.AccessControl.MutexSecurity>  
- <xref:System.Security.AccessControl.MutexAccessRule>  
- [Subprocesamiento](../../../docs/standard/threading/index.md)  
- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Monitors](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) (Clases Monitor)  
- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.Mutex.%23ctor%2A>  
+- <xref:System.Security.AccessControl.MutexSecurity>  
+- <xref:System.Security.AccessControl.MutexAccessRule>  
+- [Subprocesamiento](../../../docs/standard/threading/index.md)  
+- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Monitors](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) (Clases Monitor)  
+- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)

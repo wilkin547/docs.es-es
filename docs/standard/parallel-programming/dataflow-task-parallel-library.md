@@ -12,11 +12,11 @@ ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d44ec0e0601383133e6c59e44cd81031918d4b6d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43385863"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269064"
 ---
 # <a name="dataflow-task-parallel-library"></a>Flujo de datos (biblioteca TPL)
 <a name="top"></a> La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) proporciona componentes de flujo de datos que ayudan a aumentar la solidez de aplicaciones habilitadas para simultaneidad. Se conoce colectivamente a estos componentes de flujo de datos como *biblioteca TDF (biblioteca de TPL Dataflow)* pero nos referiremos descriptivamente a ella como "biblioteca de flujos de datos TPL". Este modelo de flujo de datos promueve una programación basada en actores mediante el paso de mensajes en proceso para tareas de canalización y de flujo de datos de grano grueso. Los componentes de flujo de datos se basan en los tipos y la infraestructura de programación de la biblioteca TPL y se integran con la compatibilidad de los lenguajes C#, Visual Basic y F# para proporcionar programación asincrónica. Estos componentes de flujo de datos son útiles cuando se tienen varias operaciones que deben comunicarse entre sí de forma asincrónica, o cuando se desea procesar datos a medida que estén disponibles. Por ejemplo, piense en una aplicación que procesa datos de imagen de una cámara web. Con el modelo de flujo de datos, la aplicación puede procesar fotogramas de imagen a medida que estén disponibles. Si la aplicación mejora fotogramas de imagen, por ejemplo, corrigiendo la luz o reduciendo ojos rojos, puede crear una *canalización* de los componentes de flujo de datos. Cada fase de la canalización puede utilizar más funcionalidad de paralelismo de grano grueso, como la funcionalidad proporcionada por la biblioteca TPL, para transformar la imagen.  

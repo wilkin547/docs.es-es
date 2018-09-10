@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592475"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204986"
 ---
 # <a name="managed-threading-best-practices"></a>Procedimientos recomendados para el subprocesamiento administrado
 El multithreading requiere que la programación sea cuidadosa. La complejidad de muchas tareas se puede reducir poniendo las solicitudes de ejecución en cola por subprocesos del grupo de subprocesos. En este tema se tratan situaciones más complicadas, como coordinar el trabajo de múltiples subprocesos, o controlar los subprocesos que se bloquean.  
@@ -196,6 +196,7 @@ else {
   
 -   Evite proporcionar métodos estáticos que alteren el estado estático. En escenarios de servidor comunes, el estado estático se comparte entre las solicitudes, lo que significa que varios subprocesos pueden ejecutar a la vez ese código. De este modo, se abre la posibilidad de errores de subprocesos. Considere la posibilidad de utilizar un modelo de diseño que encapsule los datos en instancias no compartidas por las solicitudes. Además, si se sincronizan los datos estáticos, las llamadas entre los métodos estáticos que modifican el estado pueden generar interbloqueos o sincronización redundante, lo que afecta negativamente al rendimiento.  
   
-## <a name="see-also"></a>Vea también  
- [Subprocesamiento](../../../docs/standard/threading/index.md)  
- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>Vea también
+
+- [Subprocesamiento](../../../docs/standard/threading/index.md)  
+- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)

@@ -2,12 +2,12 @@
 title: 'Cómo: Depurar conjuntos de resultados de consulta vacíos (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: a425327c6ba7168f7070d53a39fa64be991d4ddf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329766"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44082328"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Cómo: Depurar conjuntos de resultados de consulta vacíos (C#)
 Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  
@@ -82,5 +82,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

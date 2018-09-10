@@ -2,12 +2,12 @@
 title: 'Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 5f0c0e92c7448eebc6f395fcdb16cfca840bb2ea
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071089"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216098"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (C#)
 
@@ -149,6 +149,6 @@ Cree y compile un proyecto cuyo destino sea una de las opciones siguientes:
 
 ## <a name="see-also"></a>Vea también
 
-[LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-[Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-[Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  

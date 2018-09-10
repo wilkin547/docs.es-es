@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 016229ea1b80c82ed9174e19bb08adfa67f016fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580528"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201405"
 ---
 # <a name="parallel-diagnostic-tools"></a>Herramientas de diagnóstico paralelo
 Visual Studio proporciona amplia compatibilidad para depurar aplicaciones de varios subprocesos y generar perfiles de estas.  
@@ -29,5 +29,6 @@ Visual Studio proporciona amplia compatibilidad para depurar aplicaciones de var
 ## <a name="profiling"></a>Generación de perfiles  
  Las vistas del informe Visualizador de simultaneidad permite visualizar cómo los subprocesos de un programa en paralelo interactúan entre sí y con subprocesos de otros procesos del sistema. Para más información, consulte [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>Vea también  
- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)

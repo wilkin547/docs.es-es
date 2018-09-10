@@ -3,12 +3,12 @@ title: 'Control de versiones de C#: Guía de C#'
 description: Comprender cómo funciona el control de versiones en C# y .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4dc8e7e521bf209d6ca69a84534d277fb8a93ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351789"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269311"
 ---
 # <a name="versioning-in-c"></a>Control de versiones en C# #
 
@@ -24,7 +24,7 @@ Como desarrollador que ha creado bibliotecas de .NET para uso público, probable
 De manera ideal, la información de la versión que proporciona a la biblioteca debe ayudar a los desarrolladores a determinar la compatibilidad con sus proyectos que usan versiones anteriores de la misma biblioteca.
 
 El enfoque más sencillo de SemVer es el formato de 3 componentes `MAJOR.MINOR.PATCH`, donde:
- 
+
 * `MAJOR` se incrementa cuando realiza cambios de API incompatibles
 * `MINOR` se incrementa cuando agrega funciones de manera compatible con versiones anteriores
 * `PATCH` se incrementa cuando realiza correcciones de errores compatibles con versiones anteriores
@@ -51,7 +51,7 @@ Cuánto más facilite la actualización a la nueva versión de la biblioteca a s
 
 ### <a name="application-configuration-file"></a>Archivo de configuración de aplicación
 
-Como desarrollador de .NET, existe una posibilidad muy alta de que haya encontrado [el archivo `app.config`](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx) en la mayoría de tipos de proyecto.
+Como desarrollador de .NET, existe una posibilidad muy alta de que haya encontrado [el archivo `app.config`](../framework/configure-apps/file-schema/index.md) en la mayoría de tipos de proyecto.
 Este sencillo archivo de configuración puede hacer mucho por mejorar la implementación de las actualizaciones nuevas. Generalmente, debe diseñar sus bibliotecas de tal manera que la información que es probable que cambie regularmente se almacene en el archivo `app.config`, de esta manera, cuando dicha información se actualice, el archivo de configuración de las versiones anteriores solo necesita reemplazarse por el nuevo sin necesidad de volver a compilar la biblioteca.
 
 ## <a name="consuming-libraries"></a>Consumo de bibliotecas
@@ -62,7 +62,7 @@ Por suerte, C# y el ecosistema de .NET incluyen características y técnicas que
 
 ### <a name="assembly-binding-redirection"></a>Redirección de enlace de ensamblados
 
-Puede usar el archivo `app.config` para actualizar la versión de una biblioteca que use su aplicación. Al agregar lo que se denomina una [*redirección de enlace*](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx), puede usar la nueva versión de la biblioteca sin tener que volver a compilar la aplicación. En el siguiente ejemplo se muestra cómo actualizaría el archivo `app.config` de la aplicación para usar la versión de revisión `1.0.1` de `ReferencedLibrary`, en lugar de la versión `1.0.0` con la que se ha compilado originalmente.
+Puede usar el archivo `app.config` para actualizar la versión de una biblioteca que use su aplicación. Al agregar lo que se denomina una [*redirección de enlace*](../framework/configure-apps/redirect-assembly-versions.md), puede usar la nueva versión de la biblioteca sin tener que volver a compilar la aplicación. En el siguiente ejemplo se muestra cómo actualizaría el archivo `app.config` de la aplicación para usar la versión de revisión `1.0.1` de `ReferencedLibrary`, en lugar de la versión `1.0.0` con la que se ha compilado originalmente.
 
 ```xml
 <dependentAssembly>

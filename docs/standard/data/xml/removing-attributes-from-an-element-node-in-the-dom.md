@@ -5,11 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 758ce84390c9ba47e3eb56e1feb293a4cf0408a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188151"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Cómo quitar atributos de un nodo de elementos en el DOM
 Existen muchas formas de quitar atributos. Una de estas técnicas consiste en quitarlos de la colección de atributos. Para ello, hay que realizar los siguientes pasos:  
@@ -38,5 +39,6 @@ Existen muchas formas de quitar atributos. Una de estas técnicas consiste en qu
   
  Al llamarlo con un <xref:System.Xml.XmlAttribute>, el método <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> establece el valor del atributo en String.Empty, ya que no puede haber un atributo sin un valor.  
   
-## <a name="see-also"></a>Vea también  
- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vea también
+
+- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

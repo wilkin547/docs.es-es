@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66fe5dd1da148e8afd07ae69cec960438b53536a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567359"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261871"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>Cómo: Quitar caracteres no válidos de una cadena
 En el ejemplo siguiente se usa el método estático <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para quitar caracteres no válidos de una cadena.  
@@ -36,5 +36,6 @@ En el ejemplo siguiente se usa el método estático <xref:System.Text.RegularExp
   
  El patrón de expresión regular `[^\w\.@-]` coincide con cualquier carácter que no sea un carácter de palabra, un punto, un símbolo @ o un guion. Un carácter de palabra es cualquier letra, dígito decimal o conector de puntuación, como un guion bajo. Cualquier carácter que coincida con este patrón se sustituye por <xref:System.String.Empty?displayProperty=nameWithType>, que es la cadena definida por el modelo de reemplazo. Para permitir caracteres adicionales en la entrada de usuario, agregue esos caracteres a la clase de caracteres en el patrón de la expresión regular. Por ejemplo, el patrón de expresión regular `[^\w\.@-\\%]`también permite un símbolo de porcentaje y una barra diagonal inversa en la cadena de entrada.  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vea también
+
+- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)

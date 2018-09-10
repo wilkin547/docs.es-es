@@ -2,12 +2,12 @@
 title: Guía de programación (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: 03742916c973f9ddac8163fe231cba45750ff080
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752109"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187918"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Guía de programación (LINQ to XML) (C#)
 En esta sección se ofrece información conceptual y paso a paso acerca de la programación con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -34,6 +34,7 @@ En esta sección se ofrece información conceptual y paso a paso acerca de la pr
 |[Seguridad de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-security.md)|Describe los problemas de seguridad asociados a LINQ to XML y ofrece una cierta orientación acerca de cómo minimizar el grado de exposición a esos problemas de seguridad.|  
 |[Documentos XML de ejemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Contiene los documentos XML de muestra que utilizan numerosos ejemplos de esta documentación.|  
   
-## <a name="see-also"></a>Vea también  
- [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: 'Cómo: Comparar el contenido de dos carpetas (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: ef4f426ca11f6d1ac40b8080c989ddae5e4c75ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1517d1f9e451306e40835e6032e2aff2fe3e60ab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330445"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209191"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Cómo: Comparar el contenido de dos carpetas (LINQ) (C#)
 En este ejemplo se muestran tres maneras de comparar dos listados de archivos:  
@@ -128,6 +128,7 @@ namespace QueryCompareTwoDirs
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Vea también
+
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc2698a37dc77ccd8c58164ec5a34f21251b6dbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571129"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264160"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tablas de conversión de tipos en .NET
 Una conversión de ampliación se produce cuando se convierte un valor de un tipo a otro tipo que es de igual o mayor tamaño. Una conversión de restricción se produce cuando se convierte un valor de un tipo a otro tipo que es de un tamaño menor. En las tablas de este tema se muestran los comportamientos de ambos tipos de conversiones.  
@@ -71,6 +71,7 @@ Una conversión de ampliación se produce cuando se convierte un valor de un tip
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Convert?displayProperty=nameWithType>  
- [Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Convert?displayProperty=nameWithType>  
+- [Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)

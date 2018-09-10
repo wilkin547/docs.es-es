@@ -2,19 +2,19 @@
 title: Técnicas de consulta avanzadas (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d33677be318275eb9c9cc427129caec6edddb2d9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326321"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44141196"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Técnicas de consulta avanzadas (LINQ to XML) (C#)
 En esta sección se proporcionan ejemplos de técnicas de consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] más avanzadas.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md) (Cómo: Combinar dos colecciones (LINQ to XML) [C#])|Muestra cómo utilizar la cláusula `Join` para aprovechar las relaciones de los datos XML.|  
 |[How to: Create Hierarchy Using Grouping (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md) (Cómo: Crear una jerarquía mediante la agrupación [C#])|Muestra cómo agrupar datos y después generar XML basado en la agrupación.|  
@@ -26,5 +26,6 @@ En esta sección se proporcionan ejemplos de técnicas de consulta de [!INCLUDE[
 |[How to: Modify an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md) (Cómo: Modificar un documento de Office Open XML [C#])|Presenta código que abre, modifica y guarda un documento XML abierto de Office.|  
 |[How to: Populate an XML Tree from the File System (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md) (Cómo: Rellenar un árbol XML desde el sistema de archivos [C#])|Presenta código que crea un árbol XML a partir del sistema de archivos.|  
   
-## <a name="see-also"></a>Vea también  
- [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Vea también
+
+- [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

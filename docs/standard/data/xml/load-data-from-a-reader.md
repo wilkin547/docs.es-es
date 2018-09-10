@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569979"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207231"
 ---
 # <a name="load-data-from-a-reader"></a>Carga de datos desde un sistema de lectura
 Si se carga un documento XML utilizando el método <xref:System.Xml.XmlDocument.Load%2A> y un parámetro de <xref:System.Xml.XmlReader>, existen diferencias en el comportamiento que se produce cuando se compara con el comportamiento derivado de la carga de datos desde otros formatos. Si el sistema de lectura está en su estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consume todo el contenido del sistema de lectura y compila el Modelo de objetos de documento (DOM) XML a partir de todos los datos del sistema de lectura.  
@@ -29,5 +29,6 @@ Si se carga un documento XML utilizando el método <xref:System.Xml.XmlDocument.
   
  De manera predeterminada, <xref:System.Xml.XmlDocument.Load%2A> no comprueba si el XML es válido utilizando la definición de tipo de documento (DTD) o la validación de esquemas. Sólo comprueba si el XML es correcto. Para que se produzca la validación, tiene que crear un <xref:System.Xml.XmlReader> utilizando la clase <xref:System.Xml.XmlReaderSettings>. La clase <xref:System.Xml.XmlReader> puede exigir la validación con una DTD o un esquema del lenguaje de definición de esquemas (XSD). La propiedad <xref:System.Xml.ValidationType> de la clase <xref:System.Xml.XmlReaderSettings> determina si la instancia de <xref:System.Xml.XmlReader> exige la validación. Para obtener más información acerca de la validación de datos XML, vea la sección Comentarios de la página de referencia de <xref:System.Xml.XmlReader>.  
   
-## <a name="see-also"></a>Vea también  
- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vea también
+
+- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

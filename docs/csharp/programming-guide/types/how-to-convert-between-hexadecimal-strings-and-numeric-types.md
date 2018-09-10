@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 0f7502bc0f14c85d207c313646f26c7787bd46b3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5acbfd121698cf0d2b6d78ccea810baf624c7981
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484092"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076049"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Cómo: Convertir cadenas hexadecimales en tipos numéricos (Guía de programación de C#)
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
@@ -52,7 +52,8 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
   
  [!code-csharp[csProgGuideTypes#38](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-between-hexadecimal-strings-and-numeric-types_5.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)  
- [Tipos](../../../csharp/programming-guide/types/index.md)  
- [Cómo: Determinar si una cadena representa un valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+## <a name="see-also"></a>Vea también
+
+- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [Tipos](../../../csharp/programming-guide/types/index.md)  
+- [Cómo: Determinar si una cadena representa un valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

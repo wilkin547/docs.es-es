@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398279"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198509"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidad de versiones en .NET Framework
 La compatibilidad con versiones anteriores significa que una aplicación desarrollada en una versión determinada de una plataforma se ejecutará en las versiones posteriores de esa plataforma. .NET Framework intenta maximizar la compatibilidad con versiones anteriores. El código fuente escrito para una versión de .NET Framework debe compilarse en versiones posteriores de .NET Framework y los binarios que se ejecutan en una versión de .NET Framework deberán comportarse del mismo modo en versiones posteriores de .NET Framework.  
@@ -52,9 +52,9 @@ La compatibilidad con versiones anteriores significa que una aplicación desarro
 
 - Si tiene una aplicación de .NET Framework 3.5, vea también [Problemas de migración de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md).
 
-- Si tiene una aplicación de .NET Framework 2.0, vea también [Cambios en .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=186989).
+- Si tiene una aplicación de .NET Framework 2.0, vea también [Cambios en .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=186989).
 
-- Si tiene una aplicación de .NET Framework 1.1, vea también [Cambios en .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125263).  
+- Si tiene una aplicación de .NET Framework 1.1, vea también [Cambios en .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125263).  
   
 -   Si va a volver a compilar código fuente existente para ejecutarlo en .NET Framework 4.5 o en sus versiones secundarias, o si va a desarrollar una nueva versión de una aplicación o un componente para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o sus versiones secundarias a partir de una base de código fuente existente, vea [Lo obsoleto en la biblioteca de clases .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md) para conocer los miembros y tipos obsoletos, y aplique las soluciones indicadas. (El código compilado previamente seguirá ejecutándose con los tipos y miembros que se han marcado como obsoletos).  
   
@@ -69,5 +69,5 @@ La compatibilidad con versiones anteriores significa que una aplicación desarro
  [Novedades](../../../docs/framework/whats-new/index.md)  
  [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)  
  [Compatibilidad de aplicaciones](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
+ [Directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
  [Problemas de migración de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

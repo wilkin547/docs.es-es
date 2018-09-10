@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7becf993db866e24381fe9013c82d74dd91ee9a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85bb6dcdaa198b6b038cc80e1e38fa7d11123678
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568035"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086386"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analizar otras cadenas en .NET
 Además de cadenas numéricas y <xref:System.DateTime>, puede analizar cadenas que representan los tipos <xref:System.Char>, <xref:System.Boolean> y <xref:System.Enum> en tipos de datos.  
@@ -50,7 +50,8 @@ Además de cadenas numéricas y <xref:System.DateTime>, puede analizar cadenas q
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
-## <a name="see-also"></a>Vea también  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
- [Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Vea también
+
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
+- [Conversión de tipos en .NET](../../../docs/standard/base-types/type-conversion.md)

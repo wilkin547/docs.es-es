@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03da36090c255f635036a9bd518bdacd99404ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575660"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264966"
 ---
 # <a name="weak-references"></a>Referencias parciales
 El recolector de elementos no utilizados no puede recopilar un objeto que está siendo usado por una aplicación mientras el código de aplicación pueda llegar a ese objeto. En este caso, se dice que la aplicación tiene una referencia segura al objeto.  
@@ -52,5 +52,6 @@ El recolector de elementos no utilizados no puede recopilar un objeto que está 
   
  Evite usar referencias débiles como solución automática para problemas de administración de memoria. En su lugar, desarrolle una directiva eficaz de almacenamiento en caché para controlar los objetos de la aplicación.  
   
-## <a name="see-also"></a>Vea también  
- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)

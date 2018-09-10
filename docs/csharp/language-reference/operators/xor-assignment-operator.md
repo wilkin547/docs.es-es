@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ^= operator [C#]
 ms.assetid: 3658ff9a-61cd-467e-ad6b-8fbf1cfbaae4
-ms.openlocfilehash: b868f2cdbfa8a80f89a12e6194a30154481f0b07
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: d6546f23ffb6dee792339a7e3863bf58ae668d58
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172378"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857237"
 ---
 # <a name="-operator-c-reference"></a>Operador ^= (Referencia de C#)
 El operador de asignación de OR exclusiva.  
@@ -36,7 +36,8 @@ x = x ^ y
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csRefOperators#23](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Operadores de C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Operadores de C#](../../../csharp/language-reference/operators/index.md)

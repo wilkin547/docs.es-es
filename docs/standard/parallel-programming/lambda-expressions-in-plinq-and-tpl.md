@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf211a35cb8864e0271032d63b5b4e9e25697e96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36a003c96e81996e304fc4347ed05bf7a255c224
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581185"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189458"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Expresiones lambda en PLINQ y TPL
 La biblioteca TPL contiene muchos métodos que adoptan una de las familias <xref:System.Func%601?displayProperty=nameWithType> o <xref:System.Action?displayProperty=nameWithType> de delegados como parámetros de entrada. Puede usar estos delegados para pasar de la lógica personalizada del programa al bucle, tarea o consulta en paralelo. Los ejemplos de código de TPL, igual que igual que de PLINQ, usan expresiones lambda para crear instancias de esos delegados como bloques de código insertados. En este tema se proporciona una breve introducción a Func y Action, y muestra cómo usar las expresiones lambda en la biblioteca TPL y PLINQ.  
@@ -36,5 +36,6 @@ La biblioteca TPL contiene muchos métodos que adoptan una de las familias <xref
  [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
  [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]  
   
-## <a name="see-also"></a>Vea también  
- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)

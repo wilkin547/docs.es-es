@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 913a5d6ab28d375dbfdd99dec6fd153bc94efee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573905"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883727"
 ---
 # <a name="latency-modes"></a>Modos de latencia
 Para reclamar objetos, el recolector de elementos no utilizados debe detener todos los subprocesos en ejecución en una aplicación. En algunos casos, como cuando una aplicación recupera datos o muestra contenido, la recolección completa de elementos no utilizados puede producirse en un momento crítico y reducir el rendimiento. Puede ajustar la tendencia a la intrusión del recolector de elementos no utilizados estableciendo la propiedad <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> en uno de los valores de <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
@@ -54,7 +54,8 @@ Para reclamar objetos, el recolector de elementos no utilizados debe detener tod
   
 -   Para forzar las recolecciones de generación 2 durante un período de latencia baja, llame al método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.GC?displayProperty=nameWithType>  
- [Colecciones inducidas](../../../docs/standard/garbage-collection/induced.md)  
- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.GC?displayProperty=nameWithType>  
+- [Colecciones inducidas](../../../docs/standard/garbage-collection/induced.md)  
+- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8640a951acab512cbe2397df831a74700b5ad6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a27696b6511103e98d37fb72b33f801d23ad391
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574825"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042184"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Deducción de esquemas a partir de documentos XML
 Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML (XSD) a partir de la estructura de un documento XML.  
@@ -82,9 +82,10 @@ Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInfe
 ## <a name="schemas-that-cannot-be-refined"></a>Esquemas que no pueden refinarse  
  Existen construcciones de esquema XML de W3C que el proceso <xref:System.Xml.Schema.XmlSchemaInference> de lenguaje de definición de esquema XML (XSD) no puede controlar si se da un tipo para refinar y provoca que se inicie una excepción. Como un tipo complejo cuyo compositor de nivel superior es una secuencia. En el modelo de objeto de esquema (SOM), esto corresponde a <xref:System.Xml.Schema.XmlSchemaComplexType> cuya propiedad <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> no es una instancia de <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Schema.XmlSchemaInference>  
- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Deducción de esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
- [Reglas para deducir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Xml.Schema.XmlSchemaInference>  
+- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Deducción de esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+- [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+- [Reglas para deducir tipos simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591317"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199770"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore y SemaphoreSlim
 La clase <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa un semáforo local o con nombre (para todo el sistema). Se trata de un contenedor fino alrededor del objeto semáforo de Win32. Los semáforos de Win32 son semáforos de recuento, que se pueden utilizar para controlar el acceso a un grupo de recursos.  
@@ -46,7 +46,8 @@ La clase <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
   
  Utilice la seguridad de control de acceso para proteger un objeto <xref:System.Threading.Semaphore> que representa un semáforo con nombre, a poder ser mediante un constructor que especifique un objeto <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. También puede aplicar la seguridad de control de acceso mediante el método <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>, pero esto deja una ventana de vulnerabilidad entre el momento en que se crea el semáforo y el momento en que se protege. Proteger los semáforos con seguridad de control de acceso ayuda a evitar ataques malintencionados, pero no soluciona el problema de conflictos involuntarios de nombres.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Semaphore>  
- <xref:System.Threading.SemaphoreSlim>  
- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Semaphore>  
+- <xref:System.Threading.SemaphoreSlim>  
+- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)

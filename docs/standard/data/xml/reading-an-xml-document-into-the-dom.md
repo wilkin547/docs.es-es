@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad649e61f4f006103d38a998eece174a07889828
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569725"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209542"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Lectura de un documento XML en el DOM
 La información XML se lee en memoria desde diferentes formatos. Se puede leer desde una cadena, una secuencia, una URL, un sistema de lectura de texto o una clase derivada de <xref:System.Xml.XmlReader>.  
@@ -70,5 +70,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vea también
+
+- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

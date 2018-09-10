@@ -2,19 +2,19 @@
 title: 'Cómo: Determinar si un archivo es un ensamblado (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0557f42d42e42606c3d1b2a2ad71bd797a159e8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee2313677fba21624ccdb44db779633f6c4503bf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317988"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861015"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Cómo: Determinar si un archivo es un ensamblado (C#)
 Un archivo es un ensamblado únicamente si está administrado y contiene una entrada de ensamblado en sus metadatos. Para más información sobre ensamblados y metadatos, vea el tema [Manifiesto del ensamblado](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Cómo determinar manualmente si un archivo es un ensamblado  
   
-1.  Inicie [Ildasm.exe (el desensamblador de lenguaje intermedio)](https://msdn.microsoft.com/library/f7dy01k1).  
+1.  Inicie [Ildasm.exe (el desensamblador de lenguaje intermedio)](../../../../framework/tools/ildasm-exe-il-disassembler.md).  
   
 2.  Cargue el archivo que quiere probar.  
   
@@ -66,7 +66,8 @@ class TestAssembly
   
  El método <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> carga el archivo de prueba y, después, lo libera cuando se lee la información.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Reflection.AssemblyName>  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Reflection.AssemblyName>  
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
+- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])

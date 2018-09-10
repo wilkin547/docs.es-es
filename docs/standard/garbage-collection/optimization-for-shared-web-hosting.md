@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3c979477f0928c9c3d2a393042867c84df33ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571974"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178525"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Optimización de hospedaje web compartido
 Si es el administrador de un servidor compartido que hospeda varios sitios web pequeños, puede optimizar el rendimiento y aumentar la capacidad del sitio si agrega la siguiente configuración `gcTrimCommitOnLowMemory` al nodo `runtime` en el archivo Aspnet.config del directorio de .NET:  
@@ -44,5 +44,6 @@ Si es el administrador de un servidor compartido que hospeda varios sitios web p
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md)

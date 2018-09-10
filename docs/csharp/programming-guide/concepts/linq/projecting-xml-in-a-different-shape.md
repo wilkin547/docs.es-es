@@ -2,12 +2,12 @@
 title: Proyección de XML en una forma distinta (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: e9d555dadea1ddd8720ef2548136f9bf9fb833c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe6166a333988d4b0a4550900a9307f1c4951aec
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340429"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43787005"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Proyección de XML en una forma distinta (C#)
 Este tema muestra un ejemplo de cómo proyectar un XML cuya apariencia es diferente a la del XML de origen.  
@@ -235,5 +235,6 @@ class Program
   
 -   [Buscar texto en documentos de Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Vea también
+
+- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

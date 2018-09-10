@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a17bc509c8c82bfb30811ec3511207ca2d823e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589859"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042236"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local para los subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos
 Puede usar el almacenamiento local para el subproceso (TLS) administrado para almacenar los datos que sean exclusivos de un subproceso y un dominio de aplicación. .NET Framework proporciona dos maneras de utilizar el TLS administrado: ranuras para datos y campos estáticos relacionados con subprocesos.  
@@ -57,9 +57,10 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado para al
   
  Las ranuras con nombre pueden ser prácticas, porque puede recuperar la ranura cuando lo necesite pasando su nombre al método <xref:System.Threading.Thread.GetNamedDataSlot%2A>, en lugar de mantener una referencia a una ranura sin nombre. Sin embargo, si otro componente usa el mismo nombre para su almacenamiento relacionado con subprocesos y un subproceso ejecuta código desde el componente y el otro componente, los dos componentes podrían dañar los datos del otro. (En este escenario se supone que ambos componentes se ejecutan en el mismo dominio de aplicación y que no están diseñados para compartir los mismos datos).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ContextStaticAttribute>  
- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
- <xref:System.ThreadStaticAttribute>  
- <xref:System.Runtime.Remoting.Messaging.CallContext>  
- [Subprocesamiento](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.ContextStaticAttribute>  
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
+- <xref:System.ThreadStaticAttribute>  
+- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- [Subprocesamiento](../../../docs/standard/threading/index.md)

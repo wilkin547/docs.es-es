@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e257ced27812f8383edf9eb9688e9f48cfde02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583752"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266857"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Cómo: Realizar escuchas de solicitudes mediante sondeo
 En el ejemplo siguiente se muestra una manera de que el código de usuario pueda sondear un token de cancelación a intervalos regulares para ver si se ha solicitado la cancelación del subproceso que realiza la llamada. En este ejemplo se usa el tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, pero se aplica el mismo modelo a operaciones asincrónicas creadas directamente por el tipo <xref:System.Threading.ThreadPool?displayProperty=nameWithType> o el tipo <xref:System.Threading.Thread?displayProperty=nameWithType>.  
@@ -30,5 +30,6 @@ En el ejemplo siguiente se muestra una manera de que el código de usuario pueda
   
  Si llama a <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, solo tiene que comprobar explícitamente la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> si tiene que hacer otro trabajo para responder a la cancelación, aparte de generar la excepción. En este ejemplo, puede ver que el código realmente tiene acceso a la propiedad dos veces: una vez en el acceso explícito y de nuevo en el método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>. Sin embargo, dado que el acto de leer la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> conlleva solo una instrucción de lectura volátil por acceso, el acceso doble no es significativo desde una perspectiva de rendimiento. Es preferible llamar al método en lugar de producir manualmente <xref:System.OperationCanceledException>.  
   
-## <a name="see-also"></a>Vea también  
- [Cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Vea también
+
+- [Cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md)

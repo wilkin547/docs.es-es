@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 424db46c879974a9859637f9a2a5dfcd4494a3c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3da35dae374018f0695f79022e83ad397e98cb88
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571803"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44202354"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Cómo: Utilizar excepciones específicas en un bloque Catch
 
@@ -32,5 +32,6 @@ En el siguiente ejemplo de código se usa un bloque `try`/`catch` para detectar 
 [!code-csharp[CatchException#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception1.cs#2)]
 [!code-vb[CatchException#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception1.vb#2)] 
 
-## <a name="see-also"></a>Vea también  
-[Excepciones](index.md)
+## <a name="see-also"></a>Vea también
+
+- [Excepciones](index.md)

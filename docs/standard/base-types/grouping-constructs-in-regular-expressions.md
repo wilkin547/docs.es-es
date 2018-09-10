@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579827"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041605"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -84,7 +84,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  En la siguiente tabla se muestra cómo se interpreta el patrón de expresión regular.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
 |`\s`|Coincide con un carácter de espacio en blanco.|  
@@ -147,7 +147,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La tabla siguiente muestra cómo se interpreta la expresión regular.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este grupo de captura se denomina `duplicateWord`.|  
 |`\s`|Coincide con un carácter de espacio en blanco.|  
@@ -164,11 +164,11 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La tabla siguiente muestra cómo se interpreta la expresión regular.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\D+`|Coincide con uno o más caracteres de dígito no decimal.|  
-|`(?<digit>\d+)`|Coincide con uno o más caracteres de dígito decimal. Asigna la coincidencia al grupo llamado `digit` .|  
-|\D+|Coincide con uno o más caracteres de dígito no decimal.|  
+|`(?<digit>\d+)`|Coincide con uno o más caracteres de dígito decimal. Asigna la coincidencia al grupo llamado `digit`.|  
+|`\D+`|Coincide con uno o más caracteres de dígito no decimal.|  
 |`(?<digit>\d+)?`|Coincide con ninguna o una aparición de uno o más caracteres de dígito decimal. Asigna la coincidencia al grupo llamado `digit` .|  
   
 <a name="balancing_group_definition"></a>   
@@ -205,7 +205,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular se interpreta como sigue:  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Comienza al principio de la cadena.|  
 |`[^<>]*`|Coincide con cero o más caracteres que no son corchetes angulares de apertura o cierre.|  
@@ -270,7 +270,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular `(?:\b(?:\w+)\W*)+\.` coincide con una frase que termina en un punto. Dado que la expresión regular se centra en frases y no en palabras individuales, las construcciones de agrupamiento se usan exclusivamente como cuantificadores. El patrón de la expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(?:\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. No asigna el texto coincidente a un grupo capturado.|  
@@ -293,7 +293,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  Por ejemplo, la expresión regular `\b(?ix: d \w+)\s` del ejemplo siguiente utiliza opciones insertadas en una construcción de agrupamiento para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas y omitir el espacio en blanco del patrón para identificar todas las palabras que comienzan por la letra "d". La expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(?ix: d \w+)`|Usando una coincidencia sin distinción entre mayúsculas y minúsculas y omitiendo los espacios en blanco en este patrón, busca una "d" seguida de uno o varios caracteres que se usan para formar palabras.|  
@@ -319,7 +319,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular `\b\w+(?=\sis\b)` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -342,7 +342,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular `\b(?!un)\w+\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(?!un)`|Determina si los dos caracteres siguientes son "un". Si no lo son, es posible una coincidencia.|  
@@ -356,7 +356,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular `\b\w+\b(?!\p{P})` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -380,7 +380,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El patrón de la expresión regular `(?<=\b20)\d{2}\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\d{2}`|Coincide con dos dígitos decimales.|  
 |`(?<=\b20)`|Continúa la búsqueda si los dos dígitos decimales van precedidos de los dos dígitos decimales "20" en un límite de palabra.|  
@@ -405,7 +405,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El patrón de la expresión regular `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\w+`|Coincide con uno o varios caracteres que se usan para formar palabras seguidos de un carácter de espacio en blanco.|  
@@ -434,7 +434,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular sin retroceso `(?>(\w)\1+).\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`(\w)`|Coincide con un único carácter que se usa para formar palabras y se lo asigna al primer grupo de captura.|  
 |`\1+`|Coincide con el valor de la primera subcadena capturada una o varias veces.|  
@@ -461,7 +461,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El patrón de expresión regular `\b(\w+)\W+)+` extrae palabras individuales de una cadena. Se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Juntos, estos caracteres forman una palabra. Este es el segundo grupo de captura.|  
@@ -470,6 +470,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El primer grupo de captura coincide con cada palabra de la frase. El segundo grupo de captura coincide con cada palabra, junto con la puntuación y el espacio en blanco que siguen a la palabra. El objeto <xref:System.Text.RegularExpressions.Group> cuyo índice es 2 proporciona información sobre el texto coincidente con el segundo grupo de captura. El conjunto de palabras completo capturado por el grupo de captura está disponible desde el objeto <xref:System.Text.RegularExpressions.CaptureCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Vea también
+
+- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

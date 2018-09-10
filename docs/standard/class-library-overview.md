@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207461"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216625"
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
 
@@ -86,7 +86,7 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
  En la tabla siguiente se muestra una lista de los tipos base que proporciona .NET, se describe brevemente cada tipo y se indica el tipo correspondiente de Visual Basic, C#, C++ y F#.  
   
-|Categoría|Nombre de la clase|Description|Tipo de datos en Visual Basic|Tipo de datos en C#|Tipo de datos en C++/CLI|Tipo de datos en F#|  
+|Categoría|Nombre de la clase|Descripción|Tipo de datos en Visual Basic|Tipo de datos en C#|Tipo de datos en C++/CLI|Tipo de datos en F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Integer|<xref:System.Byte>|Entero de 8 bits sin signo.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|Entero de 8 bits con signo.<br /><br /> No es conforme a CLS.|**SByte**|**sbyte**|**char**<br /> O bien<br /> **signed** **char**|**sbyte**|  
@@ -110,7 +110,8 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
  Para más información sobre los espacios de nombres, use el [explorador de API de .NET](https://docs.microsoft.com/dotnet/api) para examinar la biblioteca de clases .NET. La documentación de referencia de API proporciona información sobre cada espacio de nombres, sus tipos y cada uno de sus miembros.  
   
-## <a name="see-also"></a>Vea también  
- [Sistema de tipos comunes](../../docs/standard/base-types/common-type-system.md)  
- [Explorador de API de .NET](https://docs.microsoft.com/dotnet/api)  
- [Información general](../../docs/framework/get-started/overview.md)
+## <a name="see-also"></a>Vea también
+
+- [Sistema de tipos comunes](../../docs/standard/base-types/common-type-system.md)  
+- [Explorador de API de .NET](https://docs.microsoft.com/dotnet/api)  
+- [Información general](../../docs/framework/get-started/overview.md)

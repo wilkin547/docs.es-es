@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577660"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210226"
 ---
 # <a name="common-io-tasks"></a>Tareas de E/S comunes
 El espacio de nombres <xref:System.IO> proporciona varias clases que permiten realizar diferentes acciones, como leer y escribir, en archivos, directorios y secuencias. Para más información, vea [E/S de archivos y secuencias](../../../docs/standard/io/index.md).  
@@ -53,7 +53,8 @@ El espacio de nombres <xref:System.IO> proporciona varias clases que permiten re
 |Buscar el tamaño de un directorio|Clase <xref:System.IO.Directory?displayProperty=nameWithType>|  
 |Determinar si existe un directorio|Método <xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vea también  
- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)  
- [Crear secuencias](../../../docs/standard/io/composing-streams.md)  
- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)
+## <a name="see-also"></a>Vea también
+
+- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)  
+- [Crear secuencias](../../../docs/standard/io/composing-streams.md)  
+- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)

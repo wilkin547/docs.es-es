@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575585"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207725"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Cómo: Prever condiciones de espacio insuficiente con almacenamiento aislado
 El código que usa el almacenamiento aislado está restringido por una [cuota](../../../docs/standard/io/isolated-storage.md#quotas) que especifica el tamaño máximo para el compartimiento de datos en que se encuentran los directorios y los archivos del almacenamiento aislado. La cuota se define mediante la directiva de seguridad y la pueden configurar los administradores. Si se supera el tamaño máximo permitido al intentar escribir datos, se genera la excepción <xref:System.IO.IsolatedStorage.IsolatedStorageException> y se produce un error en la operación. Esto ayuda a evitar los ataques de denegación de servicio malintencionados que pudieron provocar que la aplicación rechazara solicitudes porque se llenara el almacén de datos.  
@@ -45,7 +45,8 @@ El código que usa el almacenamiento aislado está restringido por una [cuota](.
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
  [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)  
- [Cómo: Obtener los almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)  
+- [Cómo: Obtener los almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

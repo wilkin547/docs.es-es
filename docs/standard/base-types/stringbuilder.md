@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072961"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197319"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Utilizar la clase StringBuilder en .NET
 El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los métodos de la clase <xref:System.String?displayProperty=nameWithType>, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto <xref:System.String> puede ser costosa. La clase <xref:System.Text.StringBuilder?displayProperty=nameWithType> se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase <xref:System.Text.StringBuilder> puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.  
@@ -111,7 +111,8 @@ El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los mét
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)  
- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
+- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)

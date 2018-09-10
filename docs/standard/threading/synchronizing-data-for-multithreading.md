@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591536"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180142"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para subprocesamiento múltiple
 Cuando varios subprocesos pueden realizar llamadas a las propiedades y los métodos de un objeto individual, es fundamental sincronizarlas. De lo contrario, un subproceso puede interrumpir lo que esté realizando otro y el objeto podría quedar en un estado no válido. La clase cuyos miembros están protegidos de tales interrupciones se conoce como segura para subprocesos.  
@@ -67,9 +67,10 @@ Cuando varios subprocesos pueden realizar llamadas a las propiedades y los méto
 ## <a name="synchronized-context"></a>Contexto sincronizado  
  Puede usar **SynchronizationAttribute** en cualquier **ContextBoundObject** para sincronizar todos los campos y métodos de instancia. Todos los objetos del mismo dominio de contexto comparten la misma instrucción lock. Varios subprocesos pueden acceder a los métodos y los campos, pero solo se permite uno a la vez.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)  
- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)  
- [SyncLock (instrucción)](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
- [lock (instrucción)](~/docs/csharp/language-reference/keywords/lock-statement.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)  
+- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)  
+- [SyncLock (instrucción)](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- [lock (instrucción)](~/docs/csharp/language-reference/keywords/lock-statement.md)

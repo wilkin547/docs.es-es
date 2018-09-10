@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961224"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857159"
 ---
 # <a name="how-to-search-strings"></a>Cómo: Buscar cadenas
 
@@ -68,7 +68,6 @@ El código siguiente usa expresiones regulares para validar el formato de cada c
 | \d{4}    | busca coincidencias con exactamente 4 caracteres de dígitos  |
 | $        | busca coincidencias con el final de la cadena       |
 
-
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
 Este patrón de búsqueda sencillo coincide con muchas cadenas válidas. Las expresiones regulares son mejores para buscar o validar con respecto a un patrón, en lugar de una cadena de texto sencilla.
@@ -77,10 +76,10 @@ Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com
 
 ## <a name="see-also"></a>Vea también  
 
- [Guía de programación de C#](../programming-guide/index.md)  
- [Cadenas](../programming-guide/strings/index.md)  
- [LINQ y cadenas](../programming-guide/concepts/linq/linq-and-strings.md)   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>     
- [Expresiones regulares de .NET Framework](../../standard/base-types/regular-expressions.md)   
- [Lenguaje de expresiones regulares: referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md)   
- [Procedimientos recomendados para el uso de cadenas en .NET](../../standard/base-types/best-practices-strings.md)  
+- [Guía de programación de C#](../programming-guide/index.md)  
+- [Cadenas](../programming-guide/strings/index.md)  
+- [LINQ y cadenas](../programming-guide/concepts/linq/linq-and-strings.md)
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
+- [Expresiones regulares de .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Lenguaje de expresiones regulares: referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Procedimientos recomendados para el uso de cadenas en .NET](../../standard/base-types/best-practices-strings.md)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 78a6bf1f5d4a93bd561faada91b4a11f52692dbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d48c2cab7100d8227b33ee0eeefb825dd81a5f88
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322346"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084574"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Cómo: Probar la igualdad de referencias (identidad) (Guía de programación de C#)
 No tiene que implementar ninguna lógica personalizada para admitir las comparaciones de igualdad de referencias en los tipos. Esta funcionalidad se proporciona para todos los tipos mediante el método <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> estático.  
@@ -26,5 +26,6 @@ No tiene que implementar ninguna lógica personalizada para admitir las comparac
   
  El runtime siempre aplica el método Intern a las cadenas constantes dentro del mismo ensamblado. Es decir, solo se conserva una instancia de cada cadena literal única. Sin embargo, el runtime no garantiza que se vaya a aplicar el método Intern a las cadenas creadas en tiempo de ejecución, ni tampoco que dicho método se aplique a dos cadenas constantes iguales en distintos ensamblados.  
   
-## <a name="see-also"></a>Vea también  
- [Comparaciones de igualdad](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
+## <a name="see-also"></a>Vea también
+
+- [Comparaciones de igualdad](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)

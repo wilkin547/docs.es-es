@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd6e85dca7c4c32361b964573f318b165e8d683
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385024"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205976"
 ---
 # <a name="destroying-threads"></a>Destrucción de subprocesos
 El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime produce una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para obtener más información, vea <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
@@ -66,7 +66,8 @@ catch (ThreadAbortException ex)
   
  Puede impedir que el sistema vuelva a generar la excepción mediante una llamada al método <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType>. Sin embargo, debe hacerlo solo si su propio código generó <xref:System.Threading.ThreadAbortException>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)

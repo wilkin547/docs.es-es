@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2e7d5ce170feecaf69aa5dd9785346de0375d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc36c926ba81de8a59ff3af69719bec6b7370efc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591510"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071497"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Introducción a la velocidad en PLINQ
 El objetivo principal de PLINQ es acelerar la ejecución de consultas LINQ to Objects mediante la ejecución de los delegados de consulta en paralelo en equipos de varios núcleos. PLINQ funciona mejor cuando el procesamiento de cada elemento de una colección de origen es independiente, sin ningún estado compartido implicado entre los delegados individuales. Estas operaciones son comunes en LINQ to Objects y PLINQ y a menudo se denominan "*perfectamente paralelas*" porque se prestan fácilmente a la programación en varios subprocesos. Sin embargo, no todas las consultas constan de operaciones paralelas perfectas; en la mayoría de los casos, una consulta incluye algunos operadores que no se pueden paralelizar o que ralentizan la ejecución en paralelo. E incluso con las consultas que son perfectamente paralelas, PLINQ debe crear particiones del origen de datos y programar el trabajo en los subprocesos y generalmente tiene que combinar los resultados cuando finaliza la consulta. Todas estas operaciones aumentan el costo computacional de la paralelización; a estos costos derivados de agregar la paralelización se les denomina *sobrecarga*. Para lograr un rendimiento óptimo de una consulta PLINQ, el objetivo es maximizar las partes que son perfectamente paralelas y minimizar las partes que requieren sobrecarga. Este artículo proporciona información que le ayudará a escribir consultas PLINQ tan eficaces como sea posible mientras se siguen produciendo resultados correctos.  
@@ -84,5 +84,6 @@ El objetivo principal de PLINQ es acelerar la ejecución de consultas LINQ to Ob
   
 -   Las consultas que contienen Reverse, a menos que se aplique a un origen de datos indexable.  
   
-## <a name="see-also"></a>Vea también  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Vea también
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9800f1b1ec8fbb0eaf91611895aaf9d45629fae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575829"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879041"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Cómo: Definir y usar proveedores de formato numérico personalizado
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ofrece un amplio control sobre la representación de cadena de valores numéricos. Admite las siguientes características para personalizar el formato de los valores numéricos:  
@@ -91,5 +91,6 @@ ms.locfileid: "33575829"
 ## <a name="compiling-the-code"></a>Compilar el código  
  Compile el código de la línea de comandos mediante csc.exe o vb.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
-## <a name="see-also"></a>Vea también  
- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>Vea también
+
+- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)

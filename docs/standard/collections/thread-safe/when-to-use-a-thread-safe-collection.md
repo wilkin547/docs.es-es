@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574844"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209963"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Cuándo usar una colección segura para subprocesos
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] presenta cinco nuevos tipos de colección que están especialmente diseñadas para admitir operaciones multiproceso de agregar y quitar. Para obtener seguridad para los subprocesos, estos nuevos tipos usan diversas clases de mecanismos de sincronización eficientes con bloqueo y sin bloqueo. La sincronización agrega sobrecarga a las operaciones. La cantidad de sobrecarga depende del tipo de sincronización que se use, el tipo de operaciones que se realicen y otros factores, como el número de subprocesos que intentan obtener acceso simultáneamente a la colección.  
@@ -62,7 +62,8 @@ ms.locfileid: "33574844"
 ## <a name="blockingcollection"></a>BlockingCollection  
  Cuando se necesita una semántica de límite y bloqueo, <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> probablemente funcionará más rápido que cualquier implementación personalizada. Además, admite tareas avanzadas de cancelación, enumeración y control de excepciones.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Colecciones seguras para subprocesos](../../../../docs/standard/collections/thread-safe/index.md)  
- [Programación en paralelo](../../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Colecciones seguras para subprocesos](../../../../docs/standard/collections/thread-safe/index.md)  
+- [Programación en paralelo](../../../../docs/standard/parallel-programming/index.md)

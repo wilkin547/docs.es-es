@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574812"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262282"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -68,11 +68,11 @@ Para obtener más información sobre UWP, vea [Introducción a la Plataforma uni
 ## <a name="net-runtimes"></a>Entornos de tiempo de ejecución .NET
 
 Un entorno de ejecución es el entorno de ejecución de un programa administrado. El sistema operativo forma parte del entorno de ejecución, pero no del entorno de ejecución .NET. Estos son algunos ejemplos de los entornos de ejecución .NET:
- 
- - Common Language Runtime (CLR) para .NET Framework
- - Core Common Language Runtime (CoreCLR) para .NET Core
- - .NET Native para la Plataforma universal de Windows 
- - El entorno de ejecución Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac y el marco de escritorio de Mono
+
+- Common Language Runtime (CLR) para .NET Framework
+- Core Common Language Runtime (CoreCLR) para .NET Core
+- .NET Native para la Plataforma universal de Windows 
+- El entorno de ejecución Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac y el marco de escritorio de Mono
 
 ## <a name="net-tooling-and-common-infrastructure"></a>Herramientas de .NET e infraestructura común
 
@@ -85,11 +85,11 @@ Tiene acceso a un amplio conjunto de herramientas y componentes de infraestructu
 - Herramientas de organización de compilación de código abierto, como [CAKE](https://cakebuild.net/) y [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>Vea también
-[Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)   
-[.NET Standard](net-standard.md)  
-[Guía de .NET Core](../core/index.md)  
-[Guía de .NET Framework](../framework/index.md)  
-[Guía de C#](../csharp/index.md)  
-[Guía de F#](../fsharp/index.md)  
-[Guía de VB.NET](../visual-basic/index.md)  
 
+- [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)   
+- [.NET Standard](net-standard.md)  
+- [Guía de .NET Core](../core/index.md)  
+- [Guía de .NET Framework](../framework/index.md)  
+- [Guía de C#](../csharp/index.md)  
+- [Guía de F#](../fsharp/index.md)  
+- [Guía de VB.NET](../visual-basic/index.md)  

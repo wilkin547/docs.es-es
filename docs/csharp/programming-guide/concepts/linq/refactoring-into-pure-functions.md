@@ -2,12 +2,12 @@
 title: Refactorizar en funciones puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: ed9b33ed2b9669cb4412177086fc648865e4954a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcb396984d58b5601d278a860b272211e785dcfb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339558"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185563"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactorizar en funciones puras (C#)
 
@@ -112,6 +112,7 @@ class Program
   
  Para obtener más información, vea [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#)).  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Diferencias entre la programación funcional y la programación imperativa (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Vea también
+
+- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Diferencias entre la programación funcional y la programación imperativa (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

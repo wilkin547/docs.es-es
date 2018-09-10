@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebea62f33c5df252dd73a0708f31612cd2998728
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c85731b991399e92297d6109a3000c1e345e02f6
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580944"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087212"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>Cómo: Especificar el modo de ejecución en PLINQ
 En este ejemplo se muestra cómo forzar a PLINQ a omitir su heurística predeterminada y paralelizar una consulta, independientemente de la forma de la consulta.  
@@ -32,6 +32,7 @@ En este ejemplo se muestra cómo forzar a PLINQ a omitir su heurística predeter
 ## <a name="compiling-the-code"></a>Compilar el código  
  Corte y pegue este código en el [ejemplo de datos de PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) y llame al método desde `Main`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

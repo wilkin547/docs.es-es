@@ -2,12 +2,12 @@
 title: 'Cómo: Crear ensamblados de confianza con signo (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340663"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260011"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Cómo: Crear ensamblados de confianza con signo (C#)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
@@ -16,7 +16,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
   
 1.  Abra un símbolo del sistema.  
   
-2.  Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, vea [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, vea [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
     1.  Genere una clave de nombre seguro para este ejemplo y almacénela en el archivo FriendAssemblies.snk:  
   
@@ -88,12 +88,13 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `internal`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
- [Ensamblados de confianza (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Cómo: Crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (Herramienta de nombre seguro)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Crear y utilizar ensamblados con nombre seguro](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
+- [Ensamblados de confianza (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [Cómo: Crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
+- [Sn.exe (Herramienta de nombre seguro)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
+- [Crear y utilizar ensamblados con nombre seguro](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)

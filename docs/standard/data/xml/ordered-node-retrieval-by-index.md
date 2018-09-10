@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cfa371394e76aab832c3dd4b065eb811413322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568630"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209992"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recuperación de nodos ordenados por índice
 En Document Object Model (DOM) XML del World Wide Web Consortium (W3C) también se describe un objeto NodeList, que tiene la capacidad de controlar una lista de nodos ordenados, en contraposición al conjunto desordenado controlado por **XmlNamedNodeMap**. El objeto NodeList incluido en Microsoft .NET Framework se denomina **XmlNodeList**. Los métodos y las propiedades que devuelve un objeto **XmlNodeList** son los siguientes:  
@@ -94,5 +94,6 @@ End While
   
  Para más información sobre los métodos y las propiedades disponibles en **XmlNodeList**, vea <xref:System.Xml.XmlNodeList>.  
   
-## <a name="see-also"></a>Vea también  
- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vea también
+
+- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

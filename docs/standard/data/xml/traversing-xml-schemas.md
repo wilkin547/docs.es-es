@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575367"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198262"
 ---
 # <a name="traversing-xml-schemas"></a>Cómo atravesar esquemas XML
 Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), se obtiene acceso a los elementos, atributos y tipos almacenados en el SOM. Atravesar un esquema XML cargado en el SOM es también el primer paso para editar un esquema XML utilizando la API del SOM.  
@@ -22,7 +22,7 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
 ## <a name="traversing-an-xml-schema"></a>Cómo atravesar un esquema XML  
  Las siguientes propiedades de la clase <xref:System.Xml.Schema.XmlSchema> proporcionan acceso a la colección de todos los elementos globales que se agregan al esquema XML.  
   
-|Property|Tipo de objeto almacenado en la colección o matriz|  
+|Propiedad.|Tipo de objeto almacenado en la colección o matriz|  
 |--------------|---------------------------------------------------|  
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|  
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
@@ -67,11 +67,12 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
   
  El código de ejemplo del tema [Compilar esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) utilizaba la colección <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> para agregar el atributo `CustomerId` al elemento `Customer`. Se trata de una propiedad anterior a la compilación del esquema. La propiedad del conjunto de información posterior a la compilación del esquema correspondiente es la colección <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, que contiene todos los atributos del tipo complejo, incluyendo los que se heredan a través de la derivación de tipos.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>Vea también
+
+- [Información general sobre el Modelo de objetos de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lectura y escritura de esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Compilación de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Edición de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Inclusión o importación de esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Conjunto de información posterior a la compilación de esquemas](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

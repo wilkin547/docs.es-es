@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 2c6467434b56d624c42aaf54219959228e068ffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 975acb5b814bc5a250cba351e0d1559968f7e298
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217235"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864711"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (Opción del compilador de C#)
 Especifica un ensamblado con tipos no públicos a los que puede acceder un archivo .netmodule.  
@@ -93,7 +93,9 @@ class A {
 }  
 ```  
   
- **Se ha llamado a An_Internal_Class.Test**  
+**Se ha llamado a An_Internal_Class.Test**
+
 ## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

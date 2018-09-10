@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 992cc1f60ee3f08131b478d2336321bf87d7ef89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd2fa6219f39a8506d865d85e1ce5f84d22a92f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573794"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269038"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modelo de programación asincrónica (APM)
 Una operación asincrónica que usa el patrón de diseño <xref:System.IAsyncResult> se implementa como dos métodos con nombre **Begin***OperationName* y **End***OperationName* que comienzan y terminan la operación asincrónica *OperationName* respectivamente. Por ejemplo, la clase <xref:System.IO.FileStream> ofrece los métodos <xref:System.IO.FileStream.BeginRead%2A> y <xref:System.IO.FileStream.EndRead%2A> para leer bytes de un archivo de manera asincrónica. Estos métodos implementan la versión asincrónica del método <xref:System.IO.FileStream.Read%2A> .  
@@ -31,7 +31,7 @@ Una operación asincrónica que usa el patrón de diseño <xref:System.IAsyncRes
 ## <a name="beginning-an-asynchronous-operation"></a>Comenzar una operación asincrónica  
  El método **Begin***OperationName* comienza la operación asincrónica *OperationName* y devuelve un objeto que implementa la interfaz <xref:System.IAsyncResult>. Los objetos<xref:System.IAsyncResult> almacenan información sobre una operación asincrónica. En la tabla siguiente se muestra información sobre una operación asincrónica.  
   
-|Miembro|Description|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Objeto opcional específico de la aplicación que contiene información sobre la operación asincrónica.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Un <xref:System.Threading.WaitHandle> que se puede usar para bloquear la ejecución de la aplicación hasta que se complete la operación asincrónica.|  
@@ -65,7 +65,8 @@ Una operación asincrónica que usa el patrón de diseño <xref:System.IAsyncRes
   
 -   Use un delegado <xref:System.AsyncCallback> para especificar un método que se debe invocar cuando finalice la operación. Para ver un ejemplo que ilustre esta técnica, consulte [Utilizar un delegado AsyncCallback para finalizar una operación asincrónica](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
-## <a name="see-also"></a>Vea también  
- [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- [Llamada a métodos sincrónicos de forma asincrónica](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [Utilizar un delegado AsyncCallback y un objeto State](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)
+## <a name="see-also"></a>Vea también
+
+- [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Llamada a métodos sincrónicos de forma asincrónica](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+- [Utilizar un delegado AsyncCallback y un objeto State](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)

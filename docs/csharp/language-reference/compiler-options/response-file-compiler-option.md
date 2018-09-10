@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43456508"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259813"
 ---
 # <a name="-c-compiler-options"></a>@ (Opciones del compilador de C#)
 La opción @ le permite especificar un archivo que contiene opciones del compilador y archivos de código fuente para compilar.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2933d574b387ec0f444883bbafb41f602bc5dcc0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464142"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208814"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de datos (biblioteca TPL)
 El *paralelismo de datos* hace referencia a los escenarios en los que la misma operación se realiza simultáneamente (es decir, en paralelo) en elementos de una colección o matriz de origen. En las operaciones paralelas de datos, se crean particiones de la colección de origen para que varios subprocesos puedan funcionar simultáneamente en segmentos diferentes.  
@@ -53,5 +53,6 @@ El *paralelismo de datos* hace referencia a los escenarios en los que la misma o
 |[Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Proporciona información general sobre la biblioteca TPL.|  
 |[Programación en paralelo](../../../docs/standard/parallel-programming/index.md)|Presenta la programación paralela en .NET Framework.|  
   
-## <a name="see-also"></a>Vea también  
- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)

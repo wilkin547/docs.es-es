@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09f717cb4c09c1e35b9472b7b549f1d3edf0dd15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814f5434dd0473b3b1dd613a2eba14a828c464d9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569283"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862787"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Comparación de objetos mediante XmlNameTable
 Cuando se crean **XmlDocuments**, se crea una tabla de nombres específicamente para dichos documentos. Cuando se carga XML en el documento o cuando se crean elementos o atributos, los nombres de los atributos y elementos se colocan en la tabla **XmlNameTable**. También puede crear una clase **XmlDocument** mediante una tabla **NameTable** existente de otro documento. Cuando se crean **XmlDocuments** con el constructor que acepta un parámetro **XmlNameTable**, el documento tiene acceso a los nombres de nodo, espacios de nombres y prefijos ya almacenados en la tabla **XmlNameTable**. Independientemente de cómo se carguen los nombres en la tabla, una vez que se almacenan en ella, pueden compararse rápidamente mediante la comparación de objetos, en lugar de a través de la comparación de cadenas. También se pueden agregar cadenas a la tabla de nombres con <xref:System.Xml.NameTable.Add%2A>. En el ejemplo de código siguiente se muestra una tabla de nombres creada y la cadena **MyString** que se agrega a la tabla. Después, se crea una clase **XmlDocument** con dicha tabla y los nombres de los elementos y atributos de **Myfile.xml** se agregan a la tabla de nombres existente.  
@@ -53,5 +53,6 @@ if (((object)node1.Name) == ((object)node2.Name))
   
  La situación anterior de una tabla de nombres que se pasa entre dos documentos es habitual cuando se procesa el mismo tipo de documento varias veces, como documentos de pedidos en un sitio de comercio electrónico, que se ajustan a un esquema XSD o DTD, y se repiten las mismas cadenas. Si se utiliza la misma tabla de nombres, se mejora la eficacia del sistema, puesto que el mismo nombre de elemento aparece en varios documentos.  
   
-## <a name="see-also"></a>Vea también  
- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vea también
+
+- [Document Object Model (DOM) para XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
