@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 5b92eaf56e337b8a8128bb3a0706ecdb76177c0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8525fa7eca2f61d3091a7597db94247b4701ed19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516832"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086523"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionar problemas de interoperabilidad (Visual Basic)
 Cuando se interoperar entre COM y el código administrado de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], puede encontrar uno o varios de los siguientes problemas comunes.  
@@ -126,11 +126,12 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Los ensamblados compartidos no deben estar en paralelo en el directorio con la aplicación que realiza la llamada.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [TlbImp.exe (Importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (Exportador de la biblioteca de tipos)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [Tutorial: Implementación de la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [Caché global de ensamblados](../../../framework/app-domains/gac.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+- [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [TlbImp.exe (Importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+- [Tlbexp.exe (Exportador de la biblioteca de tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
+- [Tutorial: Implementación de la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+- [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+- [Caché global de ensamblados](../../../framework/app-domains/gac.md)

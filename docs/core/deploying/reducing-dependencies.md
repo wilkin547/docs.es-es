@@ -5,11 +5,11 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211789"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193625"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reducción de dependencias de paquete con project.json
 

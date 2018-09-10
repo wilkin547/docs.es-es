@@ -3,13 +3,13 @@ title: 'Comando dotnet nuget push: CLI de .NET Core'
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 09/04/2018
+ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728581"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186468"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -41,7 +41,7 @@ dotnet nuget push [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet nuget push` inserta un paquete en el servidor y lo publica. El comando push usa los detalles del servidor y de las credenciales encontrados en el archivo de configuración NuGet del sistema o en la cadena de archivos de configuración. Para más información sobre los archivos de configuración, consulte [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configuración del comportamiento de NuGet). La configuración predeterminada de NuGet se obtiene mediante la carga de *%AppData%\NuGet\NuGet.config* (Windows) o *$HOME/.local/share* (Linux/macOS), y luego la carga de cualquier archivo *nuget.config* o *.nuget\nuget.config* comenzando desde la raíz de la unidad y finalizando en el directorio actual.
 
@@ -198,7 +198,3 @@ Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica un t
 Inserta todos los archivos *.nupkg*  del directorio actual en el origen de inserción predeterminado:
 
 `dotnet nuget push *.nupkg`
-
-Inserta todos los archivos *.nupkg* del directorio actual en el origen de inserción predeterminado, y especifica un archivo de configuración personalizado *./config/My.Config*:
-
-`dotnet nuget push *.nupkg --config-file ./config/My.Config`

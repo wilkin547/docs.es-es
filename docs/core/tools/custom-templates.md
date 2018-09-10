@@ -4,12 +4,12 @@ description: Obtenga información sobre las plantillas personalizadas para cualq
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: fe888d0bfeeb51d77b73ec481b93fec9b40aa6ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217326"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525972"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -43,7 +43,7 @@ Los archivos y las carpetas que se almacenan en la plantilla no se limitan a tip
 
 El archivo *template.json* se coloca en una carpeta *.template.config* en el directorio raíz de la plantilla. El archivo proporciona información de configuración al motor de plantillas. La configuración mínima necesita los miembros que se muestran en la tabla siguiente, que es suficiente para crear una plantilla funcional.
 
-| Miembro            | Tipo          | Description |
+| Miembro            | Tipo          | Descripción |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | Identificador URI           | El esquema JSON para el archivo *template.json*. Los editores que admiten los esquemas JSON habilitan las características de edición JSON cuando se especifica el esquema. Por ejemplo, [Visual Studio Code](https://code.visualstudio.com/) necesita este miembro para habilitar IntelliSense. Use un valor de `http://json.schemastore.org/template`. |
 | `author`          | cadena        | El autor de la plantilla. |
@@ -81,7 +81,7 @@ Actualmente, una plantilla personalizada se empaqueta en Windows con [nuget.exe]
 
 El contenido de la carpeta del proyecto, junto con su archivo *.template.config/template.json*, se colocan en una carpeta denominada *content*. Junto a la carpeta *content*, agregue un [archivo *nuspec*](/nuget/create-packages/creating-a-package), que es un archivo de manifiesto XML que describe el contenido de un paquete y controla el proceso de crear el paquete NuGet. Dentro de un elemento **\<packageTypes>** en el archivo *nuspec*, incluya un elemento **\<packageType>** con un valor de atributo `name` de `Template`. Tanto la carpeta *content* como el archivo *nuspec* deben estar en el mismo directorio. En la tabla se muestran los elementos de archivo *nuspec* mínimos necesarios para generar una plantilla como un paquete NuGet.
 
-| Elemento            | Tipo   | Description |
+| Elemento            | Tipo   | Descripción |
 | ------------------ | ------ | ----------- |
 | **\<authors>**     | cadena | Una lista separada por comas de los autores de los paquetes, que coinciden con los nombres de perfil de nuget.org. Estos se muestran en la galería de NuGet, en nuget.org, y se usan para hacer referencias cruzadas a paquetes de los mismos autores. |
 | **\<description>** | cadena | Una descripción larga del paquete para su visualización en la interfaz de usuario. |
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Vea también
 
-[Creación de una plantilla personalizada para dotnet new (tutorial)](../tutorials/create-custom-template.md)  
-[Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)  
-[Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-[How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) (Cómo crear sus propias plantillas para dotnet new)  
-[Esquema *template.json* en el Almacenamiento del esquema JSON](http://json.schemastore.org/template)  
+* [Creación de una plantilla personalizada para dotnet new (tutorial)](../tutorials/create-custom-template.md)  
+* [Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)  
+* [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
+* [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) (Cómo crear sus propias plantillas para dotnet new)  
+* [Esquema *template.json* en el Almacenamiento del esquema JSON](http://json.schemastore.org/template)  

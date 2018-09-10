@@ -4,12 +4,12 @@ description: El comando “dotnet store” almacena los ensamblados especificado
 author: bleroy
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696330"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181068"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -23,7 +23,7 @@ ms.locfileid: "34696330"
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 `dotnet store` almacena los ensamblados especificados en el [almacenamiento de paquetes en tiempo de ejecución](../deploying/runtime-store.md). De forma predeterminada, los ensamblados están optimizados para el tiempo de ejecución y el marco de trabajo de destino. Para obtener más información, consulte el tema [runtime package store](../deploying/runtime-store.md) (almacenamiento de paquetes en tiempo de ejecución).
 
@@ -83,4 +83,4 @@ Almacenamiento de los paquetes especificados en *packages.csproj* sin optimizaci
 
 ## <a name="see-also"></a>Vea también
 
-[Runtime package store](../deploying/runtime-store.md) (Almacenamiento de paquetes en tiempo de ejecución)
+* [Runtime package store](../deploying/runtime-store.md) (Almacenamiento de paquetes en tiempo de ejecución)

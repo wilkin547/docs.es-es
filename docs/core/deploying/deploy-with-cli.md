@@ -4,12 +4,12 @@ description: Obtenga información sobre la implementación de aplicaciones de .N
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244756"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855027"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implementación de aplicaciones de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
 
@@ -26,7 +26,7 @@ Cuando se trabaja desde la línea de comandos, puede usar un programa editor de 
 
 ## <a name="framework-dependent-deployment"></a>Implementación dependiente de marco de trabajo
 
-La implementación de una implementación dependiente del marco sin dependencias de terceros implica simplemente la compilación, la prueba y la publicación de la aplicación. Un sencillo ejemplo escrito en C# ilustra el proceso. 
+La implementación de una implementación dependiente del marco sin dependencias de terceros implica simplemente la compilación, la prueba y la publicación de la aplicación. Un sencillo ejemplo escrito en C# ilustra el proceso.
 
 1. Crear un directorio de proyecto.
 
@@ -43,7 +43,7 @@ La implementación de una implementación dependiente del marco sin dependencias
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Actualizar las herramientas y las dependencias del proyecto.
- 
+
    Ejecute el comando [dotnet restore](../tools/dotnet-restore.md) ([vea la nota](#dotnet-restore-note)) para restaurar las dependencias especificadas en el proyecto.
 
 1. Crear una versión de depuración de la aplicación.
@@ -105,7 +105,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
 1. Definir las plataformas de destino de la aplicación.
 
-   Cree una etiqueta `<RuntimeIdentifiers>` en la sección `<PropertyGroup>` del archivo *csproj* que defina las plataformas a las que se destina la aplicación y especifique el identificador en tiempo de ejecución (RID) de cada una. Tenga en cuenta que también debe agregar un punto y coma para separar los RID. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../rid-catalog.md). 
+   Cree una etiqueta `<RuntimeIdentifiers>` en la sección `<PropertyGroup>` del archivo *csproj* que defina las plataformas a las que se destina la aplicación y especifique el identificador en tiempo de ejecución (RID) de cada una. Tenga en cuenta que también debe agregar un punto y coma para separar los RID. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../rid-catalog.md).
 
    Por ejemplo, la siguiente sección `<PropertyGroup>` indica que la aplicación se ejecuta en sistemas operativos Windows 10 de 64 bits y OS X versión 10.11 de 64 bits.
 
@@ -188,8 +188,7 @@ Tenga en cuenta que solo puede implementar una implementación autocontenida con
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
 
-[Implementación de aplicaciones .NET Core](index.md)   
-[Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)   
-
+* [Implementación de aplicaciones .NET Core](index.md)
+* [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)

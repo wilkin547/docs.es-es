@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una plantilla personalizada 
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: fee2709f54395b9926dae904a448cb92aafb5172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218087"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516658"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creación de una plantilla personalizada para dotnet new
 
@@ -63,12 +63,12 @@ Ha terminado la plantilla. Una vez hecho esto, tiene dos opciones para la distri
 1. Cree una carpeta para el paquete de NuGet. Para el tutorial, se usa el nombre de carpeta *GarciaSoftware.ConsoleTemplate.CSharp*, y esta se crea dentro de una carpeta *Documentos\NuGetTemplates* del perfil del usuario. Cree una carpeta denominada *content* dentro de la nueva carpeta de plantillas que contendrá los archivos del proyecto.
 1. Copie el contenido de la carpeta del proyecto, junto con el archivo *.template.config/template.json*, en la carpeta *content* que ha creado.
 1. Junto a la carpeta *content*, agregue un [archivo *nuspec*](/nuget/create-packages/creating-a-package). El archivo nuspec es un archivo de manifiesto XML en el que se describe el contenido de un paquete y que controla el proceso de creación del paquete de NuGet.
-   
+
    ![Estructura de directorios en la que se muestra el diseño del paquete de NuGet](./media/create-custom-template/nugetdirectorylayout.png)
 
 1. Dentro de un elemento **\<packageTypes>** en el archivo *nuspec*, incluya un elemento **\<packageType>** con un valor de atributo `name` de `Template`. Tanto la carpeta *content* como el archivo *nuspec* deben estar en el mismo directorio. En la tabla se muestran los elementos de archivo *nuspec* mínimos necesarios para generar una plantilla como un paquete NuGet.
 
-   | Elemento            | Tipo   | Description |
+   | Elemento            | Tipo   | Descripción |
    | ------------------ | ------ | ----------- |
    | **\<authors>**     | cadena | Una lista separada por comas de los autores de los paquetes, que coinciden con los nombres de perfil de nuget.org. Estos se muestran en la galería de NuGet, en nuget.org, y se usan para hacer referencias cruzadas a paquetes de los mismos autores. |
    | **\<description>** | cadena | Una descripción larga del paquete para su visualización en la interfaz de usuario. |
@@ -158,7 +158,7 @@ dotnet new -u GarciaSoftware.ConsoleTemplate.CSharp
 
 > [!NOTE]
 > El ejemplo solamente sirve de demostración. No hay ningún paquete de NuGet denominado `GarciaSoftware.ConsoleTemplate.CSharp` en nuget.org ni instalado con el SDK de .NET Core. Si ejecuta el comando, no se desinstalará ninguna plantilla ni paquete y se mostrará la siguiente excepción:
-> 
+>
 > > Could not find something to uninstall called 'GarciaSoftware.ConsoleTemplate.CSharp' (No se ha encontrado nada denominado “GarciaSoftware.ConsoleTemplate.CSharp” para desinstalarlo).
 
 Si ha instalado la [plantilla de NUnit 3 para dotnet-new](https://www.nuget.org/packages/NUnit3.DotNetNew.Template/) y quiere desinstalarla, use el comando siguiente:
@@ -209,7 +209,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 ## <a name="see-also"></a>Vea también
 
-[Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)  
-[Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-[How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) (Cómo crear sus propias plantillas para dotnet new)  
-[Esquema *template.json* en el Almacenamiento del esquema JSON](http://json.schemastore.org/template)  
+* [Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)  
+* [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
+* [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) (Cómo crear sus propias plantillas para dotnet new)
+* [Esquema *template.json* en el Almacenamiento del esquema JSON](http://json.schemastore.org/template)  
