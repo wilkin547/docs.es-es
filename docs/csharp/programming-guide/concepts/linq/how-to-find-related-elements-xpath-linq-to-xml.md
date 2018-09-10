@@ -2,26 +2,26 @@
 title: 'Cómo: Buscar elementos relacionados (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: e5367c1b47f24dd269f5055f692c657ecd748b63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57cbba6e52feec05ed6381899017f1ce5d1e8ec1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518631"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="3bfbb-102">Cómo: Buscar elementos relacionados (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="3bfbb-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="3bfbb-103">Este tema muestra cómo obtener un elemento seleccionando en un atributo al que hace referencia el valor de otro elemento.</span><span class="sxs-lookup"><span data-stu-id="3bfbb-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="85555-102">Cómo: Buscar elementos relacionados (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="85555-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="85555-103">Este tema muestra cómo obtener un elemento seleccionando en un atributo al que hace referencia el valor de otro elemento.</span><span class="sxs-lookup"><span data-stu-id="85555-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- <span data-ttu-id="3bfbb-104">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="3bfbb-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="85555-104">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="85555-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a><span data-ttu-id="3bfbb-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3bfbb-105">Example</span></span>  
- <span data-ttu-id="3bfbb-106">Este ejemplo encuentra el duodécimo (12) elemento `Order`, y después encuentra el cliente de dicho pedido.</span><span class="sxs-lookup"><span data-stu-id="3bfbb-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
+## <a name="example"></a><span data-ttu-id="85555-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="85555-105">Example</span></span>  
+ <span data-ttu-id="85555-106">Este ejemplo encuentra el duodécimo (12) elemento `Order`, y después encuentra el cliente de dicho pedido.</span><span class="sxs-lookup"><span data-stu-id="85555-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- <span data-ttu-id="3bfbb-107">Tenga en cuenta que la indización en una lista de .Net se basa en "cero".</span><span class="sxs-lookup"><span data-stu-id="3bfbb-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="3bfbb-108">Sin embargo, la indización en una colección de nodos de un predicado XPath se basa en "uno".</span><span class="sxs-lookup"><span data-stu-id="3bfbb-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="3bfbb-109">Este ejemplo refleja esta diferencia.</span><span class="sxs-lookup"><span data-stu-id="3bfbb-109">This example reflects this difference.</span></span>  
+ <span data-ttu-id="85555-107">Tenga en cuenta que la indización en una lista de .Net se basa en "cero".</span><span class="sxs-lookup"><span data-stu-id="85555-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="85555-108">Sin embargo, la indización en una colección de nodos de un predicado XPath se basa en "uno".</span><span class="sxs-lookup"><span data-stu-id="85555-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="85555-109">Este ejemplo refleja esta diferencia.</span><span class="sxs-lookup"><span data-stu-id="85555-109">This example reflects this difference.</span></span>  
   
- <span data-ttu-id="3bfbb-110">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="3bfbb-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="85555-110">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="85555-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -64,7 +64,7 @@ else
 Console.WriteLine(customer1);  
 ```  
   
- <span data-ttu-id="3bfbb-111">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="3bfbb-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="85555-111">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="85555-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -84,5 +84,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3bfbb-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="3bfbb-112">See Also</span></span>  
- [<span data-ttu-id="3bfbb-113">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="3bfbb-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="85555-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="85555-112">See Also</span></span>
+
+- [<span data-ttu-id="85555-113">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="85555-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -2,20 +2,20 @@
 title: 'Cómo: Proyectar un nuevo tipo (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: f9a46e78a0f80f33764e9f87e3e8ce3560a8e0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 889396dbcc44b685945eaafdf85cfe2510ddcde3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323776"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510339"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-c"></a><span data-ttu-id="8f8e1-102">Cómo: Proyectar un nuevo tipo (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8f8e1-102">How to: Project a New Type (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="8f8e1-103">Otros ejemplos de esta sección han mostrado consultados que devuelven resultados como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string` y <xref:System.Collections.Generic.IEnumerable%601> de `int`.</span><span class="sxs-lookup"><span data-stu-id="8f8e1-103">Other examples in this section have shown queries that return results as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> of `string`, and <xref:System.Collections.Generic.IEnumerable%601> of `int`.</span></span> <span data-ttu-id="8f8e1-104">Se trata de tipos de resultados comunes, pero no son adecuados para cada caso.</span><span class="sxs-lookup"><span data-stu-id="8f8e1-104">These are common result types, but they are not appropriate for every scenario.</span></span> <span data-ttu-id="8f8e1-105">En muchos casos querrá que sus consultas devuelvan un <xref:System.Collections.Generic.IEnumerable%601> de algún otro tipo.</span><span class="sxs-lookup"><span data-stu-id="8f8e1-105">In many cases you will want your queries to return an <xref:System.Collections.Generic.IEnumerable%601> of some other type.</span></span>  
+# <a name="how-to-project-a-new-type-linq-to-xml-c"></a><span data-ttu-id="9c972-102">Cómo: Proyectar un nuevo tipo (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9c972-102">How to: Project a New Type (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="9c972-103">Otros ejemplos de esta sección han mostrado consultados que devuelven resultados como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string` y <xref:System.Collections.Generic.IEnumerable%601> de `int`.</span><span class="sxs-lookup"><span data-stu-id="9c972-103">Other examples in this section have shown queries that return results as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> of `string`, and <xref:System.Collections.Generic.IEnumerable%601> of `int`.</span></span> <span data-ttu-id="9c972-104">Se trata de tipos de resultados comunes, pero no son adecuados para cada caso.</span><span class="sxs-lookup"><span data-stu-id="9c972-104">These are common result types, but they are not appropriate for every scenario.</span></span> <span data-ttu-id="9c972-105">En muchos casos querrá que sus consultas devuelvan un <xref:System.Collections.Generic.IEnumerable%601> de algún otro tipo.</span><span class="sxs-lookup"><span data-stu-id="9c972-105">In many cases you will want your queries to return an <xref:System.Collections.Generic.IEnumerable%601> of some other type.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8f8e1-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8f8e1-106">Example</span></span>  
- <span data-ttu-id="8f8e1-107">En este ejemplo se muestra como crear instancias de objetos en la cláusula `select`.</span><span class="sxs-lookup"><span data-stu-id="8f8e1-107">This example shows how to instantiate objects in the `select` clause.</span></span> <span data-ttu-id="8f8e1-108">El código primero define una nueva clase con un constructor y después modifica la instrucción `select` para que la expresión sea una nueva instancia de la nueva clase.</span><span class="sxs-lookup"><span data-stu-id="8f8e1-108">The code first defines a new class with a constructor, and then modifies the `select` statement so that the expression is a new instance of the new class.</span></span>  
+## <a name="example"></a><span data-ttu-id="9c972-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9c972-106">Example</span></span>  
+ <span data-ttu-id="9c972-107">En este ejemplo se muestra como crear instancias de objetos en la cláusula `select`.</span><span class="sxs-lookup"><span data-stu-id="9c972-107">This example shows how to instantiate objects in the `select` clause.</span></span> <span data-ttu-id="9c972-108">El código primero define una nueva clase con un constructor y después modifica la instrucción `select` para que la expresión sea una nueva instancia de la nueva clase.</span><span class="sxs-lookup"><span data-stu-id="9c972-108">The code first defines a new class with a constructor, and then modifies the `select` statement so that the expression is a new instance of the new class.</span></span>  
   
- <span data-ttu-id="8f8e1-109">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="8f8e1-109">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
+ <span data-ttu-id="9c972-109">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="9c972-109">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 class NameQty {  
@@ -45,14 +45,15 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="8f8e1-110">En este ejemplo se usa el método `M:System.Xml.Linq.XElement.Element` que se introdujo en el tema [Cómo: Recuperar un único elemento secundario (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="8f8e1-110">This example uses the `M:System.Xml.Linq.XElement.Element` method that was introduced in the topic [How to: Retrieve a Single Child Element (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md).</span></span> <span data-ttu-id="8f8e1-111">También utiliza conversiones para recuperar los valores de los elementos devueltos por el método `M:System.Xml.Linq.XElement.Element`.</span><span class="sxs-lookup"><span data-stu-id="8f8e1-111">It also uses casts to retrieve the values of the elements that are returned by the `M:System.Xml.Linq.XElement.Element` method.</span></span>  
+ <span data-ttu-id="9c972-110">En este ejemplo se usa el método `M:System.Xml.Linq.XElement.Element` que se introdujo en el tema [Cómo: Recuperar un único elemento secundario (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9c972-110">This example uses the `M:System.Xml.Linq.XElement.Element` method that was introduced in the topic [How to: Retrieve a Single Child Element (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md).</span></span> <span data-ttu-id="9c972-111">También utiliza conversiones para recuperar los valores de los elementos devueltos por el método `M:System.Xml.Linq.XElement.Element`.</span><span class="sxs-lookup"><span data-stu-id="9c972-111">It also uses casts to retrieve the values of the elements that are returned by the `M:System.Xml.Linq.XElement.Element` method.</span></span>  
   
- <span data-ttu-id="8f8e1-112">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="8f8e1-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="9c972-112">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="9c972-112">This example produces the following output:</span></span>  
   
 ```  
 Lawnmower:1  
 Baby Monitor:2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8f8e1-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="8f8e1-113">See Also</span></span>  
- [<span data-ttu-id="8f8e1-114">Proyecciones y transformaciones (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8f8e1-114">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="9c972-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="9c972-113">See Also</span></span>
+
+- [<span data-ttu-id="9c972-114">Proyecciones y transformaciones (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9c972-114">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
