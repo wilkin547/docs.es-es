@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c5f47f4c33f725377281146bef0a37dbd3f774c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6f3f5d6ae577195987dfcf2d8020e591217b480d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753734"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503002"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Cómo: Quitar un ensamblado de la memoria caché global de ensamblados
 Hay dos formas de quitar un ensamblado de la caché global de ensamblados (GAC):  
   
 -   Con la [herramienta Caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). Puede usar esta opción para desinstalar los ensamblados que haya colocado en la GAC durante el desarrollo y las pruebas.  
   
--   Con [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx). Debe usar esta opción para desinstalar ensamblados al probar los paquetes de instalación y en sistemas de producción.  
+-   Con [Windows Installer](/windows/desktop/Msi/windows-installer-portal). Debe usar esta opción para desinstalar ensamblados al probar los paquetes de instalación y en sistemas de producción.  
   
 ### <a name="removing-an-assembly-with-gacutilexe"></a>Quitar un ensamblado con Gacutil.exe  
   

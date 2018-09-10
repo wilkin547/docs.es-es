@@ -2,12 +2,12 @@
 title: 'Cómo: Proyectar un tipo anónimo (C#)'
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: 6ecb29c59d16b64b1dfb7018a2d22ae81242ee81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3a72fb860a1cbb79533f19bc7d6547c4342311c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320682"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526635"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>Cómo: Proyectar un tipo anónimo (C#)
 En algunos casos quizás desee proyectar una consulta a un nuevo tipo, aunque sepa que solo utilizará este tipo durante un breve período. Crear un nuevo tipo solamente para usarlo en la proyección conlleva mucho trabajo adicional. En este caso un enfoque más eficiente consiste en proyectar en un tipo anónimo. Los tipos anónimos permiten definir una clase y, a continuación, declarar e inicializar un objeto de esa clase, sin dar un nombre a la clase.  
@@ -52,5 +52,6 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Proyecciones y transformaciones (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Proyecciones y transformaciones (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

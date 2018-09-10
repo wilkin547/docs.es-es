@@ -15,11 +15,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: d0ab0aeecdbd6cf763ae34cfa3bcd50af1874d39
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421495"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517193"
 ---
 # <a name="enabling-network-tracing"></a>Habilitación del seguimiento de red
 El seguimiento de red proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Para habilitar el seguimiento de red en la aplicación tiene que realizar las tareas siguientes:  

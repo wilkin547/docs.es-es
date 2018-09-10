@@ -9,11 +9,11 @@ ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43424082"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530008"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5
 El instalador de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa el [Administrador de reinicio](https://go.microsoft.com/fwlink/?LinkId=231425) para evitar reinicios del sistema durante la instalación, siempre que sea posible. Si el programa de instalación de la aplicación instala .NET Framework, este puede comunicarse con el Administrador de reinicio para aprovechar esta característica. Para obtener más información, vea [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md) (Cómo: Obtener el progreso del instalador de .NET Framework 4.5).  

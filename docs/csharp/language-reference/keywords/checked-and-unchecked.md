@@ -10,11 +10,11 @@ helpviewer_keywords:
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
 ms.openlocfilehash: 04f603905690497bcd4249f73c7296be2c269a60
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468816"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741937"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked y Unchecked (Referencia de C#)
 Las instrucciones de C# se pueden ejecutar en un contexto comprobado o no comprobado. En un contexto no comprobado, el desbordamiento aritmético produce una excepción. En un contexto sin comprobar, se omite el desbordamiento aritmético y se produce un truncamiento del resultado al descartar los bits de orden superior que no caben en el tipo de destino.  

@@ -2,12 +2,12 @@
 title: Cancelar las tareas asincrónicas restantes cuando se completa una (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: 22a29dec90dcbbd24ff1a6081fd7bf1d56d6ac0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7ea530b369b2de22f195d348a90816b2b797584
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327429"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515308"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Cancelar las tareas asincrónicas restantes cuando se completa una (C#)
 Mediante el método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> junto con <xref:System.Threading.CancellationToken>, puede cancelar todas las tareas restantes cuando se completa una tarea. El método `WhenAny` toma un argumento que es una colección de tareas. El método inicia todas las tareas y devuelve una sola tarea. La tarea se completa cuando se complete cualquier tarea de la colección.  
@@ -257,8 +257,9 @@ namespace CancelAfterOneTask
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
- [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Ajuste de la aplicación asincrónica [C#])  
- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: ajuste de la aplicación)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+- [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Ajuste de la aplicación asincrónica [C#])  
+- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: ajuste de la aplicación)

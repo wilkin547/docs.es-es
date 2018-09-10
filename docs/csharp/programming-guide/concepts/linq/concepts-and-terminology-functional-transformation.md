@@ -2,12 +2,12 @@
 title: Conceptos y terminología (transformación funcional) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: f0d09f8846556dfa0ce70f253d59ddd41f254363
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e42c14965ba3341c812811f6c27ece386c42d7c2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339295"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527000"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceptos y terminología (transformación funcional) (C#)
 Este tema presenta los conceptos y la terminología en relación con las transformaciones funcionales. La aproximación que utiliza la transformación funcional para transformar datos permite obtener un código que normalmente se escribe más rápido, es más expresivo y fácil de mantener y depurar, si lo comparamos con la programación imperativa, que es más tradicional.  
@@ -71,6 +71,7 @@ Este tema presenta los conceptos y la terminología en relación con las transfo
   
  Estas características del lenguaje se utilizarán en códigos de ejemplo a lo largo de esta sección.  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Diferencias entre la programación funcional y la programación imperativa (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Vea también
+
+- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Diferencias entre la programación funcional y la programación imperativa (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

@@ -25,12 +25,12 @@ ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ef674855d1b9d6538e08ea2bb95f1f63e602d61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aad12f48409216e8833b9cb6bffbd35b84f40091
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396395"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513777"
 ---
 # <a name="introducing-pluggable-protocols"></a>Escribir protocolos acoplables
 Microsoft .NET Framework proporciona una implementación por capas, extensible y administrada de servicios de Internet que se puede integrar rápida y fácilmente en las aplicaciones. Las clases de acceso a Internet de los espacios de nombres <xref:System.Net> y <xref:System.Net.Sockets> se pueden usar para implementar aplicaciones basadas en Internet y en web.  
@@ -73,4 +73,4 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  [Programming Pluggable Protocols (Programar protocolos acoplables)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)  
  [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Ejemplos de red para .NET en la galería de código de MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Ejemplos de red para .NET en la galería de código de MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

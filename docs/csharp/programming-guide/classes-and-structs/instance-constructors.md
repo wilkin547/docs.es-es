@@ -5,12 +5,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 5864511e6323ca1508494abfe2350e8eaffb6a2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd7105ec61e5c878dc148c30b27706b1eda3ae72
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333029"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530384"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Constructores de instancias (Guía de programación de C#)
 Los constructores de instancias se usan para crear e inicializar las variables miembro de instancia cuando se usa la expresión [new](../../../csharp/language-reference/keywords/new.md) para crear un objeto de una [clase](../../../csharp/language-reference/keywords/class.md). Para inicializar una clase [estática](../../../csharp/language-reference/keywords/static.md), o variables estáticas en una clase no estática, se debe definir un constructor estático. Para obtener más información, vea [Static Constructors](../../../csharp/programming-guide/classes-and-structs/static-constructors.md) (Constructores estáticos [Guía de programación de C#]).  
@@ -57,9 +57,10 @@ Los constructores de instancias se usan para crear e inicializar las variables m
   
  Para obtener más ejemplos sobre cómo invocar los constructores de clase base, vea [virtual](../../../csharp/language-reference/keywords/virtual.md), [override](../../../csharp/language-reference/keywords/override.md) y [base](../../../csharp/language-reference/keywords/base.md).  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [static](../../../csharp/language-reference/keywords/static.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)

@@ -2,12 +2,12 @@
 title: 'Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
-ms.openlocfilehash: 46459c86f4d4bffc5a1f5ce785488dbe4838a921
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d1a5b18f9e660959a8c9656cc82ac0686c7d7ca
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330315"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43741992"
 ---
 # <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Se trata de un archivo de configuración de pruebas.  
@@ -56,5 +56,6 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Documentos XML de ejemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Documentos XML de ejemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

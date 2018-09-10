@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#], pointer types
 - pointer expressions [C#]
 ms.assetid: 3e7d9db3-20e9-4493-9c99-53c3214d19e5
-ms.openlocfilehash: 040bb5091b99d8f1df7f8b13e5852328e01b31ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a45557ab2cdcc17bc32f5183f6320be1819c6bcb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330338"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520892"
 ---
 # <a name="pointer-expressions-c-programming-guide"></a>Expresiones de puntero (Guía de programación de C#)
 En esta sección, se tratan las siguientes expresiones de puntero:  
@@ -25,11 +25,12 @@ En esta sección, se tratan las siguientes expresiones de puntero:
   
  [Manipular punteros](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Conversiones de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
- [Tipos de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [Tipos](../../../csharp/language-reference/keywords/types.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed (instrucción)](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Conversiones de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
+- [Tipos de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [Tipos](../../../csharp/language-reference/keywords/types.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed (instrucción)](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

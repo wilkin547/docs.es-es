@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514455"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855340"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Lo obsoleto en la biblioteca de clases .NET Framework
 .NET Framework cambia con el tiempo. Cada nueva versión agrega nuevos tipos y miembros de tipos que proporcionan una nueva funcionalidad. Los tipos existentes y sus miembros también cambian con el tiempo. Por ejemplo, algunos tipos pierden importancia cuando la tecnología que admiten es reemplazada por una nueva y algunos métodos son sustituidos por métodos más nuevos que resultan más cómodos o están más completos.  
@@ -73,13 +73,13 @@ ms.locfileid: "33514455"
  [Miembros obsoletos](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Listas de obsoletos para versiones anteriores  
- [Tipos obsoletos en .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224224)  
+ [Tipos obsoletos en .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Miembros obsoletos en .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Miembros obsoletos en .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Lista de API obsoletas en .NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [Lista de API obsoletas en .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Lista de API obsoletas en .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [Lista de API obsoletas en .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Vea también  
  [\<supportedRuntime > Elemento](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

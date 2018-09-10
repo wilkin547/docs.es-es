@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c1d1944ae06ea26ce9bf7b4726e79155768d444
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b0ef0072e6e9a1e9f4a28d6e19894f301fe3fc0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405306"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864805"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Herramienta de prueba de certificados del publicador de software)
-La herramienta de prueba de certificados de editor de software crea un certificado de editor de software (SPC) a partir de uno o varios certificados X.509. Cert2spc.exe se utiliza únicamente para pruebas. Se puede obtener un certificado SPC válido de una entidad de certificación como VeriSign o Thawte. Para más información sobre cómo crear certificados X.509, consulte [Makecert.exe (Herramienta de creación de certificados)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d).  
+La herramienta de prueba de certificados de editor de software crea un certificado de editor de software (SPC) a partir de uno o varios certificados X.509. Cert2spc.exe se utiliza únicamente para pruebas. Se puede obtener un certificado SPC válido de una entidad de certificación como VeriSign o Thawte. Para más información sobre cómo crear certificados X.509, consulte [Makecert.exe (Herramienta de creación de certificados)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d).  
   
  Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -32,13 +32,13 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |`certN.cer`|Nombre de certificado X.509 que se incluye en el archivo SPC. Se pueden especificar varios nombres separados por espacios.|  
 |`crlN.crl`|Nombre de la lista de revocación de certificados que se va a incluir en el archivo SPC. Se pueden especificar varios nombres separados por espacios.|  
 |`outputSPCfile.spc`|Nombre del objeto PKCS #7 que contendrá los certificados X.509.|  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
@@ -57,5 +57,5 @@ cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas](../../../docs/framework/tools/index.md)  
- [Makecert.exe (Herramienta de creación de certificados)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (Herramienta de creación de certificados)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

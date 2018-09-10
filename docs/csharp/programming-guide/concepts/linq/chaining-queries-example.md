@@ -2,12 +2,12 @@
 title: Ejemplo de encadenamiento de consultas (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: d28f5f4ed4f9e6deb5f6f3d381d310ebcef6e132
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 864d7ed34957defdedf21ccb1671d49c48913d88
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327697"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43739931"
 ---
 # <a name="chaining-queries-example-c"></a>Ejemplo de encadenamiento de consultas (C#)
 Este ejemplo se basa en el ejemplo anterior y muestra qué sucede cuando se encadenan dos consultas que usan ejecución aplazada y evaluación diferida.  
@@ -86,5 +86,6 @@ Main: str >GHI!!!<
   
 -   [Materialización intermedia (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Encadenar consultas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a>Vea también
+
+- [Tutorial: Encadenar consultas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

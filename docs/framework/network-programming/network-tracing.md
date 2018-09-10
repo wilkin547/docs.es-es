@@ -22,11 +22,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: bc58efa55656f50acfa58e3e0d15b35495af357c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487044"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504435"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Traza de la red en .NET Framework
 El seguimiento de red de .NET Framework proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Esta característica es útil para depurar las aplicaciones en desarrollo y para analizar las aplicaciones implementadas. El resultado proporcionado por la traza de la red se puede personalizar para admitir diferentes escenarios de uso en tiempo de desarrollo y en un entorno de producción.  

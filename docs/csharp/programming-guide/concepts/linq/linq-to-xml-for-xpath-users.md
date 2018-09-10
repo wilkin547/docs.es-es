@@ -2,12 +2,12 @@
 title: LINQ to XML para usuarios de XPath (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: c5c3d94c218f712a127ad313d3b000174644f9dd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199126"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516411"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>LINQ to XML para usuarios de XPath (C#)
 En este conjunto de temas se muestran varias expresiones XPath y sus equivalentes de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -36,7 +36,8 @@ En este conjunto de temas se muestran varias expresiones XPath y sus equivalente
 |[Cómo: Buscar elementos secundarios en función de la posición (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md)|Compara cómo buscar un elemento basándose en su posición relativa usando XPath y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> La expresión XPath asociada es:`"Test[position() >= 2 and position() <= 4]"`|  
 |[Cómo: Buscar el nodo del mismo nivel inmediatamente anterior (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Compara cómo buscar el elemento del mismo nivel inmediatamente anterior de un nodo usando XPath y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> La expresión XPath asociada es:`"preceding-sibling::*[1]"`|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.XPath?displayProperty=nameWithType>  
- [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
- [Procesamiento de datos XML con el modelo de datos XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Xml.XPath?displayProperty=nameWithType>  
+- [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
+- [Procesamiento de datos XML con el modelo de datos XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

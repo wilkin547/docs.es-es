@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: b67a3d7b6d2e10519363a273b7dd1d8b61317d1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74503c510007b132a7bbb14da7eade4c379b2179
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338076"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856588"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Cómo: Controlar una excepción mediante Try y Catch (Guía de programación de C#)
 El propósito de un bloque [try-catch](../../../csharp/language-reference/keywords/try-catch.md) es detectar y controlar una excepción generada por código en funcionamiento. Algunas excepciones se pueden controlar en un bloque `catch` y es posible resolver el problema sin que se vuelva a producir la excepción, pero la mayoría de las veces lo único que se puede hacer es asegurarse de que se produzca la excepción adecuada.  
@@ -24,7 +24,8 @@ El propósito de un bloque [try-catch](../../../csharp/language-reference/keywor
 ## <a name="comments"></a>Comentarios  
  El código que produce una excepción está incluido en el bloque `try`. Se agrega una instrucción `catch` inmediatamente después para controlar `IndexOutOfRangeException`, si se produce. El bloque `catch` controla la excepción `IndexOutOfRangeException` y produce en su lugar la excepción `ArgumentOutOfRangeException`, más adecuada. Para proporcionar al autor de la llamada tanta información como sea posible, considere la posibilidad de especificar la excepción original como <xref:System.Exception.InnerException%2A> de la nueva excepción. Dado que la propiedad <xref:System.Exception.InnerException%2A> es [readonly](../../../csharp/language-reference/keywords/readonly.md), debe asignarla en el constructor de la nueva excepción.  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)  
- [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)  
+- [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)

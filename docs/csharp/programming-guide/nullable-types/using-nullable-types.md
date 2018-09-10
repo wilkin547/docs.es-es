@@ -5,12 +5,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8ef875aee8c40f60472df52c19d1c1f2c73e95e8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417880"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515442"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Uso de tipos que aceptan valores NULL (Guía de programación de C#)
 
@@ -111,6 +111,6 @@ Tenga en cuenta que estos dos operadores no siguen las reglas descritas en la se
   
 ## <a name="see-also"></a>Vea también
 
- [Nullable types](index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])  
- [Guía de programación de C#](../../programming-guide/index.md)  
- [¿Qué significa exactamente "elevado"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  
+- [Nullable types](index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])  
+- [Guía de programación de C#](../../programming-guide/index.md)  
+- [¿Qué significa exactamente "elevado"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 310c5eed5507f75239efc78b6132fbc91211d29e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0691c33b551e39b2384950cfcd0be6e8a3a29cee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339597"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506906"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Búferes de tamaño fijo (Guía de programación de C#)
 
@@ -32,7 +32,7 @@ Un `struct` puede contener una matriz insertada en el código no seguro. En el s
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-El tamaño de la matriz `char` de 128 elementos es 256 bytes. Los búferes [char](../../language-reference/keywords/char.md) de tamaño fijo siempre admiten dos bytes por carácter, independientemente de la codificación. Esto es verdadero, incluso cuando se calculan las referencias de los búferes de caracteres a los métodos API o structs con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Para obtener más información, consulta <xref:System.Runtime.InteropServices.CharSet>.
+El tamaño de la matriz `char` de 128 elementos es 256 bytes. Los búferes [char](../../language-reference/keywords/char.md) de tamaño fijo siempre admiten dos bytes por carácter, independientemente de la codificación. Esto es verdadero, incluso cuando se calculan las referencias de los búferes de caracteres a los métodos API o structs con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Para obtener más información, vea <xref:System.Runtime.InteropServices.CharSet>.
 
 En el ejemplo anterior se muestra cómo acceder a campos `fixed` sin anclar, lo que está disponible a partir de C# 7.3.
 
@@ -50,7 +50,7 @@ Los búferes no seguros son diferentes de las matrices normales en los siguiente
 
 ## <a name="see-also"></a>Vea también
 
-[Guía de programación de C#](../index.md)  
-[Código no seguro y punteros](index.md)  
-[fixed (instrucción)](../../language-reference/keywords/fixed-statement.md)  
-[Interoperabilidad](../interop/index.md)
+- [Guía de programación de C#](../index.md)  
+- [Código no seguro y punteros](index.md)  
+- [fixed (instrucción)](../../language-reference/keywords/fixed-statement.md)  
+- [Interoperabilidad](../interop/index.md)

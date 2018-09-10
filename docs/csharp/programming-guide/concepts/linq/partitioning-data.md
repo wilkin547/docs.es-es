@@ -2,12 +2,12 @@
 title: Realizar particiones de datos (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 003e292979b1dc75baa298ea4bda7ef432d0f27b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e719b3a61b7c42d8ec6afe5fffe88a5bf83f82e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523466"
 ---
 # <a name="partitioning-data-c"></a>Realizar particiones de datos (C#)
 Partición en LINQ es la operación de dividir una secuencia de entrada en dos secciones, sin reorganizar los elementos, y devolver después una de las secciones.  
@@ -20,13 +20,14 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
   
 ## <a name="operators"></a>Operadores  
   
-|Nombre de operador|Description|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre de operador|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-------------------|-----------------|---------------------------------|----------------------|  
 |Skip|Omite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Omite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
 |Take|Admite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
 |TakeWhile|Admite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq>  
- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Linq>  
+- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))

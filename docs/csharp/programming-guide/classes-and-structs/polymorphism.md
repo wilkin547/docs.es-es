@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328450"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523398"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guía de programación de C#)
 El polimorfismo suele considerarse el tercer pilar de la programación orientada a objetos, después de la encapsulación y la herencia. Polimorfismo es una palabra griega que significa "con muchas formas" y tiene dos aspectos diferentes:  
@@ -50,7 +50,7 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
  [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
- Los métodos y propiedades virtuales permiten a las clases derivadas extender una clase base sin necesidad de usar la implementación de clase base de un método. Para obtener más información, consulte [Control de versiones con las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Una interfaz proporciona otra manera de definir un método o conjunto de métodos cuya implementación se deja a las clases derivadas. Para obtener más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+ Los métodos y propiedades virtuales permiten a las clases derivadas extender una clase base sin necesidad de usar la implementación de clase base de un método. Para obtener más información, consulte [Control de versiones con las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Una interfaz proporciona otra manera de definir un método o conjunto de métodos cuya implementación se deja a las clases derivadas. Para más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Ocultar miembros de clase base con nuevos miembros  
  Si quiere que el miembro derivado tenga el mismo nombre que un miembro de una clase base, pero no quiere que participe en la invocación virtual, puede usar la palabra clave [new](../../../csharp/language-reference/keywords/new.md). La palabra clave `new` se coloca antes que el tipo devuelto del miembro de la clase que se está reemplazando. El siguiente fragmento de código muestra un ejemplo:  
@@ -94,13 +94,14 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
 -   [Cómo: Invalidar el método ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Eventos](../../../csharp/programming-guide/events/index.md)  
- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
- [Tipos](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Eventos](../../../csharp/programming-guide/events/index.md)  
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Tipos](../../../csharp/programming-guide/types/index.md)

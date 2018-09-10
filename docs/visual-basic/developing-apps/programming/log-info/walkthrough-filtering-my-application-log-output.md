@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 43ac92cefe717b4bfa64969839b289e944980b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a299ba0bfb2d6f49b449e2f1e567a06d09da49e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591890"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500022"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
 En este tutorial se muestra cómo cambiar el filtrado del registro predeterminado para el objeto `My.Application.Log`, para controlar qué información se pasa desde el objeto `Log` a los agentes de escucha y qué información escriben estos. Puede cambiar el comportamiento del registro incluso después de generar la aplicación, porque la información de configuración se almacena en el archivo de configuración de la aplicación.  
@@ -253,4 +253,4 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
  [Tutorial: Crear agentes de escucha de registro personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  [Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [Modificadores de seguimiento](../../../../framework/debug-trace-profile/trace-switches.md)  
- [Registrar información de la aplicación](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [Registrar información de la aplicación](../../../../visual-basic/developing-apps/programming/log-info/index.md)

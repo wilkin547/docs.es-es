@@ -2,12 +2,12 @@
 title: 'Cómo: Efectuar transformaciones de transmisión de texto en XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 4313c5263b6a219ec3c8d05a7b7938c41c7cc028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98fa8bd9ae393e9c87b67ae3f2874a2c279415af
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526952"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Cómo: Efectuar transformaciones de transmisión de texto en XML (C#)
 Un enfoque del procesamiento de un archivo de texto es escribir un método de extensión que transmita el archivo de texto por secuencias de línea en línea mediante la construcción `yield return`. Después, puede escribir una consulta LINQ que procese el archivo de texto de forma aplazada y lenta. Si después usa <xref:System.Xml.Linq.XStreamingElement> para transmitir el resultado, puede crear una transformación del archivo de texto al XML usando una cantidad mínima de memoria, independientemente del tamaño del archivo de texto de origen.  
@@ -86,6 +86,7 @@ class Program
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XStreamingElement>  
- [Técnicas de consulta avanzadas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Xml.Linq.XStreamingElement>  
+- [Técnicas de consulta avanzadas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

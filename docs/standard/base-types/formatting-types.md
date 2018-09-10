@@ -28,11 +28,11 @@ ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484869"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502220"
 ---
 # <a name="formatting-types-in-net"></a>Aplicar formato a tipos en .NET
 <a name="Introduction"></a> Aplicar formato es el proceso de convertir una instancia de una clase, una estructura o un valor de enumeración en su representación de cadena, a menudo para que la cadena resultante se pueda mostrar a los usuarios o deserializar para restaurar el tipo de datos original. Esta conversión puede plantear varios desafíos:  

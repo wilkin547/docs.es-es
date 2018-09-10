@@ -2,12 +2,12 @@
 title: 'Cómo: Buscar un elemento con un elemento secundario específico (C#)'
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: e7528784f898f0f9ba84095b080eb82f8458424e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36a6981a26f6f75c74256369c78361ee7f129a3e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527825"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Cómo: Buscar un elemento con un elemento secundario específico (C#)
 Este tema muestra cómo encontrar un elemento en particular que tenga un elemento secundario con un valor específico.  
@@ -57,9 +57,10 @@ foreach (XElement el in tests)
 0006  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
- [Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md) (Operaciones de proyección [C#])
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Xml.Linq.XElement.Attribute%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
+- [Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md) (Operaciones de proyección [C#])

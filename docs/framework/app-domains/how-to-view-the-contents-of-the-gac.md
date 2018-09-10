@@ -14,11 +14,11 @@ ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3650de934cb3d2940d0e8e971d03aff856bddfd7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43394470"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515484"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Cómo: Consultar el contenido de la memoria caché global de ensamblados
 Use la [herramienta Caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para ver el contenido de la caché global de ensamblados.  

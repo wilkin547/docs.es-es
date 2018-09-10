@@ -8,11 +8,11 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408251"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502371"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 Este artículo paso a paso describe cómo un administrador del sistema puede implementar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md).  

@@ -2,12 +2,12 @@
 title: Controlar la reentrada en aplicaciones asincrónicas (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: f2b43bd982b7dcd1f4641ae55f95595d14d70b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0d3da41fdabaf8745dff083d37fcd89e3a2700
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521633"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Controlar la reentrada en aplicaciones asincrónicas (C#)
 Cuando se incluye código asincrónico en una aplicación, hay que tener en cuenta (y posiblemente evitar) la reentrada, que significa volver a especificar una operación asincrónica antes de que finalice. Si no se identifican ni controlan las posibilidades de reentrada, pueden producirse resultados inesperados.  
@@ -710,6 +710,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 12. Realice los cambios de [Deshabilitar el botón de inicio](#BKMK_DisableTheStartButton), [Cancelar y reiniciar la operación](#BKMK_CancelAndRestart) o [Ejecutar varias operaciones y poner en cola el resultado](#BKMK_RunMultipleOperations) para controlar la reentrada.  
   
-## <a name="see-also"></a>Vea también  
- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])  
- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])  
+- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

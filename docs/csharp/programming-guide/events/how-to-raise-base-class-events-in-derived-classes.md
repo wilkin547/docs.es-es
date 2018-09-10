@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: e064c318f16c2fe87aa980b7dec7468b1e61ab25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51bc6621d49bbb16313c900a92b539c30eb61ff0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320097"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525204"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Cómo: Producir eventos de una clase base en clases derivadas (Guía de programación de C#)
 En el siguiente ejemplo sencillo se muestra la forma estándar de declarar eventos en una clase base para que también se puedan generar desde clases derivadas. Este patrón se usa mucho en las clases de Windows Forms de la biblioteca de clases de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -22,9 +22,10 @@ En el siguiente ejemplo sencillo se muestra la forma estándar de declarar event
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Eventos](../../../csharp/programming-guide/events/index.md)  
- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [Crear controladores de eventos en Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Eventos](../../../csharp/programming-guide/events/index.md)  
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
+- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Crear controladores de eventos en Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

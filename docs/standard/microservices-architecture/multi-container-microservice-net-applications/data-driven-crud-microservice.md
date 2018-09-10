@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
 ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396121"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512121"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creación de un microservicio CRUD sencillo controlado por datos
 

@@ -2,12 +2,12 @@
 title: Sincronización de subprocesos (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6f0fe42c06b27369612cf586c7a93ce098822162
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463161"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509391"
 ---
 # <a name="thread-synchronization-c"></a>Sincronización de subprocesos (C#)
 En las secciones siguientes se describen las características y clases que se pueden usar para sincronizar el acceso a recursos en aplicaciones multiproceso.  
@@ -142,26 +142,27 @@ class ThreadingExample
 ## <a name="deadlocks"></a>Interbloqueos  
  La sincronización de subprocesos resulta de un valor incalculable en aplicaciones multiproceso, pero siempre existe el peligro de crear un `deadlock`, en el que varios subprocesos están esperando unos a otros y la aplicación se bloquea. Un interbloqueo es una situación análoga a otra en la que hay automóviles parados en un cruce con cuatro señales de stop y cada uno de los conductores está esperando a que los otros se pongan en marcha. Evitar los interbloqueos es importante; la clave se planea cuidadosamente. A menudo es posible predecir situaciones de interbloqueo mediante la creación de diagramas de las aplicaciones multiproceso, antes de empezar a escribir código.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.WaitHandle.WaitOne%2A>  
- <xref:System.Threading.WaitHandle.WaitAny%2A>  
- <xref:System.Threading.WaitHandle.WaitAll%2A>  
- <xref:System.Threading.Thread.Join%2A>  
- <xref:System.Threading.Thread.Start%2A>  
- <xref:System.Threading.Thread.Sleep%2A>  
- <xref:System.Threading.Monitor>  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading>  
- <xref:System.Threading.EventWaitHandle.Set%2A>  
- <xref:System.Threading.Monitor>  
- [lock (instrucción)](../../../../csharp/language-reference/keywords/lock-statement.md)  
- [Mutexes](../../../../standard/threading/mutexes.md) (Clases Mutex)  
- [Interlocked Operations](../../../../standard/threading/interlocked-operations.md) (Operaciones Interlocked)  
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
- [Sincronizar datos para subprocesamiento múltiple](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.WaitHandle.WaitOne%2A>  
+- <xref:System.Threading.WaitHandle.WaitAny%2A>  
+- <xref:System.Threading.WaitHandle.WaitAll%2A>  
+- <xref:System.Threading.Thread.Join%2A>  
+- <xref:System.Threading.Thread.Start%2A>  
+- <xref:System.Threading.Thread.Sleep%2A>  
+- <xref:System.Threading.Monitor>  
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading>  
+- <xref:System.Threading.EventWaitHandle.Set%2A>  
+- <xref:System.Threading.Monitor>  
+- [lock (instrucción)](../../../../csharp/language-reference/keywords/lock-statement.md)  
+- [Mutexes](../../../../standard/threading/mutexes.md) (Clases Mutex)  
+- [Interlocked Operations](../../../../standard/threading/interlocked-operations.md) (Operaciones Interlocked)  
+- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+- [Sincronizar datos para subprocesamiento múltiple](../../../../standard/threading/synchronizing-data-for-multithreading.md)

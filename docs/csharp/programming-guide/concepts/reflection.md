@@ -2,12 +2,12 @@
 title: Reflexión (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: fc5c3f6af1a089d824289a55f6781e887b7cfc56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d04fb15add465d0a04ac6b38b1c47aa408c81eaa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340442"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521677"
 ---
 # <a name="reflection-c"></a>Reflexión (C#)
 La reflexión proporciona objetos (de tipo <xref:System.Type>) que describen los ensamblados, módulos y tipos. Puede usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente e invocar sus métodos, o acceder a sus campos y propiedades. Si usa atributos en el código, la reflexión le permite acceder a ellos. Para obtener más información, consulte [Attributes](../../../../docs/standard/attributes/index.md) (Atributos).  
@@ -64,6 +64,7 @@ System.Console.WriteLine(info);
   
 -   [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Ensamblados en Common Language Runtime](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Ensamblados en Common Language Runtime](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

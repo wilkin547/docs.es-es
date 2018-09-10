@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392858"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519413"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro
 La activación sin registro de los componentes de .NET Framework solo es un poco más complicada que la de los componentes COM. La configuración requiere dos manifiestos:  
@@ -37,7 +37,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Para obtener información sobre los elementos del manifiesto y sus atributos, consulte [Manifiestos de aplicación](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
+     Para obtener información sobre los elementos del manifiesto y sus atributos, consulte [Manifiestos de aplicación](/windows/desktop/SbsCs/application-manifests).  
   
 3.  Identifique al propietario del manifiesto. En el ejemplo siguiente, la versión 1 de `myComApp` es el propietario del archivo de manifiesto.  
   
@@ -77,7 +77,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
 5.  Nombre el archivo de manifiesto y guárdelo. El nombre de un manifiesto de aplicación es el nombre del ensamblado ejecutable seguido de la extensión .manifest. Por ejemplo, el nombre del archivo de manifiesto de la aplicación de myComApp.exe es myComApp.exe.manifest.  
   
- El manifiesto de aplicación se puede instalar en el mismo directorio que la aplicación COM. Opcionalmente, se puede agregar como recurso al archivo .exe de la aplicación. Para más información, consulte el artículo sobre [los ensamblados en paralelo](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
+ El manifiesto de aplicación se puede instalar en el mismo directorio que la aplicación COM. Opcionalmente, se puede agregar como recurso al archivo .exe de la aplicación. Para más información, consulte el artículo sobre [los ensamblados en paralelo](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>Para crear un manifiesto de componente  
   
@@ -105,7 +105,7 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
 4.  Identifique cada clase del ensamblado. Use el elemento `<clrClass>` para identificar cada clase del ensamblado administrado de manera única. El elemento, que es un subelemento del elemento `<assembly>`, tiene los atributos que se describen en la tabla siguiente.  
   
-    |Atributo|Description|Obligatorio|  
+    |Atributo|Descripción|Obligatorio|  
     |---------------|-----------------|--------------|  
     |`clsid`|El identificador que especifica la clase que ha de ser activada.|Sí|  
     |`description`|Cadena que informa al usuario sobre el componente. De manera predeterminada, es una cadena vacía.|No|  

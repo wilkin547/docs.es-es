@@ -2,12 +2,12 @@
 title: Información general de la clase XAttribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: e0020a8cd8841ef9a35781b534c82db5e15c257f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5619a8442fde9f4e8f612f213bde16c86ba00115
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934818"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529079"
 ---
 # <a name="xattribute-class-overview-c"></a>Información general de la clase XAttribute (C#)
 Los atributos son pares de nombre y valor asociados a un elemento. La clase <xref:System.Xml.Linq.XAttribute> representa los atributos XML.  
@@ -79,5 +79,6 @@ Console.WriteLine(c);
   
  Esta distinción solo resulta de importancia para los desarrolladores que escriban código que trabaje con árboles XML en el nivel de nodo. A muchos desarrolladores no les afecta esta distinción.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre la programación de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Vea también
+
+- [Información general sobre la programación de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
