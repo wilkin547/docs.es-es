@@ -2,20 +2,20 @@
 title: 'Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0fa19af47847b0d6b804528af3f766c9775e74f3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478031"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863692"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a><span data-ttu-id="89582-102">Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="89582-102">How to: Create a Document with Namespaces (C#) (LINQ to XML)</span></span>
-<span data-ttu-id="89582-103">En este tema se muestra cómo crear documentos con espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="89582-103">This topic shows how to create documents with namespaces.</span></span>  
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a><span data-ttu-id="13353-102">Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="13353-102">How to: Create a Document with Namespaces (C#) (LINQ to XML)</span></span>
+<span data-ttu-id="13353-103">En este tema se muestra cómo crear documentos con espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="13353-103">This topic shows how to create documents with namespaces.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="89582-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="89582-104">Example</span></span>  
- <span data-ttu-id="89582-105">Para crear un elemento o un atributo que se encuentra en un espacio de nombres, primero debe declarar e inicializar un objeto <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="89582-105">To create an element or an attribute that is in a namespace, you first declare and initialize an <xref:System.Xml.Linq.XNamespace> object.</span></span> <span data-ttu-id="89582-106">A continuación debe utilizar la sobrecarga del operador de suma para combinar el espacio de nombres con el nombre local, expresado como una cadena.</span><span class="sxs-lookup"><span data-stu-id="89582-106">You then use the addition operator overload to combine the namespace with the local name, expressed as a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="13353-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="13353-104">Example</span></span>  
+ <span data-ttu-id="13353-105">Para crear un elemento o un atributo que se encuentra en un espacio de nombres, primero debe declarar e inicializar un objeto <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="13353-105">To create an element or an attribute that is in a namespace, you first declare and initialize an <xref:System.Xml.Linq.XNamespace> object.</span></span> <span data-ttu-id="13353-106">A continuación debe utilizar la sobrecarga del operador de suma para combinar el espacio de nombres con el nombre local, expresado como una cadena.</span><span class="sxs-lookup"><span data-stu-id="13353-106">You then use the addition operator overload to combine the namespace with the local name, expressed as a string.</span></span>  
   
- <span data-ttu-id="89582-107">En el ejemplo siguiente se crea un documento con un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="89582-107">The following example creates a document with one namespace.</span></span> <span data-ttu-id="89582-108">De forma predeterminada, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializa este documento con un espacio de nombres predeterminado.</span><span class="sxs-lookup"><span data-stu-id="89582-108">By default, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializes this document with a default namespace.</span></span>  
+ <span data-ttu-id="13353-107">En el ejemplo siguiente se crea un documento con un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="13353-107">The following example creates a document with one namespace.</span></span> <span data-ttu-id="13353-108">De forma predeterminada, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializa este documento con un espacio de nombres predeterminado.</span><span class="sxs-lookup"><span data-stu-id="13353-108">By default, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializes this document with a default namespace.</span></span>  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -26,7 +26,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="89582-109">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="89582-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="13353-109">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="13353-109">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -34,8 +34,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="89582-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="89582-110">Example</span></span>  
- <span data-ttu-id="89582-111">En el ejemplo siguiente se crea un documento con un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="89582-111">The following example creates a document with one namespace.</span></span> <span data-ttu-id="89582-112">También crea un atributo que declara el espacio de nombres con un prefijo.</span><span class="sxs-lookup"><span data-stu-id="89582-112">It also creates an attribute that declares the namespace with a namespace prefix.</span></span> <span data-ttu-id="89582-113">Para crear un atributo que declara un espacio de nombres con un prefijo, debe crearlo de modo que el nombre del atributo sea el prefijo del espacio de nombres y el nombre se encuentre en el espacio de nombres <xref:System.Xml.Linq.XNamespace.Xmlns%2A>.</span><span class="sxs-lookup"><span data-stu-id="89582-113">To create an attribute that declares a namespace with a prefix, you create an attribute where the name of the attribute is the namespace prefix, and this name is in the <xref:System.Xml.Linq.XNamespace.Xmlns%2A> namespace.</span></span> <span data-ttu-id="89582-114">El valor de este atributo es el URI del espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="89582-114">The value of this attribute is the URI of the namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="13353-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="13353-110">Example</span></span>  
+ <span data-ttu-id="13353-111">En el ejemplo siguiente se crea un documento con un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="13353-111">The following example creates a document with one namespace.</span></span> <span data-ttu-id="13353-112">También crea un atributo que declara el espacio de nombres con un prefijo.</span><span class="sxs-lookup"><span data-stu-id="13353-112">It also creates an attribute that declares the namespace with a namespace prefix.</span></span> <span data-ttu-id="13353-113">Para crear un atributo que declara un espacio de nombres con un prefijo, debe crearlo de modo que el nombre del atributo sea el prefijo del espacio de nombres y el nombre se encuentre en el espacio de nombres <xref:System.Xml.Linq.XNamespace.Xmlns%2A>.</span><span class="sxs-lookup"><span data-stu-id="13353-113">To create an attribute that declares a namespace with a prefix, you create an attribute where the name of the attribute is the namespace prefix, and this name is in the <xref:System.Xml.Linq.XNamespace.Xmlns%2A> namespace.</span></span> <span data-ttu-id="13353-114">El valor de este atributo es el URI del espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="13353-114">The value of this attribute is the URI of the namespace.</span></span>  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -47,7 +47,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="89582-115">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="89582-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="13353-115">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="13353-115">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -55,10 +55,10 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="89582-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="89582-116">Example</span></span>  
- <span data-ttu-id="89582-117">El ejemplo siguiente muestra la creación de un documento que contiene dos espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="89582-117">The following example shows the creation of a document that contains two namespaces.</span></span> <span data-ttu-id="89582-118">Uno es el espacio de nombres predeterminado.</span><span class="sxs-lookup"><span data-stu-id="89582-118">One is the default namespace.</span></span> <span data-ttu-id="89582-119">El otro es un espacio de nombres con un prefijo.</span><span class="sxs-lookup"><span data-stu-id="89582-119">Another is a namespace with a prefix.</span></span>  
+## <a name="example"></a><span data-ttu-id="13353-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="13353-116">Example</span></span>  
+ <span data-ttu-id="13353-117">El ejemplo siguiente muestra la creación de un documento que contiene dos espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="13353-117">The following example shows the creation of a document that contains two namespaces.</span></span> <span data-ttu-id="13353-118">Uno es el espacio de nombres predeterminado.</span><span class="sxs-lookup"><span data-stu-id="13353-118">One is the default namespace.</span></span> <span data-ttu-id="13353-119">El otro es un espacio de nombres con un prefijo.</span><span class="sxs-lookup"><span data-stu-id="13353-119">Another is a namespace with a prefix.</span></span>  
   
- <span data-ttu-id="89582-120">Mediante la inclusión de los atributos de espacio de nombres en el elemento raíz, los espacios de nombres se serializan de modo que `http://www.adventure-works.com` sea el espacio de nombres predeterminado y `www.fourthcoffee.com` se serialice con un prefijo "fc".</span><span class="sxs-lookup"><span data-stu-id="89582-120">By including namespace attributes in the root element, the namespaces are serialized so that `http://www.adventure-works.com` is the default namespace, and `www.fourthcoffee.com` is serialized with a prefix of "fc".</span></span> <span data-ttu-id="89582-121">Para crear un atributo que declare un espacio de nombres predeterminado, debe crear un atributo con el nombre "xmlns", sin un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="89582-121">To create an attribute that declares a default namespace, you create an attribute with the name "xmlns", without a namespace.</span></span> <span data-ttu-id="89582-122">El valor del atributo es el URI del espacio de nombres predeterminado.</span><span class="sxs-lookup"><span data-stu-id="89582-122">The value of the attribute is the default namespace URI.</span></span>  
+ <span data-ttu-id="13353-120">Mediante la inclusión de los atributos de espacio de nombres en el elemento raíz, los espacios de nombres se serializan de modo que `http://www.adventure-works.com` sea el espacio de nombres predeterminado y `www.fourthcoffee.com` se serialice con un prefijo "fc".</span><span class="sxs-lookup"><span data-stu-id="13353-120">By including namespace attributes in the root element, the namespaces are serialized so that `http://www.adventure-works.com` is the default namespace, and `www.fourthcoffee.com` is serialized with a prefix of "fc".</span></span> <span data-ttu-id="13353-121">Para crear un atributo que declare un espacio de nombres predeterminado, debe crear un atributo con el nombre "xmlns", sin un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="13353-121">To create an attribute that declares a default namespace, you create an attribute with the name "xmlns", without a namespace.</span></span> <span data-ttu-id="13353-122">El valor del atributo es el URI del espacio de nombres predeterminado.</span><span class="sxs-lookup"><span data-stu-id="13353-122">The value of the attribute is the default namespace URI.</span></span>  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  
@@ -76,7 +76,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="89582-123">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="89582-123">This example produces the following output:</span></span>  
+ <span data-ttu-id="13353-123">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="13353-123">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -88,8 +88,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="89582-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="89582-124">Example</span></span>  
- <span data-ttu-id="89582-125">En el ejemplo siguiente se crea un documento que contiene dos espacios de nombres, todos ellos con prefijos de espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="89582-125">The following example creates a document that contains two namespaces, both with namespace prefixes.</span></span>  
+## <a name="example"></a><span data-ttu-id="13353-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="13353-124">Example</span></span>  
+ <span data-ttu-id="13353-125">En el ejemplo siguiente se crea un documento que contiene dos espacios de nombres, todos ellos con prefijos de espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="13353-125">The following example creates a document that contains two namespaces, both with namespace prefixes.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -106,7 +106,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="89582-126">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="89582-126">This example produces the following output:</span></span>  
+ <span data-ttu-id="13353-126">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="13353-126">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -118,12 +118,12 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="89582-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="89582-127">Example</span></span>  
- <span data-ttu-id="89582-128">Otro método para conseguir el mismo resultado consiste en usar nombres expandidos en lugar de declarar y crear un objeto <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="89582-128">Another way to accomplish the same result is to use expanded names instead of declaring and creating an <xref:System.Xml.Linq.XNamespace> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="13353-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="13353-127">Example</span></span>  
+ <span data-ttu-id="13353-128">Otro método para conseguir el mismo resultado consiste en usar nombres expandidos en lugar de declarar y crear un objeto <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="13353-128">Another way to accomplish the same result is to use expanded names instead of declaring and creating an <xref:System.Xml.Linq.XNamespace> object.</span></span>  
   
- <span data-ttu-id="89582-129">Este método tiene implicaciones en el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="89582-129">This approach has performance implications.</span></span> <span data-ttu-id="89582-130">Cada vez que pasa una cadena que contiene un nombre expandido a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] debe analizar el nombre, buscar el espacio de nombres atomizado y buscar el nombre atomizado.</span><span class="sxs-lookup"><span data-stu-id="89582-130">Each time you pass a string that contains an expanded name to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] must parse the name, find the atomized namespace, and find the atomized name.</span></span> <span data-ttu-id="89582-131">Este proceso consume tiempo de la CPU.</span><span class="sxs-lookup"><span data-stu-id="89582-131">This process takes CPU time.</span></span> <span data-ttu-id="89582-132">Si el rendimiento es importante, tal vez quiera declarar y usar explícitamente un objeto <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="89582-132">If performance is important, you might want to declare and use an <xref:System.Xml.Linq.XNamespace> object explicitly.</span></span>  
+ <span data-ttu-id="13353-129">Este método tiene implicaciones en el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="13353-129">This approach has performance implications.</span></span> <span data-ttu-id="13353-130">Cada vez que pasa una cadena que contiene un nombre expandido a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] debe analizar el nombre, buscar el espacio de nombres atomizado y buscar el nombre atomizado.</span><span class="sxs-lookup"><span data-stu-id="13353-130">Each time you pass a string that contains an expanded name to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] must parse the name, find the atomized namespace, and find the atomized name.</span></span> <span data-ttu-id="13353-131">Este proceso consume tiempo de la CPU.</span><span class="sxs-lookup"><span data-stu-id="13353-131">This process takes CPU time.</span></span> <span data-ttu-id="13353-132">Si el rendimiento es importante, tal vez quiera declarar y usar explícitamente un objeto <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="13353-132">If performance is important, you might want to declare and use an <xref:System.Xml.Linq.XNamespace> object explicitly.</span></span>  
   
- <span data-ttu-id="89582-133">Si el rendimiento es un problema importante, vea [Atomización previa de objetos XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="89582-133">If performance is an important issue, see [Pre-Atomization of XName Objects (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) for more information</span></span>  
+ <span data-ttu-id="13353-133">Si el rendimiento es un problema importante, vea [Atomización previa de objetos XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="13353-133">If performance is an important issue, see [Pre-Atomization of XName Objects (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) for more information</span></span>  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -134,7 +134,7 @@ XElement root = new XElement("{http://www.adventure-works.com}Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="89582-134">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="89582-134">This example produces the following output:</span></span>  
+ <span data-ttu-id="13353-134">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="13353-134">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -142,5 +142,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="89582-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="89582-135">See Also</span></span>  
- [<span data-ttu-id="89582-136">Trabajar con espacios de nombres XML (C#)</span><span class="sxs-lookup"><span data-stu-id="89582-136">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="13353-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="13353-135">See Also</span></span>
+
+- [<span data-ttu-id="13353-136">Trabajar con espacios de nombres XML (C#)</span><span class="sxs-lookup"><span data-stu-id="13353-136">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

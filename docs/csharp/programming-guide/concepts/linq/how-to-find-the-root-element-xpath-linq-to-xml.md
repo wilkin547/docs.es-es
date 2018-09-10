@@ -2,24 +2,24 @@
 title: Cómo buscar el elemento raíz (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: a7c15c8eb688f70b2d1633fc5c094b02cc97031c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a0197a34f2e9d1b42a71d3c8cb1a4281ba495c4f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43421027"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261097"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a><span data-ttu-id="a155b-102">Cómo buscar el elemento raíz (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="a155b-102">How to: Find the Root Element (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="a155b-103">Este tema muestra cómo obtener el elemento raíz con XPath y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a155b-103">This topic shows how to get the root element with XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a><span data-ttu-id="5a90e-102">Cómo buscar el elemento raíz (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="5a90e-102">How to: Find the Root Element (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="5a90e-103">Este tema muestra cómo obtener el elemento raíz con XPath y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5a90e-103">This topic shows how to get the root element with XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
- <span data-ttu-id="a155b-104">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="a155b-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="5a90e-104">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="5a90e-104">The XPath expression is:</span></span>  
   
  `/PurchaseOrders`  
   
-## <a name="example"></a><span data-ttu-id="a155b-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a155b-105">Example</span></span>  
- <span data-ttu-id="a155b-106">Este ejemplo busca el elemento raíz.</span><span class="sxs-lookup"><span data-stu-id="a155b-106">This example finds the root element.</span></span>  
+## <a name="example"></a><span data-ttu-id="5a90e-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5a90e-105">Example</span></span>  
+ <span data-ttu-id="5a90e-106">Este ejemplo busca el elemento raíz.</span><span class="sxs-lookup"><span data-stu-id="5a90e-106">This example finds the root element.</span></span>  
   
- <span data-ttu-id="a155b-107">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: varios pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a155b-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="5a90e-107">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: varios pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5a90e-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -37,12 +37,13 @@ else
 Console.WriteLine(el1.Name);  
 ```  
   
- <span data-ttu-id="a155b-108">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="a155b-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="5a90e-108">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="5a90e-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 PurchaseOrders  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a155b-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="a155b-109">See Also</span></span>  
- [<span data-ttu-id="a155b-110">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="a155b-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="5a90e-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="5a90e-109">See Also</span></span>
+
+- [<span data-ttu-id="5a90e-110">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="5a90e-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -5,15 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: b489f647-a175-4659-ada4-170058bb41d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de11c190310dec90bd23d044f77d0c38e3a34fcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 008cf14e63b8458feebf26eaf27be516bb79f933
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568854"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216046"
 ---
-# <a name="xml-element-and-attribute-name-verification-when-creating-new-nodes"></a><span data-ttu-id="e4e0b-102">Comprobación de nombres de atributos y elementos XML al crear nodos nuevos</span><span class="sxs-lookup"><span data-stu-id="e4e0b-102">XML Element and Attribute Name Verification when Creating New Nodes</span></span>
-<span data-ttu-id="e4e0b-103">El modelo de objetos de documento (DOM) XML comprueba la validez de los nombres cuando se crean nuevos nodos de elementos o de atributos.</span><span class="sxs-lookup"><span data-stu-id="e4e0b-103">The XML Document Object Model (DOM) checks the validity of the names when creating new element nodes or attribute nodes.</span></span> <span data-ttu-id="e4e0b-104">Si los nombres contienen caracteres no válidos, se produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="e4e0b-104">If the names contain illegal characters, an exception is thrown.</span></span> <span data-ttu-id="e4e0b-105">Para asegurarse de que los nombres son válidos y que están codificados correctamente, debe usar la clase **XmlConvert** para codificar el nombre y decodificarlo de nuevo en el nivel de aplicación.</span><span class="sxs-lookup"><span data-stu-id="e4e0b-105">To ensure that names are valid and encoded correctly, you need to use the **XmlConvert** class to encode the name and decode it back at an application level.</span></span> <span data-ttu-id="e4e0b-106">La clase **XmlWriter** cuenta con métodos que realizan trabajo adicional para asegurar que se genera XML con el formato correcto.</span><span class="sxs-lookup"><span data-stu-id="e4e0b-106">The **XmlWriter** has methods that do additional work to ensure well-formed XML is generated.</span></span>  
+# <a name="xml-element-and-attribute-name-verification-when-creating-new-nodes"></a><span data-ttu-id="c25db-102">Comprobación de nombres de atributos y elementos XML al crear nodos nuevos</span><span class="sxs-lookup"><span data-stu-id="c25db-102">XML Element and Attribute Name Verification when Creating New Nodes</span></span>
+<span data-ttu-id="c25db-103">El modelo de objetos de documento (DOM) XML comprueba la validez de los nombres cuando se crean nuevos nodos de elementos o de atributos.</span><span class="sxs-lookup"><span data-stu-id="c25db-103">The XML Document Object Model (DOM) checks the validity of the names when creating new element nodes or attribute nodes.</span></span> <span data-ttu-id="c25db-104">Si los nombres contienen caracteres no válidos, se produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="c25db-104">If the names contain illegal characters, an exception is thrown.</span></span> <span data-ttu-id="c25db-105">Para asegurarse de que los nombres son válidos y que están codificados correctamente, debe usar la clase **XmlConvert** para codificar el nombre y decodificarlo de nuevo en el nivel de aplicación.</span><span class="sxs-lookup"><span data-stu-id="c25db-105">To ensure that names are valid and encoded correctly, you need to use the **XmlConvert** class to encode the name and decode it back at an application level.</span></span> <span data-ttu-id="c25db-106">La clase **XmlWriter** cuenta con métodos que realizan trabajo adicional para asegurar que se genera XML con el formato correcto.</span><span class="sxs-lookup"><span data-stu-id="c25db-106">The **XmlWriter** has methods that do additional work to ensure well-formed XML is generated.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4e0b-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="e4e0b-107">See Also</span></span>  
- [<span data-ttu-id="e4e0b-108">Document Object Model (DOM) para XML</span><span class="sxs-lookup"><span data-stu-id="e4e0b-108">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="c25db-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="c25db-107">See also</span></span>
+
+- [<span data-ttu-id="c25db-108">Document Object Model (DOM) para XML</span><span class="sxs-lookup"><span data-stu-id="c25db-108">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

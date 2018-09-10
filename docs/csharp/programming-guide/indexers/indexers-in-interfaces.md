@@ -5,34 +5,34 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 120b6e72a6ab906437c593d6eb33024d1df8f52b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c3ddb48590087d49402482e8cbf3760027da1a2a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208087"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799468"
 ---
-# <a name="indexers-in-interfaces-c-programming-guide"></a><span data-ttu-id="1f148-102">Indizadores en interfaces (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="1f148-102">Indexers in Interfaces (C# Programming Guide)</span></span>
-<span data-ttu-id="1f148-103">Los indexadores se pueden declarar en una [interfaz](../../../csharp/language-reference/keywords/interface.md).</span><span class="sxs-lookup"><span data-stu-id="1f148-103">Indexers can be declared on an [interface](../../../csharp/language-reference/keywords/interface.md).</span></span> <span data-ttu-id="1f148-104">Los descriptores de acceso de los indexadores de interfaz se diferencian de los descriptores de acceso de los indexadores de [clase](../../../csharp/language-reference/keywords/class.md) de las maneras siguientes:</span><span class="sxs-lookup"><span data-stu-id="1f148-104">Accessors of interface indexers differ from the accessors of [class](../../../csharp/language-reference/keywords/class.md) indexers in the following ways:</span></span>  
+# <a name="indexers-in-interfaces-c-programming-guide"></a><span data-ttu-id="1f044-102">Indizadores en interfaces (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="1f044-102">Indexers in Interfaces (C# Programming Guide)</span></span>
+<span data-ttu-id="1f044-103">Los indexadores se pueden declarar en una [interfaz](../../../csharp/language-reference/keywords/interface.md).</span><span class="sxs-lookup"><span data-stu-id="1f044-103">Indexers can be declared on an [interface](../../../csharp/language-reference/keywords/interface.md).</span></span> <span data-ttu-id="1f044-104">Los descriptores de acceso de los indexadores de interfaz se diferencian de los descriptores de acceso de los indexadores de [clase](../../../csharp/language-reference/keywords/class.md) de las maneras siguientes:</span><span class="sxs-lookup"><span data-stu-id="1f044-104">Accessors of interface indexers differ from the accessors of [class](../../../csharp/language-reference/keywords/class.md) indexers in the following ways:</span></span>  
   
--   <span data-ttu-id="1f148-105">Los descriptores de acceso de interfaz no usan modificadores.</span><span class="sxs-lookup"><span data-stu-id="1f148-105">Interface accessors do not use modifiers.</span></span>  
+-   <span data-ttu-id="1f044-105">Los descriptores de acceso de interfaz no usan modificadores.</span><span class="sxs-lookup"><span data-stu-id="1f044-105">Interface accessors do not use modifiers.</span></span>  
   
--   <span data-ttu-id="1f148-106">Un descriptor de acceso de interfaz no tiene un cuerpo.</span><span class="sxs-lookup"><span data-stu-id="1f148-106">An interface accessor does not have a body.</span></span>  
+-   <span data-ttu-id="1f044-106">Un descriptor de acceso de interfaz no tiene un cuerpo.</span><span class="sxs-lookup"><span data-stu-id="1f044-106">An interface accessor does not have a body.</span></span>  
   
- <span data-ttu-id="1f148-107">Por tanto, el propósito del descriptor de acceso es indicar si el indexador es de lectura y escritura, de solo lectura o de solo escritura.</span><span class="sxs-lookup"><span data-stu-id="1f148-107">Thus, the purpose of the accessor is to indicate whether the indexer is read-write, read-only, or write-only.</span></span>  
+ <span data-ttu-id="1f044-107">Por tanto, el propósito del descriptor de acceso es indicar si el indexador es de lectura y escritura, de solo lectura o de solo escritura.</span><span class="sxs-lookup"><span data-stu-id="1f044-107">Thus, the purpose of the accessor is to indicate whether the indexer is read-write, read-only, or write-only.</span></span>  
   
- <span data-ttu-id="1f148-108">A continuación tiene un ejemplo de un descriptor de acceso de indexador de interfaz:</span><span class="sxs-lookup"><span data-stu-id="1f148-108">The following is an example of an interface indexer accessor:</span></span>  
+ <span data-ttu-id="1f044-108">A continuación tiene un ejemplo de un descriptor de acceso de indexador de interfaz:</span><span class="sxs-lookup"><span data-stu-id="1f044-108">The following is an example of an interface indexer accessor:</span></span>  
   
  [!code-csharp[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
   
- <span data-ttu-id="1f148-109">La firma de un indexador debe ser diferente de las firmas de los demás indexadores declarados en la misma interfaz.</span><span class="sxs-lookup"><span data-stu-id="1f148-109">The signature of an indexer must differ from the signatures of all other indexers declared in the same interface.</span></span>  
+ <span data-ttu-id="1f044-109">La firma de un indexador debe ser diferente de las firmas de los demás indexadores declarados en la misma interfaz.</span><span class="sxs-lookup"><span data-stu-id="1f044-109">The signature of an indexer must differ from the signatures of all other indexers declared in the same interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1f148-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1f148-110">Example</span></span>  
- <span data-ttu-id="1f148-111">En el siguiente ejemplo, se muestra cómo implementar indexadores de interfaz.</span><span class="sxs-lookup"><span data-stu-id="1f148-111">The following example shows how to implement interface indexers.</span></span>  
+## <a name="example"></a><span data-ttu-id="1f044-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1f044-110">Example</span></span>  
+ <span data-ttu-id="1f044-111">En el siguiente ejemplo, se muestra cómo implementar indexadores de interfaz.</span><span class="sxs-lookup"><span data-stu-id="1f044-111">The following example shows how to implement interface indexers.</span></span>  
   
  [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
- <span data-ttu-id="1f148-112">En el ejemplo anterior, podría usar la implementación del miembro de interfaz explícita al usar el nombre completo del miembro de interfaz.</span><span class="sxs-lookup"><span data-stu-id="1f148-112">In the preceding example, you could use the explicit interface member implementation by using the fully qualified name of the interface member.</span></span> <span data-ttu-id="1f148-113">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1f148-113">For example:</span></span>  
+ <span data-ttu-id="1f044-112">En el ejemplo anterior, podría usar la implementación del miembro de interfaz explícita al usar el nombre completo del miembro de interfaz.</span><span class="sxs-lookup"><span data-stu-id="1f044-112">In the preceding example, you could use the explicit interface member implementation by using the fully qualified name of the interface member.</span></span> <span data-ttu-id="1f044-113">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="1f044-113">For example:</span></span>  
   
 ```  
 string ISomeInterface.this[int index]   
@@ -40,7 +40,7 @@ string ISomeInterface.this[int index]
 }   
 ```  
   
- <span data-ttu-id="1f148-114">En cambio, el nombre completo solo es necesario para evitar la ambigüedad cuando la clase implementa más de una interfaz con la misma firma de indexador.</span><span class="sxs-lookup"><span data-stu-id="1f148-114">However, the fully qualified name is only needed to avoid ambiguity when the class is implementing more than one interface with the same indexer signature.</span></span> <span data-ttu-id="1f148-115">Por ejemplo, si una clase `Employee` implementa dos interfaces `ICitizen` y `IEmployee` y ambas interfaces tienen la misma firma de indexador, la implementación del miembro de interfaz explícita es necesaria.</span><span class="sxs-lookup"><span data-stu-id="1f148-115">For example, if an `Employee` class is implementing two interfaces, `ICitizen` and `IEmployee`, and both interfaces have the same indexer signature, the explicit interface member implementation is necessary.</span></span> <span data-ttu-id="1f148-116">Es decir, la siguiente declaración de indexador:</span><span class="sxs-lookup"><span data-stu-id="1f148-116">That is, the following indexer declaration:</span></span>  
+ <span data-ttu-id="1f044-114">En cambio, el nombre completo solo es necesario para evitar la ambigüedad cuando la clase implementa más de una interfaz con la misma firma de indexador.</span><span class="sxs-lookup"><span data-stu-id="1f044-114">However, the fully qualified name is only needed to avoid ambiguity when the class is implementing more than one interface with the same indexer signature.</span></span> <span data-ttu-id="1f044-115">Por ejemplo, si una clase `Employee` implementa dos interfaces `ICitizen` y `IEmployee` y ambas interfaces tienen la misma firma de indexador, la implementación del miembro de interfaz explícita es necesaria.</span><span class="sxs-lookup"><span data-stu-id="1f044-115">For example, if an `Employee` class is implementing two interfaces, `ICitizen` and `IEmployee`, and both interfaces have the same indexer signature, the explicit interface member implementation is necessary.</span></span> <span data-ttu-id="1f044-116">Es decir, la siguiente declaración de indexador:</span><span class="sxs-lookup"><span data-stu-id="1f044-116">That is, the following indexer declaration:</span></span>  
   
 ```  
 string IEmployee.this[int index]   
@@ -48,7 +48,7 @@ string IEmployee.this[int index]
 }   
 ```  
   
- <span data-ttu-id="1f148-117">implementa el indexador en la interfaz `IEmployee`, mientras que la siguiente declaración:</span><span class="sxs-lookup"><span data-stu-id="1f148-117">implements the indexer on the `IEmployee` interface, while the following declaration:</span></span>  
+ <span data-ttu-id="1f044-117">implementa el indexador en la interfaz `IEmployee`, mientras que la siguiente declaración:</span><span class="sxs-lookup"><span data-stu-id="1f044-117">implements the indexer on the `IEmployee` interface, while the following declaration:</span></span>  
   
 ```  
 string ICitizen.this[int index]
@@ -56,10 +56,11 @@ string ICitizen.this[int index]
 }   
 ```  
   
- <span data-ttu-id="1f148-118">implementa el indexador en la interfaz `ICitizen`.</span><span class="sxs-lookup"><span data-stu-id="1f148-118">implements the indexer on the `ICitizen` interface.</span></span>  
+ <span data-ttu-id="1f044-118">implementa el indexador en la interfaz `ICitizen`.</span><span class="sxs-lookup"><span data-stu-id="1f044-118">implements the indexer on the `ICitizen` interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f148-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="1f148-119">See Also</span></span>  
- [<span data-ttu-id="1f148-120">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="1f148-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="1f148-121">Indizadores</span><span class="sxs-lookup"><span data-stu-id="1f148-121">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
- [<span data-ttu-id="1f148-122">Propiedades</span><span class="sxs-lookup"><span data-stu-id="1f148-122">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [<span data-ttu-id="1f148-123">Interfaces</span><span class="sxs-lookup"><span data-stu-id="1f148-123">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="1f044-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="1f044-119">See Also</span></span>
+
+- [<span data-ttu-id="1f044-120">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="1f044-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="1f044-121">Indizadores</span><span class="sxs-lookup"><span data-stu-id="1f044-121">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+- [<span data-ttu-id="1f044-122">Propiedades</span><span class="sxs-lookup"><span data-stu-id="1f044-122">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [<span data-ttu-id="1f044-123">Interfaces</span><span class="sxs-lookup"><span data-stu-id="1f044-123">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)

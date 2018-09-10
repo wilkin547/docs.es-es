@@ -13,16 +13,16 @@ helpviewer_keywords:
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
 ms.openlocfilehash: f00d5e489931d9c1172a21ee5f0d3e3d0a6f4a4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409003"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192819"
 ---
-# <a name="-and--null-conditional-operators-c-and-visual-basic"></a><span data-ttu-id="ef004-102">?.</span><span class="sxs-lookup"><span data-stu-id="ef004-102">?.</span></span> <span data-ttu-id="ef004-103">y ?[]: operadores condicionales NULL (C# y Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ef004-103">and ?[] null-conditional Operators (C# and Visual Basic)</span></span>
-<span data-ttu-id="ef004-104">Comprueba si el valor del operando izquierdo es null antes de realizar una operación de acceso a miembro (`?.`) o de índice (`?[]`); devuelve `null` si el operando izquierdo se evalúa como `null`.</span><span class="sxs-lookup"><span data-stu-id="ef004-104">Tests the value of the left-hand operand for null before performing a member access (`?.`) or index (`?[]`) operation; returns `null` if the left-hand operand evaluates to `null`.</span></span> 
+# <a name="-and--null-conditional-operators-c-and-visual-basic"></a><span data-ttu-id="1775f-102">?.</span><span class="sxs-lookup"><span data-stu-id="1775f-102">?.</span></span> <span data-ttu-id="1775f-103">y ?[]: operadores condicionales NULL (C# y Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1775f-103">and ?[] null-conditional Operators (C# and Visual Basic)</span></span>
+<span data-ttu-id="1775f-104">Comprueba si el valor del operando izquierdo es null antes de realizar una operación de acceso a miembro (`?.`) o de índice (`?[]`); devuelve `null` si el operando izquierdo se evalúa como `null`.</span><span class="sxs-lookup"><span data-stu-id="1775f-104">Tests the value of the left-hand operand for null before performing a member access (`?.`) or index (`?[]`) operation; returns `null` if the left-hand operand evaluates to `null`.</span></span> 
 
-<span data-ttu-id="ef004-105">Estos operadores ayudan a escribir menos código para controlar las comprobaciones de null, especialmente para descender en estructuras de datos.</span><span class="sxs-lookup"><span data-stu-id="ef004-105">These operators help you write less code to handle null checks, especially for descending into data structures.</span></span>  
+<span data-ttu-id="1775f-105">Estos operadores ayudan a escribir menos código para controlar las comprobaciones de null, especialmente para descender en estructuras de datos.</span><span class="sxs-lookup"><span data-stu-id="1775f-105">These operators help you write less code to handle null checks, especially for descending into data structures.</span></span>  
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -36,7 +36,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- <span data-ttu-id="ef004-106">Los operadores de condición NULL se cortocircuitan.</span><span class="sxs-lookup"><span data-stu-id="ef004-106">The null-conditional operators are short-circuiting.</span></span>  <span data-ttu-id="ef004-107">Si una operación en una cadena de la operación de índice y de acceso a miembros condicional devuelve null, se detiene el resto de la ejecución de la cadena.</span><span class="sxs-lookup"><span data-stu-id="ef004-107">If one operation in a chain of conditional member access and index operation returns null, then the rest of the chain’s execution stops.</span></span>  <span data-ttu-id="ef004-108">En el ejemplo siguiente, `E` no se ejecuta si `A`, `B` o `C` se evalúan como NULL.</span><span class="sxs-lookup"><span data-stu-id="ef004-108">In the following example, `E` doesn't execute if `A`, `B`, or `C` evaluates to null.</span></span>
+ <span data-ttu-id="1775f-106">Los operadores de condición NULL se cortocircuitan.</span><span class="sxs-lookup"><span data-stu-id="1775f-106">The null-conditional operators are short-circuiting.</span></span>  <span data-ttu-id="1775f-107">Si una operación en una cadena de la operación de índice y de acceso a miembros condicional devuelve null, se detiene el resto de la ejecución de la cadena.</span><span class="sxs-lookup"><span data-stu-id="1775f-107">If one operation in a chain of conditional member access and index operation returns null, then the rest of the chain’s execution stops.</span></span>  <span data-ttu-id="1775f-108">En el ejemplo siguiente, `E` no se ejecuta si `A`, `B` o `C` se evalúan como NULL.</span><span class="sxs-lookup"><span data-stu-id="1775f-108">In the following example, `E` doesn't execute if `A`, `B`, or `C` evaluates to null.</span></span>
   
 ```csharp
 A?.B?.C?.Do(E);
@@ -48,7 +48,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
- <span data-ttu-id="ef004-109">Otro uso para el acceso a miembros de condición null es invocar delegados de manera segura para los subprocesos con mucho menos código.</span><span class="sxs-lookup"><span data-stu-id="ef004-109">Another use for the null-conditional member access is invoking delegates in a thread-safe way with much less code.</span></span>  <span data-ttu-id="ef004-110">La antigua manera de hacerlo requiere un código parecido a este:</span><span class="sxs-lookup"><span data-stu-id="ef004-110">The old way requires code like the following:</span></span>  
+ <span data-ttu-id="1775f-109">Otro uso para el acceso a miembros de condición null es invocar delegados de manera segura para los subprocesos con mucho menos código.</span><span class="sxs-lookup"><span data-stu-id="1775f-109">Another use for the null-conditional member access is invoking delegates in a thread-safe way with much less code.</span></span>  <span data-ttu-id="1775f-110">La antigua manera de hacerlo requiere un código parecido a este:</span><span class="sxs-lookup"><span data-stu-id="1775f-110">The old way requires code like the following:</span></span>  
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -62,7 +62,7 @@ If handler IsNot Nothing
     Call handler(…)  
 ```  
   
- <span data-ttu-id="ef004-111">La nueva manera es mucho más sencilla:</span><span class="sxs-lookup"><span data-stu-id="ef004-111">The new way is much simpler:</span></span>  
+ <span data-ttu-id="1775f-111">La nueva manera es mucho más sencilla:</span><span class="sxs-lookup"><span data-stu-id="1775f-111">The new way is much simpler:</span></span>  
   
 ```csharp
 PropertyChanged?.Invoke(…)  
@@ -72,16 +72,16 @@ PropertyChanged?.Invoke(…)
 PropertyChanged?.Invoke(…)
 ```  
   
- <span data-ttu-id="ef004-112">La nueva forma de hacerlo es segura para los subprocesos porque el compilador genera código para evaluar `PropertyChanged` solo una vez, manteniendo el resultado en una variable temporal.</span><span class="sxs-lookup"><span data-stu-id="ef004-112">The new way is thread-safe because the compiler generates code to evaluate `PropertyChanged` one time only, keeping the result in a temporary variable.</span></span> <span data-ttu-id="ef004-113">Debe llamar explícitamente al método `Invoke` porque no hay ninguna sintaxis de invocación del delegado null condicional `PropertyChanged?(e)`.</span><span class="sxs-lookup"><span data-stu-id="ef004-113">You need to explicitly call the `Invoke` method because there is no null-conditional delegate invocation syntax `PropertyChanged?(e)`.</span></span>  
+ <span data-ttu-id="1775f-112">La nueva forma de hacerlo es segura para los subprocesos porque el compilador genera código para evaluar `PropertyChanged` solo una vez, manteniendo el resultado en una variable temporal.</span><span class="sxs-lookup"><span data-stu-id="1775f-112">The new way is thread-safe because the compiler generates code to evaluate `PropertyChanged` one time only, keeping the result in a temporary variable.</span></span> <span data-ttu-id="1775f-113">Debe llamar explícitamente al método `Invoke` porque no hay ninguna sintaxis de invocación del delegado null condicional `PropertyChanged?(e)`.</span><span class="sxs-lookup"><span data-stu-id="1775f-113">You need to explicitly call the `Invoke` method because there is no null-conditional delegate invocation syntax `PropertyChanged?(e)`.</span></span>  
   
-## <a name="language-specifications"></a><span data-ttu-id="ef004-114">Especificaciones del lenguaje</span><span class="sxs-lookup"><span data-stu-id="ef004-114">Language Specifications</span></span>  
+## <a name="language-specifications"></a><span data-ttu-id="1775f-114">Especificaciones del lenguaje</span><span class="sxs-lookup"><span data-stu-id="1775f-114">Language Specifications</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
- <span data-ttu-id="ef004-115">Para obtener más información, vea [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="ef004-115">For more information, see the [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md).</span></span>  
+ <span data-ttu-id="1775f-115">Para obtener más información, vea [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="1775f-115">For more information, see the [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef004-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="ef004-116">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1775f-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="1775f-116">See Also</span></span>
 
-- [<span data-ttu-id="ef004-117">?? (operador de uso combinado de NULL)</span><span class="sxs-lookup"><span data-stu-id="ef004-117">?? (null-coalescing operator)</span></span>](null-coalescing-operator.md)  
-- [<span data-ttu-id="ef004-118">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="ef004-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="ef004-119">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="ef004-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="ef004-120">Guía de programación en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ef004-120">Visual Basic Programming Guide</span></span>](../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="1775f-117">?? (operador de uso combinado de NULL)</span><span class="sxs-lookup"><span data-stu-id="1775f-117">?? (null-coalescing operator)</span></span>](null-coalescing-operator.md)  
+- [<span data-ttu-id="1775f-118">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="1775f-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="1775f-119">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="1775f-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="1775f-120">Guía de programación en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1775f-120">Visual Basic Programming Guide</span></span>](../../../visual-basic/programming-guide/index.md)

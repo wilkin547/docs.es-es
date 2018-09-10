@@ -2,18 +2,18 @@
 title: 'Cómo: Crear una unión de C-C++ mediante atributos (C#)'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315846"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798514"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a><span data-ttu-id="6a3b8-102">Cómo: Crear una unión de C/C++ mediante atributos (C#)</span><span class="sxs-lookup"><span data-stu-id="6a3b8-102">How to: Create a C/C++ Union by Using Attributes (C#)</span></span>
-<span data-ttu-id="6a3b8-103">Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria.</span><span class="sxs-lookup"><span data-stu-id="6a3b8-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="6a3b8-104">Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="6a3b8-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a><span data-ttu-id="8f394-102">Cómo: Crear una unión de C/C++ mediante atributos (C#)</span><span class="sxs-lookup"><span data-stu-id="8f394-102">How to: Create a C/C++ Union by Using Attributes (C#)</span></span>
+<span data-ttu-id="8f394-103">Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria.</span><span class="sxs-lookup"><span data-stu-id="8f394-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="8f394-104">Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="8f394-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6a3b8-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6a3b8-105">Example</span></span>  
- <span data-ttu-id="6a3b8-106">En este segmento de código, todos los campos de `TestUnion` empiezan en la misma ubicación en la memoria.</span><span class="sxs-lookup"><span data-stu-id="6a3b8-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
+## <a name="example"></a><span data-ttu-id="8f394-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8f394-105">Example</span></span>  
+ <span data-ttu-id="8f394-106">En este segmento de código, todos los campos de `TestUnion` empiezan en la misma ubicación en la memoria.</span><span class="sxs-lookup"><span data-stu-id="8f394-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -35,8 +35,8 @@ ms.locfileid: "33315846"
        }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="6a3b8-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6a3b8-107">Example</span></span>  
- <span data-ttu-id="6a3b8-108">A continuación se muestra otro ejemplo en el que los campos empiezan en ubicaciones diferentes establecidas explícitamente.</span><span class="sxs-lookup"><span data-stu-id="6a3b8-108">The following is another example where fields start at different explicitly set locations.</span></span>  
+## <a name="example"></a><span data-ttu-id="8f394-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8f394-107">Example</span></span>  
+ <span data-ttu-id="8f394-108">A continuación se muestra otro ejemplo en el que los campos empiezan en ubicaciones diferentes establecidas explícitamente.</span><span class="sxs-lookup"><span data-stu-id="8f394-108">The following is another example where fields start at different explicitly set locations.</span></span>  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -64,14 +64,15 @@ ms.locfileid: "33315846"
        }  
 ```  
   
- <span data-ttu-id="6a3b8-109">Los dos campos enteros, `i1` e `i2`, tiene las mismas ubicaciones en la memoria que `lg`.</span><span class="sxs-lookup"><span data-stu-id="6a3b8-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="6a3b8-110">Este tipo de control sobre el diseño del struct es útil cuando se usa la invocación de plataforma.</span><span class="sxs-lookup"><span data-stu-id="6a3b8-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
+ <span data-ttu-id="8f394-109">Los dos campos enteros, `i1` e `i2`, tiene las mismas ubicaciones en la memoria que `lg`.</span><span class="sxs-lookup"><span data-stu-id="8f394-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="8f394-110">Este tipo de control sobre el diseño del struct es útil cuando se usa la invocación de plataforma.</span><span class="sxs-lookup"><span data-stu-id="8f394-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a3b8-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="6a3b8-111">See Also</span></span>  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [<span data-ttu-id="6a3b8-112">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="6a3b8-112">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="6a3b8-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="6a3b8-113">Attributes</span></span>](../../../../../docs/standard/attributes/index.md)  
- [<span data-ttu-id="6a3b8-114">Reflexión (C#)</span><span class="sxs-lookup"><span data-stu-id="6a3b8-114">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)  
- [<span data-ttu-id="6a3b8-115">Atributos (C#)</span><span class="sxs-lookup"><span data-stu-id="6a3b8-115">Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [<span data-ttu-id="6a3b8-116">Crear atributos personalizados (C#)</span><span class="sxs-lookup"><span data-stu-id="6a3b8-116">Creating Custom Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [<span data-ttu-id="6a3b8-117">Acceder a atributos mediante reflexión (C#)</span><span class="sxs-lookup"><span data-stu-id="6a3b8-117">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a><span data-ttu-id="8f394-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="8f394-111">See Also</span></span>
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [<span data-ttu-id="8f394-112">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="8f394-112">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="8f394-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="8f394-113">Attributes</span></span>](../../../../../docs/standard/attributes/index.md)  
+- [<span data-ttu-id="8f394-114">Reflexión (C#)</span><span class="sxs-lookup"><span data-stu-id="8f394-114">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [<span data-ttu-id="8f394-115">Atributos (C#)</span><span class="sxs-lookup"><span data-stu-id="8f394-115">Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [<span data-ttu-id="8f394-116">Crear atributos personalizados (C#)</span><span class="sxs-lookup"><span data-stu-id="8f394-116">Creating Custom Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [<span data-ttu-id="8f394-117">Acceder a atributos mediante reflexión (C#)</span><span class="sxs-lookup"><span data-stu-id="8f394-117">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
