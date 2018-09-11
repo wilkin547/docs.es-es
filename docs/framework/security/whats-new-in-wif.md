@@ -5,11 +5,11 @@ ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 2a275c32caefb54b11cc605c1339526465c8319a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205145"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269337"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Novedades de Windows Identity Foundation 4.5
 La primera versión de Windows Identity Foundation (WIF) se suministró como una descarga independiente y se conoce como WIF 3.5 porque se introdujo en el período de tiempo de .NET 3.5 SP1. A partir de .NET 4.5, WIF forma parte de .NET Framework. Poder disponer de las clases de WIF directamente en el marco de trabajo permite una integración mucho más profunda de la identidad basada en notificaciones en .NET, lo que facilita el uso de notificaciones. Las aplicaciones escritas para WIF 3.5 se tendrán que modificar para poder aprovechar el nuevo modelo; para obtener información, vea [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md) (Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5).  

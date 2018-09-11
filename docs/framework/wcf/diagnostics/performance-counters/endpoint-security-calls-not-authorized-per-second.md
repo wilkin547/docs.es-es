@@ -5,11 +5,11 @@ ms.assetid: c8a1547b-986b-45c1-b302-dea0cd4b516d
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 4cefdd7480c7d0e9475b1883e603d9db1f287d4a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186336"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259748"
 ---
 # <a name="endpoint-security-calls-not-authorized-per-second"></a>punto de conexión: Llamadas de seguridad no autorizadas por segundo
 Nombre del contador: llamadas de seguridad no autorizadas por segundo.  

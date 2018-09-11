@@ -11,11 +11,11 @@ ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190181"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259972"
 ---
 # <a name="member-design-guidelines"></a>Instrucciones de diseño de miembros
 Los métodos, propiedades, eventos, constructores y campos se conocen colectivamente como miembros. En última instancia, los miembros son el medio por el que se expone la funcionalidad del marco a los usuarios finales de un marco de trabajo.  
