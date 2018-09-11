@@ -2,17 +2,16 @@
 title: Restricciones (F#)
 description: 'Obtenga información sobre restricciones de F # que se aplican a los parámetros de tipo genérico para especificar los requisitos para un argumento de tipo en una función o tipo genérico.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525610"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867834"
 ---
 # <a name="constraints"></a>Restricciones
 
 En este tema se describe las restricciones que se pueden aplicar a genérica parámetros para especificar los requisitos para un argumento de tipo en una función o tipo genérico de tipo.
-
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,13 +20,14 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 Hay varias restricciones diferentes que puede aplicar para limitar los tipos que se pueden usar en un tipo genérico. En la tabla siguiente se enumera y describe estas restricciones.
 
 |Restricción|Sintaxis|Descripción|
 |----------|------|-----------|
 |Restricción de tipo|*parámetro de tipo* :&gt; *tipo*|El tipo proporcionado debe ser igual o derivado del tipo especificado, o bien, si el tipo es una interfaz, el tipo proporcionado debe implementar la interfaz.|
 |Restricción null|*parámetro de tipo* : null|El tipo proporcionado debe admitir el literal null. Esto incluye todos los tipos de objetos. NET, pero no F # lista, tupla, función, clase, registro o tipos de unión.|
-|Restricción de miembro explícito|[()]*parámetro de tipo* [o … o *parámetro de tipo*)]: (*firma del miembro*)|Al menos uno de los argumentos de tipo proporcionados debe tener un miembro que tiene la firma especificada; no se ha diseñado para su uso común. Los miembros deben ser explícitamente definidos en el tipo o parte de una extensión de tipo implícito sea destinos válidos para una restricción explícita del miembro.|
+|Restricción de miembro explícito|[(]*parámetro de tipo* [o … o *parámetro de tipo*)]: (*firma del miembro*)|Al menos uno de los argumentos de tipo proporcionados debe tener un miembro que tiene la firma especificada; no se ha diseñado para su uso común. Los miembros deben ser explícitamente definidos en el tipo o parte de una extensión de tipo implícito sea destinos válidos para una restricción explícita del miembro.|
 |Restricción de constructor|*parámetro de tipo* : (nuevo: unidad -&gt; ' un)|El tipo proporcionado debe tener un constructor predeterminado.|
 |Restricción de tipo de valor|: struct|El tipo proporcionado debe ser un tipo de valor. NET.|
 |Restricción de tipo de referencia|: no struct|El tipo proporcionado debe ser un tipo de referencia. NET.|
@@ -115,6 +115,6 @@ class end
 ```
 
 ## <a name="see-also"></a>Vea también
-[Genéricos](index.md)
 
-[Restricciones](constraints.md)
+- [Genéricos](index.md)
+- [Restricciones](constraints.md)

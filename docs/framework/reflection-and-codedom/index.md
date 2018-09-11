@@ -8,11 +8,11 @@ ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e90857fcf02dbd0dd888b0658f3ab626bc5b11bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202419"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44352762"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Programación dinámica en .NET Framework
 Esta sección de la documentación proporciona información acerca de la programación dinámica en .NET Framework.  
