@@ -2,12 +2,12 @@
 title: 'Cómo: Encadenar llamadas de métodos de eje (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 36160a9dd4cc26b0b1d54e6e8b91d2880dd23abf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b486ef5cbf1f9752077cfa8d774184c7be90f6f2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333783"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44212105"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Cómo: Encadenar llamadas de métodos de eje (LINQ to XML) (C#)
 Un patrón común que puede utilizar en el código consiste en llamar a un método Axis y, después, llamar a uno de los métodos de extensión Axes.  
@@ -116,5 +116,6 @@ foreach (XElement e in names)
 <aw:Name xmlns:aw="http://www.adventure-works.com">Jessica Arnold</aw:Name>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md) (Ejes de LINQ to XML [C#])
+## <a name="see-also"></a>Vea también
+
+- [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md) (Ejes de LINQ to XML [C#])

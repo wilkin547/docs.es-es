@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 3bfb4028fb5efce693abd83b40636b0149962e3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe2d61001584aa7c175500bfa754b2ae2244660
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339687"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209256"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Genéricos y atributos (Guía de programación de C#)
 Los atributos pueden aplicarse a los tipos genéricos de la misma manera que los tipos no genéricos. Para obtener más información sobre la aplicación de los atributos, vea [Atributos](../../../csharp/programming-guide/concepts/attributes/index.md).  
@@ -43,7 +43,8 @@ Los atributos pueden aplicarse a los tipos genéricos de la misma manera que los
   
  Para obtener información sobre un tipo genérico o un parámetro de tipo en tiempo de ejecución, puede usar los métodos de <xref:System.Reflection>. Para obtener más información, vea [Genéricos y reflexión](../../../csharp/programming-guide/generics/generics-and-reflection.md).  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Genéricos](../../../csharp/programming-guide/generics/index.md)  
- [Atributos](../../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Genéricos](../../../csharp/programming-guide/generics/index.md)  
+- [Atributos](../../../../docs/standard/attributes/index.md)

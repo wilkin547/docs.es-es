@@ -2,12 +2,12 @@
 title: Varianza en delegados (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 8b74c29d8d94a31d30408131009d92e2b2a4281c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326233"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208683"
 ---
 # <a name="variance-in-delegates-c"></a>Varianza en delegados (C#)
 En .NET Framework 3.5 se presentó por primera vez la compatibilidad con la varianza para hacer coincidir firmas de método con tipos de delegados en todos los delegados en C#. Esto significa que puede asignar a los delegados no solo métodos con firmas coincidentes, sino métodos que devuelven tipos más derivados (covarianza) o que aceptan parámetros con tipos menos derivados (contravarianza) que el especificado por el tipo de delegado. Esto incluye delegados genéricos y no genéricos.  
@@ -196,7 +196,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Genéricos](~/docs/standard/generics/index.md)  
- [Usar varianza para los delegados genéricos Func y Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
- [Cómo: Combinar delegados (delegados de multidifusión)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+## <a name="see-also"></a>Vea también
+
+- [Genéricos](~/docs/standard/generics/index.md)  
+- [Usar varianza para los delegados genéricos Func y Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+- [Cómo: Combinar delegados (delegados de multidifusión)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

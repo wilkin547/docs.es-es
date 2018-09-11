@@ -2,12 +2,12 @@
 title: 'Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: b7df5c1f1ffbcc8c60fd6ed0596088f0842ef9ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 241bd6baf0c1133ba7603da433a7cdf8d36748c0
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482819"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260248"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)
 El rendimiento de la solución asincrónica de [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: acceso a la web con async y await [C#]) se puede mejorar con el método <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Este método espera de forma asincrónica varias operaciones asincrónicas, que se representan como una colección de tareas.  
@@ -61,7 +61,7 @@ El rendimiento de la solución asincrónica de [Walkthrough: Accessing the Web b
     //}  
     ```  
   
-3.  Cree una colección de tareas. El código siguiente define una [consulta](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) que, cuando la ejecute el método <xref:System.Linq.Enumerable.ToArray%2A>, crea una colección de tareas que descargan el contenido de cada sitio web. Las tareas se inician cuando se evalúa la consulta.  
+3.  Cree una colección de tareas. El código siguiente define una [consulta](../../../../csharp/programming-guide/concepts/linq/index.md) que, cuando la ejecute el método <xref:System.Linq.Enumerable.ToArray%2A>, crea una colección de tareas que descargan el contenido de cada sitio web. Las tareas se inician cuando se evalúa la consulta.  
   
      Agregue el código siguiente en el método `SumPageSizesAsync` después de la declaración de `urlList`.  
   
@@ -136,7 +136,7 @@ El rendimiento de la solución asincrónica de [Walkthrough: Accessing the Web b
     //}  
     ```  
   
-3.  Define una [consulta](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) que, cuando la ejecute el método <xref:System.Linq.Enumerable.ToArray%2A>, crea una colección de tareas que descargan el contenido de cada sitio web. Las tareas se inician cuando se evalúa la consulta.  
+3.  Define una [consulta](../../../../csharp/programming-guide/concepts/linq/index.md) que, cuando la ejecute el método <xref:System.Linq.Enumerable.ToArray%2A>, crea una colección de tareas que descargan el contenido de cada sitio web. Las tareas se inician cuando se evalúa la consulta.  
   
      Agregue el código siguiente en el método `SumPageSizesAsync` después de la declaración de `client` y `urlList`.  
   
@@ -435,6 +435,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 74f51d18ddda1ae4706b78aaf713683d2e505d2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327247"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195184"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Cómo: Utilizar el alias del espacio de nombres global (Guía de programación de C#)
 La capacidad de tener acceso a un miembro en el [espacio de nombres](../../../csharp/language-reference/keywords/namespace.md) global es útil cuando el miembro puede estar oculto por otra entidad del mismo nombre.  
@@ -41,12 +41,14 @@ La capacidad de tener acceso a un miembro en el [espacio de nombres](../../../cs
   
  [!code-csharp[csProgGuideNamespaces#5](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_6.cs)]  
   
- **A 1**  
-**B 2**  
-**C 3**   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)  
- [. .](../../../csharp/language-reference/operators/member-access-operator.md)  
- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+**A 1**
+**B 2**
+**C 3**
+
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)  
+- [. .](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a0c57ab049fff699d5bb12004fd48d90a226e514
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525027"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Cómo: Depurar aplicaciones de servicios de Windows
 Un servicio se debe ejecutar desde el contexto del Administrador de control de servicios en lugar de desde Visual Studio. Por este motivo, la depuración de un servicio no es tan simple como depurar otros tipos de aplicaciones de Visual Studio. Para depurar un servicio, debe iniciar el servicio y, a continuación, asociar un depurador al proceso en el que se ejecuta. Entonces puede depurar la aplicación mediante el uso de todas las funciones de depuración estándar de Visual Studio.  
@@ -33,7 +33,7 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
 >  Depurar el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> puede ser difícil porque el Administrador de control de servicios impone un límite de 30 segundos en todos los intentos de iniciar un servicio. Para más información, consulte [Solución de problemas: depurar servicios de Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Para obtener información significativa para la depuración, el depurador de Visual Studio debe buscar archivos de símbolos para los archivos binarios que se están depurando. Si depura un servicio que compiló en Visual Studio, los archivos de símbolos (archivos .pdb) están en la misma carpeta que el archivo ejecutable o la biblioteca, y el depurador los carga automáticamente. Si depura un servicio que no compiló, primero debe encontrar los símbolos del servicio y asegurarse de que el depurador los pueda encontrar. Consulte [Especificar archivos de código fuente y símbolos (.pdb) en el depurador de Visual Studio](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Si depura un proceso del sistema o desea tener símbolos para las llamadas del sistema en los servicios, debe agregar los servidores de símbolos de Microsoft. Consulte [Símbolos de depuración](/windows/desktop/DxTechArts/debugging-with-symbols).  
+>  Para obtener información significativa para la depuración, el depurador de Visual Studio debe buscar archivos de símbolos para los archivos binarios que se están depurando. Si depura un servicio que compiló en Visual Studio, los archivos de símbolos (archivos .pdb) están en la misma carpeta que el archivo ejecutable o la biblioteca, y el depurador los carga automáticamente. Si depura un servicio que no compiló, primero debe encontrar los símbolos del servicio y asegurarse de que el depurador los pueda encontrar. Consulte [Especificar archivos de código fuente y símbolos (.pdb) en el depurador de Visual Studio](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Si depura un proceso del sistema o desea tener símbolos para las llamadas del sistema en los servicios, debe agregar los servidores de símbolos de Microsoft. Consulte [Símbolos de depuración](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Para depurar un servicio  
   
@@ -112,7 +112,7 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
   
 5.  Para volver a ejecutar el programa como un servicio de Windows, instálelo e inícielo de la manera habitual para un servicio de Windows. No es necesario invertir estos cambios.  
   
- En algunos casos, como cuando desea depurar un problema que se produce solo al iniciar el sistema, debe usar el depurador de Windows. Instale las [Herramientas de depuración para Windows](http://msdn.microsoft.com/windows/hardware/hh852365) y consulte [cómo depurar los servicios de Windows](http://support.microsoft.com/kb/824344).  
+ En algunos casos, como cuando desea depurar un problema que se produce solo al iniciar el sistema, debe usar el depurador de Windows. Instale las [Herramientas de depuración para Windows](https://msdn.microsoft.com/windows/hardware/hh852365) y consulte [cómo depurar los servicios de Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

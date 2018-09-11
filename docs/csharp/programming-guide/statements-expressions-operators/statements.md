@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 4dc2507e37793fb154b932062854b3f590e362e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 515ae6bb6030e80c80289ff888f07ade2f341792
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43420434"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44187501"
 ---
 # <a name="statements-c-programming-guide"></a>Instrucciones (Guía de programación de C#)
 Las acciones que realiza un programa se expresan en instrucciones. Entre las acciones comunes se incluyen declarar variables, asignar valores, llamar a métodos, recorrer colecciones en bucle y crear una bifurcación a uno u otro bloque de código, en función de una condición determinada. El orden en el que se ejecutan las instrucciones en un programa se denomina flujo de control o flujo de ejecución. El flujo de control puede variar cada vez que se ejecuta un programa, en función de cómo reacciona el programa a la entrada que recibe en tiempo de ejecución.  
@@ -32,7 +32,7 @@ Las acciones que realiza un programa se expresan en instrucciones. Entre las acc
 |[Instrucciones para el control de excepciones](../../../csharp/language-reference/keywords/exception-handling-statements.md)|Las instrucciones para el control de excepciones permiten recuperarse correctamente de condiciones excepcionales producidas en tiempo de ejecución. Para obtener más información, vea los temas siguientes:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Checked y unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|Las instrucciones checked y unchecked permiten especificar si las operaciones numéricas pueden producir un desbordamiento cuando el resultado se almacena en una variable que es demasiado pequeña para contener el valor resultante. Para obtener más información, vea [checked](../../../csharp/language-reference/keywords/checked.md) y [unchecked](../../../csharp/language-reference/keywords/unchecked.md).|  
 |Instrucción `await`|Si marca un método con el modificador [async](../../../csharp/language-reference/keywords/async.md) , puede usar el operador [await](../../../csharp/language-reference/keywords/await.md) en el método. Cuando el control alcanza una expresión `await` en el método asincrónico, el control se devuelve al autor de llamada y el progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.<br /><br /> Para obtener un ejemplo sencillo, vea la sección "Métodos asincrónicos" de [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md). Para obtener más información, vea [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md).|  
-|Instrucción `yield return`|Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza una instrucción `yield return`, se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.<br /><br /> Para obtener más información, consulta [Iteradores](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).|  
+|Instrucción `yield return`|Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza una instrucción `yield return`, se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.<br /><br /> Para obtener más información, consulta [Iteradores](../../../csharp/programming-guide/concepts/iterators.md).|  
 |Instrucción `fixed`|La instrucción fixed impide que el recolector de elementos no utilizados cambie la ubicación de una variable móvil. Para obtener más información, vea [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |Instrucción `lock`|La instrucción lock permite limitar el acceso a bloques de código a un solo subproceso de cada vez. Para obtener más información, vea [lock](../../../csharp/language-reference/keywords/lock-statement.md).|  
 |Instrucciones con etiqueta|Puede asignar una etiqueta a una instrucción y, después, usar la palabra clave [goto](../../../csharp/language-reference/keywords/goto.md) para saltar a la instrucción con etiqueta. (Vea el ejemplo de la línea siguiente).|  
@@ -91,5 +91,6 @@ En los ejemplos siguientes se muestran dos usos de una instrucción vacía:
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)

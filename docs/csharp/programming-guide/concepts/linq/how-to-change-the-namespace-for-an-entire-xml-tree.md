@@ -2,12 +2,12 @@
 title: 'Cómo: Cambiar el espacio de nombres de todo un árbol XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: 698d5323d712555cf59714323d2cb13d2ee6a371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbb7c3d332eea83d6df71812cc18633df6fbb6d0
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328258"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261858"
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Cómo: Cambiar el espacio de nombres de todo un árbol XML (C#)
 En ocasiones, tendrá que cambiar, mediante programación, el espacio de nombres de un elemento o de un atributo. Esto resulta sencillo con LINQ to XML. Es posible modificar la propiedad <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>. No es posible modificar la propiedad <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, pero es posible copiar con facilidad los atributos en un <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, eliminar los atributos existentes y, a continuación, agregar los atributos nuevos que se encuentran en el espacio de nombres deseado.  
@@ -77,5 +77,6 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+
+- [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

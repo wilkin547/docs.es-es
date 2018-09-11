@@ -2,12 +2,12 @@
 title: Habilitar un origen de datos para realizar consultas LINQ
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221002"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253187"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitar un origen de datos para realizar consultas LINQ
 Existen varias maneras de extender [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para permitir consultar cualquier origen de datos en el patrón de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. El origen de datos podría ser una estructura de datos, un servicio Web, un sistema de archivos o una base de datos, por nombrar algunos. El modelo de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] facilita a los clientes las consultas a un origen de datos para el que las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] están habilitadas, ya que la sintaxis y el modelo de la consulta no cambian. Las maneras en las que [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se puede extender a estos orígenes de datos son las siguientes:  
@@ -39,9 +39,10 @@ Existen varias maneras de extender [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.
   
  Un proveedor `IQueryable` complejo, como el proveedor de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], podría traducir consultas completas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en un lenguaje de consulta más expresivo, como SQL. Un proveedor complejo es más general que un proveedor menos complejo, porque puede controlar una gran variedad de preguntas en la consulta. También posee un sistema de tipos abierto y, por tanto, debe contener una amplia infraestructura para utilizar tipos definidos por el usuario. El desarrollo de un proveedor complejo requiere un esfuerzo significativo.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq.IQueryable%601>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- <xref:System.Linq.Enumerable>  
- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Linq.IQueryable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Linq.Enumerable>  
+- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

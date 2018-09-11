@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: 1a0ed1d02fd40a94d4ae63deea3c09b04bfc9bd8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33848302"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183137"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitir métodos y ensamblados dinámicos
 En esta sección se describe un conjunto de tipos administrados del espacio de nombres <xref:System.Reflection.Emit> que permite a un compilador o una herramienta emitir metadatos y el Lenguaje Intermedio de Microsoft (MSIL) en tiempo de ejecución y, opcionalmente, generar un archivo portable ejecutable (PE) en el disco. Los motores de scripts y los compiladores son los principales usuarios de este espacio de nombres. En esta sección, la funcionalidad proporcionada por el espacio de nombres <xref:System.Reflection.Emit> se conoce como emisión de la reflexión.  
@@ -35,7 +35,7 @@ En esta sección se describe un conjunto de tipos administrados del espacio de n
   
  Además de los tipos administrados del espacio de nombres <xref:System.Reflection.Emit>, hay interfaces de metadatos no administradas que se describen en la documentación de referencia [Interfaces de metadatos](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md). La emisión de reflexión administrada proporciona una comprobación más estricta de los errores semánticos y un mayor nivel de abstracción de los metadatos que las interfaces de metadatos no administradas.  
   
- Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente la sección II sobre la definición y la semántica de los metadatos y la partición III sobre el conjunto de instrucciones de CIL. La documentación está disponible en línea en [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) y en el [sitio web de Ecma](http://go.microsoft.com/fwlink/?LinkId=116487).  
+ Otro recurso útil para trabajar con metadatos y MSIL es la documentación de Common Language Infrastructure (CLI), especialmente la sección II sobre la definición y la semántica de los metadatos y la partición III sobre el conjunto de instrucciones de CIL. La documentación está disponible en línea en [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) y en el [sitio web de Ecma](https://go.microsoft.com/fwlink/?LinkId=116487).  
   
 ## <a name="in-this-section"></a>En esta sección
   

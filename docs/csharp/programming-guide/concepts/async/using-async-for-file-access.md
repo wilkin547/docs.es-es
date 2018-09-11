@@ -2,12 +2,12 @@
 title: Usar Async en acceso a archivos (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 083a9113fc75c9e18646953a144b9e3d1bfd90ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbaeb14d5c17665308932c26a0630f1e9e5dabdf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328294"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225222"
 ---
 # <a name="using-async-for-file-access-c"></a>Usar Async en acceso a archivos (C#)
 Puede usar la característica async para acceder a archivos. Con la característica async, se puede llamar a métodos asincrónicos sin usar devoluciones de llamada ni dividir el código en varios métodos o expresiones lambda. Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.  
@@ -174,7 +174,8 @@ public async void ProcessWriteMult()
   
  Al usar los métodos <xref:System.IO.Stream.WriteAsync%2A> y <xref:System.IO.Stream.ReadAsync%2A>, puede especificar un <xref:System.Threading.CancellationToken>, que puede usar para cancelar la operación en mitad de la secuencia. Para obtener más información, vea [Ajustar una aplicación asincrónica (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) y [Cancelación en subprocesos administrados](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Vea también  
- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])  
- [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#])
+## <a name="see-also"></a>Vea también
+
+- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])  
+- [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#])

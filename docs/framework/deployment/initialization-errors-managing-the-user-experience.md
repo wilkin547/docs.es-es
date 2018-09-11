@@ -9,11 +9,11 @@ ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43394746"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501805"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errores de inicialización de .NET Framework: Administrar la experiencia del usuario
 El sistema de activación de Common Language Runtime (CLR) determina qué versión del CLR se utilizará para ejecutar código de aplicaciones administradas. El sistema de activación no siempre encuentra una versión de CLR para cargar. Esta situación normalmente se produce cuando una aplicación requiere una versión de CLR que está desusada o no está instalada en un equipo determinado. Si no se encuentra la versión solicitada, el sistema de activación de CLR devuelve un código de error HRESULT desde la función o interfaz a la que se llamó, y muestra al usuario que ejecuta la aplicación un mensaje de error. Este artículo facilita una lista de códigos HRESULT y explica cómo se puede impedir que aparezca el mensaje de error.  

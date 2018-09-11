@@ -5,12 +5,12 @@ ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754961"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178262"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)
 
@@ -34,6 +34,6 @@ Se puede usar el código que se presenta en el ejemplo siguiente para determinar
   
 ## <a name="see-also"></a>Vea también
 
-[Nullable types](index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])  
-[Uso de tipos que aceptan valores NULL](using-nullable-types.md)  
-<xref:System.Nullable.GetUnderlyingType%2A>  
+- [Nullable types](index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])  
+- [Uso de tipos que aceptan valores NULL](using-nullable-types.md)  
+- <xref:System.Nullable.GetUnderlyingType%2A>  

@@ -2,12 +2,12 @@
 title: 'Cómo: Calcular valores de columna en un archivo de texto CSV (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 6f203d7fa4a313be122d09d5bd68e77411c89ed2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328765"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261267"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Cómo: Calcular valores de columna en un archivo de texto CSV (LINQ) (C#)
 En este ejemplo se muestra cómo efectuar cálculos agregados (como sumas, promedios, mínimos y máximos) en las columnas de un archivo .csv. Los principios de ejemplo que se muestran aquí se pueden aplicar a otros tipos de textos estructurados.  
@@ -161,6 +161,7 @@ class SumColumns
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Vea también
+
+- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

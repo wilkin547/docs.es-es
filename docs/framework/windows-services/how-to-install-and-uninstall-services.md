@@ -14,11 +14,11 @@ ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
 manager: douge
 ms.openlocfilehash: 9d8e84280b5821f8d8df36694198bd85fb8470d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416913"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225073"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Cómo: Instalar y desinstalar servicios
 Si desarrolla un servicio de Windows mediante .NET Framework, puede instalar rápidamente la aplicación de servicio mediante una utilidad de línea de comandos denominada InstallUtil.exe. Si es desarrollador y desea publicar un servicio de Windows que los usuarios puedan instalar y desinstalar, debe usar InstallShield. Consulte [Implementación de Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  

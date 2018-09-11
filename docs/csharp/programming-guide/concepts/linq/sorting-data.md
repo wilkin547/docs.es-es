@@ -2,12 +2,12 @@
 title: Ordenación de datos (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 90ff7d52e6832935fe16e081e904acae3a24669a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402034"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209425"
 ---
 # <a name="sorting-data-c"></a>Ordenación de datos (C#)
 Una operación de ordenación ordena los elementos de una secuencia según uno o varios atributos. El primer criterio de ordenación realiza una ordenación primaria de los elementos. Al especificar un segundo criterio de ordenación, se pueden ordenar los elementos dentro de cada grupo de ordenación primaria.  
@@ -126,9 +126,10 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq>  
- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
- [orderby (cláusula)](../../../../csharp/language-reference/keywords/orderby-clause.md)  
- [Cómo: Ordenar los resultados de una cláusula join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
- [Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Linq>  
+- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
+- [orderby (cláusula)](../../../../csharp/language-reference/keywords/orderby-clause.md)  
+- [Cómo: Ordenar los resultados de una cláusula join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+- [Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

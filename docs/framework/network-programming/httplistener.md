@@ -8,11 +8,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 68c69de839ccbd51de9f0bfa74be018f877f7731
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43416876"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085914"
 ---
 # <a name="httplistener"></a>HttpListener
 La clase <xref:System.Net.HttpListener> proporciona un agente de escucha del protocolo HTTP controlado mediante programación. El agente de escucha está activo durante la vigencia del objeto <xref:System.Net.HttpListener> y se ejecuta dentro de la aplicación.  

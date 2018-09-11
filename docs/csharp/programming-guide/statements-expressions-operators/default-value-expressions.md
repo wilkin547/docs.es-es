@@ -5,12 +5,12 @@ ms.date: 04/25/2018
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.openlocfilehash: be51ad253a2939f538144caf4500f39e144c1664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94866f22fb3ad921a834cffb16fe17e44cef5965
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336806"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222297"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Expresiones de valor predeterminado (Guía de programación de C#)
 
@@ -61,9 +61,9 @@ El ejemplo siguiente muestra varios usos del literal `default` en una expresión
 
 ## <a name="see-also"></a>Vea también
 
- <xref:System.Collections.Generic>  
- [Guía de programación de C#](../index.md)  
- [Genéricos (Guía de programación de C#)](../generics/index.md)  
- [Métodos genéricos](../generics/generic-methods.md)  
- [Elementos genéricos en .NET](~/docs/standard/generics/index.md)  
- [Tabla de valores predeterminados](../../language-reference/keywords/default-values-table.md)
+- <xref:System.Collections.Generic>  
+- [Guía de programación de C#](../index.md)  
+- [Genéricos (Guía de programación de C#)](../generics/index.md)  
+- [Métodos genéricos](../generics/generic-methods.md)  
+- [Elementos genéricos en .NET](~/docs/standard/generics/index.md)  
+- [Tabla de valores predeterminados](../../language-reference/keywords/default-values-table.md)

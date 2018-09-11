@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: a1746a492685cf25869bd06935bfd056de257fea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 476f5940b0b93d0c28bcd2bc9ca73147bc7bf3eb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331446"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210044"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Excepciones generadas por el compilador (Guía de programación de C#)
 Algunas excepciones las inicia automáticamente el entorno Common Language Runtime (CLR) de .NET Framework cuando se producen errores de operaciones básicas. En la tabla siguiente se enumeran estas excepciones y sus condiciones de error.  
   
-|Excepción|Description|  
+|Excepción|Descripción|  
 |---------------|-----------------|  
 |<xref:System.ArithmeticException>|Una clase base para las excepciones que se producen durante las operaciones aritméticas, como <xref:System.DivideByZeroException> y <xref:System.OverflowException>.|  
 |<xref:System.ArrayTypeMismatchException>|Se inicia cuando una matriz no puede almacenar un elemento determinado porque el tipo real del elemento es incompatible con el tipo real de la matriz.|  
@@ -27,10 +27,11 @@ Algunas excepciones las inicia automáticamente el entorno Common Language Runti
 |<xref:System.StackOverflowException>|Se inicia cuando se agota la pila de ejecución por tener demasiadas llamadas a métodos pendientes. Normalmente, indica una recursividad muy profunda o infinita.|  
 |<xref:System.TypeInitializationException>|Se inicia cuando un constructor estático inicia una excepción y no existe una cláusula `catch` compatible para capturarla.|  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)  
- [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)  
+- [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

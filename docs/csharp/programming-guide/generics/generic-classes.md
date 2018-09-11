@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 65c5f376bce44e6120c17638076d2edfc38c734e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2568600c130847b3317aeb399541c61a050901ce
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338291"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216085"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Clases genéricas (Guía de programación de C#)
 Las clases genéricas encapsulan operaciones que no son específicas de un tipo de datos determinado. El uso más común de las clases genéricas es con colecciones como listas vinculadas, tablas hash, pilas, colas y árboles, entre otros. Las operaciones como la adición y eliminación de elementos de la colección se realizan básicamente de la misma manera independientemente del tipo de datos que se almacenan.  
@@ -65,9 +65,10 @@ Las clases genéricas encapsulan operaciones que no son específicas de un tipo 
   
  Las clases genéricas son invariables. En otras palabras, si un parámetro de entrada especifica un `List<BaseClass>`, obtendrá un error en tiempo de compilación si intenta proporcionar un `List<DerivedClass>`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Generic>  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Genéricos](../../../csharp/programming-guide/generics/index.md)  
- [Guardar el estado de los enumeradores](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
- [Un puzle de herencia, parte uno](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Collections.Generic>  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Genéricos](../../../csharp/programming-guide/generics/index.md)  
+- [Guardar el estado de los enumeradores](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+- [Un puzle de herencia, parte uno](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

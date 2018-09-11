@@ -2,12 +2,12 @@
 title: Contenido válido de objetos XElement y XDocument
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: 32521941bacdf8d689a81f6136d427307481ddc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afaeed7ba49891380982ec9c3cade43574ab8c16
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340325"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214061"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenido válido de objetos XElement y XDocument
 En este tema se describen los argumentos válidos que se pueden pasar a los constructores y los métodos que se usan para agregar contenido a elementos y documentos.  
@@ -75,7 +75,7 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Constructores y funciones que permiten agregar contenido  
  Los métodos siguientes permiten agregar contenido secundario a un objeto <xref:System.Xml.Linq.XElement> o a un objeto <xref:System.Xml.Linq.XDocument>:  
   
-|Método|Description|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|Construye un objeto <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Construye un objeto <xref:System.Xml.Linq.XDocument>.|  
@@ -88,5 +88,6 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Reemplaza los nodos secundarios por contenido nuevo.|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Reemplaza un nodo por contenido nuevo.|  
   
-## <a name="see-also"></a>Vea también  
- [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))
+## <a name="see-also"></a>Vea también
+
+- [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))

@@ -2,12 +2,12 @@
 title: Tipos de valor devueltos asincrónicos (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 9b0ee1c2e9925a1caffca6b7fb83eff34003246b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43387584"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44212144"
 ---
 # <a name="async-return-types-c"></a>Tipos de valor devueltos asincrónicos (C#)
 Los métodos asincrónicos pueden tener los siguientes tipos de valor devuelto:
@@ -77,9 +77,10 @@ Como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>Vea también  
-<xref:System.Threading.Tasks.Task.FromResult%2A>   
-[Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  (Tutorial: Acceso a la web usando async y await (C#))  
-[Controlar el flujo en los programas asincrónicos (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
-[async](../../../../csharp/language-reference/keywords/async.md)   
-[await](../../../../csharp/language-reference/keywords/await.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Threading.Tasks.Task.FromResult%2A>   
+- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])   
+- [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#])   
+- [async](../../../../csharp/language-reference/keywords/async.md)   
+- [await](../../../../csharp/language-reference/keywords/await.md)

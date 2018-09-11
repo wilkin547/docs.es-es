@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: d3922d9a81e350fd9ce95ffaa51dc3534873fb97
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754997"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856184"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 
@@ -63,7 +63,7 @@ En la tabla siguiente se muestran las opciones que admiten los comandos `-New` y
 |**-pu,** **-ProviderURL** `url`||Manifiestos de implementación.|Especifica la dirección URL que ClickOnce examinará para buscar actualizaciones de la aplicación.|
 |**-pub, -Publisher** `publisherName`||Manifiestos de aplicación.<br /><br /> Manifiestos de implementación.|Agrega el nombre del publicador al elemento de descripción del manifiesto de implementación o de aplicación. Cuando se usa en un manifiesto de aplicación, también se debe especificar **-UseManifestForTrust** con un valor "true" o "t"; de lo contrario, este parámetro producirá un error.|
 |**-s, -SupportURL**  `url`||Manifiestos de aplicación.<br /><br /> Manifiestos de implementación.|Especifica el vínculo que aparece en Agregar o quitar programas para la aplicación ClickOnce.|
-|**-ti, -TimestampUri** `uri`||Manifiestos de aplicación.<br /><br /> Manifiestos de implementación.|La dirección URL de un servicio de marca de tiempo digital. Las marcas de tiempo en los manifiestos evitan tener que volver a firmarlos en caso de que el certificado digital expire antes de implementar la versión siguiente de la aplicación. Para obtener más información, vea [Windows root certificate program members](http://go.microsoft.com/fwlink/?LinkId=159000)(Miembros del programa de certificados raíz de Windows).|
+|**-ti, -TimestampUri** `uri`||Manifiestos de aplicación.<br /><br /> Manifiestos de implementación.|La dirección URL de un servicio de marca de tiempo digital. Las marcas de tiempo en los manifiestos evitan tener que volver a firmarlos en caso de que el certificado digital expire antes de implementar la versión siguiente de la aplicación. Para obtener más información, vea [Windows root certificate program members](https://go.microsoft.com/fwlink/?LinkId=159000)(Miembros del programa de certificados raíz de Windows).|
 |**-t, -ToFile** `filePath`|-   Nuevo:<br />-   Implementación: deploy.application<br />-   Aplicación: application.exe.manifest<br />-   Actualización:<br />-   El archivo de entrada.|Todos los tipos de archivo.|Especifica la ruta de acceso de salida del archivo que se ha creado o modificado.<br /><br /> Si no se proporciona **-ToFile** al usar **-New**, la salida se escribirá en el directorio de trabajo actual. Si no se proporciona **-ToFile** al usar **-Update**, *Mage.exe* volverá a escribir el archivo en el archivo de entrada.|
 |**-tr, -TrustLevel** `level`|Depende de la zona en la que reside la URL de la aplicación.|Manifiestos de aplicación.|El nivel de confianza que se concederá a la aplicación en los equipos cliente. Los valores son "Internet", "Intranet" y "FullTrust".|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|Manifiestos de aplicación.|Especifica si se usará la firma digital del manifiesto de aplicación para tomar decisiones de confianza cuando la aplicación se ejecute en el cliente. Si se especifica "true" o "t", el manifiesto de aplicación se usará para las decisiones de confianza. Si se especifica "false" o "f", se usará la firma del manifiesto de implementación.|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 773add221317a2154ac620acf766607ec22c629d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329552"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208652"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Utilizar espacios de nombres (Guía de programación de C#)
 Los espacios de nombres se usan mucho en programas de C# de dos maneras. En primer lugar, las clases de .NET Framework usan espacios de nombres para organizar sus clases. En segundo lugar, declarar sus propios espacios de nombres puede ayudar a controlar el ámbito de nombres de clase y método en proyectos de programación grandes.  
@@ -87,10 +87,11 @@ Los espacios de nombres se usan mucho en programas de C# de dos maneras. En prim
   
  Vea el tema [Cómo: Usar el alias del espacio de nombres global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) para obtener más información sobre el alias `global`.  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)  
- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [. .](../../../csharp/language-reference/operators/member-access-operator.md)  
- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)  
+- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [. .](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

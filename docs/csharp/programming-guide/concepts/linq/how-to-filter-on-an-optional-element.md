@@ -2,12 +2,12 @@
 title: 'Cómo: Filtrar por un elemento opcional (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: aa6eb5c9f661a27729c409edcc44b75377498925
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c781db261dbf673af7a11150971956b4c07da774
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320175"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205314"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Cómo: Filtrar por un elemento opcional (C#)
 En ocasiones, deseará filtrar por un elemento dado a pesar de que no está seguro de si existe o no en el documento XML. La consulta debería ejecutarse de forma que si el elemento en particular no tiene ningún elemento secundario, no se produzca una excepción de referencia nula al filtrar por él. En el ejemplo siguiente, el elemento `Child5` no tiene ningún elemento secundario `Type`, pero aún así, la consulta se ejecuta correctamente.  
@@ -95,10 +95,11 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
- [Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md) (Operaciones de proyección [C#])
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
+- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
+- [Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md) (Operaciones de proyección [C#])

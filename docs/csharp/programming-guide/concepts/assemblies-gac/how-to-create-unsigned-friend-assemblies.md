@@ -2,12 +2,12 @@
 title: 'Cómo: Crear ensamblados de confianza sin firmar(C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 676b9d3c641f45736af50bc2290426e261b591c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340208"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211806"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Cómo: Crear ensamblados de confianza sin firmar(C#)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.  
@@ -90,9 +90,10 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `internal`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
- [Ensamblados de confianza (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Cómo: Crear ensamblados de confianza con signo (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
+- [Ensamblados de confianza (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [Cómo: Crear ensamblados de confianza con signo (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)

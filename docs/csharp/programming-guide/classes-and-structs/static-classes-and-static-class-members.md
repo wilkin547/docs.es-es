@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: f3e64d975d2845d8317b37f43c3811af6be03b55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 60a75946d30b1555aea01507d846e790dd00f767
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468702"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216495"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Clases estáticas y sus miembros (Guía de programación de C#)
 Una clase [estática](../../../csharp/language-reference/keywords/static.md) es básicamente lo mismo que una clase no estática, con la diferencia de que no se pueden crear instancias de una clase estática. En otras palabras, no puede usar la palabra clave [new](../../../csharp/language-reference/keywords/new.md) para crear una variable del tipo de clase. Dado que no hay ninguna variable de instancia, para tener acceso a los miembros de una clase estática, debe usar el nombre de la clase. Por ejemplo, si tiene una clase estática denominada `UtilityClass` que tiene un método público denominado `MethodA`, llame al método tal como se muestra en el ejemplo siguiente:  
@@ -86,10 +86,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [static](../../../csharp/language-reference/keywords/static.md)  
- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [Constructores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
- [Constructores de instancias](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
+- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [Constructores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+- [Constructores de instancias](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

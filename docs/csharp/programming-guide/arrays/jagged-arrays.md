@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297373"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261676"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrices escalonadas (Guía de programación de C#)
+
 Una matriz escalonada es una matriz cuyos elementos son matrices. Los elementos de una matriz escalonada pueden ser de diferentes dimensiones y tamaños. Una matriz escalonada se denomina a veces "matriz de matrices". En los ejemplos siguientes, se muestra cómo declarar, inicializar y acceder a matrices escalonadas.  
   
  La siguiente es una declaración de una matriz unidimensional que tiene tres elementos, cada uno de los cuales es una matriz unidimensional de enteros:  
@@ -57,14 +58,16 @@ Una matriz escalonada es una matriz cuyos elementos son matrices. Los elementos 
   
  devuelve un valor de 3.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Ejemplo
+
  En este ejemplo, se crea una matriz cuyos elementos son matrices. Cada uno de los elementos de matriz tiene un tamaño diferente.  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Array>  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Matrices](../../../csharp/programming-guide/arrays/index.md)  
- [Matrices unidimensionales](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Matrices multidimensionales](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Array>  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Matrices](../../../csharp/programming-guide/arrays/index.md)  
+- [Matrices unidimensionales](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Matrices multidimensionales](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

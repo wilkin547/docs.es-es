@@ -5,12 +5,12 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: f8f4a9ebaf41a0787e17685a60d3e847f2aca0c2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a77f022b4cf7659d506a7893923ce47270cb8c1b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43415467"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214997"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Clases COM de ejemplo (Guía de programación de C#)
 El siguiente es un ejemplo de una clase que se expondría como un objeto COM. Una vez insertado este código de ejemplo en un archivo .cs y agregado al proyecto, establezca la propiedad **Registrar para interoperabilidad COM** en **True**. Para obtener más información, vea [Cómo: Registrar un componente para interoperabilidad COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
@@ -36,7 +36,8 @@ El siguiente es un ejemplo de una clase que se expondría como un objeto COM. Un
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Interoperabilidad](../../../csharp/programming-guide/interop/index.md)  
- [Página Compilar (Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Interoperabilidad](../../../csharp/programming-guide/interop/index.md)  
+- [Página Compilar (Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

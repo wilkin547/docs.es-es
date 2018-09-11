@@ -3,11 +3,11 @@ title: Información general sobre manipulaciones e inercia
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
 ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401230"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521244"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Información general sobre manipulaciones e inercia
 Las *manipulaciones* permiten a los usuarios mover, girar y cambiar de tamaño los elementos de la interfaz de usuario (UI) con *manipuladores*. Un manipulador representa un mouse o (en los escenarios táctiles) un lápiz o un dedo.  

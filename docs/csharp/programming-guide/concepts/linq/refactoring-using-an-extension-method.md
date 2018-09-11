@@ -2,12 +2,12 @@
 title: Refactorizar mediante un método de extensión (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: f3a1d64aebc04d772209dbe867e6d729de087127
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08c37923792e1ac6ee922bf052d39fb63b1685c7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335489"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201055"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactorizar mediante un método de extensión (C#)
 Este ejemplo se basa en el ejemplo anterior, [Recuperar el texto de los párrafos (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), mediante la refactorización de la concatenación de cadenas con una función pura que se implementa como método de extensión.  
@@ -246,6 +246,7 @@ StyleName:Code >Hello World<
   
 -   [Refactorizar mediante una función pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Vea también
+
+- [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -2,12 +2,12 @@
 title: 'Cómo: Compartir un ensamblado con otras aplicaciones (C#)'
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: beadd6adb176c3fd4e6dde94d95194aea790a2fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b20061c759fd914193f24aa123317f13d31dce
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324127"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266474"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>Cómo: Compartir un ensamblado con otras aplicaciones (C#)
 Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la mayoría de los programas sencillos constan de un ensamblado privado porque no se diseñaron para ser usados por otras aplicaciones.  
@@ -24,8 +24,9 @@ Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la m
   
 4.  Agregue el ensamblado a la caché global de ensamblados. Para obtener más información, vea [Cómo: Instalar un ensamblado en la memoria caché global de ensamblados](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Obtenga acceso a los tipos contenidos en el ensamblado desde las otras aplicaciones. Para obtener más información, vea [Cómo: Hacer referencia a un ensamblado con nombre seguro](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Obtenga acceso a los tipos contenidos en el ensamblado desde las otras aplicaciones. Para obtener más información, vea [Cómo: Hacer referencia a un ensamblado con nombre seguro](../../../../framework/app-domains/how-to-reference-a-strong-named-assembly.md).  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
- [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
+- [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)
