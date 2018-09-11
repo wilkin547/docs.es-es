@@ -3,11 +3,11 @@ title: Actividad personalizada para cambiar en un intervalo de valores
 ms.date: 03/30/2017
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
 ms.openlocfilehash: cfaf4318b1557a9fc217de8254e164243ea54569
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338199"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360705"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Actividad personalizada para cambiar en un intervalo de valores
 En este ejemplo se muestra cómo crear una actividad personalizada que amplía el uso de una instrucción <xref:System.Activities.Statements.Switch%601>. Una instrucción <xref:System.Activities.Statements.Switch%601> convencional permite el cambio en función de un único valor. Sin embargo, existen escenarios empresariales donde una actividad debe cambiar en función de un intervalo de valores. Por ejemplo, una actividad podría ejecutar una acción cuando el valor de cambio se sitúa entre 1 y 5, otra acción cuando el valor se sitúa entre 6 y 10 y una acción predeterminada para los demás valores. Esta actividad personalizada permite exactamente ese escenario.  

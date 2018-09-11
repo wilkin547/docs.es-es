@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198938"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361607"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
@@ -55,7 +55,7 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
  Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio alojado por Internet Information Services (IIS), el proceso [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se ejecuta bajo la cuenta [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso con la herramienta WinHttpCertConfig.exe, vea [Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obtener más información sobre cómo usar certificados de cliente con IIS, vea [Cómo llamar a un servicio web con un certificado de cliente para la autenticación en una aplicación web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Confianza de cadena y entidades de certificación  
- Los certificados se crean en una jerarquía en la que cada certificado individual se vincula a la CA que emite el certificado. Este vínculo va al certificado de la CA. Después, el certificado de la CA se vincula a la CA que emitió el certificado original de la CA. Este proceso se repite hasta que se llegue al certificado de la CA raíz. Se confía intrínsecamente en el certificado de la CA raíz.  
+ Los certificados se crean en una jerarquía en la que cada certificado individual se vincula a la CA que emite el certificado. Este vínculo va al certificado de la CA. De la entidad emisora de certificados, a continuación, vínculos a la entidad de certificación que emitió el certificado de CA original. Este proceso se repite hasta que se llegue al certificado de la CA raíz. Se confía intrínsecamente en el certificado de la CA raíz.  
   
  Los certificados digitales se usan para autenticar una entidad confiando en esta jerarquía, que también se denomina *cadena de confianza*. Puede ver la cadena de cualquier certificado mediante el complemento MMC si hace doble clic en cualquier certificado y, después, hace clic en la pestaña **Ruta de acceso de certificado**. Para obtener más información sobre la importación de cadenas de certificados para una entidad de certificación, vea [Cómo: Especificar la cadena de certificados de la entidad de certificación utilizada para comprobar las firmas (WCF)](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   

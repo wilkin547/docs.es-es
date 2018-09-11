@@ -3,11 +3,11 @@ title: Referencia de símbolos y operadores (F#)
 description: 'Obtenga información sobre los símbolos y operadores que se utilizan en el lenguaje de programación F #.'
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338693"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44354131"
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
