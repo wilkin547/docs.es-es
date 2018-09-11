@@ -3,11 +3,11 @@ title: Operaciones de combinación (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
 ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44200859"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44270789"
 ---
 # <a name="join-operations-c"></a>Operaciones de combinación (C#)
 Una *combinación* de dos orígenes de datos es la asociación de objetos de un origen de datos con los objetos que comparten un atributo común en otro origen de datos.  
