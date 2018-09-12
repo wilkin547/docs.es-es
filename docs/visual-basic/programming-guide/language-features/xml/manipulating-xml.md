@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
 ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261621"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710014"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Manipular XML en Visual Basic
 Puede usar *literales XML* para cargar XML desde un origen externo, como una cadena, un archivo o una secuencia. A continuación, puede usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para manipular el XML y usar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] para consultar el XML.  

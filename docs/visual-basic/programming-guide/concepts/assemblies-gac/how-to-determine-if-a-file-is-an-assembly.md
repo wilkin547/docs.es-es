@@ -3,11 +3,11 @@ title: 'Cómo: determinar si un archivo es un ensamblado (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
 ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266652"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710173"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Cómo: determinar si un archivo es un ensamblado (Visual Basic)
 Un archivo es un ensamblado únicamente si está administrado y contiene una entrada de ensamblado en sus metadatos. Para más información sobre ensamblados y metadatos, vea el tema [Manifiesto del ensamblado](../../../../framework/app-domains/assembly-manifest.md).  
