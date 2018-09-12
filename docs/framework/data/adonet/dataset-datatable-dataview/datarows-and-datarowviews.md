@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
 ms.openlocfilehash: 5bd7ebefc03dbe6b44a199ba3123414e7b282c90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191279"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510199"
 ---
 # <a name="datarows-and-datarowviews"></a>Objetos DataRow y DataRowView
 Un <xref:System.Data.DataView> expone una colección enumerable de objetos <xref:System.Data.DataRowView>. El **DataRowView** objetos exponen valores como matrices de objetos que se indizan por el nombre o la referencia ordinal de la columna en la tabla subyacente. Puede tener acceso a la <xref:System.Data.DataRow> que se expone mediante el **DataRowView** utilizando el <xref:System.Data.DataRowView.Row%2A> propiedad de la **DataRowView**.  

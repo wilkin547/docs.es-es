@@ -3,11 +3,11 @@ title: Anidamiento de TransactionScope dentro de un servicio
 ms.date: 03/30/2017
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
 ms.openlocfilehash: cf73c0c2d061f1c997a8ade5d7b2bf61887915ca
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44364811"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700029"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Anidamiento de TransactionScope dentro de un servicio
 Este ejemplo consiste en la ejecución de dos escenarios para mostrar cómo administrar instancias de actividad <xref:System.Activities.Statements.TransactionScope> dentro de un servicio. En primer lugar, la transacción se inicia utilizando la actividad <xref:System.Activities.Statements.TransactionScope> para crear una transacción en el cliente y <xref:System.ServiceModel.Activities.TransactedReceiveScope> para recibir y determinar la duración de la transacción en el servidor. El primer escenario dentro del servicio ejecuta una actividad <xref:System.Activities.Statements.TransactionScope> secundaria para mostrar el anidamiento de las actividades <xref:System.Activities.Statements.TransactionScope> dentro del servicio. El segundo escenario muestra cómo se respetan los tiempos de espera dentro de las actividades <xref:System.Activities.Statements.TransactionScope> anidadas.  

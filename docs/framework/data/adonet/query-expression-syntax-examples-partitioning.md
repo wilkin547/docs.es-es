@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
 ms.openlocfilehash: 456e4289af2c71ee2ef96f48939dc9f7b70c6bc0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44186687"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44508197"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>Ejemplos de sintaxis de expresiones de consulta: particionamiento (LINQ to DataSet)
 Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A> para consultar un <xref:System.Data.DataSet> usando la sintaxis de expresión de consultas.  

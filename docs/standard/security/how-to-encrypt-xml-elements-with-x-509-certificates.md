@@ -17,11 +17,11 @@ ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 674a4c917df20f58a509e92465e756c4615118ca
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353887"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699638"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Cómo: Cifrar elementos XML con certificados X.509
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, vea la especificación de World Wide Web Consortium (W3C) para cifrado XML ubicado en http://www.w3.org/TR/xmldsig-core/.  

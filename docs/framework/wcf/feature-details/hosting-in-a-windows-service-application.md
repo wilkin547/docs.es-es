@@ -3,11 +3,11 @@ title: Hospedaje en una aplicación de servicios de Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 2b3935babec0c7cdc3ffca5dd11d693fdfee7a89
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187408"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44508366"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedaje en una aplicación de servicios de Windows
 Los servicios de Windows (anteriormente conocidos como servicios de Windows NT) proporcionan un modelo de procesamiento particularmente apropiado para las aplicaciones que deben vivir en una aplicación ejecutable de larga duración y que no deben mostrar ninguna forma de interfaz de usuario. La duración de un proceso de una aplicación de servicios de Windows es administrada mediante el Administrador de control de servicios (SCM) que le permite iniciar, detener y pausar aplicaciones de servicios de Windows. Puede configurar un proceso de servicio de Windows que se inicie automáticamente cuando se inicia el equipo, lo que un entorno de hospedaje adecuado para aplicaciones "siempre activado". Para obtener más información acerca de las aplicaciones de servicio de Windows, consulte [aplicaciones de servicio de Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  

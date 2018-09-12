@@ -7,11 +7,11 @@ helpviewer_keywords:
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
 ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265018"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700721"
 ---
 # <a name="trees-in-wpf"></a>Árboles en WPF
 En muchas tecnologías, los elementos y componentes se organizan en una estructura de árbol en la que los desarrolladores manipulan directamente los nodos de objeto en el árbol para modificar la representación o el comportamiento de una aplicación. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también usa varias metáforas de la estructura de árbol para definir las relaciones entre los elementos de programa. En su mayor parte, los desarrolladores de WPF pueden crear una aplicación en código o definir partes de la aplicación en código XAML mientras piensan conceptualmente en la metáfora de árbol de objetos, pero estarán llamando a una API concreta o usando un marcado concreto para llamarla, en lugar de usar una API de manipulación de árbol de objetos general como se usaría en DOM XML. WPF expone dos clases auxiliares que proporcionan una vista de metáfora de árbol, <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>. Los términos árbol visual y árbol lógico también se usan en la documentación de WPF porque estos mismos árboles son útiles para entender el comportamiento de ciertas características clave de WPF. En este tema define lo que representan el árbol visual y árbol lógico, se describe cómo se relacionan estos árboles con un concepto de árbol de objetos general y presenta <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>s.  

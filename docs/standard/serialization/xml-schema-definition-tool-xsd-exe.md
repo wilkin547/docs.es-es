@@ -3,11 +3,11 @@ title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
 ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210713"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44514661"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 La herramienta Definición de esquemas XML (Xsd.exe) genera clases de esquemas XML o de Common Language Runtime a partir de archivos XDR, XML y XSD, o a partir de clases de un ensamblado de motor en tiempo de ejecución.  

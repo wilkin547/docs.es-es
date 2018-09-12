@@ -3,11 +3,11 @@ title: Join Operations (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: 660b6d04e0a807a3072cff51d885999545052018
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44352929"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700614"
 ---
 # <a name="join-operations-visual-basic"></a>Join Operations (Visual Basic)
 Una *combinación* de dos orígenes de datos es la asociación de objetos de un origen de datos con los objetos que comparten un atributo común en otro origen de datos.  

@@ -11,11 +11,11 @@ ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ea4a61be3a76c30c564cbf98ba3318fc6c3e7d4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193632"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44511622"
 ---
 # <a name="using-standard-exception-types"></a>Usar tipos de excepciones estándar
 Esta sección describen las excepciones estándar proporcionadas por el marco de trabajo y los detalles de su uso. La lista no es exhaustiva. Consulte la documentación de referencia de .NET Framework para el uso de otros tipos de excepción de Framework.  

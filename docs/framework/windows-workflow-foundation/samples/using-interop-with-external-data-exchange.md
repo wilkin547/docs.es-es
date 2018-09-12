@@ -3,11 +3,11 @@ title: Utilizar interoperabilidad con intercambio de datos externos
 ms.date: 03/30/2017
 ms.assetid: 96f6fe26-5305-494f-9119-7748e0c4b3fa
 ms.openlocfilehash: 534321e5b5568e0dd0988333dc98ccc18ff33df8
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44337374"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44508301"
 ---
 # <a name="using-interop-with-external-data-exchange"></a>Utilizar interoperabilidad con intercambio de datos externos
 El <xref:System.Activities.Statements.Interop> actividad se puede usar para ejecutar actividades de Windows Workflow Foundation (WF) en [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] y [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF3) y los flujos de trabajo dentro de Windows Workflow Foundation en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF4). En este ejemplo se muestra cómo configurar y ejecutar un flujo de trabajo WF3 que utiliza <xref:System.Workflow.Activities.ExternalDataExchangeService> (y las actividades personalizadas correspondientes para llamar a los métodos y administrar los eventos) utilizando la actividad <xref:System.Activities.Statements.Interop> en un servicio de flujo de trabajo WF4.  

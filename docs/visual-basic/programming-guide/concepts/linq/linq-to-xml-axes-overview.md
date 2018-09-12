@@ -3,11 +3,11 @@ title: Información general sobre los ejes de LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
 ms.openlocfilehash: 43649800869f4829d56977f1e6e62d30192b0604
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338394"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510030"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Información general sobre los ejes de LINQ to XML (Visual Basic)
 Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, puede realizar consultas sobre él para encontrar elementos y atributos, así como para recuperar sus valores. Las colecciones se recuperan mediante los *métodos de eje*, también denominados *ejes*. Algunos de los ejes son métodos de las clases <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument>, que devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601>. Algunos de los métodos Axes son métodos de extensión de la clase <xref:System.Xml.Linq.Extensions>. Los ejes que se han implementado como métodos de extensión trabajan colecciones y devuelven colecciones.  

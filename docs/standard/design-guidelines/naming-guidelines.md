@@ -14,11 +14,11 @@ ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267013"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699920"
 ---
 # <a name="naming-guidelines"></a>Instrucciones de nomenclatura
 Seguir un conjunto coherente de convenciones de nomenclatura en el desarrollo de un marco de trabajo puede ser una contribución importante a la facilidad de uso de .NET framework. Permite que el marco de trabajo que va a utilizar muchos desarrolladores en proyectos separados ampliamente. Más allá de la coherencia del formulario, los nombres de elementos de marco se deben entender fácilmente y deben transmitir la función de cada elemento.  
