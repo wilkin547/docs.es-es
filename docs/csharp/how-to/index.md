@@ -2,12 +2,12 @@
 title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507680"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191696"
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -65,7 +65,7 @@ Puede que deba convertir un objeto a otro tipo.
 - [Convierta una cadena en un valor `DateTime`](../../standard/base-types/parsing-datetime.md).
 - [Convierta una matriz de bytes en un valor int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Convierta una cadena en un número](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [Use `as` y `is` para realizar una conversión a un tipo diferente con seguridad](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
+- [Use la coincidencia de patrones y los operadores `as` y `is` para una conversión segura a otro tipo](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Defina los operadores de conversión para tipos `struct`](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Determine si un tipo es un tipo de valor que acepta valores NULL](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Realice conversiones entre tipos de valores que aceptan valores NULL y tipos que no](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
