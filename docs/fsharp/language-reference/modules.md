@@ -3,11 +3,11 @@ title: Módulos (F#)
 description: 'Obtenga información sobre cómo un módulo de F # es una agrupación de código de F #, como valores, tipos y valores de función, en un programa de F #.'
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514360"
+ms.locfileid: "44705130"
 ---
 # <a name="modules"></a>Módulos
 
