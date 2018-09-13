@@ -15,7 +15,7 @@ ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 6a44cd16513bffa47e56064ea7e0e05692cb78a7
 ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/12/2018
 ms.locfileid: "44704480"
