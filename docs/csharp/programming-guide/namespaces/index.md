@@ -6,11 +6,11 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: c4011092a6c605137053b544d4b9f14cce2fdb4c
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366158"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44755715"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espacios de nombres (Guía de programación de C#)
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728685"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271940"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Ejemplo de expresiones regulares: Buscar etiquetas HREF
 En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
@@ -38,7 +38,7 @@ En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los v
   
  El patrón de la expresión regular `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`href`|Coincide con la cadena literal "href". La búsqueda no distingue entre mayúsculas y minúsculas.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
@@ -56,5 +56,6 @@ En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los v
   
  Para abordar estos problemas, la clase <xref:System.Text.RegularExpressions.Regex> admite la sintaxis `(?<name>…)` para capturar una coincidencia en una ranura especificada (el nombre dado a la ranura puede ser una cadena o un entero; los enteros se pueden recuperar con más rapidez). Así, las coincidencias alternativas para la misma cadena se pueden dirigir todas al mismo lugar. En caso de conflicto, la última coincidencia situada en la ranura es la coincidencia correcta. (Pero está disponible una lista completa de varias coincidencias para una única ranura. Consulte la colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> para obtener más información).  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Vea también
+
+- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
