@@ -3,11 +3,11 @@ title: '&lt;peerAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
 ms.openlocfilehash: bb83d2badad609394a66246fc14c19a6602399e0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199757"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778209"
 ---
 # <a name="ltpeerauthenticationgt"></a>&lt;peerAuthentication&gt;
 Especifica los valores de autenticación para un certificado del mismo nivel usado por el remitente del mensaje.  

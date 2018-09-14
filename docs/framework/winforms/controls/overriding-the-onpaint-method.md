@@ -9,11 +9,11 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
 ms.openlocfilehash: fbc0a82f82afcc59384246b58437d521d56d708b
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338055"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44756280"
 ---
 # <a name="overriding-the-onpaint-method"></a>Reemplazar el método OnPaint
 Los pasos básicos para reemplazar un evento definido en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] son idénticos y se resumen en la lista siguiente.  

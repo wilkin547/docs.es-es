@@ -3,11 +3,11 @@ title: 'Archivos de firma (F #)'
 description: 'Obtenga información sobre cómo usar los archivos de signatura de F # para almacenar información sobre las signaturas públicas de un conjunto de F # elementos de programa, como módulos, tipos y espacios de nombres.'
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338066"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508426"
 ---
 # <a name="signatures"></a>Prototipos
 

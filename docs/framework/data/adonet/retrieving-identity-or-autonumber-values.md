@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
 ms.openlocfilehash: ca739f703267f27932ec7450a59d7f4afaffd64b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080077"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45526660"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Recuperar valores autonuméricos y de identidad
 Una clave principal de una base de datos relacional es una columna o combinación de columnas que siempre contienen valores únicos. Conocer el valor de la clave principal permite localizar la fila que la contiene. Los motores de bases de datos relacionales, como SQL Server, Oracle y Microsoft Access/Jet admiten la creación de columnas de incremento automático que pueden designarse como claves principales. Estos valores los genera el servidor cuando se agregan filas a una tabla. En SQL Server se establece la propiedad de identidad de una columna, en Oracle se crea una secuencia y en Microsoft Access se crea una columna Autonumérica.  

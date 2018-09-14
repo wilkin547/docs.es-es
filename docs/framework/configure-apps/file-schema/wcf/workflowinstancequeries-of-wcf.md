@@ -3,11 +3,11 @@ title: '&lt;workflowInstanceQueries&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
 ms.openlocfilehash: dfa75a7e4729244ba5887e6666c0fdfe840e9faf
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698973"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508361"
 ---
 # <a name="ltworkflowinstancequeriesgt-of-wcf"></a>&lt;workflowInstanceQueries&gt; de WCF
 Representa una colección de elementos de configuración que realizan el seguimiento de los cambios del ciclo de vida de la instancia del flujo de trabajo, como un evento iniciado o completado.  

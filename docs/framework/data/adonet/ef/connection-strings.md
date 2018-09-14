@@ -3,11 +3,11 @@ title: Cadenas de conexión
 ms.date: 03/30/2017
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708301"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508585"
 ---
 # <a name="connection-strings"></a>Cadenas de conexión
 Una cadena de conexión contiene información de inicialización que se transfiere como un parámetro desde un proveedor de datos a un origen de datos. La sintaxis depende del proveedor de datos y la cadena de conexión se analiza mientras se intenta abrir una conexión. Las cadenas de conexión que usa Entity Framework contienen la información que se emplea para conectar con el proveedor de datos ADO.NET subyacente que Entity Framework admite. También contienen información sobre los archivos del modelo y de asignación necesarios.  

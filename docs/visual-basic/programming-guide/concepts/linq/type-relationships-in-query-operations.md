@@ -12,11 +12,11 @@ helpviewer_keywords:
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
 ms.openlocfilehash: f1084ffcf0b5330185a44eda8721ef2a03413602
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197279"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508335"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relaciones entre tipos en operaciones de consulta (Visual Basic)
 Las variables utilizadas en [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] consulta operaciones están fuertemente tipadas y deben ser compatibles entre sí. Establecimiento inflexible de tipos se usa en el origen de datos, en la propia consulta y en la ejecución de consultas. La ilustración siguiente identifica los términos usados para describir un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Para obtener más información acerca de los elementos de una consulta, vea [operaciones básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

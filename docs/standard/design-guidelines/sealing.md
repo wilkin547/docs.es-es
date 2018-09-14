@@ -11,11 +11,11 @@ ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8c445de44a69f6c0cb1eaefa0e59d682288318
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44336919"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515878"
 ---
 # <a name="sealing"></a>Sellar
 Una de las características de marcos de trabajo orientado a objetos es que los desarrolladores pueden ampliar y personalizarlos en modos imprevistos por los diseñadores de framework. Se trata de la eficacia y el peligro de diseño extensible. Al diseñar su marco, es, por lo tanto, muy importante para diseñar cuidadosamente para la extensibilidad cuando lo desee y para limitar la extensibilidad cuando resulta peligroso.  

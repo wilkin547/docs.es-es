@@ -3,11 +3,11 @@ title: 'Tipos de referencia (F #)'
 description: 'Obtenga información sobre byref y similar a byref tipos en F #, que se usan para la programación de bajo nivel.'
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699651"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508309"
 ---
 # <a name="byrefs"></a>Tipos de referencia
 

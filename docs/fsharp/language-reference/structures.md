@@ -3,11 +3,11 @@ title: Estructuras (F#)
 description: 'Obtenga información sobre la estructura de F #, un tipo de objeto compacto a menudo más eficaz que una clase para los tipos con una pequeña cantidad de datos y un comportamiento simple.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44337960"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508455"
 ---
 # <a name="structures"></a>Estructuras
 

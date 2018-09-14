@@ -3,11 +3,11 @@ title: Aplicaciones cliente seguras
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208561"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507591"
 ---
 # <a name="secure-client-applications"></a>Aplicaciones cliente seguras
 Por lo general las aplicaciones constan de varios elementos que deben estar protegidos ante las vulnerabilidades que pueden provocar pérdidas de datos o poner en peligro el sistema de cualquier otro modo. La creación de interfaces de usuario seguras puede impedir un gran número de problemas ya que bloquea a los atacantes antes de que puedan tener acceso a los datos o a los recursos del sistema.  
