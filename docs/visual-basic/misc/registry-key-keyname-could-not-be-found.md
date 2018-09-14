@@ -3,21 +3,21 @@ title: Clave del registro &#39; &lt;keyname&gt; &#39; no se pudo encontrar
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342084"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507224"
 ---
-# <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a><span data-ttu-id="b281a-102">Clave del registro &#39; &lt;keyname&gt; &#39; no se pudo encontrar</span><span class="sxs-lookup"><span data-stu-id="b281a-102">Registry key &#39;&lt;keyname&gt;&#39; could not be found</span></span>
-<span data-ttu-id="b281a-103">No encontró ninguna clave de registro.</span><span class="sxs-lookup"><span data-stu-id="b281a-103">A registry key cannot be found.</span></span>  
+# <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a><span data-ttu-id="c9385-102">Clave del registro &#39; &lt;keyname&gt; &#39; no se pudo encontrar</span><span class="sxs-lookup"><span data-stu-id="c9385-102">Registry key &#39;&lt;keyname&gt;&#39; could not be found</span></span>
+<span data-ttu-id="c9385-103">No encontró ninguna clave de registro.</span><span class="sxs-lookup"><span data-stu-id="c9385-103">A registry key cannot be found.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b281a-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="b281a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c9385-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="c9385-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="b281a-105">Compruebe que el nombre de la clave esté bien escrito.</span><span class="sxs-lookup"><span data-stu-id="b281a-105">Check the spelling of the key name.</span></span>  
+1.  <span data-ttu-id="c9385-105">Compruebe que el nombre de la clave esté bien escrito.</span><span class="sxs-lookup"><span data-stu-id="c9385-105">Check the spelling of the key name.</span></span>  
   
-2.  <span data-ttu-id="b281a-106">Asegúrese de que tiene los permisos de seguridad necesarios para acceder a la clave.</span><span class="sxs-lookup"><span data-stu-id="b281a-106">Make sure that you have sufficient security permissions to access the key.</span></span>  
+2.  <span data-ttu-id="c9385-106">Asegúrese de que tiene los permisos de seguridad necesarios para acceder a la clave.</span><span class="sxs-lookup"><span data-stu-id="c9385-106">Make sure that you have sufficient security permissions to access the key.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b281a-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="b281a-107">See Also</span></span>  
- [<span data-ttu-id="b281a-108">Resumen del Registro</span><span class="sxs-lookup"><span data-stu-id="b281a-108">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
- [<span data-ttu-id="b281a-109">Cambios de acceso del registro en Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="b281a-109">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)
+## <a name="see-also"></a><span data-ttu-id="c9385-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="c9385-107">See Also</span></span>  
+ [<span data-ttu-id="c9385-108">Resumen del Registro</span><span class="sxs-lookup"><span data-stu-id="c9385-108">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
+ [<span data-ttu-id="c9385-109">Cambios de acceso del registro en Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="c9385-109">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)
