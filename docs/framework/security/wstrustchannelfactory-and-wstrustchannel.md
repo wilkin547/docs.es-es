@@ -5,11 +5,11 @@ ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517936"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597011"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory y WSTrustChannel
 Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que un cliente WCF ya reconoce la federación. Al configurar un cliente WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un enlace personalizado similar, puede habilitar la autenticación federada en un servicio.  

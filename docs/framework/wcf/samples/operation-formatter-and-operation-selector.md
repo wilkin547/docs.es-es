@@ -3,11 +3,11 @@ title: Formateador de operación y selector de operación
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: a814de7433f2d06491245dc1d6e6e637b514118a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189941"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589286"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formateador de operación y selector de operación
 Este ejemplo muestra cómo se pueden usar puntos de extensibilidad de Windows Communication Foundation (WCF) para permitir que los datos del mensaje en un formato diferente de lo que espera WCF. De forma predeterminada, los formateadores WCF esperan parámetros de método que se incluirán en el `soap:body` elemento. El ejemplo muestra cómo implementar un formateador de operación personalizado que analiza los datos de parámetro a partir de una cadena de consulta HTTP GET en su lugar e invoca los métodos que utilizan esos datos.  

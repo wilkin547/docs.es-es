@@ -3,11 +3,11 @@ title: Herramientas de serialización
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
 ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513877"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597516"
 ---
 # <a name="serialization-tools"></a>Herramientas de serialización
 Esta sección contiene información detallada acerca de las herramientas de serialización. Puede ejecutar todas las herramientas desde la línea de comandos.  

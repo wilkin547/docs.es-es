@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361539"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591876"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
 Configuración de un servicio de Windows Communication Foundation (WCF) con un archivo de configuración le ofrece la flexibilidad de proporcionar el punto de conexión y los datos de comportamiento de servicio en el punto de distribución en lugar de en tiempo de diseño. En este tema se describen las principales técnicas disponibles.  

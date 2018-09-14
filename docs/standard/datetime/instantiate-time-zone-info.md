@@ -12,11 +12,11 @@ ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c8ff38325e26dd1bc946f6f12c365b6dea3e228
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508236"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45613935"
 ---
 # <a name="how-to-instantiate-a-timezoneinfo-object"></a>Cómo: crear una instancia de un objeto TimeZoneInfo
 

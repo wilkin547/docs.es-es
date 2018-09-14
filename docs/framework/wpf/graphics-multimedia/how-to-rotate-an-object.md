@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
 ms.openlocfilehash: b5a954158388e8b85589042e9d1f3b82c1747e30
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526498"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591508"
 ---
 # <a name="how-to-rotate-an-object"></a>Cómo: Girar un objeto
 Este ejemplo muestra cómo girar un objeto. El ejemplo crea primero un <xref:System.Windows.Media.RotateTransform> y, a continuación, especifica su <xref:System.Windows.Media.RotateTransform.Angle%2A> en grados.  

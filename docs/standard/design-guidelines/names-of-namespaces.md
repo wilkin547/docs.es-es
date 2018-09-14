@@ -11,11 +11,11 @@ ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183267"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591729"
 ---
 # <a name="names-of-namespaces"></a>Nombres de espacios de nombres
 Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los espacios de nombres está creando una mayor claridad suficiente para los programadores que utilizan el marco de trabajo saber inmediatamente lo que es probable que sea el contenido del espacio de nombres. La plantilla siguiente especifica la regla general para asignar nombres a los espacios de nombres:  

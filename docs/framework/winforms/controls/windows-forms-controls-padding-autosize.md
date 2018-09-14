@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 52bc75135e4f8cf5b9c1888b2ad9f5e278c1d6e2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271291"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597867"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El **Diseñador de Windows Forms** le ofrece muchas herramientas de diseño para realizar esta acción. Tres de las más importantes son la <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, y <xref:System.Windows.Forms.Control.AutoSize%2A> propiedades, que están presentes en todos los controles de Windows Forms.  

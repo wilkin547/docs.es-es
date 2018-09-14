@@ -13,11 +13,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: cb239adc6dfb11c83fb983a41ea40ad8bf714038
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367631"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45596590"
 ---
 # <a name="move-a-ui-automation-element"></a>Mover un elemento de UI Automation
 > [!NOTE]

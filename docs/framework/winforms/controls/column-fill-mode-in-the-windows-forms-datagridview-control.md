@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a023d8d8c31131db46cc8535d0e903c2a8d8a345
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360666"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595195"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modo de relleno de columnas en el control DataGridView de formularios Windows Forms
 En el modo de relleno de columna, el control <xref:System.Windows.Forms.DataGridView> cambia el tamaño de sus columnas automáticamente para que rellenen el ancho del área de visualización disponible. El control no muestra la barra de desplazamiento horizontal excepto cuando es necesario que el ancho de cada columna sea igual o mayor que su valor de propiedad <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  

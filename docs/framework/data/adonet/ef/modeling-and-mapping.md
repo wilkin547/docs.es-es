@@ -3,11 +3,11 @@ title: Modelado y asignación
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
 ms.openlocfilehash: 81080c416fd18c51be6626cb70a23073e049051d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515190"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593516"
 ---
 # <a name="modeling-and-mapping"></a>Modelado y asignación
 En [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], puede definir el modelo conceptual, el modelo de almacenamiento y la asignación entre los dos de la forma que mejor convenga a la aplicación. Las herramientas de Entity Data Model en Visual Studio permiten crear una. [archivo edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) desde una base de datos o un modelo gráfico y, a continuación, actualice ese archivo cuando cambia la base de datos o el modelo.  
