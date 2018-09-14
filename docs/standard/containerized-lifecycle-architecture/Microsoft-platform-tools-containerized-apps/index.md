@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106196"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594360"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 
@@ -29,17 +29,17 @@ Tabla 3-1: Flujo de trabajo de DevOps abierto para cualquier tecnología
 | administrador de flujos de trabajo | Tecnologías de Microsoft | Aplicaciones de terceros: acoplables a Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Plataforma para aplicaciones de Docker   | • Microsoft Visual Studio y Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • Cualquier editor de código (por ejemplo, Sublime)<br /> • Cualquier lenguaje (Node.js, Java, Go, etc.)<br /> • Cualquier orquestrator y programador<br /> • Cualquier registro de Docker<br /> |
-| DevOps para aplicaciones de Docker     | • Visual Studio Team Services<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Centro de datos de Docker local, Docker Swarm, Mesos DC/OS, Kubernetes, etc.<br /> |
+| DevOps para aplicaciones de Docker     | • Los servicios de azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Centro de datos de Docker local, Docker Swarm, Mesos DC/OS, Kubernetes, etc.<br /> |
 | Administración y supervisión  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos, etc.<br />
 
 La plataforma y las herramientas de Microsoft para aplicaciones de Docker en contenedor, como se define en la tabla 3-1, constan de los siguientes componentes:
 
 -   **Plataforma de desarrollo de aplicaciones de Docker**. El desarrollo de un servicio una colección de servicios que componen una "aplicación". La plataforma de desarrollo ofrece todo el trabajo que los desarrolladores necesitan antes de insertar el código en un repositorio de código compartido. El desarrollo de servicios, implementados como contenedores, es muy similar al desarrollo de las mismas aplicaciones o servicios sin Docker. Puede continuar usando su lenguaje favorito (.NET, Node.js, Go, etc.) y el editor o IDE preferidos, como Visual Studio o Visual Studio Code. Sin embargo, en lugar de considerar Docker como un destino de implementación, los servicios se desarrollan en el entorno de Docker. El código se compila, ejecuta, prueba y depura en contenedores a nivel local, proporcionando el entorno de destino en la fase de desarrollo. Al proporcionar el entorno de destino local, los contenedores de Docker configuran lo que ayudará significativamente a mejorar el ciclo de vida de DevOps. Visual Studio y Visual Studio Code disponen de extensiones para integrar los contenedores de Docker en el proceso de desarrollo.
 
--   **DevOps para las aplicaciones de Docker**. Los desarrolladores que crean aplicaciones de Docker pueden usar Visual Studio Team Services (VSTS) o cualquier otro producto de terceros, como Jenkins, para crear una administración integral y automatizada del ciclo de vida de las aplicaciones.
+-   **DevOps para aplicaciones de Docker** los desarrolladores que crean aplicaciones de Docker pueden usar Azure DevOps Services o cualquier otro producto de terceros, como Jenkins elaborar una completa automatizada administración del ciclo de vida de aplicaciones (ALM).
 
-Con VSTS, los desarrolladores pueden crear DevOps centradas en contenedores para un proceso rápido e iterativo que abarque el control del código fuente desde cualquier plataforma (VSTS-Git, GitHub, cualquier repositorio Git remoto o Subversion), integración continua (CI), pruebas unitarias internas, pruebas de integración entre contenedores y servicios, entrega continua (CD) y administración de versiones. Los desarrolladores también pueden automatizar las versiones de las aplicaciones de Docker en Azure Container Service, desde entornos de desarrollo a almacenamiento provisional y producción.
-
+Con los servicios de Azure DevOps, los desarrolladores pueden crear centrada en el contenedor de control de DevOps para un proceso rápido e iterativo que abarque el código fuente desde cualquier lugar (Git de Azure DevOps Services, GitHub, cualquier repositorio Git remoto o Subversion), integración continua (CI) , pruebas unitarias internas, entre las pruebas de integración de contenedores y servicios, entrega continua (CD) y la administración de versiones (RM). Los desarrolladores también pueden automatizar las versiones de las aplicaciones de Docker en Azure Container Service, desde entornos de desarrollo a almacenamiento provisional y producción.
+ 
 -   Supervisión y administración de producción de TI.
 
 **Administración**. Los equipos de TI pueden administrar aplicaciones y servicios de producción de varias formas:
