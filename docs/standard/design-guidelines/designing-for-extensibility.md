@@ -11,11 +11,11 @@ ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710906"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615604"
 ---
 # <a name="designing-for-extensibility"></a>Diseñar extensibilidad
 Un aspecto importante del diseño de un marco de trabajo es asegurarse de que la extensibilidad del marco se ha considerado atentamente. Esto requiere que comprenda los costos y beneficios asociados con distintos mecanismos de extensibilidad. Este capítulo le ayuda a decidir cuál de los mecanismos de extensibilidad: subclases, eventos, los miembros virtuales, las devoluciones de llamada y así sucesivamente, puede cumplir mejor los requisitos de su marco.  

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo definir y usar valores locales y d
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510570"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616145"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 
@@ -58,7 +58,7 @@ El valor devuelto de tipo ref es un alias para otra variable en el ámbito del m
 - Al leer su valor, se lee un valor a la variable a la que se asigna el alias.
 - Si la devolución se realiza *por referencia*, entonces devuelve un alias a esa misma variable.
 - Si pasa el valor a otro método *por referencia*, pasará una referencia a la variable a la que se asigna el alias.
-- Al asignar un alias [local tipo ref](#ref-local), crea un alias para la misma variable.
+- Al asignar un alias [local tipo ref](#ref-locals), crea un alias para la misma variable.
 
 
 ## <a name="ref-locals"></a>Variables locales de tipo ref
