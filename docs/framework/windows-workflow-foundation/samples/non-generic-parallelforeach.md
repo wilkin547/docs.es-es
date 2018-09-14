@@ -3,11 +3,11 @@ title: ParallelForEach no genérico
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
 ms.openlocfilehash: 70d5de587dda3cb61205a8d77f2173df9b93498b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210590"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514140"
 ---
 # <a name="non-generic-parallelforeach"></a>ParallelForEach no genérico
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] se incluye en el cuadro de herramientas de un conjunto de actividades de flujo de Control, incluidos <xref:System.Activities.Statements.ParallelForEach%601>, que permite recorrer <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` colecciones.  

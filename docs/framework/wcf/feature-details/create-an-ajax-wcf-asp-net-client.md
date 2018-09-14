@@ -2,12 +2,12 @@
 title: Crear un servicio WCF con AJAX habilitado y un cliente de ASP.NET en Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384291"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558046"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Cómo crear un servicio WFC con AJAX habilitado y un cliente ASP.NET que tiene acceso al servicio
 
@@ -25,7 +25,7 @@ En este tema se muestra cómo usar Visual Studio para crear un servicio de Windo
 
 1. En el **nueva aplicación Web ASP.NET** cuadro de diálogo, seleccione **vacía** y, a continuación, seleccione **Aceptar**.
 
-   ![Cuadro de diálogo de tipo de aplicación ASP.NET web en Visual Studio](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+   ![Cuadro de diálogo de tipo de aplicación ASP.NET web en Visual Studio](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
 ## <a name="add-a-web-form"></a>Agregue un formulario web
 
@@ -51,7 +51,7 @@ En este tema se muestra cómo usar Visual Studio para crear un servicio de Windo
 
 1. En el **Agregar nuevo elemento** cuadro de diálogo, expanda el **instalado** > **Visual C#** > **Web** categoría y, a continuación, Seleccione el **servicio WCF (AJAX habilitado)** plantilla.
 
-   ![Plantilla de elemento (compatible con AJAX) de servicio WCF en Visual Studio](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+   ![Plantilla de elemento (compatible con AJAX) de servicio WCF en Visual Studio](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
 1. Nombre del servicio **CostService** y, a continuación, seleccione **agregar**.
 

@@ -3,11 +3,11 @@ title: Actividad NoPersistScope
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038788"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45529261"
 ---
 # <a name="nopersistscope-activity"></a>Actividad NoPersistScope
 En este ejemplo se muestra cómo manipular un estado no serializable y descartable dentro de un flujo de trabajo. Es importante que los flujos de trabajo no intenten conservar el estado no serializable y también que los objetos descartables se limpien después de utilizarse en el flujo de trabajo.  

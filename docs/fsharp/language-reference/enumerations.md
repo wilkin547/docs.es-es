@@ -3,11 +3,11 @@ title: Enumeraciones (F#)
 description: 'Obtenga información sobre cómo usar las enumeraciones de F # en lugar de literales para hacer que el código más legible y fácil de mantener.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44369074"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533534"
 ---
 # <a name="enumerations"></a>Enumeraciones
 

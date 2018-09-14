@@ -3,11 +3,11 @@ title: Realizar el seguimiento del uso de un archivo de texto
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
 ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44707304"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45513656"
 ---
 # <a name="tracking-using-a-text-file"></a>Realizar el seguimiento del uso de un archivo de texto
 Este ejemplo muestra cómo ampliar el seguimiento en Windows Workflow Foundation (WF) mediante la creación de un participante de seguimiento personalizado. Los participantes de seguimiento son clases de .NET Framework que reciben registros de seguimiento del motor en tiempo de ejecución a medida que se emiten. Puede crear un participante de seguimiento para transportar los eventos de seguimiento al destino necesario para su escenario. Por ejemplo, como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se proporciona el participante de seguimiento de ETW (Seguimiento de eventos para Windows). El participante de seguimiento de este ejemplo escribe los registros en formato XML en un archivo de texto.  

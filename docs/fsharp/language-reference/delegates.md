@@ -3,11 +3,11 @@ title: Delegados (F#)
 description: 'Obtenga información sobre cómo trabajar con delegados en F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368957"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45517101"
 ---
 # <a name="delegates"></a>Delegados
 
