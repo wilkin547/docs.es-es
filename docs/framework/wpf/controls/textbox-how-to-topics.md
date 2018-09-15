@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212053"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624501"
 ---
 # <a name="textbox-how-to-topics"></a>Temas "Cómo..." del control TextBox
 En esta sección se proporciona ejemplos que muestran cómo realizar tareas comunes mediante el <xref:System.Windows.Controls.TextBox> control.  
