@@ -3,11 +3,11 @@ title: Procedimientos recomendados de hospedaje de Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
 ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588532"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658761"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedimientos recomendados de hospedaje de Internet Information Services
 En este tema se describe algunos procedimientos recomendados para hospedar servicios Windows Communication Foundation (WCF).  
