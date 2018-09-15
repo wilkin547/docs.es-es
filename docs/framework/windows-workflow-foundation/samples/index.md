@@ -3,11 +3,11 @@ title: Ejemplos de Windows Workflow (WF)
 ms.date: 03/30/2017
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
 ms.openlocfilehash: e9b511606c6278e7d2b2fb1bc3cbd9c38b51b000
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569104"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45647767"
 ---
 # <a name="windows-workflow-wf-samples"></a>Ejemplos de Windows Workflow (WF)
 Estos ejemplos proporcionan instrucciones sobre distintos aspectos de Windows Workflow Foundation (WF).  
