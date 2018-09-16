@@ -5,24 +5,24 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: d362ed594fd343c22345df9767c94a5770e5303a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45587528"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45673940"
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a><span data-ttu-id="80e17-102">Línea &lt;número&gt; no se puede analizar mediante los FieldWidths actuales</span><span class="sxs-lookup"><span data-stu-id="80e17-102">Line &lt;number&gt; cannot be parsed using the current FieldWidths</span></span>
-<span data-ttu-id="80e17-103">La línea especificada no se puede analizar porque sus campos tienen anchos distintos a los especificados.</span><span class="sxs-lookup"><span data-stu-id="80e17-103">The specified line cannot be parsed because its fields have widths other than those specified.</span></span>  
+# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a><span data-ttu-id="33e37-102">Línea &lt;número&gt; no se puede analizar mediante los FieldWidths actuales</span><span class="sxs-lookup"><span data-stu-id="33e37-102">Line &lt;number&gt; cannot be parsed using the current FieldWidths</span></span>
+<span data-ttu-id="33e37-103">La línea especificada no se puede analizar porque sus campos tienen anchos distintos a los especificados.</span><span class="sxs-lookup"><span data-stu-id="33e37-103">The specified line cannot be parsed because its fields have widths other than those specified.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="80e17-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="80e17-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="33e37-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="33e37-104">To correct this error</span></span>  
   
--   <span data-ttu-id="80e17-105">Ajuste `FieldWidths` para que la línea se pueda analizar correctamente o inserte código de control de excepciones para controlar la línea.</span><span class="sxs-lookup"><span data-stu-id="80e17-105">Adjust `FieldWidths` so the line can be parsed correctly, or insert exception-handling code in order to handle the line.</span></span>  
+-   <span data-ttu-id="33e37-105">Ajuste `FieldWidths` para que la línea se pueda analizar correctamente o inserte código de control de excepciones para controlar la línea.</span><span class="sxs-lookup"><span data-stu-id="33e37-105">Adjust `FieldWidths` so the line can be parsed correctly, or insert exception-handling code in order to handle the line.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80e17-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="80e17-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33e37-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="33e37-106">See also</span></span>
 
-- [<span data-ttu-id="80e17-107">Leer archivos de texto con varios formatos</span><span class="sxs-lookup"><span data-stu-id="80e17-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
-- [<span data-ttu-id="80e17-108">My.Computer.FileSystem.OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="80e17-108">My.Computer.FileSystem.OpenTextFieldParser</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
-- [<span data-ttu-id="80e17-109">Análisis de archivos de texto con el objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="80e17-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
-- [<span data-ttu-id="80e17-110">TextFieldParser (objeto)</span><span class="sxs-lookup"><span data-stu-id="80e17-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
-- [<span data-ttu-id="80e17-111">TextFieldParser.FieldWidths (propiedad)</span><span class="sxs-lookup"><span data-stu-id="80e17-111">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
-- [<span data-ttu-id="80e17-112">TextFieldParser.SetFieldWidths (método)</span><span class="sxs-lookup"><span data-stu-id="80e17-112">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)
+- [<span data-ttu-id="33e37-107">Leer archivos de texto con varios formatos</span><span class="sxs-lookup"><span data-stu-id="33e37-107">How to: Read From Text Files with Multiple Formats</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+- [<span data-ttu-id="33e37-108">My.Computer.FileSystem.OpenTextFieldParser</span><span class="sxs-lookup"><span data-stu-id="33e37-108">My.Computer.FileSystem.OpenTextFieldParser</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)  
+- [<span data-ttu-id="33e37-109">Análisis de archivos de texto con el objeto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="33e37-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+- [<span data-ttu-id="33e37-110">TextFieldParser (objeto)</span><span class="sxs-lookup"><span data-stu-id="33e37-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
+- [<span data-ttu-id="33e37-111">TextFieldParser.FieldWidths (propiedad)</span><span class="sxs-lookup"><span data-stu-id="33e37-111">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
+- [<span data-ttu-id="33e37-112">TextFieldParser.SetFieldWidths (método)</span><span class="sxs-lookup"><span data-stu-id="33e37-112">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)

@@ -3,41 +3,41 @@ title: Crear un servicio WCF con AJAX habilitado y un cliente de ASP.NET en Visu
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
 ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45558046"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678287"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="eab23-102">Cómo crear un servicio WFC con AJAX habilitado y un cliente ASP.NET que tiene acceso al servicio</span><span class="sxs-lookup"><span data-stu-id="eab23-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="58de5-102">Cómo crear un servicio WFC con AJAX habilitado y un cliente ASP.NET que tiene acceso al servicio</span><span class="sxs-lookup"><span data-stu-id="58de5-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
 
-<span data-ttu-id="eab23-103">En este tema se muestra cómo usar Visual Studio para crear un servicio de Windows Communication Foundation (WCF) con AJAX habilitado y un cliente ASP.NET que tiene acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="eab23-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
+<span data-ttu-id="58de5-103">En este tema se muestra cómo usar Visual Studio para crear un servicio de Windows Communication Foundation (WCF) con AJAX habilitado y un cliente ASP.NET que tiene acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="58de5-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
 
-## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="eab23-104">Crear una aplicación web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="eab23-104">Create an ASP.NET web app</span></span>
+## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="58de5-104">Crear una aplicación web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="58de5-104">Create an ASP.NET web app</span></span>
 
-1. <span data-ttu-id="eab23-105">Abra Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="eab23-105">Open Visual Studio.</span></span>
+1. <span data-ttu-id="58de5-105">Abra Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="58de5-105">Open Visual Studio.</span></span>
 
-1. <span data-ttu-id="eab23-106">Desde el **archivo** menú, seleccione **New** > **proyecto**</span><span class="sxs-lookup"><span data-stu-id="eab23-106">From the **File** menu, select **New** > **Project**</span></span>
+1. <span data-ttu-id="58de5-106">Desde el **archivo** menú, seleccione **New** > **proyecto**</span><span class="sxs-lookup"><span data-stu-id="58de5-106">From the **File** menu, select **New** > **Project**</span></span>
 
-1. <span data-ttu-id="eab23-107">En el **nuevo proyecto** cuadro de diálogo, expanda el **instalado** > **Visual C#** > **Web** categoría y, a continuación, Seleccione **aplicación Web ASP.NET (.NET Framework)**.</span><span class="sxs-lookup"><span data-stu-id="eab23-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
+1. <span data-ttu-id="58de5-107">En el **nuevo proyecto** cuadro de diálogo, expanda el **instalado** > **Visual C#** > **Web** categoría y, a continuación, Seleccione **aplicación Web ASP.NET (.NET Framework)**.</span><span class="sxs-lookup"><span data-stu-id="58de5-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
 
-1. <span data-ttu-id="eab23-108">Denomine el proyecto **SandwichServices** y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="eab23-108">Name the Project **SandwichServices** and click **OK**.</span></span>
+1. <span data-ttu-id="58de5-108">Denomine el proyecto **SandwichServices** y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="58de5-108">Name the Project **SandwichServices** and click **OK**.</span></span>
 
-1. <span data-ttu-id="eab23-109">En el **nueva aplicación Web ASP.NET** cuadro de diálogo, seleccione **vacía** y, a continuación, seleccione **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="eab23-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
+1. <span data-ttu-id="58de5-109">En el **nueva aplicación Web ASP.NET** cuadro de diálogo, seleccione **vacía** y, a continuación, seleccione **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="58de5-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
 
    ![Cuadro de diálogo de tipo de aplicación ASP.NET web en Visual Studio](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
-## <a name="add-a-web-form"></a><span data-ttu-id="eab23-111">Agregue un formulario web</span><span class="sxs-lookup"><span data-stu-id="eab23-111">Add a web form</span></span>
+## <a name="add-a-web-form"></a><span data-ttu-id="58de5-111">Agregue un formulario web</span><span class="sxs-lookup"><span data-stu-id="58de5-111">Add a web form</span></span>
 
-1. <span data-ttu-id="eab23-112">Haga clic en el proyecto SandwichServices en **el Explorador de soluciones** y seleccione **agregar** > **nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="eab23-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="58de5-112">Haga clic en el proyecto SandwichServices en **el Explorador de soluciones** y seleccione **agregar** > **nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="58de5-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
 
-1. <span data-ttu-id="eab23-113">En el **Agregar nuevo elemento** cuadro de diálogo, expanda el **instalado** > **Visual C#** > **Web** categoría y, a continuación, Seleccione el **formulario Web Forms** plantilla.</span><span class="sxs-lookup"><span data-stu-id="eab23-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
+1. <span data-ttu-id="58de5-113">En el **Agregar nuevo elemento** cuadro de diálogo, expanda el **instalado** > **Visual C#** > **Web** categoría y, a continuación, Seleccione el **formulario Web Forms** plantilla.</span><span class="sxs-lookup"><span data-stu-id="58de5-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
 
-1. <span data-ttu-id="eab23-114">Acepte el nombre predeterminado (**WebForm1**) y, a continuación, seleccione **agregar**.</span><span class="sxs-lookup"><span data-stu-id="eab23-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
+1. <span data-ttu-id="58de5-114">Acepte el nombre predeterminado (**WebForm1**) y, a continuación, seleccione **agregar**.</span><span class="sxs-lookup"><span data-stu-id="58de5-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
 
-   <span data-ttu-id="eab23-115">*WebForm1.aspx* se abre en **origen** vista.</span><span class="sxs-lookup"><span data-stu-id="eab23-115">*WebForm1.aspx* opens in **Source** view.</span></span>
+   <span data-ttu-id="58de5-115">*WebForm1.aspx* se abre en **origen** vista.</span><span class="sxs-lookup"><span data-stu-id="58de5-115">*WebForm1.aspx* opens in **Source** view.</span></span>
 
-1. <span data-ttu-id="eab23-116">Agregue el siguiente marcado dentro de la  **\<cuerpo >** etiquetas:</span><span class="sxs-lookup"><span data-stu-id="eab23-116">Add the following markup inside the **\<body>** tags:</span></span>
+1. <span data-ttu-id="58de5-116">Agregue el siguiente marcado dentro de la  **\<cuerpo >** etiquetas:</span><span class="sxs-lookup"><span data-stu-id="58de5-116">Add the following markup inside the **\<body>** tags:</span></span>
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -45,19 +45,19 @@ ms.locfileid: "45558046"
    <span id="additionResult"></span>
    ```
 
-## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="eab23-117">Creación de un servicio WCF con AJAX habilitado</span><span class="sxs-lookup"><span data-stu-id="eab23-117">Create an AJAX-enabled WCF service</span></span>
+## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="58de5-117">Creación de un servicio WCF con AJAX habilitado</span><span class="sxs-lookup"><span data-stu-id="58de5-117">Create an AJAX-enabled WCF service</span></span>
 
-1. <span data-ttu-id="eab23-118">Haga clic en el proyecto SandwichServices en **el Explorador de soluciones** y seleccione **agregar** > **nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="eab23-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="58de5-118">Haga clic en el proyecto SandwichServices en **el Explorador de soluciones** y seleccione **agregar** > **nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="58de5-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
 
-1. <span data-ttu-id="eab23-119">En el **Agregar nuevo elemento** cuadro de diálogo, expanda el **instalado** > **Visual C#** > **Web** categoría y, a continuación, Seleccione el **servicio WCF (AJAX habilitado)** plantilla.</span><span class="sxs-lookup"><span data-stu-id="eab23-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
+1. <span data-ttu-id="58de5-119">En el **Agregar nuevo elemento** cuadro de diálogo, expanda el **instalado** > **Visual C#** > **Web** categoría y, a continuación, Seleccione el **servicio WCF (AJAX habilitado)** plantilla.</span><span class="sxs-lookup"><span data-stu-id="58de5-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
 
    ![Plantilla de elemento (compatible con AJAX) de servicio WCF en Visual Studio](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
-1. <span data-ttu-id="eab23-121">Nombre del servicio **CostService** y, a continuación, seleccione **agregar**.</span><span class="sxs-lookup"><span data-stu-id="eab23-121">Name the service **CostService** and then select **Add**.</span></span>
+1. <span data-ttu-id="58de5-121">Nombre del servicio **CostService** y, a continuación, seleccione **agregar**.</span><span class="sxs-lookup"><span data-stu-id="58de5-121">Name the service **CostService** and then select **Add**.</span></span>
 
-   <span data-ttu-id="eab23-122">*CostService.svc.cs* se abre en el editor.</span><span class="sxs-lookup"><span data-stu-id="eab23-122">*CostService.svc.cs* opens in the editor.</span></span>
+   <span data-ttu-id="58de5-122">*CostService.svc.cs* se abre en el editor.</span><span class="sxs-lookup"><span data-stu-id="58de5-122">*CostService.svc.cs* opens in the editor.</span></span>
 
-1. <span data-ttu-id="eab23-123">Implementar la operación en el servicio.</span><span class="sxs-lookup"><span data-stu-id="eab23-123">Implement the operation in the service.</span></span> <span data-ttu-id="eab23-124">Agregue el método siguiente a la clase CostService para calcular el costo de una cantidad de bocadillos:</span><span class="sxs-lookup"><span data-stu-id="eab23-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
+1. <span data-ttu-id="58de5-123">Implementar la operación en el servicio.</span><span class="sxs-lookup"><span data-stu-id="58de5-123">Implement the operation in the service.</span></span> <span data-ttu-id="58de5-124">Agregue el método siguiente a la clase CostService para calcular el costo de una cantidad de bocadillos:</span><span class="sxs-lookup"><span data-stu-id="58de5-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
 
     ```csharp
     [OperationContract]
@@ -67,15 +67,15 @@ ms.locfileid: "45558046"
     }
     ```
 
-## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="eab23-125">Configurar el cliente para tener acceso al servicio</span><span class="sxs-lookup"><span data-stu-id="eab23-125">Configure the client to access the service</span></span>
+## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="58de5-125">Configurar el cliente para tener acceso al servicio</span><span class="sxs-lookup"><span data-stu-id="58de5-125">Configure the client to access the service</span></span>
 
-1. <span data-ttu-id="eab23-126">Abra el *WebForm1.aspx* de archivo y seleccione el **diseño** vista.</span><span class="sxs-lookup"><span data-stu-id="eab23-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
+1. <span data-ttu-id="58de5-126">Abra el *WebForm1.aspx* de archivo y seleccione el **diseño** vista.</span><span class="sxs-lookup"><span data-stu-id="58de5-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
 
-2. <span data-ttu-id="eab23-127">Desde el **vista** menú, seleccione **cuadro de herramientas**.</span><span class="sxs-lookup"><span data-stu-id="eab23-127">From the **View** menu, select **Toolbox**.</span></span>
+2. <span data-ttu-id="58de5-127">Desde el **vista** menú, seleccione **cuadro de herramientas**.</span><span class="sxs-lookup"><span data-stu-id="58de5-127">From the **View** menu, select **Toolbox**.</span></span>
 
-3. <span data-ttu-id="eab23-128">Expanda el **AJAX Extensions** nodo y arrastrar y colocar un **ScriptManager** hasta el formulario.</span><span class="sxs-lookup"><span data-stu-id="eab23-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
+3. <span data-ttu-id="58de5-128">Expanda el **AJAX Extensions** nodo y arrastrar y colocar un **ScriptManager** hasta el formulario.</span><span class="sxs-lookup"><span data-stu-id="58de5-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
 
-4. <span data-ttu-id="eab23-129">En el **origen** ver, agregue el siguiente código entre el  **\<ScriptManager >** etiquetas para especificar la ruta de acceso al servicio de WCF:</span><span class="sxs-lookup"><span data-stu-id="eab23-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
+4. <span data-ttu-id="58de5-129">En el **origen** ver, agregue el siguiente código entre el  **\<ScriptManager >** etiquetas para especificar la ruta de acceso al servicio de WCF:</span><span class="sxs-lookup"><span data-stu-id="58de5-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
 
     ```html
     <Services>
@@ -83,7 +83,7 @@ ms.locfileid: "45558046"
     </Services>
     ```
 
-1. <span data-ttu-id="eab23-130">Agregue el código para la función de Javascript `Calculate()`.</span><span class="sxs-lookup"><span data-stu-id="eab23-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="eab23-131">Coloque el código siguiente en el **head** sección del formulario web:</span><span class="sxs-lookup"><span data-stu-id="eab23-131">Place the following code in the **head** section of the web form:</span></span>
+1. <span data-ttu-id="58de5-130">Agregue el código para la función de Javascript `Calculate()`.</span><span class="sxs-lookup"><span data-stu-id="58de5-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="58de5-131">Coloque el código siguiente en el **head** sección del formulario web:</span><span class="sxs-lookup"><span data-stu-id="58de5-131">Place the following code in the **head** section of the web form:</span></span>
 
     ```javascript
     <script type="text/javascript">
@@ -100,15 +100,15 @@ ms.locfileid: "45558046"
     </script>
     ```
 
-   <span data-ttu-id="eab23-132">Este código llama al método de CostService para calcular el precio de tres bocadillos y, a continuación, muestra el resultado en el intervalo denominado **additionResult**.</span><span class="sxs-lookup"><span data-stu-id="eab23-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
+   <span data-ttu-id="58de5-132">Este código llama al método de CostService para calcular el precio de tres bocadillos y, a continuación, muestra el resultado en el intervalo denominado **additionResult**.</span><span class="sxs-lookup"><span data-stu-id="58de5-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
 
-## <a name="run-the-program"></a><span data-ttu-id="eab23-133">Ejecutar el programa</span><span class="sxs-lookup"><span data-stu-id="eab23-133">Run the program</span></span>
+## <a name="run-the-program"></a><span data-ttu-id="58de5-133">Ejecutar el programa</span><span class="sxs-lookup"><span data-stu-id="58de5-133">Run the program</span></span>
 
-<span data-ttu-id="eab23-134">Asegúrese de que *WebForm1.aspx* tiene el foco y, a continuación, presione **iniciar** botón para iniciar el cliente web.</span><span class="sxs-lookup"><span data-stu-id="eab23-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="eab23-135">El botón tiene un triángulo verde y dice algo parecido a **IIS Express (Microsoft Edge)**.</span><span class="sxs-lookup"><span data-stu-id="eab23-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="eab23-136">O bien, puede presionar **F5**.</span><span class="sxs-lookup"><span data-stu-id="eab23-136">Or, you can press **F5**.</span></span> <span data-ttu-id="eab23-137">Haga clic en el **precio de 3 bocadillos** botón para generar el resultado esperado de "3,75".</span><span class="sxs-lookup"><span data-stu-id="eab23-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
+<span data-ttu-id="58de5-134">Asegúrese de que *WebForm1.aspx* tiene el foco y, a continuación, presione **iniciar** botón para iniciar el cliente web.</span><span class="sxs-lookup"><span data-stu-id="58de5-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="58de5-135">El botón tiene un triángulo verde y dice algo parecido a **IIS Express (Microsoft Edge)**.</span><span class="sxs-lookup"><span data-stu-id="58de5-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="58de5-136">O bien, puede presionar **F5**.</span><span class="sxs-lookup"><span data-stu-id="58de5-136">Or, you can press **F5**.</span></span> <span data-ttu-id="58de5-137">Haga clic en el **precio de 3 bocadillos** botón para generar el resultado esperado de "3,75".</span><span class="sxs-lookup"><span data-stu-id="58de5-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
 
-## <a name="example-code"></a><span data-ttu-id="eab23-138">código de ejemplo</span><span class="sxs-lookup"><span data-stu-id="eab23-138">Example code</span></span>
+## <a name="example-code"></a><span data-ttu-id="58de5-138">código de ejemplo</span><span class="sxs-lookup"><span data-stu-id="58de5-138">Example code</span></span>
 
-<span data-ttu-id="eab23-139">Siguiente es el código completo en el *CostService.svc.cs* archivo:</span><span class="sxs-lookup"><span data-stu-id="eab23-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
+<span data-ttu-id="58de5-139">Siguiente es el código completo en el *CostService.svc.cs* archivo:</span><span class="sxs-lookup"><span data-stu-id="58de5-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
 
 ```csharp
 using System.ServiceModel;
@@ -129,7 +129,7 @@ namespace SandwichServices
 }
 ```
 
-<span data-ttu-id="eab23-140">La siguiente es todo el contenido de la *WebForm1.aspx* página:</span><span class="sxs-lookup"><span data-stu-id="eab23-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
+<span data-ttu-id="58de5-140">La siguiente es todo el contenido de la *WebForm1.aspx* página:</span><span class="sxs-lookup"><span data-stu-id="58de5-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
 
 ```aspx-csharp
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>
