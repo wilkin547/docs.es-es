@@ -3,11 +3,11 @@ title: Expresiones de cálculo (F#)
 description: 'Obtenga información sobre cómo crear una sintaxis adecuada para escribir cálculos en F # que se pueden secuenciar y combinar mediante enlaces y construcciones de flujo de control.'
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508543"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685743"
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
@@ -208,9 +208,9 @@ En la tabla siguiente se describe los métodos que pueden usarse en una clase de
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|Contiene una expresión de cálculo como una función.|
 |`Return`|`'T -> M<'T>`|Llamado para `return` en expresiones de cálculo.|
 |`ReturnFrom`|`M<'T> -> M<'T>`|Llamado para `return!` en expresiones de cálculo.|
-|`Run`|`M<'T> -> M<'T>` o<br /><br />`M<'T> -> 'T`|Ejecuta una expresión de cálculo.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` o<br /><br />`M<unit> * M<'T> -> M<'T>`|Se llama para la secuenciación en expresiones de cálculo.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` o<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Llamado para `for...do` expresiones en expresiones de cálculo.|
+|`Run`|`M<'T> -> M<'T>`, o bien<br /><br />`M<'T> -> 'T`|Ejecuta una expresión de cálculo.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>`, o bien<br /><br />`M<unit> * M<'T> -> M<'T>`|Se llama para la secuenciación en expresiones de cálculo.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>`, o bien<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Llamado para `for...do` expresiones en expresiones de cálculo.|
 |`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Llamado para `try...finally` expresiones en expresiones de cálculo.|
 |`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Llamado para `try...with` expresiones en expresiones de cálculo.|
 |`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Llamado para `use` enlaces en expresiones de cálculo.|

@@ -3,11 +3,11 @@ title: Agrupación de conexiones
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533417"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678514"
 ---
 # <a name="connection-pooling"></a>Agrupación de conexiones
 La conexión a un origen de datos puede ser un proceso largo. Para minimizar el costo de abrir conexiones, ADO.NET emplea una técnica de optimización llamada *agrupación de conexiones*, que reduce el costo de abrir y cerrar conexiones repetidas veces. Los proveedores de datos .NET Framework tratan de forma diferente la agrupación de conexiones.  

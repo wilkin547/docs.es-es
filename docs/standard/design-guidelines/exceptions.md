@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588584"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674733"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instrucciones de diseño de excepciones
 Control de excepciones presenta muchas ventajas respecto a los informes de errores basado en el valor de retorno. Diseño de buen marco ayuda a los desarrolladores de aplicaciones aprovechar las ventajas de las excepciones. En esta sección se describe las ventajas de las excepciones y se muestra instrucciones para usar de forma eficaz.  

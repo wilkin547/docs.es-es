@@ -3,11 +3,11 @@ title: 'Tipos básicos (F #)'
 description: 'Descubra los tipos básicos fundamentales que se usan en el lenguaje F #.'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514981"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45686107"
 ---
 # <a name="basic-types"></a>Tipos básicos
 

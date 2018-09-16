@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45587485"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677713"
 ---
 # <a name="common-design-patterns"></a>Patrones de diseño comunes
 Hay numerosos libros sobre patrones de software, lenguajes de patrones y antipatrones que abordan al asunto muy amplio de patrones. Por lo tanto, este capítulo proporciona directrices y discusión relacionada con un conjunto muy limitado de patrones que se usan con frecuencia en el diseño de la API de .NET Framework.  

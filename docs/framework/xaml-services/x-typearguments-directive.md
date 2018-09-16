@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510183"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45686274"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments (Directiva)
 Pasa restringir los argumentos de un elemento genérico para el constructor del tipo genérico de tipo.  
