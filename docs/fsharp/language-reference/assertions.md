@@ -3,11 +3,11 @@ title: Aserciones (F#)
 description: "Obtenga información sobre cómo usar la expresión 'assert' como una característica de depuración para probar las expresiones en el lenguaje de programación F #."
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521666"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45667903"
 ---
 # <a name="assertions"></a>Aserciones
 

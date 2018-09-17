@@ -4,12 +4,12 @@ description: Conozca las diferencias entre los archivos csproj de .NET Core y lo
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1e356d0123328fe703f672c38cb5ee7799cb574c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d868eb689af1d87ea2adb1f0069345cbb8195af7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218237"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646381"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -20,13 +20,13 @@ Se hace una referencia implícita a los metapaquetes basándose en los marcos de
 
 ```xml
  <PropertyGroup>
-   <TargetFramework>netcoreapp1.1</TargetFramework>
+   <TargetFramework>netcoreapp2.1</TargetFramework>
  </PropertyGroup>
  ```
  
  ```xml
  <PropertyGroup>
-   <TargetFrameworks>netcoreapp1.1;net462</TargetFrameworks>
+   <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
  </PropertyGroup>
  ```
 
@@ -168,10 +168,10 @@ En el ejemplo siguiente se proporcionan los elementos Fallback para todos los de
 </PackageTargetFallback >
 ```
 
-En el ejemplo siguiente se especifican los elementos Fallback solo para el destino `netcoreapp1.0`:
+En el ejemplo siguiente se especifican los elementos Fallback solo para el destino `netcoreapp2.1`:
 
 ```xml
-<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp1.0'">
+<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp2.1'">
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
@@ -201,7 +201,7 @@ Una descripción larga del paquete para su visualización en la interfaz de usua
 Detalles de copyright del paquete.
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
-Un valor booleano que especifica si el cliente debe pedir al consumidor que acepte la licencia del paquete antes de instalarlo. El valor predeterminado es `false`.
+Un valor booleano que especifica si el cliente debe pedir al consumidor que acepte la licencia del paquete antes de instalarlo. De manera predeterminada, es `false`.
 
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 Una dirección URL a la licencia que se aplica al paquete.
@@ -246,7 +246,7 @@ Especifica la versión mínima del cliente de NuGet que puede instalar este paqu
 Este valor booleano especifica si se deben empaquetar los ensamblados de salida de la compilación en el archivo *.nupkg* o no.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
-Este valor booleano especifica si los elementos del tipo `Content` se incluirán automáticamente en el paquete resultante. El valor predeterminado es `true`. 
+Este valor booleano especifica si los elementos del tipo `Content` se incluirán automáticamente en el paquete resultante. De manera predeterminada, es `true`. 
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 Especifica la carpeta en la que se colocarán los ensamblados de salida. Los ensamblados de salida (y otros archivos de salida) se copian en sus respectivas carpetas de marco.

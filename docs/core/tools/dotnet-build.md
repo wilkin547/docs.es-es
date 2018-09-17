@@ -4,14 +4,14 @@ description: El comando dotnet build compila un proyecto y todas sus dependencia
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: dc5970fa1c8f3172916676819fa7789d84a5386e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961465"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692981"
 ---
-# <a name="dotnet-build"></a>dotnet-build
+# <a name="dotnet-build"></a>dotnet build
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
