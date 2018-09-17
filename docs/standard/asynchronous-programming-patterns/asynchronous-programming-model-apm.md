@@ -14,11 +14,11 @@ ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cd2fa6219f39a8506d865d85e1ce5f84d22a92f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269038"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45658633"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modelo de programación asincrónica (APM)
 Una operación asincrónica que usa el patrón de diseño <xref:System.IAsyncResult> se implementa como dos métodos con nombre **Begin***OperationName* y **End***OperationName* que comienzan y terminan la operación asincrónica *OperationName* respectivamente. Por ejemplo, la clase <xref:System.IO.FileStream> ofrece los métodos <xref:System.IO.FileStream.BeginRead%2A> y <xref:System.IO.FileStream.EndRead%2A> para leer bytes de un archivo de manera asincrónica. Estos métodos implementan la versión asincrónica del método <xref:System.IO.FileStream.Read%2A> .  

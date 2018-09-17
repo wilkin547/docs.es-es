@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34233956"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649400"
 ---
 # <a name="application-domains"></a>Dominios de aplicación
 Normalmente, los sistemas operativos y los entornos de Common Language Runtime proporcionan algún tipo de aislamiento entre las aplicaciones. Por ejemplo, Windows utiliza procesos para aislar las aplicaciones. Este aislamiento es necesario para garantizar que el código que se ejecuta en una aplicación no afecta negativamente a otras aplicaciones no relacionadas.  
@@ -55,7 +55,7 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
     > [!NOTE]
     >  No se puede descargar ensamblados o tipos por separado. Sólo se puede descargar un dominio completo.  
   
--   El código que se ejecuta en una aplicación no puede tener acceso directo al código o a los recursos de otra aplicación. Common Language Runtime impone este aislamiento al impedir que se realicen llamadas directas entre objetos de dominios de aplicación diferentes. Los objetos que se pasan entre dominios se copian o se obtiene acceso a ellos mediante proxy. Si el objeto se copia, la llamada al objeto es local. En otras palabras, el llamador y el objeto al que se hace referencia se encuentran en el mismo dominio de aplicación. Si se tiene acceso al objeto a través de un proxy, la llamada al objeto es remota. En este caso, el llamador y el objeto al que se hace referencia se encuentran en dominios de aplicación diferentes. En las llamadas entre dominios se utiliza la misma infraestructura de llamada remota que en las llamadas entre dos procesos o entre dos equipos. En consecuencia, los metadatos del objeto al que se hace referencia deben estar disponibles para ambos dominios de aplicación a fin de que la llamada al método no provoque un error en la compilación JIT. Si el dominio que llama no tiene acceso a los metadatos del objeto al que se está llamando, se podría producir un error de compilación con una excepción del tipo **System.IO.FileNotFound**. Consulte [Objetos remotos](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58) para obtener más información. El objeto es quien decide el mecanismo para determinar cómo se puede obtener acceso a los objetos entre dominios. Para obtener más información, consulta <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+-   El código que se ejecuta en una aplicación no puede tener acceso directo al código o a los recursos de otra aplicación. Common Language Runtime impone este aislamiento al impedir que se realicen llamadas directas entre objetos de dominios de aplicación diferentes. Los objetos que se pasan entre dominios se copian o se obtiene acceso a ellos mediante proxy. Si el objeto se copia, la llamada al objeto es local. En otras palabras, el llamador y el objeto al que se hace referencia se encuentran en el mismo dominio de aplicación. Si se tiene acceso al objeto a través de un proxy, la llamada al objeto es remota. En este caso, el llamador y el objeto al que se hace referencia se encuentran en dominios de aplicación diferentes. En las llamadas entre dominios se utiliza la misma infraestructura de llamada remota que en las llamadas entre dos procesos o entre dos equipos. En consecuencia, los metadatos del objeto al que se hace referencia deben estar disponibles para ambos dominios de aplicación a fin de que la llamada al método no provoque un error en la compilación JIT. Si el dominio que llama no tiene acceso a los metadatos del objeto al que se está llamando, se podría producir un error de compilación con una excepción del tipo **System.IO.FileNotFound**. Consulte [Objetos remotos](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58) para obtener más información. El objeto es quien decide el mecanismo para determinar cómo se puede obtener acceso a los objetos entre dominios. Para obtener más información, vea <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   La aplicación en la que se ejecuta el código establece el comportamiento del mismo. En otras palabras, el dominio de aplicación proporciona valores de configuración tales como las directivas de versión de la aplicación, la ubicación de los ensamblados remotos a los que tiene acceso e información sobre dónde encontrar los ensamblados que se cargan en el dominio.  
   
@@ -114,7 +114,7 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  La <xref:System.AppDomain> es la interfaz de programación para los dominios de aplicación. Esta clase incluye métodos para crear y descargar dominios, crear instancias de tipos en dominios y registrar diversas notificaciones, como por ejemplo cuando una aplicación descarga un dominio. En la tabla siguiente, se presentan los métodos <xref:System.AppDomain> más usados.  
   
-|Método de AppDomain|Description|  
+|Método de AppDomain|Descripción|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Crea un nuevo dominio de aplicación. Se recomienda utilizar una sobrecarga de este método que especifique un objeto <xref:System.AppDomainSetup>. Ésta es la forma recomendada para establecer las propiedades de un nuevo dominio, como la base de la aplicación o el directorio raíz para la aplicación; la ubicación del archivo de configuración para el dominio; y la ruta de búsqueda que va a utilizar Common Language Runtime para cargar ensamblados en el dominio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> y <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Ejecuta un ensamblado en el dominio de aplicación. Éste es un método de instancia, por lo que se puede utilizar para ejecutar el código en otro dominio de aplicación al que se haga referencia.|  

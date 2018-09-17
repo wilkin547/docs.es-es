@@ -16,11 +16,11 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264927"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45638878"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 La característica de formato compuesto de .NET toma una lista de objetos y una cadena de formato compuesto como entrada. Una cadena de formato compuesto está formada por texto fijo combinado con marcadores de posición indizados, que reciben el nombre de elementos de formato, y que se corresponden con los objetos de la lista. La operación de formato genera una cadena de resultado compuesta por el texto fijo original combinado con la representación de cadena de los objetos de la lista.  

@@ -11,11 +11,11 @@ ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265083"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677843"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Cómo: Agregar y quitar elementos de ConcurrentDictionary
 En este ejemplo se muestra cómo agregar, recuperar, actualizar y quitar elementos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Esta clase de colección es una implementación segura para subprocesos. Es recomendable que la use cada vez que varios subprocesos puedan intentar tener acceso a los elementos de forma simultánea.  

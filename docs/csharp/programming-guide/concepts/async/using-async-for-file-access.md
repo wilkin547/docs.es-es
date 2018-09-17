@@ -3,11 +3,11 @@ title: Usar Async en acceso a archivos (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
 ms.openlocfilehash: bbaeb14d5c17665308932c26a0630f1e9e5dabdf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225222"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677232"
 ---
 # <a name="using-async-for-file-access-c"></a>Usar Async en acceso a archivos (C#)
 Puede usar la característica async para acceder a archivos. Con la característica async, se puede llamar a métodos asincrónicos sin usar devoluciones de llamada ni dividir el código en varios métodos o expresiones lambda. Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.  

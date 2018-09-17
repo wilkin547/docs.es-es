@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: e15210d189c4a553da72b418f583e44666bac2fc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44201184"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677297"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (Opciones del compilador de C#)
 La opción **-target:library** hace que el compilador cree una biblioteca de vínculos dinámicos (DLL) en lugar de un archivo ejecutable (EXE).  

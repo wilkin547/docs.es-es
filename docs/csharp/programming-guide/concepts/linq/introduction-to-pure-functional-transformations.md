@@ -3,18 +3,18 @@ title: Introducción a las transformaciones funcionales puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
 ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270492"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45675631"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introducción a las transformaciones funcionales puras (C#)
 Esta sección ofrece una introducción a las transformaciones funcionales, incluyendo los conceptos subyacentes y los constructores del lenguaje que las hacen posible. Realiza una comparación entre las metodologías de programación de orientación a objetos y de transformación funcional, incluyendo consejos acerca de cómo llevar a cabo la transición a ésta última. Aunque es posible utiliza las transformaciones funcionales en numerosos escenarios, aquí utilizaremos la transformación XML como un ejemplo concreto.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Conceptos y terminología (transformación funcional) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)|Presenta los conceptos y la terminología en relación con las transformaciones funcionales.|  
 |[Diferencias entre la programación funcional y programación imperativa (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)|Compara y contrasta la programación funcional con la programación imperativa (orientada a procedimientos) más tradicional.|  

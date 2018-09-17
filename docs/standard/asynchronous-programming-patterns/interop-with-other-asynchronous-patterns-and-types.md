@@ -15,11 +15,11 @@ ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05b53016712f75e45636979d77bfd27116ce8e14
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43892829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45638761"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidad con otros tipos y patrones asincrónicos
 .NET Framework 1.0 introdujo el patrón <xref:System.IAsyncResult> , conocido también como [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o el patrón `Begin/End` .  .NET Framework 2.0 agregó [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir de .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) reemplaza a APM y EAP, pero proporciona la capacidad de crear fácilmente rutinas de migración a partir de los patrones anteriores:  

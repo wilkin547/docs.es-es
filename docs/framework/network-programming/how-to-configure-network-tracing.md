@@ -15,11 +15,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217131"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45610079"
 ---
 # <a name="how-to-configure-network-tracing"></a>Cómo: configurar el seguimiento de red
 El archivo de configuración de la aplicación o equipo contiene la configuración que determina el formato y el contenido del seguimiento de red. Antes de realizar este procedimiento, asegúrese de que el seguimiento está habilitado. Para obtener información sobre cómo habilitar el seguimiento de red, vea [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md) (Habilitar el seguimiento de red).  

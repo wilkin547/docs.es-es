@@ -11,11 +11,11 @@ ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 74518f6f56f65668d4c7f073a79c9e7de27d7978
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178575"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45645767"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Cómo: Agregar y tomar elementos de forma individual en una clase BlockingCollection
 Este ejemplo muestra cómo agregar y quitar elementos de <xref:System.Collections.Concurrent.BlockingCollection%601> con bloqueo y sin bloqueo. Para obtener más información sobre <xref:System.Collections.Concurrent.BlockingCollection%601>, consulte [Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  

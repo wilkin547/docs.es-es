@@ -13,11 +13,11 @@ ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251565"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45618917"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Cómo: Desvincular bloques de flujos de datos
 En este documento se describe cómo desvincular un bloque de flujo de datos de destino de su origen.

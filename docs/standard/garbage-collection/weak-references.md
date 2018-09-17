@@ -11,11 +11,11 @@ ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264966"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609689"
 ---
 # <a name="weak-references"></a>Referencias parciales
 El recolector de elementos no utilizados no puede recopilar un objeto que está siendo usado por una aplicación mientras el código de aplicación pueda llegar a ese objeto. En este caso, se dice que la aplicación tiene una referencia segura al objeto.  

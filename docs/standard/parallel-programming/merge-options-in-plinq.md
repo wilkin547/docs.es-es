@@ -11,11 +11,11 @@ ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44221901"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45648075"
 ---
 # <a name="merge-options-in-plinq"></a>Opciones de fusión mediante combinación en PLINQ
 Cuando una consulta se ejecuta en paralelo, PLINQ crea particiones de la secuencia de origen para que varios subprocesos puedan funcionar en diferentes partes al mismo tiempo, por lo general en subprocesos independientes. Si los resultados se van a usar en un subproceso, por ejemplo, en un bucle `foreach` (`For Each` en Visual Basic), los resultados de cada subproceso deben volver a combinarse en una secuencia. El tipo de combinación que PLINQ realiza depende de los operadores que están presentes en la consulta. Por ejemplo, los operadores que imponen un nuevo orden de los resultados deben almacenar en búfer todos los elementos de todos los subprocesos. Desde la perspectiva del subproceso utilizado (que también es el del usuario de la aplicación), una consulta totalmente almacenada en búfer podría ejecutarse durante un período de tiempo considerable antes de generar su primer resultado. Otros operadores, de forma predeterminada, están parcialmente almacenados en búfer; producen sus resultados en lotes. Un operador, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, no se almacena en búfer de forma predeterminada. Genera inmediatamente todos los elementos de todos los subprocesos.  

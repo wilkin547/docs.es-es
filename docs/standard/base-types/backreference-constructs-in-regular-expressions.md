@@ -14,11 +14,11 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262378"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615331"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 Las referencias inversas proporcionan una forma cómoda de identificar un carácter o subcadena repetidos dentro de una cadena. Por ejemplo, si la cadena de entrada contiene varias apariciones de una subcadena arbitraria, puede buscar una coincidencia con la primera aparición con un grupo de captura y después usar una referencia inversa para buscar una coincidencia con las siguientes apariciones de la subcadena.  

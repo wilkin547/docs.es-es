@@ -6,11 +6,11 @@ ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266870"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676985"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Se expanden las referencias de entidad pero no se preservan
 Cuando se expande la referencia de entidad y se reemplaza por el texto que representa, no se crea el nodo **XmlEntityReference**. En su lugar, se analiza la declaración de entidad y los nodos creados a partir del contenido de la declaración se copian en lugar del nodo **XmlEntityReference**. Por tanto, en el ejemplo de `&publisher;`, `&publisher;` no se guarda, sino que se crea un nodo **XmlText**.  

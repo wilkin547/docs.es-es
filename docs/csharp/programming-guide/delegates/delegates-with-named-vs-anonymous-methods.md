@@ -6,11 +6,11 @@ helpviewer_keywords:
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
 ms.openlocfilehash: 6d7dcb3c7c6fa8f1d55237504c23cf468aa0e79d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274214"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678527"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegados con métodos con nombre y Métodos anónimos (Guía de programación de C#)
 Un [delegado](../../../csharp/language-reference/keywords/delegate.md) puede asociarse con un método con nombre. Cuando crea una instancia de un delegado mediante un método con nombre, el método se pasa como un parámetro, por ejemplo:  

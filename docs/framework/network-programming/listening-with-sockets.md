@@ -1,5 +1,5 @@
 ---
-title: Escuchas con sockets
+title: escuchas con sockets
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,13 +19,13 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 640caf57638acae9bbe39d3f1039bc08c036785f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275202"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624988"
 ---
-# <a name="listening-with-sockets"></a>Escuchas con sockets
+# <a name="listening-with-sockets"></a>escuchas con sockets
 Los sockets de escucha o de servidor abren un puerto en la red y esperan a que un cliente se conecte a ese puerto. Aunque existen otros protocolos y familias de direcciones de red, en este ejemplo se muestra cómo crear un servicio remoto para una red TCP/IP.  
   
  La dirección única de un servicio TCP/IP se define mediante la combinación de la dirección IP del host con el número de puerto del servicio para crear un punto de conexión para el servicio. La clase <xref:System.Net.Dns> proporciona métodos que devuelven información sobre las direcciones de red compatibles con el dispositivo de red local. Cuando el dispositivo de red local tiene más de una dirección de red, o si el sistema local admite más de un dispositivo de red, la clase **Dns** devuelve información sobre todas las direcciones de red y la aplicación debe elegir la dirección correcta para el servicio. Internet Assigned Numbers Authority (Iana) define números de puerto para los servicios comunes; para obtener más información, vea [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/port-numbers) (Registro del nombre de servicio y del número de puerto del protocolo de transporte). Hay otros servicios que pueden tener registrados números de puerto en el intervalo comprendido entre 1024 y 65 535.  

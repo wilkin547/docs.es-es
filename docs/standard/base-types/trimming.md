@@ -18,11 +18,11 @@ ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d13d4e115caa636e5d760b65bc98e195490f911
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184098"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45616239"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Recorte y eliminación de caracteres de cadenas en .NET
 Si va a analizar una frase en las palabras que la forman, el resultado pueden ser palabras con espacios en blanco delante y detrás. En este caso, puede usar uno de los métodos de recorte de la clase **System.String** para quitar espacios u otros caracteres de una posición especificada de la cadena. En la tabla siguiente se describen los métodos de recorte disponibles.  

@@ -3,11 +3,11 @@ title: Crear la clase Game1
 ms.date: 03/30/2017
 ms.assetid: 47932ce3-2ba5-476f-a26b-3ddfd5226f27
 ms.openlocfilehash: 368da9df4dffc7017abb02888bc2eb2641f04b8b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197843"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45652903"
 ---
 # <a name="creating-the-game1-class"></a>Crear la clase Game1
 Igual que con todos los proyectos de Microsoft XNA, la clase Game1 deriva de la clase [Microsoft.Xna.Framework.Game](https://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx), que proporciona funciones básicas de inicialización de dispositivos de gráficos, lógica de juego y código de representación para juegos de XNA. La clase Game1 es bastante simple porque la mayor parte del trabajo se realiza en las clases GamePiece y GamePieceCollection.  

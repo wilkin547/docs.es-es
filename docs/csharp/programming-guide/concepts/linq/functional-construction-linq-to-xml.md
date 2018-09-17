@@ -3,11 +3,11 @@ title: Construcción funcional (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
 ms.openlocfilehash: c2579da6e3cdfea6469742d29935b0137e320bbb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44191019"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45610105"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>Construcción funcional (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona una manera eficaz de crear elementos XML denominada *construcción funcional*. La construcción funcional es la capacidad de crear un árbol XML en una sola instrucción.  

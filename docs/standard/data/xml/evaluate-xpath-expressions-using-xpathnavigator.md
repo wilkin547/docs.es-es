@@ -9,11 +9,11 @@ ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a2712c1de4a5f4a06ba041fdc0c5df2487eebdd2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205418"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664506"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>Evaluación de expresiones XPath con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye el método <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> para evaluar una expresión XPath. El método <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> toma una expresión XPath, la evalúa y devuelve un tipo XPath del W3C de tipo booleano, numérico, de cadena o de conjunto de nodos basándose en el resultado de la expresión XPath.  

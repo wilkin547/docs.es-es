@@ -16,11 +16,11 @@ ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262677"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45668878"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Ejemplo de expresiones regulares: Cambiar formatos de fecha
 En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para reemplazar las fechas con el formato *mm*/*dd*/*aa* con fechas que tienen el formato *dd*-*mm*-*aa*.  

@@ -3,11 +3,11 @@ title: 'Cómo: Proyectar un gráfico de objetos (C#)'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
 ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261540"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609494"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Cómo: Proyectar un gráfico de objetos (C#)
 En este tema se ilustra cómo proyectar o rellenar un gráfico de objetos de XML.  

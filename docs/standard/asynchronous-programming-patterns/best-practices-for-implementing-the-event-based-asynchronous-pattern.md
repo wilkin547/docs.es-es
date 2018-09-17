@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267172"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45615474"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Procedimientos recomendados para implementar el modelo asincrónico basado en eventos
 El modelo asincrónico basado en eventos proporciona un método eficaz de exponer el comportamiento asincrónico en clases, con una semántica de delegados y eventos ya conocida. Para implementar el modelo asincrónico basado en eventos, es necesario cumplir algunos requisitos de comportamiento específicos. En las secciones siguientes se describen los requisitos y las instrucciones que se deben tener en cuenta a la hora de implementar una clase que responda a este modelo.  

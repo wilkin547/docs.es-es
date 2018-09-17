@@ -3,11 +3,11 @@ title: 'Cómo: Combinar consultas LINQ con expresiones regulares (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
 ms.openlocfilehash: c535620f2dee1ec9cd1b6ee994fbf860629601ba
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261069"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45641357"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Cómo: Combinar consultas LINQ con expresiones regulares (C#)
 En este ejemplo se muestra cómo usar la clase <xref:System.Text.RegularExpressions.Regex> para crear una expresión regular para coincidencias más complejas en cadenas de texto. Con la consulta LINQ, resulta fácil filtrar por los archivos exactos que se quieren buscar con la expresión regular y dar forma a los resultados.  

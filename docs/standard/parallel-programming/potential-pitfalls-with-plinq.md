@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4decd01938500fe6330c48caa33b845916aaff
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863012"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638839"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Posibles problemas con PLINQ
 En muchos casos, PLINQ puede proporcionar importantes mejoras de rendimiento con respecto a las consultas secuenciales LINQ to Objects. Sin embargo, el trabajo de paralelizar la ejecución de consultas aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir consultas PLINQ.  
@@ -83,36 +83,32 @@ a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
   
 ```vb  
 Dim mre = New ManualResetEventSlim()  
-    Enumerable.Range(0, ProcessorCount * 100).AsParallel().ForAll(Sub(j)   
-  
-                                                     If j = Environment.ProcessorCount Then  
-  
-                                                         Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
-                                                         mre.Set()  
-  
-                                                     Else  
-  
-                                                         Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
-                                                         mre.Wait()  
-                                                     End If  
-    End Sub) ' deadlocks  
+Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll(Sub(j)   
+   If j = Environment.ProcessorCount Then  
+       Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
+       mre.Set()  
+   Else  
+       Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
+       mre.Wait()  
+   End If  
+End Sub) ' deadlocks  
 ```  
   
 ```csharp  
 ManualResetEventSlim mre = new ManualResetEventSlim();  
-            Enumerable.Range(0, ProcessorCount * 100).AsParallel().ForAll((j) =>  
-            {  
-                if (j == Environment.ProcessorCount)  
-                {  
-                    Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
-                    mre.Set();  
-                }  
-                else  
-                {  
-                    Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
-                    mre.Wait();  
-                }  
-            }); //deadlocks  
+Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>  
+{  
+    if (j == Environment.ProcessorCount)  
+    {  
+        Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
+        mre.Set();  
+    }  
+    else  
+    {  
+        Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
+        mre.Wait();  
+    }  
+}); //deadlocks  
 ```  
   
  En este ejemplo, una iteración establece un evento y el resto de las iteraciones esperan el evento. Ninguna de las iteraciones que esperan puede completarse hasta que se haya completado la iteración del valor de evento. Sin embargo, es posible que las iteraciones que esperan bloqueen todos los subprocesos que se utilizan para ejecutar el bucle paralelo antes de que la iteración del valor de evento haya tenido oportunidad de ejecutarse. Esto produce un interbloqueo: la iteración del valor de evento nunca se ejecutará y las iteraciones que esperan nunca se activarán.  

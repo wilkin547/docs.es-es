@@ -8,11 +8,11 @@ ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192553"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45645975"
 ---
 # <a name="induced-collections"></a>Colecciones inducidas
 En la mayoría de los casos, el recolector de elementos no utilizados puede determinar cuál es el mejor momento para realizar una recolección y se debe permitir su ejecución de forma independiente. Hay ocasiones excepcionales en que una recolección forzada puede mejorar el rendimiento de la aplicación. En estos casos, se puede inducir la recolección de elementos no utilizados utilizando el método <xref:System.GC.Collect%2A?displayProperty=nameWithType> para forzar una recolección de elementos no utilizados.  

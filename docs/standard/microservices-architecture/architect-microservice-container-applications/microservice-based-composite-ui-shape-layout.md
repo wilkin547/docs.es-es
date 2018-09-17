@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
 ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275540"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45641279"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Crear una interfaz de usuario compuesta en función de los microservicios, incluidos la forma y el diseño visual de la interfaz de usuario generados por varios microservicios
 

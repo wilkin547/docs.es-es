@@ -9,11 +9,11 @@ ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e83cf82aee57b1f40f695700d8d0b38c12e0ac39
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217053"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45647150"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>Entrada de XmlDocument en XslTransform
 La clase <xref:System.Xml.XmlDocument> permite modificar un documento XML. Si el XML necesita editarse o modificarse antes de ser enviado al método <xref:System.Xml.Xsl.XslTransform.Transform%2A>, cargue el XML en <xref:System.Xml.XmlDocument>, edítelo y envíelo a <xref:System.Xml.Xsl.XslTransform>.  

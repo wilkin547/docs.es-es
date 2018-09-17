@@ -4,11 +4,11 @@ description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 06/01/2018
 ms.custom: mvc
 ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464031"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45618027"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introducción a la transformación de sintaxis
 

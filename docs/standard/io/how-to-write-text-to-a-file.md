@@ -14,18 +14,18 @@ ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270820"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677154"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Cómo: Escribir texto en un archivo
-En este tema se describen diferentes formas de escribir texto en un archivo para aplicaciones de .NET Framework o aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Las clases y los métodos siguientes normalmente se usan para escribir texto en un archivo:  
+En este tema se describen diferentes formas de escribir texto en un archivo para aplicaciones de .NET Framework o aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Las clases y los métodos siguientes normalmente se usan para escribir texto en un archivo:  
   
--   <xref:System.IO.StreamWriter>: contiene métodos para escribir en un archivo de forma sincrónica (<xref:System.IO.StreamWriter.Write%2A> o <xref:System.IO.TextWriter.WriteLine%2A>) o asincrónica (<xref:System.IO.StreamWriter.WriteAsync%2A> y <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
+-   <xref:System.IO.StreamWriter> : contiene métodos para escribir en un archivo de forma sincrónica (<xref:System.IO.StreamWriter.Write%2A> o <xref:System.IO.TextWriter.WriteLine%2A>) o asincrónica (<xref:System.IO.StreamWriter.WriteAsync%2A> y <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
   
--   <xref:System.IO.File>: para usar con aplicaciones de .NET Framework. Proporciona métodos estáticos para escribir texto en un archivo (por ejemplo, <xref:System.IO.File.WriteAllLines%2A> y <xref:System.IO.File.WriteAllText%2A>) o para anexar texto a un archivo (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> o <xref:System.IO.File.AppendText%2A>).  
+-   <xref:System.IO.File> : para usar con aplicaciones de .NET Framework. Proporciona métodos estáticos para escribir texto en un archivo (por ejemplo, <xref:System.IO.File.WriteAllLines%2A> y <xref:System.IO.File.WriteAllText%2A>) o para anexar texto a un archivo (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> o <xref:System.IO.File.AppendText%2A>).  
   
 -   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) : para usar con aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Contiene métodos asincrónicos para escribir texto en un archivo ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) o [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) o anexar texto a un archivo ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) o [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
 
@@ -35,31 +35,31 @@ En este tema se describen diferentes formas de escribir texto en un archivo para
  Presentamos ejemplos sencillos para permitirle centrarse en la tarea que esté realizando. Por este motivo, en los ejemplos se realizan una comprobación de errores y un control de excepciones mínimos, si hubiera. Generalmente, una aplicación real ofrece una comprobación de errores y un control de excepciones más exhaustivos.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo escribir texto en un archivo nuevo de forma sincrónica mediante la clase <xref:System.IO.StreamWriter>, una línea a la vez. El nuevo archivo de texto se guarda en la carpeta Mis documentos del usuario. Dado que en la instrucción `using` se declara el objeto <xref:System.IO.StreamWriter> y se crea una instancia de este, se invoca el método <xref:System.IO.StreamWriter.Dispose%2A> que automáticamente vacía y cierra el flujo.  
+ En el ejemplo siguiente se muestra cómo escribir texto en un archivo nuevo de forma sincrónica mediante la clase <xref:System.IO.StreamWriter> , una línea a la vez. El nuevo archivo de texto se guarda en la carpeta Mis documentos del usuario. Dado que en la instrucción <xref:System.IO.StreamWriter> se declara el objeto `using` y se crea una instancia de este, se invoca el método <xref:System.IO.StreamWriter.Dispose%2A> que automáticamente vacía y cierra el flujo.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeline)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeline)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo anexar texto a un archivo existente mediante la clase <xref:System.IO.StreamWriter>. Se usa el mismo archivo de texto del ejemplo anterior.  
+ En el ejemplo siguiente se muestra cómo anexar texto a un archivo existente mediante la clase <xref:System.IO.StreamWriter> . Se usa el mismo archivo de texto del ejemplo anterior.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#appendtext)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#AppendText](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#appendtext)]     
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo escribir texto en un archivo nuevo de forma asincrónica mediante la clase <xref:System.IO.StreamWriter>. Para invocar el método <xref:System.IO.StreamWriter.WriteAsync%2A>, la llamada al método debe estar dentro de un método `async`. El nuevo archivo de texto se guarda en la carpeta Mis documentos del usuario.  
+ En el ejemplo siguiente se muestra cómo escribir texto en un archivo nuevo de forma asincrónica mediante la clase <xref:System.IO.StreamWriter> . Para invocar el método <xref:System.IO.StreamWriter.WriteAsync%2A> , la llamada al método debe estar dentro de un método `async` . El nuevo archivo de texto se guarda en la carpeta Mis documentos del usuario.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writeasync)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteAsync](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writeasync)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo escribir texto en un archivo nuevo y anexar nuevas líneas de texto en el mismo archivo con la clase <xref:System.IO.File>. Los métodos <xref:System.IO.File.WriteAllText%2A> y <xref:System.IO.File.AppendAllLines%2A> abren y cierran el archivo automáticamente. Si ya existe la ruta de acceso al método <xref:System.IO.File.WriteAllText%2A> proporcionada, se sobrescribe el archivo.  
+ En el ejemplo siguiente se muestra cómo escribir texto en un archivo nuevo y anexar nuevas líneas de texto en el mismo archivo con la clase <xref:System.IO.File> . Los métodos <xref:System.IO.File.WriteAllText%2A> y <xref:System.IO.File.AppendAllLines%2A> abren y cierran el archivo automáticamente. Si ya existe la ruta de acceso al método <xref:System.IO.File.WriteAllText%2A> proporcionada, se sobrescribe el archivo.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source.cs#writefile)] 
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestra cómo escribir asincrónicamente en un archivo de texto los datos proporcionados por el usuario en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Por cuestiones de seguridad, la apertura de un archivo desde una aplicación de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] normalmente requiere el uso de un control [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx). En este ejemplo, `FileOpenPicker` se filtra para mostrar archivos de texto.  
+ En el siguiente ejemplo se muestra cómo escribir asincrónicamente en un archivo de texto los datos proporcionados por el usuario en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Por cuestiones de seguridad, la apertura de un archivo desde una aplicación de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] normalmente requiere el uso de un control [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx). En este ejemplo, `FileOpenPicker` se filtra para mostrar archivos de texto.  
   
 ```xaml  
 <Page  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
 ms.openlocfilehash: 036acd6159bcf5ca1677ee6383c9db357625cd67
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276816"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677388"
 ---
 # <a name="ltlt-operator-c-reference"></a>Operador &lt;&lt; (Referencia de C#)
 El operador de desplazamiento a la izquierda (`<<`) desplaza su primer operando a la izquierda el número de bits especificado por su segundo operando. El tipo del segundo operando debe ser [int](../../../csharp/language-reference/keywords/int.md) o un tipo que tiene una conversión numérica implícita predefinida en `int`.  

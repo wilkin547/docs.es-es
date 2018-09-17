@@ -8,11 +8,11 @@ ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210226"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45641513"
 ---
 # <a name="common-io-tasks"></a>Tareas de E/S comunes
 El espacio de nombres <xref:System.IO> proporciona varias clases que permiten realizar diferentes acciones, como leer y escribir, en archivos, directorios y secuencias. Para más información, vea [E/S de archivos y secuencias](../../../docs/standard/io/index.md).  

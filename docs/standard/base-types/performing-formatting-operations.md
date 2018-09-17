@@ -13,11 +13,11 @@ ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262425"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677732"
 ---
 # <a name="performing-formatting-operations"></a>Efectuar operaciones de formato
 En los temas siguientes se proporcionan instrucciones detalladas para realizar operaciones de formato concretas.  

@@ -4,11 +4,11 @@ description: Obtenga información sobre cómo realizar combinaciones internas co
 ms.date: 12/1/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45597113"
 ---
 # <a name="perform-inner-joins"></a>Realizar combinaciones internas
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
 ms.openlocfilehash: 615b100447233856ab3740d075d69e3ae19285fd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210434"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45648787"
 ---
 # <a name="---operator-c-reference"></a>Operador -- (Referencia de C#)
 El operador de decremento (`--`) disminuye su operando en 1. El operador de decremento puede aparecer antes o después de su operando: `--variable` y `variable--`. La primera forma es una operación de decremento de prefijo. El resultado de la operación es el valor del operando "después" del decremento. La segunda forma es una operación de decremento de postfijo. El resultado de la operación es el valor del operando "antes" del decremento.  

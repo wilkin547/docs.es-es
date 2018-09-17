@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213811"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615266"
 ---
 # <a name="expressions-c-programming-guide"></a>Expresiones (Guía de programación de C#)
 Una *expresión* es una secuencia de uno o más operandos y cero o más operadores que se pueden evaluar como un valor, objeto, método o espacio de nombres único. Las expresiones pueden constar de un valor literal, una invocación de método, un operador y sus operandos o un *nombre simple*. Los nombres simples pueden ser el nombre de una variable, el miembro de un tipo, el parámetro de un método, un espacio de nombres o un tipo.  

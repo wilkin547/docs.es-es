@@ -3,11 +3,11 @@ title: 'Cómo: Calcular valores de columna en un archivo de texto CSV (LINQ) (C#
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
 ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261267"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668774"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Cómo: Calcular valores de columna en un archivo de texto CSV (LINQ) (C#)
 En este ejemplo se muestra cómo efectuar cálculos agregados (como sumas, promedios, mínimos y máximos) en las columnas de un archivo .csv. Los principios de ejemplo que se muestran aquí se pueden aplicar a otros tipos de textos estructurados.  

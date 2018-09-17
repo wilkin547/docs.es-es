@@ -6,11 +6,11 @@ ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b299f09f3dc47b5d136284d4d1d285f2e5aad5f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268015"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45641331"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Resultados de XslTransform
 Como las hojas de estilos pueden determinar el formato del resultado utilizando una instrucción `<xsl:output>` con el atributo `method`, en la tabla siguiente se describe cuál es el formato del resultado cuando se utiliza el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> para escribir el resultado, y el formato del resultado se declara como <xref:System.IO.Stream> o <xref:System.IO.TextWriter>.  

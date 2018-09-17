@@ -9,11 +9,11 @@ ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264602"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45614717"
 ---
 # <a name="when-to-use-generic-collections"></a>Cuándo utilizar colecciones genéricas
 Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ventaja inmediata de la seguridad de tipos sin necesidad de derivar de un tipo de colección base ni de implementar miembros específicos de tipo. Los tipos de colección genéricos también suelen funcionan mejor que los correspondientes tipos de colección no genéricos (y mejor que los tipos que se derivan de los tipos de colección base no genéricos) cuando los elementos de la colección son tipos de valor; esto se debe a que con los genéricos no es necesario realizar una conversión boxing de los elementos.  

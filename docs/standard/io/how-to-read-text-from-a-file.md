@@ -15,11 +15,11 @@ ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f979f3d09079f36d12408d0a82ef58e603da859
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252322"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45645897"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Cómo: Leer texto de un archivo
 En los ejemplos siguientes se muestra cómo leer texto desde un archivo de texto de forma sincrónica y asincrónica mediante .NET para aplicaciones de escritorio. En ambos ejemplos, cuando se crea la instancia de la clase <xref:System.IO.StreamReader>, se proporciona la ruta de acceso relativa o absoluta del archivo. En los ejemplos siguientes se supone que el archivo denominado TestFile.txt está en la misma carpeta que la aplicación.  

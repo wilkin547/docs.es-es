@@ -11,11 +11,11 @@ ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273650"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45647741"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Cómo: Combinar consultas LINQ paralelas y secuenciales
 Este ejemplo muestra cómo utilizar el método <xref:System.Linq.ParallelEnumerable.AsSequential%2A> para indicar a PLINQ que procese secuencialmente todos los operadores subsiguientes en la consulta. Aunque el procesamiento secuencial es normalmente más lento que el paralelo, a veces es necesario para generar resultados correctos.  

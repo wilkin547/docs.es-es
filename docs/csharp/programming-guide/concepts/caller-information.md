@@ -3,11 +3,11 @@ title: Información del llamador (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
 ms.openlocfilehash: 048e91ad337f74ef04a2a03412a44a0be0ef9506
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212456"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676394"
 ---
 # <a name="caller-information-c"></a>Información del llamador (C#)
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea en el código fuente y el nombre de miembro del llamador. Esta información resulta útil para el seguimiento y la depuración, así como para crear herramientas de diagnóstico.  

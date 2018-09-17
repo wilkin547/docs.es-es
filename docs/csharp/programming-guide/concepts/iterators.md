@@ -3,11 +3,11 @@ title: Procesar una iteración mediante colecciones en C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
 ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189902"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45666751"
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 

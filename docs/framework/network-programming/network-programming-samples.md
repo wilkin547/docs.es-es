@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 9a8230d382cfcf3709a2e4df42758470f3caea4e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276661"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45653036"
 ---
 # <a name="network-programming-samples"></a>Ejemplos de programación de red
 En esta sección se incluyen descripciones y vínculos a ejemplos de programación de redes que se pueden descargar y que usan clases en los espacios de nombres <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> y relacionados. 

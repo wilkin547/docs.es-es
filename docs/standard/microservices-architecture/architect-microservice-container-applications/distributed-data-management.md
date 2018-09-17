@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646225"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -19,7 +19,7 @@ Definir los límites del microservicio es probablemente el primer desafío con e
 
 En primer lugar, hay que centrarse en los modelos de dominio de la lógica de la aplicación y en los datos relacionados. Hay que procurar identificar islas desacopladas de datos y contextos diferentes dentro de la misma aplicación. Cada contexto podría tener un lenguaje empresarial diferente (términos empresariales diferentes). Los contextos deben definirse y administrarse de forma independiente. Los términos y las entidades utilizadas en estos contextos pueden parecer similares, pero es posible que un concepto empresarial se use para un propósito diferente según el contexto, e incluso podría tener otro nombre. Por ejemplo, un usuario puede denominarse usuario en el contexto de identidad o pertenencia, cliente en un contexto CRM, comprador en un contexto de pedidos y así sucesivamente.
 
-La manera en que identifica los límites entre varios contextos de aplicación con un dominio diferente para cada contexto es exactamente cómo puede identificar los límites de cada microservicio de negocio con sus respectivos datos y modelo de dominio. Siempre se intenta minimizar el acoplamiento entre esos microservicios. Más adelante en esta guía se explica con más detalle este modelo de diseño de identificación y modelo de dominio en la sección [Identificación de los límites del modelo de dominio para cada microservicio](#identifying-domain-model-boundaries-for-each-microservice).
+La manera en que identifica los límites entre varios contextos de aplicación con un dominio diferente para cada contexto es exactamente cómo puede identificar los límites de cada microservicio de negocio con sus respectivos datos y modelo de dominio. Siempre se intenta minimizar el acoplamiento entre esos microservicios. Más adelante en esta guía se explica con más detalle este modelo de diseño de identificación y modelo de dominio en la sección [Identificación de los límites del modelo de dominio para cada microservicio](identify-microservice-domain-model-boundaries.md).
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Desafío n.º 2: Cómo crear consultas que recuperen datos de varios microservicios
 
@@ -57,7 +57,7 @@ Como indica el [teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem), debe el
 
 Además, las transacciones de confirmación en dos fases de estilo ACID no solo van en contra de los principios de microservicios; la mayoría de las bases de datos NoSQL (Azure Cosmos DB, MongoDB, etc.) no son compatibles con las transacciones de confirmación en dos fases. Pero es esencial mantener la coherencia de los datos entre los servicios y las bases de datos. Este desafío también está relacionado con la cuestión de cómo se propagan los cambios a los distintos microservicios cuando hay datos concretos que deben ser redundantes: por ejemplo, cuando necesite que el nombre o la descripción del producto estén en el microservicio de catálogo y en el microservicio de cesta.
 
-Una buena solución para este problema consiste en usar coherencia eventual entre microservicios articulada mediante comunicación orientada a eventos y un sistema de publicación y suscripción. Estos temas se tratan más adelante en la sección [Comunicación asincrónica orientada a eventos](#async_event_driven_communication) de esta guía.
+Una buena solución para este problema consiste en usar coherencia eventual entre microservicios articulada mediante comunicación orientada a eventos y un sistema de publicación y suscripción. Estos temas se tratan más adelante en la sección [Comunicación asincrónica orientada a eventos](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) de esta guía.
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Desafío n.º 4: Cómo diseñar la comunicación entre los límites de los microservicios
 

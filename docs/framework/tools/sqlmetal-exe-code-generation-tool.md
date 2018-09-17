@@ -10,11 +10,11 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267265"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597257"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Herramienta de generación de código)
 La herramienta de la línea de comandos SqlMetal genera el código y las asignaciones del componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Si aplica las opciones que se incluyen posteriormente en este tema, puede indicarle a SqlMetal que realice algunas acciones diferentes, entre las que se incluyen las siguientes:  

@@ -3,11 +3,11 @@ title: 'Cómo: Hacer streaming de fragmentos XML con acceso a la información de
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
 ms.openlocfilehash: 9c141b21a009f836fbf385c1f4179e288ec6c3b5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217079"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597400"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)
 A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  

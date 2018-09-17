@@ -20,11 +20,11 @@ ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cf253ff4a25ba902c16c6d00a8be4bf291166774
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268739"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45652955"
 ---
 # <a name="asynchronous-file-io"></a>E/S de archivos asincrónica
 Las operaciones asincrónicas permiten realizar operaciones de E/S que hacen un uso intensivo de recursos sin bloquear el subproceso principal. Esta consideración de rendimiento es especialmente importante en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] o una aplicación de [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] en que una operación de streaming prolongada puede bloquear el subproceso de interfaz de usuario y hacer que parezca que una aplicación ha dejado de responder.  

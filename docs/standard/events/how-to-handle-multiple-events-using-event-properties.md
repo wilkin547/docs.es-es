@@ -15,11 +15,11 @@ ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269415"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668371"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Cómo: Controlar varios eventos mediante propiedades de eventos
 Para poder utilizar propiedades de evento, hay que definirlas en la clase que provoca los eventos y, a continuación, establecer los delegados de las propiedades de evento en las clases que controlan los eventos. Para implementar varias propiedades de evento en una clase, esta clase deberá almacenar internamente y mantener el delegado definido para cada evento. Para hacerlo, uno de los enfoques típicos consiste en implementar una colección de delegados que se indice por medio de una clave de evento.  

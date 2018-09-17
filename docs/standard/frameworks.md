@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 346eece8fdb391fd62b369db6ef65964fcd6e67a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934861"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45616752"
 ---
 # <a name="target-frameworks"></a>Versiones de .NET Framework de destino
 
@@ -131,10 +131,10 @@ Las siguientes plataformas de destino están en desuso. Los paquetes destinados 
 
 ## <a name="see-also"></a>Vea también
 
-[Paquetes, metapaquetes y marcos de trabajo](../core/packages.md)  
-[Desarrollo de bibliotecas con herramientas multiplataforma](../core/tutorials/libraries.md)  
-[.NET Standard](net-standard.md)  
-[Control de versiones de .NET Core](../core/versions/index.md)  
-[Repositorio de GitHub dotnet/standard](https://github.com/dotnet/standard)  
-[Repositorio de GitHub de herramientas de NuGet](https://github.com/joelverhagen/NuGetTools)  
-[Framework Profiles in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Perfiles de marco de trabajo en .NET)
+- [Paquetes, metapaquetes y marcos de trabajo](../core/packages.md)  
+- [Desarrollo de bibliotecas con herramientas multiplataforma](../core/tutorials/libraries.md)  
+- [.NET Standard](net-standard.md)  
+- [Control de versiones de .NET Core](../core/versions/index.md)  
+- [Repositorio de GitHub dotnet/standard](https://github.com/dotnet/standard)  
+- [Repositorio de GitHub de herramientas de NuGet](https://github.com/joelverhagen/NuGetTools)  
+- [Framework Profiles in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Perfiles de marco de trabajo en .NET)

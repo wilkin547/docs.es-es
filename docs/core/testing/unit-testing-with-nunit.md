@@ -4,11 +4,11 @@ description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree
 author: rprouse
 ms.date: 08/31/2018
 ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276791"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45617005"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Prueba unitaria de C# con NUnit y .NET Core
 

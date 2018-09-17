@@ -10,11 +10,11 @@ ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44209568"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45617362"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Inserción de datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para insertar nodos de atributos, secundarios y relacionados en un documento XML. Para utilizar estos métodos, el objeto <xref:System.Xml.XPath.XPathNavigator> debe ser editable, es decir, su propiedad <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> debe ser `true`.  

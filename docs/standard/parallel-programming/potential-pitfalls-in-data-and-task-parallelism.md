@@ -11,11 +11,11 @@ ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214126"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692929"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemas potenciales en el paralelismo de datos y tareas
 En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pueden proporcionar importantes mejoras de rendimiento con respecto a los bucles secuenciales normales. Sin embargo, el trabajo de paralelizar el bucle aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir bucles paralelos.  

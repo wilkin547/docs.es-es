@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591645"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615029"
 ---
 # <a name="order-preservation-in-plinq"></a>Conservar el orden en PLINQ
 En PLINQ, el objetivo es maximizar el rendimiento manteniendo la exactitud. Una consulta se debería ejecutar lo más rápido que fuese posible pero con resultados correctos. La exactitud exige que se conserve el orden de la secuencia de origen en algunos casos; sin embargo, la ordenación puede suponer la utilización de muchos recursos de computación. Por consiguiente, de forma predeterminada, PLINQ no conserva el orden de la secuencia de origen. En este sentido, PLINQ se parece a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], pero es diferente de LINQ to Objects, que conserva el orden.  
@@ -122,6 +122,7 @@ En PLINQ, el objetivo es maximizar el rendimiento manteniendo la exactitud. Una 
   
  Los resultados desordenados no se ordenan aleatoriamente de forma activa; simplemente no se les aplica ninguna lógica de ordenación especial. En algunos casos, una consulta desordenada puede conservar el orden de la secuencia de origen. En las consultas que usan el operador Select indizado, PLINQ garantiza que los elementos de salida aparecerán en el orden de los índices ascendentes, pero no ofrece ninguna garantía sobre qué índices se asignarán a qué elementos.  
   
-## <a name="see-also"></a>Vea también  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)

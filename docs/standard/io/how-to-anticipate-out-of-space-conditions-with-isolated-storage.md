@@ -25,11 +25,11 @@ ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207725"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649391"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Cómo: Prever condiciones de espacio insuficiente con almacenamiento aislado
 El código que usa el almacenamiento aislado está restringido por una [cuota](../../../docs/standard/io/isolated-storage.md#quotas) que especifica el tamaño máximo para el compartimiento de datos en que se encuentran los directorios y los archivos del almacenamiento aislado. La cuota se define mediante la directiva de seguridad y la pueden configurar los administradores. Si se supera el tamaño máximo permitido al intentar escribir datos, se genera la excepción <xref:System.IO.IsolatedStorage.IsolatedStorageException> y se produce un error en la operación. Esto ayuda a evitar los ataques de denegación de servicio malintencionados que pudieron provocar que la aplicación rechazara solicitudes porque se llenara el almacén de datos.  

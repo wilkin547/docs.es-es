@@ -3,11 +3,11 @@ title: Mantener pares nombre/valor (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
 ms.openlocfilehash: 28c01ce17881ffe7e8fcc35e2c23dec85d50955d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44216560"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45658683"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Mantener pares nombre/valor (C#)
 Son muchas las aplicaciones que necesitan mantener información que se almacena mejor en forma de pares de nombre/valor. Esta información podría contener datos sobre configuración o valores globales. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] incluye métodos que facilitan la operación de mantener un conjunto de pares nombre/valor. Puede almacenar la información como atributos o como un conjunto de elementos secundarios.  
