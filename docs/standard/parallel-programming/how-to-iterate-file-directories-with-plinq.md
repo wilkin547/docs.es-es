@@ -8,11 +8,11 @@ ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43871629"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45689332"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Cómo: Recorrer en iteración directorios con PLINQ
 En este ejemplo se muestran dos maneras sencillas de paralelizar operaciones en directorios de archivos. La primera consulta utiliza el método <xref:System.IO.Directory.GetFiles%2A> para rellenar una matriz de nombres de archivo en un directorio y en todos los subdirectorios. Este método no realiza ninguna devolución hasta que se rellena la matriz completa y, por lo tanto, puede presentar latencia al principio de la operación. Sin embargo, una vez que se rellena la matriz, PLINQ puede procesarla en paralelo muy rápidamente.  
