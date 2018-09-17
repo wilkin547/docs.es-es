@@ -8,37 +8,37 @@ helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
 ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266688"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591009"
 ---
-# <a name="do-c-reference"></a><span data-ttu-id="58618-102">do (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="58618-102">do (C# Reference)</span></span>
+# <a name="do-c-reference"></a><span data-ttu-id="13074-102">do (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="13074-102">do (C# Reference)</span></span>
 
-<span data-ttu-id="58618-103">La instrucción `do` ejecuta una instrucción o un bloque de instrucciones mientras una expresión booleana especificada se evalúa como `true`.</span><span class="sxs-lookup"><span data-stu-id="58618-103">The `do` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="58618-104">Como esa expresión se evalúa después de cada ejecución del bucle, un bucle `do-while` se ejecuta una o varias veces.</span><span class="sxs-lookup"><span data-stu-id="58618-104">Because that expression is evaluated after each execution of the loop, a `do-while` loop executes one or more times.</span></span> <span data-ttu-id="58618-105">Esto es diferente del bucle [while](while.md), que se ejecuta cero o varias veces.</span><span class="sxs-lookup"><span data-stu-id="58618-105">This differs from the [while](while.md) loop, which executes zero or more times.</span></span>
+<span data-ttu-id="13074-103">La instrucción `do` ejecuta una instrucción o un bloque de instrucciones mientras una expresión booleana especificada se evalúa como `true`.</span><span class="sxs-lookup"><span data-stu-id="13074-103">The `do` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="13074-104">Como esa expresión se evalúa después de cada ejecución del bucle, un bucle `do-while` se ejecuta una o varias veces.</span><span class="sxs-lookup"><span data-stu-id="13074-104">Because that expression is evaluated after each execution of the loop, a `do-while` loop executes one or more times.</span></span> <span data-ttu-id="13074-105">Esto es diferente del bucle [while](while.md), que se ejecuta cero o varias veces.</span><span class="sxs-lookup"><span data-stu-id="13074-105">This differs from the [while](while.md) loop, which executes zero or more times.</span></span>
 
-<span data-ttu-id="58618-106">En cualquier punto del bloque de instrucciones `do`, se puede salir del bucle mediante la instrucción [break](break.md).</span><span class="sxs-lookup"><span data-stu-id="58618-106">At any point within the `do` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
+<span data-ttu-id="13074-106">En cualquier punto del bloque de instrucciones `do`, se puede salir del bucle mediante la instrucción [break](break.md).</span><span class="sxs-lookup"><span data-stu-id="13074-106">At any point within the `do` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
 
-<span data-ttu-id="58618-107">Puede ir directamente a la evaluación de la expresión `while` mediante la instrucción [continue](continue.md).</span><span class="sxs-lookup"><span data-stu-id="58618-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="58618-108">Si la expresión se evalúa como `true`, la ejecución continúa en la primera instrucción del bucle.</span><span class="sxs-lookup"><span data-stu-id="58618-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="58618-109">En caso contrario, la ejecución continúa en la primera instrucción después del bucle.</span><span class="sxs-lookup"><span data-stu-id="58618-109">Otherwise, execution continues at the first statement after the loop.</span></span>
+<span data-ttu-id="13074-107">Puede ir directamente a la evaluación de la expresión `while` mediante la instrucción [continue](continue.md).</span><span class="sxs-lookup"><span data-stu-id="13074-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="13074-108">Si la expresión se evalúa como `true`, la ejecución continúa en la primera instrucción del bucle.</span><span class="sxs-lookup"><span data-stu-id="13074-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="13074-109">En caso contrario, la ejecución continúa en la primera instrucción después del bucle.</span><span class="sxs-lookup"><span data-stu-id="13074-109">Otherwise, execution continues at the first statement after the loop.</span></span>
 
-<span data-ttu-id="58618-110">También se puede salir de un bucle `do-while` mediante las instrucciones [goto](goto.md), [return](return.md) o [throw](throw.md).</span><span class="sxs-lookup"><span data-stu-id="58618-110">You also can exit a `do-while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+<span data-ttu-id="13074-110">También se puede salir de un bucle `do-while` mediante las instrucciones [goto](goto.md), [return](return.md) o [throw](throw.md).</span><span class="sxs-lookup"><span data-stu-id="13074-110">You also can exit a `do-while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
 
-## <a name="example"></a><span data-ttu-id="58618-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="58618-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="13074-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="13074-111">Example</span></span>
 
-<span data-ttu-id="58618-112">En el ejemplo siguiente se muestra el uso de la instrucción `do`.</span><span class="sxs-lookup"><span data-stu-id="58618-112">The following example shows the usage of the `do` statement.</span></span> <span data-ttu-id="58618-113">Haga clic en **Ejecutar** para ejecutar el código de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="58618-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="58618-114">Después, puede modificar el código y volver a ejecutarlo.</span><span class="sxs-lookup"><span data-stu-id="58618-114">After that you can modify the code and run it again.</span></span>
+<span data-ttu-id="13074-112">En el ejemplo siguiente se muestra el uso de la instrucción `do`.</span><span class="sxs-lookup"><span data-stu-id="13074-112">The following example shows the usage of the `do` statement.</span></span> <span data-ttu-id="13074-113">Haga clic en **Ejecutar** para ejecutar el código de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="13074-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="13074-114">Después, puede modificar el código y volver a ejecutarlo.</span><span class="sxs-lookup"><span data-stu-id="13074-114">After that you can modify the code and run it again.</span></span>
 
 [!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="58618-115">especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="58618-115">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="13074-115">especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="13074-115">C# language specification</span></span>
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="58618-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="58618-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13074-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="13074-116">See also</span></span>
 
-- [<span data-ttu-id="58618-117">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="58618-117">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="58618-118">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="58618-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="58618-119">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="58618-119">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="58618-120">do-while (Instrucción) (C++)</span><span class="sxs-lookup"><span data-stu-id="58618-120">do-while Statement (C++)</span></span>](/cpp/cpp/do-while-statement-cpp)  
-- [<span data-ttu-id="58618-121">Instrucciones de iteración</span><span class="sxs-lookup"><span data-stu-id="58618-121">Iteration Statements</span></span>](iteration-statements.md)  
-- [<span data-ttu-id="58618-122">while (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="58618-122">while statement</span></span>](while.md)  
+- [<span data-ttu-id="13074-117">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="13074-117">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="13074-118">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="13074-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="13074-119">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="13074-119">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="13074-120">do-while (Instrucción) (C++)</span><span class="sxs-lookup"><span data-stu-id="13074-120">do-while Statement (C++)</span></span>](/cpp/cpp/do-while-statement-cpp)  
+- [<span data-ttu-id="13074-121">Instrucciones de iteración</span><span class="sxs-lookup"><span data-stu-id="13074-121">Iteration Statements</span></span>](iteration-statements.md)  
+- [<span data-ttu-id="13074-122">while (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="13074-122">while statement</span></span>](while.md)  
