@@ -15,11 +15,11 @@ ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649400"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698320"
 ---
 # <a name="application-domains"></a>Dominios de aplicación
 Normalmente, los sistemas operativos y los entornos de Common Language Runtime proporcionan algún tipo de aislamiento entre las aplicaciones. Por ejemplo, Windows utiliza procesos para aislar las aplicaciones. Este aislamiento es necesario para garantizar que el código que se ejecuta en una aplicación no afecta negativamente a otras aplicaciones no relacionadas.  
