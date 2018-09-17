@@ -3,72 +3,68 @@ title: Con Visual Studio Tools para Docker (Visual Studio en Windows)
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/12/2018
+ms.custom: vs-dotnet
+ms.openlocfilehash: af14c92ab27885deec878dc33e7b94035f43e65b
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104897"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743835"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools para Docker (Visual Studio en Windows)
 
-El flujo de trabajo de desarrollador cuando se usa Visual Studio Tools para Docker es similar al flujo de trabajo cuando se usa código de Visual Studio y la CLI de Docker (de hecho, se basa en la misma CLI de Docker), pero es más fácil empezar a trabajar, simplifica el proceso y proporciona una mayor productividad de la compilación, ejecución y crear tareas. También es capaz de ejecutar y depurar los contenedores a través de acciones simples como F5 y CTRL+F5 desde Visual Studio. Aún más, con Visual 2017 Studio, además de poder ejecutar y depurar un único contenedor, también puede ejecutar y depurar un grupo de contenedores (una solución completa) a la vez que se hayan definido en el mismo archivo de compose.yml de docker en el nivel de solución.
+El flujo de trabajo de desarrollo al usar Visual Studio Tools para Docker es similar al flujo de trabajo cuando se usa Visual Studio Code y CLI de Docker. De hecho, se basa en la misma CLI de Docker, pero es más fácil empezar a trabajar, simplifica el proceso y proporciona mayor productividad para la compilación, ejecución y crear tareas. También es capaz de ejecutar y depurar los contenedores a través de acciones simples, como F5 y CTRL+F5 desde Visual Studio. Con la compatibilidad con la orquestación de contenedor opcional, además de poder ejecutar y depurar un único contenedor, puede ejecutar y depurar un grupo de contenedores (una solución completa) al mismo tiempo. Simplemente definen los contenedores en el mismo *docker-compose.yml* archivo en el nivel de solución.
 
-## <a name="configuring-your-local-environment"></a>Cómo configurar el entorno local
+## <a name="configuring-your-local-environment"></a>Para configurar un entorno local
 
-Con las versiones más recientes de Docker para Windows, es más fácil que nunca para desarrollar aplicaciones de Docker porque el programa de instalación es sencilla, como se explica en las siguientes referencias.
+Compatibilidad con docker se incluye en Visual Studio 2017 con cualquiera de las cargas de trabajo de .NET y .NET Core instalados. Instale Docker para Windows por separado.
 
-**Obtener más información:** para más información sobre la instalación de Docker para Windows, vaya a <https://docs.docker.com/docker-for-windows/>.
+Con las últimas versiones de Docker para Windows, es más fácil que nunca para desarrollar aplicaciones de Docker porque el programa de instalación es sencilla, como se explica en las siguientes referencias.
 
-Si usa Visual Studio 2015, debe tener la actualización 3 o una versión posterior y Visual Studio Tools para Docker.
+**Más información:** para más información acerca de cómo instalar Docker para Windows, vaya a <https://docs.docker.com/docker-for-windows/>.
 
-**Obtener más información:** para obtener instrucciones acerca de cómo instalar Visual Studio, vaya a [ https://visualstudio.microsoft.com/\ productos/vs-2015--ediciones de productos](https://visualstudio.microsoft.com/products/vs-2015-product-editions).
+**Más información:** para obtener instrucciones sobre cómo instalar Visual Studio, vaya a [ https://visualstudio.microsoft.com/downloads/ ](https://visualstudio.microsoft.com/downloads/).
 
 Para obtener más información acerca de la instalación de Visual Studio Tools para Docker, vaya a <http://aka.ms/vstoolsfordocker> y <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
-Si usa Visual Studio de 2017, ya se incluye compatibilidad con Docker.
+## <a name="using-docker-tools-in-visual-studio-2017"></a>Uso de herramientas de Docker en Visual Studio 2017
 
-## <a name="using-docker-tools-in-visual-studio-2015"></a>Con las herramientas de Docker en Visual Studio de 2015
+Al agregar compatibilidad con Docker a un proyecto (consulte la figura 4-26), Visual Studio agrega un *Dockerfile* a la raíz del proyecto.
 
-Visual Studio Tools para Docker proporciona una manera coherente para desarrollar y validar localmente los contenedores de Docker para Linux en un host Linux Docker o VM o los contenedores de Windows directamente en Windows.
+![Activar la compatibilidad con la solución de Docker en un proyecto de Visual Studio 2017](./media/image32.png)
 
-Si usa un único contenedor, lo primero que necesita para empezar es desactivar la compatibilidad con Docker en el proyecto de .NET Core. Para ello, haga clic en el archivo de proyecto, como se muestra en la figura 4-25.
+Figura 4-26: activar la compatibilidad con la solución de Docker en un proyecto de Visual Studio 2017
 
-![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
+ Compatibilidad con orquestación de contenedores, a través de Docker Compose, se agrega de forma predeterminada en las versiones de Visual Studio 2017 15.7 o una versión anteriores. Compatibilidad con la orquestación de contenedor es una característica opcional en las versiones de Visual Studio 2017 15,8 o versiones posteriores, en cuyo caso Docker Compose y Service Fabric se admiten.
 
-Figura 4-25: activar la compatibilidad de Docker para el proyecto de Visual Studio
+Con Visual Studio versión 15,8 y versiones posterior, puede agregar compatibilidad para varios proyectos en una solución que cada uno tiene un contenedor asociado. Haga doble clic en el nodo de solución o proyecto en **el Explorador de soluciones**y elija **agregar** > **compatibilidad con la orquestación de contenedor**.  A continuación, elija **Docker Compose** o **Service Fabric** para administrar los contenedores.
 
-## <a name="using-docker-tools-in-visual-studio-2017"></a>Con las herramientas de Docker en Visual Studio de 2017
+Cuando se elige **Docker Compose**, Visual Studio agrega una sección de servicio en la solución *docker-compose.yml* archivos (o crea los archivos si no existen). Es una manera fácil de comenzar a crear la solución de varios contenedor; a continuación, puede abrir el *docker-compose.yml* archivos y debe actualizarlos con características adicionales.
 
-Al agregar compatibilidad con Docker a un proyecto de servicio de la solución (consulte la figura 4-26), Visual Studio es no limitarse a agregar un archivo DockerFile al proyecto, agrega también una sección de servicio en la solución docker compose.yml archivos (o crear los archivos si no ha existe). Es una manera sencilla de empezar a crear la solución multicontainer; a continuación, puede abrir los archivos de docker compose.yml y actualizarlas con características adicionales.
+Esta acción agrega las líneas de configuración necesarias de código para un *docker-compose.yml* establecido en el nivel de solución.
 
-![](./media/image32.png)
+También puede activar compatibilidad con Docker al crear un proyecto de ASP.NET Core en Visual Studio 2017, tal como se muestra en la figura 4-27.
 
-Figura 4: 26: activar la compatibilidad de la solución de Docker en un proyecto de Visual Studio de 2017
-
-Esta acción no solo agrega el DockerFile al proyecto, también agrega las líneas de configuración necesarias de código para establecer en el nivel de solución un compose.yml docker global.
-
-También puede activar en la compatibilidad con Docker al crear un proyecto de ASP.NET Core en 2017 de Visual Studio, tal como se muestra en la figura 4-27.
-
-![](./media/image33.png)
+![Activar la compatibilidad con Docker al crear un proyecto](./media/image33.png)
 
 Figura 4-27: activar la compatibilidad con Docker al crear un proyecto
 
-Después de agregar compatibilidad de Docker a la solución en Visual Studio, también verá un nuevo árbol de nodo en el Explorador de soluciones con los archivos compose.yml de docker agregada, como se muestra en la figura 4-28.
+Después de agregar compatibilidad con Docker a la solución en Visual Studio, también verá un nuevo árbol de nodos en **el Explorador de soluciones** con agregado *docker-compose.yml* archivos, como se muestra en la figura 4-28.
 
-![](./media/image34.PNG)
+![archivos docker-compose.yml se muestran ahora en el Explorador de soluciones](./media/image34.PNG)
 
-Figura 4-28: archivos de compose.yml de docker se muestran ahora en el Explorador de soluciones
+Figura 4-28: archivos docker-compose.yml se muestran ahora en **el Explorador de soluciones**
 
-Podría implementar un multicontainer docker componer de aplicación mediante un archivo de docker-compose.yml único cuando se ejecuta; Sin embargo, Visual Studio agrega un grupo de ellos, por lo que puede invalidar valores según el entorno (desarrollo frente a producción) y la ejecución del tipo (versión en comparación con depuración). Esta capacidad se explican mejor en capítulos posteriores.
+Podría implementar una aplicación de varios contenedor mediante una sola *docker-compose.yml* archivo al ejecutar `docker-compose up`; sin embargo, Visual Studio agrega un grupo de ellos, para que pueda sustituir valores según el entorno (desarrollo frente a producción) y la ejecución del tipo (versión frente a depuración). Esta capacidad se explica mejor en los capítulos posteriores.
 
-**Obtener más información:** para obtener más información sobre la implementación de los servicios y el uso de Visual Studio Tools para Docker, lea los siguientes artículos:
+También puede utilizar a Service Fabric en lugar de Docker Compose para administrar varios contenedores. Consulte [Tutorial: implementar una aplicación .NET en un contenedor de Windows en Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-host-app-in-a-container).
+
+**Más información:** para obtener más información sobre la implementación de los servicios y el uso de Visual Studio Tools para Docker, lea los artículos siguientes:
 
 Compilar, depurar, actualizar y actualizar aplicaciones en un contenedor de Docker local: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-Implementar un contenedor ASP.NET en un host de Docker remoto: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
-
+Implementar un contenedor de Docker de ASP.NET Core en un registro de contenedor: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
 [Anterior](docker-apps-inner-loop-workflow.md)

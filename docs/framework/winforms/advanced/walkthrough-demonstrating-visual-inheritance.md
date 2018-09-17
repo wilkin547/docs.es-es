@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: bc91e3bde54eedb4d9dbcfcb9f7faa0ccc98e397
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505629"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746210"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Tutorial: Demostración de la herencia visual
 La herencia visual le permite ver los controles del formulario base y agregar controles nuevos. En este tutorial, creará un formulario base y lo compilará para convertirlo en una biblioteca de clases. Importará la biblioteca de clases en otro proyecto y creará un nuevo formulario que herede del formulario base. Durante este tutorial aprenderá a:  
@@ -80,7 +80,7 @@ La herencia visual le permite ver los controles del formulario base y agregar co
   
     -   Establecer el **(nombre)** propiedad **btnProtected**.  
   
-    -   Establecer el**modificadores** propiedad **Protected**. Esto hace posible para los formularios que heredan de **Form1** para modificar las propiedades de **btnProtected**.  
+    -   Establecer el **modificadores** propiedad **Protected**. Esto hace posible para los formularios que heredan de **Form1** para modificar las propiedades de **btnProtected**.  
   
 4.  Haga doble clic en el **Say Hello** para agregar un controlador de eventos para el **haga clic en** eventos.  
   
@@ -128,7 +128,7 @@ La herencia visual le permite ver los controles del formulario base y agregar co
   
 #### <a name="to-add-an-inherited-form"></a>Para agregar un formulario heredado  
   
-1.  En **el Explorador de soluciones**, haga clic en el **InheritanceTest** proyecto, seleccione **agregar**y, a continuación, seleccione**nuevo elemento**.  
+1.  En **el Explorador de soluciones**, haga clic en el **InheritanceTest** proyecto, seleccione **agregar**y, a continuación, seleccione **nuevo elemento**.  
   
 2.  En el **Agregar nuevo elemento** cuadro de diálogo, seleccione el **Windows Forms** categoría (si tiene una lista de categorías) y, a continuación, seleccione el **formulario heredado** plantilla.  
   

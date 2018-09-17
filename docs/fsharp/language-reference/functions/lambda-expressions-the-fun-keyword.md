@@ -3,11 +3,11 @@ title: 'Expresiones lambda: la palabra clave fun (F#)'
 description: 'Obtenga información sobre cómo usar la palabra clave "diversión" de F # para definir una expresión lambda, que es una función anónima.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964253"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Expresiones lambda: la palabra clave fun (F#)
 

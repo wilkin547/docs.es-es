@@ -3,11 +3,11 @@ title: Expresiones de código delimitadas (F#)
 description: 'Obtenga información sobre F # expresiones de código delimitadas, una característica del lenguaje que le permite generar y trabajar con expresiones de código de F # mediante programación.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666727"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749959"
 ---
 # <a name="code-quotations"></a>Expresiones de código delimitadas
 
