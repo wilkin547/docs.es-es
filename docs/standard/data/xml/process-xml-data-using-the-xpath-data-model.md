@@ -6,11 +6,11 @@ ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da8b623d3a73ca8791a0619c67b0ed3bd42447d3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569914"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696294"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Procesamiento de datos XML con el modelo de datos XPath
 El espacio de nombres <xref:System.Xml?displayProperty=nameWithType> proporciona una representación mediante programación de documentos XML, fragmentos, nodos o conjuntos de nodos en memoria utilizando las clases <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>.  

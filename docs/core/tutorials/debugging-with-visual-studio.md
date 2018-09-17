@@ -4,12 +4,13 @@ description: Obtenga información sobre cómo depurar una aplicación Hola mundo
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/15/2017
-ms.openlocfilehash: 3c130c2eebdf79c1db171cb2171aa68dfff728a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218435"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696151"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Depuración de la aplicación Hola a todos con Visual Studio 2017
 
