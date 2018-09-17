@@ -6,11 +6,11 @@ ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 960d69e7db4d06956bfff8fb849f1d085e4cb1c0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179382"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45594055"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Cómo quitar nodos, contenido y valores de un documento XML
 Una vez que un Modelo de objetos de documento XML (DOM) está en memoria, puede quitar nodos del árbol, o quitar contenido y valores de determinados tipos de nodos. Para obtener información sobre cómo quitar un nodo hoja o todo un subárbol de nodos de un documento, vea [Cómo quitar nodos del DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Para obtener información sobre cómo quitar atributos de un elemento, vea [Cómo quitar atributos de un nodo de elementos en el DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Para obtener información sobre cómo quitar contenido de un nodo, dejando el nodo en el árbol, vea [Cómo quitar el contenido de los nodos en el DOM](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  

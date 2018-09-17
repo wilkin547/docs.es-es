@@ -3,11 +3,11 @@ title: 'Cómo: Generar archivos de texto a partir de XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
 ms.openlocfilehash: 1e0c57b1fa16bb1b92cabaf4afa7ff7bf40824bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192748"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591365"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>Cómo: Generar archivos de texto a partir de XML (C#)
 Este ejemplo muestra cómo generar un archivo de valores separados por comas (CSV) a partir de un archivo XML.  

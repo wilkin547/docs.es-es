@@ -4,12 +4,13 @@ description: Obtenga información sobre cómo crear una sencilla aplicación de 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.openlocfilehash: d68ae899e5dc7c37a9c92e79aeae452b000b0960
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 031c0a433391fbe4cdd40f6ce648f476787baf48
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218025"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45594366"
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017
 

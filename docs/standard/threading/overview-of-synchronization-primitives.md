@@ -10,11 +10,11 @@ ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271304"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591885"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Información general sobre los primitivos de sincronización
 <a name="top"></a> .NET Framework proporciona un intervalo de primitivas de sincronización para controlar las interacciones de subprocesos y evitar las condiciones de carrera. En líneas generales, estas pueden dividirse en tres categorías: operaciones de bloqueos, de señalización y de interbloqueos.  
@@ -85,7 +85,7 @@ ms.locfileid: "44271304"
   
  Para información conceptual, consulte [Bloqueos de lector y escritor](../../../docs/standard/threading/reader-writer-locks.md).  
   
-#### <a name="semaphore-class"></a>Semaphore (Clase)  
+#### <a name="semaphore-class"></a>Semaphore (clase)  
  La clase <xref:System.Threading.Semaphore> permite que un número especificado de subprocesos acceda a un recurso. Los demás subprocesos que soliciten el recurso se bloquearán hasta que un subproceso libere el semáforo.  
   
  Al igual que la clase <xref:System.Threading.Mutex>, <xref:System.Threading.Semaphore> deriva de <xref:System.Threading.WaitHandle>. Asimismo, al igual que <xref:System.Threading.Mutex>, un <xref:System.Threading.Semaphore> puede ser local o global. También se puede usar en los límites del dominio de aplicación.  
