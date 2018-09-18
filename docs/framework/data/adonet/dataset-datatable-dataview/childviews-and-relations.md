@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692597"
+ms.locfileid: "45964285"
 ---
 # <a name="childviews-and-relations"></a>Objetos ChildView y Relation
 Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria. Por ejemplo, el siguiente código muestra **categorías** y sus relacionados **productos** en orden alfabético por **CategoryName** y **ProductName** .  
