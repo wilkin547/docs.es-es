@@ -10,11 +10,11 @@ ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45970661"
 ---
 # <a name="field-design"></a>Diseño de campos
 El principio de encapsulación es una de las nociones más importantes en el diseño orientado a objetos. Este principio afirma que los datos almacenados dentro de un objeto deben ser accesibles solo a ese objeto.  

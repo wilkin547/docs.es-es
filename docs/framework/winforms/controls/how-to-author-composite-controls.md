@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 2c7d2c94c376b671d6e9e4e4b71bc8a9b0fbc343
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007449"
 ---
 # <a name="how-to-author-composite-controls"></a>Cómo: Crear controles compuestos
 Los controles compuestos pueden emplearse de muchas formas. Puede crearlos como parte de un proyecto de aplicación de escritorio de Windows y utilizarlos solo en formularios del proyecto. También podría crearlos en un proyecto de Biblioteca de controles de Windows, compilar el proyecto en un ensamblado y utilizar los controles en otros proyectos. Es posible incluso heredar de ellos y utilizar la herencia visual para personalizarlos rápidamente para fines especiales.  
@@ -26,11 +26,11 @@ Los controles compuestos pueden emplearse de muchas formas. Puede crearlos como 
   
 1.  Abra un nuevo proyecto **Aplicación Windows** denominado `DemoControlHost`.  
   
-2.  En el menú **Proyecto**, haga clic en **Agregar control de usuario**.  
+2.  En el menú **Proyecto** , haga clic en **Agregar control de usuario**.  
   
 3.  En el cuadro de diálogo **Agregar nuevo elemento**, dé al archivo de clase (archivo .vb o .cs) el nombre que desea para el control compuesto.  
   
-4.  Haga clic en el botón **Agregar** para crear el archivo de clase para el control compuesto.  
+4.  Seleccione el **agregar** botón para crear el archivo de clase para el control compuesto.  
   
 5.  Agregue controles del **Cuadro de herramientas** a la superficie del control compuesto.  
   

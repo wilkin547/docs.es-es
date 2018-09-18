@@ -5,11 +5,11 @@ ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 25afbb268a0ef7772585a0f3829b56f135758b61
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002689"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Cómo: Utilizar múltiples tokens de seguridad del mismo tipo
 -   En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un mensaje de cliente solo contenía un token de un tipo dado. Ahora, los mensajes de cliente pueden contener múltiples tokens de un tipo. En este tema se muestra cómo incluir múltiples tokens del mismo tipo en un mensaje de cliente.  

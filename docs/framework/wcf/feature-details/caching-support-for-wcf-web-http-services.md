@@ -3,11 +3,11 @@ title: Soporte de almacenamiento en memoria caché para servicios web HTTP de WC
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
 ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45648396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972993"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Soporte de almacenamiento en memoria caché para servicios web HTTP de WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] le permite usar el mecanismo de almacenamiento en caché declarativo disponible en ASP.NET en los servicios Web HTTP de WCF. Esto le permite almacenar en memoria caché las respuestas de las operaciones de servicio Web HTTP de WCF. Cuando un usuario envía un protocolo HTTP GET al servicio que está configurado para almacenarlo en memoria caché, ASP.NET devuelve la respuesta almacenada en memoria caché y no se llama al método de servicio. Cuando la memoria caché expira, la próxima vez que un usuario envía un protocolo HTTP GET, se llama al método de servicio y la respuesta se vuelve a almacenar en memoria caché. Para obtener más información sobre el almacenamiento en caché de ASP.NET, vea [información general sobre el almacenamiento en caché de ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  

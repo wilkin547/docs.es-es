@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009731"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
