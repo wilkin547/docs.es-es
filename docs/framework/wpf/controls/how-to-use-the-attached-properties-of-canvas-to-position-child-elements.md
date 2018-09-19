@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
 ms.openlocfilehash: 89327b834dfd71c0a7420eb42a598b98cdb5e9d8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002637"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Cómo: Utilizar las propiedades asociadas de Canvas para situar elementos secundarios
 En este ejemplo se muestra cómo usar las propiedades asociadas de <xref:System.Windows.Controls.Canvas> para situar elementos secundarios.  

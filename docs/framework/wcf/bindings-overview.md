@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615630"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45989792"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Información general de enlaces de Windows Communication Foundation
 Los enlaces son objetos que se usan para especificar los detalles de comunicación que son necesarias para conectarse al punto de conexión de un servicio de Windows Communication Foundation (WCF). Cada punto de conexión en un servicio WCF requiere un enlace esté bien especificado. En este tema se describe los tipos de datos de comunicación que definen los enlaces, los elementos de un enlace, qué enlaces están incluidos en WCF y cómo se puede especificar un enlace para un punto de conexión.  

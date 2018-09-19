@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ad1cf3dd598a2ec76302c48ae36b45fd0310d69d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d884c0e772deafdaa2326a47903e90691f8106
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45969670"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Cómo auditar los eventos de seguridad de Windows Communication Foundation
-Windows Communication Foundation (WCF) le permite registrar eventos de seguridad en el registro de eventos de Windows, que puede verse mediante el Visor de eventos de Windows. Este tema explica cómo configurar una aplicación para que registre los eventos de seguridad. Para obtener más información acerca de la auditoría de WCF, vea [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+Windows Communication Foundation (WCF) le permite registrar eventos de seguridad en el registro de eventos de Windows, que se pueden ver mediante el Visor de eventos de Windows. Este tema explica cómo configurar una aplicación para que registre los eventos de seguridad. Para obtener más información acerca de la auditoría de WCF, vea [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Para auditar los eventos de seguridad en el código  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) le permite registrar eventos de seguridad
   
 ### <a name="to-set-up-auditing-in-configuration"></a>Para establecer la auditoría en la configuración  
   
-1.  Para configurar la auditoría en la configuración, agregue un [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento a la [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sección del archivo web.config. A continuación, agregue un [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) elemento y establezca los distintos atributos, como se muestra en el ejemplo siguiente.  
+1.  Para configurar la auditoría en la configuración, agregue un [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento a la [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sección del archivo web.config. A continuación, agregue un [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) y establezca los distintos atributos, como se muestra en el ejemplo siguiente.  
   
     ```xml  
     <behaviors>  
@@ -81,11 +81,11 @@ Windows Communication Foundation (WCF) le permite registrar eventos de seguridad
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Cuando se establece la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> como `true`, se suprime cualquier error que genere auditorías de seguridad (si se establece como `false`, se inicia una excepción). Sin embargo, si habilita las siguientes ventanas **configuración de seguridad Local**propiedad, un error al generar eventos de auditoría hará que Windows se cerró inmediatamente:  
+ Cuando se establece la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> como `true`, se suprime cualquier error que genere auditorías de seguridad (si se establece como `false`, se inicia una excepción). Sin embargo, si habilita el siguiente Windows **configuración de seguridad Local** propiedad, un error al generar eventos de auditoría hará que Windows cierre inmediato:  
   
- **Auditoría: Apagar el sistema inmediatamente si no se ha podido registrar auditorías de seguridad**  
+ **Auditoría: Apagar el sistema de inmediato si no se puede registrar las auditorías de seguridad**  
   
- Para establecer la propiedad, abra el **configuración de seguridad Local** cuadro de diálogo. En **configuración de seguridad**, haga clic en **directivas locales**. A continuación, haga clic en **opciones de seguridad**.  
+ Para establecer la propiedad, abra el **configuración de seguridad Local** cuadro de diálogo. En **configuración de seguridad**, haga clic en **directivas locales**. A continuación, haga clic en **las opciones de seguridad**.  
   
  Si el <xref:System.ServiceModel.AuditLogLocation> propiedad está establecida en <xref:System.ServiceModel.AuditLogLocation.Security> y **auditar el acceso a objetos** no está establecido en el **directiva de seguridad Local**, eventos de auditoría no se escribirán en el registro de seguridad. Tenga en cuenta que no se devuelve ningún error, aunque las entradas de auditoría no se escriben en el registro de seguridad.  
   

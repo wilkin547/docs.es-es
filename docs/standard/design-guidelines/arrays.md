@@ -10,11 +10,11 @@ ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ac7e28c3172f2ed68d402e1d04a1664644c7f25
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990211"
+ms.locfileid: "46288243"
 ---
 # <a name="arrays"></a>Matrices
 **✓ DO** prefieren usar colecciones sobre matrices en las API públicas. El [colecciones](../../../docs/standard/design-guidelines/guidelines-for-collections.md) sección proporcionan detalles sobre cómo elegir entre las colecciones y matrices.  

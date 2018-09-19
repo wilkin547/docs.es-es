@@ -6,11 +6,11 @@ ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287470"
 ---
 # <a name="extension-methods"></a>Métodos de extensión.
 Métodos de extensión son una característica del lenguaje que permite a los métodos estáticos llamar mediante sintaxis de llamada de método de instancia. Estos métodos deben tener al menos un parámetro, que representa la instancia en que es el método operar.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
 ms.openlocfilehash: 480e10b9667712fbd2a3ffa95e1373d72ee1a9df
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46288008"
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 Define un enlace seguro, de confianza e interoperable, adecuado para contratos de servicio no dúplex. El enlace implementa las características siguientes: WS-Reliable Messaging para confiabilidad y WS-Security para la seguridad del mensaje y autenticación. El transporte es HTTP y la codificación del mensaje es codificación de texto/XML.  

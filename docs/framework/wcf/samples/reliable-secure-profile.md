@@ -5,11 +5,11 @@ ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45998973"
 ---
 # <a name="reliable-secure-profile"></a>Perfil seguro confiable
 En este ejemplo se muestra cómo crear WCF y [perfil seguro confiable](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Este ejemplo muestra la implementación de un [establecer conexión](https://go.microsoft.com/fwlink/?LinkId=178141) canal que se puede componer junto con mensajería confiable y, opcionalmente, un canal seguro para crear un enlace de protección confiable basado en la especificación RSP.  

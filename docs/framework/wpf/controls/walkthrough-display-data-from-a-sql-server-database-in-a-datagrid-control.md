@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1421d076ff202ec87a9d861ab2c7d1c1cdcdc1b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dba2ec98b25c9c65a795c462b18504a799df04bc
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972272"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Tutorial: Mostrar los datos de una base de datos de SQL Server en un control DataGrid
 En este tutorial, recuperar datos de una base de datos de SQL Server y mostrar dichos datos en un <xref:System.Windows.Controls.DataGrid> control. Usar ADO.NET Entity Framework para crear las clases de entidad que representan los datos y usar LINQ para escribir una consulta que recupera los datos especificados de una clase de entidad.  
@@ -33,7 +33,7 @@ En este tutorial, recuperar datos de una base de datos de SQL Server y mostrar d
   
      Aparece el cuadro de diálogo Agregar nuevo elemento.  
   
-3.  En el panel Plantillas instaladas, seleccione **datos** y en la lista de plantillas, seleccione **modo de datos de ADO.NET Entity**l.  
+3.  En el panel Plantillas instaladas, seleccione **datos** y en la lista de plantillas, seleccione **ADO.NET Entity Data Model**.  
   
      ![Seleccione ADO.NET Entity Data Model](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")  
   

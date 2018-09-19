@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615526"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999474"
 ---
 # <a name="introducing-xml-serialization"></a>Introducir la serialización XML
 
@@ -61,7 +61,7 @@ Si crea una aplicación que usa la clase **XmlSerializer**, debería conocer los
 
 - Los datos confidenciales serializados podrían ser vulnerables.
 
-  Después de que **XmlSerializer** haya serializado los datos, puede almacenarse como un archivo XML u otro almacén de datos. Si su almacén de datos está disponible para otros procesos, o está visible en una intranet o Internet, los datos se pueden robar y utilizar malévolamente. Por ejemplo, si se crea una aplicación que serializa órdenes, que incluyen la tarjeta de crédito, los datos son muy sensibles. Para ayudar a evitar esto, siempre proteja el almacén para que sus datos y los pasos de la toma lo mantenga privado.
+  Después de la **XmlSerializer** haya serializado los datos, puede almacenarse como un archivo XML u otro almacén de datos. Si su almacén de datos está disponible para otros procesos, o está visible en una intranet o Internet, los datos se pueden robar y utilizar malévolamente. Por ejemplo, si se crea una aplicación que serializa órdenes, que incluyen la tarjeta de crédito, los datos son muy sensibles. Para ayudar a evitar esto, siempre proteja el almacén para que sus datos y los pasos de la toma lo mantenga privado.
 
 ## <a name="serialization-of-a-simple-class"></a>Serialización de una clase simple
 
