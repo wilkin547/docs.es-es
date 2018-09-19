@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ec28c581b8e6e0aff3a2765720b6e9795be931b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003105"
 ---
-# <a name="gettypelibinfo-function"></a><span data-ttu-id="0d9f0-102">GetTypeLibInfo (Función)</span><span class="sxs-lookup"><span data-stu-id="0d9f0-102">GetTypeLibInfo Function</span></span>
-<span data-ttu-id="0d9f0-103">Devuelve información acerca de la biblioteca de tipos especificado examinando su [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) estructura.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-103">Returns information about the specified type library by examining its [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) structure.</span></span>  
+# <a name="gettypelibinfo-function"></a><span data-ttu-id="5dcd8-102">GetTypeLibInfo (Función)</span><span class="sxs-lookup"><span data-stu-id="5dcd8-102">GetTypeLibInfo Function</span></span>
+<span data-ttu-id="5dcd8-103">Devuelve información acerca de la biblioteca de tipos especificado examinando su [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) estructura.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-103">Returns information about the specified type library by examining its [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d9f0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0d9f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5dcd8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5dcd8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeLibInfo(  
@@ -39,39 +39,39 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0d9f0-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="0d9f0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5dcd8-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5dcd8-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="0d9f0-106">[in] El nombre de la biblioteca de tipos de archivo.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-106">[in] The file name of the type library.</span></span>  
+ <span data-ttu-id="5dcd8-106">[in] El nombre de la biblioteca de tipos de archivo.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-106">[in] The file name of the type library.</span></span>  
   
  `pTypeLibID`  
- <span data-ttu-id="0d9f0-107">[out] El GUID de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-107">[out] The GUID of the type library.</span></span>  
+ <span data-ttu-id="5dcd8-107">[out] El GUID de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-107">[out] The GUID of the type library.</span></span>  
   
  `pTypeLibLCID`  
- <span data-ttu-id="0d9f0-108">[out] El identificador de localización de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-108">[out] The localization ID of the type library.</span></span>  
+ <span data-ttu-id="5dcd8-108">[out] El identificador de localización de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-108">[out] The localization ID of the type library.</span></span>  
   
  `pTypeLibPlatform`  
- <span data-ttu-id="0d9f0-109">[out] Un [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) marca que identifica el sistema operativo de destino para la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-109">[out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="0d9f0-110">Los valores habituales son SYS_WIN32 y SYS_WIN64.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
+ <span data-ttu-id="5dcd8-109">[out] Un [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) marca que identifica el sistema operativo de destino para la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-109">[out] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) flag that identifies the target operating system for the type library.</span></span> <span data-ttu-id="5dcd8-110">Los valores habituales son SYS_WIN32 y SYS_WIN64.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-110">Common values are SYS_WIN32 and SYS_WIN64.</span></span>  
   
  `pTypeLibMajorVer`  
- <span data-ttu-id="0d9f0-111">[out] El número de versión principal de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="0d9f0-112">Por ejemplo, para la versión *x.y*, el número de versión principal es *x*.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
+ <span data-ttu-id="5dcd8-111">[out] El número de versión principal de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-111">[out] The major version number of the type library.</span></span> <span data-ttu-id="5dcd8-112">Por ejemplo, para la versión *x.y*, el número de versión principal es *x*.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-112">For example, for version *x.y*, the major version number is *x*.</span></span>  
   
  `pTypeLibMinorVer`  
- <span data-ttu-id="0d9f0-113">[out] El número de versión secundaria de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="0d9f0-114">Por ejemplo, para la versión *x.y*, el número de versión secundaria es *y*.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
+ <span data-ttu-id="5dcd8-113">[out] El número de versión secundaria de la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-113">[out] The minor version number of the type library.</span></span> <span data-ttu-id="5dcd8-114">Por ejemplo, para la versión *x.y*, el número de versión secundaria es *y*.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-114">For example, for version *x.y*, the minor version number is *y*.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0d9f0-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0d9f0-115">Remarks</span></span>  
- <span data-ttu-id="0d9f0-116">El `GetTypeLibInfo` llama a la función el [Tlbexp.exe (exportador de biblioteca)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span><span class="sxs-lookup"><span data-stu-id="0d9f0-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="0d9f0-117">Esta herramienta genera una biblioteca de tipos que se describe los tipos en un ensamblado de common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="0d9f0-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5dcd8-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5dcd8-115">Remarks</span></span>  
+ <span data-ttu-id="5dcd8-116">El `GetTypeLibInfo` llama a la función el [Tlbexp.exe (exportador de biblioteca)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span><span class="sxs-lookup"><span data-stu-id="5dcd8-116">The `GetTypeLibInfo` function is called by the [Tlbexp.exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span> <span data-ttu-id="5dcd8-117">Esta herramienta genera una biblioteca de tipos que se describe los tipos en un ensamblado de common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="5dcd8-117">This tool generates a type library that describes the types in a common language runtime (CLR) assembly.</span></span>  
   
- <span data-ttu-id="0d9f0-118">Si cualquier parámetro es null, la función devuelve un `HRESULT` de `E_POINTER`.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="0d9f0-119">De lo contrario, devuelve `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="0d9f0-119">Otherwise, it returns `S_OK`.</span></span>  
+ <span data-ttu-id="5dcd8-118">Si cualquier parámetro es null, la función devuelve un `HRESULT` de `E_POINTER`.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-118">If any parameter is null, the function returns an `HRESULT` of `E_POINTER`.</span></span> <span data-ttu-id="5dcd8-119">De lo contrario, devuelve `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="5dcd8-119">Otherwise, it returns `S_OK`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d9f0-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0d9f0-120">Requirements</span></span>  
- <span data-ttu-id="0d9f0-121">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d9f0-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5dcd8-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5dcd8-120">Requirements</span></span>  
+ <span data-ttu-id="5dcd8-121">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5dcd8-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0d9f0-122">**Encabezado:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="0d9f0-122">**Header:** TlbRef.h</span></span>  
+ <span data-ttu-id="5dcd8-122">**Encabezado:** TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="5dcd8-122">**Header:** TlbRef.h</span></span>  
   
- <span data-ttu-id="0d9f0-123">**Biblioteca:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="0d9f0-123">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="5dcd8-123">**Biblioteca:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="5dcd8-123">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="0d9f0-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d9f0-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5dcd8-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5dcd8-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d9f0-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="0d9f0-125">See Also</span></span>  
- [<span data-ttu-id="0d9f0-126">Funciones auxiliares Tlbexp</span><span class="sxs-lookup"><span data-stu-id="0d9f0-126">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [<span data-ttu-id="0d9f0-127">LoadTypeLibEx de la función</span><span class="sxs-lookup"><span data-stu-id="0d9f0-127">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a><span data-ttu-id="5dcd8-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="5dcd8-125">See Also</span></span>  
+ [<span data-ttu-id="5dcd8-126">Funciones auxiliares Tlbexp</span><span class="sxs-lookup"><span data-stu-id="5dcd8-126">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [<span data-ttu-id="5dcd8-127">LoadTypeLibEx de la función</span><span class="sxs-lookup"><span data-stu-id="5dcd8-127">LoadTypeLibEx Function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
