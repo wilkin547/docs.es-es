@@ -2,12 +2,12 @@
 title: Correlación dúplex duradera
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 5bef3e243afc0ea9a51f474bfed98320134ec043
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491493"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323787"
 ---
 # <a name="durable-duplex-correlation"></a>Correlación dúplex duradera
 La correlación dúplex duradera, también conocida como correlación de devolución de llamada, es útil cuando un servicio de flujo de trabajo tiene un requisito para enviar una devolución de llamada al autor de la llamada inicial. A diferencia del dúplex de WCF, la devolución de llamada puede producirse en cualquier momento en el futuro y no está vinculada a un mismo canal o a la duración del canal; el único requisito es que el autor de la llamada tenga un extremo activo que realice escuchas para el mensaje de devolución de llamada. Esto permite a dos servicios de flujo de trabajo comunicarse en una conversación de ejecución prolongada. En este tema, se proporciona información general sobre la correlación dúplex duradera.  
@@ -16,7 +16,7 @@ La correlación dúplex duradera, también conocida como correlación de devoluc
  Para usar la correlación dúplex duradera, los dos servicios deben usar un enlace habilitado para el contexto que admita operaciones bidireccionales, como <xref:System.ServiceModel.NetTcpContextBinding> o <xref:System.ServiceModel.WSHttpContextBinding>. El servicio de llamada registra <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> con el enlace deseado en <xref:System.ServiceModel.Endpoint> del cliente. El servicio de recepción recibe estos datos en la llamada inicial y, a continuación, los usa en su propia <xref:System.ServiceModel.Endpoint>, en la actividad <xref:System.ServiceModel.Activities.Send> que realiza la devolución de llamada al servicio de llamada. En este ejemplo, dos servicios se comunican entre sí. El primer servicio invoca un método en el segundo servicio y, a continuación, espera una respuesta. El segundo servicio conoce el nombre del método de devolución de llamada, pero no conoce el extremo del servicio que implementa este método en tiempo de diseño.  
   
 > [!NOTE]
->  El dúplex duradero solo se puede usar cuando el objeto <xref:System.ServiceModel.Channels.AddressingVersion> del extremo se configura con la propiedad <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Si no lo está, un <xref:System.InvalidOperationException> se produce una excepción con el siguiente mensaje: "el mensaje contiene un encabezado de contexto de devolución de llamada con una referencia de extremo para AddressingVersion ' Addressing200408 (HYPERLINK"http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)'. El contexto de devolución de llamada solo se puede transmitir cuando AddressingVersion se configura con 'WSAddressing10'".  
+> El dúplex duradero solo se puede usar cuando el objeto <xref:System.ServiceModel.Channels.AddressingVersion> del extremo se configura con la propiedad <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Si no, es una <xref:System.InvalidOperationException> se produce una excepción con el siguiente mensaje: "el mensaje contiene un encabezado de contexto de devolución de llamada con una referencia de punto de conexión para [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Contexto de devolución de llamada solo se puede transmitir cuando AddressingVersion se configura con 'WSAddressing10'.
   
  En el siguiente ejemplo, se hospeda un servicio de flujo de trabajo que crea una <xref:System.ServiceModel.Endpoint> de devolución de llamada mediante <xref:System.ServiceModel.WSHttpContextBinding>.  
   
