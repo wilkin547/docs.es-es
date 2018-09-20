@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: a35a0bf54d7850e4b10e59c259e4ee512bc93aad
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990614"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Cómo: Compilar una cadena de conexión EntityConnection
 En este tema se muestra un ejemplo para generar una <xref:System.Data.EntityClient.EntityConnection>.  

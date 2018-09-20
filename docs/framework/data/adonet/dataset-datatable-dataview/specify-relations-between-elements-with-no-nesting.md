@@ -3,11 +3,11 @@ title: Especificar relaciones entre elementos sin anidamiento
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: d04a3d946b87c7203497313c6e21a75ef69f50eb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526563"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609598"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Especificar relaciones entre elementos sin anidamiento
 Cuando los elementos no están anidados, no se crea ninguna relación implícita. Sin embargo, puede especifican explícitamente relaciones entre elementos que no están anidados utilizando el **msdata: Relationship** anotación.  
