@@ -9,11 +9,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 1a129abca5888120d03c42689ac825d768733a9d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970258"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46325817"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; elemento (configuración Web)
 Especifica la configuración que se usa ASP.NET para administrar el comportamiento de todo el proceso cuando se ejecuta una aplicación ASP.NET en el modo integrado en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o una versión posterior.  

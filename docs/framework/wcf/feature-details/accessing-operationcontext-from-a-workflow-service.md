@@ -2,15 +2,15 @@
 title: Acceso a OperationContext desde un servicio de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495572"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326376"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Acceso a OperationContext desde un servicio de flujo de trabajo
-Para tener acceso a <xref:System.ServiceModel.OperationContext> en un servicio de flujo de trabajo, debe implementar la interfaz <xref:System.ServiceModel.Activities.IReceiveMessageCallback> en una propiedad de ejecución personalizada. Invalide el método <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, al que se pasa una referencia a <xref:System.ServiceModel.OperationContext>. Este tema le guiará en la implementación de esta propiedad de ejecución para recuperar un encabezado personalizado, así como una actividad personalizada que mostrará esta propiedad a <xref:System.ServiceModel.Activities.Receive> en tiempo de ejecución.  La actividad personalizada implementará el mismo comportamiento que un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` actividad, excepto que, cuando un <xref:System.ServiceModel.Activities.Receive> se coloca dentro de él, el <xref:System.ServiceModel.Activities.IReceiveMessageCallback> llamará y <xref:System.ServiceModel.OperationContext> se recuperará información.  Este tema también muestra cómo tener acceso a <xref:System.ServiceModel.OperationContext> en el lado del cliente para agregar encabezados de salida a través de la interfaz <xref:System.ServiceModel.Activities.ISendMessageCallback>.  
+Para tener acceso a <xref:System.ServiceModel.OperationContext> en un servicio de flujo de trabajo, debe implementar la interfaz <xref:System.ServiceModel.Activities.IReceiveMessageCallback> en una propiedad de ejecución personalizada. Invalide el método <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, al que se pasa una referencia a <xref:System.ServiceModel.OperationContext>. Este tema le guiará en la implementación de esta propiedad de ejecución para recuperar un encabezado personalizado, así como una actividad personalizada que mostrará esta propiedad a <xref:System.ServiceModel.Activities.Receive> en tiempo de ejecución.  La actividad personalizada implementará el mismo comportamiento que una actividad <xref:System.Activities.Statements.Sequence>, con la salvedad de que, cuando <xref:System.ServiceModel.Activities.Receive> se coloque dentro, se llamará a <xref:System.ServiceModel.Activities.IReceiveMessageCallback> y se recuperará la información de <xref:System.ServiceModel.OperationContext>.  Este tema también muestra cómo tener acceso a <xref:System.ServiceModel.OperationContext> en el lado del cliente para agregar encabezados de salida a través de la interfaz <xref:System.ServiceModel.Activities.ISendMessageCallback>.  
   
 ### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementar IReceiveMessageCallback en el lado del servicio  
   
@@ -144,7 +144,7 @@ Para tener acceso a <xref:System.ServiceModel.OperationContext> en un servicio d
   
 ### <a name="implement-the-workflow-service"></a>Implementar el servicio de flujo de trabajo  
   
-1.  Abra el existente `Program` clase.  
+1.  Abra existente `Program` clase.  
   
 2.  Defina las constantes siguientes:  
   
@@ -438,7 +438,7 @@ Para tener acceso a <xref:System.ServiceModel.OperationContext> en un servicio d
             }  
     ```  
   
-4.  Agregue el siguiente código de hospedaje para la `Main()` método.  
+4.  Agregue el siguiente código de hospedaje para el `Main()` método.  
   
     ```  
     static void Main(string[] args)  
