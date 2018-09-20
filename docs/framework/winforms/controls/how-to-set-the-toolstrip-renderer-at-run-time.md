@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
 ms.openlocfilehash: 98a027cb8cd913e3e2d00db16fc2f527159a1c87
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742910"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472300"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Cómo: Establecer la representación de ToolStrip en tiempo de ejecución
 Puede personalizar la apariencia de su control <xref:System.Windows.Forms.ToolStrip> creando una clase `ProfessionalColorTable` personalizada.  

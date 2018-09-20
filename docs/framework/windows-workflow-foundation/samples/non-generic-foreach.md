@@ -2,17 +2,17 @@
 title: ForEach no genérico
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: b94ad54d248af7f6ad45c11b9860dd415db840f9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419322"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478323"
 ---
 # <a name="non-generic-foreach"></a>ForEach no genérico
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] se incluye en el cuadro de herramientas de un conjunto de actividades de flujo de Control, incluidos <xref:System.Activities.Statements.ForEach%601>, que permite recorrer <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` colecciones.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] incluye en su cuadro de herramientas un conjunto de actividades Control Flow, como la actividad <xref:System.Activities.Statements.ForEach%601>, que permite recorrer en iteración colecciones <xref:System.Collections.Generic.IEnumerable%601>.  
   
- <xref:System.Activities.Statements.ForEach%601> requiere su <xref:System.Activities.Statements.ForEach%601.Values%2A> propiedad sea de tipo <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Esto impide que los usuarios recorrer en iteración las estructuras de datos que implementan <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` interfaz (por ejemplo, <xref:System.Collections.ArrayList>). La versión no genérica de <xref:System.Activities.Statements.ForEach%601> supera este requisito, a costa de una mayor complejidad del tiempo de ejecución para garantizar la compatibilidad de los tipos de los valores de la colección.  
+ <xref:System.Activities.Statements.ForEach%601> requiere que su propiedad <xref:System.Activities.Statements.ForEach%601.Values%2A> sea del tipo <xref:System.Collections.Generic.IEnumerable%601>. Esto impide a los usuarios recorrer en iteración estructuras de datos que implementan la interfaz <xref:System.Collections.Generic.IEnumerable%601> (por ejemplo, <xref:System.Collections.ArrayList>). La versión no genérica de <xref:System.Activities.Statements.ForEach%601> supera este requisito, a costa de una mayor complejidad del tiempo de ejecución para garantizar la compatibilidad de los tipos de los valores de la colección.  
   
  En este ejemplo se muestra cómo implementar una actividad <xref:System.Activities.Statements.ForEach%601> no genérica y su diseñador. Esta actividad se puede utilizar para recorrer en iteración <xref:System.Collections.ArrayList>.  
   

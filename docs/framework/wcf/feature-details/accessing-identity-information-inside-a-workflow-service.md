@@ -2,17 +2,17 @@
 title: Acceder a la información de identidad de un servicio de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-ms.openlocfilehash: a87c21215c37fefd8d9306fd0ccd0c5b2a1dfd11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491980"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480752"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Acceder a la información de identidad de un servicio de flujo de trabajo
-Para tener acceso a la información de identidad en un servicio de flujo de trabajo, debe implementar la interfaz <xref:System.ServiceModel.Activities.IReceiveMessageCallback> en una propiedad de ejecución personalizada. En el método <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> puede acceder a una clase <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> para acceder a la información de identidad. Este tema le guiará en la implementación de esta propiedad de ejecución, así como una actividad personalizada que mostrará esta propiedad en la actividad <xref:System.ServiceModel.Activities.Receive> en tiempo de ejecución.  La actividad personalizada implementará el mismo comportamiento que un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` actividad, excepto que, cuando un <xref:System.ServiceModel.Activities.Receive> se coloca dentro de él, el <xref:System.ServiceModel.Activities.IReceiveMessageCallback> se llama y se recuperará la información de identidad.  
+Para tener acceso a la información de identidad en un servicio de flujo de trabajo, debe implementar la interfaz <xref:System.ServiceModel.Activities.IReceiveMessageCallback> en una propiedad de ejecución personalizada. En el método <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> puede acceder a una clase <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> para acceder a la información de identidad. Este tema le guiará en la implementación de esta propiedad de ejecución, así como una actividad personalizada que mostrará esta propiedad en la actividad <xref:System.ServiceModel.Activities.Receive> en tiempo de ejecución. La actividad personalizada implementará el mismo comportamiento que una actividad <xref:System.Activities.Statements.Sequence>, salvo que cuando se coloque una actividad <xref:System.ServiceModel.Activities.Receive> en su interior, se llamará a la interfaz <xref:System.ServiceModel.Activities.IReceiveMessageCallback> y se recuperará la información de identidad.  
   
-### <a name="implement-ireceivemessagecallback"></a>Implementar IReceiveMessageCallback  
+## <a name="implement-ireceivemessagecallback"></a>Implementar IReceiveMessageCallback  
   
 1.  Cree una solución [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vacía.  
   
@@ -50,13 +50,13 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
   
      Este código usa la clase <xref:System.ServiceModel.OperationContext> pasada en el método para acceder a la información de identidad.  
   
-### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementar una actividad nativa para agregar la implementación de IReceiveMessageCallback a NativeActivityContext  
+## <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementar una actividad nativa para agregar la implementación de IReceiveMessageCallback a NativeActivityContext  
   
 1.  Agregue una nueva clase derivada de <xref:System.Activities.NativeActivity> denominada `AccessIdentityScope`.  
   
 2.  Agregue variables locales para realizar el seguimiento de las actividades secundarias, variables, el índice de actividad actual y una devolución de llamada <xref:System.Activities.CompletionCallback>.  
   
-    ```  
+    ```csharp
     public sealed class AccessIdentityScope : NativeActivity  
     {  
         Collection<Activity> children;  
@@ -68,7 +68,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
   
 3.  Implemente el constructor  
   
-    ```  
+    ```csharp
     public AccessIdentityScope() : base()  
     {  
         this.children = new Collection<Activity>();  
@@ -79,7 +79,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
   
 4.  Implemente las propiedades `Activities` y `Variables`.  
   
-    ```  
+    ```csharp
     public Collection<Activity> Activities  
     {  
          get { return this.children; }  
@@ -93,7 +93,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
   
 5.  Invalide <xref:System.Activities.NativeActivity.CacheMetadata%2A>  
   
-    ```  
+    ```csharp
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
     {  
         //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
@@ -105,7 +105,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
   
 6.  Invalide <xref:System.Activities.NativeActivity.Execute%2A>  
   
-    ```  
+    ```csharp
     protected override void Execute(NativeActivityContext context)  
     {  
        // Add the IReceiveMessageCallback implementation as an Execution property   
@@ -139,13 +139,13 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
     }  
     ```  
   
-### <a name="implement-the-workflow-service"></a>Implementar el servicio de flujo de trabajo  
+## <a name="implement-the-workflow-service"></a>Implementar el servicio de flujo de trabajo  
   
-1.  Abra el existente `Program` clase.  
+1.  Abra existente `Program` clase.  
   
 2.  Defina las constantes siguientes:  
   
-    ```  
+    ```csharp
     class Program  
     {  
        const string addr = "http://localhost:8080/Service";  
@@ -155,7 +155,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
   
 3.  Agregue un método estático llamado `GetWorkflowService` que cree el servicio del flujo de trabajo.  
   
-    ```  
+    ```csharp
     static Activity GetServiceWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -194,7 +194,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
   
 4.  En el método `Main` existente, hospede el servicio del flujo de trabajo.  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        string addr = "http://localhost:8080/Service";  
@@ -213,7 +213,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
     }  
     ```  
   
-### <a name="implement-a-workflow-client"></a>Implementar un cliente de flujo de trabajo  
+## <a name="implement-a-workflow-client"></a>Implementar un cliente de flujo de trabajo  
   
 1.  Cree un nuevo proyecto de aplicación de consola denominado `Client`.  
   
@@ -227,7 +227,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
   
 3.  Abra el archivo Program.cs generado y agregue un método estático llamado `GetClientWorkflow` para crear el flujo de trabajo del cliente.  
   
-    ```  
+    ```csharp
     static Activity GetClientWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -245,7 +245,7 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
           OperationName = "Echo",  
           Content = new SendParametersContent()  
           {  
-             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }   
+             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }
           }  
        };  
   
@@ -253,12 +253,12 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
        {  
           Variables = { echoString },  
           Activities =  
-          {                      
+          {
              new CorrelationScope  
              {  
                 Body = new Sequence  
                 {  
-                   Activities =   
+                   Activities =
                    {  
                       echoRequest,  
                       new ReceiveReply  
@@ -271,17 +271,17 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
                       }  
                    }  
                 }  
-             },                      
-             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+             },
+             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
              }  
           };  
        }  
     }  
     ```  
   
-4.  Agregue el siguiente código de hospedaje para la `Main()` método.  
+4.  Agregue el siguiente código de hospedaje para el `Main()` método.  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        Activity workflow = GetClientWorkflow();  
@@ -292,10 +292,10 @@ Para tener acceso a la información de identidad en un servicio de flujo de trab
     }  
     ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a>Ejemplo
  A continuación, se muestra el código fuente completo que se emplea en este tema.  
   
-```  
+```csharp
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -333,9 +333,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -381,9 +381,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         {  
             //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
             base.CacheMetadata(metadata);  
-            //add the private implementation variable: currentIndex   
+            //add the private implementation variable: currentIndex
             metadata.AddImplementationVariable(this.currentIndex);  
-        }                     
+        }
   
         protected override void Execute(  
             NativeActivityContext context)  
@@ -418,9 +418,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -493,10 +493,10 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
-// client.cs   
+```csharp
+// client.cs
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
 //----------------------------------------------------------------  
@@ -546,12 +546,12 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
             {  
                 Variables = { echoString },  
                 Activities =  
-                {                      
+                {
                     new CorrelationScope  
                     {  
                         Body = new Sequence  
                         {  
-                            Activities =   
+                            Activities =
                             {  
                                 echoRequest,  
                                 new ReceiveReply  
@@ -564,8 +564,8 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
                                 }  
                             }  
                         }  
-                    },                      
-                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+                    },
+                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
                 }  
             };  
         }  

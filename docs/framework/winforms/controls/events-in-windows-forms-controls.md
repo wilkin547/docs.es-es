@@ -6,11 +6,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], events overview (using code)
 ms.assetid: 7e3d1379-87aa-437c-afce-c99454eff30e
 ms.openlocfilehash: d18938565c302be085b7ac51f878d83ae5ab533d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45993970"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473043"
 ---
 # <a name="events-in-windows-forms-controls"></a>Eventos de los controles de formularios Windows Forms
 Un control de Windows Forms hereda más de sesenta eventos de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Estos incluyen el <xref:System.Windows.Forms.Control.Paint> evento, lo que hace que se dibuje un control, eventos relacionados con la presentación de una ventana, como el <xref:System.Windows.Forms.Control.Resize> y <xref:System.Windows.Forms.Control.Layout> eventos y eventos de teclado y mouse de bajo nivel. Algunos eventos de bajo nivel se sintetizan mediante <xref:System.Windows.Forms.Control> en eventos semánticos como <xref:System.Windows.Forms.Control.Click> y <xref:System.Windows.Forms.Control.DoubleClick>. Para obtener más información sobre los eventos heredados, vea <xref:System.Windows.Forms.Control>.  

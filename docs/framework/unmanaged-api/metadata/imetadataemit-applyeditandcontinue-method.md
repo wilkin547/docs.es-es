@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287282"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472118"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue (Método)
 El ámbito de ensamblado actual se actualiza con los cambios realizados en los metadatos especificados.  

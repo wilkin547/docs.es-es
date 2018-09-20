@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: deb1b6ca5c6fc996a015e32dd5e0c7b9bd6530fa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677323"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472342"
 ---
 # <a name="how-to-create-an-activity"></a>Cómo: Crear una actividad
 Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../../includes/wf1-md.md)]. La lógica de ejecución de una actividad se puede implementar en un código administrado o mediante otras actividades. Este tema muestra cómo crear dos actividades. La primera actividad es una actividad simple que usa código para implementar la lógica de ejecución. La implementación de la segunda actividad se define mediante otras actividades. Estas actividades se usan en los siguientes pasos del tutorial.  

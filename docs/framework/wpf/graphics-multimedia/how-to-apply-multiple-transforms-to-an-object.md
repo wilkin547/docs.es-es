@@ -11,11 +11,11 @@ helpviewer_keywords:
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
 ms.openlocfilehash: 0700a7ae3f18f745b0d479ace3acbf2d7fbd9722
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46286719"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471031"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Cómo: Aplicar varias transformaciones a un objeto
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.TransformGroup> al grupo de dos o más <xref:System.Windows.Media.Transform> objetos en un elemento compuesto <xref:System.Windows.Media.Transform>.  

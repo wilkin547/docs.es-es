@@ -2,15 +2,16 @@
 title: Usar acciones para implementar el comportamiento del servidor
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 415797114d1e6d2ff307f0d872361f7d415cad3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516266"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471741"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usar acciones para implementar el comportamiento del servidor
-Las acciones OData proporcionan una manera de implementar un comportamiento que actúa sobre un recurso obtenido de un servicio OData.  Por ejemplo, considere una película digital como un recurso; se pueden hacer muchas cosas con ella: desproteger, valorar/comentar o proteger. Todos estos son ejemplos de acciones que se pueden implementar mediante un Servicio de datos de WCF que administre películas digitales. Las acciones se describen en una respuesta OData que contiene un recurso en el que se puede invocar la acción. Cuando un usuario solicita un recurso que representa una película digital, la respuesta devuelta por el Servicio de datos de WCF contiene información sobre las acciones disponibles para dicho recurso. La disponibilidad de una acción puede depender del estado del servicio de datos o del recurso. Por ejemplo, una vez desprotegida una película digital otro usuario no la puede desproteger. Los clientes pueden invocar una acción con solo especificar una dirección URL. Por ejemplo http://MyServer/MovieService.svc/Movies(6) identificaría una película digital concreta y http://MyServer/MovieService.svc/Movies(6)/Checkout invocaría la acción en esa película específica. Las acciones le permiten exponer su modelo de servicio sin exponer el modelo de datos. Continuando con el ejemplo de servicio de películas, quizás desee permitir que un usuario valore una película pero no desee exponer directamente los datos de valoración como un recurso. Podría implementar una acción de valoración que permitiera al usuario valorar una película pero no tener acceso directamente a los datos de valoración como un recurso.  
+
+Las acciones OData proporcionan una manera de implementar un comportamiento que actúa sobre un recurso obtenido de un servicio OData. Por ejemplo, considere una película digital como un recurso; se pueden hacer muchas cosas con ella: desproteger, valorar/comentar o proteger. Todos estos son ejemplos de acciones que se pueden implementar mediante un Servicio de datos de WCF que administre películas digitales. Las acciones se describen en una respuesta OData que contiene un recurso en el que se puede invocar la acción. Cuando un usuario solicita un recurso que representa una película digital, la respuesta devuelta por el Servicio de datos de WCF contiene información sobre las acciones disponibles para dicho recurso. La disponibilidad de una acción puede depender del estado del servicio de datos o del recurso. Por ejemplo, una vez desprotegida una película digital otro usuario no la puede desproteger. Los clientes pueden invocar una acción con solo especificar una dirección URL. Por ejemplo, `http://MyServer/MovieService.svc/Movies(6)` identificaría una película digital concreta y `http://MyServer/MovieService.svc/Movies(6)/Checkout` invocaría la acción en esa película específica. Las acciones le permiten exponer su modelo de servicio sin exponer el modelo de datos. Continuando con el ejemplo de servicio de películas, quizás desee permitir que un usuario valore una película pero no desee exponer directamente los datos de valoración como un recurso. Podría implementar una acción de valoración que permitiera al usuario valorar una película pero no tener acceso directamente a los datos de valoración como un recurso.
   
 ## <a name="implementing-an-action"></a>Implementar una acción  
  Para implementar una acción de servicio debe implementar la <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), y [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfaces. <xref:System.IServiceProvider> permite que WCF Data Services obtenga su implementación de [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) permite que WCF Data Services crear, buscar, describa e invocar las acciones de servicio. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) le permite invocar el código que implementa el comportamiento de las acciones de servicio y obtener los resultados, si existe. Tenga en cuenta que WCF Data Services son Servicios de WCF por llamada; se creará una nueva instancia del servicio cada vez que se llame al servicio.  Asegúrese de que no se realiza trabajo innecesario cuando se crea el servicio.  
@@ -52,7 +53,7 @@ Las acciones OData proporcionan una manera de implementar un comportamiento que 
 ## <a name="invoking-a-wcf-data-service-action"></a>Invocar una acción de un Servicio de datos de WCF  
  Las acciones se invocan mediante una solicitud POST HTTP. La dirección URL especifica el recurso seguido del nombre de la acción. Los parámetros se pasan en el cuerpo de la solicitud. Por ejemplo, suponga que hay un servicio denominado MovieService que expone una acción denominada Rate. Puede usar la dirección URL siguiente para invocar la acción Rate en una película concreta:  
   
- http://MovieServer/MovieService.svc/Movies(1)/Rate  
+ `http://MovieServer/MovieService.svc/Movies(1)/Rate`
   
  Movies(1) especifica la película que desea valorar y Rate especifica la acción Rate. El valor real de la valoración estará en el cuerpo de la solicitud HTTP como se muestra en el ejemplo siguiente:  
   
@@ -67,15 +68,15 @@ Host: localhost:15238
 ```  
   
 > [!WARNING]
->  El código muestra anterior solo funcionará con WCF Data Services 5.2 y versiones posteriores que admitan JSON ligero. Si emplea una versión anterior de WCF Data Services, debe especificar el content-type detallado de json de la manera siguiente: `application/json;odata=verbose`.  
+> El código muestra anterior solo funcionará con WCF Data Services 5.2 y versiones posteriores que admitan JSON ligero. Si emplea una versión anterior de WCF Data Services, debe especificar el content-type detallado de json de la manera siguiente: `application/json;odata=verbose`.  
   
  O bien, puede invocar una acción mediante el Cliente de WCF Data Services como se muestra en el fragmento de código siguiente.  
   
-```  
+```csharp
 MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.svc/"));  
-            //...  
-            context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );           
-```  
+//...  
+context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );
+```
   
  En el fragmento de código anterior, la clase `MoviesModel` se generaba usando Visual Studio para Agregar referencia de servicio a un Servicio de datos de WCF.  
   

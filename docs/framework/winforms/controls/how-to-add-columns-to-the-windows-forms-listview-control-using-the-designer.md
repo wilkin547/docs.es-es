@@ -6,11 +6,11 @@ helpviewer_keywords:
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
 ms.openlocfilehash: 4c696644e61004bcac48399ffc752e40675642fc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597817"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46477801"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Cómo: Agregar columnas al control ListView de formularios Windows Forms mediante el Diseñador
 Los formularios de Windows <xref:System.Windows.Forms.ListView> control puede mostrar varias columnas para cada lista de elementos cuando se encuentra en la **detalles** vista. Puede usar las columnas para mostrar varios tipos de información sobre cada elemento de lista. Por ejemplo, una lista de archivos podría mostrar el nombre de archivo, tipo de archivo, tamaño y fecha de que última modificación del archivo. Para obtener información sobre cómo rellenar las columnas una vez que se crean, vea [Cómo: Mostrar subelementos en columnas con el ListView Control de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  

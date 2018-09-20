@@ -2,21 +2,21 @@
 title: Usar NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: a753cca008c7eb9b500afa7f3f3b55b5410522a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498874"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471150"
 ---
 # <a name="using-the-nethttpbinding"></a>Usar NetHttpBinding
-<xref:System.ServiceModel.NetHttpBinding> es un enlace diseñado para consumir servicios HTTP o WebSocket y usa la codificación binaria de forma predeterminada. <xref:System.ServiceModel.NetHttpBinding> detectará si se usa con un contrato de solicitud-respuesta o dúplex y cambiará su comportamiento para que coincida; usará HTTP para los contratos de solicitud-respuesta y WebSockets para los contratos dúplex. Este comportamiento puede invalidarse mediante el <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` configuración:  
+<xref:System.ServiceModel.NetHttpBinding> es un enlace diseñado para consumir servicios HTTP o WebSocket y usa la codificación binaria de forma predeterminada. <xref:System.ServiceModel.NetHttpBinding> detectará si se usa con un contrato de solicitud-respuesta o dúplex y cambiará su comportamiento para que coincida; usará HTTP para los contratos de solicitud-respuesta y WebSockets para los contratos dúplex. Este comportamiento puede invalidarse mediante la configuración <xref:System.ServiceModel.Channels.WebSocketTransportUsage>:  
   
-1.  Siempre: obliga a usar WebSockets incluso para los contratos de solicitud-respuesta.  
+1. `Always` -Esto fuerza WebSockets incluso para los contratos de solicitud-respuesta.  
   
-2.  Nunca: evita que se use WebSockets. Si se intenta usar un contrato dúplex con este valor se producirá una excepción.  
+2. `Never` -Esto impide que se utilice WebSockets. Si se intenta usar un contrato dúplex con este valor se producirá una excepción.  
   
-3.  WhenDuplex: es el valor predeterminado y se comporta como se ha descrito anteriormente.  
+3. `WhenDuplex` -Éste es el valor predeterminado y se comporta como se describió anteriormente.  
   
  <xref:System.ServiceModel.NetHttpBinding> admite sesiones confiables en modo HTTP y en modo WebSocket. En el modo WebSocket, el transporte proporciona las sesiones.  
   

@@ -2,19 +2,19 @@
 title: Exponer e invocar ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
-ms.openlocfilehash: f36d88fc54e5150927113ed8825fbccad84129d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520128"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479759"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Exponer e invocar ActivityActions
 En este ejemplo se muestra cómo desarrollar una actividad personalizada que tiene un objeto <xref:System.Activities.ActivityAction>. También muestra cómo utilizar esta actividad proporcionando una implementación de <xref:System.Activities.ActivityAction>.  
   
- Un <xref:System.Activities.ActivityAction> permite que un autor de actividad exponen "agujeros" con firmas específicas donde el usuario de la actividad puede conectar un comportamiento personalizado. Por ejemplo, el <!--zz <xref:System.Activities.Statements.ForEach>--> `System.Activities.Statements.ForEach` actividad, (que actúa sobre una colección de elementos), tiene un <xref:System.Activities.ActivityAction> que permite al usuario de la actividad agregar un comportamiento que actúa sobre el elemento de iteración actual.  
+ Un <xref:System.Activities.ActivityAction> permite que un autor de actividad exponen "agujeros" con firmas específicas donde el usuario de la actividad puede conectar un comportamiento personalizado. Por ejemplo, la actividad <xref:System.Activities.Statements.ForEach%601>, (que actúa sobre una colección de elementos) tiene un objeto <xref:System.Activities.ActivityAction> que permite al usuario de la actividad agregar un comportamiento que actúa sobre el elemento de iteración actual.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
+## <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
 1.  Abra el **ActivityAction.sln** solución de ejemplo [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   

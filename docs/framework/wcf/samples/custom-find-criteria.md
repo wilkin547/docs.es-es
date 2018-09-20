@@ -3,11 +3,11 @@ title: Criterios de búsqueda personalizados
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678064"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471702"
 ---
 # <a name="custom-find-criteria"></a>Criterios de búsqueda personalizados
 Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usando la lógica y cómo implementar un servicio de detección personalizado. Los clientes utilizan la funcionalidad de concordancia de ámbito personalizada para refinar y seguir usando la funcionalidad de búsqueda proporcionada por la detección WCF. El escenario que abarca este ejemplo es el siguiente:  
@@ -45,7 +45,7 @@ Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usand
   
      Esta lógica personalizada pasa por todos los ámbitos de cada uno de los puntos de conexión que el servicio tiene. Si alguno de los ámbitos del punto de conexión coincide con alguno de los ámbitos proporcionados por el cliente, el servicio de descarga agrega ese punto de conexión a la respuesta que se devuelve al cliente.  
   
-3.  **CustomDiscoveryExtension.cs**: el último paso para implementar el servicio de detección es conectar esta implementación de personalizado detectar el servicio al host de servicio. La clase de aplicación auxiliar que se utiliza aquí es la clase `CustomDiscoveryExtension`. Esta clase extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. El usuario debe invalidar el método <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. En este caso, el método devuelve una instancia del servicio de detección personalizado que se creó antes. `PublishedEndpoints` es <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contiene todos los extremos de aplicación que se agregan a <xref:System.ServiceModel.ServiceHost>. El servicio de detección personalizado lo utiliza para rellenar su lista interna. El usuario puede agregar también otros metadatos de extremo.  
+3.  **CustomDiscoveryExtension.cs**: el último paso para implementar el servicio de detección es conectar esta implementación de personalizado detectar el servicio al host de servicio. La clase del asistente que se utiliza aquí es la clase `CustomDiscoveryExtension`. Esta clase extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. El usuario debe invalidar el método <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. En este caso, el método devuelve una instancia del servicio de detección personalizado que se creó antes. `PublishedEndpoints` es <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contiene todos los extremos de aplicación que se agregan a <xref:System.ServiceModel.ServiceHost>. El servicio de detección personalizado lo utiliza para rellenar su lista interna. El usuario puede agregar también otros metadatos de extremo.  
   
  Por último, abra Program.cs. Observe que tanto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> como `CustomDiscoveryExtension` se agregan al host. Una vez hecho esto, si el host tiene un punto de conexión sobre el que recibir los mensajes de detección, la aplicación puede utilizar el servicio de detección personalizado.  
   

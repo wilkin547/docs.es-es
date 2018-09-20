@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 9a04b8aaf9c6263a8935099963aaa1dc8d9100fd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c656811e493c11ca463ce85d71b716c681501f21
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664675"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481902"
 ---
 # <a name="transport-security-overview"></a>Información general de la seguridad del transporte
 Mecanismos de seguridad de transporte en Windows Communication Foundation (WCF) dependen el enlace y el transporte que se va a usar. Por ejemplo, al utilizar la clase <xref:System.ServiceModel.WSHttpBinding>, el transporte es HTTP y el mecanismo principal para garantizar el transporte es Capa de sockets seguros (SSL) sobre HTTP, normalmente denominado HTTPS. En este tema se describe los mecanismos de seguridad de transporte principales utilizados en los enlaces proporcionados por el sistema WCF.  
@@ -21,7 +21,7 @@ Mecanismos de seguridad de transporte en Windows Communication Foundation (WCF) 
 >  Cuando se usa la seguridad SSL con .NET Framework 3.5 y versiones posteriores, un cliente WCF utiliza tanto los certificados intermedios en su almacén de certificados y los certificados intermedios reciben durante la negociación de SSL para realizar la validación de la cadena de certificados en el servicio certificado. .NET Framework 3.0 solo usa los certificados intermedios instalados en el almacén de certificados local.  
   
 > [!WARNING]
->  Cuando se utiliza la seguridad de transporte, el <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` puede sobrescribirse la propiedad. Para evitar que esto suceda, establezca el <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` en None. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> es un comportamiento de servicio que se puede establecer en la descripción del servicio.  
+>  Cuando se utiliza la seguridad de transporte, puede sobrescribirse la propiedad <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>. Para evitar que esto suceda, establezca el <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> a <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> es un comportamiento de servicio que se puede establecer en la descripción del servicio.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  De manera predeterminada, la clase <xref:System.ServiceModel.BasicHttpBinding> no proporciona seguridad. Este enlace está diseñado para la interoperabilidad con proveedores de servicios Web que no implementan seguridad. Sin embargo, puede activar la seguridad definiendo la propiedad <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> en cualquier valor excepto <xref:System.ServiceModel.BasicHttpSecurityMode.None>. Para habilitar la seguridad del transporte, defina la propiedad en <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  

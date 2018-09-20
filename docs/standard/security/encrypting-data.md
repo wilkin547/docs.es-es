@@ -14,11 +14,11 @@ ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46008523"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479564"
 ---
 # <a name="encrypting-data"></a>Cifrar datos
 El cifrado simétrico y el cifrado asimétrico se efectúan mediante procesos distintos. El cifrado simétrico se realiza en secuencias y, por tanto, resulta útil para cifrar grandes cantidades de datos. El cifrado asimétrico se realiza en un pequeño número de bytes y, por tanto, solo resulta útil para pequeñas cantidades de datos.  
