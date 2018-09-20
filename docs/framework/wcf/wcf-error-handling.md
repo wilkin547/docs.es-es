@@ -2,12 +2,12 @@
 title: Control de errores de WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 90c1d5a955de10b7e65dd21bda7ebfb64f24399d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504921"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473452"
 ---
 # <a name="wcf-error-handling"></a>Control de errores de WCF
 Los errores detectados por una aplicación WCF pertenecen a uno de los tres grupos:  
@@ -35,16 +35,16 @@ Los errores detectados por una aplicación WCF pertenecen a uno de los tres grup
 -   Controlar eventos <xref:System.ServiceModel.ServiceHost>  
   
 ## <a name="fault-contracts"></a>Contrato de error  
- Los contratos de error le permiten definir los errores que se pueden producir durante la operación de servicio en una plataforma de manera independiente. De forma predeterminada, todas las excepciones producidas desde una operación de servicio se devolverán al cliente como objeto <xref:System.ServiceModel.FaultException>. El objeto <xref:System.ServiceModel.FaultException> contendrá muy poca información. Puede controlar la información enviada al cliente mediante la definición de un contrato de error y la devolución del error como clase <xref:System.ServiceModel.FaultException%601>. Para obtener más información, consulte [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+ Los contratos de error le permiten definir los errores que se pueden producir durante la operación de servicio en una plataforma de manera independiente. De forma predeterminada, todas las excepciones producidas desde una operación de servicio se devolverán al cliente como objeto <xref:System.ServiceModel.FaultException>. El objeto <xref:System.ServiceModel.FaultException> contendrá muy poca información. Puede controlar la información enviada al cliente mediante la definición de un contrato de error y la devolución del error como clase <xref:System.ServiceModel.FaultException%601>. Para obtener más información, consulte [especificar y controlar errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- La interfaz <xref:System.ServiceModel.Dispatcher.IErrorHandler> le permite controlar más la respuesta de la aplicación WCF a los errores.  Proporciona control total sobre el mensaje de error devuelto al cliente y permite realizar el procesamiento de errores personalizado como el registro.  Para obtener más información acerca de <xref:System.ServiceModel.Dispatcher.IErrorHandler> y [extender Control sobre un control de errores e informes](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ La interfaz <xref:System.ServiceModel.Dispatcher.IErrorHandler> le permite controlar más la respuesta de la aplicación WCF a los errores.  Proporciona control total sobre el mensaje de error devuelto al cliente y permite realizar el procesamiento de errores personalizado como el registro.  Para obtener más información acerca de <xref:System.ServiceModel.Dispatcher.IErrorHandler> y [extender Control sobre el control de errores e informes](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>Eventos ServiceHost  
  La clase <xref:System.ServiceModel.ServiceHost> hospeda servicios y define varios eventos que quizá sean necesarios para el control de errores. Por ejemplo:  
   
-1.  <!--zz <xref:System.ServiceModel.ServiceHost.Faulted>-->  `System.ServiceModel.ServiceHost.Faulted`
+1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   
-2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
+2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
  Para obtener más información, vea <xref:System.ServiceModel.ServiceHost>

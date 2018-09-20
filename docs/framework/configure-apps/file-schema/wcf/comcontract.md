@@ -2,12 +2,12 @@
 title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b15d40c5933776676c605e71c77453442ad3e339
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749067"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490457"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Especifica un contrato de servicio de integración de COM+.  
@@ -70,7 +70,7 @@ Especifica un contrato de servicio de integración de COM+.
 |comContracts|Contiene una colección de elementos `comContract`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Contratos de servicio de integración de COM + están restringidos actualmente a la "http://tempuri.org" espacio de nombres, y el nombre del contrato se deriva de la interfaz COM de apoyo. Puede, sin embargo, especificar las alternativas utilizando la sección `comContracts`, así como el elemento `comContract` en el archivo de configuración. Por ejemplo, puede utilizar la configuración siguiente para especificar el espacio de nombres, el nombre del contrato y los tipos definidos por el usuario que se van incluir, así como otros valores para un contrato de servicios.  
+ Contratos de servicio de integración de COM + están restringidos actualmente a la `http://tempuri.org` espacio de nombres y nombre de contrato se deriva de la interfaz COM de apoyo. Puede, sin embargo, especificar las alternativas utilizando la sección `comContracts`, así como el elemento `comContract` en el archivo de configuración. Por ejemplo, puede utilizar la configuración siguiente para especificar el espacio de nombres, el nombre del contrato y los tipos definidos por el usuario que se van incluir, así como otros valores para un contrato de servicios.  
   
 ```xml  
 <comContracts>  

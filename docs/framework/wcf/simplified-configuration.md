@@ -2,12 +2,12 @@
 title: Configuración simplificada
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 4893cb0d01d2a4a11bffd94768155512dce263a9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509527"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46485709"
 ---
 # <a name="simplified-configuration"></a>Configuración simplificada
 Configuración de servicios de Windows Communication Foundation (WCF) puede ser una tarea compleja. Existen muchas opciones diferentes y no siempre es fácil determinar qué configuración es necesaria. Aunque los archivos de configuración aumentan la flexibilidad de los servicios de WCF, también son el origen de muchos difícil encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] aborda estos problemas y proporciona una forma de reducir el tamaño y la complejidad de la configuración del servicio.  
@@ -87,24 +87,27 @@ Configuración de servicios de Windows Communication Foundation (WCF) puede ser 
  El siguiente ejemplo es un archivo de configuración equivalente al del principio de este tema que utiliza el modelo de configuración simplificado.  
   
 ```xml  
-<system.serviceModel>  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior>  
-          <serviceMetadata httpGetEnabled="True"/>  
-          <serviceDebug includeExceptionDetailInFaults="false"/>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>    <bindings>  
-       <basicHttpBinding>  
-          <binding maxBufferSize="100"  
-                   maxReceiveBufferSize="100" />  
-       </basicHttpBinding>  
-    </bindings>    <!-- No <service> tag is necessary. Default endpoints will be added to the service -->  
-    <!-- The service behavior with name="" will be picked up by the service -->  
-    <protocolMapping>  
-      <add scheme="http"     binding="basicHttpBinding" / </protocolMapping>  
-  </system.serviceModel>  
+<system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <bindings>
+       <basicHttpBinding>
+          <binding maxBufferSize="100"
+                   maxReceiveBufferSize="100" />
+       </basicHttpBinding>
+    </bindings>
+    <!-- No <service> tag is necessary. Default endpoints will be added to the service -->
+    <!-- The service behavior with name="" will be picked up by the service -->
+    <protocolMapping>
+      <add scheme="http" binding="basicHttpBinding" />
+  </protocolMapping>
+  </system.serviceModel>
 ```  
   
 > [!IMPORTANT]

@@ -13,12 +13,12 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 921f5f2bfda1a19d022d3f3f4131e3653fd17ea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3c3ea63df8d99154c42e40b359180ad1065f6c5
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742795"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481759"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;agregar&gt; elemento para webRequestModules (configuración de red)
 Agrega un módulo de solicitud Web personalizado a la aplicación.  
@@ -45,7 +45,7 @@ Agrega un módulo de solicitud Web personalizado a la aplicación.
 |**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
 |`prefix`|El prefijo URI para las solicitudes administradas por este módulo de solicitud Web.|  
-|`type`|El nombre de tipo completo (indicado por la <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por comas, que implementa este módulo de solicitud Web.|  
+|`type`|El nombre de tipo completo (indicado por el <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por punto y coma, que implementa este módulo de solicitud Web.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -57,19 +57,19 @@ Agrega un módulo de solicitud Web personalizado a la aplicación.
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica los módulos que se utilizan para solicitar información de hosts de la red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `prefix` atributo define el prefijo URI que utiliza el módulo de solicitud Web especificado. Módulos de solicitud Web suelen registrarse para controlar un protocolo específico, como HTTP o FTP, pero se pueden registrar para controlar una solicitud a un servidor específico o una ruta de acceso en un servidor.  
+ El `prefix` atributo define el prefijo URI que utiliza el módulo de solicitud Web especificado. Módulos de solicitud Web se registran normalmente para controlar un protocolo específico, como HTTP o FTP, pero se pueden registrar para controlar una solicitud a un servidor específico o una ruta de acceso en un servidor.  
   
  El módulo de solicitud Web se crea cuando se pasa a la <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> método.  
   
- El valor de la `prefix` atributo debe ser los primeros caracteres de un URI válido, por ejemplo, "http", o "http://www.contoso.com".  
+ El valor de la `prefix` atributo debe ser los primeros caracteres de un URI válido. Por ejemplo: `http` o `http://www.contoso.com`.
   
- El valor de la `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por punto y coma.  
+ El valor de la `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por comas.
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se registra un módulo de solicitud Web personalizado para HTTP. Debe reemplazar los valores de Version y PublicKeyToken con los valores correctos para el módulo especificado.  
+ El ejemplo siguiente registra un módulo de solicitud Web personalizado para HTTP. Debe reemplazar los valores de versión y PublicKeyToken con los valores correctos para el módulo especificado.  
   
 ```xml  
 <configuration>  

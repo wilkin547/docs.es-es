@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646459"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478907"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Información general sobre la globalización y la localización de WPF
 Cuando se limita la disponibilidad de un producto a un solo idioma, se limita la base de clientes potenciales a una fracción de los 6,5 mil millones de habitantes del mundo. Si quiere que las aplicaciones alcancen una audiencia global, la localización rentable del producto es una de las formas mejores y más económicas de llegar a más clientes.  
@@ -54,7 +54,7 @@ Cuando se limita la disponibilidad de un producto a un solo idioma, se limita la
   
 -   Usar atributos de localización para controlar la localización en lugar de omitir selectivamente <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> las propiedades de elementos. Consulte [atributos y comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md) para obtener más información.  
   
--   Use **msbuild/t: updateuid** y **/t: checkuid** para agregar y comprobar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades en su [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Use <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades para realizar el seguimiento de cambios entre el desarrollo y la localización. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades de ayudan a localizar los nuevos cambios de desarrollo. Si agrega manualmente <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades para un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], la tarea será habitualmente tediosa y menos precisa.  
+-   Use `msbuild -t:updateuid` y `-t:checkuid` para agregar y comprobar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades en su [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Use <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades para realizar el seguimiento de cambios entre el desarrollo y la localización. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades de ayudan a localizar los nuevos cambios de desarrollo. Si agrega manualmente <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades para un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], la tarea será habitualmente tediosa y menos precisa.  
   
     -   No modifique ni cambie <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades después de iniciar la localización.  
   
@@ -125,7 +125,7 @@ Cuando se limita la disponibilidad de un producto a un solo idioma, se limita la
   
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> se necesitan propiedades en orden para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localización [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] funcione correctamente.  
   
- Se usan por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localización [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] para realizar el seguimiento de cambios entre el desarrollo y la localización de la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades le permiten combinar una versión más reciente de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con una localización anterior de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Agrega un <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedad ejecutando **msbuild/t: updateuid RunDialog.csproj** en un shell de comandos. Este es el método recomendado de agregar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades porque agregarlas manualmente suele exigir mucho tiempo y menos precisa. Puede comprobar que <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades se establecen correctamente ejecutando **msbuild/t: checkuid RunDialog.csproj**.  
+ Se usan por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localización [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] para realizar el seguimiento de cambios entre el desarrollo y la localización de la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades le permiten combinar una versión más reciente de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con una localización anterior de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Agrega un <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedad ejecutando `msbuild -t:updateuid RunDialog.csproj` en un shell de comandos. Este es el método recomendado de agregar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades porque agregarlas manualmente suele exigir mucho tiempo y menos precisa. Puede comprobar que <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades se establecen correctamente ejecutando `msbuild -t:checkuid RunDialog.csproj`.
   
  El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se estructura usando el <xref:System.Windows.Controls.Grid> control, que es un control útil para aprovechar el diseño automático en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Observe que el cuadro de diálogo se divide en tres filas y cinco columnas. No, una de las definiciones de columna y fila tiene un tamaño fijo; por lo tanto, el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] los elementos que se colocan en cada celda pueden adaptarse a aumentos y reducciones de tamaño durante la localización.  
   

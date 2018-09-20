@@ -2,12 +2,12 @@
 title: Guía de interoperabilidad de los protocolos de servicios web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739050"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490381"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guía de interoperabilidad de los protocolos de servicios web
 Windows Communication Foundation (WCF) se implementa una serie de protocolos de servicios Web. Muchos de estos protocolos incluyen distintas opciones y puntos de extensibilidad que son decisión del responsable de la implementación. En este tema se proporciona una lista de protocolos de servicios Web que WCF implementa. Otros temas incluidos en esta sección proporcionan información detallada acerca de la implementación de cada protocolo admitido.  
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF) se implementa una serie de protocolos de 
 |WS-Coordination|[Coordinación de servicios Web](https://go.microsoft.com/fwlink/?LinkId=95324)|  
 |Transacción WS-Atomic|[Transacción atómica de servicios Web](https://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- El <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, y <xref:System.ServiceModel.Description.MetadataResolver> clases proporcionan compatibilidad con las siguientes especificaciones de metadatos:  
+ Las clases <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter> y <xref:System.ServiceModel.Description.MetadataResolver> proporcionan compatibilidad con las siguientes especificaciones de metadatos:  
   
 -   [Esquema XML parte 1: Segunda edición de estructuras](https://go.microsoft.com/fwlink/?LinkId=3536)  
   

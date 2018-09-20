@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197571"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490171"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
 
@@ -192,7 +192,7 @@ Svcutil.exe puede generar el código de serialización C# necesario a partir de 
 |/ reference:\<ruta de acceso de archivo >|Agrega el ensamblado especificado al conjunto de ensamblados utilizados para resolver las referencias de tipo.<br /><br /> Forma abreviada: `/r`|
 |/excludeType:\<tipo >|Especifica el nombre completo o calificado con el ensamblado de un tipo que se va a excluir de la exportación o de la validación.<br /><br /> Forma abreviada: `/et`|
 |/ out:\<archivo >|Especifica el nombre de archivo para el código generado. Se omite esta opción cuando se pasan varios ensamblados a la herramienta como entrada.<br /><br /> Valor predeterminado: Se deriva del nombre de ensamblado.<br /><br /> Forma abreviada: `/o`|
-|/UseSerializerForFaults|Especifica que el <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` debe usarse para leer y escribir los errores, en lugar del predeterminado <xref:System.Runtime.Serialization.DataContractSerializer>.|
+|/UseSerializerForFaults|Especifica que <xref:System.Xml.Serialization.XmlSerializer> se debería utilizar para leer y escribir los errores, en lugar del <xref:System.Runtime.Serialization.DataContractSerializer> predeterminado.|
 
 ## <a name="examples"></a>Ejemplos
 
