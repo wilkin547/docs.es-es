@@ -2,12 +2,12 @@
 title: Asignación de tipos entre CLR y SQL
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862110"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478700"
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación que prefiera. Cuando la aplicación se ejecuta, LINQ to SQL convierte las consultas integradas del lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, LINQ to SQL los vuelve a convertir en objetos con los que pueda trabajar en su propio lenguaje de programación.  
@@ -122,7 +122,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
  Hay muchas otras asignaciones de tipos numéricos entre las que puede elegir, pero algunas pueden tener como resultado excepciones de desbordamiento o de pérdida de datos mientras se trasladan a la base de datos o desde ella. Para obtener más información, consulte el [matriz de comportamiento de tiempo tipo de asignación de ejecución](#BehaviorMatrix).  
   
 ### <a name="decimal-and-money-types"></a>Tipos Decimal y Money  
- La precisión predeterminada de SQL Server `DECIMAL` tipo (18 dígitos decimales a la izquierda y derecha del separador decimal) es mucho menor que la precisión de CLR <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` tipo que se empareja con de forma predeterminada. Esto puede producir una pérdida de precisión cuando los datos se guardan en la base de datos. Sin embargo, puede ocurrir exactamente lo contrario si el tipo `DECIMAL` de SQL Server se configura con más de 29 dígitos de precisión. Cuando se ha configurado un tipo `DECIMAL` de SQL Server con mayor precisión que el tipo <xref:System.Decimal?displayProperty=nameWithType> de CLR, la pérdida de precisión se produce al recuperar los datos de la base de datos.  
+ La precisión predeterminada de SQL Server `DECIMAL` tipo (18 dígitos decimales a la izquierda y derecha del separador decimal) es mucho menor que la precisión de CLR <xref:System.Decimal?displayProperty=nameWithType> tipo que se empareja con de forma predeterminada. Esto puede producir una pérdida de precisión cuando los datos se guardan en la base de datos. Sin embargo, puede ocurrir exactamente lo contrario si el tipo `DECIMAL` de SQL Server se configura con más de 29 dígitos de precisión. Cuando se ha configurado un tipo `DECIMAL` de SQL Server con mayor precisión que el tipo <xref:System.Decimal?displayProperty=nameWithType> de CLR, la pérdida de precisión se produce al recuperar los datos de la base de datos.  
   
  Los tipos `MONEY` y `SMALLMONEY` de SQL Server, que también están emparejados con el tipo <xref:System.Decimal?displayProperty=nameWithType> de CLR de forma predeterminada, tienen mucha menos precisión, por lo que pueden producirse excepciones de desbordamiento o de pérdida de datos al guardar los datos en la base de datos.  
   

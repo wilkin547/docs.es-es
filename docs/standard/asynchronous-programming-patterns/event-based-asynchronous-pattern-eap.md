@@ -10,11 +10,11 @@ ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742013"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480635"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Patrón asincrónico basado en eventos (EAP)
 
@@ -38,7 +38,7 @@ Hay varias maneras de exponer las características asincrónicas al código de c
  En este tema se describe cómo determinar el momento conveniente para implementar el modelo asincrónico basado en eventos en lugar del modelo <xref:System.IAsyncResult>, representado por el [modelo de programación asincrónica (APM)](asynchronous-programming-model-apm.md).
   
  [Implementar un componente que admita el modelo asincrónico basado en eventos](component-that-supports-the-event-based-asynchronous-pattern.md)  
- En este tema se describe cómo crear un componente que implemente el modelo asincrónico basado en eventos. Se implementa utilizando las clases auxiliares del espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>, que garantiza que el componente funciona correctamente bajo cualquier modelo de aplicación.  
+ En este tema se describe cómo crear un componente que implemente el modelo asincrónico basado en eventos. Se implementa utilizando las clases del asistente del espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>, que garantiza que el componente funciona correctamente bajo cualquier modelo de aplicación.  
 
  [Implementar un cliente en un modelo asincrónico basado en eventos](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  En este tema se describe cómo crear un cliente que use un componente que implemente el modelo asincrónico basado en eventos.
