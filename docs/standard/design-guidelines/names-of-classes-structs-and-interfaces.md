@@ -15,11 +15,11 @@ ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44706079"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326272"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nombres de clases, estructuras e interfaces
 Sigan las instrucciones de nomenclatura se aplican a los nombres de tipo general.  

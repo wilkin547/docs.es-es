@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 6d526758871d881a97db94ba50491a1988ea782c
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 46a6c4896dae3951b5aedae79361f2e06d02bc04
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33594193"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488930"
 ---
-# <a name="xml-namespace-uri-39httpwwww3orgxml1998namespace39-can-be-bound-only-to-39xmlns39"></a>URI de espacio de nombres XML &#39; http://www.w3.org/XML/1998/namespace&#39; se pueden enlazar únicamente a &#39;xmlns&#39;
-El URI http://www.w3.org/XML/1998/namespace se utiliza en una declaración de espacio de nombres XML. Este URI es un espacio de nombres reservado y no puede incluirse en una declaración de espacio de nombres XML.  
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a>URI de espacio de nombres XML `http://www.w3.org/XML/1998/namespace`; se pueden enlazar únicamente a &#39;xmlns&#39;
+El URI `http://www.w3.org/XML/1998/namespace` se utiliza en una declaración de espacio de nombres XML. Este URI es un espacio de nombres reservado y no puede incluirse en una declaración de espacio de nombres XML.  
   
  **Identificador de error:** BC31183  
   

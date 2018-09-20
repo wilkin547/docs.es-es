@@ -3,11 +3,11 @@ title: Mensajes de mensajería de confianza quitados por segundo
 ms.date: 03/30/2017
 ms.assetid: a11b0b80-b242-48e1-b0bb-7f756db5486b
 ms.openlocfilehash: 7722b32f99b302c5c272e095033879c9e04c7ee1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188925"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45518992"
 ---
 # <a name="reliable-messaging-messages-dropped-per-second"></a>Mensajes de mensajería de confianza quitados por segundo
 Nombre de contador: sesiones de mensajería de confianza quitadas por segundo.  
