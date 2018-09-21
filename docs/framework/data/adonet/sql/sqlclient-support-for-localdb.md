@@ -3,11 +3,11 @@ title: Compatibilidad de SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749769"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46492644"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Compatibilidad de SqlClient para LocalDB
 A partir de SQL Server nombre de código Denali, una versión ligera de SQL Server, denominada LocalDB, estará disponible. Este tema explica cómo conectarse a una base de datos de LocalDB.  

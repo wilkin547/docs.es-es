@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
 ms.openlocfilehash: b88df66ef2e065d1db8d4033eb1fb0e47ebdd189
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46322379"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493532"
 ---
 # <a name="creating-a-dataview"></a>Crear un objeto DataView
 Hay dos formas de crear una <xref:System.Data.DataView>. Puede usar el **DataView** constructor, o bien puede crear una referencia a la <xref:System.Data.DataTable.DefaultView%2A> propiedad de la <xref:System.Data.DataTable>. El **DataView** constructor puede estar vacío o puede aceptar también una **DataTable** como un solo argumento, o un **DataTable** junto con los criterios de filtro, los criterios de ordenación y una fila filtro de estado. Para obtener más información acerca de los argumentos adicionales disponibles para su uso con el **DataView**, consulte [ordenar y filtrar datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  

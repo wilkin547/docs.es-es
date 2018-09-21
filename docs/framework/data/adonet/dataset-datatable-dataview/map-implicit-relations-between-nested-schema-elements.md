@@ -2,12 +2,12 @@
 title: Asignar relaciones implícitas entre elementos de esquema anidados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73cd8a83021934de3b8e3bf494a4f59dd32e183c
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485578"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493625"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Asignar relaciones implícitas entre elementos de esquema anidados
 Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos complejos anidados dentro de otros. En este caso, el proceso de asignación aplica la asignación predeterminada y crea lo siguiente en el <xref:System.Data.DataSet>:  
@@ -16,7 +16,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
   
 -   Si no existe ninguna restricción única en el elemento primario, una columna de clave principal adicional por cada definición de tabla denominado *TableName*_Id donde *TableName* es el nombre de la tabla primaria.  
   
--   Una restricción primary key en la tabla primaria que identifica la columna adicional como clave principal (estableciendo la **IsPrimaryKey** propiedad **True**). La restricción recibe el nombre Constraint*#* donde *#* es 1, 2, 3 y así sucesivamente. Por ejemplo, el nombre predeterminado de la primera restricción es Constraint1.  
+-   Una restricción primary key en la tabla primaria que identifica la columna adicional como clave principal (estableciendo la **IsPrimaryKey** propiedad **True**). La restricción recibe el nombre Constraint\#, donde \# es 1, 2, 3, etc. Por ejemplo, el nombre predeterminado de la primera restricción es Constraint1.  
   
 -   Una restricción de clave externa en la tabla secundaria que identifica la columna adicional como clave externa que hace referencia a la clave principal de la tabla primaria. La restricción recibe el nombre *ParentTable_ChildTable* donde *ParentTable* es el nombre de la tabla primaria y *ChildTable* es el nombre de la tabla secundaria.  
   

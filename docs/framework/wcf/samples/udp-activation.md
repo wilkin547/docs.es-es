@@ -3,11 +3,11 @@ title: Activación UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508847"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493404"
 ---
 # <a name="udp-activation"></a>Activación UDP
 En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo. Extiende la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo para admitir la activación del proceso usando el servicio de activación de procesos de Windows (WAS).  

@@ -13,11 +13,11 @@ ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46288282"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493048"
 ---
 # <a name="event-design"></a>Diseño de eventos
 Los eventos son la forma más frecuente de las devoluciones de llamada (construcciones que permiten el marco de trabajo llamar a código de usuario). Otros mecanismos de devolución de llamada incluyen a miembros tomar basado en la interfaz de complementos, los miembros virtuales y los delegados. Datos de estudios de uso indican que la mayoría de los desarrolladores son más cómodos si usan los eventos que usan otros mecanismos de devolución de llamada. Los eventos se integran perfectamente con Visual Studio y muchos lenguajes.  
