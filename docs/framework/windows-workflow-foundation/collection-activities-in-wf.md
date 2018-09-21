@@ -2,12 +2,12 @@
 title: Actividades de colección en WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516732"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538393"
 ---
 # <a name="collection-activities-in-wf"></a>Actividades de colección en WF
 Las actividades de colección se usan para trabajar con objetos de colección en un flujo de trabajo. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene actividades proporcionadas por el sistema para agregar y quitar elementos de una colección, probar la existencia de un elemento en una colección y borrar una colección. `ExistsInCollection` y `RemoveFromCollection` tiene un <xref:System.Activities.OutArgument%601> de tipo <xref:System.Boolean>, lo que indica el resultado.  
@@ -25,7 +25,7 @@ Las actividades de colección se usan para trabajar con objetos de colección en
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|Quita un elemento de una colección especificada y devuelve `true` si el elemento se quitó correctamente.|  
   
 ## <a name="using-collection-activities"></a>Usar actividades de colección  
- El siguiente ejemplo de código muestra cómo interactuar con un colección declarada como una variable de flujo de trabajo. La colección usada es una <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` de <xref:System.String> objetos denominados `fruitList`.  
+ El siguiente ejemplo de código muestra cómo interactuar con un colección declarada como una variable de flujo de trabajo. La colección usada es una <xref:System.Collections.Generic.List%601> de objetos <xref:System.String> denominada `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -227,7 +227,7 @@ Activity wf = new Sequence
   
  Los ejemplos de código anteriores también se pueden crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en lugar de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
-```  
+```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
 {  
     Default = new CSharpValue<ICollection<string>>("new List<String> From {\"Apple\", \"Orange\"};"),  

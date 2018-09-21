@@ -3,11 +3,11 @@ title: Secuencias (F#)
 description: 'Obtenga información sobre cómo usar las secuencias de F #, cuando se disponga de una gran colección ordenada de datos pero no espere usar todos los elementos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009815"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532391"
 ---
 # <a name="sequences"></a>Secuencias
 

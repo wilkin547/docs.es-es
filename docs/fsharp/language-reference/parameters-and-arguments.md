@@ -3,11 +3,11 @@ title: Parámetros y argumentos (F#)
 description: 'Obtenga información sobre la compatibilidad del lenguaje F # para definir parámetros y pasar argumentos a funciones, métodos y propiedades.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46288188"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532800"
 ---
 # <a name="parameters-and-arguments"></a>Parámetros y argumentos
 
