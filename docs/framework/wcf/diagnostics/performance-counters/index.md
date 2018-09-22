@@ -5,11 +5,11 @@ helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508770"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697638"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de rendimiento de WCF
 Windows Communication Foundation (WCF) incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación.  

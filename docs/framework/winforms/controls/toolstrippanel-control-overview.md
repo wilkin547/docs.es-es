@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
 ms.openlocfilehash: 1f13240df9879f656d986845552e8e93a74ade8f
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46286770"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579412"
 ---
 # <a name="toolstrippanel-control-overview"></a>Información general del control ToolStripPanel
 Un <xref:System.Windows.Forms.ToolStripPanel> proporciona un área única para colocar y compartir el espacio <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, y <xref:System.Windows.Forms.StatusStrip> controles. Varios <xref:System.Windows.Forms.ToolStrip> controles se apilan vertical u horizontalmente en función de la <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> de la <xref:System.Windows.Forms.ToolStripPanel>.  

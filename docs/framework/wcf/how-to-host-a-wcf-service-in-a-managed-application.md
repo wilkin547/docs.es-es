@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46530211"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696313"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Cómo: hospedar un servicio WCF en una aplicación administrada
 
@@ -63,7 +63,7 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
 
     > [!NOTE]
-    > En este ejemplo se usan puntos de conexión predeterminados, y este servicio no requiere ningún archivo de configuración. Si no se configura ningún punto de conexión, el tiempo de ejecución crea uno para cada dirección base de cada contrato de servicio implementado por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > En este ejemplo se usan extremos predeterminados, y este servicio no requiere ningún archivo de configuración. Si no se configura ningún extremo, el tiempo de ejecución crea uno para cada dirección base de cada contrato de servicio implementado por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
 
 7. Presione **Ctrl**+**MAYÚS**+**B** para compilar la solución.
 
@@ -89,7 +89,7 @@ El siguiente procedimiento muestra cómo implementar un servicio autohospedado e
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente ejemplo crea un objeto <xref:System.ServiceModel.ServiceHost> para hospedar un servicio de tipo `HelloWorldService`, y, a continuación, llama al método <xref:System.ServiceModel.ICommunicationObject.Open%2A> en <xref:System.ServiceModel.ServiceHost>. Se proporciona una dirección base mediante código, se habilita la publicación de metadatos y se usan puntos de conexión predeterminados.
+El siguiente ejemplo crea un objeto <xref:System.ServiceModel.ServiceHost> para hospedar un servicio de tipo `HelloWorldService`, y, a continuación, llama al método <xref:System.ServiceModel.ICommunicationObject.Open%2A> en <xref:System.ServiceModel.ServiceHost>. Se proporciona una dirección base mediante código, se habilita la publicación de metadatos y se usan extremos predeterminados.
 
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]

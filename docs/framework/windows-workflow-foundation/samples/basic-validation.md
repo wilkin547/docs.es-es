@@ -3,11 +3,11 @@ title: Validación básica
 ms.date: 03/30/2017
 ms.assetid: ba1343cc-aaab-4ade-b0c0-1dd5063bf4ad
 ms.openlocfilehash: 74d99e2d426e9ea5701fad80418fdf019112cc9e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539478"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581290"
 ---
 # <a name="basic-validation"></a>Validación básica
 Este ejemplo consta de una actividad, `CreateProduct`, que valida que su argumento `Cost` es menor o igual que su argumento `Price`.  

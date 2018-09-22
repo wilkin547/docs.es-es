@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537818"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696608"
 ---
 # <a name="getqualifierset-function"></a>Función GetQualifierSet
 Recupera el calificador establecido para una instancia o una definición de clase.

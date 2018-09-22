@@ -7,11 +7,11 @@ helpviewer_keywords:
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
 ms.openlocfilehash: 93bba86801ec4971e884cb4703d7a6323a2e94fe
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538786"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696409"
 ---
 # <a name="sample-opentype-font-pack"></a>Paquete de fuentes OpenType de ejemplo
 En este tema se proporciona información general sobre las fuentes de ejemplo de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] distribuidas con [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Las fuentes de ejemplo admiten características de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] extendidas que se pueden usar en las aplicaciones de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -21,7 +21,7 @@ En este tema se proporciona información general sobre las fuentes de ejemplo de
 ## <a name="fonts-in-the-opentype-font-pack"></a>Fuentes del paquete de fuentes OpenType  
  [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] proporciona un conjunto de fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de ejemplo que se pueden usar para crear aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Las fuentes de ejemplo se proporcionan bajo licencia de Ascender Corporation. Estas fuentes implementan únicamente un subconjunto de las características totales definidas por el formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]. En la tabla siguiente se enumeran los nombres de las fuentes de ejemplo de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
-|**Name**|**Archivo**|  
+|**Nombre**|**Archivo**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
