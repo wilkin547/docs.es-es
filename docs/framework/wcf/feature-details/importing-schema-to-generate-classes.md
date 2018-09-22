@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539921"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577946"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importación del esquema para generar clases
 Para generar clases de esquemas que se pueden usar con Windows Communication Foundation (WCF), use el <xref:System.Runtime.Serialization.XsdDataContractImporter> clase. En este tema se describen el proceso y variaciones.  

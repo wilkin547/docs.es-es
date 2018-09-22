@@ -3,11 +3,11 @@ title: Referencia
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
 ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46485790"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698420"
 ---
 # <a name="reference"></a>Referencia
 En esta sección se proporciona información de referencia para programadores de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

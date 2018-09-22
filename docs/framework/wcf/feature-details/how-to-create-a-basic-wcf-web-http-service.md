@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
 ms.openlocfilehash: 1b76d21cb4f416aae76e7597ad16cfd45e5b7cad
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532433"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696304"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Cómo: Crear un servicio básico web HTTP de WCF
 
-Windows Communication Foundation (WCF) le permite crear un servicio que expone un extremo Web. Los puntos de conexión web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de extremos.
+Windows Communication Foundation (WCF) le permite crear un servicio que expone un extremo Web. Los extremos web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de extremos.
 
 > [!NOTE]
 > La única manera de proteger un extremo web es exponerlo a través de HTTPS, utilizando la seguridad de transporte. Al usar la seguridad basada en mensaje, la información de seguridad se coloca normalmente en encabezados SOAP, y dado que los mensajes enviados a los extremos que no son SOAP no contienen envoltura SOAP, no hay ningún lugar donde colocar la información de seguridad y debe confiar en la seguridad de transporte.
 
-## <a name="to-create-a-web-endpoint"></a>Para crear un punto de conexión web
+## <a name="to-create-a-web-endpoint"></a>Para crear un extremo web
 
 1. Defina un contrato de servicios mediante una interfaz marcada con los atributos <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> y <xref:System.ServiceModel.Web.WebGetAttribute>.
 
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
     > [!NOTE]
     > Si no agrega un extremo, <xref:System.ServiceModel.Web.WebServiceHost> crea automáticamente un extremo predeterminado. <xref:System.ServiceModel.Web.WebServiceHost> también agrega <xref:System.ServiceModel.Description.WebHttpBehavior> y deshabilita la página de ayuda de HTTP y la funcionalidad GET del lenguaje de descripción de servicios Web (WSDL) para que el extremo de metadatos no interfiera con el extremo HTTP predeterminado.
     >
-    >  Agregar un punto de conexión que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el punto de conexión. La razón de esto es el URI del extremo es el mismo que el URI de la página de ayuda (la página que se muestra al ir a la dirección base de un servicio WCF) de escucha.
+    >  Agregar un extremo que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el extremo. La razón de esto es el URI del extremo es el mismo que el URI de la página de ayuda (la página que se muestra al ir a la dirección base de un servicio WCF) de escucha.
 
      Para evitar que esto suceda, puede realizar una de las siguientes acciones:
 

@@ -3,11 +3,11 @@ title: Funciones canónicas matemáticas
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
 ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537259"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579341"
 ---
 # <a name="math-canonical-functions"></a>Funciones canónicas matemáticas
 

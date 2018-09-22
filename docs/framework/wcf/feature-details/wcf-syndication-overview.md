@@ -3,11 +3,11 @@ title: Información general de distribución de WCF
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 ms.openlocfilehash: 60a919a03552f5195529ae0997e60d1fba55d7c3
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46507297"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46695888"
 ---
 # <a name="wcf-syndication-overview"></a>Información general de distribución de WCF
 Windows Communication Foundation (WCF) proporciona compatibilidad para exponer las fuentes de distribución desde un servicio WCF. La distribución es un mecanismo de integración de aplicaciones en el que un servidor expone algunos datos de la aplicación en un formato interoperable conocido como fuente. Una fuente es una colección de datos de la aplicación que está compuesta de algunos metadatos de fuente (título, autor, dirección URL y otros metadatos) y una serie de elementos de fuente. Dentro de la fuente, los elementos de fuente están ordenados normalmente en orden cronológico inverso. Un elemento de fuente está compuesto por un conjunto estándar de metadatos de elementos (título, dirección URL, fecha de creación, categoría y otros metadatos de elementos) y una cantidad arbitraria de datos específicos de la aplicación. Los dos tipos más comunes de las fuentes de distribución son Really Simple Syndication (RSS) 2.0 y Atom 1.0, que son compatibles con WCF.  

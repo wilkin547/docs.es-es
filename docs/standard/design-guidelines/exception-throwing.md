@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531487"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579906"
 ---
 # <a name="exception-throwing"></a>Generación de excepciones
 Excepciones directrices descritas en esta sección requieren una buena definición del significado del error de ejecución. Se produce un error de ejecución cada vez que un miembro no puede hacer lo que fue diseñado para hacer (lo que el nombre de miembro implica). Por ejemplo, si la `OpenFile` método no puede devolver un identificador de archivo abierto al llamador, se consideraría un error de ejecución.  

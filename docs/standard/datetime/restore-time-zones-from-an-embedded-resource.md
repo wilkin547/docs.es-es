@@ -12,11 +12,11 @@ ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46485777"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699136"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Cómo: restaurar zonas horarias de un recurso incrustado
 

@@ -3,11 +3,11 @@ title: 'Cómo: Utilizar los filtros'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46509007"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586525"
 ---
 # <a name="how-to-use-filters"></a>Cómo: Utilizar los filtros
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que utiliza múltiples filtros. En este ejemplo, los mensajes se enrutan a dos implementaciones de un servicio de la calculadora, regularCalc y roundingCalc. Ambas implementaciones admiten las mismas operaciones; sin embargo, un servicio redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar si se debe utilizar la versión del redondeo del servicio; si no se especifica ninguna preferencia de servicio, la carga del mensaje se equilibra entre los dos servicios. Las operaciones expuestas por ambos servicios son:  

@@ -13,11 +13,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 7353ad142bb276cde1c6fb0ff0c6dcf03b699aeb
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531164"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577206"
 ---
 # <a name="traverse-text-using-ui-automation"></a>Recorrer texto mediante usando UI Automation
 > [!NOTE]
