@@ -2,31 +2,34 @@
 title: Ejemplos de Windows Workflow (WF)
 ms.date: 03/30/2017
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e9b511606c6278e7d2b2fb1bc3cbd9c38b51b000
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b6f614bd8543070ee69636344376b058988c2306
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698424"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580621"
 ---
-# <a name="windows-workflow-wf-samples"></a><span data-ttu-id="7ac9b-102">Ejemplos de Windows Workflow (WF)</span><span class="sxs-lookup"><span data-stu-id="7ac9b-102">Windows Workflow (WF) Samples</span></span>
-<span data-ttu-id="7ac9b-103">Estos ejemplos proporcionan instrucciones sobre distintos aspectos de Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="7ac9b-103">These samples provide instruction on various aspects of Windows Workflow Foundation (WF).</span></span>  
-  
-<span data-ttu-id="7ac9b-104">Los ejemplos se pueden descargar desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=150780).</span><span class="sxs-lookup"><span data-stu-id="7ac9b-104">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>  
-  
+# <a name="windows-workflow-wf-samples"></a><span data-ttu-id="2a6c0-102">Ejemplos de Windows Workflow (WF)</span><span class="sxs-lookup"><span data-stu-id="2a6c0-102">Windows Workflow (WF) Samples</span></span>
+
+<span data-ttu-id="2a6c0-103">Estos ejemplos proporcionan instrucciones sobre distintos aspectos de Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="2a6c0-103">These samples provide instruction on various aspects of Windows Workflow Foundation (WF).</span></span>
+
+<span data-ttu-id="2a6c0-104">Los ejemplos se pueden descargar desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=150780).</span><span class="sxs-lookup"><span data-stu-id="2a6c0-104">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="7ac9b-105">Estos ejemplos se crearon con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] y [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], pero son compatibles con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] y [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7ac9b-105">These samples were created with [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] and [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], but are compatible with [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].</span></span> <span data-ttu-id="7ac9b-106">Ejemplos adicionales para Windows Workflow Foundation en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] pueden encontrarse en [Code MSDN](https://aka.ms/WF45Samples).</span><span class="sxs-lookup"><span data-stu-id="7ac9b-106">Additional samples for Windows Workflow Foundation in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] can be found on [Code MSDN](https://aka.ms/WF45Samples).</span></span>
-  
-## <a name="in-this-section"></a><span data-ttu-id="7ac9b-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="7ac9b-107">In this section</span></span>  
- [<span data-ttu-id="7ac9b-108">Aplicación</span><span class="sxs-lookup"><span data-stu-id="7ac9b-108">Application</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/application.md)  
- <span data-ttu-id="7ac9b-109">Proporciona ejemplos relacionados con aplicaciones de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="7ac9b-109">Provides samples that are related to workflow applications.</span></span>  
-  
- [<span data-ttu-id="7ac9b-110">Básico</span><span class="sxs-lookup"><span data-stu-id="7ac9b-110">Basic</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)  
- <span data-ttu-id="7ac9b-111">Proporciona ejemplos que muestran la funcionalidad básica de Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="7ac9b-111">Provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>  
-  
- [<span data-ttu-id="7ac9b-112">Escenario</span><span class="sxs-lookup"><span data-stu-id="7ac9b-112">Scenario</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)  
- <span data-ttu-id="7ac9b-113">Proporciona ejemplos de escenarios de Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="7ac9b-113">Provides examples of Windows Workflow Foundation (WF) scenarios.</span></span>  
-  
- <span data-ttu-id="7ac9b-114">Los ejemplos incluidos en esta sección hace uso de nuevas características de C# 3.0.</span><span class="sxs-lookup"><span data-stu-id="7ac9b-114">The samples contained in this section make use of new features in C# 3.0.</span></span> <span data-ttu-id="7ac9b-115">Para obtener información sobre algunas nuevas características de C# 3.0 que pueden ser desconocidas, vea [C# 3.0 Overview](https://go.microsoft.com/fwlink/?LinkId=193972) (Información general de C# 3.0).</span><span class="sxs-lookup"><span data-stu-id="7ac9b-115">For details on some new features of C# 3.0 that may be unfamiliar, please see the [C# 3.0 Overview](https://go.microsoft.com/fwlink/?LinkId=193972).</span></span>  
-  
- <span data-ttu-id="7ac9b-116">Los ejemplos se pueden descargar desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=150780).</span><span class="sxs-lookup"><span data-stu-id="7ac9b-116">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>
+> <span data-ttu-id="2a6c0-105">Estos ejemplos se crearon con Visual Studio 2010 y [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], pero son compatibles con versiones posteriores de Visual Studio y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2a6c0-105">These samples were created with Visual Studio 2010 and [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], but are compatible with later versions of Visual Studio and the .NET Framework.</span></span> <span data-ttu-id="2a6c0-106">Ejemplos adicionales para Windows Workflow Foundation en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] pueden encontrarse en [ejemplos de código MSDN](https://aka.ms/WF45Samples).</span><span class="sxs-lookup"><span data-stu-id="2a6c0-106">Additional samples for Windows Workflow Foundation in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] can be found on [MSDN code samples](https://aka.ms/WF45Samples).</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="2a6c0-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="2a6c0-107">In this section</span></span>
+
+[<span data-ttu-id="2a6c0-108">Aplicación</span><span class="sxs-lookup"><span data-stu-id="2a6c0-108">Application</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/application.md)
+
+<span data-ttu-id="2a6c0-109">Proporciona ejemplos relacionados con aplicaciones de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="2a6c0-109">Provides samples that are related to workflow applications.</span></span>
+
+[<span data-ttu-id="2a6c0-110">Básico</span><span class="sxs-lookup"><span data-stu-id="2a6c0-110">Basic</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)
+
+<span data-ttu-id="2a6c0-111">Proporciona ejemplos que muestran la funcionalidad básica de Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="2a6c0-111">Provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>
+
+[<span data-ttu-id="2a6c0-112">Escenario</span><span class="sxs-lookup"><span data-stu-id="2a6c0-112">Scenario</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)
+
+<span data-ttu-id="2a6c0-113">Proporciona ejemplos de escenarios de Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="2a6c0-113">Provides examples of Windows Workflow Foundation (WF) scenarios.</span></span>
+
+<span data-ttu-id="2a6c0-114">Los ejemplos se pueden descargar desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=150780).</span><span class="sxs-lookup"><span data-stu-id="2a6c0-114">The samples can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=150780).</span></span>
