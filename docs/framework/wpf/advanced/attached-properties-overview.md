@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c830a8ac3c8c935aa73974bb5fcee1f2be9c79a3
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754669"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702912"
 ---
 # <a name="attached-properties-overview"></a>Información general sobre propiedades asociadas
 
@@ -60,7 +60,7 @@ El escenario más típico donde WPF define una propiedad adjunta es cuando un el
 
 ## Propiedades adjuntas en código <a name="attached_properties_code"></a>
 
-Las propiedades adjuntas en WPF no tiene el típico [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] métodos "contenedor" para el acceso fácil de obtener o establecer. Esto se debe a que la propiedad adjunta no forma parte necesariamente del espacio de nombres de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para las instancias con la propiedad establecida. No obstante, un procesador de XAML debe poder establecer esos valores durante el análisis de XAML. Para admitir el uso eficaz de las propiedades adjuntas, el tipo de propietario de la propiedad adjunta debe implementar métodos de descriptor de acceso dedicados con el formato `Get`*NombreDePropiedad* y `Set`*NombreDePropiedad*. Estos métodos de descriptor de acceso dedicados también resultan útiles para obtener o establecer la propiedad adjunta en el código. Desde una perspectiva del código, una propiedad adjunta se parece a un campo de respaldo, que presenta descriptores de acceso de métodos en lugar de descriptores de acceso de propiedades. Ese campo de respaldo puede existir en cualquier objeto, en lugar de tener que definirse específicamente.
+Las propiedades adjuntas en WPF no tiene el típico [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] métodos "contenedor" para el acceso fácil de obtener o establecer. Esto se debe a que la propiedad adjunta no forma parte necesariamente del espacio de nombres de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para las instancias con la propiedad establecida. No obstante, un procesador de XAML debe poder establecer esos valores durante el análisis de XAML. Para admitir el uso de una propiedad adjunta efectivo, el tipo de propietario de la propiedad adjunta debe implementar métodos de descriptor de acceso dedicados en el formulario **obtener * PropertyName*** y **establecer*PropertyName ***. Estos métodos de descriptor de acceso dedicados también resultan útiles para obtener o establecer la propiedad adjunta en el código. Desde una perspectiva del código, una propiedad adjunta se parece a un campo de respaldo, que presenta descriptores de acceso de métodos en lugar de descriptores de acceso de propiedades. Ese campo de respaldo puede existir en cualquier objeto, en lugar de tener que definirse específicamente.
 
 En el ejemplo siguiente se muestra cómo establecer una propiedad adjunta en el código. En este ejemplo, `myCheckBox` es una instancia de la <xref:System.Windows.Controls.CheckBox> clase.
 
@@ -91,16 +91,16 @@ Como mencionamos anteriormente, debe realizar el registro como una propiedad adj
 
 Si la clase está definiendo la propiedad adjunta estrictamente para su uso en otros tipos, la clase no tiene que derivar <xref:System.Windows.DependencyObject>. Pero debe derivar de <xref:System.Windows.DependencyObject> si sigue el modelo general de WPF de tener la propiedad adjunta también ser una propiedad de dependencia.
 
-Defina la propiedad adjunta como una propiedad de dependencia declarando un `public static readonly` campo de tipo <xref:System.Windows.DependencyProperty>. Este campo se define mediante el valor devuelto de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método. El nombre del campo debe coincidir con el nombre de propiedad adjunta, anexado la cadena `Property`, seguir el patrón establecido de WPF de asignación de nombres de los campos que identifican frente a las propiedades que representan. El proveedor de propiedades adjuntas debe proporcionar también los métodos estáticos `Get`*NombreDePropiedad* y `Set`*NombreDePropiedad* como descriptores de acceso para la propiedad adjunta; de lo contrario, el sistema de propiedades no podrá usar la propiedad adjunta.
+Defina la propiedad adjunta como una propiedad de dependencia declarando un `public static readonly` campo de tipo <xref:System.Windows.DependencyProperty>. Este campo se define mediante el valor devuelto de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método. El nombre del campo debe coincidir con el nombre de propiedad adjunta, anexado la cadena `Property`, seguir el patrón establecido de WPF de asignación de nombres de los campos que identifican frente a las propiedades que representan. El proveedor de propiedades adjuntas debe proporcionar también estático **obtener * PropertyName*** y **establecer * PropertyName*** métodos como descriptores de acceso para la propiedad adjunta; si no lo hace esto dará como resultado de la propiedad sistema no podrá usar la propiedad adjunta.
 
 > [!NOTE]
 > Si se omite el descriptor de acceso de la propiedad adjunta get, enlace de datos en la propiedad no funcionará en las herramientas de diseño, como Visual Studio y Expression Blend.
 
 #### <a name="the-get-accessor"></a>Descriptor de acceso get
 
-La signatura del descriptor de acceso `Get`*NombreDePropiedad* debe ser:
+La firma para el **obtener * PropertyName*** debe ser el descriptor de acceso:
 
-`public static object Get` *PropertyName* `(object target)`
+`public static object GetPropertyName(object target)`
 
 -   El objeto `target` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> método el tipo del parámetro como <xref:System.Windows.UIElement>, porque la propiedad adjunta solo debe establecerse en <xref:System.Windows.UIElement> instancias.
 
@@ -108,15 +108,15 @@ La signatura del descriptor de acceso `Get`*NombreDePropiedad* debe ser:
 
 #### <a name="the-set-accessor"></a>Descriptor de acceso set
 
-La signatura del descriptor de acceso `Set`*NombreDePropiedad* debe ser:
+La firma para el **establecer * PropertyName*** debe ser el descriptor de acceso:
 
-`public static void Set` *NombreDePropiedad* `(object`  `target` `, object`  `value` `)`
+`public static void SetPropertyName(object target, object value)`
 
 -   El objeto `target` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.SetDock%2A> tipos de método como <xref:System.Windows.UIElement>, porque la propiedad adjunta solo debe establecerse en <xref:System.Windows.UIElement> instancias.
 
 -   El objeto `value` puede especificarse como un tipo más específico en la implementación. Por ejemplo, el <xref:System.Windows.Controls.DockPanel.SetDock%2A> tipos de método como <xref:System.Windows.Controls.Dock>, porque el valor solo puede establecerse en esa enumeración. Recuerde que el valor de este método es la entrada procedente del cargador de XAML cuando encuentra la propiedad adjunta en el uso de propiedades adjuntas en un marcado. Esa entrada es el valor especificado como un valor de atributo XAML en el marcado. Por lo tanto, debe existir compatibilidad con la conversión de tipos, el serializador de valores o la extensión de marcado para el tipo que usa, de modo que el tipo adecuado se pueda crear desde el valor del atributo (que, básicamente, es una cadena).
 
-El ejemplo siguiente muestra el registro de la propiedad de dependencia (mediante el <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método), así como el `Get` *PropertyName* y `Set` *PropertyName* descriptores de acceso . En el ejemplo, el nombre de la propiedad adjunta es `IsBubbleSource`. Por consiguiente, los descriptores de acceso deben denominarse `GetIsBubbleSource` y `SetIsBubbleSource`.
+El ejemplo siguiente muestra el registro de la propiedad de dependencia (mediante el <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método), así como el **obtener * PropertyName*** y **establecer * PropertyName*** descriptores de acceso. En el ejemplo, el nombre de la propiedad adjunta es `IsBubbleSource`. Por consiguiente, los descriptores de acceso deben denominarse `GetIsBubbleSource` y `SetIsBubbleSource`.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

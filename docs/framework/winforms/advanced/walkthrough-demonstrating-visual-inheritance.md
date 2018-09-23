@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746210"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703690"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Tutorial: Demostración de la herencia visual
 La herencia visual le permite ver los controles del formulario base y agregar controles nuevos. En este tutorial, creará un formulario base y lo compilará para convertirlo en una biblioteca de clases. Importará la biblioteca de clases en otro proyecto y creará un nuevo formulario que herede del formulario base. Durante este tutorial aprenderá a:  

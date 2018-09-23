@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
 ms.openlocfilehash: 3e66e4f34afcf8cba03c60c92b5b69d8ca01961b
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009091"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706361"
 ---
 # <a name="performance-counters-in-adonet"></a>Contadores de rendimiento de ADO.NET
 ADO.NET 2.0 incorporó la compatibilidad expandida para los contadores de rendimiento que incluye la compatibilidad tanto con <xref:System.Data.SqlClient> como con <xref:System.Data.OracleClient>. Los contadores de rendimiento <xref:System.Data.SqlClient> que estaban disponibles en las versiones anteriores de ADO.NET se han descartado y se han sustituido por los nuevos contadores de rendimiento que se describen aquí. Puede utilizar los contadores de rendimiento de ADO.NET para supervisar el estado de su aplicación y los recursos de conexión que emplea. Los contadores de rendimiento se pueden controlar con el Monitor de rendimiento de Windows pero también se puede tener acceso a ellos mediante programación usando la clase <xref:System.Diagnostics.PerformanceCounter> del espacio de nombres <xref:System.Diagnostics>.  
