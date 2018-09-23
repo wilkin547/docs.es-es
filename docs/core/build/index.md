@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo compilar .NET Core y la CLI de .NE
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618524"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577508"
 ---
 # <a name="build-net-core-from-source"></a>Compilar .NET Core desde el código fuente
 
@@ -93,7 +93,7 @@ Para compilar la CLI de .NET Core, necesita tener lo siguiente instalado en su e
   * Xcode
   * OpenSSL
 
-Para compilar, ejecute `build.cmd` en Windows, o `build.sh` en Linux y macOS desde la raíz. Si no quiere ejecutar pruebas, ejecute `build.cmd /t:Compile` o `./build.sh /t:Compile`. Para compilar la CLI en macOS Sierra, debe ejecutar `export DOTNET_RUNTIME_ID=osx.10.11-x64` para establecer la variable de entorno DOTNET_RUNTIME_ID.
+Para compilar, ejecute `build.cmd` en Windows, o `build.sh` en Linux y macOS desde la raíz. Si no quiere ejecutar pruebas, ejecute `build.cmd -t:Compile` o `./build.sh -t:Compile`. Para compilar la CLI en macOS Sierra, debe ejecutar `export DOTNET_RUNTIME_ID=osx.10.11-x64` para establecer la variable de entorno DOTNET_RUNTIME_ID.
 
 ### <a name="using-your-build"></a>Usar la compilación
 
