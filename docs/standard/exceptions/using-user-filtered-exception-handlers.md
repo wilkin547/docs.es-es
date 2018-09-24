@@ -9,11 +9,11 @@ ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45618248"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699292"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Utilizar controladores de excepciones filtradas por el usuario
 Actualmente, Visual Basic admite excepciones filtradas por el usuario. Los controladores de excepciones filtradas por usuario detectan y controlan las excepciones en función de los requisitos que se definen para la excepción. Estos controladores utilizan la instrucción **Catch** con la palabra clave **When**.  

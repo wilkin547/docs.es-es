@@ -11,11 +11,11 @@ ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638839"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525716"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Posibles problemas con PLINQ
 En muchos casos, PLINQ puede proporcionar importantes mejoras de rendimiento con respecto a las consultas secuenciales LINQ to Objects. Sin embargo, el trabajo de paralelizar la ejecución de consultas aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir consultas PLINQ.  

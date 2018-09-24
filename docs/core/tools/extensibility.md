@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo puede ampliar las herramientas de 
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45592067"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46326587"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidad de las herramientas de la CLI de .NET Core
 
@@ -133,7 +133,7 @@ En el ejemplo siguiente, puede ver el archivo del proyecto de destino con la sin
 
 Para consumir destinos personalizados se proporciona un elemento `<PackageReference>` que apunta al paquete y su versión dentro del proyecto que se extiende. A diferencia de las herramientas, el paquete de destinos personalizados se incluye en el cierre de dependencia del proyecto de consumo.
 
-El uso del destino personalizado depende exclusivamente de cómo se configure. Como es un destino de MSBuild, puede depender de un destino dado, ejecutarse después de otro destino e invocarse también manualmente mediante el comando `dotnet msbuild /t:<target-name>`.
+El uso del destino personalizado depende exclusivamente de cómo se configure. Como es un destino de MSBuild, puede depender de un destino dado, ejecutarse después de otro destino e invocarse también manualmente mediante el comando `dotnet msbuild -t:<target-name>`.
 
 En cambio, si quiere proporcionar una mejor experiencia de usuario, puede combinar las herramientas por proyecto y los destinos personalizados. En este escenario, la herramienta por proyecto básicamente solo aceptaría todos los parámetros necesarios y lo traduciría en la invocación de [`dotnet msbuild`](dotnet-msbuild.md) necesaria que ejecutaría el destino. Puede ver una muestra de esta clase de sinergia en el [repositorio de ejemplos de MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) del proyecto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 

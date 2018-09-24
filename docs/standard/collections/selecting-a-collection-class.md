@@ -13,11 +13,11 @@ ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591592"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46580673"
 ---
 # <a name="selecting-a-collection-class"></a>Seleccionar una clase de colección
 Asegúrese de elegir con cuidado la clase de colección. Usar un tipo incorrecto puede restringir el uso de la colección. En general, evite usar los tipos del espacio de nombres <xref:System.Collections> a menos que su objetivo sea específicamente la versión 1.1 de .NET Framework. Se preferirán las versiones genéricas y simultáneas de las colecciones por la mayor seguridad de los tipos y otras mejoras.  

@@ -11,11 +11,11 @@ ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45638561"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583686"
 ---
 # <a name="mutexes"></a>Mutexes
 Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso exclusivo a un recurso. La clase <xref:System.Threading.Mutex> usa más recursos del sistema que la clase <xref:System.Threading.Monitor>, pero se pueden calcular sus referencias a través de los límites de dominio de aplicación, se puede usar con varias esperas y se puede usar para sincronizar subprocesos en distintos procesos. Para ver una comparación de los mecanismos de sincronización administrados, consulte [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

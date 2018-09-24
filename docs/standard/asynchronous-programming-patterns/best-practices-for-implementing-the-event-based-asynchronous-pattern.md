@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45615474"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46581056"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Procedimientos recomendados para implementar el modelo asincrónico basado en eventos
 El modelo asincrónico basado en eventos proporciona un método eficaz de exponer el comportamiento asincrónico en clases, con una semántica de delegados y eventos ya conocida. Para implementar el modelo asincrónico basado en eventos, es necesario cumplir algunos requisitos de comportamiento específicos. En las secciones siguientes se describen los requisitos y las instrucciones que se deben tener en cuenta a la hora de implementar una clase que responda a este modelo.  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Si su clase admite varias invocaciones simultáneas, habilite al desarrollador para que realice un seguimiento por separado de cada invocación; para ello, defina la sobrecarga <em>MethodName</em>**Async** que toma un parámetro de estado con valor de objeto o identificador de tarea, denominado `userSuppliedState`. Este parámetro siempre debe ser el último de la signatura del método <em>MethodName</em>**Async**.  
   
--   Si su clase define la sobrecarga <em>MethodName</em>**Async** que toma un parámetro de estado con valor de objeto o identificador de tarea, asegúrese de realizar un seguimiento de la duración de la operación con ese identificador de tarea y de devolverlo al controlador de finalización. Hay clases auxiliares que le servirán de ayuda. Para más información sobre la administración de simultaneidad, vea [Tutorial: Implementación de un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Si su clase define la sobrecarga <em>MethodName</em>**Async** que toma un parámetro de estado con valor de objeto o identificador de tarea, asegúrese de realizar un seguimiento de la duración de la operación con ese identificador de tarea y de devolverlo al controlador de finalización. Hay clases del asistente que le servirán de ayuda. Para más información sobre la administración de simultaneidad, vea [Tutorial: Implementación de un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 -   Si su clase define el método <em>MethodName</em>**Async** sin el parámetro de estado y no admite varias invocaciones simultáneas, asegúrese de que cualquier intento de invocar <em>MethodName</em>**Async** antes de que la invocación previa a <em>MethodName</em>**Async** se haya completado genere <xref:System.InvalidOperationException>.  
   
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 -   Capture todas las excepciones que se produzcan en la operación asincrónica y establezca el valor de la propiedad <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> en esa excepción.  
   
 ### <a name="threading-and-contexts"></a>Subprocesos y contextos  
- Para que su clase funcione correctamente, es muy importante que los controladores de eventos del cliente se invoquen en el subproceso o contexto apropiados para el modelo de aplicación dado, incluidas aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] y Windows Forms. Para garantizar que su clase asincrónica se comporta correctamente en cualquier modelo de aplicación, se proporcionan dos importantes clases auxiliares: <xref:System.ComponentModel.AsyncOperation> y <xref:System.ComponentModel.AsyncOperationManager>.  
+ Para que su clase funcione correctamente, es muy importante que los controladores de eventos del cliente se invoquen en el subproceso o contexto apropiados para el modelo de aplicación dado, incluidas aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] y Windows Forms. Para garantizar que su clase asincrónica se comporta correctamente en cualquier modelo de aplicación, se proporcionan dos importantes clases del asistente: <xref:System.ComponentModel.AsyncOperation> y <xref:System.ComponentModel.AsyncOperationManager>.  
   
  <xref:System.ComponentModel.AsyncOperationManager> proporciona un método, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, que devuelve una <xref:System.ComponentModel.AsyncOperation>. El método <em>MethodName</em>**Async** llama a <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> y su clase usa la clase <xref:System.ComponentModel.AsyncOperation> devuelta para realizar un seguimiento de la duración de la tarea asincrónica.  
   

@@ -9,11 +9,11 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45529855"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584297"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 <a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  
@@ -724,7 +724,7 @@ ms.locfileid: "45529855"
     0000002a 79fa22bd fragment_ni!request.Main(System.String[])+0x153  
     ```  
   
-     Un código auxiliar Just-In-Time (`JIT_New*`) llama finalmente a `GCHeap::GarbageCollectGeneration`. Si determina que las recolecciones de elementos no utilizados de generación 2 se deben a asignaciones, debe averiguar qué objetos recolecta una recolección de elementos no utilizados de generación 2 y cómo evitarlas. Es decir, debe determinar la diferencia entre el inicio y el final de una recolección de elementos no utilizados de generación 2 y los objetos que causaron la recolección de generación 2.  
+     Un asistente Just-In-Time (`JIT_New*`) llama finalmente a `GCHeap::GarbageCollectGeneration`. Si determina que las recolecciones de elementos no utilizados de generación 2 se deben a asignaciones, debe averiguar qué objetos recolecta una recolección de elementos no utilizados de generación 2 y cómo evitarlas. Es decir, debe determinar la diferencia entre el inicio y el final de una recolección de elementos no utilizados de generación 2 y los objetos que causaron la recolección de generación 2.  
   
      Por ejemplo, escriba el comando siguiente en el depurador para mostrar el comienzo de una recolección de generación 2:  
   

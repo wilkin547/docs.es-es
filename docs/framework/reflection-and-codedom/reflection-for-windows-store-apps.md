@@ -11,11 +11,11 @@ ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649099"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46539270"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexión en .NET Framework para aplicaciones de la Tienda Windows
 A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework incluye un conjunto de tipos y miembros de reflexión para su uso en aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Estos tipos y miembros están disponibles en la versión completa de .NET Framework, así como en [.NET para aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/?LinkID=225700). En este documento se explican las diferencias principales entre estos y sus homólogos en .NET Framework 4 y versiones anteriores.  
@@ -30,7 +30,7 @@ A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework
 ## <a name="query-methods"></a>Métodos de consulta  
  En [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], use las propiedades de reflexión que devuelven colecciones de <xref:System.Collections.Generic.IEnumerable%601> en lugar de los métodos que devuelven matrices. Los contextos de reflexión pueden implementar el recorrido diferido de estas colecciones para los ensamblados o tipos de gran tamaño.  
   
- Las propiedades de reflexión solo devuelven los métodos declarados en un objeto determinado en lugar de recorrer el árbol de herencia. Además, no usan los parámetros <xref:System.Reflection.BindingFlags> para el filtrado. En su lugar, el filtrado tiene lugar en el código de usuario, mediante el uso de consultas LINQ en las colecciones devueltas. Para los objetos de reflexión que se originan con el runtime (por ejemplo, como resultado de `typeof(Object)`), recorrer el árbol de herencia se logra mejor usando los métodos auxiliares de la clase <xref:System.Reflection.RuntimeReflectionExtensions>. Los consumidores de objetos de contextos de reflexión personalizados no pueden usar estos métodos, y deben recorrer el árbol de herencia por su cuenta.  
+ Las propiedades de reflexión solo devuelven los métodos declarados en un objeto determinado en lugar de recorrer el árbol de herencia. Además, no usan los parámetros <xref:System.Reflection.BindingFlags> para el filtrado. En su lugar, el filtrado tiene lugar en el código de usuario, mediante el uso de consultas LINQ en las colecciones devueltas. Para los objetos de reflexión que se originan con el runtime (por ejemplo, como resultado de `typeof(Object)`), recorrer el árbol de herencia se logra mejor usando los métodos del asistente de la clase <xref:System.Reflection.RuntimeReflectionExtensions>. Los consumidores de objetos de contextos de reflexión personalizados no pueden usar estos métodos, y deben recorrer el árbol de herencia por su cuenta.  
   
 ## <a name="restrictions"></a>Restricciones  
  En una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], el acceso a algunos tipos y miembros de .NET Framework está restringido. Por ejemplo, no puede llamar a los métodos de .NET Framework que no estén incluidos en [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] usando un objeto <xref:System.Reflection.MethodInfo>. Además, ciertos tipos y miembros que no se consideran seguros en el contexto de una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] están bloqueados, al igual que los miembros <xref:System.Runtime.InteropServices.Marshal> y <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal>. Esta restricción solo afecta a los tipos y miembros de .NET Framework; puede llamar a su propio código o al de otros fabricantes como lo haría normalmente.  

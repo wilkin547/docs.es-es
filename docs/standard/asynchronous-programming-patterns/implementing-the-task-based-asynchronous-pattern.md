@@ -14,11 +14,11 @@ ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45652984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988574"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementar el modelo asincrónico basado en tareas
 Puede implementar el patrón asincrónico basado en tareas (TAP) de tres maneras: mediante los compiladores de C# y Visual Basic en Visual Studio, manualmente o mediante una combinación del compilador y métodos manuales. En las siguientes secciones se describe cada método con detalle. Puede usar el modelo TAP para implementar operaciones asincrónicas enlazadas a cálculos y enlazadas a E/S. En la sección [Cargas de trabajo](#workloads) se trata cada tipo de operación.

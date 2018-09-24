@@ -6,11 +6,11 @@ ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45673849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004054"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Asignación de tipos de datos XML a tipos CLR
 En la siguiente tabla se describen las asignaciones predeterminadas entre tipos de datos XML y los tipos Common Language Runtime (CLR).  

@@ -12,11 +12,11 @@ ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45590957"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46568626"
 ---
 # <a name="handling-com-interop-exceptions"></a>Controlar excepciones de interoperabilidad COM
 El código administrado y el código no administrado pueden trabajar juntos para controlar excepciones. Si un método produce una excepción en código administrado, Common Language Runtime puede pasar un HRESULT a un objeto COM. Si un método produce un error en código no administrado y devuelve un HRESULT de error, el tiempo de ejecución produce una excepción que el código administrado puede capturar.  

@@ -11,11 +11,11 @@ ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2933d574b387ec0f444883bbafb41f602bc5dcc0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45614678"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46577354"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de datos (biblioteca TPL)
 El *paralelismo de datos* hace referencia a los escenarios en los que la misma operación se realiza simultáneamente (es decir, en paralelo) en elementos de una colección o matriz de origen. En las operaciones paralelas de datos, se crean particiones de la colección de origen para que varios subprocesos puedan funcionar simultáneamente en segmentos diferentes.  
@@ -33,7 +33,7 @@ El *paralelismo de datos* hace referencia a los escenarios en los que la misma o
 > [!NOTE]
 >  También puede proporcionar un programador o creador de particiones personalizado. Para más información, consulte [Custom Partitioners for PLINQ and TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) (Particionadores personalizados para PLINQ y TPL) y [Programadores de tareas](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
   
- Los métodos <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> tienen varias sobrecargas que permiten detener o ejecutar la ejecución de bucles, supervisar el estado del bucle en otros subprocesos, mantener el estado de subprocesos locales, finalizar los objetos de subprocesos locales, controlar el grado de simultaneidad, etc. Los tipos de aplicación auxiliar que habilitan esta funcionalidad son <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken> y <xref:System.Threading.CancellationTokenSource>.  
+ Los métodos <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> tienen varias sobrecargas que permiten detener o ejecutar la ejecución de bucles, supervisar el estado del bucle en otros subprocesos, mantener el estado de subprocesos locales, finalizar los objetos de subprocesos locales, controlar el grado de simultaneidad, etc. Los tipos del asistente que habilitan esta funcionalidad son <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken> y <xref:System.Threading.CancellationTokenSource>.  
   
  Para obtener más información, consulte [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (Patrones para la programación paralela: comprender y aplicar patrones paralelos con .NET Framework 4).  
   

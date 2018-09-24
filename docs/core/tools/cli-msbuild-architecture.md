@@ -3,12 +3,12 @@ title: Arquitectura de las herramientas de la línea de comandos de .NET Core
 description: Obtenga información sobre las capas de herramientas de .NET Core y sobre lo que ha cambiado en versiones recientes.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245134"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46696341"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Introducción de alto nivel de los cambios en las herramientas de .NET Core
 
@@ -63,7 +63,7 @@ Desde una perspectiva de la ejecución, los comandos de la CLI tomarán sus par�
     
 Este comando está publicando una aplicación en una carpeta `pub` mediante la configuración de "Release". Internamente, este comando se traduce en la siguiente invocación de MSBuild: 
 
-   `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
+   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
 
 La excepción importante a esta regla son los comandos `new` y `run`, dado que no se han implementado como destinos de MSBuild.
 
