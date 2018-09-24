@@ -2,11 +2,11 @@
 title: 'Tutorial: Conservar un objeto con C#'
 ms.date: 04/26/2018
 ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46568146"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027326"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Tutorial: Conservar un objeto con C# #
 
