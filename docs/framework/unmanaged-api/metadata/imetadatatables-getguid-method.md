@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f589225dde1ba2aabc4ca32542339a771c3287d4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703244"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085910"
 ---
-# <a name="imetadatatablesgetguid-method"></a><span data-ttu-id="463ad-102">IMetaDataTables::GetGuid (Método)</span><span class="sxs-lookup"><span data-stu-id="463ad-102">IMetaDataTables::GetGuid Method</span></span>
-<span data-ttu-id="463ad-103">Obtiene un GUID de la fila en el índice especificado.</span><span class="sxs-lookup"><span data-stu-id="463ad-103">Gets a GUID from the row at the specified index.</span></span>  
+# <a name="imetadatatablesgetguid-method"></a><span data-ttu-id="79569-102">IMetaDataTables::GetGuid (Método)</span><span class="sxs-lookup"><span data-stu-id="79569-102">IMetaDataTables::GetGuid Method</span></span>
+<span data-ttu-id="79569-103">Obtiene un GUID de la fila en el índice especificado.</span><span class="sxs-lookup"><span data-stu-id="79569-103">Gets a GUID from the row at the specified index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="463ad-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="463ad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79569-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="79569-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGuid (   
@@ -36,25 +36,25 @@ HRESULT GetGuid (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="463ad-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="463ad-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="79569-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="79569-105">Parameters</span></span>  
  `ixGuid`  
- <span data-ttu-id="463ad-106">[in] El índice de la fila de la que se va a obtener el GUID.</span><span class="sxs-lookup"><span data-stu-id="463ad-106">[in] The index of the row from which to get the GUID.</span></span>  
+ <span data-ttu-id="79569-106">[in] El índice de la fila de la que se va a obtener el GUID.</span><span class="sxs-lookup"><span data-stu-id="79569-106">[in] The index of the row from which to get the GUID.</span></span>  
   
  `ppGuid`  
- <span data-ttu-id="463ad-107">[out] Un puntero a un puntero al GUID.</span><span class="sxs-lookup"><span data-stu-id="463ad-107">[out] A pointer to a pointer to the GUID.</span></span>  
+ <span data-ttu-id="79569-107">[out] Un puntero a un puntero al GUID.</span><span class="sxs-lookup"><span data-stu-id="79569-107">[out] A pointer to a pointer to the GUID.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="463ad-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="463ad-108">Remarks</span></span>  
- <span data-ttu-id="463ad-109">No se recomienda el uso de este método, porque no devuelve resultados coherentes.</span><span class="sxs-lookup"><span data-stu-id="463ad-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="463ad-110">Para obtener información acerca de la tabla GUID, consulte la documentación de Common Language Infrastructure (CLI), especialmente en "Partition II: Metadata Definition and Semantics".</span><span class="sxs-lookup"><span data-stu-id="463ad-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="463ad-111">La documentación está disponible en línea; vea [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) (Estándares de ECMA C# y Common Language Infrastructure) en MSDN y [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) (Estándar ECMA-335: Common Language Infrastructure [CLI]) en el sitio web de Ecma International.</span><span class="sxs-lookup"><span data-stu-id="463ad-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="79569-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="79569-108">Remarks</span></span>  
+ <span data-ttu-id="79569-109">No se recomienda el uso de este método, porque no devuelve resultados coherentes.</span><span class="sxs-lookup"><span data-stu-id="79569-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="79569-110">Para obtener información acerca de la tabla GUID, consulte la documentación de Common Language Infrastructure (CLI), especialmente en "Partition II: Metadata Definition and Semantics".</span><span class="sxs-lookup"><span data-stu-id="79569-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="79569-111">La documentación está disponible en línea; vea [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) (Estándares de ECMA C# y Common Language Infrastructure) en MSDN y [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) (Estándar ECMA-335: Common Language Infrastructure [CLI]) en el sitio web de Ecma International.</span><span class="sxs-lookup"><span data-stu-id="79569-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="463ad-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="463ad-112">Requirements</span></span>  
- <span data-ttu-id="463ad-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="463ad-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79569-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="79569-112">Requirements</span></span>  
+ <span data-ttu-id="79569-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79569-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="463ad-114">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="463ad-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="79569-114">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="79569-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="463ad-115">**Biblioteca:** usada como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="463ad-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="79569-115">**Biblioteca:** usada como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="79569-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="463ad-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="463ad-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="79569-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79569-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="463ad-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="463ad-117">See Also</span></span>  
- [<span data-ttu-id="463ad-118">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="463ad-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="463ad-119">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="463ad-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="79569-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="79569-117">See Also</span></span>  
+ [<span data-ttu-id="79569-118">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="79569-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [<span data-ttu-id="79569-119">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="79569-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
