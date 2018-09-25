@@ -3,20 +3,19 @@ title: '&lt;sessionSecurityTokenCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 0b0d3c01a81f110f79f64d75aa2ab2ff2873fedd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b812673ac1c015adde357d3c0707d85643aad3e9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755050"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084337"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
-Registra una memoria caché de símbolos de sesión con un servicio o una colección de controlador de token de seguridad.  
+Registra una memoria caché de tokens de sesión con un servicio o una colección de controladores de token de seguridad.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
-\<almacena en memoria caché >  
+\<las memorias caché >  
 \<sessionSecurityTokenCache >  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,7 +38,7 @@ Registra una memoria caché de símbolos de sesión con un servicio o una colecc
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|type|Un tipo que deriva de la <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> clase.|  
+|type|Un tipo que deriva la <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> clase.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -48,10 +47,10 @@ Registra una memoria caché de símbolos de sesión con un servicio o una colecc
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<almacena en memoria caché >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra las memorias caché usadas por un servicio o una colección de controlador de token de seguridad.|  
+|[\<las memorias caché >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra las memorias caché utilizadas por un servicio o una colección de controladores de token de seguridad.|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código XML muestra la configuración de una caché personalizado para almacenar los tokens de seguridad de sesión (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). La configuración se toma de la `ClaimsAwareWebFarm` ejemplo. Para obtener más información acerca de este ejemplo, vea [índice de ejemplo de código WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
+ El siguiente XML muestra la configuración de una caché personalizada para almacenar los tokens de seguridad de sesión (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). La configuración se toma de la `ClaimsAwareWebFarm` ejemplo. Para obtener más información acerca de este ejemplo, vea [índice de ejemplo de código WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
   
 ```xml  
 <caches>  

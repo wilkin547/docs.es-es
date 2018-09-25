@@ -5,11 +5,11 @@ helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
 ms.openlocfilehash: 7800311895d1c0fac43577076226a68712164f60
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537363"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081765"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Utilizar el Modelo de objetos de documento HTML administrado
 El modelo de objetos de documento (DOM) HTML administrado proporciona un contenedor basado en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para las clases HTML expuestas por Internet Explorer. Use estas clases para manipular páginas HTML hospedadas en el <xref:System.Windows.Forms.WebBrowser> control, o para crear nuevas páginas desde el principio.  

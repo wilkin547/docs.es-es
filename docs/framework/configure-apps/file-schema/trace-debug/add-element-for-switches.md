@@ -1,5 +1,5 @@
 ---
-title: '&lt;agregar&gt; (elemento) para &lt;conmutadores&gt;'
+title: '&lt;agregar&gt; (elemento) para &lt;modificadores&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e0dc425327f6577606e1205a23fdaffcc39f6e01
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747459"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109529"
 ---
-# <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;agregar&gt; (elemento) para &lt;conmutadores&gt;
+# <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;agregar&gt; (elemento) para &lt;modificadores&gt;
 Especifica el nivel en el que está establecido un modificador de seguimiento.  
   
  \<configuration>  
@@ -40,7 +39,7 @@ Especifica el nivel en el que está establecido un modificador de seguimiento.
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**name**|Atributo necesario.<br /><br /> Especifica el nombre del conmutador. El valor de este atributo corresponde a la *displayName* parámetro que se pasa al constructor del modificador.|  
-|**value**|Atributo necesario.<br /><br /> Especifica el nivel del conmutador.|  
+|**value**|Atributo necesario.<br /><br /> Especifica el nivel del modificador.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -54,10 +53,10 @@ Especifica el nivel en el que está establecido un modificador de seguimiento.
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede cambiar el nivel de un modificador de seguimiento colocándola en un archivo de configuración. Si el modificador está un <xref:System.Diagnostics.BooleanSwitch>, se puede activar y desactivar. Si el modificador está un <xref:System.Diagnostics.TraceSwitch>, puede asignar distintos niveles para especificar los tipos de seguimiento de mensajes o de depuración genera la aplicación.  
+ Puede cambiar el nivel de un modificador de seguimiento colocándola en un archivo de configuración. Si el modificador es un <xref:System.Diagnostics.BooleanSwitch>, puede activar y desactivar. Si el modificador es un <xref:System.Diagnostics.TraceSwitch>, puede asignar distintos niveles para especificar los tipos de seguimiento de mensajes o de depuración genera la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el  **\<Agregar >** elemento que se va a establecer el `General` modificador de seguimiento para la <xref:System.Diagnostics.TraceLevel> nivel y habilitar la `Data` modificador de seguimiento booleano.  
+ El ejemplo siguiente muestra cómo usar el  **\<Agregar >** elemento va a establecer el `General` modificador de seguimiento para el <xref:System.Diagnostics.TraceLevel> nivel y habilitar el `Data` modificador de seguimiento booleano.  
   
 ```xml  
 <configuration>  

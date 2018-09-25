@@ -3,11 +3,11 @@ title: 'Tutorial: Crear un proveedor de tipos (F #)'
 description: 'Obtenga información sobre cómo crear sus propios proveedores de tipo de F # en F # 3.0 mediante el examen de varios proveedores de tipo simple para ilustrar los conceptos básicos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743873"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109136"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
 
@@ -177,7 +177,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 
 Este tipo debe ser pública y debe marcarse con el [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) para que el compilador reconozca el proveedor de tipos cuando un proyecto independiente de F # hace referencia al ensamblado que contiene el tipo de atributo. El *config* parámetro es opcional y, si está presente, contiene información de configuración contextual para la instancia de tipo de proveedor que crea el compilador de F #.
 
-A continuación, implemente el [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interfaz. En este caso, puede utilizar el tipo `TypeProviderForNamespaces` de la API `ProvidedTypes` como tipo base. Este tipo auxiliar puede proporcionar una colección finita de espacios de nombres proporcionados anticipadamente, cada uno de los cuales contiene directamente un número finito de tipos fijos proporcionados anticipadamente. En este contexto, el proveedor *concienzudamente* genera tipos aunque no son necesarios ni se utilicen.
+A continuación, implemente el [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interfaz. En este caso, puede utilizar el tipo `TypeProviderForNamespaces` de la API `ProvidedTypes` como tipo base. Este tipo del asistente puede proporcionar una colección finita de espacios de nombres proporcionados anticipadamente, cada uno de los cuales contiene directamente un número finito de tipos fijos proporcionados anticipadamente. En este contexto, el proveedor *concienzudamente* genera tipos aunque no son necesarios ni se utilicen.
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
@@ -774,7 +774,7 @@ let (time:float) = row.[1]
 printfn "%f" (float time)
 ```
 
-La conversión óptima requerirá que el proveedor de tipo defina un tipo `CsvFile` real en el ensamblado del proveedor de tipo. Los proveedores de tipos a veces se basan en algunos tipos y métodos auxiliares para contener la lógica importante. Dado que las medidas se borran en tiempo de ejecución, se puede utilizar `float[]` como el tipo borrado para una fila. El compilador considerará que las distintas columnas contienen distintos tipos de medidas. Por ejemplo, la primera columna de nuestro ejemplo contiene el tipo `float<meter>` y la segunda contiene `float<second>`. Sin embargo, la representación borrada puede seguir siendo bastante simple.
+La conversión óptima requerirá que el proveedor de tipo defina un tipo `CsvFile` real en el ensamblado del proveedor de tipo. Los proveedores de tipos a veces se basan en algunos tipos y métodos del asistente para contener la lógica importante. Dado que las medidas se borran en tiempo de ejecución, se puede utilizar `float[]` como el tipo borrado para una fila. El compilador considerará que las distintas columnas contienen distintos tipos de medidas. Por ejemplo, la primera columna de nuestro ejemplo contiene el tipo `float<meter>` y la segunda contiene `float<second>`. Sin embargo, la representación borrada puede seguir siendo bastante simple.
 
 En el ejemplo de código siguiente se muestra el núcleo de la implementación.
 
@@ -1029,7 +1029,7 @@ Realizar los miembros proporcionados (cuyas signaturas incluyen tipos de matriz,
 
 ### <a name="providing-unit-of-measure-annotations"></a>Proporcionar anotaciones de unidades de medida
 
-La API ProvidedTypes proporciona aplicaciones auxiliares para proporcionar anotaciones de medidas. Por ejemplo, para proporcionar el tipo `float<kg>`, utilice el código siguiente:
+La API ProvidedTypes proporciona asistentes para proporcionar anotaciones de medidas. Por ejemplo, para proporcionar el tipo `float<kg>`, utilice el código siguiente:
 
 ```fsharp
   let measures = ProvidedMeasureBuilder.Default
@@ -1082,7 +1082,7 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-El código auxiliar ProvidedTypes-0.2 que forma parte de la versión 3.0 de F# solo tiene compatibilidad limitada para proporcionar tipos generados. Los enunciados siguientes deben ser verdaderos para una definición de un tipo generado:
+El código del asistente ProvidedTypes-0.2 que forma parte de la versión 3.0 de F# solo tiene compatibilidad limitada para proporcionar tipos generados. Los enunciados siguientes deben ser verdaderos para una definición de un tipo generado:
 
 - `isErased` debe establecerse en `false`.
 

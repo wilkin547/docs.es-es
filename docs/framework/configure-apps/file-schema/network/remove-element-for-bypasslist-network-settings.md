@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742954"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074984"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;quitar&gt; elemento para bypasslist (configuración de red)
 Quita una dirección IP o nombre DNS de la lista de omisión de proxy.  
@@ -53,10 +52,10 @@ Quita una dirección IP o nombre DNS de la lista de omisión de proxy.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan a un servidor proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no se usa a un proxy.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `remove` elemento quita expresiones regulares que describen direcciones IP o nombres de los servidores DNS de la lista de direcciones que omiten un servidor proxy. Las direcciones se definieron anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.  
+ El `remove` elemento quita expresiones regulares que describen direcciones IP o nombres de servidor DNS en la lista de direcciones que omitir un servidor proxy. Las direcciones definidas anteriormente en el archivo de configuración o en un nivel superior de la jerarquía de configuración.  
   
  El valor de la `address` atributo debe ser una expresión regular que describe un conjunto de direcciones IP o nombres de host.  
   
@@ -66,7 +65,7 @@ Quita una dirección IP o nombre DNS de la lista de omisión de proxy.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita cualquier definición anterior para el dominio adventure-works.com y, a continuación, agrega el dominio contoso.com a la lista de omisión.  
+ El ejemplo siguiente quita cualquier definición anterior para el dominio adventure-works.com y, a continuación, agrega el dominio contoso.com a la lista de omisión.  
   
 ```xml  
 <configuration>  

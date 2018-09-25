@@ -5,13 +5,12 @@ helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6160f3be39bc7317b57f8f1d85bda8e61dbd80fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfb8f3b8d824c1a3324b1d01edc9a087c0cf4abd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508731"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078219"
 ---
 # <a name="security-protocols"></a>Protocolos de seguridad
 Los protocolos de seguridad de servicios Web proporcionan mecanismos de seguridad de servicios Web que cubren todos los requisitos de seguridad de mensajería para empresas existentes. En esta sección se describe los detalles de Windows Communication Foundation (WCF) (implementado en el <xref:System.ServiceModel.Channels.SecurityBindingElement>) para los siguiente servicios Web protocolos de seguridad.  
@@ -34,7 +33,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |Nota de la aplicación:<br /><br /> Referencias e identidad de extremos de direccionamiento de servicios Web|Para su publicación|  
 |WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
   
- WCF, versión 1, proporciona 17 modos de autenticación que pueden utilizarse como base para la configuración de seguridad de servicios Web. Cada modo se optimiza para un conjunto común de requisitos de implementación, como:  
+ WCF, versión 1, proporciona 17 modos de autenticación que se pueden usar como base para la configuración de seguridad de servicios Web. Cada modo se optimiza para un conjunto común de requisitos de implementación, como:  
   
 -   Credenciales utilizadas para autenticar cliente y servicio.  
   
@@ -64,9 +63,9 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  Los extremos que usan tales modos de autenticación pueden expresar sus requisitos de seguridad mediante WS-SecurityPolicy (WS-SP). Este documento describe la estructura de mensajes de infraestructura y encabezado de seguridad para cada modo de autenticación y proporciona ejemplos de directivas y mensajes.  
   
- WCF usa WS-SecureConversation para proporcionar compatibilidad con sesiones seguras para proteger intercambios de múltiples mensajes entre aplicaciones.  Vea "Sesiones seguras" más abajo para obtener detalles de implementación.  
+ WCF reutiliza WS-SecureConversation para proporcionar compatibilidad con sesiones seguras para proteger los intercambios de múltiples mensajes entre aplicaciones.  Vea "Sesiones seguras" más abajo para obtener detalles de implementación.  
   
- Además de los modos de autenticación, WCF proporciona ajustes para controlar mecanismos de protección comunes que se aplican a la mayoría de los modos de autenticación basada en seguridad de mensaje, por ejemplo: orden de firma frente a las operaciones de cifrado, conjuntos de algoritmos, derivación de claves y la confirmación de firma.  
+ Además de los modos de autenticación, WCF proporciona opciones para controlar mecanismos de protección comunes que se aplican a la mayoría de los modos de autenticación basada en la seguridad de mensaje, por ejemplo: pedido de firma frente a las operaciones de cifrado, los conjuntos de algoritmos, derivación de claves y la confirmación de firma.  
   
  Los siguientes prefijos y espacios de nombres se utilizan en este documento.  
   
@@ -93,7 +92,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  El atributo R1101 PasswordType en el elemento UsernameToken\Password no se debe omitir ni debe tener el valor #PasswordText (valor predeterminado).  
   
- Uno puede implementar el #PasswordDigest mediante extensibilidad. Se ha observado que #PasswordDigest se confunde a menudo como un mecanismo de protección de contraseña suficientemente seguro. Pero #PasswordDigest no puede actuar como un sustituto del cifrado del UsernameToken. El objetivo principal de #PasswordDigest es la protección frente a ataques mediante repetición. En los modos de autenticación de WCF, las amenazas de ataques de reproducción se mitigan mediante el uso de las firmas del mensaje.  
+ Uno puede implementar el #PasswordDigest mediante extensibilidad. Se ha observado que #PasswordDigest se confunde a menudo como un mecanismo de protección de contraseña suficientemente seguro. Pero #PasswordDigest no puede actuar como un sustituto del cifrado del UsernameToken. El objetivo principal de #PasswordDigest es la protección frente a ataques mediante repetición. En los modos de autenticación de WCF, mitigar las amenazas de ataques de reproducción mediante el uso de las firmas del mensaje.  
   
  WCF B1102 nunca emite subelementos Nonce y Created del UsernameToken.  
   
@@ -120,37 +119,37 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  R1204 Si se está utilizando X509TokenProfile1.1, una referencia externa al token de seguridad X509 DEBERÍA utilizar la huella digital introducida por WS-Security 1.1.  
   
- WCF admite X509IssuerSerial. Sin embargo, hay problemas de interoperabilidad con X509IssuerSerial: WCF usa una cadena para comparar dos valores de X509IssuerSerial. Por lo tanto, si uno reordena componentes del nombre del sujeto y envía a un servicio WCF, una referencia a un certificado, no puede ser encontrado.  
+ WCF admite X509IssuerSerial. Sin embargo, hay problemas de interoperabilidad con X509IssuerSerial: WCF usa una cadena para comparar dos valores de X509IssuerSerial. Por lo tanto, si uno reordena componentes del nombre del sujeto y envía a un servicio WCF, una referencia a un certificado, puede no encontrarlo.  
   
 ### <a name="13-kerberos-token"></a>1.3 Token de Kerberos.  
  WCF admite KerberosTokenProfile1.1 para la autenticación de Windows con las siguientes restricciones:  
   
  R1301 Un Token de Kerberos debe llevar el valor de un AP_REQ de Kerberos v4 ajustado a GSS, tal y como se define en GSS_API y en la especificación de Kerberos, y debe tener el atributo ValueType con el valor #GSS_Kerberosv5_AP_REQ.  
   
- WCF usa GSS ajustado AP-REQ de Kerberos, no una reconstrucción AP-REQ. Éste es un procedimiento de seguridad recomendado.  
+ WCF usa GSS ajustado AP-REQ de Kerberos, no un AP-REQ desnudo Éste es un procedimiento de seguridad recomendado.  
   
 ### <a name="14-saml-v11-token"></a>1.4 Token SAML v1.1  
  WCF admite perfiles de Token de WSS SAML 1.0 y 1.1 para tokens SAML v1.1. Es posible implementar otras versiones de formatos de token SAML.  
   
 ### <a name="15-security-context-token"></a>1.5 Token de contexto de seguridad  
- WCF admite la seguridad de Token de contexto (SCT) introducido en WS-SecureCoversation. SCT se utiliza para representar un contexto de seguridad establecido en SecureConversation así como los protocolos de negociación binarios TLS y SSPI, descritos a continuación.  
+ WCF es compatible con el contexto de seguridad Token (SCT) introducido en WS-SecureCoversation. SCT se utiliza para representar un contexto de seguridad establecido en SecureConversation así como los protocolos de negociación binarios TLS y SSPI, descritos a continuación.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Parámetros de seguridad de mensajes comunes  
   
 ### <a name="21-timestamp"></a>2.1 Marca de tiempo  
- La presencia de la marca de tiempo se controla mediante la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF serializa siempre wsse: timestamp con wsse: crear y wsse: expira campos. El wsse:TimeStamp siempre se firma cuando se utilizan las firmas.  
+ La presencia de la marca de tiempo se controla mediante la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF siempre serializa wsse: timestamp con wsse: crea y wsse: campos que expire. El wsse:TimeStamp siempre se firma cuando se utilizan las firmas.  
   
 ### <a name="22-protection-order"></a>2.2 Orden de protección  
- WCF admite la orden de protección de mensaje "Inicio de sesión antes de cifrar" e "Cifrar antes de iniciar sesión" (1.2 de directiva de seguridad). "Sign Before Encrypt" se recomienda por diferentes motivos, entre los que se incluyen los siguientes: los mensajes protegidos mediante Encrypt Before Sign están expuestos a ataques de sustitución de firmas a menos que se use el mecanismo SignatureConfirmation de WS-Security 1.1, y una firma sobre el contenido cifrado dificulta la auditoría.  
+ WCF admite el orden de protección de mensaje "Inicio de sesión antes de cifrar" y "Cifrar antes de cerrar sesión" (Security Policy 1,2). "Sign Before Encrypt" se recomienda por diferentes motivos, entre los que se incluyen los siguientes: los mensajes protegidos mediante Encrypt Before Sign están expuestos a ataques de sustitución de firmas a menos que se use el mecanismo SignatureConfirmation de WS-Security 1.1, y una firma sobre el contenido cifrado dificulta la auditoría.  
   
 ### <a name="23-signature-protection"></a>2.3 Protección de firmas  
  Cuando se usa Cifrar antes de firmar, se recomienda proteger la firma para evitar los ataques por fuerza bruta para adivinar el contenido cifrado o la clave de la firma (sobre todo cuando un token personalizado se utiliza con material de clave débil).  
   
 ### <a name="24-algorithm-suite"></a>2.4 Conjunto de algoritmos  
- WCF admite todos los conjuntos de algoritmos enumerados en 1.2 de directiva de seguridad.  
+ WCF es compatible con todos los conjuntos de algoritmos enumerados en 1.2 de la directiva de seguridad.  
   
 ### <a name="25-key-derivation"></a>2.5 Derivación de clave  
- WCF usa "Derivación de clave para las claves simétricas" tal y como se describe en WS-SecureConversation.  
+ WCF usa "Derivación de clave para las claves simétricas" tal como se describe en WS-SecureConversation.  
   
 ### <a name="26-signature-confirmation"></a>2.6 Confirmación de firma  
  La confirmación de firma puede utilizarse como protección frente a ataques de intermediarios para proteger el conjunto de firmas.  
@@ -301,7 +300,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 utilizando certificados X.509 para la autenticación de servicio  
+### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 mediante certificados X.509 para la autenticación de servicio  
  En esta sección se describen los modos de autenticación siguientes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate y IssuedTokenForCertificate.  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
@@ -403,7 +402,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 ```  
   
 #### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 Uso de SymmetricBinding con autenticación de servicio X.509  
- "WSS10" proporcionó compatibilidad limitada para escenarios con tokens de X509. Por ejemplo, no hubo manera de proporcionar protección de cifrado y firma para los mensajes que solo usan tokens de X509 de servicio. "WSS11" introdujo el uso de EncryptedKey como un token simétrico. Ahora una clave temporal cifrada para el certificado X.509 de servicio se podría utilizar para la protección de mensajes de solicitud y respuesta. Los modos de autenticación que se describe en la sección 3.4 siguiente usan este patrón.  
+ "WSS10" proporcionó compatibilidad limitada para escenarios con tokens de X509. Por ejemplo, no hubo manera de proporcionar protección de cifrado y firma para los mensajes que solo usan tokens de X509 de servicio. "WSS11" introdujo el uso de EncryptedKey como un token simétrico. Ahora una clave temporal cifrada para el certificado X.509 de servicio se podría utilizar para la protección de mensajes de solicitud y respuesta. Los modos de autenticación que se describe en la sección 3.4, a continuación utilicen este patrón.  
   
  WS-SecurityPolicy describe este patrón utilizando SymmetricBinding con token X509 de servicio como el token de protección.  
   

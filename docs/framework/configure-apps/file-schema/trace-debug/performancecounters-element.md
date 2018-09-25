@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754163"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088690"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; elemento
 Especifica el tamaño de la memoria global que comparten los contadores de rendimiento.  
@@ -51,11 +50,11 @@ Especifica el tamaño de la memoria global que comparten los contadores de rendi
 |`system.diagnostics`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|  
   
 ## <a name="remarks"></a>Comentarios  
- Contadores de rendimiento de usar un archivo asignado a memoria, o memoria compartida, para publicar los datos de rendimiento.  El tamaño de la memoria compartida determina cuántas instancias se pueden utilizar a la vez.  Hay dos tipos de memoria compartida: memoria compartida global y memoria compartida independiente.  La memoria compartida global se usa por todas las categorías de contador de rendimiento instaladas con las versiones de .NET Framework 1.0 o 1.1.  Las categorías de contador de rendimiento instaladas con la versión 2.0 de .NET Framework utilizan memoria compartida independiente, y cada categoría de contador de rendimiento tiene su propia memoria.  
+ Contadores de rendimiento de usar un archivo asignado en memoria, o memoria compartida, para publicar datos de rendimiento.  El tamaño de la memoria compartida determina cuántas instancias se pueden usar a la vez.  Hay dos tipos de memoria compartida: memoria compartida global y memoria compartida independiente.  Se utiliza la memoria global compartida por todas las categorías de contador de rendimiento instaladas con las versiones de .NET Framework 1.0 o 1.1.  Categorías de contador de rendimiento instaladas con la versión 2.0 de .NET Framework usa memoria compartida independiente, con cada categoría de contador de rendimiento tiene su propia memoria.  
   
- El tamaño de la memoria compartida global puede establecerse solo con un archivo de configuración.  El tamaño predeterminado es 524.288 bytes, el tamaño máximo es de 33.554.432 bytes y el tamaño mínimo es de 32.768 bytes.  Puesto que todos los procesos y categorías comparten la memoria compartida global, el primer creador especifica el tamaño.  Si el tamaño se define en el archivo de configuración de aplicación, ese tamaño sólo se utiliza si la aplicación es la primera aplicación que hace que los contadores de rendimiento ejecutar.  Por lo tanto, la ubicación correcta para especificar el `filemappingsize` valor es el archivo Machine.config.  No se puede liberar memoria en la memoria compartida global mediante contadores de rendimiento individuales, por lo que finalmente se agota la memoria compartida global si se crea una gran cantidad de instancias de contador de rendimiento con nombres diferentes.  
+ Solo con un archivo de configuración se puede establecer el tamaño de memoria compartida global.  El tamaño predeterminado es 524.288 bytes, el tamaño máximo es 33 554 432 bytes y el tamaño mínimo es de 32.768 bytes.  Puesto que todos los procesos y categorías comparten la memoria compartida global, el creador del primer especifica el tamaño.  Si define el tamaño del archivo de configuración de aplicación, sólo se utiliza ese tamaño si la primera aplicación que hace que los contadores de rendimiento ejecutar la aplicación.  Por lo tanto, la ubicación correcta para especificar el `filemappingsize` valor es el archivo Machine.config.  No se puede liberar memoria en la memoria global compartida por los contadores de rendimiento individuales, por lo que finalmente se agota la memoria compartida global si se crea un gran número de instancias de contador de rendimiento con nombres diferentes.  
   
- El tamaño de memoria compartida independiente, el valor de DWORD FileMappingSize en el registro de clave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nombre de categoría >* \Performance se hace referencia en primer lugar, seguido por el valor especificado para la memoria compartida global en el archivo de configuración. Si el valor de FileMappingSize no existe, el tamaño de memoria compartida independiente se establece en una cuarta (1/4) la configuración global en el archivo de configuración.  
+ El tamaño de memoria compartida independiente, el valor de DWORD FileMappingSize en el registro de clave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nombre de categoría >* \Performance se hace referencia en primer lugar, seguido por el valor especificado para la memoria compartida global en el archivo de configuración. Si el valor de FileMappingSize no existe, se establece el tamaño de memoria compartida independiente a un cuarto (1/4) la configuración global en el archivo de configuración.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Diagnostics.PerformanceCounter>  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt; , elemento de &lt;configuración&gt;'
+title: '&lt;assemblyBinding&gt; (elemento) para &lt;configuración&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6a3358b2d64ade65e641caa203e2e760dcc4be2c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743126"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073468"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > (elemento) para \<configuración >
 
@@ -52,14 +51,14 @@ Especifica la directiva de enlace del ensamblado en el nivel de configuración.
 
 ## <a name="remarks"></a>Comentarios
 
-El [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento simplifica la administración de ensamblados de componentes al permitir que los archivos de configuración de aplicación para incluir los ensamblados de archivos de configuración en ubicaciones bien conocidas, en lugar de duplicar valores de configuración de ensamblado.
+El [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento simplifica la administración de ensamblados de componentes al permitir que los archivos de configuración de aplicación para incluir ensamblado en los archivos de configuración ubicaciones conocidas, en lugar de duplicar valores de configuración del ensamblado.
 
 > [!NOTE]
 > El  **\<linkedConfiguration >** elemento no se admite para las aplicaciones con manifiestos en paralelo de Windows.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo incluir un archivo de configuración en el disco duro local:
+El ejemplo siguiente muestra cómo incluir un archivo de configuración en el disco duro local:
 
 ```xml
 <configuration>
@@ -71,4 +70,4 @@ En el ejemplo siguiente se muestra cómo incluir un archivo de configuración en
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+[Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

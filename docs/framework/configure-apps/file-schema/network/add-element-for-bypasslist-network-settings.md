@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d786d4fd7e6663649408b36fb518db06063ef916
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754524"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081038"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;agregar&gt; elemento para bypasslist (configuración de red)
 Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.  
@@ -53,14 +52,14 @@ Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan a un servidor proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no se usa a un proxy.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `add` elemento inserta expresiones regulares que describen direcciones IP o nombres de servidor DNS a la lista de direcciones que omiten un servidor proxy.  
+ El `add` elemento inserta expresiones regulares que describen direcciones IP o nombres de los servidores DNS a la lista de direcciones que omitir un servidor proxy.  
   
  El valor de la `address` atributo debe ser una expresión regular que describe un conjunto de direcciones IP o nombres de host.  
   
- Debe tener cuidado al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\.contoso\\.com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para buscar sólo un host en el dominio contoso.com, utilice un delimitador ("$"): "[a-z] +\\.contoso\\.com$".  
+ Se debe tener cuidado al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\.contoso\\.com" coincide con cualquier host en el dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para que coincida con un host en el dominio contoso.com, use un delimitador ("$"): "[a-z] +\\.contoso\\.com$".  
   
  Para obtener más información sobre las expresiones regulares, vea. [Expresiones regulares de .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
@@ -68,7 +67,7 @@ Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se agrega dos direcciones a la lista de omisión. La primera omite al proxy para todos los servidores en el dominio contoso.com; la segunda omite al proxy para todos los servidores cuya dirección IP comienza con 192.168.  
+ El ejemplo siguiente agrega dos direcciones a la lista de omisión. La primera omite al proxy para todos los servidores en el dominio contoso.com; la segunda omite al proxy para todos los servidores cuya dirección IP comienza con 192.168.  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;servicePointManager&gt; Element (Network Settings)'
+title: '&lt;servicePointManager&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753591"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113074"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; Element (Network Settings)
+# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; elemento (configuración de red)
 Configura las conexiones a los recursos de red.  
   
  \<configuration>  
@@ -47,12 +46,12 @@ Configura las conexiones a los recursos de red.
   
 |**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Especifica si el sistema debe comprobar que el nombre del certificado coincide con el nombre de host del servidor antes de utilizar el certificado. El valor predeterminado es `true`.|  
+|`checkCertificateName`|Especifica si el sistema debe comprobar que el nombre del certificado coincide con el nombre de host del servidor antes de usar el certificado. El valor predeterminado es `true`.|  
 |`checkCertificateRevocationList`|Especifica si el sistema debe comprobar si se ha revocado el certificado antes de usar el certificado. El valor predeterminado es `false`.|  
-|`dnsRefreshTimeout`|Especifica cuánto tiempo dominio servicio de nombres (DNS) se almacenan en caché las soluciones junto con la opción de DNS Round Robin, en milisegundos. El valor predeterminado es 120.000 milisegundos (dos minutos).|  
-|`enableDnsRoundRobin`|Especifica si las resoluciones DNS de host nombres con varias direcciones de protocolo de Internet (IP) devueltos de todas las direcciones o simplemente la primera de ellas. El valor predeterminado es `false`.|  
-|`encryptionPolicy`|Especifica la directiva de cifrado que se aplica a una sesión SSL/TLS en un <xref:System.Net.ServicePointManager> instancia. Los valores posibles son equivalentes a los valores para el <xref:System.Net.Security.EncryptionPolicy> enumeración. El uso de <xref:System.Security.Authentication.CipherAlgorithmType.Null> es necesaria cuando la directiva de cifrado se establece en `NoEncryption`. El valor predeterminado es `RequireEncryption`.|  
-|`expect100Continue`|Especifica si los métodos POST deben esperar recibir un `100-continue` respuesta del servidor. El valor predeterminado es `true`.|  
+|`dnsRefreshTimeout`|Especifica cuánto nombre servicio dominio (DNS) se almacenan en caché las resoluciones junto con la opción de operación por turnos DNS, en milisegundos. El valor predeterminado es 120.000 milisegundos (dos minutos).|  
+|`enableDnsRoundRobin`|Especifica si las resoluciones DNS del host de nombres con varias direcciones de protocolo de Internet (IP) devueltas todas las direcciones o solo la primera de ellas. El valor predeterminado es `false`.|  
+|`encryptionPolicy`|Especifica la directiva de cifrado que se aplica a una sesión SSL/TLS en un <xref:System.Net.ServicePointManager> instancia. Los valores posibles son equivalentes a los valores de la <xref:System.Net.Security.EncryptionPolicy> enumeración. El uso de <xref:System.Security.Authentication.CipherAlgorithmType.Null> es necesaria cuando la directiva de cifrado se establece en `NoEncryption`. El valor predeterminado es `RequireEncryption`.|  
+|`expect100Continue`|Especifica si los métodos POST deben esperar recibir una `100-continue` respuesta del servidor. El valor predeterminado es `true`.|  
 |`useNagleAlgorithm`|Especifica si las conexiones controladas por el Administrador de punto de servicio utilizan el algoritmo de Nagle. El valor predeterminado es `true`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

@@ -6,13 +6,12 @@ dev_langs:
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ef2f02bb5ad6e7458ae11e7880fe403f3a6e9916
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85954dd89bdb576b68d234a364a406a6e0d2145b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493417"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079888"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Cómo: Crear un token de contexto de seguridad para una sesión segura
 Mediante el uso de un token de contexto de seguridad con estado (SCT) en una sesión segura, la sesión puede soportar que el servicio se recicle. Por ejemplo, cuando un SCT sin estado se utiliza en una sesión segura y se restablece Internet Information Services (IIS), a continuación, se pierden los datos de la sesión que están asociados al servicio. Estos datos de la sesión incluyen una caché de token de SCT. Así, la próxima vez que un cliente envíe un SCT sin estado al servicio, se devuelve un error, porque no se puede recuperar la clave que está asociada a SCT. Si, sin embargo, se utiliza un SCT con estado, la clave que está asociada a SCT se contiene dentro de SCT. Dado que la clave se contiene dentro de SCT y, por tanto, dentro del mensaje, el reciclaje del servicio no afecta a la sesión segura. De forma predeterminada, Windows Communication Foundation (WCF) utiliza SCT sin estado en una sesión segura. En este tema se detalla cómo utilizar SCT con estado en una sesión segura.  
@@ -30,7 +29,7 @@ Mediante el uso de un token de contexto de seguridad con estado (SCT) en una ses
   
 -   Cree un enlace personalizado que especifique que una sesión segura que utiliza un SCT con estado protege los mensajes SOAP.  
   
-    1.  Definir un enlace personalizado, mediante la adición de un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) al archivo de configuración para el servicio.  
+    1.  Defina un enlace personalizado, agregando un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) al archivo de configuración para el servicio.  
   
         ```xml  
         <customBinding>  
@@ -61,13 +60,13 @@ Mediante el uso de un token de contexto de seguridad con estado (SCT) en una ses
         <secureConversationBootstrap authenticationMode="UserNameForCertificate" />  
         ```  
   
-    5.  Especificar la codificación del mensaje mediante la adición de un elemento de codificación, como [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+    5.  Especifique la codificación de mensajes mediante la adición de un elemento de codificación, como [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
         ```xml  
         <textMessageEncoding />  
         ```  
   
-    6.  Especificar el transporte, agregando un elemento de transporte, como el [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+    6.  Especificar el transporte agregando un elemento de transporte, como el [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
         ```xml  
         <httpTransport />  
@@ -94,7 +93,7 @@ Mediante el uso de un token de contexto de seguridad con estado (SCT) en una ses
  [!code-csharp[c_CreateStatefulSCT#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createstatefulsct/cs/secureservice.cs#2)]
  [!code-vb[c_CreateStatefulSCT#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createstatefulsct/vb/secureservice.vb#2)]  
   
- Cuando se usa la autenticación de Windows en combinación con un SCT con estado, WCF no rellena el <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> propiedad con el llamador real de la identidad, pero en su lugar establece la propiedad en anónimo. Porque la seguridad de WCF debe volver a crear el contenido del contexto de seguridad de servicio para cada solicitud del SCT de entrada, el servidor no mantiene un seguimiento de la sesión de seguridad en la memoria. Dado que es imposible serializar la instancia de <xref:System.Security.Principal.WindowsIdentity> en SCT, la propiedad <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> devuelve una identidad anónima.  
+ Cuando se usa la autenticación de Windows en combinación con un SCT con estado, WCF no rellena el <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> propiedad con el llamador real de la identidad, pero en su lugar establece la propiedad en anónimo. Dado que la seguridad de WCF debe volver a crear el contenido del contexto de seguridad del servicio para cada solicitud del SCT de entrada, el servidor no mantiene un seguimiento de la sesión de seguridad en la memoria. Dado que es imposible serializar la instancia de <xref:System.Security.Principal.WindowsIdentity> en SCT, la propiedad <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> devuelve una identidad anónima.  
   
  La siguiente configuración exhibe este comportamiento.  
   

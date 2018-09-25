@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46705687"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108096"
 ---
 # <a name="putinstancewmi-function"></a>Función PutInstanceWmi
 Crea o actualiza una instancia de una clase existente. La instancia se escribe en el repositorio de la WMI. 

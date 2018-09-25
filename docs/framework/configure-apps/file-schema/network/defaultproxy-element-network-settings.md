@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultProxy&gt; Element (Network Settings)'
+title: '&lt;defaultProxy&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1e9548c6d43824ea5017b73a132eb49444ed6c77
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: c1783776b62532a2bd28067ca9bdb6ae4c80c717
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140195"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070780"
 ---
-# <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; Element (Network Settings)
+# <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; elemento (configuración de red)
 Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).  
   
  \<configuration>  
@@ -52,8 +51,8 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no usan el proxy.|  
-|[Módulo](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Agrega un nuevo módulo proxy a la aplicación.|  
-|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Define un servidor proxy.|  
+|[módulo](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Agrega un nuevo módulo proxy a la aplicación.|  
+|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Define un servidor proxy.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -64,13 +63,13 @@ Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).
 ## <a name="remarks"></a>Comentarios  
  Si el elemento defaultProxy está vacío, se usará la configuración de proxy de Internet Explorer. Este comportamiento es diferente de la versión 1.1 de .NET Framework.  
   
- Se produce una excepción si el [módulo](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) elemento especifica un tipo no público, el tipo no deriva de la <xref:System.Net.IWebProxy> (clase), se produjo una excepción desde el constructor predeterminado de este objeto o se produjo una excepción mientras recuperar al proxy predeterminado especificado por el sistema. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa del error.  
+ Se produce una excepción si el [módulo](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) elemento especifica un tipo no público, el tipo no deriva de la <xref:System.Net.IWebProxy> (clase), se produjo una excepción en el constructor predeterminado de este objeto, o se produjo una excepción mientras Recuperando al proxy predeterminado especificado por el sistema. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa del error.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo utiliza los valores predeterminados del proxy de Internet Explorer, especifica la dirección del proxy y omite al proxy para el acceso local y contoso.com.  
+ El ejemplo siguiente utiliza los valores predeterminados desde el proxy de Internet Explorer, especifica la dirección del proxy y omite al proxy para el acceso local y contoso.com.  
   
 ```xml  
 <configuration>  

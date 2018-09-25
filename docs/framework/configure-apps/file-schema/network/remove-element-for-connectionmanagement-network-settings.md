@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8d503e06139fc6ce14f4d2c50c46e4bcfeb1b860
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754485"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085551"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;quitar&gt; elemento para connectionManagement (configuración de red)
 Quita una dirección IP o nombre DNS de la lista de administración de conexiones.  
@@ -63,7 +62,7 @@ Quita una dirección IP o nombre DNS de la lista de administración de conexione
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita las entradas de lista de administración de conexión para el servidor www.adventure-works.com y, a continuación, configura una aplicación para usar cuatro conexiones con el servidor www.contoso.com y dos conexiones con todos los demás servidores.  
+ El ejemplo siguiente quita las entradas de lista de administración de conexión para el servidor de www.adventure-works.com y, a continuación, configura una aplicación para usar cuatro conexiones con el servidor www.contoso.com y dos conexiones con todos los demás servidores.  
   
 ```xml  
 <configuration>  

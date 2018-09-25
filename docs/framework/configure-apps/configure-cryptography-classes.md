@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b12d5d95a17439308d79d094e8c22206778f3128
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b9153b4525063d6c52e22d754d68ffa42e914d00
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743256"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074906"
 ---
 # <a name="configuring-cryptography-classes"></a>Configurar clases de criptografía
-El [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] permite a los administradores de equipo configurar los algoritmos criptográficos predeterminados y las implementaciones de algoritmos que utilizan .NET Framework y las aplicaciones escritas correctamente.  Por ejemplo, una empresa que tenga su propia implementación de un algoritmo criptográfico puede hacer que la implementación el valor predeterminado en lugar de la implementación que se incluye en el [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Aunque las aplicaciones administradas que utilizan criptografía siempre pueden elegir enlazarse de forma explícita a una implementación concreta, se recomienda que creen objetos criptográficos mediante el sistema de configuración de criptografía.  
+El [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] permite a los administradores de equipo configurar los algoritmos criptográficos predeterminados y las implementaciones de algoritmos que usan .NET Framework y aplicaciones escritas de forma adecuada.  Por ejemplo, una empresa que tiene su propia implementación de un algoritmo criptográfico puede hacer que la implementación el valor predeterminado en lugar de la implementación se incluye en el [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Aunque siempre pueden elegir las aplicaciones administradas que utilizan criptografía enlazar explícitamente una implementación determinada, se recomienda que creen objetos criptográficos mediante el sistema de configuración de criptografía.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Asignar nombres de algoritmo a clases de criptografía](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
  Describe cómo asignar un nombre de algoritmo a una clase de criptografía.  
   
  [Asignar identificadores de objeto a algoritmos de criptografía](../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)  
- Describe cómo asignar un identificador de objeto a un algoritmo criptográfico.  
+ Describe cómo asignar un identificador de objeto a un algoritmo de criptografía.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  

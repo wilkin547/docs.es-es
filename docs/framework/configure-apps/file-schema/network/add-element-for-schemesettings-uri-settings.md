@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: bd8033b07b29066633e5217645f3ee06937179da
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9cca5e35bfc0aef448d2d515f5ac55ed9e2e2258
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741859"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157618"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;agregar&gt; elemento para schemeSettings (configuración de Uri)
 Agrega un valor de esquema para un nombre de esquema.  
@@ -36,13 +35,13 @@ Agrega un valor de esquema para un nombre de esquema.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|name|El nombre de esquema para el que se aplica esta configuración. El solo valores compatibles son name = "http" y name = "https".|  
+|name|El nombre de esquema que se aplica esta configuración. Los únicos valores compatibles son el nombre = "http" y el nombre = "https".|  
   
 ## <a name="attribute-name-attribute"></a>{Nombre del atributo} Atributo  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|genericUriParserOptions|Las opciones del analizador para este esquema. El único valor admitido es genericUriParserOptions = "DontUnescapePathDotsAndSlashes".|  
+|genericUriParserOptions|Las opciones del analizador de este esquema. El único valor admitido es genericUriParserOptions = "DontUnescapePathDotsAndSlashes".|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -54,25 +53,25 @@ Agrega un valor de esquema para un nombre de esquema.
 |[Elemento \<schemeSettings> (configuración de URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, la <xref:System.Uri?displayProperty=nameWithType> delimitadores de ruta de acceso de la codificación de porcentaje de quitar los caracteres de escape de clase antes de ejecutar la compresión de la ruta de acceso. Esto se implementa como un mecanismo de seguridad frente a ataques similar al siguiente:  
+ De forma predeterminada, el <xref:System.Uri?displayProperty=nameWithType> delimitadores de ruta de acceso de codificación de porcentaje de anular los caracteres de escape de clase antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad frente a ataques similar al siguiente:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Si este URI se pasa a los módulos no se controla por ciento correctamente los caracteres codificados, podría producir en el siguiente comando que se está ejecutando el servidor:  
+ Si este URI se pasa a los módulos no se controla por ciento correctamente los caracteres codificados, podría dar como resultado el siguiente comando que se está ejecutando el servidor:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por esta razón, <xref:System.Uri?displayProperty=nameWithType> clase primera delimitadores de ruta de acceso de los caracteres de escape anular y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior a <xref:System.Uri?displayProperty=nameWithType> clase resultados de constructor en el URI siguiente:  
+ Por este motivo, <xref:System.Uri?displayProperty=nameWithType> delimitadores de ruta de acceso de primera anular los caracteres de escape de clase y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior a <xref:System.Uri?displayProperty=nameWithType> clase constructor produce el siguiente URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Este comportamiento predeterminado puede modificarse para no anula escape porcentaje de ruta de acceso codificada de los delimitadores con la opción de configuración schemeSettings para un esquema específico.  
+ Este comportamiento predeterminado puede modificarse para no escape de un porcentaje de ruta de acceso codificada delimitadores de mediante la opción de configuración schemeSettings para un esquema específico.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una configuración utilizada por la <xref:System.Uri> clase para admitir delimitadores de ruta de acceso con codificación de porcentaje para el esquema http.  
+ El ejemplo siguiente muestra una configuración utilizada por el <xref:System.Uri> clase para admitir los delimitadores de ruta de acceso codificados con porcentaje para el esquema http.  
   
 ```xml  
 <configuration>  

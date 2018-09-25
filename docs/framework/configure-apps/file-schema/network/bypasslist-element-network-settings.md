@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypasslist&gt; Element (Network Settings)'
+title: '&lt;bypasslist&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2d2076ee5e95ab722fe828ee625392671a6281c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ca7ba9b0e534b5806570580b207da5314243d8f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743906"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109045"
 ---
-# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; Element (Network Settings)
-Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan a un servidor proxy.  
+# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; elemento (configuración de red)
+Proporciona un conjunto de expresiones regulares que describen direcciones que no se usa a un proxy.  
   
  \<configuration>  
 \<System.NET >  
@@ -56,7 +55,7 @@ Proporciona un conjunto de expresiones regulares que describen direcciones que n
 ## <a name="remarks"></a>Comentarios  
  La lista de omisión contiene expresiones regulares que describen las direcciones URI que <xref:System.Net.WebRequest> instancias directamente en lugar de tener acceso a través del servidor proxy.  
   
- Debe tener cuidado al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\.contoso\\.com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para buscar sólo un host en el dominio contoso.com, utilice un delimitador ("$"): "[a-z] +\\.contoso\\.com$".  
+ Se debe tener cuidado al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\.contoso\\.com" coincide con cualquier host en el dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para que coincida con un host en el dominio contoso.com, use un delimitador ("$"): "[a-z] +\\.contoso\\.com$".  
   
  Para obtener más información sobre las expresiones regulares, vea. [Expresiones regulares de .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
@@ -64,7 +63,7 @@ Proporciona un conjunto de expresiones regulares que describen direcciones que n
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se agrega dos direcciones a la lista de omisión. La primera omite al proxy para todos los servidores en el dominio contoso.com; la segunda omite al proxy para todos los servidores cuyas direcciones IP comienzan con 192.168.  
+ El ejemplo siguiente agrega dos direcciones a la lista de omisión. La primera omite al proxy para todos los servidores en el dominio contoso.com; la segunda omite al proxy para todos los servidores cuyas direcciones IP comienzan con 192.168.  
   
 ```xml  
 <configuration>  

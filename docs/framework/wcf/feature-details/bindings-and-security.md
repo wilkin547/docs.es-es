@@ -8,13 +8,12 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a7d2e55f84ed99ccb25e9966dc72112c0113eabc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519811"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080135"
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 Los enlaces proporcionados por el sistema incluidos con Windows Communication Foundation (WCF) ofrecen una forma rápida de programar aplicaciones de WCF. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  

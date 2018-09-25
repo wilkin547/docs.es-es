@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744972"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077348"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; (elemento) para &lt;en tiempo de ejecución&gt;
 Contiene información de identificación sobre el ensamblado.  
@@ -45,9 +44,9 @@ culture="assembly culture"/>
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`name`|Atributo necesario.<br /><br /> El nombre del ensamblado|  
-|`culture`|Atributo opcional.<br /><br /> Una cadena que especifica el idioma y país o región del ensamblado.|  
+|`culture`|Atributo opcional.<br /><br /> Cadena que especifica el idioma y país o región del ensamblado.|  
 |`publicKeyToken`|Atributo opcional.<br /><br /> Un valor hexadecimal que especifica el nombre seguro del ensamblado.|  
-|`processorArchitecture`|Atributo opcional.<br /><br /> Uno de los valores "x86", "amd64", "msil" o "ia64", que se especifica la arquitectura de procesador para un ensamblado que contiene código específico del procesador. Los valores no distinguen mayúsculas de minúsculas. Si el atributo se asigna cualquier otro valor, toda la matriz `<assemblyIdentity>` se omite el elemento. Vea <xref:System.Reflection.ProcessorArchitecture>.|  
+|`processorArchitecture`|Atributo opcional.<br /><br /> Uno de los valores "x86", "amd64", "msil" o "ia64", que se especifica la arquitectura de procesador para un ensamblado que contiene código específico del procesador. Los valores no distinguen mayúsculas de minúsculas. Si el atributo se asigna a cualquier otro valor, toda la `<assemblyIdentity>` se omite el elemento. Vea <xref:System.Reflection.ProcessorArchitecture>.|  
   
 ## <a name="processorarchitecture-attribute"></a>Atributo processorArchitecture  
   
@@ -55,8 +54,8 @@ culture="assembly culture"/>
 |-----------|-----------------|  
 |`amd64`|Un procesador AMD de 64 bits sólo.|  
 |`ia64`|Un procesador Intel de 64 bits sólo.|  
-|`msil`|Neutral con respecto al procesador y los bits por palabra|  
-|`x86`|Un procesador Intel de 32 bits, ya sea nativo o en el entorno Windows on Windows (WOW) en una plataforma de 64 bits.|  
+|`msil`|Neutral respecto al procesador y bits por palabra|  
+|`x86`|Un procesador Intel de 32 bits, o nativo o en el Windows en el entorno de Windows (WOW) en una plataforma de 64 bits.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -67,15 +66,15 @@ culture="assembly culture"/>
 |-------------|-----------------|  
 |`assemblyBinding`|Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`dependentAssembly`|Encapsula la directiva de enlace y la ubicación de cada ensamblado. Utilice uno `<dependentAssembly>` elemento para cada ensamblado.|  
+|`dependentAssembly`|Encapsula la directiva de enlace y la ubicación de cada ensamblado. Utilice uno `<dependentAssembly>` (elemento) para cada ensamblado.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cada  **\<dependentAssembly >** elemento debe tener una  **\<assemblyIdentity >** elemento secundario.  
   
- Si el `processorArchitecture` atributo está presente, el `<assemblyIdentity>` elemento se aplica únicamente al ensamblado con la arquitectura del procesador correspondiente. Si el `processorArchitecture` atributo no está presente, el `<assemblyIdentity>` elemento puede aplicar a un ensamblado con cualquier arquitectura de procesador.  
+ Si el `processorArchitecture` atributo está presente, el `<assemblyIdentity>` elemento se aplica solo al ensamblado con la arquitectura del procesador correspondiente. Si el `processorArchitecture` atributo no está presente, el `<assemblyIdentity>` elemento puede aplicarse a un ensamblado con cualquier arquitectura de procesador.  
   
- En el ejemplo siguiente se muestra un archivo de configuración para dos ensamblados con el mismo nombre que destinan a dos arquitecturas de procesador de dos diferentes y cuyas versiones no se han mantenido sincronizadas. Cuando la aplicación se ejecuta en el x86 plataforma la primera `<assemblyIdentity>` elemento se aplica y la otra se omite. Si la aplicación se ejecuta en una plataforma distinta x86 o ia64, ambos se omiten.  
+ El ejemplo siguiente muestra un archivo de configuración para los dos ensamblados con el mismo nombre que tienen como destino dos arquitecturas diferentes de un procesador de dos y cuyas versiones no se haya mantenido en sincronía. Cuando la aplicación se ejecuta en el x86 la primera plataforma `<assemblyIdentity>` se aplica el elemento y se omite el resto. Si la aplicación se ejecuta en una plataforma distinta x86 o ia64, ambos se omiten.  
   
 ```xml  
 <configuration>  
@@ -102,10 +101,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- Si un archivo de configuración contiene un `<assemblyIdentity>` elemento sin ningún `processorArchitecture` de atributo y no contiene un elemento que coincida con la plataforma, el elemento sin el `processorArchitecture` se utiliza el atributo.  
+ Si un archivo de configuración contiene un `<assemblyIdentity>` elemento sin ningún `processorArchitecture` de atributo y no contiene un elemento que coincide con la plataforma, el elemento sin el `processorArchitecture` se usa el atributo.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo proporcionar información sobre un ensamblado.  
+ El ejemplo siguiente muestra cómo proporcionar información sobre un ensamblado.  
   
 ```xml  
 <configuration>  

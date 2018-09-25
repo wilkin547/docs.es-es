@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 095212f73adb906d9d80db747c331c436c1cf846
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: be4f3dcce1a746b287e75e0e6d3ba6eaa1d9b57b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745791"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156874"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;filtro&gt; (elemento) para &lt;agregar&gt; para &lt;los agentes de escucha&gt; para &lt;seguimiento&gt;
 Agrega un filtro a un agente de escucha en el `Listeners` colección para un seguimiento.  
@@ -43,7 +42,7 @@ Agrega un filtro a un agente de escucha en el `Listeners` colección para un seg
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`type`|Atributo necesario.<br /><br /> Especifica el tipo del filtro, que se debe heredar de la <xref:System.Diagnostics.TraceFilter> clase. Puede usar el nombre calificado de espacio de nombres del tipo, que se corresponde con el tipo <xref:System.Type.FullName%2A> propiedad, o bien puede usar el nombre de tipo completo incluyendo la información de ensamblado, que corresponde a la <xref:System.Type.AssemblyQualifiedName%2A> propiedad. Para obtener información acerca de los nombres de tipo completo, vea [especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`type`|Atributo necesario.<br /><br /> Especifica el tipo del filtro, que se debe heredar de la <xref:System.Diagnostics.TraceFilter> clase. Puede usar el nombre calificado de espacio de nombres del tipo, que se corresponde con el tipo <xref:System.Type.FullName%2A> propiedad, o bien puede usar el nombre de tipo completo incluida la información de ensamblado, que corresponde a la <xref:System.Type.AssemblyQualifiedName%2A> propiedad. Para obtener información acerca de los nombres de tipo completo, vea [especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Atributo opcional.<br /><br /> Cadena pasada al constructor de la clase de filtro especificado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -56,16 +55,16 @@ Agrega un filtro a un agente de escucha en el `Listeners` colección para un seg
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
-|`listeners`|Contiene los agentes de escucha que recopilarán, almacenan y enrutan los mensajes. Agentes de escucha dirigen los resultados del seguimiento a un destino apropiado.|  
+|`listeners`|Contiene los agentes de escucha que recopilarán, almacenan y enrutan los mensajes. Los agentes de escucha dirigen los resultados de seguimiento a un destino apropiado.|  
 |`add`|Agrega un agente de escucha a la colección `Listeners`.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `<filter>` elemento debe estar contenido en una `<add>` elemento para un agente de escucha de seguimiento que especifica el tipo del agente de escucha, no sólo el nombre de un agente de escucha definido en un [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Si el agente de escucha se define en un [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), el filtro de ese agente de escucha debe definirse en ese elemento.  
+ El `<filter>` elemento debe estar contenido en un `<add>` elemento para un agente de escucha de seguimiento que especifica el tipo del agente de escucha, no sólo el nombre de un agente de escucha definido en un [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Si el agente de escucha se define en un [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), el filtro para ese agente de escucha debe definirse en ese elemento.  
   
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `<filter>` elemento para agregar un filtro al agente de escucha `console` en el `Listeners` colección para seguimiento, especificando el nivel de evento de filtro como `Error`.  
+ El ejemplo siguiente muestra cómo usar el `<filter>` elemento para agregar un filtro al agente de escucha `console` en el `Listeners` colección para seguimiento, especificando el nivel de evento de filtro como `Error`.  
   
 ```xml  
 <configuration>  

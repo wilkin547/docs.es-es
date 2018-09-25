@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 73fe0fb13c191843516a2218c708851abc1851b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752707"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084454"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;orígenes&gt; elemento
 Especifica los orígenes de seguimiento que inician mensajes de seguimiento.  
@@ -54,10 +53,10 @@ Especifica los orígenes de seguimiento que inician mensajes de seguimiento.
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `<sources>` elemento que se va a agregar el origen de seguimiento `mySource` y para establecer el nivel para el modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
+ El ejemplo siguiente muestra cómo usar el `<sources>` elemento va a agregar el origen de seguimiento `mySource` y establecer el nivel del modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
 ```xml  
 <configuration>  

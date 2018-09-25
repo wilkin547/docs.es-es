@@ -9,13 +9,12 @@ helpviewer_keywords:
 - source element
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b7c2a71b129a0ad7d1c2a72b18b8a69a111f9495
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752577"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088950"
 ---
 # <a name="ltsourcegt-element"></a>&lt;origen&gt; elemento
 Contiene un origen de seguimiento que inicia mensajes de seguimiento.  
@@ -41,9 +40,9 @@ Contiene un origen de seguimiento que inicia mensajes de seguimiento.
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`name`|Atributo opcional.<br /><br /> Especifica el nombre del origen de seguimiento.|  
-|`switchName`|Atributo opcional.<br /><br /> Especifica el nombre de una instancia de modificador de seguimiento en la aplicación. Si el conmutador no se identifica en un `<switches>` elemento, el valor especifica el nivel para el conmutador.|  
+|`switchName`|Atributo opcional.<br /><br /> Especifica el nombre de una instancia de conmutador de seguimiento en la aplicación. Si el conmutador no se identifica en un `<switches>` elemento, el valor especifica el nivel del modificador.|  
 |`switchType`|Atributo opcional.<br /><br /> Especifica el tipo del modificador de seguimiento. Si está presente, el tipo debe ser un nombre de clase válido y no puede ser una cadena vacía.|  
-|`extraAttribute`|Atributo opcional.<br /><br /> Especifica el valor de un atributo específico del origen de seguimiento identificado por la <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para ese origen de seguimiento.|  
+|`extraAttribute`|Atributo opcional.<br /><br /> Especifica el valor de un atributo específico del origen de seguimiento identificado por el <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para ese origen de seguimiento.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -60,10 +59,10 @@ Contiene un origen de seguimiento que inicia mensajes de seguimiento.
 |`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `<source>` elemento que se va a agregar el origen de seguimiento `mySource` y para establecer el nivel para el modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
+ El ejemplo siguiente muestra cómo usar el `<source>` elemento va a agregar el origen de seguimiento `mySource` y establecer el nivel del modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
 ```xml  
 <configuration>  

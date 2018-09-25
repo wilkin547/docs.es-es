@@ -3,16 +3,15 @@ title: '&lt;userNameSecurityTokenHandlerRequirement&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5d725cc0d16457f2bdfb404baf4758e3431ce6b7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dfcaad8b150321fda2a86e601bf57204cbdc1a0e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756662"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075042"
 ---
 # <a name="ltusernamesecuritytokenhandlerrequirementgt"></a>&lt;userNameSecurityTokenHandlerRequirement&gt;
-Proporciona la configuración para el <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> clase o clases derivadas.  
+Proporciona la configuración de la <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> clase o clases derivadas.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
@@ -42,7 +41,7 @@ Proporciona la configuración para el <xref:System.IdentityModel.Services.Tokens
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|membershipProviderName|Especifica la <xref:System.Web.Security.MembershipProvider> que debe usar el controlador de token de seguridad.|  
+|membershipProviderName|Especifica el <xref:System.Web.Security.MembershipProvider> que debe usar el controlador de token de seguridad.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -51,7 +50,7 @@ Proporciona la configuración para el <xref:System.IdentityModel.Services.Tokens
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Agrega el controlador de token de seguridad especificado a la colección de controlador de token.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Agrega el controlador de token de seguridad especificado a la colección de controladores de token.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `<userNameSecurityTokenHandlerRequirement>` conjuntos de elementos del <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> propiedad cuando un <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> se inicializa el objeto de configuración.  

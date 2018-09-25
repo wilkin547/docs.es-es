@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746360"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082073"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; elemento
 Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.  
@@ -41,7 +40,7 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**OID**|Atributo necesario.<br /><br /> Especifica el OID ASN.1 correspondiente al algoritmo implementado por la clase.|  
-|**name**|Atributo necesario.<br /><br /> Especifica el valor de la **nombre** de atributo en el [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiqueta.|  
+|**name**|Atributo necesario.<br /><br /> Especifica el valor de la **nombre** atributo en el [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiqueta.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -56,10 +55,10 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
 |`oidMap`|Contiene asignaciones de identificador (OID) de objeto ASN.1 a clases.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los identificadores de objeto ASN.1 identifican algoritmos en algunos formatos criptográficos. Asignar identificadores de objetos a los nombres descriptivos de los algoritmos que desea identificar.  
+ Los identificadores de objeto ASN.1 identifican algoritmos en algunos formatos criptográficos. Los identificadores de objetos se asignan a nombres descriptivos para los algoritmos que desea identificar.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el  **\<oidEntry >** elemento que se va a asignar un identificador de objeto para el algoritmo de hash RIPEMD-160 a una implementación de ese algoritmo hash.  
+ El ejemplo siguiente muestra cómo usar el  **\<oidEntry >** elemento para asignar un identificador de objeto para el algoritmo de hash RIPEMD-160 a una implementación del algoritmo hash.  
   
 ```xml  
 <configuration>  
