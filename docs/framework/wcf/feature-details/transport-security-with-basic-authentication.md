@@ -6,13 +6,12 @@ dev_langs:
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f29087b01dbd55f936462d3c4ee2a26bbfe97b9a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4a6ad2746bea9dfea1999e272796d44f0341e64d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867445"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082349"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Seguridad de transporte con autenticación básica
 La siguiente ilustración muestra un servicio de Windows Communication Foundation (WCF) y un cliente. El servidor necesita un certificado X.509 válido que se puede utilizar para Capa de sockets seguros (SSL) y los clientes deben confiar en el certificado del servidor. Además, el servicio web ya tiene una implementación SSL que se puede usar. Para obtener más información acerca de cómo habilitar la autenticación básica en Internet Information Services (IIS), consulte [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  
