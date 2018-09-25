@@ -14,11 +14,11 @@ ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591283"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071200"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Controlar y generar excepciones en .NET
 
