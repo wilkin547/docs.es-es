@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753747"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080330"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="01819-102">&lt;agregar&gt; elemento para connectionManagement (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="01819-102">&lt;add&gt; Element for connectionManagement (Network Settings)</span></span>
-<span data-ttu-id="01819-103">Agrega una dirección IP o nombre DNS a la lista de administración de conexión.</span><span class="sxs-lookup"><span data-stu-id="01819-103">Adds an IP address or DNS name to the connection management list.</span></span>  
+# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="12c17-102">&lt;agregar&gt; elemento para connectionManagement (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="12c17-102">&lt;add&gt; Element for connectionManagement (Network Settings)</span></span>
+<span data-ttu-id="12c17-103">Agrega una dirección IP o nombre DNS a la lista de administración de conexión.</span><span class="sxs-lookup"><span data-stu-id="12c17-103">Adds an IP address or DNS name to the connection management list.</span></span>  
   
- <span data-ttu-id="01819-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="01819-104">\<configuration></span></span>  
-<span data-ttu-id="01819-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="01819-105">\<system.net></span></span>  
-<span data-ttu-id="01819-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="01819-106">\<connectionManagement></span></span>  
-<span data-ttu-id="01819-107">\<add></span><span class="sxs-lookup"><span data-stu-id="01819-107">\<add></span></span>  
+ <span data-ttu-id="12c17-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="12c17-104">\<configuration></span></span>  
+<span data-ttu-id="12c17-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="12c17-105">\<system.net></span></span>  
+<span data-ttu-id="12c17-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="12c17-106">\<connectionManagement></span></span>  
+<span data-ttu-id="12c17-107">\<add></span><span class="sxs-lookup"><span data-stu-id="12c17-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01819-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="01819-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="12c17-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="12c17-108">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -37,35 +36,35 @@ ms.locfileid: "32753747"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="01819-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="01819-109">Attributes and Elements</span></span>  
- <span data-ttu-id="01819-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="01819-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="12c17-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="12c17-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="12c17-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="12c17-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="01819-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="01819-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="12c17-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="12c17-111">Attributes</span></span>  
   
-|<span data-ttu-id="01819-112">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="01819-112">**Attribute**</span></span>|<span data-ttu-id="01819-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="01819-113">**Description**</span></span>|  
+|<span data-ttu-id="12c17-112">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="12c17-112">**Attribute**</span></span>|<span data-ttu-id="12c17-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="12c17-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`address`|<span data-ttu-id="01819-114">Cadena que describe una dirección IP o nombre DNS.</span><span class="sxs-lookup"><span data-stu-id="01819-114">A string describing an IP address or DNS name.</span></span>|  
-|`maxconnection`|<span data-ttu-id="01819-115">Número máximo de conexiones permitido en un servidor.</span><span class="sxs-lookup"><span data-stu-id="01819-115">The maximum number of connections allowed to a server.</span></span> <span data-ttu-id="01819-116">Si no se proporciona, el valor predeterminado es 2.</span><span class="sxs-lookup"><span data-stu-id="01819-116">If not supplied, the default is 2.</span></span>|  
+|`address`|<span data-ttu-id="12c17-114">Cadena que describe una dirección IP o nombre DNS.</span><span class="sxs-lookup"><span data-stu-id="12c17-114">A string describing an IP address or DNS name.</span></span>|  
+|`maxconnection`|<span data-ttu-id="12c17-115">Número máximo de conexiones permitido en un servidor.</span><span class="sxs-lookup"><span data-stu-id="12c17-115">The maximum number of connections allowed to a server.</span></span> <span data-ttu-id="12c17-116">Si no se proporciona, el valor predeterminado es 2.</span><span class="sxs-lookup"><span data-stu-id="12c17-116">If not supplied, the default is 2.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="01819-117">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="01819-117">Child Elements</span></span>  
- <span data-ttu-id="01819-118">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="01819-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="12c17-117">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="12c17-117">Child Elements</span></span>  
+ <span data-ttu-id="12c17-118">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="12c17-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="01819-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="01819-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="12c17-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="12c17-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="01819-120">**Element**</span><span class="sxs-lookup"><span data-stu-id="01819-120">**Element**</span></span>|<span data-ttu-id="01819-121">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="01819-121">**Description**</span></span>|  
+|<span data-ttu-id="12c17-120">**Element**</span><span class="sxs-lookup"><span data-stu-id="12c17-120">**Element**</span></span>|<span data-ttu-id="12c17-121">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="12c17-121">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="01819-122">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="01819-122">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="01819-123">Especifica el número máximo de conexiones a un host de red.</span><span class="sxs-lookup"><span data-stu-id="01819-123">Specifies the maximum number of connections to a network host.</span></span>|  
+|[<span data-ttu-id="12c17-122">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="12c17-122">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="12c17-123">Especifica el número máximo de conexiones a un host de red.</span><span class="sxs-lookup"><span data-stu-id="12c17-123">Specifies the maximum number of connections to a network host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="01819-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="01819-124">Remarks</span></span>  
- <span data-ttu-id="01819-125">El valor de la `address` atributo debe ser un asterisco para indicar todas las conexiones, o bien una cadena del formulario `<schema>://<idn_hostname>[:<port>]`.</span><span class="sxs-lookup"><span data-stu-id="01819-125">The value of the `address` attribute should be either an asterisk to indicate all connections, or a string of the form `<schema>://<idn_hostname>[:<port>]`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="12c17-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="12c17-124">Remarks</span></span>  
+ <span data-ttu-id="12c17-125">El valor de la `address` atributo debe ser un asterisco para indicar todas las conexiones, o bien una cadena del formulario `<schema>://<idn_hostname>[:<port>]`.</span><span class="sxs-lookup"><span data-stu-id="12c17-125">The value of the `address` attribute should be either an asterisk to indicate all connections, or a string of the form `<schema>://<idn_hostname>[:<port>]`.</span></span>  
   
- <span data-ttu-id="01819-126">Si el URI pasado a cualquier API de HTTP contiene Unicode, el nombre se convertirá internamente mediante <xref:System.Uri.DnsSafeHost%2A>, que puede devolver una cadena de punicode (comportamiento dependiente de la configuración actual de IDN).</span><span class="sxs-lookup"><span data-stu-id="01819-126">If the URI passed to any HTTP APIs contains Unicode, the name will be converted internally using <xref:System.Uri.DnsSafeHost%2A> which might return a punicode string (behavior dependent on the current IDN configuration).</span></span>  
+ <span data-ttu-id="12c17-126">Si el URI pasado a cualquier API de HTTP contiene Unicode, el nombre se convertirá internamente mediante <xref:System.Uri.DnsSafeHost%2A>, que puede devolver una cadena de punicode (comportamiento dependiente de la configuración actual de IDN).</span><span class="sxs-lookup"><span data-stu-id="12c17-126">If the URI passed to any HTTP APIs contains Unicode, the name will be converted internally using <xref:System.Uri.DnsSafeHost%2A> which might return a punicode string (behavior dependent on the current IDN configuration).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="01819-127">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="01819-127">Configuration Files</span></span>  
- <span data-ttu-id="01819-128">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="01819-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="12c17-127">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="12c17-127">Configuration Files</span></span>  
+ <span data-ttu-id="12c17-128">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="12c17-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="01819-129">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="01819-129">Example</span></span>  
- <span data-ttu-id="01819-130">En el ejemplo siguiente se configura una aplicación para usar cuatro conexiones con el servidor www.contoso.com y dos conexiones con todos los demás servidores.</span><span class="sxs-lookup"><span data-stu-id="01819-130">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
+## <a name="example"></a><span data-ttu-id="12c17-129">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="12c17-129">Example</span></span>  
+ <span data-ttu-id="12c17-130">El ejemplo siguiente configura una aplicación para usar cuatro conexiones con el servidor www.contoso.com y dos conexiones con todos los demás servidores.</span><span class="sxs-lookup"><span data-stu-id="12c17-130">The following example configures an application to use four connections to the server www.contoso.com and two connections to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,7 +77,7 @@ ms.locfileid: "32753747"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="01819-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="01819-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="12c17-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="12c17-131">See Also</span></span>  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
- [<span data-ttu-id="01819-132">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="01819-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="12c17-132">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="12c17-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
