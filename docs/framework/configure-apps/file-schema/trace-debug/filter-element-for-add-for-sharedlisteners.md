@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745060"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115144"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;filtro&gt; (elemento) para &lt;agregar&gt; para &lt;sharedListeners&gt;
 Agrega un filtro a un agente de escucha en la colección `sharedListeners`.  
@@ -43,7 +42,7 @@ Agrega un filtro a un agente de escucha en la colección `sharedListeners`.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|**type**|Atributo necesario.<br /><br /> Especifica el tipo de filtro. Puede usar solo el nombre completo del tipo (con el formato de la <xref:System.Type.FullName%2A?displayProperty=nameWithType> propiedad), o puede usar el nombre de tipo completo, incluida la información de ensamblado (en el formato de la <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> propiedad). Para obtener información acerca de cómo crear un nombre de tipo completo, vea [especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Atributo necesario.<br /><br /> Especifica el tipo del filtro. Puede usar solo el nombre completo del tipo (en el formato de la <xref:System.Type.FullName%2A?displayProperty=nameWithType> propiedad), o bien puede usar el nombre de tipo completo, incluida la información de ensamblado (con el formato de la <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> propiedad). Para obtener información sobre la creación de un nombre de tipo completo, vea [especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Atributo opcional.<br /><br /> La cadena pasada al constructor de la clase especificada.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -59,12 +58,12 @@ Agrega un filtro a un agente de escucha en la colección `sharedListeners`.
 |`add`|Agrega un agente de escucha para el **sharedListeners** colección.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si un agente de escucha se define en un `<add>` elemento de la `<sharedListeners>` elemento, el filtro de ese agente de escucha debe definirse en un `<filter>` elemento que es un elemento secundario de la `<add>` elemento.  
+ Si un agente de escucha se define en un `<add>` elemento de la `<sharedListeners>` elemento, el filtro para ese agente de escucha debe definirse en un `<filter>` elemento que es un elemento secundario de la `<add>` elemento.  
   
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `<filter>` elemento para agregar un filtro al agente de escucha de seguimiento `console` en el `sharedListeners` colección.  
+ El ejemplo siguiente muestra cómo usar el `<filter>` elemento para agregar un filtro a la escucha de seguimiento `console` en el `sharedListeners` colección.  
   
 ```xml  
 <configuration>  

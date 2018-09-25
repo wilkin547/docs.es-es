@@ -3,11 +3,11 @@ title: Acceso a OperationContext desde un servicio de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
 ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697833"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111325"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Acceso a OperationContext desde un servicio de flujo de trabajo
 Para tener acceso a <xref:System.ServiceModel.OperationContext> en un servicio de flujo de trabajo, debe implementar la interfaz <xref:System.ServiceModel.Activities.IReceiveMessageCallback> en una propiedad de ejecución personalizada. Invalide el método <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, al que se pasa una referencia a <xref:System.ServiceModel.OperationContext>. Este tema le guiará en la implementación de esta propiedad de ejecución para recuperar un encabezado personalizado, así como una actividad personalizada que mostrará esta propiedad a <xref:System.ServiceModel.Activities.Receive> en tiempo de ejecución.  La actividad personalizada implementará el mismo comportamiento que una actividad <xref:System.Activities.Statements.Sequence>, con la salvedad de que, cuando <xref:System.ServiceModel.Activities.Receive> se coloque dentro, se llamará a <xref:System.ServiceModel.Activities.IReceiveMessageCallback> y se recuperará la información de <xref:System.ServiceModel.OperationContext>.  Este tema también muestra cómo tener acceso a <xref:System.ServiceModel.OperationContext> en el lado del cliente para agregar encabezados de salida a través de la interfaz <xref:System.ServiceModel.Activities.ISendMessageCallback>.  

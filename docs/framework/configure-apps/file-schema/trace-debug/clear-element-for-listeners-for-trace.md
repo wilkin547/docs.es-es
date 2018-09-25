@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1705ed7cc847d60ecf8b42f4615d77f2cc569e21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 91b4b4f132138fa6752c1da9b28e7a3ab7fad006
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748664"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082895"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Borrar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;seguimiento&gt;
 Borra la colección `Listeners` de un seguimiento.  
@@ -48,20 +47,20 @@ Borra la colección `Listeners` de un seguimiento.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
-|`listeners`|Contiene los agentes de escucha que recopilarán, almacenan y enrutan los mensajes. Agentes de escucha dirigen los resultados del seguimiento a un destino apropiado.|  
+|`listeners`|Contiene los agentes de escucha que recopilarán, almacenan y enrutan los mensajes. Los agentes de escucha dirigen los resultados de seguimiento a un destino apropiado.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `<clear>` elemento quita todos los agentes de escucha de la `Listeners` colección de seguimiento. Puede usar el `<clear>` elemento antes de usar el `<add>` elemento para estar seguro de que no hay ningún otro agente de escucha activo en la colección.  
+ El `<clear>` elemento quita todos los agentes de escucha desde el `Listeners` colección de seguimiento. Puede usar el `<clear>` elemento antes de usar el `<add>` elemento que esté seguro de que no hay ningún otros agentes de escucha activos en la colección.  
   
- Puede desactivar la `Listeners` colección mediante programación, mediante una llamada a la <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método en el <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> propiedad (`System.Diagnostics.Trace.Listeners.Clear()`).  
+ Puede borrar el `Listeners` colección mediante programación mediante una llamada a la <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método en el <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> propiedad (`System.Diagnostics.Trace.Listeners.Clear()`).  
   
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 > [!NOTE]
->  El `<clear>` elemento quita el <xref:System.Diagnostics.DefaultTraceListener> desde el `Listeners` colección, alterar el comportamiento de la <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, y <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> métodos. Llamar a un `Assert` o `Fail` método normalmente da como resultado la presentación de un cuadro de mensaje. Sin embargo, no se muestra el cuadro de mensaje si la <xref:System.Diagnostics.DefaultTraceListener> no está en el `Listeners` colección.  
+>  El `<clear>` elemento quita el <xref:System.Diagnostics.DefaultTraceListener> desde el `Listeners` colección, alterar el comportamiento de la <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, y <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> métodos. Una llamada a un `Assert` o `Fail` método normalmente da como resultado de la presentación de un cuadro de mensaje. Sin embargo, no se muestra el cuadro de mensaje si el <xref:System.Diagnostics.DefaultTraceListener> no está en el `Listeners` colección.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `<clear>` elemento antes de usar el `<add>` elemento que se va a agregar el agente de escucha `console` para el `Listeners` colección para seguimiento.  
+ En el ejemplo siguiente se muestra cómo usar el `<clear>` elemento antes de usar el `<add>` elemento para agregar el agente de escucha `console` a la `Listeners` recopilación para el seguimiento.  
   
 ```xml  
 <configuration>  

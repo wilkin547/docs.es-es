@@ -6,13 +6,12 @@ dev_langs:
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 7aad53e9c6d5708bceca9831264c112f885fb889
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9100d3d16c39ca53e9afe3721c9d6f1027ba2048
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857367"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070999"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Seguridad de mensajes con un cliente de certificado
 El escenario siguiente muestra un cliente de Windows Communication Foundation (WCF) y el servicio protegido utilizando el modo de seguridad de mensajes. Tanto el cliente como el servicio se autentican con certificados. Para obtener más información, consulte [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  

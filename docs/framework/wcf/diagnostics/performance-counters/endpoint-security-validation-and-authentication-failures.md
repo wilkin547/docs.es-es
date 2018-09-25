@@ -3,13 +3,12 @@ title: 'punto de conexión: Errores en la autenticación y validación de la seg
 ms.date: 03/30/2017
 ms.assetid: 5bad60aa-6084-4c7b-aefd-9b581f04382e
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8c46354fac11f5f0b46ef1b5629157f6da455fcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7cd2268eefa0176ab71a3d5d3bc82c178664742
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471812"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075101"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures"></a>punto de conexión: Errores en la autenticación y validación de la seguridad
 Nombre del contador: errores en la autenticación y validación de la seguridad  

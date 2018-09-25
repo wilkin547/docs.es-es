@@ -5,13 +5,12 @@ helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 220795488d6e4bedf40e0764040470c18d3a3b48
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081518fb1b3eb1f66c772cd401c19c0eb523d32a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525829"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111261"
 ---
 # <a name="common-security-scenarios"></a>Escenarios de seguridad comunes
 Los temas de esta sección catalogan varias configuraciones posibles de seguridad de cliente y servicio. Las configuraciones varían según varios factores. Por ejemplo, si un servicio o cliente está en una intranet o si Windows o transporte (como HTTPS) proporciona la seguridad.  

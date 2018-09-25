@@ -3,13 +3,12 @@ title: '&lt;system.identityModel&gt;'
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6faeadc9fcdffc8c8aa14fdcc744896b45a941f0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755258"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077335"
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
 Proporciona la configuración para habilitar las opciones de Windows Identity Foundation (WIF) en las aplicaciones.  
@@ -45,7 +44,7 @@ Proporciona la configuración para habilitar las opciones de Windows Identity Fo
  Agregar un `<system.identityModel>` sección al archivo de configuración para configurar un servicio o aplicación para que use Windows Identity Foundation (WIF). El `<system.identityModel>` elemento representado por la <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> clase.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo agregar un `<system.identityModel>` sección a un archivo de configuración. Primero debe agregar la declaración de espacio de nombres y la sección de configuración en el `<configSections>` elemento. A continuación, puede agregar el `<system.IdentityModel>` elemento al archivo de configuración para especificar una o varias configuraciones de identidad.  
+ El ejemplo siguiente muestra cómo agregar un `<system.identityModel>` sección a un archivo de configuración. En primer lugar debe agregar la declaración de espacio de nombres y la sección de configuración bajo el `<configSections>` elemento. A continuación, puede agregar el `<system.IdentityModel>` elemento al archivo de configuración para especificar una o varias configuraciones de identidad.  
   
 ```xml  
 <configuration>  

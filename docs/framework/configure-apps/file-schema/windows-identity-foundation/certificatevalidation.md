@@ -3,16 +3,15 @@ title: '&lt;certificateValidation&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: af4dc459da49b46d70276d3f4bcd5f94d2a91ffe
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29881be43f02d275ad135efd97dc8b25a7409beb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756064"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074793"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
-Controla la configuración que usan los controladores de tokens para validar certificados. Estos valores se sustituyen si se configura un controlador específico con su propio validador.  
+Controla la configuración que los controladores de token que se usan para validar los certificados. Esta configuración se invalida si un controlador específico se configura con su propio validador.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
@@ -39,7 +38,7 @@ Controla la configuración que usan los controladores de tokens para validar cer
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|certificateValidationMode|Un <xref:System.ServiceModel.Security.X509CertificateValidationMode> valor que especifica el modo de validación que se utilizará para el certificado X.509. El valor predeterminado es "PeerOrChainTrust". Para especificar un validador personalizado, establezca este atributo en "Custom" y especifique el validador mediante el [ \<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md) elemento. Opcional.|  
+|certificateValidationMode|Un <xref:System.ServiceModel.Security.X509CertificateValidationMode> valor que especifica el modo de validación que se usará para el certificado X.509. El valor predeterminado es "PeerOrChainTrust". Para especificar un validador personalizado, establezca este atributo en "Custom" y especifique el validador con la [ \<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md) elemento. Opcional.|  
 |revocationMode|Un <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> valor que especifica el modo de revocación que se usará para el certificado X.509. El valor predeterminado es "Online". Opcional.|  
 |trustedStoreLocation|Un <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valor que especifica el almacén de certificados X.509. El valor predeterminado es "LocalMachine". Opcional.|  
   
@@ -47,17 +46,17 @@ Controla la configuración que usan los controladores de tokens para validar cer
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)|Especifica un tipo personalizado para la validación del certificado. Este tipo se usa únicamente si la `certificateValidationMode` atributo de la [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) elemento está establecido en "Custom".|  
+|[\<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)|Especifica un tipo personalizado para la validación del certificado. Este tipo se usa únicamente si el `certificateValidationMode` atributo de la [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) está establecida en "Custom".|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica los valores de identidad de nivel de servicio.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de seguridad controladores de tokens.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de seguridad controladores de token.|  
   
 ## <a name="remarks"></a>Comentarios  
- A `<certificateValidation>` elemento puede especificarse en el nivel de servicio en la `<identityConfiguration>` elemento o en el nivel de colección de controlador de token de seguridad en el `<securityTokenHandlerConfiguration>` elemento. La configuración en una colección de controlador de token invalida las especificadas en el servicio. Algunos controladores de tokens permiten especificar la configuración de la validación de certificado en la configuración. Configuración de controladores de tokens individuales invalida los especificados en el nivel de servicio y en la colección de controlador de token de seguridad.  
+ Un `<certificateValidation>` elemento puede especificarse en el nivel de servicio bajo la `<identityConfiguration>` elemento o en el nivel de colección de controladores de token de seguridad bajo el `<securityTokenHandlerConfiguration>` elemento. La configuración en una colección de controladores de token invalida las especificadas en el servicio. Algunos controladores de token le permiten especificar la configuración de validación de certificados en la configuración. La configuración en los controladores de token individuales invalida los especificados en el nivel de servicio y en la colección de controladores de token de seguridad.  
   
 ## <a name="example"></a>Ejemplo  
   

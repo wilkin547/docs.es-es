@@ -3,16 +3,15 @@ title: Archivo ReadMe del ejemplo de protección extendida para la autenticació
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495085"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110329"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Archivo ReadMe del ejemplo de protección extendida para la autenticación
-Protección extendida es una iniciativa de seguridad para protegerse contra ataques de tipo man in the middle (MITM), en el que un atacante (el "man-in-the-middle") intercepta las credenciales del cliente y las usa para tener acceso a recursos seguros en el servidor del cliente previsto.  
+Protección extendida es una iniciativa de seguridad para protegerse contra ataques man-in-the-middle (MITM), en el que un atacante (el "man-in-the-middle") intercepta las credenciales de un cliente y los utiliza para tener acceso a recursos seguros en el servidor del cliente previsto.  
   
  Para obtener más información, consulte [protección ampliada para la introducción a la autenticación](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).  
   
@@ -45,6 +44,6 @@ Protección extendida es una iniciativa de seguridad para protegerse contra ataq
   
 10. Puede probar el servicio obteniendo acceso a la dirección URL desde una ventana del explorador. Si desea tener acceso a esta dirección URL desde varios equipos, asegúrese de que el firewall está abierto para todas las conexiones HTTP y HTTPS entrantes.  
   
-11. Abra el archivo de configuración de cliente y proporcione un nombre completo de equipo para el \<cliente >- \<endpoint >-address attribute, reemplace << full_machine_name >>.  
+11. Abra el archivo de configuración de cliente y proporcione un nombre de equipo completo para el \<cliente >- \<endpoint >-address attribute, que reemplaza << full_machine_name >>.  
   
 12. Ejecute el cliente. El cliente se comunica con el servicio estableciendo un canal seguro y usando la protección extendida.

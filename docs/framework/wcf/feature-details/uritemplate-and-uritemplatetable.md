@@ -2,12 +2,12 @@
 title: UriTemplate y UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478603"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090518"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate y UriTemplateTable
 Los desarrolladores web necesitan poder describir la forma y el diseño de los URI a los que sus servicios responden. Windows Communication Foundation (WCF) agrega dos nuevas clases para proporcionar a los desarrolladores control sobre sus URI. <xref:System.UriTemplate> y <xref:System.UriTemplateTable> forman la base del motor de distribución basado en URI en WCF. Estas clases también se pueden usar en su propios, lo que permite a los desarrolladores aprovechar las ventajas de las plantillas y el URI del mecanismo de asignación sin necesidad de implementar un servicio WCF.  
@@ -192,7 +192,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  Un URI como http://localhost:8000/// no coincide con la plantilla aparece en el código anterior, pero un URI como http://localhost:8000/ does.  
+> Un URI como `http://localhost:8000///` no coincide con la plantilla aparece en el código anterior, pero un URI como `http://localhost:8000/` does.  
   
  En el código siguiente se muestra cómo se administran los valores de variable predeterminados al crear un URI con una plantilla.  
   

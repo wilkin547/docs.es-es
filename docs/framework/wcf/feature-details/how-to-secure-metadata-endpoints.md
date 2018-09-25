@@ -6,24 +6,23 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497183"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090232"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Cómo: Proteger los puntos de conexión de metadatos
 Los metadatos para un servicio pueden contener información confidencial sobre su aplicación que un usuario malintencionado puede aprovechar. Los consumidores de su servicio también pueden requerir un mecanismo seguro para obtener los metadatos sobre su servicio. Por consiguiente, a veces es necesario publicar sus metadatos utilizando un punto de conexión seguro.  
   
- Los extremos de metadatos generalmente se protegen utilizando los mecanismos de seguridad estándar definidos en Windows Communication Foundation (WCF) para proteger los extremos de la aplicación. (Para obtener más información, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Los extremos de metadatos generalmente se protegen utilizando los mecanismos de seguridad estándar definidos en Windows Communication Foundation (WCF) para la protección de extremos de la aplicación. (Para obtener más información, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  En este tema se describen los pasos para crear un punto de conexión protegido por un certificado SSL (Capa de sockets seguros) o, en otras palabras, un punto de conexión de HTTPS.  
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Para crear un punto de conexión seguro de metadatos HTTPS GET en código  
   
-1.  Configure un puerto con un certificado X.509 adecuado. El certificado debe proceder de una autoridad de confianza y debe tener un uso previsto de "Autorización de servicio." Debe utilizar la herramienta HttpCfg.exe para asociar el certificado al puerto. Vea [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Configure un puerto con un certificado X.509 adecuado. El certificado debe proceder de una autoridad de confianza y debe tener un uso previsto de "Autorización de servicio." Debe utilizar la herramienta HttpCfg.exe para asociar el certificado al puerto. Consulte [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
     > [!IMPORTANT]
     >  El asunto del certificado o su Domain Name System (DNS) debe coincidir con el nombre del equipo. Esto es esencial porque uno de los primeros pasos que el mecanismo de HTTPS realiza es comprobar que el certificado esté emitido para el mismo identificador URI (Uniform Resource Identifier) que la dirección en la que se invoca.  

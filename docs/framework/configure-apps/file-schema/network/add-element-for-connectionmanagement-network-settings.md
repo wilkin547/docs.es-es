@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753747"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080330"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;agregar&gt; elemento para connectionManagement (configuración de red)
 Agrega una dirección IP o nombre DNS a la lista de administración de conexión.  
@@ -65,7 +64,7 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se configura una aplicación para usar cuatro conexiones con el servidor www.contoso.com y dos conexiones con todos los demás servidores.  
+ El ejemplo siguiente configura una aplicación para usar cuatro conexiones con el servidor www.contoso.com y dos conexiones con todos los demás servidores.  
   
 ```xml  
 <configuration>  
