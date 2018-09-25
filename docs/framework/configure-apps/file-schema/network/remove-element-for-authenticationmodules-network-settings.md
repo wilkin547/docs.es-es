@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a22ddbada0162ba38589b244cab9123f33d7cf45
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 332f8eb4fb1a5a02df76c5745522037b029a2407
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742395"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072800"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;quitar&gt; elemento para authenticationModules (configuración de red)
 Quita un módulo de autenticación de la aplicación.  
@@ -52,10 +51,10 @@ Quita un módulo de autenticación de la aplicación.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica los módulos utilizados para autenticar las solicitudes de red.|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica los módulos que se usa para autenticar las solicitudes de red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `remove` elemento quita módulos de autenticación definidos anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.  
+ El `remove` elemento quita módulos de autenticación definidos anteriormente en el archivo de configuración o en un nivel superior de la jerarquía de configuración.  
   
  El valor de la `type` atributo debe ser un nombre de clase válida.  
   
@@ -63,7 +62,7 @@ Quita un módulo de autenticación de la aplicación.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita un módulo de autenticación.  
+ El ejemplo siguiente quita un módulo de autenticación.  
   
 ```xml  
 <configuration>  
