@@ -3,25 +3,24 @@ title: '&lt;nameClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e403667f16e316004f766b8476e20eca9bd1c988
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bd4033b2edea7450b66c25f446669b3ded65e9af
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755102"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112223"
 ---
-# <a name="ltnameclaimtypegt"></a><span data-ttu-id="69735-102">&lt;nameClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="69735-102">&lt;nameClaimType&gt;</span></span>
-<span data-ttu-id="69735-103">Establece el tipo de notificación que especifica la <xref:System.Security.Principal.IIdentity.Name%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="69735-103">Sets the claim type that specifies the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="69735-104">El tipo de notificación se utiliza para buscar un <xref:System.Security.Claims.Claim> en la colección de <xref:System.Security.Claims.ClaimsIdentity> objetos devueltos por la <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método de este controlador de token.</span><span class="sxs-lookup"><span data-stu-id="69735-104">The claim type is used to search for a <xref:System.Security.Claims.Claim> in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of this token handler.</span></span> <span data-ttu-id="69735-105">El valor de la notificación correspondiente, a continuación, se establece como el nombre de la <xref:System.Security.Principal.IIdentity> generados a partir de este controlador de token.</span><span class="sxs-lookup"><span data-stu-id="69735-105">The value of the matching claim is then set as the name of the <xref:System.Security.Principal.IIdentity> generated from this token handler.</span></span>  
+# <a name="ltnameclaimtypegt"></a><span data-ttu-id="b4fd9-102">&lt;nameClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="b4fd9-102">&lt;nameClaimType&gt;</span></span>
+<span data-ttu-id="b4fd9-103">Establece el tipo de notificación que especifica el <xref:System.Security.Principal.IIdentity.Name%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="b4fd9-103">Sets the claim type that specifies the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="b4fd9-104">El tipo de notificación se utiliza para buscar un <xref:System.Security.Claims.Claim> en la colección de <xref:System.Security.Claims.ClaimsIdentity> los objetos devueltos por la <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método de este controlador de token.</span><span class="sxs-lookup"><span data-stu-id="b4fd9-104">The claim type is used to search for a <xref:System.Security.Claims.Claim> in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of this token handler.</span></span> <span data-ttu-id="b4fd9-105">El valor de la notificación correspondiente, a continuación, se establece como el nombre de la <xref:System.Security.Principal.IIdentity> generado a partir de este controlador de token.</span><span class="sxs-lookup"><span data-stu-id="b4fd9-105">The value of the matching claim is then set as the name of the <xref:System.Security.Principal.IIdentity> generated from this token handler.</span></span>  
   
- <span data-ttu-id="69735-106">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="69735-106">\<system.identityModel></span></span>  
-<span data-ttu-id="69735-107">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="69735-107">\<identityConfiguration></span></span>  
-<span data-ttu-id="69735-108">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="69735-108">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="69735-109">\<add></span><span class="sxs-lookup"><span data-stu-id="69735-109">\<add></span></span>  
-<span data-ttu-id="69735-110">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="69735-110">\<samlSecurityTokenRequirement></span></span>  
-<span data-ttu-id="69735-111">\<nameClaimType ></span><span class="sxs-lookup"><span data-stu-id="69735-111">\<nameClaimType></span></span>  
+ <span data-ttu-id="b4fd9-106">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="b4fd9-106">\<system.identityModel></span></span>  
+<span data-ttu-id="b4fd9-107">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="b4fd9-107">\<identityConfiguration></span></span>  
+<span data-ttu-id="b4fd9-108">\<securityTokenHandlers></span><span class="sxs-lookup"><span data-stu-id="b4fd9-108">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="b4fd9-109">\<add></span><span class="sxs-lookup"><span data-stu-id="b4fd9-109">\<add></span></span>  
+<span data-ttu-id="b4fd9-110">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="b4fd9-110">\<samlSecurityTokenRequirement></span></span>  
+<span data-ttu-id="b4fd9-111">\<nameClaimType ></span><span class="sxs-lookup"><span data-stu-id="b4fd9-111">\<nameClaimType></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69735-112">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="69735-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4fd9-112">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b4fd9-112">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -38,28 +37,28 @@ ms.locfileid: "32755102"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="69735-113">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="69735-113">Attributes and Elements</span></span>  
- <span data-ttu-id="69735-114">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="69735-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b4fd9-113">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="b4fd9-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="b4fd9-114">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="b4fd9-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="69735-115">Atributos</span><span class="sxs-lookup"><span data-stu-id="69735-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b4fd9-115">Atributos</span><span class="sxs-lookup"><span data-stu-id="b4fd9-115">Attributes</span></span>  
   
-|<span data-ttu-id="69735-116">Atributo</span><span class="sxs-lookup"><span data-stu-id="69735-116">Attribute</span></span>|<span data-ttu-id="69735-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="69735-117">Description</span></span>|  
+|<span data-ttu-id="b4fd9-116">Atributo</span><span class="sxs-lookup"><span data-stu-id="b4fd9-116">Attribute</span></span>|<span data-ttu-id="b4fd9-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="b4fd9-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="69735-118">value</span><span class="sxs-lookup"><span data-stu-id="69735-118">value</span></span>|<span data-ttu-id="69735-119">Una cadena que especifica el URI que representa el tipo de notificación de la notificación que se usará para la <xref:System.Security.Principal.IIdentity.Name%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="69735-119">A string that specifies the URI that represents the claim type of the claim to use for the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="69735-120">Requerido.</span><span class="sxs-lookup"><span data-stu-id="69735-120">Required.</span></span>|  
+|<span data-ttu-id="b4fd9-118">value</span><span class="sxs-lookup"><span data-stu-id="b4fd9-118">value</span></span>|<span data-ttu-id="b4fd9-119">Una cadena que especifica el URI que representa el tipo de notificación de la notificación que se usará para el <xref:System.Security.Principal.IIdentity.Name%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="b4fd9-119">A string that specifies the URI that represents the claim type of the claim to use for the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span> <span data-ttu-id="b4fd9-120">Requerido.</span><span class="sxs-lookup"><span data-stu-id="b4fd9-120">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="69735-121">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="69735-121">Child Elements</span></span>  
- <span data-ttu-id="69735-122">Ninguna</span><span class="sxs-lookup"><span data-stu-id="69735-122">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b4fd9-121">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="b4fd9-121">Child Elements</span></span>  
+ <span data-ttu-id="b4fd9-122">Ninguna</span><span class="sxs-lookup"><span data-stu-id="b4fd9-122">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="69735-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="69735-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b4fd9-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="b4fd9-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="69735-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="69735-124">Element</span></span>|<span data-ttu-id="69735-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="69735-125">Description</span></span>|  
+|<span data-ttu-id="b4fd9-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="b4fd9-124">Element</span></span>|<span data-ttu-id="b4fd9-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="b4fd9-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="69735-126">\<samlSecurityTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="69735-126">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="69735-127">Proporciona la configuración para la <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> (clase), el <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> clase o una clase derivada de cualquiera de estas clases.</span><span class="sxs-lookup"><span data-stu-id="69735-127">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
+|[<span data-ttu-id="b4fd9-126">\<samlSecurityTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="b4fd9-126">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="b4fd9-127">Proporciona la configuración de la <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> (clase), el <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> clase o una clase derivada de cualquiera de estas clases.</span><span class="sxs-lookup"><span data-stu-id="b4fd9-127">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="69735-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="69735-128">Remarks</span></span>  
- <span data-ttu-id="69735-129">El `<nameClaimType>` conjuntos de elementos del <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> propiedad cuando un <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> se inicializa el objeto de configuración.</span><span class="sxs-lookup"><span data-stu-id="69735-129">The `<nameClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b4fd9-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b4fd9-128">Remarks</span></span>  
+ <span data-ttu-id="b4fd9-129">El `<nameClaimType>` conjuntos de elementos del <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> propiedad cuando un <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> se inicializa el objeto de configuración.</span><span class="sxs-lookup"><span data-stu-id="b4fd9-129">The `<nameClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="69735-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="69735-130">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b4fd9-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b4fd9-130">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
@@ -69,5 +68,5 @@ ms.locfileid: "32755102"
 </add>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="69735-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="69735-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b4fd9-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="b4fd9-131">See Also</span></span>  
  <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

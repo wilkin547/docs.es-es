@@ -11,16 +11,16 @@ ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46695903"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072565"
 ---
-# <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="a19bc-102">CertTimestampAuthenticodeLicense (Función)</span><span class="sxs-lookup"><span data-stu-id="a19bc-102">CertTimestampAuthenticodeLicense Function</span></span>
-<span data-ttu-id="a19bc-103">Aplica marcas de hora a una licencia Authenticode XrML.</span><span class="sxs-lookup"><span data-stu-id="a19bc-103">Time-stamps an Authenticode XrML license.</span></span>  
+# <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="3186e-102">CertTimestampAuthenticodeLicense (Función)</span><span class="sxs-lookup"><span data-stu-id="3186e-102">CertTimestampAuthenticodeLicense Function</span></span>
+<span data-ttu-id="3186e-103">Aplica marcas de hora a una licencia Authenticode XrML.</span><span class="sxs-lookup"><span data-stu-id="3186e-103">Time-stamps an Authenticode XrML license.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a19bc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a19bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3186e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3186e-104">Syntax</span></span>  
   
 ```  
 HRESULT CertTimestampAuthenticodeLicense (  
@@ -30,21 +30,21 @@ HRESULT CertTimestampAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a19bc-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a19bc-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3186e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3186e-105">Parameters</span></span>  
  `pSignedLicenseBlob`  
- <span data-ttu-id="a19bc-106">[in] Licencia Authenticode XrML firmada a la que se va a aplicar la marca de hora.</span><span class="sxs-lookup"><span data-stu-id="a19bc-106">[in] The signed Authenticode XrML license to be time-stamped.</span></span> <span data-ttu-id="a19bc-107">Consulte la [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estructura.</span><span class="sxs-lookup"><span data-stu-id="a19bc-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="3186e-106">[in] Licencia Authenticode XrML firmada a la que se va a aplicar la marca de hora.</span><span class="sxs-lookup"><span data-stu-id="3186e-106">[in] The signed Authenticode XrML license to be time-stamped.</span></span> <span data-ttu-id="3186e-107">Consulte la [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estructura.</span><span class="sxs-lookup"><span data-stu-id="3186e-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `pwszTimestampURI`  
- <span data-ttu-id="a19bc-108">[in] URI del servidor de marca de hora.</span><span class="sxs-lookup"><span data-stu-id="a19bc-108">[in] The time-stamp server's URI.</span></span>  
+ <span data-ttu-id="3186e-108">[in] URI del servidor de marca de hora.</span><span class="sxs-lookup"><span data-stu-id="3186e-108">[in] The time-stamp server's URI.</span></span>  
   
  `pTimestampSignatureBlob`  
- <span data-ttu-id="a19bc-109">[out] Puntero a CRYPT_DATA_BLOB para recibir la firma de marca de hora con codificación base64.</span><span class="sxs-lookup"><span data-stu-id="a19bc-109">[out] A pointer to CRYPT_DATA_BLOB to receive the base64-encoded time-stamp signature.</span></span> <span data-ttu-id="a19bc-110">Es responsabilidad del llamante liberar `pTimestampSignatureBlob` -> `pbData` con `HepFree()` tras su uso.</span><span class="sxs-lookup"><span data-stu-id="a19bc-110">It is the caller's responsibility to free `pTimestampSignatureBlob`->`pbData` with `HepFree()` after use.</span></span> <span data-ttu-id="a19bc-111">Consulte la [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estructura.</span><span class="sxs-lookup"><span data-stu-id="a19bc-111">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="3186e-109">[out] Puntero a CRYPT_DATA_BLOB para recibir la firma de marca de hora con codificación base64.</span><span class="sxs-lookup"><span data-stu-id="3186e-109">[out] A pointer to CRYPT_DATA_BLOB to receive the base64-encoded time-stamp signature.</span></span> <span data-ttu-id="3186e-110">Es responsabilidad del llamante liberar `pTimestampSignatureBlob` -> `pbData` con `HepFree()` tras su uso.</span><span class="sxs-lookup"><span data-stu-id="3186e-110">It is the caller's responsibility to free `pTimestampSignatureBlob`->`pbData` with `HepFree()` after use.</span></span> <span data-ttu-id="3186e-111">Consulte la [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estructura.</span><span class="sxs-lookup"><span data-stu-id="3186e-111">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a19bc-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a19bc-112">Remarks</span></span>  
- <span data-ttu-id="a19bc-113">La firma de marca de hora es en realidad un mensaje PKCS #7 SignedData cuyo contenido es el formato binario del SignatureValue de la firma de la licencia.</span><span class="sxs-lookup"><span data-stu-id="a19bc-113">The time-stamp signature is actually a PKCS #7 SignedData message whose content is the binary form of the SignatureValue from the license's signature.</span></span> <span data-ttu-id="a19bc-114">Básicamente, actúa como contrafirma de la licencia.</span><span class="sxs-lookup"><span data-stu-id="a19bc-114">Basically, this acts as a counter-signature of the license.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3186e-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="3186e-112">Remarks</span></span>  
+ <span data-ttu-id="3186e-113">La firma de marca de hora es en realidad un mensaje PKCS #7 SignedData cuyo contenido es el formato binario del SignatureValue de la firma de la licencia.</span><span class="sxs-lookup"><span data-stu-id="3186e-113">The time-stamp signature is actually a PKCS #7 SignedData message whose content is the binary form of the SignatureValue from the license's signature.</span></span> <span data-ttu-id="3186e-114">Básicamente, actúa como contrafirma de la licencia.</span><span class="sxs-lookup"><span data-stu-id="3186e-114">Basically, this acts as a counter-signature of the license.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a19bc-115">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a19bc-115">Return Value</span></span>  
- <span data-ttu-id="a19bc-116">`S_OK` si la función se realiza correctamente.</span><span class="sxs-lookup"><span data-stu-id="a19bc-116">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="a19bc-117">De lo contrario, devuelve un código de error.</span><span class="sxs-lookup"><span data-stu-id="a19bc-117">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3186e-115">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="3186e-115">Return Value</span></span>  
+ <span data-ttu-id="3186e-116">`S_OK` si la función se realiza correctamente.</span><span class="sxs-lookup"><span data-stu-id="3186e-116">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="3186e-117">De lo contrario, devuelve un código de error.</span><span class="sxs-lookup"><span data-stu-id="3186e-117">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a19bc-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="a19bc-118">See Also</span></span>  
- [<span data-ttu-id="a19bc-119">Authenticode</span><span class="sxs-lookup"><span data-stu-id="a19bc-119">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="3186e-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="3186e-118">See Also</span></span>  
+ [<span data-ttu-id="3186e-119">Authenticode</span><span class="sxs-lookup"><span data-stu-id="3186e-119">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

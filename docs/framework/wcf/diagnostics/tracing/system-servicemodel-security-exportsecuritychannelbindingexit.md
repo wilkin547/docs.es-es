@@ -1,32 +1,22 @@
 ---
 title: System.ServiceModel.Security.ExportSecurityChannelBindingExit
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 714a8f4d-a297-4f1c-b9df-d97115a1d82a
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
-manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b555660449a036892c4053470e144665c0f5ec42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbda9956d0e0eb8576c01affd76980810013a618
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072935"
 ---
-# <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a><span data-ttu-id="9c9f7-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="9c9f7-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>
-<span data-ttu-id="9c9f7-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="9c9f7-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>  
+# <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a><span data-ttu-id="d1eae-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="d1eae-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>
+<span data-ttu-id="d1eae-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="d1eae-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9c9f7-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="9c9f7-104">Description</span></span>  
- <span data-ttu-id="9c9f7-105">Seguridad ExportChannelBinding finalizada.</span><span class="sxs-lookup"><span data-stu-id="9c9f7-105">The Security ExportChannelBinding finished.</span></span>  
+## <a name="description"></a><span data-ttu-id="d1eae-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="d1eae-104">Description</span></span>  
+ <span data-ttu-id="d1eae-105">Seguridad ExportChannelBinding finalizada.</span><span class="sxs-lookup"><span data-stu-id="d1eae-105">The Security ExportChannelBinding finished.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c9f7-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9c9f7-106">See Also</span></span>  
- [<span data-ttu-id="9c9f7-107">Traza</span><span class="sxs-lookup"><span data-stu-id="9c9f7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="9c9f7-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="9c9f7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="9c9f7-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="9c9f7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d1eae-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="d1eae-106">See Also</span></span>  
+ [<span data-ttu-id="d1eae-107">Traza</span><span class="sxs-lookup"><span data-stu-id="d1eae-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d1eae-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="d1eae-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d1eae-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="d1eae-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
