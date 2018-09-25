@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 471e36bb584164b851e7a06c0e682ba9872f7910
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742905"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083892"
 ---
 # <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;agregar&gt; elemento para authenticationModules (configuración de red)
 Agrega un módulo de autenticación a la aplicación.  
@@ -43,7 +42,7 @@ Agrega un módulo de autenticación a la aplicación.
   
 |**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
-|`type`|El nombre de tipo completo (indicado por la <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por punto y coma.|  
+|`type`|El nombre de tipo completo (indicado por el <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por punto y coma.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -52,18 +51,18 @@ Agrega un módulo de autenticación a la aplicación.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica los módulos utilizados para autenticar las solicitudes de red.|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica los módulos que se usa para autenticar las solicitudes de red.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `add` elemento agrega un módulo de autenticación al final de la lista de módulos de autenticación registrados. Módulos de autenticación se llaman en el orden en que se agregaron a la lista.  
   
- El valor de la `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por punto y coma.  
+ El valor de la `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por comas.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se habilita los módulos de autenticación predeterminados. Debe reemplazar los valores de Version y PublicKeyToken con los valores correctos para el módulo especificado.  
+ El ejemplo siguiente habilita los módulos de autenticación predeterminados. Debe reemplazar los valores de versión y PublicKeyToken con los valores correctos para el módulo especificado.  
   
 ```xml  
 <configuration>  
