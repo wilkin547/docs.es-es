@@ -15,11 +15,11 @@ ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05b53016712f75e45636979d77bfd27116ce8e14
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45638761"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027718"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidad con otros tipos y patrones asincrónicos
 .NET Framework 1.0 introdujo el patrón <xref:System.IAsyncResult> , conocido también como [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o el patrón `Begin/End` .  .NET Framework 2.0 agregó [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir de .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) reemplaza a APM y EAP, pero proporciona la capacidad de crear fácilmente rutinas de migración a partir de los patrones anteriores:  
@@ -37,7 +37,7 @@ ms.locfileid: "45638761"
   
 <a name="ApmToTap"></a>   
 ### <a name="from-apm-to-tap"></a>de APM a TAP  
- Como el patrón [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) está muy estructurado, es muy fácil crear un contenedor para exponer una implementación de APM como una implementación de TAP. De hecho, .NET Framework 4, a partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], incluye rutinas auxiliares en forma de sobrecargas del método <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> para ofrecer esta traducción.  
+ Como el patrón [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) está muy estructurado, es muy fácil crear un contenedor para exponer una implementación de APM como una implementación de TAP. De hecho, .NET Framework 4, a partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], incluye rutinas del asistente en forma de sobrecargas del método <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> para ofrecer esta traducción.  
   
  Considere la clase <xref:System.IO.Stream> y sus métodos <xref:System.IO.Stream.BeginRead%2A> y <xref:System.IO.Stream.EndRead%2A> , que representan el equivalente de APM al método sincrónico <xref:System.IO.Stream.Read%2A> :  
   
@@ -60,7 +60,7 @@ ms.locfileid: "45638761"
   
 <a name="TapToApm"></a>   
 ### <a name="from-tap-to-apm"></a>de TAP a APM  
- Si la infraestructura existente espera el patrón APM, también deseará realizar una implementación de TAP y usarla donde se espere una implementación de APM.  Como las tareas se pueden crear y la clase <xref:System.Threading.Tasks.Task> implementa <xref:System.IAsyncResult>, puede usar una función auxiliar sencilla para ello. En el código siguiente se usa una extensión de la clase <xref:System.Threading.Tasks.Task%601> , pero puede usar una función casi idéntica para las tareas no genéricas.  
+ Si la infraestructura existente espera el patrón APM, también deseará realizar una implementación de TAP y usarla donde se espere una implementación de APM.  Como las tareas se pueden crear y la clase <xref:System.Threading.Tasks.Task> implementa <xref:System.IAsyncResult>, puede usar una función del asistente sencilla para ello. En el código siguiente se usa una extensión de la clase <xref:System.Threading.Tasks.Task%601> , pero puede usar una función casi idéntica para las tareas no genéricas.  
   
  [!code-csharp[Conceptual.AsyncInterop#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM1.cs#6)]
  [!code-vb[Conceptual.AsyncInterop#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM1.vb#6)]  
