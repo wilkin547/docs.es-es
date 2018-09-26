@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746064"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176352"
 ---
 # <a name="lttracegt-element"></a>&lt;seguimiento&gt; elemento
 Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.  
@@ -42,7 +41,7 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`autoflush`|Atributo opcional.<br /><br /> Especifica si los agentes de escucha de seguimiento vacían automáticamente o el búfer de salida después de cada operación de escritura.|  
+|`autoflush`|Atributo opcional.<br /><br /> Especifica si los agentes de escucha de seguimiento automáticamente de vaciar el búfer de salida después de cada operación de escritura.|  
 |`indentsize`|Atributo opcional.<br /><br /> Especifica el número de espacios para la sangría.|  
 |`useGlobalLock`|Atributo opcional.<br /><br /> Indica si se debe utilizar el bloqueo global.|  
   
@@ -50,7 +49,7 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`false`|No se vacíe automáticamente el búfer de salida. Este es el valor predeterminado.|  
+|`false`|No realiza automáticamente el vaciado de búfer de salida. Este es el valor predeterminado.|  
 |`true`|Automáticamente se vacía el búfer de salida.|  
   
 ## <a name="usegloballock-attribute"></a>Atributo useGlobalLock  
@@ -74,7 +73,7 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `<trace>` elemento que se va a agregar el agente de escucha `MyListener` a la `Listeners` colección. `MyListener` crea un archivo que se denomina `MyListener.log` y escribe el resultado en el archivo. El `useGlobalLock` atributo está establecido en `false`, lo que hace que el bloqueo global no que se utilizará si el agente de escucha de seguimiento es seguro para subprocesos. El `autoflush` atributo está establecido en `true`, lo que hace que el agente de escucha de seguimiento escribir en el archivo independientemente de si el <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> se llama al método. El `indentsize` atributo está establecido en 0 (cero), lo que hace que el agente de escucha sangre cero espacios cuando el <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> se llama al método.  
+ El ejemplo siguiente muestra cómo usar el `<trace>` elemento para agregar el agente de escucha `MyListener` a la `Listeners` colección. `MyListener` crea un archivo que se denomina `MyListener.log` y escribe el resultado en el archivo. El `useGlobalLock` atributo está establecido en `false`, lo que hace que el bloqueo global no que se utilizará si el agente de escucha de seguimiento es seguro para subprocesos. El `autoflush` atributo está establecido en `true`, lo que hace que el agente de escucha de seguimiento escribir en el archivo independientemente de si el <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> se llama al método. El `indentsize` atributo está establecido en 0 (cero), lo que hace que el agente de escucha aplicar sangría a cero espacios cuando el <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> se llama al método.  
   
 ```xml  
 <configuration>  

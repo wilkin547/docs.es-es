@@ -8,16 +8,15 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495637"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171743"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Cómo: Crear un enlace personalizado mediante SecurityBindingElement
-Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que se pueden configurar pero que no proporcionan completa flexibilidad al configurar todas las opciones de seguridad que es compatible con WCF. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que se pueden configurar pero no proporcionan completa flexibilidad al configurar todas las opciones de seguridad que WCF admite. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> no admite la forma de canal de <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, que es el uso predeterminado de la forma de canal por el transporte TCP cuando <xref:System.ServiceModel.TransferMode> se establece en <xref:System.ServiceModel.TransferMode.Buffered>. Debe establecer <xref:System.ServiceModel.TransferMode> en <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> en este escenario.  

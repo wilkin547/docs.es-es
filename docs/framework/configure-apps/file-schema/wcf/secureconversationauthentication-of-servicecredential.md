@@ -3,13 +3,12 @@ title: Elemento &lt;secureConversationAuthentication&gt; de &lt;serviceCredentia
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 7b56d12793ad35e6f951638465e77b92a66a6fd0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3adcf7ba9814bcf494d345cf0e3f47c57df2152c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749337"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173413"
 ---
 # <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a>Elemento &lt;secureConversationAuthentication&gt; de &lt;serviceCredential&gt;
 Especifica los valores para un servicio de conversación seguro.  

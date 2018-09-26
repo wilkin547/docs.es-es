@@ -3,11 +3,11 @@ title: Obtener acceso a los servicios WCF con una aplicación cliente de la Tien
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
 ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585157"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176339"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la Tienda Windows. Estas aplicaciones están diseñadas para una interfaz de pantalla táctil. .NET Framework 4.5 permite que las aplicaciones de la Tienda Windows llamen a servicios WCF.  

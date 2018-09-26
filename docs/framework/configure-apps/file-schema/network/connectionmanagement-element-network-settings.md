@@ -1,5 +1,5 @@
 ---
-title: '&lt;connectionManagement&gt; Element (Network Settings)'
+title: '&lt;connectionManagement&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a7e1609df0a7a1de4e70f425e649115459b43f8c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742827"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173076"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; Element (Network Settings)
+# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; elemento (configuración de red)
 Especifica el número máximo de conexiones a un host de red.  
   
  \<configuration>  
@@ -59,7 +58,7 @@ Especifica el número máximo de conexiones a un host de red.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se configura una aplicación para usar cuatro conexiones con el servidor www.contoso.com y dos conexiones con todos los demás servidores.  
+ El ejemplo siguiente configura una aplicación para usar cuatro conexiones con el servidor www.contoso.com y dos conexiones con todos los demás servidores.  
   
 ```xml  
 <configuration>  

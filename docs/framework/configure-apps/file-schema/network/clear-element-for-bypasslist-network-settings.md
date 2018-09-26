@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9297b68a31117aabfa45328954ccb9c7cdac66c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742197"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170644"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Borrar&gt; elemento para bypasslist (configuración de red)
 Borra la lista de omisión de proxy.  
@@ -48,7 +47,7 @@ Borra la lista de omisión de proxy.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan a un servidor proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no se usa a un proxy.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `clear` elemento borra todas las entradas de la lista de omisión.  
@@ -57,7 +56,7 @@ Borra la lista de omisión de proxy.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se borra la lista de omisión y, a continuación, se agrega dos direcciones a la lista de omisión. La primera omite al proxy para todos los servidores en el dominio contoso.com; la segunda omite al proxy para todos los servidores cuya dirección IP comienza con 192.168.  
+ El siguiente ejemplo borra la lista de omisión y, a continuación, agrega dos direcciones a la lista de omisión. La primera omite al proxy para todos los servidores en el dominio contoso.com; la segunda omite al proxy para todos los servidores cuya dirección IP comienza con 192.168.  
   
 ```xml  
 <configuration>  

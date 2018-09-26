@@ -9,13 +9,12 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 364d4e6b1009993c11a7f23edcd262de4ad435c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493883"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172198"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Cómo: Crear un servicio de token de seguridad
 Un servicio de token de seguridad implementa el protocolo definido en la especificación de WS-Trust. Este protocolo define formatos de mensaje y patrones de intercambio de mensajes para emitir, renovar, cancelar y validar tokens de seguridad. Un servicio de token de seguridad determinado proporciona uno o más de estas funciones. Este tema aborda el escenario común: implementación de la emisión de token.  
@@ -26,9 +25,9 @@ Un servicio de token de seguridad implementa el protocolo definido en la especif
 ### <a name="request-message-structure"></a>Estructura de mensaje de solicitud  
  La estructura del mensaje de solicitud de problema está normalmente compuesta de los elementos siguientes:  
   
--   URI del tipo de una solicitud con un valor de http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Una solicitud de tipo de URI con un valor de http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
--   Un URI del tipo de token. Para los tokens de lenguaje de marcado de aserciones de seguridad (SAML) 1.1, el valor de este URI es http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Un URI del tipo de token. Para los tokens de lenguaje de marcado de aserción de seguridad (SAML) 1.1, el valor de este URI es http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
 -   Un valor de tamaño clave que indica el número de bits en la clave que se va asociar al token emitido.  
   
@@ -123,7 +122,7 @@ Un servicio de token de seguridad implementa el protocolo definido en la especif
  Estos valores diferentes se serializan a continuación en el mensaje de respuesta devuelto al cliente.  
   
 ## <a name="example"></a>Ejemplo  
- Para obtener un servicio de token de seguridad de código completo, vea [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Para obtener el código completo para un servicio de token de seguridad, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.IdentityModel.Tokens.SigningCredentials>  

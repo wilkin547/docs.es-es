@@ -7,13 +7,12 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cdd6e4a4849a031dc6bcad909509498406fcb129
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 17043cdd4bcabf2e5e14c7b9c31b8c1747d2c866
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745518"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171951"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Borrar&gt; (elemento) para &lt;namedCaches&gt;
 Todos los borra `namedCache` entradas en el `namedCaches` colección de una memoria caché.  
@@ -51,7 +50,7 @@ Todos los borra `namedCache` entradas en el `namedCaches` colección de una memo
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contiene una colección de valores de configuración para la instancia con nombre <xref:System.Runtime.Caching.MemoryCache> instancias.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `clear` elemento borra todos los `namedCache` las entradas de la colección de caché con nombre de una memoria caché. Puede usar el `clear` elemento antes de usar el `add` elemento que se va a agregar una nueva entrada de caché con nombre para estar seguro de que no hay ninguna otra nombrar cachés en la colección.  
+ El `clear` elemento borra todo `namedCache` entradas de la colección de caché con nombre de una memoria caché. Puede usar el `clear` elemento antes de usar el `add` elemento para agregar una nueva entrada de caché con nombre para estar seguro de que hay ninguna otra denominada caché en la colección.  
   
 ## <a name="see-also"></a>Vea también  
- [\<namedCaches > Element (Cache Settings)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+ [\<namedCaches > elemento (configuración de caché)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

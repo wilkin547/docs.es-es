@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2f0d795d6a8789772ff3fd46648fbc0d683c66e5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748144"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172841"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;los agentes de escucha&gt; (elemento) para &lt;seguimiento&gt;
-Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Agentes de escucha dirigen los resultados del seguimiento a un destino apropiado.  
+Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Los agentes de escucha dirigen los resultados de seguimiento a un destino apropiado.  
   
  \<Configuración > elemento  
 \<System.Diagnostics > elemento  
@@ -47,7 +46,7 @@ Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Ag
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `Listeners`.|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Borra la colección `Listeners` de un seguimiento.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Quita un agente de escucha de la `Listeners` colección.|  
+|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Quita un agente de escucha el `Listeners` colección.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -58,13 +57,13 @@ Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Ag
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- El <xref:System.Diagnostics.Debug> y <xref:System.Diagnostics.Trace> clases comparten la misma **los agentes de escucha** colección. Si agrega un objeto de agente de escucha a la colección en una de estas clases, la otra clase utilizará el mismo agente de escucha. Las clases de agente de escucha incluidas en .NET Framework se derivan de la <xref:System.Diagnostics.TraceListener> clase.  
+ El <xref:System.Diagnostics.Debug> y <xref:System.Diagnostics.Trace> clases comparten el mismo **los agentes de escucha** colección. Si agrega un objeto de escucha a la colección en una de estas clases, la otra clase usa el mismo agente de escucha. Las clases de agente de escucha incluidas en .NET Framework se derivan de la <xref:System.Diagnostics.TraceListener> clase.  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el  **\<los agentes de escucha >** elemento que se va a agregar los agentes de escucha `MyListener` y `MyEventListener` a la **los agentes de escucha** colección. `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener` crea una entrada en el registro de eventos.  
+ El ejemplo siguiente muestra cómo usar el  **\<los agentes de escucha >** elemento para agregar los agentes de escucha `MyListener` y `MyEventListener` a la **los agentes de escucha** colección. `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener` crea una entrada en el registro de eventos.  
   
 ```xml  
 <configuration>  

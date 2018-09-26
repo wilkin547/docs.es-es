@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748677"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172737"
 ---
 # <a name="ltruntimegt-element"></a>&lt;en tiempo de ejecución&gt; elemento
-Proporciona información utilizada por common language runtime para configurar las aplicaciones.  
+Proporciona información de common language runtime usada para configurar las aplicaciones.  
   
  \<configuration>  
 \<en tiempo de ejecución >  
@@ -33,7 +32,7 @@ Proporciona información utilizada por common language runtime para configurar l
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los elementos secundarios y los elementos primarios.  
+ Las siguientes secciones describen los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
  Ninguno.  
@@ -88,9 +87,9 @@ Proporciona información utilizada por common language runtime para configurar l
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los elementos secundarios en el [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección de un archivo de configuración se usan por common language runtime para configurar cómo se ejecuta una aplicación. Por ejemplo, el [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento determina si el recolector de elementos no utilizados utiliza la colección de elementos no utilizados de estación de trabajo o la recolección de elementos no utilizados de servidor, el [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) elemento determina si common language runtime calcula códigos hash de cadena por una aplicación o un dominio por aplicación y el `AppContextSwitchOverrides` elemento permite a los usuarios de la biblioteca para participar o no formen parte de la funcionalidad proporcionada por una biblioteca que ha cambiado.  
+ Los elementos secundarios en el [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección de un archivo de configuración se usan por common language runtime para configurar cómo se ejecuta una aplicación. Por ejemplo, el [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento determina si el recolector de elementos no utilizados utiliza la recolección de elementos no utilizados de estación de trabajo o la recolección de elementos no utilizados de servidor, el [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) elemento determina si common language runtime calcula los códigos hash para cadenas por una aplicación o un dominio por aplicación y el `AppContextSwitchOverrides` elemento permite a los usuarios de la biblioteca para participar o no fuera de la funcionalidad proporcionada por una biblioteca que ha cambiado.  
   
- Los elementos de la [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección se leen automáticamente mediante common language runtime al iniciar la aplicación. También puede definir el archivo de configuración para un dominio de aplicación no predeterminado proporcionando su nombre a la <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propiedad; su configuración se lee automáticamente cuando se carga el dominio de aplicación. En contadas ocasiones, si alguna vez, tendrá una necesidad de leer directamente la configuración de la [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección en el archivo de configuración de la aplicación.  
+ Los elementos de la [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección lee automáticamente common language runtime al iniciarse la aplicación. También puede definir el archivo de configuración para un dominio de aplicación no predeterminado proporcionando su nombre a la <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propiedad; su configuración se lee de forma automática cuando se carga el dominio de aplicación. Debe rara vez, si alguna vez, tiene una necesidad de leer directamente la configuración en el [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección en el archivo de configuración de la aplicación.  
   
 ## <a name="see-also"></a>Vea también  
  [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

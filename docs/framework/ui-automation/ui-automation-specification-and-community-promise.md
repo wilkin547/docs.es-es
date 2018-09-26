@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b238fd69-2f62-499c-bea0-b91dfb9204f0
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 14a9f6215b8d45092bb0df5993dc62f1ef42efd2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 24a9923bc60b0379ee51c04a8e55d83bf262aa50
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524861"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171535"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>UI Automation Specification y Community Promise
 Automatización de interfaz de usuario proporciona acceso mediante programación a la mayoría de los elementos de interfaz de usuario en el escritorio, lo que permite los productos de tecnología de asistencia como lectores de pantalla para proporcionar información sobre la interfaz de usuario a los usuarios finales y manipular la interfaz de usuario por otros medios distintos datos de entrada estándar .  

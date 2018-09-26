@@ -3,13 +3,12 @@ title: Elemento &lt;security&gt; de &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 13aeb3261fdb9689caa1dea1ec7382fdb9d9b1ce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 045fb60f6ae0fb54dce7fd9bc8c634caee5fddcd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516978"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170696"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>Elemento &lt;security&gt; de &lt;netTcpBinding&gt;
 Define la configuración de seguridad de un enlace.  

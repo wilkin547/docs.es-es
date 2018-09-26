@@ -1,5 +1,5 @@
 ---
-title: '&lt;authenticationModules&gt; Element (Network Settings)'
+title: '&lt;authenticationModules&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6d7f811a5746fa07264a192efdc4c5c02323e1f4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 394a686fe07036d6c3ac2bc51fb3503e1ee4a9e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743334"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170813"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; Element (Network Settings)
-Especifica los módulos utilizados para autenticar las solicitudes de red.  
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; elemento (configuración de red)
+Especifica los módulos que se usa para autenticar las solicitudes de red.  
   
  \<configuration>  
 \<System.NET >  
@@ -53,13 +52,13 @@ Especifica los módulos utilizados para autenticar las solicitudes de red.
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `authenticationModule` elemento especifica los módulos de autenticación que lleven a cabo el proceso de autenticación con un servidor. Un módulo de autenticación debe implementar la <xref:System.Net.IAuthenticationModule> interfaz.  
+ El `authenticationModule` elemento especifica los módulos de autenticación que realizan el proceso de autenticación con un servidor. Un módulo de autenticación debe implementar la <xref:System.Net.IAuthenticationModule> interfaz.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se habilita un módulo de autenticación. Debe reemplazar los valores de Version y PublicKeyToken con los valores correctos para el módulo especificado.  
+ El ejemplo siguiente habilita un módulo de autenticación. Debe reemplazar los valores de versión y PublicKeyToken con los valores correctos para el módulo especificado.  
   
 ```xml  
 <configuration>  
