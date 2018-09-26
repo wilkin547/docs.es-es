@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075192"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199793"
 ---
 # <a name="inheritsfrom-function"></a>Función InheritsFrom
 Determina si la clase o instancia actual deriva de una clase principal especificada.

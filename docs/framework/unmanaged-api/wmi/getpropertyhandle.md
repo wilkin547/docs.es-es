@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109754"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231471"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle (función)
 Devuelve un controlador único que identifica una propiedad.

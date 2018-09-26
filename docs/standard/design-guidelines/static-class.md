@@ -13,11 +13,11 @@ ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111508"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192737"
 ---
 # <a name="static-class-design"></a>Diseño de clases estáticas
 Se define una clase estática como una clase que contiene sólo miembros estáticos (por supuesto además de los miembros de instancia heredados de <xref:System.Object?displayProperty=nameWithType> y, posiblemente, un constructor privado). Algunos lenguajes ofrecen compatibilidad integrada para las clases estáticas. En C# 2.0 y versiones posteriores, cuando una clase se declara como estática, está sellada y abstracta y se puede invalidar o declarado ningún miembro de instancia.  

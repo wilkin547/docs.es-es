@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071129"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205333"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip (Control de formularios Windows Forms)
 Este control agrupa comandos de la aplicación y hace que sean más fácilmente accesibles.  

@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cc6772e7a9b98f09df21fd1acf24f578b66ae51e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754280"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188942"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;quitar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;origen&gt;
 Quita un agente de escucha de la colección `Listeners` para un origen de seguimiento.  
@@ -60,10 +59,10 @@ Quita un agente de escucha de la colección `Listeners` para un origen de seguim
   
  Puede quitar un elemento de la `Listeners` colección para un origen de seguimiento mediante programación mediante una llamada a la <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> método en el <xref:System.Diagnostics.TraceSource.Listeners%2A> propiedad de la <xref:System.Diagnostics.TraceSource> instancia.  
   
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `<remove>` elemento antes de usar el `<add>` elemento que se va a agregar el agente de escucha `console` a la `Listeners` colección para el origen de seguimiento `TraceSourceApp`.  
+ El ejemplo siguiente muestra cómo usar el `<remove>` elemento antes de usar el `<add>` elemento para agregar el agente de escucha `console` a la `Listeners` recopilación para el origen de seguimiento `TraceSourceApp`.  
   
 ```xml  
 <configuration>  

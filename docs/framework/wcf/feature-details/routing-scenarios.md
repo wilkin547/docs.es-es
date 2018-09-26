@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 458b67de57be2bd0847ceccbc8a3aebd3b025f64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496157"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200456"
 ---
 # <a name="routing-scenarios"></a>Escenarios de enrutamiento
 Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío para diseñar una lógica de enrutamiento eficaz al crear una nueva configuración desde el principio.  Sin embargo, hay varios escenarios comunes que sigue la mayoría de las configuraciones del servicio de enrutamiento. Aunque puede que estos escenarios no se apliquen directamente a su configuración concreta, el hecho de saber cómo se puede configurar el servicio de enrutamiento para administrar estos escenarios le ayudará a entender el servicio de enrutamiento.  
@@ -34,17 +34,17 @@ Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío 
   
  Utilizando el servicio de enrutamiento, puede exponer un extremo para recibir mensajes de aplicaciones cliente y, a continuación, enrutar cada mensaje a la versión de servicio correcta en función del contenido del mensaje. La implementación más básica implica agregar un encabezado personalizado al mensaje que indica la versión del servicio con el que se procesará el mensaje. El servicio de enrutamiento puede utilizar XPathMessageFilter para inspeccionar cada mensaje con el fin de detectar la presencia del encabezado personalizado y enrutar el mensaje al punto de conexión de destino adecuado.  
   
- Para los pasos utilizados para crear una configuración de control de versiones de servicio, consulte [How To: control de versiones del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md). Para obtener un ejemplo del uso de la XPathMessageFilter para enrutar los mensajes en función de un encabezado personalizado, consulte el [filtros avanzados](../../../../docs/framework/wcf/samples/advanced-filters.md) ejemplo.  
+ Para los pasos utilizados para crear una configuración de control de versiones de servicio, consulte [How To: control de versiones del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Particionar datos de servicio  
  Al diseñar un entorno distribuido, a menudo es conveniente repartir la carga de procesamiento entre varios equipos para proporcionar una alta disponibilidad, disminuir la carga de procesamiento en equipos individuales o proporcionar recursos dedicados para un determinado subconjunto de mensajes. Aunque el servicio de enrutamiento no reemplaza una solución de equilibrio de carga dedicada, su capacidad de realizar un enrutamiento basado en el contenido se puede utilizar para enrutar de otro modo mensajes similares a destinos concretos. Por ejemplo, puede tener un requisito para procesar mensajes de un cliente concreto por separado de los mensajes recibidos de otros clientes.  
   
- Para ver los pasos que se usa para crear una configuración de partición de datos de servicio, consulte [How To: creación de particiones de datos de servicio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md). Para obtener un ejemplo del uso de filtros para dividir los datos en función de la dirección URL y los encabezados personalizados, consulte la [filtros avanzados](../../../../docs/framework/wcf/samples/advanced-filters.md) ejemplo.  
+ Los pasos que se usa para crear una configuración de partición de datos de servicio, consulte [How To: creación de particiones de datos de servicio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Enrutamiento dinámico  
  A menudo, es conveniente modificar la configuración de enrutamiento para satisfacer las cambiantes necesidades empresariales, como agregar una ruta a una versión más reciente de un servicio, cambiar los criterios de enrutamiento o cambiar el extremo de destino de un mensaje determinado al que enruta el filtro. El servicio de enrutamiento le permite hacer esto a través de <xref:System.ServiceModel.Routing.RoutingExtension>, que le permite proporcionar un nuevo RoutingConfiguration durante el tiempo de ejecución. La nueva configuración surte efecto inmediatamente, pero solo afecta a cualquier sesión nueva procesada mediante el servicio de enrutamiento.  
   
- Para ver los pasos que se usa para implementar el enrutamiento dinámico, consulte [How To: actualización dinámica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md). Para obtener un ejemplo del uso de enrutamiento dinámico, consulte el [reconfiguración dinámica](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md) ejemplo.  
+ Los pasos que se usa para implementar el enrutamiento dinámico, consulte [How To: actualización dinámica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Multidifusión  
  Al enrutar mensajes, normalmente enruta cada mensaje a un extremo de destino concreto.  Sin embargo, algunas veces, puede necesitar enrutar una copia del mensaje a varios extremos de destino. Para realizar un enrutamiento de multidifusión, deben cumplirse las siguientes condiciones:  
@@ -56,16 +56,14 @@ Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío 
  Si se cumplen estas condiciones, cada punto de conexión de destino asociado a un filtro que devuelva un valor verdadero recibirá una copia del mensaje.  
   
 ### <a name="protocol-bridging"></a>Puente protocolar  
- Al enrutar mensajes entre protocolos de SOAP diferentes entre sí, el servicio de enrutamiento utiliza API de WCF para convertir el mensaje de un protocolo al otro. Esto se produce automáticamente cuando el extremo de servicio expuesto por el servicio de enrutamiento usa un protocolo diferente al de los extremos de cliente a los que se enrutan los mensajes. Es posible deshabilitar este comportamiento si los protocolos en uso no son estándar; sin embargo, en ese caso, debe proporcionar su propio código de puente.  
-  
- . Para obtener un ejemplo de usar el servicio de enrutamiento para traducir los mensajes entre protocolos, consulte el [el protocolo de puente y el control de errores](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) ejemplo.  
+ Al enrutar mensajes entre protocolos de SOAP diferentes entre sí, el servicio de enrutamiento utiliza API de WCF para convertir el mensaje de un protocolo al otro. Esto se produce automáticamente cuando el extremo de servicio expuesto por el servicio de enrutamiento usa un protocolo diferente al de los extremos de cliente a los que se enrutan los mensajes. Es posible deshabilitar este comportamiento si los protocolos en uso no son estándar; sin embargo, en ese caso, debe proporcionar su propio código de puente.
   
 ### <a name="error-handling"></a>Control de errores  
  En un entorno distribuido, no es raro encontrar errores transitorios de red o errores de comunicación. Sin un servicio intermedio como el servicio de enrutamiento, la carga de administrar tales errores recae en la aplicación cliente. Si la aplicación cliente no incluye una lógica concreta para realizar reintentos en caso de producirse errores de la red o errores de comunicación ni conocimiento de ubicaciones alternativas, el usuario puede encontrarse con escenarios donde un mensaje tenga que enviarse varias veces antes de ser procesado correctamente por el servicio de destino. Esto puede hacer que el cliente esté descontento con la aplicación, ya que se puede percibir como no confiable.  
   
  El servicio de enrutamiento intenta solucionar este escenario proporcionando capacidades de control de errores sólidas para los mensajes que se encuentran con errores de la red o errores relacionados con la comunicación. Al crear una lista de posibles extremos de destino y asociar esta lista a cada filtro de mensajes, elimina el punto de concentración de errores que se produce cuando solo hay un destino posible. En caso de error, el servicio de enrutamiento intentará entregar el mensaje al punto de conexión siguiente de la lista hasta que se entregue el mensaje, se produzca un error no relacionado con la comunicación o se hayan agotado todos los puntos de conexión.  
   
- Para los pasos utilizados para configurar el control de errores, vea [How To: control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Para obtener un ejemplo de la implementación del control de errores, consulte el [el protocolo de puente y el control de errores](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) y [avanzada de tratamiento de errores](../../../../docs/framework/wcf/samples/advanced-error-handling.md) ejemplos.  
+ Para los pasos utilizados para configurar el control de errores, vea [How To: control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>En esta sección  
  [Control de versiones del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  

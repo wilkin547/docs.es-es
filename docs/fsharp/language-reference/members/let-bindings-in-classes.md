@@ -3,11 +3,11 @@ title: Enlaces let en clases (F#)
 description: "Obtenga información sobre cómo definir los campos privados y funciones privadas para las clases de F # mediante el uso de enlaces 'let' en la definición de clase."
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576723"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47210245"
 ---
 # <a name="let-bindings-in-classes"></a>Enlaces let en clases
 

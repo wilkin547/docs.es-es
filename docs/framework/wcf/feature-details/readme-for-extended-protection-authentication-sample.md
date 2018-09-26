@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
 ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110329"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216897"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Archivo ReadMe del ejemplo de protección extendida para la autenticación
 Protección extendida es una iniciativa de seguridad para protegerse contra ataques man-in-the-middle (MITM), en el que un atacante (el "man-in-the-middle") intercepta las credenciales de un cliente y los utiliza para tener acceso a recursos seguros en el servidor del cliente previsto.  
