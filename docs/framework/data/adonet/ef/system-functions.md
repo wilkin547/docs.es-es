@@ -3,11 +3,11 @@ title: Funciones del sistema
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
 ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083168"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204471"
 ---
 # <a name="system-functions"></a>Funciones del sistema
 El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona las funciones del sistema siguientes:  

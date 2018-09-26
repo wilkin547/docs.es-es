@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 author: BrucePerlerMS
 ms.openlocfilehash: a45ec6b5cdd241cb92069e8097bc94baa65b2166
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075637"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193731"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedimientos recomendados acerca de seguridad en WCF
 En las secciones siguientes se enumeran los procedimientos recomendados que tener en cuenta a la hora de crear aplicaciones seguras mediante Windows Communication Foundation (WCF). Para obtener más información sobre la seguridad, vea [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) y [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  

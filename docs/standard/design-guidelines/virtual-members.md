@@ -10,11 +10,11 @@ ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076894"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216427"
 ---
 # <a name="virtual-members"></a>Miembros virtuales
 Pueden invalidar los miembros virtuales, lo que cambiará el comportamiento de la subclase. Son muy similares a las devoluciones de llamada en cuanto a la extensibilidad que proporcionan, pero están mejores en términos de rendimiento de la ejecución y el consumo de memoria. Además, los miembros virtuales resultar más naturales en escenarios que requieren la creación de un especial de un tipo existente (especialización).  
