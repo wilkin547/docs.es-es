@@ -3,11 +3,11 @@ title: Solo los ocho primeros caracteres de un nombre de registro personalizado 
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46519216"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169936"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Solo los ocho primeros caracteres de un nombre de registro personalizado son relevantes
 Al comprobar la exclusividad de los nombres de registro de eventos, solo se han tenido en cuenta los primeros ocho caracteres. Puede producirse un conflicto de los registros de eventos que comparten sus primeros ocho caracteres.  
