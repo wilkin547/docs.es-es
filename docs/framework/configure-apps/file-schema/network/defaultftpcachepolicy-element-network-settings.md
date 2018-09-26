@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultFtpCachePolicy&gt; Element (Network Settings)'
+title: '&lt;defaultFtpCachePolicy&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultFtpCachePolicy
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e4ea16c925114d4ad4054af5f340c764ed6fe4fd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743152"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209431"
 ---
-# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt; Element (Network Settings)
-Describe si el almacenamiento en caché de FTP está activo y describe la predeterminada de directiva de caché.  
+# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt; elemento (configuración de red)
+Describe si el almacenamiento en caché de FTP está activo y describe la directiva de caché de predeterminada.  
   
  \<configuration>  
 \<System.NET >  
@@ -47,14 +46,14 @@ Describe si el almacenamiento en caché de FTP está activo y describe la predet
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`Default`|Devuelve el recurso almacenado en caché si el recurso es nuevo, la longitud del contenido es precisa y la expiración, modificación y atributos de longitud de contenido están presentes.|  
+|`Default`|Devuelve el recurso almacenado en caché si el recurso está actualizado, la longitud del contenido es precisa y están presentes los atributos de la longitud del contenido, modificación y caducidad.|  
 |`BypassCache`|Devuelve el recurso desde el servidor.|  
-|`CacheOnly`|Devuelve el recurso almacenado en caché si la longitud del contenido está presente y coincide con el tamaño de la entrada.|  
+|`CacheOnly`|Devuelve el recurso almacenado en caché si la longitud del contenido está presente y coincide con el tamaño de entrada.|  
 |`CacheIfAvailable`|Devuelve el recurso almacenado en caché si la longitud del contenido se proporciona y coincide con el tamaño de la entrada; en caso contrario, el recurso se descarga desde el servidor y se devuelve al llamador.|  
-|`Revalidate`|Devuelve el recurso almacenado en caché si la marca de tiempo del recurso almacenado en caché es igual que la marca de tiempo del recurso en el servidor; en caso contrario, el recurso se descargan desde el servidor, almacenado en la memoria caché y devuelve al llamador.|  
-|`Reload`|Descarga el recurso del servidor, lo almacena en la memoria caché y devuelve el recurso al llamador.|  
+|`Revalidate`|Devuelve el recurso almacenado en caché si la marca de tiempo del recurso almacenado en caché es igual que la marca de tiempo del recurso en el servidor. en caso contrario, el recurso se descarga desde el servidor, almacenado en la memoria caché y devuelve al llamador.|  
+|`Reload`|Descarga el recurso desde el servidor, lo almacena en la memoria caché y devuelve el recurso al llamador.|  
 |`NoCacheNoStore`|Si existe un recurso almacenado en caché, se elimina. El recurso se descarga desde el servidor y se devuelve al llamador.|  
-|`Revalidate`|Satisface una solicitud mediante la copia en caché del recurso si la marca de tiempo es el mismo que la marca de tiempo del recurso en el servidor; en caso contrario, el recurso se descarga desde el servidor, presenta al llamador y almacenado en la memoria caché.|  
+|`Revalidate`|Atiende una solicitud mediante el uso de la copia en caché del recurso si la marca de tiempo es igual que la marca de tiempo del recurso en el servidor. en caso contrario, el recurso se descarga desde el servidor, presenta al llamador y almacenado en la memoria caché.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -63,12 +62,12 @@ Describe si el almacenamiento en caché de FTP está activo y describe la predet
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché las solicitudes de red.|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
   
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo especificar un FTP almacenamiento en caché de la directiva de `NoCacheNoStore`.  
+ En el ejemplo siguiente se muestra cómo especificar la directiva de almacenamiento en caché de FTP `NoCacheNoStore`.  
   
 ```xml  
 <configuration>  

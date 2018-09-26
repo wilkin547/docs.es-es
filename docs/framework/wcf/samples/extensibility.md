@@ -2,15 +2,15 @@
 title: Extensibilidad
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805387"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196880"
 ---
 # <a name="extensibility"></a>Extensibilidad
-Esta sección contiene ejemplos que tratan sobre la extensibilidad personalizada y otras características de Windows Communication Foundation (WCF).  
+Esta sección contiene ejemplos que se encargan de extensibilidad personalizada y otras características de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Extensibilidad de los canales](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -38,16 +38,13 @@ Esta sección contiene ejemplos que tratan sobre la extensibilidad personalizada
  Muestra la distribución personalizada.  
   
  [Extensibilidad de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
- Muestra los transportes personalizados.  
-  
- [Extensibilidad web](../../../../docs/framework/wcf/samples/web-extensibility.md)  
- Muestra la funcionalidad web personalizada.  
+ Muestra los transportes personalizados.
   
  [Formateador de operación y selector de operación](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
  Muestra el modo en que los puntos de extensibilidad pueden utilizar formatos de datos de mensaje personalizados.  
   
  [Filtro de mensaje personalizado](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- muestra cómo reemplazar los filtros de mensajes que Windows Communication Foundation (WCF) se utiliza para enviar mensajes a puntos de conexión.  
+ muestra cómo reemplazar los filtros de mensajes que usa Windows Communication Foundation (WCF) para enviar mensajes a puntos de conexión.  
   
  [Host de servicio personalizado](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Muestra cómo utilizar un derivado personalizado de la clase <xref:System.ServiceModel.ServiceHost> para modificar el comportamiento de tiempo de ejecución de un servicio.  
@@ -62,4 +59,4 @@ Esta sección contiene ejemplos que tratan sobre la extensibilidad personalizada
  Muestra cómo implementar y configurar los inspectores de mensaje de cliente y servicio.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Muestra cómo asignar nuevos tipos de contenido a formatos de cuerpo de mensaje WCF.
+ Muestra cómo asignar nuevos tipos de contenido a los formatos de cuerpo de mensaje WCF.

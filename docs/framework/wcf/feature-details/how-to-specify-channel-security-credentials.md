@@ -3,16 +3,15 @@ title: Cómo especificar las credenciales de seguridad de los canales
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e730e3deaccb581b1722b62ce6282d8fde7180e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496856"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196195"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Cómo especificar las credenciales de seguridad de los canales
-El Moniker de servicio de Windows Communication Foundation (WCF) permite que las aplicaciones COM para llamar a los servicios WCF. La mayoría de los servicios WCF requieren que el cliente especificar las credenciales para la autenticación y autorización. Al llamar a un servicio WCF desde un cliente WCF, puede especificar estas credenciales en código administrado o en un archivo de configuración de aplicación. Al llamar a un servicio WCF desde una aplicación COM, puede usar el <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaz para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
+El Moniker de servicio de Windows Communication Foundation (WCF) permite a las aplicaciones COM llamar a los servicios WCF. La mayoría de los servicios WCF requieren que el cliente especificar las credenciales para la autenticación y autorización. Al llamar a un servicio WCF desde un cliente WCF, puede especificar estas credenciales en código administrado o en un archivo de configuración de la aplicación. Al llamar a un servicio WCF desde una aplicación COM, puede usar el <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaz para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> es una interfaz basada en IDispatch y no se obtiene la funcionalidad IntelliSense en el entorno de Visual Studio.  
@@ -25,7 +24,7 @@ El Moniker de servicio de Windows Communication Foundation (WCF) permite que las
   
 2.  Abra el proyecto de seguridad del mensaje.  
   
-3.  Agregar `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` a la `ICalculator` definición de la interfaz.  
+3.  Agregar `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` a la `ICalculator` definición de interfaz.  
   
 4.  Agregar `bindingNamespace=``http://Microsoft.ServiceModel.Samples` a la etiqueta de punto de conexión en el archivo App.config para el servicio.  
   

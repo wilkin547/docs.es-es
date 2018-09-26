@@ -3,11 +3,11 @@ title: Atributos (F#)
 description: 'Obtenga información sobre cómo F # atributos permiten que los metadatos que se aplicará a una construcción de programación.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027887"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216492"
 ---
 # <a name="attributes"></a>Atributos
 

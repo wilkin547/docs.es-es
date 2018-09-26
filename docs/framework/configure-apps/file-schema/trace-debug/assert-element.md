@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ab1644d23e4d6d78b62e701902e5ec39e134b38b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745125"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193517"
 ---
 # <a name="ltassertgt-element"></a>&lt;Assert&gt; elemento
 Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; también indica el nombre del archivo para el que se van a escribir los mensajes.  
@@ -39,7 +38,7 @@ Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:S
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`assertuienabled`|Atributo opcional.<br /><br /> Especifica si mostrar un cuadro de mensaje cuando el **Debug.Assert** se evalúa como método **false**.|  
-|`logfilename`|Atributo opcional.<br /><br /> Especifica el nombre del archivo que se escribirá el mensaje como si **Debug.Assert** se evalúa como **false**.|  
+|`logfilename`|Atributo opcional.<br /><br /> Especifica el nombre de archivo que se escribirá el mensaje como si **Debug.Assert** se evalúa como **false**.|  
   
 ## <a name="assertuienabled-attribute"></a>Atributo AssertUiEnabled  
   
@@ -59,10 +58,10 @@ Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:S
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Ambos atributos en el  **\<assert >** elemento son opcionales. Puede deshabilitar los cuadros de mensaje sin especificar un archivo para escribir los mensajes en, o puede especificar un archivo para escribir mensajes mientras se realiza la dejando mensaje cuadros habilitados.  
+ Ambos atributos en el  **\<assert >** elemento son opcionales. Puede deshabilitar los cuadros de mensaje sin especificar un archivo para escribir los mensajes a, o puede especificar un archivo para escribir mensajes mientras deja cuadros habilitados del mensaje.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo deshabilitar la presentación de los cuadros de mensaje cuando se llama a **Debug.Assert** y escribir los mensajes a `c:\log.txt`.  
+ El ejemplo siguiente muestra cómo deshabilitar la presentación de cuadros de mensaje cuando se llama a **Debug.Assert** y escribir los mensajes a `c:\log.txt`.  
   
 ```xml  
 <configuration>  

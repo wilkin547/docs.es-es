@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 author: BrucePerlerMS
 ms.openlocfilehash: 01ad849090bd66ba7e0b4e062f78ad7a04ad059d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084688"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200235"
 ---
 # <a name="how-to-create-a-secure-session"></a>Cómo: Crear una sesión segura
 Con la excepción de la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) enlace, los enlaces proporcionados por el sistema en Windows Communication Foundation (WCF) utilizan automáticamente sesiones seguras cuando está habilitada la seguridad del mensaje.  

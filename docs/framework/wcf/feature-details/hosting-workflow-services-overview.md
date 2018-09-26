@@ -2,12 +2,12 @@
 title: Hospedar información general de servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
-ms.openlocfilehash: 7b5de31b5931af13b41b11af6e48a52b5628e27c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489565"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208462"
 ---
 # <a name="hosting-workflow-services-overview"></a>Hospedar información general de servicios de flujo de trabajo
 Los servicios de flujo de trabajo deben estar hospedados para ejecutarse. La clase <xref:System.ServiceModel.WorkflowServiceHost> es el host de flujo de trabajo que hospeda varias instancias, la configuración y la mensajería WCF (aunque no es necesario que los flujos de trabajo usen la mensajería para ser hospedados).  También se integra con la persistencia, el seguimiento y el control de instancias a través de un conjunto de comportamientos de servicio.  Al igual que el <xref:System.ServiceModel.ServiceHost> de WCF, el <xref:System.ServiceModel.WorkflowServiceHost> puede ser autohospedado por cualquier aplicación .NET administrada u hospedada en web (como un archivo .xamlx) en IIS o WAS.  Los temas de esta sección describen cómo hospedar un servicio de flujo de trabajo.  
@@ -23,10 +23,7 @@ Los servicios de flujo de trabajo deben estar hospedados para ejecutarse. La cla
  Describe cómo ampliar la funcionalidad del host de servicio de flujo de trabajo.  
   
  [Punto de conexión de control de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
- Describe cómo definir un punto de conexión que permite controlar instancias de flujo de trabajo.  
-  
- [Hospedaje de un flujo de trabajo no perteneciente al servicio en IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
- Muestra cómo hospedar un flujo de trabajo que no es un servicio de flujo de trabajo en IIS.  
+ Describe cómo definir un punto de conexión que permite controlar instancias de flujo de trabajo.
   
  [Hospedaje de un servicio de flujo de trabajo con Windows Server App Fabric](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
  Muestra cómo hospedar un servicio de flujo de trabajo existente en Windows Server App Fabric.  
