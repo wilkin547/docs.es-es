@@ -1,5 +1,5 @@
 ---
-title: '&lt;authenticationModules&gt; Element (Network Settings)'
+title: '&lt;authenticationModules&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -10,56 +10,55 @@ helpviewer_keywords:
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6d7f811a5746fa07264a192efdc4c5c02323e1f4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 394a686fe07036d6c3ac2bc51fb3503e1ee4a9e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743334"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170813"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="b4793-102">&lt;authenticationModules&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="b4793-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="b4793-103">Especifica los módulos utilizados para autenticar las solicitudes de red.</span><span class="sxs-lookup"><span data-stu-id="b4793-103">Specifies modules used to authenticate network requests.</span></span>  
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="6731c-102">&lt;authenticationModules&gt; elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="6731c-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="6731c-103">Especifica los módulos que se usa para autenticar las solicitudes de red.</span><span class="sxs-lookup"><span data-stu-id="6731c-103">Specifies modules used to authenticate network requests.</span></span>  
   
- <span data-ttu-id="b4793-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b4793-104">\<configuration></span></span>  
-<span data-ttu-id="b4793-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="b4793-105">\<system.net></span></span>  
-<span data-ttu-id="b4793-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="b4793-106">\<authenticationModules></span></span>  
+ <span data-ttu-id="6731c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="6731c-104">\<configuration></span></span>  
+<span data-ttu-id="6731c-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="6731c-105">\<system.net></span></span>  
+<span data-ttu-id="6731c-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="6731c-106">\<authenticationModules></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4793-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b4793-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6731c-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6731c-107">Syntax</span></span>  
   
 ```xml  
 <authenticationModules>   
 </authenticationModules>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b4793-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="b4793-108">Attributes and Elements</span></span>  
- <span data-ttu-id="b4793-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="b4793-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6731c-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="6731c-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="6731c-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="6731c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b4793-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="b4793-110">Attributes</span></span>  
- <span data-ttu-id="b4793-111">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="b4793-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6731c-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="6731c-110">Attributes</span></span>  
+ <span data-ttu-id="6731c-111">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="6731c-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="b4793-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="b4793-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6731c-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="6731c-112">Child Elements</span></span>  
   
-|<span data-ttu-id="b4793-113">**Element**</span><span class="sxs-lookup"><span data-stu-id="b4793-113">**Element**</span></span>|<span data-ttu-id="b4793-114">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="b4793-114">**Description**</span></span>|  
+|<span data-ttu-id="6731c-113">**Element**</span><span class="sxs-lookup"><span data-stu-id="6731c-113">**Element**</span></span>|<span data-ttu-id="6731c-114">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="6731c-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="b4793-115">add</span><span class="sxs-lookup"><span data-stu-id="b4793-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="b4793-116">Agrega un módulo de autenticación a la aplicación.</span><span class="sxs-lookup"><span data-stu-id="b4793-116">Adds an authentication module to the application.</span></span>|  
-|[<span data-ttu-id="b4793-117">clear</span><span class="sxs-lookup"><span data-stu-id="b4793-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="b4793-118">Borra todos los módulos de autenticación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="b4793-118">Clears all authentication modules from the application.</span></span>|  
-|[<span data-ttu-id="b4793-119">remove</span><span class="sxs-lookup"><span data-stu-id="b4793-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="b4793-120">Quita un módulo de autenticación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="b4793-120">Removes an authentication module from the application.</span></span>|  
+|[<span data-ttu-id="6731c-115">add</span><span class="sxs-lookup"><span data-stu-id="6731c-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="6731c-116">Agrega un módulo de autenticación a la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6731c-116">Adds an authentication module to the application.</span></span>|  
+|[<span data-ttu-id="6731c-117">clear</span><span class="sxs-lookup"><span data-stu-id="6731c-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="6731c-118">Borra todos los módulos de autenticación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6731c-118">Clears all authentication modules from the application.</span></span>|  
+|[<span data-ttu-id="6731c-119">remove</span><span class="sxs-lookup"><span data-stu-id="6731c-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="6731c-120">Quita un módulo de autenticación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6731c-120">Removes an authentication module from the application.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="b4793-121">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="b4793-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6731c-121">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="6731c-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="b4793-122">**Element**</span><span class="sxs-lookup"><span data-stu-id="b4793-122">**Element**</span></span>|<span data-ttu-id="b4793-123">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="b4793-123">**Description**</span></span>|  
+|<span data-ttu-id="6731c-122">**Element**</span><span class="sxs-lookup"><span data-stu-id="6731c-122">**Element**</span></span>|<span data-ttu-id="6731c-123">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="6731c-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="b4793-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="b4793-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="b4793-125">Contiene valores que especifican cómo se conecta .NET Framework a la red.</span><span class="sxs-lookup"><span data-stu-id="b4793-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="6731c-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="6731c-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="6731c-125">Contiene valores que especifican cómo se conecta .NET Framework a la red.</span><span class="sxs-lookup"><span data-stu-id="6731c-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b4793-126">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b4793-126">Remarks</span></span>  
- <span data-ttu-id="b4793-127">El `authenticationModule` elemento especifica los módulos de autenticación que lleven a cabo el proceso de autenticación con un servidor.</span><span class="sxs-lookup"><span data-stu-id="b4793-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="b4793-128">Un módulo de autenticación debe implementar la <xref:System.Net.IAuthenticationModule> interfaz.</span><span class="sxs-lookup"><span data-stu-id="b4793-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6731c-126">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6731c-126">Remarks</span></span>  
+ <span data-ttu-id="6731c-127">El `authenticationModule` elemento especifica los módulos de autenticación que realizan el proceso de autenticación con un servidor.</span><span class="sxs-lookup"><span data-stu-id="6731c-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="6731c-128">Un módulo de autenticación debe implementar la <xref:System.Net.IAuthenticationModule> interfaz.</span><span class="sxs-lookup"><span data-stu-id="6731c-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="b4793-129">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="b4793-129">Configuration Files</span></span>  
- <span data-ttu-id="b4793-130">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="b4793-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="6731c-129">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="6731c-129">Configuration Files</span></span>  
+ <span data-ttu-id="6731c-130">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="6731c-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b4793-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b4793-131">Example</span></span>  
- <span data-ttu-id="b4793-132">En el ejemplo siguiente se habilita un módulo de autenticación.</span><span class="sxs-lookup"><span data-stu-id="b4793-132">The following example enables an authentication module.</span></span> <span data-ttu-id="b4793-133">Debe reemplazar los valores de Version y PublicKeyToken con los valores correctos para el módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="b4793-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="6731c-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6731c-131">Example</span></span>  
+ <span data-ttu-id="6731c-132">El ejemplo siguiente habilita un módulo de autenticación.</span><span class="sxs-lookup"><span data-stu-id="6731c-132">The following example enables an authentication module.</span></span> <span data-ttu-id="6731c-133">Debe reemplazar los valores de versión y PublicKeyToken con los valores correctos para el módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="6731c-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,7 +71,7 @@ ms.locfileid: "32743334"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b4793-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="b4793-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6731c-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="6731c-134">See Also</span></span>  
  <xref:System.Net.IAuthenticationModule>  
  <xref:System.Net.AuthenticationManager>  
- [<span data-ttu-id="b4793-135">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="b4793-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="6731c-135">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="6731c-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
