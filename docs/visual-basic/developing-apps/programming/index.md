@@ -6,11 +6,11 @@ helpviewer_keywords:
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45990029"
 ---
 # <a name="programming-in-visual-basic"></a>Programar en Visual Basic
 En esta sección se describen las tareas de programación sobre las que necesitará obtener información adicional a medida que crea la aplicación de Visual Basic.  
