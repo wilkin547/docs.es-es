@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: a174db12-23e4-49ec-b8b3-40ca7b2c1ba1
 author: BrucePerlerMS
 ms.openlocfilehash: 742cbfbcc0194ad9960f27b8b66c70b5e2e94281
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47074838"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198012"
 ---
-# <a name="systemservicemodelsecurityimportsecuritychannelbindingexit"></a><span data-ttu-id="81623-102">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="81623-102">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span></span>
-<span data-ttu-id="81623-103">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="81623-103">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span></span>  
+# <a name="systemservicemodelsecurityimportsecuritychannelbindingexit"></a><span data-ttu-id="9bc31-102">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="9bc31-102">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span></span>
+<span data-ttu-id="9bc31-103">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="9bc31-103">System.ServiceModel.Security.ImportSecurityChannelBindingExit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="81623-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="81623-104">Description</span></span>  
- <span data-ttu-id="81623-105">Seguridad ImportChannelBinding finalizada.</span><span class="sxs-lookup"><span data-stu-id="81623-105">The Security ImportChannelBinding finished.</span></span>  
+## <a name="description"></a><span data-ttu-id="9bc31-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="9bc31-104">Description</span></span>  
+ <span data-ttu-id="9bc31-105">Seguridad ImportChannelBinding finalizada.</span><span class="sxs-lookup"><span data-stu-id="9bc31-105">The Security ImportChannelBinding finished.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81623-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="81623-106">See Also</span></span>  
- [<span data-ttu-id="81623-107">Traza</span><span class="sxs-lookup"><span data-stu-id="81623-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="81623-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="81623-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="81623-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="81623-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9bc31-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9bc31-106">See Also</span></span>  
+ [<span data-ttu-id="9bc31-107">Traza</span><span class="sxs-lookup"><span data-stu-id="9bc31-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9bc31-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="9bc31-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9bc31-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="9bc31-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
