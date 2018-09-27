@@ -3,13 +3,12 @@ title: Excepciones de seguridad
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 057d01ba918a41df0bdf2acc30c9bb35777ebc27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e5795da5765e3dadfb169b1819b7154bd6ce0a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474888"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233265"
 ---
 # <a name="security-exceptions"></a>Excepciones de seguridad
 En este tema se enumeran todas las excepciones de seguridad.  
@@ -30,7 +29,7 @@ En este tema se enumeran todas las excepciones de seguridad.
 |BindingDoesNotSupportWindowsIdenityForImpersonation|La operación del contrato especificado requiere la identidad de Windows para la suplantación automática. Una identidad de Windows que representa al llamador no es proporcionada por el enlace específico para el contrato específico.|  
 |CachedNegotiationStateQuotaReached|El servicio no puede almacenar en caché el estado de la negociación cuando se ha alcanzado la capacidad especificada. Reintente la solicitud.|  
 |CacheQuotaReached|No se puede agregar el elemento. Se especifica el tamaño de caché máximo.|  
-|CannotDetermineSPNBasedOnAddress|El cliente no puede determinar el nombre de la entidad de seguridad del servicio basándose en la identidad en la dirección de destino especificada con el propósito de SspiNegotiation/Kerberos. La identidad de la dirección de destino debe ser una identidad UPN (como acmedomain\\\alice) o identidad SPN (como host/equipo-Bob).|  
+|CannotDetermineSPNBasedOnAddress|El cliente no puede determinar el nombre de la entidad de seguridad del servicio basándose en la identidad en la dirección de destino especificada con el propósito de SspiNegotiation/Kerberos. La identidad de la dirección de destino debe ser una identidad UPN (como acmedomain\\\alice) o identidad SPN (como host/bobs-machine).|  
 |CannotFindCert|No se puede encontrar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue.|  
 |CannotFindCertForTarget|No se puede encontrar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue para el destino especificado.|  
 |CannotFindCorrelationStateForApplyingSecurity|No se puede encontrar el estado de correlación para aplicar la seguridad para responder en el respondedor.|  

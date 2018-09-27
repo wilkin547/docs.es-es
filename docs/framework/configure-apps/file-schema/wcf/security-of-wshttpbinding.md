@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 author: BrucePerlerMS
 ms.openlocfilehash: 0512197cf792c2d3d04f999a9708297ec3137728
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109727"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233046"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>Elemento &lt;security&gt; de &lt;wsHttpBinding&gt;
 Representa las funciones de seguridad de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
