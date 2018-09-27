@@ -19,11 +19,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0618e9853eea2f4aa6e6a5dfd11b571cb3d7b123
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112957"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397181"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
