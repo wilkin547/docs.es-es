@@ -3,11 +3,11 @@ title: Expresiones de consulta (F#)
 description: 'Obtenga información sobre la compatibilidad con expresiones de consulta de LINQ en el lenguaje de programación F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071077"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400860"
 ---
 # <a name="query-expressions"></a>Expresiones de consulta
 

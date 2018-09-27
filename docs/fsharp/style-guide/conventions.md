@@ -3,11 +3,11 @@ title: 'Convenciones de código de F #'
 description: 'Obtenga información sobre expresiones y directrices generales al escribir código de F #.'
 ms.date: 05/14/2018
 ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078485"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237414"
 ---
 # <a name="f-coding-conventions"></a>Convenciones de código de F #
 
