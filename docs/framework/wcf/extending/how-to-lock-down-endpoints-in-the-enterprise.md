@@ -3,11 +3,11 @@ title: Cómo bloquear puntos de conexión en la empresa
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075529"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421299"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Cómo bloquear puntos de conexión en la empresa
 Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa. El siguiente tema describe cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones cliente de Windows Communication Foundation (WCF) instaladas en los equipos.  
