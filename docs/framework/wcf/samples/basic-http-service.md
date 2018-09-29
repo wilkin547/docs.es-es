@@ -2,12 +2,12 @@
 title: Servicio HTTP básico
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516634"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455728"
 ---
 # <a name="basic-http-service"></a>Servicio HTTP básico
 Este ejemplo muestra cómo implementar un servicio basado en HTTP, basados en RPC contemplado habitualmente como servicio "POX" (Plain Old XML): con el modelo de programación de REST de Windows Communication Foundation (WCF). Este ejemplo consta de dos componentes: un servicio HTTP WCF autohospedado (Service.cs) y una aplicación de consola (Program.cs) que crea el servicio y lo llama.  
@@ -21,7 +21,7 @@ Este ejemplo muestra cómo implementar un servicio basado en HTTP, basados en RP
   
  El archivo App.config configura el servicio WCF con un <xref:System.ServiceModel.Description.WebHttpEndpoint> predeterminado que tiene la propiedad <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> establecida en `true`. Como resultado, la infraestructura de WCF crea una página de Ayuda basada en HTML automática en `http://localhost:8000/Customers/help` que proporciona información sobre cómo construir las solicitudes HTTP al servicio y cómo consumir la respuesta HTTP del servicio.  
   
- Program.cs muestra el uso de un generador de canales WCF para realizar llamadas a las respuestas de proceso y servicios. Observe que se trata simplemente de una manera de tener acceso a un servicio de WCF. También es posible tener acceso al servicio utilizando otras clases de .NET Framework como <xref:System.Net.HttpWebRequest> y <xref:System.Net.WebClient>. Otros ejemplos del SDK (como el [selección automática de formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md) ejemplo y [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo) se muestra cómo utilizar estas clases para comunicarse con un servicio WCF.  
+ Program.cs muestra el uso de un generador de canales WCF para realizar llamadas a las respuestas de proceso y servicios. Observe que se trata simplemente de una manera de tener acceso a un servicio de WCF. También es posible tener acceso al servicio utilizando otras clases de .NET Framework como <xref:System.Net.HttpWebRequest> y <xref:System.Net.WebClient>.
   
  El ejemplo consta de un servicio autohospedado y un cliente que se ejecutan ambos dentro de una aplicación de consola. A medida que se ejecuta la aplicación de consola, el cliente realiza solicitudes al servicio y escribe la información pertinente de las respuestas en la ventana de la consola.  
   
@@ -41,7 +41,3 @@ Este ejemplo muestra cómo implementar un servicio basado en HTTP, basados en RP
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
-  
-## <a name="see-also"></a>Vea también  
- [Selección de formato automática](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [Servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md)
