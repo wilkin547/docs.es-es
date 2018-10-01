@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 36cf61982bb5a83e6031c35a19ba8ebf0b94aa6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393989"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47193153"
 ---
 # <a name="cache-policy"></a>Directiva de caché
 Una directiva de caché define reglas que se usan para determinar si se puede satisfacer una solicitud mediante una copia almacenada en caché del recurso solicitado. Las aplicaciones especifican requisitos de caché de cliente de actualización, pero la directiva de caché en vigor viene determinada por los requisitos de caché de cliente, los requisitos de expiración del contenido del servidor y los requisitos de revalidación del servidor. La interacción de la directiva de caché de cliente y los requisitos de servidor siempre da como resultado la directiva de caché más conservadora para ayudar a garantizar que el contenido actualizado se devuelva a la aplicación cliente.  
@@ -27,7 +26,7 @@ Una directiva de caché define reglas que se usan para determinar si se puede sa
   
  Las clases descritas en la siguiente tabla se usan para especificar directivas de caché.  
   
-|Nombre de la clase|Description|  
+|Nombre de la clase|Descripción|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|Representa directivas de caché basadas en la ubicación y en el tiempo para los recursos solicitados mediante objetos <xref:System.Net.HttpWebRequest>.|  
 |<xref:System.Net.Cache.RequestCachePolicy>|Representa directivas de caché basadas en la ubicación o la directiva de caché basada en el tiempo <xref:System.Net.Cache.RequestCacheLevel.Default> para los recursos solicitados mediante objetos <xref:System.Net.WebRequest>.|  

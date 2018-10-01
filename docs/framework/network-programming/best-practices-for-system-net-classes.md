@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c74f9d0534675d07c87d3edbcf8434cd98f6c621
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 987e2294f1e34eb3a4da1e31285868877338ccf4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393950"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47192210"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Procedimientos recomendados para las clases System.Net
 Las siguientes recomendaciones le ayudarán a usar las clases incluidas en <xref:System.Net> para su beneficio:  
