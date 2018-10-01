@@ -9,68 +9,68 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
 ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706257"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157709"
 ---
-# <a name="float-c-reference"></a><span data-ttu-id="ace9d-102">float (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="ace9d-102">float (C# Reference)</span></span>
+# <a name="float-c-reference"></a><span data-ttu-id="839a4-102">float (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="839a4-102">float (C# Reference)</span></span>
 
-<span data-ttu-id="ace9d-103">La palabra clave `float` indica un tipo simple que almacena valores de punto flotante de 32 bits.</span><span class="sxs-lookup"><span data-stu-id="ace9d-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="ace9d-104">En la tabla siguiente se muestran la precisión y el intervalo aproximado para el tipo `float`.</span><span class="sxs-lookup"><span data-stu-id="ace9d-104">The following table shows the precision and approximate range for the `float` type.</span></span>
+<span data-ttu-id="839a4-103">La palabra clave `float` indica un tipo simple que almacena valores de punto flotante de 32 bits.</span><span class="sxs-lookup"><span data-stu-id="839a4-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="839a4-104">En la tabla siguiente se muestran la precisión y el intervalo aproximado para el tipo `float`.</span><span class="sxs-lookup"><span data-stu-id="839a4-104">The following table shows the precision and approximate range for the `float` type.</span></span>
 
-|<span data-ttu-id="ace9d-105">Tipo</span><span class="sxs-lookup"><span data-stu-id="ace9d-105">Type</span></span>|<span data-ttu-id="ace9d-106">Intervalo aproximado</span><span class="sxs-lookup"><span data-stu-id="ace9d-106">Approximate range</span></span>|<span data-ttu-id="ace9d-107">Precisión</span><span class="sxs-lookup"><span data-stu-id="ace9d-107">Precision</span></span>|<span data-ttu-id="ace9d-108">Tipo de .NET</span><span class="sxs-lookup"><span data-stu-id="ace9d-108">.NET type</span></span>|  
+|<span data-ttu-id="839a4-105">Tipo</span><span class="sxs-lookup"><span data-stu-id="839a4-105">Type</span></span>|<span data-ttu-id="839a4-106">Intervalo aproximado</span><span class="sxs-lookup"><span data-stu-id="839a4-106">Approximate range</span></span>|<span data-ttu-id="839a4-107">Precisión</span><span class="sxs-lookup"><span data-stu-id="839a4-107">Precision</span></span>|<span data-ttu-id="839a4-108">Tipo de .NET</span><span class="sxs-lookup"><span data-stu-id="839a4-108">.NET type</span></span>|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|<span data-ttu-id="ace9d-109">De ±1,5 x 10<sup>-45</sup> a ±3,4 x 10<sup>38</sup></span><span class="sxs-lookup"><span data-stu-id="ace9d-109">±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup></span></span>|<span data-ttu-id="ace9d-110">7 dígitos</span><span class="sxs-lookup"><span data-stu-id="ace9d-110">7 digits</span></span>|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|<span data-ttu-id="839a4-109">De ±1,5 x 10<sup>-45</sup> a ±3,4 x 10<sup>38</sup></span><span class="sxs-lookup"><span data-stu-id="839a4-109">±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup></span></span>|<span data-ttu-id="839a4-110">7 dígitos</span><span class="sxs-lookup"><span data-stu-id="839a4-110">7 digits</span></span>|<xref:System.Single?displayProperty=nameWithType>|  
 
-## <a name="literals"></a><span data-ttu-id="ace9d-111">Literales</span><span class="sxs-lookup"><span data-stu-id="ace9d-111">Literals</span></span>
+## <a name="literals"></a><span data-ttu-id="839a4-111">Literales</span><span class="sxs-lookup"><span data-stu-id="839a4-111">Literals</span></span>
 
-<span data-ttu-id="ace9d-112">De forma predeterminada, un literal numérico real a la derecha del operador de asignación se trata como [double](double.md).</span><span class="sxs-lookup"><span data-stu-id="ace9d-112">By default, a real numeric literal on the right side of the assignment operator is treated as [double](double.md).</span></span> <span data-ttu-id="ace9d-113">Por consiguiente, para inicializar una variable float, use el sufijo `f` o `F`, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="ace9d-113">Therefore, to initialize a float variable, use the suffix `f` or `F`, as in the following example:</span></span>
+<span data-ttu-id="839a4-112">De forma predeterminada, un literal numérico real a la derecha del operador de asignación se trata como [double](double.md).</span><span class="sxs-lookup"><span data-stu-id="839a4-112">By default, a real numeric literal on the right side of the assignment operator is treated as [double](double.md).</span></span> <span data-ttu-id="839a4-113">Por consiguiente, para inicializar una variable float, use el sufijo `f` o `F`, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="839a4-113">Therefore, to initialize a float variable, use the suffix `f` or `F`, as in the following example:</span></span>
 
 ```csharp
 float x = 3.5F;
 ```
 
-<span data-ttu-id="ace9d-114">Si no usa el sufijo en la declaración anterior, obtendrá un error de compilación porque intenta almacenar un valor [double](double.md) en una variable `float`.</span><span class="sxs-lookup"><span data-stu-id="ace9d-114">If you do not use the suffix in the previous declaration, you will get a compilation error because you are trying to store a [double](double.md) value into a `float` variable.</span></span>
+<span data-ttu-id="839a4-114">Si no usa el sufijo en la declaración anterior, obtendrá un error de compilación porque intenta almacenar un valor [double](double.md) en una variable `float`.</span><span class="sxs-lookup"><span data-stu-id="839a4-114">If you do not use the suffix in the previous declaration, you will get a compilation error because you are trying to store a [double](double.md) value into a `float` variable.</span></span>
 
-## <a name="conversions"></a><span data-ttu-id="ace9d-115">Conversiones</span><span class="sxs-lookup"><span data-stu-id="ace9d-115">Conversions</span></span>
+## <a name="conversions"></a><span data-ttu-id="839a4-115">Conversiones</span><span class="sxs-lookup"><span data-stu-id="839a4-115">Conversions</span></span>
 
-<span data-ttu-id="ace9d-116">Puede combinar tipos numéricos enteros y tipos de punto flotante en una expresión.</span><span class="sxs-lookup"><span data-stu-id="ace9d-116">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="ace9d-117">En este caso, los tipos enteros se convierten a tipos de punto flotante.</span><span class="sxs-lookup"><span data-stu-id="ace9d-117">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="ace9d-118">La evaluación de la expresión se realiza según las reglas siguientes:</span><span class="sxs-lookup"><span data-stu-id="ace9d-118">The evaluation of the expression is performed according to the following rules:</span></span>
+<span data-ttu-id="839a4-116">Puede combinar tipos numéricos enteros y tipos de punto flotante en una expresión.</span><span class="sxs-lookup"><span data-stu-id="839a4-116">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="839a4-117">En este caso, los tipos enteros se convierten a tipos de punto flotante.</span><span class="sxs-lookup"><span data-stu-id="839a4-117">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="839a4-118">La evaluación de la expresión se realiza según las reglas siguientes:</span><span class="sxs-lookup"><span data-stu-id="839a4-118">The evaluation of the expression is performed according to the following rules:</span></span>
 
-- <span data-ttu-id="ace9d-119">Si uno de los tipos de punto flotante es [double](double.md), la expresión se evalúa como [double](double.md) o [bool](bool.md) en comparaciones relacionales o de igualdad.</span><span class="sxs-lookup"><span data-stu-id="ace9d-119">If one of the floating-point types is [double](double.md), the expression evaluates to [double](double.md), or to [bool](bool.md) in relational comparisons or comparisons for equality.</span></span>
+- <span data-ttu-id="839a4-119">Si uno de los tipos de punto flotante es [double](double.md), la expresión se evalúa como [double](double.md) o [bool](bool.md) en comparaciones relacionales o de igualdad.</span><span class="sxs-lookup"><span data-stu-id="839a4-119">If one of the floating-point types is [double](double.md), the expression evaluates to [double](double.md), or to [bool](bool.md) in relational comparisons or comparisons for equality.</span></span>
 
-- <span data-ttu-id="ace9d-120">Si no hay ningún tipo [double](double.md) en la expresión, esta se evalúa como `float` o [bool](bool.md) en comparaciones relacionales o de igualdad.</span><span class="sxs-lookup"><span data-stu-id="ace9d-120">If there is no [double](double.md) type in the expression, the expression evaluates to `float`, or to [bool](bool.md) in relational comparisons or comparisons for equality.</span></span>
+- <span data-ttu-id="839a4-120">Si no hay ningún tipo [double](double.md) en la expresión, esta se evalúa como `float` o [bool](bool.md) en comparaciones relacionales o de igualdad.</span><span class="sxs-lookup"><span data-stu-id="839a4-120">If there is no [double](double.md) type in the expression, the expression evaluates to `float`, or to [bool](bool.md) in relational comparisons or comparisons for equality.</span></span>
 
-<span data-ttu-id="ace9d-121">Una expresión de punto flotante puede contener los siguientes conjuntos de valores:</span><span class="sxs-lookup"><span data-stu-id="ace9d-121">A floating-point expression can contain the following sets of values:</span></span>
+<span data-ttu-id="839a4-121">Una expresión de punto flotante puede contener los siguientes conjuntos de valores:</span><span class="sxs-lookup"><span data-stu-id="839a4-121">A floating-point expression can contain the following sets of values:</span></span>
 
-- <span data-ttu-id="ace9d-122">Cero positivo y negativo</span><span class="sxs-lookup"><span data-stu-id="ace9d-122">Positive and negative zero</span></span>
+- <span data-ttu-id="839a4-122">Cero positivo y negativo</span><span class="sxs-lookup"><span data-stu-id="839a4-122">Positive and negative zero</span></span>
 
-- <span data-ttu-id="ace9d-123">Infinito positivo y negativo</span><span class="sxs-lookup"><span data-stu-id="ace9d-123">Positive and negative infinity</span></span>
+- <span data-ttu-id="839a4-123">Infinito positivo y negativo</span><span class="sxs-lookup"><span data-stu-id="839a4-123">Positive and negative infinity</span></span>
 
-- <span data-ttu-id="ace9d-124">Valor no numérico (NaN)</span><span class="sxs-lookup"><span data-stu-id="ace9d-124">Not-a-Number value (NaN)</span></span>
+- <span data-ttu-id="839a4-124">Valor no numérico (NaN)</span><span class="sxs-lookup"><span data-stu-id="839a4-124">Not-a-Number value (NaN)</span></span>
 
-- <span data-ttu-id="ace9d-125">El conjunto finito de valores distintos de cero</span><span class="sxs-lookup"><span data-stu-id="ace9d-125">The finite set of nonzero values</span></span>
+- <span data-ttu-id="839a4-125">El conjunto finito de valores distintos de cero</span><span class="sxs-lookup"><span data-stu-id="839a4-125">The finite set of nonzero values</span></span>
 
-<span data-ttu-id="ace9d-126">Para obtener más información sobre estos valores, vea el estándar IEEE para aritmética binaria de punto flotante, disponible en el sitio web de [IEEE](http://www.ieee.org).</span><span class="sxs-lookup"><span data-stu-id="ace9d-126">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](http://www.ieee.org) website.</span></span>
+<span data-ttu-id="839a4-126">Para obtener más información sobre estos valores, vea el estándar IEEE para aritmética binaria de punto flotante, disponible en el sitio web de [IEEE](http://www.ieee.org).</span><span class="sxs-lookup"><span data-stu-id="839a4-126">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](http://www.ieee.org) website.</span></span>
 
-## <a name="example"></a><span data-ttu-id="ace9d-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ace9d-127">Example</span></span>
+## <a name="example"></a><span data-ttu-id="839a4-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="839a4-127">Example</span></span>
 
-<span data-ttu-id="ace9d-128">En el ejemplo siguiente, se incluyen un [int](int.md), un [short](short.md) y un `float` en una expresión matemática cuyo resultado es `float`.</span><span class="sxs-lookup"><span data-stu-id="ace9d-128">In the following example, an [int](int.md), a [short](short.md), and a `float` are included in a mathematical expression giving a `float` result.</span></span> <span data-ttu-id="ace9d-129">(Recuerde que `float` es un alias para el tipo <xref:System.Single?displayProperty=nameWithType>). Observe que no hay ningún [double](double.md) en la expresión.</span><span class="sxs-lookup"><span data-stu-id="ace9d-129">(Remember that `float` is an alias for the <xref:System.Single?displayProperty=nameWithType> type.) Notice that there is no [double](double.md) in the expression.</span></span>
+<span data-ttu-id="839a4-128">En el ejemplo siguiente, se incluyen un [int](int.md), un [short](short.md) y un `float` en una expresión matemática cuyo resultado es `float`.</span><span class="sxs-lookup"><span data-stu-id="839a4-128">In the following example, an [int](int.md), a [short](short.md), and a `float` are included in a mathematical expression giving a `float` result.</span></span> <span data-ttu-id="839a4-129">(Recuerde que `float` es un alias para el tipo <xref:System.Single?displayProperty=nameWithType>). Observe que no hay ningún [double](double.md) en la expresión.</span><span class="sxs-lookup"><span data-stu-id="839a4-129">(Remember that `float` is an alias for the <xref:System.Single?displayProperty=nameWithType> type.) Notice that there is no [double](double.md) in the expression.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="ace9d-130">especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="ace9d-130">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="839a4-130">especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="839a4-130">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="ace9d-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="ace9d-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="839a4-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="839a4-131">See also</span></span>
 
 - <xref:System.Single>  
-- [<span data-ttu-id="ace9d-132">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="ace9d-132">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="ace9d-133">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="ace9d-133">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="ace9d-134">Conversiones de tipos</span><span class="sxs-lookup"><span data-stu-id="ace9d-134">Casting and Type Conversions</span></span>](../../programming-guide/types/casting-and-type-conversions.md)  
-- [<span data-ttu-id="ace9d-135">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="ace9d-135">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="ace9d-136">Tabla de tipos enteros</span><span class="sxs-lookup"><span data-stu-id="ace9d-136">Integral Types Table</span></span>](integral-types-table.md)  
-- [<span data-ttu-id="ace9d-137">Tabla de tipos integrados</span><span class="sxs-lookup"><span data-stu-id="ace9d-137">Built-In Types Table</span></span>](built-in-types-table.md)  
-- [<span data-ttu-id="ace9d-138">Tabla de conversiones numéricas implícitas</span><span class="sxs-lookup"><span data-stu-id="ace9d-138">Implicit Numeric Conversions Table</span></span>](implicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="ace9d-139">Tabla de conversiones numéricas explícitas</span><span class="sxs-lookup"><span data-stu-id="ace9d-139">Explicit Numeric Conversions Table</span></span>](explicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="839a4-132">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="839a4-132">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="839a4-133">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="839a4-133">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="839a4-134">Conversiones de tipos</span><span class="sxs-lookup"><span data-stu-id="839a4-134">Casting and Type Conversions</span></span>](../../programming-guide/types/casting-and-type-conversions.md)  
+- [<span data-ttu-id="839a4-135">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="839a4-135">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="839a4-136">Tabla de tipos enteros</span><span class="sxs-lookup"><span data-stu-id="839a4-136">Integral Types Table</span></span>](integral-types-table.md)  
+- [<span data-ttu-id="839a4-137">Tabla de tipos integrados</span><span class="sxs-lookup"><span data-stu-id="839a4-137">Built-In Types Table</span></span>](built-in-types-table.md)  
+- [<span data-ttu-id="839a4-138">Tabla de conversiones numéricas implícitas</span><span class="sxs-lookup"><span data-stu-id="839a4-138">Implicit Numeric Conversions Table</span></span>](implicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="839a4-139">Tabla de conversiones numéricas explícitas</span><span class="sxs-lookup"><span data-stu-id="839a4-139">Explicit Numeric Conversions Table</span></span>](explicit-numeric-conversions-table.md)  
