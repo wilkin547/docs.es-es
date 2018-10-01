@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 166a076eae69b351248bc67570cdaf50b43ab95c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a163374810cbc06ca048c1bdd304de9519db140c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396303"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195711"
 ---
 # <a name="requesting-data"></a>Solicitud de datos
 El desarrollo de aplicaciones que se ejecutan en el entorno operativo distribuido de Internet hoy en día requiere un método eficaz y fácil de usar para recuperar datos de recursos de todo tipo. Los protocolos acoplables permiten desarrollar aplicaciones que usan una sola interfaz para recuperar datos de varios protocolos de Internet.  

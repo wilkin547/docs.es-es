@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8020a92345ba85a99c0b46b2d4247d677defd054
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 776e0a728b56aa2acfb7a033c2a7244b2cc824f9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397928"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47237194"
 ---
 # <a name="handling-errors"></a>Control de errores
 Las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> generan excepciones de sistema (como <xref:System.ArgumentException>) y excepciones específicas de web (que son <xref:System.Net.WebException> generadas mediante el método <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -48,7 +47,7 @@ Las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> generan 
   
  En la tabla siguiente se describen los valores posibles de la propiedad **Status**.  
   
-|Estado|Description|  
+|Estado|Descripción|  
 |------------|-----------------|  
 |ConnectFailure|No se ha podido contactar con el servicio remoto en el nivel de transporte.|  
 |ConnectionClosed|La conexión ha terminado antes de tiempo.|  

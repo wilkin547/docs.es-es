@@ -7,13 +7,12 @@ dev_langs:
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 31856e7fc7136b3bdb8fab9fdf8185de32a3007a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ceaa7cbaf2035276a0ba0105f3969f0249c6132
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395218"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47402609"
 ---
 # <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Cómo: solicitar una página web y recuperar los resultados como una secuencia
 En este ejemplo se muestra cómo solicitar una página web y recuperar los resultados en una secuencia.  

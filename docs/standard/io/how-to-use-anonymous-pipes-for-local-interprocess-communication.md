@@ -16,11 +16,11 @@ ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641084"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47234814"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Cómo: Usar canalizaciones anónimas para la comunicación local entre procesos
 Las canalizaciones anónimas permiten la comunicación entre procesos en un equipo local. Proporcionan menos funcionalidad que las canalizaciones con nombre, pero también tienen menos carga de procesamiento. Puede utilizar las canalizaciones anónimas para facilitar la comunicación entre procesos en un equipo local. No se puede utilizar las canalizaciones anónimas para la comunicación a través de una red.  

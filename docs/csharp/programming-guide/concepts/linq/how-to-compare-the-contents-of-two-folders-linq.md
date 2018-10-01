@@ -3,11 +3,11 @@ title: 'Cómo: Comparar el contenido de dos carpetas (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
 ms.openlocfilehash: 1517d1f9e451306e40835e6032e2aff2fe3e60ab
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46698942"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455715"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Cómo: Comparar el contenido de dos carpetas (LINQ) (C#)
 En este ejemplo se muestran tres maneras de comparar dos listados de archivos:  

@@ -3,12 +3,12 @@ title: Introducción a la transformación de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45618027"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47400795"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introducción a la transformación de sintaxis
 
@@ -30,7 +30,7 @@ Elija una de las dos estrategias para las transformaciones de sintaxis. Los patr
 
 En la primera transformación de sintaxis se muestran los patrones de diseño Factory Method. Va a reemplazar una instrucción `using System.Collections;` por una instrucción `using System.Collections.Generic;`. En este ejemplo se muestra cómo crear objetos <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> mediante los patrones de diseño Factory Method <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>. Para cada tipo de **nodo**, **token** o **curiosidades** hay un patrón Factory Method que crea una instancia de ese tipo. Creará árboles de sintaxis mediante la composición de nodos jerárquicamente de abajo arriba. Luego, transformará el programa existente para reemplazar los nodos existentes por el nuevo árbol que ha creado.
 
-Inicie Visual Studio y cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C#. En Visual Studio, elija **Archivo** > **Nuevo* > **Proyecto** para mostrar el cuadro de diálogo Nuevo proyecto. En **Visual C#** > **Extensibilidad**, elija **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente). Este tutorial rápido tiene dos proyectos de ejemplo, así que llame a la solución **SyntaxTransformationQuickStart** y al proyecto **ConstructionCS**. Haga clic en **Aceptar**.
+Inicie Visual Studio y cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C#. En Visual Studio, elija **Archivo** > **Nuevo** > **Proyecto** para mostrar el cuadro de diálogo Nuevo proyecto. En **Visual C#** > **Extensibilidad**, elija **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente). Este tutorial rápido tiene dos proyectos de ejemplo, así que llame a la solución **SyntaxTransformationQuickStart** y al proyecto **ConstructionCS**. Haga clic en **Aceptar**.
 
 Este proyecto usa los métodos de clase <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> para construir un <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> que representa el espacio de nombres `System.Collections.Generic`.
 

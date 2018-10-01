@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 562129b7deea4af9b91dfc92f83a538f6f89f06a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390304"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208307"
 ---
 # <a name="asynchronous-client-socket-example"></a>Ejemplo de sockets de cliente asincrónicos
 El programa de ejemplo siguiente crea un cliente que se conecta a un servidor. El cliente se ha creado con un socket asincrónico, así que no se suspende la ejecución de la aplicación de cliente mientras se espera una respuesta del servidor. La aplicación envía una cadena al servidor y luego muestra la cadena devuelta por el servidor en la consola.  

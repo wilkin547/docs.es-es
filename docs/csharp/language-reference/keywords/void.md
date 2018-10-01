@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
 ms.openlocfilehash: 223db893dd42181c234d9a07c1a1c00af26f0c30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47232905"
 ---
 # <a name="void-c-reference"></a>void (Referencia de C#)
 Cuando se usa como tipo de valor devuelto para un método, `void` especifica que el método no devuelve un valor.

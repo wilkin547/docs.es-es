@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 02e6d65baac0a0eab9bfde545a117d3636239c17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cab8bb848596d4d6dc7f810d454b875f4fd58e47
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397590"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47216507"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nombres de mismo nivel e identificadores PNRP
 Un nombre de mismo nivel representa un punto de conexión para la comunicación, que puede ser un equipo, un usuario, un grupo, un servicio o cualquier elemento asociado a un elemento del mismo nivel que se puede resolver en una dirección IPv6. El Protocolo de resolución de nombres de mismo nivel (PNRP) toma el nombre de mismo nivel estadísticamente único para la creación de un identificador PNRP, que se usa para identificar a los miembros de la nube.  

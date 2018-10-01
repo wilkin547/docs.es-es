@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 532928118df9784198eada6f6a2f1e7a1b808ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394841"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47194014"
 ---
 # <a name="ipv6-addressing"></a>Direccionamiento IPv6
 En el protocolo de Internet versión 6 (IPv6), las direcciones tienen una longitud de 128 bits. Entre otras razones, el espacio de direcciones es tan grande para subdividir las direcciones disponibles en una jerarquía de dominios de enrutamiento que reflejen la topología de Internet y para asignar las direcciones de los adaptadores de red (o interfaces) que conectan los dispositivos a la red. IPv6 se caracteriza por una capacidad inherente para resolver direcciones en su nivel más bajo, que es el nivel de la interfaz de red, y cuenta con funciones de configuración automática.  
