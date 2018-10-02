@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393216"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213720"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Opciones del compilador de C#)
 La opción **-reference** hace que el compilador importe información de tipo [public](../../../csharp/language-reference/keywords/public.md) del archivo especificado al proyecto actual, lo que permite hacer referencia a metadatos de los archivos de ensamblado especificados.  
@@ -67,10 +67,12 @@ La opción **-reference** hace que el compilador importe información de tipo [p
  En este ejemplo se muestra cómo usar la característica [alias externo](../../../csharp/language-reference/keywords/extern-alias.md).  
   
  Compile el archivo de origen e importe los metadatos desde `grid.dll` y `grid20.dll`, que se han compilado previamente. Los dos archivos DLL contienen versiones independientes del mismo componente y se usan dos **-reference** con opciones de alias para compilar el archivo de origen. Las opciones tiene este aspecto:  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll y -reference:GridV2=grid20.dll  
-  
- Esto configura los alias externos "GridV1" y "GridV2" que se usan en el programa por medio de una instrucción extern:  
+ Esto configura los alias externos `GridV1` y `GridV2`, que se usan en el programa por medio de una instrucción `extern`:  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- Una vez hecho esto, se puede hacer referencia al control de cuadrícula de grid.dll anteponiendo GridV1 al nombre del control, de esta forma:  
+ Una vez hecho esto, se puede hacer referencia al control de cuadrícula desde `grid.dll` si se antepone `GridV1` al nombre del control, de esta forma:  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- Además, se puede hacer referencia al control de cuadrícula de grid20.dll anteponiendo GridV2 al nombre del control, de esta forma:  
+ Además, se puede hacer referencia al control de cuadrícula desde `grid20.dll` si se antepone `GridV2` al nombre del control, de esta forma:  
   
 ```csharp  
 GridV2::Grid   

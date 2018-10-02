@@ -3,12 +3,12 @@ title: Creación de un cliente de REST con .NET Core
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc3c23b277b233efba9f32cc49b29ac905f3abc8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480161"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227264"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -37,7 +37,7 @@ Antes de comenzar a realizar modificaciones, vamos a recorrer los pasos para eje
 Después de restaurar los paquetes, ejecutará `dotnet build`. Esta acción ejecuta el motor de compilación y crea la aplicación. Por último, ejecute `dotnet run` para ejecutar la aplicación.
 
 ## <a name="adding-new-dependencies"></a>Adición de nuevas dependencias
-Uno de los objetivos de diseño principales para .NET Core es reducir el tamaño de la instalación de .NET Framework. El marco de trabajo de la aplicación .NET Core solo contiene los elementos más comunes del marco completo .NET. Si una aplicación necesita bibliotecas adicionales para algunas de sus características, agregará esas dependencias al archivo de proyecto (\*.csproj) de C#. En nuestro ejemplo, deberá agregar el paquete `System.Runtime.Serialization.Json` para que su aplicación pueda procesar respuestas JSON.
+Uno de los principales objetivos de diseño de .NET Core es minimizar el tamaño de la instalación de .NET. Si una aplicación necesita bibliotecas adicionales para algunas de sus características, agregará esas dependencias al archivo de proyecto (\*.csproj) de C#. En nuestro ejemplo, deberá agregar el paquete `System.Runtime.Serialization.Json` para que su aplicación pueda procesar respuestas JSON.
 
 Abra el archivo de proyecto `csproj`. La primera línea del archivo debe aparecer como:
 
