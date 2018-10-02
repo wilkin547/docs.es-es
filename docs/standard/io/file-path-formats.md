@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933610"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861307"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -117,7 +117,7 @@ Casi todas las rutas de acceso que se pasan a las API de Windows se normalizan. 
 - Evalúa los componentes de directorio relativos (`.` para el directorio actual y `..` para el directorio principal).
 - Recorta determinados caracteres.
 
-Esta normalización se produce de manera implícita, pero se puede realizar de forma explícita mediante una llamada al método <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, que encapsula una llamada a la [función GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx). También se puede llamar directamente a la [función GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) de Windows mediante P/Invoke. También se puede llamar a 
+Esta normalización se produce de manera implícita, pero se puede realizar de forma explícita mediante una llamada al método <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, que encapsula una llamada a [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). También se puede llamar directamente al elemento [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) de Windows mediante P/Invoke. También se puede llamar a 
 
 ### <a name="identifying-the-path"></a>Identificación de la ruta de acceso
 

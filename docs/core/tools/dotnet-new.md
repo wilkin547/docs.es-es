@@ -3,13 +3,13 @@ title: 'Comando dotnet new: CLI de .NET Core'
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 author: mairaw
 ms.author: mairaw
-ms.date: 06/12/2018
-ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 07/31/2018
+ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207814"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512560"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -22,28 +22,34 @@ ms.locfileid: "36207814"
 ## <a name="synopsis"></a>Sinopsis
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
     [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
+
 ---
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet new` proporciona una manera cómoda de inicializar un proyecto .NET Core válido.
 
@@ -284,9 +290,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 **web**
 
-`--use-launch-settings`: incluye *launchSettings.json* en la salida de la plantilla generada.
+`--exclude-launch-settings`: excluye *launchSettings.json* de la plantilla generada.
 
 `--no-restore`: no se ejecuta una restauración implícita durante la creación del proyecto.
+
+`--no-https`: el proyecto no requiere HTTPS. Esta opción solo se aplica si no se usan `IndividualAuth` u `OrganizationalAuth`.
 
 **webapi**
 
@@ -311,11 +319,13 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 `-r|--org-read-access`: concede a esta aplicación acceso de lectura al directorio. Solo se aplica a las autenticaciones `SingleOrg` y `MultiOrg`.
 
-`--use-launch-settings`: incluye *launchSettings.json* en la salida de la plantilla generada.
+`--exclude-launch-settings`: excluye *launchSettings.json* de la plantilla generada.
 
 `-uld|--use-local-db`: especifica que se debería usar LocalDB en vez de SQLite. Solo se aplica a las autenticaciones `Individual` y `IndividualB2C`.
 
 `--no-restore`: no se ejecuta una restauración implícita durante la creación del proyecto.
+
+`--no-https`: el proyecto no requiere HTTPS. `app.UseHsts` y `app.UseHttpsRedirection` no se agregan a `Startup.Configure`. Esta opción solo se aplica si no se usan `Individual`, `IndividualB2C`, `SingleOrg` o `MultiOrg`.
 
 **mvc, razor**
 
@@ -348,13 +358,15 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 `-r|--org-read-access`: concede a esta aplicación acceso de lectura al directorio. Solo se aplica a las autenticaciones `SingleOrg` y `MultiOrg`.
 
-`--use-launch-settings`: incluye *launchSettings.json* en la salida de la plantilla generada.
+`--exclude-launch-settings`: excluye *launchSettings.json* de la plantilla generada.
 
 `--use-browserlink`: incluye BrowserLink en el proyecto.
 
 `-uld|--use-local-db`: especifica que se debería usar LocalDB en vez de SQLite. Solo se aplica a las autenticaciones `Individual` y `IndividualB2C`.
 
 `--no-restore`: no se ejecuta una restauración implícita durante la creación del proyecto.
+
+`--no-https`: el proyecto no requiere HTTPS. `app.UseHsts` y `app.UseHttpsRedirection` no se agregan a `Startup.Configure`. Esta opción solo se aplica si no se usan `Individual`, `IndividualB2C`, `SingleOrg` o `MultiOrg`.
 
 **page**
 
@@ -524,7 +536,7 @@ Creación de un archivo *global.json* en el directorio actual que establezca la 
 
 ## <a name="see-also"></a>Vea también
 
-[Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new)  
-[Creación de una plantilla personalizada para dotnet new](~/docs/core/tutorials/create-custom-template.md)  
-[Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Plantillas disponibles para dotnet new)
+* [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new)  
+* [Creación de una plantilla personalizada para dotnet new](~/docs/core/tutorials/create-custom-template.md)  
+* [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
+* [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Plantillas disponibles para dotnet new)

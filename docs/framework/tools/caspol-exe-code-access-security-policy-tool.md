@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410103"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748437"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)
 La herramienta de la directiva de seguridad de acceso del código (CAS), o herramienta Caspol.exe, permite a los usuarios y administradores modificar las directivas de seguridad correspondientes a los niveles de equipo, usuario y empresa.  
@@ -45,7 +45,7 @@ caspol [options]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**-addfulltrust** *archivo_ensamblado*<br /><br /> o<br /><br /> **-af** *archivo_ensamblado*|Agrega un ensamblado que implementa un objeto de seguridad personalizado (como un permiso personalizado o una condición de pertenencia personalizada) a la lista de ensamblados de plena confianza para un nivel de directiva específico. El argumento *archivo_ensamblado* especifica el ensamblado que se va a agregar. Este archivo debe estar firmado con un [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md). Puede firmar un ensamblado con un nombre seguro mediante la herramienta [Nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).<br /><br /> Cada vez que se agrega a la directiva un conjunto de permisos que contiene un permiso personalizado, se debe agregar el ensamblado que implementa el permiso personalizado a la lista de plena confianza para dicho nivel de directiva. Los ensamblados que implementan objetos de seguridad personalizados (como grupos de código personalizados o condiciones de pertenencia personalizadas) que se utilizan en una directiva de seguridad (como la directiva de equipo) siempre deben agregarse a la lista de ensamblados de plena confianza. **Precaución:** Si el ensamblado que implementa el objeto de seguridad personalizado hace referencia a otros ensamblados, debe agregar primero los ensamblados a los que se hace referencia a la lista de ensamblados de plena confianza. Los objetos de seguridad personalizados creados con Visual Basic, C++ y JScript hacen referencia a Microsoft.VisualBasic.dll, Microsoft.VisualC.dll o Microsoft.JScript.dll, respectivamente. Estos ensamblados no se encuentran en la lista de ensamblados de plena confianza de forma predeterminada. Debe agregar el ensamblado adecuado a la lista de plena confianza antes de agregar un objeto de seguridad personalizado. Si se produce un error al realizar esta operación, el sistema de seguridad se interrumpirá y los ensamblados no se cargarán. En caso de que se produzca esta situación, la opción **-all -reset** de la herramienta Caspol.exe no reparará la seguridad. Para reparar la seguridad, debe editar manualmente los archivos de seguridad a fin de quitar el objeto de seguridad personalizado.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> o<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Agrega un grupo de código nuevo a la jerarquía de grupos de código. Puede especificar el argumento *parent_label* o el argumento *parent_name*. El argumento *parent_label* especifica la etiqueta (como 1. o 1.1) del nombre del grupo de código que es el elemento primario del grupo de código que se va a agregar. El argumento *parent_name* especifica el nombre del grupo de código que es el elemento primario del grupo de código que se va a agregar. Dado que los argumentos *parent_label* y *parent_name* se pueden usar indistintamente, Caspol.exe debe poder distinguir entre ellos. Por tanto, el argumento *parent_name* no puede empezar con un número. Además, *parent_name* solo puede contener caracteres de A a Z, de 0 a 9 y de subrayado.<br /><br /> El argumento *mship* especifica la condición de pertenencia para el nuevo grupo de código. Para más información, consulte la tabla de los argumentos *mship* más adelante en esta sección.<br /><br /> El argumento *pset_name* es el nombre del conjunto de permisos que se asociará al grupo de código nuevo. También se pueden establecer uno o varios argumentos *flags* para el nuevo grupo. Para más información, consulte la tabla de argumentos *flags* más adelante en esta sección.|  
@@ -81,31 +81,31 @@ caspol [options]
   
  El argumento *mship*, que especifica la condición de pertenencia de un grupo de código, se puede usar con las opciones **-addgroup** y **-chggroup**. Cada argumento *mship* se implementa como una clase de .NET Framework. Para especificar el argumento *mship*, use uno de los argumentos siguientes.  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
-|**-allcode**|Especifica todo el código. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.AllMembershipCondition>.|  
-|**-appdir**|Especifica el directorio de la aplicación. Si especifica **–appdir** como condición de pertenencia, la evidencia de dirección URL del código se compara con la evidencia de directorio de aplicación de dicho código. Si ambos valores de evidencia coinciden, se cumple la condición de pertenencia. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>.|  
+|**-allcode**|Especifica todo el código. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
+|**-appdir**|Especifica el directorio de la aplicación. Si especifica **–appdir** como condición de pertenencia, la evidencia de dirección URL del código se compara con la evidencia de directorio de aplicación de dicho código. Si ambos valores de evidencia coinciden, se cumple la condición de pertenencia. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
 |**-custom**  *xmlfile*|Agrega una condición de pertenencia personalizada. El argumento *xmlfile* obligatorio especifica el archivo .xml que contiene la serialización en formato XML de la condición de pertenencia personalizada.|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *archivo_ensamblado* }|Especifica el código que tiene el hash de ensamblado especificado. Para usar un hash como condición de pertenencia de grupo de código, debe especificar el valor hash o el archivo de ensamblado. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.HashMembershipCondition>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica el código que tiene el editor de software especificado, indicado por un archivo de certificado, una firma en un archivo o la representación hexadecimal de un certificado X509. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.PublisherMembershipCondition>.|  
-|**-site** *website*|Especifica el código que tiene el sitio de origen especificado. Por ejemplo:<br /><br /> **-site** www.proseware.com<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.SiteMembershipCondition>.|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica el código que tiene un nombre seguro determinado, que se indica por el nombre de archivo, el nombre de ensamblado en forma de cadena y la versión del ensamblado con el formato *major*.*minor*.*build*.*revision*. Por ejemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
-|**-url** *URL*|Especifica el código que se origina en la dirección URL especificada. La dirección URL debe incluir un protocolo, como http:// o ftp://. Además, puede utilizarse un carácter comodín (\*) para especificar varios ensamblados desde una dirección URL en particular. **Nota**: Dado que una dirección URL puede identificarse mediante el uso de varios nombres, el uso de una dirección URL como condición de pertenencia no es una forma segura de confirmar la identidad del código. Siempre que pueda, utilice una condición de pertenencia consistente en un nombre seguro, en una compañía de software o en un hash. <br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.UrlMembershipCondition>.|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *archivo_ensamblado* }|Especifica el código que tiene el hash de ensamblado especificado. Para usar un hash como condición de pertenencia de grupo de código, debe especificar el valor hash o el archivo de ensamblado. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica el código que tiene el editor de software especificado, indicado por un archivo de certificado, una firma en un archivo o la representación hexadecimal de un certificado X509. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
+|**-site** *website*|Especifica el código que tiene el sitio de origen especificado. Por ejemplo:<br /><br /> `-site** www.proseware.com`<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica el código que tiene un nombre seguro determinado, que se indica por el nombre de archivo, el nombre de ensamblado en forma de cadena y la versión del ensamblado con el formato *major*.*minor*.*build*.*revision*. Por ejemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Especifica el código que se origina en la dirección URL especificada. La dirección URL debe incluir un protocolo, como http:// o ftp://. Además, puede utilizarse un carácter comodín (\*) para especificar varios ensamblados desde una dirección URL en particular. **Nota**: Dado que una dirección URL puede identificarse mediante el uso de varios nombres, el uso de una dirección URL como condición de pertenencia no es una forma segura de confirmar la identidad del código. Siempre que pueda, utilice una condición de pertenencia consistente en un nombre seguro, en una compañía de software o en un hash. <br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Especifica el código que tiene la zona de origen especificada. El argumento *zonename* puede ser uno de los valores siguientes: **MyComputer**, **Intranet**, **Trusted**, **Internet** o **Untrusted**. Para obtener más información sobre esta condición de pertenencia, vea la clase <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  El argumento *flags*, que se puede usar con las opciones **–addgroup** y **–chggroup**, se especifica mediante uno de los argumentos siguientes.  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
-|**-description "** *descripción* **"**|Si se usa con la opción **–addgroup**, especifica la descripción del grupo de código que se va a agregar. Si se usa con la opción **–chggroup**, especifica la descripción del grupo de código que se va a modificar. El argumento *descripción* debe ir entre comillas dobles.|  
+|**-description** "*descripción*"|Si se usa con la opción **–addgroup**, especifica la descripción del grupo de código que se va a agregar. Si se usa con la opción **–chggroup**, especifica la descripción del grupo de código que se va a modificar. El argumento *descripción* debe ir entre comillas dobles.|  
 |**-exclusive** {**on**&#124;**off**}|Cuando esta opción se establece en **on**, indica que solo se tiene en cuenta el conjunto de permisos asociado al grupo de código que se va a agregar o a modificar cuando parte del código satisface la condición de pertenencia del grupo de código. Cuando esta opción se establece en **off**, Caspol.exe tiene en cuenta los conjuntos de permisos de todos los grupos de código coincidentes en el nivel de directiva.|  
 |**-levelfinal** {**on**&#124;**off**}|Cuando esta opción se establece en **on**, indica que no se tiene en cuenta ningún nivel de directiva por debajo del nivel en el que se encuentra el grupo de código agregado o modificado. Esta opción se usa normalmente en el nivel de directiva de equipo. Por ejemplo, si establece esta marca para un grupo de código en el nivel de equipo y una parte de código cumple la condición de pertenencia de este grupo de código, Caspol.exe no calcula ni aplica la directiva de nivel de usuario para este código.|  
-|**-name "** *nombre* **"**|Si se usa con la opción **–addgroup**, especifica el nombre de scripting del grupo de código que se va a agregar. Si se usa con la opción **-chggroup**, especifica el nombre de scripting del grupo de código que se va a modificar. El argumento *nombre* debe ir entre comillas dobles. El argumento *nombre* no puede empezar con un número y solo puede contener caracteres de A a Z, de 0 a 9 y de subrayado. Se puede hacer referencia a los grupos de código mediante el argumento *nombre* en lugar de usar su etiqueta numérica. El argumento *nombre* también es muy útil en materia de scripting.|  
+|**-name** "*nombre*"|Si se usa con la opción **–addgroup**, especifica el nombre de scripting del grupo de código que se va a agregar. Si se usa con la opción **-chggroup**, especifica el nombre de scripting del grupo de código que se va a modificar. El argumento *nombre* debe ir entre comillas dobles. El argumento *nombre* no puede empezar con un número y solo puede contener caracteres de A a Z, de 0 a 9 y de subrayado. Se puede hacer referencia a los grupos de código mediante el argumento *nombre* en lugar de usar su etiqueta numérica. El argumento *nombre* también es muy útil en materia de scripting.|  
   
 ## <a name="remarks"></a>Comentarios  
  La directiva de seguridad se expresa mediante tres niveles: equipo, usuario y empresa. El conjunto de permisos que recibe un ensamblado viene determinado por la intersección de los conjuntos de permisos permitidos por estos tres niveles de directiva. Cada nivel está representado por una estructura jerárquica de grupos de código. Cada grupo de código tiene una condición de pertenencia que determina qué código es miembro de ese grupo. Asimismo, cada grupo de código tiene asociado un conjunto de permisos con nombre. Este conjunto de permisos especifica los permisos que el runtime permite que tenga el código que satisface la condición de pertenencia. Una jerarquía de grupos de código, junto con sus conjuntos de permisos con nombre asociados, define y conserva cada nivel de directiva de seguridad. Puede usar las opciones **–user**, **-customuser**, **–machine** y **-enterprise** para establecer el nivel de la directiva de seguridad.  
   
- Para más información sobre la directiva de seguridad y el modo en que el runtime determina qué permisos se conceden al código, consulte [Administración de directivas de seguridad](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Para más información sobre la directiva de seguridad y el modo en que el runtime determina qué permisos se conceden al código, consulte [Administración de directivas de seguridad](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Hacer referencia a grupos de código y conjuntos de permisos  
  Para facilitar las referencias a grupos de código en una jerarquía, la opción **-list** muestra una lista de grupos de código con sangría junto con sus etiquetas numéricas (1, 1.1, 1.1.1, etc.). Las demás operaciones de línea de comandos cuyo destino son los grupos de código también usan etiquetas numéricas para hacer referencia a grupos de código específicos.  
@@ -132,13 +132,13 @@ caspol [options]
   
  Suponga que se ha agregado a la directiva de equipo un conjunto de permisos que contiene un permiso personalizado. Este permiso personalizado se implementa en `MyPerm.exe` y `MyPerm.exe` hace referencia a clases de `MyOther.exe`. Ambos ensamblados de deben agregar a la lista de ensamblados de plena confianza. El comando siguiente agrega el ensamblado `MyPerm.exe` a la lista de plena confianza de la directiva de equipo.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyPerm.exe  
 ```  
   
  El comando siguiente agrega el ensamblado `MyOther.exe` a la lista de plena confianza de la directiva de equipo.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyOther.exe  
 ```  
   
@@ -146,13 +146,13 @@ caspol -machine -addfulltrust MyOther.exe
   
  El comando siguiente agrega un grupo de código secundario a la raíz de la jerarquía de grupos de código de la directiva de equipo. El nuevo grupo de código es miembro de la zona **Internet** y está asociado al conjunto de permisos **Execution**.  
   
-```  
+```console  
 caspol -machine -addgroup 1.  -zone Internet Execution  
 ```  
   
  El siguiente comando agrega un grupo de código secundario que concede permisos de intranet local al recurso compartido \\\netserver\netshare.  
   
-```  
+```console  
 caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet  
 ```  
   
@@ -160,7 +160,7 @@ caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet
   
  El comando siguiente agrega el conjunto de permisos `Mypset` a la directiva de usuario.  
   
-```  
+```console  
 caspol -user -addpset Mypset.xml Mypset  
 ```  
   
@@ -168,13 +168,13 @@ caspol -user -addpset Mypset.xml Mypset
   
  El comando siguiente cambia el conjunto de permisos de la directiva de usuario del grupo de código cuya etiqueta es 1.2. para el conjunto de permisos **Execution**.  
   
-```  
+```console  
 caspol -user -chggroup 1.2. Execution  
 ```  
   
  El comando siguiente cambia la condición de pertenencia de la directiva predeterminada del grupo de código cuya etiqueta es 1.2.1. y cambia el valor de la marca **exclusive**. La condición de pertenencia se define como código que se origina en la zona **Internet** y se activa la marca **exclusive**.  
   
-```  
+```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  
 ```  
   
@@ -182,7 +182,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
   
  El comando siguiente cambia el conjunto de permisos denominado `Mypset` por el conjunto de permisos contenido en `newpset.xml`. Tenga en cuenta que la versión actual no permite cambiar conjuntos de permisos que se estén usando en la jerarquía de grupos de código.  
   
-```  
+```console  
 caspol -chgpset Mypset newpset.xml  
 ```  
   
@@ -190,7 +190,7 @@ caspol -chgpset Mypset newpset.xml
   
  El comando siguiente hace que el grupo de código raíz de la directiva de usuario (con la etiqueta numérica 1) se asocie al conjunto de permisos denominado **Nothing**. Esto impide la ejecución de Caspol.exe.  
   
-```  
+```console  
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
@@ -198,7 +198,7 @@ caspol -force -user -chggroup 1 Nothing
   
  El comando siguiente recupera la última directiva de equipo guardada.  
   
-```  
+```console  
 caspol -machine -recover  
 ```  
   
@@ -206,7 +206,7 @@ caspol -machine -recover
   
  El comando siguiente quita el grupo de código con la etiqueta numérica 1.1. Si este grupo de código tiene grupos de código secundarios, estos también se eliminan.  
   
-```  
+```console  
 caspol -remgroup 1.1.  
 ```  
   
@@ -214,13 +214,13 @@ caspol -remgroup 1.1.
   
  El comando siguiente quita el conjunto de permisos **Execution** de la directiva de usuario.  
   
-```  
+```console  
 caspol -user -rempset Execution  
 ```  
   
  El comando siguiente quita `Mypset` del nivel de directiva de usuario.  
   
-```  
+```console  
 caspol -rempset MyPset  
 ```  
   
@@ -228,13 +228,13 @@ caspol -rempset MyPset
   
  El comando siguiente muestra todos los grupos de código de la directiva de equipo a la que pertenece `myassembly`.  
   
-```  
+```console  
 caspol -machine -resolvegroup myassembly  
 ```  
   
  El comando siguiente muestra todos los grupos de código de las directivas de equipo, empresa y usuario personalizado especificado a las que pertenece `myassembly`.  
   
-```  
+```console  
 caspol -customall "c:\config_test\security.config" -resolvegroup myassembly  
 ```  
   
@@ -242,10 +242,10 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
   
  El comando siguiente calcula los permisos correspondientes a `testassembly` basándose en los niveles de directiva de equipo y usuario.  
   
-```  
+```console  
 caspol -all -resolveperm testassembly  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)  
- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Herramientas](index.md)  
+ [Símbolos del sistema](developer-command-prompt-for-vs.md)

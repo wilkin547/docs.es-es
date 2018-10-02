@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457935"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514190"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guía de programación de C#)
 En C#, un *operador* es un elemento de programa que se aplica a uno o varios *operandos* en una expresión o instrucción. Los operadores que toman un operando, como el operador de incremento (`++`) o `new`, se conocen como operadores *unarios* . Los operadores que toman dos operandos, como los operadores aritméticos (`+`,`-`,`*`,`/`) se conocen como operadores *binarios* . Un operador, el operador condicional (`?:`), toma tres operandos y es el único operador ternario de C#.  
@@ -37,7 +37,7 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
   
  **Operadores principales**  
   
-|Expresión|Description|  
+|Expresión|Descripción|  
 |----------------|-----------------|  
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Acceso a miembros<br /><br /> Acceso a miembros condicional|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Invocación de método y delegado|  
@@ -56,7 +56,7 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
   
  **Operadores unarios**  
   
-|Expresión|Description|  
+|Expresión|Descripción|  
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|identidad|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negación|  
@@ -68,7 +68,7 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
   
  **Operadores de multiplicación**  
   
-|Expresión|Description|  
+|Expresión|Descripción|  
 |----------------|-----------------|  
 |[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Multiplicación|  
 |[/](../../../csharp/language-reference/operators/division-operator.md)|División|  
@@ -76,21 +76,21 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
   
  **Operadores de suma**  
   
-|Expresión|Description|  
+|Expresión|Descripción|  
 |----------------|-----------------|  
 |x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Suma, concatenación de cadenas, combinación de delegados|  
 |x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Resta, eliminación de delegados|  
   
  **Operadores de desplazamiento**  
   
-|Expresión|Description|  
+|Expresión|Descripción|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Desplazamiento a la izquierda|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Desplazamiento a la derecha|  
   
  **Operadores relacionales y de tipo**  
   
-|Expresión|Description|  
+|Expresión|Descripción|  
 |----------------|-----------------|  
 |x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|Menor que|  
 |x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|Mayor que|  
@@ -101,14 +101,14 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
   
  **Operadores de igualdad**  
   
-|Expresión|Description|  
+|Expresión|Descripción|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Igual|  
 |x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|No igual|  
   
  **Operadores lógicos, condicionales y NULL**  
   
-|Categoría|Expresión|Description|  
+|Categoría|Expresión|Descripción|  
 |--------------|----------------|-----------------|  
 |AND lógico|x [&](../../../csharp/language-reference/operators/and-operator.md) y|AND bit a bit entero, AND lógico booleano|  
 |XOR lógico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR bit a bit entero, XOR lógico booleano|  
@@ -120,10 +120,10 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
   
  **Operadores de asignación y anónimos**  
   
-|Expresión|Description|  
+|Expresión|Descripción|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Asignación|  
-|x op= y|Asignación compuesta. Admite estos operadores: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|Asignación compuesta. Admite estos operadores: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Función anónima (expresión lambda)|  
   
 ## <a name="associativity"></a>Asociatividad  
@@ -163,11 +163,12 @@ a = (b = c);
 |`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
   
 ## <a name="operator-overloading"></a>Sobrecarga de operadores  
- Se puede cambiar el comportamiento de los operadores para las clases y structs personalizados. Este proceso se conoce como *sobrecarga de operadores*. Para obtener más información, vea [Operadores sobrecargables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).  
+ Se puede cambiar el comportamiento de los operadores para las clases y structs personalizados. Este proceso se conoce como *sobrecarga de operadores*. Para obtener más información, vea el artículo sobre la palabra clave [operator](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) y [Operadores sobrecargables](../../../csharp/language-reference/keywords/operator.md).  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  Para obtener más información, vea [Palabras clave de operador](../../../csharp/language-reference/keywords/operator-keywords.md) y [Operadores de C#](../../../csharp/language-reference/operators/index.md).  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Instrucciones, expresiones y operadores](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Instrucciones, expresiones y operadores](../../../csharp/programming-guide/statements-expressions-operators/index.md)
