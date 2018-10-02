@@ -1,77 +1,68 @@
 ---
 title: lock (Instrucción, Referencia de C#)
-description: 'La palabra clave lock se usa en el subprocesamiento '
-ms.date: 07/20/2015
+description: Use la instrucción lock de C# para sincronizar el acceso de un subproceso al recurso compartido
+ms.date: 08/28/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6ed46837482642dfd7e1a96cd120fc18023c5e9f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931198"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858361"
 ---
 # <a name="lock-statement-c-reference"></a>lock (Instrucción, Referencia de C#)
 
-La palabra clave `lock` marca un bloque de instrucciones como una sección crítica. Para ello, obtiene el bloqueo de exclusión mutua para un objeto determinado, ejecuta una instrucción y, después, libera el bloqueo. En el ejemplo siguiente se incluye una instrucción `lock`.
+La instrucción `lock` obtiene el bloqueo de exclusión mutua de un objeto determinado, ejecuta un bloque de instrucciones y luego libera el bloqueo. Mientras se mantiene un bloqueo, el subproceso que lo mantiene puede volver a obtener y liberar el bloqueo. Ningún otro subproceso puede obtener el bloqueo y espera hasta que se libera.
+
+La instrucción `lock` tiene el formato
 
 ```csharp
-class Account
+lock (x)
 {
-    decimal balance;
-    private Object thisLock = new Object();
-
-    public void Withdraw(decimal amount)
-    {
-        lock (thisLock)
-        {
-            if (amount > balance)
-            {
-                throw new Exception("Insufficient funds");
-            }
-            balance -= amount;
-        }
-    }
+    // Your code...
 }
 ```
 
-Para obtener más información, vea [Sincronización de subprocesos](../../programming-guide/concepts/threading/thread-synchronization.md).
+donde `x` es una expresión de un [tipo de referencia](reference-types.md). Es exactamente equivalente a
 
-## <a name="remarks"></a>Comentarios
+```csharp
+object __lockObj = x;
+bool __lockWasTaken = false;
+try
+{
+    System.Threading.Monitor.Enter(__lockObj, ref __lockWasTaken);
+    // Your code...
+}
+finally
+{
+    if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
+}
+```
 
-La palabra clave `lock` garantiza que un subproceso no entra en una sección crítica de código mientras otro subproceso se encuentra en la sección crítica. Si otro subproceso intenta entrar en un código bloqueado, esperará hasta que se libere el objeto.
-
-En la sección [Subprocesamiento](../../programming-guide/concepts/threading/index.md) se describen los subprocesos.
-
-La palabra clave `lock` llama a <xref:System.Threading.Monitor.Enter%2A> al comienzo del bloque y a <xref:System.Threading.Monitor.Exit%2A> al final de este. Se genera <xref:System.Threading.ThreadInterruptedException> si <xref:System.Threading.Thread.Interrupt%2A> interrumpe un subproceso que está esperando para especificar una instrucción `lock`.
-
-En general, evite el bloqueo en un tipo `public` o en instancias que estén fuera del control de su código. Las construcciones comunes `lock (this)`, `lock (typeof (MyType))` y `lock ("myLock")` incumplen esta instrucción:
-
-- `lock (this)` es un problema si la instancia es accesible públicamente.
-
-- `lock (typeof (MyType))` es un problema si `MyType` es accesible públicamente.
-
-- `lock("myLock")` es un problema porque cualquier otro código del proceso que use la misma cadena compartirá el bloqueo.
-
-Se recomienda definir un objeto `private` para bloquear, o una variable de objeto `private static` para proteger los datos comunes a todas las instancias.
+Puesto que el código usa un bloque [try... finally](try-finally.md), el bloqueo se libera aunque se produzca una excepción dentro del cuerpo de una instrucción `lock`.
 
 No se puede usar la palabra clave [await](await.md) en el cuerpo de una instrucción `lock`.
 
-## <a name="example---threads-without-locking"></a>Ejemplo: subprocesos sin bloquear
+## <a name="remarks"></a>Comentarios
 
-En el ejemplo siguiente se muestra un uso simple de los subprocesos sin bloquear en C#:
+Al sincronizar el acceso del subproceso al recurso compartido, bloquee una instancia dedicada de objeto (por ejemplo, `private readonly object balanceLock = new object();`) u otra instancia cuyo empleo como objeto de bloqueo sea poco probable por parte de elementos no relacionados del código. Evite el uso de la misma instancia de objeto de bloqueo para distintos recursos compartidos, ya que se podría producir un interbloqueo o una contención de bloqueo. En particular, evite usar
 
-[!code-csharp[csrefKeywordsFixedLock#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#5)]
+- `this` (los autores de llamadas podrían usarlo como un bloqueo),
+- instancias <xref:System.Type> (el operador o la reflexión [typeof](typeof.md) podrían obtenerlas),
+- instancias de cadena, incluidos literales de cadena,
 
-## <a name="example---threads-using-locking"></a>Ejemplo: subprocesos con bloqueo
+como objetos de bloqueo.
 
-En el ejemplo siguiente se usan subprocesos y `lock`. Siempre que la instrucción `lock` esté presente, el bloque de instrucciones será una sección crítica y `balance` nunca se convertirá en un número negativo:
+## <a name="example"></a>Ejemplo
 
-[!code-csharp[csrefKeywordsFixedLock#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#6)]
+En el ejemplo siguiente se define una clase `Account` que sincroniza el acceso a su campo privado `balance` mediante el bloqueo de una instancia dedicada `balanceLock`. El empleo de la misma instancia para bloquear garantiza que el campo `balance` no sea actualizado al mismo tiempo por dos subprocesos que intentan llamar a los métodos `Debit` o `Credit` simultáneamente.
+
+[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>especificación del lenguaje C#
 
@@ -79,14 +70,11 @@ En el ejemplo siguiente se usan subprocesos y `lock`. Siempre que la instrucció
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Reflection.MethodImplAttributes>
-- <xref:System.Threading.Mutex>
-- <xref:System.Threading.Monitor>
-- [Referencia de C#](../../language-reference/index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
-- [Subprocesamiento](../../programming-guide/concepts/threading/index.md)
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.SpinLock?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [Referencia de C#](../index.md)
 - [Palabras clave de C#](index.md)
 - [Palabras clave de instrucciones](statement-keywords.md)
-- [Interlocked Operations](../../../standard/threading/interlocked-operations.md) (Operaciones Interlocked)
-- [AutoResetEvent](../../../standard/threading/autoresetevent.md)
-- [Sincronización de subprocesos](../../programming-guide/concepts/threading/thread-synchronization.md)
+- [Operaciones de bloqueo](../../../standard/threading/interlocked-operations.md)
+- [Información general sobre las primitivas de sincronización](../../../standard/threading/overview-of-synchronization-primitives.md)

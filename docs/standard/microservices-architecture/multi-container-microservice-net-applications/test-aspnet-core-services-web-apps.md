@@ -4,18 +4,18 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792418"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195626"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
 Los controladores son una parte fundamental de cualquier servicio de la API de ASP.NET Core y de la aplicación web de ASP.NET MVC. Por lo tanto, debe tener la seguridad de que se comportan según lo previsto en la aplicación. Las pruebas automatizadas pueden darle esta seguridad, así como detectar errores antes de que lleguen a la fase producción.
 
-Debe probar cómo se comporta el controlador según las entradas válidas o no válidas y probar las respuestas del controlador en función del resultado de la operación comercial que lleve a cabo. Pero debe realizar estos tipos de pruebas en sus microservicios:
+Debe probar cómo se comporta el controlador según las entradas válidas o no válidas y probar las respuestas del controlador en función del resultado de la operación comercial que lleve a cabo. Pero debe realizar estos tipos de pruebas en los microservicios:
 
 -   Pruebas unitarias. Esto garantiza que los componentes individuales de la aplicación funcionan según lo previsto. Las aserciones prueban la API del componente.
 
@@ -31,9 +31,9 @@ Las pruebas unitarias conllevan probar una parte de una aplicación de forma ais
 
 Cuando realice pruebas unitarias de sus acciones de controlador, asegúrese de centrarse solamente en su comportamiento. Una prueba unitaria de controlador evita tener que recurrir a elementos como los filtros, el enrutamiento o el enlace de modelos. Como se centran en comprobar solo una cosa, las pruebas unitarias suelen ser fáciles de escribir y rápidas de ejecutar. Un conjunto de pruebas unitarias bien escrito se puede ejecutar con frecuencia sin demasiada sobrecarga.
 
-Las pruebas unitarias se implementan en función de los marcos de pruebas como xUnit.net, MSTest, Moq o NUnit. Para la aplicación de ejemplo eShopOnContainers, usamos XUnit.
+Las pruebas unitarias se implementan en función de los marcos de pruebas como xUnit.net, MSTest, Moq o NUnit. En la aplicación de ejemplo eShopOnContainers, se usa XUnit.
 
-Al escribir una prueba unitaria para un controlador de API web, puede ejemplificar directamente la clase de controlador mediante la nueva palabra clave en C\#, para que la prueba se ejecute tan rápido como sea posible. En el ejemplo siguiente se muestra cómo hacerlo utilizando [XUnit](https://xunit.github.io/) como marco de pruebas.
+Al escribir una prueba unitaria para un controlador de API web, puede ejemplificar directamente la clase de controlador mediante la nueva palabra clave en C\#, para que la prueba se ejecute tan rápido como sea posible. En el ejemplo siguiente se muestra cómo hacerlo con [XUnit](https://xunit.github.io/) como marco de pruebas.
 
 ```csharp
 [Fact]

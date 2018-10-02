@@ -4,12 +4,12 @@ description: Aprenda sobre los scripts de dotnet-install para instalar las herra
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: acdf49950ebb49751c55ae72b3f623e590489202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214385"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180048"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -27,7 +27,7 @@ macOS y Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--dry-run] [--no-path] [--azure-feed] [--verbose] [--help]`
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 Los scripts `dotnet-install` se usan para realizar una instalación sin derechos administrativos del SDK de .NET Core, que incluye las herramientas de la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
 
@@ -36,11 +36,11 @@ Le recomendamos que use la versión estable que se hospeda en el [sitio web prin
 * https://dot.net/v1/dotnet-install.sh (bash, UNIX)
 * https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
 
-La utilidad principal de estos scripts está en los escenarios de automatización y las instalaciones sin derechos administrativos. Hay dos scripts: uno es un script de PowerShell que funciona en Windows. El otro script es un script de bash que funciona en Linux y macOS. Ambos scripts tienen el mismo comportamiento. El script de bash también lee modificadores de PowerShell, por lo que puede usar modificadores de PowerShell con el script en sistemas Linux y macOS. 
+La utilidad principal de estos scripts está en los escenarios de automatización y las instalaciones sin derechos administrativos. Hay dos scripts: uno es un script de PowerShell que funciona en Windows. El otro script es un script de bash que funciona en Linux y macOS. Ambos scripts tienen el mismo comportamiento. El script de bash también lee modificadores de PowerShell, por lo que puede usar modificadores de PowerShell con el script en sistemas Linux y macOS.
 
-Los scripts de instalación descargan el archivo ZIP o tarball desde las entregas de compilación de la CLI y proceden a instalarlo en la ubicación predeterminada o en una ubicación especificada por `-InstallDir|--install-dir`. De forma predeterminada, los scripts de instalación descargan el SDK y lo instalan. Si desea obtener solo el tiempo de ejecución compartido, especifique el argumento `--shared-runtime`. 
+Los scripts de instalación descargan el archivo ZIP o tarball desde las entregas de compilación de la CLI y proceden a instalarlo en la ubicación predeterminada o en una ubicación especificada por `-InstallDir|--install-dir`. De forma predeterminada, los scripts de instalación descargan el SDK y lo instalan. Si desea obtener solo el tiempo de ejecución compartido, especifique el argumento `--shared-runtime`.
 
-De forma predeterminada, el script agrega la ubicación de instalación a $PATH para la sesión actual. Para invalidar este comportamiento, especifique el argumento `--no-path`. 
+De forma predeterminada, el script agrega la ubicación de instalación a $PATH para la sesión actual. Para invalidar este comportamiento, especifique el argumento `--no-path`.
 
 Antes de ejecutar el script, instale las [dependencias](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) necesarias.
 
@@ -91,7 +91,7 @@ Si se establece, el prefijo/installdir no se exportan a la ruta de acceso para l
 
 `-AzureFeed`
 
-Especifica la dirección URL de la fuente de Azure al instalador. No se recomienda cambiar este valor. El valor predeterminado es `https://dotnetcli.azureedge.net/dotnet`.
+Especifica la dirección URL de la fuente de Azure al instalador. No se recomienda cambiar este valor. De manera predeterminada, es `https://dotnetcli.azureedge.net/dotnet`.
 
 `-ProxyAddress`
 
@@ -141,7 +141,7 @@ Obtenga el script e instale ejemplos de una línea para la CLI de .NET Core:
 
 Windows:
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
 
 macOS y Linux:
 
@@ -149,5 +149,5 @@ macOS y Linux:
 
 ## <a name="see-also"></a>Vea también
 
-[Versiones de .NET Core](https://github.com/dotnet/core/releases)   
-[Archivo de descarga del SDK y .NET Core Runtime](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+* [Versiones de .NET Core](https://github.com/dotnet/core/releases)
+* [Archivo de descarga del SDK y .NET Core Runtime](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

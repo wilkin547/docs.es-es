@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf4a8df87cd507f2bfb17086e83dc8374a22fe71
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 659f9ffa8ebb10b34300167e9183f60568279513
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746896"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44187177"
 ---
 # <a name="enhanced-strong-naming"></a>Nombres seguros mejorados
 Una firma de nombre seguro es un mecanismo de identidad de .NET Framework para identificar ensamblados. Es una firma digital de clave pública que se suele usar para comprobar la integridad de los datos que se pasan de un remitente (firmante) a un destinatario (comprobador). Esta firma se usa como identidad única para un ensamblado y garantiza que las referencias al ensamblado no son ambiguas. El ensamblado se firma como parte del proceso de compilación y, después, se comprueba cuando se carga.  
@@ -90,8 +90,36 @@ Una firma de nombre seguro es un mecanismo de identidad de .NET Framework para i
 4.  Genere los parámetros para un atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> y adjunte el atributo al ensamblado.  
   
     ```  
-    sn -ac IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
+    sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
     ```  
+
+    Esto genera un resultado similar al siguiente.
+
+    ```
+    Information for key migration attribute.
+    (System.Reflection.AssemblySignatureKeyAttribute):
+    publicKey=
+    002400000c80000094000000060200000024000052534131000400000100010005a3a81ac0a519
+    d96244a9c589fc147c7d403e40ccf184fc290bdd06c7339389a76b738e255a2bce1d56c3e7e936
+    e4fc87d45adc82ca94c716b50a65d39d373eea033919a613e4341c66863cb2dc622bcb541762b4
+    3893434d219d1c43f07e9c83fada2aed400b9f6e44ff05e3ecde6c2827830b8f43f7ac8e3270a3
+    4d153cdd
+
+    counterSignature=
+    e3cf7c211678c4d1a7b8fb20276c894ab74c29f0b5a34de4d61e63d4a997222f78cdcbfe4c91eb
+    e1ddf9f3505a32edcb2a76f34df0450c4f61e376b70fa3cdeb7374b1b8e2078b121e2ee6e8c6a8
+    ed661cc35621b4af53ac29c9e41738f199a81240e8fd478c887d1a30729d34e954a97cddce66e3
+    ae5fec2c682e57b7442738
+    ```
+
+    Luego este resultado se puede transformar en AssemblySignatureKeyAttribute.
+
+    ```
+    [assembly:System.Reflection.AssemblySignatureKeyAttribute(
+    "002400000c80000094000000060200000024000052534131000400000100010005a3a81ac0a519d96244a9c589fc147c7d403e40ccf184fc290bdd06c7339389a76b738e255a2bce1d56c3e7e936e4fc87d45adc82ca94c716b50a65d39d373eea033919a613e4341c66863cb2dc622bcb541762b43893434d219d1c43f07e9c83fada2aed400b9f6e44ff05e3ecde6c2827830b8f43f7ac8e3270a34d153cdd",
+    "e3cf7c211678c4d1a7b8fb20276c894ab74c29f0b5a34de4d61e63d4a997222f78cdcbfe4c91ebe1ddf9f3505a32edcb2a76f34df0450c4f61e376b70fa3cdeb7374b1b8e2078b121e2ee6e8c6a8ed661cc35621b4af53ac29c9e41738f199a81240e8fd478c887d1a30729d34e954a97cddce66e3ae5fec2c682e57b7442738"
+    )]
+    ```
   
 5.  Retrase la firma del ensamblado con la clave pública de identidad.  
   

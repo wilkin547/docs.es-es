@@ -3,20 +3,20 @@ title: Uso de ML.NET para predecir las tarifas de taxi de Nueva York (regresión
 description: Obtenga información acerca de cómo usar ML.NET en un escenario de regresión.
 author: aditidugar
 ms.author: johalex
-ms.date: 06/18/2018
+ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e3ff2124a43cf42ce26cf94cfd5384387eef0ed9
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937077"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252849"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Tutorial: Uso de ML.NET para predecir las tarifas de taxi de Nueva York (regresión)
 
 > [!NOTE]
-> Este tema hace referencia a ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. Para obtener más información, visite [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+> Este tema hace referencia a ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. Para obtener más información, vea [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 En este tutorial se muestra cómo utilizar ML.NET para generar un [modelo de regresión](../resources/glossary.md#regression) para predecir las tarifas de taxi de Nueva York.
 
@@ -38,21 +38,21 @@ En este tutorial aprenderá a:
 
 ## <a name="understand-the-problem"></a>Entender el problema
 
-Este problema se centra en **predecir la tarifa de un viaje en taxi en Nueva York**. A primera vista, puede parecer que simplemente depende de la distancia recorrida. Sin embargo, los taxistas de Nueva York cobran distintas cantidades por otros factores, como llevar pasajeros adicionales o pagar con tarjeta de crédito en lugar de efectivo.
+Este problema trata sobre la predicción de la tarifa de una carrera de taxi en Nueva York. A primera vista, puede parecer que simplemente depende de la distancia recorrida. Sin embargo, los taxistas de Nueva York cobran distintas cantidades por otros factores, como llevar pasajeros adicionales o pagar con tarjeta de crédito en lugar de efectivo.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Seleccionar la tarea de aprendizaje automático adecuada
 
-Para predecir la tarifa del taxi, primero seleccione la tarea de aprendizaje automático adecuada. Está buscando predecir un valor real (un doble que representa el precio) en función de los otros factores del conjunto de datos. Elige una tarea de [**regresión**](../resources/glossary.md#regression).
+Se quiere predecir el precio, que es un valor real, en función de los demás factores del conjunto de datos. Para ello, elija una tarea de aprendizaje automático de [regresión](../resources/glossary.md#regression).
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
 1. Abra Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo **Nuevo proyecto**, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "TaxiFarePrediction" y después haga clic en el botón **Aceptar**.
 
-2. Cree un directorio denominado *Datos* en el proyecto para guardar los archivos del conjunto de datos:
+1. Cree un directorio denominado *Datos* en el proyecto para almacenar el conjunto de datos y los archivos del modelo:
 
     En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar** > **Nueva carpeta**. Escriba "Datos" y presione Entrar.
 
-3. Instale el **paquete NuGet Microsoft.ML**:
+1. Instale el paquete NuGet **Microsoft.ML**:
 
     En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete, seleccione la pestaña **Examinar**, busque **Microsoft.ML**, seleccione ese paquete en la lista y haga clic en el botón **Instalar**. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
 
@@ -60,9 +60,9 @@ Para predecir la tarifa del taxi, primero seleccione la tarea de aprendizaje aut
 
 1. Descargue los conjuntos de datos [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) y [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) y guárdelos en la carpeta *Datos* que ha creado en el paso anterior. Usaremos estos conjuntos de datos para entrenar el modelo de aprendizaje automático y, después, evaluar su precisión. Estos conjuntos de datos proceden originalmente del [conjunto de datos NYC TLC Taxi Trip](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
 
-2. En el **Explorador de soluciones**, haga clic con el botón derecho en cada uno de los archivos \*.csv y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** a **Siempre**.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en cada uno de los archivos \*.csv y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** por **Copiar si es posterior**.
 
-3. Abra el conjunto de datos **taxi-fare-train.csv** y consulte los encabezados de columna de la primera fila. Eche un vistazo a cada una de las columnas. Estudie los datos y decida qué columnas son **características** y cuál es la **etiqueta**.
+1. Abra el conjunto de datos **taxi-fare-train.csv** y consulte los encabezados de columna de la primera fila. Eche un vistazo a cada una de las columnas. Estudie los datos y decida qué columnas son **características** y cuál es la **etiqueta**.
 
 La **etiqueta** es el identificador de la columna que quiere predecir. Las **características** identificadas se usan para predecir la etiqueta.
 
@@ -92,7 +92,10 @@ Quite la definición de clase existente y agregue el código siguiente, que tien
 
 `TaxiTrip` es la clase de datos de entrada y tiene definiciones para cada una de las columnas del conjunto de datos. Use el atributo [Columna](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) para especificar los índices de las columnas de origen en el conjunto de datos.
 
-La clase `TaxiTripFarePrediction` se usa para representar los resultados previstos. Tiene un único campo flotante (`FareAmount`) con un atributo `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) aplicado. La columna **Puntuación** es la columna especial de ML.NET. El modelo generará valores de predicción en esa columna.
+La clase `TaxiTripFarePrediction` representa los resultados predichos. Tiene un único campo flotante, `FareAmount`, con un atributo `Score` [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) aplicado. En el caso de la tarea de regresión, la columna **Score** contiene valores de etiqueta predichos.
+
+> [!NOTE]
+> Use el tipo `float` para representar los valores de punto flotante en las clases de entrada y predicción de datos.
 
 ## <a name="define-data-and-model-paths"></a>Definir rutas de acceso de datos y modelos
 
@@ -116,7 +119,7 @@ Agregue las directivas `using` adicionales siguientes a la parte superior del ar
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-En `Main`, reemplace `Console.WriteLine("Hello World!")` por el código siguiente:
+En el método `Main`, reemplace `Console.WriteLine("Hello World!")` por el código siguiente:
 
 ```csharp
 PredictionModel<TaxiTrip, TaxiTripFarePrediction> model = Train();
@@ -139,7 +142,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>Cargar y transformar datos
 
-El primer paso que realiza la canalización de aprendizaje es cargar datos desde el conjunto de datos de entrenamiento. En nuestro caso, el conjunto de datos de entrenamiento se almacena en el archivo de texto con una ruta de acceso definida por el campo `_datapath`. Ese archivo contiene el encabezado con los nombres de columna, por lo que se debe omitir la primera fila al cargar los datos. En el archivo, las columnas se separan mediante una coma (","). Agregue el código siguiente al método `Train`:
+El primer paso que se debe realizar es cargar los datos del conjunto de datos de aprendizaje. En nuestro caso, el conjunto de datos de entrenamiento se almacena en el archivo de texto con una ruta de acceso definida por el campo `_datapath`. Ese archivo contiene el encabezado con los nombres de columna, por lo que se debe omitir la primera fila al cargar los datos. En el archivo, las columnas se separan mediante una coma (","). Agregue el código siguiente al método `Train`:
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -147,7 +150,7 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 En los pasos siguientes se hace referencia a las columnas con los nombres definidos en la clase `TaxiTrip`.
 
-Cuando el modelo se entrena y evalúa, los valores de la columna **Etiqueta** se consideran valores correctos para predecir. Para predecir la tarifa del viaje en taxi, debe copiar la columna `FareAmount` en la columna **Etiqueta**. Para ello, use <xref:Microsoft.ML.Transforms.ColumnCopier> y agregue el código siguiente:
+Si el modelo se ha entrenado y evaluado, de forma predeterminada, los valores de la columna **Label** se consideran valores correctos para predecir. Para predecir la tarifa del viaje en taxi, debe copiar la columna `FareAmount` en la columna **Etiqueta**. Para ello, use <xref:Microsoft.ML.Transforms.ColumnCopier> y agregue el código siguiente:
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
@@ -161,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-En el último paso para la preparación de los datos, se combinan todas las columnas de característica en la columna **Características** mediante la clase de transformación <xref:Microsoft.ML.Transforms.ColumnConcatenator>. Este paso es necesario, ya que un aprendiz solo procesará las características de la columna **Características**. Agregue el código siguiente:
+En el último paso para la preparación de los datos, se combinan todas las columnas de característica en la columna **Características** mediante la clase de transformación <xref:Microsoft.ML.Transforms.ColumnConcatenator>. De forma predeterminada, un algoritmo de aprendizaje solo procesa las características de la columna **Features**. Agregue el código siguiente:
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -179,7 +182,7 @@ Tenga en cuenta que la columna `TripTime`, que corresponde a la columna `trip_ti
 
 ## <a name="choose-a-learning-algorithm"></a>Elegir un algoritmo de aprendizaje
 
-Después de agregar los datos a la canalización y transformarlos en el formato de entrada correcto, seleccione un algoritmo de aprendizaje (**aprendiz**). El aprendiz entrena el modelo. Como ha elegido una **tarea de regresión** para este problema, deberá agregar un aprendiz de <xref:Microsoft.ML.Trainers.FastTreeRegressor>, uno de los aprendices de regresión que proporciona ML.NET.
+Después de agregar los datos a la canalización y transformarlos en el formato de entrada correcto, seleccione un algoritmo de aprendizaje (**aprendiz**). El aprendiz entrena el modelo. Ha elegido una tarea de **regresión** para este problema, así que use un aprendiz de <xref:Microsoft.ML.Trainers.FastTreeRegressor>, que es uno de los aprendices de regresión que proporciona ML.NET.
 
 El aprendiz <xref:Microsoft.ML.Trainers.FastTreeRegressor> usa la potenciación de gradiente. La potenciación de gradiente es una técnica para los problemas de regresión de aprendizaje automático. Crea cada árbol de regresión de forma escalonada. Utiliza una función de pérdida predefinida para medir el error en cada paso y corregirlo en el siguiente. El resultado es un modelo de predicción que es realmente un conjunto de modelos de predicción más débiles. Para obtener más información sobre la potenciación de gradiente, consulte [Boosted Decision Tree Regression](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression) (Regresión de árbol de decisión potenciado).
 
@@ -203,7 +206,7 @@ Y listo. Ha entrenado correctamente un modelo de aprendizaje automático que pue
 
 ### <a name="save-the-model"></a>Guardado del modelo
 
-Antes de ir al paso siguiente, guarde el modelo en un archivo .zip agregando el código siguiente al final del método `Train`:
+En este punto, tiene un modelo que se puede integrar en cualquiera de las aplicaciones de .NET nuevas o existentes. Para guardar el modelo en un archivo .zip, agregue el código siguiente al final del método `Train`:
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#5 "Save the model asynchronously and return the model")]
 
@@ -227,7 +230,7 @@ Debido a que el método `async Main` es una característica agregada en C# 7.1 y
 
 ## <a name="evaluate-the-model"></a>Evaluar el modelo
 
-La evaluación es el proceso que sirve para comprobar cómo predice valores de etiqueta el modelo. Es importante que el modelo haga buenas predicciones sobre los datos que no se han usado para entrenarlo. Una forma de hacerlo es dividiendo los datos en conjuntos de datos de entrenamiento y prueba, tal como ha hecho en este tutorial. Ahora que ha entrenado el modelo en los datos de entrenamiento, puede ver qué tal funciona en los datos de prueba.
+La evaluación es el proceso que sirve para comprobar cómo predice valores de etiqueta el modelo. Es importante que el modelo haga buenas predicciones sobre los datos que no se han usado para entrenarlo. Una forma de hacerlo es dividir los datos en conjuntos de datos de entrenamiento y prueba, como se ha hecho en este tutorial. Ahora que ha entrenado el modelo en los datos de aprendizaje, puede ver qué tal funciona en los datos de prueba.
 
 Vuelva al método `Main` y agregue el código siguiente debajo de la llamada al método `Train`:
 
@@ -260,7 +263,7 @@ Agregue el código siguiente para evaluar el modelo y generar las métricas de e
 
 ## <a name="use-the-model-for-predictions"></a>Usar el modelo para las predicciones
 
-A continuación, cree una clase para hospedar escenarios de prueba que pueda usar para asegurarse de que el modelo funcione correctamente:
+Cree una clase para guardar instancias de datos de prueba:
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar** > **Nuevo elemento**.
 1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *TestTrips.cs*. A continuación, seleccione el botón **Agregar**.
@@ -280,7 +283,7 @@ Para predecir la tarifa del viaje especificado, vuelva al archivo *Program.cs* y
 
 Ejecute el programa para ver la tarifa de taxi predicha para su caso de prueba.
 
-¡Enhorabuena! Ya ha creado correctamente un modelo de aprendizaje automático para predecir tarifas de viajes en taxi, ha evaluado su precisión y lo ha usado para hacer predicciones. Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction).
+¡Enhorabuena! Ya ha creado correctamente un modelo de aprendizaje automático para predecir tarifas de viajes en taxi, ha evaluado su precisión y lo ha usado para hacer predicciones. Puede encontrar el código fuente de este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) de GitHub.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

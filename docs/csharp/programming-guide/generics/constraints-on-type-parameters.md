@@ -6,20 +6,20 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457380"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208665"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 
 Las restricciones informan al compilador sobre las capacidades que debe tener un argumento de tipo. Sin restricciones, el argumento de tipo puede ser cualquier tipo. El compilador solo puede suponer los miembros de <xref:System.Object?displayPropety=nameWithType>, que es la clase base fundamental de los tipos .NET. Para más información, vea [Por qué usar restricciones](#why-use-constraints). Si el código de cliente intenta crear una instancia de su clase mediante un tipo que no se permite por una restricción, el resultado es un error en tiempo de compilación. Las restricciones se especifican con la palabra clave contextual `where`. En la tabla siguiente se muestran los siete tipos de restricciones:
 
-|Restricción|Description|
+|Restricción|Descripción|
 |----------------|-----------------|
-|`where T : struct`|El argumento de tipo debe ser un tipo de valor. Cualquier tipo de valor excepto <xref:System.Nullable> puede especificarse. Para más información, vea [Uso de tipos que aceptan valores NULL](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|El argumento de tipo debe ser un tipo de valor. Cualquier tipo de valor excepto <xref:System.Nullable%601> puede especificarse. Para obtener más información sobre los tipos que aceptan valores NULL, vea [Tipos que aceptan valores NULL](../nullable-types/index.md).|
 |`where T : class`|El argumento de tipo debe ser un tipo de referencia. Esta restricción se aplica también a cualquier clase, interfaz, delegado o tipo de matriz.|
 |`where T : unmanaged`|El argumento de tipo no debe ser un tipo de referencia y no debe contener ningún miembro de tipo de referencia en ningún nivel de anidamiento.|
 |`where T : new()`|El argumento de tipo debe tener un constructor sin parámetros público. Cuando se usa conjuntamente con otras restricciones, la restricción `new()` debe especificarse en último lugar.|
@@ -111,7 +111,8 @@ Podría usarla como se muestra en el ejemplo siguiente para crear una enumeraci�
 
 ## <a name="see-also"></a>Vea también
 
- <xref:System.Collections.Generic> [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Introducción a los genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Clases genéricas](../../../csharp/programming-guide/generics/generic-classes.md)  
- [new (restricción)](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Introducción a los genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Clases genéricas](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [new (restricción)](../../../csharp/language-reference/keywords/new-constraint.md)  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: b0963457e22bf0c3fc92d33c5ed0eb699be27cf7
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932047"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857987"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos opcionales y con nombre (Guía de programación de C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduce argumentos opcionales y con nombre. Los *argumentos con nombre* permiten especificar un argumento para un parámetro concreto asociando el argumento al nombre del parámetro y no a la posición del parámetro en la lista de parámetros. Los *argumentos opcionales* permiten omitir argumentos para algunos parámetros. Ambas técnicas se pueden usar con métodos, indexadores, constructores y delegados.  
@@ -101,7 +101,7 @@ Parámetros opcionales en ExampleMethod
 ## <a name="com-interfaces"></a>Interfaces COM  
  Los argumentos opcionales y con nombre, además de compatibilidad con objetos dinámicos y otros avances, mejoran considerablemente la interoperabilidad con las API de COM, como las API de automatización de Office.  
   
- Por ejemplo, el método [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) de la interfaz [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) de Microsoft Office Excel tiene siete parámetros, todos ellos opcionales. Estos parámetros se muestran en la siguiente ilustración.  
+ Por ejemplo, el método <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> de la interfaz <xref:Microsoft.Office.Interop.Excel.Range> de Microsoft Office Excel tiene siete parámetros, todos ellos opcionales. Estos parámetros se muestran en la siguiente ilustración.  
   
  ![Información rápida de IntelliSense para el método AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Parámetros de AutoFormat  
@@ -128,8 +128,9 @@ Parámetros de AutoFormat
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
- [Uso de tipo dinámico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Utilizar constructores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [Utilizar indizadores](../../../csharp/programming-guide/indexers/using-indexers.md)
+## <a name="see-also"></a>Vea también
+
+- [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [Uso de tipo dinámico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Utilizar constructores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [Utilizar indizadores](../../../csharp/programming-guide/indexers/using-indexers.md)

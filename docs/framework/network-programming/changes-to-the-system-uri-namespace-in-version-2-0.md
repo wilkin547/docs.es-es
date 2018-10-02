@@ -5,12 +5,12 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392453"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205989"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Cambios realizados en el espacio de nombres System.Uri de la versión 2.0
 Se han realizado varios cambios en la clase <xref:System.Uri?displayProperty=nameWithType>. Estos cambios han corregido un comportamiento incorrecto, han mejorado el uso y también la seguridad.  
@@ -42,7 +42,7 @@ Se han realizado varios cambios en la clase <xref:System.Uri?displayProperty=nam
   
 -   En los esquemas URI que se sabe que no tienen un elemento de consulta (archivo, ftp y otros), el carácter "?" siempre tiene escape y no se considera el principio de un elemento <xref:System.Uri.Query%2A>.  
   
--   En los URI de archivo implícitos (con formato "c:\directory\file@name.txt"), el carácter de fragmento ("#") siempre tiene escape a menos que se solicite no escape completo o <xref:System.Uri.LocalPath%2A> sea `true`.  
+-   En el caso de los URI de archivo implícitos (con formato `c:\directory\file@name.txt`), el carácter de fragmento ("#") siempre tiene escape a menos que se solicite no escape completo o <xref:System.Uri.LocalPath%2A> sea `true`.  
   
 -   Se ha quitado la compatibilidad de nombre de host UNC; se ha adoptado la especificación de IDN para representar nombres de host internacionales.  
   
@@ -56,9 +56,9 @@ Se han realizado varios cambios en la clase <xref:System.Uri?displayProperty=nam
   
 -   <xref:System.Uri.IsLoopback%2A> ahora genera resultados coherentes.  
   
--   El URI "`file:///path`" ya no se traduce en "file://path".  
+-   El URI "`file:///path`" ya no se traduce en `file://path`.  
   
--   "#" ahora se reconoce como un terminador de nombre de host. Es decir, "http://consoto.com#fragment" ahora se convierte en"http://contoso.com/#fragment".  
+-   "#" ahora se reconoce como un terminador de nombre de host. Es decir, `http://consoto.com#fragment` ahora se convierte en `http://contoso.com/#fragment`.  
   
 -   Se ha corregido un error al combinar un URI base con un fragmento.  
   

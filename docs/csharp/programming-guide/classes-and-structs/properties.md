@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 47f8e978d81b4aec94482f0a295691b830c3698c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 74020696a9d2370de2976671a9f1ed944aba8fb9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199165"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857685"
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 
@@ -73,8 +73,9 @@ Si una propiedad tiene un descriptor de acceso `get` y `set`, ambos deben ser im
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
- [get (palabra clave)](../../../csharp/language-reference/keywords/get.md)    
- [set (palabra clave)](../../../csharp/language-reference/keywords/set.md)    
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+- [get (Palabra clave)](../../../csharp/language-reference/keywords/get.md)    
+- [set (palabra clave)](../../../csharp/language-reference/keywords/set.md)    

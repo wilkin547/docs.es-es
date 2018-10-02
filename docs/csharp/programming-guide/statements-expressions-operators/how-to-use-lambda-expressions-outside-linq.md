@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], outside LINQ
 ms.assetid: 2b519274-6ee4-4455-ab2e-aed67dbfd07c
-ms.openlocfilehash: 6ba6c6f50b4d2f717de4325b5cd21434066b2899
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: eb9fea64b8aeb96a880b7e177673c1316b7aa4c1
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43389189"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261543"
 ---
 # <a name="how-to-use-lambda-expressions-outside-linq-c-programming-guide"></a>Cómo: Usar expresiones lambda fuera de LINQ (Guía de programación de C#)
 Las expresiones lambda no están limitadas a las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Se pueden usar en cualquier lugar en que se espere un valor de delegado, es decir, dondequiera que se puede usar un método anónimo. En el ejemplo siguiente se muestra cómo usar una expresión lambda en un controlador de eventos de Windows Forms. Observe que los tipos de las entradas (<xref:System.Object> y <xref:System.Windows.Forms.MouseEventArgs>) los deduce el compilador y no tienen que especificarse explícitamente en los parámetros de entrada lambda.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```csharp  
 public partial class Form1 : Form  
 {  
     public Form1()  
@@ -28,7 +28,8 @@ public partial class Form1 : Form
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>Vea también
+
+- [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [Language Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)

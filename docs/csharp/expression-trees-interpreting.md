@@ -3,12 +3,12 @@ title: Interpretación de expresiones
 description: Obtenga información sobre cómo escribir código para examinar la estructura de un árbol de expresión.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 04622c0aa7323ac4cf16af94e31f1ef6987f87c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219315"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506424"
 ---
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
@@ -514,7 +514,7 @@ En primer lugar, los visitantes solo controlan constantes que son enteros. Los v
 
 Incluso en el último ejemplo se reconoce un subconjunto de los tipos de nodo posibles.
 Todavía puede proporcionarle muchas expresiones que provocarán que se produzca un error.
-Se incluye una implementación completa en .NET Standard bajo el nombre [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) y puede controlar todos los tipos de nodo posibles.
+En .NET Standard se incluye una implementación completa con el nombre <xref:System.Linq.Expressions.ExpressionVisitor> que puede controlar todos los tipos de nodo posibles.
 
 Por último, la biblioteca que he usado en este artículo se ha creado con fines de demostración y aprendizaje. No está optimizada. La he escrito para dejar claro las estructuras que he usado y para resaltar las técnicas usadas para visitar los nodos y analizar lo que hay ahí. Una implementación de producción prestaría más atención al rendimiento.
 

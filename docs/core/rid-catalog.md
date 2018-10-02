@@ -3,13 +3,13 @@ title: Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
 description: Obtenga información sobre el identificador en tiempo de ejecución (RID) y sobre cómo se usan los RID en .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/07/2017
-ms.openlocfilehash: 81f9e5f65385bbd81c7fdae7f75c62d11b6f6319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 07/19/2018
+ms.openlocfilehash: ff0449f7c6f878131f0ec4b16d685d2c02d26719
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215915"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517384"
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
 
@@ -122,22 +122,24 @@ Vea [Requisitos previos para .NET Core en Windows](windows-prerequisites.md) par
 - Debian
   - `debian-x64`
   - `debian.8-x64`
+  - `debian.9-x64` (.NET Core 1.1 o versiones posteriores)
 - Fedora
   - `fedora-x64`
-  - `fedora.24-x64`
-  - `fedora.25-x64` (.NET Core 2.0 o versiones posteriores)
-  - `fedora.26-x64` (.NET Core 2.0 o versiones posteriores)
+  - `fedora.27-x64`
+  - `fedora.28-x64` (.NET Core 1.1 o versiones posteriores)
 - Gentoo (.NET Core 2.0 o versiones posteriores)
   - `gentoo-x64`
 - openSUSE
   - `opensuse-x64`
-  - `opensuse.42.1-x64`
+  - `opensuse.42.3-x64`
 - Oracle Linux
   - `ol-x64`
   - `ol.7-x64`
   - `ol.7.0-x64`
   - `ol.7.1-x64`
   - `ol.7.2-x64`
+  - `ol.7.3-x64`
+  - `ol.7.4-x64`
 - Red Hat Enterprise Linux
   - `rhel-x64`
   - `rhel.6-x64` (.NET Core 2.0 o versiones posteriores)
@@ -148,21 +150,32 @@ Vea [Requisitos previos para .NET Core en Windows](windows-prerequisites.md) par
   - `rhel.7.4-x64` (.NET Core 2.0 o versiones posteriores)
 - Tizen (.NET Core 2.0 o versiones posteriores)
   - `tizen`
+  - `tizen.4.0.0`
+  - `tizen.5.0.0`
 - Ubuntu
   - `ubuntu-x64`
   - `ubuntu.14.04-x64`
-  - `ubuntu.14.10-x64`
-  - `ubuntu.15.04-x64`
-  - `ubuntu.15.10-x64`
   - `ubuntu.16.04-x64`
-  - `ubuntu.16.10-x64`
+  - `ubuntu.17.10-x64`
+  - `ubuntu.18.04-x64`
 - Derivados de Ubuntu
   - `linuxmint.17-x64`
   - `linuxmint.17.1-x64`
   - `linuxmint.17.2-x64`
   - `linuxmint.17.3-x64`
-  - `linuxmint.18-x64`
+  - `linuxmint.18-x64` (.NET Core 2.0 o versiones posteriores)
   - `linuxmint.18.1-x64` (.NET Core 2.0 o versiones posteriores)
+  - `linuxmint.18.2-x64` (.NET Core 2.0 o versiones posteriores)
+  - `linuxmint.18.3-x64` (.NET Core 2.0 o versiones posteriores)
+- SUSE Enterprise Linux (SLES) (.NET Core 2.0 o versiones posteriores)
+  - `sles-x64`
+  - `sles.12-x64`
+  - `sles.12.1-x64`
+  - `sles.12.2-x64`
+  - `sles.12.3-x64`
+- Alpine Linux (.NET Core 2.1 o versiones posteriores)
+  - `alpine-x64`
+  - `alpine.3.7-x64`
 
 Vea [Requisitos previos para .NET Core en Linux](linux-prerequisites.md) para más información.
 
@@ -185,4 +198,4 @@ Vea [Requisitos previos para .NET Core en macOS](macos-prerequisites.md) para m�
 
 ## <a name="see-also"></a>Vea también
 
-[Identificadores de entorno de ejecución](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+* [Identificadores de entorno de ejecución](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
