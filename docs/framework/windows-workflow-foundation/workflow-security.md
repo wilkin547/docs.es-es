@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: ebce4daf433647179a0bce5751f66cdfab7a4d80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195724"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030277"
 ---
 # <a name="workflow-security"></a>Seguridad del flujo de trabajo
 Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, como Microsoft SQL Server y Windows Communication Foundation (WCF). Al interactuar con estas tecnologías, se pueden introducir problemas de seguridad en su flujo de trabajo si no se hace de manera correcta.
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, 
 
 -   Se deben proteger los extremos de Windows Communication Foundation (WCF) que se usan en flujos de trabajo. Para obtener más información, consulte [información general sobre la seguridad de WCF](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   La autorización en el nivel de host puede implementarse mediante <xref:System.ServiceModel.ServiceAuthorizationManager>. Consulte [Cómo: crear un administrador de autorización personalizado para un servicio](https://go.microsoft.com/fwlink/?LinkId=192228) para obtener más información. Esto también se muestra en el ejemplo siguiente: [proteger servicios de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).
+-   La autorización en el nivel de host puede implementarse mediante <xref:System.ServiceModel.ServiceAuthorizationManager>. Consulte [Cómo: crear un administrador de autorización personalizado para un servicio](https://go.microsoft.com/fwlink/?LinkId=192228) para obtener más información.
 
 -   El ServiceSecurityContext para el mensaje entrante también está disponible desde el flujo de trabajo mediante el acceso a OperationContext.
 

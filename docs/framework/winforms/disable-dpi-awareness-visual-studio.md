@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 226ec3f683913102e8f5202ffaa100945e629e0a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037046"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deshabilitar el reconocimiento de PPP en Visual Studio
 
@@ -51,7 +51,10 @@ Es importante reiniciar Visual Studio como un proceso con reconocimiento de PPP,
 
 Visual Studio se puede marcar como no reconocen el PPP modificando el registro. Abra **Editor del registro** y agregar una entrada a la **NT\CurrentVersion\AppCompatFlags\Layers HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows** subclave:
 
-**Entrada**: % ProgramFiles (x86) %\Microsoft Visual Studio\2017\your-edition\Common7\IDE\devenv.exe
+**Entrada**: % ProgramFiles (x86) %\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+
+   > [!NOTE]
+   > Si usa la edición Professional o Enterprise de Visual Studio 2017, reemplace **Comunidad** con **Professional** o **Enterprise** en la entrada.
 
 **Tipo**: REG_SZ
 

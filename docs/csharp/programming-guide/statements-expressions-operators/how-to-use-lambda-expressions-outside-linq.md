@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C#], outside LINQ
 ms.assetid: 2b519274-6ee4-4455-ab2e-aed67dbfd07c
 ms.openlocfilehash: eb9fea64b8aeb96a880b7e177673c1316b7aa4c1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261543"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45639177"
 ---
 # <a name="how-to-use-lambda-expressions-outside-linq-c-programming-guide"></a>Cómo: Usar expresiones lambda fuera de LINQ (Guía de programación de C#)
 Las expresiones lambda no están limitadas a las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Se pueden usar en cualquier lugar en que se espere un valor de delegado, es decir, dondequiera que se puede usar un método anónimo. En el ejemplo siguiente se muestra cómo usar una expresión lambda en un controlador de eventos de Windows Forms. Observe que los tipos de las entradas (<xref:System.Object> y <xref:System.Windows.Forms.MouseEventArgs>) los deduce el compilador y no tienen que especificarse explícitamente en los parámetros de entrada lambda.  

@@ -3,11 +3,11 @@ title: Modelo de objetos de Detección de WCF
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231393"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046674"
 ---
 # <a name="wcf-discovery-object-model"></a>Modelo de objetos de Detección de WCF
 Detección de WCF consta de un conjunto de tipos que proporcionan un modelo de programación unificado que le permite escribir servicios reconocibles durante el tiempo de ejecución y clientes que encuentran y utilizan estos servicios.  

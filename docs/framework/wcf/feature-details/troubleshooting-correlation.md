@@ -2,12 +2,12 @@
 title: Solución de problemas de correlación
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397166"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027928"
 ---
 # <a name="troubleshooting-correlation"></a>Solución de problemas de correlación
 La correlación se utiliza para relacionar los mensajes del servicio de flujo de trabajo entre sí y con la instancia de flujo de trabajo correcta, pero si no está configurada correctamente, los mensajes no se recibirán y las aplicaciones no funcionarán de forma adecuada. Este tema proporciona información general de varios métodos para solucionar problemas de la correlación y también enumera algunos problemas comunes que se pueden producir cuando se usa.
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Un participante del seguimiento como ConsoleTrackingParticipant es útil para los servicios de flujo de trabajo autohospedados que tengan una ventana de la consola. Para un servicio hospedado en Web, debe usarse un participante de seguimiento que registra la información de seguimiento en un almacén duradero, como el integrado <xref:System.Activities.Tracking.EtwTrackingParticipant>, o un participante de seguimiento personalizado que registra la información en un archivo, como el `TextWriterTrackingParticpant` desde el [ Seguimiento del uso de un archivo de texto](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) ejemplo.
+ Un participante del seguimiento como ConsoleTrackingParticipant es útil para los servicios de flujo de trabajo autohospedados que tengan una ventana de la consola. Para un servicio hospedado en Web, debe usarse un participante de seguimiento que registra la información de seguimiento en un almacén duradero, como el integrado <xref:System.Activities.Tracking.EtwTrackingParticipant>, o un participante de seguimiento personalizado que registra la información en un archivo.
 
  Para obtener más información sobre el seguimiento y la configuración del seguimiento para un servicio de flujo de trabajo hospedado en Web, consulte [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [configuración del seguimiento para un flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)y el [ Seguimiento &#91;ejemplos de WF&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) ejemplos.
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- Esto se puede confirmar examinando el cuerpo del mensaje.
+Esto se puede confirmar examinando el cuerpo del mensaje.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- El ejemplo siguiente muestra una actividad <xref:System.ServiceModel.Activities.Receive> configurada para una operación `AddItem` que usa el contrato de mensaje anterior para recuperar datos. La consulta XPath está configurada correctamente.
+El ejemplo siguiente muestra una actividad <xref:System.ServiceModel.Activities.Receive> configurada para una operación `AddItem` que usa el contrato de mensaje anterior para recuperar datos. La consulta XPath está configurada correctamente.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-Para obtener más información sobre la correlación basada en contenido, consulte el [calculadora correlacionada](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) ejemplo.

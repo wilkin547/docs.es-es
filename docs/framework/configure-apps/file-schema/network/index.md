@@ -15,11 +15,11 @@ ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5783e63d81c8951afb6b1646b595fc619d51549c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193585"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028789"
 ---
 # <a name="network-settings-schema"></a>Esquema de la configuración de red
 La configuración de red especifica cómo se conecta .NET Framework a Internet. En la tabla siguiente se describe la función de cada elemento de configuración secundario bajo el [elemento \<system.Net> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  

@@ -2,25 +2,22 @@
 title: Diseñadores de actividad personalizados
 ms.date: 03/30/2017
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
-ms.openlocfilehash: 3356a15e5da72e1d112bb10e0218feccc5b97cf3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c27ad19121f4faa0a3fca7b13b197a88a95c6d15
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031908"
 ---
 # <a name="custom-activity-designers"></a>Diseñadores de actividad personalizados
 Esta sección contiene ejemplos de actividades que utilizan diseñadores personalizados en la presentación en el diseñador de flujo de trabajo.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Diseñadores compuestos personalizados: moderador de elementos de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)  
- Este ejemplo muestra cómo compilar un diseñador de actividades que muestre este tipo "zona de colocación."  
+ Este ejemplo muestra cómo crear a un diseñador de actividad que se muestra este tipo una "zona de colocación."  
   
  [Diseñadores compuestos personalizados: moderador de elementos de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)  
  En este ejemplo se muestra cómo compilar un diseñador de actividad que muestra este tipo de colección modificable.  
-  
- [Capacidad de programación del almacén de metadatos](../../../../docs/framework/windows-workflow-foundation/samples/metadata-store-programmability.md)  
- En este ejemplo se muestra cómo realizar una programación en el almacén de metadatos aplicando atributos a un tipo en tiempo de ejecución, sobre cuyo origen no tenemos control alguno.  
   
  [Uso de ExpressionTextBox en un diseñador de actividad personalizado](../../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)  
  En este ejemplo se muestra cómo utilizar el objeto <xref:System.Activities.Presentation.View.ExpressionTextBox> en un diseñador de actividad personalizado.  
