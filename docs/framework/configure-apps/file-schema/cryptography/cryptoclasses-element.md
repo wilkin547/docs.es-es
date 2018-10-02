@@ -11,51 +11,51 @@ ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 671302003c3a1f3a37e1773aeeae9cb09a457d13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47215878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033368"
 ---
-# <a name="ltcryptoclassesgt-element"></a><span data-ttu-id="4af2d-102">&lt;cryptoClasses&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="4af2d-102">&lt;cryptoClasses&gt; Element</span></span>
-<span data-ttu-id="4af2d-103">Contiene una lista de las clases de criptografía que tienen una asignación a un nombre descriptivo en el elemento [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="4af2d-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
+# <a name="ltcryptoclassesgt-element"></a><span data-ttu-id="8e18c-102">&lt;cryptoClasses&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="8e18c-102">&lt;cryptoClasses&gt; Element</span></span>
+<span data-ttu-id="8e18c-103">Contiene una lista de las clases de criptografía que tienen una asignación a un nombre descriptivo en el elemento [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="8e18c-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
   
- <span data-ttu-id="4af2d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="4af2d-104">\<configuration></span></span>  
-<span data-ttu-id="4af2d-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="4af2d-105">\<mscorlib></span></span>  
-<span data-ttu-id="4af2d-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="4af2d-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="4af2d-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="4af2d-107">\<cryptoNameMapping></span></span>  
-<span data-ttu-id="4af2d-108">\<cryptoClasses ></span><span class="sxs-lookup"><span data-stu-id="4af2d-108">\<cryptoClasses></span></span>  
+ <span data-ttu-id="8e18c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8e18c-104">\<configuration></span></span>  
+<span data-ttu-id="8e18c-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="8e18c-105">\<mscorlib></span></span>  
+<span data-ttu-id="8e18c-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="8e18c-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="8e18c-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="8e18c-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="8e18c-108">\<cryptoClasses ></span><span class="sxs-lookup"><span data-stu-id="8e18c-108">\<cryptoClasses></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4af2d-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4af2d-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e18c-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8e18c-109">Syntax</span></span>  
   
 ```xml  
 <cryptoClasses>   
 </cryptoClasses>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4af2d-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="4af2d-110">Attributes and Elements</span></span>  
- <span data-ttu-id="4af2d-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="4af2d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8e18c-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="8e18c-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="8e18c-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="8e18c-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4af2d-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="4af2d-112">Attributes</span></span>  
- <span data-ttu-id="4af2d-113">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="4af2d-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8e18c-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="8e18c-112">Attributes</span></span>  
+ <span data-ttu-id="8e18c-113">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="8e18c-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="4af2d-114">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="4af2d-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8e18c-114">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="8e18c-114">Child Elements</span></span>  
   
-|<span data-ttu-id="4af2d-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="4af2d-115">Element</span></span>|<span data-ttu-id="4af2d-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="4af2d-116">Description</span></span>|  
+|<span data-ttu-id="8e18c-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="8e18c-115">Element</span></span>|<span data-ttu-id="8e18c-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="8e18c-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4af2d-117">\<cryptoClass ></span><span class="sxs-lookup"><span data-stu-id="4af2d-117">\<cryptoClass></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|<span data-ttu-id="4af2d-118">Contiene una clase de criptografía que tiene una asignación a un nombre descriptivo en el elemento **\<nameEntry>**.</span><span class="sxs-lookup"><span data-stu-id="4af2d-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
+|[<span data-ttu-id="8e18c-117">\<cryptoClass ></span><span class="sxs-lookup"><span data-stu-id="8e18c-117">\<cryptoClass></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|<span data-ttu-id="8e18c-118">Contiene una clase de criptografía que tiene una asignación a un nombre descriptivo en el elemento **\<nameEntry>**.</span><span class="sxs-lookup"><span data-stu-id="8e18c-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="4af2d-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="4af2d-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8e18c-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="8e18c-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="4af2d-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="4af2d-120">Element</span></span>|<span data-ttu-id="4af2d-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="4af2d-121">Description</span></span>|  
+|<span data-ttu-id="8e18c-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="8e18c-120">Element</span></span>|<span data-ttu-id="8e18c-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="8e18c-121">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="4af2d-122">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4af2d-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`cryptographySettings`|<span data-ttu-id="4af2d-123">Contiene la configuración de criptografía.</span><span class="sxs-lookup"><span data-stu-id="4af2d-123">Contains cryptography settings.</span></span>|  
-|`cryptoNameMapping`|<span data-ttu-id="4af2d-124">Contiene asignaciones de clases a nombres descriptivos.</span><span class="sxs-lookup"><span data-stu-id="4af2d-124">Contains mappings of classes to friendly names.</span></span>|  
-|`mscorlib`|<span data-ttu-id="4af2d-125">Contiene el `cryptographySettings` elemento.</span><span class="sxs-lookup"><span data-stu-id="4af2d-125">Contains the `cryptographySettings` element.</span></span>|  
+|`configuration`|<span data-ttu-id="8e18c-122">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8e18c-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="8e18c-123">Contiene la configuración de criptografía.</span><span class="sxs-lookup"><span data-stu-id="8e18c-123">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="8e18c-124">Contiene asignaciones de clases a nombres descriptivos.</span><span class="sxs-lookup"><span data-stu-id="8e18c-124">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="8e18c-125">Contiene el `cryptographySettings` elemento.</span><span class="sxs-lookup"><span data-stu-id="8e18c-125">Contains the `cryptographySettings` element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="4af2d-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4af2d-126">Example</span></span>  
- <span data-ttu-id="4af2d-127">El ejemplo siguiente se muestra cómo utilizar el  **\<cryptoClass >** elemento para hacer referencia a una clase de criptografía y configurar el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="4af2d-127">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="4af2d-128">A continuación, puede pasar la cadena "RSA" a la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método y el uso la <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método devuelva un `MyCryptoRSAClass` objeto.</span><span class="sxs-lookup"><span data-stu-id="4af2d-128">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="8e18c-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8e18c-126">Example</span></span>  
+ <span data-ttu-id="8e18c-127">El ejemplo siguiente se muestra cómo utilizar el  **\<cryptoClass >** elemento para hacer referencia a una clase de criptografía y configurar el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="8e18c-127">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="8e18c-128">A continuación, puede pasar la cadena "RSA" a la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método y el uso la <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método devuelva un `MyCryptoRSAClass` objeto.</span><span class="sxs-lookup"><span data-stu-id="8e18c-128">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,10 +78,10 @@ ms.locfileid: "47215878"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4af2d-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="4af2d-129">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8e18c-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="8e18c-129">See Also</span></span>  
  <xref:System.Security.Cryptography>  
- [<span data-ttu-id="4af2d-130">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="4af2d-130">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="4af2d-131">Esquema de la configuración de criptografía</span><span class="sxs-lookup"><span data-stu-id="4af2d-131">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [<span data-ttu-id="4af2d-132">Servicios criptográficos</span><span class="sxs-lookup"><span data-stu-id="4af2d-132">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
- [<span data-ttu-id="4af2d-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span><span class="sxs-lookup"><span data-stu-id="4af2d-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span></span>](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
- [<span data-ttu-id="4af2d-134">Configurar clases de criptografía</span><span class="sxs-lookup"><span data-stu-id="4af2d-134">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+ [<span data-ttu-id="8e18c-130">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="8e18c-130">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="8e18c-131">Esquema de la configuración de criptografía</span><span class="sxs-lookup"><span data-stu-id="8e18c-131">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="8e18c-132">Servicios criptográficos</span><span class="sxs-lookup"><span data-stu-id="8e18c-132">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="8e18c-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span><span class="sxs-lookup"><span data-stu-id="8e18c-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span></span>](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
+ [<span data-ttu-id="8e18c-134">Configurar clases de criptografía</span><span class="sxs-lookup"><span data-stu-id="8e18c-134">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

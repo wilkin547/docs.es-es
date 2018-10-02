@@ -8,44 +8,44 @@ helpviewer_keywords:
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
 ms.openlocfilehash: 66f341e193a0f018adb76a40617f85266519e602
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45746593"
 ---
-# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a><span data-ttu-id="6ba5f-102">Cómo: Obtener el valor de una variable de puntero (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="6ba5f-102">How to: Obtain the Value of a Pointer Variable (C# Programming Guide)</span></span>
-<span data-ttu-id="6ba5f-103">Use el operador de direccionamiento indirecto del puntero para obtener la variable en la ubicación indicada por un puntero.</span><span class="sxs-lookup"><span data-stu-id="6ba5f-103">Use the pointer indirection operator to obtain the variable at the location pointed to by a pointer.</span></span> <span data-ttu-id="6ba5f-104">La expresión tiene el formato siguiente, donde `p` es un tipo de puntero:</span><span class="sxs-lookup"><span data-stu-id="6ba5f-104">The expression takes the following form, where `p` is a pointer type:</span></span>  
+# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a><span data-ttu-id="176fb-102">Cómo: Obtener el valor de una variable de puntero (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="176fb-102">How to: Obtain the Value of a Pointer Variable (C# Programming Guide)</span></span>
+<span data-ttu-id="176fb-103">Use el operador de direccionamiento indirecto del puntero para obtener la variable en la ubicación indicada por un puntero.</span><span class="sxs-lookup"><span data-stu-id="176fb-103">Use the pointer indirection operator to obtain the variable at the location pointed to by a pointer.</span></span> <span data-ttu-id="176fb-104">La expresión tiene el formato siguiente, donde `p` es un tipo de puntero:</span><span class="sxs-lookup"><span data-stu-id="176fb-104">The expression takes the following form, where `p` is a pointer type:</span></span>  
   
 ```  
 *p;  
 ```  
   
- <span data-ttu-id="6ba5f-105">No se puede usar el operador de direccionamiento indirecto unario en una expresión de cualquier tipo distinta de la del tipo de puntero.</span><span class="sxs-lookup"><span data-stu-id="6ba5f-105">You cannot use the unary indirection operator on an expression of any type other than the pointer type.</span></span> <span data-ttu-id="6ba5f-106">Tampoco se puede aplicar a un puntero [void](../../../csharp/language-reference/keywords/void.md).</span><span class="sxs-lookup"><span data-stu-id="6ba5f-106">Also, you cannot apply it to a [void](../../../csharp/language-reference/keywords/void.md) pointer.</span></span>  
+ <span data-ttu-id="176fb-105">No se puede usar el operador de direccionamiento indirecto unario en una expresión de cualquier tipo distinta de la del tipo de puntero.</span><span class="sxs-lookup"><span data-stu-id="176fb-105">You cannot use the unary indirection operator on an expression of any type other than the pointer type.</span></span> <span data-ttu-id="176fb-106">Tampoco se puede aplicar a un puntero [void](../../../csharp/language-reference/keywords/void.md).</span><span class="sxs-lookup"><span data-stu-id="176fb-106">Also, you cannot apply it to a [void](../../../csharp/language-reference/keywords/void.md) pointer.</span></span>  
   
- <span data-ttu-id="6ba5f-107">Cuando se aplica el operador de direccionamiento indirecto a un puntero [null](../../../csharp/language-reference/keywords/null.md), el resultado depende de la implementación.</span><span class="sxs-lookup"><span data-stu-id="6ba5f-107">When you apply the indirection operator to a [null](../../../csharp/language-reference/keywords/null.md) pointer, the result depends on the implementation.</span></span>  
+ <span data-ttu-id="176fb-107">Cuando se aplica el operador de direccionamiento indirecto a un puntero [null](../../../csharp/language-reference/keywords/null.md), el resultado depende de la implementación.</span><span class="sxs-lookup"><span data-stu-id="176fb-107">When you apply the indirection operator to a [null](../../../csharp/language-reference/keywords/null.md) pointer, the result depends on the implementation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6ba5f-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6ba5f-108">Example</span></span>  
- <span data-ttu-id="6ba5f-109">En el ejemplo siguiente, se tiene acceso a una variable del tipo `char` mediante punteros de tipos diferentes.</span><span class="sxs-lookup"><span data-stu-id="6ba5f-109">In the following example, a variable of the type `char` is accessed by using pointers of different types.</span></span> <span data-ttu-id="6ba5f-110">Hay que tener en cuenta que la dirección de `theChar` variará de una ejecución a otra porque la dirección física asignada a una variable puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="6ba5f-110">Note that the address of `theChar` will vary from run to run, because the physical address allocated to a variable can change.</span></span>  
+## <a name="example"></a><span data-ttu-id="176fb-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="176fb-108">Example</span></span>  
+ <span data-ttu-id="176fb-109">En el ejemplo siguiente, se tiene acceso a una variable del tipo `char` mediante punteros de tipos diferentes.</span><span class="sxs-lookup"><span data-stu-id="176fb-109">In the following example, a variable of the type `char` is accessed by using pointers of different types.</span></span> <span data-ttu-id="176fb-110">Hay que tener en cuenta que la dirección de `theChar` variará de una ejecución a otra porque la dirección física asignada a una variable puede cambiar.</span><span class="sxs-lookup"><span data-stu-id="176fb-110">Note that the address of `theChar` will vary from run to run, because the physical address allocated to a variable can change.</span></span>  
   
  [!code-csharp[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_1.cs)]  
   
  [!code-csharp[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
-<span data-ttu-id="6ba5f-111">**Valor de theChar = Z**
+<span data-ttu-id="176fb-111">**Valor de theChar = Z**
 **Dirección de theChar = 12F718**
 **Valor de pChar = Z**
-**Valor de pInt = 90**</span><span class="sxs-lookup"><span data-stu-id="6ba5f-111">**Value of theChar = Z**
+**Valor de pInt = 90**</span><span class="sxs-lookup"><span data-stu-id="176fb-111">**Value of theChar = Z**
 **Address of theChar = 12F718**
 **Value of pChar = Z**
 **Value of pInt = 90**</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="6ba5f-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="6ba5f-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="176fb-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="176fb-112">See Also</span></span>
 
-- [<span data-ttu-id="6ba5f-113">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="6ba5f-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="6ba5f-114">Expresiones de puntero</span><span class="sxs-lookup"><span data-stu-id="6ba5f-114">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [<span data-ttu-id="6ba5f-115">Tipos de puntero</span><span class="sxs-lookup"><span data-stu-id="6ba5f-115">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [<span data-ttu-id="6ba5f-116">Tipos</span><span class="sxs-lookup"><span data-stu-id="6ba5f-116">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
-- [<span data-ttu-id="6ba5f-117">unsafe</span><span class="sxs-lookup"><span data-stu-id="6ba5f-117">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="6ba5f-118">fixed (instrucción)</span><span class="sxs-lookup"><span data-stu-id="6ba5f-118">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
-- [<span data-ttu-id="6ba5f-119">stackalloc</span><span class="sxs-lookup"><span data-stu-id="6ba5f-119">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
+- [<span data-ttu-id="176fb-113">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="176fb-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="176fb-114">Expresiones de puntero</span><span class="sxs-lookup"><span data-stu-id="176fb-114">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [<span data-ttu-id="176fb-115">Tipos de puntero</span><span class="sxs-lookup"><span data-stu-id="176fb-115">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [<span data-ttu-id="176fb-116">Tipos</span><span class="sxs-lookup"><span data-stu-id="176fb-116">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
+- [<span data-ttu-id="176fb-117">unsafe</span><span class="sxs-lookup"><span data-stu-id="176fb-117">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
+- [<span data-ttu-id="176fb-118">fixed (instrucción)</span><span class="sxs-lookup"><span data-stu-id="176fb-118">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [<span data-ttu-id="176fb-119">stackalloc</span><span class="sxs-lookup"><span data-stu-id="176fb-119">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
