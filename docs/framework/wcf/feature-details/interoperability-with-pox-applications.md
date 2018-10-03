@@ -1,4 +1,4 @@
----
+﻿---
 title: Interoperabilidad con aplicaciones POX
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
