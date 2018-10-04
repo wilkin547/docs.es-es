@@ -2,12 +2,12 @@
 title: Argumentos necesarios y grupos de sobrecarga
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 794a0a531fbd26d9e4242d40be5147ab41547192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517565"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244872"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argumentos necesarios y grupos de sobrecarga
 Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse. El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios. Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
@@ -61,12 +61,13 @@ public sealed class Add : CodeActivity<int>
   
  Si se usa la actividad y no se enlaza ninguno de los argumentos necesarios, se devuelve el siguiente error de validación.  
   
- **No se proporcionó el valor para un argumento de actividad necesario 'Operand1'.**  
+ **No se proporcionó el valor de un argumento de actividad necesario 'Operand1'.**  
 > [!NOTE]
->  Para obtener más información sobre acerca de cómo buscar y controlar errores de validación y advertencias, vea [invocar validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Para obtener más información acerca de la comprobación y control de errores de validación y advertencias, vea [invocar la validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
-## <a name="using-overload-groups"></a>Usar grupos de sobrecargas  
- Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad. Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>. A cada grupo se le proporciona un nombre especificado por <xref:System.Activities.OverloadGroupAttribute>. La actividad es válida cuando se enlaza sólo un conjunto de argumentos en un grupo de sobrecargas. En el siguiente ejemplo, tomado de la [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) ejemplo, un `CreateLocation` se define la clase.  
+## <a name="using-overload-groups"></a>Usar grupos de sobrecargas
+
+Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad. Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>. Cada grupo se asigna un nombre que se especifica mediante el <xref:System.Activities.OverloadGroupAttribute>. La actividad es válida cuando se enlaza sólo un conjunto de argumentos de un grupo de sobrecargas. En el ejemplo siguiente, se define una clase `CreateLocation`.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -105,7 +106,7 @@ class CreateLocation: Activity
   
  El objetivo de esta actividad es especificar una ubicación en los EE. UU. Para ello, el usuario de la actividad puede especificar la ubicación con uno de los tres grupos de argumentos. Para especificar las combinaciones válidas de argumentos, se definen tres grupos de sobrecargas. `G1` contiene los argumentos `Latitude` y `Longitude`. `G2` contiene `Street`, `City` y `State`. `G3` contiene `Street` y `Zip`. `Name` también es un argumento necesario, pero no forma parte de un grupo de sobrecargas. Para que esta actividad sea válida, `Name` tendría que estar enlazado con todos los argumentos de uno y solo un grupo de sobrecargas.  
   
- En el siguiente ejemplo, tomado de la [las actividades de acceso de base de datos](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) ejemplo, hay dos grupos de sobrecargas: `ConnectionString` y `ConfigFileSectionName`. Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
+ En el ejemplo siguiente, tomado de la [actividades de acceso de la base de datos](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) ejemplo, hay dos grupos de sobrecargas: `ConnectionString` y `ConfigFileSectionName`. Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
