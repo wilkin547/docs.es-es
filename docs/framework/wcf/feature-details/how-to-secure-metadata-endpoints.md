@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
 ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027709"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781796"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Cómo: Proteger los puntos de conexión de metadatos
 Los metadatos para un servicio pueden contener información confidencial sobre su aplicación que un usuario malintencionado puede aprovechar. Los consumidores de su servicio también pueden requerir un mecanismo seguro para obtener los metadatos sobre su servicio. Por consiguiente, a veces es necesario publicar sus metadatos utilizando un punto de conexión seguro.  

@@ -6,31 +6,31 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ad98c2da32084122dab529b8cf3a8fe7ef506b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489908"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780146"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Tutorial: Aplicar estilos al contenido de WPF
-En este tutorial se muestra cómo aplicar un estilo a un control de Windows Presentation Foundation (WPF) hospedado en un Windows Form.  
-  
- En este tutorial, realizará las tareas siguientes:  
-  
--   Crear el proyecto.  
-  
--   Crear el tipo de control WPF.  
-  
--   Aplicar un estilo al control WPF.  
-  
+En este tutorial se muestra cómo aplicar un estilo a un control de Windows Presentation Foundation (WPF) hospedado en un Windows Form.
+
+ En este tutorial, realizará las tareas siguientes:
+
+-   Crear el proyecto.
+
+-   Crear el tipo de control WPF.
+
+-   Aplicar un estilo al control WPF.
+
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto de Windows Forms.  

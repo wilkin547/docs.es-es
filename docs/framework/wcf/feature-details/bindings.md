@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-ms.openlocfilehash: 1930826cf51d67ceb789e20920ca42f04d1adc1b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e69cd500c50e9d76824d0e438a1af86f3a722c52
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199338"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780704"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Enlaces de Windows Communication Foundation
-Windows Communication Foundation (WCF) separa cómo se escribe el software para una aplicación de cómo se comunica con otro software. Los enlaces se usan para especificar el transporte, codificación y detalles protocolares requeridos para que los clientes y servicios se comuniquen entre sí. WCF usa los enlaces para generar la representación subyacente de conexión del punto de conexión, por lo que la mayoría de los detalles de enlace debe ser acordada por las partes que se están comunicando. La manera más sencilla de lograrlo es que los clientes de un servicio usen el mismo enlace que emplea el punto de conexión para el servicio. Para obtener más información acerca de cómo hacerlo, consulte [uso de enlaces para configurar los servicios de Windows Communication Foundation y los clientes](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+Windows Communication Foundation (WCF) separa cómo se escribe el software para una aplicación de cómo se comunica con otro software. Los enlaces se usan para especificar el transporte, codificación y detalles protocolares requeridos para que los clientes y servicios se comuniquen entre sí. WCF usa los enlaces para generar la representación subyacente de conexión del punto de conexión, por lo que la mayoría de los detalles de enlace debe ser acordada por las partes que se están comunicando. La manera más sencilla de lograrlo es que los clientes de un servicio usen el mismo enlace que emplea el punto de conexión para el servicio. Para obtener más información acerca de cómo hacerlo, consulte [uso de enlaces para configurar servicios y clientes](~/docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
  Un enlace se compone de una colección de elementos de enlace. Cada elemento describe algún aspecto de cómo el extremo se comunica con los clientes. Un enlace debe incluir por lo menos un elemento de enlace del transporte, por lo menos un elemento de enlace de la codificación de mensajes (que el elemento de enlace del transporte puede proporcionar de forma predeterminada), y cualquier número de otros elementos de enlace de protocolo. El proceso que compila un tiempo de ejecución a partir de esta descripción permite a cada elemento de enlace contribuir en el código a ese tiempo de ejecución.  
   
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) separa cómo se escribe el software para 
  [Configuración de enlaces proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Describe cómo utilizar y modificar los enlaces que proporciona WCF para admitir escenarios comunes.  
   
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  Describe cómo definir los enlaces de Windows Communication Foundation (WCF) para servicios y clientes imperativamente en código y de manera declarativa mediante configuración.  
   
  [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)  

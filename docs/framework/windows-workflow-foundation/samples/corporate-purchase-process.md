@@ -2,42 +2,42 @@
 title: Proceso de compra corporativa
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802916"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781666"
 ---
 # <a name="corporate-purchase-process"></a>Proceso de compra corporativa
-En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.  
-  
- Este ejemplo incluye una aplicación cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite interactuar con el proceso como diferentes participantes (como el solicitante original o un proveedor en particular).  
-  
-## <a name="requirements"></a>Requisitos  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
-  
-## <a name="demonstrates"></a>Demostraciones  
-  
--   Actividades personalizadas  
-  
--   Composición de actividades.  
-  
--   Marcadores  
-  
--   Persistencia  
-  
--   Persistencia esquematizada  
-  
--   Traza  
-  
--   Seguimiento  
-  
--   Hospedaje de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes (aplicaciones web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y aplicaciones WinForms).  
-  
+En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.
+
+ Este ejemplo incluye una aplicación cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite interactuar con el proceso como diferentes participantes (como el solicitante original o un proveedor en particular).
+
+## <a name="requirements"></a>Requisitos
+
+-   Visual Studio 2012.
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+
+## <a name="demonstrates"></a>Demostraciones
+
+-   Actividades personalizadas
+
+-   Composición de actividades.
+
+-   Marcadores
+
+-   Persistencia
+
+-   Persistencia esquematizada
+
+-   Traza
+
+-   Seguimiento
+
+-   Hospedaje de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes (aplicaciones web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y aplicaciones WinForms).
+
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
@@ -143,7 +143,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Abra el archivo de solución PurchaseProcess.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Con Visual Studio 2010, abra el archivo de solución PurchaseProcess.sln.  
   
 2.  Para ejecutar el proyecto de cliente Web, abra **el Explorador de soluciones** y haga clic en el **Web cliente** proyecto. Seleccione **establecer como proyecto de inicio**.  
   

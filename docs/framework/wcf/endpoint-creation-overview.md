@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b72c3959b2a42c6a5abc8ef31975d5bdb9ce220e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809175"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781614"
 ---
 # <a name="endpoint-creation-overview"></a>Información general acerca de la creación de puntos finales
 Toda la comunicación con un servicio de Windows Communication Foundation (WCF) se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio WCF. Esta sección describe la estructura de un punto de conexión, y detalla cómo definir un punto de conexión en la configuración y el código.  
@@ -20,11 +20,11 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
 ## <a name="the-structure-of-an-endpoint"></a>Estructura de un extremo  
  Cada punto de conexión contiene una dirección que indica dónde se encuentra el punto de conexión, un enlace que especifica cómo puede comunicarse un cliente con el punto de conexión, y un contrato que identifica los métodos disponibles.  
   
--   **Dirección**. La dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales dónde se ubica el servicio. Se representa en el modelo de objetos WCF mediante el <xref:System.ServiceModel.EndpointAddress> dirección, que contiene un identificador uniforme de recursos (URI) y las propiedades de dirección que incluyen una identidad, algunos elementos de lenguaje de descripción de servicios Web (WSDL) y una colección de opcional encabezados. Los encabezados opcionales proporcionan información de direccionamiento adicional para identificar o interactuar con el punto de conexión. Para obtener más información, consulte [al especificar una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Dirección**. La dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales dónde se ubica el servicio. Se representa en el modelo de objetos WCF mediante el <xref:System.ServiceModel.EndpointAddress> dirección, que contiene un identificador uniforme de recursos (URI) y las propiedades de dirección que incluyen una identidad, algunos elementos de lenguaje de descripción de servicios Web (WSDL) y una colección de opcional encabezados. Los encabezados opcionales proporcionan información de direccionamiento adicional para identificar o interactuar con el punto de conexión. Para obtener más información, consulte [especificando una dirección de extremo](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Enlace**. El enlace especifica cómo comunicarse con el punto de conexión. El enlace especifica cómo se comunica el punto de conexión con el mundo, incluido el protocolo de transporte que utiliza (por ejemplo, TCP o HTTP), la codificación utilizada en los mensajes (por ejemplo, texto o binario) y los requisitos de seguridad necesarios (por ejemplo, capa de sockets seguros [SSL] o seguridad del mensaje SOAP). Para obtener más información, consulte [utilizando enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+-   **Enlace**. El enlace especifica cómo comunicarse con el punto de conexión. El enlace especifica cómo se comunica el punto de conexión con el mundo, incluido el protocolo de transporte que utiliza (por ejemplo, TCP o HTTP), la codificación utilizada en los mensajes (por ejemplo, texto o binario) y los requisitos de seguridad necesarios (por ejemplo, capa de sockets seguros [SSL] o seguridad del mensaje SOAP). Para obtener más información, consulte [uso de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Contrato de servicio**. El contrato de servicios describe qué funcionalidad expone el punto de conexión al cliente. Un contrato especifica las operaciones a las que puede llamar un cliente, la forma del mensaje y el tipo de parámetros de entrada o los datos necesarios para llamar a la operación, así como el tipo de mensaje de procesamiento o respuesta que puede esperar el cliente. Existen tres tipos básicos de contratos que se corresponden con los patrones de intercambio de mensajes básicos (MEP): datagrama (unidireccional), solicitud/respuesta y dúplex (bidireccional). El contrato de servicio también puede emplear contratos de datos y mensajes para exigir tipos de datos y formatos de mensaje específicos cuando se obtiene acceso. Para obtener más información sobre cómo definir un contrato de servicio, consulte [diseñar contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md). Tenga en cuenta que también pueden exigírsele a un cliente que implemente un contrato definido por servicio, denominado un contrato de devolución de llamada, para recibir los mensajes del servicio en un MEP dúplex. Para obtener más información, consulte [servicios dúplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+-   **Contrato de servicio**. El contrato de servicios describe qué funcionalidad expone el punto de conexión al cliente. Un contrato especifica las operaciones a las que puede llamar un cliente, la forma del mensaje y el tipo de parámetros de entrada o los datos necesarios para llamar a la operación, así como el tipo de mensaje de procesamiento o respuesta que puede esperar el cliente. Existen tres tipos básicos de contratos que se corresponden con los patrones de intercambio de mensajes básicos (MEP): datagrama (unidireccional), solicitud/respuesta y dúplex (bidireccional). El contrato de servicio también puede emplear contratos de datos y mensajes para exigir tipos de datos y formatos de mensaje específicos cuando se obtiene acceso. Para obtener más información sobre cómo definir un contrato de servicio, consulte [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md). Tenga en cuenta que también pueden exigírsele a un cliente que implemente un contrato definido por servicio, denominado un contrato de devolución de llamada, para recibir los mensajes del servicio en un MEP dúplex. Para obtener más información, consulte [servicios dúplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  El punto de conexión de un servicio puede especificarse de manera imperativa, mediante el código, o de manera declarativa a través de la configuración. Si no se especifica ningún extremo, el tiempo de ejecución proporciona extremos predeterminados, agregando uno para cada dirección base de cada contrato de servicio implementado por el servicio. Normalmente, no resulta muy práctico definir los extremos en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Generalmente, es más práctico definir extremos de servicio mediante la configuración en lugar del código. Mantener la información del enlace y el direccionamiento fuera del código les permite cambiar sin tener que recompilar e implementar la aplicación.  
   
@@ -38,7 +38,7 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
   
 -   Implemente un servicio `Echo` del tipo definido por el contrato `IEcho`.  
   
--   Especifique una dirección de punto de conexión de http://localhost:8000/Echo para el servicio.  
+-   Especifique una dirección de punto de conexión de `http://localhost:8000/Echo` para el servicio.  
   
 -   Configure el servicio `Echo` mediante un enlace <xref:System.ServiceModel.WSHttpBinding>.  
   
@@ -132,7 +132,7 @@ serviceHost.Open()
  Con frecuencia al crear una aplicación se desea delegar las decisiones al administrador que está implementando la aplicación. Por ejemplo, es habitual que no pueda saberse de antemano cuál será la dirección de servicio (una URI). En lugar de incluir una dirección en el código, es preferible permitir a un administrador hacerlo después de crear un servicio. Esta flexibilidad se logra a través de la configuración. Para obtener más información, consulte [configurar Services](../../../docs/framework/wcf/configuring-services.md).  
   
 > [!NOTE]
->  Use la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con el `/config:` *filename*`[,`*filename* `]` cambiar a Cree rápidamente archivos de configuración.  
+>  Use la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con el `/config:` *filename*`[,`*filename* `]` cambiar a crear rápidamente archivos de configuración.  
   
 ## <a name="using-default-endpoints"></a>Usar puntos de conexión predeterminados  
  Si no se especifica ningún extremo en el código ni en la configuración, el tiempo de ejecución proporciona extremos predeterminados, agregando uno para cada dirección base de cada contrato de servicio implementado por el servicio. La dirección base se puede especificar en el código o en la configuración, y los extremos predeterminados se agregan al llamar al método <xref:System.ServiceModel.ICommunicationObject.Open> en el objeto <xref:System.ServiceModel.ServiceHost>. Este ejemplo es el mismo que el de la sección anterior, pero como no se han especificado extremos, se agregan los predeterminados.  
@@ -196,7 +196,7 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()  
 ```  
   
- Si se proporcionan extremos de forma explícita, es posible agregar extremos predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obtener más información sobre puntos de conexión predeterminados, consulte [configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Si se proporcionan extremos de forma explícita, es posible agregar extremos predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obtener más información sobre los puntos de conexión predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Implementación de contratos de servicio](../../../docs/framework/wcf/implementing-service-contracts.md)

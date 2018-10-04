@@ -3,12 +3,12 @@ title: '&lt;security&gt; de &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
 author: BrucePerlerMS
-ms.openlocfilehash: 28cff66cfd50229eacbb7c7c4b1d65678efb40ea
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 04a44535b1f293c9961b617eaa12b1c0a478a0f5
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236207"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781718"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;security&gt; de &lt;webHttpBinding&gt;
 Especifica los requisitos de seguridad para un extremo configurado con un [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -76,6 +76,6 @@ Especifica los requisitos de seguridad para un extremo configurado con un [ \<ws
  [Selección de tipos de credenciales](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)  
  [Modelo de programación de web HTTP de WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

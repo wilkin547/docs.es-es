@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
 ms.openlocfilehash: 41829bee3df3e47c0ccd712ecc9a314e5971aba0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032652"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793377"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Información general de Windows Identity Foundation 4.5
 Windows Identity Foundation 4.5 es un conjunto de clases de .NET Framework para implementar la identidad basada en notificaciones en las aplicaciones. Al usarlo, se beneficiará fácilmente de las ventajas de las aplicaciones y los servicios compatibles con notificaciones. WIF 4.5 se puede usar en cualquier aplicación web o servicio Web que use .NET Framework versión 4.5 o versiones posteriores. WIF es solo una parte de la familia de software de identidad federada de Microsoft que implementa la visión compartida del sector basada en estándares abiertos. La identidad federada consta de tres componentes: [Servicios de federación de Active Directory®](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [Windows Azure Access Control Services](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) y WIF. Juntos, estos tres componentes forman el núcleo de la nueva plataforma de acceso e identidad de nube basada en notificaciones de Microsoft.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 29caae11c72ff230d738e9dab1cd763899710843
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1493cb6f9588ee618b085186b3bb63476a9a8930
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207560"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793548"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;MsmqIntegrationBinding&gt;
 Define un enlace que proporciona la compatibilidad de uso de colas enrutando los mensajes a través de MSMQ.  
@@ -137,5 +137,5 @@ msmqIntegrationBinding
  [\<enlace >](../../../../../docs/framework/misc/binding.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

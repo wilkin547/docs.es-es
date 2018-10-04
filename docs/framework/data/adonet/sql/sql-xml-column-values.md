@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
 ms.openlocfilehash: b46c763e7cddfc7617c9a6a23428f83a54955ba0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48244703"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781978"
 ---
 # <a name="sql-xml-column-values"></a>Valores de columna de SQL XML
 SQL Server admite la `xml` tipo de datos, y los programadores pueden recuperar conjuntos de resultados que incluyan este tipo mediante el comportamiento estándar de la <xref:System.Data.SqlClient.SqlCommand> clase. Las columnas `xml` se pueden recuperar como se recupera cualquier columna (por ejemplo, en un <xref:System.Data.SqlClient.SqlDataReader>) pero si desea trabajar con el contenido de la columna en XML, deberá utilizar un <xref:System.Xml.XmlReader>.  

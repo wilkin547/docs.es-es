@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
 author: BrucePerlerMS
 ms.openlocfilehash: e81469f5ac55b1c698dc99af0782dbdedab33339
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036572"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793154"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Cómo deshabilitar sesiones seguras en WSFederationHttpBinding
 Algunos servicios pueden requerir credenciales federadas pero no admiten sesiones seguras. En ese caso, debe deshabilitar la característica de sesión segura. A diferencia de la <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, el <xref:System.ServiceModel.WSFederationHttpBinding> clase no proporciona una manera de deshabilitar las sesiones seguras al comunicarse con un servicio. En su lugar, debe crear un enlace personalizado que reemplace los valores de sesión seguros con un arranque.  

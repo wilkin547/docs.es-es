@@ -3,12 +3,12 @@ title: Elemento &lt;security&gt; de &lt;wsHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 author: BrucePerlerMS
-ms.openlocfilehash: 0512197cf792c2d3d04f999a9708297ec3137728
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cee14a1ed8aa9f11aa77006ee2ed4e205ceedbe3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233046"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793440"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>Elemento &lt;security&gt; de &lt;wsHttpBinding&gt;
 Representa las funciones de seguridad de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -80,5 +80,5 @@ Representa las funciones de seguridad de la [ \<wsHttpBinding >](../../../../../
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

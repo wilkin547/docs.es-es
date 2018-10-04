@@ -2,19 +2,19 @@
 title: 'Cómo: Implementar una aplicación de integración de COM+'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e338641b801113c5cd6ff4ec380f60f9ef900fc2
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490144"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793076"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Cómo: Implementar una aplicación de integración de COM+
 Cuando ha escrito una aplicación de integración de COM+, puede que desee implementarla en otro equipo. En este tema se describe cómo mover una aplicación de integración de COM+ de un equipo a otro.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Mover una aplicación de integración alojada por COM+  
   
-1.  Asegúrese de que WCF está instalado en ambos equipos.  
+1.  Asegúrese de que está instalado WCF en ambos equipos.  
   
 2.  Exportar la aplicación desde el equipo A.  
   
@@ -24,11 +24,11 @@ Cuando ha escrito una aplicación de integración de COM+, puede que desee imple
   
 5.  Copie los archivos Application.config y Application.manifest del directorio raíz de la aplicación en el equipo A en el directorio raíz de la aplicación en el equipo B.  
   
-6.  Modifique las direcciones del punto de conexión de servicio en el archivo Application.config en el equipo B para identificar el equipo adecuado. Por ejemplo, cambie http://machineA/MyService a http://machineB/MyService.  
+6.  Modifique las direcciones del punto de conexión de servicio en el archivo Application.config en el equipo B para identificar el equipo adecuado. Por ejemplo, cambie `http://machineA/MyService` a `http://machineB/MyService`.  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Mover una aplicación de integración alojada en Web  
   
-1.  Asegúrese de que WCF está instalado en ambos equipos.  
+1.  Asegúrese de que está instalado WCF en ambos equipos.  
   
 2.  Exportar la aplicación desde el equipo A.  
   
