@@ -22,7 +22,7 @@ Puede resolver problemas de interoperabilidad del Modelo de objetos componentes 
   
 -   Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el formulario de Windows Forms.  
   
--   Muestre cada Windows Form en un subproceso independiente. Para obtener más información, consulta [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+-   Muestre cada Windows Form en un subproceso independiente. Para más información, consulte [Cómo admitir la interoperabilidad COM mostrando cada Windows Forms en su propio subproceso](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="procedure"></a>Procedimiento  
  El uso del método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> puede ser la manera más fácil de mostrar un formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] porque, de todos los enfoques, es el que necesita menos código para su implementación.  
