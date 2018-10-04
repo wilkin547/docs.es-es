@@ -2,151 +2,151 @@
 title: Seguimiento personalizado
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: c986d9845bb76219ad8b0657a3a7252aaaf4c6cd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5f603d991748439890a31a0a25fc65ad270a5083
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198080"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266694"
 ---
-# <a name="custom-tracking"></a><span data-ttu-id="ca4d0-102">Seguimiento personalizado</span><span class="sxs-lookup"><span data-stu-id="ca4d0-102">Custom Tracking</span></span>
-<span data-ttu-id="ca4d0-103">En este ejemplo se muestra cómo crear un participante de seguimiento personalizado y cómo escribir en la consola el contenido de los datos de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-103">This sample demonstrates how to create a custom tracking participant and write the contents of the tracking data to console.</span></span> <span data-ttu-id="ca4d0-104">Además, el ejemplo muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> rellenados con datos definidos por el usuario.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-104">In addition, the sample demonstrates how to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects populated with user defined data.</span></span> <span data-ttu-id="ca4d0-105">El participante de seguimiento basado en consola filtra los objetos <xref:System.Activities.Tracking.TrackingRecord> que emite el flujo de trabajo utilizando un objeto de perfil de seguimiento creado en código.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-105">The console-based tracking participant filters the <xref:System.Activities.Tracking.TrackingRecord> objects emitted by the workflow using a tracking profile object created in code.</span></span>  
-  
-## <a name="sample-details"></a><span data-ttu-id="ca4d0-106">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="ca4d0-106">Sample Details</span></span>  
- <span data-ttu-id="ca4d0-107">Windows Workflow Foundation (WF) proporciona una infraestructura de seguimiento para realizar un seguimiento de la ejecución de una instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-107">Windows Workflow Foundation (WF) provides a tracking infrastructure to track execution of a workflow instance.</span></span> <span data-ttu-id="ca4d0-108">El tiempo de ejecución de seguimiento implementa una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos de seguimiento personalizados.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-108">The tracking runtime implements a workflow instance to emit events related to the workflow lifecycle, events from workflow activities and custom tracking events.</span></span> <span data-ttu-id="ca4d0-109">En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-109">The following table details the primary components of the tracking infrastructure.</span></span>  
-  
-|<span data-ttu-id="ca4d0-110">Componente</span><span class="sxs-lookup"><span data-stu-id="ca4d0-110">Component</span></span>|<span data-ttu-id="ca4d0-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="ca4d0-111">Description</span></span>|  
-|---------------|-----------------|  
-|<span data-ttu-id="ca4d0-112">Tiempo de ejecución de seguimiento</span><span class="sxs-lookup"><span data-stu-id="ca4d0-112">Tracking runtime</span></span>|<span data-ttu-id="ca4d0-113">Proporciona la infraestructura para emitir registros de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-113">Provides the infrastructure to emit tracking records.</span></span>|  
-|<span data-ttu-id="ca4d0-114">Participantes de seguimiento</span><span class="sxs-lookup"><span data-stu-id="ca4d0-114">Tracking participants</span></span>|<span data-ttu-id="ca4d0-115">Usa los registros de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-115">Consumes the tracking records.</span></span> [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]<span data-ttu-id="ca4d0-116"> se distribuye con un participante de seguimiento que escribe los eventos de seguimiento como eventos de Seguimiento de eventos para Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="ca4d0-116"> ships with a tracking participant that writes tracking records as Event Tracing for Windows (ETW) events.</span></span>|  
-|<span data-ttu-id="ca4d0-117">Perfil de seguimiento</span><span class="sxs-lookup"><span data-stu-id="ca4d0-117">Tracking profile</span></span>|<span data-ttu-id="ca4d0-118">Un mecanismo de filtrado que permite a un participante de seguimiento suscribirse a un subconjunto de los registros de seguimiento emitidos desde una instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-118">A filtering mechanism that allows a tracking participant to subscribe for a subset of the tracking records emitted from a workflow instance.</span></span>|  
-  
- <span data-ttu-id="ca4d0-119">En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-119">The following table details the tracking records that the workflow runtime emits.</span></span>  
-  
-|<span data-ttu-id="ca4d0-120">Registro de seguimiento</span><span class="sxs-lookup"><span data-stu-id="ca4d0-120">Tracking Record</span></span>|<span data-ttu-id="ca4d0-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="ca4d0-121">Description</span></span>|  
-|---------------------|-----------------|  
-|<span data-ttu-id="ca4d0-122">Registros de seguimiento de instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-122">Workflow instance tracking records.</span></span>|<span data-ttu-id="ca4d0-123">Describe el ciclo de vida de la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-123">Describes the life cycle of the workflow instance.</span></span> <span data-ttu-id="ca4d0-124">Por ejemplo, se emite un registro de instancia cuando el flujo de trabajo se inicia o se completa.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-124">For example, an instance record is emitted when the workflow starts or completes.</span></span>|  
-|<span data-ttu-id="ca4d0-125">Registros de seguimiento de estado de actividad.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-125">Activity state Tracking Records.</span></span>|<span data-ttu-id="ca4d0-126">Describe la ejecución de la actividad.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-126">Details activity execution.</span></span> <span data-ttu-id="ca4d0-127">Estos registros indican el estado de una actividad de flujo de trabajo; por ejemplo, cuándo se programa una actividad, cuándo se completa o cuándo se produce un error.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-127">These records indicate the state of a workflow activity such as when an activity is scheduled or when the activity completes or when a fault is thrown.</span></span>|  
-|<span data-ttu-id="ca4d0-128">Registro de reanudación de marcadores.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-128">Bookmark resumption record.</span></span>|<span data-ttu-id="ca4d0-129">Se emite siempre que se reanude un marcador en una instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-129">Emitted whenever a bookmark within a workflow instance is resumed.</span></span>|  
-|<span data-ttu-id="ca4d0-130">Registros de seguimiento personalizados.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-130">Custom Tracking Records.</span></span>|<span data-ttu-id="ca4d0-131">Un autor del flujo de trabajo puede crear registros de seguimiento personalizados y emitirlos en la actividad personalizada.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-131">A workflow author can create Custom Tracking Records and emit them within the custom activity.</span></span>|  
-  
- <span data-ttu-id="ca4d0-132">El participante de seguimiento se suscribe a un subconjunto de los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos utilizando perfiles de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-132">The tracking participant subscribes for a subset of the emitted <xref:System.Activities.Tracking.TrackingRecord> objects using tracking profiles.</span></span> <span data-ttu-id="ca4d0-133">Un perfil de seguimiento contiene consultas de seguimiento que permiten suscribirse a un tipo de registro de seguimiento concreto.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-133">A tracking profile contains tracking queries that allow subscribing for a particular tracking record type.</span></span> <span data-ttu-id="ca4d0-134">Los perfiles de seguimiento se pueden especificar mediante código o en la configuración.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-134">Tracking profiles can be specified in code or in configuration.</span></span>  
-  
-### <a name="custom-tracking-participant"></a><span data-ttu-id="ca4d0-135">Participante de seguimiento personalizado</span><span class="sxs-lookup"><span data-stu-id="ca4d0-135">Custom Tracking Participant</span></span>  
- <span data-ttu-id="ca4d0-136">La API de participante de seguimiento permite la ampliación del tiempo de ejecución de seguimiento mediante un participante de seguimiento proporcionado por el usuario que puede incluir una lógica personalizada para controlar los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos por el tiempo de ejecución de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-136">The tracking participant API allows extension of the tracking runtime with a user provided tracking participant that can include custom logic to handle <xref:System.Activities.Tracking.TrackingRecord> objects emitted by the workflow runtime.</span></span>  
-  
- <span data-ttu-id="ca4d0-137">Para escribir un participante de seguimiento, el usuario debe implementar <xref:System.Activities.Tracking.TrackingParticipant>.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-137">To write a tracking participant the user must implement <xref:System.Activities.Tracking.TrackingParticipant>.</span></span> <span data-ttu-id="ca4d0-138">Concretamente, el participante personalizado debe implementar el método <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-138">Specifically, the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method has to be implemented by the custom participant.</span></span> <span data-ttu-id="ca4d0-139">Se llama a este método cuando el tiempo de ejecución de flujo de trabajo emite un registro <xref:System.Activities.Tracking.TrackingRecord>.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-139">This method is called when a <xref:System.Activities.Tracking.TrackingRecord> is emitted by the workflow runtime.</span></span>  
-  
-```csharp  
-public abstract class TrackingParticipant  
-{  
-    protected TrackingParticipant();  
-  
-    public virtual TrackingProfile TrackingProfile { get; set; }  
-    public abstract void Track(TrackingRecord record, TimeSpan timeout);  
-}  
-```  
-  
- <span data-ttu-id="ca4d0-140">El participante de seguimiento completo se implementa en el archivo ConsoleTrackingParticipant.cs. En el siguiente ejemplo de código se muestra el método <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> para el participante de seguimiento personalizado.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-140">The complete tracking participant is implemented in the ConsoleTrackingParticipant.cs file.The following code example is the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method for the custom tracking participant.</span></span>  
-  
-```csharp  
-protected override void Track(TrackingRecord record, TimeSpan timeout)  
-{  
-    ...             
-    WorkflowInstanceRecord workflowInstanceRecord = record as WorkflowInstanceRecord;  
-    if (workflowInstanceRecord != null)  
-    {  
-        Console.WriteLine(String.Format(CultureInfo.InvariantCulture,  
-            " Workflow InstanceID: {0} Workflow instance state: {1}",  
-            record.InstanceId, workflowInstanceRecord.State));  
-    }  
-  
-    ActivityStateRecord activityStateRecord = record as ActivityStateRecord;  
-    if (activityStateRecord != null)  
-    {  
-        IDictionary<String, object> variables = activityStateRecord.Variables;  
-        StringBuilder vars = new StringBuilder();  
-  
-        if (variables.Count > 0)  
-        {  
-            vars.AppendLine("\n\tVariables:");  
-            foreach (KeyValuePair<string, object> variable in variables)  
-            {     
-                vars.AppendLine(String.Format(  
-                    "\t\tName: {0} Value: {1}", variable.Key, variable.Value));  
-            }  
-        }  
-        Console.WriteLine(String.Format(CultureInfo.InvariantCulture,  
-            " :Activity DisplayName: {0} :ActivityInstanceState: {1} {2}",  
-                activityStateRecord.Activity.Name, activityStateRecord.State,  
-            ((variables.Count > 0) ? vars.ToString() : String.Empty)));  
-    }  
-  
-    CustomTrackingRecord customTrackingRecord = record as CustomTrackingRecord;  
-  
-    if ((customTrackingRecord != null) && (customTrackingRecord.Data.Count > 0))  
-    {  
-        ...  
-    }  
-    Console.WriteLine();  
-  
-}  
-```  
-  
- <span data-ttu-id="ca4d0-141">El siguiente ejemplo de código agrega el participante de la consola al invocador de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-141">The following code example adds the console participant to the workflow invoker.</span></span>  
-  
-```csharp  
-ConsoleTrackingParticipant customTrackingParticipant = new ConsoleTrackingParticipant()  
-{  
-    ...  
-    // The tracking profile is set here, refer to Program.CS  
-...  
-}  
-  
-WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());  
-invoker.Extensions.Add(customTrackingParticipant);  
-```  
-  
-### <a name="emitting-custom-tracking-records"></a><span data-ttu-id="ca4d0-142">Emitir registros de seguimiento personalizados</span><span class="sxs-lookup"><span data-stu-id="ca4d0-142">Emitting Custom Tracking Records</span></span>  
- <span data-ttu-id="ca4d0-143">En este ejemplo también se muestra la capacidad de emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> desde una actividad de flujo de trabajo personalizada:</span><span class="sxs-lookup"><span data-stu-id="ca4d0-143">This sample also demonstrates the ability to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects from a custom workflow activity:</span></span>  
-  
--   <span data-ttu-id="ca4d0-144">Los objetos <xref:System.Activities.Tracking.CustomTrackingRecord> se crean y rellenan con datos definidos por el usuario que se desean emitir con el registro.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-144">The <xref:System.Activities.Tracking.CustomTrackingRecord> objects are created and populated with user-defined data that is desired to be emitted with the record.</span></span>  
-  
--   <span data-ttu-id="ca4d0-145">El <xref:System.Activities.Tracking.CustomTrackingRecord> se genera mediante una llamada a método de seguimiento de la <xref:System.Activities.ActivityContext>.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-145">The <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted by calling the track method of the <xref:System.Activities.ActivityContext>.</span></span>  
-  
- <span data-ttu-id="ca4d0-146">En el siguiente ejemplo se muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> desde una actividad personalizada.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-146">The following example demonstrates how to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects within a custom activity.</span></span>  
-  
-```csharp  
-// Create the Custom Tracking Record  
-CustomTrackingRecord customRecord = new CustomTrackingRecord("OrderIn")  
-{  
-    Data =   
-    {  
-        {"OrderId", 200},  
-        {"OrderDate", "20 Aug 2001"}  
-    }  
-};  
-  
-// Emit custom tracking record  
-context.Track(customRecord);  
-```  
-  
-#### <a name="to-use-this-sample"></a><span data-ttu-id="ca4d0-147">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="ca4d0-147">To use this sample</span></span>  
-  
-1.  <span data-ttu-id="ca4d0-148">Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución CustomTrackingSample.sln.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-148">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the CustomTrackingSample.sln solution file.</span></span>  
-  
-2.  <span data-ttu-id="ca4d0-149">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-149">To build the solution, press CTRL+SHIFT+B.</span></span>  
-  
-3.  <span data-ttu-id="ca4d0-150">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-150">To run the solution, press CTRL+F5.</span></span>  
-  
+# <a name="custom-tracking"></a><span data-ttu-id="93b3e-102">Seguimiento personalizado</span><span class="sxs-lookup"><span data-stu-id="93b3e-102">Custom Tracking</span></span>
+<span data-ttu-id="93b3e-103">En este ejemplo se muestra cómo crear un participante de seguimiento personalizado y cómo escribir en la consola el contenido de los datos de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="93b3e-103">This sample demonstrates how to create a custom tracking participant and write the contents of the tracking data to console.</span></span> <span data-ttu-id="93b3e-104">Además, el ejemplo muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> rellenados con datos definidos por el usuario.</span><span class="sxs-lookup"><span data-stu-id="93b3e-104">In addition, the sample demonstrates how to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects populated with user defined data.</span></span> <span data-ttu-id="93b3e-105">El participante de seguimiento basado en consola filtra los objetos <xref:System.Activities.Tracking.TrackingRecord> que emite el flujo de trabajo utilizando un objeto de perfil de seguimiento creado en código.</span><span class="sxs-lookup"><span data-stu-id="93b3e-105">The console-based tracking participant filters the <xref:System.Activities.Tracking.TrackingRecord> objects emitted by the workflow using a tracking profile object created in code.</span></span>
+
+## <a name="sample-details"></a><span data-ttu-id="93b3e-106">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="93b3e-106">Sample Details</span></span>
+ <span data-ttu-id="93b3e-107">Windows Workflow Foundation (WF) proporciona una infraestructura de seguimiento para realizar un seguimiento de la ejecución de una instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-107">Windows Workflow Foundation (WF) provides a tracking infrastructure to track execution of a workflow instance.</span></span> <span data-ttu-id="93b3e-108">El tiempo de ejecución de seguimiento implementa una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos de seguimiento personalizados.</span><span class="sxs-lookup"><span data-stu-id="93b3e-108">The tracking runtime implements a workflow instance to emit events related to the workflow lifecycle, events from workflow activities and custom tracking events.</span></span> <span data-ttu-id="93b3e-109">En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="93b3e-109">The following table details the primary components of the tracking infrastructure.</span></span>
+
+|<span data-ttu-id="93b3e-110">Componente</span><span class="sxs-lookup"><span data-stu-id="93b3e-110">Component</span></span>|<span data-ttu-id="93b3e-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="93b3e-111">Description</span></span>|
+|---------------|-----------------|
+|<span data-ttu-id="93b3e-112">Tiempo de ejecución de seguimiento</span><span class="sxs-lookup"><span data-stu-id="93b3e-112">Tracking runtime</span></span>|<span data-ttu-id="93b3e-113">Proporciona la infraestructura para emitir registros de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="93b3e-113">Provides the infrastructure to emit tracking records.</span></span>|
+|<span data-ttu-id="93b3e-114">Participantes de seguimiento</span><span class="sxs-lookup"><span data-stu-id="93b3e-114">Tracking participants</span></span>|<span data-ttu-id="93b3e-115">Usa los registros de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="93b3e-115">Consumes the tracking records.</span></span> [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] <span data-ttu-id="93b3e-116">se distribuye con un participante de seguimiento que escribe los eventos de seguimiento como eventos de Seguimiento de eventos para Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="93b3e-116"> ships with a tracking participant that writes tracking records as Event Tracing for Windows (ETW) events.</span></span>|
+|<span data-ttu-id="93b3e-117">Perfil de seguimiento</span><span class="sxs-lookup"><span data-stu-id="93b3e-117">Tracking profile</span></span>|<span data-ttu-id="93b3e-118">Un mecanismo de filtrado que permite a un participante de seguimiento suscribirse a un subconjunto de los registros de seguimiento emitidos desde una instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-118">A filtering mechanism that allows a tracking participant to subscribe for a subset of the tracking records emitted from a workflow instance.</span></span>|
+
+ <span data-ttu-id="93b3e-119">En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-119">The following table details the tracking records that the workflow runtime emits.</span></span>
+
+|<span data-ttu-id="93b3e-120">Registro de seguimiento</span><span class="sxs-lookup"><span data-stu-id="93b3e-120">Tracking Record</span></span>|<span data-ttu-id="93b3e-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="93b3e-121">Description</span></span>|
+|---------------------|-----------------|
+|<span data-ttu-id="93b3e-122">Registros de seguimiento de instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-122">Workflow instance tracking records.</span></span>|<span data-ttu-id="93b3e-123">Describe el ciclo de vida de la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-123">Describes the life cycle of the workflow instance.</span></span> <span data-ttu-id="93b3e-124">Por ejemplo, se emite un registro de instancia cuando el flujo de trabajo se inicia o se completa.</span><span class="sxs-lookup"><span data-stu-id="93b3e-124">For example, an instance record is emitted when the workflow starts or completes.</span></span>|
+|<span data-ttu-id="93b3e-125">Registros de seguimiento de estado de actividad.</span><span class="sxs-lookup"><span data-stu-id="93b3e-125">Activity state Tracking Records.</span></span>|<span data-ttu-id="93b3e-126">Describe la ejecución de la actividad.</span><span class="sxs-lookup"><span data-stu-id="93b3e-126">Details activity execution.</span></span> <span data-ttu-id="93b3e-127">Estos registros indican el estado de una actividad de flujo de trabajo; por ejemplo, cuándo se programa una actividad, cuándo se completa o cuándo se produce un error.</span><span class="sxs-lookup"><span data-stu-id="93b3e-127">These records indicate the state of a workflow activity such as when an activity is scheduled or when the activity completes or when a fault is thrown.</span></span>|
+|<span data-ttu-id="93b3e-128">Registro de reanudación de marcadores.</span><span class="sxs-lookup"><span data-stu-id="93b3e-128">Bookmark resumption record.</span></span>|<span data-ttu-id="93b3e-129">Se emite siempre que se reanude un marcador en una instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-129">Emitted whenever a bookmark within a workflow instance is resumed.</span></span>|
+|<span data-ttu-id="93b3e-130">Registros de seguimiento personalizados.</span><span class="sxs-lookup"><span data-stu-id="93b3e-130">Custom Tracking Records.</span></span>|<span data-ttu-id="93b3e-131">Un autor del flujo de trabajo puede crear registros de seguimiento personalizados y emitirlos en la actividad personalizada.</span><span class="sxs-lookup"><span data-stu-id="93b3e-131">A workflow author can create Custom Tracking Records and emit them within the custom activity.</span></span>|
+
+ <span data-ttu-id="93b3e-132">El participante de seguimiento se suscribe a un subconjunto de los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos utilizando perfiles de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="93b3e-132">The tracking participant subscribes for a subset of the emitted <xref:System.Activities.Tracking.TrackingRecord> objects using tracking profiles.</span></span> <span data-ttu-id="93b3e-133">Un perfil de seguimiento contiene consultas de seguimiento que permiten suscribirse a un tipo de registro de seguimiento concreto.</span><span class="sxs-lookup"><span data-stu-id="93b3e-133">A tracking profile contains tracking queries that allow subscribing for a particular tracking record type.</span></span> <span data-ttu-id="93b3e-134">Los perfiles de seguimiento se pueden especificar mediante código o en la configuración.</span><span class="sxs-lookup"><span data-stu-id="93b3e-134">Tracking profiles can be specified in code or in configuration.</span></span>
+
+### <a name="custom-tracking-participant"></a><span data-ttu-id="93b3e-135">Participante de seguimiento personalizado</span><span class="sxs-lookup"><span data-stu-id="93b3e-135">Custom Tracking Participant</span></span>
+ <span data-ttu-id="93b3e-136">La API de participante de seguimiento permite la ampliación del tiempo de ejecución de seguimiento mediante un participante de seguimiento proporcionado por el usuario que puede incluir una lógica personalizada para controlar los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos por el tiempo de ejecución de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-136">The tracking participant API allows extension of the tracking runtime with a user provided tracking participant that can include custom logic to handle <xref:System.Activities.Tracking.TrackingRecord> objects emitted by the workflow runtime.</span></span>
+
+ <span data-ttu-id="93b3e-137">Para escribir un participante de seguimiento, el usuario debe implementar <xref:System.Activities.Tracking.TrackingParticipant>.</span><span class="sxs-lookup"><span data-stu-id="93b3e-137">To write a tracking participant the user must implement <xref:System.Activities.Tracking.TrackingParticipant>.</span></span> <span data-ttu-id="93b3e-138">Concretamente, el participante personalizado debe implementar el método <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>.</span><span class="sxs-lookup"><span data-stu-id="93b3e-138">Specifically, the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method has to be implemented by the custom participant.</span></span> <span data-ttu-id="93b3e-139">Se llama a este método cuando el tiempo de ejecución de flujo de trabajo emite un registro <xref:System.Activities.Tracking.TrackingRecord>.</span><span class="sxs-lookup"><span data-stu-id="93b3e-139">This method is called when a <xref:System.Activities.Tracking.TrackingRecord> is emitted by the workflow runtime.</span></span>
+
+```csharp
+public abstract class TrackingParticipant
+{
+    protected TrackingParticipant();
+
+    public virtual TrackingProfile TrackingProfile { get; set; }
+    public abstract void Track(TrackingRecord record, TimeSpan timeout);
+}
+```
+
+ <span data-ttu-id="93b3e-140">El participante de seguimiento completo se implementa en el archivo ConsoleTrackingParticipant.cs. En el siguiente ejemplo de código se muestra el método <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> para el participante de seguimiento personalizado.</span><span class="sxs-lookup"><span data-stu-id="93b3e-140">The complete tracking participant is implemented in the ConsoleTrackingParticipant.cs file.The following code example is the <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> method for the custom tracking participant.</span></span>
+
+```csharp
+protected override void Track(TrackingRecord record, TimeSpan timeout)
+{
+    ...
+    WorkflowInstanceRecord workflowInstanceRecord = record as WorkflowInstanceRecord;
+    if (workflowInstanceRecord != null)
+    {
+        Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
+            " Workflow InstanceID: {0} Workflow instance state: {1}",
+            record.InstanceId, workflowInstanceRecord.State));
+    }
+
+    ActivityStateRecord activityStateRecord = record as ActivityStateRecord;
+    if (activityStateRecord != null)
+    {
+        IDictionary<String, object> variables = activityStateRecord.Variables;
+        StringBuilder vars = new StringBuilder();
+
+        if (variables.Count > 0)
+        {
+            vars.AppendLine("\n\tVariables:");
+            foreach (KeyValuePair<string, object> variable in variables)
+            {
+                vars.AppendLine(String.Format(
+                    "\t\tName: {0} Value: {1}", variable.Key, variable.Value));
+            }
+        }
+        Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
+            " :Activity DisplayName: {0} :ActivityInstanceState: {1} {2}",
+                activityStateRecord.Activity.Name, activityStateRecord.State,
+            ((variables.Count > 0) ? vars.ToString() : String.Empty)));
+    }
+
+    CustomTrackingRecord customTrackingRecord = record as CustomTrackingRecord;
+
+    if ((customTrackingRecord != null) && (customTrackingRecord.Data.Count > 0))
+    {
+        ...
+    }
+    Console.WriteLine();
+
+}
+```
+
+ <span data-ttu-id="93b3e-141">El siguiente ejemplo de código agrega el participante de la consola al invocador de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-141">The following code example adds the console participant to the workflow invoker.</span></span>
+
+```csharp
+ConsoleTrackingParticipant customTrackingParticipant = new ConsoleTrackingParticipant()
+{
+    ...
+    // The tracking profile is set here, refer to Program.CS
+...
+}
+
+WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
+invoker.Extensions.Add(customTrackingParticipant);
+```
+
+### <a name="emitting-custom-tracking-records"></a><span data-ttu-id="93b3e-142">Emitir registros de seguimiento personalizados</span><span class="sxs-lookup"><span data-stu-id="93b3e-142">Emitting Custom Tracking Records</span></span>
+ <span data-ttu-id="93b3e-143">En este ejemplo también se muestra la capacidad de emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> desde una actividad de flujo de trabajo personalizada:</span><span class="sxs-lookup"><span data-stu-id="93b3e-143">This sample also demonstrates the ability to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects from a custom workflow activity:</span></span>
+
+-   <span data-ttu-id="93b3e-144">Los objetos <xref:System.Activities.Tracking.CustomTrackingRecord> se crean y rellenan con datos definidos por el usuario que se desean emitir con el registro.</span><span class="sxs-lookup"><span data-stu-id="93b3e-144">The <xref:System.Activities.Tracking.CustomTrackingRecord> objects are created and populated with user-defined data that is desired to be emitted with the record.</span></span>
+
+-   <span data-ttu-id="93b3e-145">El <xref:System.Activities.Tracking.CustomTrackingRecord> se genera mediante una llamada a método de seguimiento de la <xref:System.Activities.ActivityContext>.</span><span class="sxs-lookup"><span data-stu-id="93b3e-145">The <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted by calling the track method of the <xref:System.Activities.ActivityContext>.</span></span>
+
+ <span data-ttu-id="93b3e-146">En el siguiente ejemplo se muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> desde una actividad personalizada.</span><span class="sxs-lookup"><span data-stu-id="93b3e-146">The following example demonstrates how to emit <xref:System.Activities.Tracking.CustomTrackingRecord> objects within a custom activity.</span></span>
+
+```csharp
+// Create the Custom Tracking Record
+CustomTrackingRecord customRecord = new CustomTrackingRecord("OrderIn")
+{
+    Data =
+    {
+        {"OrderId", 200},
+        {"OrderDate", "20 Aug 2001"}
+    }
+};
+
+// Emit custom tracking record
+context.Track(customRecord);
+```
+
+#### <a name="to-use-this-sample"></a><span data-ttu-id="93b3e-147">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="93b3e-147">To use this sample</span></span>
+
+1.  <span data-ttu-id="93b3e-148">Con Visual Studio 2010, abra el archivo de solución CustomTrackingSample.sln.</span><span class="sxs-lookup"><span data-stu-id="93b3e-148">Using Visual Studio 2010, open the CustomTrackingSample.sln solution file.</span></span>
+
+2.  <span data-ttu-id="93b3e-149">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="93b3e-149">To build the solution, press CTRL+SHIFT+B.</span></span>
+
+3.  <span data-ttu-id="93b3e-150">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="93b3e-150">To run the solution, press CTRL+F5.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="ca4d0-151">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-151">The samples may already be installed on your computer.</span></span> <span data-ttu-id="ca4d0-152">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-152">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="93b3e-151">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="93b3e-151">The samples may already be installed on your computer.</span></span> <span data-ttu-id="93b3e-152">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="93b3e-152">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ca4d0-153">Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-153">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ca4d0-154">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="ca4d0-154">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="93b3e-153">Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos.</span><span class="sxs-lookup"><span data-stu-id="93b3e-153">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="93b3e-154">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="93b3e-154">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## <a name="see-also"></a><span data-ttu-id="ca4d0-155">Vea también</span><span class="sxs-lookup"><span data-stu-id="ca4d0-155">See Also</span></span>  
- [<span data-ttu-id="ca4d0-156">Ejemplos de supervisión de AppFabric</span><span class="sxs-lookup"><span data-stu-id="ca4d0-156">AppFabric Monitoring Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="93b3e-155">Vea también</span><span class="sxs-lookup"><span data-stu-id="93b3e-155">See Also</span></span>  
+ [<span data-ttu-id="93b3e-156">Ejemplos de supervisión de AppFabric</span><span class="sxs-lookup"><span data-stu-id="93b3e-156">AppFabric Monitoring Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=193959)

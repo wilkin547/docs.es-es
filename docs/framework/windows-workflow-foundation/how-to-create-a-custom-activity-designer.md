@@ -2,350 +2,352 @@
 title: 'Cómo: Crear un diseñador de actividad personalizado'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e4aab60a598be2d6df5546ab1c98a289b4aef04a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86cd3544e9117cca273b6c8dde8454672f14a36a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520349"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777687"
 ---
-# <a name="how-to-create-a-custom-activity-designer"></a><span data-ttu-id="49713-102">Cómo: Crear un diseñador de actividad personalizado</span><span class="sxs-lookup"><span data-stu-id="49713-102">How to: Create a Custom Activity Designer</span></span>
-<span data-ttu-id="49713-103">Normalmente los diseñadores de actividad personalizados se implementan de forma que sus actividades asociadas admitan composición con otras actividades cuyos diseñadores se pueden colocar en la superficie de diseño con ellas.</span><span class="sxs-lookup"><span data-stu-id="49713-103">Custom activity designers are typically implemented so that their associated activities are composable with other activities whose designers can be dropped on to the design surface with them.</span></span> <span data-ttu-id="49713-104">Esta funcionalidad requiere que un diseñador de actividad personalizado proporcione un "área de colocación" donde se puede colocar una actividad arbitraria y también los medios para administrar la colección resultante de elementos en la superficie de diseño.</span><span class="sxs-lookup"><span data-stu-id="49713-104">This functionality requires that a custom activity designer provide a "drop zone" where an arbitrary activity can be placed and also the means to manage the resulting collection of elements on the design surface.</span></span> <span data-ttu-id="49713-105">En este tema se describe cómo crear un diseñador de actividad personalizado que contenga esta área de colocación y cómo crear un diseñador de actividad personalizado que proporcione la funcionalidad de edición necesaria para administrar la colección de elementos del diseñador.</span><span class="sxs-lookup"><span data-stu-id="49713-105">This topic describes how to create a custom activity designer that contains such a drop zone and how to create a custom activity designer that provides that editing functionality needed to manage the collection of designer elements.</span></span>  
-  
- <span data-ttu-id="49713-106">Por lo general, los diseñadores de actividad personalizados heredan de <xref:System.Activities.Presentation.ActivityDesigner>, el tipo de diseñador de actividades base predeterminado para cualquier actividad sin un diseñador específico.</span><span class="sxs-lookup"><span data-stu-id="49713-106">Custom activity designers typically inherit from <xref:System.Activities.Presentation.ActivityDesigner> which is the default base activity designer type for any activities without a specific designer.</span></span> <span data-ttu-id="49713-107">Este tipo proporciona la experiencia de interactuar en tiempo de diseño con la cuadrícula de propiedades y de configurar los aspectos básicos como la administración de colores e iconos.</span><span class="sxs-lookup"><span data-stu-id="49713-107">This type provides the design-time experience of interacting with the property grid and configuring basic aspects such as managing colors and icons.</span></span>  
-  
- <span data-ttu-id="49713-108"><xref:System.Activities.Presentation.ActivityDesigner> usa dos controles de aplicación auxiliar, <xref:System.Activities.Presentation.WorkflowItemPresenter> y <xref:System.Activities.Presentation.WorkflowItemsPresenter>, para facilitar el desarrollo de diseñadores de actividad personalizados.</span><span class="sxs-lookup"><span data-stu-id="49713-108"><xref:System.Activities.Presentation.ActivityDesigner> uses two helper controls, <xref:System.Activities.Presentation.WorkflowItemPresenter> and <xref:System.Activities.Presentation.WorkflowItemsPresenter> to make it easier to develop custom activity designers.</span></span> <span data-ttu-id="49713-109">Administran funciones comunes como arrastrar y colocar elementos secundarios, además de la eliminación, selección y adición de esos elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="49713-109">They handle common functionality like dragging and dropping of child elements, deletion, selection, and addition of those child elements.</span></span> <span data-ttu-id="49713-110">El <xref:System.Activities.Presentation.WorkflowItemPresenter> permite un único elemento secundario UI elemento dentro del "área de colocación", mientras el <xref:System.Activities.Presentation.WorkflowItemsPresenter> puede proporcionar admitir varios elementos de interfaz de usuario, incluida funcionalidad adicional como la ordenación, mover, eliminar y adición de elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="49713-110">The <xref:System.Activities.Presentation.WorkflowItemPresenter> allows a single child UI element inside, providing the "drop zone", it while the <xref:System.Activities.Presentation.WorkflowItemsPresenter> can provide support multiple UI elements, including additional functionality like the ordering, moving, deleting, and adding of child elements.</span></span>  
-  
- <span data-ttu-id="49713-111">El otro elemento importante que se debe destacar en la implementación de un diseñador de actividad personalizado está relacionado con la forma en que las ediciones visuales se enlazan mediante el enlace de datos de [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] a la instancia almacenada en memoria de lo que se está editando en el diseñador.</span><span class="sxs-lookup"><span data-stu-id="49713-111">The other key part of the story that needs highlighting in the implementation of a custom activity designer concerns the way in which the visual edits are bound using [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] data binding to the instance stored in memory of what we are editing in the designer.</span></span> <span data-ttu-id="49713-112">Esto se lleva a cabo mediante el árbol de elementos de modelo, que también es responsable de la habilitación de la notificación de cambios y del seguimiento de eventos como los cambios en los estados.</span><span class="sxs-lookup"><span data-stu-id="49713-112">This is accomplished by the Model Item tree, which is also responsible for enabling change notification and the tracking of events like changes in states.</span></span>  
-  
- <span data-ttu-id="49713-113">En este tema se describen dos procedimientos.</span><span class="sxs-lookup"><span data-stu-id="49713-113">This topic outlines two procedures.</span></span>  
-  
-1.  <span data-ttu-id="49713-114">El primer procedimiento describe cómo crear un diseñador de actividad personalizado con una clase <xref:System.Activities.Presentation.WorkflowItemPresenter> que proporciona el área de colocación que recibe a otras actividades.</span><span class="sxs-lookup"><span data-stu-id="49713-114">The first procedure describes how to create a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter> that provides the drop zone that receives other activities.</span></span> <span data-ttu-id="49713-115">Este procedimiento se basa en el [diseñadores compuestos personalizados - moderador de elementos de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="49713-115">This procedure is based on the [Custom Composite Designers - Workflow Item Presenter](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) sample.</span></span>  
-  
-2.  <span data-ttu-id="49713-116">El segundo procedimiento describe cómo crear un diseñador de actividad personalizado con una clase <xref:System.Activities.Presentation.WorkflowItemsPresenter> que proporciona la funcionalidad necesaria para editar una colección de elementos contenidos.</span><span class="sxs-lookup"><span data-stu-id="49713-116">The second procedure describes how to create a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter> that provides the functionality needed to edit of a collection of contained elements.</span></span> <span data-ttu-id="49713-117">Este procedimiento se basa en el [diseñadores compuestos personalizados - moderador de elementos de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="49713-117">This procedure is based on the [Custom Composite Designers - Workflow Items Presenter](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) sample.</span></span>  
-  
-### <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a><span data-ttu-id="49713-118">Para crear un diseñador de actividad personalizado con un área de colocación mediante WorkflowItemPresenter</span><span class="sxs-lookup"><span data-stu-id="49713-118">To create a custom activity designer with a drop zone using WorkflowItemPresenter</span></span>  
-  
-1.  <span data-ttu-id="49713-119">Inicie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="49713-119">Start [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
-  
-2.  <span data-ttu-id="49713-120">En el **archivo** menú, elija **New**y, a continuación, seleccione **proyecto...** .</span><span class="sxs-lookup"><span data-stu-id="49713-120">On the **File** menu, point to **New**, and then select **Project…**.</span></span>  
-  
-     <span data-ttu-id="49713-121">Aparece el cuadro de diálogo **Nuevo proyecto** .</span><span class="sxs-lookup"><span data-stu-id="49713-121">The **New Project** dialog box opens.</span></span>  
-  
-3.  <span data-ttu-id="49713-122">En el **plantillas instaladas** panel, seleccione **Windows** de la categoría de idioma preferido.</span><span class="sxs-lookup"><span data-stu-id="49713-122">In the **Installed Templates** pane, select **Windows** from your preferred language category.</span></span>  
-  
-4.  <span data-ttu-id="49713-123">En el **plantillas** panel, seleccione **aplicación WPF**.</span><span class="sxs-lookup"><span data-stu-id="49713-123">In the **Templates** pane, select **WPF Application**.</span></span>  
-  
-5.  <span data-ttu-id="49713-124">En el **nombre** cuadro, escriba `UsingWorkflowItemPresenter`.</span><span class="sxs-lookup"><span data-stu-id="49713-124">In the **Name** box, enter `UsingWorkflowItemPresenter`.</span></span>  
-  
-6.  <span data-ttu-id="49713-125">En el **ubicación** cuadro, escriba el directorio en el que desea guardar el proyecto o haga clic en **examinar** para navegar hasta él.</span><span class="sxs-lookup"><span data-stu-id="49713-125">In the **Location** box, enter the directory in which you want to save your project, or click **Browse** to navigate to it.</span></span>  
-  
-7.  <span data-ttu-id="49713-126">En el **solución** cuadro, acepte el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="49713-126">In the **Solution** box, accept the default value.</span></span>  
-  
-8.  <span data-ttu-id="49713-127">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="49713-127">Click **OK**.</span></span>  
-  
-9. <span data-ttu-id="49713-128">Haga clic en el archivo MainWindows.xaml en el **el Explorador de soluciones**, seleccione **eliminar** y confirme **Aceptar** en el **Microsoft Visual Studio**cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="49713-128">Right-click the MainWindows.xaml file in the **Solution Explorer**, select **Delete** and confirm **OK** in the **Microsoft Visual Studio** dialogue box.</span></span>  
-  
-10. <span data-ttu-id="49713-129">Haga clic en el proyecto UsingWorkflowItemPresenter en **el Explorador de soluciones**, seleccione **agregar**, a continuación, **nuevo elemento...**</span><span class="sxs-lookup"><span data-stu-id="49713-129">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="49713-130">para que aparezca el **Agregar nuevo elemento** de diálogo y seleccione la **WPF** categoría desde la **plantillas instaladas** sección de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="49713-130">to bring up the **Add New Item** dialogue and select the **WPF** category from the **Installed Templates** section on the left.</span></span>  
-  
-11. <span data-ttu-id="49713-131">Seleccione el **ventana (WPF)** plantilla, asígnele el nombre `RehostingWFDesigner`y haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="49713-131">Select the  **Window (WPF)** template, name it `RehostingWFDesigner`, and click **Add**.</span></span>  
-  
-12. <span data-ttu-id="49713-132">Abra el archivo RehostingWFDesigner.xaml y pegue el siguiente código en él para definir la interfaz de usuario de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="49713-132">Open the RehostingWFDesigner.xaml file and paste the following code into it to define the UI for the application.</span></span>  
-  
-    ```xml  
-    <Window x:Class=" UsingWorkflowItemPresenter.RehostingWFDesigner"  
-            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-            xmlns:sapt="clr-namespace:System.Activities.Presentation.Toolbox;assembly=System.Activities.Presentation"  
-            xmlns:sys="clr-namespace:System;assembly=mscorlib"  
-            Title="Window1" Height="600" Width="900">  
-        <Window.Resources>  
-            <sys:String x:Key="AssemblyName">System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</sys:String>  
-        </Window.Resources>  
-        <Grid>  
-            <Grid.ColumnDefinitions>  
-                <ColumnDefinition Width="2*"/>  
-                <ColumnDefinition Width="7*"/>  
-                <ColumnDefinition Width="3*"/>  
-            </Grid.ColumnDefinitions>  
-            <Border Grid.Column="0">  
-                <sapt:ToolboxControl Name="Toolbox">  
-                    <sapt:ToolboxCategory CategoryName="Basic">  
-                        <sapt:ToolboxItemWrapper AssemblyName="{StaticResource AssemblyName}" >  
-                            <sapt:ToolboxItemWrapper.ToolName>  
-                                System.Activities.Statements.Sequence  
-                            </sapt:ToolboxItemWrapper.ToolName>  
-                           </sapt:ToolboxItemWrapper>  
-                        <sapt:ToolboxItemWrapper  AssemblyName="{StaticResource AssemblyName}">  
-                            <sapt:ToolboxItemWrapper.ToolName>  
-                                System.Activities.Statements.WriteLine  
-                            </sapt:ToolboxItemWrapper.ToolName>  
-  
-                        </sapt:ToolboxItemWrapper>  
-                        <sapt:ToolboxItemWrapper  AssemblyName="{StaticResource AssemblyName}">  
-                            <sapt:ToolboxItemWrapper.ToolName>  
-                                System.Activities.Statements.If  
-                            </sapt:ToolboxItemWrapper.ToolName>  
-  
-                        </sapt:ToolboxItemWrapper>  
-                        <sapt:ToolboxItemWrapper  AssemblyName="{StaticResource AssemblyName}">  
-                            <sapt:ToolboxItemWrapper.ToolName>  
-                                System.Activities.Statements.While  
-                            </sapt:ToolboxItemWrapper.ToolName>  
-  
-                        </sapt:ToolboxItemWrapper>  
-                    </sapt:ToolboxCategory>  
-                </sapt:ToolboxControl>  
-            </Border>  
-            <Border Grid.Column="1" Name="DesignerBorder"/>  
-            <Border Grid.Column="2" Name="PropertyBorder"/>  
-        </Grid>  
-    </Window>  
-    ```  
-  
-13. <span data-ttu-id="49713-133">Para asociar un diseñador de actividad a un tipo de actividad, debe registrar ese diseñador de actividad con el almacén de metadatos.</span><span class="sxs-lookup"><span data-stu-id="49713-133">To associate an activity designer with an activity type, you must register that activity designer with the metadata store.</span></span> <span data-ttu-id="49713-134">Para ello, agregue el método `RegisterMetadata` a la clase `RehostingWFDesigner`.</span><span class="sxs-lookup"><span data-stu-id="49713-134">To do this, add the `RegisterMetadata` method to the `RehostingWFDesigner` class.</span></span> <span data-ttu-id="49713-135">Dentro del ámbito del método `RegisterMetadata`, cree un objeto <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> y llame al método <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> para agregar los atributos a él.</span><span class="sxs-lookup"><span data-stu-id="49713-135">Within the scope of the  `RegisterMetadata` method, create an <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> object and call the <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> method to add the attributes to it.</span></span> <span data-ttu-id="49713-136">Llame al método <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> para agregar <xref:System.Activities.Presentation.Metadata.AttributeTable> al almacén de metadatos.</span><span class="sxs-lookup"><span data-stu-id="49713-136">Call the <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> method to add the <xref:System.Activities.Presentation.Metadata.AttributeTable> to the metadata store.</span></span> <span data-ttu-id="49713-137">El siguiente código contiene la lógica de rehospedaje para el diseñador.</span><span class="sxs-lookup"><span data-stu-id="49713-137">The following code contains the rehosting logic for the designer.</span></span> <span data-ttu-id="49713-138">Registra los metadatos, coloca `SimpleNativeActivity` en el cuadro de herramientas y crea el flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="49713-138">It registers the metadata, puts the `SimpleNativeActivity` into the toolbox, and creates the workflow.</span></span> <span data-ttu-id="49713-139">Coloque este código en el archivo RehostingWFDesigner.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="49713-139">Put this code into the RehostingWFDesigner.xaml.cs file.</span></span>  
-  
-    ```  
-    using System;  
-    using System.Activities.Core.Presentation;  
-    using System.Activities.Presentation;  
-    using System.Activities.Presentation.Metadata;  
-    using System.Activities.Presentation.Toolbox;  
-    using System.Activities.Statements;  
-    using System.ComponentModel;  
-    using System.Windows;  
-  
-    namespace UsingWorkflowItemPresenter  
-    {  
-        // Interaction logic for RehostingWFDesigner.xaml  
-        public partial class RehostingWFDesigner  
-        {  
-            public RehostingWFDesigner()  
-            {  
-                InitializeComponent();  
-            }  
-  
-            protected override void OnInitialized(EventArgs e)  
-            {  
-                base.OnInitialized(e);  
-                // register metadata  
-                (new DesignerMetadata()).Register();  
-                RegisterCustomMetadata();  
-                // add custom activity to toolbox  
-                Toolbox.Categories.Add(new ToolboxCategory("Custom activities"));  
-                Toolbox.Categories[1].Add(new ToolboxItemWrapper(typeof(SimpleNativeActivity)));  
-  
-                // create the workflow designer  
-                WorkflowDesigner wd = new WorkflowDesigner();  
-                wd.Load(new Sequence());  
-                DesignerBorder.Child = wd.View;  
-                PropertyBorder.Child = wd.PropertyInspectorView;  
-  
-            }  
-  
-            void RegisterCustomMetadata()  
-            {  
-                AttributeTableBuilder builder = new AttributeTableBuilder();  
-                builder.AddCustomAttributes(typeof(SimpleNativeActivity), new DesignerAttribute(typeof(SimpleNativeDesigner)));  
-                MetadataStore.AddAttributeTable(builder.CreateTable());  
-            }  
-        }  
-    }  
-    ```  
-  
-14. <span data-ttu-id="49713-140">Haga clic en el directorio referencias en el Explorador de soluciones y seleccione **Agregar referencia...**</span><span class="sxs-lookup"><span data-stu-id="49713-140">Right-click the References directory in Solution Explorer and select **Add Reference …**</span></span> <span data-ttu-id="49713-141">para que aparezca el **Agregar referencia** cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="49713-141">to bring up the **Add Reference** dialogue.</span></span>  
-  
-15. <span data-ttu-id="49713-142">Haga clic en el **.NET** ficha, busque el ensamblado denominado **System.Activities.Core.Presentation**, selecciónelo y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="49713-142">Click the **.NET** tab, locate the assembly named **System.Activities.Core.Presentation**, select it and click **OK**.</span></span>  
-  
-16. <span data-ttu-id="49713-143">Con el mismo procedimiento, agregue referencias a los siguientes ensamblados:</span><span class="sxs-lookup"><span data-stu-id="49713-143">Using the same procedure, add references to the following assemblies:</span></span>  
-  
-    1.  <span data-ttu-id="49713-144">System.Data.DataSetExtensions.dll</span><span class="sxs-lookup"><span data-stu-id="49713-144">System.Data.DataSetExtensions.dll</span></span>  
-  
-    2.  <span data-ttu-id="49713-145">System.Activities.Presentation.dll</span><span class="sxs-lookup"><span data-stu-id="49713-145">System.Activities.Presentation.dll</span></span>  
-  
-    3.  <span data-ttu-id="49713-146">System.ServiceModel.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="49713-146">System.ServiceModel.Activities.dll</span></span>  
-  
-17. <span data-ttu-id="49713-147">Abra el archivo App.xaml y cambie el valor de StartUpUri a "RehostingWFDesigner.xaml".</span><span class="sxs-lookup"><span data-stu-id="49713-147">Open the App.xaml file and change the value of the StartUpUri to "RehostingWFDesigner.xaml".</span></span>  
-  
-18. <span data-ttu-id="49713-148">Haga clic en el proyecto UsingWorkflowItemPresenter en **el Explorador de soluciones**, seleccione **agregar**, a continuación, **nuevo elemento...**</span><span class="sxs-lookup"><span data-stu-id="49713-148">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="49713-149">para que aparezca el **Agregar nuevo elemento** de diálogo y seleccione la **flujo de trabajo** formulario categoría la **plantillas instaladas** sección de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="49713-149">to bring up the **Add New Item** dialogue and select the **Workflow** category form the **Installed Templates** section on the left.</span></span>  
-  
-19. <span data-ttu-id="49713-150">Seleccione el **Diseñador de actividades** plantilla, asígnele el nombre `SimpleNativeDesigner`y haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="49713-150">Select the **Activity Designer** template, name it `SimpleNativeDesigner`, and click **Add**.</span></span>  
-  
-20. <span data-ttu-id="49713-151">Abra el archivo SimpleNativeDesigner.xaml y pegue el siguiente código en él.</span><span class="sxs-lookup"><span data-stu-id="49713-151">Open the SimpleNativeDesigner.xaml file and paste the following code into it.</span></span> <span data-ttu-id="49713-152">Observe que este código utiliza <xref:System.Activities.Presentation.ActivityDesigner> como elemento raíz y muestra cómo se usa el enlace para integrar <xref:System.Activities.Presentation.WorkflowItemPresenter> en el diseñador de forma que se pueda mostrar un tipo secundario en el diseñador de actividad compuesto.</span><span class="sxs-lookup"><span data-stu-id="49713-152">Note this code uses <xref:System.Activities.Presentation.ActivityDesigner> as your root element and shows how binding is used to integrate <xref:System.Activities.Presentation.WorkflowItemPresenter> into your designer so a child type can be displayed in your composite activity designer.</span></span>  
-  
+# <a name="how-to-create-a-custom-activity-designer"></a><span data-ttu-id="d5e39-102">Cómo: Crear un diseñador de actividad personalizado</span><span class="sxs-lookup"><span data-stu-id="d5e39-102">How to: Create a Custom Activity Designer</span></span>
+
+<span data-ttu-id="d5e39-103">Normalmente los diseñadores de actividad personalizados se implementan de forma que sus actividades asociadas admitan composición con otras actividades cuyos diseñadores se pueden colocar en la superficie de diseño con ellas.</span><span class="sxs-lookup"><span data-stu-id="d5e39-103">Custom activity designers are typically implemented so that their associated activities are composable with other activities whose designers can be dropped on to the design surface with them.</span></span> <span data-ttu-id="d5e39-104">Esta funcionalidad requiere que un diseñador de actividad personalizado proporcione una "zona de colocación" donde se puede colocar una actividad arbitraria y también los medios para administrar la colección resultante de elementos en la superficie de diseño.</span><span class="sxs-lookup"><span data-stu-id="d5e39-104">This functionality requires that a custom activity designer provide a "drop zone" where an arbitrary activity can be placed and also the means to manage the resulting collection of elements on the design surface.</span></span> <span data-ttu-id="d5e39-105">En este tema se describe cómo crear un diseñador de actividad personalizado que contenga esta área de colocación y cómo crear un diseñador de actividad personalizado que proporcione la funcionalidad de edición necesaria para administrar la colección de elementos del diseñador.</span><span class="sxs-lookup"><span data-stu-id="d5e39-105">This topic describes how to create a custom activity designer that contains such a drop zone and how to create a custom activity designer that provides that editing functionality needed to manage the collection of designer elements.</span></span>
+
+ <span data-ttu-id="d5e39-106">Por lo general, los diseñadores de actividad personalizados heredan de <xref:System.Activities.Presentation.ActivityDesigner>, el tipo de diseñador de actividades base predeterminado para cualquier actividad sin un diseñador específico.</span><span class="sxs-lookup"><span data-stu-id="d5e39-106">Custom activity designers typically inherit from <xref:System.Activities.Presentation.ActivityDesigner> which is the default base activity designer type for any activities without a specific designer.</span></span> <span data-ttu-id="d5e39-107">Este tipo proporciona la experiencia de interactuar en tiempo de diseño con la cuadrícula de propiedades y de configurar los aspectos básicos como la administración de colores e iconos.</span><span class="sxs-lookup"><span data-stu-id="d5e39-107">This type provides the design-time experience of interacting with the property grid and configuring basic aspects such as managing colors and icons.</span></span>
+
+ <span data-ttu-id="d5e39-108"><xref:System.Activities.Presentation.ActivityDesigner> usa dos controles de aplicación auxiliar, <xref:System.Activities.Presentation.WorkflowItemPresenter> y <xref:System.Activities.Presentation.WorkflowItemsPresenter>, para facilitar el desarrollo de diseñadores de actividad personalizados.</span><span class="sxs-lookup"><span data-stu-id="d5e39-108"><xref:System.Activities.Presentation.ActivityDesigner> uses two helper controls, <xref:System.Activities.Presentation.WorkflowItemPresenter> and <xref:System.Activities.Presentation.WorkflowItemsPresenter> to make it easier to develop custom activity designers.</span></span> <span data-ttu-id="d5e39-109">Administran funciones comunes como arrastrar y colocar elementos secundarios, además de la eliminación, selección y adición de esos elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="d5e39-109">They handle common functionality like dragging and dropping of child elements, deletion, selection, and addition of those child elements.</span></span> <span data-ttu-id="d5e39-110">El <xref:System.Activities.Presentation.WorkflowItemPresenter> permite un único elemento secundario de elemento de la interfaz de usuario dentro de, que proporciona la "zona de colocación", mientras el <xref:System.Activities.Presentation.WorkflowItemsPresenter> puede proporcionar compatibilidad con varios elementos de interfaz de usuario, incluida funcionalidad adicional como la ordenación, mover, eliminar y adición de elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="d5e39-110">The <xref:System.Activities.Presentation.WorkflowItemPresenter> allows a single child UI element inside, providing the "drop zone", it while the <xref:System.Activities.Presentation.WorkflowItemsPresenter> can provide support multiple UI elements, including additional functionality like the ordering, moving, deleting, and adding of child elements.</span></span>
+
+ <span data-ttu-id="d5e39-111">El otro elemento importante que se debe destacar en la implementación de un diseñador de actividad personalizado está relacionado con la forma en que las ediciones visuales se enlazan mediante el enlace de datos de [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] a la instancia almacenada en memoria de lo que se está editando en el diseñador.</span><span class="sxs-lookup"><span data-stu-id="d5e39-111">The other key part of the story that needs highlighting in the implementation of a custom activity designer concerns the way in which the visual edits are bound using [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] data binding to the instance stored in memory of what we are editing in the designer.</span></span> <span data-ttu-id="d5e39-112">Esto se lleva a cabo mediante el árbol de elementos de modelo, que también es responsable de la habilitación de la notificación de cambios y del seguimiento de eventos como los cambios en los estados.</span><span class="sxs-lookup"><span data-stu-id="d5e39-112">This is accomplished by the Model Item tree, which is also responsible for enabling change notification and the tracking of events like changes in states.</span></span>
+
+ <span data-ttu-id="d5e39-113">En este tema se describen dos procedimientos.</span><span class="sxs-lookup"><span data-stu-id="d5e39-113">This topic outlines two procedures.</span></span>
+
+1.  <span data-ttu-id="d5e39-114">El primer procedimiento describe cómo crear un diseñador de actividad personalizado con una clase <xref:System.Activities.Presentation.WorkflowItemPresenter> que proporciona el área de colocación que recibe a otras actividades.</span><span class="sxs-lookup"><span data-stu-id="d5e39-114">The first procedure describes how to create a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter> that provides the drop zone that receives other activities.</span></span> <span data-ttu-id="d5e39-115">Este procedimiento se basa en el [compuesto diseñadores personalizados - moderador de elementos de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="d5e39-115">This procedure is based on the [Custom Composite Designers - Workflow Item Presenter](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) sample.</span></span>
+
+2.  <span data-ttu-id="d5e39-116">El segundo procedimiento describe cómo crear un diseñador de actividad personalizado con una clase <xref:System.Activities.Presentation.WorkflowItemsPresenter> que proporciona la funcionalidad necesaria para editar una colección de elementos contenidos.</span><span class="sxs-lookup"><span data-stu-id="d5e39-116">The second procedure describes how to create a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter> that provides the functionality needed to edit of a collection of contained elements.</span></span> <span data-ttu-id="d5e39-117">Este procedimiento se basa en el [compuesto diseñadores personalizados - moderador de elementos de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="d5e39-117">This procedure is based on the [Custom Composite Designers - Workflow Items Presenter](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) sample.</span></span>
+
+## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a><span data-ttu-id="d5e39-118">Para crear un diseñador de actividad personalizado con un área de colocación mediante WorkflowItemPresenter</span><span class="sxs-lookup"><span data-stu-id="d5e39-118">To create a custom activity designer with a drop zone using WorkflowItemPresenter</span></span>
+
+1.  <span data-ttu-id="d5e39-119">Inicie Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="d5e39-119">Start Visual Studio 2010.</span></span>
+
+2.  <span data-ttu-id="d5e39-120">En el **archivo** menú, elija **New**y, a continuación, seleccione **proyecto...** .</span><span class="sxs-lookup"><span data-stu-id="d5e39-120">On the **File** menu, point to **New**, and then select **Project…**.</span></span>
+
+     <span data-ttu-id="d5e39-121">Aparece el cuadro de diálogo **Nuevo proyecto** .</span><span class="sxs-lookup"><span data-stu-id="d5e39-121">The **New Project** dialog box opens.</span></span>
+
+3.  <span data-ttu-id="d5e39-122">En el **plantillas instaladas** panel, seleccione **Windows** desde la categoría de lenguaje que prefiera.</span><span class="sxs-lookup"><span data-stu-id="d5e39-122">In the **Installed Templates** pane, select **Windows** from your preferred language category.</span></span>
+
+4.  <span data-ttu-id="d5e39-123">En el **plantillas** panel, seleccione **aplicación WPF**.</span><span class="sxs-lookup"><span data-stu-id="d5e39-123">In the **Templates** pane, select **WPF Application**.</span></span>
+
+5.  <span data-ttu-id="d5e39-124">En el **nombre** , escriba `UsingWorkflowItemPresenter`.</span><span class="sxs-lookup"><span data-stu-id="d5e39-124">In the **Name** box, enter `UsingWorkflowItemPresenter`.</span></span>
+
+6.  <span data-ttu-id="d5e39-125">En el **ubicación** cuadro, escriba el directorio en el que desea guardar el proyecto o haga clic en **examinar** para desplazarse hasta él.</span><span class="sxs-lookup"><span data-stu-id="d5e39-125">In the **Location** box, enter the directory in which you want to save your project, or click **Browse** to navigate to it.</span></span>
+
+7.  <span data-ttu-id="d5e39-126">En el **solución** cuadro, acepte el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="d5e39-126">In the **Solution** box, accept the default value.</span></span>
+
+8.  <span data-ttu-id="d5e39-127">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="d5e39-127">Click **OK**.</span></span>
+
+9. <span data-ttu-id="d5e39-128">Haga clic en el archivo MainWindows.xaml en el **el Explorador de soluciones**, seleccione **eliminar** y confirme **Aceptar** en el **Microsoft Visual Studio**cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="d5e39-128">Right-click the MainWindows.xaml file in the **Solution Explorer**, select **Delete** and confirm **OK** in the **Microsoft Visual Studio** dialogue box.</span></span>
+
+10. <span data-ttu-id="d5e39-129">Haga clic en el proyecto UsingWorkflowItemPresenter en **el Explorador de soluciones**, seleccione **agregar**, a continuación, **nuevo elemento...**</span><span class="sxs-lookup"><span data-stu-id="d5e39-129">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="d5e39-130">para que aparezca el **Agregar nuevo elemento** de cuadro de diálogo y seleccione el **WPF** categoría desde la **plantillas instaladas** sección de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="d5e39-130">to bring up the **Add New Item** dialogue and select the **WPF** category from the **Installed Templates** section on the left.</span></span>
+
+11. <span data-ttu-id="d5e39-131">Seleccione el **ventana (WPF)** plantilla, asígnele el nombre `RehostingWFDesigner`y haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="d5e39-131">Select the  **Window (WPF)** template, name it `RehostingWFDesigner`, and click **Add**.</span></span>
+
+12. <span data-ttu-id="d5e39-132">Abra el archivo RehostingWFDesigner.xaml y pegue el siguiente código en él para definir la interfaz de usuario de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d5e39-132">Open the RehostingWFDesigner.xaml file and paste the following code into it to define the UI for the application.</span></span>
+
+    ```xml
+    <Window x:Class=" UsingWorkflowItemPresenter.RehostingWFDesigner"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:sapt="clr-namespace:System.Activities.Presentation.Toolbox;assembly=System.Activities.Presentation"
+            xmlns:sys="clr-namespace:System;assembly=mscorlib"
+            Title="Window1" Height="600" Width="900">
+        <Window.Resources>
+            <sys:String x:Key="AssemblyName">System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</sys:String>
+        </Window.Resources>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0">
+                <sapt:ToolboxControl Name="Toolbox">
+                    <sapt:ToolboxCategory CategoryName="Basic">
+                        <sapt:ToolboxItemWrapper AssemblyName="{StaticResource AssemblyName}" >
+                            <sapt:ToolboxItemWrapper.ToolName>
+                                System.Activities.Statements.Sequence
+                            </sapt:ToolboxItemWrapper.ToolName>
+                           </sapt:ToolboxItemWrapper>
+                        <sapt:ToolboxItemWrapper  AssemblyName="{StaticResource AssemblyName}">
+                            <sapt:ToolboxItemWrapper.ToolName>
+                                System.Activities.Statements.WriteLine
+                            </sapt:ToolboxItemWrapper.ToolName>
+
+                        </sapt:ToolboxItemWrapper>
+                        <sapt:ToolboxItemWrapper  AssemblyName="{StaticResource AssemblyName}">
+                            <sapt:ToolboxItemWrapper.ToolName>
+                                System.Activities.Statements.If
+                            </sapt:ToolboxItemWrapper.ToolName>
+
+                        </sapt:ToolboxItemWrapper>
+                        <sapt:ToolboxItemWrapper  AssemblyName="{StaticResource AssemblyName}">
+                            <sapt:ToolboxItemWrapper.ToolName>
+                                System.Activities.Statements.While
+                            </sapt:ToolboxItemWrapper.ToolName>
+
+                        </sapt:ToolboxItemWrapper>
+                    </sapt:ToolboxCategory>
+                </sapt:ToolboxControl>
+            </Border>
+            <Border Grid.Column="1" Name="DesignerBorder"/>
+            <Border Grid.Column="2" Name="PropertyBorder"/>
+        </Grid>
+    </Window>
+    ```
+
+13. <span data-ttu-id="d5e39-133">Para asociar un diseñador de actividad a un tipo de actividad, debe registrar ese diseñador de actividad con el almacén de metadatos.</span><span class="sxs-lookup"><span data-stu-id="d5e39-133">To associate an activity designer with an activity type, you must register that activity designer with the metadata store.</span></span> <span data-ttu-id="d5e39-134">Para ello, agregue el método `RegisterMetadata` a la clase `RehostingWFDesigner`.</span><span class="sxs-lookup"><span data-stu-id="d5e39-134">To do this, add the `RegisterMetadata` method to the `RehostingWFDesigner` class.</span></span> <span data-ttu-id="d5e39-135">Dentro del ámbito del método `RegisterMetadata`, cree un objeto <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> y llame al método <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> para agregar los atributos a él.</span><span class="sxs-lookup"><span data-stu-id="d5e39-135">Within the scope of the  `RegisterMetadata` method, create an <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> object and call the <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A> method to add the attributes to it.</span></span> <span data-ttu-id="d5e39-136">Llame al método <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> para agregar <xref:System.Activities.Presentation.Metadata.AttributeTable> al almacén de metadatos.</span><span class="sxs-lookup"><span data-stu-id="d5e39-136">Call the <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> method to add the <xref:System.Activities.Presentation.Metadata.AttributeTable> to the metadata store.</span></span> <span data-ttu-id="d5e39-137">El siguiente código contiene la lógica de rehospedaje para el diseñador.</span><span class="sxs-lookup"><span data-stu-id="d5e39-137">The following code contains the rehosting logic for the designer.</span></span> <span data-ttu-id="d5e39-138">Registra los metadatos, coloca `SimpleNativeActivity` en el cuadro de herramientas y crea el flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="d5e39-138">It registers the metadata, puts the `SimpleNativeActivity` into the toolbox, and creates the workflow.</span></span> <span data-ttu-id="d5e39-139">Coloque este código en el archivo RehostingWFDesigner.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="d5e39-139">Put this code into the RehostingWFDesigner.xaml.cs file.</span></span>
+
+    ```
+    using System;
+    using System.Activities.Core.Presentation;
+    using System.Activities.Presentation;
+    using System.Activities.Presentation.Metadata;
+    using System.Activities.Presentation.Toolbox;
+    using System.Activities.Statements;
+    using System.ComponentModel;
+    using System.Windows;
+
+    namespace UsingWorkflowItemPresenter
+    {
+        // Interaction logic for RehostingWFDesigner.xaml
+        public partial class RehostingWFDesigner
+        {
+            public RehostingWFDesigner()
+            {
+                InitializeComponent();
+            }
+
+            protected override void OnInitialized(EventArgs e)
+            {
+                base.OnInitialized(e);
+                // register metadata
+                (new DesignerMetadata()).Register();
+                RegisterCustomMetadata();
+                // add custom activity to toolbox
+                Toolbox.Categories.Add(new ToolboxCategory("Custom activities"));
+                Toolbox.Categories[1].Add(new ToolboxItemWrapper(typeof(SimpleNativeActivity)));
+
+                // create the workflow designer
+                WorkflowDesigner wd = new WorkflowDesigner();
+                wd.Load(new Sequence());
+                DesignerBorder.Child = wd.View;
+                PropertyBorder.Child = wd.PropertyInspectorView;
+
+            }
+
+            void RegisterCustomMetadata()
+            {
+                AttributeTableBuilder builder = new AttributeTableBuilder();
+                builder.AddCustomAttributes(typeof(SimpleNativeActivity), new DesignerAttribute(typeof(SimpleNativeDesigner)));
+                MetadataStore.AddAttributeTable(builder.CreateTable());
+            }
+        }
+    }
+    ```
+
+14. <span data-ttu-id="d5e39-140">Haga clic en el directorio referencias en el Explorador de soluciones y seleccione **Agregar referencia...**</span><span class="sxs-lookup"><span data-stu-id="d5e39-140">Right-click the References directory in Solution Explorer and select **Add Reference …**</span></span> <span data-ttu-id="d5e39-141">para que aparezca el **Agregar referencia** cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="d5e39-141">to bring up the **Add Reference** dialogue.</span></span>
+
+15. <span data-ttu-id="d5e39-142">Haga clic en el **.NET** pestaña, busque el ensamblado denominado **System.Activities.Core.Presentation**, selecciónelo y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="d5e39-142">Click the **.NET** tab, locate the assembly named **System.Activities.Core.Presentation**, select it and click **OK**.</span></span>
+
+16. <span data-ttu-id="d5e39-143">Con el mismo procedimiento, agregue referencias a los siguientes ensamblados:</span><span class="sxs-lookup"><span data-stu-id="d5e39-143">Using the same procedure, add references to the following assemblies:</span></span>
+
+    1.  <span data-ttu-id="d5e39-144">System.Data.DataSetExtensions.dll</span><span class="sxs-lookup"><span data-stu-id="d5e39-144">System.Data.DataSetExtensions.dll</span></span>
+
+    2.  <span data-ttu-id="d5e39-145">System.Activities.Presentation.dll</span><span class="sxs-lookup"><span data-stu-id="d5e39-145">System.Activities.Presentation.dll</span></span>
+
+    3.  <span data-ttu-id="d5e39-146">System.ServiceModel.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="d5e39-146">System.ServiceModel.Activities.dll</span></span>
+
+17. <span data-ttu-id="d5e39-147">Abra el archivo App.xaml y cambie el valor de StartUpUri a "RehostingWFDesigner.xaml".</span><span class="sxs-lookup"><span data-stu-id="d5e39-147">Open the App.xaml file and change the value of the StartUpUri to "RehostingWFDesigner.xaml".</span></span>
+
+18. <span data-ttu-id="d5e39-148">Haga clic en el proyecto UsingWorkflowItemPresenter en **el Explorador de soluciones**, seleccione **agregar**, a continuación, **nuevo elemento...**</span><span class="sxs-lookup"><span data-stu-id="d5e39-148">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="d5e39-149">para que aparezca el **Agregar nuevo elemento** de cuadro de diálogo y seleccione el **flujo de trabajo** formulario categoría la **plantillas instaladas** sección de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="d5e39-149">to bring up the **Add New Item** dialogue and select the **Workflow** category form the **Installed Templates** section on the left.</span></span>
+
+19. <span data-ttu-id="d5e39-150">Seleccione el **Diseñador de actividad** plantilla, asígnele el nombre `SimpleNativeDesigner`y haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="d5e39-150">Select the **Activity Designer** template, name it `SimpleNativeDesigner`, and click **Add**.</span></span>
+
+20. <span data-ttu-id="d5e39-151">Abra el archivo SimpleNativeDesigner.xaml y pegue el siguiente código en él.</span><span class="sxs-lookup"><span data-stu-id="d5e39-151">Open the SimpleNativeDesigner.xaml file and paste the following code into it.</span></span> <span data-ttu-id="d5e39-152">Observe que este código utiliza <xref:System.Activities.Presentation.ActivityDesigner> como elemento raíz y muestra cómo se usa el enlace para integrar <xref:System.Activities.Presentation.WorkflowItemPresenter> en el diseñador de forma que se pueda mostrar un tipo secundario en el diseñador de actividad compuesto.</span><span class="sxs-lookup"><span data-stu-id="d5e39-152">Note this code uses <xref:System.Activities.Presentation.ActivityDesigner> as your root element and shows how binding is used to integrate <xref:System.Activities.Presentation.WorkflowItemPresenter> into your designer so a child type can be displayed in your composite activity designer.</span></span>
+
     > [!NOTE]
-    >  <span data-ttu-id="49713-153">El esquema para <xref:System.Activities.Presentation.ActivityDesigner> permite agregar únicamente un elemento secundario a la definición personalizada del diseñador de actividad; sin embargo, este elemento podría ser un `StackPanel`, `Grid` o algún otro elemento compuesto de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="49713-153">The schema for <xref:System.Activities.Presentation.ActivityDesigner> allows the addition of only one child element to your custom activity designer definition; however, this element could be a `StackPanel`, `Grid`, or some other composite UI element.</span></span>  
-  
-    ```xml  
-    <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"  
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-        xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"  
-        xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">  
-        <sap:ActivityDesigner.Resources>  
-            <DataTemplate x:Key="Collapsed">  
-                <StackPanel>  
-                    <TextBlock>This is the collapsed view</TextBlock>  
-                </StackPanel>  
-            </DataTemplate>  
-            <DataTemplate x:Key="Expanded">  
-                <StackPanel>  
-                    <TextBlock>Custom Text</TextBlock>  
-                    <sap:WorkflowItemPresenter Item="{Binding Path=ModelItem.Body, Mode=TwoWay}"  
-                                            HintText="Please drop an activity here" />  
-                </StackPanel>  
-            </DataTemplate>  
-            <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">  
-                <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>  
-                <Style.Triggers>  
-                    <DataTrigger Binding="{Binding Path=ShowExpanded}" Value="true">  
-                        <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>  
-                    </DataTrigger>  
-                </Style.Triggers>  
-            </Style>  
-        </sap:ActivityDesigner.Resources>  
-        <Grid>  
-            <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}" />  
-        </Grid>  
-    </sap:ActivityDesigner>  
-    ```  
-  
-21. <span data-ttu-id="49713-154">Haga clic en el proyecto UsingWorkflowItemPresenter en **el Explorador de soluciones**, seleccione **agregar**, a continuación, **nuevo elemento...**</span><span class="sxs-lookup"><span data-stu-id="49713-154">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="49713-155">para que aparezca el **Agregar nuevo elemento** de diálogo y seleccione la **flujo de trabajo** formulario categoría la **plantillas instaladas** sección de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="49713-155">to bring up the **Add New Item** dialogue and select the **Workflow** category form the **Installed Templates** section on the left.</span></span>  
-  
-22. <span data-ttu-id="49713-156">Seleccione el **actividad de código** plantilla, asígnele el nombre `SimpleNativeActivity`y haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="49713-156">Select the  **Code Activity** template, name it `SimpleNativeActivity`, and click **Add**.</span></span>  
-  
-23. <span data-ttu-id="49713-157">Implemente la clase `SimpleNativeActivity` registrando el siguiente código en el archivo SimpleNativeActivity.cs.</span><span class="sxs-lookup"><span data-stu-id="49713-157">Implement the `SimpleNativeActivity` class by entering the following code into the SimpleNativeActivity.cs file.</span></span>  
-  
-    ```  
-    using System.Activities;  
-  
-    namespace UsingWorkflowItemPresenter  
-    {  
-        public sealed class SimpleNativeActivity : NativeActivity  
-        {  
-            // this property contains an activity that will be scheduled in the execute method  
-    // the WorkflowItemPresenter in the designer is bound to this to enable editing  
-    // of the value  
-            public Activity Body { get; set; }  
-  
-            protected override void CacheMetadata(NativeActivityMetadata metadata)  
-            {  
-               metadata.AddChild(Body);  
-               base.CacheMetadata(metadata);  
-  
-            }  
-  
-            protected override void Execute(NativeActivityContext context)  
-            {  
-                context.ScheduleActivity(Body);  
-            }  
-        }  
-    }  
-    ```  
-  
-24. <span data-ttu-id="49713-158">Seleccione **generar solución** desde el **generar** menú.</span><span class="sxs-lookup"><span data-stu-id="49713-158">Select **Build Solution** from the **Build** menu.</span></span>  
-  
-25. <span data-ttu-id="49713-159">Seleccione **iniciar sin depurar** desde el **depurar** menú para abrir la ventana de diseño personalizado rehospedado.</span><span class="sxs-lookup"><span data-stu-id="49713-159">Select **Start Without Debugging** from the **Debug** menu to open the rehosted custom design window.</span></span>  
-  
-### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a><span data-ttu-id="49713-160">Para crear un diseñador de actividad personalizado mediante WorkflowItemsPresenter</span><span class="sxs-lookup"><span data-stu-id="49713-160">To create a custom activity designer using WorkflowItemsPresenter</span></span>  
-  
-1.  <span data-ttu-id="49713-161">El procedimiento para el segundo diseñador de actividad personalizado es paralelo al primero con algunas modificaciones, el primero de ellos consiste en la segunda aplicación el nombre `UsingWorkflowItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="49713-161">The procedure for the second custom activity designer is the parallels the first with a few modifications, the first of which is to name the second application `UsingWorkflowItemsPresenter`.</span></span> <span data-ttu-id="49713-162">Esta aplicación tampoco define una nueva actividad personalizada.</span><span class="sxs-lookup"><span data-stu-id="49713-162">Also this application does not define a new custom activity.</span></span>  
-  
-2.  <span data-ttu-id="49713-163">Las diferencias clave se encuentran en los archivos CustomParallelDesigner.xaml y RehostingWFDesigner.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="49713-163">Key differences are contained in the CustomParallelDesigner.xaml and RehostingWFDesigner.xaml.cs files.</span></span> <span data-ttu-id="49713-164">A continuación se indica el código del archivo CustomParallelDesigner.xaml que define la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="49713-164">Here is the code from the CustomParallelDesigne.xaml file that defines the UI.</span></span>  
-  
-    ```xml  
-    <sap:ActivityDesigner x:Class=" UsingWorkflowItemsPresenter.CustomParallelDesigner"  
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-        xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"  
-        xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">  
-        <sap:ActivityDesigner.Resources>  
-            <DataTemplate x:Key="Collapsed">  
-                <TextBlock>This is the Collapsed View</TextBlock>  
-            </DataTemplate>  
-            <DataTemplate x:Key="Expanded">  
-                <StackPanel>  
-                    <TextBlock HorizontalAlignment="Center">This is the</TextBlock>  
-                    <TextBlock HorizontalAlignment="Center">extended view</TextBlock>  
-                    <sap:WorkflowItemsPresenter HintText="Drop Activities Here"  
-                                        Items="{Binding Path=ModelItem.Branches}">  
-                        <sap:WorkflowItemsPresenter.SpacerTemplate>  
-                            <DataTemplate>  
-                                <Ellipse Width="10" Height="10" Fill="Black"/>  
-                            </DataTemplate>  
-                        </sap:WorkflowItemsPresenter.SpacerTemplate>  
-                        <sap:WorkflowItemsPresenter.ItemsPanel>  
-                            <ItemsPanelTemplate>  
-                                <StackPanel Orientation="Horizontal"/>  
-                            </ItemsPanelTemplate>  
-                        </sap:WorkflowItemsPresenter.ItemsPanel>  
-                    </sap:WorkflowItemsPresenter>  
-                </StackPanel>  
-            </DataTemplate>  
-            <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">  
-                <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>  
-                <Style.Triggers>  
-                    <DataTrigger Binding="{Binding Path=ShowExpanded}" Value="true">  
-                        <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>  
-                    </DataTrigger>  
-                </Style.Triggers>  
-            </Style>  
-        </sap:ActivityDesigner.Resources>  
-        <Grid>  
-            <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>  
-        </Grid>  
-    </sap:ActivityDesigner>  
-    ```  
-  
-3.  <span data-ttu-id="49713-165">A continuación se indica el código del archivo RehostingWFDesigner.xaml.cs que proporciona la lógica de rehospedaje.</span><span class="sxs-lookup"><span data-stu-id="49713-165">Here is the code from the RehostingWFDesigner.xaml.cs file that provides the rehosting logic.</span></span>  
-  
-    ```  
-    using System;  
-    using System.Activities.Core.Presentation;  
-    using System.Activities.Presentation;  
-    using System.Activities.Presentation.Metadata;  
-    using System.Activities.Statements;  
-    using System.ComponentModel;  
-    using System.Windows;  
-  
-    namespaceUsingWorkflowItemsPresenter  
-    {  
-        public partial class RehostingWfDesigner : Window  
-        {  
-            public RehostingWfDesigner()  
-            {  
-                InitializeComponent();  
-            }  
-  
-            protected override void OnInitialized(EventArgs e)  
-            {  
-                base.OnInitialized(e);  
-                // register metadata  
-                (new DesignerMetadata()).Register();  
-                RegisterCustomMetadata();  
-  
-                // create the workflow designer  
-                WorkflowDesigner wd = new WorkflowDesigner();  
-                wd.Load(new Sequence());  
-                DesignerBorder.Child = wd.View;  
-                PropertyBorder.Child = wd.PropertyInspectorView;  
-  
-            }  
-  
-            void RegisterCustomMetadata()  
-            {  
-                AttributeTableBuilder builder = new AttributeTableBuilder();  
-                builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));  
-                MetadataStore.AddAttributeTable(builder.CreateTable());  
-            }  
-        }  
-    }  
-    ```  
-  
-## <a name="see-also"></a><span data-ttu-id="49713-166">Vea también</span><span class="sxs-lookup"><span data-stu-id="49713-166">See Also</span></span>  
- <xref:System.Activities.Presentation.ActivityDesigner>  
- <xref:System.Activities.Presentation.WorkflowItemPresenter>  
- <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
- <xref:System.Activities.Presentation.WorkflowViewElement>  
- <xref:System.Activities.Presentation.Model.ModelItem>  
- [<span data-ttu-id="49713-167">Personalización de la experiencia de diseño del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="49713-167">Customizing the Workflow Design Experience</span></span>](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+    >  <span data-ttu-id="d5e39-153">El esquema para <xref:System.Activities.Presentation.ActivityDesigner> permite agregar únicamente un elemento secundario a la definición personalizada del diseñador de actividad; sin embargo, este elemento podría ser un `StackPanel`, `Grid` o algún otro elemento compuesto de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="d5e39-153">The schema for <xref:System.Activities.Presentation.ActivityDesigner> allows the addition of only one child element to your custom activity designer definition; however, this element could be a `StackPanel`, `Grid`, or some other composite UI element.</span></span>
+
+    ```xml
+    <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+        xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+        <sap:ActivityDesigner.Resources>
+            <DataTemplate x:Key="Collapsed">
+                <StackPanel>
+                    <TextBlock>This is the collapsed view</TextBlock>
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate x:Key="Expanded">
+                <StackPanel>
+                    <TextBlock>Custom Text</TextBlock>
+                    <sap:WorkflowItemPresenter Item="{Binding Path=ModelItem.Body, Mode=TwoWay}"
+                                            HintText="Please drop an activity here" />
+                </StackPanel>
+            </DataTemplate>
+            <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">
+                <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Path=ShowExpanded}" Value="true">
+                        <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </sap:ActivityDesigner.Resources>
+        <Grid>
+            <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}" />
+        </Grid>
+    </sap:ActivityDesigner>
+    ```
+
+21. <span data-ttu-id="d5e39-154">Haga clic en el proyecto UsingWorkflowItemPresenter en **el Explorador de soluciones**, seleccione **agregar**, a continuación, **nuevo elemento...**</span><span class="sxs-lookup"><span data-stu-id="d5e39-154">Right-click the UsingWorkflowItemPresenter project in **Solution Explorer**, select **Add**, then **New Item…**</span></span> <span data-ttu-id="d5e39-155">para que aparezca el **Agregar nuevo elemento** de cuadro de diálogo y seleccione el **flujo de trabajo** formulario categoría la **plantillas instaladas** sección de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="d5e39-155">to bring up the **Add New Item** dialogue and select the **Workflow** category form the **Installed Templates** section on the left.</span></span>
+
+22. <span data-ttu-id="d5e39-156">Seleccione el **actividad Code** plantilla, asígnele el nombre `SimpleNativeActivity`y haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="d5e39-156">Select the  **Code Activity** template, name it `SimpleNativeActivity`, and click **Add**.</span></span>
+
+23. <span data-ttu-id="d5e39-157">Implemente la clase `SimpleNativeActivity` registrando el siguiente código en el archivo SimpleNativeActivity.cs.</span><span class="sxs-lookup"><span data-stu-id="d5e39-157">Implement the `SimpleNativeActivity` class by entering the following code into the SimpleNativeActivity.cs file.</span></span>
+
+    ```
+    using System.Activities;
+
+    namespace UsingWorkflowItemPresenter
+    {
+        public sealed class SimpleNativeActivity : NativeActivity
+        {
+            // this property contains an activity that will be scheduled in the execute method
+    // the WorkflowItemPresenter in the designer is bound to this to enable editing
+    // of the value
+            public Activity Body { get; set; }
+
+            protected override void CacheMetadata(NativeActivityMetadata metadata)
+            {
+               metadata.AddChild(Body);
+               base.CacheMetadata(metadata);
+
+            }
+
+            protected override void Execute(NativeActivityContext context)
+            {
+                context.ScheduleActivity(Body);
+            }
+        }
+    }
+    ```
+
+24. <span data-ttu-id="d5e39-158">Seleccione **compilar solución** desde el **compilar** menú.</span><span class="sxs-lookup"><span data-stu-id="d5e39-158">Select **Build Solution** from the **Build** menu.</span></span>
+
+25. <span data-ttu-id="d5e39-159">Seleccione **iniciar sin depurar** desde el **depurar** menú para abrir la ventana de diseño personalizado rehospedado.</span><span class="sxs-lookup"><span data-stu-id="d5e39-159">Select **Start Without Debugging** from the **Debug** menu to open the rehosted custom design window.</span></span>
+
+### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a><span data-ttu-id="d5e39-160">Para crear un diseñador de actividad personalizado mediante WorkflowItemsPresenter</span><span class="sxs-lookup"><span data-stu-id="d5e39-160">To create a custom activity designer using WorkflowItemsPresenter</span></span>
+
+1.  <span data-ttu-id="d5e39-161">El procedimiento para el segundo diseñador de actividad personalizado es paralelo el primero con algunas modificaciones, el primero de ellos es un nombre de la segunda aplicación `UsingWorkflowItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="d5e39-161">The procedure for the second custom activity designer is the parallels the first with a few modifications, the first of which is to name the second application `UsingWorkflowItemsPresenter`.</span></span> <span data-ttu-id="d5e39-162">Esta aplicación tampoco define una nueva actividad personalizada.</span><span class="sxs-lookup"><span data-stu-id="d5e39-162">Also this application does not define a new custom activity.</span></span>
+
+2.  <span data-ttu-id="d5e39-163">Las diferencias clave se encuentran en los archivos CustomParallelDesigner.xaml y RehostingWFDesigner.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="d5e39-163">Key differences are contained in the CustomParallelDesigner.xaml and RehostingWFDesigner.xaml.cs files.</span></span> <span data-ttu-id="d5e39-164">A continuación se indica el código del archivo CustomParallelDesigner.xaml que define la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="d5e39-164">Here is the code from the CustomParallelDesigne.xaml file that defines the UI.</span></span>
+
+    ```xml
+    <sap:ActivityDesigner x:Class=" UsingWorkflowItemsPresenter.CustomParallelDesigner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+        xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+        <sap:ActivityDesigner.Resources>
+            <DataTemplate x:Key="Collapsed">
+                <TextBlock>This is the Collapsed View</TextBlock>
+            </DataTemplate>
+            <DataTemplate x:Key="Expanded">
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">This is the</TextBlock>
+                    <TextBlock HorizontalAlignment="Center">extended view</TextBlock>
+                    <sap:WorkflowItemsPresenter HintText="Drop Activities Here"
+                                        Items="{Binding Path=ModelItem.Branches}">
+                        <sap:WorkflowItemsPresenter.SpacerTemplate>
+                            <DataTemplate>
+                                <Ellipse Width="10" Height="10" Fill="Black"/>
+                            </DataTemplate>
+                        </sap:WorkflowItemsPresenter.SpacerTemplate>
+                        <sap:WorkflowItemsPresenter.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </sap:WorkflowItemsPresenter.ItemsPanel>
+                    </sap:WorkflowItemsPresenter>
+                </StackPanel>
+            </DataTemplate>
+            <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">
+                <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Path=ShowExpanded}" Value="true">
+                        <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </sap:ActivityDesigner.Resources>
+        <Grid>
+            <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>
+        </Grid>
+    </sap:ActivityDesigner>
+    ```
+
+3.  <span data-ttu-id="d5e39-165">A continuación se indica el código del archivo RehostingWFDesigner.xaml.cs que proporciona la lógica de rehospedaje.</span><span class="sxs-lookup"><span data-stu-id="d5e39-165">Here is the code from the RehostingWFDesigner.xaml.cs file that provides the rehosting logic.</span></span>
+
+    ```
+    using System;
+    using System.Activities.Core.Presentation;
+    using System.Activities.Presentation;
+    using System.Activities.Presentation.Metadata;
+    using System.Activities.Statements;
+    using System.ComponentModel;
+    using System.Windows;
+
+    namespaceUsingWorkflowItemsPresenter
+    {
+        public partial class RehostingWfDesigner : Window
+        {
+            public RehostingWfDesigner()
+            {
+                InitializeComponent();
+            }
+
+            protected override void OnInitialized(EventArgs e)
+            {
+                base.OnInitialized(e);
+                // register metadata
+                (new DesignerMetadata()).Register();
+                RegisterCustomMetadata();
+
+                // create the workflow designer
+                WorkflowDesigner wd = new WorkflowDesigner();
+                wd.Load(new Sequence());
+                DesignerBorder.Child = wd.View;
+                PropertyBorder.Child = wd.PropertyInspectorView;
+
+            }
+
+            void RegisterCustomMetadata()
+            {
+                AttributeTableBuilder builder = new AttributeTableBuilder();
+                builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));
+                MetadataStore.AddAttributeTable(builder.CreateTable());
+            }
+        }
+    }
+    ```
+
+## <a name="see-also"></a><span data-ttu-id="d5e39-166">Vea también</span><span class="sxs-lookup"><span data-stu-id="d5e39-166">See Also</span></span>
+
+- <xref:System.Activities.Presentation.ActivityDesigner>
+- <xref:System.Activities.Presentation.WorkflowItemPresenter>
+- <xref:System.Activities.Presentation.WorkflowItemsPresenter>
+- <xref:System.Activities.Presentation.WorkflowViewElement>
+- <xref:System.Activities.Presentation.Model.ModelItem>
+- [<span data-ttu-id="d5e39-167">Personalización de la experiencia de diseño del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="d5e39-167">Customizing the Workflow Design Experience</span></span>](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

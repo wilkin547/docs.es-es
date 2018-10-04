@@ -13,21 +13,21 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 64df186be7d9e503ac22e177bca8da31e165f240
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032600"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266317"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="2fa61-102">&lt;agregar&gt; elemento para webRequestModules (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="2fa61-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="2fa61-103">Agrega un módulo de solicitud Web personalizado a la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2fa61-103">Adds a custom Web request module to the application.</span></span>  
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="0ffc2-102">&lt;agregar&gt; elemento para webRequestModules (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="0ffc2-102">&lt;add&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="0ffc2-103">Agrega un módulo de solicitud Web personalizado a la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-103">Adds a custom Web request module to the application.</span></span>  
   
- <span data-ttu-id="2fa61-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2fa61-104">\<configuration></span></span>  
-<span data-ttu-id="2fa61-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="2fa61-105">\<system.net></span></span>  
-<span data-ttu-id="2fa61-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="2fa61-106">\<webRequestModules></span></span>  
-<span data-ttu-id="2fa61-107">\<add></span><span class="sxs-lookup"><span data-stu-id="2fa61-107">\<add></span></span>  
+ <span data-ttu-id="0ffc2-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0ffc2-104">\<configuration></span></span>  
+<span data-ttu-id="0ffc2-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="0ffc2-105">\<system.net></span></span>  
+<span data-ttu-id="0ffc2-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="0ffc2-106">\<webRequestModules></span></span>  
+<span data-ttu-id="0ffc2-107">\<add></span><span class="sxs-lookup"><span data-stu-id="0ffc2-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2fa61-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2fa61-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ffc2-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0ffc2-108">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -36,39 +36,39 @@ ms.locfileid: "48032600"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2fa61-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="2fa61-109">Attributes and Elements</span></span>  
- <span data-ttu-id="2fa61-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="2fa61-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0ffc2-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="0ffc2-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="0ffc2-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2fa61-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="2fa61-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0ffc2-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="0ffc2-111">Attributes</span></span>  
   
-|<span data-ttu-id="2fa61-112">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="2fa61-112">**Attribute**</span></span>|<span data-ttu-id="2fa61-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="2fa61-113">**Description**</span></span>|  
+|<span data-ttu-id="0ffc2-112">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="0ffc2-112">**Attribute**</span></span>|<span data-ttu-id="0ffc2-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="0ffc2-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`prefix`|<span data-ttu-id="2fa61-114">El prefijo URI para las solicitudes administradas por este módulo de solicitud Web.</span><span class="sxs-lookup"><span data-stu-id="2fa61-114">The URI prefix for requests handled by this Web request module.</span></span>|  
-|`type`|<span data-ttu-id="2fa61-115">El nombre de tipo completo (indicado por el <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por punto y coma, que implementa este módulo de solicitud Web.</span><span class="sxs-lookup"><span data-stu-id="2fa61-115">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
+|`prefix`|<span data-ttu-id="0ffc2-114">El prefijo URI para las solicitudes administradas por este módulo de solicitud Web.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-114">The URI prefix for requests handled by this Web request module.</span></span>|  
+|`type`|<span data-ttu-id="0ffc2-115">El nombre de tipo completo (indicado por el <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por punto y coma, que implementa este módulo de solicitud Web.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-115">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2fa61-116">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="2fa61-116">Child Elements</span></span>  
- <span data-ttu-id="2fa61-117">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="2fa61-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0ffc2-116">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="0ffc2-116">Child Elements</span></span>  
+ <span data-ttu-id="0ffc2-117">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2fa61-118">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="2fa61-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0ffc2-118">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="0ffc2-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="2fa61-119">**Element**</span><span class="sxs-lookup"><span data-stu-id="2fa61-119">**Element**</span></span>|<span data-ttu-id="2fa61-120">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="2fa61-120">**Description**</span></span>|  
+|<span data-ttu-id="0ffc2-119">**Element**</span><span class="sxs-lookup"><span data-stu-id="0ffc2-119">**Element**</span></span>|<span data-ttu-id="0ffc2-120">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="0ffc2-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="2fa61-121">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="2fa61-121">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="2fa61-122">Especifica los módulos que se utilizan para solicitar información de hosts de la red.</span><span class="sxs-lookup"><span data-stu-id="2fa61-122">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="0ffc2-121">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="0ffc2-121">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="0ffc2-122">Especifica los módulos que se utilizan para solicitar información de hosts de la red.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-122">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2fa61-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2fa61-123">Remarks</span></span>  
- <span data-ttu-id="2fa61-124">El `prefix` atributo define el prefijo URI que utiliza el módulo de solicitud Web especificado.</span><span class="sxs-lookup"><span data-stu-id="2fa61-124">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="2fa61-125">Módulos de solicitud Web se registran normalmente para controlar un protocolo específico, como HTTP o FTP, pero se pueden registrar para controlar una solicitud a un servidor específico o una ruta de acceso en un servidor.</span><span class="sxs-lookup"><span data-stu-id="2fa61-125">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0ffc2-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0ffc2-123">Remarks</span></span>  
+ <span data-ttu-id="0ffc2-124">El `prefix` atributo define el prefijo URI que utiliza el módulo de solicitud Web especificado.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-124">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="0ffc2-125">Módulos de solicitud Web se registran normalmente para controlar un protocolo específico, como HTTP o FTP, pero se pueden registrar para controlar una solicitud a un servidor específico o una ruta de acceso en un servidor.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-125">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
   
- <span data-ttu-id="2fa61-126">El módulo de solicitud Web se crea cuando se pasa a la <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="2fa61-126">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
+ <span data-ttu-id="0ffc2-126">El módulo de solicitud Web se crea cuando se pasa a la <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-126">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
   
- <span data-ttu-id="2fa61-127">El valor de la `prefix` atributo debe ser los primeros caracteres de un URI válido.</span><span class="sxs-lookup"><span data-stu-id="2fa61-127">The value for the `prefix` attribute should be the leading characters of a valid URI.</span></span> <span data-ttu-id="2fa61-128">Por ejemplo: `http` o `http://www.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="2fa61-128">For example, `http` or `http://www.contoso.com`.</span></span>
+ <span data-ttu-id="0ffc2-127">El valor de la `prefix` atributo debe ser los primeros caracteres de un URI válido.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-127">The value for the `prefix` attribute should be the leading characters of a valid URI.</span></span> <span data-ttu-id="0ffc2-128">Por ejemplo: `http` o `http://www.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-128">For example, `http` or `http://www.contoso.com`.</span></span>
   
- <span data-ttu-id="2fa61-129">El valor de la `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por comas.</span><span class="sxs-lookup"><span data-stu-id="2fa61-129">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>
+ <span data-ttu-id="0ffc2-129">El valor de la `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por comas.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-129">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>
   
-## <a name="configuration-files"></a><span data-ttu-id="2fa61-130">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="2fa61-130">Configuration Files</span></span>  
- <span data-ttu-id="2fa61-131">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="2fa61-131">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="0ffc2-130">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="0ffc2-130">Configuration Files</span></span>  
+ <span data-ttu-id="0ffc2-131">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="0ffc2-131">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2fa61-132">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2fa61-132">Example</span></span>  
- <span data-ttu-id="2fa61-133">El ejemplo siguiente registra un módulo de solicitud Web personalizado para HTTP.</span><span class="sxs-lookup"><span data-stu-id="2fa61-133">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="2fa61-134">Debe reemplazar los valores de versión y PublicKeyToken con los valores correctos para el módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="2fa61-134">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="0ffc2-132">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0ffc2-132">Example</span></span>  
+ <span data-ttu-id="0ffc2-133">El ejemplo siguiente registra un módulo de solicitud Web personalizado para HTTP.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-133">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="0ffc2-134">Debe reemplazar los valores de versión y PublicKeyToken con los valores correctos para el módulo especificado.</span><span class="sxs-lookup"><span data-stu-id="0ffc2-134">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ ms.locfileid: "48032600"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2fa61-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="2fa61-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0ffc2-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="0ffc2-135">See Also</span></span>  
  <xref:System.Net.WebRequest>  
- [<span data-ttu-id="2fa61-136">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="2fa61-136">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="0ffc2-136">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="0ffc2-136">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

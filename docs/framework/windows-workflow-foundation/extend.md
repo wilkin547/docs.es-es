@@ -6,19 +6,18 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], extending
 - extending [WF]
 ms.assetid: d6861f28-9c8c-4225-872d-9a80e2e59034
-ms.openlocfilehash: b8fcdfdee442afe5a8fc354f4fb484f3a947d293
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 667be700a5b7bafe80d20e6f899cd63529ea9b82
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511896"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581812"
 ---
-# <a name="extending-windows-workflow-foundation"></a><span data-ttu-id="739a4-102">Ampliar Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="739a4-102">Extending Windows Workflow Foundation</span></span>
-<span data-ttu-id="739a4-103">La siguiente sección describe cómo ampliar Windows Workflow Foundation (WF) con las actividades personalizadas y diseñadores en entornos hospedados fuera de [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="739a4-103">The following section describes how to extend Windows Workflow Foundation (WF) with custom activities and designers in rehosted environments outside [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="739a4-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="739a4-104">In This Section</span></span>  
- [<span data-ttu-id="739a4-105">Personalización de la experiencia de diseño del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="739a4-105">Customizing the Workflow Design Experience</span></span>](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)  
- <span data-ttu-id="739a4-106">Indica cómo los escenarios para diseñar actividades personalizadas y para re-hospedar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] se han simplificado enormemente en [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="739a4-106">Indicates how the scenarios for designing custom activities and for rehosting the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] have been greatly simplified in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span></span> <span data-ttu-id="739a4-107">Desarrollo e implementación resultan ahora más fáciles y más flexibles porque el nuevo modelo de programación Diseñador de actividad se basa en Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="739a4-107">Development and deployment are now both easier and more flexible because the new activity designer programming model is built upon Windows Presentation Foundation (WPF).</span></span>  
+# <a name="extending-windows-workflow-foundation"></a><span data-ttu-id="f397e-102">Ampliar Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="f397e-102">Extending Windows Workflow Foundation</span></span>
+<span data-ttu-id="f397e-103">La siguiente sección describe cómo ampliar Windows Workflow Foundation (WF) con actividades personalizadas y diseñadores en entornos rehospedados fuera de Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="f397e-103">The following section describes how to extend Windows Workflow Foundation (WF) with custom activities and designers in rehosted environments outside Visual Studio 2010.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="739a4-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="739a4-108">See also</span></span>
- [<span data-ttu-id="739a4-109">Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="739a4-109">Windows Workflow Foundation</span></span>](../../../docs/framework/windows-workflow-foundation/index.md)
+## <a name="in-this-section"></a><span data-ttu-id="f397e-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f397e-104">In This Section</span></span>
+ <span data-ttu-id="f397e-105">[Puede personalizar la experiencia de diseño de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md) indica cómo los escenarios para diseñar las actividades personalizadas y para RE-hospedar el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] se han simplificado enormemente en [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f397e-105">[Customizing the Workflow Design Experience](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md) Indicates how the scenarios for designing custom activities and for rehosting the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] have been greatly simplified in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span></span> <span data-ttu-id="f397e-106">Desarrollo e implementación resultan ahora más fácil y más flexible porque el nuevo modelo de programación Diseñador de actividad se basa en Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="f397e-106">Development and deployment are now both easier and more flexible because the new activity designer programming model is built upon Windows Presentation Foundation (WPF).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="f397e-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="f397e-107">See also</span></span>
+ [<span data-ttu-id="f397e-108">Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="f397e-108">Windows Workflow Foundation</span></span>](../../../docs/framework/windows-workflow-foundation/index.md)

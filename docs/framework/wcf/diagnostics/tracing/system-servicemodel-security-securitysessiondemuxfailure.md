@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 74b89d9a-22be-4799-b9fb-e3dfa5426dec
 author: BrucePerlerMS
 ms.openlocfilehash: 502eb49616c4b274b59c64a3e4f2c65af9fcda5e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030318"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777872"
 ---
-# <a name="systemservicemodelsecuritysecuritysessiondemuxfailure"></a><span data-ttu-id="db7ef-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="db7ef-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>
-<span data-ttu-id="db7ef-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="db7ef-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessiondemuxfailure"></a><span data-ttu-id="89821-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="89821-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>
+<span data-ttu-id="89821-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="89821-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="db7ef-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="db7ef-104">Description</span></span>  
- <span data-ttu-id="db7ef-105">El mensaje entrante no forma parte de una sesión de seguridad existente.</span><span class="sxs-lookup"><span data-stu-id="db7ef-105">The incoming message is not part of an existing security session.</span></span>  
+## <a name="description"></a><span data-ttu-id="89821-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="89821-104">Description</span></span>  
+ <span data-ttu-id="89821-105">El mensaje entrante no forma parte de una sesión de seguridad existente.</span><span class="sxs-lookup"><span data-stu-id="89821-105">The incoming message is not part of an existing security session.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db7ef-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="db7ef-106">See Also</span></span>  
- [<span data-ttu-id="db7ef-107">Traza</span><span class="sxs-lookup"><span data-stu-id="db7ef-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="db7ef-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="db7ef-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="db7ef-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="db7ef-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="89821-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="89821-106">See Also</span></span>  
+ [<span data-ttu-id="89821-107">Traza</span><span class="sxs-lookup"><span data-stu-id="89821-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="89821-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="89821-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="89821-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="89821-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
