@@ -2,12 +2,12 @@
 title: Propiedades de ejecución del flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2681152ba89baa2f65d5402a8c8c9d872cadb65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518649"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582075"
 ---
 # <a name="workflow-execution-properties"></a>Propiedades de ejecución del flujo de trabajo
 A través del almacenamiento local para el subproceso (TLS), el CLR mantiene un contexto de ejecución para cada subproceso. Este contexto de ejecución rige propiedades de subproceso bien conocidas, como la identidad del subproceso, la transacción ambiente y el conjunto de permisos actual así como las propiedades de subproceso definidas por el usuario como ranuras con nombre.  
@@ -18,9 +18,6 @@ A través del almacenamiento local para el subproceso (TLS), el CLR mantiene un 
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>Crear y usar propiedades de ejecución de flujo de trabajo  
  Las propiedades de ejecución de flujo de trabajo implementan generalmente la interfaz <xref:System.Activities.IExecutionProperty> , aunque las propiedades centradas en mensajería pueden implementar <xref:System.ServiceModel.Activities.ISendMessageCallback> y <xref:System.ServiceModel.Activities.IReceiveMessageCallback> en su lugar. Para crear una propiedad de ejecución de flujo de trabajo, cree una clase que implemente la interfaz <xref:System.Activities.IExecutionProperty> e implemente los miembros <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> y <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>. Estos miembros le dan a la propiedad de ejecución la oportunidad de configurar y anular el almacenamiento local de subprocesos durante cada pulso de trabajo de la actividad que contiene la propiedad, incluidas las actividades secundarias. En este ejemplo, se crea `ConsoleColorProperty`, que establece `Console.ForegroundColor`.  
-  
-> [!NOTE]
->  El siguiente código de ejemplo en este tema se basa en el [propiedades de ejecución](../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md) ejemplo.  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  

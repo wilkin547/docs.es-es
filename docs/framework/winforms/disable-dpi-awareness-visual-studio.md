@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037046"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263511"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deshabilitar el reconocimiento de PPP en Visual Studio
 
@@ -68,6 +68,10 @@ Visual Studio se puede marcar como no reconocen el PPP modificando el registro. 
 Para establecer la pantalla de configuración al 100% de escala en Windows 10, escriba **Mostrar configuración** en la tarea de la barra de cuadro de búsqueda y, a continuación, seleccione **cambiar la configuración de presentación**. En el **configuración** ventana, establezca **cambiar el tamaño de texto, las aplicaciones y otros elementos** a **100%**.
 
 Establecer el ajuste de escala al 100% de pantalla puede no ser deseable, ya que puede que la interfaz de usuario demasiado pequeño para ser utilizable.
+
+## <a name="troubleshoot"></a>Solucionar problemas
+
+Si la transición de reconocimiento de PPP no funciona según lo previsto en Visual Studio, compruebe si tiene la `dpiAwareness` valor en el **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image archivo ejecución Options\devenv.exe**  subclaves en el Editor del registro. Elimine el valor si está presente.
 
 ## <a name="see-also"></a>Vea también
 

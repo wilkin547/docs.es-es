@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004502"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582585"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)
 Una parte importante de Visual Basic es la capacidad para crear aplicaciones de Windows Forms que se ejecutan localmente en los equipos de usuarios. Puede usar Visual Studio para crear la aplicación e interfaz de usuario con Windows Forms. Una aplicación de Windows Forms se basa en las clases desde el <xref:System.Windows.Forms> espacio de nombres.  
@@ -54,7 +54,7 @@ Una parte importante de Visual Basic es la capacidad para crear aplicaciones de 
 ## <a name="displaying-and-manipulating-data"></a>Mostrar y manipular datos  
  Muchas aplicaciones deben mostrar datos procedentes de una base de datos, archivo XML, servicio web XML u otro origen de datos. Windows Forms proporciona un control flexible denominado el <xref:System.Windows.Forms.DataGridView> control para mostrar esta información tabulada en un formato tradicional de filas y columnas, por lo que cada dato ocupe su propia celda. Uso de <xref:System.Windows.Forms.DataGridView> puede personalizar la apariencia de celdas individuales, bloquear filas y columnas en su lugar arbitrarias y mostrar controles complejos dentro de las celdas, entre otras características.  
   
- La conexión a orígenes de datos a través de una red es una tarea sencilla con las aplicaciones smart client de Windows Forms. El componente <xref:System.Windows.Forms.BindingSource> —introducido en Windows Forms en [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] y [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]— representa una conexión a un origen de datos y expone métodos para enlazar datos a controles, desplazarse por los registros anteriores y siguientes, modificar registros y guardar los cambios en el origen. El control <xref:System.Windows.Forms.BindingNavigator> proporciona una interfaz sencilla en el componente <xref:System.Windows.Forms.BindingSource> para que los usuarios se desplacen por los registros.  
+ La conexión a orígenes de datos a través de una red es una tarea sencilla con las aplicaciones smart client de Windows Forms. El <xref:System.Windows.Forms.BindingSource> , componente, novedad en Windows Forms en Visual Studio 2005 y el [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], representa una conexión a un origen de datos y expone métodos para enlazar datos a controles, desplazarse por los registros anteriores y siguiente, modificar registros y guardar cambios en el origen original. El control <xref:System.Windows.Forms.BindingNavigator> proporciona una interfaz sencilla en el componente <xref:System.Windows.Forms.BindingSource> para que los usuarios se desplacen por los registros.  
   
 ### <a name="data-bound-controls"></a>Controles enlazados a datos  
  Puede crear controles enlazados a datos fácilmente mediante la ventana Orígenes de datos, que muestra los orígenes de datos como bases de datos, servicios Web y objetos del proyecto. Para crear controles enlazados a datos, arrastre los elementos desde esta ventana hasta los formularios de su proyecto. También puede enlazar controles existentes a datos si arrastra los objetos desde la ventana Orígenes de datos a los controles existentes.  

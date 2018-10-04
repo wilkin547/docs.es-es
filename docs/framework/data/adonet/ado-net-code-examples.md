@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 93cc0cf34d2bba23ff0938c8c13d7343d665192d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649229"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580750"
 ---
 # <a name="adonet-code-examples"></a>Ejemplos de código ADO.NET
 Los listados de código de este tema muestran cómo recuperar datos de una base de datos utilizando las tecnologías ADO.NET siguientes:
@@ -66,7 +66,7 @@ En el código de este ejemplo se presupone una conexión a DEMO.CUSTOMER en un s
 En los listados de código siguientes se muestra cómo recuperar los datos de un origen de datos consultando las entidades de un Entity Data Model (EDM). Estos ejemplos se usa el [modelo de Northwind](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Para obtener más información, consulte [Introducción a Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-El código de este ejemplo usa una consulta LINQ para devolver los datos como objetos Categories, que se proyectan como un tipo anónimo que contiene solo las propiedades CategoryID y CategoryName. Para obtener más información, consulte [LINQ: Introducción entidades](https://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6).
+El código de este ejemplo usa una consulta LINQ para devolver los datos como objetos Categories, que se proyectan como un tipo anónimo que contiene solo las propiedades CategoryID y CategoryName. Para obtener más información, consulte [LINQ: Introducción entidades](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
 ```csharp
 using System;

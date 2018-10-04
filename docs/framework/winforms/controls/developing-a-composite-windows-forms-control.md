@@ -7,17 +7,17 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 24fbf17f02072b2d9922ca0998805b916afc41b6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3bd8a91942cf41be62ff1e66bd97064e2db26692
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510165"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580815"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Desarrollar un control de formularios Windows Forms compuesto
 Puede desarrollar un control de Windows Forms compuesto mediante la combinación de otros controles de Windows Forms. Los controles compuestos que derivan de <xref:System.Web.UI.UserControl> se denominan controles de usuario. La clase base, <xref:System.Windows.Forms.UserControl>, proporciona el enrutamiento de teclado de los controles secundarios, lo que asegura que puedan recibir el foco. Para obtener un ejemplo de un control de usuario, consulte el <xref:System.Windows.Forms.UserControl> en [Cómo: aplicar atributos en controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
- El Diseñador de Windows Forms de [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] proporciona una buena compatibilidad en tiempo de diseño para la creación de controles de usuario.   
+ El Diseñador de Windows Forms en Visual Studio proporciona compatibilidad enriquecida en tiempo de diseño para la creación de controles de usuario.  
   
 -   [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   

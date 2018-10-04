@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
 ms.openlocfilehash: 29881be43f02d275ad135efd97dc8b25a7409beb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235460"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778174"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
 Controla la configuración que los controladores de token que se usan para validar los certificados. Esta configuración se invalida si un controlador específico se configura con su propio validador.  

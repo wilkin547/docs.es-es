@@ -2,12 +2,12 @@
 title: Uso de extremos estándar
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: b3e8cb32832763c7182f86f68c5c80d80ce8c3af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518231"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584291"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso de extremos estándar
 
@@ -110,7 +110,7 @@ En la función `CreateServiceEndpoint`, se crea un objeto `CustomEndpoint`. Su d
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
 {
-    public CustomEndpoint() 
+    public CustomEndpoint()
         : this(string.Empty)
     {
     }
@@ -139,7 +139,7 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1.  Mediante [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra el archivo StandardEndpoints.sln.
+1.  Con Visual Studio 2012, abra el archivo StandardEndpoints.sln.
 
 2.  Habilite varios proyectos para iniciarse.
 

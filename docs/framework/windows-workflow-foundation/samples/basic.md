@@ -3,11 +3,11 @@ title: Basic1
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
 ms.openlocfilehash: 371c80bba9b7398af936415819609b531ddd1593
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031856"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261224"
 ---
 # <a name="basic"></a>Básico
 Esta sección proporciona ejemplos que muestran la funcionalidad básica de Windows Workflow Foundation (WF).  

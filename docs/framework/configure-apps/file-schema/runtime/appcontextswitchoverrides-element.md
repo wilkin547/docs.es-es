@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ed2a81c4ec4f679b99f5f5a4d2a2c21270691e93
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028195"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778412"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Define uno o varios modificadores usados por la clase <xref:System.AppContext> para proporcionar un mecanismo para cancelar la participación con nueva funcionalidad.  
@@ -93,7 +93,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Controles si el valor de la [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) propiedad es una [IntPtr](xref:System.IntPtr) que representa la ubicación de memoria de una ventana de controlar, o si es un identificador de ventana (HWND). Para más información, vea [Mitigación: CspParameters.ParentWindowHandle espera HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Determina si el valor predeterminado para algunas operaciones SignedCMS es SHA1 o SHA256. |.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Determina si el valor predeterminado para algunas operaciones SignedXML es SHA1 o SHA256. |.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Determina si el `TransportWithMessageCredential` modo de seguridad permite a los mensajes con unsigned "a" encabezado. Se trata de un conmutador de inclusión. Para obtener más información, consulte [cambios de Runtime de .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
+|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Determina si el `TransportWithMessageCredential` modo de seguridad permite a los mensajes con unsigned "a" encabezado. Se trata de un conmutador de inclusión. Para obtener más información, consulte [cambios de Runtime de .NET Framework 4.6.1](~/docs/framework/migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Controles si el <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> constructor produce una <xref:System.ArgumentException> si uno de los elementos es `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Determina que si el intento de usar X509 certificados con un proveedor de almacenamiento de claves CSG inicia una excepción. Para obtener más información, consulte [seguridad de transporte WCF es compatible con los certificados almacenados con CNG](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
 |`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|Cuando se usa el transporte HTTP con un servicio autohospedado, establecer este valor en `true` hace que WCF pasar por alto la adición de una aplicación la `Connection: close` encabezado a los encabezados de respuesta para una solicitud. Establecer este valor en `false` permite agregar la `Connection: close` encabezado a los encabezados de respuesta, lo que resulta en el socket de la solicitud de cierre después de que se ha enviado una respuesta.|.NET Framework 4.6|

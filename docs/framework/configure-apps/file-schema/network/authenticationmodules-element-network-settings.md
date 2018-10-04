@@ -11,11 +11,11 @@ ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 394a686fe07036d6c3ac2bc51fb3503e1ee4a9e6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028451"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777570"
 ---
 # <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; elemento (configuración de red)
 Especifica los módulos que se usa para autenticar las solicitudes de red.  

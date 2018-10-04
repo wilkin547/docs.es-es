@@ -2,16 +2,16 @@
 title: Proceso de aprobación de un documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508935"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582715"
 ---
 # <a name="document-approval-process"></a>Proceso de aprobación de un documento
-Este ejemplo muestra el uso de muchas características de Windows Workflow Foundation (WF) y Windows Communication Foundation (WCF) juntos. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.  
-  
+Este ejemplo muestra el uso de muchas características de Windows Workflow Foundation (WF) y Windows Communication Foundation (WCF) juntos. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.
+
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
@@ -80,11 +80,11 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 ##### <a name="to-set-up-the-database"></a>Para configurar la base de datos  
   
-1.  Desde un símbolo del sistema de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] abierto con privilegios de administrador, navegue a esta carpeta DocumentApprovalProcess y ejecute Setup.cmd.  
+1.  Desde una línea de comandos de Visual Studio 2010 abierta con privilegios de administrador, vaya a la carpeta DocumentApprovalProcess y ejecute Setup.cmd.  
   
 ##### <a name="to-set-up-the-application"></a>Para configurar la aplicación  
   
-1.  Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución de DocumentApprovalProcess.sln.  
+1.  Con Visual Studio 2010, abra el archivo de solución de DocumentApprovalProcess.sln.  
   
 2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
@@ -146,4 +146,4 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 ##### <a name="to-clean-up"></a>Para realizar una limpieza  
   
-1.  En un símbolo de sistema de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], navegue a la carpeta DocumentApprovalProcess y ejecute Cleanup.cmd.
+1.  Desde un símbolo del sistema de Visual Studio 2010, vaya a la carpeta DocumentApprovalProcess y ejecute Cleanup.cmd.

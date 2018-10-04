@@ -2,26 +2,26 @@
 title: Seguimiento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779148"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584334"
 ---
 # <a name="sql-tracking"></a>Seguimiento de SQL
-Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona el flujo de trabajo de seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información acerca del seguimiento de flujo de trabajo, consulte [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
-  
-#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
-  
-1.  Compruebe que tiene instalado SQL Server 2008, SQL Server 2008 Express o una versión más reciente. Los scripts empaquetados con el ejemplo dan por supuesto el uso de una instancia de SQL Express en su equipo local. Si tiene una instancia diferente, modifique los scripts de base de datos antes de ejecutar el ejemplo.  
-  
-2.  Cree la base de datos de seguimiento de SQL Server ejecutando Trackingsetup.cmd en el directorio de scripts (\WF\Basic\Tracking\SqlTracking\CS\Scripts). De esta forma, se creará una base de datos denominada TrackingSample.  
-  
+Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona el flujo de trabajo de seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información acerca del seguimiento de flujo de trabajo, consulte [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
+
+#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
+
+1.  Compruebe que tiene instalado SQL Server 2008, SQL Server 2008 Express o una versión más reciente. Los scripts empaquetados con el ejemplo dan por supuesto el uso de una instancia de SQL Express en su equipo local. Si tiene una instancia diferente, modifique los scripts de base de datos antes de ejecutar el ejemplo.
+
+2.  Cree la base de datos de seguimiento de SQL Server ejecutando Trackingsetup.cmd en el directorio de scripts (\WF\Basic\Tracking\SqlTracking\CS\Scripts). De esta forma, se creará una base de datos denominada TrackingSample.
+
     > [!NOTE]
     >  El script crea la base de datos en la instancia predeterminada de SQL Express. Si desea realizar la instalación en una instancia de base de datos diferente, modifique el script Trackingsetup.cmd.  
   
-3.  Abra SqlTrackingSample.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+3.  Abra SqlTrackingSample.sln en Visual Studio 2010.  
   
 4.  Presione Ctrl+MAYÚS+B para compilar la solución.  
   
@@ -48,8 +48,8 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
 1.  Ejecute el script Trackingcleanup.cmd script en el directorio de ejemplo (\WF\Basic\Tracking\SqlTracking).  
   
     > [!NOTE]
-    >  Trackingcleanup.cmd intenta eliminar la base de datos en el SQL Express del equipo local. Si está utilizando otra instancia del servidor SQL, modifique Trackingcleanup.cmd.  
-  
+    >  Trackingcleanup.cmd intenta eliminar la base de datos en el SQL Express del equipo local. Si está utilizando otra instancia del servidor SQL, modifique Trackingcleanup.cmd.
+
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   

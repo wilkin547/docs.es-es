@@ -2,18 +2,18 @@
 title: Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 3c3c5934cbbc7dd68f03d888aa0594f9ff61c225
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664636"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263445"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
-La mayoría de los ejemplos de Windows Communication Foundation (WCF) se hospedan en Internet Information Services (IIS) y ejecutar desde un directorio virtual común. Este procedimiento de instalación única crea una carpeta en el disco; También agrega un directorio virtual en IIS denominado **ServiceModelSamples**.  
-  
- El **ServiceModelSamples** directorio virtual se utiliza para compilar y ejecutar todos los ejemplos que utilizan un servicio hospedado en IIS. Éste es el único directorio virtual que se exige para ejecutar los ejemplos. Al compilar un ejemplo, se reemplazará cualquier servicio implementado anteriormente en este directorio virtual; solo se implementará y estará disponible en este directorio virtual el ejemplo creado más recientemente.  
-  
+La mayoría de los ejemplos de Windows Communication Foundation (WCF) se hospedan en Internet Information Services (IIS) y ejecutar desde un directorio virtual común. Este procedimiento de instalación única crea una carpeta en el disco; También agrega un directorio virtual en IIS denominado **ServiceModelSamples**.
+
+ El **ServiceModelSamples** directorio virtual se utiliza para compilar y ejecutar todos los ejemplos que utilizan un servicio hospedado en IIS. Éste es el único directorio virtual que se exige para ejecutar los ejemplos. Al compilar un ejemplo, se reemplazará cualquier servicio implementado anteriormente en este directorio virtual; solo se implementará y estará disponible en este directorio virtual el ejemplo creado más recientemente.
+
 > [!NOTE]
 >  Debe ejecutar todos los comandos con una cuenta de administrador local. Si está utilizando Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] o Windows Server 2008 R2, también debe ejecutar el símbolo del sistema con privilegios elevados. Para ello, haga clic en el icono de símbolo del sistema y, a continuación, haga clic en **ejecutar como administrador**. Todos los comandos de este tema se deben ejecutar en un símbolo del sistema que tenga la configuración de ruta de acceso adecuada.  La manera más fácil de asegurarse de esto es usar el símbolo del sistema de Visual Studio. Para abrir este símbolo del sistema, haga clic en **iniciar**, seleccione **todos los programas**, desplácese hacia abajo hasta **Visual Studio 2010**, seleccione **Visual Studio Tools**, Haga clic en **Visual Studio Command Prompt (2010)** y, a continuación, haga clic en **ejecutar como administrador**. Si tiene una de las ediciones de Visual Studio Express instalada, este símbolo del sistema no está disponible, y tendrá que agregar "C:\Windows\Microsoft.Net\Framework\v4.0" a la ruta de acceso del sistema.  
   
@@ -23,18 +23,18 @@ La mayoría de los ejemplos de Windows Communication Foundation (WCF) se hospeda
   
 2.  Asegúrese de que [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] está instalado. Buscar el siguiente directorio v4.0 (o posterior): **\Windows\Microsoft.NET\Framework**  
   
-3.  Si [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] no está instalado, y el sistema operativo no es Windows Server 2008 SP2 o posterior, instale [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
+3.  Si no está instalado Visual Studio 2012 y el sistema operativo no es Windows Server 2008 SP2 o posterior, instale [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
 4.  Ejecute los siguientes comandos. Para obtener más información acerca de por qué se deben ejecutar estos comandos, consulte [error del servicio hospedado IIS](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
   
     > [!WARNING]
-    >  Si se reinstala IIS, los siguientes comandos deberán ejecutarse de nuevo.  
-  
-    ```  
-    "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\aspnet_regiis" –i –enable  
-    "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\ServiceModelReg.exe" -r  
-    ```  
-  
+    >  Si se reinstala IIS, los siguientes comandos deberán ejecutarse de nuevo.
+
+    ```
+    "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\aspnet_regiis" –i –enable
+    "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\ServiceModelReg.exe" -r
+    ```
+
     > [!WARNING]
     >  Ejecute el comando `aspnet_regiis –i –enable` hará que el grupo de aplicaciones predeterminadas se ejecute con [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], lo que puede generar problemas de incompatibilidad para otras aplicaciones en el mismo equipo.  
   
@@ -55,35 +55,35 @@ La mayoría de los ejemplos de Windows Communication Foundation (WCF) se hospeda
      Si prefiere configurar estos directorios manualmente, consulte el [instrucciones de configuración del directorio Virtual](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md). Para revertir todos los cambios efectuados en este paso, ejecute cleanupvroot.bat después de que termine de utilizar los ejemplos.  
   
     > [!NOTE]
-    >  Este procedimiento solo se debe realizar una vez en un equipo, a menos que se ejecute cleanupvroot.bat.  
-  
-10. Debe conceder permiso para modificar %SystemDrive%\inetpub\wwwroot a la cuenta con la que se van a compilar los ejemplos y al usuario del Servicio de red. Mientras se compilan, algunos ejemplos hospedados en Web podrían intentar copiar los archivos binarios compilados en la ubicación mencionada previamente y, si no se han establecido los permisos adecuados, la compilación se interrumpirá. Alternativamente puede dejar los permisos tal como están y ejecutar el símbolo de sistema de SDK o de Visual Studio (2012) como administrador, o bien compilar los ejemplos en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], también como administrador.  
-  
+    >  Este procedimiento solo se debe realizar una vez en un equipo, a menos que se ejecute cleanupvroot.bat.
+
+10. Debe conceder permiso para modificar %SystemDrive%\inetpub\wwwroot a la cuenta con la que se van a compilar los ejemplos y al usuario del Servicio de red. Mientras se compilan, algunos ejemplos hospedados en Web podrían intentar copiar los archivos binarios compilados en la ubicación mencionada previamente y, si no se han establecido los permisos adecuados, la compilación se interrumpirá. Como alternativa, puede dejar los permisos tal y como están y ejecutar el símbolo del sistema de SDK o el símbolo del sistema de Visual Studio (2012) como administrador o compilar los ejemplos de Visual Studio 2012, también se ejecutan como administrador.
+
     > [!NOTE]
-    >  Si no se completa este paso, todos los ejemplos hospedados en IIS generarán errores al compilarse. Asegúrese de que ha establecido los permisos correctamente o ejecute el símbolo del sistema de SDK y Visual Studio (2012) como administrador.  
-  
-11. Cree un directorio C:\logs en el equipo; en algunos ejemplos podría esperarse que exista. Asegúrese de que la cuenta adecuada tiene concedido acceso de escritura en esta carpeta. Para Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)], y Windows Server 2008 R2, esta cuenta es **Network Service**. En [!INCLUDE[lserver](../../../../includes/lserver-md.md)], la cuenta es NT Authority\Network Service. En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la cuenta es ASPNET.  
-  
-12. Ejecute el archivo Setupcerttool.bat. Este archivo se encuentra en la \<Rutadeinstalación > \WF_WCF_Samples\WCF\Setup\ carpeta.  Este script realizará las siguientes tareas:  
-  
-    -   Compile La herramienta FindPrivateKey.  
-  
-    -   Cree un directorio denominado %ProgramFiles%\ServiceModelSampleTools.  
-  
-    -   Copie la nueva herramienta FindPrivateKey en este directorio.  
-  
-     Esta herramienta se requiere en los ejemplos que utilizan certificados y se hospedan en IIS.  
-  
+    >  Si no se completa este paso, todos los ejemplos hospedados en IIS generarán errores al compilarse. Asegúrese de que ha establecido los permisos correctamente o ejecute el símbolo del sistema de SDK y Visual Studio (2012) como administrador.
+
+11. Cree un directorio C:\logs en el equipo; en algunos ejemplos podría esperarse que exista. Asegúrese de que la cuenta adecuada tiene concedido acceso de escritura en esta carpeta. Para Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)], y Windows Server 2008 R2, esta cuenta es **Network Service**. En [!INCLUDE[lserver](../../../../includes/lserver-md.md)], la cuenta es NT Authority\Network Service. En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la cuenta es ASPNET.
+
+12. Ejecute el archivo Setupcerttool.bat. Este archivo se encuentra en la \<Rutadeinstalación > \WF_WCF_Samples\WCF\Setup\ carpeta.  Este script realizará las siguientes tareas:
+
+    -   Compile La herramienta FindPrivateKey.
+
+    -   Cree un directorio denominado %ProgramFiles%\ServiceModelSampleTools.
+
+    -   Copie la nueva herramienta FindPrivateKey en este directorio.
+
+     Esta herramienta se requiere en los ejemplos que utilizan certificados y se hospedan en IIS.
+
     > [!NOTE]
-    >  Por motivos de seguridad, no olvide quitar la definición del directorio virtual y los permisos concedidos en los pasos de instalación anteriores cuando termine con los ejemplos; para ello ejecute el archivo por lotes denominado Cleanupvroot.bat.  
-  
-13. Los ejemplos autohospedados (no se hospedan en IIS) requieren permiso para registrar las direcciones HTTP en el equipo a fin de realizar escuchas. El permiso para una reserva de espacio de nombres HTTP procede de la cuenta de usuario utilizada para ejecutar el ejemplo. De forma predeterminada, las cuentas de administrador tienen el permiso para registrar cualquier dirección HTTP. Las cuentas de usuario no administrador deben tener concedido permiso para los espacios de nombres HTTP usados por los ejemplos. Para obtener más información sobre cómo configurar las reservas de espacio de nombres, vea [Configuración de HTTP y HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
-  
-14. Algunos ejemplos requieren Message Queuing. Consulte [instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) para obtener instrucciones de instalación.  
-  
+    >  Por motivos de seguridad, no olvide quitar la definición del directorio virtual y los permisos concedidos en los pasos de instalación anteriores cuando termine con los ejemplos; para ello ejecute el archivo por lotes denominado Cleanupvroot.bat.
+
+13. Los ejemplos autohospedados (no se hospedan en IIS) requieren permiso para registrar las direcciones HTTP en el equipo a fin de realizar escuchas. El permiso para una reserva de espacio de nombres HTTP procede de la cuenta de usuario utilizada para ejecutar el ejemplo. De forma predeterminada, las cuentas de administrador tienen el permiso para registrar cualquier dirección HTTP. Las cuentas de usuario no administrador deben tener concedido permiso para los espacios de nombres HTTP usados por los ejemplos. Para obtener más información sobre cómo configurar las reservas de espacio de nombres, vea [Configuración de HTTP y HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).
+
+14. Algunos ejemplos requieren Message Queuing. Consulte [instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) para obtener instrucciones de instalación.
+
     > [!NOTE]
-    >  Asegúrese de iniciar el servicio de MSMQ antes de ejecutar cualquier ejemplo que requiera Message Queuing.  
-  
-15. En algunos ejemplos se requieren los certificados. Consulte [de Internet Information Services (IIS) instrucciones de instalación de certificado de servidor](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
-  
+    >  Asegúrese de iniciar el servicio de MSMQ antes de ejecutar cualquier ejemplo que requiera Message Queuing.
+
+15. En algunos ejemplos se requieren los certificados. Consulte [de Internet Information Services (IIS) instrucciones de instalación de certificado de servidor](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
+
 ## <a name="see-also"></a>Vea también

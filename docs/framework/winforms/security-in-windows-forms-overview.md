@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747130"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580935"
 ---
 # <a name="security-in-windows-forms-overview"></a>Información general sobre la seguridad en formularios Windows Forms
 Antes del lanzamiento de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], todo el código que se ejecutaba en el equipo de un usuario tenía los mismos derechos o permisos de acceso a los recursos que los que tenía un usuario del equipo. Por ejemplo, si el usuario tenía acceso al sistema de archivos, el código también tenía acceso al sistema de archivos; si el usuario tenía acceso a una base de datos, el código también tenía acceso a esa base de datos. Aunque estos derechos o permisos pueden ser aceptables para el código de los ejecutables que el usuario ha instalado explícitamente en el equipo local, no pueden ser aceptables para el código potencialmente malintencionado procedente de Internet o de una intranet local. Este código no debe tener acceso a los recursos del equipo del usuario sin permiso.  
@@ -49,7 +49,7 @@ Antes del lanzamiento de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md
   
  Cuando solicite permisos opcionales, debe controlar las excepciones de seguridad que se generarán si la aplicación realiza una acción que requiere permisos que no tiene concedidos. El control adecuado de <xref:System.Security.SecurityException> garantizará que la aplicación continúa ejecutándose. La aplicación puede usar la excepción para determinar si se debería deshabilitar una característica para el usuario. Por ejemplo, una aplicación puede deshabilitar la opción de menú **Guardar** si no se concede el permiso de archivo necesario.  
   
- A veces es difícil saber si ha declarado todos los permisos adecuados. Por ejemplo, una llamada de método que a primera vista parece inofensiva, puede tener acceso al sistema de archivos en algún momento durante su ejecución. Si la aplicación no se implementa con todos los permisos necesarios, la depuración en el escritorio no dará problemas, pero producirá un error cuando se implemente. Tanto el [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK y [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] contienen herramientas para calcular los permisos que necesita una aplicación: los comandos MT.exe herramienta de línea y la característica Calcular permisos de Visual Studio, respectivamente.  
+ A veces es difícil saber si ha declarado todos los permisos adecuados. Por ejemplo, una llamada de método que a primera vista parece inofensiva, puede tener acceso al sistema de archivos en algún momento durante su ejecución. Si la aplicación no se implementa con todos los permisos necesarios, la depuración en el escritorio no dará problemas, pero producirá un error cuando se implemente. Tanto el [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK y Visual Studio 2005 contienen herramientas para calcular los permisos que necesita una aplicación: los comandos MT.exe herramienta de línea y la característica Calcular permisos de Visual Studio, respectivamente.  
   
  Los temas siguientes describen características de seguridad adicionales de Windows Forms.  
   

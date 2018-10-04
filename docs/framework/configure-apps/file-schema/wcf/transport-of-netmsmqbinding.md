@@ -2,12 +2,12 @@
 title: Elemento &lt;transport&gt; de &lt;netMsmqBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: 1b0de5e1d581384d00c18dbefbf7b170325e2061
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 06114990f931eb06d064fcec425e9ab42507c932
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209713"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582312"
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a>Elemento &lt;transport&gt; de &lt;netMsmqBinding&gt;
 Define la configuración de seguridad para el transporte.  
@@ -64,5 +64,5 @@ Define la configuración de seguridad para el transporte.
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

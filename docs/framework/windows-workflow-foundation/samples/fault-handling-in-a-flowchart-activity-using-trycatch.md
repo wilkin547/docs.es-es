@@ -2,41 +2,41 @@
 title: Control de errores en una actividad de diagrama de flujo utilizando TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: e89c80ecfa8ec93fdde82b5638c504ded681a4fc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df3d93087744ce0fba597f5c9f1d2da4b71a50dd
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864698"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779860"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Control de errores en una actividad de diagrama de flujo utilizando TryCatch
-En este ejemplo se muestra cómo se puede usar la actividad <xref:System.Activities.Statements.TryCatch> dentro de una actividad de flujo de control compleja.  
-  
- En este ejemplo, se pasan un código de la promoción y el número de hijos como variables a una actividad <xref:System.Activities.Statements.Flowchart> que calcula un descuento en función de fórmulas que corresponden al código de promoción. En el ejemplo se incluyen las versiones de código imperativo y de diseñador de flujo de trabajo del ejemplo.  
-  
- En la siguiente tabla se detallan las variables de la actividad `CreateFlowchartWithFaults`.  
-  
-|Parámetros|Descripción|  
-|----------------|-----------------|  
-|promoCode|El código de la promoción. Tipo: string<br /><br /> Los posibles valores con descripción en paréntesis:<br /><br /> -Única (Single)<br />-MNK (casado sin hijos).<br />-MWK (casado con hijos).|  
-|numKids|El número de hijos. Tipo: int|  
-  
- La actividad `CreateFlowchartWithFaults` utiliza una actividad <xref:System.Activities.Statements.FlowSwitch%601> que activa el argumento `promoCode` y calcula el descuento mediante la siguiente fórmula.  
-  
-|Valor de `promoCode`|Descuento (%)|  
-|--------------------------|--------------------|  
-|Single|10|  
-|MNK|15|  
-|MWK|15 + (1 – 1 /`numberOfKids`)\*10 **Nota:** potencialmente, puede producir este cálculo un <xref:System.DivideByZeroException>. Por tanto, el cálculo del descuento se incluye en una actividad <xref:System.Activities.Statements.TryCatch> que detecta la excepción <xref:System.DivideByZeroException> y establece el descuento en cero.|  
-  
-#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
-  
-1.  Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución FlowchartWithFaultHandling.sln.  
-  
-2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
-  
-3.  Presione F5 para ejecutar la solución.  
-  
+En este ejemplo se muestra cómo se puede usar la actividad <xref:System.Activities.Statements.TryCatch> dentro de una actividad de flujo de control compleja.
+
+ En este ejemplo, se pasan un código de la promoción y el número de hijos como variables a una actividad <xref:System.Activities.Statements.Flowchart> que calcula un descuento en función de fórmulas que corresponden al código de promoción. En el ejemplo se incluyen las versiones de código imperativo y de diseñador de flujo de trabajo del ejemplo.
+
+ En la siguiente tabla se detallan las variables de la actividad `CreateFlowchartWithFaults`.
+
+|Parámetros|Descripción|
+|----------------|-----------------|
+|promoCode|El código de la promoción. Tipo: string<br /><br /> Los posibles valores con descripción en paréntesis:<br /><br /> -Única (Single)<br />-MNK (casado sin hijos).<br />-MWK (casado con hijos).|
+|numKids|El número de hijos. Tipo: int|
+
+ La actividad `CreateFlowchartWithFaults` utiliza una actividad <xref:System.Activities.Statements.FlowSwitch%601> que activa el argumento `promoCode` y calcula el descuento mediante la siguiente fórmula.
+
+|Valor de `promoCode`|Descuento (%)|
+|--------------------------|--------------------|
+|Single|10|
+|MNK|15|
+|MWK|15 + (1 – 1 /`numberOfKids`)\*10 **Nota:** potencialmente, puede producir este cálculo un <xref:System.DivideByZeroException>. Por tanto, el cálculo del descuento se incluye en una actividad <xref:System.Activities.Statements.TryCatch> que detecta la excepción <xref:System.DivideByZeroException> y establece el descuento en cero.|
+
+#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
+
+1.  Con Visual Studio 2010, abra el archivo de solución FlowchartWithFaultHandling.sln.
+
+2.  Para compilar la solución, presione Ctrl+MAYÚS+B.
+
+3.  Presione F5 para ejecutar la solución.
+
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   

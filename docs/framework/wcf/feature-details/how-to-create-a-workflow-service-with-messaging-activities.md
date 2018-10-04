@@ -2,19 +2,19 @@
 title: 'Cómo: Crear un servicio de flujo de trabajo con actividades de mensajería'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 6ccc4ddc6ba273f6f41efb023f077dd6b87c7ffb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196562"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580503"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Cómo: Crear un servicio de flujo de trabajo con actividades de mensajería
 En este tema, se describe cómo crear un servicio de flujo de trabajo simple mediante actividades de mensajería. Este tema se centra en los sistemas de creación de un servicio de flujo de trabajo compuesto solo por actividades de mensajería. En un servicio real, el flujo de trabajo contiene muchas otras actividades. El servicio implementa una operación denominada Eco, que toma una cadena y la devuelve al autor de la llamada. Este tema es el primero en una serie de dos temas. El siguiente tema [Cómo: obtener acceso a un servicio desde un flujo de trabajo de aplicación](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) describe cómo crear una aplicación de flujo de trabajo que se puede llamar al servicio creado en este tema.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Para crear un proyecto de servicio de flujo de trabajo  
   
-1.  Inicie [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Inicie Visual Studio 2012.  
   
 2.  Haga clic en el **archivo** menú, seleccione **New**y, a continuación, **proyecto** para mostrar el **cuadro de diálogo nuevo proyecto**. Seleccione **flujo de trabajo** en la lista de plantillas instaladas y **aplicación de servicio de flujo de trabajo de WCF** en la lista de tipos de proyecto. Denomine el proyecto `MyWFService` y usar la ubicación predeterminada como se muestra en la siguiente ilustración.  
   
