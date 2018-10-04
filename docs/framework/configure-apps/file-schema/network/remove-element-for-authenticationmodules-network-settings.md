@@ -13,21 +13,21 @@ ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 332f8eb4fb1a5a02df76c5745522037b029a2407
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028542"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780653"
 ---
-# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="a246f-102">&lt;quitar&gt; elemento para authenticationModules (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="a246f-102">&lt;remove&gt; Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="a246f-103">Quita un módulo de autenticación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a246f-103">Removes an authentication module from the application.</span></span>  
+# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="64d13-102">&lt;quitar&gt; elemento para authenticationModules (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="64d13-102">&lt;remove&gt; Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="64d13-103">Quita un módulo de autenticación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="64d13-103">Removes an authentication module from the application.</span></span>  
   
- <span data-ttu-id="a246f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a246f-104">\<configuration></span></span>  
-<span data-ttu-id="a246f-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="a246f-105">\<system.net></span></span>  
-<span data-ttu-id="a246f-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="a246f-106">\<authenticationModules></span></span>  
-<span data-ttu-id="a246f-107">\<Quitar ></span><span class="sxs-lookup"><span data-stu-id="a246f-107">\<remove></span></span>  
+ <span data-ttu-id="64d13-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="64d13-104">\<configuration></span></span>  
+<span data-ttu-id="64d13-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="64d13-105">\<system.net></span></span>  
+<span data-ttu-id="64d13-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="64d13-106">\<authenticationModules></span></span>  
+<span data-ttu-id="64d13-107">\<Quitar ></span><span class="sxs-lookup"><span data-stu-id="64d13-107">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a246f-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a246f-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64d13-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="64d13-108">Syntax</span></span>  
   
 ```xml  
 <remove   
@@ -35,34 +35,34 @@ ms.locfileid: "48028542"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a246f-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="a246f-109">Attributes and Elements</span></span>  
- <span data-ttu-id="a246f-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="a246f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="64d13-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="64d13-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="64d13-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="64d13-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a246f-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="a246f-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="64d13-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="64d13-111">Attributes</span></span>  
   
-|<span data-ttu-id="a246f-112">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="a246f-112">**Attribute**</span></span>|<span data-ttu-id="a246f-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="a246f-113">**Description**</span></span>|  
+|<span data-ttu-id="64d13-112">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="64d13-112">**Attribute**</span></span>|<span data-ttu-id="64d13-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="64d13-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|<span data-ttu-id="a246f-114">**type**</span><span class="sxs-lookup"><span data-stu-id="a246f-114">**type**</span></span>|<span data-ttu-id="a246f-115">El nombre del módulo de autenticación para quitar.</span><span class="sxs-lookup"><span data-stu-id="a246f-115">The name of the authentication module to remove.</span></span>|  
+|<span data-ttu-id="64d13-114">**type**</span><span class="sxs-lookup"><span data-stu-id="64d13-114">**type**</span></span>|<span data-ttu-id="64d13-115">El nombre del módulo de autenticación para quitar.</span><span class="sxs-lookup"><span data-stu-id="64d13-115">The name of the authentication module to remove.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a246f-116">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="a246f-116">Child Elements</span></span>  
- <span data-ttu-id="a246f-117">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="a246f-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="64d13-116">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="64d13-116">Child Elements</span></span>  
+ <span data-ttu-id="64d13-117">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="64d13-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a246f-118">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="a246f-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="64d13-118">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="64d13-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="a246f-119">**Element**</span><span class="sxs-lookup"><span data-stu-id="a246f-119">**Element**</span></span>|<span data-ttu-id="a246f-120">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="a246f-120">**Description**</span></span>|  
+|<span data-ttu-id="64d13-119">**Element**</span><span class="sxs-lookup"><span data-stu-id="64d13-119">**Element**</span></span>|<span data-ttu-id="64d13-120">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="64d13-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="a246f-121">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="a246f-121">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="a246f-122">Especifica los módulos que se usa para autenticar las solicitudes de red.</span><span class="sxs-lookup"><span data-stu-id="a246f-122">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="64d13-121">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="64d13-121">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="64d13-122">Especifica los módulos que se usa para autenticar las solicitudes de red.</span><span class="sxs-lookup"><span data-stu-id="64d13-122">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a246f-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a246f-123">Remarks</span></span>  
- <span data-ttu-id="a246f-124">El `remove` elemento quita módulos de autenticación definidos anteriormente en el archivo de configuración o en un nivel superior de la jerarquía de configuración.</span><span class="sxs-lookup"><span data-stu-id="a246f-124">The `remove` element removes authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="64d13-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="64d13-123">Remarks</span></span>  
+ <span data-ttu-id="64d13-124">El `remove` elemento quita módulos de autenticación definidos anteriormente en el archivo de configuración o en un nivel superior de la jerarquía de configuración.</span><span class="sxs-lookup"><span data-stu-id="64d13-124">The `remove` element removes authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
- <span data-ttu-id="a246f-125">El valor de la `type` atributo debe ser un nombre de clase válida.</span><span class="sxs-lookup"><span data-stu-id="a246f-125">The value for the `type` attribute should be a valid class name.</span></span>  
+ <span data-ttu-id="64d13-125">El valor de la `type` atributo debe ser un nombre de clase válida.</span><span class="sxs-lookup"><span data-stu-id="64d13-125">The value for the `type` attribute should be a valid class name.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="a246f-126">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="a246f-126">Configuration Files</span></span>  
- <span data-ttu-id="a246f-127">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="a246f-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="64d13-126">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="64d13-126">Configuration Files</span></span>  
+ <span data-ttu-id="64d13-127">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="64d13-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a246f-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a246f-128">Example</span></span>  
- <span data-ttu-id="a246f-129">El ejemplo siguiente quita un módulo de autenticación.</span><span class="sxs-lookup"><span data-stu-id="a246f-129">The following example removes an authentication module.</span></span>  
+## <a name="example"></a><span data-ttu-id="64d13-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="64d13-128">Example</span></span>  
+ <span data-ttu-id="64d13-129">El ejemplo siguiente quita un módulo de autenticación.</span><span class="sxs-lookup"><span data-stu-id="64d13-129">The following example removes an authentication module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,7 @@ ms.locfileid: "48028542"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a246f-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="a246f-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="64d13-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="64d13-130">See Also</span></span>  
  <xref:System.Net.IAuthenticationModule>  
  <xref:System.Net.AuthenticationManager>  
- [<span data-ttu-id="a246f-131">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="a246f-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="64d13-131">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="64d13-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
