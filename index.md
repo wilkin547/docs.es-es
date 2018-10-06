@@ -5,12 +5,13 @@ hide_bc: true
 title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
-ms.openlocfilehash: a62586689d1fe1c3352171fe71d92620269d9a72
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.date: 06/21/2018
+ms.openlocfilehash: dd07b771f267eb2c022b1e0b8de02aca5b0c7a5c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314909"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837474"
 ---
 <div id="main" class="v2">
     <div class="container">
