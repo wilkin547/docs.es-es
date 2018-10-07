@@ -2,12 +2,12 @@
 title: Elemento &lt;message&gt; de &lt;wsFederationHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 820ee7015a51ecc5510889516faef20292cfbc07
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: d959d43d9f7d232dea2972b81f1ad2697c8d494a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260037"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840324"
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>Elemento &lt;message&gt; de &lt;wsFederationHttpBinding&gt;
 Define la configuración de la seguridad de nivel de mensaje para el [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -135,5 +135,5 @@ Define la configuración de la seguridad de nivel de mensaje para el [ \<wsFeder
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

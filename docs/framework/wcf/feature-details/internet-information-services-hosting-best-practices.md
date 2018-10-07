@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de hospedaje de Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073598"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840750"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedimientos recomendados de hospedaje de Internet Information Services
 En este tema se describe algunos procedimientos recomendados para hospedar servicios Windows Communication Foundation (WCF).  
@@ -33,7 +33,7 @@ En este tema se describe algunos procedimientos recomendados para hospedar servi
  Los escenarios de nivel medio también generan ganancias de rendimiento utilizando API asincrónicas generadas por la opción `svcutil /a`. El `/a` opción hace que el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar `BeginXXX/EndXXX` métodos para cada operación de servicio, lo que permite potencialmente de larga ejecución realizar las llamadas a servicios remotos en subprocesos en segundo plano.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF en escenarios multitarjeta o de varios nombres  
- Puede implementar servicios WCF dentro de una granja de servidores Web de IIS, donde un conjunto de equipos comparten un nombre común externo (como http://www.contoso.com) pero son direccionados individualmente por nombres de host diferentes (por ejemplo, http://www.contoso.com podría dirigir el tráfico a dos equipos diferentes denominado http://machine1.internal.contoso.com y http://machine2.internal.contoso.com). Este escenario de implementación es totalmente compatible con WCF, pero requiere configuración especial para el sitio Web de IIS que hospeda los servicios WCF para mostrar el nombre de host correcto (externo) en los metadatos del servicio (Web Services Description Language).  
+ Puede implementar servicios WCF dentro de una granja de servidores Web de IIS, donde un conjunto de equipos comparten un nombre común externo (como `http://www.contoso.com`), pero son direccionados individualmente por nombres de host diferentes (por ejemplo, `http://www.contoso.com` podría dirigir el tráfico a dos equipos diferentes denominado `http://machine1.internal.contoso.com` y `http://machine2.internal.contoso.com`). Este escenario de implementación es totalmente compatible con WCF, pero requiere configuración especial para el sitio Web de IIS que hospeda los servicios WCF para mostrar el nombre de host correcto (externo) en los metadatos del servicio (Web Services Description Language).  
   
  Para asegurarse de que el nombre de host correcto aparece en los metadatos del servicio que WCF genera, configure la identidad predeterminada para el sitio Web de IIS que hospeda los servicios WCF para usar un nombre de host explícito. Por ejemplo, los equipos que residen dentro de la granja www.contoso.com deben usar un enlace de sitio IIS de *: 80: www.contoso.com para HTTP y \*: 443:www.contoso.com para HTTPS.  
   

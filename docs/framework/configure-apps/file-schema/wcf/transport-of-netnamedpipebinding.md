@@ -3,11 +3,11 @@ title: Elemento &lt;transport&gt; de &lt;netNamedPipeBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
 ms.openlocfilehash: c42132f774257589b9020248188ee8d972eb92ba
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779251"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837055"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>Elemento &lt;transport&gt; de &lt;netNamedPipeBinding&gt;
 Define los valores de seguridad de transporte para una canalización con nombre.  

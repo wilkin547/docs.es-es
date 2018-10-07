@@ -6,11 +6,11 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
 ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778213"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841623"
 ---
 # <a name="using-wpf-controls"></a>Utilizar controles WPF
 Puede usar los controles de Windows Presentation Foundation (WPF) en sus aplicaciones basadas en Windows Forms. Aunque son dos tecnologías de vista diferente, interoperan fácilmente.  

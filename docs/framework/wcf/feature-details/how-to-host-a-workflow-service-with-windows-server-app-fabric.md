@@ -2,19 +2,19 @@
 title: 'Cómo: Hospedar un servicio de flujo de trabajo con Windows Server App Fabric'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: d71052edaccd34bab7354c93431a260f41647f2b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2c1e4e8763ad9bd65099173c75d272965ac8caa8
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500035"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840633"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Cómo: Hospedar un servicio de flujo de trabajo con Windows Server App Fabric
 Hospedar servicios de flujo de trabajo en App Fabric es parecido al hospedaje en IIS/WAS. Las herramientas que proporciona App Fabric para implementar, supervisar y administrar los servicios de flujo de trabajo son la única diferencia. Este tema usa el servicio de flujo de trabajo creado en el [creación de un servicio de flujo de trabajo de larga ejecución](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). que le guiará por el proceso de creación de un servicio de flujo de trabajo. En este tema se explicará cómo hospedar el servicio de flujo de trabajo usando App Fabric. Para obtener más información acerca de Windows Server App Fabric, consulte [documentación de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Antes de completar los pasos siguientes asegúrese de que tiene instalado Windows Server App Fabric.  Para ello, abra Internet Information Services (inetmgr.exe), haga clic en el nombre del servidor en el **conexiones** ver, haga clic en sitios y haga clic en **sitio Web predeterminado**. En el lado derecho de la pantalla verá una sección denominada **App Fabric**. Si no ve esta sección (estará en la parte superior del panel derecho), no tiene App Fabric instalado. Para obtener más información acerca de cómo instalar Windows Server App Fabric, consulte [instalar Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Crear un servicio de flujo de trabajo simple  
   
-1.  Abra [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] y cargue la solución OrderProcessing creada en el [creación de un servicio de flujo de trabajo de larga ejecución](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) tema.  
+1.  Abra Visual Studio 2012 y cargue la solución OrderProcessing creada en el [creación de un servicio de flujo de trabajo de larga ejecución](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) tema.  
   
 2.  Haga clic en el **OrderService** del proyecto y seleccione **propiedades** y seleccione el **Web** ficha.  
   

@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt; (elemento)'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748869"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838285"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; (elemento)
 Representa una colección de certificados X.509 proporcionada por servicios concretos (con ámbito) para la autenticación. Esta colección se utiliza normalmente para especificar los certificados de servicio para los servicios de token de seguridad en un escenario asociado externo.  
@@ -19,7 +19,7 @@ sección endpointBehaviors
 \<clientCredentials >  
 \<serviceCertificate >  
 \<scopedCertificates > elemento  
-\<Agregar > (elemento) para \<scopedCertificates >  
+\<Agregar > elemento para \<scopedCertificates >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,10 +56,10 @@ sección endpointBehaviors
   
  Si un enlace requiere un certificado para el servicio y no se encuentra ningún certificado concreto para la dirección URL del servicio en ScopedCertificates, se utilizará el certificado predeterminado.  
   
- Para obtener más información, vea la sección "Ámbito de certificados" de [Cómo: crear un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Para obtener más información, vea la sección "Certificados con ámbito" de [Cómo: crear un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se especifica un certificado de servicio para el cliente debe usar al comunicarse con extremos cuyo nombre de dominio es http://www.contoso.com sobre el protocolo HTTP.  
+ El ejemplo siguiente especifica un certificado de servicio para el cliente que se usará al comunicarse con puntos de conexión cuyo nombre de dominio es `http://www.contoso.com` a través del protocolo HTTP.  
   
 ```xml  
 <serviceCertificate>  

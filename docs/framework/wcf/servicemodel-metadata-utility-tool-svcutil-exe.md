@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200768"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837269"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
 
@@ -236,7 +236,7 @@ El comando siguiente genera los tipos de serialización para los tipos <xref:Sys
 
 Al utilizar svcutil para generar metadatos para un servicio, es posible que obtenga el mensaje de error siguiente:
 
-Error: No se puede obtener metadatos de http://localhost:8000/somesservice/mex se superó la cuota de número de caracteres máximo de la tabla de nombres (16384) al leer los datos XML. La tabla de nombres es una estructura de datos que se emplea para almacenar las cadenas encontradas durante el procesamiento XML. Los documentos XML largos con valores de atributo, nombres de atributo y nombres de elemento no repetidos pueden hacer que se sobrepase la cuota. Esta cuota puede aumentarse cambiando la propiedad MaxNameTableCharCount en el objeto XmlDictionaryReaderQuotas usado al crear el lector XML.
+Error: No se puede obtener metadatos de `http://localhost:8000/somesservice/mex` se superó la cuota de número de caracteres máximo de la tabla de nombres (16384) al leer los datos XML. La tabla de nombres es una estructura de datos que se emplea para almacenar las cadenas encontradas durante el procesamiento XML. Los documentos XML largos con valores de atributo, nombres de atributo y nombres de elemento no repetidos pueden hacer que se sobrepase la cuota. Esta cuota puede aumentarse cambiando la propiedad MaxNameTableCharCount en el objeto XmlDictionaryReaderQuotas usado al crear el lector XML.
 
 Este error puede producirlo un servicio que devuelve un archivo WSDL de gran tamaño cuando se solicitan sus metadatos. El problema se produce porque se supera la cuota de caracteres de la herramienta svcutil.exe. Este valor se establece para evitar los ataques por denegación de servicio (DOS). Puede aumentar esta cuota especificando el archivo de configuración siguiente para svcutil.
 

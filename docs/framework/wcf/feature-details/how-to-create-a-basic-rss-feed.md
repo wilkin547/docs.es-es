@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: d5b62d968c38401a19fc9009954450bef210e5a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf8f719a47fda8b592165368234a2db0467c59ce
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493287"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835802"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Creación de una fuente RSS básica
 Windows Communication Foundation (WCF) le permite crear un servicio que expone una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de  distribución RSS.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Todas las operaciones de servicio que apliquen el atributo <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes GET de HTTP. Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información, consulte [Cómo: crear un servicio básico de WCF Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Todas las operaciones de servicio que apliquen el atributo <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes GET de HTTP. Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información, consulte [Cómo: crear un servicio de WCF Web HTTP básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Implemente el contrato de servicios.  
   
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Realización de llamadas a GetBlog() mediante HTTP GET  
   
-1.  Abra Internet Explorer, escriba la dirección URL siguiente y presione ENTRAR: http://localhost:8000/BlogService/GetBlog. La dirección URL contiene la dirección base del servicio (http://localhost:8000/BlogService), la dirección relativa del extremo y la operación de servicio a llamar.  
+1.  Abra Internet Explorer, escriba la dirección URL siguiente y presione ENTRAR: `http://localhost:8000/BlogService/GetBlog`. La dirección URL contiene la dirección base del servicio (`http://localhost:8000/BlogService`), la dirección relativa del extremo y para llamar a la operación de servicio.  
   
 ### <a name="to-call-getblog-from-code"></a>Llamar a GetBlog() mediante código  
   

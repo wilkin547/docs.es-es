@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 74c3b825bbd51a082f20e8e2009e1ca5f0b35100
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857100"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837159"
 ---
 # <a name="getting-started-sample"></a>Ejemplo de introducción
 El ejemplo de introducción muestra cómo implementar un servicio típico y un cliente típicos con Windows Communication Foundation (WCF). Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.  
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  El servicio expone el punto de conexión en la dirección base proporcionada por el host IIS o WAS. El enlace se configura con un <xref:System.ServiceModel.WSHttpBinding>estándar, que proporciona comunicación del HTTP y protocolos estándar del servicio Web para direccionar y seguridad. El contrato es el `ICalculator` implementado por el servicio.  
   
- Como se ha configurado, puede tener acceso al servicio en http://localhost/servicemodelsamples/service.svc por un cliente en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.  
+ Como se ha configurado, puede tener acceso al servicio en `http://localhost/servicemodelsamples/service.svc` por un cliente en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.  
   
- El marco no expone ningún metadato de forma predeterminada. Por lo tanto, el servicio activa el <xref:System.ServiceModel.Description.ServiceMetadataBehavior> y expone un extremo de intercambio (MEX) de metadatos en http://localhost/servicemodelsamples/service.svc/mex. La siguiente configuración lo muestra.  
+ El marco no expone ningún metadato de forma predeterminada. Por lo tanto, el servicio activa el <xref:System.ServiceModel.Description.ServiceMetadataBehavior> y expone un extremo de intercambio (MEX) de metadatos en `http://localhost/servicemodelsamples/service.svc/mex`. La siguiente configuración lo muestra.  
   
 ```xaml  
 <system.serviceModel>  

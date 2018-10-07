@@ -3,11 +3,11 @@ title: 'Cómo: Agregar detectabilidad mediante programación a un cliente y un s
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779899"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838460"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 En este tema se explica cómo hacer que un servicio de Windows Communication Foundation (WCF) que pueda detectar. Se basa en el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  

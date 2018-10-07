@@ -2,12 +2,12 @@
 title: '&lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 05ab1b064f6dd7bb28d1d118ec8c4249da5a75e1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0fb174488f3505eeab8195df361af1f203d0f8a5
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087596"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839084"
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Define un enlace en cola adecuado para la comunicación del equipo de cruce.  
@@ -139,5 +139,5 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
  [\<enlace >](../../../../../docs/framework/misc/binding.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

@@ -2,12 +2,12 @@
 title: Rehospedaje del diseñador
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028919"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837365"
 ---
 # <a name="designer-rehosting"></a>Rehospedaje del diseñador
 El rehospedaje del diseñador es un escenario común que hace referencia al hospedaje del lienzo de diseño de flujo de trabajo dentro de una aplicación personalizada. La aplicación de hospedaje con la que están familiarizados la mayoría de los usuarios es Visual Studio; sin embargo, hay varios escenarios donde puede resultar útil mostrar el diseñador de flujo de trabajo en una aplicación:  
@@ -114,7 +114,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Utilizar el ejemplo  
   
-1.  Abra la solución DesignerRehosting.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Abra la solución DesignerRehosting.sln en Visual Studio 2010.  
   
 2.  Presione F5 para compilar y ejecutar la aplicación.  
   

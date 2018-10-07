@@ -2,12 +2,12 @@
 title: 'Instalar F #'
 description: 'Obtenga información sobre cómo instalar F # basándose en su entorno.'
 ms.date: 08/28/2018
-ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515902"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844012"
 ---
 # <a name="install-f"></a>Instalar F # #
 
@@ -17,7 +17,7 @@ Puede instalar F # de varias maneras, dependiendo de su entorno.
 
 Si está descargando [Visual Studio](https://visualstudio.microsoft.com/) por primera vez, instalará el instalador de Visual Studio. Instale el adecuado SKU de Visual Studio desde el instalador. Si ya tiene instalado, haga clic en **modificar**.
 
-A continuación verá una lista de las cargas de trabajo. Seleccione **ASP.NET y desarrollo web**, que instalará la compatibilidad con F #, compatibilidad con .NET Core, y los proyectos de la compatibilidad con F # para ASP.NET Core.
+A continuación verá una lista de las cargas de trabajo. Seleccione **ASP.NET y desarrollo web** que instalará la compatibilidad con F # y compatibilidad con .NET Core para proyectos de ASP.NET Core.
 
 A continuación, haga clic en **modificar** en el lado inferior derecho.  Así instalará todo lo que ha seleccionado. A continuación, puede abrir Visual Studio 2017 con compatibilidad con el lenguaje F # haciendo **iniciar**.
 

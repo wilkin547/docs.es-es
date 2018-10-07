@@ -2,12 +2,12 @@
 title: Instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502610"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838253"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)
 Para ejecutar los ejemplos que se comunican de forma segura con Internet Information Services (IIS), debe crear e instalar un certificado de servidor.  
@@ -36,7 +36,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![Asistente para certificados IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  Probar el acceso al servicio en un explorador mediante la dirección HTTPS https://localhost/servicemodelsamples/service.svc.  
+6.  Probar el acceso al servicio en un explorador utilizando la dirección HTTPS `https://localhost/servicemodelsamples/service.svc`.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Si SSL se configuró previamente utilizando httpcfg.exe  
   
@@ -55,7 +55,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>Para instalar IIS en IIS 7.0 (Windows Vista y Windows Server 2008)  
   
-1.  Desde el **iniciar** menú, haga clic en **ejecutar**, a continuación, escriba **inetmgr** para abrir el complemento MMC de servicios de Internet Information Server (IIS).  
+1.  Desde el **iniciar** menú, haga clic en **ejecutar**, a continuación, escriba **inetmgr** para abrir el complemento MMC de Internet Information Services (IIS).  
   
 2.  Haga clic en el **sitio Web predeterminado** y seleccione **modificar enlaces...**  
   
@@ -65,7 +65,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5.  Seleccione el **ServiceModelSamples-HTTPS-Server** desde el **certificado SSL** lista desplegable y haga clic en **Aceptar**.  
   
-6.  Probar el acceso al servicio en un explorador mediante la dirección HTTPS https://localhost/servicemodelsamples/service.svc.  
+6.  Probar el acceso al servicio en un explorador utilizando la dirección HTTPS `https://localhost/servicemodelsamples/service.svc`.  
   
 > [!NOTE]
 >  Dado que el certificado de prueba que acaba de instalar no es un certificado de confianza, puede encontrar advertencias de seguridad de Internet Explorer adicionales al ir a las direcciones web locales protegidas con este certificado.  

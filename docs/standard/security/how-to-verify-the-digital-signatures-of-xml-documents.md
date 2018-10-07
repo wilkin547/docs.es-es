@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111859"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840367"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Cómo: Comprobar las firmas digitales de documentos XML
-Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para comprobar datos XML firmados con una firma digital.  Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos.  Para obtener más información sobre el estándar XMLDSIG, consulte la especificación de World Wide Web Consortium (W3C) en http://www.w3.org/TR/xmldsig-core/.  
+Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para comprobar datos XML firmados con una firma digital. Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos. Para obtener más información sobre el estándar XMLDSIG, consulte la especificación de World Wide Web Consortium (W3C) en <https://www.w3.org/TR/xmldsig-core/>.
   
  En el ejemplo de código de este procedimiento se muestra cómo comprobar una firma digital XML que se encuentra en un elemento <`Signature`>.  En el ejemplo se recupera una clave pública RSA de un contenedor de claves y se usa la clave para comprobar la firma.  
   

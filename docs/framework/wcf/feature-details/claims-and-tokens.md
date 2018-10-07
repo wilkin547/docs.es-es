@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 087deeef91367210db936f2976a3846d0279dcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491860"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837539"
 ---
 # <a name="claims-and-tokens"></a>Notificaciones y tokens
 En este tema se describe los distintos tipos de notificación que Windows Communication Foundation (WCF) crea a partir de los tokens predeterminados que admite.  
   
  Puede examinar las notificaciones de una credencial del cliente mediante <xref:System.IdentityModel.Claims.ClaimSet> y las clases <xref:System.IdentityModel.Claims.Claim>. `ClaimSet` contiene una colección de objetos `Claim`. Cada `Claim` posee los siguientes miembros importantes:  
   
--   La propiedad <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> devuelve un Identificador uniforme de recursos (URI) que especifica el tipo de notificación que se realiza. Por ejemplo, un tipo de notificación puede ser la huella digital de un certificado, en cuyo caso la dirección URI es http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint.  
+-   La propiedad <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> devuelve un Identificador uniforme de recursos (URI) que especifica el tipo de notificación que se realiza. Por ejemplo, un tipo de notificación puede ser una huella digital de un certificado, en cuyo caso el URI es `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`.  
   
 -   La propiedad <xref:System.IdentityModel.Claims.Claim.Right%2A> devuelve una dirección URI que especifica el derecho de la notificación. Los derechos predefinidos se encuentran en la clase (<xref:System.IdentityModel.Claims.Rights>, <xref:System.IdentityModel.Claims.Rights.Identity%2A>) <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
   
@@ -50,19 +50,19 @@ En este tema se describe los distintos tipos de notificación que Windows Commun
   
     -   Una `Claim` con un `ClaimType` de huella digital, un `Right` PossessProperty, y un `Resource` que es una matriz de bytes que contiene la huella digital del certificado.  
   
-    -   Las notificaciones PossessProperty adicionales de varios tipos, incluidas X500DistinguishedName, Dns, Name, Upn y Rsa, representan varias propiedades del certificado. El recurso de la notificación de Rsa es la clave pública asociada al certificado. **Nota** donde el tipo de credencial de cliente es un certificado que el servicio se asigna a una ventana de la cuenta, dos `ClaimSet` se generan los objetos. El primero contiene todas las notificaciones relacionadas con la cuenta de Windows, y el segundo todas las notificaciones relacionadas con el certificado.  
+    -   Las notificaciones PossessProperty adicionales de varios tipos, incluidas X500DistinguishedName, Dns, Name, Upn y Rsa, representan varias propiedades del certificado. El recurso de la notificación Rsa es la clave pública asociada al certificado. **Nota** donde el tipo de credencial de cliente es un certificado que el servicio se asigna a un Windows cuenta, dos `ClaimSet` los objetos se generan. El primero contiene todas las notificaciones relacionadas con la cuenta de Windows, y el segundo todas las notificaciones relacionadas con el certificado.  
   
 ## <a name="user-namepassword"></a>Nombre de usuario/contraseña  
- Cuando la credencial del cliente es un nombre de usuario/contraseña (o equivalente) que no se asigna a una cuenta de Windows, el `ClaimSet` resultante es emitido por la propiedad <xref:System.IdentityModel.Claims.ClaimSet.System%2A> estática de la clase `ClaimSet`. El `ClaimSet` contiene un `Identity` de notificación de tipo <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> cuyo recurso es el nombre de usuario del cliente proporciona. Una notificación correspondiente tiene un `Right` de `PossessProperty`.  
+ Cuando la credencial del cliente es un nombre de usuario/contraseña (o equivalente) que no se asigna a una cuenta de Windows, el `ClaimSet` resultante es emitido por la propiedad <xref:System.IdentityModel.Claims.ClaimSet.System%2A> estática de la clase `ClaimSet`. El `ClaimSet` contiene un `Identity` de notificación de tipo <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> cuyo recurso es el nombre de usuario del cliente. Una notificación correspondiente tiene un `Right` de `PossessProperty`.  
   
 ## <a name="rsa-keys"></a>Claves RSA  
- Cuando se utiliza una clave RSA no asociada a un certificado, resultante `ClaimSet` se emita por sí mismo y contiene un `Identity` de notificación de tipo <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> cuyo recurso es la clave RSA. Una notificación correspondiente tiene un `Right` de `PossessProperty`.  
+ Cuando se utiliza una clave RSA no asociada con un certificado, el resultado `ClaimSet` es de emisión propia y contiene un `Identity` de notificación de tipo <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> cuyo recurso es la clave RSA. Una notificación correspondiente tiene un `Right` de `PossessProperty`.  
   
 ## <a name="saml"></a>SAML  
  Cuando el cliente realiza la autenticación con un token de Lenguaje de marcado de aserciones de seguridad (SAML), la entidad que firmo el token de SAML, con frecuencia el certificado del servicio de token de seguridad (STS) que emitió el token de SAML, emite el `ClaimSet` resultante. El `ClaimSet` contiene varias notificaciones tal y como se encuentran en el token de SAML. Si el token de SAML contiene `SamlSubject` con un no nombre `null`, se crea una notificación `Identity` con un tipo de <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A>, y un tipo de recurso <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource>.  
   
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Notificaciones de identidad y ServiceSecurityContext.IsAnonymous  
- Si ninguno de los `ClaimSet` objetos resultantes de las credenciales del cliente contienen una notificación con un `Right` de `Identity,` la <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> propiedad devuelve `true`. Si una o más de esas notificaciones están presentes, la propiedad `IsAnonymous` devuelve `false`.  
+ Si ninguno de los `ClaimSet` los objetos resultantes de las credenciales del cliente contienen una notificación con un `Right` de `Identity,` el <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> propiedad devuelve `true`. Si una o más de esas notificaciones están presentes, la propiedad `IsAnonymous` devuelve `false`.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.IdentityModel.Claims.ClaimSet>  

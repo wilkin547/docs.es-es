@@ -3,12 +3,12 @@ title: Comportamientos de seguridad en WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 author: BrucePerlerMS
-ms.openlocfilehash: a4727b98d98caadef5cd7ae61cddd92d6d8408b9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d995ce4c37084cb8641199ec7dfa826b65e02b65
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397981"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841409"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamientos de seguridad en WCF
 En Windows Communication Foundation (WCF), los comportamientos modifican el comportamiento de tiempo de ejecución en el nivel de servicio o en el nivel de punto de conexión. (Para obtener más información acerca de los comportamientos en general, vea [especificar el comportamiento de tiempo de ejecución de servicio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamientos de seguridad* ofrecen control sobre las credenciales, autenticación, autorización y los registros de auditoría. Puede utilizar comportamientos mediante programación o a través de configuración. Este tema se centra en la configuración de los siguientes comportamientos relacionados con las funciones de seguridad:  
@@ -125,7 +125,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
  El [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) contiene los elementos utilizados para configurar un emisor de tokens, o los comportamientos utilizados con un servicio de token de seguridad local. Para que obtener instrucciones sobre cómo configurar un cliente para utilizar un emisor local, consulte [Cómo: configurar un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 #### <a name="localissueraddress"></a>\<localIssuerAddress >  
- Especifica una dirección de servicio de token de seguridad predeterminada. Esto se usa cuando el <xref:System.ServiceModel.WSFederationHttpBinding> no proporciona una dirección URL para el servicio de token de seguridad o la dirección del emisor de un enlace federado es http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`. En casos como éste, las <xref:System.ServiceModel.Description.ClientCredentials> deben configurarse con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.  
+ Especifica una dirección de servicio de token de seguridad predeterminada. Esto se usa cuando el <xref:System.ServiceModel.WSFederationHttpBinding> no proporciona una dirección URL para el servicio de token de seguridad o la dirección del emisor de un enlace federado es `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` o `null`. En casos como éste, las <xref:System.ServiceModel.Description.ClientCredentials> deben configurarse con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
  Use la [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) para agregar comportamientos de cliente WCF usados al comunicarse con un servicio de token de seguridad. Defina los comportamientos del cliente en el [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sección. Para utilizar un comportamiento definido, agregue un <`add`> elemento para el `<issuerChannelBehaviors>` elemento con dos atributos. Establezca la `issuerAddress` en la dirección URL del servicio de token de seguridad y establezca el atributo `behaviorConfiguration` en el nombre del comportamiento del extremo definido, tal y como se muestra en el ejemplo siguiente.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 5a13ab73e48616b38e583b1c9948fc1bf5eb8a64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522293"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844298"
 ---
 # <a name="impersonating-the-client"></a>Suplantar el cliente
 El ejemplo de Suplantación muestra cómo suplantar la aplicación de llamador en el servicio para que el servicio pueda tener acceso a los recursos del sistema en nombre del llamador.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Al ejecutar el ejemplo, las solicitudes y las respuestas de operación se muestran tanto en la ventanas de la consola del cliente como del servicio. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.  
   
 > [!NOTE]
->  El servicio debe ejecutar bajo una cuenta administrativa o la cuenta se ejecuta bajo debe tener derechos para registrar el http://localhost:8000/ServiceModelSamples URI con el nivel de HTTP. Se pueden conceder estos derechos mediante la configuración de un [Namespace reserva](https://go.microsoft.com/fwlink/?LinkId=95012) utilizando el [herramienta Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+>  El servicio debe ejecutar bajo una cuenta administrativa o la cuenta se ejecuta bajo debe tener derechos para registrar el `http://localhost:8000/ServiceModelSamples` URI con el nivel de HTTP. Se pueden conceder estos derechos mediante la configuración de un [Namespace reserva](https://go.microsoft.com/fwlink/?LinkId=95012) utilizando el [herramienta Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  En los equipos que ejecutan [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la suplantación se admite sólo si la aplicación Host.exe tiene el privilegio de Suplantación. (De forma predeterminada, sólo los administradores tienen este permiso.) Para agregar este privilegio a una cuenta de servicio se está ejecutando como, vaya a **herramientas administrativas**, abra **directiva de seguridad Local**, abra **directivas locales**, haga clic en **Asignación de derechos de usuario**y seleccione **suplantar un cliente tras la autenticación** y haga doble clic en **propiedades** para agregar un usuario o grupo.  

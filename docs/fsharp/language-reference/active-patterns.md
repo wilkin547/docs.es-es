@@ -3,11 +3,11 @@ title: Modelos activos (F#)
 description: 'Obtenga información sobre cómo usar los patrones activos para definir particiones con nombre que subdividen los datos de entrada en el lenguaje de programación F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030647"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838317"
 ---
 # <a name="active-patterns"></a>Patrones activos
 

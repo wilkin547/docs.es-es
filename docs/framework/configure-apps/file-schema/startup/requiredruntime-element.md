@@ -12,11 +12,11 @@ ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 7cb5e29f3d7fc1faffdba01a5322f1883fca8af0
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580360"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837425"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; elemento
 Especifica que la aplicación solo admite la versión 1.0 de Common Language Runtime. Este elemento está en desuso y ya no se debe usar. El [ `supportedRuntime` ](supportedruntime-element.md) elemento debe usarse en su lugar.

@@ -3,11 +3,11 @@ title: Usar actividades de WF de .NET Framework 3.0 en .NET Framework 4 con la a
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793570"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844753"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Usar actividades de WF de .NET Framework 3.0 en .NET Framework 4 con la actividad Interop
 La actividad <xref:System.Activities.Statements.Interop> es una actividad de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) que ajusta una actividad de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) dentro de un flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. La actividad WF 3 puede ser una actividad de hoja única o un árbol completo de actividades. La ejecución (incluso la cancelación y el control de excepciones) y la persistencia de la actividad de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] se producen en el contexto de la instancia de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que está ejecutando.  

@@ -2,15 +2,15 @@
 title: Soportar múltiples enlaces de sitios de IIS
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 2c42ba7cf3713e5d165d10ce7049df8200d612fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5a8b06d86b505452f9ded808f727343b1453e592
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517880"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840873"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Soportar múltiples enlaces de sitios de IIS
-Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS) 7.0, puede proporcionar varias direcciones base que usan el mismo protocolo en el mismo sitio. Esto permite que el mismo servicio responda a varios URI diferentes. Esto es útil cuando desee hospedar un servicio que escucha en http://www.contoso.com y http://contoso.com. También es útil crear un servicio que tenga una dirección base para los usuarios internos y una dirección base independiente para los usuarios externos. Por ejemplo: http://internal.contoso.com y http://www.contoso.com.  
+Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS) 7.0, puede proporcionar varias direcciones base que usan el mismo protocolo en el mismo sitio. Esto permite que el mismo servicio responda a varios URI diferentes. Esto es útil cuando desee hospedar un servicio que escucha en `http://www.contoso.com` y `http://contoso.com`. También es útil crear un servicio que tenga una dirección base para los usuarios internos y una dirección base independiente para los usuarios externos. Por ejemplo: `http://internal.contoso.com` y `http://www.contoso.com`.  
   
 > [!NOTE]
 >  Esta funcionalidad solo está disponible mediante el protocolo HTTP.  

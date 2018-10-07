@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
-ms.openlocfilehash: 32fd1ebede841488d1bfabd2f92bd3fb1ffb55e8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0efa9ecbe384009cc8fc4735ec9fc3db8ed3ce59
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035661"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841461"
 ---
 # <a name="how-to-set-the-security-mode"></a>Cómo: Establecer el modo de seguridad
 Seguridad de Windows Communication Foundation (WCF) tiene tres modos de seguridad comunes que se encuentran en los enlaces más predefinidos: transporte, mensaje y "transporte con credencial de mensaje". Dos modos adicionales son específicos para dos enlaces: el modo “solo credencial de transporte” encontrado en el <xref:System.ServiceModel.BasicHttpBinding>y el modo “Ambos” encontrado en el <xref:System.ServiceModel.NetMsmqBinding>. Sin embargo, este tema se concentra en los tres modos de seguridad comunes: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>y <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -88,7 +88,7 @@ Seguridad de Windows Communication Foundation (WCF) tiene tres modos de segurida
     ```xml  
     <wsHttpBinding>  
     <binding name="TransportSecurity">  
-        <security mode="Transport" />  
+        <security mode="Transport" >  
            <transport clientCredentialType = "Windows" />  
         </security>  
     </binding>  
@@ -100,7 +100,7 @@ Seguridad de Windows Communication Foundation (WCF) tiene tres modos de segurida
     ```xml  
     <wsHttpBinding>  
     <binding name="MessageSecurity">  
-        <security mode="Message" />  
+        <security mode="Message" >  
            <message clientCredentialType = "Certificate" />  
         </security>  
     </binding>  

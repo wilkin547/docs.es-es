@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188389"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839435"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedaje en Servicio de activación de procesos de Windows
 El servicio de activación de procesos de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen aplicaciones que hospedar servicios de Windows Communication Foundation (WCF). El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios WCF usar HTTP y protocolos no HTTP, tales como Net.TCP, en un entorno de hospedaje que admite la activación basada en mensajes y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
@@ -45,8 +45,8 @@ El servicio de activación de procesos de Windows (WAS) administra la activació
   
  Los servicios y recursos dentro de una aplicación también se pueden direccionar. Dentro de una aplicación, los recursos de la aplicación se direccionan en relación a la ruta de acceso base de la aplicación. Por ejemplo, suponga que un sitio con un nombre de equipo contoso.com tiene enlaces del sitio para los protocolos HTTP y Net.TCP. Suponga también que el sitio contiene una aplicación ubicada en /Billing (facturación), que expone un servicio en GetOrders.svc. A continuación, si el servicio GetOrders.svc expuso un punto de conexión con una dirección relativa de SecureEndpoint, el punto de conexión de servicio se expondría en los dos URI siguientes:  
   
- http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
-net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
+- `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
+- `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>El tiempo de ejecución de WAS  
  Las aplicaciones se organizan en sitios para propósitos de direccionamiento y administración. En tiempo de ejecución, las aplicaciones también se agrupan en grupos de aplicaciones. Un grupo de aplicaciones puede alojar muchas aplicaciones diferentes desde muchos sitios diferentes. Todas las aplicaciones dentro de un grupo de aplicaciones comparten un conjunto común de características de tiempo de ejecución. Por ejemplo, todas se ejecutan bajo la misma versión de Common Language Runtime (CLR) y comparten una identidad de proceso común. Cada grupo de aplicaciones corresponde a una instancia de un proceso de trabajo (w3wp.exe). Cada aplicación administrada que se ejecuta dentro de un grupo de aplicaciones compartido se aísla de otras aplicaciones por medio de un AppDomain de CLR.  

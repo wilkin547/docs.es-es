@@ -2,12 +2,12 @@
 title: Ejecución de los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618697"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836922"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Ejecución de los ejemplos de Windows Communication Foundation
 Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una configuración de equipo único o varios equipos. Tal y como se proporcionan, los ejemplos están listos para ejecutarse en un equipo único. En una configuración de equipos cruzada, es necesario modificar la configuración del archivo de configuración de un ejemplo. Los procedimientos siguientes explican cómo ejecutar un ejemplo en mismo equipo y en configuraciones de equipos cruzadas. Observe que hay variaciones en los pasos para los servicios hospedados en Internet Information Services (IIS) y los ejemplos autohospedados. La mayoría de los ejemplos se hospedan en IIS; vea la información readme del ejemplo para determinar cómo se hospeda.  
@@ -19,7 +19,7 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1.  Si el servicio está hospedado por IIS, asegúrese de que solo puede acceder al servicio utilizando un explorador escribiendo la siguiente dirección: http://localhost/servicemodelsamples/service.svc. Como respuesta se debe mostrar una página de confirmación. Si no se muestra la página de confirmación, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Si el servicio está hospedado por IIS, asegúrese de que solo puede acceder al servicio utilizando un explorador escribiendo la siguiente dirección: `http://localhost/servicemodelsamples/service.svc`. Como respuesta se debe mostrar una página de confirmación. Si no se muestra la página de confirmación, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Si el servicio es autohospedado, ejecute Service.exe desde \service\bin, bajo la carpeta específica del lenguaje. La actividad del servicio se muestra en la ventana de la consola del servicio.  
   
@@ -63,7 +63,7 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
   
 2.  Si el servicio se hospeda en IIS:  
   
-    1.  Activar el servicio utilizando un explorador escribiendo la dirección http://localhost/servicemodelsamples/service.svc.  
+    1.  Activar el servicio utilizando un explorador escribiendo la dirección `http://localhost/servicemodelsamples/service.svc`.  
   
     2.  En la solución, elija el **depurar** menú y el **asociar al proceso** elemento de menú.  
   

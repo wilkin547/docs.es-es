@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778106"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845807"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Información general sobre formas y dibujo básico en WPF
 En este tema proporciona información general sobre cómo dibujar con <xref:System.Windows.Shapes.Shape> objetos. Un <xref:System.Windows.Shapes.Shape> es un tipo de <xref:System.Windows.UIElement> que le permite dibujar una forma a la pantalla. Dado que son elementos de interfaz de usuario, <xref:System.Windows.Shapes.Shape> objetos pueden usarse dentro de <xref:System.Windows.Controls.Panel> elementos y la mayoría de los controles.  

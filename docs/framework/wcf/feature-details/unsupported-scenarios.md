@@ -2,12 +2,12 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 6c0ee061f754e85244bffdc06cbe23aee68d2222
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858074"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845689"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 Por diversas razones, Windows Communication Foundation (WCF) no es compatible con algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por lo tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como nombre de usuario/contraseña y autenticación de HTTP/HTTPS integrada al ejecutar WCF en Windows XP Home Edition.  
@@ -93,11 +93,11 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
   
  Un ejemplo de esta situación sería un servicio con las tres direcciones de punto de conexión siguientes:  
   
--   http://localhost/CalculatorService/service (el servicio)  
+- `http://localhost/CalculatorService/service` (el servicio)  
   
--   http://localhost/CalculatorService/issue_ticket (STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
--   http://localhost/CalculatorService/mex (el extremo de metadatos)  
+- `http://localhost/CalculatorService/mex` (el extremo de metadatos)  
   
  Esto produce una excepción.  
   
