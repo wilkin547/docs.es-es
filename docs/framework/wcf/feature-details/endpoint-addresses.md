@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855720"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847417"
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección de punto de conexión se representa en el modelo de programación de Windows Communication Foundation (WCF) mediante el <xref:System.ServiceModel.EndpointAddress> (clase), que contiene un elemento opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad que habilita la autenticación del punto de conexión por otros extremos que intercambiar mensajes con él y un conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propiedades, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
   
 ## <a name="uri-structure-of-an-address"></a>Estructura URI de una Dirección  
- El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, las cuatro partes del URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint puede ser detallado como se indica a continuación:  
+ El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, las cuatro partes del URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` puede ser detallado como se indica a continuación:  
   
--   Esquema: http:  
+-   Esquema: `http:`
   
 -   Equipo: `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  Por ejemplo, un sitio podría contener las direcciones base siguientes:  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  Con [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], especifica un filtro de prefijo en el nivel del AppDomain en el archivo de configuración. Hacer esto con el [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) elemento, que contiene una lista de prefijos. Las direcciones base de entrada, proporcionadas por IIS, se filtran en función de la lista de prefijos opcional. De forma predeterminada, cuando no se especifica un prefijo, se atraviesan todas las direcciones. Al especificar el prefijo, se provoca que solo la dirección base coincidente para ese esquema se pase a través.  
   
@@ -75,7 +75,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
 </system.serviceModel>  
 ```  
   
- En el ejemplo anterior, TCP://Payroll.myorg.com: 8000 y http://shipping.myorg.com:8000 son las únicas direcciones base, para sus respectivos esquemas, que se pasan a través.  
+ En el ejemplo anterior, `net.tcp://payroll.myorg.com:8000` y `http://shipping.myorg.com:8000` son las únicas direcciones base, para sus respectivos esquemas, que se pasan a través.  
   
  `baseAddressPrefixFilter` no admite los caracteres comodín.  
   

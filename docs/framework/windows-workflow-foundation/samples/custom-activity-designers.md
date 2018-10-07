@@ -3,11 +3,11 @@ title: Diseñadores de actividad personalizados
 ms.date: 03/30/2017
 ms.assetid: dcf14dca-ce6d-4278-96ba-062f0a679075
 ms.openlocfilehash: c27ad19121f4faa0a3fca7b13b197a88a95c6d15
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781263"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847378"
 ---
 # <a name="custom-activity-designers"></a>Diseñadores de actividad personalizados
 Esta sección contiene ejemplos de actividades que utilizan diseñadores personalizados en la presentación en el diseñador de flujo de trabajo.  

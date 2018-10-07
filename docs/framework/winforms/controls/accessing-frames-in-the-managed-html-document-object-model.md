@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 5b214a3b3c8d59d27a60b5cee28ea168edb9bf4a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779778"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847650"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acceso a marcos en el Modelo de objetos de documento HTML administrado
 Algunos documentos HTML están compuestos de *marcos*, o windows que pueden contener sus propios documentos HTML distintos. Los marcos facilitan la creación de páginas HTML porque permiten que una o más partes de la página permanezcan estáticas, como una barra de navegación, mientras que otros marcos cambian su contenido constantemente.  
@@ -34,7 +34,7 @@ Algunos documentos HTML están compuestos de *marcos*, o windows que pueden cont
 3.  Al acceder a una etiqueta `FRAME` o `IFRAME` mediante la propiedad <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> de <xref:System.Windows.Forms.HtmlWindow>, la colección <xref:System.Windows.Forms.HtmlElement.Children%2A> o métodos como <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> o <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, se recupera el elemento de marco. Esto representa las propiedades estáticas del marco, incluida la dirección URL especificada en el archivo HTML original.  
   
 ## <a name="frames-and-security"></a>Marcos y seguridad  
- Obtener acceso a los marcos es complicado por el hecho de que el DOM HTML administrado implementa una medida de seguridad conocido como *seguridad de scripting entre marcos*. Si un documento contiene un `FRAMESET` con dos o más `FRAME` en dominios diferentes, estos `FRAME` no pueden interactuar entre sí. En otras palabras, un `FRAME` que muestra el contenido del sitio Web no puede tener acceso a información en un `FRAME` que hospeda un sitio de terceros, como http://www.adatum.com/. Esta seguridad se implementa en el nivel de la clase <xref:System.Windows.Forms.HtmlWindow>. Puede obtener información general sobre un `FRAME` que hospeda otro sitio web, como su dirección URL, pero no podrá acceder a su <xref:System.Windows.Forms.HtmlWindow.Document%2A> ni cambiar el tamaño o la ubicación de su `FRAME` o `IFRAME` host.  
+ Obtener acceso a los marcos es complicado por el hecho de que el DOM HTML administrado implementa una medida de seguridad conocido como *seguridad de scripting entre marcos*. Si un documento contiene un `FRAMESET` con dos o más `FRAME` en dominios diferentes, estos `FRAME` no pueden interactuar entre sí. En otras palabras, un `FRAME` que muestra el contenido del sitio Web no puede tener acceso a información en un `FRAME` que hospeda un sitio de terceros, como `http://www.adatum.com/`. Esta seguridad se implementa en el nivel de la clase <xref:System.Windows.Forms.HtmlWindow>. Puede obtener información general sobre un `FRAME` que hospeda otro sitio web, como su dirección URL, pero no podrá acceder a su <xref:System.Windows.Forms.HtmlWindow.Document%2A> ni cambiar el tamaño o la ubicación de su `FRAME` o `IFRAME` host.  
   
  Esta regla también se aplica a las ventanas que se abren con los métodos <xref:System.Windows.Forms.HtmlWindow.Open%2A> y <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Si la ventana que abre está en un dominio distinto de la página hospedada en el control <xref:System.Windows.Forms.WebBrowser>, no podrá mover esa ventana ni examinar su contenido. Estas restricciones también se aplican si usa el control <xref:System.Windows.Forms.WebBrowser> para mostrar un sitio web distinto del sitio web usado para implementar su aplicación de Windows Forms. Si usa la tecnología de implementación de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] para instalar la aplicación desde el sitio web A y usar el <xref:System.Windows.Forms.WebBrowser> para mostrar el sitio web B, no podrá acceder a los datos del sitio web B.  
   

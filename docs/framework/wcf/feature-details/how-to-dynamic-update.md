@@ -3,11 +3,11 @@ title: 'Cómo: Actualización dinámica'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
 ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777148"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848145"
 ---
 # <a name="how-to-dynamic-update"></a>Cómo: Actualización dinámica
 Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento. En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el extremo de destino del servicio de roundingCalc.  

@@ -3,11 +3,11 @@ title: Enlace MSMQ por transacciones
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: e8b0b21acb9c99305ef144d18104338da5f8769a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793401"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846531"
 ---
 # <a name="transacted-msmq-binding"></a>Enlace MSMQ por transacciones
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ).
