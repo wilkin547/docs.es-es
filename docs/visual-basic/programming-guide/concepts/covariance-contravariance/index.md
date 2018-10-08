@@ -2,12 +2,12 @@
 title: Covarianza y contravarianza (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 322cb452e0a3391812e58b68406657651f7a430f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241b8f5864b6e9b3e1caddde25d032a24e4d0bb7
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644048"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850457"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Covarianza y contravarianza (Visual Basic)
 En Visual Basic, la covarianza y la contravarianza habilitan la conversión de referencias implícita de tipos de matriz, tipos de delegado y argumentos de tipo genérico. La covarianza conserva la compatibilidad de asignaciones y la contravarianza la invierte.  
@@ -78,7 +78,7 @@ Shared Sub Test()
 End Sub  
 ```  
   
- En .NET Framework 4 o versiones posteriores, Visual Basic admite la covarianza y la contravarianza en las interfaces genéricas y los delegados, y permite la conversión implícita de los parámetros de tipo genérico. Para obtener más información, vea [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) (Varianza en interfaces genéricas (Visual Basic)) y [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) (Varianza en delegados (Visual Basic)).  
+ En .NET Framework 4 o posterior, Visual Basic admite la covarianza y contravarianza en interfaces y delegados genéricos y permite la conversión implícita de parámetros de tipo genérico. Para obtener más información, vea [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) (Varianza en interfaces genéricas (Visual Basic)) y [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) (Varianza en delegados (Visual Basic)).  
   
  En el ejemplo de código siguiente, se muestra la conversión implícita de referencias para interfaces genéricas.  
   

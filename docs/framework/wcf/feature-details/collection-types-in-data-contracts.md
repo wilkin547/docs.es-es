@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496911"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850881"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de colección en contratos de datos
 Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tales listas se pueden representar utilizando matrices o una variedad de otros tipos (Lista genérica, <xref:System.ComponentModel.BindingList%601>genérica, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Por ejemplo, una colección puede albergar una lista de direcciones para un determinado cliente. Estas colecciones se denominan *colecciones de lista*, con independencia de cual sea su tipo real.  
@@ -29,7 +29,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
  Los tipos contenidos en las colecciones deben ser tipos de contrato de datos o, de lo contrario, se deben poder serializar. Para obtener más información, consulte [tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- Para obtener más información acerca de qué es y lo que no se considera una colección válida, así como acerca de cómo se serializan las colecciones, vea la información sobre las colecciones de serialización en la sección "Reglas avanzadas de colección" de este tema.  
+ Para obtener más información sobre qué es y qué no se considera una colección válida, así como acerca de cómo se serializan las colecciones, vea la información sobre las colecciones de serialización en la sección "Reglas avanzadas de colección" de este tema.  
   
 ## <a name="interchangeable-collections"></a>Colecciones intercambiables  
  Se considera que todas las colecciones de listas del mismo tipo tienen el mismo contrato de datos (a menos que se personalicen utilizando el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , como se aborda más adelante en este tema). Así, por ejemplo, los contratos de datos siguientes son equivalentes.  
@@ -73,12 +73,12 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
  Durante la serialización, cuando el tipo declarado es una interfaz, el tipo de instancia real que se usa puede ser cualquier tipo que implemente esa interfaz. Las restricciones mencionadas previamente (tener un constructor predeterminado y un método `Add` ) no se aplican. Por ejemplo, puede establecer direcciones en Customer2 en una instancia de <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> genérica de dirección, aunque no pueda declarar directamente un miembro de datos de tipo <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>genérica.  
   
- Durante la deserialización, cuando el tipo declarado es una interfaz, el motor de serialización elige un tipo que implemente la interfaz declarada y se crea una instancia del tipo. Los tipos conocidos mecanismo (se describe en [tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) no tiene ningún efecto aquí, y la elección del tipo integrada en WCF.  
+ Durante la deserialización, cuando el tipo declarado es una interfaz, el motor de serialización elige un tipo que implemente la interfaz declarada y se crea una instancia del tipo. Mecanismo de tipos el conocido (se describe en [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) no tiene ningún efecto aquí, la elección del tipo está integrada en WCF.  
   
 ## <a name="customizing-collection-types"></a>Personalizar tipos de colección  
  Puede personalizar tipos de colección utilizando el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , que tiene varios usos.  
   
- Observe que al personalizar los tipos de colección se pone en peligro la posibilidad de intercambio de colecciones, por lo que normalmente se recomienda evitar aplicar este atributo siempre que sea posible. Para obtener más información acerca de este problema, vea la sección "Reglas avanzadas de colección" más adelante en este tema.  
+ Observe que al personalizar los tipos de colección se pone en peligro la posibilidad de intercambio de colecciones, por lo que normalmente se recomienda evitar aplicar este atributo siempre que sea posible. Para obtener más información sobre este problema, consulte la sección "Reglas avanzadas de colección" más adelante en este tema.  
   
 ### <a name="collection-data-contract-naming"></a>Denominación de contrato de datos de colección  
  Las reglas para denominar los tipos de colección son similares a las existentes para denominar los tipos de contrato de datos normales, como se describe en [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md), aunque existen algunas diferencias importantes:  
@@ -139,12 +139,12 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
 </cust_list>  
 ```  
   
- Para obtener más información, vea la sección "Reglas avanzadas de colección" más adelante en este tema.  
+ Para obtener más información, consulte la sección "Reglas avanzadas de colección" más adelante en este tema.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Personalizar el nombre de elementos repetidos en colecciones de listas  
  Las colecciones de listas contienen entradas repetidas. Normalmente, cada entrada repetida se representa como un elemento denominado según el nombre del contrato de datos del tipo contenido en la colección.  
   
- En los ejemplos `CustomerList` , las colecciones contenían cadenas. El nombre de contrato de datos para el tipo primitivo de cadena es "string", por lo que el elemento repetido era "\<cadena >".  
+ En los ejemplos `CustomerList` , las colecciones contenían cadenas. El nombre de contrato de datos para el tipo primitivo de cadena es "string", por lo que el elemento repetido era "\<string >".  
   
  Sin embargo, utilizando la propiedad <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> en el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , se puede personalizar este nombre de elementos repetidos. Para ver un ejemplo, vea el tipo siguiente.  
   
@@ -222,7 +222,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
 ## <a name="collections-and-schema"></a>Colecciones y esquema  
  Todas las colecciones equivalentes tienen la misma representación en lenguaje de definición de esquemas XML (XSD). Como consecuencia, normalmente no se obtiene el mismo tipo de colección en el código de cliente generado y en el servidor. Por ejemplo, el servidor puede utilizar un contrato de datos con una <xref:System.Collections.Generic.List%601> genérica de miembro de datos entero, pero en el código de cliente generado el mismo miembro de datos se puede convertir en una matriz de enteros.  
   
- Colecciones de diccionario se marcan con una anotación de esquema específicas de WCF que indican que son diccionarios; de lo contrario, son diferencian de las listas simples que contienen entradas con una clave y un valor. Para una descripción exacta de cómo se representan las colecciones en el esquema del contrato de datos, consulte [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Las colecciones de diccionario se marcan con una anotación de esquema específica de WCF que indican que son diccionarios; de lo contrario, son indistinguibles de listas simples que contienen entradas con una clave y un valor. Para una descripción exacta de cómo se representan las colecciones en el esquema del contrato de datos, consulte [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  De forma predeterminada, no se generan tipos para las colecciones no personalizadas en el código importado. Los miembros de datos de tipos de colección de listas se importan como matrices, y los miembros de datos de tipos de colección de diccionarios se importan como diccionario genérico.  
   
@@ -245,7 +245,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
  Cuando se hace referencia a tipos genéricos, deben ser genéricos totalmente abiertos o genéricos totalmente cerrados.  
   
 > [!NOTE]
->  Al usar la herramienta Svcutil.exe, la referencia se puede realizar mediante el uso del modificador de la línea de comandos **/collectionType** (forma corta: **/ct**). Tenga en cuenta que también debe especificar el ensamblado para los tipos de colección a los que se hace referencia mediante el uso del modificador **/reference** (forma corta: **/r**). Si el tipo es genérico, debe ir seguido de una comilla atrás y el número de parámetros genéricos. La comilla de atrás (`) no debe confundirse con el carácter de la comilla simple (‘). Puede especificar varios tipos de colección de referencia mediante el uso del modificador **/collectionType** más de una vez.  
+>  Al usar la herramienta Svcutil.exe, la referencia se puede realizar mediante el uso del modificador de la línea de comandos **/collectionType** (forma corta: **/ct**). Tenga en cuenta que también debe especificar el ensamblado para los tipos de colección a los que se hace referencia mediante el uso del modificador **/reference** (forma corta: **/r**). Si el tipo es genérico, debe ir seguido de una comilla atrás y el número de parámetros genéricos. La comilla de atrás (\`) consiste en que no debe confundirse con el carácter de comilla simple ('). Puede especificar varios tipos de colección de referencia mediante el uso del modificador **/collectionType** más de una vez.  
   
  Por ejemplo, para que todas las listas se importen como de tipo <xref:System.Collections.Generic.List%601>genérico.  
   
@@ -305,7 +305,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Se permite combinar los tipos de colección (tener colecciones de colecciones). Las matrices escalonadas se tratan como colecciones de colecciones. No se soportan matrices multidimensionales.  
   
--   Las matrices de byte y matrices de <xref:System.Xml.XmlNode> son los tipos de matriz especiales que se tratan como primitivas, no colecciones. Al serializar una matriz de bytes se obtiene un elemento XML único que contiene un bloque de datos con codificación Base64, en lugar de un elemento aparte para cada byte. Para obtener más información acerca de cómo una matriz de <xref:System.Xml.XmlNode> es tratan, consulte [tipos XML y ADO.NET en contratos de datos](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Evidentemente, estos tipos especiales pueden participar en colecciones: una matriz de matriz de byte resulta en múltiples elementos XML, y cada uno de ellos contiene un bloque de datos codificados por Base64.  
+-   Las matrices de byte y matrices de <xref:System.Xml.XmlNode> son los tipos de matriz especiales que se tratan como primitivas, no colecciones. Al serializar una matriz de bytes se obtiene un elemento XML único que contiene un bloque de datos con codificación Base64, en lugar de un elemento aparte para cada byte. Para obtener más información acerca de cómo una matriz de <xref:System.Xml.XmlNode> es tratar, consulte [tipos XML y ADO.NET en contratos de datos](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Evidentemente, estos tipos especiales pueden participar en colecciones: una matriz de matriz de byte resulta en múltiples elementos XML, y cada uno de ellos contiene un bloque de datos codificados por Base64.  
   
 -   Si el atributo <xref:System.Runtime.Serialization.DataContractAttribute> se aplica a un tipo de colección, el tipo se trata como un tipo de contrato de datos normal, no como una colección.  
   
@@ -342,13 +342,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>Denominación de colección  
  A continuación, se muestra una lista de las reglas para denominar una colección:  
   
--   El espacio de nombres predeterminado para todos los contratos de datos de colección de diccionarios, así como para los contratos de datos de colección de listas que contienen tipos primitivos, http://schemas.microsoft.com/2003/10/Serialization/Arrays a menos que se invalide utilizando Namespace. Los tipos que se asignan a tipos XSD integrados, así como `char`, `Timespan`y los tipos `Guid` , se consideran primitivos para este propósito.  
+-   El espacio de nombres predeterminado para todos los contratos de datos de colección de diccionario, así como para contratos de datos de colección de lista que contienen tipos primitivos, `http://schemas.microsoft.com/2003/10/Serialization/Arrays` a menos que se invalide utilizando Namespace. Los tipos que se asignan a tipos XSD integrados, así como `char`, `Timespan`y los tipos `Guid` , se consideran primitivos para este propósito.  
   
 -   El espacio de nombres predeterminado para tipos de colección que contienen tipos no primitivos, a menos que se invalide mediante el uso de Namespace, es el mismo que el espacio de nombres de contrato de datos del tipo contenido en la colección.  
   
 -   El nombre predeterminado para los contratos de datos de colección de listas, a menos que se invalide utilizando Nombre, es la cadena "ArrayOf" combinada con el nombre de contrato de datos del tipo contenido en la colección. Por ejemplo, el nombre de contrato de datos para una lista genérica de enteros es "ArrayOfint." Tenga presente que el nombre de contrato de datos de `Object` es "anyType", de modo que el nombre de contrato de datos de listas no genéricas como <xref:System.Collections.ArrayList> es "ArrayOfanyType."  
   
- El nombre predeterminado para los contratos de datos de colección de diccionarios, a menos que se invalide utilizando `Name`, es la cadena "ArrayOfKeyValueOf" combinada con el nombre de contrato de datos del tipo clave seguido por el nombre de contrato de datos del tipo de valor. Por ejemplo, el nombre de contrato de datos para un diccionario genérico de cadena y entero es "ArrayOfKeyValueOfstringint." Adicionalmente, si los tipos de clave o valor no son tipos primitivos, un hash de espacio de nombres de los espacios de nombres de contrato de datos de los tipos de clave y valor se agrega al nombre. Para obtener más información acerca de valores hash de espacio de nombres, vea [nombres de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ El nombre predeterminado para los contratos de datos de colección de diccionarios, a menos que se invalide utilizando `Name`, es la cadena "ArrayOfKeyValueOf" combinada con el nombre de contrato de datos del tipo clave seguido por el nombre de contrato de datos del tipo de valor. Por ejemplo, el nombre de contrato de datos para un diccionario genérico de cadena y entero es "ArrayOfKeyValueOfstringint." Adicionalmente, si los tipos de clave o valor no son tipos primitivos, un hash de espacio de nombres de los espacios de nombres de contrato de datos de los tipos de clave y valor se agrega al nombre. Para obtener más información acerca de los hash de espacio de nombres, vea [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Cada contrato de datos de colección de diccionarios tiene un contrato de datos complementario que representa una entrada en el diccionario. Su nombre es igual que para el contrato de datos del diccionario, salvo el prefijo "ArrayOf", y su espacio de nombres es igual que para el contrato de datos del diccionario. Por ejemplo, para el contrato de datos de diccionario de "ArrayOfKeyValueOfstringint", el contrato de datos de "KeyValueofstringint" representa una entrada en el diccionario. Puede personalizar el nombre de este contrato de datos utilizando la propiedad `ItemName` , como se describe en la sección siguiente.  
   

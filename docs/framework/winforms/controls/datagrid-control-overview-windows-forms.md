@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462469"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850692"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Información general del control DataGrid (Formularios Windows Forms)
 > [!NOTE]
@@ -90,7 +90,7 @@ Un control DataGrid enlazado a datos con múltiples tablas
 |Varias tablas relacionadas.|La cuadrícula puede mostrar una vista de árbol para seleccionar las tablas, o usted puede especificar que la cuadrícula muestre la tabla primaria. Los registros de la tabla primaria permiten a los usuarios desplazarse a las filas secundarias relacionadas.|  
   
 > [!NOTE]
->  Las tablas de un conjunto de datos se relacionan mediante <xref:System.Data.DataRelation>.  Consulte también [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relaciones en conjuntos de datos](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) o [relaciones en conjuntos de datos](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+> Las tablas de un conjunto de datos se relacionan mediante <xref:System.Data.DataRelation>. Consulte también [crear relaciones entre los conjuntos de datos](/visualstudio/data-tools/relationships-in-datasets).
   
  Cuando el control <xref:System.Windows.Forms.DataGrid> muestra una tabla y la propiedad <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> se establece en `true`, los datos se pueden volver a ordenar haciendo clic en los encabezados de columna. El usuario también puede agregar filas y modificar celdas.  
   
