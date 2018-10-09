@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964389"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873129"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Crear un esquema criptográfico
 Los componentes criptográficos de .NET Framework se pueden combinar para crear distintos esquemas para cifrar y descifrar datos.  
@@ -30,7 +30,7 @@ Los componentes criptográficos de .NET Framework se pueden combinar para crear 
   
 5.  Después, las partes inician una conversación mediante el cifrado simétrico.  
   
- Crear un esquema criptográfico no es una tarea trivial. Para obtener más información sobre el uso de criptografía, vea el tema criptografía en la documentación de Platform SDK en http://msdn.microsoft.com/library.  
+ Crear un esquema criptográfico no es una tarea trivial.
   
 ## <a name="see-also"></a>Vea también
 

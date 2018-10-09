@@ -2,12 +2,12 @@
 title: Directiva de autorización
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198324"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873484"
 ---
 # <a name="authorization-policy"></a>Directiva de autorización
 
@@ -284,7 +284,7 @@ O bien, puede hacer lo mismo en la configuración:
 
 Windows Communication Foundation (WCF) proporciona un modelo enriquecido basado en notificaciones para realizar comprobaciones de acceso. El objeto <xref:System.ServiceModel.ServiceAuthorizationManager> se utiliza para realizar la comprobación de acceso y determinar si las notificaciones asociadas con el cliente satisfacen los requisitos necesarios para tener acceso al método de servicio.
 
-Para los fines de demostración, este ejemplo muestra una implementación de <xref:System.ServiceModel.ServiceAuthorizationManager> que implementa el <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método para permitir el acceso de un usuario a los métodos en función de las notificaciones de tipo http://example.com/claims/allowedoperation cuyo valor es el URI de acción de la operación permite que se llame.
+Para los fines de demostración, este ejemplo muestra una implementación de <xref:System.ServiceModel.ServiceAuthorizationManager> que implementa el <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método para permitir el acceso de un usuario a los métodos en función de las notificaciones de tipo `http://example.com/claims/allowedoperation` cuyo valor es el URI de acción de la operación permite que se llame.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager

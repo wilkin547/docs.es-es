@@ -8,15 +8,15 @@ ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 60e95d79ae7cd43b79ec4fd79285bfea071f20f8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034826"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873562"
 ---
 # <a name="accessibility-best-practices"></a>Procedimientos de accesibilidad recomendados
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Al implementar los siguientes procedimientos recomendados en los controles o las aplicaciones, mejorará su accesibilidad para las personas que utilizan dispositivos [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] . Muchas de estas prácticas recomendadas se centran en lograr un buen diseño de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . Cada procedimiento recomendado incluye información de implementación para las aplicaciones o los controles de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] . En muchos casos, el trabajo que se debe realizar para cumplir estos procedimientos recomendados ya está incluido en los controles [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
   
@@ -135,4 +135,4 @@ ms.locfileid: "48034826"
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Automation.Peers>  
  [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [Directrices para el diseño de interfaz de usuario de teclado](http://msdn2.microsoft.com/library/ms971323.aspx)
+ [Directrices para el diseño de la interfaz de usuario de teclado](http://msdn2.microsoft.com/library/ms971323.aspx)

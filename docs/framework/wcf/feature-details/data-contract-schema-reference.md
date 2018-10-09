@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088042"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873724"
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
@@ -32,7 +32,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 ## <a name="general-information"></a>Información general  
   
--   El espacio de nombres de esquema se describe en [esquema XML](https://go.microsoft.com/fwlink/?LinkId=95475). El prefijo "xs" se utiliza en este documento.  
+-   El espacio de nombres del esquema se describe en [Esquema XML](https://go.microsoft.com/fwlink/?LinkId=95475). El prefijo "xs" se utiliza en este documento.  
   
 -   Cualquier atributo con un espacio de nombres que no sea del esquema Se ignora.  
   
@@ -47,7 +47,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`elementFormDefault`|Se debe calificar. Todos los elementos se deben calificar para un esquema para que `DataContractSerializer`los admita. Esto puede realizarse, ya sea estableciendo xs:schema/@elementFormDefault en "qualified" o estableciendo xs:element/@form en "qualified" en la declaración de cada elemento individual.|  
 |`finalDefault`|ignorado.|  
 |`Id`|ignorado.|  
-|`targetNamespace`|Admitido y asignado al espacio de nombres del contrato de datos. Si no se especifica este atributo, se utiliza el espacio de nombres en blanco. No puede ser el espacio de nombres reservado http://schemas.microsoft.com/2003/10/Serialization/.|  
+|`targetNamespace`|Admitido y asignado al espacio de nombres del contrato de datos. Si no se especifica este atributo, se utiliza el espacio de nombres en blanco. No puede ser el espacio de nombres reservado `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|ignorado.|  
   
 ### <a name="xsschema-contents"></a>\<xs: schema >: contenido  
@@ -56,7 +56,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |--------------|------------|  
 |`include`|Se admite. `DataContractSerializer` admite xs:include y xs:import. Sin embargo, Svcutil.exe restringe las siguientes referencias `xs:include/@schemaLocation` y `xs:import/@location` cuando los metadatos se cargan desde un archivo local. La lista de archivos de esquema se debe pasar mediante un mecanismo fuera de banda y no mediante `include` en este caso; los documentos de esquema `include`se omiten.|  
 |`redefine`|no autorizado. El uso de `xs:redefine` se prohíbe por parte de `DataContractSerializer` por razones de seguridad: `x:redefine` requiere que se siga `schemaLocation` . En ciertas circunstancias, el uso de DataContract por parte de Svcutil.exe restringe el uso de `schemaLocation`.|  
-|`import`|Se admite. `DataContractSerializer` admite `xs:include` y `xs:import`. Sin embargo, Svcutil.exe restringe las siguientes referencias `xs:include/@schemaLocation` y `xs:import/@location` cuando los metadatos se cargan desde un archivo local. La lista de archivos de esquema se debe pasar mediante un mecanismo fuera de banda y no mediante `include` en este caso; los documentos de esquema `include`se omiten.|  
+|`import`|Se admite. `DataContractSerializer` admite `xs:include` y `xs:import`. Sin embargo, Svcutil.exe restringe las siguientes referencias `xs:include/@schemaLocation` y `xs:import/@location` cuando los metadatos se cargan desde un archivo local. La lista de archivos de esquema se debe pasar mediante un mecanismo fuera de banda y no mediante `include` en este caso; los documentos de esquema `include` se omiten.|  
 |`simpleType`|Se admite. Vea la sección `xs:simpleType` .|  
 |`complexType`|Admitido, se asigna a contratos de datos. Vea la sección `xs:complexType` .|  
 |`group`|ignorado. `DataContractSerializer` no admite el uso de `xs:group`, `xs:attributeGroup`ni `xs:attribute`. Estas declaraciones se ignoran como elementos secundarios de `xs:schema`, pero no se puede hacer referencia a ellas desde `complexType` u otras estructuras admitidas.|  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Asignación de tipos ISerializable  
- En la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0, `ISerializable` se introdujo como un mecanismo general para serializar objetos para proporcionar persistencia o transferencia de datos. Hay muchos tipos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que implementan `ISerializable` y que pueden pasarse entre aplicaciones. `DataContractSerializer` proporciona de manera natural compatibilidad para las clases `ISerializable` . `DataContractSerializer` asigna tipos de esquema de implementación de `ISerializable` que solo difieren en cuanto al QName (nombre completo) del tipo y son colecciones de propiedades. Por ejemplo, el `DataContractSerializer` asigna <xref:System.Exception> al tipo XSD siguiente en el http://schemas.datacontract.org/2004/07/System espacio de nombres.  
+ En la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0, `ISerializable` se introdujo como un mecanismo general para serializar objetos para proporcionar persistencia o transferencia de datos. Hay muchos tipos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que implementan `ISerializable` y que pueden pasarse entre aplicaciones. `DataContractSerializer` proporciona de manera natural compatibilidad para las clases `ISerializable` . `DataContractSerializer` asigna tipos de esquema de implementación de `ISerializable` que solo difieren en cuanto al QName (nombre completo) del tipo y son colecciones de propiedades. Por ejemplo, el `DataContractSerializer` asigna <xref:System.Exception> al tipo XSD siguiente en el `http://schemas.datacontract.org/2004/07/System` espacio de nombres.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -541,7 +541,7 @@ public class Employee : Person
 ## <a name="datacontract-serialization-schema"></a>Esquema de serialización de DataContract  
  Varios esquemas exportados por los tipos de uso, elementos y atributos del `DataContractSerializer` , desde un espacio de nombres de serialización de contrato de datos especial:  
   
- http://schemas.microsoft.com/2003/10/Serialization  
+ `http://schemas.microsoft.com/2003/10/Serialization`
   
  A continuación, se muestra una declaración de esquema de serialización de contrato de datos completa.  
   

@@ -4,12 +4,12 @@ description: Aprenda a elevación y desplazamiento y modernizar aplicaciones exi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747009"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873510"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicaciones .NET existentes con la nube de Azure y contenedores de Windows (2nd edition)
 
@@ -25,7 +25,7 @@ Copyright © 2018 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
-Este libro está disponible gratuitamente en forma de libro electrónico (eBook) disponible a través de varios canales de Microsoft, como http://dot.net/architecture.
+Este libro está disponible gratuitamente en forma de libro electrónico (eBook) disponible a través de varios canales de Microsoft, como <http://dot.net/architecture>.
 
 Si tiene preguntas relacionadas con este libro, envíe un correo electrónico a [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
@@ -33,7 +33,7 @@ Este libro se proporciona “tal cual” y expresa las opiniones del autor. Las 
 
 Algunos ejemplos descritos aquí se proporcionan únicamente con fines ilustrativos y son ficticios. No debe deducirse ninguna asociación ni conexión reales.
 
-Microsoft y las marcas comerciales indicadas en http://www.microsoft.com en la página web "Marcas comerciales" pertenecen al grupo de empresas de Microsoft. El resto de marcas pertenecen a sus respectivos propietarios.
+Microsoft y las marcas comerciales indicadas en <https://www.microsoft.com> en la página web "Marcas comerciales" pertenecen al grupo de empresas de Microsoft. El resto de marcas pertenecen a sus respectivos propietarios.
 
 Autor:
 > **Cesar de la Torre**, administrador de programas sénior del equipo del producto de .NET, Microsoft Corp.
