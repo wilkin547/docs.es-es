@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e5aea783640a2aa2c9f4fa7754b9a3a435d1f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579072"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584148"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
@@ -115,7 +115,7 @@ ms.locfileid: "33579072"
   
 -   Los delegados genéricos permiten devoluciones de llamada con seguridad de tipos sin necesidad de crear varias clases de delegado. Por ejemplo, el delegado genérico <xref:System.Predicate%601> le permite crear un método que implementa sus propios criterios de búsqueda para un tipo concreto y utilizar su método con métodos del tipo <xref:System.Array> , como <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>y <xref:System.Array.FindAll%2A>.  
   
--   Los genéricos optimizan el código generado dinámicamente. Cuando se utilizan genéricos con código generado dinámicamente, no es necesario generar el tipo. Esto aumenta el número de escenarios en los que puede utilizar métodos dinámicos ligeros en lugar de generar ensamblados completos. Para obtener más información, vea el tema sobre cómo definir y ejecutar métodos dinámicos y DynamicMethod.  
+-   Los genéricos optimizan el código generado dinámicamente. Cuando se utilizan genéricos con código generado dinámicamente, no es necesario generar el tipo. Esto aumenta el número de escenarios en los que puede utilizar métodos dinámicos ligeros en lugar de generar ensamblados completos. Para obtener más información, vea [Cómo: Definir y ejecutar métodos dinámicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) y <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Las siguientes son algunas limitaciones de los genéricos:  
   
@@ -161,7 +161,7 @@ ms.locfileid: "33579072"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Colecciones genéricas en .NET](../../../docs/standard/generics/collections.md)|Describe las clases de colección genérica y otros tipos genéricos en .NET.|  
 |[Delegados genéricos para manipular matrices y listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Describe los delegados genéricos para conversiones, predicados de búsqueda y acciones realizadas en los elementos de una matriz o colección.|  
