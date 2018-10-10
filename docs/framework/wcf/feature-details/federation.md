@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 205e0052f0ea257d965b0cd088cbe3586321022f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496772"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48914184"
 ---
 # <a name="federation"></a>Federación
-En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También describe la compatibilidad de Windows Communication Foundation (WCF) para la implementación de arquitecturas de seguridad federada. Para una aplicación de ejemplo que muestra la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
+En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También se describe la compatibilidad de Windows Communication Foundation (WCF) para implementar una arquitectura de seguridad federada. Para una aplicación de ejemplo que demuestre la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="definition-of-federated-security"></a>Definición de seguridad federada  
  La seguridad federada permite una separación limpia entre el servicio al que un cliente intenta obtener acceso y los procedimientos de autenticación y autorización asociados. La seguridad federada también habilita la colaboración en múltiples sistemas, redes y organizaciones en dominios de confianza diferentes.  
   
- WCF proporciona compatibilidad para crear e implementar sistemas distribuidos que emplean la seguridad federada.  
+ WCF proporciona compatibilidad para la creación e implementación de sistemas distribuidos que emplean la seguridad federada.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Elementos de una arquitectura de seguridad federada  
  La arquitectura de seguridad federada tiene tres elementos clave, tal y como se describe en la tabla siguiente.  
@@ -40,7 +40,7 @@ En este tema se proporciona una información general breve sobre el concepto de 
  Este escenario incluye dos organizaciones: A y B. La organización B tiene un recurso web (un servicio web) que algunos usuarios de la organización A encuentran valioso.  
   
 > [!NOTE]
->  Esta sección utiliza los términos *recursos*, *servicio*, y *servicio Web* indistintamente.  
+>  En esta sección utiliza los términos *recursos*, *servicio*, y *servicio Web* indistintamente.  
   
  Normalmente, la organización B requiere que un usuario de la organización A proporcione alguna forma válida de autenticación antes de obtener acceso al servicio. Además, la organización también puede requerir que el usuario esté autorizado para tener acceso al recurso concreto en cuestión. Una manera de resolver este problema y permitir a los usuarios de la organización A obtener acceso al recurso de la organización B es la siguiente:  
   
@@ -60,7 +60,7 @@ En este tema se proporciona una información general breve sobre el concepto de 
   
  En una arquitectura de seguridad federada, los usuarios de la organización A saben que si desean tener acceso al servicio web de la organización B, deben presentar un token de seguridad válido desde el STS de la organización B, que autentica y autoriza su acceso al servicio específico.  
   
- Al ponerse en contacto con el STS de B, los usuarios reciben otro nivel de direccionamiento indirecto desde la directiva asociada al STS. Deben presentar un token de seguridad válido del STS de A (es decir, el dominio de confianza del cliente) antes de que el STS de B pueda emitirles un token de seguridad. Esto es un corolario de la relación de confianza establecida entre las dos organizaciones e implica que la organización B no tiene que administrar las identidades de los usuarios de la organización A. En la práctica, el STS de B tiene normalmente una `issuerAddress` y `issuerMetadataAddress` nulas. Para obtener más información, consulte [Cómo: configurar un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). En ese caso, el cliente consulta una directiva local para buscar STS A. Esta configuración se denomina *federación del dominio de inicio* y se escala mejor porque STS de B no tiene que mantener información acerca de STS A.  
+ Al ponerse en contacto con el STS de B, los usuarios reciben otro nivel de direccionamiento indirecto desde la directiva asociada al STS. Deben presentar un token de seguridad válido del STS de A (es decir, el dominio de confianza del cliente) antes de que el STS de B pueda emitirles un token de seguridad. Esto es un corolario de la relación de confianza establecida entre las dos organizaciones e implica que la organización B no tiene que administrar las identidades de los usuarios de la organización A. En la práctica, el STS de B tiene normalmente una `issuerAddress` y `issuerMetadataAddress` nulas. Para obtener más información, consulte [Cómo: configurar un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). En ese caso, el cliente consulta una directiva local para buscar STS A. Esta configuración se denomina *federación del dominio de inicio* y se escala mejor porque STS de B no tiene que mantener información sobre STS A.  
   
  Los usuarios se ponen en contacto a continuación con el STS de la organización A y obtienen un token de seguridad presentando las credenciales de autenticación que utilizan normalmente para obtener acceso a cualquier otro recurso de la organización A. Esto también palia el problema de que los usuarios tengan que mantener varios conjuntos de credenciales o que usen el mismo conjunto de credenciales en varios sitios de servicios.  
   
@@ -69,12 +69,12 @@ En este tema se proporciona una información general breve sobre el concepto de 
 ## <a name="support-for-federated-security-in-wcf"></a>Compatibilidad para la seguridad federada en WCF  
  WCF proporciona compatibilidad inmediata para la implementación de arquitecturas de seguridad federadas a través de la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
- El [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento proporciona para un enlace seguro, confiable y interoperable que implica el uso de HTTP como mecanismo de transporte subyacente para el estilo de comunicación de solicitud y respuesta, uso de texto y XML como el formato de codificación.  
+ El [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento proporciona un enlace seguro, fiable e interoperable que conlleva el uso de HTTP como mecanismo de transporte subyacente para el estilo de comunicación de solicitud-respuesta, empleo del texto y XML como el formato de codificación.  
   
- El uso de [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) en una seguridad federada escenario puede se separa en dos fases independientes lógicamente, tal como se describe en las secciones siguientes.  
+ El uso de [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) de seguridad federada se puede desacoplar escenario en dos fases lógicamente independientes, como se describe en las secciones siguientes.  
   
 ### <a name="phase-1-design-phase"></a>Fase 1: fase de diseño  
- Durante la fase de diseño, el cliente utiliza la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para leer la directiva expone el extremo de servicio y para recopilar los requisitos de autenticación y autorización del servicio. Los proxys adecuados se construyen para crear el siguiente patrón de comunicación de seguridad federada en el cliente:  
+ Durante la fase de diseño, el cliente usa la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para leer la directiva que expone el extremo de servicio y para recopilar los requisitos de autenticación y autorización del servicio. Los proxys adecuados se construyen para crear el siguiente patrón de comunicación de seguridad federada en el cliente:  
   
 -   Obtenga un token de seguridad de STS en el dominio de confianza del cliente.  
   
@@ -85,19 +85,19 @@ En este tema se proporciona una información general breve sobre el concepto de 
 -   Presente el token al servicio para obtener acceso al servicio.  
   
 ### <a name="phase-2-run-time-phase"></a>Fase 2: fase en tiempo de ejecución  
- Durante la fase de tiempo de ejecución, el cliente crea una instancia de un objeto de la clase de cliente WCF y realiza una llamada mediante el cliente de WCF. El marco subyacente de WCF administra los pasos mencionados anteriormente en el patrón de comunicación de seguridad federada y permite al cliente utilizar a la perfección el servicio.  
+ Durante la fase de tiempo de ejecución, el cliente crea una instancia de un objeto de la clase de cliente WCF y realiza una llamada con el cliente de WCF. El marco subyacente de WCF administra los pasos mencionados anteriormente en el patrón de comunicación de seguridad federada y permite al cliente consumir el servicio de forma transparente.  
   
 ## <a name="sample-implementation-using-wcf"></a>Ejemplo de implementación mediante WCF  
- En la siguiente ilustración se muestra una implementación de ejemplo para una arquitectura de seguridad federada utilizando la compatibilidad nativa de WCF.  
+ La siguiente ilustración muestra una implementación de ejemplo para una arquitectura de seguridad federada utilizando la compatibilidad nativa de WCF.  
   
- ![Seguridad de federación en WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![Seguridad de la federación en WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
 ### <a name="example-myservice"></a>Ejemplo de MyService  
  El servicio `MyService` expone un extremo único a través de `MyServiceEndpoint`. La siguiente ilustración muestra la dirección, enlace y contrato asociados al punto de conexión.  
   
  ![Federación](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
   
- El extremo de servicio `MyServiceEndpoint` utiliza la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) y requiere un token de lenguaje de marcado de aserciones de seguridad (SAML) válido con un `accessAuthorized` notificación emitida por el STS de B. Esto se especifica mediante declaración en la configuración del servicio.  
+ El punto de conexión de servicio `MyServiceEndpoint` usa el [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) y requiere un token de lenguaje de marcado de aserción de seguridad (SAML) válido con un `accessAuthorized` notificación emitida por STS B. Esto se especifica mediante declaración en la configuración del servicio.  
   
 ```xml  
 <system.serviceModel>  
@@ -148,7 +148,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Se debería tener en cuenta un pequeño punto sobre las demandas requeridas por `MyService`. La segunda figura indica que `MyService` requiere un token de SAML con la demanda `accessAuthorized`. Para ser más preciso, esto especifica el tipo de demanda que `MyService` requiere. El nombre completo de este tipo de notificación es http://tempuri.org:accessAuthorized (junto con el espacio de nombres asociado), que se usa en el archivo de configuración de servicio. El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de B lo ha establecido en `true`.  
+>  Se debería tener en cuenta un pequeño punto sobre las demandas requeridas por `MyService`. La segunda figura indica que `MyService` requiere un token de SAML con la demanda `accessAuthorized`. Para ser más preciso, esto especifica el tipo de demanda que `MyService` requiere. El nombre completo de este tipo de notificación es `http://tempuri.org:accessAuthorized` (junto con el espacio de nombres asociado), que se usa en el archivo de configuración de servicio. El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de B lo ha establecido en `true`.  
   
  En tiempo de ejecución, la clase `MyServiceOperationRequirement` que se implementa como parte de `MyService` obliga a cumplir esta directiva.  
   
@@ -162,7 +162,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![Federación](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
   
- El STS de B expone un extremo único, denominado `STSEndpoint`, que puede ser de uso para solicitar tokens de seguridad. Específicamente, el STS de B emite tokens SAML con la demanda `accessAuthorized`, que puede presentarse en el sitio del servicio `MyService` para obtener acceso al servicio. Sin embargo, el STS de B requiere que los usuarios presenten un token SAML válido emitido por el STS de A que contiene la demanda `userAuthenticated`. Esto se especifica mediante declaración en la configuración del STS.  
+ El STS de B expone un punto de conexión único, denominado `STSEndpoint`, que puede ser de uso para solicitar tokens de seguridad. Específicamente, el STS de B emite tokens SAML con la demanda `accessAuthorized`, que puede presentarse en el sitio del servicio `MyService` para obtener acceso al servicio. Sin embargo, el STS de B requiere que los usuarios presenten un token SAML válido emitido por el STS de A que contiene la demanda `userAuthenticated`. Esto se especifica mediante declaración en la configuración del STS.  
   
 ```xml  
 <system.serviceModel>  
@@ -207,7 +207,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Una vez más, la `userAuthenticated` notificación es el tipo de notificación requerida por el STS de B. El nombre completo de este tipo de notificación es http://tempuri.org:userAuthenticated (junto con el espacio de nombres asociado), que se usa en el archivo de configuración de STS. El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de A lo ha establecido en `true`.  
+>  Nuevamente, el `userAuthenticated` notificación es el tipo de notificación requerido por el STS de B. El nombre completo de este tipo de notificación es `http://tempuri.org:userAuthenticated` (junto con el espacio de nombres asociado), que se usa en el archivo de configuración de STS. El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de A lo ha establecido en `true`.  
   
  En tiempo de ejecución, la clase `STS_B_OperationRequirement` hace cumplir esta directiva, que se implementa como parte del STS de B.  
   
