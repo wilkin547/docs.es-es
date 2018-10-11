@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838239"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086393"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools para Docker (Visual Studio en Windows)
 
@@ -76,12 +76,15 @@ Figura 4-30: opciones de herramientas de Docker
 
 En la tabla siguiente puede ayudarle a decidir cómo establecer estas opciones.
 
-| nombre | Configuración predeterminada | Descripción |
-| -----|:---------------:| ----------- |
-| Extraiga automáticamente imágenes de Docker necesarias al cargar el proyecto | Activado | Para aumentar el rendimiento, al cargar los proyectos, Visual Studio se iniciará una operación de extracción de Docker en segundo plano para que cuando esté listo para ejecutar el código, ya se descarga la imagen o en el proceso de descarga. Si simplemente está cargando proyectos y código de exploración, puede desactivar esta opción para evitar la descarga de imágenes de contenedor que no es necesario. |
-| Iniciar automáticamente los contenedores en segundo plano | Activado | Nuevo para aumentar el rendimiento, Visual Studio crea un contenedor con montajes de volumen listo al compilar y ejecutar el contenedor. Si desea controlar cuando se crea el contenedor, desactivar esta opción. |
-| Cerrar automáticamente de contenedores de interrupción en la solución | Activado | Desactivar esta opción si desea que los contenedores de la solución seguir ejecutándose después de cerrar la solución o cerrar Visual Studio. |
-| No preguntar para confiar en certificado SSL de localhost | Desactivado | Visual Studio continuará solicitar nuevos proyectos incluso después de que el certificado SSL se ha de confianza para un proyecto anterior. Puede establecer esta casilla de verificación para evitar el símbolo del sistema al abrir otros proyectos. |
+| nombre | Configuración predeterminada | Se aplica a | Descripción |
+| -----|:---------------:|:----------:| ----------- |
+| Extraiga automáticamente imágenes de Docker necesarias al cargar el proyecto | Activado | Docker Compose | Para aumentar el rendimiento, al cargar los proyectos, Visual Studio se iniciará una operación de extracción de Docker en segundo plano para que cuando esté listo para ejecutar el código, ya se descarga la imagen o en el proceso de descarga. Si simplemente está cargando proyectos y código de exploración, puede desactivar esta opción para evitar la descarga de imágenes de contenedor que no es necesario. |
+| Iniciar automáticamente los contenedores en segundo plano | Activado | Docker Compose | Nuevo para aumentar el rendimiento, Visual Studio crea un contenedor con montajes de volumen listo al compilar y ejecutar el contenedor. Si desea controlar cuando se crea el contenedor, desactivar esta opción. |
+| Cerrar automáticamente de contenedores de interrupción en la solución | Activado | Docker Compose | Desactivar esta opción si desea que los contenedores de la solución seguir ejecutándose después de cerrar la solución o cerrar Visual Studio. |
+| No preguntar para confiar en certificado SSL de localhost | Desactivado | Proyectos de ASP.NET Core 2.1 | Si el certificado SSL de localhost no es de confianza, Visual Studio le pedirá cada vez que ejecute el proyecto, a menos que se activa esta casilla. |
+
+> [!WARNING]
+> Si el certificado SSL de localhost no es de confianza y la casilla para suprimir la solicitud, a continuación, las solicitudes HTTPS web pueden producir un error en tiempo de ejecución en su aplicación o servicio. En ese caso, desactive la **no preguntar** checkbox, ejecute el proyecto e indicar confianza en el símbolo del sistema.
 
 **Obtener más información:** para obtener más información sobre la implementación de los servicios y el uso de Visual Studio Tools para Docker, lea los artículos siguientes:
 

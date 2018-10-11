@@ -2,12 +2,12 @@
 title: Servicios de WCF y seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266876"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086588"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servicios de WCF y seguimiento de eventos para Windows
 Este ejemplo muestra cómo utilizar la traza analítica en Windows Communication Foundation (WCF) para emitir eventos de seguimiento de eventos para Windows (ETW). Los seguimientos analíticos son los eventos emitidos en puntos clave de la pila de WCF que permiten solucionar problemas de servicios WCF en el entorno de producción.
@@ -34,7 +34,7 @@ Este ejemplo muestra cómo utilizar la traza analítica en Windows Communication
 
 5.  En el cliente de prueba WCF, agregue el servicio seleccionando **archivo**y, a continuación, **Agregar servicio**.
 
-     Agregue la dirección del punto de conexión en el cuadro de entrada. De manera predeterminada, es http://localhost:1378/Calculator.svc.
+     Agregue la dirección del punto de conexión en el cuadro de entrada. De manera predeterminada, es `http://localhost:1378/Calculator.svc`.
 
 6.  Abra la aplicación Visor de eventos.
 

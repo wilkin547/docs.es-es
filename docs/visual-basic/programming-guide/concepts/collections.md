@@ -3,11 +3,11 @@ title: Colecciones (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847469"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087380"
 ---
 # <a name="collections-visual-basic"></a>Colecciones (Visual Basic)
 Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados. Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.  
@@ -182,7 +182,7 @@ End Class
   
 -   Clases <xref:System.Collections>  
   
--   Visual Basic `Collection` clase  
+-   Clase `Collection` de Visual Basic  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>Clases System.Collections.Generic  
@@ -228,13 +228,13 @@ End Class
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Clase de colección de Visual Basic  
- Puede usar Visual Basic <xref:Microsoft.VisualBasic.Collection> clase para tener acceso a una colección de elementos mediante un índice numérico o un `String` clave. Puede agregar elementos a un objeto de colección especificando o sin especificar clave. Si agrega un elemento sin clave, debe usar su índice numérico para tener acceso a dicho elemento.  
+ Puede usar la clase de Visual Basic <xref:Microsoft.VisualBasic.Collection> para tener acceso a un elemento de colección mediante un índice numérico o una clave `String`. Puede agregar elementos a un objeto de colección especificando o sin especificar clave. Si agrega un elemento sin clave, debe usar su índice numérico para tener acceso a dicho elemento.  
   
- Visual Basic `Collection` clase almacena todos sus elementos como de tipo `Object`, por lo que puede agregar un elemento de cualquier tipo de datos. No hay ningún método de protección contra los tipos de datos inadecuados agregados.  
+ La clase de Visual Basic `Collection` almacena todos sus elementos como de tipo `Object`, por lo que puede agregar un elemento de cualquier tipo de datos. No hay ningún método de protección contra los tipos de datos inadecuados agregados.  
   
- Cuando se usa Visual Basic `Collection` (clase), el primer elemento de una colección tiene un índice de 1. Esto difiere de las clases de colección de .NET Framework, para las cuales el índice inicial es 0.  
+ Cuando se usa la clase de Visual Basic `Collection`, el primer elemento de una colección tiene un índice de 1. Esto difiere de las clases de colección de .NET Framework, para las cuales el índice inicial es 0.  
   
- Siempre que sea posible, debe usar las colecciones genéricas en el <xref:System.Collections.Generic?displayProperty=nameWithType> espacio de nombres o el <xref:System.Collections.Concurrent> espacio de nombres en lugar de Visual Basic `Collection` clase.  
+ Siempre que sea posible, debe usar las colecciones genéricas del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType> o del espacio de nombres <xref:System.Collections.Concurrent> en lugar de la clase de Visual Basic `Collection`.  
   
  Para obtener más información, consulta <xref:Microsoft.VisualBasic.Collection>.  
   

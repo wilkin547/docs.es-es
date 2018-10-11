@@ -3,11 +3,11 @@ title: Características de simplificación de WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
 ms.openlocfilehash: 2a2b1bc90729f2c8c3303c5d8ce6befc4dff3980
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847963"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087367"
 ---
 # <a name="wcf-simplification-features"></a>Características de simplificación de WCF
 En este tema se describen las características nuevas que simplifican la escritura de aplicaciones WCF.  
@@ -81,7 +81,7 @@ En este tema se describen las características nuevas que simplifican la escritu
   
 ## <a name="streaming-improvements"></a>Mejoras en streaming  
   
--   Se ha agregado a WCF una nueva compatibilidad para streaming asincrónico. Para habilitar el streaming asincrónico, agregue el comportamiento de extremo <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`.  Esto puede beneficiar a la escalabilidad cuando un servicio envía mensajes de secuencias a varios clientes que leen despacio. WCF ya no bloquea un subproceso por cliente y liberará el subproceso para atender a otro cliente.  
+-   Se ha agregado a WCF una nueva compatibilidad para streaming asincrónico. Para habilitar el streaming asincrónico, agregue el comportamiento de punto de conexión <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`.  Esto puede beneficiar a la escalabilidad cuando un servicio envía mensajes de secuencias a varios clientes que leen despacio. WCF ya no bloquea un subproceso por cliente y liberará el subproceso para atender a otro cliente.  
   
 -   Se han quitado las limitaciones sobre el almacenamiento en búfer de mensajes cuando un servicio está hospedado en IIS. En versiones anteriores de WCF, al recibir un mensaje para un servicio hospedado por IIS que usaba transferencia de mensajes de streaming, ASP.NET almacenaba en búfer todo el mensaje antes de enviarlo a WCF. Esto provocaba que el consumo de memoria fuera grande. Este almacenamiento en búfer se ha quitado en .NET 4.5 y ahora los servicios WCF hospedados en IIS pueden empezar a procesar el flujo de entrada antes de que se haya recibido el mensaje completo, lo que permite streaming auténtico. Esto permite que WCF responda inmediatamente a los mensajes y permite mejorar el rendimiento. Además, ya no es necesario especificar un valor para `maxRequestLength`, el límite de tamaño de ASP.NET en las solicitudes entrantes. Si se establece esta propiedad, se omite. Para obtener más información acerca de `maxRequestLength` vea [ \<httpRuntime > elemento de configuración](https://go.microsoft.com/fwlink/?LinkId=223344). Todavía deberá configurar maxAllowedContentLength, para obtener más información, consulte [límites de solicitud de IIS](https://go.microsoft.com/fwlink/?LinkId=225908).  
   

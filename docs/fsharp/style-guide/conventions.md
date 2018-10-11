@@ -2,12 +2,12 @@
 title: 'Convenciones de código de F #'
 description: 'Obtenga información sobre expresiones y directrices generales al escribir código de F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237414"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087393"
 ---
 # <a name="f-coding-conventions"></a>Convenciones de código de F #
 
@@ -420,7 +420,7 @@ Esta técnica no se debe aplicar universalmente a la base de código completo, p
 
 F # tiene varias opciones para [control de acceso](../language-reference/access-control.md), al heredar de lo que está disponible en el tiempo de ejecución. NET. Estos no son sólo puede usar para los tipos: se pueden usar para las funciones, demasiado.
 
-* Prefiere que no sean de`public` tipos y miembros hasta que se tienen que ser públicamente. Esto minimiza también qué par de los consumidores a
+* Prefiere que no sean de`public` tipos y miembros hasta que se tienen que ser públicamente. Esto minimiza también qué par de los consumidores a.
 * Intente mantener toda la funcionalidad de aplicación auxiliar `private`.
 * Considere el uso de `[<AutoOpen>]` en un módulo de funciones de aplicación auxiliar que dejen de estar numerosos privado.
 

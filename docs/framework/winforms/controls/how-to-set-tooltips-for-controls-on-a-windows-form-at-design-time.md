@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 7f698a517fbf72ceafde4a117b4d92dd9d352834
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 689b06e8fbebe490f79ab6c12f144546472a95ff
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964413"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087224"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Cómo: Establecer información sobre herramientas en controles de Windows Forms en tiempo de diseño
 Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o en el Diseñador de Windows Forms. Para obtener más información sobre la <xref:System.Windows.Forms.ToolTip> componente, vea [información general del componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
@@ -50,8 +50,33 @@ Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o e
 2.  Seleccione el control que se mostrará la información sobre herramientas, o agréguelo al formulario.  
   
 3.  En el **propiedades** ventana, establezca el **información sobre herramientas en ToolTip1** valor a una cadena de texto adecuada.  
+
+### <a name="to-remove-a-tooltip-programmatically"></a>Para quitar una información sobre herramientas mediante programación  
   
+1.  Use la <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método de la <xref:System.Windows.Forms.ToolTip> componente.  
+  
+    ```vb  
+    ' In this example, Button1 is the control displaying the ToolTip.  
+    ToolTip1.SetToolTip(Button1, Nothing)  
+    ```  
+  
+    ```csharp  
+    // In this example, button1 is the control displaying the ToolTip.  
+    toolTip1.SetToolTip(button1, null);  
+    ```  
+  
+    ```cpp  
+    // In this example, button1 is the control displaying the ToolTip.  
+    toolTip1->SetToolTip(button1, NULL);  
+    ```  
+  
+### <a name="to-remove-a-tooltip-in-the-designer"></a>Para quitar una información sobre herramientas en el diseñador  
+  
+1.  Seleccione el control que muestra la información sobre herramientas.  
+  
+2.  En el **propiedades** ventana, elimine el texto en el **información sobre herramientas en ToolTip1**.  
+
 ## <a name="see-also"></a>Vea también  
- [Información general sobre el componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
- [Cambiar el retardo del componente ToolTip de Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
- [ToolTip (componente)](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+- [Información general sobre el componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
+- [Cambiar el retardo del componente ToolTip de Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+- [ToolTip (componente)](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
