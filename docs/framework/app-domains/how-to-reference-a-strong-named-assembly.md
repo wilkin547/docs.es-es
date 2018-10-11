@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f78fff50d1a227061076790ad77f17debe3f690
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abc53381bf6cc8458b83edf5586b76fe7ed5f303
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743321"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199903"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Cómo: Hacer referencia a un ensamblado con nombre seguro
 El proceso para hacer referencia a tipos o recursos en un ensamblado con nombre seguro suele ser transparente. Puede hacer referencia en tiempo de compilación (enlace anticipado) o en tiempo de ejecución.  
@@ -68,7 +68,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  Si tiene un archivo de clave pública, puede usar en su lugar el comando siguiente (observe la diferencia en el caso de la opción de la línea de comandos):  
   
- **sn -tp \<** *assembly* **>**  
+ **sn -tp \<** *archivo de clave pública* **>**  
   
 ## <a name="see-also"></a>Vea también  
  [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

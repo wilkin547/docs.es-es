@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44186193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45743393"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementar un método Dispose
 
@@ -107,7 +107,7 @@ A continuación se muestra el patrón general para implementar el patrón de Dis
 
 Una clase derivada de una clase que implemente la interfaz <xref:System.IDisposable> no debe implementar <xref:System.IDisposable>, porque la implementación de la clase base de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> la heredan sus clases derivadas. En su lugar, para implementar el patrón de Dispose para una clase derivada, debe proporcionar lo siguiente:  
   
-* Un método `protected Dispose(Boolean)` que invalide el método de la clase base y realice el trabajo real de liberar los recursos de la clase derivada. Este método también debe llamar al método `Dispose(Boolean)` de la clase base y pasarle un valor `true` para el argumento *disposing*.  
+* Un método `protected Dispose(Boolean)` que invalide el método de la clase base y realice el trabajo real de liberar los recursos de la clase derivada. Este método también debe llamar al método `Dispose(Boolean)` de la clase base y pasar su estado disposing para el argumento.  
   
 * Una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> que contiene el recurso no administrado (recomendado), o una invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La clase <xref:System.Runtime.InteropServices.SafeHandle> proporciona un finalizador que evita que tenga que codificar uno. Si proporciona un finalizador, debe llamar a la sobrecarga de `Dispose(Boolean)` con un argumento *disposing* que sea `false`.  
   

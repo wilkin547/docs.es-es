@@ -14,6 +14,7 @@
 ### [Crear secuencias](composing-streams.md)
 ### [Convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [Asynchronous File I/O](asynchronous-file-i-o.md) (E/S de archivos asincrónica)
+## [Control de errores de E/S](handling-io-errors.md)
 ## [Almacenamiento aislado](isolated-storage.md)
 ### [Tipos de aislamiento](types-of-isolation.md)
 ### [Cómo: Obtener los almacenes de almacenamiento aislado](how-to-obtain-stores-for-isolated-storage.md)

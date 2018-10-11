@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 68b376d00762238b810f6463463aa78c492a1a1f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e11bf8af6f56cbdcdcc920cafe145edcf744efed
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003404"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Cómo: Utilizar componentes que admitan el modelo asincrónico basado en eventos
 Muchos componentes le ofrecen la opción de realizar su trabajo de forma asincrónica. Por ejemplo, los componentes <xref:System.Media.SoundPlayer> y <xref:System.Windows.Forms.PictureBox> permiten cargas sonidos e imágenes "en segundo plano" mientras el subproceso principal continúa ejecutándose sin interrupción.  
   
- Usar métodos asincrónicos en una clase que admite la [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) puede ser tan sencillo como adjuntar un controlador de eventos al evento *MethodName***Completed** del componente, como lo haría para otro componente. Cuando se llama al método *MethodName***Async**, la aplicación continuará ejecutándose sin interrupción hasta que se genere el evento *MethodName***Completed**. En el controlador de eventos, puede examinar el parámetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar si la operación asincrónica se completó correctamente o si se canceló.  
+ Usar métodos asincrónicos en una clase que admite la [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) puede ser tan sencillo como adjuntar un controlador de eventos al evento _MethodName_**Completed** del componente, como lo haría para cualquier otro evento. Cuando se llama al método _MethodName_**Async**, la aplicación continuará ejecutándose sin interrupción hasta que se genere el evento _MethodName_**Completed**. En el controlador de eventos, puede examinar el parámetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar si la operación asincrónica se completó correctamente o si se canceló.  
   
  Para más información sobre el uso de los controladores de eventos, vea [Información general sobre controladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   

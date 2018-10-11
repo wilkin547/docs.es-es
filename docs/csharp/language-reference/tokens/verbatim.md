@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbab5a743b4f9fed759210e8410cd6e3459efac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591404"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192238"
 ---
 # <a name="-c-reference"></a>@ (Referencia de C#)
 
@@ -33,46 +33,9 @@ El carácter especial `@` actúa como un identificador textual. Se puede usar de
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Para permitir que el compilador distinga entre los atributos en caso de conflicto de nomenclatura. Un atributo es un tipo que deriva de <xref:System.Attribute>. Normalmente, su nombre de tipo incluye el sufijo **Attribute**, aunque el compilador no exige el cumplimiento de esta convención. Es posible hacer referencia al atributo en el código mediante su nombre de tipo completo (por ejemplo, `[InfoAttribute]`) o mediante su nombre abreviado (por ejemplo, `[Info]`). Pero se produce un conflicto de nomenclatura si dos nombres abreviados de tipo de atributo son idénticos, y un nombre de tipo incluye el sufijo **Attribute** y el otro no. Por ejemplo, el código siguiente produce un error al compilarse porque el compilador no puede determinar si el atributo `Info` o `InfoAttribute` se aplica a la clase `Example`.
+1. Para permitir que el compilador distinga entre los atributos en caso de conflicto de nomenclatura. Un atributo es una clase que deriva de <xref:System.Attribute>. Normalmente, su nombre de tipo incluye el sufijo **Attribute**, aunque el compilador no exige el cumplimiento de esta convención. Es posible hacer referencia al atributo en el código mediante su nombre de tipo completo (por ejemplo, `[InfoAttribute]`) o mediante su nombre abreviado (por ejemplo, `[Info]`). Pero se produce un conflicto de nomenclatura si dos nombres abreviados de tipo de atributo son idénticos, y un nombre de tipo incluye el sufijo **Attribute** y el otro no. Por ejemplo, el código siguiente produce un error al compilarse porque el compilador no puede determinar si el atributo `Info` o `InfoAttribute` se aplica a la clase `Example`. Vea [CS1614](../compiler-messages/cs1614.md) para obtener más información.
 
-   ```csharp
-   using System;
-
-   [AttributeUsage(AttributeTargets.Class)]
-   public class Info : Attribute
-   {
-      private string information;
-      
-      public Info(string info)
-      {
-          information = info;
-      }
-   }
-
-   [AttributeUsage(AttributeTargets.Method)]
-   public class InfoAttribute : Attribute
-   {
-      private string information;
-      
-      public InfoAttribute(string info)
-      {
-          information = info;
-      }
-   }
-
-   [Info("A simple executable.")]
-   public class Example
-   {
-      [InfoAttribute("The entry point.")]
-      public static void Main()
-      {
-      }
-   }
-   ```  
-
-   Si el identificador textual se usa para identificar el atributo `Info`, el ejemplo se compila correctamente.
-
-   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
+   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
 ## <a name="see-also"></a>Vea también
 

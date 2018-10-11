@@ -4,12 +4,12 @@ description: Aprenda la terminología sobre paquetes, metapaquetes y marcos de t
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472807"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597695"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
 
@@ -56,7 +56,7 @@ Normalmente, en lugar de incluir paquetes en sus proyectos en una base de paquet
 
 Los metapaquetes son una conversión de paquetes NuGet que se usa para describir un conjunto de paquetes que tienen sentido juntos. Para representar este conjunto de paquetes, los transforman en dependencias. De manera opcional, pueden especificar un marco de trabajo a fin de establecer uno para este conjunto de paquetes. 
 
-De manera predeterminada, las versiones anteriores de las herramientas de .NET Core (las herramientas basadas en project.json y csproj) especificaban un marco y un metapaquete. Pero, actualmente, el marco de destino hace referencia implícitamente al metapaquete, de manera que cada uno está asociado a un marco de destino. Por ejemplo, el marco `netstandard1.6` hace referencia al metapaquete de la versión 1.6.0 de NetStandard.Library. De manera similar, el marco `netcoreapp1.1` hace referencia al metapaquete de la versión 1.1.0 de Microsoft.NETCore.App. Para obtener más información, vea [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Referencia del paquete implícita del metapaquete en el SDK de .NET Core).
+De manera predeterminada, las versiones anteriores de las herramientas de .NET Core (las herramientas basadas en project.json y csproj) especificaban un marco y un metapaquete. Pero, actualmente, el marco de destino hace referencia implícitamente al metapaquete, de manera que cada uno está asociado a un marco de destino. Por ejemplo, el marco `netstandard1.6` hace referencia al metapaquete de la versión 1.6.0 de NetStandard.Library. De manera similar, el marco `netcoreapp2.1` hace referencia al metapaquete de la versión 2.1.0 de Microsoft.NETCore.App. Para obtener más información, vea [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Referencia del paquete implícita del metapaquete en el SDK de .NET Core).
 
 Dirigirse a un marco y hacer referencia implícitamente a un metapaquete significa que realmente está agregando una referencia a cada uno de sus paquetes dependientes como un gesto único. Esto hace que todas las bibliotecas de esos paquetes estén disponibles para IntelliSense (o una experiencia similar) y para publicar la aplicación.  
 

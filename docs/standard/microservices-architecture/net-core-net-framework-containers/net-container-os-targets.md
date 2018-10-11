@@ -3,25 +3,25 @@ title: Selección del sistema operativo de destino con contenedores de .NET
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Selección del sistema operativo de destino con contenedores de .NET
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: fca5cf280d5abb85da78413a6eed463a2ffe6a88
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: b2ae1d2e732f152133dd8a8757b955e05cdd88eb
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45970830"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Selección del sistema operativo de destino con contenedores de .NET
 
-Teniendo en cuenta la diversidad de sistemas operativos compatibles con Docker y las diferencias entre .NET Framework y .NET Core, debe escoger un sistema operativo de destino específico y versiones específicas según el marco que utilice. 
+Teniendo en cuenta la diversidad de sistemas operativos compatibles con Docker y las diferencias entre .NET Framework y .NET Core, debe escoger un sistema operativo de destino específico y versiones específicas según el marco que utilice.
 
-Para Windows, puede usar Windows Server Core o Nano Server de Windows. Estas versiones de Windows proporcionan diferentes características (IIS en Windows Server Core frente a un servidor web autohospedado, como Kestrel, en Nano Server) que .NET Framework o .NET Core, respectivamente, podrían necesitar. 
+Para Windows, puede usar Windows Server Core o Nano Server de Windows. Estas versiones de Windows proporcionan diferentes características (IIS en Windows Server Core frente a un servidor web autohospedado, como Kestrel, en Nano Server) que .NET Framework o .NET Core, respectivamente, podrían necesitar.
 
 Para Linux, hay varias distribuciones disponibles y compatibles en imágenes oficiales del Docker de .NET (por ejemplo, Debian).
 
 En la Figura 3-1 se puede ver la posible versión de sistema operativo en función de la versión de .NET Framework que se utilice.
 
-![](./media/image1.png)
+![Al implementar aplicaciones heredadas de .NET Framework que tienen como destino Windows Server Core, compatible con aplicaciones heredadas e IIS, tiene una imagen más grande. Al implementar aplicaciones de .NET Core, puede tener como destino Windows Nano Server, que está optimizado para la nube, usa Kestrel y es más pequeño y se inicia más rápido. También puede tener como destino Linux, con compatibilidad con Debian, Alpine y otros. También usa Kestrel y es más pequeño y se inicia más rápido.](./media/image1.png)
 
 **Figura 3-1.** Sistemas operativos de destino en función de las versiones de .NET Framework
 
@@ -29,25 +29,33 @@ También puede crear su propia imagen de Docker en los casos en que quiera utili
 
 Al agregar el nombre de imagen al archivo Dockerfile, puede seleccionar el sistema operativo y la versión dependiendo de la etiqueta que utilice, como en los ejemplos siguientes:
 
--   microsoft/**dotnet:2.1-runtime**
-
-        .NET Core 2.1 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
-
--   microsoft/**dotnet:2.1-aspnetcore-runtime**
-    
-        ASP.NET Core 2.1 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
-        The aspnetcore image has a few optimizations for ASP.NET Core. 
-
--   microsoft/**dotnet:2.1-aspnetcore-runtime-alpine** 
-
-        .NET Core 2.1 runtime-only on Linux Alpine distro
-
--   microsoft/**dotnet:2.1-aspnetcore-runtime-nanoserver-1803** 
-
-        .NET Core 2.1 runtime-only on Windows Nano Server (Windows Server version 1803)
-
-
-
+<table>
+<thead>
+<tr class="header">
+<th>Imagen</th>
+<th>Comentarios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>microsoft/dotnet:2.1-runtime</td>
+<td>Arquitectura múltiple de .NET Core 2.1: es compatible con Linux y Windows Nano Server en función del host de Docker.</td>
+</tr>
+<tr class="odd">
+<td>microsoft/dotnet:2.1-aspnetcore-runtime</td>
+<td><p>Arquitectura múltiple de ASP.NET Core 2.1: es compatible con Linux y Windows Nano Server en función del host de Docker.</p>
+<p>La imagen de aspnetcore tiene algunas optimizaciones para ASP.NET Core.</p></td>
+</tr>
+<tr class="even">
+<td>microsoft/dotnet:2.1-aspnetcore-runtime-alpine</td>
+<td>.NET Core 2.1 solo en tiempo de ejecución en una distribución de Alpine Linux</td>
+</tr>
+<tr class="odd">
+<td>microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
+<td>.NET Core 2.1 solo en tiempo de ejecución en Windows Nano Server (Windows Server 1803)</td>
+</tr>
+</tbody>
+</table>
 
 >[!div class="step-by-step"]
 [Anterior](container-framework-choice-factors.md)

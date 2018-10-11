@@ -4,12 +4,12 @@ description: El comando dotnet new crea proyectos de .NET Core basados en la pla
 author: mairaw
 ms.author: mairaw
 ms.date: 07/31/2018
-ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512560"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208638"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -228,8 +228,9 @@ Filtra plantillas en función de los tipos disponibles. Los valores predefinidos
 Desinstala un paquete de plantillas u origen en los parámetros `PATH` o `NUGET_ID` proporcionados.
 
 > [!NOTE]
-> Para desinstalar una plantilla mediante `PATH`, debe usar el nombre completo de la ruta de acceso. Por ejemplo, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, pero *./GarciaSoftware.ConsoleTemplate.CSharp* desde la carpeta contenedora no lo hará.
-> Además, no debe incluir una barra diagonal para finalizar el directorio en la ruta de acceso a la plantilla.
+> Para desinstalar una plantilla mediante un origen `PATH`, debe usar el nombre completo de la ruta de acceso. Por ejemplo, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, pero *./GarciaSoftware.ConsoleTemplate.CSharp* desde la carpeta contenedora no lo hará. Además, no debe incluir una barra diagonal para finalizar el directorio en la ruta de acceso a la plantilla.
+> 
+> Si no puede determinar el argumento `PATH` o `NUGET_ID` necesario para desinstalar una plantilla, la ejecución de `dotnet new --uninstall` sin un argumento enumerará todas las plantillas instaladas y el argumento requerido para desinstalarlas.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

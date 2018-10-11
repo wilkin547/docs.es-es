@@ -1,20 +1,20 @@
 ---
 title: 'Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)'
 description: Obtenga información sobre cómo determinar si un tipo es un tipo que acepta valores NULL o una instancia es de un tipo que acepta valores NULL.
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45624954"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47400548"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)
 
-En el ejemplo siguiente se muestra cómo determinar si una instancia de <xref:System.Type?displayProperty=nameWithType> representa un tipo que acepta valores NULL:
+El ejemplo siguiente muestra cómo determinar si una instancia <xref:System.Type?displayProperty=nameWithType> representa un tipo genérico cerrado que acepta valores NULL, es decir, el tipo <xref:System.Nullable%601?displayProperty=nameWithType> con un parámetro de tipo especificado `T`:
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 

@@ -4,12 +4,12 @@ description: Información sobre el uso del SDK de .NET Core y sus herramientas e
 author: guardrex
 ms.author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 0835ffafc6c091c311b03c90f665cbd669cccfe9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 207a6740f2a483d532c194b2bf8112898e9c3463
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43749939"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47233250"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso de .NET Core SDK y herramientas de integración continua (CI)
 
@@ -34,11 +34,13 @@ El uso del script del instalador permite la instalación sin derechos administra
 El script del instalador se puede automatizar para que se ejecute al principio de la compilación, a fin de obtener e instalar la versión deseada del SDK. La *versión deseada* se corresponde con cualquier versión del SKD que los proyectos necesitan para la compilación. El script permite instalar el SDK en un directorio local del servidor, ejecutar las herramientas desde la ubicación de instalación y limpiar después de la compilación, o bien dejar que el servicio de CI realice dicha limpieza. Esto permite encapsular y aislar todo el proceso de compilación. La referencia del script de instalación se encuentra en el tema [dotnet-install](dotnet-install-script.md).
 
 > [!NOTE]
+> **Azure DevOps Services**
+>
 > Cuando se utiliza el script del instalador, las dependencias nativas no se instalan automáticamente. Debe instalarlas en caso de el sistema operativo no las incluya. Vea la lista de requisitos previos en el tema [.NET Core native prerequisites](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) (Requisitos previos nativos de .NET Core).
 
 ## <a name="ci-setup-examples"></a>Ejemplos de configuración de CI
 
-En esta sección se explica un procedimiento de instalación manual con un script de PowerShell o de Bash, además de incluir una descripción de varias soluciones de CI de software como servicio (SaaS). Las soluciones de CI de SaaS tratadas son [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [compilación de Visual Studio Team Services](https://docs.microsoft.com/vsts/build-release/index).
+En esta sección se explica un procedimiento de instalación manual con un script de PowerShell o de Bash, además de incluir una descripción de varias soluciones de CI de software como servicio (SaaS). Las soluciones de CI de SaaS tratadas son [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [ Build](https://docs.microsoft.com/azure/devops/build-release/index).
 
 ### <a name="manual-setup"></a>Instalación manual
 
@@ -142,16 +144,16 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### <a name="visual-studio-team-services-vsts"></a>Visual Studio Team Services (VSTS)
+### <a name="azure-devops-services"></a>Azure DevOps Services
 
-Configure Visual Studio Team Services (VSTS) para compilar proyectos de .NET Core con alguno de estos enfoques:
+Configure Azure DevOps Services para compilar proyectos de .NET Core con alguno de estos enfoques:
 
 1. Ejecute el script del [paso de instalación manual](#manual-setup) con sus comandos.
-1. Cree una compilación compuesta de varias tareas de compilación integradas en VSTS que están configuradas para usar herramientas de .NET Core.
+1. Cree una compilación compuesta de varias tareas de compilación integradas en Azure DevOps Services que están configuradas para usar herramientas de .NET Core.
 
-Ambas soluciones son válidas. Con la utilización de un script de instalación manual, puede controlar la versión de las herramientas que recibe, ya que las descarga como parte de la compilación. La compilación se ejecuta desde un script que debe crear. En este tema solo se trata la opción manual. Para obtener más información sobre la composición de una compilación con tareas de compilación de VSTS, consulte el tema [Continuous integration and deployment](https://docs.microsoft.com/vsts/build-release/index) (Implementación e integración continuas) de VSTS.
+Ambas soluciones son válidas. Con la utilización de un script de instalación manual, puede controlar la versión de las herramientas que recibe, ya que las descarga como parte de la compilación. La compilación se ejecuta desde un script que debe crear. En este tema solo se trata la opción manual. Para obtener más información sobre la composición de una compilación con tareas de compilación de Azure DevOps Services, consulte el tema de [implementación e integración continuas](https://docs.microsoft.com/azure/devops/build-release/index) de Azure DevOps Services.
 
-Para usar un script de instalación manual en VSTS, cree una definición de compilación y especifique el script que va a ejecutar para el paso de compilación. Esto se realiza en la interfaz de usuario de VSTS:
+Para usar un script de instalación manual en Azure DevOps Services, cree una definición de compilación y especifique el script que va a ejecutar para el paso de compilación. Esto se realiza en la interfaz de usuario de Azure DevOps Services:
 
 1. Empiece por crear una definición de compilación. Cuando llegue a la pantalla en la que se ofrece la opción de definir el tipo de compilación que desea crear, seleccione la opción **Vacío**.
 
@@ -171,7 +173,7 @@ Para usar un script de instalación manual en VSTS, cree una definición de comp
 
 ## <a name="orchestrating-the-build"></a>Orquestación de la compilación
 
-En la mayor parte de este documento se describe cómo adquirir las herramientas de .NET Core y configurar varios servicios de CI sin ofrecer información sobre cómo orquestar o *compilar realmente* el código con .NET Core. Las opciones para estructurar el proceso de compilación dependen de muchos factores que no se pueden tratar aquí en términos generales. Explore los recursos y ejemplos proporcionados en las series de documentos de [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [VSTS](https://docs.microsoft.com/vsts/build-release/index) para obtener más información sobre cómo orquestar las compilaciones con cada tecnología.
+En la mayor parte de este documento se describe cómo adquirir las herramientas de .NET Core y configurar varios servicios de CI sin ofrecer información sobre cómo orquestar o *compilar realmente* el código con .NET Core. Las opciones para estructurar el proceso de compilación dependen de muchos factores que no se pueden tratar aquí en términos generales. Explore los recursos y ejemplos proporcionados en las series de documentos de [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/index) para obtener más información sobre cómo orquestar las compilaciones con cada tecnología.
 
 Dos enfoques generales que se aplican para estructurar el proceso de compilación del código de .NET Core con herramientas de .NET Core consisten en utilizar directamente MSBuild o en usar los comandos de la línea de comandos de .NET Core. El enfoque que debe adoptar depende de lo cómo que se sienta con cada uno de ellos y de los inconvenientes que presente su complejidad. MSBuild ofrece la posibilidad de expresar el proceso de compilación como tareas y objetivos, pero presenta la complejidad añadida de tener que aprender la sintaxis del archivo de proyecto de MSBuild. Quizá sea más sencillo usar las herramientas de línea de comandos de .NET Core, pero, en este caso, es necesario escribir la lógica de orquestación en un lenguaje de scripting como `bash` o PowerShell.
 

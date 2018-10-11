@@ -3,14 +3,14 @@ title: Introducción a .NET Core con la CLI
 description: Un tutorial paso a paso que muestra cómo empezar a trabajar con .NET Core en Windows, Linux o macOS con la interfaz de la línea de comandos (CLI) de .NET Core.
 author: cartermp
 ms.author: mairaw
-ms.date: 03/08/2017
+ms.date: 09/10/2018
 ms.technology: dotnet-cli
-ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b31a0324c0d762e9898c681cc6581b3860d41f89
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200322"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47203766"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introducción a .NET Core en Windows/Linux/macOS con la línea de comandos
 
@@ -20,7 +20,7 @@ Si no está familiarizado con el conjunto de herramientas de la CLI de .NET Core
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [SDK 1.0 de .NET Core](https://www.microsoft.com/net/download/core).
+- [SDK de .NET Core 2.1](https://www.microsoft.com/net/download/core).
 - Un editor de texto o un editor de código de su elección.
 
 ## <a name="hello-console-app"></a>Hola, aplicación de consola
@@ -31,7 +31,6 @@ Abra un símbolo del sistema y cree una carpeta denominada *Hello*. Vaya a la ca
 
 ```console
 $ dotnet new console
-$ dotnet restore
 $ dotnet run
 ```
 
@@ -60,13 +59,12 @@ Veamos un tutorial rápido:
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-2. `$ dotnet restore`
+   `dotnet new` llama a [`dotnet restore`](../tools/dotnet-restore.md) de forma implícita. `dotnet restore` llama a [NuGet](https://www.nuget.org/) (el administrador de paquetes de .NET) para restaurar el árbol de dependencias. NuGet analiza el archivo *Hello.csproj*, descarga las dependencias descritas en el archivo (o las toma de la memoria caché del equipo) y escribe el archivo *obj/project.assets.json*, que es necesario para compilar y ejecutar el ejemplo. 
+   
+   > [!IMPORTANT]
+   > Si usa una versión .NET Core 1.x del SDK, tendrá que llamar a `dotnet restore` usted mismo después de llamar a `dotnet new`.
 
-   [`dotnet restore`](../tools/dotnet-restore.md) llama a [NuGet](https://www.nuget.org/) (el administrador de paquetes de .NET) para restaurar el árbol de dependencias. NuGet analiza el archivo *Hello.csproj*, descarga las dependencias descritas en el archivo (o las toma de la memoria caché del equipo) y escribe el archivo *obj/project.assets.json*.  El archivo *project.assets.json* es necesario para realizar la compilación y ejecución.
-
-   El archivo *project.assets.json* es un conjunto completo y persistente del gráfico de dependencias de NuGet y cualquier otra información que describa una aplicación.  Este archivo se lee por otras herramientas, como [`dotnet build`](../tools/dotnet-build.md) y [`dotnet run`](../tools/dotnet-run.md), que les permite procesar el código fuente con un conjunto correcto de las dependencias de NuGet y resoluciones de enlace.
-
-3. `$ dotnet run`
+2. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) llama a [`dotnet build`](../tools/dotnet-build.md) para asegurarse de que los destinos de la compilación se han creado y, después, llama a `dotnet <assembly.dll>` para ejecutar la aplicación de destino.
 
@@ -75,10 +73,9 @@ Veamos un tutorial rápido:
     Hello World!
     ```
 
-    También puede ejecutar [`dotnet build`](../tools/dotnet-build.md) para compilar el código sin ejecutar las aplicaciones de consola de compilación. El resultado es una aplicación compilada como un archivo DLL que se puede ejecutar con `dotnet bin\Debug\netcoreapp1.0\Hello.dll` en Windows (use `/` para otros sistemas que no sean de Windows). También puede especificar argumentos para la aplicación como verá posteriormente en el tema.
-
+    También puede ejecutar [`dotnet build`](../tools/dotnet-build.md) para compilar el código sin ejecutar las aplicaciones de consola de compilación. El resultado es una aplicación compilada como un archivo DLL que se puede ejecutar con `dotnet bin\Debug\netcoreapp2.1\Hello.dll` en Windows (use `/` para otros sistemas que no sean de Windows). También puede especificar argumentos para la aplicación como verá posteriormente en el tema.
     ```console
-    $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
+    $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!
     ```
 

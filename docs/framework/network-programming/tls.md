@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798917"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424485"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -179,7 +179,10 @@ Para obtener más información sobre protocolos TLS, consulte [Mitigación: prot
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Configuración de seguridad mediante el Registro de Windows
 
-Si la configuración de uno o los dos conmutadores de `AppContext` no es una opción, puede controlar los protocolos de seguridad que usa su aplicación con las claves de Registro de Windows que se describen en esta sección. Quizá no pueda utilizar uno de los conmutadores de `AppContext`, o los dos, si la aplicación tiene como destino una versión de .NET Framework anterior a 4.6 o no puede editar el archivo de configuración. Si desea configurar la seguridad con el Registro, no especifique un valor de protocolo de seguridad en el código; de hacerlo, se reemplazaría el Registro.
+> [!WARNING]
+> La configuración de las claves del Registro afecta a todas las aplicaciones del sistema. Use esta opción solo si tiene el control total de la máquina y puede controlar los cambios realizados en el registro.
+
+Si la configuración de uno o los dos conmutadores de `AppContext` no es una opción, puede controlar los protocolos de seguridad que usa su aplicación con las claves del Registro de Windows que se describen en esta sección. Quizá no pueda utilizar uno de los conmutadores de `AppContext`, o los dos, si la aplicación se ejecuta en .NET Framework 4.5.2 o en versiones anteriores, o no puede editar el archivo de configuración. Si desea configurar la seguridad con el Registro, no especifique un valor de protocolo de seguridad en el código; de hacerlo, se reemplazará la configuración del Registro.
 
 Los nombres de las claves del Registro son similares a los nombres de los conmutadores de `AppContext` correspondientes, pero sin `DontEnable` antepuesto al nombre. Por ejemplo, el conmutador de `AppContext` `DontEnableSchUseStrongCrypto` es la clave del Registro llamada [SchUseStrongCrypto](#schusestrongcrypto).
 

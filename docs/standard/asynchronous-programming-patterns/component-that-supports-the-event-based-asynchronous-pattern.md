@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003820"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos
 Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- En este tutorial se explica cómo crear un componente que implementa el modelo asincrónico basado en eventos. Se implementa utilizando las clases auxiliares del espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>, que garantiza que el componente funciona correctamente bajo cualquier modelo de aplicación, incluidos [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], las aplicaciones de consola y aplicaciones Windows Forms. Este componente también se puede diseñar con un control <xref:System.Windows.Forms.PropertyGrid> y sus propios diseñadores personalizados.  
+ En este tutorial se explica cómo crear un componente que implementa el modelo asincrónico basado en eventos. Se implementa utilizando las clases del asistente del espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>, que garantiza que el componente funciona correctamente bajo cualquier modelo de aplicación, incluidos [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], las aplicaciones de consola y aplicaciones Windows Forms. Este componente también se puede diseñar con un control <xref:System.Windows.Forms.PropertyGrid> y sus propios diseñadores personalizados.  
   
  Cuando haya terminado, tendrá una aplicación que calcula de forma asincrónica los números de primos. La aplicación tendrá un subproceso de interfaz de usuario principal y un subproceso para cada cálculo de números primos. Aunque comproar si un número elevado es primo puede llevar un tiempo considerable, el subproceso de interfaz de usuario principal no se interrumpirá por este retraso, y el formulario seguirá respondiendo durante el cálculo. Podrá ejecutar tantos cálculos como cálculos simultáneos de cancelación desee de forma simultánea y selectiva.  
   
@@ -58,7 +58,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
 -   Cree una clase llamada `PrimeNumberCalculator` y heredada de <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definir delegados y eventos asincrónicos públicos  
- El componente se comunica con los clientes mediante eventos. El evento *MethodName***Completed** informa a los clientes de la finalización de una tarea asincrónica, y el evento *MethodName***ProgressChanged** informa a los clientes del progreso de una tarea asincrónica.  
+ El componente se comunica con los clientes mediante eventos. El evento _MethodName_**Completed** informa a los clientes de la finalización de una tarea asincrónica, y el evento _MethodName_**ProgressChanged** informa a los clientes del progreso de una tarea asincrónica.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Para definir eventos asincrónicos para los clientes de su componente:  
   
@@ -217,7 +217,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      Todo lo que queda por escribir son los métodos para iniciar y cancelar operaciones asincrónicas, `CalculatePrimeAsync` y `CancelAsync`.  
   
 ## <a name="implementing-the-start-and-cancel-methods"></a>Implementación de los métodos de inicio y cancelación  
- Inicie el método de trabajo en su propio subproceso llamando a `BeginInvoke` en el delegado que lo contiene. Para administrar la duración de una operación asincrónica determinada, llame al método <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> en la clase auxiliar <xref:System.ComponentModel.AsyncOperationManager>. Devuelve <xref:System.ComponentModel.AsyncOperation>, que serializa las llamadas a los controladores de eventos del cliente para el subproceso o contexto apropiados.  
+ Inicie el método de trabajo en su propio subproceso llamando a `BeginInvoke` en el delegado que lo contiene. Para administrar la duración de una operación asincrónica determinada, llame al método <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> en la clase del asistente <xref:System.ComponentModel.AsyncOperationManager>. Devuelve <xref:System.ComponentModel.AsyncOperation>, que serializa las llamadas a los controladores de eventos del cliente para el subproceso o contexto apropiados.  
   
  Puede cancelar una operación pendiente concreta si llama a <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> en su clase <xref:System.ComponentModel.AsyncOperation> correspondiente. Esto finaliza esa operación y todas las llamadas posteriores a <xref:System.ComponentModel.AsyncOperation> generarán una excepción.  
   

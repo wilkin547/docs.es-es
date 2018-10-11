@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754734"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937610"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml 
 
@@ -126,7 +126,7 @@ Este servicio de contenedor tiene la siguiente configuración básica:
 
 -   El nombre de SQL Server es sql.data, que es el mismo nombre que se usa para el contenedor que ejecuta la instancia de SQL Server para Linux. Esto resulta práctico: poder usar esta resolución de nombres (interna al host de Docker) resolverá la dirección de red, por lo que no necesita saber la dirección IP interna de los contenedores a los que tiene acceso desde otros contenedores.
 
-Dado que la cadena de conexión se define mediante una variable de entorno, podría establecer esa variable mediante otro mecanismo y en otro momento. Por ejemplo, podría establecer una cadena de conexión diferente al efectuar una implementación en producción en los hosts finales, o haciéndolo desde sus canalizaciones de CI/CD en VSTS o en su sistema de DevOps preferido.
+Dado que la cadena de conexión se define mediante una variable de entorno, podría establecer esa variable mediante otro mecanismo y en otro momento. Por ejemplo, podría establecer una cadena de conexión diferente al efectuar una implementación en producción en los hosts finales, o haciéndolo desde sus canalizaciones de CI/CD en Azure DevOps Services o en su sistema de DevOps preferido.
 
 -   Expone el puerto 80 para el acceso interno al servicio catalog.api dentro del host de Docker. Actualmente, el host es una máquina virtual de Linux porque se basa en una imagen de Docker para Linux, aunque podría configurar el contenedor para que se ejecute en una imagen de Windows.
 
@@ -180,7 +180,7 @@ Al fijar como objetivo entornos diferentes, debe usar varios archivos compose. A
 
 Podría usar un archivo docker-compose.yml como en los ejemplos simplificados que se muestran en las secciones anteriores, pero no se recomienda para la mayoría de las aplicaciones.
 
-De forma predeterminada, Compose lee dos archivos, un archivo docker-compose.yml y un archivo docker-compose.override.yml opcional. Como se muestra en la figura 8-11, al usar Visual Studio y habilitar la compatibilidad de Docker, Visual Studio también crea otro archivo docker-compose.ci.build.yml para que lo use desde sus canalizaciones de CI/CD, como en VSTS.
+De forma predeterminada, Compose lee dos archivos, un archivo docker-compose.yml y un archivo docker-compose.override.yml opcional. Como se muestra en la figura 8-11, al usar Visual Studio y habilitar la compatibilidad de Docker, Visual Studio también crea otro archivo docker-compose.ci.build.yml para que lo use desde sus canalizaciones de CI/CD, como en Azure DevOps Services.
 
 ![](./media/image12.png)
 

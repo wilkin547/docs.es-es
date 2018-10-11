@@ -13,26 +13,35 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3650de934cb3d2940d0e8e971d03aff856bddfd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4142c3f12cc5a0e2277cc8dba28a281d5cf0ba55
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515484"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198220"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Cómo: Consultar el contenido de la memoria caché global de ensamblados
-Use la [herramienta Caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para ver el contenido de la caché global de ensamblados.  
-  
-### <a name="to-view-a-list-of-the-assemblies-in-the-global-assembly-cache"></a>Para ver una lista de los ensamblados de la caché global de ensamblados  
-  
-1.  En el [símbolo del sistema de Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), escriba el comando siguiente:  
-  
-     **gacutil -l**   
-     O bien  
-    **gacutil /l**  
-  
- En versiones anteriores de .NET Framework, la extensión [Shfusion.dll](https://msdn.microsoft.com/library/0d9464cf-ddba-4ca9-bbec-f678fb58f380) del shell de Windows permitía ver la caché global de ensamblados en el Explorador de archivos. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll está obsoleto.  
-  
-## <a name="see-also"></a>Vea también  
- [Trabajar con ensamblados y la memoria caché global de ensamblados](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Consultar el contenido de la memoria caché global de ensamblados
+
+Use la [herramienta de caché global de ensamblados (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) para ver el contenido de la caché global de ensamblados.
+
+## <a name="view-the-assemblies-in-the-gac"></a>Ver los ensamblados en la caché global de ensamblados
+
+Para ver una lista de los ensamblados en la caché global de ensamblados, abra el [Símbolo del sistema para desarrolladores de Visual Studio](../tools/developer-command-prompt-for-vs.md) y, a continuación, escriba el siguiente comando:
+
+```shell
+gacutil -l
+```
+
+O bien
+
+```shell
+gacutil /l
+```
+
+> [!NOTE]
+> En versiones anteriores de .NET Framework, la extensión [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) del shell de Windows permitía ver la caché global de ensamblados en el Explorador de archivos. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll está obsoleto.
+
+## <a name="see-also"></a>Vea también
+
+- [Trabajar con ensamblados y la memoria caché global de ensamblados](working-with-assemblies-and-the-gac.md)
+- [Gacutil.exe (Herramienta Caché global de ensamblados)](../tools/gacutil-exe-gac-tool.md)

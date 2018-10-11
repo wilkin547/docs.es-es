@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Utilizar SpinLock para la sincronización de bajo nivel'
+title: Utilizar SpinLock para la sincronización de bajo nivel
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,16 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ff604b94ecef1ffec5fe9845df7c5ba35f5857d7
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593861"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46000273"
 ---
-# <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Cómo: Utilizar SpinLock para la sincronización de bajo nivel
-En el siguiente ejemplo se muestra cómo usar <xref:System.Threading.SpinLock>.  
-  
-## <a name="example"></a>Ejemplo  
- En este ejemplo, la sección crítica realiza una cantidad de trabajo mínima, lo que la convierte en una buena candidata para un elemento <xref:System.Threading.SpinLock>. Al aumentar ligeramente el trabajo, aumenta el rendimiento del elemento <xref:System.Threading.SpinLock> en comparación con un bloqueo estándar. Sin embargo, existe un punto en el que un elemento SpinLock es más caro que un bloqueo estándar. Puede usar la funcionalidad de generación de perfiles de simultaneidad de las herramientas de generación de perfiles para ver qué tipo de bloqueo proporciona mejor rendimiento en su programa. Para más información, consulte [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer).  
+# <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Utilizar SpinLock para la sincronización de bajo nivel
+
+En el siguiente ejemplo se muestra cómo usar <xref:System.Threading.SpinLock>. En este ejemplo, la sección crítica realiza una cantidad de trabajo mínima, lo que la convierte en una buena candidata para un elemento <xref:System.Threading.SpinLock>. Al aumentar ligeramente el trabajo, aumenta el rendimiento del elemento <xref:System.Threading.SpinLock> en comparación con un bloqueo estándar. Sin embargo, existe un punto en el que un elemento SpinLock es más caro que un bloqueo estándar. Puede usar la funcionalidad de generación de perfiles de simultaneidad de las herramientas de generación de perfiles para ver qué tipo de bloqueo proporciona mejor rendimiento en su programa. Para más información, consulte [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer).  
   
  [!code-csharp[CDS_SpinLock#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#02)]
  [!code-vb[CDS_SpinLock#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_vb.vb#02)]  
@@ -30,8 +28,10 @@ En el siguiente ejemplo se muestra cómo usar <xref:System.Threading.SpinLock>.
   
  En este ejemplo se usa la clase <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, que requiere la sincronización del usuario para el acceso multiproceso. En las aplicaciones que tienen como destino .NET Framework 4, otra opción es usar <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>, que no requiere ningún bloqueo de usuario.  
   
- Tenga en cuenta el uso de `false` (`False` en Visual Basic) en la llamada a <xref:System.Threading.SpinLock.Exit%2A>. Esto proporciona el mejor rendimiento. Especifique `true` (`True`) en las arquitecturas IA64 para usar la barrera de memoria, que vacía los búferes de escritura para garantizar que ahora el bloqueo esté disponible para que salgan otros subprocesos.  
+ Tenga en cuenta el uso de `false` (`False` en Visual Basic) en la llamada a <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>. Esto proporciona el mejor rendimiento. Especifique `true` (`True` en Visual Basic) en las arquitecturas IA64 para usar la barrera de memoria, que vacía los búferes de escritura para garantizar que ahora el bloqueo esté disponible para que salgan otros subprocesos.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)
+- [Objetos y características de subprocesos](threading-objects-and-features.md)
+- [lock (Instrucción, C#)](../../csharp/language-reference/keywords/lock-statement.md)
+- [SyncLock (Instrucción, Visual Basic)](../../visual-basic/language-reference/statements/synclock-statement.md)

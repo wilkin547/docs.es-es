@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592594"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171379"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programación asincrónica basada en tareas
 La biblioteca TPL se basa en el concepto de *tarea*, que representa una operación asincrónica. De cierta forma, una tarea recuerda a un subproceso o elemento de trabajo <xref:System.Threading.ThreadPool>, pero en un nivel más alto de abstracción. El término *paralelismo de tareas* hace referencia a la ejecución simultánea de una o varias tareas independientes. Las tareas proporcionan dos ventajas fundamentales:  
@@ -59,10 +59,10 @@ La biblioteca TPL se basa en el concepto de *tarea*, que representa una operaci�
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- También se puede usar el método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> para crear e iniciar una tarea en una sola operación. Utilice este método cuando la creación y la programación no tengan que ser independientes y necesite opciones de creación de tareas adicionales o el uso de un programador concreto, o cuando necesita pasar información de estado adicional en la tarea mediante su propiedad <xref:System.Threading.Tasks.Task.AsyncState%2A>, como se muestra en el ejemplo siguiente.  
+ También se puede usar el método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> para crear e iniciar una tarea en una sola operación. Utilice este método cuando la creación y la programación no tengan que ser independientes y necesite opciones de creación de tareas adicionales o el uso de un programador concreto, o cuando necesita pasar información de estado adicional en la tarea que se puede recuperar mediante su propiedad <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>, como se muestra en el ejemplo siguiente.  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> exponen en cada caso una propiedad <xref:System.Threading.Tasks.Task.Factory%2A> estática que devuelve una instancia predeterminada de <xref:System.Threading.Tasks.TaskFactory>, por lo que se puede llamar al método como `Task.Factory.StartNew()`. Asimismo, en el siguiente ejemplo, dado que las tareas son de tipo <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, cada una tiene una propiedad <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> pública que contiene el resultado del cálculo. Las tareas se ejecutan de forma asincrónica y pueden completarse en cualquier orden. Si se obtiene acceso a la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> antes de que el cálculo se complete, la propiedad bloqueará el subproceso hasta que el valor esté disponible.  
   
@@ -92,7 +92,7 @@ La biblioteca TPL se basa en el concepto de *tarea*, que representa una operaci�
 ## <a name="task-creation-options"></a>Opciones de creación de tareas  
  La mayoría de las API que crean tareas proporcionan sobrecargas que aceptan un parámetro <xref:System.Threading.Tasks.TaskCreationOptions>. Al especificar una de estas opciones, se le está indicando al programador cómo se programa la tarea en el grupo de subprocesos. En la tabla siguiente se muestran las diversas opciones de creación de tareas.  
   
-|<xref:System.Threading.Tasks.TaskCreationOptions> valor de parámetro|Description|  
+|<xref:System.Threading.Tasks.TaskCreationOptions> valor de parámetro|Descripción|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Es la opción predeterminada si no se especifica ninguna opción. El programador usa su heurística predeterminada para programar la tarea.|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Especifica que la tarea debe programarse de modo que las tareas creadas anteriormente tengan más posibilidades de ejecutarse antes y que las tareas posteriormente tengan más posibilidades de ejecutarse después.|  
@@ -237,10 +237,10 @@ La biblioteca TPL se basa en el concepto de *tarea*, que representa una operaci�
  Al objeto <xref:System.Threading.Tasks.TaskFactory> predeterminado se puede tener acceso como propiedad estática de la clase <xref:System.Threading.Tasks.Task> o de la clase <xref:System.Threading.Tasks.Task%601>. También pueden crearse directamente instancias de <xref:System.Threading.Tasks.TaskFactory> y especificar varias opciones entre las que se incluyan las opciones <xref:System.Threading.CancellationToken>, <xref:System.Threading.Tasks.TaskCreationOptions>, <xref:System.Threading.Tasks.TaskContinuationOptions> o <xref:System.Threading.Tasks.TaskScheduler>. Cualquier opción que se especifique al crear el generador de tareas se aplicará a todas las tareas que este generador cree, a menos que <xref:System.Threading.Tasks.Task> se cree usando la enumeración <xref:System.Threading.Tasks.TaskCreationOptions>, en cuyo caso las opciones de la tarea reemplazarán a las del generador de tareas.  
   
 ## <a name="tasks-without-delegates"></a>Tareas sin delegados  
- En algunos casos, es posible que desee usar un objeto <xref:System.Threading.Tasks.Task> para encapsular alguna operación asincrónica ejecutada por un componente externo en lugar de su propio usuario delegado. Si la operación se basa en el patrón Begin/End del modelo de programación asincrónica, puede usar los métodos <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. Si no es este el caso, puede usar el objeto <xref:System.Threading.Tasks.TaskCompletionSource%601> para encapsular la operación en una tarea y, de este modo, aprovechar algunas de las ventajas de programación de <xref:System.Threading.Tasks.Task>, como por ejemplo, su compatibilidad con la propagación de excepciones y el uso de continuaciones. Para obtener más información, consulta <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+ En algunos casos, es posible que desee usar un objeto <xref:System.Threading.Tasks.Task> para encapsular alguna operación asincrónica ejecutada por un componente externo en lugar de su propio usuario delegado. Si la operación se basa en el patrón Begin/End del modelo de programación asincrónica, puede usar los métodos <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. Si no es este el caso, puede usar el objeto <xref:System.Threading.Tasks.TaskCompletionSource%601> para encapsular la operación en una tarea y, de este modo, aprovechar algunas de las ventajas de programación de <xref:System.Threading.Tasks.Task>, como por ejemplo, su compatibilidad con la propagación de excepciones y el uso de continuaciones. Para obtener más información, vea <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
   
 ## <a name="custom-schedulers"></a>Programadores personalizados  
- La mayoría de los desarrolladores de aplicaciones o bibliotecas no prestan atención al procesador en el que se ejecuta la tarea, al modo en que la tarea sincroniza su trabajo con otras tareas o al modo en que se programa la tarea en el objeto <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Solo necesitan que la ejecución en el equipo host sea lo más eficaz posible. Si necesita tener un control más minucioso sobre los detalles de programación, la biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) permite configurar algunos valores del programador de tareas predeterminado e incluso permite proporcionar un programador personalizado. Para obtener más información, consulta <xref:System.Threading.Tasks.TaskScheduler>.  
+ La mayoría de los desarrolladores de aplicaciones o bibliotecas no prestan atención al procesador en el que se ejecuta la tarea, al modo en que la tarea sincroniza su trabajo con otras tareas o al modo en que se programa la tarea en el objeto <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Solo necesitan que la ejecución en el equipo host sea lo más eficaz posible. Si necesita tener un control más minucioso sobre los detalles de programación, la biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) permite configurar algunos valores del programador de tareas predeterminado e incluso permite proporcionar un programador personalizado. Para obtener más información, vea <xref:System.Threading.Tasks.TaskScheduler>.  
   
 ## <a name="related-data-structures"></a>Estructuras de datos relacionados  
  TPL tiene varios tipos públicos nuevos que resultan útiles tanto en escenarios en paralelo como en escenarios secuenciales. Entre ellos, se incluyen diversas clases de colecciones multiproceso rápidas y escalables del espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y varios tipos nuevos de sincronización, como <xref:System.Threading.Semaphore?displayProperty=nameWithType> y <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, que resultan más eficaces que sus predecesores en tipos concretos de cargas de trabajo. Otros tipos nuevos de .NET Framework versión 4, como <xref:System.Threading.Barrier?displayProperty=nameWithType> y <xref:System.Threading.SpinLock?displayProperty=nameWithType>, proporcionan una funcionalidad que no estaba disponible en versiones anteriores. Para más información, consulte [Data Structures for Parallel Programming](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) (Estructuras de datos para la programación en paralelo).  
@@ -252,7 +252,7 @@ La biblioteca TPL se basa en el concepto de *tarea*, que representa una operaci�
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-|-|  
 |[Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md) (Encadenar tareas mediante tareas de continuación)|Describe el funcionamiento de las continuaciones.|  
 |[Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas)|Describe la diferencia entre las tareas secundarias asociadas y desasociadas.|  
@@ -267,6 +267,7 @@ La biblioteca TPL se basa en el concepto de *tarea*, que representa una operaci�
 |[Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)|Describe cómo usar <xref:System.Threading.Tasks.Parallel.For%2A> y <xref:System.Threading.Tasks.Parallel.ForEach%2A> para crear bucles paralelos sobre los datos.|  
 |[Programación en paralelo](../../../docs/standard/parallel-programming/index.md)|Nodo de nivel superior de la programación en paralelo de .NET Framework.|  
   
-## <a name="see-also"></a>Vea también  
- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
- [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364) (Ejemplos de programación en paralelo con .NET Framework)
+## <a name="see-also"></a>Vea también
+
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
+- [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364) (Ejemplos de programación en paralelo con .NET Framework)

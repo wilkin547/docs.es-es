@@ -1,24 +1,28 @@
 ---
 title: Programación en paralelo en .NET
-ms.date: 03/30/2017
+ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802308"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112729"
 ---
 # <a name="parallel-programming-in-net"></a>Programación en paralelo en .NET
 
-Muchos equipos y estaciones de trabajo tienen varios núcleos de CPU que permiten ejecutar varios subprocesos simultáneamente. Se espera que los equipos en un futuro cercano tengan significativamente más núcleos. Para aprovecharse del hardware de hoy y del mañana, puede paralelizar el código para distribuir el trabajo entre varios procesadores. En el pasado, la paralelización requería manipulación de bajo nivel de los subprocesos y bloqueos. Visual Studio 2010 y .NET Framework 4 mejoran la compatibilidad para la programación paralela proporcionando un nuevo tiempo de ejecución, nuevos tipos de biblioteca de clases y nuevas herramientas de diagnóstico. Estas características simplifican el desarrollo en paralelo, de modo que pueda escribir código paralelo eficaz, específico y escalable de forma natural sin tener que trabajar directamente con subprocesos ni el bloque de subprocesos. La siguiente ilustración proporciona una información general de alto nivel de la arquitectura de programación paralela en .NET Framework 4.
+Muchos equipos y estaciones de trabajo personales tienen varios núcleos de CPU que permiten ejecutar múltiples subprocesos simultáneamente. Para aprovecharse del hardware, puede paralelizar el código para distribuir el trabajo entre varios procesadores.
 
- ![Arquitectura de programación en paralelo de .NET](./media/tpl-architecture.png "TPL_Architecture")
+En el pasado, la paralelización requería manipulación de bajo nivel de los subprocesos y bloqueos. Visual Studio y .NET Framework mejoran la compatibilidad para la programación paralela proporcionando un tiempo de ejecución, tipos de biblioteca de clases y herramientas de diagnóstico. Estas características, que se presentaron con .NET Framework 4, simplifican el desarrollo en paralelo. Puede escribir código paralelo eficaz, específico y escalable de forma natural sin tener que trabajar directamente con subprocesos ni el bloque de subprocesos.
+
+La siguiente ilustración proporciona una información general de alto nivel de la arquitectura de programación paralela en .NET Framework:
+
+![Arquitectura de programación en paralelo de .NET](./media/tpl-architecture.png)
 
 ## <a name="related-topics"></a>Temas relacionados
 

@@ -1,6 +1,6 @@
 ---
 title: Procedimientos recomendados para el uso de cadenas en .NET
-ms.date: 08/22/2018
+ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000156"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080343"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
 <a name="top"></a> .NET proporciona una gran compatibilidad para desarrollar aplicaciones localizadas y globalizadas, y simplifica la aplicación de las convenciones de la referencia cultural actual o de una referencia cultural concreta al realizar operaciones comunes como ordenar y mostrar cadenas. Pero ordenar o comparar cadenas no es siempre una operación dependiente de la referencia cultural. Por ejemplo, las cadenas usadas internamente por una aplicación normalmente se deben administrar de forma idéntica en todas las referencias culturales. Cuando los datos de cadenas independientes de la referencia cultural (como etiquetas XML, etiquetas HTML, nombres de usuario, rutas de acceso de archivos y nombres de objetos del sistema) se interpretan como si fueran dependientes de la referencia cultural, el código de aplicación puede estar sujeto a errores imperceptibles, un rendimiento inadecuado y, en algunos casos, a problemas de seguridad.  
@@ -123,10 +123,12 @@ ms.locfileid: "43000156"
  La comparación de cadenas es el corazón de muchas operaciones relacionadas con cadenas, especialmente la ordenación y la comprobación de igualdad. Las cadenas se ordenan en un orden determinado: si "mi" aparece antes que "cadena" en una lista ordenada de cadenas, "mi" debe compararse como menor o igual que "cadena". Además, la comparación define la igualdad implícitamente. La operación de comparación devuelve cero para las cadenas que considera iguales. Una buena interpretación es que ninguna cadena es menor que otra. La mayoría de las operaciones significativas que implican cadenas incluyen uno o ambos de estos procedimientos: comparar con otra cadena y ejecutar una operación de ordenación bien definida.  
 
 > [!NOTE]
-> Puede descargar las [tablas de pesos de ordenación](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un conjunto de archivos de texto que contienen información sobre los pesos de caracteres que se usan en las operaciones de ordenación y comparación para los sistemas operativos Windows.
+> Puede descargar las [tablas de pesos de ordenación](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un conjunto de archivos de texto que contienen información sobre los pesos de caracteres que se usan en las operaciones de ordenación y comparación para los sistemas operativos Windows, además de la [tabla de elementos de intercalación Unicode predeterminada](https://www.unicode.org/Public/UCA/latest/allkeys.txt), que es la última versión de la tabla de pesos de ordenación para Linux y macOS. La versión específica de la tabla de pesos de ordenación en Linux y macOS depende de la versión de las bibliotecas de [componentes internacionales de Unicode](http://site.icu-project.org/) instaladas en el sistema. Para más información sobre las versiones de los componentes internacionales de Unicode y las versiones de Unicode que implementan, vea la información sobre la [descarga de componentes internacionales de Unicode](http://site.icu-project.org/download).
 
  Sin embargo, la evaluación de dos cadenas para comprobar su igualdad o su criterio de ordenación no produce ningún resultado correcto único; el resultado depende de los criterios empleados para comparar las cadenas. En especial, las comparaciones de cadenas que son ordinales o que se basan en las convenciones de ordenación y uso de mayúsculas y minúsculas de la referencia cultural actual o de la referencia cultural de todos los idiomas (una referencia cultural válida para la configuración regional basada en el idioma inglés) pueden producir resultados diferentes.  
-  
+
+Además, las comparaciones de cadenas mediante las diferentes versiones de .NET o con .NET en distintos sistemas operativos o versiones de sistema operativo pueden devolver resultados diferentes. Para más información, vea [Las cadenas y el estándar Unicode](xref:System.String#Unicode). 
+
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>Comparaciones de cadenas que usan la referencia cultural actual  
  Un criterio implica usar las convenciones de la referencia cultural actual a la hora de comparar cadenas. Las comparaciones que se basan en la referencia cultural actual usan la referencia cultural o la configuración regional actual del subproceso. Si el usuario no establece la referencia cultural, se usa como valor predeterminado la configuración de la ventana **Opciones regionales** del Panel de control. Siempre debe usar comparaciones basadas en la referencia cultural actual cuando los datos sean lingüísticamente pertinentes y cuando refleje una interacción con el usuario dependiente de la referencia cultural.  
@@ -370,5 +372,6 @@ ms.locfileid: "43000156"
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Manipular cadenas](../../../docs/standard/base-types/manipulating-strings.md)
+## <a name="see-also"></a>Vea también
+
+- [Manipular cadenas](../../../docs/standard/base-types/manipulating-strings.md)

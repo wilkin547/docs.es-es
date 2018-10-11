@@ -3,12 +3,12 @@ title: Patrón de eventos estándar de .NET
 description: Obtenga información sobre los patrones de eventos de .NET y cómo crear orígenes de eventos estándar, y suscribir y procesar eventos estándar en su código.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 9bd9f71726647966dd1e4426b260484decb048c6
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827253"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399955"
 ---
 # <a name="standard-net-event-patterns"></a>Patrón de eventos estándar de .NET
 
@@ -49,7 +49,7 @@ Vamos a rellenar la clase FileSearcher para buscar archivos que coincidan con un
 
 [!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
-## <a name="definining-and-raising-field-like-events"></a>Definición y generación de eventos como si fueran campos
+## <a name="defining-and-raising-field-like-events"></a>Definición y generación de eventos como si fueran campos
 
 La manera más sencilla de agregar un evento a la clase es declarar ese evento como un campo público, como en el ejemplo anterior:
 

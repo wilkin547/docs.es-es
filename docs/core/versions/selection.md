@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo .NET Core busca y elige las versio
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204869"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47233210"
 ---
 # <a name="net-core-version-selection"></a>Selección de la versión de .NET Core
 
@@ -31,7 +31,12 @@ En el resto de este documento se examinan los cuatro escenarios.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>El SDK usa la versión instalada más reciente
 
-Los comandos de SDK incluyen `dotnet new`,   o `dotnet run`. La CLI de `dotnet` debe elegir una versión del SDK para cualquier comando. La CLI de .NET Core usa el SDK más reciente instalado en el equipo de forma predeterminada. Deberá usar el SDK v2.1.301 de .NET Core cuando esté instalado, incluso si el proyecto con el que está trabajando está destinado al runtime 2.0 de .NET Core. Utilizará tanto las versiones preliminares como las versiones publicadas. Puede beneficiarse de las características y mejoras del SDK más reciente mientras selecciona como destino versiones anteriores del runtime de .NET Core. Puede tener como destino varias versiones del runtime de .NET Core en otros proyectos, con las mismas herramientas del SDK para todos los proyectos.
+Los comandos de SDK incluyen `dotnet new` y `dotnet run`. La CLI de `dotnet` debe elegir una versión del SDK para cada comando dotnet. La CLI de .NET Core usa el SDK más reciente instalado en el equipo de forma predeterminada, aunque:
+
+* El proyecto tenga como destino una versión anterior.
+* La última versión sea una versión preliminar.
+
+Las aplicaciones pueden beneficiarse de las características y mejoras del SDK más reciente mientras selecciona como destino versiones anteriores del tiempo de ejecución de .NET Core. Puede tener como destino varias versiones del runtime de .NET Core en otros proyectos, con las mismas herramientas del SDK para todos los proyectos.
 
 En raras ocasiones, es posible que tenga que usar una versión anterior del SDK. Esa versión se especifica en un [archivo *global.json*](../tools/global-json.md). La directiva "usar la versión más reciente" significa que solo se usa *global.json* para especificar una versión del SDK de .NET Core anterior a la versión instalada más reciente.
 

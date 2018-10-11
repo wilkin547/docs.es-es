@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264680"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698567"
 ---
 # <a name="comparing-strings-in-net"></a>Comparación de cadenas en .NET
 .NET proporciona varios métodos para comparar los valores de cadenas. En la tabla siguiente se enumeran y describen los métodos de comparación de valores.  
@@ -154,4 +154,5 @@ ms.locfileid: "44264680"
 
 - [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)  
 - [Realizar operaciones de cadenas que no distinguen entre referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Ordenación de tablas de pesos](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Ordenación de tablas de peso (para .NET en Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Tabla de elementos de intercalación predeterminada Unicode (para .NET Core en macOS y Linux)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

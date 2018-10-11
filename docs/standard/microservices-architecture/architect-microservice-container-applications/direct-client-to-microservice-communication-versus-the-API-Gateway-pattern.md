@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: f820b0ed866c539beda641164ef42631263490d3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739687"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198688"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>El patrón de puerta de enlace de API frente a la comunicación directa de cliente a microservicio
 
@@ -176,6 +176,8 @@ Después de las secciones iniciales de explicación de arquitectura y patrones, 
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 - **Clemens Vasters. Messaging and Microservices at GOTO 2016** (Mensajería y microservicios en GOTO 2016; vídeo) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+
+- **API Gateway in a Nutshell** (ASP.net Core API Gateway Tutorial Series) [*http://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](http://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html) [Puerta de enlace de API en resumen (Serie de tutoriales de puerta de enlace de API de ASP.NET Core)]
 
 >[!div class="step-by-step"]
 [Anterior](identify-microservice-domain-model-boundaries.md)

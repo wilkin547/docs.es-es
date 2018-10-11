@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961474"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170657"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -64,7 +64,7 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
 |\U|Secuencia de escape Unicode para pares suplentes.|\Unnnnnnnn|  
 |\u|Secuencia de escape Unicode|\u0041 = "A"|  
 |\v|Tabulación vertical|0x000B|  
-|\x|Secuencia de escape Unicode similar a "\u" excepto con longitud variable.|\x0041 = "A"|  
+|\x|Secuencia de escape Unicode similar a "\u" excepto con longitud variable.|\x0041 o \x41 = "A"|  
   
 > [!NOTE]
 >  En tiempo de compilación, las cadenas textuales se convierten en cadenas normales con las mismas secuencias de escape. Por lo tanto, si se muestra una cadena textual en la ventana Inspección del depurador, verá los caracteres de escape agregados por el compilador, no la versión textual del código fuente. Por ejemplo, la cadena textual @"C:\files.txt" aparecerá en la ventana Inspección, como "C:\\\files.txt".  

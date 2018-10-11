@@ -4,12 +4,12 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Proceso de des
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404394"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231250"
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo para Azure
 
@@ -44,15 +44,15 @@ Con independencia de que prefiera un IDE eficaz y completo, o un editor ligero y
 
 El ciclo de vida de desarrollo de una aplicación se inicia en el equipo de cada desarrollador, donde se codifica la aplicación con el lenguaje preferido y se prueba de forma local. Los desarrolladores pueden elegir su sistema de control de código fuente preferido y configurar la integración continua (CI) o entrega e implementación continua (CD) con un servidor de compilación o en función de las características integradas de Azure.
 
-Para empezar a desarrollar una aplicación ASP.NET Core con CI/CD, puede usar Visual Studio Team Services o el propio Team Foundation Server (TFS) de la organización.
+Para empezar a desarrollar una aplicación ASP.NET Core con CI/CD, puede usar Azure DevOps Services o el propio Team Foundation Server (TFS) de la organización.
 
 ### <a name="initial-setup"></a>Instalación inicial
 
 Para crear una canalización de versión de la aplicación, debe tener el código de la aplicación en el control de código fuente. Configure un repositorio local y conéctelo a un repositorio remoto de un proyecto de equipo. Siga estas instrucciones:
 
-- [Comparta el código con Git y Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs), o bien
+- [Comparta el código con Git y Visual Studio](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs), o bien
 
-- [Comparta el código con TFVC y Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs).
+- [Comparta el código con TFVC y Visual Studio](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs).
 
 Cree un Azure App Service donde se va a implementar la aplicación. Vaya a la hoja App Services de Azure Portal y cree una aplicación web. Haga clic en +Agregar, seleccione la plantilla Aplicación web, haga clic en Crear y proporcione un nombre y otros detalles. La aplicación web será accesible desde {nombre}.azurewebsites.net.
 
@@ -62,13 +62,13 @@ Cree un Azure App Service donde se va a implementar la aplicación. Vaya a la ho
 
 El proceso de compilación de CI realizará una compilación automatizada siempre que se confirme código nuevo en el repositorio de control de código fuente del proyecto. Esto ofrece información inmediata de que el código se compila (y, de forma ideal, que pasa las pruebas automatizadas) y que potencialmente se puede implementar. Esta compilación de CI generará un artefacto de paquete de implementación web y lo publicará para su uso por el proceso de CD.
 
-[Definir el proceso de compilación de CI](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
+[Definir el proceso de compilación de CI](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Asegúrese de habilitar la integración continua para que el sistema ponga en cola una compilación cada vez que alguien del equipo confirme código nuevo. Pruebe la compilación y compruebe que está generando un paquete de implementación web como uno de sus artefactos.
 
 Cuando la compilación se realice correctamente, el proceso de CD implementará los resultados de la compilación de CI en la aplicación web de Azure. Para configurar esto, se crea y configura una *Versión*, que se implementará en Azure App Service.
 
-[Definir el proceso de publicación de CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
+[Definir el proceso de publicación de CD](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 
 Una vez que se configura la canalización de CI/CD, puede realizar actualizaciones en la aplicación web y confirmarlas en el control de código fuente para que se implementen.
 
@@ -86,7 +86,7 @@ El desarrollo de la aplicación ASP.NET Core para su implementación en Azure no
 
 #### <a name="step-2-application-code-repository"></a>Paso 2. Repositorio de código de la aplicación
 
-Cuando esté listo para compartir el código con el equipo, debe insertar los cambios desde el repositorio de origen local al repositorio de código fuente compartido del equipo. Si ha estado trabajando en una rama personalizada, este paso normalmente implica combinar el código en una rama compartida (posiblemente por medio de una [solicitud de incorporación de cambios](https://docs.microsoft.com/vsts/git/pull-requests)).
+Cuando esté listo para compartir el código con el equipo, debe insertar los cambios desde el repositorio de origen local al repositorio de código fuente compartido del equipo. Si ha estado trabajando en una rama personalizada, este paso normalmente implica combinar el código en una rama compartida (posiblemente por medio de una [solicitud de incorporación de cambios](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Paso 3. Servidor de compilación: integración continua. Compilar, probar, empaquetar
 
@@ -107,7 +107,7 @@ Mientras se ejecuta la aplicación web, se puede supervisar su estado y recopila
 ## <a name="references"></a>Referencias
 
 **Build and Deploy Your ASP.NET Core App to Azure** (Compilación e implementación de la aplicación ASP.NET Core en Azure)  
-<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
+<https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
 [Anterior](test-asp-net-core-mvc-apps.md)

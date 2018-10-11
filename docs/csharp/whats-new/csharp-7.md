@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general sobre las nuevas características que entran en la próxima versión 7 del lenguaje C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956414"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237389"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
@@ -159,7 +159,7 @@ En el ejemplo siguiente se define un método `QueryCityDataForYears` que devuelv
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 Para obtener más información, vea [Descartes](../discards.md).
- 
+
 ## <a name="pattern-matching"></a>Detección de patrones
 
 La *coincidencia de patrones* es una característica que permite implementar la distribución de métodos en propiedades distintas al tipo de un objeto. Probablemente ya esté familiarizado con la distribución de métodos en función del tipo de un objeto. En la programación orientada a objetos, los métodos virtuales y de invalidación proporcionan la sintaxis del lenguaje para implementar la distribución de métodos en función del tipo de un objeto. Las clases base y derivadas proporcionan distintas implementaciones. Las expresiones de coincidencia de patrones extienden este concepto para que se puedan implementar fácilmente patrones de distribución similares para tipos y elementos de datos que no se relacionan mediante una jerarquía de herencia. 
@@ -277,7 +277,9 @@ El lenguaje C# tiene otras tres reglas que protegen del uso incorrecto de las va
 * Las `ref` locales y las devoluciones no se pueden usar con métodos asíncronos.
     - El compilador no puede identificar si una variable a la que se hace referencia se ha establecido en su valor final en la devolución del método asíncrono.
 
-La incorporación de variables locales ref y devoluciones de ref permite usar algoritmos que resultan más eficientes si se evita copiar los valores o se realizan operaciones de desreferencia varias veces. 
+La incorporación de variables locales ref y devoluciones de ref permite usar algoritmos que resultan más eficientes si se evita copiar los valores o se realizan operaciones de desreferencia varias veces.
+
+Agregar `ref` al valor devuelto es un [cambio compatible con el origen](version-update-considerations.md#source-compatible-changes). El código existente se compila, pero el valor devuelto de referencia se copia cuando se asigna. Los autores de las llamadas deben actualizar el almacenamiento para el valor devuelto en una variable local `ref` para almacenar el valor devuelto como referencia.
 
 ## <a name="local-functions"></a>Funciones locales
 
@@ -327,6 +329,8 @@ En C# 6 se presentaron los [miembros con forma de expresión](csharp-6.md#expres
 
 Estas nuevas ubicaciones de miembros con forma de expresión representan un hito importante en el lenguaje C#: estas características las han implementado miembros de la comunidad que trabajan en el proyecto de código abierto [Roslyn](https://github.com/dotnet/Roslyn).
 
+Cambiar un método a un miembro con cuerpo de expresión es un [cambio compatible con un elemento binario](version-update-considerations.md#binary-compatible-changes).
+
 ## <a name="throw-expressions"></a>Expresiones throw
 
 En C#, `throw` siempre ha sido una instrucción. Dado que `throw` es una instrucción, no una expresión, había construcciones de C# en las que no se podía usar. Incluyen expresiones condicionales, expresiones de fusión nulas y algunas expresiones lambda. La incorporación de miembros con forma de expresión agrega más ubicaciones donde las expresiones `throw` resultarían útiles. Para que pueda escribir cualquiera de estas construcciones, C# 7.0 presenta las *expresiones throw*.
@@ -362,8 +366,10 @@ La nueva característica de lenguaje significa que los métodos asincrónicos pu
 Una optimización simple sería usar `ValueTask` en lugares donde antes se usaría `Task`. Pero si quiere realizar otras optimizaciones a mano, puede almacenar en caché los resultados del trabajo asincrónico y volver a usar el resultado en llamadas posteriores. La estructura `ValueTask` tiene un constructor con un parámetro `Task` para que se pueda diseñar un `ValueTask` a partir del valor devuelto de cualquier método asincrónico existente:
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 Como con todas las recomendaciones de rendimiento, debe evaluar las dos versiones antes de realizar grandes cambios de escala en el código.
+
+Cuando el valor devuelto es el destino de una instrucción `await`, cambiar una API de <xref:System.Threading.Tasks.Task%601> a <xref:System.Threading.Tasks.ValueTask%601> es un [cambio compatible con el origen](version-update-considerations.md#source-compatible-changes). En general, cambiar a `ValueTask` no lo es.
 
 ## <a name="numeric-literal-syntax-improvements"></a>Mejoras en la sintaxis de literales numéricos
 

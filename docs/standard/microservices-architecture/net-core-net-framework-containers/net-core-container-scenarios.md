@@ -3,13 +3,13 @@ title: Cuándo elegir .NET Core para contenedores de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Cuándo elegir .NET Core para contenedores de Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 761a9579cc301b7ca4b949a2a83af20ab8bb0f20
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104658"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208020"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Cuándo elegir .NET Core para contenedores de Docker
 
@@ -25,11 +25,13 @@ Obviamente, si su objetivo es tener una aplicación (servicio o aplicación web)
 
 .NET Core también admite macOS como plataforma de desarrollo. Pero, al implementar contenedores en un host Docker, el host debe estar (actualmente) basado en Linux o Windows. Por ejemplo, en un entorno de desarrollo, podría utilizar una máquina virtual Linux que se ejecutara en un equipo Mac.
 
-[Visual Studio](https://visualstudio.microsoft.com/) proporciona un entorno de desarrollo integrado (IDE) para Windows y admite el desarrollo en Docker. 
+[Visual Studio](https://www.visualstudio.com/vs/) proporciona un entorno de desarrollo integrado (IDE) para Windows y admite el desarrollo en Docker.
 
-[Visual Studio para Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) es un IDE, evolución de Xamarin Studio, que se ejecuta en Mac OS y es compatible con Docker desde mediados de 2017.
+[Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/) es un IDE, una evolución de Xamarin Studio, que se ejecuta en macOS y admite el desarrollo de aplicaciones basadas en Docker. Debe ser la opción preferida para los desarrolladores que trabajan en equipos Mac y que también deseen usar un IDE eficaz.
 
-También puede usar [Visual Studio Code](https://code.visualstudio.com/) (VS Code) en macOS, Linux y Windows. VS Code es compatible con .NET Core, incluidos IntelliSense y depuración. Como VS Code es un editor ligero, puede usarlo para desarrollar aplicaciones en contenedor en Mac, junto con la interfaz de la línea de comandos de Docker y las [herramientas de interfaz de línea de comandos (CLI) de .NET Core](../../../core/tools/index.md). También puede utilizar .NET Core con la mayoría de editores de terceros, como Sublime Text, Emacs, vi y el proyecto OmniSharp de código abierto, que es compatible con IntelliSense para los lenguajes .NET. Además de los editores e IDE, puede utilizar la CLI de .NET Core en todas las plataformas admitidas.
+También puede usar [Visual Studio Code](https://code.visualstudio.com/) (VS Code) en macOS, Linux y Windows. VS Code es compatible con .NET Core, incluidos IntelliSense y depuración. Como VS Code es un editor ligero, puede usarlo para desarrollar aplicaciones en contenedor en Mac, junto con la interfaz de la línea de comandos de Docker y la [interfaz de la línea de comandos (CLI) de .NET Core](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x). También puede utilizar .NET Core con la mayoría de editores de terceros, como Sublime, Emacs, vi y el proyecto OmniSharp de código abierto, que también es compatible con IntelliSense.
+
+Además de los editores e IDE, puede utilizar las herramientas de la [CLI de .NET Core](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) en todas las plataformas admitidas.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Uso de contenedores para nuevos proyectos (green field)
 
@@ -41,7 +43,7 @@ Puede utilizar el tradicional .NET Framework para crear aplicaciones basadas en 
 
 En cambio, .NET Core es la mejor opción si ha adoptado un sistema orientado a microservicios que se basa en contenedores, puesto que .NET Core es ligero. Además, sus imágenes de contenedor relacionadas, ya sea la imagen de Linux o la imagen de Windows Nano, son eficientes y pequeñas, lo que hace que los contenedores sean ligeros y rápidos al iniciarse.
 
-Un microservicio está pensado para ser lo más pequeño posible: que sea ligero al acelerar, que tenga una superficie pequeña, que tenga un pequeño contexto limitado, que represente una pequeña área de problemas y que se pueda iniciar y detener rápidamente. Para cumplir con estos requisitos, le recomendamos que utilice imágenes de contenedor pequeñas y fáciles de ejemplificar, como la imagen de contenedor de .NET Core.
+Un microservicio está pensado para ser lo más pequeño posible: que sea ligero al acelerar, que tenga una superficie pequeña, que tenga un pequeño contexto limitado (comprobar DDD, [diseño basado en dominios](https://en.wikipedia.org/wiki/Domain-driven_design)), que represente una pequeña área de problemas y que se pueda iniciar y detener rápidamente. Para cumplir con estos requisitos, le recomendamos que utilice imágenes de contenedor pequeñas y fáciles de ejemplificar, como la imagen de contenedor de .NET Core.
 
 Una arquitectura de microservicios también le permite mezclar tecnologías en un límite de servicio. Esto permite migrar gradualmente a .NET Core microservicios nuevos que funcionan junto con otros microservicios o con servicios desarrollados con Node.js, Python, Java, GoLang u otras tecnologías.
 

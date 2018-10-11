@@ -1,38 +1,60 @@
 ---
 title: Tabla de formatos de presentación para valores numéricos (Referencia de C#)
-ms.date: 07/20/2015
+description: Obtenga información sobre las cadenas de formato numérico estándar de C#
+ms.date: 09/20/2018
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
-- Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508204"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47203896"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabla de formatos de presentación para valores numéricos (Referencia de C#)
-Se puede aplicar formato a los resultados numéricos mediante el método <xref:System.String.Format%2A?displayProperty=nameWithType>, o con los métodos <xref:System.Console.Write%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> que realizan una llamada a `String.Format`, o usando la [interpolación de cadenas](../tokens/interpolated.md). El formato se especifica mediante cadenas de formato. La tabla siguiente contiene las cadenas de formato estándar admitidas. La cadena de formato toma la siguiente forma: `Axx`, donde `A` es el especificador de formato y `xx` es el especificador de precisión. El especificador de formato controla el tipo de formato aplicado al valor numérico, mientras que el especificador de precisión controla el número de dígitos significativos o posiciones decimales del resultado. El valor de los intervalos del especificador de precisión comprende de 0 a 99.  
-  
- Para obtener más información sobre cadenas de formato estándar y personalizadas, vea [Aplicación de formato a tipo](../../../standard/base-types/formatting-types.md).
-  
-|Especificador de formato|Descripción|Ejemplos|Salida|  
+
+La siguiente tabla muestra los especificadores de formato admitidos para dar formato a los resultados numéricos. El resultado con formato de la última columna corresponde a la clase <xref:System.Globalization.CultureInfo> "en-US".
+
+|Especificador de formato|Descripción|Ejemplos|Resultado|  
 |----------------------|-----------------|--------------|------------|  
-|C o c|Moneda|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
-|D o d|Decimal|Console.Write("{0:D5}", 25);|00025|  
-|E o e|Científica|Console.Write("{0:E}", 250000);|2.500000E+005|  
-|F o f|Punto fijo|Console.Write("{0:F2}", 25);<br /><br /> Console.Write("{0:F0}", 25);|25.00<br /><br /> 25|  
-|G o g|General|Console.Write("{0:G}", 2.5);|2.5|  
-|N o n|número|Console.Write("{0:N}", 2500000);|2,500,000.00|  
-|X o x|Hexadecimal|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
-  
+|C o c|Moneda|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|D o d|Decimal|`string s = $"{25:D5}";`|00025|  
+|E o e|Exponencial|`string s = $"{250000:E2}";`|2.50E+005|  
+|F o f|Punto fijo|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|G o g|General|`string s = $"{2.5:G}";`|2.5|  
+|N o n|Numérica|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P o p|Porcentaje|`string s = $"{0.25:P}";`|25.00 %|  
+|R o r|Acción de ida y vuelta|`string s = $"{2.5:R}";`|2.5|  
+|X o x|Hexadecimal|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
+
+## <a name="remarks"></a>Comentarios
+
+Use un especificador de formato para crear una cadena de formato. La cadena de formato tiene el siguiente formato: `Axx`, donde
+
+- `A` es el especificador de formato, que controla el tipo de formato aplicado al valor numérico.
+- `xx` es el especificador de precisión, que afecta al número de dígitos del resultado con formato. El valor de los intervalos del especificador de precisión comprende de 0 a 99.
+
+Los especificadores de formato decimal ("D" o "d") y hexadecimal ("X" o "x") solo son compatibles con tipos enteros. El especificador de formato del recorrido de ida y vuelta ("R" o "r") solo es compatible para los tipos <xref:System.Single>, <xref:System.Double> y <xref:System.Numerics.BigInteger>.
+
+Las cadenas con formato numérico estándar son compatibles con:
+
+- Algunas sobrecargas del método `ToString` de todos los tipos numéricos. Por ejemplo, se puede proporcionar una cadena de formato numérico a los métodos <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.
+
+- La [característica de formato compuesto](../../../standard/base-types/composite-formatting.md) de .NET, que es compatible con el método <xref:System.String.Format%2A?displayProperty=nameWithType>, por ejemplo.
+
+- [Cadenas interpoladas](../tokens/interpolated.md).
+
+Para más información, vea [Cadenas de formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md).
+
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [string](../../../csharp/language-reference/keywords/string.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Tablas de referencia para tipos](reference-tables-for-types.md)
+- [Aplicar formato a tipos](../../../standard/base-types/formatting-types.md)
+- [Formatos compuestos](../../../standard/base-types/composite-formatting.md)
+- [Interpolación de cadenas](../tokens/interpolated.md)
+- [string](string.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106533"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47205075"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
@@ -37,7 +37,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
   
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Vea la sección [Notas](#NotesCustomFormatting) para obtener información adicional sobre cómo usar las cadenas de formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.  
   
-|Especificador de formato|nombre|Description|Ejemplos|  
+|Especificador de formato|nombre|Descripción|Ejemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|Marcador de posición cero|Reemplaza el cero con el dígito correspondiente si hay alguno presente; de lo contrario, el cero aparece en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Marcador de posición de dígito.|Reemplaza el símbolo "#" por el dígito correspondiente si hay alguno presente; de lo contrario, no aparece ningún dígito en la cadena de resultado.<br /><br /> Tenga en cuenta que no se mostrará ningún dígito en la cadena de resultado si el dígito que se encuentra en la cadena de entrada es un 0 no significativo. Por ejemplo, 0003 ("####") -> 3.<br /><br /> Más información: [El especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -53,7 +53,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
   
  En las secciones siguientes se proporciona información detallada sobre cada uno de los especificadores de formato numérico personalizado.  
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-partial-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>Especificador personalizado "0"  
@@ -64,7 +64,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  En el ejemplo siguiente se muestran varios valores a los que se les ha aplicado cadenas de formato personalizado que incluyen marcadores de posición cero.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [Volver a la tabla](#table)  
@@ -80,7 +80,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  En el ejemplo siguiente se muestran varios valores a los que se les ha aplicado cadenas de formato personalizado que incluyen marcadores de posición de dígitos.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Para devolver una cadena de resultado en la que los dígitos que faltan o los ceros iniciales se reemplazan por espacios, use la [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md) y especifique un ancho de campo, como se muestra en el ejemplo siguiente.  
@@ -100,7 +100,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  En el ejemplo siguiente se utiliza el especificador de formato "." para definir la ubicación del separador decimal en varias cadenas de resultado.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [Volver a la tabla](#table)  
@@ -120,13 +120,13 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  En el ejemplo siguiente se muestra el uso de la coma como separador de grupos.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  En el ejemplo siguiente se muestra el uso de la coma como especificador de escala numérica.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [Volver a la tabla](#table)  
@@ -138,7 +138,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  En el ejemplo siguiente se definen varias cadenas de formato personalizado que incluyen el especificador personalizado "%".  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [Volver a la tabla](#table)  
@@ -150,7 +150,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  En el ejemplo siguiente se define una cadena de formato personalizado que incluye el especificador personalizado "‰".  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [Volver a la tabla](#table)  
@@ -162,7 +162,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  En el ejemplo siguiente se da formato a varios valores numéricos utilizando los especificadores de notación científica.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [Volver a la tabla](#table)  
@@ -190,7 +190,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
 ## <a name="the--section-separator"></a>Separador de sección ";"  
  El punto y coma (;) es un especificador de formato condicional que aplica distinto formato a un número dependiendo de si su valor es positivo, negativo o cero. Para generar este comportamiento, una cadena de formato personalizado puede contener hasta tres secciones separadas por signos de punto y coma. Estas secciones se describen en la siguiente tabla.  
   
-|Número de secciones|Description|  
+|Número de secciones|Descripción|  
 |------------------------|-----------------|  
 |Una sección|La cadena de formato se aplica a todos los valores.|  
 |Dos secciones|La primera sección se aplica a valores positivos y ceros, y la segunda, sólo a valores negativos.<br /><br /> Si el número al que se va a dar formato es negativo, pero se convierte en cero después de redondearlo según el formato de la segunda sección, se da formato al cero resultante según la primera sección.|  
@@ -235,8 +235,8 @@ En el ejemplo siguiente se muestra un uso habitual de las unidades de carácter 
 
 En el ejemplo siguiente se usan los dos enfoques para incluir caracteres reservados en una cadena de formato numérico personalizada.  
   
-     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
-     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+ [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal1.cs#1)]
+ [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal1.vb#1)]  
     
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>Notas  
@@ -264,9 +264,10 @@ En el ejemplo siguiente se usan los dos enfoques para incluir caracteres reserva
   
  [Volver a la tabla](#table)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Rellenar un número con ceros a la izquierda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Rellenar un número con ceros a la izquierda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

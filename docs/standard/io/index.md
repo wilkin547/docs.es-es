@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025602"
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferencia de datos con destino u origen en un medio de almacenamiento. En .NET Framework, los espacios de nombres `System.IO` contienen tipos que permiten la lectura y escritura, tanto sincrónica como asincrónica, en archivos y flujos de datos. Estos espacios de nombres también contienen tipos que realizan la compresión y la descompresión de archivos, así como tipos que permiten la comunicación a través de canalizaciones y puertos de serie.  
@@ -41,6 +41,8 @@ Para obtener las convenciones de nomenclatura de las rutas de acceso y las maner
   
 -   <xref:System.IO.Path>: proporciona métodos y propiedades para procesar cadenas de directorio entre plataformas.  
   
+ Siempre debe proporcionar un control de excepciones sólido al llamar a métodos del sistema de archivos. Para más información, vea [Handling I/O errors](handling-io-errors.md) (Control de errores de E/S).
+ 
  Además de usar estas clases, los usuarios de Visual Basic pueden usar los métodos y propiedades proporcionados por la clase <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para la E/S de archivos.  
   
  Vea [How to: Copy Directories](../../../docs/standard/io/how-to-copy-directories.md)(Cómo: Copiar directorios), [Cómo: Crear una lista de directorios](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) y [How to: Enumerate Directories and Files](../../../docs/standard/io/how-to-enumerate-directories-and-files.md) (Cómo: Enumerar directorios y archivos).  

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195626"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47232864"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -121,7 +121,7 @@ Como se indicó anteriormente, al probar aplicaciones con varios contenedores, t
 
 Puede usar diferentes enfoques. En el archivo docker-compose.yml que va a usar para implementar la aplicación (o en archivos similares, como docker-compose.ci.build.yml), en el nivel de solución puede expandir el punto de entrada para usar la [prueba de dotnet](../../../core/tools/dotnet-test.md). También puede usar otro archivo de composición que ejecute las pruebas en la imagen de destino. Si utiliza otro archivo de composición para las pruebas de integración, que incluyan sus microservicios y bases de datos en contenedores, puede comprobar que los datos relacionados siempre se restablecen a su estado original antes de ejecutar las pruebas.
 
-Si ejecuta Visual Studio, cuando la aplicación de redacción esté en funcionamiento, podrá aprovechar los puntos de interrupción y las excepciones. También podrá ejecutar las pruebas de integración automáticamente en la canalización de integración continua en Visual Studio Team Services o en cualquier otro sistema de integración continua o de entrega continua que admita los contenedores de Docker.
+Si ejecuta Visual Studio, cuando la aplicación de redacción esté en funcionamiento, podrá aprovechar los puntos de interrupción y las excepciones. También podrá ejecutar las pruebas de integración automáticamente en la canalización de integración continua en Azure DevOps Services o en cualquier otro sistema de integración continua o de entrega continua que admita los contenedores de Docker.
 
 >[!div class="step-by-step"]
 [Anterior](subscribe-events.md)

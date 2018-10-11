@@ -3,12 +3,12 @@ title: Novedades de C# 6 - Guía de C#
 description: Obtenga información sobre las nuevas características de la versión 6 de C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565883"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208190"
 ---
 # <a name="whats-new-in-c-6"></a>Novedades de C# 6
 
@@ -45,7 +45,7 @@ El efecto general de estas características es que se escribe código más conci
 
 En el resto de este tema se proporcionan detalles sobre cada una de estas características.
 
-## <a name="auto-property-enhancements"></a>Mejoras de propiedades automáticas 
+## <a name="auto-property-enhancements"></a>Mejoras de propiedades automáticas
 
 La sintaxis de las propiedades implementadas automáticamente (normalmente denominadas "propiedades automáticas") facilitó la creación de propiedades que tenían descriptores de acceso get y set sencillos:
 
@@ -88,6 +88,8 @@ public class Student
 
 Esta característica habilita la compatibilidad del lenguaje real para crear tipos inmutables y usar la sintaxis de propiedades automáticas más concisa y cómoda.
 
+Si al agregar esta sintaxis no se quita un método accesible, se trata de un [cambio compatible con los elementos binarios](version-update-considerations.md#binary-compatible-changes).
+
 ### <a name="auto-property-initializers"></a>Inicializadores de propiedades automáticas
 
 Los *inicializadores de propiedades automáticas* permiten declarar el valor inicial de una propiedad automática como parte de la declaración de la propiedad.  En versiones anteriores, estas propiedades debían tener establecedores y era necesario usar ese establecedor para inicializar el almacenamiento de datos usado por el campo de respaldo. Considere esta clase para un alumno que contiene el nombre y una lista de las notas del alumno:
@@ -115,6 +117,9 @@ El cuerpo de muchos miembros que se escriben consta de una sola instrucción que
 También se pueden usar miembros con cuerpo de expresión en propiedades de solo lectura:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
+
+Cambiar un miembro existente por un miembro con cuerpo de expresión es un [cambio compatible con un elemento binario](version-update-considerations.md#binary-compatible-changes).
+
 
 ## <a name="using-static"></a>uso de versión estática
 
@@ -398,4 +403,3 @@ La opción `-deterministic` indica al compilador que cree un ensamblado de salid
 De forma predeterminada, todas las compilaciones generan una salida única en cada compilación. El compilador agrega una marca de tiempo y genera un GUID a partir de números aleatorios. Use esta opción si quiere comparar la salida byte a byte para garantizar la coherencia entre las compilaciones.
 
 Para obtener más información, vea el artículo [-deterministic (opción del compilador)](../language-reference/compiler-options/deterministic-compiler-option.md).
-
