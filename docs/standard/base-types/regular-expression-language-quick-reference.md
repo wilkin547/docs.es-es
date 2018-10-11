@@ -161,7 +161,7 @@ ms.locfileid: "44041621"
   
 |Construcciones de alternancia|Descripción|Modelo|Coincidencias|  
 |---------------------------|-----------------|-------------|-------------|  
-|<code>&#124;</code>|Coincide con cualquier elemento separado por el carácter de barra vertical (*&#124;).|<code>th(e&#124;is&#124;at)</code>|"el", "este" en "este es el día. "|  
+|<code>&#124;</code>|Coincide con cualquier elemento separado por el carácter de barra vertical (*&#124;).|<code>th(e&#124;is&#124;at)</code>|"the", "this" en "this is the day. " "|  
 |`(?(` *expresión* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si el patrón de expresión regular designado por *expresión* coincide; de lo contrario, coincide con la parte opcional *no* . *expresión* se interpreta como una aserción de ancho cero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" en "A10 C103 910"|  
 |`(?(` *nombre* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si *nombre*, un grupo de captura con nombre o numerado, tiene una coincidencia; de lo contrario, coincide con la parte opcional *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Dogs.jpg, "Yiska playing.jpg" en "Dogs.jpg "Yiska playing.jpg""|  
   
