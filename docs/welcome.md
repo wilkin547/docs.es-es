@@ -61,7 +61,7 @@ Esta documentación es completamente de [código abierto](https://github.com/dot
 
 - [Página principal de .NET Core](https://github.com/dotnet/core)
 - [Bibliotecas de .NET](https://github.com/dotnet/corefx)
-- [Tiempo de ejecución de .NET Core](https://github.com/dotnet/coreclr)
+- [Entorno en tiempo de ejecución (runtime enviroment) de .NET Core](https://github.com/dotnet/coreclr)
 - [Plataforma del compilador de Roslyn (C# y Visual Basic) y herramientas de IDE](https://github.com/dotnet/roslyn)
 - [Compilador de F# y herramientas de IDE](https://github.com/microsoft/visualfsharp)
 
