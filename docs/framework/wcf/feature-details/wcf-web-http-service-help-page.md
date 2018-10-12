@@ -2,15 +2,15 @@
 title: Página de ayuda del servicio web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195997"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121212"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Página de ayuda del servicio web HTTP de WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] proporciona una página de ayuda automática para servicios WEB HTTP de WCF. Esta página de ayuda contiene una lista de descripciones de cada operación, formatos de solicitud y respuesta, así como esquemas. Esta funcionalidad se desactiva de forma predeterminada. Cuando un usuario se desplaza a un servicio WEB HTTP de WCF y anexa "/ Ayuda" al final de la dirección URL, por ejemplo http://localhost:8000/Customers/Help, una página de ayuda, como se muestra lo siguiente.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] proporciona una página de ayuda automática para servicios WEB HTTP de WCF. Esta página de ayuda contiene una lista de descripciones de cada operación, formatos de solicitud y respuesta, así como esquemas. Esta funcionalidad se desactiva de forma predeterminada. Cuando un usuario se desplaza a un servicio WEB HTTP de WCF y anexa "/ Ayuda" al final de la dirección URL, por ejemplo `http://localhost:8000/Customers/Help`, una página de ayuda, como se muestra lo siguiente.  
   
  ![Página de Ayuda de WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
@@ -28,7 +28,7 @@ ms.locfileid: "47195997"
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- Para activar la página de ayuda WEB HTTP de WCF, debe agregar un comportamiento de extremo a los extremos del servicio. Esto se puede hacer en la configuración o a través de un código. Para habilitar la página de ayuda WEB HTTP de WCF en la configuración, agregue un comportamiento de extremo con un elemento `<webHttp>`, establezca `enableHelp` en `true` y agregue un extremo y configúrelo para utilizar el comportamiento del extremo. El código de configuración siguiente muestra cómo realizar esta operación.  
+ Para activar la página de ayuda WEB HTTP de WCF, debe agregar un comportamiento de extremo a los extremos del servicio. Esto se puede hacer en la configuración o a través de un código. Para habilitar la página de ayuda WEB HTTP de WCF en la configuración, agregue un comportamiento de punto de conexión con un elemento `<webHttp>`, establezca `enableHelp` en `true` y agregue un punto de conexión y configúrelo para utilizar el comportamiento del punto de conexión. El código de configuración siguiente muestra cómo realizar esta operación.  
   
 ```xml  
 <endpointBehaviors>  
