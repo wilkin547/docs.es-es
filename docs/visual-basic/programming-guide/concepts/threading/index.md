@@ -3,11 +3,11 @@ title: Subprocesamiento (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 ms.openlocfilehash: 366c88db5d229120b1e626f275b4eeb8ecd42dba
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845001"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123103"
 ---
 # <a name="threading-visual-basic"></a>Subprocesamiento (Visual Basic)
 El subprocesamiento permite a los programas de Visual Basic llevar a cabo un procesamiento simultáneo para que pueda hacer más de una operación a la vez. Por ejemplo, puede usar el subprocesamiento para hacer un seguimiento de los datos escritos por un usuario, realizar tareas en segundo plano y administrar transmisiones simultáneas de los datos escritos.  

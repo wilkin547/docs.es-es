@@ -2,12 +2,12 @@
 title: Rendimiento de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873698"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123818"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Rendimiento de Windows Workflow Foundation
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Incluso con flujos de trabajo complejos con gran profundidad y un alto número de actividades, los resultados del rendimiento son coherentes con otras cifras mostradas anteriormente en este artículo.  El rendimiento de WF4 es más rápido en órdenes de magnitud y tiene que compararse en una escala logarítmica.
 
 ### <a name="memory"></a>Memoria
- La sobrecarga de la memoria de Windows Workflow Foundation se mide en dos áreas clave: la complejidad del flujo de trabajo y el número de definiciones de flujo de trabajo.  Las mediciones de memoria se tomaron en una estación de trabajo de 64 bits con Windows 7.  Hay muchas maneras de obtener la medición del tamaño como supervisar los contadores de rendimiento, sondeando Environment.WorkingSet o mediante una herramienta como VMMap disponible en [VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx). Se utilizó una combinación de métodos para obtener y comprobar los resultados de cada prueba.
+ La sobrecarga de la memoria de Windows Workflow Foundation se mide en dos áreas clave: la complejidad del flujo de trabajo y el número de definiciones de flujo de trabajo.  Las mediciones de memoria se tomaron en una estación de trabajo de 64 bits con Windows 7.  Hay muchas maneras de obtener la medición del tamaño como supervisar los contadores de rendimiento, sondeando Environment.WorkingSet o mediante una herramienta como VMMap disponible en [VMMap](/sysinternals/downloads/vmmap). Se utilizó una combinación de métodos para obtener y comprobar los resultados de cada prueba.
 
 ### <a name="workflow-complexity-test"></a>Prueba de complejidad de flujo de trabajo
  La prueba de complejidad de flujo de trabajo mide la diferencia del espacio de trabajo basándose en la complejidad del flujo de trabajo.  Además de los flujos de trabajo complejos utilizados en la sección anterior, las nuevas variaciones se agregan para cubrir dos casos básicos: un flujo de trabajo de una sola actividad y una secuencia con 1000 actividades.  Para estas pruebas, los flujos de trabajo se inicializan y ejecutan hasta su finalización en un bucle serie único durante un período de un minuto.  Cada variación de prueba se ejecuta tres veces y los datos registrados son la media de estas tres ejecuciones.

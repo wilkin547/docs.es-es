@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426941"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123779"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints (Método)
-Define un grupo de puntos de secuencia dentro del método actual. Cada línea inicial y la columna de inicio definen el comienzo de una instrucción dentro de un método. Cada línea final y cada columna final definen el final de una instrucción dentro de un método. Las matrices se deben ordenar en orden creciente de desplazamientos. El desplazamiento siempre se mide desde el principio del método, en bytes.  
+Define un grupo de puntos de secuencia dentro del método actual. Cada línea de inicio y la columna inicial define el principio de una instrucción dentro de un método. Cada línea final y columna final definen el final de una instrucción dentro de un método. Las matrices se deben ordenar en orden creciente de los desplazamientos. El desplazamiento siempre se mide desde el principio del método, en bytes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +45,7 @@ HRESULT DefineSequencePoints(
  [in] El objeto de documento para el que se definen los puntos de secuencia.  
   
  `spCount`  
- [in] A `ULONG32` que indica el tamaño de cada uno de los `offsets`, `lines`, `columns`, `endLines`, y `endColumns` búferes.  
+ [in] Un `ULONG32` que indica el tamaño de cada uno de los `offsets`, `lines`, `columns`, `endLines`, y `endColumns` búferes.  
   
  `offsets`  
  [in] El desplazamiento de los puntos de secuencia medido desde el principio del método.  
@@ -54,7 +54,7 @@ HRESULT DefineSequencePoints(
  [in] Los números de línea inicial de los puntos de secuencia.  
   
  `columns`  
- [in] Los números de columna inicial de los puntos de secuencia.  
+ [in] Los números de columna a partir de los puntos de secuencia.  
   
  `endLines`  
  [in] Los números de línea final de los puntos de secuencia. Este parámetro es opcional.  
@@ -63,7 +63,7 @@ HRESULT DefineSequencePoints(
  [in] Los números de columna final de los puntos de secuencia. Este parámetro es opcional.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** CorSym.idl, CorSym.h  

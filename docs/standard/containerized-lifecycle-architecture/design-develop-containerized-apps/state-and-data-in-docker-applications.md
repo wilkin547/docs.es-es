@@ -4,18 +4,18 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586052"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123233"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 
 Un tipo primitivo de contenedores es la inmutabilidad. En comparación con una máquina virtual, no desaparecen contenedores como un hecho frecuente. Una máquina virtual puede producir un error en diversas formas de procesos caducos, sobrecarga de la CPU o un disco completo o con errores. Sin embargo, esperamos que la máquina virtual esté disponible y unidades RAID son típicos para asegurarse de mantienen los datos de errores de disco.
 
-Sin embargo, los contenedores se consideran las instancias de procesos. Un proceso no mantiene el estado duradero. Aunque puede escribir un contenedor para su almacenamiento local, suponiendo que esa instancia permanecerá indefinidamente sería equivalente a suponiendo que una copia única de memoria será duradera. Debe suponer que los contenedores, como procesos, están duplicados, elimina, o cuando se administran con un orquestador de contenedores, se puede mover.
+Sin embargo, los contenedores se consideran las instancias de procesos. Un proceso no mantiene el estado duradero. Aunque puede escribir un contenedor para su almacenamiento local, suponiendo que la instancia permanecerá indefinidamente sería equivalente a suponiendo que una copia única de memoria será duradera. Debe suponer que los contenedores, como procesos, están duplicados, elimina, o cuando se administran con un orquestador de contenedores, se puede mover.
 
 Docker usa una característica conocida como una *sistema de archivos de superposición* implementar un proceso de copia en escritura que almacena cualquier información actualizada en el sistema de archivos raíz de un contenedor, en comparación con la imagen original en el que se basa. Estos cambios se perderán si posteriormente se elimina el contenedor del sistema. Un contenedor, por lo tanto, no tiene almacenamiento persistente de forma predeterminada. Aunque es posible guardar el estado de un contenedor, diseñar un sistema de solucionar este problema sería en conflicto con el principio de arquitectura de contenedor.
 

@@ -2,12 +2,12 @@
 title: Direccionamiento
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468370"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123207"
 ---
 # <a name="addressing"></a>Direccionamiento
 El ejemplo de direccionamiento muestra varios aspectos y características de direcciones del punto de conexión. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola. El servicio define varios extremos mediante una combinación de direcciones del extremo absolutas y relativas.  
@@ -40,7 +40,7 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- En este caso, la dirección relativa está vacía (""), por lo que la dirección del punto de conexión es igual a la dirección base. La dirección del extremo real es http://localhost:8000/servicemodelsamples/service.  
+ En este caso, la dirección relativa está vacía (""), por lo que la dirección del punto de conexión es igual a la dirección base. La dirección del extremo real es `http://localhost:8000/servicemodelsamples/service`.
   
  La segunda definición de extremo también especifica una dirección relativa, como se muestra en el siguiente ejemplo de configuración.  
   
@@ -53,7 +53,7 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- La dirección relativa, "test", se anexa a la dirección base. La dirección del extremo real es http://localhost:8000/servicemodelsamples/service/test.  
+ La dirección relativa, "test", se anexa a la dirección base. La dirección del extremo real es `http://localhost:8000/servicemodelsamples/service/test`.
   
  La tercera definición de extremo especifica una dirección absoluta, como se muestra en el siguiente ejemplo de configuración.  
   
@@ -63,9 +63,9 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- La dirección base no desempeña ningún papel en la dirección. La dirección del extremo real es http://localhost:8001/hello/servicemodelsamples.  
+ La dirección base no desempeña ningún papel en la dirección. La dirección del extremo real es `http://localhost:8001/hello/servicemodelsamples`.
   
- La cuarta dirección del extremo especifica una dirección absoluta y un TCP de transporte diferente. La dirección base no desempeña ningún papel en la dirección. La dirección del extremo real es net.tcp://localhost:9000/servicemodelsamples/service.  
+ La cuarta dirección del extremo especifica una dirección absoluta y un TCP de transporte diferente. La dirección base no desempeña ningún papel en la dirección. La dirección del extremo real es `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -79,7 +79,7 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
 </service>  
 ```  
   
- El cliente tiene acceso solo a uno de los cuatro extremos de servicio, pero los cuatro se definen en su archivo de configuración. El cliente selecciona un extremo cuando crea el objeto `CalculatorProxy`. Cambiando el nombre de configuración de `CalculatorEndpoint1` a través de `CalculatorEndpoint4`, puede ejercer cada uno de los extremos.  
+ El cliente tiene acceso solo a uno de los cuatro puntos de conexión de servicio, pero los cuatro se definen en su archivo de configuración. El cliente selecciona un extremo cuando crea el objeto `CalculatorProxy`. Cambiando el nombre de configuración de `CalculatorEndpoint1` a través de `CalculatorEndpoint4`, puede ejercer cada uno de los extremos.  
   
  Al ejecutar el ejemplo, el servicio enumera la dirección, enlazando el nombre y el nombre del contrato para cada uno de sus extremos. El extremo de intercambio (MEX) de metadatos simplemente es otro extremo de la perspectiva del ServiceHost que se presenta en la lista.  
   

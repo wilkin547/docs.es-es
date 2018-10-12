@@ -1,13 +1,13 @@
 ---
 title: Programación asincrónica
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504980"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123662"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -23,8 +23,9 @@ En este tema explica la compatibilidad con programación asincrónica en el [!IN
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  Esta funcionalidad permanece en SqlClient en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
-  
- A partir de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], estos métodos ya no necesitan `Asynchronous Processing=true` en la cadena de conexión.  
+
+> [!TIP]
+> A partir de la [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], ya no necesitan estos métodos heredados `Asynchronous Processing=true` en la cadena de conexión.  
   
 ## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Características de programación asincrónica agregadas en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
  La nueva característica de programación asincrónica proporciona una técnica sencilla para crear código asincrónico.  
@@ -87,6 +88,9 @@ En este tema explica la compatibilidad con programación asincrónica en el [!IN
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  Se agregaron otros miembros asincrónicos para admitir [SqlClient Streaming admite](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+
+> [!TIP]
+> Los nuevos métodos asincrónicos no requieren `Asynchronous Processing=true` en la cadena de conexión.  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Apertura de conexiones sincrónicas a asincrónicas  
  Puede actualizar una aplicación existente para usar la nueva característica asincrónica. Por ejemplo, suponga que una aplicación tiene un algoritmo de conexión sincrónico y bloquea el subproceso de la interfaz de usuario cada vez que se conecta a la base de datos y, una vez que está conectada, la aplicación llama a un procedimiento almacenado que señala otros usuarios en vez de al que acaba de iniciar sesión.  

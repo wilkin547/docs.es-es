@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo detectar y mitigar las vulnerabili
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840540"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123649"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de control de tiempo con descifrado simétrico modo CBC mediante el relleno
 
@@ -65,7 +65,7 @@ Históricamente, ha habido un consenso que es importante cifrar y autenticar a l
 
 Una clase de vulnerabilidades que se conoce como "padding ataques de oracle" se sabe que existe más de 10 años. Estas vulnerabilidades permitir que un atacante descifrar los datos cifrados con algoritmos de bloques simétricos, como AES y 3DES, con no más de 4096 intentos por bloque de datos. Estas vulnerabilidades hacer uso del hecho de que cifrados por bloques se utilizan frecuentemente con relleno que se pueda comprobar datos al final. Se encontró que si un atacante puede alterar el texto cifrado y averiguar si la alteración produjo un error en el formato de relleno al final, el atacante puede descifrar los datos.
 
-Inicialmente, ataques reales se basaban en los servicios que devuelven los códigos de error diferentes en función de si era válido, como la vulnerabilidad de ASP.NET relleno [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Sin embargo, Microsoft ahora cree que es práctico para llevar a cabo ataques similar utilizando solo las diferencias en el tiempo que transcurre entre el procesamiento de caracteres de relleno válido y no válido.
+Inicialmente, ataques reales se basaban en los servicios que devuelven los códigos de error diferentes en función de si era válido, como la vulnerabilidad de ASP.NET relleno [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Sin embargo, Microsoft ahora cree que es práctico para llevar a cabo ataques similar utilizando solo las diferencias en el tiempo que transcurre entre el procesamiento de caracteres de relleno válido y no válido.
 
 Siempre que el esquema de cifrado emplea una firma y que se realiza la comprobación de firma con un tiempo de ejecución fija durante un período determinado de datos (independientemente del contenido), se puede comprobar la integridad de los datos sin emitir ninguna información a un el atacante a través de un [canal lateral](https://en.wikipedia.org/wiki/Side-channel_attack). Puesto que la comprobación de integridad rechaza los mensajes alterados, se mitiga la amenaza de oracle de relleno.
 

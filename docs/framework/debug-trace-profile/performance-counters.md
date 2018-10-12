@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40d8edd2b2166b0c90da1ce640dcd16bc33ed9f7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4839513f28de0fd79de7a8dc5245d4d0a2fb1622
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525314"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123805"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de rendimiento de .NET Framework
-En este tema se proporciona una lista de los contadores de rendimiento que se pueden encontrar en el [Monitor de rendimiento](https://technet.microsoft.com/library/cc749249.aspx).  
+En este tema se proporciona una lista de contadores de rendimiento que se puede encontrar en el [Monitor de rendimiento de Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
 -   [Contadores de rendimiento de excepciones](#exception)  
   
