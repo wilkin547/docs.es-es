@@ -4,12 +4,12 @@ description: Arquitectura de Microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 0f401f89b0a568b8dc7c3734b2f06fa3a14de110
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088502"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121368"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservicios de .NET: arquitectura para aplicaciones .NET en contenedor
 
@@ -171,7 +171,7 @@ Este libro se proporciona “tal cual” y expresa las opiniones del autor. Las 
 
 Algunos ejemplos descritos aquí se proporcionan únicamente con fines ilustrativos y son ficticios. No debe deducirse ninguna asociación ni conexión reales.
 
-Microsoft y las marcas comerciales indicadas en http://www.microsoft.com en la página web "Marcas comerciales" pertenecen al grupo de empresas de Microsoft.
+Microsoft y las marcas comerciales indicadas en <https://www.microsoft.com> en la página web "Marcas comerciales" pertenecen al grupo de empresas de Microsoft.
 
 Mac y macOS son marcas comerciales de Apple Inc.
 
