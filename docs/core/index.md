@@ -5,12 +5,12 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: cfa7c27871204b808c9d753a970d5abb907a183e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b302b6fc7e097a811c718d2244f603246cb5c259
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512846"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121043"
 ---
 # <a name="net-core-guide"></a>Guía de .NET Core
 
@@ -18,7 +18,7 @@ ms.locfileid: "43512846"
 
 Consulte [Acerca de .NET Core](about.md) para más información sobre .NET Core, incluidas sus características, idiomas y marcos admitidos y principales API.
 
-Consulte los [tutoriales de .NET Core](tutorials/index.md) para aprender a crear una aplicación .NET Core sencilla. En unos minutos su primera aplicación estará lista y funcionando. Si quiere probar .NET Core en su explorador, consulte la guía de inicio rápido [Números en C#](https://docs.microsoft.com/dotnet/csharp/quick-starts/hello-world).
+Consulte los [tutoriales de .NET Core](tutorials/index.md) para aprender a crear una aplicación .NET Core sencilla. En unos minutos su primera aplicación estará lista y funcionando. Si quiere probar .NET Core en su explorador, consulte la guía de inicio rápido [Números en C#](https://docs.microsoft.com/dotnet/csharp/quick-starts/numbers-in-csharp).
 
 ## <a name="download-net-core-21"></a>Descarga de .NET Core 2.1
 
