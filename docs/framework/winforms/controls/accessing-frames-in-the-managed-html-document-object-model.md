@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847650"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308492"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acceso a marcos en el Modelo de objetos de documento HTML administrado
 Algunos documentos HTML están compuestos de *marcos*, o windows que pueden contener sus propios documentos HTML distintos. Los marcos facilitan la creación de páginas HTML porque permiten que una o más partes de la página permanezcan estáticas, como una barra de navegación, mientras que otros marcos cambian su contenido constantemente.  

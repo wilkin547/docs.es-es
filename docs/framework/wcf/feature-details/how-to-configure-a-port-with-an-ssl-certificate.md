@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0a2ac22bfb5f84235d34a554df8cc1ad43ddc489
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857633"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308445"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Cómo: Configurar un puerto con un certificado SSL
 Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí mismos con el <xref:System.ServiceModel.WSHttpBinding> que utiliza seguridad de transporte de clase, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -130,4 +130,4 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+* [Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

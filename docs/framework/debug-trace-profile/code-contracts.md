@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649222"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308557"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Los contratos de código proporcionan una manera de especificar condiciones previas, condiciones posteriores e invariantes de objeto en el código. Las condiciones previas son requisitos que deben cumplirse al escribir un método o propiedad. Las condiciones posteriores describen las expectativas en el momento en que se cierra el código del método o propiedad. Las invariantes de objeto describen el estado esperado de una clase que está en buen estado.  
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   Un valor preindicado en una condición posterior hace referencia al valor de una expresión en el inicio de un método o propiedad. Se usa la expresión `Contract.OldValue<T>(e)`, donde `T` es el tipo de `e`. Puede omitir el argumento de tipo genérico siempre que el compilador pueda deducir su tipo. (Por ejemplo, el compilador de C# siempre deduce el tipo porque toma un argumento). Hay varias restricciones en lo que puede ocurrir en `e` y los contextos en los que puede aparecer una expresión antigua. Una expresión antigua no puede contener otra expresión antigua. Lo más importante es que una expresión antigua debe hacer referencia a un valor que existía en el estado de condición previa del método. En otras palabras, debe ser una expresión que pueda evaluarse siempre que la condición previa del método sea `true`. A continuación se muestran varias instancias de esa regla.  
   
-    -   El valor debe existir en el estado de condición previa del método. Para hacer referencia a un campo en un objeto, las condiciones previas deben garantizar que ese objeto siempre es distinto de null.  
+    -   El valor debe existir en el estado de condición previa del método. Para hacer referencia a un campo en un objeto, las condiciones previas deben garantizar que el objeto siempre es distinto de null.  
   
     -   No es posible hacer referencia al valor devuelto del método en una expresión antigua:  
   
