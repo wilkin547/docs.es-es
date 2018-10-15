@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7802a64716f8bde278fe3f8ed8214f6ac01eadbc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839480"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316524"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Borrar&gt; elemento para connectionManagement (configuración de red)
 Borra la lista de administración de conexiones.  
@@ -55,7 +55,7 @@ Borra la lista de administración de conexiones.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo borra la lista de administración de conexión y, a continuación, agrega nuevas entradas de la administración de conexión para el servidor www.contoso.com y todos los demás hosts de red.  
+ El siguiente ejemplo se borra la lista de administración de conexión y, a continuación, agrega nuevas entradas para el servidor `www.contoso.com` y todos los demás hosts de red.  
   
 ```xml  
 <configuration>  

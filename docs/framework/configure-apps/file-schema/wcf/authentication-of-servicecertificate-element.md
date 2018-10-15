@@ -2,12 +2,12 @@
 title: Elemento &lt;authentication&gt; de &lt;serviceCertificate&gt;
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 9ef17c8bedf6bcef21a7c59d98a86bb20ad2da80
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811d54b49d8cd4fddbf196dbb524c5d303805c4f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752551"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316459"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>Elemento &lt;authentication&gt; de &lt;serviceCertificate&gt;
 Especifica la configuración utilizada por el proxy del cliente para autenticar certificados del servicio que se obtienen utilizando la negociación de SSL/TLS.  
@@ -38,7 +38,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |customCertificateValidatorType|Cadena. Tipo y ensamblado utilizados para validar un tipo personalizado.|  
 |certificateValidationMode|Especifica uno de los tres modos utilizados para validar las credenciales. Si se establece en `Custom`, también debe proporcionarse un customCertificateValidator. De manera predeterminada, es `ChainTrust`.|  
 |revocationMode|Uno de los modos utilizados para comprobar listas de certificados revocadas (CRL). De manera predeterminada, es `Online`.|  
-|trustedStoreLocation|Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`. Se utiliza este valor cuando un certificado del servicio se negocia al cliente. Validación se realiza contra el **personas de confianza** almacenar en la ubicación del almacén especificado. De manera predeterminada, es `CurrentUser`.|  
+|trustedStoreLocation|Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`. Se utiliza este valor cuando un certificado del servicio se negocia al cliente. Se realiza la validación contra el **personas de confianza** almacenar en la ubicación del almacén especificado. De manera predeterminada, es `CurrentUser`.|  
   
 ## <a name="customcertificatevalidator-attribute"></a>Atributo customCertificateValidator  
   
@@ -79,7 +79,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  El atributo `revocationMode` especifica cómo se comprueba la revocación de los certificados. El valor predeterminado es `online` que indica que se comprobará automáticamente la revocación de los certificados. Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo realiza dos tareas: Especifica primero un certificado del servicio para que el cliente lo utilice al comunicarse con extremos cuyo nombre de dominio es www.contoso.com sobre el protocolo HTTP. En segundo lugar, especifica el modo de revocación y ubicación del almacén utilizado durante la autenticación.  
+ El siguiente ejemplo realiza dos tareas: Primero especifica un certificado de servicio para el cliente que se usará al comunicarse con puntos de conexión cuyo nombre de dominio es `www.contoso.com` a través del protocolo HTTP. En segundo lugar, especifica el modo de revocación y ubicación del almacén utilizado durante la autenticación.  
   
 ```xml  
 <serviceCertificate>  
@@ -105,6 +105,6 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Creación de un servicio que emplee un validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [\<autenticación >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
+ [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)  
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
