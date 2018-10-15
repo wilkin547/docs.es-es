@@ -2,12 +2,12 @@
 title: Programación asincrónica con Async y Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e95010f966119db72a32c21408852d6c3bd6521
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529168"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122843"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programación asincrónica con Async y Await (C#)
 Puede evitar cuellos de botella de rendimiento y mejorar la capacidad de respuesta total de la aplicación mediante la programación asincrónica. Sin embargo, las técnicas tradicionales para escribir aplicaciones asincrónicas pueden resultar complicadas, haciéndolas difícil de escribir, depurar y mantener.  
