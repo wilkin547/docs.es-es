@@ -2,15 +2,15 @@
 title: Usar WorkflowInvoker y WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 6cbfca14eddeb82fc2d88b70703cae0fe59d63ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc315013ce50539eb4b72d26848a99164bb6b2d0
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519631"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347986"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Usar WorkflowInvoker y WorkflowApplication
-Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujos de trabajo. <xref:System.Activities.WorkflowInvoker> proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. <xref:System.ServiceModel.Activities.WorkflowServiceHost> proporciona compatibilidad para las actividades de mensajería y se usa principalmente con servicios de flujo de trabajo. Este tema presenta el hospedaje del flujo de trabajo con <xref:System.Activities.WorkflowInvoker> y <xref:System.Activities.WorkflowApplication>. Para obtener más información sobre el hospedaje de flujos de trabajo con <xref:System.ServiceModel.Activities.WorkflowServiceHost>, consulte [servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-services.md) y [información general de servicios de flujo de trabajo de hospedaje](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
+Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujos de trabajo. <xref:System.Activities.WorkflowInvoker> proporciona una manera sencilla de invocar un flujo de trabajo como si fuera una llamada al método y se puede usar solo para los flujos de trabajo que no usan la persistencia. <xref:System.Activities.WorkflowApplication> proporciona un modelo más enriquecido para ejecutar flujos de trabajo que incluye notificación de eventos de ciclo de vida, control de ejecución, reanudación de marcadores y persistencia. <xref:System.ServiceModel.Activities.WorkflowServiceHost> proporciona compatibilidad para las actividades de mensajería y se usa principalmente con servicios de flujo de trabajo. Este tema presenta el hospedaje del flujo de trabajo con <xref:System.Activities.WorkflowInvoker> y <xref:System.Activities.WorkflowApplication>. Para obtener más información sobre cómo hospedar flujos de trabajo con <xref:System.ServiceModel.Activities.WorkflowServiceHost>, consulte [servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-services.md) y [información general de hospedaje de servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
   
 ## <a name="using-workflowinvoker"></a>Usar WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> proporciona un modelo para ejecutar un flujo de trabajo como si fuera una llamada al método. Para invocar un flujo de trabajo mediante <xref:System.Activities.WorkflowInvoker>, llame al método <xref:System.Activities.WorkflowInvoker.Invoke%2A> y pase la definición del flujo de trabajo que se vaya a invocar. En este ejemplo, se invoca una actividad <xref:System.Activities.Statements.WriteLine> mediante <xref:System.Activities.WorkflowInvoker>.  
@@ -24,7 +24,7 @@ Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujo
 > [!NOTE]
 >  La excepción <xref:System.TimeoutException> solo se produce si se agota el tiempo de espera y el flujo de trabajo queda inactivo durante la ejecución. Un flujo de trabajo que tarda en completarse más tiempo que el especificado por el intervalo de tiempo de espera se completa correctamente si el flujo de trabajo no queda inactivo.  
   
- <xref:System.Activities.WorkflowInvoker> también proporciona versiones asincrónicas del método de invocación. Para obtener más información, consulte <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> y <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ <xref:System.Activities.WorkflowInvoker> también proporciona versiones asincrónicas del método de invocación. Para obtener más información, vea <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> y <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Definir argumentos de entrada de un flujo de trabajo  
  Los datos se pueden pasar a un flujo de trabajo mediante un diccionario de parámetros de entrada, con claves por nombre de argumento, que se asignan a los argumentos de entrada del flujo de trabajo. En este ejemplo, se invoca <xref:System.Activities.Statements.WriteLine> y el valor de su argumento <xref:System.Activities.Statements.WriteLine.Text%2A> se especifica con el diccionario de parámetros de entrada.  
@@ -60,7 +60,7 @@ Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujo
  [!code-csharp[CFX_WorkflowApplicationExample#30](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>Recuperar argumentos de salida de un flujo de trabajo  
- Cuando un flujo de trabajo se completa, se puede recuperar cualquier parámetro de salida en el controlador <xref:System.Activities.WorkflowApplication.Completed%2A> teniendo acceso al diccionario <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>. En el siguiente ejemplo, se hospeda un flujo de trabajo utilizando <xref:System.Activities.WorkflowApplication>. Una instancia de <xref:System.Activities.WorkflowApplication> se construye utilizando una definición de flujo de trabajo que está compuesta de una sola actividad `DiceRoll`. La actividad `DiceRoll` tiene dos argumentos de salida que representan los resultados de la operación de tirar los dados. Cuando se completa el flujo de trabajo, las salidas se recuperan en el controlador <xref:System.Activities.WorkflowApplication.Completed%2A>.  
+ Cuando un flujo de trabajo se completa, se puede recuperar cualquier parámetro de salida en el controlador <xref:System.Activities.WorkflowApplication.Completed%2A> teniendo acceso al diccionario <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>. En el siguiente ejemplo, se hospeda un flujo de trabajo utilizando <xref:System.Activities.WorkflowApplication>. Un <xref:System.Activities.WorkflowApplication> instancia se construye utilizando una definición de flujo de trabajo que consta de una sola `DiceRoll` actividad. La actividad `DiceRoll` tiene dos argumentos de salida que representan los resultados de la operación de tirar los dados. Cuando se completa el flujo de trabajo, las salidas se recuperan en el controlador <xref:System.Activities.WorkflowApplication.Completed%2A>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
@@ -85,7 +85,7 @@ Windows Workflow Foundation (WF) proporciona varios métodos para hospedar flujo
  El siguiente ejemplo de código es similar al ejemplo anterior salvo que los marcadores activos se enumeran antes de que se reanude el marcador. Se inicia el flujo de trabajo, y una vez se ha creado el objeto <xref:System.Activities.Bookmark> y se ha quedado inactivo el flujo de trabajo, se llama al método <xref:System.Activities.WorkflowApplication.GetBookmarks%2A>. Cuando se completa el flujo de trabajo, se muestra la siguiente salida en la consola.  
   
  **¿Cómo te llamas?**  
-**BookmarkName: Nombre de usuario-OwnerDisplayName: ReadLine**   
+**BookmarkName: Nombre de usuario - OwnerDisplayName: ReadLine**   
 **Steve**   
 **Hola, Steve**
 

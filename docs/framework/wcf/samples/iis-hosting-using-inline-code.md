@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 30e50d39b0edb34bcda1bec6d1848a09eabd34fa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ebaf524997ae4ed50b28aec53507f843f028bc31
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524942"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348996"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Hospedaje de IIS utilizando código en línea
 Este ejemplo muestra cómo implementar un servicio hospedado por Internet Information Services (IIS), donde el código de servicio está contenido en línea en un archivo .svc y se compila a petición. El código de servicio también se puede implementar directamente en los archivos de código de origen situado en el directorio \App_Code de la aplicación o compilado en un ensamblado implementado en \bin. Este ejemplo no muestra estas técnicas.  
@@ -29,7 +29,7 @@ Este ejemplo muestra cómo implementar un servicio hospedado por Internet Inform
   
  El ejemplo muestra un servicio típico que implementa un contrato que define un modelo de comunicación solicitud-respuesta. El servicio se hospeda en IIS y el código de servicio se contiene completamente en el archivo Service.svc. El primer mensaje enviado al servicio permite que éste se active en el host y se compile a petición. No es necesario realizar una compilación previa. El servicio implementa un contrato `ICalculator` tal y como se define en el código siguiente:  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
     public interface ICalculator  
@@ -47,9 +47,10 @@ Este ejemplo muestra cómo implementar un servicio hospedado por Internet Inform
   
  La implementación del servicio calcula y devuelve el resultado adecuado.  
   
-```  
+```svc
 <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>   
-…  
+```
+```csharp
 // Service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -74,7 +75,7 @@ public class CalculatorService : ICalculator
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
