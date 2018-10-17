@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 5f8eb4afe53292b2589964f1a745f00d761ee019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0d2b99368dc985c11951089adbabf8e1cdc8b9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542969"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372153"
 ---
-# <a name="documents"></a><span data-ttu-id="1cf2b-102">Documentos</span><span class="sxs-lookup"><span data-stu-id="1cf2b-102">Documents</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="1cf2b-103"> ofrece un conjunto versátil de componentes que permiten a los desarrolladores crear aplicaciones con características de documento avanzadas y una experiencia de lectura mejorada.</span><span class="sxs-lookup"><span data-stu-id="1cf2b-103"> provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="1cf2b-104">Además de las capacidades y la calidad mejoradas, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también ofrece servicios de administración simplificada de empaquetado, seguridad y almacenamiento de documentos.</span><span class="sxs-lookup"><span data-stu-id="1cf2b-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
+# <a name="documents"></a><span data-ttu-id="f808f-102">Documentos</span><span class="sxs-lookup"><span data-stu-id="f808f-102">Documents</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="f808f-103">ofrece un conjunto versátil de componentes que permiten a los desarrolladores crear aplicaciones con características de documento avanzadas y una experiencia de lectura mejorada.</span><span class="sxs-lookup"><span data-stu-id="f808f-103">provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="f808f-104">Además de las capacidades y la calidad mejoradas, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también ofrece servicios de administración simplificada de empaquetado, seguridad y almacenamiento de documentos.</span><span class="sxs-lookup"><span data-stu-id="f808f-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1cf2b-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="1cf2b-105">In This Section</span></span>  
- [<span data-ttu-id="1cf2b-106">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="1cf2b-106">Documents in WPF</span></span>](documents-in-wpf.md)  
- [<span data-ttu-id="1cf2b-107">Almacenamiento y serialización de documentos</span><span class="sxs-lookup"><span data-stu-id="1cf2b-107">Document Serialization and Storage</span></span>](document-serialization-and-storage.md)  
- [<span data-ttu-id="1cf2b-108">Anotaciones</span><span class="sxs-lookup"><span data-stu-id="1cf2b-108">Annotations</span></span>](annotations.md)  
- [<span data-ttu-id="1cf2b-109">Contenido dinámico</span><span class="sxs-lookup"><span data-stu-id="1cf2b-109">Flow Content</span></span>](flow-content.md)  
- [<span data-ttu-id="1cf2b-110">Tipografía</span><span class="sxs-lookup"><span data-stu-id="1cf2b-110">Typography</span></span>](typography.md)  
- [<span data-ttu-id="1cf2b-111">Imprimir y administración de sistemas de impresión</span><span class="sxs-lookup"><span data-stu-id="1cf2b-111">Printing and Print System Management</span></span>](printing-and-print-system-management.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f808f-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f808f-105">In This Section</span></span>  
+ [<span data-ttu-id="f808f-106">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="f808f-106">Documents in WPF</span></span>](documents-in-wpf.md)  
+ [<span data-ttu-id="f808f-107">Almacenamiento y serialización de documentos</span><span class="sxs-lookup"><span data-stu-id="f808f-107">Document Serialization and Storage</span></span>](document-serialization-and-storage.md)  
+ [<span data-ttu-id="f808f-108">Anotaciones</span><span class="sxs-lookup"><span data-stu-id="f808f-108">Annotations</span></span>](annotations.md)  
+ [<span data-ttu-id="f808f-109">Contenido dinámico</span><span class="sxs-lookup"><span data-stu-id="f808f-109">Flow Content</span></span>](flow-content.md)  
+ [<span data-ttu-id="f808f-110">Tipografía</span><span class="sxs-lookup"><span data-stu-id="f808f-110">Typography</span></span>](typography.md)  
+ [<span data-ttu-id="f808f-111">Imprimir y administración de sistemas de impresión</span><span class="sxs-lookup"><span data-stu-id="f808f-111">Printing and Print System Management</span></span>](printing-and-print-system-management.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1cf2b-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="1cf2b-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f808f-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="f808f-112">See Also</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- <span data-ttu-id="1cf2b-113">[isXPS.exe (Herramienta isXPS Conformance)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="1cf2b-113">[isXPS.exe (isXPS Conformance Tool)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))</span></span>
+ <span data-ttu-id="f808f-113">[isXPS.exe (Herramienta isXPS Conformance)](/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="f808f-113">[isXPS.exe (isXPS Conformance Tool)](/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span></span>
