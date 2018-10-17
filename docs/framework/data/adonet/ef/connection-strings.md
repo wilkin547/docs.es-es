@@ -1,32 +1,33 @@
 ---
-title: Cadenas de conexión
-ms.date: 03/30/2017
+title: Cadenas de conexión de ADO.NET Entity Framework
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842183"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372491"
 ---
-# <a name="connection-strings"></a>Cadenas de conexión
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>Cadenas de conexión de ADO.NET Entity Framework
 Una cadena de conexión contiene información de inicialización que se transfiere como un parámetro desde un proveedor de datos a un origen de datos. La sintaxis depende del proveedor de datos y la cadena de conexión se analiza mientras se intenta abrir una conexión. Las cadenas de conexión que usa Entity Framework contienen la información que se emplea para conectar con el proveedor de datos ADO.NET subyacente que Entity Framework admite. También contienen información sobre los archivos del modelo y de asignación necesarios.  
   
  El proveedor de EntityClient utiliza la cadena de conexión al obtener acceso a los metadatos del modelo y de asignación y al conectar con el origen de datos. Se puede obtener acceso a la cadena de conexión o establecerse a través de la propiedad <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder> se puede utilizar para construir mediante programación los parámetros de la cadena de conexión o tener acceso a ellos. Para obtener más información, consulte [Cómo: compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  El [herramientas de Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) generan una cadena de conexión que se almacena en el archivo de configuración de la aplicación. <xref:System.Data.Objects.ObjectContext> recupera esta información de conexión automáticamente al crear consultas de objetos. Se puede tener acceso al elemento  <xref:System.Data.EntityClient.EntityConnection> que usa una instancia de <xref:System.Data.Objects.ObjectContext> desde la propiedad <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obtener más información, consulte [administrar conexiones y transacciones](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
-  
+
+## <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
+
+Para obtener información sobre la sintaxis general para las cadenas de conexión, consulte [sintaxis de la cadena de conexión | Las cadenas de conexión de ADO.NET](../connection-strings.md#connection-string-syntax).
+
 ## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión  
- El formato de una cadena de conexión es una lista de pares de parámetros de clave y valor delimitados por punto y coma:  
-  
- `keyword1=value; keyword2=value;`  
-  
- El signo igual (=) asocia cada palabra clave a su valor. Las palabras clave no distinguen entre mayúsculas y minúsculas y los espacios entre los pares clave-valor se omiten. Sin embargo, los valores pueden distinguir entre mayúsculas y minúsculas, en función del origen de datos. Los valores que contengan un punto y coma, caracteres de comilla sencilla o caracteres de comilla doble deben colocarse entre comillas dobles. En la tabla siguiente se muestran los nombres válidos para los valores de palabra clave en la propiedad <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
+
+En la tabla siguiente se muestran los nombres válidos para los valores de palabra clave en la propiedad <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
   
 |Palabra clave|Descripción|  
 |-------------|-----------------|  
 |`Provider`|Se requiere si no se especifica la palabra clave `Name`. El nombre del proveedor, que se usa para recuperar el objeto <xref:System.Data.Common.DbProviderFactory> para el proveedor subyacente. Este valor es constante.<br /><br /> Cuando la palabra clave `Name` no se incluye en una cadena de conexión de Entity, se requiere un valor no vacío para la palabra clave `Provider`. Esta palabra clave y la palabra clave `Name` se excluyen mutuamente.|  
-|`Provider Connection String`|Opcional. Especifica la cadena de conexión específica del proveedor que se pasa al origen de datos subyacente. Esta cadena de conexión se expresa mediante pares palabra clave-valor válidos para el proveedor de datos. Un valor de `Provider Connection String` no válido provocará un error en tiempo de ejecución cuando sea evaluado por el origen de datos.<br /><br /> Esta palabra clave y la palabra clave `Name` se excluyen mutuamente.<br /><br /> El valor de `Provider Connection String` debe estar entrecomillado. A continuación se muestra un ejemplo:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> El ejemplo siguiente no va a funcionar:<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|Opcional. Especifica la cadena de conexión específica del proveedor que se pasa al origen de datos subyacente. Esta cadena de conexión contiene los pares palabra clave-valor son válidos para el proveedor de datos. Un valor de `Provider Connection String` no válido provocará un error en tiempo de ejecución cuando sea evaluado por el origen de datos.<br /><br /> Esta palabra clave y la palabra clave `Name` se excluyen mutuamente.<br /><br /> Asegúrese de que anular el valor de acuerdo con la sintaxis general de [las cadenas de conexión de ADO.NET](../../../../../docs/framework/data/adonet/connection-strings.md). Considere, por ejemplo, la siguiente cadena de conexión: `Server=serverName; User ID = userID`. Deben convertirse porque contiene un punto y coma. Puesto que no contiene comillas dobles, se puede usar para secuencias de escape:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|Se requiere si no se especifica la palabra clave `Name`. Una lista delimitada por barras verticales de los directorios, archivos y localizadores de recursos en que se ha de buscar información de asignación y metadatos. A continuación se muestra un ejemplo:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Los espacios en blanco a cada lado del separador de barra vertical se pasan por alto.<br /><br /> Esta palabra clave y la palabra clave `Name` se excluyen mutuamente.|  
 |`Name`|La aplicación puede especificar, si se desea, el nombre de conexión en un archivo de configuración de la aplicación que proporcione los valores de cadena de conexión con pares palabra clave-valor necesarios. En este caso, no es posible suministrarlos directamente en la cadena de conexión. La palabra clave `Name` no se permite en un archivo de configuración.<br /><br /> Cuando la palabra clave `Name` no se incluye en la cadena de conexión, se requiere un valor no vacío para la palabra clave Provider.<br /><br /> Esta palabra clave y todas las demás palabras clave de cadena de conexión se excluyen mutuamente.|  
   

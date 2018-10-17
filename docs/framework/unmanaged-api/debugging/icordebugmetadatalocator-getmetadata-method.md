@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521359"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373889"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData (Método)
 Pide al depurador que devuelva la ruta de acceso completa a un módulo cuyos metadatos se necesitan para completar una operación solicitada por el depurador.  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] Cadena terminada en NULL que representa la ruta de acceso completa al archivo. Si la ruta de acceso completa no está disponible, el nombre y la extensión del archivo (*filename*. *extensión*).  
   
  `dwImageTimeStamp`  
- [in] Marca de tiempo de los encabezados del archivo PE de la imagen. Este parámetro puede emplearse para un servidor de símbolos ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) búsqueda.  
+ [in] Marca de tiempo de los encabezados del archivo PE de la imagen. Este parámetro puede emplearse para un servidor de símbolos ([SymSrv](/windows/desktop/debug/using-symsrv)) búsqueda.  
   
  `dwImageSize`  
  [in] Tamaño de la imagen en los encabezados de archivo PE. Este parámetro podría usarse para una búsqueda de SymSrv.  

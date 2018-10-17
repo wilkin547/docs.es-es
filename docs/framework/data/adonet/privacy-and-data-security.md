@@ -2,18 +2,18 @@
 title: Privacidad y seguridad de datos
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: dd74abcd95faf27485efcefa1a0a76e830df60fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508869"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372523"
 ---
 # <a name="privacy-and-data-security"></a>Privacidad y seguridad de datos
 La protección y la administración de información confidencial en una aplicación de ADO.NET depende de los productos y las tecnologías utilizados para crearla. ADO.NET no proporciona de forma directa servicios para proteger ni cifrar datos.  
   
 ## <a name="cryptography-and-hash-codes"></a>Criptografía y códigos hash  
- Las clases del espacio de nombres <xref:System.Security.Cryptography> de .NET Framework se pueden utilizar desde las aplicaciones de ADO.NET para impedir que terceras partes no autorizadas lean o modifiquen los datos. Algunas clases son contenedores para Microsoft CryptoAPI no administrado, mientras que otras son implementaciones administradas. El [servicios criptográficos](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) tema proporciona información general sobre criptografía en .NET Framework, describe cómo se implementa la criptografía y cómo realizar tareas criptográficas específicas.  
+ Las clases del espacio de nombres <xref:System.Security.Cryptography> de .NET Framework se pueden utilizar desde las aplicaciones de ADO.NET para impedir que terceras partes no autorizadas lean o modifiquen los datos. Algunas clases son contenedores para Microsoft CryptoAPI no administrado, mientras que otras son implementaciones administradas. El [servicios criptográficos](../../../../docs/standard/security/cryptographic-services.md) tema proporciona información general sobre criptografía en .NET Framework, describe cómo se implementa la criptografía y cómo realizar tareas criptográficas específicas.  
   
  Al contrario que la criptografía, que permite cifrar datos y descifrarlos posteriormente, el proceso hash de datos es unidireccional. La utilización de algoritmos hash en los datos resulta útil para evitar la manipulación mediante la comprobación de que los datos no han sido alterados: para cadenas de entrada idénticas, los algoritmos hash siempre generan valores de salida cortos idénticos que se pueden comparar fácilmente. [Asegurar la integridad de datos mediante códigos Hash](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) describe cómo generar y comprobar valores hash.  
   

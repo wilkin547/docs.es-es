@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837445"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371009"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle (función)
 Devuelve un controlador único que identifica una propiedad.
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in] Una cadena terminada en null de characaters codificados UTF16 que contiene el nombre de propiedad.   
 
 `pType`  
-[out] Un puntero a un [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) miembro de enumeración que representa el tipo CIM de la propiedad.
+[out] Un puntero a un [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) miembro de enumeración que representa el tipo CIM de la propiedad.
 
 `pHandle`   
 [out] Un puntero a un entero que contiene el identificador de propiedad.

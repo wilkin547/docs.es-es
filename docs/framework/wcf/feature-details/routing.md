@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: 065bbb5e20ddf1b26e98934d94c764e83969cc8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518909"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370839"
 ---
 # <a name="routing"></a>Enrutamiento
 Los temas de esta sección explican el servicio de enrutamiento. El servicio de enrutamiento es un intermediario de SOAP configurable genérico que permite configurar el enrutamiento basado en contenido, preparar puentes protocolares, administrar errores de comunicaciones, así como actualizar dinámicamente la lógica de enrutamiento durante el tiempo de ejecución.  
@@ -20,7 +20,7 @@ Los temas de esta sección explican el servicio de enrutamiento. El servicio de 
  [Servicio de enrutamiento](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Proporciona una introducción a las características del servicio de enrutamiento.  
   
- [Servicio de enrutamiento](https://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Servicio de enrutamiento](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Describe las características del servicio de enrutamiento.  
   
  [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

@@ -2,12 +2,12 @@
 title: Cómo bloquear puntos de conexión en la empresa
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836930"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374162"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Cómo bloquear puntos de conexión en la empresa
 Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa. El siguiente tema describe cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones cliente de Windows Communication Foundation (WCF) instaladas en los equipos.  
@@ -29,7 +29,7 @@ Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conf
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Cree un nuevo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que registre el validador de extremo creado en el paso 1. El ejemplo de código siguiente muestra cómo hacerlo. (El código original para este ejemplo está en el [validación de seguridad](../../../../docs/framework/wcf/samples/security-validation.md) ejemplo.)  
+2.  Cree un nuevo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que registre el validador de punto de conexión creado en el paso 1. El ejemplo de código siguiente muestra cómo hacerlo. (El código original para este ejemplo está en el [validación de seguridad](../../../../docs/framework/wcf/samples/security-validation.md) ejemplo.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
@@ -39,7 +39,7 @@ Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conf
   
 1.  Instale el validador del extremo mediante el mecanismo adecuado. En una empresa, esto puede hacerse utilizando la directiva de grupo y Systems Management Server (SMS).  
   
-2.  Instalar el ensamblado con nombre seguro en la caché global de ensamblados mediante la [Gacutil.exe (Global Assembly Cache Tool)](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
+2.  Instalar el ensamblado con nombre seguro en la caché global de ensamblados mediante la [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
 3.  Utilice los tipos de espacio de nombres de <xref:System.Configuration?displayProperty=nameWithType> para:  
   

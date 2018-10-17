@@ -3,11 +3,11 @@ title: Usar delegados de actividad
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580893"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374240"
 ---
 # <a name="using-activity-delegates"></a>Usar delegados de actividad
 Los delegados de actividad permiten a los autores de actividad exponer devoluciones de llamada con firmas específicas, para las que los usuarios de la actividad pueden proporcionar controladores basados en actividades. Hay dos tipos de delegados de actividad disponibles: <xref:System.Activities.ActivityAction%601> se usa para definir delegados de actividad que no tienen un valor devuelto y <xref:System.Activities.ActivityFunc%601> se utiliza para definir delegados de actividad que tienen un valor devuelto.  
@@ -44,7 +44,7 @@ Los ejemplos de este tema usan la sintaxis de inicialización del objeto. Esta s
  Hay varias versiones genéricas de <xref:System.Activities.Statements.InvokeAction%601> y <xref:System.Activities.ActivityAction%601> proporcionadas para pasar uno o varios argumentos.  
   
 ## <a name="using-activityfunc"></a>Usar ActivityFunc  
- <xref:System.Activities.ActivityAction%601> es útil cuando no existe ningún valor de resultado procedente de la actividad y <xref:System.Activities.ActivityFunc%601> se utiliza cuando se devuelve un valor de resultado. Cuando cree una actividad personalizada que defina un objeto <xref:System.Activities.ActivityFunc%601>, use <xref:System.Activities.Expressions.InvokeFunc%601> para modelar la invocación de ese objeto <xref:System.Activities.ActivityFunc%601>. En el ejemplo siguiente, se define una actividad `WriteFillerText`. Para proporcionar el texto de relleno, se especifica una clase <xref:System.Activities.Expressions.InvokeFunc%601> que toma un argumento entero y genera una cadena como resultado. Una vez recuperado el texto de relleno, se muestra en la consola utilizando una actividad <xref:System.Activities.Statements.WriteLine>.  
+ <xref:System.Activities.ActivityAction%601> es útil cuando no existe ningún valor de resultado procedente de la actividad y <xref:System.Activities.ActivityFunc%601> se utiliza cuando se devuelve un valor de resultado. Cuando cree una actividad personalizada que defina un objeto <xref:System.Activities.ActivityFunc%601>, use <xref:System.Activities.Expressions.InvokeFunc%601> para modelar la invocación de ese objeto <xref:System.Activities.ActivityFunc%601>. En el ejemplo siguiente, se define una actividad `WriteFillerText` . Para proporcionar el texto de relleno, se especifica una clase <xref:System.Activities.Expressions.InvokeFunc%601> que toma un argumento entero y genera una cadena como resultado. Una vez recuperado el texto de relleno, se muestra en la consola utilizando una actividad <xref:System.Activities.Statements.WriteLine>.  
   
  [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   

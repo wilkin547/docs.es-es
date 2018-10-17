@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40820a805310786eeb0effd7c5284c1a70a6e70b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407605"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373701"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause (Estructura)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -53,9 +53,9 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|Desplazamiento, en bytes, desde el principio del cuerpo del método para un controlador de excepciones basado en filtros.|  
   
 ## <a name="remarks"></a>Comentarios  
- Una matriz de `CoreDebugEHClause` está devolviendo valores el [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) método.  
+ Una matriz de `CoreDebugEHClause` los valores que se devuelven los [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) método.  
   
- La información de la cláusula EH se define mediante la especificación de CLI. Para obtener más información, consulte [estándar ECMA-355: Common Language Infrastructure (CLI), 6ª edición](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ La información de la cláusula EH se define mediante la especificación de CLI. Para obtener más información, consulte [estándar ECMA-355: Common Language Infrastructure (CLI), 6th Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  El campo `flags` puede contener las siguientes marcas. Tenga en cuenta que no están definidas en CorDebug.idl ni en CorDebug.h.  
   
@@ -67,13 +67,13 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Cláusula fault (cláusula `finally` a la que se llama solo cuando se inicia una excepción).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [GetEHClauses (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
