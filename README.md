@@ -1,4 +1,4 @@
-# <a name="net-docs"></a>Documentos de .NET
+﻿# <a name="net-docs"></a>Documentos de .NET
 
 Este repositorio contiene documentación conceptual de .NET. El [sitio de documentación de .NET](https://docs.microsoft.com/dotnet) se ha creado a partir de varios repositorios, además de este:
 
