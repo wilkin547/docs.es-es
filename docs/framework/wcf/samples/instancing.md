@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 1d193b0cac56f365a4f0a294145369502754a1b1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 61d966599d06c65690e317be0d514eba944beb77
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696597"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373761"
 ---
 # <a name="instancing"></a>Creación de instancias
 El ejemplo de la creación de instancias muestra el valor de comportamiento de creación de instancias, que controla cómo las instancias de una clase de servicio se crean en respuesta a las solicitudes de cliente. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa el `ICalculator` contrato de servicio. Este ejemplo define un nuevo contrato, `ICalculatorInstance`, que se hereda de `ICalculator`. El contrato especificado por `ICalculatorInstance` proporciona tres operaciones adicionales para inspeccionar el estado de la instancia del servicio. Modificando el valor de la creación de instancias, puede observar el cambio en el comportamiento ejecutando el cliente.  
@@ -30,7 +30,7 @@ El ejemplo de la creación de instancias muestra el valor de comportamiento de c
   
  La clase de servicio especifica el comportamiento de la creación de instancias con el atributo `[ServiceBehavior(InstanceContextMode=<setting>)]` como se muestra en el ejemplo de código que sigue. Cambiando las líneas que se marcan con comentarios, se puede observar el comportamiento de cada uno de los modos de la instancia. Recuerde recompilar el servicio después de cambiar el modo de la creación de instancias. No hay ninguna configuración relacionada con la creación de instancias para especificar en el cliente.  
   
-```  
+```csharp
 // Enable one of the following instance modes to compare instancing behaviors.  
  [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
   

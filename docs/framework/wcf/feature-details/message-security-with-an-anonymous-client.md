@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 ms.openlocfilehash: f488d2e840ec2524f0cde8dc4b3e6c1cd10c554e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030303"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374175"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Seguridad de mensajes con clientes anónimos
 El siguiente escenario muestra un cliente y servicio protegido por seguridad de mensajes de Windows Communication Foundation (WCF). Un objetivo del diseño es usar la seguridad del mensaje en lugar de la seguridad de transporte, para que en el futuro pueda admitir un modelo basado en notificaciones más completo. Para obtener más información acerca de cómo usar notificaciones enriquecidas para la autorización, consulte [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

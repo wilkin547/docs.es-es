@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004356"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372075"
 ---
 # <a name="ltpropertygt-element-net-native"></a>Elemento &lt;Property&gt; (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.  
@@ -75,7 +75,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.
   
  El archivo se aplica el valor `All` a la directiva `Activate` de la clase `Book`, lo que permite el acceso a los constructores de clase mediante reflexión. La directiva `Browse` para la `Book` clase se hereda de su espacio de nombres primario. Esto se establece en `Required Public`, que hace que los metadatos estén disponibles en tiempo de ejecución.  
   
- A continuación se muestra el código fuente del ejemplo. La variable `outputBlock` representa un control [TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx).  
+ A continuación se muestra el código fuente del ejemplo. El `outputBlock` variable representa un <xref:Windows.UI.Xaml.Controls.TextBlock> control.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

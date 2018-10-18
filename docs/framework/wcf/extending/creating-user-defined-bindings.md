@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806749"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372247"
 ---
 # <a name="creating-user-defined-bindings"></a>Creación de enlaces definidos por el usuario
 Hay varias maneras de crear enlaces no proporcionadas por el sistema:  
@@ -42,10 +42,10 @@ Hay varias maneras de crear enlaces no proporcionadas por el sistema:
 |Codificación|Texto, binario, MTOM, personalizado|Sí*|  
 |Transporte|TCP, canalizaciones con nombre, HTTP, HTTPS, MSMQ, personalizado|Sí|  
   
- * Dado que se requiere para cada enlace, una codificación si no se especifica una codificación, WCF agrega una codificación predeterminada. El valor predeterminado es texto/XML para los transportes HTTP y HTTPS, y binario para otros transportes.  
+ * Porque se requiere para cada enlace, una codificación si no se especifica una codificación, WCF agrega una codificación predeterminada. El valor predeterminado es texto/XML para los transportes HTTP y HTTPS, y binario para otros transportes.  
   
 ## <a name="creating-a-new-binding-element"></a>Creación de un nuevo elemento de enlace  
- Además de los tipos derivados de <xref:System.ServiceModel.Channels.BindingElement> que son proporcionados por WCF, puede crear sus propios elementos de enlace. Esto le permite personalizar la manera en la que se crea la pila de enlaces y los componentes que van en ella creando su propio <xref:System.ServiceModel.Channels.BindingElement> que puede componerse con el resto de tipos proporcionados por el sistema en la pila.  
+ Además de los tipos derivados de <xref:System.ServiceModel.Channels.BindingElement> que son proporcionadas por WCF, puede crear sus propios elementos de enlace. Esto le permite personalizar la manera en la que se crea la pila de enlaces y los componentes que van en ella creando su propio <xref:System.ServiceModel.Channels.BindingElement> que puede componerse con el resto de tipos proporcionados por el sistema en la pila.  
   
  Por ejemplo, si implementa un `LoggingBindingElement` que proporciona la capacidad de registrar el mensaje en una base de datos, debe colocarlo sobre un canal de transporte en la pila de canales. En este caso, la aplicación crea un enlace personalizado que compuso el `LoggingBindingElement` con `TcpTransportBindingElement`, como en el siguiente ejemplo.  
   
@@ -61,20 +61,20 @@ Binding customBinding = new CustomBinding(
 ## <a name="creating-a-new-binding"></a>Crear un nuevo enlace  
  Un elemento de enlace creado por el usuario se puede utilizar de dos maneras. La sección anterior muestra la primera manera: a través de un enlace personalizado. Un enlace personalizado le permite al usuario crear su propio enlace en función de un conjunto arbitrario de elementos de enlace, incluso los creados por usuario.  
   
- Si utiliza el enlace en más de una aplicación, cree su propio enlace y extienda el <xref:System.ServiceModel.Channels.Binding>. Esto evita crear manualmente un enlace personalizado cada vez que desee utilizarlo. Un enlace definido por el usuario le permite definir el comportamiento del enlace e incluir elementos de enlace definidos por el usuario. Y es *preempaquetado*: no es necesario recompilar el enlace cada vez que lo utilice.  
+ Si utiliza el enlace en más de una aplicación, cree su propio enlace y extienda el <xref:System.ServiceModel.Channels.Binding>. Esto evita crear manualmente un enlace personalizado cada vez que desee utilizarlo. Un enlace definido por el usuario le permite definir el comportamiento del enlace e incluir elementos de enlace definidos por el usuario. Y es *preempaquetado*: no es necesario volver a generar el enlace cada vez que lo utilice.  
   
  Como mínimo, un enlace definido por el usuario deberá implementar el método <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> y la propiedad <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
- El método <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> devuelve un nuevo <xref:System.ServiceModel.Channels.BindingElementCollection> que contiene los elementos de enlace del enlace. Se ordena la colección y debería contener primero los elementos de enlace protocolares, seguidos por el elemento de enlace de la codificación, seguido por el elemento de enlace de transporte. Al utilizar los elementos de enlace de WCF proporcionados por el sistema, debe seguir el orden de las reglas especificadas en el elemento de enlace [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md). Esta colección nunca debería hacer referencia a objetos a los que se ha hecho referencia dentro de la clase de enlace definida por el usuario; por consiguiente, los autores de enlaces deben devolver un `Clone()` de la <xref:System.ServiceModel.Channels.BindingElementCollection> en cada llamada a <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ El método <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> devuelve un nuevo <xref:System.ServiceModel.Channels.BindingElementCollection> que contiene los elementos de enlace del enlace. Se ordena la colección y debería contener primero los elementos de enlace protocolares, seguidos por el elemento de enlace de la codificación, seguido por el elemento de enlace de transporte. Al usar los elementos de enlace proporcionado por el sistema WCF, debe seguir el orden de las reglas especificadas en el elemento de enlace [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md). Esta colección nunca debería hacer referencia a objetos a los que se ha hecho referencia dentro de la clase de enlace definida por el usuario; por consiguiente, los autores de enlaces deben devolver un `Clone()` de la <xref:System.ServiceModel.Channels.BindingElementCollection> en cada llamada a <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
   
  La propiedad <xref:System.ServiceModel.Channels.Binding.Scheme%2A> representa el esquema del URI para el protocolo de transporte que se está utilizando en el enlace. Por ejemplo, el *WSHttpBinding* y *NetTcpBinding* devuelven "http" y "net.tcp" desde sus respectivas <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propiedades.  
   
  Para obtener una lista completa de métodos y propiedades opcionales para los enlaces definidos por el usuario, vea <xref:System.ServiceModel.Channels.Binding>.  
   
 ### <a name="example"></a>Ejemplo  
- Este ejemplo implementa el enlace del perfil en `SampleProfileUdpBinding`, que deriva de <xref:System.ServiceModel.Channels.Binding>. El `SampleProfileUdpBinding` contiene hasta cuatro elementos de enlace dentro de él: uno creado por el usuario `UdpTransportBindingElement`; y tres proporcionados por el sistema: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, y `ReliableSessionBindingElement`.  
+ Este ejemplo implementa el enlace del perfil en `SampleProfileUdpBinding`, que deriva de <xref:System.ServiceModel.Channels.Binding>. El `SampleProfileUdpBinding` contiene hasta cuatro elementos de enlace dentro de ella: uno creado por el usuario `UdpTransportBindingElement`; y tres proporcionado por el sistema: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, y `ReliableSessionBindingElement`.  
   
-```  
+```csharp
 public override BindingElementCollection CreateBindingElements()  
 {     
     BindingElementCollection bindingElements = new BindingElementCollection();  
@@ -93,7 +93,7 @@ public override BindingElementCollection CreateBindingElements()
  No todos los elementos de enlace son compatibles entre sí. En concreto, hay algunas restricciones con respecto a elementos de enlaces de seguridad cuando se utilizan con contratos dúplex.  
   
 ### <a name="one-shot-security"></a>Seguridad monoestable  
- Puede implementar la seguridad "Monoestable", donde se envían las credenciales de seguridad necesarios en un único mensaje, estableciendo el `negotiateServiceCredential` atributo de la \<mensaje > elemento de configuración a `false`.  
+ Puede implementar la seguridad "Monoestable", donde todas las credenciales de seguridad necesarias se envían en un único mensaje, estableciendo el `negotiateServiceCredential` atributo de la \<mensaje > elemento de configuración a `false`.  
   
  La autenticación monoestable no trabaja con contratos dúplex.  
   

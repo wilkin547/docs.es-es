@@ -2,17 +2,17 @@
 title: Codificadores personalizados
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: ae3904af83452dd76723abb78a7a06fdb0f798cc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809282"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372699"
 ---
 # <a name="custom-encoders"></a>Codificadores personalizados
 Este tema describe cómo crear codificadores personalizados.  
   
- En Windows Communication Foundation (WCF), utilice un *enlace* para especificar cómo transferir datos a través de una red entre los extremos. Un enlace se compone de una secuencia de *elementos de enlace*. Un enlace incluye elementos de enlace de protocolo opcionales, como seguridad, *codificador de mensajes* elemento de enlace y un elemento de enlace de transporte necesario. Un codificador de mensaje está representado por un elemento de enlace de codificación de mensaje. En WCF se incluyen tres codificadores de mensajes: binario, Message Transmission Optimization Mechanism (MTOM) y texto.  
+ En Windows Communication Foundation (WCF), usa un *enlace* para especificar cómo transferir datos a través de una red entre los puntos de conexión. Un enlace está formado por una secuencia de *elementos de enlace*. Un enlace incluye elementos de enlace protocolares opcionales, como seguridad, *codificador de mensajes* elemento de enlace y un elemento de enlace de transporte necesario. Un codificador de mensaje está representado por un elemento de enlace de codificación de mensaje. Se incluyen tres codificadores de mensajes en WCF: binario, Message Transmission Optimization Mechanism (MTOM) y texto.  
   
  Un elemento de enlace de codificación de mensajes serializa un <xref:System.ServiceModel.Channels.Message> saliente y lo pasa al transporte, o recibe del transporte la forma serializada de un mensaje y lo pasa al nivel de protocolo, si está presente, o, si no lo está, a la aplicación.  
   
@@ -21,20 +21,20 @@ Este tema describe cómo crear codificadores personalizados.
  Al establecer una conexión con un cliente o servidor existente previamente, puede tener opciones sobre la utilización de una codificación de mensajes determinada. Sin embargo, los servicios de WCF pueden hacerse accesibles a través de varios extremos, cada uno con un codificador de mensajes diferentes. Cuando un único codificador no abarca toda la audiencia de su servicio, considere la exposición del servicio en varios puntos de conexión. De este modo, las aplicaciones cliente pueden elegir el extremo que más les convenga. La utilización de múltiples extremos permite combinar las ventajas de diferentes codificadores de mensaje con otros elementos de enlace.  
   
 ## <a name="system-provided-encoders"></a>Codificadores proporcionados por el sistema  
- WCF ofrece varios enlaces proporcionados por el sistema que están diseñados para cubrir los escenarios de aplicación más comunes. Cada uno de estos enlaces combina un transporte, un codificador de mensaje y otras opciones (por ejemplo, seguridad). Este tema describe cómo extender el `Text`, `Binary`, y `MTOM` mensaje codificadores que se incluyen en WCF, o crear su propio codificador personalizado. El codificador de mensajes de texto admite tanto la codificación XML como la codificación SOAP. El modo de codificación XML sin formato del codificador de mensajes de texto se denomina POX (“XML sin formato"), para distinguirlo de la codificación SOAP basada en texto.  
+ WCF ofrece varios enlaces proporcionados por el sistema que están diseñados para cubrir los escenarios más comunes de la aplicación. Cada uno de estos enlaces combina un transporte, un codificador de mensaje y otras opciones (por ejemplo, seguridad). Este tema describe cómo extender el `Text`, `Binary`, y `MTOM` codificadores que se incluyen en WCF, o crear su propio codificador personalizado de mensajes. El codificador de mensajes de texto admite tanto la codificación XML como la codificación SOAP. El modo de codificación XML sin formato del codificador de mensajes de texto se denomina POX (“XML sin formato"), para distinguirlo de la codificación SOAP basada en texto.  
   
- Para obtener más información acerca de las combinaciones de elementos de enlace proporcionados por los enlaces proporcionados por el sistema, consulte la sección correspondiente en [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Para obtener más información sobre las combinaciones de elementos de enlace proporcionados por los enlaces proporcionados por el sistema, consulte la sección correspondiente en [elección del transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Cómo trabajar con codificadores proporcionados por el sistema  
  Se agrega una codificación a un enlace mediante una clase derivada de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
- WCF proporciona los siguientes tipos de elementos de enlace derivados de la <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> clase que pueda proporcionar codificación de texto, binario y Message Transmission Optimization Mechanism (MTOM):  
+ WCF proporciona los siguientes tipos de elementos de enlace que se deriva el <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> clase que pueda proporcionar codificación de texto, binario y Message Transmission Optimization Mechanism (MTOM):  
   
 -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: el codificador más interoperable, pero el menos eficaz con mensajes XML. En general, un servicio web, o un cliente de servicios web, pueden entender XML textual. No obstante, la transmisión de grandes bloques de datos binarios en forma de texto no es eficaz.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: representa el elemento de enlace que especifica la codificación de caracteres y el control de versiones del mensaje, utilizados con los mensajes binarios basados en XML. Se trata de las opciones de codificación, pero la menos interoperable, más eficaz porque solo es compatible con los puntos de conexión WCF.  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: representa el elemento de enlace que especifica la codificación de caracteres y el control de versiones del mensaje, utilizados con los mensajes binarios basados en XML. Esto es más eficaz de las opciones de codificación, pero la menos interoperable, porque solo es compatible con los puntos de conexión WCF.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: representa el elemento de enlace que especifica la codificación de caracteres y la versión de mensaje que se utilizan para un mensaje usando la codificación Message Transmission Optimization Mechanism (MTOM). MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta equilibrar la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos en texto.  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: representa el elemento de enlace que especifica la codificación de caracteres y el control de versiones del mensaje, utilizados con un mensaje codificado mediante el mecanismo de optimización de la transmisión del mensaje (MTOM). MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta equilibrar la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos en texto.  
   
  El elemento de enlace crea un binario, MTOM, o <xref:System.ServiceModel.Channels.MessageEncoderFactory> de texto. El generador crea un binario, MTOM o una instancia <xref:System.ServiceModel.Channels.MessageEncoderFactory> de texto. Normalmente, solo existe una instancia. No obstante, si se utilizan sesiones, puede proporcionarse un codificador diferente para cada sesión. El codificador binario utiliza este recurso para coordinar los diccionarios dinámicos (vea, Infrastructura de XML).  
   
@@ -57,7 +57,7 @@ Este tema describe cómo crear codificadores personalizados.
   
  Las cadenas se anexan al mensaje mediante un método `AddSessionInformationToMessage` interno. Agrega las cadenas con formato UTF-8 al principio del mensaje prefijado con su longitud. A continuación, se prefija el encabezado de diccionario completo con la longitud de sus datos. La operación inversa la realiza un método `ExtractSessionInformationFromMessage` interno.  
   
- Además de procesar las claves de diccionario dinámico, los mensajes con sesión almacenados en búfer se reciben de una única manera. En lugar de crear un lector sobre el documento y procesarlo, el codificador binario utiliza la clase `MessagePatterns` interna para deconstruir la secuencia binaria. La idea es que la mayoría de los mensajes tiene un determinado conjunto de encabezados que se muestran en un orden determinado cuando son generados por WCF. El sistema del patrón interrumpe el mensaje basándose en sus expectativas. Si es correcto, inicializa un objeto <xref:System.ServiceModel.Channels.MessageHeaders> sin analizar el XML. Si no lo es, recurre al método estándar.  
+ Además de procesar las claves de diccionario dinámico, los mensajes con sesión almacenados en búfer se reciben de una única manera. En lugar de crear un lector sobre el documento y procesarlo, el codificador binario utiliza la clase `MessagePatterns` interna para deconstruir la secuencia binaria. La idea es que la mayoría de los mensajes tiene un determinado conjunto de encabezados que se muestran en un orden determinado cuando generado por WCF. El sistema del patrón interrumpe el mensaje basándose en sus expectativas. Si es correcto, inicializa un objeto <xref:System.ServiceModel.Channels.MessageHeaders> sin analizar el XML. Si no lo es, recurre al método estándar.  
   
 ### <a name="mtom-encoding"></a>Codificación MTOM  
  El <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> clase tiene una propiedad de configuración adicional denominada <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`. MaxBufferSize % 2A >. Esta propiedad establece un límite superior a la cantidad de datos que pueden almacenarse en búfer durante el proceso de lectura de un mensaje. Puede que sea necesario almacenar en búfer el conjunto de información XML (Infoset), u otras partes MIME, para volver a ensamblar todas las partes MIME en un mensaje único.  
@@ -89,7 +89,7 @@ Este tema describe cómo crear codificadores personalizados.
   
  A continuación, conecte su <xref:System.ServiceModel.Channels.MessageEncoderFactory> personalizado a la pila de elementos de enlace utilizada para configurar el servicio o el cliente, invalidando el método <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>, para devolver una instancia de este generador.  
   
- Hay dos ejemplos que se proporcionan con WCF y que muestran este proceso con código de ejemplo: [codificador de mensajes personalizado: codificador de texto personalizado](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) y [codificador de mensajes personalizado: codificador de compresión](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
+ Hay dos ejemplos que ilustran este proceso con código de ejemplo proporcionados con WCF: [codificador del mensaje personalizado: codificador de texto personalizado](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) y [codificador del mensaje personalizado: codificador de compresión](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
