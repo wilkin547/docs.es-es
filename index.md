@@ -418,7 +418,7 @@ ms.locfileid: "48837474"
                                             </div>
                                             <div class="cardText">
                                                 <a href="/dotnet/fsharp/using-fsharp-on-azure">
-                                                    <h3>Uso de F # en Azure</h3>
+                                                    <h3>Uso de F# en Azure</h3>
                                                     <p>Aprenda a usar los distintos servicios de Azure en F# como Azure Storage, Cloud Services y Azure Functions.</p>
                                                 </a>
                                             </div>
