@@ -1,8 +1,0 @@
-# [Tutoriales](index.md)
-## [Aplicación de consola](console-teleprompter.md)
-## [Cliente REST](console-webapiclient.md)
-## [Herencia en C# y .NET](inheritance.md)
-## [Trabajar con LINQ](working-with-linq.md)
-## [Microservicios alojados en Docker](microservices.md)
-## [Interpolación de cadenas](string-interpolation.md)
-## [Uso de atributos](attributes.md)
