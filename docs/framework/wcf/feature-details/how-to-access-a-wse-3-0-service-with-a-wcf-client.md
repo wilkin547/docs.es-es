@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698450"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193817"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Cómo: Obtener acceso al servicio WSE 3.0 con un cliente WCF
 Los clientes de Windows Communication Foundation (WCF) son compatibles con Web Services Enhancements (WSE) 3.0 en el nivel de conexión de servicios de Microsoft .NET cuando se configuran los clientes de WCF para usar la versión de agosto de 2004 de la especificación WS-Addressing. Sin embargo, los servicios WSE 3.0 no admiten el protocolo de intercambio (MEX) de metadatos, así que cuando se usa el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear una clase de cliente WCF, la configuración de seguridad no se aplica a generado Cliente WCF. Por lo tanto, debe especificar la configuración de seguridad que el servicio de WSE 3.0 requiere una vez generado el cliente de WCF.  
@@ -27,7 +27,7 @@ Los clientes de Windows Communication Foundation (WCF) son compatibles con Web S
   
 2.  Cree una clase que represente un enlace que puede comunicarse con los servicios Web WSE 3.0.  
   
-     La clase siguiente forma parte de la [interoperar con WSE](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) ejemplo:  
+     La clase siguiente forma parte de la [interoperar con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) ejemplo:  
   
     1.  Cree una clase que se derive de la clase <xref:System.ServiceModel.Channels.Binding>.  
   
@@ -64,4 +64,4 @@ Los clientes de Windows Communication Foundation (WCF) son compatibles con Web S
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Channels.Binding>  
- [Interoperar con WSE](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [Interoperar con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

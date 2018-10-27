@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-author: BrucePerlerMS
-ms.openlocfilehash: 85954dd89bdb576b68d234a364a406a6e0d2145b
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: ec065854e049e333252003e0ce6e6efad4c6ce6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261334"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193538"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Cómo: Crear un token de contexto de seguridad para una sesión segura
 Mediante el uso de un token de contexto de seguridad con estado (SCT) en una sesión segura, la sesión puede soportar que el servicio se recicle. Por ejemplo, cuando un SCT sin estado se utiliza en una sesión segura y se restablece Internet Information Services (IIS), a continuación, se pierden los datos de la sesión que están asociados al servicio. Estos datos de la sesión incluyen una caché de token de SCT. Así, la próxima vez que un cliente envíe un SCT sin estado al servicio, se devuelve un error, porque no se puede recuperar la clave que está asociada a SCT. Si, sin embargo, se utiliza un SCT con estado, la clave que está asociada a SCT se contiene dentro de SCT. Dado que la clave se contiene dentro de SCT y, por tanto, dentro del mensaje, el reciclaje del servicio no afecta a la sesión segura. De forma predeterminada, Windows Communication Foundation (WCF) utiliza SCT sin estado en una sesión segura. En este tema se detalla cómo utilizar SCT con estado en una sesión segura.  

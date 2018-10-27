@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0917569b556c31413b715d75c83a96f3a4b015d7
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371958"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192205"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Cómo: Hacer los certificados X.509 accesibles para WCF
 Para hacer que un certificado X.509 accesible a Windows Communication Foundation (WCF), el código de la aplicación debe especificar el nombre del almacén de certificados y la ubicación. En ciertas circunstancias, la identidad del proceso debe tener el acceso al archivo que contiene la clave privada asociada al certificado X.509. Para obtener la clave privada asociada con un certificado X.509 en un almacén de certificados, WCF debe tener permiso para hacerlo. De forma predeterminada, solo el propietario y la cuenta del sistema pueden tener acceso a la clave privada de un certificado.  

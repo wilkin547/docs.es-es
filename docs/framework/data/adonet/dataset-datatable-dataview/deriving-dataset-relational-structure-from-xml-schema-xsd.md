@@ -2,17 +2,17 @@
 title: Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504952"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195299"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)
 Esta sección ofrece información general sobre cómo se crea el esquema relacional de un `DataSet` a partir del documento de esquema del lenguaje de definición de esquema XML (XSD). En general, para cada `complexType` elemento secundario de un elemento de esquema, se genera una tabla en la `DataSet`. La estructura de la tabla está determinada por la definición del tipo complejo. Las tablas se crean en el `DataSet` para elementos de nivel superior en el esquema. Sin embargo, solo se crea una tabla para un nivel superior `complexType` elemento cuando el `complexType` elemento está anidado dentro de otra `complexType` elemento, en el que caso anidado `complexType` elemento se asigna a un `DataTable` dentro de la `DataSet`.  
   
- Para obtener más información sobre el XSD, vea el World Wide Web Consortium (W3C) XML Schema Part 0: recomendación base, el esquema XML parte 1: recomendación de estructuras y XML Schema Part 2: Datatypes Recommendation, ubicado en [ http://www.w3.org/ ](http://www.w3.org/TR/).  
+ Para obtener más información sobre el XSD, vea el World Wide Web Consortium (W3C) [XML Schema Part 0: recomendación base](https://www.w3.org/TR/xmlschema-0/), [XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/)y el [XML Esquema parte 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/).  
   
  En el ejemplo siguiente se muestra un esquema XML donde `customers` es el elemento secundario de la `MyDataSet` elemento, que es un **DataSet** elemento.  
   

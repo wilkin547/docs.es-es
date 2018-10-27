@@ -7,13 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-author: BrucePerlerMS
-ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cd180c5e1bd8afff462c380ad3389a78027eb48
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198467"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195325"
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 Los enlaces proporcionados por el sistema incluidos con Windows Communication Foundation (WCF) ofrecen una forma rápida de programar aplicaciones de WCF. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  
@@ -90,7 +89,7 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
     -   Proporcionar credenciales de servicio negociadas desde el servicio como parte de la configuración del canal.  
   
- Para obtener más información, consulte <xref:System.ServiceModel.WSDualHttpSecurity> y <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ Para obtener más información, vea <xref:System.ServiceModel.WSDualHttpSecurity> y <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  En el código, utilice el <xref:System.ServiceModel.NetTcpBinding> clase; en configuración, utilice el [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -145,7 +144,7 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
 -   Seguridad de transporte de MSMQ (Transporte).  
   
- Para obtener más información, consulte <xref:System.ServiceModel.NetMsmqSecurity> y <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ Para obtener más información, vea <xref:System.ServiceModel.NetMsmqSecurity> y <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  En el código, utilice el <xref:System.ServiceModel.NetMsmqBinding> clase; en configuración, utilice el [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -166,7 +165,7 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
   
  Se admite la credencial <xref:System.ServiceModel.MessageCredentialType.Certificate> solo cuando el modo de seguridad está establecido en <xref:System.ServiceModel.NetMsmqSecurityMode.Both> o <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
- Para obtener más información, consulte <xref:System.ServiceModel.MessageSecurityOverMsmq> y <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ Para obtener más información, vea <xref:System.ServiceModel.MessageSecurityOverMsmq> y <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  En el código, utilice el <xref:System.ServiceModel.WSFederationHttpBinding> clase; en configuración, utilice el [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  

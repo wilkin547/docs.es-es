@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-author: BrucePerlerMS
-ms.openlocfilehash: bf3276353473f07f58740a5819226994123efdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201158"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195949"
 ---
 # <a name="security-considerations-for-data"></a>Consideraciones de seguridad para datos
 Cuando se trabaja con datos en Windows Communication Foundation (WCF), debe considerar varias categorías de amenaza. La tabla siguiente enumera las clases más importantes de amenazas relacionadas con el procesamiento de datos. WCF proporciona herramientas para mitigar estas amenazas.  
@@ -206,7 +205,7 @@ Cuando se trabaja con datos en Windows Communication Foundation (WCF), debe cons
   
 -   Atributo<xref:System.Runtime.Serialization.KnownTypeAttribute> aplicado al tipo.  
   
--   Atributo`KnownTypeAttribute` que especifica un método que devuelve una lista de tipos.  
+-   Atributo `KnownTypeAttribute` que especifica un método que devuelve una lista de tipos.  
   
 -   Atributo`ServiceKnownTypeAttribute` .  
   

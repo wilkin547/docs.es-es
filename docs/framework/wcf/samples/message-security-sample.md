@@ -2,13 +2,12 @@
 title: Ejemplo de seguridad de mensaje
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-author: BrucePerlerMS
-ms.openlocfilehash: 46e17cb2d4fecc8a71988ff61287e6cc682654c9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8982e896f6ac383a1fd850bc5814bf99e5c3961d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845351"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193752"
 ---
 # <a name="message-security-sample"></a>Ejemplo de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBinding` y seguridad de mensaje. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -16,7 +15,7 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBin
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El modo de seguridad de `basicHttpBinding` puede establecerse en los valores siguientes: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` y `None`. En el siguiente archivo App.config del servicio del ejemplo, la definición de extremo especifica `basicHttpBinding` y hace referencia una configuración de enlace denominada `Binding1`, como se muestra en la configuración del ejemplo siguiente:  
+ El modo de seguridad de `basicHttpBinding` puede establecerse en los valores siguientes: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` y `None`. En el siguiente archivo App.config del servicio del ejemplo, la definición de punto de conexión especifica `basicHttpBinding` y hace referencia una configuración de enlace denominada `Binding1`, como se muestra en la configuración del ejemplo siguiente:  
   
 ```xml  
 <system.serviceModel>  

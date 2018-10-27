@@ -3,11 +3,11 @@ title: Instrucciones de hospedaje Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: 303fe47df987901b09cee8cc4292f12bcda2b74d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204040"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194012"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instrucciones de hospedaje Internet Information Services
 Para ejecutar los ejemplos que son hospedados por Internet Information Services (IIS), debe asegurarse de que IIS está instalado correctamente y se está ejecutando.  

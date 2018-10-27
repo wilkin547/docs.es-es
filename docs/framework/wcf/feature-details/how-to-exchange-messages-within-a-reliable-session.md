@@ -3,11 +3,11 @@ title: Intercambio de mensajes dentro de una sesión confiable
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
 ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374526"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195741"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Intercambio de mensajes dentro de una sesión confiable
 

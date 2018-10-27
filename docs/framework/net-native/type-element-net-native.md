@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9359d196ecdaa83d7f5f14c3570392d54691be73
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037474"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195637"
 ---
 # <a name="lttypegt-element-net-native"></a>Elemento &lt;Type&gt; (.NET Native)
 Aplica la directiva de tiempo de ejecución a un tipo determinado, como una clase o estructura.  
@@ -95,10 +95,10 @@ Aplica la directiva de tiempo de ejecución a un tipo determinado, como una clas
   
  Un elemento `<Type>` de un tipo genérico aplica su directiva a todas las instancias que no tienen su propia directiva. La directiva de los tipos genéricos construidos se define mediante el elemento [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- Si el tipo es un tipo genérico, su nombre se decora con un símbolo de acento grave (\`) seguido por el número de parámetros genéricos. Por ejemplo, el atributo `Name` de un elemento `<Type>` de la clase <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> aparece como `Name="System.Collections.Generic.List`1"`.  
+ Si el tipo es un tipo genérico, su nombre se decora con un símbolo de acento grave (\`) seguido por el número de parámetros genéricos. Por ejemplo, el atributo `Name` de un elemento `<Type>` de la clase <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> aparece como ``Name="System.Collections.Generic.List`1"``.
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza la reflexión para mostrar información sobre los campos, las propiedades y los métodos de la clase <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variable `b` del ejemplo es un control [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx). Dado que el ejemplo simplemente recupera información de tipos, la disponibilidad de los metadatos se controla mediante la configuración de directiva `Browse`.  
+ En el ejemplo siguiente se utiliza la reflexión para mostrar información sobre los campos, las propiedades y los métodos de la clase <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. La variable `b` en el ejemplo es un <xref:Windows.UI.Xaml.Controls.TextBlock> control. Dado que el ejemplo simplemente recupera información de tipos, la disponibilidad de los metadatos se controla mediante la configuración de directiva `Browse`.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -116,7 +116,7 @@ Aplica la directiva de tiempo de ejecución a un tipo determinado, como una clas
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza la reflexión para recuperar un objeto <xref:System.Reflection.PropertyInfo> que representa a la propiedad <xref:System.String.Chars%2A?displayProperty=nameWithType>. A continuación, se utiliza el método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar el valor del séptimo carácter de una cadena y para mostrar todos los caracteres de la cadena. La variable `b` del ejemplo es un control [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
+ En el ejemplo siguiente se utiliza la reflexión para recuperar un objeto <xref:System.Reflection.PropertyInfo> que representa a la propiedad <xref:System.String.Chars%2A?displayProperty=nameWithType>. A continuación, se utiliza el método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar el valor del séptimo carácter de una cadena y para mostrar todos los caracteres de la cadena. La variable `b` en el ejemplo es un <xref:Windows.UI.Xaml.Controls.TextBlock> control.  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   

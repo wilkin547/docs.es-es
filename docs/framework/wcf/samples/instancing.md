@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 61d966599d06c65690e317be0d514eba944beb77
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373761"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193700"
 ---
 # <a name="instancing"></a>Creación de instancias
 El ejemplo de la creación de instancias muestra el valor de comportamiento de creación de instancias, que controla cómo las instancias de una clase de servicio se crean en respuesta a las solicitudes de cliente. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa el `ICalculator` contrato de servicio. Este ejemplo define un nuevo contrato, `ICalculatorInstance`, que se hereda de `ICalculator`. El contrato especificado por `ICalculatorInstance` proporciona tres operaciones adicionales para inspeccionar el estado de la instancia del servicio. Modificando el valor de la creación de instancias, puede observar el cambio en el comportamiento ejecutando el cliente.  

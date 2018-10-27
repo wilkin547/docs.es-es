@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8ce303d33a83d972247609e5d02d16a4a57669ff
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a73c3e8f554d2c78252ca763a620d05c5b494884
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033361"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192933"
 ---
 # <a name="ltcompilersgt-element"></a>&lt;los compiladores&gt; elemento
 Contenedor para los elementos de configuración del compilador; contiene cero o más elementos [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md).  
@@ -80,8 +80,8 @@ Contenedor para los elementos de configuración del compilador; contiene cero o 
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.CodeDom.Compiler.CompilerInfo>  
- <xref:System.CodeDom.Compiler.CodeDomProvider>  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Esquema de configuración de compilador y proveedor de lenguaje](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
- [Elemento \<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- <xref:System.CodeDom.Compiler.CompilerInfo>  
+- <xref:System.CodeDom.Compiler.CodeDomProvider>  
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Esquema de configuración de compilador y proveedor de lenguaje](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+- [Elemento \<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

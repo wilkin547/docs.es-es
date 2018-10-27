@@ -3,11 +3,11 @@ title: Servicio AJAX mediante HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
 ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372067"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192803"
 ---
 # <a name="ajax-service-using-http-post"></a>Servicio AJAX mediante HTTP POST
 Este ejemplo muestra cómo usar Windows Communication Foundation (WCF) para crear un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servicio JavaScript asincrónico y XML (AJAX) que utiliza HTTP POST. Un servicio AJAX es un servicio al que puede tener acceso utilizando el código JavaScript básico desde un cliente del explorador web. En este ejemplo se basa en el [servicio AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) ejemplo; la única diferencia entre los dos ejemplos es el uso de HTTP POST en lugar de HTTP GET.  

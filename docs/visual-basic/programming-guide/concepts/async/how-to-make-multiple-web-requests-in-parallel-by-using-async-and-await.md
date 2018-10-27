@@ -2,15 +2,15 @@
 title: 'Cómo: hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 44531ef643df6402ad318957c0a2bdc058c5bcb0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728448"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195040"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Cómo: hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)
-En un método asincrónico, las tareas se inician en el momento de crearse. El [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador se aplica a la tarea en el punto en el método que no se puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
+En un método asincrónico, las tareas se inician en el momento de crearse. El [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador se aplica a la tarea en el momento en el método donde no puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
@@ -38,13 +38,13 @@ Dim result = Await myTask
 > [!NOTE]
 >  Para llevar a cabo este proyecto, debe tener instalados en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.  
   
- Para obtener otro ejemplo que inicia varias tareas al mismo tiempo, consulte [Cómo: Extender la Async Walkthrough usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Para obtener otro ejemplo que inicia varias tareas al mismo tiempo, consulte [Cómo: ampliar el Async Walkthrough usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Puede descargar el código de este ejemplo en [Muestras de código para desarrollador](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Para configurar el proyecto  
   
-1.  Para configurar una aplicación WPF, lleve a cabo los siguientes pasos. También puede encontrar instrucciones detalladas para estos pasos en [Tutorial: obtener acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Para configurar una aplicación WPF, lleve a cabo los siguientes pasos. Puede encontrar instrucciones detalladas para realizar estos pasos en [Tutorial: acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Cree una aplicación WPF que contenga un cuadro de texto y un botón. Asigne al botón el nombre `startButton` y, al cuadro de texto, `resultsTextBox`.  
   
@@ -72,7 +72,7 @@ Dim result = Await myTask
   
     -   `DisplayResults` muestra el número de bytes de la matriz de bytes de cada dirección URL. En esta pantalla se muestra cuándo se ha terminado la descarga de cada tarea.  
   
-     Los siguientes métodos de copiar y pegar tras el `startButton_Click` controlador de eventos en el archivo MainWindow.xaml.vb.  
+     Copie los métodos siguientes y péguelos después el `startButton_Click` controlador de eventos en el archivo MainWindow.xaml.vb.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -88,8 +88,8 @@ Dim result = Await myTask
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
     ```  
@@ -117,11 +117,11 @@ Dim result = Await myTask
         ' Create and start the tasks. As each task finishes, DisplayResults   
         ' displays its length.  
         Dim download1 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com", client)  
+            ProcessURLAsync("https://msdn.microsoft.com", client)  
         Dim download2 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
         Dim download3 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client)  
   
         ' Await each task.  
         Dim length1 As Integer = Await download1  
@@ -165,11 +165,11 @@ Class MainWindow
         ' Create and start the tasks. As each task finishes, DisplayResults   
         ' displays its length.  
         Dim download1 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com", client)  
+            ProcessURLAsync("https://msdn.microsoft.com", client)  
         Dim download2 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client)  
         Dim download3 As Task(Of Integer) =  
-            ProcessURLAsync("http://msdn.microsoft.com/library/67w7t67f.aspx", client)  
+            ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client)  
   
         ' Await each task.  
         Dim length1 As Integer = Await download1  
@@ -196,8 +196,8 @@ Class MainWindow
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
 End Class  

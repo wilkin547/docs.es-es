@@ -2,12 +2,12 @@
 title: Establecimiento del uso y estilo de las propiedades
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: c4cee5fac84d8fb47565cc4ebde47f04365b989e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6728ab0a02c4fc171019564fa2a55bc3a5afd394
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836859"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195910"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Establecimiento del uso y estilo de las propiedades
 En este ejemplo se muestra cómo se utiliza el uso y las propiedades de estilo en <xref:System.ServiceModel.XmlSerializerFormatAttribute> y en <xref:System.ServiceModel.DataContractFormatAttribute>. Estas propiedades afectan a la forma en que se ha dado formato a los mensajes. De forma predeterminada, se da formato al cuerpo del mensaje con el estilo establecido en <xref:System.ServiceModel.OperationFormatStyle.Document>. Esta configuración se puede especificar en el nivel del contrato de servicios o en el nivel del contrato de operación.  
@@ -56,7 +56,7 @@ En este ejemplo se muestra cómo se utiliza el uso y las propiedades de estilo e
   
  El código siguiente muestra el contrato de servicios con la propiedad <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> establecida en <xref:System.ServiceModel.OperationFormatUse> y el formato del cuerpo del mensaje cambiados del <xref:System.ServiceModel.OperationFormatStyle> predeterminado a <xref:System.ServiceModel.OperationFormatStyle.Document>.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
 XmlSerializerFormat(Style = OperationFormatStyle.Rpc,   
                                  Use = OperationFormatUse.Encoded)]  

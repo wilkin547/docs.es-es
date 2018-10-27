@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656105"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195182"
 ---
 # <a name="-define-visual-basic"></a>-Definir (Visual Basic)
 Permite definir constantes condicionales para el compilador.  
@@ -34,10 +32,10 @@ Permite definir constantes condicionales para el compilador.
 |Término|Definición|  
 |---|---|  
 |`symbol`|Requerido. Símbolo que se va a definir.|  
-|`value`|Opcional. Valor que se va a asignar a `symbol`. Si `value` es una cadena, debe incluirse entre secuencias de barra diagonal inversa/comillas (\\") en lugar de comillas. Si no se especifica ningún valor, se considera como verdadero.|  
+|`value`|Opcional. Valor que se va a asignar a `symbol`. Si `value` es una cadena, se debe entrecomillar las secuencias de barra diagonal inversa/comillas (\\") en lugar de comillas. Si no se especifica ningún valor, se considera como verdadero.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `-define` opción tiene un efecto similar al uso de un `#Const` directiva de preprocesador en el archivo de origen, excepto que las constantes definidas con `-define` son públicas y se aplican a todos los archivos en el proyecto.  
+ El `-define` opción tiene un efecto similar al uso de un `#Const` directiva de preprocesador en el archivo de origen, excepto que las constantes definidas con `-define` son públicos y se aplican a todos los archivos del proyecto.  
   
  Los símbolos creados por esta opción se pueden usar con la directiva `#If`...`Then`...`#Else` para compilar archivos de origen condicionalmente.  
   

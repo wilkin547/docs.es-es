@@ -3,11 +3,11 @@ title: Programación de AsyncF#
 description: Obtenga información sobre cómo F# programación asincrónica se logra a través de un modelo de programación de nivel de lenguaje que sea fácil de usar y el lenguaje natural.
 ms.date: 06/20/2016
 ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50034432"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195065"
 ---
 # <a name="async-programming-in-f"></a>Programación de AsyncF# #
 

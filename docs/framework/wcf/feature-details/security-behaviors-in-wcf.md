@@ -2,13 +2,12 @@
 title: Comportamientos de seguridad en WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-author: BrucePerlerMS
-ms.openlocfilehash: d995ce4c37084cb8641199ec7dfa826b65e02b65
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841409"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192907"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamientos de seguridad en WCF
 En Windows Communication Foundation (WCF), los comportamientos modifican el comportamiento de tiempo de ejecución en el nivel de servicio o en el nivel de punto de conexión. (Para obtener más información acerca de los comportamientos en general, vea [especificar el comportamiento de tiempo de ejecución de servicio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamientos de seguridad* ofrecen control sobre las credenciales, autenticación, autorización y los registros de auditoría. Puede utilizar comportamientos mediante programación o a través de configuración. Este tema se centra en la configuración de los siguientes comportamientos relacionados con las funciones de seguridad:  
@@ -128,7 +127,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
  Especifica una dirección de servicio de token de seguridad predeterminada. Esto se usa cuando el <xref:System.ServiceModel.WSFederationHttpBinding> no proporciona una dirección URL para el servicio de token de seguridad o la dirección del emisor de un enlace federado es `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` o `null`. En casos como éste, las <xref:System.ServiceModel.Description.ClientCredentials> deben configurarse con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
- Use la [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) para agregar comportamientos de cliente WCF usados al comunicarse con un servicio de token de seguridad. Defina los comportamientos del cliente en el [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sección. Para utilizar un comportamiento definido, agregue un <`add`> elemento para el `<issuerChannelBehaviors>` elemento con dos atributos. Establezca la `issuerAddress` en la dirección URL del servicio de token de seguridad y establezca el atributo `behaviorConfiguration` en el nombre del comportamiento del extremo definido, tal y como se muestra en el ejemplo siguiente.  
+ Use la [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) para agregar comportamientos de cliente WCF usados al comunicarse con un servicio de token de seguridad. Defina los comportamientos del cliente en el [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sección. Para utilizar un comportamiento definido, agregue un <`add`> elemento para el `<issuerChannelBehaviors>` elemento con dos atributos. Establezca la `issuerAddress` en la dirección URL del servicio de token de seguridad y establezca el atributo `behaviorConfiguration` en el nombre del comportamiento del punto de conexión definido, tal y como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <clientCredentials>  
@@ -205,7 +204,7 @@ En Windows Communication Foundation (WCF), los comportamientos modifican el comp
 ```  
   
 ## <a name="secure-metadata-exchange"></a>Intercambio seguro de metadatos  
- Exportar los metadatos a los clientes es conveniente para los desarrolladores de clientes y servicios, puesto que permite la descarga de configuración y código de cliente. Para reducir la exposición de un servicio a los usuarios malintencionados, es posible proteger la transferencia mediante el mecanismo SSL sobre HTTP (HTTPS). Para realizar esto, debe enlazar primero un certificado X.509 adecuado a un puerto concreto en el equipo que esté hospedando el servicio. (Para obtener más información, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) En segundo lugar, agregue un [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) a la configuración del servicio y establezca el `HttpsGetEnabled` atributo `true`. Finalmente, establezca el atributo `HttpsGetUrl` en la dirección URL del extremo de metadatos del servicio, tal y como se muestra en el ejemplo siguiente.  
+ Exportar los metadatos a los clientes es conveniente para los desarrolladores de clientes y servicios, puesto que permite la descarga de configuración y código de cliente. Para reducir la exposición de un servicio a los usuarios malintencionados, es posible proteger la transferencia mediante el mecanismo SSL sobre HTTP (HTTPS). Para realizar esto, debe enlazar primero un certificado X.509 adecuado a un puerto concreto en el equipo que esté hospedando el servicio. (Para obtener más información, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) En segundo lugar, agregue un [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) a la configuración del servicio y establezca el `HttpsGetEnabled` atributo `true`. Finalmente, establezca el atributo `HttpsGetUrl` en la dirección URL del punto de conexión de metadatos del servicio, tal y como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <behaviors>  
