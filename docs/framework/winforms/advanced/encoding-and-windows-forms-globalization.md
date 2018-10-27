@@ -19,15 +19,15 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208605"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183118"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Codificación y globalización de Windows Forms
-Las aplicaciones de Windows Forms están totalmente habilitadas para Unicode, lo que significa que cada carácter se representa mediante un número único, independientemente de la plataforma, el programa o el idioma. Para obtener más información sobre Unicode, vea el [sitio Web de Unicode consortium](http://www.unicode.org).  
+Las aplicaciones de Windows Forms están totalmente habilitadas para Unicode, lo que significa que cada carácter se representa mediante un número único, independientemente de la plataforma, el programa o el idioma. Para obtener más información sobre Unicode, vea el [sitio Web de Unicode consortium](https://www.unicode.org).  
   
 ## <a name="benefits-of-unicode"></a>Ventajas de Unicode  
  Entre las ventajas de los formularios habilitados para Unicode se incluye la capacidad de trabajar con scripts que son solo Unicode, como el Hindi. Además, puede usar varios idiomas en un único formulario. En Unicode, todos los caracteres tienen una longitud de dos bytes, por lo que no es necesario realizar ningún esfuerzo especial para representar los caracteres de doble byte. También puede escribir un único conjunto de código que funcionará en todas las plataformas. Se trata de un cambio con respecto a versiones anteriores de Visual Basic, en el que tenía que escribir código diferente para distintas plataformas, como Windows NT y [!INCLUDE[win98](../../../../includes/win98-md.md)].  
