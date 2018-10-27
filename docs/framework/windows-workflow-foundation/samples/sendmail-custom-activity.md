@@ -2,12 +2,12 @@
 title: Actividad personalizada SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845260"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181295"
 ---
 # <a name="sendmail-custom-activity"></a>Actividad personalizada SendMail
 En este ejemplo se muestra cómo crear una actividad personalizada que deriva de <xref:System.Activities.AsyncCodeActivity> para enviar correo utilizando SMTP para el uso dentro de una aplicación de flujo de trabajo. La actividad personalizada utiliza las capacidades de <xref:System.Net.Mail.SmtpClient> para enviar correo electrónico de forma asincrónica y enviar correo electrónico con la autenticación. También proporciona algunas características de usuario final como el modo de prueba, reemplazo del token, plantillas de archivo y ruta de colocación para dejar la prueba.  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Enviar correo en modo de prueba  
- Este fragmento de código muestra cómo establecer las dos propiedades de pruebas: estableciendo `TestMailTo` a todos los mensajes se enviarán a john.doe@contoso.con (independientemente de los valores de para, Cc, CCO). Estableciendo que todos los correos electrónicos de salida a TestDropPath se registrarán también en la ruta de acceso proporcionada. Estas propiedades se pueden establecer independientemente (no están relacionadas).  
+ Este fragmento de código muestra cómo establecer las dos propiedades de pruebas: estableciendo `TestMailTo` a todos los mensajes se enviarán a `john.doe@contoso.con` (independientemente de los valores de para, Cc, CCO). Estableciendo que todos los correos electrónicos de salida a TestDropPath se registrarán también en la ruta de acceso proporcionada. Estas propiedades se pueden establecer independientemente (no están relacionadas).  
   
 ```  
 new SendMail  

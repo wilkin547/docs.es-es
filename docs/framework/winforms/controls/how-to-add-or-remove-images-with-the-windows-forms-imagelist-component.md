@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: e5c563c4f46924a95936bc5a51862230f2cbdb99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28dce033064517a427750ef99b1cd4f8bccaaf09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527643"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182975"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Cómo: Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
-Los formularios de Windows <xref:System.Windows.Forms.ImageList> componente normalmente se rellena con imágenes antes de asociarlo con un control. Sin embargo, puede agregar y quitar imágenes después de asociar la lista de imágenes con un control.  
+Los formularios de Windows <xref:System.Windows.Forms.ImageList> componente normalmente se rellena con las imágenes antes de asociarlo con un control. Sin embargo, puede agregar y quitar imágenes después de asociar la lista de imágenes con un control.  
   
 > [!NOTE]
->  Cuando quite imágenes, compruebe que la <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propiedad de los controles asociados sigue siendo válida.  
+>  Al quitar las imágenes, compruebe que la <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> sigue siendo válida la propiedad de los controles asociados.  
   
 ### <a name="to-add-images-programmatically"></a>Para agregar imágenes mediante programación  
   
 -   Use la <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> método de la lista de imágenes <xref:System.Windows.Forms.ImageList.Images%2A> propiedad.  
   
-     En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación de la imagen es la **Mis documentos** carpeta. Se utiliza esta ubicación porque se puede asumir que la mayoría de los equipos que ejecuta el sistema operativo Windows incluirá esta carpeta. Al elegir esta ubicación también permite a los usuarios que tienen acceso niveles mínimos más ejecutar con seguridad de la aplicación. El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya se ha agregado.  
+     En el ejemplo de código siguiente establece la ruta de acceso para la ubicación de la imagen es la **Mis documentos** carpeta. Se utiliza esta ubicación porque se puede suponer que la mayoría de los equipos que ejecuta el sistema operativo Windows incluirá esta carpeta. Al elegir esta ubicación también permite a los usuarios que tienen acceso niveles mínimos más ejecutar de forma segura la aplicación. El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya se ha agregado.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -74,11 +74,11 @@ Los formularios de Windows <xref:System.Windows.Forms.ImageList> componente norm
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a>Para agregar imágenes con un valor de clave.  
+### <a name="to-add-images-with-a-key-value"></a>Para agregar las imágenes con un valor de clave.  
   
 -   Utilice uno de los <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> métodos de la lista de imágenes <xref:System.Windows.Forms.ImageList.Images%2A> propiedad que toma un valor de clave.  
   
-     En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación de la imagen es la **Mis documentos** carpeta. Se utiliza esta ubicación porque se puede asumir que la mayoría de los equipos que ejecuta el sistema operativo Windows incluirá esta carpeta. Al elegir esta ubicación también permite a los usuarios que tienen acceso niveles mínimos más ejecutar con seguridad de la aplicación. El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya se ha agregado.  
+     En el ejemplo de código siguiente establece la ruta de acceso para la ubicación de la imagen es la **Mis documentos** carpeta. Se utiliza esta ubicación porque se puede suponer que la mayoría de los equipos que ejecuta el sistema operativo Windows incluirá esta carpeta. Al elegir esta ubicación también permite a los usuarios que tienen acceso niveles mínimos más ejecutar de forma segura la aplicación. El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya se ha agregado.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -105,15 +105,13 @@ public void addImage()
 }  
 ```  
   
-1.  
-  
 ### <a name="to-remove-all-images-programmatically"></a>Para quitar todas las imágenes mediante programación  
   
--   Use la <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> método para quitar una sola imagen  
+-   Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> método para quitar una sola imagen  
   
-     , - o bien -  
+     , - o -  
   
-     Use la <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> método para borrar todas las imágenes en la lista de imágenes.  
+     Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> método para borrar todas las imágenes en la lista de imágenes.  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -131,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>Para quitar las imágenes por clave  
   
--   Use la <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> método para quitar una sola imagen por su clave.  
+-   Use el <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> método para quitar una sola imagen por su clave.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
@@ -144,6 +142,6 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- [Información general sobre el componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+- [Información general sobre el componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
+- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

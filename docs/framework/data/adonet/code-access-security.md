@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 45c838fbac5e6f576a242c8839f849dc9529ef7d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779278"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453182"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidad de código no administrado  
  El código que se ejecuta fuera de CLR se denomina código no administrado. Por lo tanto, los mecanismos de seguridad como CAS no se pueden aplicar en código no administrado. Los componentes COM, las interfaces ActiveX y las funciones de la API de Win32 son ejemplos de código no administrado. Cuando se ejecuta código no administrado se aplican consideraciones de seguridad especiales, de forma que no se ponga en peligro la seguridad global de la aplicación. Para más información, consulte [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
   
- .NET Framework también es compatible con versiones anteriores de componentes COM existentes mediante el acceso a través de la interoperabilidad COM. Se pueden incluir componentes COM en una aplicación de .NET Framework usando las herramientas de la interoperabilidad COM para importar los tipos COM necesarios. Una vez que se han importado, los tipos COM están listos para su uso. La interoperabilidad COM también permite que los clientes COM tengan acceso a código administrado mediante la exportación de metadatos de ensamblado a una biblioteca de tipos y mediante el registro del componente administrado como un componente COM. Para obtener más información, consulte [interoperabilidad COM avanzada](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+ .NET Framework también es compatible con versiones anteriores de componentes COM existentes mediante el acceso a través de la interoperabilidad COM. Se pueden incluir componentes COM en una aplicación de .NET Framework usando las herramientas de la interoperabilidad COM para importar los tipos COM necesarios. Una vez que se han importado, los tipos COM están listos para su uso. La interoperabilidad COM también permite que los clientes COM tengan acceso a código administrado mediante la exportación de metadatos de ensamblado a una biblioteca de tipos y mediante el registro del componente administrado como un componente COM. Para obtener más información, consulte [interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [PAVE Seguridad del código nativo y del código de .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Seguridad de acceso del código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Seguridad basada en roles](https://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
+ [Seguridad de acceso del código](../../../../docs/framework/misc/code-access-security.md)  
+ [Seguridad basada en roles](../../../../docs/standard/security/role-based-security.md)  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

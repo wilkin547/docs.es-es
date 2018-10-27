@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193819"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049287"
 ---
 # <a name="connectserverwmi-function"></a>Función ConnectServerWmi
 Crea una conexión a un espacio de nombres de WMI a través de DCOM en un equipo especificado.  
@@ -94,7 +94,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemLocator:: ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) método.
+Esta función contiene una llamada a la [IWbemLocator:: ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) método.
 
  Para el acceso local al espacio de nombres predeterminado, `strNetworkResource` puede ser una ruta de acceso de objeto simple: "root\default" o "\\.\root\default". Para el acceso al espacio de nombres predeterminado en un equipo remoto mediante redes de COM o compatible con Microsoft, incluya el nombre del equipo: "\\myserver\root\default". El nombre del equipo también puede ser un nombre DNS o dirección IP. El `ConnectServerWmi` función también puede conectar con equipos que ejecutan IPv6 mediante una dirección IPv6.
 

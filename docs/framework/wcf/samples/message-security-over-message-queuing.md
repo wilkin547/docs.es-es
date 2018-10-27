@@ -2,13 +2,12 @@
 title: Seguridad de mensajes mediante Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-author: BrucePerlerMS
-ms.openlocfilehash: 4578f93759379fabe258f6a70e38a9c5d46433dc
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ddb06e4c85d3fa6db3df14ce15813adb8ae2fc99
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850842"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181545"
 ---
 # <a name="message-security-over-message-queuing"></a>Seguridad de mensajes mediante Message Queuing
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ. En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.

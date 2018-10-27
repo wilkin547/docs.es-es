@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-author: BrucePerlerMS
-ms.openlocfilehash: 25e48125cff5a9761d0b880bf755a94463d42f19
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2b1601bd84e92b5a39c5c4c91fdfe67537720430
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045670"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Modos de autenticación de SecurityBindingElement
 Windows Communication Foundation (WCF) proporciona varios modos en que los clientes y servicios autentican entre sí. Puede crear elementos de enlace de seguridad para estos modos de autenticación utilizando los métodos estáticos en la clase <xref:System.ServiceModel.Channels.SecurityBindingElement> o a través de la configuración. Este tema describe brevemente los 18 modos de autenticación.  
@@ -94,7 +93,7 @@ Windows Communication Foundation (WCF) proporciona varios modos en que los clien
  Con este modo de autenticación, el cliente autentica mediante un certificado X.509 que aparece en el nivel de SOAP como un token auxiliar de aprobación; es decir, un token que firma la firma del mensaje. La autenticación del servicio también se realiza mediante un certificado X.509. El elemento de enlace de seguridad es un `SymmetricSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>. Por otra parte, defina el atributo `authenticationMode` en `MutualCertificate`.  
   
 ### <a name="mutualcertificateduplex"></a>MutualCertificateDuplex  
- Con este modo de autenticación, el cliente autentica mediante un certificado X.509 que aparece en el nivel de SOAP como un token auxiliar de aprobación; es decir, un token que firma la firma del mensaje. La autenticación del servicio también se realiza mediante un certificado X.509. Es enlace es un  `AsymmetricSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement%2A>. Por otra parte, defina el atributo `authenticationMode` en `MutualCertificateDuplex`.  
+ Con este modo de autenticación, el cliente autentica mediante un certificado X.509 que aparece en el nivel de SOAP como un token auxiliar de aprobación; es decir, un token que firma la firma del mensaje. La autenticación del servicio también se realiza mediante un certificado X.509. Es enlace es un `AsymmetricSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement%2A>. Por otra parte, defina el atributo `authenticationMode` en `MutualCertificateDuplex`.  
   
 ### <a name="mutualsslnegotiated"></a>MutualSslNegotiated  
  Con este modo de autenticación, el cliente y el servicio autentican utilizando los certificados X.509. El elemento de enlace de seguridad es un `SymmetricSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> cuando se pasa un valor `true` para el primer parámetro. Por otra parte, defina el atributo `authenticationMode` en `MutualSslNegotiated`.  

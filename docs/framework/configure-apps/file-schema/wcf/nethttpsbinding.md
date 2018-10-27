@@ -2,12 +2,12 @@
 title: '&lt;netHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: 2dbcdbe7fff758bab0e932817feddab398ed9ed1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b59fe7277a266a7e006f980ac31e6987dbb5b977
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526509"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453418"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Representa un enlace que puede usar un servicio de Windows Communication Foundation (WCF) para configurar y exponer extremos que pueden comunicarse a través de HTTPS. Cuando se usa con un contrato dúplex, se usará WebSockets; si no, se usará HTTPS.  
@@ -99,7 +99,7 @@ Siguiente elemento
  Seguridad está desactivada de forma predeterminada, pero se puede agregar estableciendo el atributo de modo de la [ \<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) elemento secundario a un valor distinto de `None`. De forma predeterminada, usa una codificación de mensajes "Text" y codificación de texto UTF-8.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el uso de la clase <xref:System.ServiceModel.NetHttpBinding> que proporciona comunicación HTTPS e interoperabilidad máxima a los servicios Web de primera y segunda generación. El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el atributo `binding` del elemento `<endpoint>`. Si desea configurar el enlace básico  y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El extremo debe hacer referencia a la configuración de enlace por nombre utilizando el atributo `bindingConfiguration` del elemento `<endpoint>`, como se muestra en el siguiente código de configuración para el servicio.  
+ En el ejemplo siguiente se muestra el uso de la clase <xref:System.ServiceModel.NetHttpBinding> que proporciona comunicación HTTPS e interoperabilidad máxima a los servicios Web de primera y segunda generación. El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el atributo `binding` del elemento `<endpoint>`. Si desea configurar el enlace básico  y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El punto de conexión debe hacer referencia a la configuración de enlace por nombre utilizando el atributo `bindingConfiguration` del elemento `<endpoint>`, como se muestra en el siguiente código de configuración para el servicio.  
   
 ```xml  
 <system.serviceModel>   
@@ -181,5 +181,5 @@ Siguiente elemento
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

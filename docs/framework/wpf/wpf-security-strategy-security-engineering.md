@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: fd29696d88eba5c1363464334b63cb2ab0df4a0e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 60def26d21ff065bda3209ac90161af0672a38af
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698554"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181701"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Estrategia de seguridad de WPF: Ingeniería de seguridad
 Trustworthy Computing es una iniciativa de Microsoft para garantizar la producción de código seguro. Un elemento clave de la iniciativa Trustworthy Computing es [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] es un procedimiento de ingeniería que se usa junto con procesos de ingeniería estándar para facilitar la distribución de código seguro. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] consta de diez fases en las que se combinan prácticas recomendadas con formalización, mensurabilidad y una estructura adicional, que incluye:  
@@ -67,7 +67,7 @@ Trustworthy Computing es una iniciativa de Microsoft para garantizar la producci
 ### <a name="source-analysis-and-editing-tools"></a>Análisis de código fuente y herramientas de edición  
  Además de los elementos manuales de revisión del código de seguridad de [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], el equipo de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa varias herramientas para realizar análisis del código fuente y las modificaciones asociadas para reducir las vulnerabilidades de seguridad. Se usa una amplia variedad de herramientas de código fuente, entre ellas:  
   
--   **FXCop**: busca problemas de seguridad comunes en código administrado, que van desde reglas de herencia hasta el uso de la seguridad de acceso del código para interoperar de forma segura con código no administrado. Consulte [FXCop](http://www.gotdotnet.com/team/fxcop/).  
+-   **FXCop**: busca problemas de seguridad comunes en código administrado, que van desde reglas de herencia hasta el uso de la seguridad de acceso del código para interoperar de forma segura con código no administrado. Consulte [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
 -   **Prefix/Prefast**: busca vulnerabilidades de seguridad y problemas de seguridad comunes en código no administrado, como la saturación de búferes, los problemas de cadenas de formato y la comprobación de errores.  
   

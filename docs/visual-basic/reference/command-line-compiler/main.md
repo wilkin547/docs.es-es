@@ -6,14 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51a527dfddd2b78ac1c0559420298a66eb4b63f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb9d38a7d6f74e5d8636f862c663c0ba0990baa5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652927"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180237"
 ---
 # <a name="-main"></a>-principal
 Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.  
@@ -26,14 +24,14 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
   
 ## <a name="arguments"></a>Argumentos  
  `location`  
- Requerido. El nombre de la clase o módulo que contiene el `Sub Main` procedimiento al que llamar cuando se inicia el programa. Esto puede tener el formato **-main: module** o **-main:namespace.module**.  
+ Requerido. El nombre de la clase o módulo que contiene el `Sub Main` procedimiento al que llamar cuando se inicia el programa. Esto puede ser en forma **-main: módulo** o **-main:namespace.module**.  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice esta opción cuando se crea un archivo ejecutable o un programa ejecutable de Windows. Si el **-principal** opción se omite, el compilador busca válido compartido `Sub Main` en todos los módulos y las clases públicas.  
+ Use esta opción cuando se crea un archivo ejecutable o un programa ejecutable de Windows. Si el **-principal** opción se omite, el compilador busca válido compartido `Sub Main` en todos los módulos y las clases públicas.  
   
- Vea [procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obtener una explicación de las distintas formas de la `Main` procedimiento.  
+ Consulte [procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obtener una explicación de las distintas formas de la `Main` procedimiento.  
   
- Cuando `location` es una clase que hereda de <xref:System.Windows.Forms.Form>, el compilador proporciona un valor predeterminado `Main` procedimiento que inicia la aplicación si la clase no tiene ningún `Main` procedimiento. Esto le permite compilar el código en la línea de comandos que se creó en el entorno de desarrollo.  
+ Cuando `location` es una clase que hereda de <xref:System.Windows.Forms.Form>, el compilador proporciona un valor predeterminado `Main` procedimiento que se inicia la aplicación si la clase no tiene ningún `Main` procedimiento. Esto le permite compilar código en la línea de comandos que se creó en el entorno de desarrollo.  
   
  [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
@@ -43,12 +41,12 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
   
 2.  Haga clic en la pestaña **Aplicación** .  
   
-3.  Asegúrese de que el **marco de aplicación de habilitar** no está activada la casilla de verificación.  
+3.  Asegúrese de que el **Habilitar marco de trabajo de aplicación** no está activada la casilla de verificación.  
   
-4.  Modifique el valor en el **objeto de inicio** cuadro.  
+4.  Modifique el valor en el **objeto Startup** cuadro.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código compila `T2.vb` y `T3.vb`, especificando que la `Sub Main` procedimiento se encuentra en la `Test2` clase.  
+ El siguiente código compila `T2.vb` y `T3.vb`, especificando que el `Sub Main` procedimiento se encuentra en la `Test2` clase.  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  

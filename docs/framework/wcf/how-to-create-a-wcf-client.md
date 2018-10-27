@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 1eadb5008575a1a53d685db14d68e42d0dce1360
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9572f3e2c0cddf75daf343f250b16e94bc2b0dbf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197531"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181675"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Creación de un cliente de Windows Communication Foundation
 
@@ -38,7 +38,7 @@ La aplicación cliente usa la clase de proxy generada para comunicarse con el se
 
    2. Una vez que se está ejecutando el host, haga clic en el **referencias** carpeta bajo el proyecto GettingStartedClient en **el Explorador de soluciones** y seleccione **agregar**  >   **Referencia de servicio**.
 
-   3. Escriba la dirección URL siguiente en el cuadro Dirección de la **Add Service Reference** cuadro de diálogo: [http://localhost:8000/GettingStartedClient/Service](http://localhost:8000/GettingStartedClient/Service)
+   3. Escriba la dirección URL siguiente en el cuadro Dirección de la **Add Service Reference** cuadro de diálogo: [http://localhost:8000/GettingStarted/CalculatorService](http://localhost:8000/GettingStarted/CalculatorService)
 
    4. Elija **vaya**.
 
@@ -49,11 +49,11 @@ La aplicación cliente usa la clase de proxy generada para comunicarse con el se
     También puede usar la herramienta de línea de comandos [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) con los modificadores adecuados para crear el código de cliente. El siguiente ejemplo genera un archivo de código y un archivo de configuración para el servicio. El primer ejemplo muestra cómo generar al proxy en VB, y la segunda muestra cómo generar al proxy en C#:
 
     ```shell
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStartedClient/service
+    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
     ```
 
     ```shell
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStartedClient/service
+    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
     ```
 
 ## <a name="next-steps"></a>Pasos siguientes

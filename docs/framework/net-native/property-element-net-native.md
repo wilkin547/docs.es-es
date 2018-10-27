@@ -5,11 +5,11 @@ ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372075"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50038911"
 ---
 # <a name="ltpropertygt-element-net-native"></a>Elemento &lt;Property&gt; (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.  

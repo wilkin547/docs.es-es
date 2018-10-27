@@ -3,11 +3,11 @@ title: '&lt;activityScheduledQueries&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
 ms.openlocfilehash: 35bcb0dc0c33d30eee566869579edb32f131f495
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374412"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452701"
 ---
 # <a name="ltactivityscheduledqueriesgt-of-wcf"></a>&lt;activityScheduledQueries&gt; de WCF
 Representa una colección de consultas que se utilizan para realizar el seguimiento de una actividad programada para su ejecución por parte de una actividad primaria. La consulta es necesaria para que un participante de seguimiento se suscriba a los registros programados de la actividad.  

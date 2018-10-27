@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201119"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453468"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
@@ -42,7 +42,7 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
   
 -   **Personal**. Este almacén se utiliza para los certificados asociados a un usuario de un equipo. Normalmente este almacén se usa para los certificados emitidos por uno de los certificados de la entidad de certificación situado en el almacén de las Entidades emisoras de certificados raíz de confianza. O bien, una aplicación puede confiar en un certificado que se encuentre aquí y que sea de emisión propia.  
   
- Para obtener más información sobre los almacenes de certificados, vea [Almacenes de certificados](https://go.microsoft.com/fwlink/?LinkId=88912).  
+ Para obtener más información sobre los almacenes de certificados, vea [Almacenes de certificados](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Selección de un almacén  
  Seleccionar dónde almacenar un certificado depende de cómo y cuándo se ejecute el cliente o el servicio. Se aplican las siguientes reglas generales:  

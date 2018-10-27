@@ -3,11 +3,11 @@ title: Actividad
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372374"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453351"
 ---
 # <a name="activity"></a>Actividad
 En este tema describe los seguimientos de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF). Las actividades procesan unidades que ayudan al usuario a reducir el ámbito de un error. Los errores que se producen en la misma actividad están directamente relacionados. Por ejemplo, se produce un error en una operación porque se ha producido un error en el descifrado del mensaje. Los seguimientos para el error de descifrado del mensaje y la operación aparecen en la misma actividad, mostrando una correlación directa entre el error del descifrado y el error de la solicitud.  

@@ -2,15 +2,15 @@
 title: WCF y ASP.NET Web API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: ca44a439fa73b16764725ff56019a1d01cc0c8cd
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 9ff974ca59b5a6448a140cbb1e7d6e8114840bdf
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308466"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040652"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF y ASP.NET Web API
-WCF es el modelo de programación unificado de Microsoft para compilar aplicaciones orientadas a servicios. Permite a los desarrolladores compilar soluciones de transacción seguras y confiables que se integran en diferentes plataformas y que interactúan con las inversiones existentes. [ASP.NET Web API](http://www.asp.net/web-api) es un marco que facilita la creación de servicios HTTP que lleguen a una amplia gama de clientes, incluidos los exploradores y dispositivos móviles. ASP.NET Web API es una plataforma ideal para compilar aplicaciones de RESTful en .NET Framework. En este tema se incluyen indicaciones para ayudarle a decidir qué tecnología se adapta mejor a sus necesidades.  
+WCF es el modelo de programación unificado de Microsoft para compilar aplicaciones orientadas a servicios. Permite a los desarrolladores compilar soluciones de transacción seguras y confiables que se integran en diferentes plataformas y que interactúan con las inversiones existentes. [ASP.NET Web API](https://www.asp.net/web-api) es un marco que facilita la creación de servicios HTTP que lleguen a una amplia gama de clientes, incluidos los exploradores y dispositivos móviles. ASP.NET Web API es una plataforma ideal para compilar aplicaciones de RESTful en .NET Framework. En este tema se incluyen indicaciones para ayudarle a decidir qué tecnología se adapta mejor a sus necesidades.  
   
 ## <a name="choosing-which-technology-to-use"></a>Elegir la tecnología que se va a usar  
  En la tabla siguiente se describen las características principales de cada tecnología.  

@@ -2,12 +2,12 @@
 title: Directivas de compilador (F#)
 description: 'Obtenga información sobre las directivas de preprocesador de lenguaje F #, las directivas de compilación condicional, las directivas de línea y las directivas de compilador.'
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042468"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181373"
 ---
 # <a name="compiler-directives"></a>Directivas de compilador
 
@@ -33,7 +33,7 @@ El efecto de deshabilitar una advertencia que se aplica a todo el archivo, inclu
 
 ## <a name="conditional-compilation-directives"></a>Directivas de compilación condicional
 
-Código que está desactivada de forma una de estas directivas aparece atenuado en el Editor de Visual StudioCode.
+Código que está desactivada de forma una de estas directivas aparece atenuado en el Editor de código de Visual Studio.
 
 >[!NOTE]
 El comportamiento de las directivas de compilación condicional no es el mismo que en otros idiomas. Así, no se pueden usar expresiones booleanas con símbolos, mientras que `true` y `false` no tienen ningún significado especial. Los símbolos que se usan en la directiva `if` se tienen que definir con la línea de comandos o en la configuración del proyecto; no hay ninguna directiva de preprocesador `define`.

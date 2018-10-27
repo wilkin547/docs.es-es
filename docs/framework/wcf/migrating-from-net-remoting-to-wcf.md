@@ -2,12 +2,12 @@
 title: Migración de .NET Remoting a WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: e260ecaf422b5654364143b1fc529112b5ea0656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857393"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50039600"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migración de .NET Remoting a WCF
 En este artículo se describe el procedimiento para migrar una aplicación que usa .NET Remoting para que use Windows Communication Foundation (WCF). Se comparan conceptos similares entre estos productos y se describe cómo llevar a cabo varios escenarios comunes de comunicación remota en WCF.  
@@ -292,7 +292,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>¿Por qué migrar de Remoting a WCF?  
   
--   **.NET remoting es un producto heredado.** Como se describe en [.NET Remoting](https://msdn.microsoft.com/library/vstudio/72x4h507\(v=vs.100\).aspx), se considera un producto heredado y no se recomienda para nuevo desarrollo. Se recomienda WCF o ASP.NET Web API para aplicaciones nuevas y existentes.  
+-   **.NET remoting es un producto heredado.** Como se describe en [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), se considera un producto heredado y no se recomienda para nuevo desarrollo. Se recomienda WCF o ASP.NET Web API para aplicaciones nuevas y existentes.  
   
 -   **WCF usa los estándares multiplataforma.** WCF se diseñó teniendo en cuenta la interoperabilidad multiplataforma y admite muchos estándares del sector (SOAP, WS-Security, WS-Trust, etc.). Un servicio WCF puede interoperar con clientes que se ejecuten en sistemas operativos distintos de Windows. Remoting se diseñó principalmente para entornos donde las aplicaciones de servidor y de cliente se ejecutan con .NET Framework en un sistema operativo Windows.  
   

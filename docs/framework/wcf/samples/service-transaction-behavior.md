@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bfdf0c9ddb8654bf7a6736bcccb0d9350e9a12a6
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858114"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50042498"
 ---
 # <a name="service-transaction-behavior"></a>Comportamiento de transacción de servicio
 Este ejemplo muestra el uso de una transacción coordinada por el cliente y la configuración de ServiceBehaviorAttribute y OperationBehaviorAttribute para controlar el comportamiento de las transacciones de servicio. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero se extiende para mantener un registro del servidor de las operaciones realizadas en una tabla de base de datos y una con estado ejecutando total para las operaciones de cálculo. Las escrituras guardadas en la tabla de registro del servidor dependen del resultado de una transacción coordinada del cliente. Si la transacción del cliente no se completa, la transacción del servicio Web garantiza que las actualizaciones de la base de datos no se confirman.  
@@ -19,7 +19,7 @@ Este ejemplo muestra el uso de una transacción coordinada por el cliente y la c
   
  El contrato para el servicio define que todas las operaciones exigen que una transacción fluya con solicitudes:  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples",  
                     SessionMode = SessionMode.Required)]  
 public interface ICalculator  
@@ -51,7 +51,7 @@ public interface ICalculator
   
  Después de iniciar tanto una conexión con el servicio como una transacción, el cliente tiene acceso a varias operaciones de servicio dentro del ámbito de esa transacción y, a continuación, completa la transacción y cierra la conexión:  
   
-```  
+```csharp
 // Create a client  
 CalculatorClient client = new CalculatorClient();  
   
@@ -114,7 +114,7 @@ client.Close();
   
  La implementación del servicio con atributos es como sigue:  
   
-```  
+```csharp
 [ServiceBehavior(  
     TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
     TransactionTimeout = "00:00:30",  
@@ -168,7 +168,7 @@ public class CalculatorService : ICalculator
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 Starting transaction  
 Performing calculations...  
   Adding 100, running total=100  
@@ -182,7 +182,7 @@ Press <ENTER> to terminate client.
   
  El registro de las solicitudes de operación de servicio se muestra en la ventana de la consola del servicio. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-```  
+```console  
 Press <ENTER> to terminate service.  
 Creating new service instance...  
   Writing row 1 to database: Adding 100 to 0  

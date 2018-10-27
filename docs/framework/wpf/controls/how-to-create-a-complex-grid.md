@@ -1,31 +1,39 @@
 ---
-title: 'Cómo: Crear un contol Grid complejo'
+title: Cómo crear un contol Grid complejo
+description: Un ejemplo sobre cómo usar un control de cuadrícula para crear un diseño similar a un calendario mensual.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - calendar [WPF], creating
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: 49bf9781d56b93fd4529f3c9b62deb171e69155f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2356113457e8c9a6737132e9779e49c05a23d77
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553600"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041861"
 ---
-# <a name="how-to-create-a-complex-grid"></a>Cómo: Crear un contol Grid complejo
-Este ejemplo muestra cómo utilizar un <xref:System.Windows.Controls.Grid> para crear el diseño que parezca un calendario mensual.  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se define ocho filas y ocho columnas mediante el <xref:System.Windows.Controls.RowDefinition> y <xref:System.Windows.Controls.ColumnDefinition> clases. Usa el <xref:System.Windows.Controls.Grid.ColumnSpan%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Grid.RowSpan%2A?displayProperty=nameWithType> adjunta propiedades, junto con <xref:System.Windows.Shapes.Rectangle> elementos, que llenan los fondos de varias columnas y filas. Este diseño es posible porque puede existir más de un elemento en cada celda de un <xref:System.Windows.Controls.Grid>, una diferencia principal entre <xref:System.Windows.Controls.Grid> y <xref:System.Windows.Documents.Table>.  
-  
- En el ejemplo se utiliza degradados verticales para <xref:System.Windows.Shapes.Shape.Fill%2A> las columnas y filas con el fin de mejorar la presentación visual y mejorar la legibilidad del calendario. Un estilo <xref:System.Windows.Controls.TextBlock> elementos representan las fechas y los días de la semana. <xref:System.Windows.Controls.TextBlock> elementos tienen una posición absoluta dentro de sus celdas usando la <xref:System.Windows.FrameworkElement.Margin%2A> propiedad y las propiedades de alineación que se definen en el estilo de la aplicación.  
-  
- [!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]  
-  
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.Grid>  
- <xref:System.Windows.Documents.TableCell>  
- [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Información general sobre tablas](../../../../docs/framework/wpf/advanced/table-overview.md)
+# <a name="how-to-create-a-complex-grid"></a>Cómo crear un contol Grid complejo
+
+En este ejemplo se muestra cómo usar un <xref:System.Windows.Controls.Grid> control para crear un diseño similar a un calendario mensual.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente define ocho filas y ocho columnas mediante el <xref:System.Windows.Controls.RowDefinition> y <xref:System.Windows.Controls.ColumnDefinition> clases. Usa el <xref:System.Windows.Controls.Grid.ColumnSpan%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Grid.RowSpan%2A?displayProperty=nameWithType> adjunta propiedades, junto con <xref:System.Windows.Shapes.Rectangle> elementos, que rellenan el fondo de varias columnas y filas. Este diseño es posible porque puede existir más de un elemento en cada celda de un <xref:System.Windows.Controls.Grid>, una diferencia principal entre <xref:System.Windows.Controls.Grid> y <xref:System.Windows.Documents.Table>.
+
+En el ejemplo se utiliza degradados verticales para <xref:System.Windows.Shapes.Shape.Fill%2A> las columnas y filas para mejorar la presentación visual y la legibilidad del calendario. Estilo <xref:System.Windows.Controls.TextBlock> elementos representan las fechas y los días de la semana. <xref:System.Windows.Controls.TextBlock> los elementos tienen una posición absoluta dentro de sus celdas mediante el uso de la <xref:System.Windows.FrameworkElement.Margin%2A> propiedad y las propiedades de alineación que se definen dentro del estilo de la aplicación.
+
+[!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
+
+La siguiente imagen muestra el control resultante, un calendario personalizable:
+
+![Captura de pantalla del control resultante](./media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
+
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Windows.Controls.Grid?displayProperty=nameWithType>
+- <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>
+- [Información general sobre el dibujo con colores sólidos y degradados](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Información general sobre elementos Panel](panels-overview.md)
+- [Información general sobre tablas](../advanced/table-overview.md)

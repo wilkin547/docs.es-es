@@ -2,12 +2,12 @@
 title: Ejemplo de identidad de servicio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 913795f9d9e35b4ecce5998320cc64c0c0b46ba7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582630"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49633916"
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 Este ejemplo de identidad de servicio muestra cómo establecer la identidad para un servicio. En el momento del diseño, un cliente puede recuperar la identidad mediante los metadatos del servicio y, en el tiempo de ejecución, el cliente puede autenticar la identidad del servicio. El concepto de identidad del servicio es permitir a un cliente autenticar un servicio antes de llamar a cualquiera de sus operaciones, protegiendo por lo tanto al cliente de llamadas no autenticadas. En una conexión segura, el servicio autentica también las credenciales de un cliente antes de permitirle acceso, pero éste no es el objetivo de este ejemplo. Consulte los ejemplos en [cliente](../../../../docs/framework/wcf/samples/client.md) que muestran la autenticación de servidor.
@@ -28,7 +28,7 @@ Este ejemplo de identidad de servicio muestra cómo establecer la identidad para
 
  El código de ejemplo siguiente muestra cómo configurar la identidad de un extremo de servicio con el Servidor de nombres de dominio (DNS) de un certificado utilizando WSHttpBinding.
 
-```
+```csharp
 //Create a service endpoint and set its identity to the certificate's DNS
 WSHttpBinding wsAnonbinding = new WSHttpBinding (SecurityMode.Message);
 // Client are Anonymous to the service
@@ -56,7 +56,7 @@ ep.Address = epa;
 
  Se puede establecer una identidad personalizada derivando desde las clases <xref:System.ServiceModel.EndpointIdentity> y <xref:System.ServiceModel.Security.IdentityVerifier>. De manera conceptual, se puede considerar la clase <xref:System.ServiceModel.Security.IdentityVerifier> para que sea el cliente equivalente de la clase `AuthorizationManager` del servicio. El ejemplo de código siguiente muestra una implementación de `OrgEndpointIdentity`, que almacena un nombre de la organización para que coincida con el nombre del asunto del certificado del servidor. La comprobación de la autorización para el nombre de la organización se produce en el método `CheckAccess` en la clase `CustomIdentityVerifier`.
 
-```
+```csharp
 // This custom EndpointIdentity stores an organization name
 public class OrgEndpointIdentity : EndpointIdentity
 {
@@ -130,7 +130,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
-1.  Antes de compilar la parte del cliente del ejemplo, asegúrese de cambiar el valor para la dirección de extremo del servicio en el archivo Client.cs en el método `CallServiceCustomClientIdentity`. Después, compile el ejemplo.  
+1.  Antes de compilar la parte del cliente del ejemplo, asegúrese de cambiar el valor para la dirección de punto de conexión del servicio en el archivo Client.cs en el método `CallServiceCustomClientIdentity`. Después, compile el ejemplo.  
   
 2.  Cree un directorio en el equipo del servicio.  
   

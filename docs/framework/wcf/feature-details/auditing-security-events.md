@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-author: BrucePerlerMS
-ms.openlocfilehash: d03a68315b6c16eeabd8aca872197d5bec73e7f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236298"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50048260"
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden registrar los eventos de seguridad (ya sea correcto, error o ambos) con la característica de auditoría. Los eventos se escriben al registro de eventos del sistema de Windows y se pueden examinar utilizando el Visor de eventos.  

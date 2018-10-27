@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
-author: BrucePerlerMS
-ms.openlocfilehash: 6204a2832bbdc0c6631903687fcd8a1c45b35d03
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: afc89d14623a25dbaa1ac5c9a58e11dd3e963617
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850640"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50088681"
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>Cómo: Crear un SecurityBindingElement para un modo de autenticación especificado
 Windows Communication Foundation (WCF) proporciona varios modos en que los clientes y servicios autentican entre sí. Puede crear los elementos de enlace de seguridad para estos modos de autenticación utilizando los métodos estáticos en la clase <xref:System.ServiceModel.Channels.SecurityBindingElement> o a través de la configuración, como se muestra en el ejemplo siguiente.  

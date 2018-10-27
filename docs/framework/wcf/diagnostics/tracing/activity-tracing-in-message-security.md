@@ -2,13 +2,12 @@
 title: Seguimiento de actividades en la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-author: BrucePerlerMS
-ms.openlocfilehash: 830339682f86d3882ff2cfc2d07d14145b987dde
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194105"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181334"
 ---
 # <a name="activity-tracing-in-message-security"></a>Seguimiento de actividades en la seguridad de mensajes
 En este tema se describe el seguimiento de actividades para el procesamiento de seguridad, que pasa en las tres fases siguientes.  

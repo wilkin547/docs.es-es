@@ -2,13 +2,12 @@
 title: Seguridad de transporte HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-author: BrucePerlerMS
-ms.openlocfilehash: c21769eed2f3040bf336860b5a9cd6cd450d5525
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087289"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036962"
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en Windows Communication Foundation (WCF).  

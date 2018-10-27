@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 9e1c38abd1c9cacfd4db953d9fb875437b2f1093
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086471"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047675"
 ---
 # <a name="impersonating-the-client"></a>Suplantar el cliente
 El ejemplo de Suplantación muestra cómo suplantar la aplicación de llamador en el servicio para que el servicio pueda tener acceso a los recursos del sistema en nombre del llamador.  
@@ -23,7 +23,7 @@ El ejemplo de Suplantación muestra cómo suplantar la aplicación de llamador e
   
  El código del servicio se ha modificado de tal modo que el método `Add` en el servicio suplanta al llamador mediante <xref:System.ServiceModel.OperationBehaviorAttribute> como se muestra en el código muestra siguiente.  
   
-```  
+```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
 public double Add(double n1, double n2)  
 {  
@@ -39,7 +39,7 @@ public double Add(double n1, double n2)
   
  El método `DisplayIdentityInformation` mostrado en el código muestra siguiente es una función de utilidad que muestra la identidad del llamador.  
   
-```  
+```csharp
 static void DisplayIdentityInformation()  
 {  
     Console.WriteLine("\t\tThread Identity            :{0}",  
@@ -54,14 +54,14 @@ static void DisplayIdentityInformation()
   
  El método `Subtract` en el servicio suplanta al llamador utilizando las llamadas imperativas, tal y como se muestra en el código muestra siguiente.  
   
-```  
+```csharp
 public double Subtract(double n1, double n2)  
 {  
     double result = n1 - n2;  
     Console.WriteLine("Received Subtract({0},{1})", n1, n2);  
     Console.WriteLine("Return: {0}", result);  
-Console.WriteLine("Before impersonating");  
-DisplayIdentityInformation();  
+    Console.WriteLine("Before impersonating");  
+    DisplayIdentityInformation();  
   
     if (ServiceSecurityContext.Current.WindowsIdentity.ImpersonationLevel == TokenImpersonationLevel.Impersonation ||  
         ServiceSecurityContext.Current.WindowsIdentity.ImpersonationLevel == TokenImpersonationLevel.Delegation)  
@@ -80,8 +80,8 @@ DisplayIdentityInformation();
         Console.WriteLine("ImpersonationLevel is not high enough to perform this operation.");  
     }  
   
-Console.WriteLine("After reverting");  
-DisplayIdentityInformation();  
+    Console.WriteLine("After reverting");  
+    DisplayIdentityInformation();  
     return result;  
 }  
 ```  
@@ -92,7 +92,7 @@ DisplayIdentityInformation();
   
  El código de cliente se ha modificado para establecer el nivel de suplantación en <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>. El cliente especifica el nivel de suplantación que el servicio va a utilizar, mediante la enumeración <xref:System.Security.Principal.TokenImpersonationLevel>. La enumeración admite los valores siguientes: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> y <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Para realizar una comprobación de acceso al tener acceso a un recurso del sistema en el equipo local que se protege utilizando ACL de Windows, el nivel de suplantación debe estar establecido en <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>, como se muestra en el código muestra siguiente.  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   

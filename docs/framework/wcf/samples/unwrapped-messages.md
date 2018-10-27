@@ -2,12 +2,12 @@
 title: Mensajes desajustados
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 2c818cc6c37a59f75599afb3eab3290d8525e4bc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 835312101ba9e0daaa7986a78c9a0040535881b9
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43797594"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044626"
 ---
 # <a name="unwrapped-messages"></a>Mensajes desajustados
 Este ejemplo muestra mensajes desajustados. De forma predeterminada, se da formato al cuerpo del mensaje de manera que se ajusten los parámetros a una operación de servicio. El ejemplo siguiente muestra un mensaje de solicitud `Add` al servicio `ICalculator` en modo ajustado.  
@@ -52,7 +52,7 @@ Este ejemplo muestra mensajes desajustados. De forma predeterminada, se da forma
   
  En este ejemplo, se crea un mensaje desajustado aplicando <xref:System.ServiceModel.MessageContractAttribute> al tipo de parámetro de operación de servicio y devuelve el tipo de valor tal y como se muestra en el código de ejemplo siguiente.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  

@@ -2,12 +2,12 @@
 title: Unidireccional
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 25720285e29641c3c040444cb643af2790f10d3b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9a8af4bcdc76afd96ada595a7234cbc5e0250dfc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740732"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180866"
 ---
 # <a name="one-way"></a>Unidireccional
 Este ejemplo muestra un contacto del servicio con operaciones de servicio unidireccionales. El cliente no espera a que se completen las operaciones de servicio como en el caso de las operaciones de servicio bidireccionales. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) y usa el `wsHttpBinding` enlace. El servicio en este ejemplo es una aplicación de consola autohospedada que le permite observar el servicio que recibe y procesa las solicitudes. El cliente es también una aplicación de consola.  
@@ -17,7 +17,7 @@ Este ejemplo muestra un contacto del servicio con operaciones de servicio unidir
   
  Para crear un contrato de servicio unidireccional, defina su contrato de servicio, aplique la clase <xref:System.ServiceModel.OperationContractAttribute> a cada operación y establezca <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> en `true`, tal y como se muestra en el código de ejemplo siguiente:  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -34,8 +34,8 @@ public interface IOneWayCalculator
   
  Para mostrar que el cliente no espera a que las operaciones de servicio se completen, el código de servicio en este ejemplo implementa un retraso de cinco segundos, tal y como se muestra en el código de ejemplo siguiente:  
   
-```  
-/ This service class implements the service contract.  
+```csharp
+// This service class implements the service contract.  
 // This code writes output to the console window.  
  [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple,  
     InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -58,7 +58,7 @@ public class CalculatorService : IOneWayCalculator
   
  El cliente finaliza delante del servicio, mostrando que un cliente no espera a que las operaciones de servicio unidireccional se completen. El resultado del cliente es el siguiente:  
   
-```  
+```console  
 Add(100,15.99)  
 Subtract(145,76.54)  
 Multiply(9,81.25)  
@@ -69,7 +69,7 @@ Press <ENTER> to terminate client.
   
  Se muestra el siguiente resultado del servicio:  
   
-```  
+```console  
 The service is ready.  
 Press <ENTER> to terminate service.  
   

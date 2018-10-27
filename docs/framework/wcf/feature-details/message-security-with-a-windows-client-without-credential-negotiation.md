@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 author: BrucePerlerMS
 ms.openlocfilehash: 8ca3a3e44386c1576610fe3d42f8697c66bee9ab
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845065"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49635642"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
 El siguiente escenario muestra un cliente de Windows Communication Foundation (WCF) y el servicio protegido por el protocolo Kerberos.  

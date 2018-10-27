@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 234071d043b2649e2438ed20fe044fb89cdb9bf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b619505f6e87efd1c3b18e1bed2862d3467984a7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041094"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 Especifica el nombre del archivo de salida.  
@@ -28,16 +26,16 @@ Especifica el nombre del archivo de salida.
   
 |Término|Definición|  
 |---|---|  
-|`filename`|Requerido. Crea el nombre del archivo de salida del compilador. Si el nombre de archivo contiene un espacio, incluya el nombre entre comillas ("").|  
+|`filename`|Requerido. El nombre del archivo de salida que crea el compilador. Si el nombre de archivo contiene un espacio, escriba el nombre entre comillas ("").|  
   
 ## <a name="remarks"></a>Comentarios  
- Especifique el nombre completo y la extensión de archivo que desea crear. Si no lo hace, el archivo .exe adopta el nombre del archivo de código fuente que contiene el `Sub Main` procedimiento y el archivo .dll adopta el nombre del primer archivo de código fuente.  
+ Especifique el nombre completo y la extensión de archivo que se creará. Si no lo hace, el archivo .exe toma su nombre de archivo de código fuente que contiene el `Sub Main` procedimiento y el archivo .dll adopta el nombre del primer archivo de código fuente.  
   
- Si especifica un nombre de archivo sin una extensión .exe o .dll, el compilador agrega automáticamente la extensión automáticamente, según el valor especificado para el `-target` opción del compilador.  
+ Si especifica un nombre de archivo sin extensión .exe o .dll, el compilador agrega automáticamente la extensión para usted, dependiendo del valor especificado para el `-target` opción del compilador.  
   
 |Para establecer - out en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Aplicación** .<br />3.  Modifique el valor en el **nombre de ensamblado** cuadro.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Aplicación** .<br />3.  Modifique el valor en el **nombre del ensamblado** cuadro.|  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `T2.vb` y crea el archivo de salida `T2.exe`.  

@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d568c1c78677b53f4b79f5aefd3a56d71c2685f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838985"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182936"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Asocia el generador usado para crear el host del servicio con el servicio que se va a hospedar y otros aspectos de programación necesarios para tener acceso o compilar el código de hospedaje proporcionado en el archivo .svc.  
@@ -43,7 +43,7 @@ CodeBehind = "CodeBehind"%>
 ## <a name="remarks"></a>Comentarios  
  El <xref:System.ServiceModel.ServiceHost> utilizada para hospedar el servicio es un punto de extensibilidad dentro del modelo de programación de Windows Communication Foundation (WCF). Se usa un patrón del generador para crear <xref:System.ServiceModel.ServiceHost> porque es, potencialmente, un tipo polimórfico del que el entorno de hospedaje no debería crear instancias directamente.  
   
- las implementaciones predeterminadas usan <xref:System.ServiceModel.Activation.ServiceHostFactory> para crear una instancia de <xref:System.ServiceModel.ServiceHost>. Pero puede proporcionar su propio generador (uno que devuelva su host derivado) especificando el nombre del tipo CLR de la implementación de fábrica en el [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directiva.  
+ las implementaciones predeterminadas usan <xref:System.ServiceModel.Activation.ServiceHostFactory> para crear una instancia de <xref:System.ServiceModel.ServiceHost>. Pero puede proporcionar su propio generador (uno que devuelva su host derivado) especificando el nombre del tipo CLR de la implementación de fábrica en el [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directiva.  
   
  Para usar el generador de host de servicios personalizados propio en lugar del generador predeterminado, basta con que proporcione el nombre de tipo en el [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directiva como sigue:  
   

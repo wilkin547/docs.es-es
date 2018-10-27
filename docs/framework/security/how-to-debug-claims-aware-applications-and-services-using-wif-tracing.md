@@ -3,12 +3,12 @@ title: 'Cómo: Depurar servicios y aplicaciones para notificaciones mediante el 
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: e10d8d2ea869b03586b4680ad8320aeb2de90620
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584278"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453400"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Cómo: Depurar servicios y aplicaciones para notificaciones mediante el seguimiento de WIF
 ## <a name="applies-to"></a>Se aplica a  
@@ -104,7 +104,7 @@ ms.locfileid: "48584278"
   
 |**Identificador del error**|**Mensaje de error**|**Acción necesaria para corregir el error**|  
 |-|-|-|  
-|ID4175|IssuerNameRegistry no reconoció el emisor del token de seguridad.  Para aceptar los tokens de seguridad de este emisor, configure IssuerNameRegistry para devolver un nombre válido para este emisor.|Este error se puede producir cuando se copia una huella digital desde el complemento MMC y se pega en el archivo *Web.config*. En concreto, puede obtener un carácter adicional no imprimible en la cadena de texto cuando se copia desde la ventana de propiedades del certificado. Este carácter adicional produce la coincidencia de huella digital para producir un error. El procedimiento para copiar correctamente la huella digital puede encontrarse aquí: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|IssuerNameRegistry no reconoció el emisor del token de seguridad.  Para aceptar los tokens de seguridad de este emisor, configure IssuerNameRegistry para devolver un nombre válido para este emisor.|Este error se puede producir cuando se copia una huella digital desde el complemento MMC y se pega en el archivo *Web.config*. En concreto, puede obtener un carácter adicional no imprimible en la cadena de texto cuando se copia desde la ventana de propiedades del certificado. Este carácter adicional produce la coincidencia de huella digital para producir un error. El procedimiento para copiar correctamente la huella digital puede encontrarse en [basada en notificaciones de inicio de sesión único-en para la Web y Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>Elementos relacionados  
   

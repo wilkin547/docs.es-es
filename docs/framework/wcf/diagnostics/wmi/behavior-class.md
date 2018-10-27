@@ -2,17 +2,17 @@
 title: Clase de comportamiento
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 6fbe6bae02d580dc0b44c2a1922187dd2b166e5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf7d7f4ae4340cd8aee9a200015255820ac140f4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485699"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50034401"
 ---
 # <a name="behavior-class"></a>Clase de comportamiento
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```csharp
 class Behavior  
 {  
   string Type;  

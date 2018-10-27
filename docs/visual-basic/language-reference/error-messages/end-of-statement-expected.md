@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
 ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039028"
 ---
 # <a name="end-of-statement-expected"></a>Se esperaba el fin de instrucción
 La instrucción es sintácticamente completa, pero un elemento de programación adicional sigue al elemento que se complete la instrucción. Falta un terminador de línea al final de cada instrucción.

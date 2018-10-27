@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845396"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50046895"
 ---
 # <a name="delegate-statement"></a>Delegate (Instrucción)
 Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que hace referencia a un `Shared` método de un tipo o a un método de instancia de un objeto. Cualquier procedimiento con parámetros y tipos devueltos de coincidencia puede utilizarse para crear una instancia de esta clase de delegado. Se invoca el procedimiento por medio de la instancia del delegado.  
@@ -69,7 +69,7 @@ Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
  [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [Utilizar una clase genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md)  
  [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

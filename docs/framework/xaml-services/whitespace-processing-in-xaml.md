@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047532"
 ---
 # <a name="white-space-processing-in-xaml"></a>Espacio en blanco en XAML de procesamiento
 Las reglas de lenguaje de XAML indican que espacio en blanco significativo debe ser procesada por una [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementación del procesador. En este tema se documentan estas reglas del lenguaje XAML. También se documenta el control de espacio en blanco adicional definida por el [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementación del procesador XAML y el escritor XAML para la serialización.  
@@ -59,7 +59,7 @@ Las reglas de lenguaje de XAML indican que espacio en blanco significativo debe 
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Caracteres de Asia oriental  
- Los "caracteres de Asia Oriental" se definen como un conjunto de intervalos de caracteres de [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] : de U+20000 a U+2FFFD y de U+30000 a U+3FFFD. En ocasiones, este subconjunto también se denomina "ideogramas CJK". Para obtener más información, vea [http://www.unicode.org](http://www.unicode.org/).  
+ Los "caracteres de Asia Oriental" se definen como un conjunto de intervalos de caracteres de [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] : de U+20000 a U+2FFFD y de U+30000 a U+3FFFD. En ocasiones, este subconjunto también se denomina "ideogramas CJK". Para obtener más información, consulta <https://www.unicode.org>.  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>Modelos de contenido de texto y de espacio en blanco  

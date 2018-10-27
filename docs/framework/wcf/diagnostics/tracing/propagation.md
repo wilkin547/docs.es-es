@@ -2,12 +2,12 @@
 title: Propagación
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803242"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50033641"
 ---
 # <a name="propagation"></a>Propagación
 Este tema describe la propagación de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF).  
@@ -15,13 +15,13 @@ Este tema describe la propagación de actividad en el modelo de seguimiento de W
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Utilización de la propagación para poner en correlación actividades entre los puntos de conexión  
  La propagación proporciona al usuario la correlación directa de las trazas de error de la misma unidad de procesamiento, entre los extremos de la aplicación, p. ej., una solicitud. Los errores emitidos en diferentes extremos de la misma unidad de procesamiento se agrupan en la misma actividad, incluso en todos los dominios de aplicación. Esto se realiza a través de la propagación del id. de actividad en los encabezados del mensaje. Por lo tanto, si a un cliente se le agota el tiempo de espera debido a un error interno del servidor, ambos errores aparecen en la misma actividad para una correlación directa.  
   
- Para ello, utilice el valor `ActivityTracing` como se mostró en el ejemplo anterior. Además, establezca el atributo `propagateActivity` para el origen de seguimiento de traza `System.ServiceModel` en todos los extremos.  
+ Para ello, utilice el valor `ActivityTracing` como se mostró en el ejemplo anterior. Además, establezca el atributo `propagateActivity` para el origen de seguimiento de traza `System.ServiceModel` en todos los puntos de conexión.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Propagación de actividad es una capacidad configurable que hace que WCF agregar un encabezado a los mensajes salientes, que incluye el identificador de actividad en TLS. Mediante la inclusión de este dato en las trazas subsiguientes en el lado del servidor, se pueden poner en correlación las actividades del cliente y el servidor.  
+ Propagación de actividad es una funcionalidad configurable que hace que WCF agregar un encabezado a los mensajes salientes, que incluye el identificador de actividad en TLS. Mediante la inclusión de este dato en las trazas subsiguientes en el lado del servidor, se pueden poner en correlación las actividades del cliente y el servidor.  
   
 ## <a name="propagation-definition"></a>Definición de propagación  
  El gAId de la actividad M se propaga a la actividad N si se aplican todas las condiciones siguientes.  
@@ -44,21 +44,19 @@ Este tema describe la propagación de actividad en el modelo de seguimiento de W
   
 ```xml  
 <MessageLogTraceRecord>  
-  <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"     
+  <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"
                       xmlns:a="http://www.w3.org/2005/08/addressing">  
     <s:Header>  
       <a:Action s:mustUnderstand="1">http://Microsoft.ServiceModel.Samples/ICalculator/Subtract  
       </a:Action>  
       <a:MessageID>urn:uuid:f0091eae-d339-4c7e-9408-ece34602f1ce  
       </a:MessageID>  
-      <ActivityId CorrelationId="f94c6af1-7d5d-4295-b693-4670a8a0ce34"   
-  
+      <ActivityId CorrelationId="f94c6af1-7d5d-4295-b693-4670a8a0ce34"
                xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">  
         17f59a29-b435-4a15-bf7b-642ffc40eac8  
       </ActivityId>  
       <a:ReplyTo>  
-          <a:Address>http://www.w3.org/2005/08/addressing/anonymous  
-          </a:Address>  
+          <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>  
       </a:ReplyTo>  
       <a:To s:mustUnderstand="1">net.tcp://localhost/servicemodelsamples/service</a:To>  
    </s:Header>  

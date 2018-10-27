@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316472"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181625"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Cómo hospedar varias versiones de un flujo de trabajo en paralelo
 `WorkflowIdentity` proporciona una manera para que los desarrolladores de aplicaciones de flujo de trabajo asocien un nombre y una versión con una definición de flujo de trabajo, y para que esta información se asocie a una instancia de flujo de trabajo persistente. Los desarrolladores de aplicaciones de flujo de trabajo pueden usar esta información de identidad para habilitar escenarios como la ejecución en paralelo de varias versiones de una definición de flujo de trabajo; además esta información proporciona la piedra angular para otras funcionalidades como la actualización dinámica. Este paso del tutorial demuestra cómo usar `WorkflowIdentity` para hospedar varias versiones de un flujo de trabajo simultáneamente.
@@ -555,14 +555,15 @@ ms.locfileid: "49316472"
 
 2.  Haga clic en iniciar un nuevo flujo de trabajo **nuevo juego**. La versión del flujo de trabajo se muestra debajo de la ventana de estado y refleja la versión actualizada del `WorkflowIdentity` asociado. Anote el valor de `InstanceId` para poder ver el archivo de seguimiento del flujo de trabajo cuando se complete y, a continuación, escriba números hasta que se termine el juego. Observe cómo el intento del usuario aparece en la información que se muestra en la ventana de estado en función de las actualizaciones de las actividades `WriteLine`.
 
- **Escriba un número entre 1 y 10**
-**5 es demasiado alto.** 
- **Escriba un número entre 1 y 10**
-**3 es demasiado alto.** 
- **Escriba un número entre 1 y 10**
-**1 es demasiado bajo.** 
- **Escriba un número entre 1 y 10**
-**Enhorabuena, acertó el número en 4 intentos.**
+ **Escriba un número entre 1 y 10**  
+**5 es demasiado alto.**  
+**Escriba un número entre 1 y 10**  
+**3 es demasiado alto.**  
+**Escriba un número entre 1 y 10**  
+**1 es demasiado bajo.**  
+**Escriba un número entre 1 y 10**  
+**Enhorabuena, acertó el número en 4 intentos.**  
+
     > [!NOTE]
     >  Se muestra el texto actualizado de las actividades `WriteLine`, pero no se muestra el resultado de la actividad final `WriteLine` que se agregó en este tema. Esto se debe a que el controlador `PersistableIdle` actualiza la ventana de estado. Debido a que el flujo de trabajo se completa y no queda inactivo después de la actividad final, no se llama al controlador `PersistableIdle`. Sin embargo, el controlador `Completed` muestra un mensaje similar en la ventana de estado. Si se desea, se puede agregar un código al controlador `Completed` para extraer el texto de `StringWriter` y mostrarlo en la ventana de estado.
 

@@ -3,11 +3,11 @@ title: Argumentos necesarios y grupos de sobrecarga
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374272"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452906"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argumentos necesarios y grupos de sobrecarga
 Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse. El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios. Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
