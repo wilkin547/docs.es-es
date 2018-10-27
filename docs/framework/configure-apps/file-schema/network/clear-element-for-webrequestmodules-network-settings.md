@@ -10,52 +10,50 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838336"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190533"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="34625-102">&lt;Borrar&gt; elemento para webRequestModules (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="34625-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="34625-103">Quita todos los módulos de solicitud Web registrados de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="34625-103">Removes all registered Web request modules from the application.</span></span>  
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="dd23b-102">&lt;Borrar&gt; elemento para webRequestModules (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="dd23b-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="dd23b-103">Quita todos los módulos de solicitud Web registrados de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="dd23b-103">Removes all registered Web request modules from the application.</span></span>  
   
- <span data-ttu-id="34625-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="34625-104">\<configuration></span></span>  
-<span data-ttu-id="34625-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="34625-105">\<system.net></span></span>  
-<span data-ttu-id="34625-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="34625-106">\<webRequestModules></span></span>  
-<span data-ttu-id="34625-107">\<Borrar ></span><span class="sxs-lookup"><span data-stu-id="34625-107">\<clear></span></span>  
+ <span data-ttu-id="dd23b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dd23b-104">\<configuration></span></span>  
+<span data-ttu-id="dd23b-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="dd23b-105">\<system.net></span></span>  
+<span data-ttu-id="dd23b-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="dd23b-106">\<webRequestModules></span></span>  
+<span data-ttu-id="dd23b-107">\<Borrar ></span><span class="sxs-lookup"><span data-stu-id="dd23b-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34625-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="34625-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd23b-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="dd23b-108">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="34625-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="34625-109">Attributes and Elements</span></span>  
- <span data-ttu-id="34625-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="34625-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dd23b-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="dd23b-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="dd23b-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="dd23b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="34625-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="34625-111">Attributes</span></span>  
- <span data-ttu-id="34625-112">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="34625-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="dd23b-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="dd23b-111">Attributes</span></span>  
+ <span data-ttu-id="dd23b-112">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="dd23b-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="34625-113">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="34625-113">Child Elements</span></span>  
- <span data-ttu-id="34625-114">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="34625-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="dd23b-113">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="dd23b-113">Child Elements</span></span>  
+ <span data-ttu-id="dd23b-114">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="dd23b-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="34625-115">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="34625-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="dd23b-115">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="dd23b-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="34625-116">**Element**</span><span class="sxs-lookup"><span data-stu-id="34625-116">**Element**</span></span>|<span data-ttu-id="34625-117">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="34625-117">**Description**</span></span>|  
+|<span data-ttu-id="dd23b-116">**Element**</span><span class="sxs-lookup"><span data-stu-id="dd23b-116">**Element**</span></span>|<span data-ttu-id="dd23b-117">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="dd23b-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="34625-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="34625-118">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="34625-119">Especifica los módulos que se utilizan para solicitar información de hosts de la red.</span><span class="sxs-lookup"><span data-stu-id="34625-119">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="dd23b-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="dd23b-118">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="dd23b-119">Especifica los módulos que se utilizan para solicitar información de hosts de la red.</span><span class="sxs-lookup"><span data-stu-id="dd23b-119">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="34625-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="34625-120">Remarks</span></span>  
- <span data-ttu-id="34625-121">El `clear` elemento quita todos los módulos de solicitud Web que se han definido anteriormente en el archivo de configuración o en un nivel superior de la jerarquía de configuración.</span><span class="sxs-lookup"><span data-stu-id="34625-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dd23b-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="dd23b-120">Remarks</span></span>  
+ <span data-ttu-id="dd23b-121">El `clear` elemento quita todos los módulos de solicitud Web que se han definido anteriormente en el archivo de configuración o en un nivel superior de la jerarquía de configuración.</span><span class="sxs-lookup"><span data-stu-id="dd23b-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="34625-122">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="34625-122">Configuration Files</span></span>  
- <span data-ttu-id="34625-123">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="34625-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="dd23b-122">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="dd23b-122">Configuration Files</span></span>  
+ <span data-ttu-id="dd23b-123">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="dd23b-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="34625-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="34625-124">Example</span></span>  
- <span data-ttu-id="34625-125">El ejemplo siguiente borra todos los módulos de solicitud Web y, a continuación, registra un módulo de solicitud Web para HTTP.</span><span class="sxs-lookup"><span data-stu-id="34625-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
+## <a name="example"></a><span data-ttu-id="dd23b-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="dd23b-124">Example</span></span>  
+ <span data-ttu-id="dd23b-125">El ejemplo siguiente borra todos los módulos de solicitud Web y, a continuación, registra un módulo de solicitud Web para HTTP.</span><span class="sxs-lookup"><span data-stu-id="dd23b-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,6 +69,6 @@ ms.locfileid: "48838336"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="34625-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="34625-126">See Also</span></span>  
- <xref:System.Net.WebRequest>  
- [<span data-ttu-id="34625-127">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="34625-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="dd23b-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="dd23b-126">See Also</span></span>  
+- <xref:System.Net.WebRequest>  
+- [<span data-ttu-id="dd23b-127">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="dd23b-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

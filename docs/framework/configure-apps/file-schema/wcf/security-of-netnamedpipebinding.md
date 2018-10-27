@@ -2,24 +2,23 @@
 title: Elemento &lt;security&gt; de &lt;netNamedPipeBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-author: BrucePerlerMS
-ms.openlocfilehash: e1c93fc344ea4c7dd3b801c876d59c9a799baf44
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4a80a8337a5b98ff30de60afbe4438e0d91b946b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835822"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185685"
 ---
-# <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="bbc30-102">Elemento &lt;security&gt; de &lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="bbc30-102">&lt;security&gt; of &lt;netNamedPipeBinding&gt;</span></span>
-<span data-ttu-id="bbc30-103">Define la configuración de seguridad de un enlace.</span><span class="sxs-lookup"><span data-stu-id="bbc30-103">Defines the security settings for a binding.</span></span>  
+# <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="7ce8c-102">Elemento &lt;security&gt; de &lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="7ce8c-102">&lt;security&gt; of &lt;netNamedPipeBinding&gt;</span></span>
+<span data-ttu-id="7ce8c-103">Define la configuración de seguridad de un enlace.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-103">Defines the security settings for a binding.</span></span>  
   
- <span data-ttu-id="bbc30-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="bbc30-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="bbc30-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="bbc30-105">\<bindings></span></span>  
-<span data-ttu-id="bbc30-106">\<netNamedPipeBinding ></span><span class="sxs-lookup"><span data-stu-id="bbc30-106">\<netNamedPipeBinding></span></span>  
-<span data-ttu-id="bbc30-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="bbc30-107">\<binding></span></span>  
-<span data-ttu-id="bbc30-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="bbc30-108">\<security></span></span>  
+ <span data-ttu-id="7ce8c-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="7ce8c-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="7ce8c-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="7ce8c-105">\<bindings></span></span>  
+<span data-ttu-id="7ce8c-106">\<netNamedPipeBinding ></span><span class="sxs-lookup"><span data-stu-id="7ce8c-106">\<netNamedPipeBinding></span></span>  
+<span data-ttu-id="7ce8c-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="7ce8c-107">\<binding></span></span>  
+<span data-ttu-id="7ce8c-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="7ce8c-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bbc30-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bbc30-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ce8c-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7ce8c-109">Syntax</span></span>  
   
 ```xml  
 <netNamedPipeBinding>  
@@ -31,35 +30,35 @@ ms.locfileid: "48835822"
 </netNamedPipeBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bbc30-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="bbc30-110">Attributes and Elements</span></span>  
- <span data-ttu-id="bbc30-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="bbc30-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7ce8c-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="7ce8c-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="7ce8c-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bbc30-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="bbc30-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7ce8c-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="7ce8c-112">Attributes</span></span>  
   
-|<span data-ttu-id="bbc30-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="bbc30-113">Attribute</span></span>|<span data-ttu-id="bbc30-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="bbc30-114">Description</span></span>|  
+|<span data-ttu-id="7ce8c-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="7ce8c-113">Attribute</span></span>|<span data-ttu-id="7ce8c-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="7ce8c-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="bbc30-115">modo</span><span class="sxs-lookup"><span data-stu-id="bbc30-115">mode</span></span>|<span data-ttu-id="bbc30-116">Especifica el tipo de seguridad que se aplica a este enlace.</span><span class="sxs-lookup"><span data-stu-id="bbc30-116">Specifies the type of security that is applied to this binding.</span></span> <span data-ttu-id="bbc30-117">Los valores válidos son los siguientes:</span><span class="sxs-lookup"><span data-stu-id="bbc30-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="bbc30-118">-None: Esto deshabilita la seguridad.</span><span class="sxs-lookup"><span data-stu-id="bbc30-118">-   None: This disables security.</span></span><br /><span data-ttu-id="bbc30-119">-Transporte: Se proporciona seguridad mediante seguridad basada en transporte subyacente.</span><span class="sxs-lookup"><span data-stu-id="bbc30-119">-   Transport: Security is provided using underlying transport based security.</span></span> <span data-ttu-id="bbc30-120">Es posible controlar el nivel de protección con este modo.</span><span class="sxs-lookup"><span data-stu-id="bbc30-120">It is possible to control the protection level with this mode.</span></span><br /><span data-ttu-id="bbc30-121">-El valor predeterminado es transporte.</span><span class="sxs-lookup"><span data-stu-id="bbc30-121">-   The default value is Transport.</span></span> <span data-ttu-id="bbc30-122">Este atributo es del tipo <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="bbc30-122">This attribute is of type <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span></span>|  
+|<span data-ttu-id="7ce8c-115">modo</span><span class="sxs-lookup"><span data-stu-id="7ce8c-115">mode</span></span>|<span data-ttu-id="7ce8c-116">Especifica el tipo de seguridad que se aplica a este enlace.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-116">Specifies the type of security that is applied to this binding.</span></span> <span data-ttu-id="7ce8c-117">Los valores válidos son los siguientes:</span><span class="sxs-lookup"><span data-stu-id="7ce8c-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="7ce8c-118">-None: Esto deshabilita la seguridad.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-118">-   None: This disables security.</span></span><br /><span data-ttu-id="7ce8c-119">-Transporte: Se proporciona seguridad mediante seguridad basada en transporte subyacente.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-119">-   Transport: Security is provided using underlying transport based security.</span></span> <span data-ttu-id="7ce8c-120">Es posible controlar el nivel de protección con este modo.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-120">It is possible to control the protection level with this mode.</span></span><br /><span data-ttu-id="7ce8c-121">-El valor predeterminado es transporte.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-121">-   The default value is Transport.</span></span> <span data-ttu-id="7ce8c-122">Este atributo es del tipo <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-122">This attribute is of type <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="bbc30-123">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="bbc30-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7ce8c-123">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="7ce8c-123">Child Elements</span></span>  
   
-|<span data-ttu-id="bbc30-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="bbc30-124">Element</span></span>|<span data-ttu-id="bbc30-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="bbc30-125">Description</span></span>|  
+|<span data-ttu-id="7ce8c-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="7ce8c-124">Element</span></span>|<span data-ttu-id="7ce8c-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="7ce8c-125">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="bbc30-126">transporte</span><span class="sxs-lookup"><span data-stu-id="bbc30-126">transport</span></span>|<span data-ttu-id="bbc30-127">Define la configuración de seguridad para el transporte.</span><span class="sxs-lookup"><span data-stu-id="bbc30-127">Defines the security settings for the transport.</span></span> <span data-ttu-id="bbc30-128">Este elemento es del tipo <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="bbc30-128">This element is of type <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span></span>|  
+|<span data-ttu-id="7ce8c-126">transporte</span><span class="sxs-lookup"><span data-stu-id="7ce8c-126">transport</span></span>|<span data-ttu-id="7ce8c-127">Define la configuración de seguridad para el transporte.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-127">Defines the security settings for the transport.</span></span> <span data-ttu-id="7ce8c-128">Este elemento es del tipo <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="7ce8c-128">This element is of type <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="bbc30-129">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="bbc30-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7ce8c-129">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="7ce8c-129">Parent Elements</span></span>  
   
-|<span data-ttu-id="bbc30-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="bbc30-130">Element</span></span>|<span data-ttu-id="bbc30-131">Descripción</span><span class="sxs-lookup"><span data-stu-id="bbc30-131">Description</span></span>|  
+|<span data-ttu-id="7ce8c-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="7ce8c-130">Element</span></span>|<span data-ttu-id="7ce8c-131">Descripción</span><span class="sxs-lookup"><span data-stu-id="7ce8c-131">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="bbc30-132">enlace</span><span class="sxs-lookup"><span data-stu-id="bbc30-132">binding</span></span>|<span data-ttu-id="bbc30-133">El elemento de enlace de la [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span><span class="sxs-lookup"><span data-stu-id="bbc30-133">The binding element of the [\<netNamedPipeBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>|  
+|<span data-ttu-id="7ce8c-132">enlace</span><span class="sxs-lookup"><span data-stu-id="7ce8c-132">binding</span></span>|<span data-ttu-id="7ce8c-133">El elemento de enlace de la [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span><span class="sxs-lookup"><span data-stu-id="7ce8c-133">The binding element of the [\<netNamedPipeBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="bbc30-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="bbc30-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7ce8c-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="7ce8c-134">See Also</span></span>  
  <xref:System.ServiceModel.NetNamedPipeSecurity>  
  <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>  
- [<span data-ttu-id="bbc30-135">Protección de servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="bbc30-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="bbc30-136">Selección de tipos de credenciales</span><span class="sxs-lookup"><span data-stu-id="bbc30-136">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [<span data-ttu-id="bbc30-137">Enlaces</span><span class="sxs-lookup"><span data-stu-id="bbc30-137">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="bbc30-138">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="bbc30-138">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="bbc30-139">Utilización de enlaces para configurar servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="bbc30-139">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [<span data-ttu-id="bbc30-140">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="bbc30-140">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="7ce8c-135">Protección de servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="7ce8c-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="7ce8c-136">Selección de tipos de credenciales</span><span class="sxs-lookup"><span data-stu-id="7ce8c-136">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="7ce8c-137">Enlaces</span><span class="sxs-lookup"><span data-stu-id="7ce8c-137">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="7ce8c-138">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="7ce8c-138">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="7ce8c-139">Utilización de enlaces para configurar servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="7ce8c-139">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="7ce8c-140">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="7ce8c-140">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
