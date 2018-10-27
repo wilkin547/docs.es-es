@@ -2,12 +2,12 @@
 title: Secuencia
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861119"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191186"
 ---
 # <a name="stream"></a>Secuencia
 El ejemplo de la secuencia muestra el uso de la comunicación de modos de transferencias por secuencia. El servicio expone varias operaciones que envían y reciben secuencias. Este ejemplo se autohospeda. Tanto el cliente como el servicio son los programas de la consola.  
@@ -20,7 +20,7 @@ El ejemplo de la secuencia muestra el uso de la comunicación de modos de transf
 ## <a name="streaming-and-service-contracts"></a>Transmisión por secuencias y contratos de servicio  
  La transmisión por secuencias es algo a tener en cuenta cuando se diseña un contrato de servicio. Si una operación recibe o devuelve grandes cantidades de datos, debería considerar transmitir por secuencias estos datos para evitar la utilización de mucha memoria debido al almacenamiento en búfer de mensajes de entrada o de salida. Para transmitir los en secuencias, el parámetro que contiene los datos deben ser los únicos parámetros del mensaje. Por ejemplo, si el mensaje de entrada es el que se va a transmitir por secuencia, la operación debe tener exactamente un parámetro de entrada. De igual forma, si el mensaje de salida se va a transmitir por secuencia, la operación debe tener exactamente un parámetro de salida o un valor devuelto. En cualquier caso, el tipo de valor de parámetro o devuelvo debe ser `Stream`, `Message` o `IXmlSerializable`. A continuación se muestra el contrato de servicio utilizado en este ejemplo de transmisión por secuencias.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` crea y devuelve una nueva instancia de `ReverseStream`. El procesamiento real se produce cuando el sistema lee desde ese objeto `ReverseStream`. La implementación `ReverseStream.Read` lee un fragmento de bytes del archivo subyacente, los invierte y después devuelve los bytes invertidos. Esto no invierte el contenido del archivo completo, sino un fragmento de bytes cada vez. Se trata de un ejemplo para mostrar cómo puede realizar el procesamiento de la secuencia cuando el contenido se lee o escribe desde la secuencia y hacia ella.  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  Resultado del servicio:  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  Resultado del cliente:  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

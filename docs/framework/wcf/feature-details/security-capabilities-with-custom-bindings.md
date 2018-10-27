@@ -2,13 +2,12 @@
 title: Capacidades de seguridad con enlaces personalizados
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-author: BrucePerlerMS
-ms.openlocfilehash: 35d2477af3dc7ce6fdd075055fff9e687bdc2a60
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c18bec095866c70622c75834e8a4d5fe6a491b08
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196740"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190897"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Capacidades de seguridad con enlaces personalizados
 Puede realizar las tareas de seguridad más habituales utilizando uno de los enlaces proporcionados por el sistema. Si necesita más control, sin embargo, puede crear un enlace personalizado con <xref:System.ServiceModel.Channels.SecurityBindingElement>, como se explica en estos temas. Para obtener más información acerca de los enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt; , elemento de &lt;configuración&gt;'
+title: '&lt;appSettings&gt; (elemento) para &lt;configuración&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: d17400536b911ce0be4d2bf105b0b4d99d0916df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742970"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190936"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > (elemento) para \<configuración >
 
@@ -35,7 +35,7 @@ Contiene la configuración de aplicación personalizada. Se trata de una secció
 
 |           | Descripción |
 | --------- | ----------- |
-| **file**  | Atributo opcional.<br><br>Especifica una ruta de acceso relativa a un archivo externo que contiene valores de configuración de aplicación personalizada. El archivo especificado contiene el mismo tipo de configuración que se especifican en el  **\<Agregar >**,  **\<quitar >**, y  **\<borrar >** elementos y se utiliza el mismo par de clave/valor el formato de los elementos.<br><br>La ruta de acceso especificada es relativa al archivo de configuración principal. Para una aplicación de formularios Windows Forms, ésta es la carpeta binaria (como */bin/debug*), no la ubicación del archivo de configuración de aplicación. Para aplicaciones de formularios Web Forms, la ruta de acceso es relativa a la raíz de la aplicación, donde el *web.config* archivo se encuentra.<br><br>Tenga en cuenta que el tiempo de ejecución omite el atributo si no se puede encontrar el archivo especificado. |
+| **file**  | Atributo opcional.<br><br>Especifica una ruta de acceso relativa a un archivo externo que contiene los valores de configuración de aplicación personalizada. El archivo especificado contiene el mismo tipo de configuración que se especifican en el  **\<Agregar >**,  **\<quitar >**, y  **\<borrar >** elementos y utiliza el mismo par de clave/valor de formato que dichos elementos.<br><br>La ruta de acceso especificada es relativa al archivo de configuración principal. Para una aplicación Windows Forms, esta es la carpeta binaria (como */bin/debug*), no la ubicación del archivo de configuración de aplicación. Las aplicaciones de formularios Web Forms, la ruta de acceso es relativa a la raíz de la aplicación, donde el *web.config* archivo se encuentra.<br><br>Tenga en cuenta que el tiempo de ejecución omite el atributo si no se puede encontrar el archivo especificado. |
 
 ## <a name="parent-element"></a>Elemento primario
 
@@ -48,16 +48,16 @@ Contiene la configuración de aplicación personalizada. Se trata de una secció
 |     | Descripción |
 | --- | ----------- |
 | [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Agrega una configuración de aplicación personalizada. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Borra toda la configuración de aplicación definida previamente. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Quita una configuración de aplicación definida previamente. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Borra todas las configuraciones de aplicación definido anteriormente. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Quita una configuración de aplicación definido anteriormente. |
 
 ## <a name="remarks"></a>Comentarios
 
-El  **\<appSettings >** elemento almacena información de configuración de aplicación personalizada, como las cadenas de conexión de base de datos, las rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para un aplicación. Los pares de clave/valor especificados en la  **\<appSettings >** elemento se obtiene acceso en el código mediante la <xref:System.Configuration.ConfigurationSettings> clase.
+El  **\<appSettings >** elemento almacena información de configuración de aplicación personalizada, como las cadenas de conexión de base de datos, las rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para un aplicación. Los pares clave/valor especificados en el  **\<appSettings >** elemento son accesibles desde código mediante la <xref:System.Configuration.ConfigurationSettings> clase.
 
-Puede usar el **archivo** de atributo en el  **\<appSettings >** elemento de la *Web.config* y archivos de configuración de aplicación. Este atributo especifica un archivo de configuración que proporciona una configuración adicional o reemplaza la configuración especificada en el  **\<appSettings >** elemento. El **archivo** atributo se puede usar en escenarios de desarrollo en equipo de control de código fuente, como cuando un usuario desea invalidar la configuración de proyecto especificada en un archivo de configuración de aplicación.
+Puede usar el **archivo** atributo en el  **\<appSettings >** elemento de la *Web.config* y archivos de configuración de aplicación. Este atributo especifica un archivo de configuración que proporciona una configuración adicional o reemplaza la configuración especificada en el  **\<appSettings >** elemento. El **archivo** atributo se puede usar en escenarios de desarrollo en equipo de control de origen, como cuando un usuario desea invalidar la configuración de proyecto especificada en un archivo de configuración de la aplicación.
 
-Archivos de configuración especificados por el **archivo** atributo debe tener un nodo raíz de  **\<appSettings >** en lugar de  **\<configuración >**.
+Los archivos de configuración especificados por el **archivo** atributo debe tener un nodo raíz de  **\<appSettings >** lugar  **\<configuración >**.
 
 ## <a name="example"></a>Ejemplo
 
@@ -82,8 +82,8 @@ En el ejemplo siguiente se muestra un archivo de configuración de la aplicació
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración de máquina (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

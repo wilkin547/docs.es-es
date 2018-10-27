@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 26485fe2ba3f5647266147744cbe53f978694a9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f061497083dc23fd07f61108938a4129c0af5f3a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656131"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188547"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 Activa el error de desbordamiento para operaciones con enteros o desactivar la comprobación.  
@@ -31,7 +29,7 @@ Activa el error de desbordamiento para operaciones con enteros o desactivar la c
   
 |Término|de esquema JSON|  
 |---|---|  
-|`+` &#124; `-`|Opcional. El `-removeintchecks-` opción hace que el compilador compruebe todos los cálculos de enteros para los errores de desbordamiento. De manera predeterminada, es `-removeintchecks-`.<br /><br /> Especificar `-removeintchecks` o `-removeintchecks+` evita la comprobación de errores y realizar cálculos de enteros más rápidos. Sin embargo, sin comprobación de errores, y si se sobrepasan las capacidades de tipo de datos, se pueden almacenar resultados incorrectos cuando se genera un error.|  
+|`+` &#124; `-`|Opcional. El `-removeintchecks-` opción hace que el compilador compruebe todos los cálculos de enteros para los errores de desbordamiento. De manera predeterminada, es `-removeintchecks-`.<br /><br /> Especificar `-removeintchecks` o `-removeintchecks+` evita la comprobación de errores y realizar los cálculos de enteros más rápidos. Sin embargo, sin comprobación de errores, y si se sobrepasan las capacidades de tipo de datos, se podrán almacenar resultados incorrectos sin provocar un error.|  
   
 |Para establecer - removeintchecks en el entorno de desarrollo integrado de Visual Studio|  
 |---|  

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ab3d4e7ce6686a43e4c5258a56e72203c38ebd
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033394"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183678"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; elemento (configuración de red)
 Define un servidor proxy.  
@@ -70,7 +68,7 @@ Define un servidor proxy.
   
  Use el `usesystemdefault` atributo para las aplicaciones de la versión 1.1 de .NET Framework que se va a migrar a la versión 2.0.  
   
- Se produce una excepción si el `proxyaddress` atributo especifica un proxy predeterminado no válido. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa del error.  
+ Se produce una excepción si el `proxyaddress` atributo especifica un proxy predeterminado no válido. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa principal del error.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
@@ -93,5 +91,5 @@ Define un servidor proxy.
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

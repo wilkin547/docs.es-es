@@ -2,13 +2,12 @@
 title: Elemento &lt;security&gt; de &lt;netMsmqBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-author: BrucePerlerMS
-ms.openlocfilehash: 90293cade964f6559c4783433914e1f858975c3c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8be7582ce5db88d9a79698193c44d9c50bdea4cb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845125"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184760"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>Elemento &lt;security&gt; de &lt;netMsmqBinding&gt;
 Define la configuración de seguridad de un enlace MSMQ. Especifica si se habilitó el transporte o la seguridad de SOAP y, si así fuera, qué modo de autenticación y niveles de protección están en uso.  

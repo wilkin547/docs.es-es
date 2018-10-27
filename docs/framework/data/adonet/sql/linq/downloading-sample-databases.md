@@ -1,26 +1,18 @@
 ---
 title: Obtener las bases de datos de ejemplo para obtener ejemplos de código ADO.NET
 description: Descargar las bases de datos de ejemplo utilizados en los ejemplos de código en la documentación de ADO.NET, así como herramientas de administración y SQL Server
-ms.date: 10/12/2018
+ms.date: 10/18/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 75ae1895d683b669f51b33130fc2f47010e39814
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 9779300288135cb9332a028d547ce55a07e89471
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347532"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188396"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Obtener las bases de datos de ejemplo para obtener ejemplos de código ADO.NET
 
 Un número de ejemplos y tutoriales en la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación usar bases de datos y SQL Server Express. Puede descargar estos productos de forma gratuita de Microsoft.
-
-## <a name="get-the-adventureworks-sample-database"></a>Obtener la base de datos de ejemplo AdventureWorks
-
-Descargue la base de datos de ejemplo AdventureWorks desde el repositorio de GitHub siguiente:
-
-[Bases de datos de ejemplo de AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
-
-Después de descargar uno de la copia de seguridad de base de datos (\*.bak) de los archivos, restaurar la copia de seguridad a una instancia de SQL Server mediante SQL Server Management Studio (SSMS). Consulte [tener SQL Server Management Studio](#get_ssms).
 
 ## <a name="get-the-northwind-sample-database"></a>Obtener la base de datos de ejemplo Northwind
 
@@ -30,11 +22,15 @@ Descargue la base de datos de ejemplo Northwind desde la página siguiente en Mi
 
 Una vez descargado el archivo, haga doble clic en el archivo para extraer las bases de datos y los scripts. De forma predeterminada, los archivos se instalan en la carpeta `<drive>:\SQL Server 2000 Sample Databases`.
 
-Para poder usar la base de datos Northwind, que debe hacer una de las siguientes acciones:
+Para poder usar la base de datos Northwind, tendrá que volver a crear la base de datos en una instancia de SQL Server mediante el uso de [SQL Server Management Studio](#get_ssms) u otra herramienta similar para ejecutar el `instnwnd.sql` archivo de script en la carpeta de instalación.
 
-- Volver a crear la base de datos en una instancia de SQL Server ejecutando el `instnwnd.sql` archivo de script en la carpeta de instalación.
+## <a name="get-the-adventureworks-sample-database"></a>Obtener la base de datos de ejemplo AdventureWorks
 
-- Adjuntar el `northwnd.mdf` archivo con sus correspondientes `*.ldf` archivo de registro a una instancia de SQL Server.
+Descargue la base de datos de ejemplo AdventureWorks desde el repositorio de GitHub siguiente:
+
+[Bases de datos de ejemplo de AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+Después de descargar uno de la copia de seguridad de base de datos (\*.bak) de los archivos, restaurar la copia de seguridad a una instancia de SQL Server mediante SQL Server Management Studio (SSMS). Consulte [tener SQL Server Management Studio](#get_ssms).
 
 ## <a name="get_sql"></a> Obtener SQL Server Express
 
@@ -42,7 +38,7 @@ SQL Server Express es una edición gratuita, nivel de entrada de SQL Server que 
   
 [Ediciones de SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Si usas [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB se incluye en la edición Community, así como las ediciones Professional y versiones posteriores.  
+Si usas [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB se incluye en la edición gratuita Community, así como las ediciones Professional y versiones posteriores.  
 
 ## <a name="get_ssms"></a> Obtener SQL Server Management Studio
 Si desea ver o modificar una base de datos que ha descargado, puede usar SQL Server Management Studio (SSMS). Descarga de SSMS desde la página siguiente:

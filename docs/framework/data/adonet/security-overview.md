@@ -2,12 +2,12 @@
 title: Seguridad Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861863"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183534"
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.  
@@ -67,7 +67,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Seguridad de acceso del código y ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Describe las interacciones entre la seguridad de acceso del código, la seguridad basada en funciones y los entornos de confianza parcial desde la perspectiva de una aplicación ADO.NET.|  
-|[Seguridad de acceso del código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|  
+|[Seguridad de acceso del código](../../../../docs/framework/misc/code-access-security.md)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|  
   
 ## <a name="database-security"></a>Seguridad de la base de datos  
  El principio de privilegios mínimos también se aplica al origen de los datos. A continuación se citan algunas instrucciones generales para la seguridad de base de datos:  

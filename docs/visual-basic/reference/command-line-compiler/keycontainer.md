@@ -6,14 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc6453dc188e7621444b6f44b805aab9354d81f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f64e47922aea35ac9ddf51428107af0d4002d33e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43854689"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185828"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Especifica un nombre de contenedor de claves para un par de claves que asigna un nombre seguro al ensamblado.  

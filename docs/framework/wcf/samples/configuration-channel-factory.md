@@ -2,12 +2,12 @@
 title: Generador de canales de configuración
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: b5dbabf8cdc28cc2beaf343b0377528c6ced1c66
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ec48743deddd52faed31b4a1a0af365909593414
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846297"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187158"
 ---
 # <a name="configuration-channel-factory"></a>Generador de canales de configuración
 En este ejemplo se explica el uso de <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. El <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> permite la administración central de configuración de cliente WCF. Esto también puede ser útil en escenarios en los que la configuración se selecciona o se cambia después de la carga del dominio de aplicación.
@@ -22,7 +22,7 @@ En este ejemplo se explica el uso de <xref:System.ServiceModel.Configuration.Con
 
  El siguiente código agrega un archivo de configuración personalizado a una aplicación cliente.
 
-```
+```csharp
 ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
 fileMap.ExeConfigFilename = "Test.config";
 Configuration newConfiguration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);

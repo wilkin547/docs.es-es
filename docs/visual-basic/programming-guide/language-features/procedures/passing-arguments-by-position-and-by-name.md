@@ -22,16 +22,15 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 49e313b2d5aa8302ea4b99e643e09f7b43659785
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183872"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Pasar argumentos por posición o por nombre (Visual Basic)
-Cuando se llama a un `Sub` o `Function` procedimiento, puede pasar argumentos *por posición* : en el orden en que aparecen en la definición del procedimiento, o se les pueden pasar *por su nombre*, sin tener en cuenta para colocar.  
+Cuando se llama a un `Sub` o `Function` procedimiento, puede pasar argumentos *por posición* , en el orden en que aparecen en la definición del procedimiento, o puede pasarlos *por nombre*, sin cuenta la posición.  
   
  Cuando se pasa un argumento por nombre, especifique el declarado del argumento nombre seguido de dos puntos y un signo igual (`:=`), seguido por el valor del argumento. Puede proporcionar argumentos con nombre en cualquier orden.  
   
@@ -39,14 +38,14 @@ Cuando se llama a un `Sub` o `Function` procedimiento, puede pasar argumentos *p
   
  [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]  
   
- Cuando se llama a este procedimiento, puede proporcionar los argumentos por posición, por nombre o mediante una combinación de ambos.  
+ Cuando se llama a este procedimiento, puede proporcionar los argumentos por posición, por nombre o mediante el uso de una combinación de ambos.  
   
 ## <a name="passing-arguments-by-position"></a>Pasar argumentos por posición  
  Puede llamar a la `Display` método con los argumentos pasados por posición y delimitados por comas, como se muestra en el ejemplo siguiente:  
   
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)] 
   
- Si se omite un argumento opcional de una lista de argumentos posicionales, debe mantener su posición mediante una coma. El ejemplo siguiente se llama el `Display` método sin el `age` argumento:  
+ Si se omite un argumento opcional en una lista de argumentos posicionales, debe mantener su lugar con una coma. El ejemplo siguiente se llama el `Display` método sin el `age` argumento:  
   
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)] 
   
@@ -55,21 +54,21 @@ Cuando se llama a un `Sub` o `Function` procedimiento, puede pasar argumentos *p
   
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)] 
 
- Pasar argumentos por nombre de esta forma resulta especialmente útil cuando se llama a un procedimiento que tiene más de un argumento opcional. Si proporciona argumentos por nombre, no es necesario utilizar comas consecutivas para denotar falta argumentos posicionales. Pasar argumentos por nombre también resulta más fácil realizar un seguimiento de los argumentos que se pasan y cuáles se omiten.  
+ Pasar argumentos por nombre de este modo resulta especialmente útil cuando se llama a un procedimiento que tiene más de un argumento opcional. Si se suministran argumentos por nombre, no es necesario utilizar comas consecutivas para denotar que faltan los argumentos posicionales. Pasar argumentos por nombre también resulta más fácil realizar un seguimiento de los argumentos se pasan y de que se están omitiendo.  
   
 ## <a name="mixing-arguments-by-position-and-by-name"></a>Pasar argumentos por posición o por nombre  
 
-Puede proporcionar argumentos por posición o por su nombre en una llamada de procedimiento único, como se muestra en el ejemplo siguiente:  
+Puede proporcionar argumentos por posición y por nombre en una llamada de procedimiento único, como se muestra en el ejemplo siguiente:  
   
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)] 
   
- En el ejemplo anterior, no hay ninguna coma adicional es necesaria para mantener la posición de la omitido `age` argumento, ya que `birth` se pasó por nombre.  
+ En el ejemplo anterior, no hay ninguna coma adicional es necesaria para mantener la posición de la que se omite `age` argumento, ya que `birth` se pasó por nombre.  
   
-En las versiones de Visual Basic anteriores 15,5, al proporcionar argumentos, una mezcla de posición y el nombre, los argumentos posicionales deben preceder al resto. Una vez que se proporciona un argumento por nombre, los argumentos restantes deben todos pasarse por nombre.  Por ejemplo, la siguiente llamada a la `Display` método muestra el error del compilador [BC30241: se esperaba un argumento con el nombre](../../../misc/bc30241.md).
+En las versiones de Visual Basic 15.5 antes de, al proporcionar argumentos mediante una combinación de posición y el nombre, los argumentos posicionales deben preceder al resto. Una vez que proporciona un argumento por nombre, los argumentos restantes deben todos pasarse por nombre.  Por ejemplo, la llamada siguiente a la `Display` método muestra el error del compilador [BC30241: se esperaba el argumento con nombre](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
-A partir de Visual Basic 15,5, los argumentos posicionales pueden seguir argumentos con nombre si los argumentos posicionales finales están en la posición correcta. Si se compilan en 15,5 de Visual Basic, la llamada anterior a la `Display` método se compila correctamente y ya no se genera el error del compilador [BC30241](../../../misc/bc30241.md).  
+A partir de Visual Basic 15.5, los argumentos posicionales pueden seguir los argumentos con nombre si los argumentos posicionales finales están en la posición correcta. Si compila en Visual Basic 15.5, la llamada anterior a la `Display` método se compila correctamente y ya no se genera el error del compilador [BC30241](../../../misc/bc30241.md).  
 
 Esta capacidad de mezclar y combinar los argumentos posicionales y con nombre en cualquier orden es especialmente útil cuando desea usar un argumento con nombre para que el código sea más legible. Por ejemplo, la siguiente `Person` constructor de clase requiere dos argumentos de tipo `Person`, ambos de los cuales pueden ser `Nothing`. 
 
@@ -79,7 +78,7 @@ Uso mixtos argumentos posicionales y con nombre ayuda a aclarar la intención de
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)] 
 
-Para seguir argumentos posicionales con argumentos con nombre, debe agregar el siguiente elemento a su proyecto de Visual Basic (\*.vbproj) archivo:
+Para seguir los argumentos posicionales con argumentos con nombre, debe agregar el siguiente elemento a su proyecto de Visual Basic (\*.vbproj) archivo:
 
 ```xml
 <PropertyGroup>
@@ -87,11 +86,13 @@ Para seguir argumentos posicionales con argumentos con nombre, debe agregar el s
 </PropertyGroup>
 ```
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>Restricciones sobre cómo proporcionar argumentos por nombre  
+Para obtener más información, consulte [configuración de la versión de idioma de Visual Basic](../../../language-reference/configure-language-version.md).
 
-No se puede pasar argumentos por nombre para evitar especificar argumentos requeridos. Puede omitir solo los argumentos opcionales.  
+## <a name="restrictions-on-supplying-arguments-by-name"></a>Restricciones al suministro de argumentos por nombre  
+
+No se puede pasar argumentos por nombre evitar escribir argumentos necesarios. Puede omitir solo los argumentos opcionales.  
   
-No se puede pasar una matriz de parámetros por nombre. Esto es porque cuando se llama al procedimiento, se proporciona un número indefinido de argumentos separados por comas para la matriz de parámetros, y el compilador no puede asociar más de un argumento con un nombre único.  
+No se puede pasar una matriz de parámetros por nombre. Esto es porque cuando se llama al procedimiento, se proporciona un número indefinido de argumentos separados por comas de la matriz de parámetros y el compilador no puede asociar más de un argumento con un nombre único.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos](./index.md)  

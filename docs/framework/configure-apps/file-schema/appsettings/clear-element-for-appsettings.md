@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 525818309ddc142fdb3ad65ce841ea58c1d635a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc52e3149c213925ea64a8421ee65befeea4161e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350671"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184223"
 ---
 # <a name="clear-element-for-appsettings"></a>\<Borrar > (elemento) para \<appSettings >
 
@@ -48,7 +48,7 @@ Ninguna
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo borrar valores de configuración personalizados:
+El ejemplo siguiente muestra cómo borrar la configuración personalizada:
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ En el ejemplo siguiente se muestra cómo borrar valores de configuración person
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 61a81e342a16bd298cbebef2dc733b5ec631839c
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807543"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183742"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Especificación del comportamiento en tiempo de ejecución del servicio
 Una vez que haya diseñado un contrato de servicios ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) y haya implementado su contrato de servicios ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), puede configurar el comportamiento de la operación del tiempo de ejecución del servicio. En este tema se tratan los comportamientos de operaciones y servicios proporcionados por el sistema y se describe dónde encontrar más información para crear nuevos comportamientos. Aunque algunos comportamientos se aplican como atributos, muchos se aplican usando un archivo de configuración de la aplicación o mediante programación. Para obtener más información acerca de cómo configurar la aplicación de servicio, consulte [configurar Services](../../../docs/framework/wcf/configuring-services.md).  
@@ -18,11 +18,11 @@ Una vez que haya diseñado un contrato de servicios ([Designing Service Contract
 ## <a name="overview"></a>Información general  
  El contrato define las entradas, las salidas, los tipos de datos y las características de un servicio de ese tipo. Al implementar un contrato de servicios, se crea una clase que, cuando se configura con un enlace en una dirección, cumple el contrato que implementa. El cliente conoce la información contractual, de enlace y dirección; sin esa información, el cliente no puede utilizar el servicio.  
   
- Sin embargo, las características de la operación, como los problemas de los subprocesos o la administración de instancias, son opacas para los clientes. Cuando haya implementado su contrato de servicios, puede configurar un gran número de características de operaciones utilizando los *comportamientos*. Los comportamientos son objetos que modifican el tiempo de ejecución de Windows Communication Foundation (WCF), estableciendo una propiedad en tiempo de ejecución o mediante la inserción de un tipo de personalización en tiempo de ejecución. Para obtener más información acerca de cómo modificar el tiempo de ejecución mediante la creación de comportamientos definidos por el usuario, consulte [ServiceHost extender y el nivel de modelo de servicio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Sin embargo, las características de la operación, como los problemas de los subprocesos o la administración de instancias, son opacas para los clientes. Cuando haya implementado su contrato de servicios, puede configurar un gran número de características de operaciones utilizando los *comportamientos*. Los comportamientos son objetos que modifican el tiempo de ejecución de Windows Communication Foundation (WCF) estableciendo una propiedad en tiempo de ejecución o insertando un tipo de personalización en el tiempo de ejecución. Para obtener más información acerca de cómo modificar el tiempo de ejecución creando comportamientos definidos por el usuario, consulte [Extending ServiceHost y la capa del modelo de servicio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
  Los atributos <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> y <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> son los comportamientos más útiles y exponen las funciones de operaciones más solicitadas. Puesto que son atributos, se han de aplicar a la implementación de la operación o el servicio. Otros comportamientos, como <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, se aplican, normalmente, mediante un archivo de configuración de la aplicación, aunque puede utilizarlos mediante programación.  
   
- Este tema proporciona información general sobre la <xref:System.ServiceModel.ServiceBehaviorAttribute> y <xref:System.ServiceModel.OperationBehaviorAttribute> atributos, describe los diversos ámbitos en el que pueden funcionar los comportamientos y proporciona una descripción rápida de muchos de los comportamientos proporcionados por el sistema en los diversos ámbitos que pueden ser de interés para desarrolladores WCF.  
+ En este tema proporciona información general sobre la <xref:System.ServiceModel.ServiceBehaviorAttribute> y <xref:System.ServiceModel.OperationBehaviorAttribute> atributos, se describen los distintos ámbitos a la que pueden funcionar comportamientos y proporciona una descripción rápida de muchos de los comportamientos proporcionados por el sistema en los distintos ámbitos que pueden ser de interés para los desarrolladores WCF.  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute y OperationBehaviorAttribute  
  Los comportamientos más importantes son los atributos <xref:System.ServiceModel.ServiceBehaviorAttribute> y <xref:System.ServiceModel.OperationBehaviorAttribute> , que puede utilizar para controlar:  
@@ -55,13 +55,13 @@ Una vez que haya diseñado un contrato de servicios ([Designing Service Contract
 ### <a name="well-known-singleton-services"></a>Servicios conocidos singleton  
  Puede utilizar los atributos <xref:System.ServiceModel.ServiceBehaviorAttribute> y <xref:System.ServiceModel.OperationBehaviorAttribute> para controlar ciertas duraciones, de <xref:System.ServiceModel.InstanceContext> y de los objetos de servicio que implementan las operaciones.  
   
- Por ejemplo, la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> controla con qué frecuencia se libera el <xref:System.ServiceModel.InstanceContext>, y las propiedades <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> y <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> controlan cuando se libera el objeto de servicios.  
+ Por ejemplo, la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> controla con qué frecuencia se libera el <xref:System.ServiceModel.InstanceContext> , y las propiedades <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> y <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> controlan cuando se libera el objeto de servicios.  
   
  Sin embargo, también puede crear un objeto de servicio y crear el host de servicio mediante ese objeto. Para hacerlo, debe establecer también la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.InstanceContextMode.Single> o se producirá una excepción al abrir el host del servicio.  
   
  Utilice el constructor <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> para crear este tipo de servicio. Ofrece una alternativa para implementar un <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizado cuando desee proporcionar una instancia de objeto concreta para su uso con el servicio de singleton. Puede utilizar esta sobrecarga cuando su tipo de implementación de servicio sea difícil de construir (por ejemplo, si no implementa un constructor público predeterminado que no tiene parámetros).  
   
- Tenga en cuenta que cuando se proporciona un objeto a este constructor, algunas características relacionadas con la que la Windows Communication Foundation (WCF) comportamiento de las instancias funcionan de manera diferente. Por ejemplo, llamar a <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType>, no tiene ningún efecto cuando se proporciona una instancia de objeto conocida. De igual forma, se omite cualquier otro mecanismo de lanzamiento de instancia. La clase <xref:System.ServiceModel.ServiceHost> siempre se comporta como si la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> se hubiese establecido en <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> para todas las operaciones.  
+ Tenga en cuenta que cuando se proporciona un objeto a este constructor, algunas características relacionadas con a la Windows Communication Foundation (WCF) comportamiento de las instancias funcionan de manera diferente. Por ejemplo, llamar a <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> , no tiene ningún efecto cuando se proporciona una instancia de objeto conocida. De igual forma, se omite cualquier otro mecanismo de lanzamiento de instancia. La clase <xref:System.ServiceModel.ServiceHost> siempre se comporta como si la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> se hubiese establecido en <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> para todas las operaciones.  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Otros comportamientos de servicio, extremo, contrato y operación  
  Los comportamientos de servicios, como el atributo <xref:System.ServiceModel.ServiceBehaviorAttribute> , funcionan en a lo largo de todo un servicio. Por ejemplo, si establece la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> debe administrar usted mismo los problemas de sincronización de subprocesos dentro de cada operación de ese servicio. Los comportamientos de extremos funcionan a lo largo de un extremo; muchos de los comportamientos de extremo proporcionados por el sistema se han creado para ofrecer funcionalidad de cliente. Los comportamientos de contratos funcionan en el nivel del contrato y los comportamientos de operaciones modifican la entrega de la operación.  
@@ -70,20 +70,20 @@ Una vez que haya diseñado un contrato de servicios ([Designing Service Contract
   
  Por ejemplo, la publicación de metadatos se configura utilizando el objeto <xref:System.ServiceModel.Description.ServiceMetadataBehavior> . El siguiente archivo de configuración de la aplicación muestra el uso más común.  
   
- [!code-csharp[ServiceMetadataBehavior#1](../../../samples/snippets/csharp/VS_Snippets_CFX/servicemetadatabehavior/cs/hostapplication.cs#1)]  
+ [!code-xml[ServiceMetadataBehavior#1](../../../samples/snippets/csharp/VS_Snippets_CFX/servicemetadatabehavior/cs/hostapplication.exe.config#1)]  
   
  Las secciones siguientes describen muchos de los comportamientos proporcionados por el sistema más útiles que puede utilizar para modificar la entrega en tiempo de ejecución de su servicio o cliente. Vea el tema de referencia para determinar cómo utilizar cada uno.  
   
 ### <a name="service-behaviors"></a>Comportamientos de servicio  
  Los siguientes comportamientos funcionan en servicios.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Aplicar a un servicio WCF para indicar si ese servicio se puede ejecutar en [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] modo de compatibilidad.  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Aplicado a un servicio WCF para indicar si ese servicio se puede ejecutar [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] el modo de compatibilidad.  
   
 -   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Controla cómo autoriza el servicio las notificaciones de cliente.  
   
 -   <xref:System.ServiceModel.Description.ServiceCredentials>. Configura una credencial de servicio. Utilice esta clase para especificar la credencial del servicio, como un certificado X.509.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Habilita la depuración y ayudar a las características de la información para un servicio WCF.  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Habilita la depuración y ayudar a las características de información para un servicio WCF.  
   
 -   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Controla la publicación de metadatos de servicio e información asociada.  
   
@@ -102,7 +102,7 @@ Una vez que haya diseñado un contrato de servicios ([Designing Service Contract
   
 -   <xref:System.ServiceModel.Description.ClientViaBehavior>. Utilizado por clientes para especificar el Identificador uniforme de recursos (URI) para el que se debería crear el canal de transporte.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Indica a WCF para deshabilitar la `MustUnderstand` de procesamiento.  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Indica a WCF que deshabilite la `MustUnderstand` de procesamiento.  
   
 -   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Indica al tiempo de ejecución que utilice un proceso de recepción sincrónico para los canales.  
   

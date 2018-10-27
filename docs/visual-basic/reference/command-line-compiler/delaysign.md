@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c979ada9984ef345ffbb6b5e29c2f30595c3074d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1459484b858137836fcfdcd9db46d8e99a06e9c7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654247"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185214"
 ---
 # <a name="-delaysign"></a>-delaysign
 Especifica si el ensamblado estará firmado total o parcialmente.  
@@ -29,21 +27,21 @@ Especifica si el ensamblado estará firmado total o parcialmente.
  Opcional. Use `-delaysign-` para firmar completamente un ensamblado. Use `-delaysign+` si desea colocar la clave pública en el ensamblado y reservar espacio para el hash firmado. De manera predeterminada, es `-delaysign-`.  
   
 ## <a name="remarks"></a>Comentarios  
- El `-delaysign` opción no tiene ningún efecto a menos que use con [- keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) o [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
+ El `-delaysign` opción no tiene ningún efecto a menos que se usa con [- keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) o [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
   
- Cuando se solicita un ensamblado totalmente firmado, el compilador genera un valor hash para el archivo que contiene el manifiesto (metadatos del ensamblado) y firma dicho valor mediante la clave privada. La firma digital resultante se almacena en el archivo que contiene el manifiesto. Una vez un ensamblado con firma retrasada, el compilador no de proceso y se almacena la firma, pero reserva espacio en el archivo para que la firma se pueda agregar más tarde.  
+ Cuando se solicita un ensamblado totalmente firmado, el compilador genera un valor hash para el archivo que contiene el manifiesto (metadatos del ensamblado) y firma dicho valor mediante la clave privada. La firma digital resultante se almacena en el archivo que contiene el manifiesto. Cuando se retrasa la firma de un ensamblado, el compilador no de proceso y se almacena la firma, pero reserva espacio en el archivo para que la firma se puede agregar más adelante.  
   
- Por ejemplo, al usar `-delaysign+`, un desarrollador de una organización distribuye versiones de prueba sin firma de un ensamblado que los evaluadores pueden utilizar y registrar con la caché global de ensamblados. Cuando se completa el trabajo en el ensamblado, la persona responsable de la clave privada de la organización puede firmar completamente el ensamblado. Esta división de funciones protege la clave privada de la organización contra la divulgación, permitiendo a los desarrolladores trabajar en los ensamblados.  
+ Por ejemplo, mediante el uso de `-delaysign+`, un desarrollador de una organización puede distribuir las versiones de prueba sin signo de un ensamblado que se pueden registrar con la caché global de ensamblados y usar los evaluadores. Cuando se completa el trabajo en el ensamblado, la persona responsable de la clave privada de la organización puede firmar completamente el ensamblado. Esta división de funciones protege la clave privada de la organización de la divulgación, permitiendo que todos los desarrolladores pueden trabajar en los ensamblados.  
   
- Vea [crear y utilizar ensamblados](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) para obtener más información sobre cómo firmar un ensamblado.  
+ Consulte [crear y utilizar ensamblados](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) para obtener más información sobre cómo firmar un ensamblado.  
   
-### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Para establecer - delaysign en el entorno de desarrollo integrado de Visual Studio  
+### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Para establecer delaysign - en el entorno de desarrollo integrado de Visual Studio  
   
 1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.   
   
 2.  Haga clic en la pestaña **Firma**.  
   
-3.  Establezca el valor el **Retrasar firma sólo** cuadro.  
+3.  Establezca el valor el **Retrasar firma solo** cuadro.  
   
 ## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  

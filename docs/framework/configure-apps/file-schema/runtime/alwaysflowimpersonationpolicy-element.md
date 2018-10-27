@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cc704bbf8631936dbbeb3539ea5ed0d8499f378
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dfdc2d434b61d1c1e16ebfdcc2ea423f96254be5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752278"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187837"
 ---
 # <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;alwaysFlowImpersonationPolicy&gt; elemento
 Especifica que la identidad de Windows siempre fluye por puntos asincrónicos, independientemente de cómo se realizó la suplantación.  
@@ -44,8 +44,8 @@ Especifica que la identidad de Windows siempre fluye por puntos asincrónicos, i
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`false`|La identidad no fluye por puntos asincrónicos, a menos que la suplantación se realiza a través de Windows administrados métodos como <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>. Este es el valor predeterminado.|  
-|`true`|La identidad de Windows siempre fluye por puntos asincrónicos, sin tener en cuenta cómo se realizó la suplantación.|  
+|`false`|La identidad no fluye por puntos asincrónicos, a menos que la suplantación se realiza a través de Windows administrado métodos como <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>. Este es el valor predeterminado.|  
+|`true`|La identidad de Windows siempre fluye por puntos asincrónicos, independientemente de cómo se realizó la suplantación.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -58,24 +58,24 @@ Especifica que la identidad de Windows siempre fluye por puntos asincrónicos, i
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- En las versiones 1.0 y 1.1 de .NET Framework, la identidad de Windows no fluye por puntos asincrónicos. En la versión 2.0 de .NET Framework, hay un <xref:System.Threading.ExecutionContext> objeto que contiene información sobre el subproceso actualmente en ejecución y fluye por puntos asincrónicos dentro de un dominio de aplicación. El <xref:System.Security.Principal.WindowsIdentity> también fluye como parte de la información que fluye por los puntos asincrónicos, siempre que se ha realizado la suplantación mediante métodos administrados como <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> y no a través de otros medios como plataforma, invocar métodos nativos. Este elemento se utiliza para especificar que la identidad de Windows fluye por puntos asincrónicos, sin tener en cuenta cómo se logró la suplantación.  
+ En las versiones 1.0 y 1.1 de .NET Framework, la identidad de Windows no fluye por puntos asincrónicos. En la versión 2.0 de .NET Framework, hay un <xref:System.Threading.ExecutionContext> objeto que contiene información sobre el subproceso actualmente en ejecución y hace que fluya por puntos asincrónicos dentro de un dominio de aplicación. El <xref:System.Security.Principal.WindowsIdentity> también flujos como parte de la información que fluye a través de los puntos asincrónicos, siempre que la suplantación se logra mediante métodos administran como <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> y no a través de otros medios como plataforma de invocación a métodos nativos. Este elemento se utiliza para especificar que la identidad de Windows fluye por puntos asincrónicos, independientemente de cómo se logró la suplantación.  
   
  Puede modificar este comportamiento predeterminado de dos formas:  
   
 1.  En el código administrado en una base por subproceso.  
   
-     Puede suprimir el flujo por subproceso modificando la <xref:System.Threading.ExecutionContext> y <xref:System.Security.SecurityContext> configuración mediante el uso de la <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, o <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> método.  
+     Puede suprimir el flujo por subproceso modificando el <xref:System.Threading.ExecutionContext> y <xref:System.Security.SecurityContext> valores mediante el <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, o <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> método.  
   
 2.  En la llamada a la interfaz de hospedaje no administrada para cargar common language runtime (CLR).  
   
-     Si una interfaz de hospedaje no administrada (en lugar de un simple archivo ejecutable administrado) se usa para cargar CLR, puede especificar una marca especial en la llamada a la [CorBindToRuntimeEx (función)](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) (función). Para habilitar el modo de compatibilidad para todo el proceso, establezca el `flags` parámetro [CorBindToRuntimeEx (función)](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) a `STARTUP_ALWAYSFLOW_IMPERSONATION`.  
+     Si una interfaz de hospedaje no administrada (en lugar de un ejecutable simple administrado) se usa para cargar el CLR, puede especificar un marcador especial en la llamada a la [función CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) función. Para habilitar el modo de compatibilidad para todo el proceso, establezca el `flags` parámetro [CorBindToRuntimeEx (función)](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) a `STARTUP_ALWAYSFLOW_IMPERSONATION`.  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
- En una aplicación de .NET Framework, este elemento se puede usar únicamente en el archivo de configuración de aplicación.  
+ En una aplicación de .NET Framework, este elemento se puede usar solo en el archivo de configuración de la aplicación.  
   
- Para una aplicación ASP.NET, se puede configurar el flujo de suplantación en el archivo aspnet.config se encuentra en la \<carpeta Windows > \Microsoft.NET\Framework\vx.x.xxxx directory.  
+ Para una aplicación ASP.NET, el flujo de suplantación puede configurarse en el archivo aspnet.config se encuentra en la \<carpeta de Windows > \Microsoft.NET\Framework\vx.x.xxxx directory.  
   
- ASP.NET de forma predeterminada, se deshabilita el flujo de suplantación en el archivo aspnet.config mediante las siguientes opciones de configuración:  
+ ASP.NET de forma predeterminada, se deshabilita el flujo de suplantación en el archivo aspnet.config mediante el uso de las opciones de configuración siguientes:  
   
 ```xml
 <configuration>  
@@ -86,7 +86,7 @@ Especifica que la identidad de Windows siempre fluye por puntos asincrónicos, i
 </configuration>  
 ```  
   
- En ASP.NET, si desea permitir el flujo de suplantación en su lugar, debe utilizar explícitamente los valores de configuración siguientes:  
+ En ASP.NET, si desea permitir el flujo de suplantación en su lugar, debe usar explícitamente la configuración siguiente:  
   
 ```xml  
 <configuration>  
@@ -98,7 +98,7 @@ Especifica que la identidad de Windows siempre fluye por puntos asincrónicos, i
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo especificar que la identidad de Windows fluye por puntos asincrónicos, incluso cuando la suplantación se logra a través de otros medios distintos de los métodos administrados.  
+ El ejemplo siguiente muestra cómo especificar que la identidad de Windows fluye por puntos asincrónicos, incluso cuando la suplantación se logra a través de otros medios distintos métodos administrados.  
   
 ```xml  
 <configuration>  
@@ -109,6 +109,6 @@ Especifica que la identidad de Windows siempre fluye por puntos asincrónicos, i
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<legacyImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<legacyImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)

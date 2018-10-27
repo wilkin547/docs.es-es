@@ -2,14 +2,12 @@
 title: 'Cómo: crear ensamblados de confianza sin firmar (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 873a5bf235b43b4460a1489a964539c4e4c18de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643070"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188338"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Cómo: crear ensamblados de confianza sin firmar (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.  
@@ -18,7 +16,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
   
 1.  Abra un símbolo del sistema.  
   
-2.  Cree un archivo de Visual Basic denominado `friend_signed_A.` que contiene el código siguiente. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
+2.  Cree un archivo de Visual Basic llamado `friend_signed_A.` que contiene el código siguiente. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -50,7 +48,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  Cree un archivo de Visual Basic denominado `friend_unsigned_B` que contiene el código siguiente. Como friend_unsigned_A especifica que friend_unsigned_B es un ensamblado de confianza, el código de friend_unsigned_B puede tener acceso a tipos `Friend` y miembros de friend_unsigned_A.  
+4.  Cree un archivo de Visual Basic llamado `friend_unsigned_B` que contiene el código siguiente. Como friend_unsigned_A especifica que friend_unsigned_B es un ensamblado de confianza, el código de friend_unsigned_B puede tener acceso a tipos `Friend` y miembros de friend_unsigned_A.  
   
     ```vb  
     ' friend_unsigned_B.vb  

@@ -2,13 +2,12 @@
 title: punto de conexión personalizado de metadatos seguros
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-author: BrucePerlerMS
-ms.openlocfilehash: af3c7ca70ea38a1ee07e077440b3936d83a34d56
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d9c1e8755e32f3d1a38287e2e88d1026c27af1e8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200747"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191238"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>punto de conexión personalizado de metadatos seguros
 Este ejemplo muestra cómo implementar un servicio con un punto de conexión de metadatos seguro que utiliza uno de los enlaces de intercambio que no es de metadatos y cómo configurar [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o clientes para capturar el metadatos de un punto de conexión de metadatos. Hay dos enlaces proporcionados por el sistema disponibles para exponer puntos de conexión de metadatos: mexHttpBinding y mexHttpsBinding. mexHttpBinding se usa para exponer un punto de conexión de metadatos sobre HTTP de una manera no segura. mexHttpsBinding se usa para exponer un punto de conexión de metadatos sobre HTTPS de una manera no segura. En este ejemplo se muestra cómo exponer un extremo de metadatos seguro mediante el objeto <xref:System.ServiceModel.WSHttpBinding>. Desearía hacer esto cuando desee cambiar la configuración de seguridad en el enlace, pero no desee usar HTTPS. Si utiliza mexHttpsBinding, su extremo de metadatos será seguro, pero no hay ninguna manera de modificar la configuración del enlace.  
@@ -51,14 +50,14 @@ Este ejemplo muestra cómo implementar un servicio con un punto de conexión de 
  </bindings>  
 ```  
   
- En muchos de los otros ejemplos, el extremo de metadatos utiliza el `mexHttpBinding`predeterminado, que no es seguro. Aquí los metadatos se protegen utilizando `WSHttpBinding` con seguridad `Message`. Para que los clientes de los metadatos recuperen estos metadatos, se deben configurar con un enlace correspondiente. Este ejemplo muestra dos clientes de este tipo.  
+ En muchos de los otros ejemplos, el punto de conexión de metadatos utiliza el `mexHttpBinding`predeterminado, que no es seguro. Aquí los metadatos se protegen utilizando `WSHttpBinding` con seguridad `Message`. Para que los clientes de los metadatos recuperen estos metadatos, se deben configurar con un enlace correspondiente. Este ejemplo muestra dos clientes de este tipo.  
   
  El primer cliente utiliza Svcutil.exe para capturar los metadatos y generar en tiempo de diseño código y configuración de cliente. Dado que el servicio utiliza un enlace no predeterminado para los metadatos, se debe configurar la herramienta Svcutil.exe específicamente para que pueda recibir los metadatos del servicio utilizando ese enlace.  
   
  El segundo cliente utiliza `MetadataResolver` para capturar dinámicamente los metadatos para un contrato conocido y a continuación, invocar las operaciones en el cliente generado dinámicamente.  
   
 ## <a name="svcutil-client"></a>Cliente de Svcutil  
- Al utilizar el enlace predeterminado para hospedar su extremo `IMetadataExchange`, puede ejecutar Svcutil.exe con la dirección de ese extremo:  
+ Al utilizar el enlace predeterminado para hospedar su punto de conexión `IMetadataExchange`, puede ejecutar Svcutil.exe con la dirección de ese punto de conexión:  
   
 ```  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
@@ -82,7 +81,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- busca el extremo denominado "http" y `IMetadataExchange` del contrato para configurar el enlace y comportamiento del intercambio de la comunicación con el extremo de metadatos. El resto del archivo Svcutil.exe.config en el ejemplo especifica las credenciales de comportamiento y configuración de enlace para hacer que coincida con la configuración del servidor del extremo de metadatos.  
+ busca el punto de conexión denominado "http" y `IMetadataExchange` del contrato para configurar el enlace y comportamiento del intercambio de la comunicación con el punto de conexión de metadatos. El resto del archivo Svcutil.exe.config en el ejemplo especifica las credenciales de comportamiento y configuración de enlace para hacer que coincida con la configuración del servidor del extremo de metadatos.  
   
  Para que Svcutil.exe recoja la configuración en Svcutil.exe.config, Svcutil.exe debe estar en el mismo directorio que el archivo de configuración. Como resultado, debe copiar Svcutil.exe de su ubicación de la instalación en el directorio que contiene el archivo Svcutil.exe.config. Entonces, desde ese directorio, ejecute el siguiente comando:  
   
@@ -157,7 +156,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 4.  En el cliente, ejecute `setup.bat client`. Ejecutando `setup.bat` con el `client` argumento crea un certificado de cliente denominado Client.com y exporta el certificado de cliente a un archivo denominado Client.cer.  
   
-5.  En el archivo App.config de `MetadataResolverClient` en el equipo cliente, cambie el valor de la dirección del extremo mex para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor. Cambie también la cadena "localhost" en el archivo metadataResolverClient.cs por el nuevo nombre del certificado del servicio (el nombre de dominio completo del servidor). Haga lo mismo para App.config en el proyecto SvcutilClient.  
+5.  En el archivo App.config de `MetadataResolverClient` en el equipo cliente, cambie el valor de la dirección del punto de conexión mex para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor. Cambie también la cadena "localhost" en el archivo metadataResolverClient.cs por el nuevo nombre del certificado del servicio (el nombre de dominio completo del servidor). Haga lo mismo para App.config en el proyecto SvcutilClient.  
   
 6.  Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.  
   

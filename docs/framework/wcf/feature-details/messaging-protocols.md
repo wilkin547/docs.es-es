@@ -2,12 +2,12 @@
 title: Protocolos de mensajería
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703016"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183859"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensajería
 
@@ -47,7 +47,7 @@ Documento de especificaciones /:
 
 Los siguientes espacios de nombres XML y prefijos asociados se usan a lo largo de este tema:
 
-| Prefijo | Identificador uniforme de Namespace de recursos (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope`| | s12 | `http://www.w3.org/2003/05/soap-envelope`| | wsa | `http://www.w3.org/2004/08/addressing`| | wsam | `http://www.w3.org/2007/05/addressing/metadata`| | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 | `http://www.w3.org/2005/08/addressing`| | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl`| | xop | `http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+| Prefijo | Identificador uniforme de Namespace de recursos (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` || s12 | `http://www.w3.org/2003/05/soap-envelope` || wsa | `http://www.w3.org/2004/08/addressing` || wsam | `http://www.w3.org/2007/05/addressing/metadata` || wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` || wsa10 | `http://www.w3.org/2005/08/addressing` || wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` || xop | `http://www.w3.org/2004/08/xop/include` || xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | DP |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 y SOAP 1.2
 
@@ -120,7 +120,7 @@ Varios escenarios requieren comunicar metadatos o una referencia a los metadatos
 
 B3121: WCF emplea mecanismos descritos en la sección 6, para incluir metadatos para referencias de punto de conexión por valor o por referencia de la especificación de WS-MetadataExchange (MEX).
 
-Considere un escenario donde un servicio WCF requiere la autenticación mediante un token de lenguaje de marcado de aserción de seguridad (SAML) emitido por el emisor del token en `http://sts.fabrikam123.com`. El punto de conexión WCF describe este requisito de autenticación mediante `sp:IssuedToken` aserción con anidada `sp:Issuer` aserción que señala al emisor del token. Las aplicaciones de cliente que obtienen acceso a la aserción `sp:Issuer` han de saber cómo comunicarse con el extremo del emisor del token. El cliente ha de saber los metadatos sobre el emisor del token. Con las extensiones de metadatos de referencia de punto de conexión definidas en MEX, WCF proporciona una referencia a los metadatos del emisor del token.
+Considere un escenario donde un servicio WCF requiere la autenticación mediante un token de lenguaje de marcado de aserción de seguridad (SAML) emitido por el emisor del token en `http://sts.fabrikam123.com`. El punto de conexión WCF describe este requisito de autenticación mediante `sp:IssuedToken` aserción con anidada `sp:Issuer` aserción que señala al emisor del token. Las aplicaciones de cliente que obtienen acceso a la aserción `sp:Issuer` han de saber cómo comunicarse con el punto de conexión del emisor del token. El cliente ha de saber los metadatos sobre el emisor del token. Con las extensiones de metadatos de referencia de punto de conexión definidas en MEX, WCF proporciona una referencia a los metadatos del emisor del token.
 
 ```xml
 <sp:IssuedToken>
@@ -166,7 +166,7 @@ A lo largo de esta sección, el solicitante envía el primer mensaje y el respon
 #### <a name="one-way-message"></a>Mensaje unidireccional
 Cuando se configura un extremo de WCF para admitir mensajes con un determinado `Action` para seguir un patrón unidireccional, el punto de conexión WCF sigue los siguientes comportamientos y requisitos. A menos que se especifique lo contrario, los comportamientos y reglas se aplican a ambas versiones de WS-Addressing de WCF admitidos:
 
-- R3311: el solicitante debe incluir `wsa:To`, `wsa:Action` y los encabezados para todos los parámetros de referencia especificados por la referencia del extremo. Cuando se utiliza WS-Addressing 2004/08 y la referencia de punto de conexión especifica las [propiedades de referencia], los encabezados correspondientes también deben agregarse al mensaje.
+- R3311: el solicitante debe incluir `wsa:To`, `wsa:Action` y los encabezados para todos los parámetros de referencia especificados por la referencia del punto de conexión. Cuando se utiliza WS-Addressing 2004/08 y la referencia de punto de conexión especifica las [propiedades de referencia], los encabezados correspondientes también deben agregarse al mensaje.
 
 - B3312: el solicitante puede incluir `MessageID`, `ReplyTo`y los encabezados `FaultTo`. La infraestructura del receptor los omitirá y se pasarán a la aplicación.
 
@@ -190,20 +190,20 @@ Cuando se configura un extremo de WCF para un mensaje con un determinado `Action
 ### <a name="web-services-addressing-faults"></a>Errores de direccionamiento de servicios Web
 R3411: WCF genera los siguientes errores definidos por WS-Addressing 2004/08.
 
-|Código|Motivo|
+| Código | Motivo |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|El mensaje llegó con un `ReplyTo` diferente a la dirección de respuesta establecida para este canal; no hay ningún extremo que escuche en la dirección especificada en el encabezado To.|
-|`wsa:ActionNotSupported`|los canales de infraestructura o el distribuidor asociados al extremo no reconocen la acción especificada en el encabezado `Action`.|
+| `wsa:DestinationUnreachable` | El mensaje llegó con un `ReplyTo` diferente a la dirección de respuesta establecida para este canal; no hay ningún punto de conexión que escuche en la dirección especificada en el encabezado To. |
+| `wsa:ActionNotSupported` | los canales de infraestructura o el distribuidor asociados al punto de conexión no reconocen la acción especificada en el encabezado `Action`. |
 
 R3412: WCF genera los siguientes errores definidos por WS-Addressing 1.0.
 
-|Código|Motivo|
+| Código | Motivo |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|Duplicar `wsa:To`, `wsa:ReplyTo`, `wsa:From` o `wsa:MessageID`. Duplicar `wsa:RelatesTo` con el mismo `RelationshipType`.|
-|`wsa10:MessageAddressingHeaderRequired`|Falta el encabezado Addressing necesario.|
-|`wsa10:DestinationUnreachable`|El mensaje llegó con un `ReplyTo` diferente a la dirección de respuesta establecida para este canal. No hay ningún punto de conexión escuchando en la dirección especificada en encabezado To.|
-|`wsa10:ActionNotSupported`|Los canales de infraestructura o el distribuidor asociados al extremo no reconocen una acción especificada en el encabezado `Action`.|
-|`wsa10:EndpointUnavailable`|El canal RM devuelve este error, indicando que el extremo no procesará la secuencia basada en el examen de los encabezados de direccionamiento del mensaje `CreateSequence`.|
+| `wsa10:InvalidAddressingHeader` | Duplicar `wsa:To`, `wsa:ReplyTo`, `wsa:From` o `wsa:MessageID`. Duplicar `wsa:RelatesTo` con el mismo `RelationshipType`. |
+| `wsa10:MessageAddressingHeaderRequired` | Falta el encabezado Addressing necesario. |
+| `wsa10:DestinationUnreachable` | El mensaje llegó con un `ReplyTo` diferente a la dirección de respuesta establecida para este canal. No hay ningún punto de conexión escuchando en la dirección especificada en encabezado To. |
+| `wsa10:ActionNotSupported` | Los canales de infraestructura o el distribuidor asociados al punto de conexión no reconocen una acción especificada en el encabezado `Action`. |
+| `wsa10:EndpointUnavailable` | El canal RM devuelve este error, indicando que el punto de conexión no procesará la secuencia basada en el examen de los encabezados de direccionamiento del mensaje `CreateSequence`. |
 
 El código de las tablas anteriores se asigna a `FaultCode` en SOAP 1.1 y `SubCode` (con Code=Sender) en SOAP 1.2.
 
@@ -286,7 +286,7 @@ La declaración anterior conduce a los siguientes requisitos en el encabezado `w
 
 - R3516: Solicitar a los mensajes enviados a un punto de conexión deben tener un `ReplyTo` encabezado con un `[address]` propiedad igual a `http://www.w3.org/2005/08/addressing/anonymous` si el punto de conexión utiliza un enlace de WSDL 1.1 SOAP 1.x HTTP y tiene una directiva alternativa con `wsap:UsingAddressing` aserción y no `cdp:CompositeDuplex`aserción adjuntada.
 
-La especificación WSDL de WS-Addressing intenta describir enlaces de protocolos similares introduciendo un elemento `<wsaw:Anonymous/>` con tres valores textuales (requerido, opcional y prohibido) para indicar requisitos en el encabezado `wsa:ReplyTo` (sección 3.2). Desafortunadamente, tal definición de elemento no es especialmente utilizable como aserción en el contexto de WS-Policy, porque requiere extensiones específicas del dominio para admitir la intersección de alternativas usando este tipo de elementos como aserción. Tal definición de elemento también indica el valor del encabezado `ReplyTo` frente al comportamiento del extremo en la conexión, que lo hace específico para el transporte HTTP.
+La especificación WSDL de WS-Addressing intenta describir enlaces de protocolos similares introduciendo un elemento `<wsaw:Anonymous/>` con tres valores textuales (requerido, opcional y prohibido) para indicar requisitos en el encabezado `wsa:ReplyTo` (sección 3.2). Desafortunadamente, tal definición de elemento no es especialmente utilizable como aserción en el contexto de WS-Policy, porque requiere extensiones específicas del dominio para admitir la intersección de alternativas usando este tipo de elementos como aserción. Tal definición de elemento también indica el valor del encabezado `ReplyTo` frente al comportamiento del punto de conexión en la conexión, que lo hace específico para el transporte HTTP.
 
 #### <a name="action-definition"></a>Definición de acción
 WS-Addressing 2004/08 define un atributo `wsa:Action` para los elementos`wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]`. El enlace ESDL de WS-Addressing 1.0 (WS-ADDR10-WSDL) define un atributo similar, `wsaw10:Action`.
@@ -300,7 +300,7 @@ Para resolver esta controversia, WCF admite una única versión de la `Action` a
 B3521: WCF usa la `wsaw10:Action` atributo `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` elementos tal como se define en WS-ADDR10-WSDL para determinar el `Action` URI para los mensajes correspondientes independientemente de la versión de WS-Addressing utilizada por el punto de conexión.
 
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Uso de la referencia de punto de conexión dentro del puerto WSDL
-La sección 4.1 de WS-ADDR10-WSDL extiende el elemento `wsdl:port` para incluir el elemento secundario `<wsa10:EndpointReference…/>` para describir el extremo en términos de WS-Addressing. WCF expande esta utilidad en WS-Addressing 2004/08, permitiendo `<wsa:EndpointReference…/>` aparezca como un elemento secundario de `wsdl:port`.
+La sección 4.1 de WS-ADDR10-WSDL extiende el elemento `wsdl:port` para incluir el elemento secundario `<wsa10:EndpointReference…/>` para describir el punto de conexión en términos de WS-Addressing. WCF expande esta utilidad en WS-Addressing 2004/08, permitiendo `<wsa:EndpointReference…/>` aparezca como un elemento secundario de `wsdl:port`.
 
 - R3531: si un extremo tiene una directiva alternativa adjunta con una aserción de directiva `<wsaw10:UsingAddressing/>`, el elemento`wsdl:port` correspondiente puede contener un elemento secundario`<wsa10:EndpointReference …/>`.
 

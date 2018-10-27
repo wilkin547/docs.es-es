@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e1433415bdc6303555ab9ae04a20e097248535
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937623"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188825"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Los generadores de perfiles CLR y las aplicaciones de Windows Store
 
@@ -100,7 +100,7 @@ Cuando Windows intenta cargar el archivo DLL de Profiler, comprueba que el archi
 
 - Asegúrese de que el archivo DLL de Profiler está firmado.
 
-- Indicar al usuario que debe instalar una licencia de desarrollador en su equipo de Windows 8 antes de usar la herramienta. Esto puede hacerse automáticamente desde Visual Studio o manualmente desde un símbolo del sistema. Para obtener más información, consulte [obtener una licencia de desarrollador](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx).
+- Indicar al usuario que debe instalar una licencia de desarrollador en su equipo de Windows 8 antes de usar la herramienta. Esto puede hacerse automáticamente desde Visual Studio o manualmente desde un símbolo del sistema. Para obtener más información, consulte [obtener una licencia de desarrollador](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
 
 **Permisos de sistema de archivos**
 
@@ -124,7 +124,7 @@ Si el proceso un intenta generar Windows Store app B de proceso, un proceso debe
 
 En primer lugar, querrá pedirle a su usuario de profiler qué aplicación de Windows Store para iniciar. Para aplicaciones de escritorio, quizás podría mostrar un cuadro de diálogo de exploración de archivo y el usuario podría buscar y seleccionar un archivo .exe. Pero Windows Store apps son diferentes y, mediante un cuadro de diálogo de exploración no tiene sentido. En su lugar, es mejor mostrar al usuario una lista de aplicaciones de Windows Store instalado para que seleccione en el usuario.
 
-Puede usar el [PackageManager clase](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) para generar esta lista. `PackageManager` es una clase en tiempo de ejecución de Windows que está disponible para las aplicaciones de escritorio y de hecho es *sólo* disponibles para las aplicaciones de escritorio.
+Puede usar el <xref:Windows.Management.Deployment.PackageManager> clase para generar esta lista. `PackageManager` es una clase en tiempo de ejecución de Windows que está disponible para las aplicaciones de escritorio y de hecho es *sólo* disponibles para las aplicaciones de escritorio.
 
 El siguiente ejemplo de código desde una interfaz de usuario de Profiler hipotético escrito como una aplicación de escritorio en C# yses el `PackageManager` para generar una lista de aplicaciones de Windows:
 
@@ -137,9 +137,9 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Especifica el bloque de entorno personalizado**
 
-Una nueva interfaz de COM, [IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx), le permite personalizar el comportamiento de ejecución de una aplicación de Windows Store para facilitar algunas formas de diagnóstico. Uno de sus métodos, [EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=vs.85\).aspx), le permite pasar un bloque de entorno a la aplicación de Windows Store cuando se inicia, junto con otros efectos útiles, por ejemplo, deshabilitar la suspensión del proceso automático. El bloque de entorno es importante ya que es donde debe especificar las variables de entorno (`COR_PROFILER`, `COR_ENABLE_PROFILING`, y `COR_PROFILER_PATH)`) usa CLR para cargar el archivo DLL de Profiler.
+Una nueva interfaz de COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), le permite personalizar el comportamiento de ejecución de una aplicación de Windows Store para facilitar algunas formas de diagnóstico. Uno de sus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), le permite pasar un bloque de entorno a la aplicación de Windows Store cuando se inicia, junto con otros efectos útiles, por ejemplo, deshabilitar la suspensión del proceso automático. El bloque de entorno es importante ya que es donde debe especificar las variables de entorno (`COR_PROFILER`, `COR_ENABLE_PROFILING`, y `COR_PROFILER_PATH)`) usa CLR para cargar el archivo DLL de Profiler.
 
-Tenga en cuenta el siguiente fragmento de código:
+Tenga en cuenta el fragmento de código siguiente:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
@@ -180,7 +180,7 @@ Hay un par de elementos, deberá realizar correctamente:
 
 **Iniciar la aplicación de Windows Store**
 
-Ha llegado el momento para iniciar la aplicación de Windows Store. Si ya ya ha intentado realizar usted mismo, es posible que haya observado que [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) es no, cómo crear un proceso de aplicación de Windows Store. En su lugar, deberá usar el [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) método. Para ello, deberá obtener el identificador de modelo de aplicación de usuario de la aplicación de Windows Store que se inicia. Por tanto, deberá hacer un poco indagar en el manifiesto.
+Ha llegado el momento para iniciar la aplicación de Windows Store. Si ya ha intentado realizar usted mismo, es posible que haya observado que [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) es no, cómo crear un proceso de aplicación de Windows Store. En su lugar, deberá usar el [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) método. Para ello, deberá obtener el identificador de modelo de aplicación de usuario de la aplicación de Windows Store que se inicia. Por tanto, deberá hacer un poco indagar en el manifiesto.
 
 Al recorrer en iteración los paquetes (vea "Elegir un Windows Store App para generar perfiles" en el [carga inicio](#startup-load) sección anterior), deseará tomar el conjunto de aplicaciones incluidas en el manifiesto del paquete actual:
 
@@ -221,7 +221,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **No olvide llamar a DisableDebugging**
 
-Cuando llama a [IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx), realizan una promesa que se limpiarían ensuciado mediante una llamada a la [IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx) método, por lo que debe asegurarse de realizar que cuando la sesión de generación de perfiles es a través.
+Cuando llama a [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), realizan una promesa que se limpiarían ensuciado mediante una llamada a la [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) método, por lo que debe asegurarse de realizar que cuando la sesión de generación de perfiles es a través.
 
 ### <a name="attach-load"></a>Adjuntar carga
 
@@ -229,7 +229,7 @@ Cuando la interfaz de usuario de Profiler desea asociar su DLL Profiler a una ap
 
 **EnableDebugging**
 
-Al igual que con la carga de inicio, llame a la [IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx) método. Ya no lo necesita para pasar un bloque de entorno, pero necesita una de las otras características: deshabilitar la suspensión del proceso automático. En caso contrario, cuando se llama la interfaz de usuario de Profiler [AttachProfiler](iclrprofiling-attachprofiler-method.md), es posible que se suspenda la aplicación de Windows Store de destino. De hecho, esto es probable que si el usuario está interactuando con la interfaz de usuario de Profiler y la aplicación de Windows Store no está activa en cualquiera de las pantallas del usuario. Y si la Windows Store app está suspendido, no podrá responder a cualquier señal de que el CLR se envía a ella para adjuntar el archivo DLL de Profiler.
+Al igual que con la carga de inicio, llame a la [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging) método. Ya no lo necesita para pasar un bloque de entorno, pero necesita una de las otras características: deshabilitar la suspensión del proceso automático. En caso contrario, cuando se llama la interfaz de usuario de Profiler [AttachProfiler](iclrprofiling-attachprofiler-method.md), es posible que se suspenda la aplicación de Windows Store de destino. De hecho, esto es probable que si el usuario está interactuando con la interfaz de usuario de Profiler y la aplicación de Windows Store no está activa en cualquiera de las pantallas del usuario. Y si la Windows Store app está suspendido, no podrá responder a cualquier señal de que el CLR se envía a ella para adjuntar el archivo DLL de Profiler.
 
 Por lo que desea hacer algo como esto:
 
@@ -243,7 +243,7 @@ Se trata de la misma llamada haría que el caso de carga de inicio, excepto que 
 
 **DisableDebugging**
 
-Como siempre, no se olvide de llamar a [IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx) cuando se completa la sesión de generación de perfiles.
+Como siempre, no se olvide de llamar a [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) cuando se completa la sesión de generación de perfiles.
 
 ## <a name="running-inside-the-windows-store-app"></a>Que se ejecuta dentro de la aplicación de Windows Store
 
@@ -273,7 +273,7 @@ Es posible que sea absolutamente no puede prescindir de una API concreta y no se
 
 ### <a name="reduced-permissions"></a>Permisos restringidos
 
-Está fuera del ámbito de este tema para enumerar todas las formas en que los permisos de aplicación de Windows Store difieren de las aplicaciones de escritorio. Pero sin duda el comportamiento será diferente cada vez que el archivo DLL de Profiler (cuando se cargan en una aplicación de Windows Store en comparación con una aplicación de escritorio) intenta tener acceso a todos los recursos. El sistema de archivos es el ejemplo más común. Existen pero algunos se coloca en el disco que se puede tener acceso a una aplicación determinada de Windows Store (consulte [acceso y permisos de archivos (aplicaciones de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)), y será el archivo DLL de Profiler en las mismas restricciones. Probar exhaustivamente el código.
+Está fuera del ámbito de este tema para enumerar todas las formas en que los permisos de aplicación de Windows Store difieren de las aplicaciones de escritorio. Pero sin duda el comportamiento será diferente cada vez que el archivo DLL de Profiler (cuando se cargan en una aplicación de Windows Store en comparación con una aplicación de escritorio) intenta tener acceso a todos los recursos. El sistema de archivos es el ejemplo más común. Existen pero algunos se coloca en el disco que se puede tener acceso a una aplicación determinada de Windows Store (consulte [acceso y permisos de archivos (aplicaciones de Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))), y será el archivo DLL de Profiler en las mismas restricciones. Probar exhaustivamente el código.
 
 ### <a name="inter-process-communication"></a>Comunicación entre procesos
 
@@ -298,7 +298,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-Mientras tanto, el archivo DLL de Profiler puede hacer básicamente lo mismo, aunque es posible más llegar fácilmente a la [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx) clase utilizando el [ApplicationData.Current](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.current.aspx) propiedad.
+Mientras tanto, el archivo DLL de Profiler puede hacer básicamente lo mismo, aunque es posible más llegar fácilmente a la <xref:Windows.Storage.ApplicationData> clase utilizando el [ApplicationData.Current](xref:Windows.Storage.ApplicationData.Current%2A) propiedad.
 
 **Comunicarse a través de eventos**
 
@@ -412,8 +412,8 @@ Es posible utilizar la API de generación de perfiles de CLR para analizar códi
 
 **Aplicaciones de la Tienda Windows**
 
-- [Acceso a archivos y permisos (aplicaciones de Windows Runtime](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)
+- [Acceso a archivos y permisos (aplicaciones de Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 
-- [Obtener una licencia de desarrollador](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)
+- [Obtener una licencia de desarrollador](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [Interfaz IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)
+- [Interfaz IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

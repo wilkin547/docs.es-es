@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b54ceb099df15855b6b30b8c28d7d8917a9c71eb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446579"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184954"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField (Método)
-Crea una definición para un campo con la firma de metadatos especificada y obtiene un símbolo (token) para esa definición de campo.  
+Crea una definición para un campo con la firma de metadatos especificados y obtiene un token para esa definición de campo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,10 +45,10 @@ HRESULT DefineField (
   
 #### <a name="parameters"></a>Parámetros  
  `td`  
- [in] El `mdTypeDef` símbolo (token) para la interfaz o clase envolvente.  
+ [in] El `mdTypeDef` token para la clase o interfaz envolvente.  
   
  `szName`  
- [in] El nombre del campo en Unicode.  
+ [in] El nombre del campo en formato Unicode.  
   
  `dwFieldFlags`  
  [in] Los atributos del campo. Se trata de una máscara de bits de `CorFieldAttr` valores.  
@@ -59,8 +59,8 @@ HRESULT DefineField (
  `cbSigBlob`  
  [in] El recuento de bytes en `pvSigBlob`.  
   
- `dwCPlusTypeFlage`  
- [in] El `ELEMENT_TYPE_` *\** para el valor constante. Se trata de un `CorElementType` valor. Si no define un valor constante para el campo, use `ELEMENT_TYPE_END`.  
+ `dwCPlusTypeFlag`  
+ [in] El `ELEMENT_TYPE_` *\** para el valor constante. Se trata de un `CorElementType` valor. Si no define un valor constante para el campo, utilice `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] El valor constante para el campo.  
@@ -72,13 +72,13 @@ HRESULT DefineField (
  [out] El `mdFieldDef` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Cor.h  
   
  **Biblioteca:** usada como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

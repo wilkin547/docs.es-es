@@ -2,12 +2,12 @@
 title: 'Tutorial: Crear un proveedor de tipos (F #)'
 description: 'Obtenga información sobre cómo crear sus propios proveedores de tipo de F # en F # 3.0 mediante el examen de varios proveedores de tipo simple para ilustrar los conceptos básicos.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397964"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183924"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
 
@@ -146,7 +146,7 @@ obj2.InstanceProperty
 let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 ```
 
-A continuación, busque los tipos en el espacio de nombres `Samples.HelloWorldTypeProvider` generado por el proveedor de tipo.
+A continuación, busque los tipos en el espacio de nombres `Samples.HelloWorldTypeProvider` generado por el proveedor de tipos.
 
 Antes de volver a compilar el proveedor, asegúrese de que se han cerrado todas las instancias de Visual Studio y de F# Interactive que están utilizando la DLL del proveedor. De lo contrario, aparecerá un error de compilación porque la DLL de salida estará bloqueada.
 
@@ -353,7 +353,7 @@ t.AddMembersDelayed(fun () ->
           p.AddXmlDocDelayed(fun () -> 
               sprintf "This is StaticProperty%d on NestedType" i)
 
-          yield p ]
+          yield p ]
 
     staticPropsInNestedType)
 
@@ -748,7 +748,7 @@ En esta sección se muestra cómo proporcionar un tipo que se puede usar para ob
 
 - Los nombres de encabezado carecen de unidades o tienen el formato "Nombre (unidad)" y no contienen comas.
 
-- Las unidades son todas las unidades pertenecen al sistema internacional (SI) como el [módulo Microsoft.FSharp.Data.UnitSystems.SI.UnitNames (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) módulo define.
+- Las unidades son todas las unidades de sistema internacional (SI) como el [módulo Microsoft.FSharp.Data.UnitSystems.SI.UnitNames (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) módulo define.
 
 - Las unidades son todas simples (por ejemplo, metro) en lugar de compuestas (por ejemplo, metros por segundo).
 
@@ -774,7 +774,7 @@ let (time:float) = row.[1]
 printfn "%f" (float time)
 ```
 
-La conversión óptima requerirá que el proveedor de tipo defina un tipo `CsvFile` real en el ensamblado del proveedor de tipo. Los proveedores de tipos a veces se basan en algunos tipos y métodos del asistente para contener la lógica importante. Dado que las medidas se borran en tiempo de ejecución, se puede utilizar `float[]` como el tipo borrado para una fila. El compilador considerará que las distintas columnas contienen distintos tipos de medidas. Por ejemplo, la primera columna de nuestro ejemplo contiene el tipo `float<meter>` y la segunda contiene `float<second>`. Sin embargo, la representación borrada puede seguir siendo bastante simple.
+La conversión óptima requerirá que el proveedor de tipos defina un tipo `CsvFile` real en el ensamblado del proveedor de tipos. Los proveedores de tipos a veces se basan en algunos tipos y métodos del asistente para contener la lógica importante. Dado que las medidas se borran en tiempo de ejecución, se puede utilizar `float[]` como el tipo borrado para una fila. El compilador considerará que las distintas columnas contienen distintos tipos de medidas. Por ejemplo, la primera columna de nuestro ejemplo contiene el tipo `float<meter>` y la segunda contiene `float<second>`. Sin embargo, la representación borrada puede seguir siendo bastante simple.
 
 En el ejemplo de código siguiente se muestra el núcleo de la implementación.
 
@@ -958,7 +958,7 @@ En este caso, el tipo proporcionado aparecería en un punto adecuado según las 
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-**Los orígenes de datos singleton**. Algunos proveedores de tipos se conectan a un único origen de datos dedicado y solo proporcionan datos. En este caso, se debería quitar el sufijo `TypeProvider` y utilizar las convenciones normales de nomenclatura de .NET:
+**Los orígenes de datos singleton**. Algunos proveedores de tipos se conectan a un único origen de datos dedicado y solo proporcionan datos. En este caso, se debería colocar el sufijo `TypeProvider` y utilizar las convenciones normales de nomenclatura de .NET:
 
 ```fsharp
 #r "Fabrikam.Data.Freebase.dll"
@@ -1048,7 +1048,7 @@ La API ProvidedTypes proporciona asistentes para proporcionar anotaciones de med
 
 ### <a name="accessing-project-local-or-script-local-resources"></a>Acceder a recursos locales del proyecto o del script
 
-A cada instancia de un proveedor de tipo se le puede asignar un valor `TypeProviderConfig` durante la construcción. Este valor contiene la "carpeta de resolución" para el proveedor (es decir, la carpeta del proyecto para la compilación o el directorio que contiene un script), la lista de ensamblados a los que se hace referencia y otra información.
+A cada instancia de un proveedor de tipos se le puede asignar un valor `TypeProviderConfig` durante la construcción. Este valor contiene la "carpeta de resolución" para el proveedor (es decir, la carpeta del proyecto para la compilación o el directorio que contiene un script), la lista de ensamblados a los que se hace referencia y otra información.
 
 ### <a name="invalidation"></a>Invalidación
 
@@ -1110,7 +1110,7 @@ El mecanismo de proveedores de tipos de F# tiene las siguientes limitaciones:
 
 ## <a name="development-tips"></a>Sugerencias de desarrollo
 
-Puede que le resulten útiles las sugerencias siguientes durante el proceso de desarrollo.
+Las siguientes sugerencias puede ser útiles durante el proceso de desarrollo:
 
 ### <a name="run-two-instances-of-visual-studio"></a>Ejecutar dos instancias de Visual Studio
 

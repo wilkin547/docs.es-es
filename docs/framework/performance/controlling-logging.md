@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bee42db7b9a92723b0640d0b3747a7921b8617c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b16ad5b3426316197d69fc137e2da7f96e7ab49
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525767"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185646"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlar el registro de .NET Framework
 Se puede utilizar el seguimiento de eventos para Windows (ETW) para registrar los eventos de Common Language Runtime (CLR). Es posible crear y ver los seguimientos mediante las siguientes herramientas:  
   
--   Las herramientas de línea de comandos [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) y [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919), que se incluyen con el sistema operativo Windows.  
+-   Las herramientas de línea de comandos [Logman](/windows-server/administration/windows-commands/logman) y [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), que se incluyen con el sistema operativo Windows.  
   
--   Las herramientas [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) del [Kit de herramientas de rendimiento de Windows](https://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). Para obtener más información sobre Xperf, vea el [blog de rendimiento de Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
+-   Las herramientas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) del [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/). Para obtener más información sobre Xperf, vea el [blog de rendimiento de Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Para capturar información de eventos de CLR, el proveedor de CLR debe estar instalado en el equipo. Para confirmar que el proveedor está instalado, escriba `logman query providers` en el símbolo del sistema. Se muestra una lista de proveedores. Esta lista debería contener una entrada para el proveedor de CLR, del modo siguiente.  
   
@@ -28,12 +28,12 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](https://go.microsoft.com/fwlink/?LinkID=150915) de Windows. Abra la ventana Símbolo del sistema como administrador. Cambie del directorio del símbolo del sistema a la carpeta [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.versión de .NET>\). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.  
+ Si el proveedor de CLR no aparece en la lista, puede instalarlo en Windows Vista y sistemas operativos posteriores mediante la herramienta de línea de comandos [Wevtutil](/windows-server/administration/windows-commands/wevtutil) de Windows. Abra la ventana Símbolo del sistema como administrador. Cambie del directorio del símbolo del sistema a la carpeta [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.versión de .NET>\). Esta carpeta contiene el archivo CLR-ETW.man. En el símbolo del sistema, escriba el siguiente comando para instalar el proveedor de CLR.  
   
  `wevtutil im CLR-ETW.man`  
   
 ## <a name="capturing-clr-etw-events"></a>Capturar eventos ETW de CLR  
- Puede usar las herramientas de línea de comandos [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) y [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) para capturar eventos ETW y las herramientas [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) y [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) para descodificar eventos de seguimiento.  
+ Puede usar las herramientas de línea de comandos [Logman](/windows-server/administration/windows-commands/logman) y [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) para capturar eventos ETW y las herramientas [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) y [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) para descodificar eventos de seguimiento.  
   
  Para activar el registro, el usuario debe especificar tres cosas:  
   
@@ -109,5 +109,5 @@ Provider                                 GUID
      Este comando hace que XPerf vuelque los eventos en un archivo de valores separados por comas (CSV) que se puede consultar. Dado que los distintos eventos tienen campos distintos, este archivo CSV contiene más de una línea de encabezado antes de los datos. El primer campo de cada línea es el tipo de evento, que indica qué encabezado se debería utilizar para determinar el resto de los campos.  
   
 ## <a name="see-also"></a>Vea también  
- [Kit de herramientas de rendimiento de Windows](https://go.microsoft.com/fwlink/?LinkID=161141)  
+ [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/)  
  [Eventos ETW en Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
