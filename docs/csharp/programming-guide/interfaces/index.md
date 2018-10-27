@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: fba595cca4d96fc9cd0f0966f45d1668181b2ec9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321410"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454439"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 
@@ -36,7 +36,7 @@ Para implementar un miembro de interfaz, el miembro correspondiente de la clase 
   
 Cuando una clase o estructura implementa una interfaz, la clase o estructura debe proporcionar una implementación para todos los miembros que define la interfaz. La propia interfaz no proporciona ninguna funcionalidad que una clase o estructura puedan heredar de la misma la forma en que pueden heredar la funcionalidad de la clase base. Sin embargo, si una clase base implementa una interfaz, cualquier clase que se derive de la clase base hereda esta implementación.  
   
-En el ejemplo siguiente se muestra una implementación de la interfaz IEquatable<T\>. La clase de implementación `Car` debe proporcionar una implementación del método <xref:System.IEquatable%601.Equals%2A>.  
+En el siguiente ejemplo se muestra una implementación de la interfaz <xref:System.IEquatable%601>. La clase de implementación `Car` debe proporcionar una implementación del método <xref:System.IEquatable%601.Equals%2A>.  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   

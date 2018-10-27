@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85bb386f2adbf02a8fde891c65c78b8e8d4537b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce84cf888145c85361d82e9b4c1d2c8c2db4fd5b
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391282"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995060"
 ---
 # <a name="net-framework-guide"></a>Guía de .NET Framework
 
@@ -28,7 +28,7 @@ ms.locfileid: "33391282"
 
 Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](../../docs/framework/get-started/index.md). Para una introducción a la arquitectura y las características principales de .NET Framework, consulte la [información general](../../docs/framework/get-started/overview.md).  
 
-.NET Framework se puede usar con Docker y con [contenedores de Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview). Vea [Implementación de aplicaciones de .NET Framework con Docker](./docker/index.md) para obtener información sobre cómo ejecutar las aplicaciones en contenedores de Docker.
+.NET Framework se puede usar con Docker y con [contenedores de Windows](/virtualization/windowscontainers/about/). Vea [Implementación de aplicaciones de .NET Framework con Docker](./docker/index.md) para obtener información sobre cómo ejecutar las aplicaciones en contenedores de Docker.
 
 ## <a name="installation"></a>Instalación
 

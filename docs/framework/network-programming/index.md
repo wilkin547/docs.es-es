@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b949c9fd50ee4d09d7237bc14898a1b55689f2f4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582637"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50045131"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programación para redes en .NET Framework
 Microsoft .NET Framework proporciona una implementación por capas, extensible y administrada de servicios de Internet que se puede integrar rápida y fácilmente en las aplicaciones. Las aplicaciones de red se pueden basar en protocolos conectables para poder usar automáticamente los nuevos protocolos de Internet, o pueden utilizar una implementación administrada de la interfaz de Windows Socket para operar con la red en el nivel de socket.  
@@ -43,7 +41,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  Explica cómo utilizar el seguimiento de la red para obtener información sobre las invocaciones de método y el tráfico de red generado por una aplicación administrada.  
   
  [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- Describe cómo utilizar el almacenamiento en caché para las aplicaciones que usan las clases <xref:System.Net.WebClient?displayProperty=nameWithType>, <xref:System.Net.WebRequest?displayProperty=nameWithType> y <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>.  
+ Describe cómo utilizar el almacenamiento en caché para las aplicaciones que usan las clases <xref:System.Net.WebClient?displayProperty=nameWithType>, <xref:System.Net.WebRequest?displayProperty=nameWithType>y <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> .  
   
  [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)  
  Describe cómo usar las técnicas estándar de seguridad y autenticación de Internet.  
@@ -55,7 +53,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  Describe cómo configurar servidores proxy.  
   
  [NetworkInformation](../../../docs/framework/network-programming/networkinformation.md)  
- Describe cómo recopilar información sobre eventos, cambios, estadísticas y propiedades de red y, explica también cómo determinar si se puede acceder a un host remoto mediante la clase <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
+ Describe cómo recopilar información sobre eventos, cambios, estadísticas y propiedades de red y, explica también cómo determinar si se puede acceder a un host remoto mediante la clase <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> .  
   
  [Cambios realizados en el espacio de nombres System.Uri de la versión 2.0](../../../docs/framework/network-programming/changes-to-the-system-uri-namespace-in-version-2-0.md)  
  Describe varios cambios realizados en la clase <xref:System.Uri?displayProperty=nameWithType> en la versión 2.0 para corregir un comportamiento incorrecto y para mejorar la capacidad de uso y la seguridad.  
@@ -73,13 +71,13 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  Describe la compatibilidad agregada en la versión 3.5 para admitir la interfaz Peer-to-Peer Collaboration basada en PNRP. El espacio de nombres <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> admite el uso de estas nuevas características.  
   
  [Cambios en la autenticación NTLM para HttpWebRequest en la versión 3.5 SP1](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
- Describe los cambios de seguridad realizados en la versión 3.5 SP1 que afectan al modo en que las clases <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> y clases relacionadas del espacio de nombres System.Net controlan la autenticación de Windows integrada.  
+ Describe los cambios de seguridad realizados en la versión 3.5 SP1 que afectan al modo en que las clases <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>y clases relacionadas del espacio de nombres System.Net controlan la autenticación de Windows integrada.  
   
  [Autenticación de Windows integrada con protección ampliada](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
- Describe las mejoras para la protección extendida que afectan al modo en que las clases <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>, <xref:System.Net.Security.SslStream?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> y clases relacionadas del espacio de nombres <xref:System.Net?displayProperty=nameWithType> y espacios de nombres relacionados controlan la autenticación de Windows integrada.  
+ Describe las mejoras para la protección extendida que afectan al modo en que las clases <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>, <xref:System.Net.Security.SslStream?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>y clases relacionadas del espacio de nombres <xref:System.Net?displayProperty=nameWithType> y espacios de nombres relacionados controlan la autenticación de Windows integrada.  
   
  [NAT Traversal mediante IPv6 y Teredo](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
- Describe las mejoras agregadas a los espacios de nombres <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType> y <xref:System.Net.Sockets?displayProperty=nameWithType> para admitir NAT traversal mediante IPv6 y Teredo.  
+ Describe las mejoras agregadas a los espacios de nombres <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>y <xref:System.Net.Sockets?displayProperty=nameWithType> para admitir NAT traversal mediante IPv6 y Teredo.  
   
  [Aislamiento de red para aplicaciones de la Tienda Windows](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
  Describe el impacto de aislamiento de red cuando se usan las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Http>y <xref:System.Net.Http.Headers> en aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] .  
@@ -101,13 +99,13 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  Clases que proporcionan una interfaz de programación para aplicaciones HTTP modernas.  
   
  <xref:System.Net.Http.Headers?displayProperty=nameWithType>  
- Proporciona compatibilidad con las colecciones de encabezados HTTP utilizadas por el espacio de nombres <xref:System.Net.Http?displayProperty=nameWithType>.  
+ Proporciona compatibilidad con las colecciones de encabezados HTTP utilizadas por el espacio de nombres <xref:System.Net.Http?displayProperty=nameWithType> .  
   
  <xref:System.Net.Mail?displayProperty=nameWithType>  
  Clases para redactar y enviar correo mediante el protocolo SMTP.  
   
  <xref:System.Net.Mime?displayProperty=nameWithType>  
- Define los tipos que se utilizan para representar los encabezados MIME (Multipurpose Internet Mail Exchange) utilizados por las clases del espacio de nombres <xref:System.Net.Mail?displayProperty=nameWithType>.  
+ Define los tipos que se utilizan para representar los encabezados MIME (Multipurpose Internet Mail Exchange) utilizados por las clases del espacio de nombres <xref:System.Net.Mail?displayProperty=nameWithType> .  
   
  <xref:System.Net.NetworkInformation?displayProperty=nameWithType>  
  Clases para recopilar información sobre eventos, cambios, estadísticas y propiedades de red mediante programación.  

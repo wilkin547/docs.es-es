@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8738e8d0f6a74e1b8ba963e487d4c153a0a6a872
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196482"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454504"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -66,7 +66,7 @@ Managed Extensibility Framework o MEF es una biblioteca para crear aplicaciones 
 
 La manera más sencilla de ver qué puede hacer MEF es compilar una aplicación sencilla con él. En este ejemplo, compilará una calculadora muy sencilla denominada SimpleCalculator. El objetivo de SimpleCalculator es crear una aplicación de consola que acepte comandos aritméticos básicos, con el formato "5+3" ó "6-2", y devuelva respuestas correctas. Con MEF, podrá agregar nuevos operadores sin cambiar el código de la aplicación.
 
-Para descargar el código completo de este ejemplo, vea [Ejemplo SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
+Para descargar el código completo de este ejemplo, vea [Ejemplo SimpleCalculator](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
 
 > [!NOTE]
 > La finalidad de SimpleCalculator es mostrar los conceptos y la sintaxis de MEF, más que proporcionar un escenario realista para su uso. Muchas de las aplicaciones que más se beneficiarían de todo lo que MEF puede ofrecer son más complejas que SimpleCalculator. Para obtener ejemplos más exhaustivos, consulte [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) en GitHub.
@@ -485,6 +485,6 @@ public class Mod : SimpleCalculator.IOperation
 
 <a name="where_do_i_go_now"></a>
 ## <a name="where-do-i-go-now"></a>¿Por dónde seguir?
- Para descargar el código completo de este ejemplo, vea [Ejemplo SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
+ Para descargar el código completo de este ejemplo, vea [Ejemplo SimpleCalculator](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).
 
- Para más información y ejemplos de código, vea [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282). Para obtener una lista de los tipos de MEF, vea el espacio de nombres <xref:System.ComponentModel.Composition?displayProperty=nameWithType>.
+ Para más información y ejemplos de código, vea [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef). Para obtener una lista de los tipos de MEF, vea el espacio de nombres <xref:System.ComponentModel.Composition?displayProperty=nameWithType>.

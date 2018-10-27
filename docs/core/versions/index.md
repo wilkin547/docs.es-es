@@ -4,12 +4,12 @@ description: Comprenda cómo funciona el control de versiones de .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 0ce64aa266f8e1de2c2cefd366bcbfa3f5cfc8f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518607"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047441"
 ---
 # <a name="net-core-versioning"></a>Control de versiones de .NET Core
 
@@ -43,7 +43,7 @@ Puede ver más detalles en la propuesta inicial, que forma parte del repositorio
 
 ## <a name="semantic-versioning"></a>Control de versiones semántico
 
-En cierto modo, el *runtime* de .NET Core sigue el [Versionamiento Semántico (SemVer)](http://semver.org/), que adopta el uso del esquema de control de versiones `MAJOR.MINOR.PATCH` y emplea las distintas partes del número de versión para describir el grado y el tipo de cambio.
+En cierto modo, el *runtime* de .NET Core sigue el [Versionamiento Semántico (SemVer)](https://semver.org/), que adopta el uso del esquema de control de versiones `MAJOR.MINOR.PATCH` y emplea las distintas partes del número de versión para describir el grado y el tipo de cambio.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]

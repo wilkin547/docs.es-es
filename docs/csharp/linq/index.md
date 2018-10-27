@@ -3,12 +3,12 @@ title: Language Integrated Query (LINQ) de C#
 description: Introducción a Language Integrated Query (LINQ) de C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 89630245a33c03851c7607b3b299eb7b9c477177
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404585"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038427"
 ---
 # <a name="language-integrated-query-linq"></a>Language-Integrated Query (LINQ)
 
@@ -30,7 +30,7 @@ En el ejemplo siguiente se muestra la operación de consulta completa. La operac
 
 - Una consulta no se ejecuta hasta que no se realiza la iteración a través de la variable de consulta, por ejemplo, en una instrucción `foreach`. Para más información, vea [Introduction to LINQ queries](../programming-guide/concepts/linq/introduction-to-linq-queries.md) (Introducción a las consultas LINQ).
 
-- En tiempo de compilación, las expresiones de consulta se convierten en llamadas al método de operador de consulta estándar según las reglas establecidas en la especificación de C#. Cualquier consulta que se puede expresar con sintaxis de consulta también se puede expresar mediante sintaxis de método. Sin embargo, en la mayoría de los casos, la sintaxis de consulta es más legible y concisa. Para más información, vea [Especificación del lenguaje C#](../language-reference/language-specification/index.md) e [Información general sobre operadores de consulta estándar](../programming-guide/concepts/linq/standard-query-operators-overview.md).
+- En tiempo de compilación, las expresiones de consulta se convierten en llamadas al método de operador de consulta estándar según las reglas establecidas en la especificación de C#. Cualquier consulta que se puede expresar con sintaxis de consulta también se puede expresar mediante sintaxis de método. Sin embargo, en la mayoría de los casos, la sintaxis de consulta es más legible y concisa. Para más información, vea [Especificación del lenguaje C#](~/_csharplang/spec/expressions.md#query-expressions) e [Información general sobre operadores de consulta estándar](../programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 - Como regla al escribir consultas LINQ, se recomienda utilizar la sintaxis de consulta siempre que sea posible y la sintaxis de método cuando sea necesario. No hay diferencias semánticas ni de rendimiento entre estas dos formas diversas. Las expresiones de consulta suelen ser más legibles que las expresiones equivalentes escritas con la sintaxis de método.
 

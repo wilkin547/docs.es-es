@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a650fa0340ce63a573074746eef60994e2254c86
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509659"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453234"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
 Este artículo le ayuda a empezar a implementar .NET Framework con la aplicación. La mayoría de la información está destinada a desarrolladores, OEM y administradores de empresa. Los usuarios que deseen instalar .NET Framework en sus equipos deben leer [Instalar .NET Framework](~/docs/framework/install/index.md).  
@@ -167,4 +167,4 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
 |[Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Describe cómo iniciar y seguir en modo silencioso el proceso de instalación de .NET Framework, mientras se muestra la vista del progreso de la instalación.|  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de desarrollo](../../../docs/framework/development-guide.md)
+- [Guía de desarrollo](../../../docs/framework/development-guide.md)

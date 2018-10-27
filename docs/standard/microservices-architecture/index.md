@@ -4,12 +4,12 @@ description: Arquitectura de Microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121368"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047707"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservicios de .NET: arquitectura para aplicaciones .NET en contenedor
 
@@ -27,9 +27,9 @@ Para que sea más fácil empezar a trabajar, la guía se centra en una aplicaci�
 
 * Clone o bifurque la aplicación de referencia [eShopOnContainers en GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
  
-* Vea el [vídeo de introducción en Channel 9](http://aka.ms/microservices-video)
+* Vea el [vídeo de introducción en Channel 9](https://aka.ms/microservices-video)
 
-* Conozca la [arquitectura de microservicios](http://aka.ms/MicroservicesArchitecture) inmediatamente
+* Conozca la [arquitectura de microservicios](https://aka.ms/MicroservicesArchitecture) inmediatamente
 
 ## <a name="introduction"></a>Introducción
 
