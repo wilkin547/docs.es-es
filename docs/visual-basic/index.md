@@ -4,14 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 716715676100b4a16c4732bef545c1c7a2e0703f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245734"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192335"
 ---
 # <a name="visual-basic-guide"></a>Guía de Visual Basic
 
@@ -42,7 +40,7 @@ Visual Basic está diseñado para crear de manera productiva aplicaciones con se
  [Interoperabilidad COM](../visual-basic/programming-guide/com-interop/index.md)  
  Se explican los problemas de interoperabilidad relacionados con la creación y uso de objetos del Modelo de objetos componentes (COM) con Visual Basic.  
   
- [Ejemplos](../visual-basic/sample-applications.md)  
+ [Muestras](../visual-basic/sample-applications.md)  
  Contiene información sobre ejemplos.  
   
  [Tutoriales](../visual-basic/walkthroughs.md)  
