@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752122"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199700"
 ---
 # <a name="remove-element-for-appsettings"></a>\<Quitar > (elemento) para \<appSettings >
 
@@ -36,7 +36,7 @@ Quita la configuración de aplicación personalizada.
 
 |         | Descripción |
 | ------- | ----------- |
-| **key** | Atributo necesario.<br><br>Especifica el nombre de la clave que se va a quitar. |
+| **key** | Atributo necesario.<br><br>Especifica el nombre de la clave para quitar. |
 
 ### <a name="parent-element"></a>Elemento primario
 
@@ -50,7 +50,7 @@ Ninguna
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo quitar un valor de configuración personalizado para `ApplicationName`:
+El ejemplo siguiente muestra cómo quitar un valor de configuración personalizado para `ApplicationName`:
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ En el ejemplo siguiente se muestra cómo quitar un valor de configuración perso
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

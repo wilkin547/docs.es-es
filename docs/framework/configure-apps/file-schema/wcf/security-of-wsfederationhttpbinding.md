@@ -3,11 +3,11 @@ title: Elemento &lt;security&gt; de &lt;wsFederationHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
 ms.openlocfilehash: 9473fa062867383f84ba5931c394f1ac665a74fb
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50046154"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199297"
 ---
 # <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>Elemento &lt;security&gt; de &lt;wsFederationHttpBinding&gt;
 Define la configuración de seguridad de la [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  

@@ -4,12 +4,12 @@ description: Aprenda a elevación y desplazamiento y modernizar aplicaciones exi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b8c293730b0921924584359ffad32efd2b83a19b
-ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
+ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49413944"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200090"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicaciones .NET existentes con la nube de Azure y contenedores de Windows (2nd edition)
 
@@ -25,7 +25,7 @@ Copyright © 2018 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
-Este libro está disponible gratuitamente en forma de libro electrónico (eBook) disponible a través de varios canales de Microsoft, como <http://dot.net/architecture>.
+Este libro está disponible gratuitamente en forma de libro electrónico (eBook) disponible a través de varios canales de Microsoft, como <https://dot.net/architecture>.
 
 Si tiene preguntas relacionadas con este libro, envíe un correo electrónico a [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
@@ -72,7 +72,7 @@ Aplicaciones modernas con la agilidad a largo plazo y el valor para la organizac
 
 En la figura 1-1 se muestran las posibles rutas de acceso que puede usar para migrar las aplicaciones .NET existentes a la nube en fases incrementales.
 
- ![Rutas de acceso de modernización de servicios y aplicaciones .NET existentes](./media/image1-1.png)
+ ![Rutas de acceso de modernización de servicios y aplicaciones .NET existentes](./media/image1-1.png)
 
 > **Figura 1-1**. Rutas de acceso de modernización de servicios y aplicaciones .NET existentes
 

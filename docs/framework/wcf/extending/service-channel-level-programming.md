@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805865"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197202"
 ---
 # <a name="service-channel-level-programming"></a>Programación de servicios a nivel de canal
 Este tema describe cómo escribir una aplicación de servicio de Windows Communication Foundation (WCF) sin utilizar el <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> y su modelo de objetos asociado.  
@@ -34,7 +34,7 @@ Este tema describe cómo escribir una aplicación de servicio de Windows Communi
  El ejemplo de código siguiente crea una instancia de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> y agrega <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> a su colección Elements, que es una colección de elementos de enlace que se utilizan para crear la pila del canal. En este ejemplo, puesto que la colección de elementos tiene solo <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, la pila del canal resultante tiene solo el canal de transporte HTTP.  
   
 #### <a name="building-a-channellistener"></a>Crear un ChannelListener  
- Después de crear un enlace, llamamos a <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` para crear la escucha de canal donde el parámetro de tipo es la forma del canal a crear. En este ejemplo estamos utilizando <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> porque deseamos realizar escuchas para los mensajes entrantes en un patrón de intercambio de solicitud/mensaje de respuesta.  
+ Después de crear un enlace, llamamos a <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> para crear la escucha del canal donde el parámetro de tipo es la forma del canal a crear. En este ejemplo estamos utilizando <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> porque deseamos realizar escuchas para los mensajes entrantes en un patrón de intercambio de solicitud/mensaje de respuesta.  
   
  <xref:System.ServiceModel.Channels.IReplyChannel> se utiliza para recibir los mensajes de solicitud y devolver los mensajes de respuesta. Al llamar a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType>, se devuelve <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, que se puede utilizar para recibir el mensaje de solicitud y devolver un mensaje de respuesta.  
   

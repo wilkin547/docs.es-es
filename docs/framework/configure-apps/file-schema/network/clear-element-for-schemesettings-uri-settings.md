@@ -2,12 +2,12 @@
 title: '&lt;Borrar&gt; elemento para schemeSettings (configuración de Uri)'
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: b7dba6335f12b546fa4309ba9eb26d6007ec1bac
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 043ce78283c42d2cf42851e13919bf71a77b28b4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50043301"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196679"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;Borrar&gt; elemento para schemeSettings (configuración de Uri)
 Borra todos los valores de esquema existente.  
@@ -71,10 +71,10 @@ Borra todos los valores de esquema existente.
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+- <xref:System.Uri?displayProperty=nameWithType>  
+- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

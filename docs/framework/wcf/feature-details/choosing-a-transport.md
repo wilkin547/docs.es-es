@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: c98fd4bb76074c2d96b702a37bf1964600d365e3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864633"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199674"
 ---
 # <a name="choosing-a-transport"></a>Elección del transporte
 En este tema se analiza los criterios para elegir entre los tres transportes principales que se incluyen en Windows Communication Foundation (WCF): HTTP, TCP y canalizaciones con nombre. WCF también incluye un message Queue Server (también conocido como MSMQ) de transporte, pero este documento no cubre message Queue Server.  
@@ -30,7 +30,7 @@ En este tema se analiza los criterios para elegir entre los tres transportes pri
   
  El protocolo HTTP no está basado en una conexión. Una vez enviada la respuesta, no se mantiene ningún estado. Para administrar transacciones de varias páginas, la aplicación debe conservar cualquier estado necesario.  
   
- En WCF, el transporte HTTP enlace se optimiza para la interoperabilidad con sistemas heredados no WCF. Si todas las partes en comunicación usa WCF, los enlaces basados en canalizaciones con nombre o basados en TCP son más rápidos. Para obtener más información, consulte <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding>.  
+ En WCF, el transporte HTTP enlace se optimiza para la interoperabilidad con sistemas heredados no WCF. Si todas las partes en comunicación usa WCF, los enlaces basados en canalizaciones con nombre o basados en TCP son más rápidos. Para obtener más información, vea <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding>.  
   
 ### <a name="when-to-use-the-tcp-transport"></a>Cuando utilizar el transporte TCP.  
  TCP es un servicio de entrega basado en conexión, orientado a secuencias con detección de errores de principio a fin y corrección. *Basado en conexión* significa que se establece una sesión de comunicación entre los hosts antes de intercambiar datos. Un host es un dispositivo en una red TCP/IP identificada por una dirección IP lógica.  
@@ -63,9 +63,10 @@ En este tema se analiza los criterios para elegir entre los tres transportes pri
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.BasicHttpBinding>  
- <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
-  <<!--zz <xref:System.ServiceModel.WsDualHttpBinding> --> `System.ServiceModel.WsDualHttpBinding`
- <<!--zz <xref:System.ServiceModel.WsFederationHttpBinding>  --> `System.ServiceModel.WsFederationHttpBinding` <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+ <xref:System.ServiceModel.WSHttpBinding>  
+ <xref:System.ServiceModel.WSDualHttpBinding>  
+ <xref:System.ServiceModel.WSFederationHttpBinding>  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.NetTcpBinding>  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
  <xref:System.ServiceModel.NetNamedPipeBinding>  
