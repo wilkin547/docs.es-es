@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 2e54f49f111c545a329a64ede400dc1354020f43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579514"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188188"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -184,7 +184,7 @@ Interfaces | [Interfaces](#interfaces) | Las interfaces conformes a CLS no puede
 Miembros | [Miembros de tipos en general](#type-members-in-general) | Los campos y métodos static globales no son conformes a CLS. | 36
 Miembros | -- | El valor de un estático literal se especifica mediante el uso de metadatos de inicialización de campos. Un literal conforme a CLS debe tener un valor especificado en los metadatos de inicialización de campos que sea exactamente del mismo tipo que el literal (o el tipo subyacente, si el literal es `enum`). | 13
 Miembros | [Miembros de tipos en general](#type-members-in-general) | La restricción vararg no forma parte de CLS y la única convención de llamada admitida por CLS es la convención de llamada administrada estándar. | 15
-Convenciones de nomenclatura | [Convenciones de nomenclatura](#naming-conventions) | Los ensamblados seguirán las directrices del anexo 7 del informe técnico 15 del estándar Unicode 3.0, que rige el conjunto de caracteres permitidos que pueden usarse como iniciales e incluirse en los identificadores. Estas directrices están disponibles en línea en [Formularios de normalización Unicode](http://www.unicode.org/unicode/reports/tr15/tr15-18.html). Los identificadores deben aparecer en el formato canónico definido por el Formulario C de normalización Unicode. En aras de la conformidad con CLS, dos identificadores se considerarán iguales si sus asignaciones de minúsculas (tal y como se especificó en las asignaciones unívocas de minúsculas de Unicode en las que no se tiene en cuenta la configuración regional) son iguales. Es decir, para que dos identificadores se consideren diferentes según CLS, tendrán que diferenciarse en algo más que en el uso de mayúsculas y minúsculas. Pero para invalidar una definición heredada, CLI requiere que se use la codificación exacta de la declaración original. | 4
+Convenciones de nomenclatura | [Convenciones de nomenclatura](#naming-conventions) | Los ensamblados seguirán las directrices del anexo 7 del informe técnico 15 del estándar Unicode 3.0, que rige el conjunto de caracteres permitidos que pueden usarse como iniciales e incluirse en los identificadores. Estas directrices están disponibles en línea en [Formularios de normalización Unicode](https://www.unicode.org/unicode/reports/tr15/tr15-18.html). Los identificadores deben aparecer en el formato canónico definido por el Formulario C de normalización Unicode. En aras de la conformidad con CLS, dos identificadores se considerarán iguales si sus asignaciones de minúsculas (tal y como se especificó en las asignaciones unívocas de minúsculas de Unicode en las que no se tiene en cuenta la configuración regional) son iguales. Es decir, para que dos identificadores se consideren diferentes según CLS, tendrán que diferenciarse en algo más que en el uso de mayúsculas y minúsculas. Pero para invalidar una definición heredada, CLI requiere que se use la codificación exacta de la declaración original. | 4
 Sobrecarga | [Convenciones de nomenclatura](#naming-conventions) | Todos los nombres especificados en un ámbito conforme a CLS deben ser distintos independientemente del tipo, salvo en los casos en los que los nombres sean idénticos y se resuelvan mediante sobrecarga. Es decir, mientras CTS permite que un tipo único use el mismo nombre para un método y un campo, CLS no. | 5
 Sobrecarga | [Convenciones de nomenclatura](#naming-conventions) | Los campos y los tipos anidados deben distinguirse únicamente por la comparación de identificadores, aunque CTS permita que se distingan signaturas diferentes. Los métodos, las propiedades y los eventos que tengan el mismo nombre (por comparación de identificadores) deben distinguirse por algo más que el tipo de valor devuelto, excepto según lo especificado en la regla 39 de CLS | 6
 Sobrecarga | [Sobrecargas](#overloads) | Solo las propiedades y los métodos se pueden sobrecargar. | 37
@@ -316,7 +316,7 @@ Todos los tipos que aparecen en las signaturas de miembros, incluidos los tipos 
 El [sistema de tipos común](common-type-system.md) de .NET incluye varios tipos integrados que se admiten directamente en Common Language Runtime y que se codifican de forma especial en los metadatos de un ensamblado. De estos tipos intrínsecos, los tipos enumerados en la tabla siguiente son conformes a CLS. 
 
 
-Tipo conforme a CLS | Description
+Tipo conforme a CLS | Descripción
 ------------------ | -----------
 [Byte](xref:System.Byte) | Entero de 8 bits sin signo 
 [Int16](xref:System.Int16) | Entero de 16 bits con signo 
@@ -333,7 +333,7 @@ Tipo conforme a CLS | Description
 Los tipos intrínsecos enumerados en la tabla siguiente no son conformes a CLS.
 
 
-Tipo no conforme | Description | Alternativa conforme a CLS
+Tipo no conforme | Descripción | Alternativa conforme a CLS
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Tipo de datos enteros de 8 bits con signo | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Entero de 16 bits sin signo | [Int32](xref:System.Int32)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 8968eaa8edd8dee177906a6c801f2f46c2a740d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842702"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Cómo: Llamar a un servicio Web de forma asincrónica (Visual Basic)
-En este ejemplo se adjunta un controlador a un evento de controlador asincrónico de servicios web para poder recuperar el resultado de una llamada de método asincrónico. En este ejemplo se ha usado el servicio web DemoTemperatureService de http://www.xmethods.net.  
+En este ejemplo se adjunta un controlador a un evento de controlador asincrónico de servicios web para poder recuperar el resultado de una llamada de método asincrónico. En este ejemplo se ha usado el servicio web DemoTemperatureService de `http://www.xmethods.net`.  
   
  Cuando se hace referencia a un servicio web en el proyecto en el entorno de desarrollo integrado (IDE) de Visual Studio, dicho servicio se agrega al objeto `My.WebServices` y el IDE genera una clase de proxy de cliente para obtener acceso al servicio web especificado.  
   
@@ -23,7 +24,7 @@ En este ejemplo se adjunta un controlador a un evento de controlador asincrónic
   
 ### <a name="to-call-a-web-service-asynchronously"></a>Para llamar a un servicio web asincrónicamente  
   
-1.  Haga referencia al servicio web DemoTemperatureService de http://www.xmethods.net. La dirección es  
+1.  Haga referencia al servicio web DemoTemperatureService de `http://www.xmethods.net`. La dirección es  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  

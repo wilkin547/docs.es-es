@@ -3,12 +3,12 @@ title: 'Tipos de tupla: Guía de C#'
 description: Más información sobre tipos de tupla con nombre y sin nombre en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509451"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186036"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C# #
 
@@ -92,7 +92,7 @@ Comenzando con C# 7.3, los tipos de tupla admiten los operadores `==` y `!=`. Es
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Hay varias reglas que hacen que las pruebas de igualdad de tupla sean más prácticas. La igualdad de tupla realiza [conversiones elevadas](language-reference/language-specification/index.md) si una de las tuplas es una tupla que admite valores NULL, como se muestra en el siguiente código:
+Hay varias reglas que hacen que las pruebas de igualdad de tupla sean más prácticas. La igualdad de tupla realiza [conversiones elevadas](~/_csharplang/spec/conversions.md#lifted-conversion-operators) si una de las tuplas es una tupla que admite valores NULL, como se muestra en el siguiente código:
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

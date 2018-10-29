@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
 ms.openlocfilehash: fbe75d8ec4a677c47a98a5868c4e7e44c95f1d93
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47235145"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028204"
 ---
 # <a name="service-application-programming-architecture"></a>Arquitectura de programación de aplicaciones de servicio
 Las aplicaciones de servicios de Windows se basan en una clase que hereda de la clase <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Se sustituyen los métodos de esta clase y se define la funcionalidad para que determinen el comportamiento del servicio.  

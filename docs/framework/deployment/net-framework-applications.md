@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c999b6c391294a05eb7fae1d1f076f1d52b8c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391656"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040912"
 ---
 # <a name="deploying-net-framework-applications"></a>Implementar aplicaciones de .NET Framework
 Esta sección de la documentación de .NET Framework proporciona información esencial para implementar aplicaciones de .NET Framework, incluidas las directrices para cargar ensamblados, resolver referencias de ensamblados y mejorar el rendimiento de la aplicación mediante la generación de imágenes nativas.  
@@ -25,4 +25,4 @@ Esta sección de la documentación de .NET Framework proporciona información es
  Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de desarrollo](../../../docs/framework/development-guide.md)
+- [Guía de desarrollo](../../../docs/framework/development-guide.md)

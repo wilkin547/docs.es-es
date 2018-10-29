@@ -9,11 +9,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47204302"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584400"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
@@ -144,7 +144,7 @@ Para publicar la aplicación desde Visual Studio, siga estos pasos:
 
       1. En la pestaña **Publicar**, seleccione **Publicar**. Visual Studio escribe los archivos que componen la aplicación en el sistema de archivos local.
 
-      1. La pestaña **Publicar** muestra ahora un solo perfil, **FolderProfile**. Los valores de configuración del perfil se muestran en la sección **Resumen** de la pestaña. **Tiempo de ejecución de destino** identifica qué tiempo de ejecución se ha publicado, y **Ubicación de destino** identifica dónde se escriben los archivos de la implementación independiente.
+      1. La pestaña **Publicar** muestra ahora un solo perfil, **FolderProfile**. Los valores de configuración del perfil se muestran en la sección **Resumen** de la pestaña. Tiempo de ejecución de destino identifica qué tiempo de ejecución se ha publicado, y **Ubicación de destino** identifica dónde se escriben los archivos de la implementación independiente.
 
       1. De forma predeterminada, Visual Studio escribe todos los archivos publicados en un único directorio. Para mayor comodidad, es mejor crear perfiles distintos para cada tiempo de ejecución de destino y colocar los archivos publicados en un directorio específico de la plataforma. Esto implica la creación de un perfil de publicación independiente para cada plataforma de destino. Por tanto, vuelva a compilar la aplicación para cada plataforma siguiendo estos pasos:
 

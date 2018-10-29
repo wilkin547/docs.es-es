@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991589"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197956"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Cómo: Obtener el progreso del instalador de .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] es un runtime redistribuible. Si desarrolla aplicaciones para esta versión de .NET Framework, puede incluir (encadenar) el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como un requisito previo para la instalación de su aplicación. Para presentar al usuario una experiencia de instalación personalizada o unificada, tal vez desee iniciar silenciosamente el proceso de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y realizar su seguimiento mientras se muestra el progreso de la instalación de la aplicación. Para habilitar el seguimiento silencioso, el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que se puede observar) define un protocolo mediante el uso de un segmento de E/S (MMIO) asignado a la memoria para comunicarse con el programa de instalación (el proceso observador o encadenador). Este protocolo proporciona al encadenador una manera de obtener información de progreso, conseguir resultados detallados, responder a mensajes y cancelar el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -310,5 +310,5 @@ ms.locfileid: "45991589"
  Un servidor normal crea un nombre de archivo MMIO aleatorio, crea el archivo (tal y como se muestra en el ejemplo de código anterior, en `Server::CreateSection`) e inicia el programa redistribuible usando el método `CreateProcess` y pasando el nombre de la canalización con la opción `-pipe someFileSectionName`. El servidor debe implementar los métodos `OnProgress`, `Send` y `Finished` con código específico de la interfaz de usuario de la aplicación.  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Implementación](../../../docs/framework/deployment/index.md)
+- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Implementación](../../../docs/framework/deployment/index.md)

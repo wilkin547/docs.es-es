@@ -4,12 +4,12 @@ description: Aprenda sobre los scripts de dotnet-install para instalar las herra
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004015"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837081"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -33,8 +33,8 @@ Los scripts `dotnet-install` se usan para realizar una instalación sin derechos
 
 Le recomendamos que use la versión estable que se hospeda en el [sitio web principal de .NET Core](https://dot.net). Las rutas de acceso directas a los scripts son las siguientes:
 
-* https://dot.net/v1/dotnet-install.sh (bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
+* <https://dot.net/v1/dotnet-install.sh> (bash, UNIX)
+* <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)
 
 La utilidad principal de estos scripts está en los escenarios de automatización y las instalaciones sin derechos administrativos. Hay dos scripts: uno es un script de PowerShell que funciona en Windows. El otro script es un script de bash que funciona en Linux y macOS. Ambos scripts tienen el mismo comportamiento. El script de bash también lee modificadores de PowerShell, por lo que puede usar modificadores de PowerShell con el script en sistemas Linux y macOS.
 

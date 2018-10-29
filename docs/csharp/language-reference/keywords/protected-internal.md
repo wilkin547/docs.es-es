@@ -2,12 +2,12 @@
 title: protected internal (Referencia de C#)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 1a305cb84989f12350e2e7cc28dd18f9d0c7ae5e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e5763830a29d4e627dbb8efa0e86fca536bbb26c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210037"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193778"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (Referencia de C#)
 
@@ -60,7 +60,7 @@ En el segundo archivo, un intento de tener acceso a `myValue` a través de una i
 
 Los miembros de struct no pueden ser `protected internal`, porque los structs no se heredan.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
@@ -75,4 +75,4 @@ Los miembros de struct no pueden ser `protected internal`, porque los structs no
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)
-- [Security concerns for internal virtual keywords](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100)) (Problemas de seguridad de palabras clave virtuales internas)
+- [Security concerns for internal virtual keywords](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100)) (Problemas de seguridad de palabras clave virtuales internas)

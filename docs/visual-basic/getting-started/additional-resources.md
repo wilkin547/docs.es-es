@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f82ed592a78bb2d13000216cda8ce8334d1f3c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591669"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195678"
 ---
 # <a name="additional-resources"></a>Recursos adicionales
 
@@ -62,7 +60,7 @@ En los siguientes sitios web encontrará orientación y respuestas a algunos pro
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Proporciona un foro para hablar sobre Visual Basic, .NET y mucho más.|
 |[vbCity](http://vbcity.com/)|Un sitio de la comunidad para que los usuarios obtengan información y formulen preguntas sobre Visual Basic y .NET.|
-|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow es un sitio en el que los desarrolladores formulan y contestan preguntas.|
+|[Desbordamiento de pila](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow es un sitio en el que los desarrolladores formulan y contestan preguntas.|
 
 ## <a name="see-also"></a>Vea también
 

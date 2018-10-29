@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f8ed5cce3e0c9e22679f54b13c84ea422f2100d
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251069"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453455"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -215,7 +215,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Nombre del ensamblado al que se hace referencia: myAssembly  
   
--   Directorio raíz de la aplicación: http://www.code.microsoft.com  
+-   Directorio raíz de la aplicación: `http://www.code.microsoft.com`  
   
 -   El elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) del archivo de configuración especifica: bin  
   
@@ -223,13 +223,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  El tiempo de ejecución sondea las direcciones URL siguientes:  
   
- http://www.code.microsoft.com/de/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly.dll`
   
- http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll`
   
 ##### <a name="multiple-assemblies-with-the-same-name"></a>Varios ensamblados con el mismo nombre  
  En el ejemplo siguiente se muestra cómo configurar varios ensamblados con el mismo nombre.  
@@ -245,8 +245,8 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Otras ubicaciones sondeadas  
  La ubicación del ensamblado también puede determinarse mediante el contexto de enlace actual. Esto suele ocurrir cuando se usa el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> y en escenarios de interoperabilidad COM. Si un ensamblado usa el método <xref:System.Reflection.Assembly.LoadFrom%2A> para hacer referencia a otro ensamblado, la ubicación del ensamblado que realiza la llamada se considera una pista sobre dónde se encontrará el ensamblado al que se hace referencia. Si se encuentra una coincidencia, se carga dicho ensamblado. Si no se encuentra ninguna coincidencia, el tiempo de ejecución prosigue con la semántica de búsqueda y, a continuación, consulta a Windows Installer para proporcionar el ensamblado. Si no se proporciona ningún ensamblado que coincida con la solicitud de enlace, se produce una excepción. Esta excepción es una <xref:System.TypeLoadException> en código administrado si se hacía referencia a un tipo, o una <xref:System.IO.FileNotFoundException> si no se encontró un ensamblado que se estuviera cargando.  
   
- Por ejemplo, si Assembly1 hace referencia a Assembly2 y Assembly1 se descargó desde http://www.code.microsoft.com/utils, dicha ubicación se considera una pista sobre dónde buscar Assembly2.dll. Después, el runtime busca el ensamblado en http://www.code.microsoft.com/utils/Assembly2.dll y http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Si no se encuentra Assembly2 en ninguna de estas ubicaciones, el tiempo de ejecución consulta a Windows Installer.  
+ Por ejemplo, si Assembly1 hace referencia a Assembly2 y Assembly1 se descargó desde `http://www.code.microsoft.com/utils`, dicha ubicación se considera una pista sobre dónde buscar Assembly2.dll. Después, el runtime busca el ensamblado en `http://www.code.microsoft.com/utils/Assembly2.dll` y `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Si no se encuentra Assembly2 en ninguna de estas ubicaciones, el tiempo de ejecución consulta a Windows Installer.  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [Implementación](../../../docs/framework/deployment/index.md)
+- [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [Implementación](../../../docs/framework/deployment/index.md)

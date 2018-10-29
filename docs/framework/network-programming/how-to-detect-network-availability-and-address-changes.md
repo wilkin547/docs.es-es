@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c0357c4000a7efdb838a40f2f3f907c1dd313c58
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c0a4a492b06ac3be09d00779f97f1eb76d2690f1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193127"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202688"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>Cómo: detectar la disponibilidad de la red y los cambios de dirección
 En este ejemplo se muestra cómo detectar cambios en la dirección de red de una interfaz.  

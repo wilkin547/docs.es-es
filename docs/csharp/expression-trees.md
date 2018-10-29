@@ -3,12 +3,12 @@ title: Expression Trees
 description: Obtenga información sobre los árboles de expresión en .NET Core y cómo usarlos para representar código como estructuras que pueda examinar, modificar y ejecutar.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db35dd99dadc4e49aaaebd5d3782409a206cafc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214918"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190741"
 ---
 # <a name="expression-trees"></a>Expression Trees
 
@@ -20,7 +20,7 @@ Cuando quiera tener una interacción mayor, necesita usar los *árboles de expre
 Los árboles de expresión representan el código como una estructura que puede examinar, modificar o ejecutar. Estas herramientas le proporcionan la capacidad de manipular el código durante el tiempo de ejecución. Puede escribir código que examine la ejecución de algoritmos o inserte nuevas características. En escenarios más avanzados, puede modificar la ejecución de algoritmos e incluso convertir expresiones de C# en otra forma para su ejecución en otro entorno.
 
 Probablemente ya ha escrito código que use árboles de expresión. Las API de LINQ de Entity Framework admiten árboles de expresión como argumentos para el patrón de expresión de consulta LINQ.
-Eso permite que [Entity Framework](http://docs.efproject.net/en/latest/) convierta la consulta que ha escrito en C# en SQL que se ejecuta en el motor de base de datos. Otro ejemplo es [Moq](https://github.com/Moq/moq), que es un marco simulado popular de .NET.
+Eso permite que [Entity Framework](/ef/) convierta la consulta que ha escrito en C# en SQL que se ejecuta en el motor de base de datos. Otro ejemplo es [Moq](https://github.com/Moq/moq), que es un marco simulado popular de .NET.
 
 En las secciones restantes de este tutorial exploraremos lo que son los árboles de expresión, examinaremos las clases de marco que admiten los árboles de expresión y le mostraremos cómo trabajar con ellos. Obtendrá información sobre cómo leer árboles de expresión, cómo crearlos, cómo crear árboles de expresión modificados y cómo ejecutar el código representado en ellos. Después de esta lectura, estará listo para usar estas estructuras para crear algoritmos muy adaptables.
 

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105776"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183508"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Diseño de un microservicio orientado a un DDD
 
@@ -57,7 +57,7 @@ En el fantástico libro de Eric Evans, [Domain Driven Design](https://domainlang
 
 En el nivel de modelo de dominio es donde se expresa el negocio. Al implementar un nivel de modelo de dominio de microservicio en. NET, este nivel se codifica como una biblioteca de clases con las entidades de dominio que capturan datos y comportamiento (métodos con lógica).
 
-Siguiendo los principios de [omisión de persistencia](http://deviq.com/persistence-ignorance/) y [omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance), este nivel debe omitir completamente los detalles de persistencia de datos. Las tareas de persistencia deben estar realizadas por el nivel de infraestructura. Por lo tanto, este nivel no debe tener dependencias directas en la infraestructura, lo que significa que una regla de importante es que las clases de entidad del modelo de dominio deben ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object).
+Siguiendo los principios de [omisión de persistencia](https://deviq.com/persistence-ignorance/) y [omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance), este nivel debe omitir completamente los detalles de persistencia de datos. Las tareas de persistencia deben estar realizadas por el nivel de infraestructura. Por lo tanto, este nivel no debe tener dependencias directas en la infraestructura, lo que significa que una regla de importante es que las clases de entidad del modelo de dominio deben ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object).
 
 Las entidades de dominio no deben depender directamente (como derivarse de una clase base) de ningún marco de infraestructura de acceso a los datos, como Entity Framework o NHibernate. Lo ideal es que las entidades de dominio no se deriven de ningún tipo definido en ningún marco de infraestructura ni lo implementen.
 
@@ -83,7 +83,7 @@ El objetivo es que la lógica del dominio en el nivel de modelo de dominio, sus 
 
 El nivel de infraestructura es la forma en que los datos que inicialmente se conservan en las entidades de dominio (en la memoria) se guardan en bases de datos o en otro almacén permanente. Un ejemplo sería usar código de Entity Framework Core para implementar las clases del patrón de repositorio que usan DBContext para conservar los datos en una base de datos relacional.
 
-De conformidad con los principios [Omisión de persistencia](http://deviq.com/persistence-ignorance/) y [Omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance) mencionados anteriormente, el nivel de infraestructura no puede "contaminar" el nivel de modelo de dominio. No puede depender demasiado de los marcos para mantener las clases de entidad de modelo de dominio apartadas de la infraestructura que utiliza para conservar datos (EF o cualquier otro marco). La biblioteca de clases de nivel de modelo de dominio solo debe tener el código de dominio, solo clases de entidad [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) que implementen la esencia del software y debe estar completamente desacoplada de tecnologías de infraestructura.
+De conformidad con los principios [Omisión de persistencia](https://deviq.com/persistence-ignorance/) y [Omisión de infraestructura](https://ayende.com/blog/3137/infrastructure-ignorance) mencionados anteriormente, el nivel de infraestructura no puede "contaminar" el nivel de modelo de dominio. No puede depender demasiado de los marcos para mantener las clases de entidad de modelo de dominio apartadas de la infraestructura que utiliza para conservar datos (EF o cualquier otro marco). La biblioteca de clases de nivel de modelo de dominio solo debe tener el código de dominio, solo clases de entidad [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) que implementen la esencia del software y debe estar completamente desacoplada de tecnologías de infraestructura.
 
 Así, los proyectos y bibliotecas de clases o niveles dependerán, en última instancia, del nivel de modelo de dominio (biblioteca) y no al revés, tal como se muestra en la Figura 9-7.
 
@@ -96,7 +96,7 @@ Este diseño de nivel debe ser independiente para cada microservicio. Como se in
 #### <a name="additional-resources"></a>Recursos adicionales
 
 -   **DevIQ. Persistence Ignorance principle (Principio de omisión de persistencia)**
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
+    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini. Infrastructure Ignorance (Omisión de infraestructura)**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)

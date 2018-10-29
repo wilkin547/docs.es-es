@@ -5,11 +5,11 @@ helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
 ms.openlocfilehash: 362217b247bd2ab7a2eec2f86cbaaf1a0652a3ad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237207"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839610"
 ---
 # <a name="new-operator-c-reference"></a>Operador new (Referencia de C#)
 
@@ -56,7 +56,7 @@ En el ejemplo siguiente, se crean y se inicializan un objeto `struct` y un objet
 
 Observe en el ejemplo que el valor predeterminado de una cadena es `null`. Por lo tanto, no se muestra.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

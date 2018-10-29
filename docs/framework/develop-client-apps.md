@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27bd71d4caf59a44a45c70217aa351cf43a5c1c7
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518669"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349126"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Desarrollo de aplicaciones cliente con .NET Framework
 
@@ -55,7 +55,7 @@ Lista de las API de .NET Framework que se pueden usar para compilar aplicaciones
 [Desarrollo de varias plataformas](../../docs/standard/cross-platform/index.md)  
 Describe las diferentes maneras en que se puede usar .NET Framework para establecer como destino varios tipos de aplicación cliente.
 
-[Introducción a sitios web de ASP.NET](http://www.asp.net/get-started/websites)  
+[Introducción a sitios web de ASP.NET](https://www.asp.net/get-started/websites)  
 Describe las maneras en que se pueden desarrollar aplicaciones web mediante ASP.NET.
 
 ## <a name="see-also"></a>Vea también

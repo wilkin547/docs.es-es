@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c071d269977ccecea9a7d4d79da78d7967bb1618
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105740"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188058"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Diseñar las validaciones en el nivel de modelo de dominio
 
@@ -17,7 +17,7 @@ En el diseño guiado por el dominio (DDD), las reglas de validación se pueden c
 
 Las entidades de dominio siempre deben ser entidades válidas. Hay un número determinado de invariables para un objeto que siempre deben ser verdaderas. Por ejemplo, un objeto de un elemento de pedido siempre debe tener una cantidad que debe constar de un entero positivo, un nombre de artículo y un precio. Por lo tanto, la aplicación de invariables es responsabilidad de las entidades de dominio (en especial de la raíz agregada) y un objeto de entidad no debería poder existir si no es válido. Las reglas invariables se expresan como contratos y, si se infringen, se generan excepciones o notificaciones.
 
-El razonamiento es que se producen muchos errores porque los objetos tienen un estado que no deberían tener nunca. A continuación se muestra una buena explicación de Greg Young, publicada en un [debate en línea](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
+El razonamiento es que se producen muchos errores porque los objetos tienen un estado que no deberían tener nunca. A continuación se muestra una buena explicación de Greg Young, publicada en un [debate en línea](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
 
 Ahora imaginémonos que tenemos un SendUserCreationEmailService que toma un UserProfile… ¿Cómo podemos justificar en ese servicio que Name no es nulo? ¿Lo volvemos a comprobar? O lo que es más probable: no se molesta en comprobarlo y "espera lo mejor" (espera que alguien se haya molestado en validarlo antes de enviárselo). Por supuesto, si usamos TDD, una de las primeras pruebas que deberíamos escribir es que si, al enviar un cliente con un nombre nulo, se generaría un error. Pero una vez que comenzamos a escribir estos tipos de pruebas una y otra vez nos damos cuenta de que… "Espera, si no hubiéramos dejado que Name fuera nulo, no tendríamos todas estas pruebas".
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
 ms.openlocfilehash: e73113bd37dbb68590267141ad037f78919520bc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193793"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848067"
 ---
 # <a name="false-operator-c-reference"></a>false (Operador, Referencia de C#)
 
@@ -27,7 +27,7 @@ Si un tipo define el operador `false`, también debe definir el operador [true](
 
 Un tipo no puede sobrecargar directamente los operadores lógicos condicionales [&&](../operators/conditional-and-operator.md) y [&#124;&#124;](../operators/conditional-or-operator.md), pero se consigue un efecto equivalente si se sobrecargan los operadores lógicos normales y los operadores `true` y `false`.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

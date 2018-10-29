@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581939"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202990"
 ---
 # <a name="recoverable-xslt-errors"></a>Errores XSLT recuperables
 La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Por ejemplo, en la sección 7.3 Creación de instrucciones de procesamiento, la recomendación 1.0 de XSLT dice que el hecho de que al crear instancias del contenido de `xsl:processing-instruction` se creen nodos que no sean de texto, es un error. Para algunos problemas, la recomendación 1.0 de XSLT indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.  
@@ -22,7 +22,7 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
   
 -   El error indica que se inicia una excepción para esta situación.  
   
--   Puede encontrar las referencias de la sección en la [recomendación de transformaciones XSL (XSLT) versión 1.0 del W3C](http://www.w3.org/TR/xslt) y en las [erratas de especificaciones de las transformaciones XSL (XSLT) versión 1.0 del W3C](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   Puede encontrar las referencias de la sección en la [recomendación de transformaciones XSL (XSLT) versión 1.0 del W3C](https://www.w3.org/TR/xslt) y en las [erratas de especificaciones de las transformaciones XSL (XSLT) versión 1.0 del W3C](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condición XSLT|Sección|Comportamiento de XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  

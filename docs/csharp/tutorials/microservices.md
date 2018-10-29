@@ -3,12 +3,12 @@ title: 'Microservicios hospedados en Docker: C#'
 description: Aprenda a crear microservicios de ASP.NET Core que se ejecutan en contenedores de Docker.
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b1f7159a222ab4d68715844e9997ca922676bc80
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106355"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454491"
 ---
 # <a name="microservices-hosted-in-docker"></a>Microservicios alojados en Docker
 
@@ -41,7 +41,7 @@ Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las inst
 Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker.
 Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
 
-También deberá instalar el motor de Docker. Consulte la [página de instalación de Docker](http://www.docker.com/products/docker) para obtener instrucciones para su plataforma.
+También deberá instalar el motor de Docker. Consulte la [página de instalación de Docker](https://docs.docker.com/install/overview/) para obtener instrucciones para su plataforma.
 Docker puede instalarse en muchas distribuciones de Linux, macOS o Windows. La página mencionada anteriormente contiene secciones para cada una de las instalaciones disponibles.
 
 ## <a name="create-the-application"></a>Crear la aplicación
@@ -75,7 +75,7 @@ dotnet run
 
 Este comando restaurará en primer lugar las dependencias necesarias para compilar la aplicación y, después, creará la aplicación.
 
-La configuración predeterminada escucha a `http://localhost:5000`. Abra un explorador y vaya a esa página. Verá un "¡Hola a todos!". .
+La configuración predeterminada escucha a `http://localhost:5000`. Abra un explorador y vaya a esa página. Verá un "¡Hola a todos!". no encontrada".
 
 Cuando haya terminado, puede cerrar la aplicación presionando <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 

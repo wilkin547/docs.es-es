@@ -1,16 +1,14 @@
 ---
 title: Glosario de aprendizaje automático
 description: Un glosario de términos sobre aprendizaje automático.
-author: jralexander
-ms.author: johalex
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6b175a8e89479dae81a7e5769e8d10c09a193898
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081103"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453208"
 ---
 # <a name="machine-learning-glossary"></a>Glosario de aprendizaje automático
 
@@ -20,13 +18,13 @@ La lista siguiente es una compilación de los términos importantes sobre aprend
 
 En [clasificación](#classification), la exactitud es el número de elementos correctamente clasificados dividido entre el número total de elementos en el conjunto de pruebas. Va desde 0 (el menos preciso) a 1 (el más preciso). La exactitud es una de las métricas de evaluación del rendimiento de su modelo. Trátela junto con el valor de [precisión](#precision), el de [recuperación](#recall) y la [puntuación F](#f-score).
 
-API de ML.NET relacionada: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
+API de ML.NET relacionada: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Área bajo la curva (AUC)
 
 En [clasificación binaria](#binary-classification), una métrica de evaluación que es el valor del área bajo la curva que traza la tasa de verdaderos positivos (en el eje y) en relación con la tasa de falsos positivos (en el eje x). Va de 0,5 (el peor) a 1 (el mejor). También conocida como el área bajo la curva ROC; es decir, la curva característica operativa del receptor. Para obtener más información, consulte el artículo de Wikipedia [Curva ROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic).
 
-API de ML.NET relacionada:<xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
+API de ML.NET relacionada:<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
 
 ## <a name="binary-classification"></a>Clasificación binaria
 
@@ -40,7 +38,7 @@ Cuando los datos se usan para predecir una categoría, la tarea de [aprendizaje 
 
 En [regresión](#regression), una métrica de evaluación que indica en qué grado los datos se ajustan a un modelo. Va de 0 a 1. Un valor de 0 significa que los datos son aleatorios o no pueden ajustarse al modelo. Un valor de 1 significa que el modelo coincide exactamente con los datos. Esto se conoce a menudo como r<sup>2</sup>, R<sup>2</sup>, o r cuadrado.
 
-API de ML.NET relacionada: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
+API de ML.NET relacionada: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Característica
 
@@ -54,7 +52,7 @@ La ingeniería de características es el proceso que implica la definición de u
 
 En [clasificación](#classification), una métrica de evaluación que equilibra [precisión](#precision) y [recuperación](#recall).
 
-API de ML.NET relacionada: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
+API de ML.NET relacionada: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
 
 ## <a name="hyperparameter"></a>Hiperparámetro
 
@@ -68,13 +66,13 @@ El elemento que se va a predecir con el modelo de aprendizaje automático. Por e
 
 En [clasificación](#classification), una métrica de evaluación que caracteriza la precisión de un clasificador. Cuanto menor sea la pérdida de registro, más preciso será un clasificador.
 
-API de ML.NET relacionada: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
+API de ML.NET relacionada: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
 
 ## <a name="mean-absolute-error-mae"></a>Error de media absoluto
 
 En [regresión](#regression), una métrica de evaluación que es el promedio de todos los errores del modelo, donde el error del modelo es la distancia entre el valor de la [etiqueta](#label) predicho y el valor de la etiqueta correcto.
 
-API de ML.NET relacionada: <xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
+API de ML.NET relacionada: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Modelo
 
@@ -100,13 +98,13 @@ Todas las operaciones necesarias para ajustar un modelo a un conjunto de datos. 
 
 En [clasificación](#classification), la precisión de una clase es el número de elementos con una predicción correcta en cuando a pertenencia a esa clase dividido entre el número total de elementos cuya predicción señalaba la pertenencia a esa clase.
 
-API de ML.NET relacionada:<xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
+API de ML.NET relacionada:<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Recuperación
 
 En [clasificación](#classification), la recuperación de una clase es el número de elementos con una predicción correcta en cuando a pertenencia a esa clase dividido entre el número total de elementos que efectivamente pertenecen a la clase.
 
-API de ML.NET relacionada:<xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
+API de ML.NET relacionada:<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
 
 ## <a name="regression"></a>Regresión
 
@@ -124,7 +122,7 @@ En [regresión](#regression), una métrica de evaluación que es la suma de todo
 
 En [regresión](#regression), una métrica de evaluación que es la raíz cuadrada del promedio de los cuadrados de los errores.
 
-API de ML.NET relacionada: <xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
+API de ML.NET relacionada: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
 ## <a name="supervised-machine-learning"></a>Aprendizaje automático supervisado
 

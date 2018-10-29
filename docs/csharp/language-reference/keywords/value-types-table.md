@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa37e2237ca0cffe7ff2e64aa53739b6ffafd24a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609728"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182755"
 ---
 # <a name="value-types-table-c-reference"></a>Tabla de tipos de valor (referencia de C#)
 
@@ -43,9 +43,9 @@ Use un sufijo de tipo para especificar un tipo de un literal numérico. Por ejem
 decimal a = 0.1M;
 ```
 
-Si un [literal numérico entero](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals) no tiene sufijo, tiene el primero de los siguientes tipos en el que se puede representar su valor: `int`, `uint`, `long`, `ulong`.
+Si un [literal numérico entero](~/_csharplang/spec/lexical-structure.md#integer-literals) no tiene sufijo, tiene el primero de los siguientes tipos en el que se puede representar su valor: `int`, `uint`, `long`, `ulong`.
 
-Si un [literal numérico real](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals) no tiene sufijo, es de tipo `double`.
+Si un [literal numérico real](~/_csharplang/spec/lexical-structure.md#real-literals) no tiene sufijo, es de tipo `double`.
 
 ## <a name="see-also"></a>Vea también
 

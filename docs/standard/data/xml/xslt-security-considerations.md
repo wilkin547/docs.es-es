@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77f29cb14af90854fa18f421acbeb701928bcd76
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210963"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50034378"
 ---
 # <a name="xslt-security-considerations"></a>Consideraciones de seguridad de XSLT
 El lenguaje XSLT posee un amplio conjunto de características que aportan gran potencia y flexibilidad. Incluye muchas características que, aunque son útiles, también se podrían aprovechar desde orígenes externos. Para poder utilizar XSLT con seguridad, debe conocer los tipos de problemas de seguridad que surgen al utilizar XSLT y las estrategias básicas que puede emplear para mitigar estos riesgos.  
@@ -29,7 +29,7 @@ El lenguaje XSLT posee un amplio conjunto de características que aportan gran p
  Los scripts se pueden incrustar en una hoja de estilos utilizando el elemento de extensión `msxsl:script`. La compatibilidad con scripts es una característica opcional en la clase <xref:System.Xml.Xsl.XslCompiledTransform> que está deshabilitada de manera predeterminada. Los scripts se pueden habilitar estableciendo la propiedad <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> en `true` y pasando el objeto <xref:System.Xml.Xsl.XsltSettings> al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
 #### <a name="guidelines"></a>Instrucciones  
- Únicamente habilite los scripts cuando la hoja de estilos provenga de un origen de confianza. Si no puede comprobar el origen de la hoja de estilos, o si la hoja de estilos no proviene de un origen de confianza, pase `null` pase el argumento de valores de XSLT.  
+ Únicamente habilite los scripts cuando la hoja de estilos provenga de un origen de confianza. Si no puede comprobar el origen de la hoja de estilos, o si la hoja de estilos no proviene de un origen de confianza, pase `null` para el argumento de valores de XSLT.  
   
 ## <a name="external-resources"></a>Recursos externos  
  El lenguaje XSLT tiene características como, por ejemplo, `xsl:import`, `xsl:include` o la función `document()`, en las que el procesador tiene que resolver referencias de URI. La clase <xref:System.Xml.XmlResolver> se utiliza para resolver recursos externos. Puede que haya que resolver los recursos externos en los siguientes dos casos:  
@@ -60,4 +60,4 @@ El lenguaje XSLT posee un amplio conjunto de características que aportan gran p
 
 - [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
 - [Resolución de recursos externos durante el procesamiento XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
-- [Seguridad de acceso del código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+- [Seguridad de acceso del código](../../../../docs/framework/misc/code-access-security.md)

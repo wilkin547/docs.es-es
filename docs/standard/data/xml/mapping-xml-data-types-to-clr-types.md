@@ -5,20 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004054"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839054"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Asignación de tipos de datos XML a tipos CLR
-En la siguiente tabla se describen las asignaciones predeterminadas entre tipos de datos XML y los tipos Common Language Runtime (CLR).  
-  
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>En la siguiente tabla se describen las asignaciones predeterminadas de un tipo de datos XML a un tipo de CLR.  
+
+En la siguiente tabla se describen las asignaciones predeterminadas entre tipos de datos XML y los tipos Common Language Runtime (CLR).
   
 > [!NOTE]
->  Los prefijos `xs` y `xdt` se asignan a los identificadores URI de espacios de nombres http://www.w3.org/2001/XMLSchema y http://www.w3.org/2003/05/xpath-datatypes respectivamente.  
+> Los prefijos `xs` y `xdt` se asignan a los identificadores URI de espacios de nombres <https://www.w3.org/2001/XMLSchema> y <https://www.w3.org/2003/05/xpath-datatypes> respectivamente.
   
 |Tipo XML|Tipo CLR|  
 |--------------|--------------|  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee61d01acbf9c409eaedc04ff3e949908e1d595e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225141"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199635"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedimientos recomendados para excepciones
 
@@ -124,7 +124,7 @@ El seguimiento de pila comienza en la instrucción en que se produce la excepci�
 
 ## <a name="use-exception-builder-methods"></a>Usar métodos de generador de excepciones
 
-Es habitual que una clase produzca la misma excepción desde distintos lugares de su implementación. Para evitar el exceso de código, use métodos auxiliares que creen la excepción y la devuelvan. Por ejemplo:
+Es habitual que una clase produzca la misma excepción desde distintos lugares de su implementación. Para evitar el exceso de código, use métodos del asistente que creen la excepción y la devuelvan. Por ejemplo:
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -169,7 +169,12 @@ Este ejemplo muestra el uso de `throw` para volver a iniciar la excepción origi
 catch (Exception ex)
 {
     from.RollbackTransaction(withdrawalTrxID);
-    throw new Exception("Withdrawal failed", ex);
+    throw new TransferFundsException("Withdrawal failed", innerException: ex)
+    {
+        From = from,
+    To = to,
+    Amount = amount
+    };
 }
 ```
 

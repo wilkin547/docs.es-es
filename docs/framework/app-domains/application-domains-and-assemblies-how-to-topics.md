@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b555ad88b90e48da39624686a37898f47d90c1e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743100"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191001"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Temas "Cómo..." sobre dominios de aplicación y ensamblados
 Las siguientes secciones contienen vínculos a todos los temas de procedimientos que se encuentran en la documentación conceptual para programación con dominios de aplicación y ensamblados.  
@@ -54,4 +54,4 @@ Las siguientes secciones contienen vínculos a todos los temas de procedimientos
 -   [Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Dominios de aplicación y ensamblados](../../../docs/framework/app-domains/index.md)
+- [Dominios de aplicación y ensamblados](../../../docs/framework/app-domains/index.md)

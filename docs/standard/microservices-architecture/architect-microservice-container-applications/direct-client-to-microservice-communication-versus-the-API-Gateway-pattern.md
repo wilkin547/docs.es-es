@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198688"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183612"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>El patrón de puerta de enlace de API frente a la comunicación directa de cliente a microservicio
 
@@ -84,13 +84,13 @@ Debe tener cuidado al implementar el patrón de puerta de enlace de API. No suel
 
 Por lo tanto, las puertas de enlace de API se deberían segregar en función de los límites del negocio y las aplicaciones cliente no deberían actuar como un simple agregador para todos los microservicios internos.
 
-Al dividir el nivel de puerta de enlace de API en múltiples puertas de enlace de API, si su aplicación tiene varias aplicaciones cliente, puede servir de pivote principal al identificar los múltiples tipos de puertas de enlace de API, de manera que puede tener una fachada diferente para las necesidades de cada aplicación cliente. Este caso es un patrón denominado "back-end para front-end" ([BFF](http://samnewman.io/patterns/architectural/bff/)), donde cada puerta de enlace de API puede proporcionar una API distinta adaptada a cada tipo de aplicación cliente, posiblemente basada incluso en el factor de forma de cliente, mediante la implementación de código adaptador específico que llame por debajo a varios servicios internos, como se muestra en la imagen siguiente:
+Al dividir el nivel de puerta de enlace de API en múltiples puertas de enlace de API, si su aplicación tiene varias aplicaciones cliente, puede servir de pivote principal al identificar los múltiples tipos de puertas de enlace de API, de manera que puede tener una fachada diferente para las necesidades de cada aplicación cliente. Este caso es un patrón denominado "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)), donde cada puerta de enlace de API puede proporcionar una API distinta adaptada a cada tipo de aplicación cliente, posiblemente basada incluso en el factor de forma de cliente, mediante la implementación de código adaptador específico que llame por debajo a varios servicios internos, como se muestra en la imagen siguiente:
 
 ![Diagrama que muestra varias puertas de enlace de API personalizadas](./media/image13.1.png)
 
 **Figura 4-13.1**. Uso de varias puertas de enlace de API personalizadas
 
-La imagen anterior muestra una arquitectura simplificada con varias puertas de enlace de API específicas. En este caso, los límites identificados para cada puerta de enlace de API se basan estrictamente en el patrón "back-end para front-end" ([BFF](http://samnewman.io/patterns/architectural/bff/)), por lo tanto, se basan solo en la API necesaria para cada aplicación cliente. Pero en aplicaciones más grandes también debe ir más allá y crear otras puertas de enlace de API basadas en los límites del negocio como un segundo pivote de diseño.
+La imagen anterior muestra una arquitectura simplificada con varias puertas de enlace de API específicas. En este caso, los límites identificados para cada puerta de enlace de API se basan estrictamente en el patrón "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)), por lo tanto, se basan solo en la API necesaria para cada aplicación cliente. Pero en aplicaciones más grandes también debe ir más allá y crear otras puertas de enlace de API basadas en los límites del negocio como un segundo pivote de diseño.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Características principales en el patrón de puerta de enlace de API
 
@@ -168,7 +168,7 @@ Después de las secciones iniciales de explicación de arquitectura y patrones, 
 
 - **Diseño de microservicios: puertas de enlace de API** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **Aggregation and composition pattern** (Patrón de agregación y composición) [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **Aggregation and composition pattern** (Patrón de agregación y composición) [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Azure API Management** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

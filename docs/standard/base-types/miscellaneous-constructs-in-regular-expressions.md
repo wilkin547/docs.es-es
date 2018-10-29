@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47205137"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836289"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construcciones misceláneas en expresiones regulares
 Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misceláneas. Una permite habilitar o deshabilitar opciones de coincidencia determinadas en medio de un patrón de expresión regular. Las otras dos permiten incluir comentarios en una expresión regular.  
@@ -42,7 +42,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
  Cualquier cambio en las opciones de expresión regular definido mediante la construcción `(?imnsx-imnsx)` permanece en vigor hasta el final del grupo envolvente.  
   
 > [!NOTE]
->  La construcción de agrupamiento `(?imnsx-imnsx:`*subexpresión*`)` proporciona una funcionalidad idéntica para una subexpresión. Para más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  La construcción de agrupamiento `(?imnsx-imnsx:`*subexpresión*`)` proporciona una funcionalidad idéntica para una subexpresión. Para obtener más información, consulta [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  En el ejemplo siguiente se usan las opciones `i`, `n` y `x` para habilitar las capturas explícitas y la opción que no hace distinción entre mayúsculas y minúsculas, y para omitir el espacio en blanco del patrón de expresión regular en medio de una expresión regular.  
   

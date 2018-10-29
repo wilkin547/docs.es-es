@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270427"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50088798"
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 <a name="top"></a> Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
@@ -63,6 +63,6 @@ ms.locfileid: "36270427"
  Debido a que los nombres seguros y las firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) garantizan la integridad, se puede basar la directiva de seguridad de acceso del código en estas dos formas de evidencia de ensamblado. Los nombres seguros y las firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) garantizan la integridad mediante firmas digitales y certificados. Todas las tecnologías mencionadas (comprobación de código hash, nombres seguros y firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md)) se combinan para garantizar que el ensamblado no ha sufrido ninguna alteración.  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [SignTool.exe (Herramienta de firma)](../../../docs/framework/tools/signtool-exe.md)
+- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [SignTool.exe (Herramienta de firma)](../../../docs/framework/tools/signtool-exe.md)
