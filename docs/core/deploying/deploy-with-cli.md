@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208255"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454454"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implementación de aplicaciones de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
 
@@ -77,7 +77,7 @@ La implementación de una implementación dependiente del marco sin dependencias
 
 La implementación de una implementación dependiente de la plataforma con una o más dependencias de terceros requiere que esas dependencias estén disponibles para el proyecto. Para poder ejecutar el comando `dotnet restore` ([vea la nota](#dotnet-restore-note)) son necesarios otros dos pasos:
 
-1. Agregue referencias a las bibliotecas de terceros requeridas a la sección `<ItemGroup>` del archivo *csproj*. La siguiente sección `<ItemGroup>` contiene una dependencia de [Json.NET](http://www.newtonsoft.com/json) como biblioteca de terceros:
+1. Agregue referencias a las bibliotecas de terceros requeridas a la sección `<ItemGroup>` del archivo *csproj*. La siguiente sección `<ItemGroup>` contiene una dependencia de [Json.NET](https://www.newtonsoft.com/json) como biblioteca de terceros:
 
       ```xml
       <ItemGroup>

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo portar proyectos de .NET Framework
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028050"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199856"
 ---
 # <a name="porting-to-net-core---libraries"></a>Traslado a .NET Core: bibliotecas
 
@@ -162,11 +162,11 @@ Es probable que vaya a combinar los enfoques anteriores en función de cada proy
 La mejor forma de asegurarse de que todo funciona correctamente cuando traslada el código es probarlo mientras lo traslada a .NET Core. Para ello, debe usar un marco de pruebas que compila y ejecuta pruebas para .NET Core. Actualmente tiene 3 opciones:
 
 - [xUnit](https://xunit.github.io/)
-  * [Introducción](http://xunit.github.io/docs/getting-started-dotnet-core.html)
+  * [Introducción](https://xunit.github.io/docs/getting-started-dotnet-core.html)
   * [Herramienta para convertir un proyecto MSTest en xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
-- [NUnit](http://www.nunit.org/)
+- [NUnit](https://nunit.org/)
   * [Introducción](https://github.com/nunit/docs/wiki/Installation)
-  * [Entrada de blog sobre la migración de MSTest a NUnit.](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  * [Entrada de blog sobre la migración de MSTest a NUnit.](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Enfoque recomendado de portabilidad

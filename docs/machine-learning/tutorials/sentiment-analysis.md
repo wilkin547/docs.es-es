@@ -4,12 +4,12 @@ description: Descubra cómo usar ML.NET en un escenario de clasificación binari
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47436146"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453169"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Uso de ML.NET en un escenario de clasificación binaria de análisis de sentimiento
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>Ingerir los datos
 
-Inicialice una nueva instancia de <xref:Microsoft.ML.LearningPipeline> que incluirá la carga de datos, el procesamiento y la caracterización de los datos y el modelo. Agregue el código siguiente a la primera línea del método `Train`:
+Inicialice una nueva instancia de <xref:Microsoft.ML.Legacy.LearningPipeline> que incluirá la carga de datos, el procesamiento y la caracterización de los datos y el modelo. Agregue el código siguiente a la primera línea del método `Train`:
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-El objeto <xref:Microsoft.ML.Data.TextLoader> es la primera parte de la canalización y carga los datos del archivo de entrenamiento.
+El objeto <xref:Microsoft.ML.Legacy.Data.TextLoader> es la primera parte de la canalización y carga los datos del archivo de entrenamiento.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,13 +187,13 @@ El objeto <xref:Microsoft.ML.Data.TextLoader> es la primera parte de la canaliza
 
 El procesamiento previo y la limpieza de datos son tareas importantes que se producen antes de que un conjunto de datos se utilice de forma eficaz para el aprendizaje automático. Los datos sin procesar contienen a menudo ruido y son poco de fiar; además, es posible que les falten valores. El uso de datos sin estas tareas de modelado puede producir resultados engañosos. Las canalizaciones de transformación de ML.NET le permiten crear un conjunto personalizado de transformaciones que se aplican a los datos antes del entrenamiento o la prueba. El propósito principal de las transformaciones es la caracterización de datos. La ventaja de una canalización de transformación es que, una vez definida, puede guardarla para aplicarla a los datos de prueba.
 
-Aplique un <xref:Microsoft.ML.Transforms.TextFeaturizer> para convertir la columna `SentimentText` en un [vector numérico](../resources/glossary.md#numerical-feature-vector) llamado `Features` utilizado por el algoritmo de aprendizaje automático. Este es el paso de preprocesamiento o caracterización. El uso de componentes adicionales disponibles en ML.NET permite conseguir mejores resultados con el modelo. Agregue `TextFeaturizer` a la canalización como la siguiente línea de código:
+Aplique un <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> para convertir la columna `SentimentText` en un [vector numérico](../resources/glossary.md#numerical-feature-vector) llamado `Features` utilizado por el algoritmo de aprendizaje automático. Este es el paso de preprocesamiento o caracterización. El uso de componentes adicionales disponibles en ML.NET permite conseguir mejores resultados con el modelo. Agregue `TextFeaturizer` a la canalización como la siguiente línea de código:
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>Elegir un algoritmo de aprendizaje
 
-El objeto <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> es un aprendiz de árbol de decisión que usará en esta canalización. De manera similar al paso de la caracterización, probar diferentes aprendices disponibles en ML.NET y cambiar sus parámetros genera resultados diferentes. Para la optimización, puede establecer [hiperparámetros](../resources/glossary.md#hyperparameter) como <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves> y <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Estos hiperparámetros se establecen antes de que algo afecte al modelo y son específicos del modelo. Se utilizan para ajustar el árbol de decisiones para el rendimiento, por lo que los valores más grandes pueden afectar negativamente al rendimiento.
+El objeto <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> es un aprendiz de árbol de decisión que usará en esta canalización. De manera similar al paso de la caracterización, probar diferentes aprendices disponibles en ML.NET y cambiar sus parámetros genera resultados diferentes. Para la optimización, puede establecer [hiperparámetros](../resources/glossary.md#hyperparameter) como <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves> y <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Estos hiperparámetros se establecen antes de que algo afecte al modelo y son específicos del modelo. Se utilizan para ajustar el árbol de decisiones para el rendimiento, por lo que los valores más grandes pueden afectar negativamente al rendimiento.
 
 Agregue el código siguiente al método `Train`:
 
@@ -201,7 +201,7 @@ Agregue el código siguiente al método `Train`:
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
-Se entrena el modelo, <xref:Microsoft.ML.PredictionModel%602>, en función del conjunto de datos que se haya cargado y transformado. `pipeline.Train<SentimentData, SentimentPrediction>()` entrena la canalización (carga los datos, entrena al caracterizador y el aprendiz). El experimento no se ejecuta hasta que esto suceda.
+Se entrena el modelo, <xref:Microsoft.ML.Legacy.PredictionModel%602>, en función del conjunto de datos que se haya cargado y transformado. `pipeline.Train<SentimentData, SentimentPrediction>()` entrena la canalización (carga los datos, entrena al caracterizador y el aprendiz). El experimento no se ejecuta hasta que esto suceda.
 
 Agregue el código siguiente al método `Train`:
 
@@ -239,15 +239,15 @@ Agregue una llamada al método nuevo desde el método `Main`, justo debajo de la
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-La clase <xref:Microsoft.ML.Data.TextLoader> carga el nuevo conjunto de datos de prueba con el mismo esquema. Puede evaluar el modelo utilizando este conjunto de datos como una comprobación de calidad. Agregue el código siguiente al método `Evaluate`:
+La clase <xref:Microsoft.ML.Legacy.Data.TextLoader> carga el nuevo conjunto de datos de prueba con el mismo esquema. Puede evaluar el modelo utilizando este conjunto de datos como una comprobación de calidad. Agregue el código siguiente al método `Evaluate`:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-El objeto <xref:Microsoft.ML.Models.BinaryClassificationEvaluator> calcula las métricas de calidad para `PredictionModel` con el conjunto de datos especificado. Para ver esas métricas, agregue el evaluador como la siguiente línea en el método `Evaluate`, con el código siguiente:
+El objeto <xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> calcula las métricas de calidad para `PredictionModel` con el conjunto de datos especificado. Para ver esas métricas, agregue el evaluador como la siguiente línea en el método `Evaluate`, con el código siguiente:
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics> contiene las métricas totales calculadas por evaluadores de clasificación binaria. Para mostrar estos elementos a fin de determinar la calidad del modelo, debe obtener primero las métricas. Agregue el código siguiente:
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> contiene las métricas totales calculadas por evaluadores de clasificación binaria. Para mostrar estos elementos a fin de determinar la calidad del modelo, debe obtener primero las métricas. Agregue el código siguiente:
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ Agregue algunos comentarios para probar las predicciones del modelo entrenado en
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-Ahora que tiene un modelo, puede utilizarlo para predecir el sentimiento positivo o negativo de los datos de comentarios con el método <xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType>. Para obtener una predicción, use `Predict` en los nuevos datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales.
+Ahora que tiene un modelo, puede utilizarlo para predecir el sentimiento positivo o negativo de los datos de comentarios con el método <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType>. Para obtener una predicción, use `Predict` en los nuevos datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

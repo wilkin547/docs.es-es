@@ -3,11 +3,11 @@ title: Emisión de trazas del código de usuario
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049170"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200592"
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 Además de habilitar el seguimiento en configuración para recopilar datos de instrumentación generados por Windows Communication Foundation (WCF), también pueden emitir trazas mediante programación en código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  

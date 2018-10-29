@@ -2,12 +2,12 @@
 title: Rendimiento de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123818"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202294"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Rendimiento de Windows Workflow Foundation
 Dustin Metzgar
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  WF4 no tiene un proveedor de seguimiento de SQL, pero AppFabric sí lo tiene.  El enfoque de seguimiento de SQL de AppFabric es la suscripción a eventos ETW con un servicio de Windows que procesa por lotes los eventos y los escribe en una tabla SQL diseñada para inserciones rápidas.  Un trabajo independiente descarga los datos de esta tabla y los reforma en tablas de informes que se pueden ver en el panel de AppFabric.  Esto significa que un lote de eventos de seguimiento se controla con independencia del flujo de trabajo del que procede y, por consiguiente, no tiene que esperar un punto de persistencia antes de su grabación.
 
- Los eventos ETW se pueden grabar con herramientas como logman o xperf.  El archivo ETL compacto puede verse con una herramienta como xperfview o convertirse a un formato más legible, como XML, con tracerpt.  En WF3, la única opción para obtener los eventos de seguimiento sin una base de datos SQL es crear un servicio de seguimiento personalizado. Para obtener más información sobre ETW, vea [servicios WCF y seguimiento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) y [seguimiento de eventos para Windows](https://msdn.microsoft.com/library/ff190903.aspx\)).
+ Los eventos ETW se pueden grabar con herramientas como logman o xperf.  El archivo ETL compacto puede verse con una herramienta como xperfview o convertirse a un formato más legible, como XML, con tracerpt.  En WF3, la única opción para obtener los eventos de seguimiento sin una base de datos SQL es crear un servicio de seguimiento personalizado. Para obtener más información sobre ETW, vea [servicios WCF y seguimiento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) y [seguimiento de eventos para Windows](https://msdn.microsoft.com/library/ff190903.aspx).
 
  La habilitación del seguimiento de flujo de trabajo influirá en el rendimiento de diversas maneras.  El banco de pruebas que figura más abajo utiliza la herramienta logman para usar los eventos de seguimiento de ETW y grabarlos en un archivo ETL.  El costo del seguimiento de SQL en AppFabric no pertenece al ámbito de este artículo.  El perfil de seguimiento básico, que también se utiliza en AppFabric, se muestra en este banco de pruebas.  También se incluye el costo de realizar solamente el seguimiento de los eventos de supervisión de estado.  Estos eventos son útiles para la solución de problemas y la determinación del rendimiento medio del sistema.
 

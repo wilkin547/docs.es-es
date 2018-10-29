@@ -5,28 +5,28 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: a43b3c0e008025171e3b1fdeba3bc514d01e28c8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856042"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201561"
 ---
 # <a name="use-automatic-layout-overview"></a>Información general sobre el uso del diseño automático
-Este tema presentan las directrices para desarrolladores sobre cómo escribir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones con localizable [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. En el pasado, la localización de un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] era un proceso lento. Cada idioma que el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se adaptó para un ajuste píxel a píxel es necesario. Hoy en día con el diseño correcto y derecha estándares de codificación, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] puede crearse para que los localizadores deban realizar menos el cambio de tamaño y posición. El enfoque para escribir aplicaciones que pueden ser más fácil cambiar el tamaño y la posición se denomina diseño automático y se puede lograr mediante el uso de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño de la aplicación.  
-  
+Este tema presentan las directrices para desarrolladores sobre cómo escribir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones con localizable [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. En el pasado, la localización de una interfaz de usuario era un proceso lento. Todos los idiomas que se adaptaba la interfaz de usuario requiere un ajuste píxel a píxel. Hoy en día con el diseño correcto y derecha estándares de codificación, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] puede crearse para que los localizadores deban realizar menos el cambio de tamaño y posición. El enfoque para escribir aplicaciones que pueden ser más fácil cambiar el tamaño y la posición se denomina diseño automático y se puede lograr mediante el uso de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño de la aplicación.  
+
 <a name="advantages_of_autolayout"></a>   
 ## <a name="advantages-of-using-automatic-layout"></a>Ventajas de usar el diseño automático  
  Dado que el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de presentación es eficaz y flexible, proporciona la capacidad de diseñar elementos en una aplicación que se pueden ajustar para ajustarse a los requisitos de idiomas diferentes. En la lista siguiente se indican algunas de las ventajas del diseño automático.  
-  
--   La [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se muestra correctamente en cualquier idioma.  
-  
+
+-   Interfaz de usuario se muestra correctamente en cualquier idioma.  
+
 -   Reduce la necesidad de reajustar la posición y el tamaño de los controles una vez traducido el texto.  
   
 -   Reduce la necesidad de reajustar el tamaño de la ventana.  
-  
--   El diseño de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se representa correctamente en cualquier lenguaje.  
-  
+
+-   Diseño de interfaz de usuario se representa correctamente en cualquier lenguaje.  
+
 -   La localización se puede reducir hasta el punto de que es poco más que la traducción de cadenas.  
   
 <a name="autolayout_controls"></a>   
@@ -46,20 +46,52 @@ Botón ajustable automáticamente
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>Diseño automático y estándares de codificación  
- Con el enfoque de diseño automático requiere un conjunto de reglas para generar un totalmente localizable y los estándares de codificación y diseño [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Las instrucciones siguientes le ayudarán en la codificación del diseño automático.  
-  
-| Estándares de codificación | Descripción |
-| ---------------------- | ----------------- |
-| No use posiciones absolutas. | <ul><li>No utilice <xref:System.Windows.Controls.Canvas> porque absolutamente coloca los elementos.</li><li>Use <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, y <xref:System.Windows.Controls.Grid> para colocar los controles.</li><li>Para obtener información sobre los distintos tipos de paneles, consulte [información general sobre](../../../../docs/framework/wpf/controls/panels-overview.md).</li></ul> |
-| No establezca un tamaño fijo para una ventana. | -Use <xref:System.Windows.Window.SizeToContent%2A>.<br />Por ejemplo:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)] |
-| Agregue <xref:System.Windows.FrameworkElement.FlowDirection%2A>. | <ul><li>Agregar un <xref:System.Windows.FrameworkElement.FlowDirection%2A> al elemento raíz de la aplicación.</li><li>WPF proporciona una manera cómoda de admitir horizontales, bidireccionales y diseños verticales. En el marco de presentación, el <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad puede usarse para definir el diseño. Los patrones de dirección de flujo son:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb): diseño horizontal para latín, Asia oriental y así sucesivamente.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb): bidireccional para árabe, hebreo y así sucesivamente.</li></ul></li></ul> |
-| Use fuentes compuestas en vez de fuentes físicas. | <ul><li>Con las fuentes compuestas, el <xref:System.Windows.Controls.Control.FontFamily%2A> propiedad no deben localizarse.</li><li>Los desarrolladores pueden usar una de las fuentes siguientes o crear sus propias fuentes.<br /><br /> <ul><li>Interfaz de usuario global</li><li>Global San Serif</li><li>Global Serif</li></ul></li></ul> |
-| Agregue xml:lang. | <ul><li>Agregar el `xml:lang` atributo en el elemento raíz de su [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], tales como `xml:lang="en-US"` para una aplicación en inglés.</li><li>Dado que las fuentes compuestas usan `xml:lang` para determinar qué fuente quiere usar, establezca esta propiedad para admitir escenarios multilingües.</li></ul> |
-  
+ Con el enfoque de diseño automático requiere un conjunto de código y los estándares de diseño y las reglas para generar una interfaz de usuario totalmente localizable. Las instrucciones siguientes le ayudarán en la codificación del diseño automático.  
+
+**No use posiciones absolutas**
+
+- No utilice <xref:System.Windows.Controls.Canvas> porque absolutamente coloca los elementos.
+
+- Use <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, y <xref:System.Windows.Controls.Grid> para colocar los controles.
+
+Para obtener información sobre los distintos tipos de paneles, consulte [información general sobre](../../../../docs/framework/wpf/controls/panels-overview.md).
+
+**No establezca un tamaño fijo para una ventana**
+
+- Use <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Por ejemplo:
+
+   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+
+**Agregar un <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
+
+- Agregar un <xref:System.Windows.FrameworkElement.FlowDirection%2A> al elemento raíz de la aplicación.
+
+   WPF proporciona una manera cómoda de admitir horizontales, bidireccionales y diseños verticales. En el marco de presentación, el <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad puede usarse para definir el diseño. Los patrones de dirección de flujo son:
+   
+     - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb): diseño horizontal para latín, Asia oriental y así sucesivamente.
+     
+     - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb): bidireccional para árabe, hebreo y así sucesivamente.
+
+**Use fuentes compuestas en lugar de fuentes físicas**
+
+- Con las fuentes compuestas, el <xref:System.Windows.Controls.Control.FontFamily%2A> propiedad no deben localizarse.
+
+- Los desarrolladores pueden usar una de las fuentes siguientes o crear sus propias fuentes.
+
+   - Interfaz de usuario global
+   - Global San Serif
+   - Global Serif
+
+**Agregue XML: lang**
+
+- Agregar el `xml:lang` atributo en el elemento raíz de la interfaz de usuario, como `xml:lang="en-US"` para una aplicación en inglés.
+
+- Dado que las fuentes compuestas usan `xml:lang` para determinar qué fuente quiere usar, establezca esta propiedad para admitir escenarios multilingües.
+
 <a name="autolay_grids"></a>   
 ## <a name="automatic-layout-and-grids"></a>Diseño automático y cuadrículas  
- El <xref:System.Windows.Controls.Grid> elemento, es útil para el diseño automático porque permite al programador colocar los elementos. Un <xref:System.Windows.Controls.Grid> control es capaz de distribuir el espacio disponible entre sus elementos secundarios, en una disposición de columna y fila. El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos pueden abarcar varias celdas, y es posible que haya cuadrículas dentro de cuadrículas. Las cuadrículas son útiles porque permiten crear y colocar complejo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. En el ejemplo siguiente se muestra cómo se usa una cuadrícula para colocar algunos botones y texto. Tenga en cuenta que el alto y ancho de las celdas están establecidos en <xref:System.Windows.GridUnitType.Auto>; por lo tanto, la celda que contiene el botón con una imagen se ajusta para que quepa la imagen.  
-  
+ El <xref:System.Windows.Controls.Grid> elemento, es útil para el diseño automático porque permite al programador colocar los elementos. Un <xref:System.Windows.Controls.Grid> control es capaz de distribuir el espacio disponible entre sus elementos secundarios, en una disposición de columna y fila. Los elementos de interfaz de usuario pueden abarcar varias celdas, y es posible que haya cuadrículas dentro de cuadrículas. Las cuadrículas son útiles porque permiten crear y colocar la IU es compleja. En el ejemplo siguiente se muestra cómo se usa una cuadrícula para colocar algunos botones y texto. Tenga en cuenta que el alto y ancho de las celdas están establecidos en <xref:System.Windows.GridUnitType.Auto>; por lo tanto, la celda que contiene el botón con una imagen se ajusta para que quepa la imagen.  
+
  [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  En el gráfico siguiente se muestra la cuadrícula que ha producido el código anterior.  

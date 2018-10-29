@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576095"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202964"
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML
 .NET Framework proporciona un conjunto de clases completo e integrado que permiten crear, de forma sencilla, aplicaciones preparadas para XML. Las clases de los espacios de nombres siguientes admiten análisis y escritura XML, edición de datos XML en memoria, validación de datos y transformación XSLT.  
@@ -35,7 +35,7 @@ ms.locfileid: "33576095"
   
 -   Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [estructuras del esquema XML (parte 1)](https://www.w3.org/TR/xmlschema-1/) y [tipos de datos del esquema XML (parte 2)](https://www.w3.org/TR/xmlschema-2/).  
   
--   Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=nameWithType> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](http://www.w3.org/TR/xslt).  
+-   Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=nameWithType> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](https://www.w3.org/TR/xslt).  
   
  Las clases XML de .NET Framework proporcionan estas ventajas:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33576095"
   
 -   **Rendimiento.** Para obtener un mejor rendimiento de la aplicación, algunas de las clases XML de .NET Framework admiten un modelo basado en streaming con las características siguientes:  
   
-    -   Almacenamiento en caché mínimo para el análisis de modelos de extracción solo hacia delante (<xref:System.Xml.XmlReader>).  
+    -   Almacenamiento en caché mínimo para el análisis de modelos de incorporación de cambios solo hacia delante (<xref:System.Xml.XmlReader>).  
   
     -   Validación solo hacia delante con (<xref:System.Xml.XmlReader>).  
   

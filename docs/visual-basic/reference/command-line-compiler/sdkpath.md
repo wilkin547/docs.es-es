@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 ms.openlocfilehash: bf665082f079901ec45122ce7797090b7519fafe
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50046804"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200854"
 ---
 # <a name="-sdkpath"></a>-sdkpath
 Especifica la ubicación de mscorlib.dll y Microsoft.VisualBasic.dll.  
