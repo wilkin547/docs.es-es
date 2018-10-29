@@ -9,35 +9,35 @@ helpviewer_keywords:
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
 ms.openlocfilehash: 089e31f3aad12c2303619e2a1998d0d6a5a0ad86
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47208781"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48844103"
 ---
-# <a name="params-c-reference"></a><span data-ttu-id="cb78c-102">params (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="cb78c-102">params (C# Reference)</span></span>
+# <a name="params-c-reference"></a><span data-ttu-id="6d9ec-102">params (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="6d9ec-102">params (C# Reference)</span></span>
 
-<span data-ttu-id="cb78c-103">Mediante el uso de la palabra clave `params`, puede especificar un [parámetro de método](method-parameters.md) que toma un número variable de argumentos.</span><span class="sxs-lookup"><span data-stu-id="cb78c-103">By using the `params` keyword, you can specify a [method parameter](method-parameters.md) that takes a variable number of arguments.</span></span>
+<span data-ttu-id="6d9ec-103">Mediante el uso de la palabra clave `params`, puede especificar un [parámetro de método](method-parameters.md) que toma un número variable de argumentos.</span><span class="sxs-lookup"><span data-stu-id="6d9ec-103">By using the `params` keyword, you can specify a [method parameter](method-parameters.md) that takes a variable number of arguments.</span></span>
 
-<span data-ttu-id="cb78c-104">Puede enviar una lista separada por comas de argumentos del tipo especificado en la declaración de parámetro o una matriz de argumentos del tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="cb78c-104">You can send a comma-separated list of arguments of the type specified in the parameter declaration or an array of arguments of the specified type.</span></span> <span data-ttu-id="cb78c-105">También puede no enviar ningún argumento.</span><span class="sxs-lookup"><span data-stu-id="cb78c-105">You also can send no arguments.</span></span> <span data-ttu-id="cb78c-106">Si no envía ningún argumento, la longitud de la lista `params` es cero.</span><span class="sxs-lookup"><span data-stu-id="cb78c-106">If you send no arguments, the length of the `params` list is zero.</span></span>
+<span data-ttu-id="6d9ec-104">Puede enviar una lista separada por comas de argumentos del tipo especificado en la declaración de parámetro o una matriz de argumentos del tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="6d9ec-104">You can send a comma-separated list of arguments of the type specified in the parameter declaration or an array of arguments of the specified type.</span></span> <span data-ttu-id="6d9ec-105">También puede no enviar ningún argumento.</span><span class="sxs-lookup"><span data-stu-id="6d9ec-105">You also can send no arguments.</span></span> <span data-ttu-id="6d9ec-106">Si no envía ningún argumento, la longitud de la lista `params` es cero.</span><span class="sxs-lookup"><span data-stu-id="6d9ec-106">If you send no arguments, the length of the `params` list is zero.</span></span>
 
-<span data-ttu-id="cb78c-107">No se permiten parámetros adicionales después de la palabra clave `params` en una declaración de método, y solo se permite una palabra clave `params` en una declaración de método.</span><span class="sxs-lookup"><span data-stu-id="cb78c-107">No additional parameters are permitted after the `params` keyword in a method declaration, and only one `params` keyword is permitted in a method declaration.</span></span>
+<span data-ttu-id="6d9ec-107">No se permiten parámetros adicionales después de la palabra clave `params` en una declaración de método, y solo se permite una palabra clave `params` en una declaración de método.</span><span class="sxs-lookup"><span data-stu-id="6d9ec-107">No additional parameters are permitted after the `params` keyword in a method declaration, and only one `params` keyword is permitted in a method declaration.</span></span>
 
-<span data-ttu-id="cb78c-108">El tipo declarado del parámetro `params` debe ser una matriz unidimensional, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="cb78c-108">The declared type of the `params` parameter must be a single-dimensional array, as the following example shows.</span></span> <span data-ttu-id="cb78c-109">En caso contrario, se produce un error del compilador [CS0225](../../misc/cs0225.md).</span><span class="sxs-lookup"><span data-stu-id="cb78c-109">Otherwise, a compiler error [CS0225](../../misc/cs0225.md) occurs.</span></span>
+<span data-ttu-id="6d9ec-108">El tipo declarado del parámetro `params` debe ser una matriz unidimensional, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="6d9ec-108">The declared type of the `params` parameter must be a single-dimensional array, as the following example shows.</span></span> <span data-ttu-id="6d9ec-109">En caso contrario, se produce un error del compilador [CS0225](../../misc/cs0225.md).</span><span class="sxs-lookup"><span data-stu-id="6d9ec-109">Otherwise, a compiler error [CS0225](../../misc/cs0225.md) occurs.</span></span>
 
-## <a name="example"></a><span data-ttu-id="cb78c-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cb78c-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6d9ec-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6d9ec-110">Example</span></span>
 
-<span data-ttu-id="cb78c-111">En el ejemplo siguiente se muestran varias maneras de enviar argumentos a un parámetro `params`.</span><span class="sxs-lookup"><span data-stu-id="cb78c-111">The following example demonstrates various ways in which arguments can be sent to a `params` parameter.</span></span>
+<span data-ttu-id="6d9ec-111">En el ejemplo siguiente se muestran varias maneras de enviar argumentos a un parámetro `params`.</span><span class="sxs-lookup"><span data-stu-id="6d9ec-111">The following example demonstrates various ways in which arguments can be sent to a `params` parameter.</span></span>
 
 [!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)] 
 
-## <a name="c-language-specification"></a><span data-ttu-id="cb78c-112">especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="cb78c-112">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="6d9ec-112">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="6d9ec-112">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="cb78c-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="cb78c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d9ec-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="6d9ec-113">See also</span></span>
 
-- [<span data-ttu-id="cb78c-114">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="cb78c-114">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="cb78c-115">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="cb78c-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="cb78c-116">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="cb78c-116">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="cb78c-117">Parámetros de métodos</span><span class="sxs-lookup"><span data-stu-id="cb78c-117">Method Parameters</span></span>](method-parameters.md)
+- [<span data-ttu-id="6d9ec-114">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="6d9ec-114">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="6d9ec-115">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="6d9ec-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="6d9ec-116">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="6d9ec-116">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="6d9ec-117">Parámetros de métodos</span><span class="sxs-lookup"><span data-stu-id="6d9ec-117">Method Parameters</span></span>](method-parameters.md)

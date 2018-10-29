@@ -8,63 +8,61 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f82ed592a78bb2d13000216cda8ce8334d1f3c83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591669"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195678"
 ---
-# <a name="additional-resources"></a><span data-ttu-id="1c6e0-103">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="1c6e0-103">Additional resources</span></span>
+# <a name="additional-resources"></a><span data-ttu-id="a4cc9-103">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="a4cc9-103">Additional resources</span></span>
 
-<span data-ttu-id="1c6e0-104">En los siguientes sitios web encontrará orientación y respuestas a algunos problemas comunes.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-104">The following web sites provide guidance and can help you find answers to common problems.</span></span>
+<span data-ttu-id="a4cc9-104">En los siguientes sitios web encontrará orientación y respuestas a algunos problemas comunes.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-104">The following web sites provide guidance and can help you find answers to common problems.</span></span>
 
-## <a name="microsoft-resources"></a><span data-ttu-id="1c6e0-105">Recursos de Microsoft</span><span class="sxs-lookup"><span data-stu-id="1c6e0-105">Microsoft resources</span></span>
+## <a name="microsoft-resources"></a><span data-ttu-id="a4cc9-105">Recursos de Microsoft</span><span class="sxs-lookup"><span data-stu-id="a4cc9-105">Microsoft resources</span></span>
 
-### <a name="on-the-web"></a><span data-ttu-id="1c6e0-106">En la Web</span><span class="sxs-lookup"><span data-stu-id="1c6e0-106">On the web</span></span>
+### <a name="on-the-web"></a><span data-ttu-id="a4cc9-106">En la Web</span><span class="sxs-lookup"><span data-stu-id="a4cc9-106">On the web</span></span>
 
-|<span data-ttu-id="1c6e0-107">Término</span><span class="sxs-lookup"><span data-stu-id="1c6e0-107">Term</span></span>|<span data-ttu-id="1c6e0-108">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="1c6e0-108">Definition</span></span>|
+|<span data-ttu-id="a4cc9-107">Término</span><span class="sxs-lookup"><span data-stu-id="a4cc9-107">Term</span></span>|<span data-ttu-id="a4cc9-108">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="a4cc9-108">Definition</span></span>|
 |----------|----------------|
-|[<span data-ttu-id="1c6e0-109">Diseño del lenguaje Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="1c6e0-109">Visual Basic .NET Language Design</span></span>](https://github.com/dotnet/vblang)|<span data-ttu-id="1c6e0-110">Repositorio oficial en GitHub para el diseño del lenguaje Visual Basic .NET.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-110">Official repository on GitHub for Visual Basic .NET language design.</span></span>|
-|[<span data-ttu-id="1c6e0-111">Blog del equipo de Microsoft Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1c6e0-111">Microsoft Visual Basic Team Blog</span></span>](https://blogs.msdn.microsoft.com/vbteam/)|<span data-ttu-id="1c6e0-112">Permite acceder al blog del equipo de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-112">Provides access to the Visual Basic team blog.</span></span>|
+|[<span data-ttu-id="a4cc9-109">Diseño del lenguaje Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="a4cc9-109">Visual Basic .NET Language Design</span></span>](https://github.com/dotnet/vblang)|<span data-ttu-id="a4cc9-110">Repositorio oficial en GitHub para el diseño del lenguaje Visual Basic .NET.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-110">Official repository on GitHub for Visual Basic .NET language design.</span></span>|
+|[<span data-ttu-id="a4cc9-111">Blog del equipo de Microsoft Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a4cc9-111">Microsoft Visual Basic Team Blog</span></span>](https://blogs.msdn.microsoft.com/vbteam/)|<span data-ttu-id="a4cc9-112">Permite acceder al blog del equipo de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-112">Provides access to the Visual Basic team blog.</span></span>|
 
-### <a name="code-samples"></a><span data-ttu-id="1c6e0-113">Ejemplos de código</span><span class="sxs-lookup"><span data-stu-id="1c6e0-113">Code samples</span></span>
+### <a name="code-samples"></a><span data-ttu-id="a4cc9-113">Ejemplos de código</span><span class="sxs-lookup"><span data-stu-id="a4cc9-113">Code samples</span></span>
 
-|<span data-ttu-id="1c6e0-114">Término</span><span class="sxs-lookup"><span data-stu-id="1c6e0-114">Term</span></span>|<span data-ttu-id="1c6e0-115">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="1c6e0-115">Definition</span></span>|
+|<span data-ttu-id="a4cc9-114">Término</span><span class="sxs-lookup"><span data-stu-id="a4cc9-114">Term</span></span>|<span data-ttu-id="a4cc9-115">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="a4cc9-115">Definition</span></span>|
 |----------|----------------|
-|[<span data-ttu-id="1c6e0-116">Galería de códigos</span><span class="sxs-lookup"><span data-stu-id="1c6e0-116">Code Gallery</span></span>](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|<span data-ttu-id="1c6e0-117">Descargue y comparta aplicaciones de ejemplo y otros recursos con la comunidad de desarrolladores.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-117">Download and share sample applications and other resources with the developer community.</span></span>|
-|[<span data-ttu-id="1c6e0-118">Ejemplos de documentación de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1c6e0-118">Visual Basic documentation samples</span></span>](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|<span data-ttu-id="1c6e0-119">Contiene los ejemplos que se usan en la documentación de Visual Basic y de .NET.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-119">Contains the samples used throughout the Visual Basic and .NET documentation.</span></span>|
+|[<span data-ttu-id="a4cc9-116">Galería de códigos</span><span class="sxs-lookup"><span data-stu-id="a4cc9-116">Code Gallery</span></span>](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|<span data-ttu-id="a4cc9-117">Descargue y comparta aplicaciones de ejemplo y otros recursos con la comunidad de desarrolladores.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-117">Download and share sample applications and other resources with the developer community.</span></span>|
+|[<span data-ttu-id="a4cc9-118">Ejemplos de documentación de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a4cc9-118">Visual Basic documentation samples</span></span>](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|<span data-ttu-id="a4cc9-119">Contiene los ejemplos que se usan en la documentación de Visual Basic y de .NET.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-119">Contains the samples used throughout the Visual Basic and .NET documentation.</span></span>|
 
-### <a name="forums"></a><span data-ttu-id="1c6e0-120">Foros</span><span class="sxs-lookup"><span data-stu-id="1c6e0-120">Forums</span></span>
+### <a name="forums"></a><span data-ttu-id="a4cc9-120">Foros</span><span class="sxs-lookup"><span data-stu-id="a4cc9-120">Forums</span></span>
 
-|<span data-ttu-id="1c6e0-121">Término</span><span class="sxs-lookup"><span data-stu-id="1c6e0-121">Term</span></span>|<span data-ttu-id="1c6e0-122">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="1c6e0-122">Definition</span></span>|
+|<span data-ttu-id="a4cc9-121">Término</span><span class="sxs-lookup"><span data-stu-id="a4cc9-121">Term</span></span>|<span data-ttu-id="a4cc9-122">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="a4cc9-122">Definition</span></span>|
 |----------|----------------|
-|[<span data-ttu-id="1c6e0-123">Foros de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1c6e0-123">Visual Basic Forums</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|<span data-ttu-id="1c6e0-124">Se describen problemas generales de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-124">Discusses general Visual Basic issues.</span></span>|
+|[<span data-ttu-id="a4cc9-123">Foros de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a4cc9-123">Visual Basic Forums</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|<span data-ttu-id="a4cc9-124">Se describen problemas generales de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-124">Discusses general Visual Basic issues.</span></span>|
 
-### <a name="videos-and-webcasts"></a><span data-ttu-id="1c6e0-125">Vídeos y webcasts</span><span class="sxs-lookup"><span data-stu-id="1c6e0-125">Videos and webcasts</span></span>
+### <a name="videos-and-webcasts"></a><span data-ttu-id="a4cc9-125">Vídeos y webcasts</span><span class="sxs-lookup"><span data-stu-id="a4cc9-125">Videos and webcasts</span></span>
 
-|<span data-ttu-id="1c6e0-126">Término</span><span class="sxs-lookup"><span data-stu-id="1c6e0-126">Term</span></span>|<span data-ttu-id="1c6e0-127">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="1c6e0-127">Definition</span></span>|
+|<span data-ttu-id="a4cc9-126">Término</span><span class="sxs-lookup"><span data-stu-id="a4cc9-126">Term</span></span>|<span data-ttu-id="a4cc9-127">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="a4cc9-127">Definition</span></span>|
 |----------|----------------|
-|[<span data-ttu-id="1c6e0-128">Channel9</span><span class="sxs-lookup"><span data-stu-id="1c6e0-128">Channel9</span></span>](https://channel9.msdn.com/)|<span data-ttu-id="1c6e0-129">Proporciona una comunidad continua a través de vídeos, Wikis y foros.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-129">Provides continuous community through videos, Wikis, and forums.</span></span>|
+|[<span data-ttu-id="a4cc9-128">Channel9</span><span class="sxs-lookup"><span data-stu-id="a4cc9-128">Channel9</span></span>](https://channel9.msdn.com/)|<span data-ttu-id="a4cc9-129">Proporciona una comunidad continua a través de vídeos, Wikis y foros.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-129">Provides continuous community through videos, Wikis, and forums.</span></span>|
 
-### <a name="support"></a><span data-ttu-id="1c6e0-130">Compatibilidad</span><span class="sxs-lookup"><span data-stu-id="1c6e0-130">Support</span></span>
+### <a name="support"></a><span data-ttu-id="a4cc9-130">Compatibilidad</span><span class="sxs-lookup"><span data-stu-id="a4cc9-130">Support</span></span>
 
-|<span data-ttu-id="1c6e0-131">Término</span><span class="sxs-lookup"><span data-stu-id="1c6e0-131">Term</span></span>|<span data-ttu-id="1c6e0-132">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="1c6e0-132">Definition</span></span>|
+|<span data-ttu-id="a4cc9-131">Término</span><span class="sxs-lookup"><span data-stu-id="a4cc9-131">Term</span></span>|<span data-ttu-id="a4cc9-132">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="a4cc9-132">Definition</span></span>|
 |----------|----------------|
-|[<span data-ttu-id="1c6e0-133">Soporte técnico de Microsoft</span><span class="sxs-lookup"><span data-stu-id="1c6e0-133">Microsoft Support</span></span>](https://support.microsoft.com)|<span data-ttu-id="1c6e0-134">Proporciona acceso a los artículos de Knowledge Base (KB), a descargas y actualizaciones, a difusiones web sobre soporte técnico y a otros servicios.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-134">Provides access to Knowledge Base (KB) articles, downloads and updates, support webcasts, and other services.</span></span>|
-|[<span data-ttu-id="1c6e0-135">Preguntas sobre Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1c6e0-135">Visual Studio Questions</span></span>](https://developercommunity.visualstudio.com)|<span data-ttu-id="1c6e0-136">Permite informar de errores o proporcionar sugerencias a Microsoft sobre .NET y Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-136">Enables you to file bugs or provide suggestions to Microsoft about .NET and Visual Studio.</span></span> <span data-ttu-id="1c6e0-137">También puede notificar un error seleccionando **Ayuda** > **Enviar comentarios** > **Notificar un problema** en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-137">You can also report a bug by selecting **Help** > **Send Feedback** > **Report a Problem** in Visual Studio.</span></span>|
+|[<span data-ttu-id="a4cc9-133">Soporte técnico de Microsoft</span><span class="sxs-lookup"><span data-stu-id="a4cc9-133">Microsoft Support</span></span>](https://support.microsoft.com)|<span data-ttu-id="a4cc9-134">Proporciona acceso a los artículos de Knowledge Base (KB), a descargas y actualizaciones, a difusiones web sobre soporte técnico y a otros servicios.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-134">Provides access to Knowledge Base (KB) articles, downloads and updates, support webcasts, and other services.</span></span>|
+|[<span data-ttu-id="a4cc9-135">Preguntas sobre Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a4cc9-135">Visual Studio Questions</span></span>](https://developercommunity.visualstudio.com)|<span data-ttu-id="a4cc9-136">Permite informar de errores o proporcionar sugerencias a Microsoft sobre .NET y Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-136">Enables you to file bugs or provide suggestions to Microsoft about .NET and Visual Studio.</span></span> <span data-ttu-id="a4cc9-137">También puede notificar un error seleccionando **Ayuda** > **Enviar comentarios** > **Notificar un problema** en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-137">You can also report a bug by selecting **Help** > **Send Feedback** > **Report a Problem** in Visual Studio.</span></span>|
 
-## <a name="third-party-resources"></a><span data-ttu-id="1c6e0-138">Recursos de terceros</span><span class="sxs-lookup"><span data-stu-id="1c6e0-138">Third-party resources</span></span>
+## <a name="third-party-resources"></a><span data-ttu-id="a4cc9-138">Recursos de terceros</span><span class="sxs-lookup"><span data-stu-id="a4cc9-138">Third-party resources</span></span>
 
-|<span data-ttu-id="1c6e0-139">Término</span><span class="sxs-lookup"><span data-stu-id="1c6e0-139">Term</span></span>|<span data-ttu-id="1c6e0-140">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="1c6e0-140">Definition</span></span>|
+|<span data-ttu-id="a4cc9-139">Término</span><span class="sxs-lookup"><span data-stu-id="a4cc9-139">Term</span></span>|<span data-ttu-id="a4cc9-140">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="a4cc9-140">Definition</span></span>|
 |----------|----------------|
-|[<span data-ttu-id="1c6e0-141">VBForums</span><span class="sxs-lookup"><span data-stu-id="1c6e0-141">VBForums</span></span>](http://www.vbforums.com/)|<span data-ttu-id="1c6e0-142">Proporciona un foro para hablar sobre Visual Basic, .NET y mucho más.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-142">Provides a forum to discuss Visual Basic, .NET, and more.</span></span>|
-|[<span data-ttu-id="1c6e0-143">vbCity</span><span class="sxs-lookup"><span data-stu-id="1c6e0-143">vbCity</span></span>](http://vbcity.com/)|<span data-ttu-id="1c6e0-144">Un sitio de la comunidad para que los usuarios obtengan información y formulen preguntas sobre Visual Basic y .NET.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-144">A community site for people to learn and ask questions about Visual Basic and .NET.</span></span>|
-|[<span data-ttu-id="1c6e0-145">Stack Overflow</span><span class="sxs-lookup"><span data-stu-id="1c6e0-145">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)|<span data-ttu-id="1c6e0-146">Stack Overflow es un sitio en el que los desarrolladores formulan y contestan preguntas.</span><span class="sxs-lookup"><span data-stu-id="1c6e0-146">Stack Overflow is a question and answer site for developers.</span></span>|
+|[<span data-ttu-id="a4cc9-141">VBForums</span><span class="sxs-lookup"><span data-stu-id="a4cc9-141">VBForums</span></span>](http://www.vbforums.com/)|<span data-ttu-id="a4cc9-142">Proporciona un foro para hablar sobre Visual Basic, .NET y mucho más.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-142">Provides a forum to discuss Visual Basic, .NET, and more.</span></span>|
+|[<span data-ttu-id="a4cc9-143">vbCity</span><span class="sxs-lookup"><span data-stu-id="a4cc9-143">vbCity</span></span>](http://vbcity.com/)|<span data-ttu-id="a4cc9-144">Un sitio de la comunidad para que los usuarios obtengan información y formulen preguntas sobre Visual Basic y .NET.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-144">A community site for people to learn and ask questions about Visual Basic and .NET.</span></span>|
+|[<span data-ttu-id="a4cc9-145">Desbordamiento de pila</span><span class="sxs-lookup"><span data-stu-id="a4cc9-145">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)|<span data-ttu-id="a4cc9-146">Stack Overflow es un sitio en el que los desarrolladores formulan y contestan preguntas.</span><span class="sxs-lookup"><span data-stu-id="a4cc9-146">Stack Overflow is a question and answer site for developers.</span></span>|
 
-## <a name="see-also"></a><span data-ttu-id="1c6e0-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="1c6e0-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4cc9-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="a4cc9-147">See also</span></span>
 
-[<span data-ttu-id="1c6e0-148">Introducción a Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1c6e0-148">Get started with Visual Basic</span></span>](../../visual-basic/getting-started/index.md)  
-[<span data-ttu-id="1c6e0-149">Hable con nosotros</span><span class="sxs-lookup"><span data-stu-id="1c6e0-149">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
+[<span data-ttu-id="a4cc9-148">Introducción a Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a4cc9-148">Get started with Visual Basic</span></span>](../../visual-basic/getting-started/index.md)  
+[<span data-ttu-id="a4cc9-149">Hable con nosotros</span><span class="sxs-lookup"><span data-stu-id="a4cc9-149">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
