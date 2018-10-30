@@ -6,18 +6,18 @@ title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
 ms.date: 06/21/2018
-ms.openlocfilehash: dd07b771f267eb2c022b1e0b8de02aca5b0c7a5c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 658c464cd7871306c7172e06c7041517ccea5ffe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837474"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183586"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/dotnet/csharp/quick-starts">
+                <a href="/dotnet/csharp/tutorials/intro-to-csharp/">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -172,7 +172,7 @@ ms.locfileid: "48837474"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Guía de C#</a></h3>
-                                                <p><a href="/dotnet/csharp/quick-starts">Guías de inicio rápido</a></p>
+                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">Aprender C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Primeros pasos</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Paseo por C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Referencia del lenguaje C#</a></p>

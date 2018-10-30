@@ -3,17 +3,17 @@ title: Portabilidad a .NET Core desde .NET Framework
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 10/23/2018
+ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835397"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192777"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Portabilidad a .NET Core desde .NET Framework
 
-Si tiene código que se ejecuta en .NET Framework, puede que le interese ejecutarlo en .NET Core 1.0.  Este artículo es una introducción al proceso de portabilidad y describe una lista de las herramientas que puede encontrar de utilidad al realizar la portabilidad a .NET Core.
+Si tiene código que se ejecuta en .NET Framework, puede que le interese ejecutarlo en .NET Core.  Este artículo es una introducción al proceso de portabilidad y describe una lista de las herramientas que puede encontrar de utilidad al realizar la portabilidad a .NET Core.
 
 ## <a name="overview-of-the-porting-process"></a>Información general sobre el proceso de portabilidad
 
@@ -23,7 +23,7 @@ El proceso recomendado para realizar la portabilidad sigue estos pasos.  Cada un
 
    Esto implica comprender lo que son las dependencias de terceros, cómo depende de ellas, cómo ver si también se ejecutan en .NET Core y los pasos que puede seguir si no lo hacen.
    
-2. Redirigir todos los proyectos que desee portar a .NET Framework 4.6.2 de destino.
+2. Redirija todos los proyectos que desee portar a la última versión de .NET Framework.
 
    Esto garantiza que puede usar alternativas de API para destinos específicos de .NET Framework en los casos donde .NET Core no pueda admitir una API determinada.
    
@@ -33,7 +33,7 @@ El proceso recomendado para realizar la portabilidad sigue estos pasos.  Cada un
    
 4. Porte el código de prueba.
 
-   Dado que portar a .NET Core es un cambio tan grande para el código base, se recomienda encarecidamente portar las pruebas de forma que pueda ejecutarlas mientras porta el código.  MSTest, xUnit y NUnit todos admiten actualmente .NET Core 1.0.
+   Dado que portar a .NET Core es un cambio tan grande para el código base, se recomienda encarecidamente portar las pruebas de forma que pueda ejecutarlas mientras porta el código.  MSTest, xUnit y NUnit admiten actualmente .NET Core.
    
 6. Ejecute el plan de portabilidad.
 

@@ -3,16 +3,16 @@ title: Novedades de C# - Guía de C#
 description: Cómo evoluciona el lenguaje C#
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314677"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047259"
 ---
 # <a name="whats-new-in-c"></a>Novedades de C# #
 
-En esta página se brinda una guía básica de las características nueva de cada versión importante del lenguaje C#. Los vínculos siguientes proporcionan información detallada sobre las características principales que se agregaron en cada versión.
+En esta página se brinda una guía básica de las características nueva de cada versión importante del lenguaje C#. Los artículos vinculados proporcionan información detallada sobre las características principales que se agregaron en cada versión. Encontrará información sobre las nuevas características que se han publicado en una versión general o en una versión preliminar pública. Se puede encontrar información sobre el estado detallado de las características de lenguaje, incluidas las características consideradas para las próximas versiones, [en el repositorio dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) de GitHub.
 
 > [!IMPORTANT]
 > El lenguaje C# se basa en tipos y métodos de una *biblioteca estándar* para algunas de las características. Un ejemplo es el procesamiento de excepciones. Cada expresión o instrucción `throw` se comprueba para asegurarse de que el objeto que se genera deriva de <xref:System.Exception>. Del mismo modo, cada `catch` se comprueba para asegurarse de que el tipo que se captura deriva de <xref:System.Exception>. Cada versión puede agregar requisitos nuevos. Para usar las características más recientes del lenguaje en entornos anteriores, es posible que tenga que instalar bibliotecas específicas. Estas dependencias están documentadas en la página de cada versión específica. Puede obtener más información sobre las [relaciones entre lenguaje y biblioteca](relationships-between-language-and-library.md) para tener más antecedentes sobre esta dependencia. 

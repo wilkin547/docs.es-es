@@ -3,13 +3,13 @@ title: Guía de la biblioteca de código abierto
 description: Procedimientos recomendados para desarrolladores a la hora de crear bibliotecas .NET de alta calidad
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 50fb745f7eb65abcaca76cebaf9991c48f559e59
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.date: 10/17/2018
+ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374913"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188630"
 ---
 # <a name="open-source-library-guidance"></a>Guía de la biblioteca de código abierto
 
@@ -18,7 +18,7 @@ En esta guía se ofrecen procedimientos recomendados para desarrolladores a la h
 Aspectos de las bibliotecas .NET de código abierto de alta calidad:
 
 > [!div class="checklist"]
-> * **Inclusivas**: las bibliotecas. NET de buena calidad deben estar diseñadas para admitir muchas plataformas y aplicaciones.
+> * **Inclusivas**: las bibliotecas. NET de buena calidad deben estar diseñadas para admitir muchas plataformas, lenguajes de programación y aplicaciones.
 > * **Estables**: las bibliotecas. NET de buena calidad deben coexistir en el ecosistema de .NET y ejecutarse en aplicaciones que se han compilado mediante muchas bibliotecas.
 > * **Diseñadas para evolucionar**: las bibliotecas .NET deben mejorar y evolucionar a lo largo del tiempo, a la vez que deben ser compatibles para los usuarios existentes.
 > * **Depurables**: las bibliotecas .NET deben usar las herramientas más recientes para ofrecer una buena experiencia de depuración a los usuarios.
@@ -27,11 +27,11 @@ Aspectos de las bibliotecas .NET de código abierto de alta calidad:
 > [!div class="nextstepaction"]
 > [Primeros pasos](./get-started.md)
 
-## <a name="recommendations"></a>Recomendaciones
+## <a name="types-of-recommendations"></a>Tipos de recomendaciones
 
-En cada artículo se ofrece una lista de recomendaciones para las bibliotecas .NET mediante las palabras **Debe**, **Es recomendable**, **Evite** y **No está permitido**. Las que se usan en cada recomendación indican hasta qué punto se deben seguir.
+Cada artículo presenta cuatro tipos de recomendaciones: **Debe**, **Es recomendable**, **Evite** y **No está permitido**. El tipo de recomendación indica hasta qué punto se deben seguir.
 
-Las recomendaciones de tipo **Debe** son aquellas que hay que seguir casi siempre:
+Casi siempre debe seguir una recomendación **Debe**. Por ejemplo:
 
 **✔️ DEBE** distribuir las bibliotecas mediante un paquete NuGet.
 
@@ -39,7 +39,7 @@ Por otro lado, las recomendaciones de tipo **Es recomendable** generalmente debe
 
 **✔️ ES RECOMENDABLE** usar [SemVer 2.0.0](https://semver.org/) para crear versiones de los paquetes NuGet.
 
-Las recomendaciones de tipo **Evite** hacen referencia a prácticas que, en general, no son una buena idea, aunque a veces tiene sentido no seguirlas:
+Las recomendaciones de tipo **Evite** mencionan prácticas que, en general, no son convenientes, aunque a veces tiene sentido no seguirlas:
 
 **❌ EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
 
