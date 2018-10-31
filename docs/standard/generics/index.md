@@ -81,7 +81,7 @@ ms.locfileid: "48584148"
   
 -   El término general *tipo genérico* incluye tanto tipos construidos como definiciones de tipo genérico.  
   
--   La*covarianza* y *contravarianza* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (contravarianza) than a target constructed type. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+-   La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 -   Las*restricciones* son límites colocados en parámetros de tipo genérico. Por ejemplo, puede limitar un parámetro de tipo a tipos que implementan la interfaz genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> para asegurarse de que se pueden ordenar las instancias del tipo. También puede restringir los parámetros de tipo a tipos que tienen una clase base concreta, un constructor predeterminado o que son tipos de referencia o tipos de valor. Los usuarios del tipo genérico no pueden sustituir los argumentos de tipo que no cumplen con las restricciones.  
   

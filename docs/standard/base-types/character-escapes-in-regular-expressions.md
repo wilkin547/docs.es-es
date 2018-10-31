@@ -17,11 +17,11 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232786"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837172"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de carácter en expresiones regulares
 La barra diagonal inversa (\\) en una expresión regular indica una de las siguientes situaciones:  
