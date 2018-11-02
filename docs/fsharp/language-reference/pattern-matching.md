@@ -3,10 +3,10 @@ title: Coincidencia de modelos [F#]
 description: 'Obtenga información sobre cómo se usan los patrones en F # para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45991429"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
