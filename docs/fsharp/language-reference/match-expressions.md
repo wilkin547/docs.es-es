@@ -3,10 +3,10 @@ title: 'Expresiones de coincidencia (F #)'
 description: 'Obtenga información sobre cómo la expresión de coincidencia en F # proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.'
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44221849"
 ---
 # <a name="match-expressions"></a>Expresiones de coincidencia.

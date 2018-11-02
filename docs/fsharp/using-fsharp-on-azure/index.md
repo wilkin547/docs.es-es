@@ -4,10 +4,10 @@ description: 'Guía de uso de servicios de Azure con F #'
 author: sylvanc
 ms.date: 09/22/2016
 ms.openlocfilehash: 1fbb85a07fc057c1b89a4c4a1ad356066cebf2b8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50201509"
 ---
 # <a name="using-f-on-azure"></a>Uso de F# en Azure

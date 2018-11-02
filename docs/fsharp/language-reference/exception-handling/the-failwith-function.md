@@ -3,10 +3,10 @@ title: 'Excepciones: función failwith (F#)'
 description: "Obtenga información sobre cómo la función 'failwith' genera una excepción de F #."
 ms.date: 05/16/2016
 ms.openlocfilehash: 69a2eb69e0157d3bde8cb8884cb0ae960634dddc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43863434"
 ---
 # <a name="exceptions-the-failwith-function"></a>Excepciones: función failwith

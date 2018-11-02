@@ -3,10 +3,10 @@ title: Directivas de compilador (F#)
 description: 'Obtenga información sobre las directivas de preprocesador de lenguaje F #, las directivas de compilación condicional, las directivas de línea y las directivas de compilador.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "50181373"
 ---
 # <a name="compiler-directives"></a>Directivas de compilador

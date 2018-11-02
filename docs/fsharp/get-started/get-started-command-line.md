@@ -3,10 +3,10 @@ title: 'Introducción a F # con herramientas de línea de comandos'
 description: 'Obtenga información sobre cómo compilar una solución sencilla de varios proyecto en F # mediante la CLI de .NET Core en cualquier sistema operativo (Windows, macOs o Linux).'
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673914"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Introducción a F # con la CLI de .NET Core

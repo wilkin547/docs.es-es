@@ -3,10 +3,10 @@ title: Seguridad del proveedor de tipos
 description: 'Obtenga información sobre la seguridad del proveedor de tipos en F #, incluida la forma de cambiar la configuración de confianza de un proveedor de tipos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43861912"
 ---
 # <a name="type-provider-security"></a>Seguridad del proveedor de tipos

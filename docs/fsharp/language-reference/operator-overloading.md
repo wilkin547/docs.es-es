@@ -3,10 +3,10 @@ title: Sobrecarga de operadores (F#)
 description: 'Obtenga información sobre cómo sobrecargar los operadores aritméticos en una clase o tipo de registro y en el nivel global en F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44087304"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operadores

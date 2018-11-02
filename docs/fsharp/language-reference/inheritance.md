@@ -3,10 +3,10 @@ title: Herencia (F#)
 description: "Obtenga información sobre cómo especificar relaciones de herencia de F # con la palabra clave 'inherit'."
 ms.date: 05/16/2016
 ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43864474"
 ---
 # <a name="inheritance"></a>Herencia

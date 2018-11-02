@@ -3,10 +3,10 @@ title: Opciones (F#)
 description: 'Obtenga información sobre cómo usar la opción F # no podrían existir tipos cuando un valor real para un valor con nombre o una variable.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "46479525"
 ---
 # <a name="options"></a>Opciones

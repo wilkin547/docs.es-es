@@ -2,12 +2,12 @@
 title: Paseo por F#
 description: Examine algunas de las características claves del lenguaje en esta visita con ejemplos de código de programación F#.
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924526"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235718"
 ---
 # <a name="tour-of-f"></a>Paseo por F# #
 
@@ -193,6 +193,6 @@ Las clases son excelentes para un gran número de razones, como cuando se necesi
 
 Ahora que ha visto algunas de las principales características del lenguaje, debería estar listo para escribir sus primeros programas de F#!  Desproteger [Introducción](tutorials/getting-started/index.md) para obtener información sobre cómo configurar el entorno de desarrollo y escribir algo de código.
 
-Los pasos siguientes para obtener más pueden ser el que desee, pero se recomienda [funciona como valores de primera clase](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> para comenzar a familiarizarse con los conceptos de programación funcional.  Estos serán esenciales en la creación de programas sólidos en F#.
+Los pasos siguientes para obtener más pueden ser el que desee, pero se recomienda [Introducción a la programación funcional en F# ](introduction-to-functional-programming/index.md) para comenzar a familiarizarse con los conceptos de programación funcional.  Estos serán esenciales en la creación de programas sólidos en F#.
 
 Además, revise el [referencia del lenguaje F#](language-reference/index.md) para ver una colección completa de contenido conceptual en F#.

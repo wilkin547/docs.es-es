@@ -1,12 +1,12 @@
 ---
 title: Control de excepciones (F#)
-description: 'Obtenga información acerca de los conceptos básicos del control de excepciones en F # y busque vínculos a expresiones y funciones de control de excepciones.'
+description: Conozca los aspectos básicos del control de excepciones en F# y encuentre vínculos a las expresiones y funciones de control de excepciones.
 ms.date: 05/16/2016
 ms.openlocfilehash: fc89feb0d21bc823cb105e435413f8309cd6174c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33564331"
 ---
 # <a name="exception-handling"></a>Control de excepciones

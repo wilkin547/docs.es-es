@@ -3,10 +3,10 @@ title: Referencia del lenguaje F#
 description: 'Buscar F # información de características de lenguaje de esta referencia a tokens de idioma, conceptos, tipos, expresiones y los temas de construcción compatible con el compilador.'
 ms.date: 05/16/2016
 ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45646420"
 ---
 # <a name="f-language-reference"></a>Referencia del lenguaje F#
