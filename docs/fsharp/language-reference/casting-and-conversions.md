@@ -1,6 +1,6 @@
 ---
 title: Conversiones (F#)
-description: 'Obtenga información sobre cómo el lenguaje de programación F # proporciona operadores de conversión para las conversiones aritméticas entre los distintos tipos primitivos.'
+description: Obtenga información sobre cómo el lenguaje de programación F# proporciona operadores de conversión para las conversiones aritméticas entre los distintos tipos primitivos.
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45677936"
 ---
 # <a name="casting-and-conversions-f"></a>Conversiones (F#)
 
-Este tema describe la compatibilidad con las conversiones de tipos en F #.
+Este tema describe la compatibilidad con las conversiones de tipos en F#.
 
 ## <a name="arithmetic-types"></a>Tipos aritméticos
 
-F # proporciona operadores de conversión para las conversiones aritméticas entre los distintos tipos primitivos, como entre valores enteros y tipos de punto flotante. Han comprobado los operadores de conversión de enteros y char y formularios desactivadas; los operadores de tipo flotante y el `enum` no lo hace el operador de conversión. Los formularios unchecked se definen en `Microsoft.FSharp.Core.Operators` y se definen las formas comprobadas en `Microsoft.FSharp.Core.Operators.Checked`. Los formularios activados comprobación el desbordamiento y generan una excepción en tiempo de ejecución si el valor resultante supera los límites del tipo de destino.
+F# proporciona operadores de conversión para las conversiones aritméticas entre los distintos tipos primitivos, como entre valores enteros y tipos de punto flotante. Han comprobado los operadores de conversión de enteros y char y formularios desactivadas; los operadores de tipo flotante y el `enum` no lo hace el operador de conversión. Los formularios unchecked se definen en `Microsoft.FSharp.Core.Operators` y se definen las formas comprobadas en `Microsoft.FSharp.Core.Operators.Checked`. Los formularios activados comprobación el desbordamiento y generan una excepción en tiempo de ejecución si el valor resultante supera los límites del tipo de destino.
 
 Cada uno de estos operadores tiene el mismo nombre que el nombre del tipo de destino. Por ejemplo, en el código siguiente, en el que los tipos se anotan explícitamente, `byte` aparece con dos significados diferentes. La primera aparición es el tipo y el segundo es el operador de conversión.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-La siguiente tabla muestra los operadores de conversión definidos en F #.
+La siguiente tabla muestra los operadores de conversión definidos en F#.
 
 |Operador|Descripción|
 |--------|-----------|
@@ -67,11 +67,11 @@ Para obtener más información, consulte [enumeraciones](enumerations.md).
 
 Conversión entre tipos en una jerarquía de objetos es fundamental para la programación orientada a objetos. Hay dos tipos básicos de conversiones: conversión de (conversión hacia arriba) y de conversión hacia abajo (conversión). Conversión de una jerarquía significa que la conversión de una referencia de objeto derivado a una referencia de objeto base. Dicha conversión garantiza que funcionar, siempre que la clase base se encuentra en la jerarquía de herencia de la clase derivada. Conversión de una jerarquía, desde una referencia de objeto base para una referencia de objeto derivado, se realiza correctamente sólo si el objeto es realmente una instancia del tipo correcto de destino (derivado) o un tipo derivado del tipo de destino.
 
-F # proporciona operadores para estos tipos de conversiones. El `:>` operador convierte la jerarquía y el `:?>` operador convierte hacia abajo en la jerarquía.
+F# proporciona operadores para estos tipos de conversiones. El `:>` operador convierte la jerarquía y el `:?>` operador convierte hacia abajo en la jerarquía.
 
 ### <a name="upcasting"></a>Conversión hacia arriba
 
-En muchos lenguajes orientados a objetos, una conversión está implícita; en F #, las reglas son ligeramente diferentes. Una conversión se aplica automáticamente al pasar argumentos a métodos en un tipo de objeto. Sin embargo, para las funciones de enlazado a let en un módulo, una conversión no es automática, a menos que el tipo de parámetro se declara como un tipo flexible. Para obtener más información, consulte [tipos flexibles](flexible-Types.md).
+En muchos lenguajes orientados a objetos, una conversión está implícita; en F#, las reglas son ligeramente diferentes. Una conversión se aplica automáticamente al pasar argumentos a métodos en un tipo de objeto. Sin embargo, para las funciones de enlazado a let en un módulo, una conversión no es automática, a menos que el tipo de parámetro se declara como un tipo flexible. Para obtener más información, consulte [tipos flexibles](flexible-Types.md).
 
 El `:>` operador realiza una conversión de tipos, lo que significa que el éxito de la conversión se determina en tiempo de compilación estática. Si una conversión de tipos que usa `:>` se compila correctamente, es una conversión válida y no tiene ninguna posibilidad de error en tiempo de ejecución.
 

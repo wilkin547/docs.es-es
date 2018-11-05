@@ -1,6 +1,6 @@
 ---
 title: Opciones (F#)
-description: 'Obtenga información sobre cómo usar la opción F # no podrían existir tipos cuando un valor real para un valor con nombre o una variable.'
+description: Obtenga información sobre cómo usar la opción F# no podrían existir tipos cuando un valor real para un valor con nombre o una variable.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "46479525"
 ---
 # <a name="options"></a>Opciones
 
-El tipo de opción en F # se usa cuando no exista un valor real para un valor con nombre o variable. Una opción tiene un tipo subyacente y puede contener un valor de ese tipo, o quizás no tenga un valor.
+El tipo de opción en F# se usa cuando no exista un valor real para un valor con nombre o variable. Una opción tiene un tipo subyacente y puede contener un valor de ese tipo, o quizás no tenga un valor.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -33,7 +33,7 @@ Las opciones se usan normalmente cuando una búsqueda no devuelve un resultado c
 
 En el código anterior, una lista es buscada de forma recursiva. La función `tryFindMatch` toma una función de predicado `pred` que devuelve un valor booleano y una lista para buscar. Si se encuentra un elemento que cumple el predicado, finaliza la recursión y la función devuelve el valor como una opción en la expresión `Some(head)`. La recursividad finaliza cuando se hace coincidir con la lista vacía. En ese momento el valor `head` no se ha encontrado, y `None` se devuelve.
 
-Muchas funciones F # biblioteca que buscar en una colección para un valor que puede existe o no devuelven el `option` tipo. Por convención, estas funciones comienzan con la `try` prefijo, por ejemplo, [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
+Muchas funciones F# biblioteca que buscar en una colección para un valor que puede existe o no devuelven el `option` tipo. Por convención, estas funciones comienzan con la `try` prefijo, por ejemplo, [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
 
 Opciones también pueden ser útiles cuando un valor no exista, por ejemplo, si es posible que se producirá una excepción al intentar construir un valor. En el siguiente ejemplo código se muestra cómo hacerlo.
 

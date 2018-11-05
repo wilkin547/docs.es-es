@@ -1,21 +1,21 @@
 ---
-title: Nombres seguros y las bibliotecas de .NET
-description: Prácticas recomendadas para las bibliotecas de .NET nomenclatura seguras.
+title: Nombres seguros y bibliotecas de .NET
+description: Procedimientos recomendados para nombres de seguros de las bibliotecas de .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: e3f7d443eb9acc84c800ea2611b803733085391c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372814"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201457"
 ---
 # <a name="strong-naming"></a>Nombres seguros
 
-Nombres seguros se refiere al firmar un ensamblado con una clave, generar un [ensamblados](../../framework/app-domains/strong-named-assemblies.md). Una vez un ensamblado con nombre seguro, crea una identidad única en función del número de versión de nombre y el ensamblado, y puede ayudar a evitar conflictos de ensamblado.
+Nombres seguros se refiere a firmar un ensamblado con una clave, generando un [ensamblado con nombre seguro](../../framework/app-domains/strong-named-assemblies.md). Una vez que un ensamblado tiene un nombre seguro, crea una identidad única en función del nombre y del número de versión del ensamblado y puede ayudar a evitar conflictos de ensamblado.
 
-La desventaja de nombre seguro es que .NET Framework en Windows permite strict carga de ensamblados una vez que un ensamblado tiene un nombre seguro. Una referencia de ensamblado con nombre seguro debe coincidir exactamente con la versión que se hace referencia a un ensamblado, los desarrolladores a [configurar redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) cuando se usa el ensamblado:
+El inconveniente de los nombres seguros es que .NET Framework en Windows habilita la carga estricta de ensamblados una vez que un ensamblado tiene un nombre seguro. Una referencia de ensamblado con nombre seguro debe coincidir exactamente con la versión a la que un ensamblado hace referencia, obligando a los desarrolladores a [configurar redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) cuando se usa el ensamblado:
 
 ```xml
 <configuration>
@@ -30,43 +30,45 @@ La desventaja de nombre seguro es que .NET Framework en Windows permite strict c
 </configuration>
 ```
 
-Cuando los desarrolladores de .NET se quejan nombres seguros, lo están normalmente queja es strict carga de ensamblados. Afortunadamente, este problema está aislado en .NET Framework. La mayoría de otras implementaciones. NET, Xamarin, UWP y .NET core no tiene la carga de ensamblados estricta y quita la principal desventaja de nombres seguros.
+Cuando los desarrolladores de .NET se quejan de los nombres seguros, normalmente se quejan de la carga estricta de los ensamblados. Afortunadamente, este problema está aislado en .NET Framework. .NET Core, Xamarin, UWP y la mayoría del resto de implementaciones de .NET no tienen carga estricta de ensamblados y quitan el principal inconveniente de los nombres seguros.
 
-Un aspecto importante de nombre seguro es que resulta viral: una fuerte denominado ensamblado sólo pueden hacer referencia otros seguro ensamblados con nombre. Si la biblioteca no está segura con nombre, a continuación, ha excluido a los desarrolladores que crean una aplicación o biblioteca que necesita nombres seguros de utilizarla.
+Un aspecto importante de los nombres seguros es que son virales: un ensamblado con nombre seguro solamente pueden hacer referencia otros ensamblados con nombre seguro. Si la biblioteca no tiene un nombre seguro, es que se ha excluido a los desarrolladores que están creando una aplicación o biblioteca que necesita nombres seguros para usarla.
 
-Las ventajas de nombres seguros son:
+Las ventajas de los nombres seguros son:
 
-1. El ensamblado se puede hacer referencia a y usar otros ensamblados con nombre seguro.
-2. El ensamblado se puede almacenar en caché de ensamblados Global (GAC).
-3. El ensamblado se puede cargar en paralelo con otras versiones del ensamblado. Carga de ensamblados en paralelo se requieren habitualmente las aplicaciones con arquitecturas para complementos.
+1. Otros ensamblados con nombre seguro pueden hacer referencia al ensamblado y usarlo.
+2. El ensamblado se puede almacenar en la memoria caché global de ensamblados (GAC).
+3. El ensamblado se puede cargar en paralelo con otras versiones de dicho ensamblado. Normalmente, las aplicaciones con arquitecturas de complemento requieren la carga de ensamblados en paralelo.
 
-## <a name="create-strong-named-net-libraries"></a>Crear seguro con el nombre de las bibliotecas de .NET
+## <a name="create-strong-named-net-libraries"></a>Creación de bibliotecas de .NET con nombre seguro
 
-Se deben asignar un nombre seguro las bibliotecas .NET de código abierto. Un ensamblado de nombres seguros garantiza la mayoría de los usuarios puede usarla y estricta ensamblado cargar solo afecta a .NET Framework.
+Se deben asignar un nombre seguro a las bibliotecas de .NET de código abierto. La asignación de un nombre seguro a un ensamblado garantiza que la mayoría de los usuarios pueden usarlo y la carga estricta del ensamblado solo afecta a .NET Framework.
 
 > [!NOTE]
-> Esta guía es específica a las bibliotecas de .NET distribuidas públicamente, como bibliotecas de .NET publican en NuGet.org. Nombres seguros no es necesaria para la mayoría de las aplicaciones de .NET y no se deben realizar de forma predeterminada.
+> Esta guía es específica de las bibliotecas de .NET distribuidas públicamente, como las bibliotecas de .NET publicadas en NuGet.org. La mayoría de las aplicaciones .NET no necesitan nombres seguros y estos no se deben utilizar de forma predeterminada.
 
-**Considere la posibilidad de ✔️** seguro nombres a los ensamblados de la biblioteca.
+**✔️ ES RECOMENDABLE** usar nombres seguros en los ensamblados de la biblioteca.
 
-**Considere la posibilidad de ✔️** comprobación de la clave utilizada para el nombre seguro en el sistema de control de código fuente.
+**✔️ ES RECOMENDABLE** agregar la clave de nombres seguros al sistema de control de código fuente.
 
-> Una clave disponible públicamente permite a los programadores modificar y volver a compilar el código fuente de biblioteca con la misma clave.
+> Una clave disponible públicamente permite a los programadores modificar y volver a compilar el código fuente de la biblioteca con la misma clave.
+> 
+> No debería publicar la clave de nombres seguros si se ha utilizado en el pasado para conceder permisos especiales en [escenarios de confianza parcial](/dotnet/framework/misc/using-libraries-from-partially-trusted-code). En caso contrario, podría poner en peligro los entornos existentes.
 
 > [!IMPORTANT]
-> Cuando se desea una identidad de cifrado, [Authenticode](/windows-hardware/drivers/install/authenticode) y [firma del paquete NuGet](/nuget/create-packages/sign-a-package) se recomiendan. No se deben usar nombres seguros de consideraciones de seguridad.
+> Cuando se desea la identidad del publicador del código, se recomiendan [Authenticode](/windows-hardware/drivers/install/authenticode) y la [firma de paquetes NuGet](/nuget/create-packages/sign-a-package). La seguridad de acceso del código (CAS) no debe usarse como una mitigación de seguridad.
 
-**Considere la posibilidad de ✔️** incrementar la versión de ensamblado en los cambios de versión principal solo para ayudar a los usuarios a reducir las redirecciones de enlace, y con qué frecuencia se actualizan.
+**✔️ ES RECOMENDABLE** incrementar la versión de ensamblado solamente en los cambios de versión principal para ayudar a los usuarios a reducir las redirecciones de enlace y la frecuencia con la que se actualizan.
 
-> Obtenga más información sobre [control de versiones y la versión del ensamblado](./versioning.md#assembly-version).
+> Obtenga más información sobre el [control de versiones y la versión del ensamblado](./versioning.md#assembly-version).
 
-**NO ❌** agregar, quitar o cambiar la clave de nomenclatura segura.
+**❌ NO** agregue, quite o cambie la clave de nombre seguro.
 
-> Modificar la clave de nomenclatura segura de un ensamblado cambia la identidad del ensamblado e interrumpe el código compilado que lo utiliza. Para obtener más información, consulte [binario cambios importantes](./breaking-changes.md#binary-breaking-change).
+> La modificación de la clave de nombre seguro de un ensamblado cambia la identidad de este e interrumpe el código compilado que lo utiliza. Para más información, vea la información sobre [cambios importantes binarios](./breaking-changes.md#binary-breaking-change).
 
-**❌ NO** publicar versiones con nombre seguro y sin seguro-nombre de la biblioteca. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
+**❌ NO ESTÁ PERMITIDO** publicar versiones de una biblioteca tanto con nombre seguro como sin él. Por ejemplo, `Contoso.Api` y `Contoso.Api.StrongNamed`.
 
-> Publicar dos bifurcaciones de paquetes en el ecosistema del desarrollador. Además, si una aplicación termina según ambos paquetes el desarrollador puede producirse conflictos de nombre de tipo. En lo que se refiere .NET son tipos diferentes en distintos ensamblados.
+> La publicación de dos paquetes bifurca el ecosistema del desarrollador. Además, si una aplicación termina dependiendo de ambos paquetes, el desarrollador puede encontrar conflictos con el nombre de tipo. En lo que respecta a .NET, son tipos distintos en diferentes ensamblados.
 
 >[!div class="step-by-step"]
 [Anterior](./cross-platform-targeting.md)

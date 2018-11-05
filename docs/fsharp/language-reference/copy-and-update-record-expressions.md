@@ -1,5 +1,5 @@
 ---
-title: 'Copiar y actualizar las expresiones de registro (F #)'
+title: Copiar y actualizar las expresiones de registro (F#)
 description: Obtenga información sobre cómo escribir un "copiar y actualizar registro expression" que copia un registro, actualizaciones especifica los campos y devuelve el registro actualizado.
 author: ChrSteinert
 ms.date: 06/04/2016

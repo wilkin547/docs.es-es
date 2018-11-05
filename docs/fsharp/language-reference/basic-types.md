@@ -1,6 +1,6 @@
 ---
-title: 'Tipos básicos (F #)'
-description: 'Descubra los tipos básicos fundamentales que se usan en el lenguaje F #.'
+title: Tipos básicos (F#)
+description: Descubra los tipos básicos fundamentales que se usan en el lenguaje F#.
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48026952"
 ---
 # <a name="basic-types"></a>Tipos básicos
 
-En este tema se enumera los tipos básicos que se definen en el lenguaje F #. Estos tipos son más importantes en F #, que forman la base de casi todos los programas F #. Son un superconjunto de los tipos primitivos. NET.
+En este tema se enumera los tipos básicos que se definen en el lenguaje F#. Estos tipos son más importantes en F#, que forman la base de casi todos los programas F#. Son un superconjunto de los tipos primitivos. NET.
 
 |Tipo|Tipo de .NET|Descripción|
 |----|---------|-----------|

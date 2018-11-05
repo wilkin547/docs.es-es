@@ -1,6 +1,6 @@
 ---
 title: 'Funciones recursivas: palabra clave rec (F#)'
-description: "Obtenga información sobre cómo se usa la palabra clave 'rec' de F # con la palabra clave 'let' para definir una función recursiva."
+description: Obtenga información sobre cómo se usa la palabra clave 'rec' de F# con la palabra clave 'let' para definir una función recursiva.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -30,7 +30,7 @@ function2-body
 
 ## <a name="remarks"></a>Comentarios
 
-Funciones recursivas, las funciones que llaman a sí mismos, se identifican explícitamente en el lenguaje F #. Esto hace que el identificador que se está definiendo disponibles en el ámbito de la función.
+Funciones recursivas, las funciones que llaman a sí mismos, se identifican explícitamente en el lenguaje F#. Esto hace que el identificador que se está definiendo disponibles en el ámbito de la función.
 
 El código siguiente muestra una función recursiva que calcula el *n*<sup>th</sup> número de Fibonacci.
 

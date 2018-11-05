@@ -1,6 +1,6 @@
 ---
 title: 'Excepciones: función failwith (F#)'
-description: "Obtenga información sobre cómo la función 'failwith' genera una excepción de F #."
+description: Obtenga información sobre cómo la función 'failwith' genera una excepción de F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 69a2eb69e0157d3bde8cb8884cb0ae960634dddc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "43863434"
 ---
 # <a name="exceptions-the-failwith-function"></a>Excepciones: función failwith
 
-El `failwith` función genera una excepción de F #.
+El `failwith` función genera una excepción de F#.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,7 +23,7 @@ failwith error-message-string
 
 El *cadena de mensaje de error* en la sintaxis anterior es una cadena literal o un valor de tipo `string`. Se convierte en el `Message` propiedad de la excepción.
 
-La excepción generada por `failwith` es un `System.Exception` excepción, que es una referencia que tiene el nombre `Failure` en código de F #. El código siguiente muestra el uso de `failwith` para producir una excepción.
+La excepción generada por `failwith` es un `System.Exception` excepción, que es una referencia que tiene el nombre `Failure` en código de F#. El código siguiente muestra el uso de `failwith` para producir una excepción.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
 

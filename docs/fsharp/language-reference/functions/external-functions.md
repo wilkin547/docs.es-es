@@ -1,6 +1,6 @@
 ---
 title: Funciones externas (F#)
-description: 'Obtenga información sobre la compatibilidad del lenguaje F # para llamar a funciones en código nativo.'
+description: Obtenga información sobre la compatibilidad del lenguaje F# para llamar a funciones en código nativo.
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45973110"
 ---
 # <a name="external-functions"></a>Funciones externas
 
-Este tema describe la compatibilidad del lenguaje F # para llamar a funciones en código nativo.
+Este tema describe la compatibilidad del lenguaje F# para llamar a funciones en código nativo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-Puede llamar a esta función de F # con el código siguiente.
+Puede llamar a esta función de F# con el código siguiente.
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-Interoperabilidad con código nativo se conoce como *de invocación de plataforma* y es una característica de CLR. Para más información, consulte [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado) La información de esa sección es aplicable a F #.
+Interoperabilidad con código nativo se conoce como *de invocación de plataforma* y es una característica de CLR. Para más información, consulte [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado) La información de esa sección es aplicable a F#.
 
 ## <a name="see-also"></a>Vea también
 

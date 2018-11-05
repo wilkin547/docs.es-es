@@ -1,6 +1,6 @@
 ---
-title: 'Resultados (F #)'
-description: "Obtenga información sobre cómo usar el tipo 'Resultado' de F # para ayudarle a escribir código tolerante a errores."
+title: Resultados (F#)
+description: Obtenga información sobre cómo usar el tipo 'Resultado' de F# para ayudarle a escribir código tolerante a errores.
 ms.date: 04/24/2017
 ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "44213045"
 ---
 # <a name="results"></a>Resultados
 
-A partir de F # 4.1, hay un `Result<'T,'TFailure>` tipo que se puede usar para escribir código tolerante a errores que se puede componer.
+A partir de F# 4.1, hay un `Result<'T,'TFailure>` tipo que se puede usar para escribir código tolerante a errores que se puede componer.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Comentarios
 
-Tenga en cuenta que el tipo de resultado es un [unión discriminada de struct](discriminated-unions.md#struct-discriminated-unions), que es otra característica presente en F # 4.1.  Aquí se aplica la semántica de igualdad estructural.
+Tenga en cuenta que el tipo de resultado es un [unión discriminada de struct](discriminated-unions.md#struct-discriminated-unions), que es otra característica presente en F# 4.1.  Aquí se aplica la semántica de igualdad estructural.
 
-El `Result` tipo se utiliza normalmente en monádico control de errores, que a menudo se conoce como [programación orientada a ferroviarias](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) dentro de la Comunidad de F #.  El siguiente ejemplo trivial muestra este enfoque.
+El `Result` tipo se utiliza normalmente en monádico control de errores, que a menudo se conoce como [programación orientada a ferroviarias](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) dentro de la Comunidad de F#.  El siguiente ejemplo trivial muestra este enfoque.
 
 ```fsharp
 // Define a simple type which has fields that can be validated

@@ -1,6 +1,6 @@
 ---
 title: Coincidencia de modelos [F#]
-description: 'Obtenga información sobre cómo se usan los patrones en F # para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos.'
+description: Obtenga información sobre cómo se usan los patrones en F# para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45991429"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
-Los modelos son reglas para transformar los datos de entrada. Se utilizan en todo el lenguaje F # para comparar los datos con una o más estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos de varias maneras.
+Los modelos son reglas para transformar los datos de entrada. Se utilizan en todo el lenguaje F# para comparar los datos con una o más estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos de varias maneras.
 
 ## <a name="remarks"></a>Comentarios
 
