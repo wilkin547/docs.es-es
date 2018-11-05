@@ -1,6 +1,6 @@
 ---
 title: Enlaces let en clases (F#)
-description: "Obtenga información sobre cómo definir los campos privados y funciones privadas para las clases de F # mediante el uso de enlaces 'let' en la definición de clase."
+description: Obtenga información sobre cómo definir los campos privados y funciones privadas para las clases de F# mediante el uso de enlaces 'let' en la definición de clase.
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,11 +9,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "48033225"
 ---
-# <a name="let-bindings-in-classes"></a><span data-ttu-id="a1a9a-103">Enlaces let en clases</span><span class="sxs-lookup"><span data-stu-id="a1a9a-103">let Bindings in Classes</span></span>
+# <a name="let-bindings-in-classes"></a><span data-ttu-id="f5980-103">Enlaces let en clases</span><span class="sxs-lookup"><span data-stu-id="f5980-103">let Bindings in Classes</span></span>
 
-<span data-ttu-id="a1a9a-104">Puede definir campos privados y funciones privadas para las clases de F # mediante `let` enlaces en la definición de clase.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-104">You can define private fields and private functions for F# classes by using `let` bindings in the class definition.</span></span>
+<span data-ttu-id="f5980-104">Puede definir campos privados y funciones privadas para las clases de F# mediante `let` enlaces en la definición de clase.</span><span class="sxs-lookup"><span data-stu-id="f5980-104">You can define private fields and private functions for F# classes by using `let` bindings in the class definition.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a1a9a-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a1a9a-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f5980-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f5980-105">Syntax</span></span>
 
 ```fsharp
 // Field.
@@ -23,34 +23,34 @@ ms.locfileid: "48033225"
 [static] let [ rec ] binding1 [ and ... binding-n ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="a1a9a-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a1a9a-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f5980-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f5980-106">Remarks</span></span>
 
-<span data-ttu-id="a1a9a-107">La sintaxis anterior aparece después de las declaraciones de encabezado y la herencia de clase, pero antes de las definiciones de miembros.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-107">The previous syntax appears after the class heading and inheritance declarations but before any member definitions.</span></span> <span data-ttu-id="a1a9a-108">La sintaxis es similar de `let` enlaces fuera de las clases, pero los nombres definidos en una clase tienen un ámbito que está limitado a la clase.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-108">The syntax is like that of `let` bindings outside of classes, but the names defined in a class have a scope that is limited to the class.</span></span> <span data-ttu-id="a1a9a-109">Un `let` enlace crea un campo privado o una función; para exponer los datos o funciones públicamente, declaran una propiedad o un método de miembro.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-109">A `let` binding creates a private field or function; to expose data or functions publicly, declare a property or a member method.</span></span>
+<span data-ttu-id="f5980-107">La sintaxis anterior aparece después de las declaraciones de encabezado y la herencia de clase, pero antes de las definiciones de miembros.</span><span class="sxs-lookup"><span data-stu-id="f5980-107">The previous syntax appears after the class heading and inheritance declarations but before any member definitions.</span></span> <span data-ttu-id="f5980-108">La sintaxis es similar de `let` enlaces fuera de las clases, pero los nombres definidos en una clase tienen un ámbito que está limitado a la clase.</span><span class="sxs-lookup"><span data-stu-id="f5980-108">The syntax is like that of `let` bindings outside of classes, but the names defined in a class have a scope that is limited to the class.</span></span> <span data-ttu-id="f5980-109">Un `let` enlace crea un campo privado o una función; para exponer los datos o funciones públicamente, declaran una propiedad o un método de miembro.</span><span class="sxs-lookup"><span data-stu-id="f5980-109">A `let` binding creates a private field or function; to expose data or functions publicly, declare a property or a member method.</span></span>
 
-<span data-ttu-id="a1a9a-110">Un `let` el enlace que no es estático se llama a una instancia `let` enlace.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-110">A `let` binding that is not static is called an instance `let` binding.</span></span> <span data-ttu-id="a1a9a-111">Instancia `let` enlaces ejecutan cuando se crean los objetos.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-111">Instance `let` bindings execute when objects are created.</span></span> <span data-ttu-id="a1a9a-112">Estática `let` enlaces forman parte del inicializador estático de la clase, que siempre se ejecutará antes de que el tipo se usa por primera vez.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-112">Static `let` bindings are part of the static initializer for the class, which is guaranteed to execute before the type is first used.</span></span>
+<span data-ttu-id="f5980-110">Un `let` el enlace que no es estático se llama a una instancia `let` enlace.</span><span class="sxs-lookup"><span data-stu-id="f5980-110">A `let` binding that is not static is called an instance `let` binding.</span></span> <span data-ttu-id="f5980-111">Instancia `let` enlaces ejecutan cuando se crean los objetos.</span><span class="sxs-lookup"><span data-stu-id="f5980-111">Instance `let` bindings execute when objects are created.</span></span> <span data-ttu-id="f5980-112">Estática `let` enlaces forman parte del inicializador estático de la clase, que siempre se ejecutará antes de que el tipo se usa por primera vez.</span><span class="sxs-lookup"><span data-stu-id="f5980-112">Static `let` bindings are part of the static initializer for the class, which is guaranteed to execute before the type is first used.</span></span>
 
-<span data-ttu-id="a1a9a-113">El código dentro de la instancia `let` enlaces pueden usar los parámetros del constructor principal.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-113">The code within instance `let` bindings can use the primary constructor's parameters.</span></span>
+<span data-ttu-id="f5980-113">El código dentro de la instancia `let` enlaces pueden usar los parámetros del constructor principal.</span><span class="sxs-lookup"><span data-stu-id="f5980-113">The code within instance `let` bindings can use the primary constructor's parameters.</span></span>
 
-<span data-ttu-id="a1a9a-114">No se permiten los atributos y modificadores de accesibilidad en `let` enlaces en clases.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-114">Attributes and accessibility modifiers are not permitted on `let` bindings in classes.</span></span>
+<span data-ttu-id="f5980-114">No se permiten los atributos y modificadores de accesibilidad en `let` enlaces en clases.</span><span class="sxs-lookup"><span data-stu-id="f5980-114">Attributes and accessibility modifiers are not permitted on `let` bindings in classes.</span></span>
 
-<span data-ttu-id="a1a9a-115">Los ejemplos de código siguientes muestran varios tipos de `let` enlaces en clases.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-115">The following code examples illustrate several types of `let` bindings in classes.</span></span>
+<span data-ttu-id="f5980-115">Los ejemplos de código siguientes muestran varios tipos de `let` enlaces en clases.</span><span class="sxs-lookup"><span data-stu-id="f5980-115">The following code examples illustrate several types of `let` bindings in classes.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
 
-<span data-ttu-id="a1a9a-116">La salida es la siguiente.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-116">The output is as follows.</span></span>
+<span data-ttu-id="f5980-116">La salida es la siguiente.</span><span class="sxs-lookup"><span data-stu-id="f5980-116">The output is as follows.</span></span>
 
 ```
 10 52 1 204
 ```
 
-## <a name="alternative-ways-to-create-fields"></a><span data-ttu-id="a1a9a-117">Maneras alternativas de crear campos</span><span class="sxs-lookup"><span data-stu-id="a1a9a-117">Alternative Ways to Create Fields</span></span>
+## <a name="alternative-ways-to-create-fields"></a><span data-ttu-id="f5980-117">Maneras alternativas de crear campos</span><span class="sxs-lookup"><span data-stu-id="f5980-117">Alternative Ways to Create Fields</span></span>
 
-<span data-ttu-id="a1a9a-118">También puede usar el `val` palabra clave para crear un campo privado.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-118">You can also use the `val` keyword to create a private field.</span></span> <span data-ttu-id="a1a9a-119">Cuando se usa el `val` palabra clave, el campo no tiene un valor cuando se crea el objeto, pero en su lugar se inicializa con un valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-119">When using the `val` keyword, the field is not given a value when the object is created, but instead is initialized with a default value.</span></span> <span data-ttu-id="a1a9a-120">Para obtener más información, consulte [campos explícitos: val (palabra clave)](explicit-fields-the-val-keyword.md).</span><span class="sxs-lookup"><span data-stu-id="a1a9a-120">For more information, see [Explicit Fields: The val Keyword](explicit-fields-the-val-keyword.md).</span></span>
+<span data-ttu-id="f5980-118">También puede usar el `val` palabra clave para crear un campo privado.</span><span class="sxs-lookup"><span data-stu-id="f5980-118">You can also use the `val` keyword to create a private field.</span></span> <span data-ttu-id="f5980-119">Cuando se usa el `val` palabra clave, el campo no tiene un valor cuando se crea el objeto, pero en su lugar se inicializa con un valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="f5980-119">When using the `val` keyword, the field is not given a value when the object is created, but instead is initialized with a default value.</span></span> <span data-ttu-id="f5980-120">Para obtener más información, consulte [campos explícitos: val (palabra clave)](explicit-fields-the-val-keyword.md).</span><span class="sxs-lookup"><span data-stu-id="f5980-120">For more information, see [Explicit Fields: The val Keyword](explicit-fields-the-val-keyword.md).</span></span>
 
-<span data-ttu-id="a1a9a-121">También puede definir los campos privados en una clase mediante una definición de miembro y agregar la palabra clave `private` a la definición.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-121">You can also define private fields in a class by using a member definition and adding the keyword `private` to the definition.</span></span> <span data-ttu-id="a1a9a-122">Esto puede ser útil si piensa cambiar la accesibilidad de un miembro sin tener que reescribir el código.</span><span class="sxs-lookup"><span data-stu-id="a1a9a-122">This can be useful if you expect to change the accessibility of a member without rewriting your code.</span></span> <span data-ttu-id="a1a9a-123">Para más información, vea [Access Control](../access-control.md) (Control de acceso).</span><span class="sxs-lookup"><span data-stu-id="a1a9a-123">For more information, see [Access Control](../access-control.md).</span></span>
+<span data-ttu-id="f5980-121">También puede definir los campos privados en una clase mediante una definición de miembro y agregar la palabra clave `private` a la definición.</span><span class="sxs-lookup"><span data-stu-id="f5980-121">You can also define private fields in a class by using a member definition and adding the keyword `private` to the definition.</span></span> <span data-ttu-id="f5980-122">Esto puede ser útil si piensa cambiar la accesibilidad de un miembro sin tener que reescribir el código.</span><span class="sxs-lookup"><span data-stu-id="f5980-122">This can be useful if you expect to change the accessibility of a member without rewriting your code.</span></span> <span data-ttu-id="f5980-123">Para más información, vea [Access Control](../access-control.md) (Control de acceso).</span><span class="sxs-lookup"><span data-stu-id="f5980-123">For more information, see [Access Control](../access-control.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a1a9a-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="a1a9a-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5980-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="f5980-124">See also</span></span>
 
-- [<span data-ttu-id="a1a9a-125">Miembros</span><span class="sxs-lookup"><span data-stu-id="a1a9a-125">Members</span></span>](index.md)
-- <span data-ttu-id="a1a9a-126">[`do` Bindings in Classes](do-bindings-in-classes.md) (Enlaces `do` en clases)</span><span class="sxs-lookup"><span data-stu-id="a1a9a-126">[`do` Bindings in Classes](do-bindings-in-classes.md)</span></span>
-- [<span data-ttu-id="a1a9a-127">`let` enlaces</span><span class="sxs-lookup"><span data-stu-id="a1a9a-127">`let` Bindings</span></span>](../functions/let-bindings.md)
+- [<span data-ttu-id="f5980-125">Miembros</span><span class="sxs-lookup"><span data-stu-id="f5980-125">Members</span></span>](index.md)
+- <span data-ttu-id="f5980-126">[`do` Bindings in Classes](do-bindings-in-classes.md) (Enlaces `do` en clases)</span><span class="sxs-lookup"><span data-stu-id="f5980-126">[`do` Bindings in Classes](do-bindings-in-classes.md)</span></span>
+- [<span data-ttu-id="f5980-127">`let` enlaces</span><span class="sxs-lookup"><span data-stu-id="f5980-127">`let` Bindings</span></span>](../functions/let-bindings.md)
