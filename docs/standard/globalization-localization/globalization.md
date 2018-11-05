@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44221914"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453364"
 ---
 # <a name="globalization"></a>Globalización
 La globalización implica diseñar y desarrollar una aplicación de uso internacional que admita interfaces localizadas y datos regionales para usuarios de varias referencias culturales. Antes de comenzar la fase de diseño, debe determinar qué referencias culturales admitirá la aplicación. Aunque una aplicación se dirige a una sola referencia cultural o región de forma predeterminada, puede diseñarla y escribirla de tal forma que se pueda ampliar fácilmente a los usuarios de otras referencias culturales o regiones.  

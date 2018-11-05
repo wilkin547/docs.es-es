@@ -2,28 +2,27 @@
 title: Publicación y resolución de nombres del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 436c84c948a867acedf69af1bc7b3e78c308ce54
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193556"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184561"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Publicación y resolución de nombres del mismo nivel
-## <a name="publishing-a-peer-name"></a>Publicación de un nombre de mismo nivel  
+
+## <a name="publishing-a-peer-name"></a>Publicación de un nombre del mismo nivel  
+
  Para publicar un nuevo identificador PNRP, un elemento de mismo nivel realiza lo siguiente:  
   
 -   Envía mensajes de publicación de PNRP a sus vecinos de caché (los elementos de mismo nivel que han registrado identificadores PNRP en el nivel más bajo de la memoria caché) para inicializar sus cachés.  
   
 -   Elige nodos aleatorios en la nube que no son sus vecinos y les envía solicitudes de resolución de nombres de PNRP para su propio identificador P2P. El proceso de determinación del punto de conexión resultante inicializa las memorias caché de los nodos aleatorios en la nube con el identificador PNRP del elemento de mismo nivel de publicación.  
   
--  
+Los nodos de la versión 2 de PNRP no publican identificadores PNRP si solo resuelven otros identificadores de P2P. El valor del Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (tipo REG_DWORD) especifica que los elementos de mismo nivel solo usen PNRP para la resolución de nombres, nunca para la publicación de nombres. Este valor del Registro también se puede configurar mediante Directiva de grupo.  
   
- Los nodos de la versión 2 de PNRP no publican identificadores PNRP si solo resuelven otros identificadores de P2P. El valor del Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (tipo REG_DWORD) especifica que los elementos de mismo nivel solo usen PNRP para la resolución de nombres, nunca para la publicación de nombres. Este valor del Registro también se puede configurar mediante Directiva de grupo.  
-  
-## <a name="resolving-a-peer-name"></a>Resolución de un nombre de mismo nivel  
+## <a name="resolving-a-peer-name"></a>Resolución de un nombre del mismo nivel
+
  La búsqueda de otros elementos de mismo nivel en una red de PNRP o en la nube es un proceso que consta de dos fases:  
   
 1.  Determinación del punto de conexión  
@@ -44,11 +43,9 @@ ms.locfileid: "47193556"
   
 -   Si no se encuentra el identificador PNRP y no hay ningún identificador PNRP en su memoria caché que se aproxime más al identificador PNRP de destino, el equipo de mismo nivel al que se realiza la solicitud envía al equipo solicitante una respuesta que indica esta condición. Después, el equipo de mismo nivel solicitante elige el identificador PNRP más cercano siguiente.  
   
--  
-  
- El equipo de mismo nivel solicitante continúa con iteraciones sucesivas, hasta localizar el nodo que registró el identificador PNRP.  
+El equipo de mismo nivel solicitante continúa con iteraciones sucesivas, hasta localizar el nodo que registró el identificador PNRP.  
   
  En el espacio de nombres <xref:System.Net.PeerToPeer>, hay una relación de varios a varios entre los registros <xref:System.Net.PeerToPeer.PeerName> que contienen puntos de conexión y nubes PNRP o mallas en las que se comunican. Cuando hay entradas duplicadas u obsoletas, o varios nodos con el mismo nombre de mismo nivel, los nodos PNRP pueden obtener información actual mediante la clase <xref:System.Net.PeerToPeer.PeerNameResolver>. Los métodos <xref:System.Net.PeerToPeer.PeerNameResolver> usan un nombre de mismo nivel único para simplificar la perspectiva a registros de nombre de mismo nivel de uno a varios y del mismo equipo de mismo nivel a varias nubes. Esto es similar a una consulta realizada con una combinación de tabla relacional. Tras completarse correctamente, el objeto de resolución devuelve una <xref:System.Net.PeerToPeer.PeerNameRecordCollection> para el nombre de mismo nivel especificado.  Por ejemplo, un nombre de mismo nivel se produciría en todos los registros de nombre de mismo nivel en la colección, ordenados por nube. Estas son las instancias del nombre de mismo nivel cuyos datos auxiliares se pueden solicitar mediante una aplicación basada en PNRP.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Net.PeerToPeer>
+- <xref:System.Net.PeerToPeer>

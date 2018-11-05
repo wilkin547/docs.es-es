@@ -3,12 +3,12 @@ title: Documentar el código con comentarios XML
 description: Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397064"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453273"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
 
@@ -51,7 +51,7 @@ Este es el código de la biblioteca matemática simple:
 La biblioteca de ejemplo es compatible con cuatro operaciones aritméticas principales (`add`, `subtract`, `multiply` y `divide`) en tipos de datos `int` y `double`.
 
 Ahora le interesa crear un documento de referencia de API desde el código para los desarrolladores de otras empresas que usan la biblioteca pero no tienen acceso al código fuente.
-Como ya se ha mencionado anteriormente, se pueden usar etiquetas de documentación XML para conseguirlo. Ahora le indicaremos las etiquetas XML estándar que admite el compilador de C#.
+Como se mencionó anteriormente, las etiquetas de documentación XML pueden utilizarse para lograr esto. Ahora recibirá una introducción a las etiquetas XML estándares que admite el compilador de C#.
 
 ### <a name="ltsummarygt"></a>&lt;summary&gt;
 
@@ -160,7 +160,7 @@ Puede usar el mismo método genérico que ha creado previamente.
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;list&gt;
+### <a name="ltlistgt"></a>&lt;lista&gt;
 
 La etiqueta `<list>` se usa para dar formato a la información de la documentación en una lista ordenada, una lista sin ordenar o una tabla.
 Cree una lista sin ordenar con todas las operaciones matemáticas que admita su biblioteca `Math`.

@@ -17,17 +17,15 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d24fa2ece34d20a3d9e8d6f971eebae5da0f496e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 650b7e17cc486068ba72436931e8bc96a6d0261c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198090"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200077"
 ---
 # <a name="time-based-cache-policies"></a>directivas de caché de duración definida
-Una directiva de caché de duración definida define la actualización de las entradas almacenadas en caché según la hora a la que se ha recuperado el recurso, los encabezados devueltos con este y la hora actual. Al establecer una directiva de caché de duración definida, puede usar la directiva de duración definida <xref:System.Net.Cache.HttpRequestCacheLevel.Default> o crear una directiva de duración definida personalizada. Al usar la directiva predeterminada de duración definida para los recursos obtenidos a través del protocolo de transferencia de hipertexto (HTTP), el comportamiento de caché exacto viene determinado por los encabezados incluidos en la respuesta almacenada en caché y por los comportamientos especificados en las secciones 13 y 14 del RFC 2616, disponible en [http://www.ietf.org](http://www.ietf.org/). Para obtener un ejemplo de código en el que se muestra cómo establecer la directiva predeterminada de duración definida para los recursos HTTP, vea [How to: Set the Default Time-Based Cache Policy for an Application](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md) (Cómo establecer la directiva predeterminada de duración definida para una aplicación). Para obtener ejemplos de código que muestran cómo crear y usar directivas de caché, vea [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
+Una directiva de caché de duración definida define la actualización de las entradas almacenadas en caché según la hora a la que se ha recuperado el recurso, los encabezados devueltos con este y la hora actual. Al establecer una directiva de caché de duración definida, puede usar la directiva de duración definida <xref:System.Net.Cache.HttpRequestCacheLevel.Default> o crear una directiva de duración definida personalizada. Al usar la directiva predeterminada de duración definida para los recursos obtenidos mediante el protocolo de transferencia de hipertexto (HTTP), el comportamiento de caché exacto viene determinado por los encabezados incluidos en la respuesta almacenada en caché y por los comportamientos especificados en las secciones 13 y 14 del RFC 2616, disponible en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Para obtener un ejemplo de código en el que se muestra cómo establecer la directiva predeterminada de duración definida para los recursos HTTP, vea [How to: Set the Default Time-Based Cache Policy for an Application](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md) (Cómo establecer la directiva predeterminada de duración definida para una aplicación). Para obtener ejemplos de código que muestran cómo crear y usar directivas de caché, vea [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Criterios para determinar la actualización de las entradas en caché  
  Para personalizar una directiva de caché de duración definida, puede especificar que se apliquen uno o varios de los siguientes criterios para determinar la actualización de las entradas almacenadas en caché:  

@@ -3,12 +3,12 @@ title: Novedades de C# 6 - Guía de C#
 description: Obtenga información sobre las nuevas características de la versión 6 de C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208190"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194038"
 ---
 # <a name="whats-new-in-c-6"></a>Novedades de C# 6
 
@@ -22,13 +22,13 @@ La versión 6.0 de C# incluye muchas características que mejoran la productivid
     - Se pueden crear métodos de una línea mediante expresiones lambda.
 * [using static](#using-static):
     - Se pueden importar todos los métodos de una clase única al espacio de nombres actual.
-* [Null: operadores condicionales](#null-conditional-operators):
+* [Operadores condicionales NULL](#null-conditional-operators):
     - Se puede obtener acceso de forma concisa y segura a los miembros de un objeto mientras continúa la comprobación de NULL con el operador condicional NULL.
 * [Interpolación de cadenas](#string-interpolation):
     - Se pueden escribir expresiones de formato de cadena mediante expresiones insertadas en lugar de argumentos posicionales.
 * [Filtros de excepciones](#exception-filters):
     - Se pueden detectar expresiones basadas en propiedades de la excepción o en otro estado del programa. 
-* [Expresiones nameof](#nameof-expressions):
+* [Expresión `nameof`](#the-nameof-expression):
     - Se puede permitir que el compilador genere las representaciones de cadena de símbolos.
 * [await en bloques catch y finally](#await-in-catch-and-finally-blocks):
     - Se pueden usar expresiones `await` en ubicaciones que previamente no las permitían.
@@ -211,27 +211,27 @@ Asegurarse de que el lado izquierdo se evalúa solo una vez también le permite 
 
 ## <a name="string-interpolation"></a>Interpolación de cadenas
 
-C# 6 contiene nueva sintaxis para crear cadenas a partir de una cadena de formato y expresiones que se evalúan para generar otros valores de cadena.
+C# 6 contiene nueva sintaxis para crear cadenas a partir de una cadena y expresiones insertadas que se evalúan para generar otros valores de cadena.
 
-Tradicionalmente, era necesario usar parámetros posicionales en un método como `string.Format`:
+Tradicionalmente, era necesario usar parámetros posicionales en un método como <xref:System.String.Format%2A?displayProperty=nameWithType>:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Con C# 6, la nueva característica [interpolación de cadenas](../language-reference/tokens/interpolated.md) permite insertar las expresiones en la cadena de formato. Solo hay que anteponer la cadena con `$`:
+Con C# 6, la nueva característica [interpolación de cadenas](../language-reference/tokens/interpolated.md) permite insertar las expresiones en una cadena. Solo hay que anteponer la cadena con `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Este ejemplo inicial usa expresiones de propiedad para las expresiones sustituidas. Se puede expandir esta sintaxis para usar cualquier expresión. Por ejemplo, se podría calcular la puntuación media de un alumno como parte de la interpolación:
+Este ejemplo usa expresiones de propiedad para las expresiones sustituidas. Se puede expandir esta sintaxis para usar cualquier expresión. Por ejemplo, se podría calcular la puntuación media de un alumno como parte de la interpolación:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-Al ejecutar el ejemplo anterior, encontrará que es posible que la salida de `Grades.Average()` tenga más posiciones decimales de las que querría. La sintaxis de interpolación de cadena admite todas las cadenas de formato disponibles mediante el uso de los métodos de formato anteriores. Las cadenas de formato se agregan entre las llaves. Agregue un signo `:` después de la expresión a la que se va a dar formato:
+Al ejecutar el ejemplo anterior, encontrará que es posible que la salida de `Grades.Average()` tenga más posiciones decimales de las que querría. La sintaxis de interpolación de cadena admite todas las cadenas de formato disponibles mediante el uso de los métodos de formato anteriores. La cadena de formato se especifica entre las llaves. Agregue un signo `:` después de la expresión a la que se va a dar formato:
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 La línea de código anterior dará formato al valor de `Grades.Average()` como un número de punto flotante con dos posiciones decimales.
 
-El símbolo `:` siempre se interpreta como el separador entre la expresión a la que se va a dar formato y la cadena de formato. Esto puede ocasionar problemas cuando la expresión usa un signo `:` de otra manera, por ejemplo como un operador condicional:
+El símbolo `:` siempre se interpreta como el separador entre la expresión a la que se va a dar formato y la cadena de formato. Esto puede ocasionar problemas cuando la expresión usa un signo `:` de otra manera, por ejemplo un [operador condicional](../language-reference/operators/conditional-operator.md):
 
 ```csharp
 public string GetGradePointPercentages() =>
@@ -249,19 +249,21 @@ No hay ninguna limitación en cuanto a las expresiones que se pueden colocar ent
 En este ejemplo se puede ver que incluso se puede anidar una expresión de interpolación de cadena dentro de otra expresión de interpolación de cadena. Este ejemplo probablemente es más complejo de lo que sería aconsejable en código de producción,
 pero es ilustrativo de la amplitud de la característica. Cualquier expresión de C# puede colocarse entre las llaves de una cadena interpolada.
 
+Para empezar a trabajar con la interpolación de cadenas, consulte el tutorial interactivo [Interpolación de cadenas en C#](../tutorials/intro-to-csharp/interpolated-strings.yml).
+
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolación de cadena y referencias culturales específicas
 
-Todos los ejemplos que se muestran en la sección anterior dan formato a las cadenas con la referencia cultural actual y el idioma del equipo donde se ejecuta el código. A menudo puede ser necesario dar formato a la cadena generada con una referencia cultural concreta.
-Para hacerlo, aprovechan que el objeto producido por una interpolación de cadena puede convertirse implícitamente a <xref:System.FormattableString>.
+Todos los ejemplos que se muestran en la sección anterior dan formato a las cadenas utilizando la referencia cultural del equipo donde se ejecuta el código. A menudo puede ser necesario dar formato a la cadena generada con una referencia cultural concreta.
+Para hacerlo, aprovechan que el objeto producido por una interpolación de cadena puede convertirse implícitamente a <xref:System.FormattableString?displayProperty=nameWithType>.
 
-La instancia de <xref:System.FormattableString> contiene la cadena de formato y los resultados de la evaluación de las expresiones antes de convertirlas en cadenas. Se pueden usar los métodos públicos de <xref:System.FormattableString> para especificar la referencia cultural al dar formato a una cadena. Por ejemplo, en el ejemplo siguiente se genera una cadena con la referencia cultural de alemán. (Usa el carácter "," para el separador de decimales y el carácter "." como separador de miles).
+La instancia de <xref:System.FormattableString> contiene la cadena de formato compuesto y los resultados de la evaluación de las expresiones antes de convertirlas en cadenas. Use el método <xref:System.FormattableString.ToString(System.IFormatProvider)> para especificar la referencia cultural cuando de formato a una cadena. Por ejemplo, en el ejemplo siguiente se genera una cadena con la referencia cultural de alemán. (Usa el carácter "," para el separador de decimales y el carácter "." como separador de miles).
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Para más información, vea el tema [Interpolación de cadenas](../language-reference/tokens/interpolated.md).
+Para más información, vea el artículo [Interpolación de cadenas](../language-reference/tokens/interpolated.md) y el tutorial [Interpolación de cadenas en C#](../tutorials/string-interpolation.md).
 
 ## <a name="exception-filters"></a>Filtros de excepciones
 
@@ -311,7 +313,7 @@ En el código, agregue un filtro de excepciones para que cualquier código de re
 Después de agregar este código, establezca el depurador para que se interrumpa en todas las excepciones no controladas. Ejecute el programa en el depurador, y el depurador siempre se interrumpe cuando `PerformFailingOperation()` produce una excepción `RecoverableException`.
 El depurador interrumpe el programa, porque la cláusula catch no se ejecutará debido al filtro de excepciones que devuelve false.
 
-## <a name="nameof-expressions"></a>Expresiones `nameof`
+## <a name="the-nameof-expression"></a>La expresión `nameof`
 
 La expresión `nameof` se evalúa como el nombre de un símbolo. Es una excelente manera de hacer que las herramientas funcionen siempre que se necesita el nombre de una variable, una propiedad o un campo de miembro.
 

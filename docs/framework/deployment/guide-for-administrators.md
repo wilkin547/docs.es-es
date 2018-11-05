@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502371"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195689"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 Este artículo paso a paso describe cómo un administrador del sistema puede implementar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -37,16 +37,16 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
 ## <a name="the-deployment-process"></a>Proceso de implementación  
  Una vez implementada la infraestructura de apoyo, se utiliza System Center 2012 Configuration Manager para implementar el paquete redistribuible de .NET Framework en equipos de la red. La creación de la infraestructura implica crear y definir cinco áreas primarias: colecciones, un paquete y un programa para el software, puntos de distribución e implementaciones.  
   
--   Las **colecciones** son grupos de recursos de Configuration Manager, tales como usuarios, grupos de usuarios o equipos, en los que se implementa .NET Framework. Para obtener más información, vea el tema sobre [colecciones en Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx) en la biblioteca de documentación de Configuration Manager.  
+-   Las **colecciones** son grupos de recursos de Configuration Manager, tales como usuarios, grupos de usuarios o equipos, en los que se implementa .NET Framework. Para más información, vea [Introducción a las recopilaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) en la biblioteca de documentación de Configuration Manager.  
   
--   Los **paquetes y programas** suelen representar aplicaciones de software que se van a instalar en un equipo cliente, aunque también pueden contener archivos individuales, actualizaciones o incluso comandos individuales. Para obtener más información, vea el tema sobre [paquetes y programas en Configuration Manager](https://technet.microsoft.com/library/gg699369.aspx) en la biblioteca de documentación de Configuration Manager.  
+-   Los **paquetes y programas** suelen representar aplicaciones de software que se van a instalar en un equipo cliente, aunque también pueden contener archivos individuales, actualizaciones o incluso comandos individuales. Para más información, vea el tema [Paquetes y programas en System Center Configuration](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) en la biblioteca de documentación de Configuration Manager.  
   
--   Los **puntos de distribución** son roles del sistema de sitio de Configuration Manager que almacenan los archivos necesarios para que el software se ejecute en los equipos cliente. Cuando un cliente de Configuration Manager recibe y procesa una implementación de software, se pone en contacto con un punto de distribución para descargar el contenido asociado al software e iniciar el proceso de instalación. Para obtener más información, vea la [introducción a la administración de contenido en Configuration Manager](https://technet.microsoft.com/library/gg682083.aspx) en la biblioteca de documentación de Configuration Manager.  
+-   Los **puntos de distribución** son roles del sistema de sitio de Configuration Manager que almacenan los archivos necesarios para que el software se ejecute en los equipos cliente. Cuando un cliente de Configuration Manager recibe y procesa una implementación de software, se pone en contacto con un punto de distribución para descargar el contenido asociado al software e iniciar el proceso de instalación. Para más información, vea [Aspectos básicos de la administración de contenido en Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) en la biblioteca de documentación de Configuration Manager.  
   
--   Las **implementaciones** indican a los miembros correspondientes de la colección de destino especificada que instalen el paquete de software. Para obtener más información, vea [cómo implementar aplicaciones en Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx) en la biblioteca de documentación de Configuration Manager.  
+-   Las **implementaciones** indican a los miembros correspondientes de la colección de destino especificada que instalen el paquete de software. 
   
 > [!IMPORTANT]
->  Los procedimientos de este tema contienen valores típicos para crear e implementar un paquete y un programa y puede que no cubran todos los valores posibles. Para ver otras opciones de implementación de Configuration Manager, consulte la [biblioteca de documentación de Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  
+>  Los procedimientos de este tema contienen valores típicos para crear e implementar un paquete y un programa y puede que no cubran todos los valores posibles. Para ver otras opciones de implementación de Configuration Manager, consulte la [biblioteca de documentación de Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>Implementación de .NET Framework  
@@ -62,7 +62,7 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Crear una colección  
- En este paso, se seleccionan los equipos donde se implementará el paquete y el programa y se agruparán en una colección de dispositivos. Para crear una colección en Configuration Manager, puede usar reglas de pertenencia directa (donde se especifican manualmente los miembros de la colección) o reglas de consulta (donde Configuration Manager determina los miembros de la colección en función de los criterios que especifique el usuario). Para obtener más información sobre las reglas de pertenencia, incluidas las reglas de consulta y las reglas directas, vea la [introducción a las colecciones en Configuration Manager](https://technet.microsoft.com/library/gg682177.aspx) en la biblioteca de documentación de Configuration Manager.  
+ En este paso, se seleccionan los equipos donde se implementará el paquete y el programa y se agruparán en una colección de dispositivos. Para crear una colección en Configuration Manager, puede usar reglas de pertenencia directa (donde se especifican manualmente los miembros de la colección) o reglas de consulta (donde Configuration Manager determina los miembros de la colección en función de los criterios que especifique el usuario). Para más información sobre las reglas de pertenencia, incluidas las reglas de consulta y las reglas directas, vea [Introducción a las recopilaciones en System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) en la biblioteca de documentación de Configuration Manager.  
   
  Para crear una colección:  
   
@@ -83,8 +83,6 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
 8.  En la página **Seleccionar recursos**, active la casilla de cada equipo en el que desea implementar .NET Framework. Elija **Siguiente** y finalice el asistente.  
   
 9. En la página **Reglas de pertenencia** del **Asistente para crear recopilación de dispositivos**, elija **Siguiente** y finalice el asistente.  
-  
- Para obtener más información sobre las recopilaciones, vea el tema sobre [colecciones en Configuration Manager](https://technet.microsoft.com/library/bb693730.aspx) en la biblioteca de documentación de Configuration Manager.  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Cree un paquete y un programa para el paquete redistribuible de .NET Framework  
@@ -154,7 +152,7 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
   
 8.  Complete el asistente.  
   
- Ahora el paquete contiene toda la información necesaria para realizar una implementación silenciosa de .NET Framework 4.5. Antes de implementar el paquete y el programa, compruebe que se haya instalado en el punto de distribución; vea la sección de supervisión de contenido del tema sobre [operaciones y mantenimiento de administración de contenido en Configuration Manager](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) en la biblioteca de documentación de Configuration Manager.  
+ Ahora el paquete contiene toda la información necesaria para realizar una implementación silenciosa de .NET Framework 4.5. Antes de implementar el paquete y el programa, compruebe que se haya instalado en el punto de distribución; vea la sección de supervisión de contenido de [Supervisión del contenido que se ha distribuido con System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) en la biblioteca de documentación de Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Implementar el paquete  
@@ -193,27 +191,27 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
   
  **Active Directory, DNS, DHCP:**  
   
--   [Servicios de dominio de Active Directory para Windows Server 2008](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
   
--   [Servidor DNS](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [Sistema de nombres de dominio (DNS)](/windows-server/networking/dns/dns-top)  
   
--   [Servidor DHCP](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [Protocolo de configuración dinámica de host (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008:**  
   
--   [Instalar SQL Server 2008 (vídeo de SQL Server)](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [Instalar SQL Server 2008 (vídeo de SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [Información general sobre la seguridad de SQL Server 2008 para administradores de bases de datos](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (punto de administración, punto de distribución):**  
   
--   [Administración del sitio de System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [Administración del sitio de System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Planeación e implementación de sitio único de Configuration Manager](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Cliente de System Center 2012 Configuration Manager para equipos Windows:**  
   
--   [Implementación de clientes para System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [Implementación de clientes para System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Solución de problemas  
@@ -248,18 +246,18 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Descargar códigos de error  
   
--   [Códigos de error del Servicio de transferencia inteligente en segundo plano (BITS)](https://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Códigos de error del Servicio de transferencia inteligente en segundo plano (BITS)](/windows/desktop/Bits/bits-return-values)  
   
--   [Códigos de error del moniker de dirección URL](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [Códigos de error del moniker de dirección URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [Códigos de error de WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Otros códigos de error:  
   
--   [Códigos de error de Windows Installer](https://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Códigos de error de Windows Installer](/windows/desktop/msi/error-codes)  
   
--   [Códigos de resultado del Agente de Windows Update](https://technet.microsoft.com/library/cc720442.aspx)  
+-   [Códigos de resultado del Agente de Windows Update](/security-updates/WindowsUpdateServices/18127055)  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)
+- [Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45653205"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191095"
 ---
 # <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
 La siguiente sección presenta las nuevas construcciones de lenguaje incluidas en C# 3.0. Aunque estas nuevas características se usan hasta cierto punto con consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no se limitan a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y se pueden usar en cualquier contexto en las que se consideren de utilidad.  
@@ -47,13 +47,26 @@ var query = from str in stringArray
 ```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
-  
- Para más información, vea [Inicializadores de objeto y de colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
-  
+Continuando con nuestra clase `Customer`, suponga que hay un origen de datos denominado `IncomingOrders` y que para cada pedido con un `OrderSize` grande, nos gustaría crear un nuevo `Customer` basado en ese orden. Se pueden ejecutar una consulta LINQ en este origen de datos y usar la inicialización de objetos para rellenar una colección:
+```csharp
+var newLargeOrderCustomers = from o in IncomingOrders
+                            where o.OrderSize > 5
+                            select new Customer { Name = o.Name, Phone = o.Phone };
+```
+El origen de datos puede tener más propiedades ocultas en el montón que la clase `Customer`, como `OrderSize`, pero con la inicialización de objetos, los datos devueltos por la consulta se moldean en el tipo de datos deseado; elegimos los datos que son relevantes para nuestra clase. Como resultado, ahora tenemos un `IEnumerable` relleno con el nuevo `Customer` que queríamos. Lo anterior también se puede escribir en la sintaxis de método de LINQ:
+```csharp
+var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
+```
+ Para obtener más información, consulte:
+ 
+ - [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+
+ - [Sintaxis de las expresiones de consulta para operadores de consulta estándar](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+
 ## <a name="anonymous-types"></a>Tipos anónimos  
  Un tipo anónimo se construye por el compilador y el nombre del tipo solo está disponible para el compilador. Los tipos anónimos son una manera cómoda de agrupar un conjunto de propiedades temporalmente en un resultado de consulta sin tener que definir un tipo con nombre independiente. Los tipos anónimos se inicializan con una nueva expresión y un inicializador de objeto, como se muestra aquí:  
   
-```  
+```csharp
 select new {name = cust.Name, phone = cust.Phone};  
 ```  
   
@@ -74,16 +87,7 @@ select new {name = cust.Name, phone = cust.Phone};
 -   [Expresiones lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
 -   [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-  
-## <a name="auto-implemented-properties"></a>Propiedades autoimplementadas  
- Las propiedades implementadas automáticamente hacen que la declaración de propiedades sea más concisa. Cuando se declara una propiedad tal como se muestra en el ejemplo siguiente, el compilador crea un campo de respaldo privado y anónimo al que solo se puede tener acceso con el captador y el establecedor de la propiedad.  
-  
-```csharp  
-public string Name {get; set;}  
-```  
-  
- Para obtener más información, vea [Propiedades implementadas automáticamente](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
-  
+   
 ## <a name="see-also"></a>Vea también
 
 - [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

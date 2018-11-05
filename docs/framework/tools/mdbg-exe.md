@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399774"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202925"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (depurador de línea de comandos .NET Framework)
 El Depurador de la línea de comandos de .NET Framework ayuda a los proveedores de herramientas y a los programadores de aplicaciones a encontrar y a corregir los errores que pueden producirse en programas orientados al Common Language Runtime de .NET Framework. Esta herramienta utiliza el runtime de la API de depuración para proporcionar servicios de depuración. Puede utilizar MDbg.exe para depurar solo código administrado; no se admite la depuración de código no administrado.  
   
- Esta herramienta está disponible mediante NuGet. Para obtener información de instalación, vea [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0). Para ejecutar la herramienta, use la Consola del Administrador de paquetes. Para obtener más información sobre cómo usar la Consola del Administrador de paquetes, vea [Using the Package Manager Console](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console) (Usar la Consola del Administrador de paquetes).  
+Esta herramienta está disponible mediante NuGet. Para obtener información de instalación, vea [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0). Para ejecutar la herramienta, use la Consola del Administrador de paquetes. Para más información sobre cómo usar la Consola del Administrador de paquetes, vea el artículo [Package Manager Console](/nuget/tools/package-manager-console) (Consola del Administrador de paquetes).
   
- A petición del Administrador de paquetes, escriba lo siguiente:  
+A petición del Administrador de paquetes, escriba lo siguiente:  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  Los comandos de MDbg.exe distinguen mayúsculas de minúsculas.  
   
-|Comando|Description|  
+|Comando|Descripción|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*number*]|Cambia a otro proceso depurado o imprime los procesos disponibles. Los números no son identificadores de proceso reales (PID), sino una lista indizada por 0.|  
 |**a**[**ttach**] [*pid*]|Asocia a un proceso o imprime los procesos disponibles.|  

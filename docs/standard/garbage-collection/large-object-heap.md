@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003092"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202912"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Montón de objetos grandes en sistemas Windows
 
@@ -74,7 +74,7 @@ Por lo general, una recolección de elementos no utilizados tiene lugar cuando s
 
   Esto es lo habitual; la mayoría de las recolecciones de elementos no utilizados ocurren debido a las asignaciones del montón administrado.
 
-- Se llama al método <xref:System.GC.Collect%2A?displayProperty=nameWithType>.
+- Se llama al método <xref:System.GC.Collect%2A?displayProperty=nameWithType> .
 
   Si se llama al método sin parámetros <xref:System.GC.Collect?displayProperty=nameWithType> o se pasa otra sobrecarga <xref:System.GC.MaxGeneration?displayProperty=nameWithType> como argumento, el montón de objetos grandes se recopilará junto con el resto del montón administrado.
 
@@ -164,7 +164,7 @@ Los contadores de rendimiento también se pueden consultar mediante programació
 > [!NOTE]
 > El uso de eventos ETW es preferible al de los contadores de rendimiento, ya que ETW proporciona información mucho más completa.
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>eventos ETW
 
 El recolector de elementos no utilizados proporciona un amplio conjunto de eventos ETW que sirven para entender qué hace el montón y por qué. En las siguientes entradas de blog se explica cómo recopilar y entender los eventos de recolección de elementos no utilizados con ETW:
 
@@ -204,7 +204,7 @@ Como se puede ver, se trata de una prueba muy sencilla que simplemente asigna ob
 
 ### <a name="a-debugger"></a>Un depurador
 
-Si todo lo que tiene es un volcado de memoria y necesita examinar los objetos que realmente hay en el montón de objetos grandes, puede usar la [extensión de depurador SoS](http://msdn2.microsoft.com/ms404370.aspx) proporcionada por .NET.
+Si todo lo que tiene es un volcado de memoria y necesita examinar los objetos que realmente hay en el montón de objetos grandes, puede usar la [extensión de depurador SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) proporcionada por .NET.
 
 > [!NOTE]
 > Los comandos de depuración que se mencionan en esta sección son válidos con los [depuradores de Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

@@ -1,180 +1,149 @@
 ---
-title: Información general sobre los primitivos de sincronización
-ms.date: 03/30/2017
+title: Información general sobre las primitivas de sincronización
+description: Obtenga información sobre las primitivas de sincronización de subprocesos .NET utilizadas para sincronizar el acceso a un recurso compartido o controlar la interacción de subprocesos
+ms.date: 10/01/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework],synchronizing threads
+- threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204604"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201603"
 ---
-# <a name="overview-of-synchronization-primitives"></a>Información general sobre los primitivos de sincronización
-<a name="top"></a> .NET Framework proporciona un intervalo de primitivas de sincronización para controlar las interacciones de subprocesos y evitar las condiciones de carrera. En líneas generales, estas pueden dividirse en tres categorías: operaciones de bloqueos, de señalización y de interbloqueos.  
-  
- Las categorías no están bien organizadas ni claramente definidas: algunos mecanismos de sincronización tienen características de varias categorías; los eventos que liberan un solo subproceso de cada vez son funcionalmente como bloqueos; la liberación de cualquier bloqueo puede considerarse una señal; y las operaciones de interbloqueos pueden usarse para construir bloqueos. Sin embargo, las categorías siguen siendo útiles.  
-  
- Es importante recordar que la sincronización de subprocesos es cooperativa. Si un solo subproceso omite un mecanismo de sincronización y accede directamente al recurso protegido, ese mecanismo de sincronización no puede ser eficaz.  
-  
- Esta información general contiene las siguientes secciones:  
-  
--   [Bloqueo](#locking)  
-  
--   [Señalización](#signaling)  
-  
--   [Tipos de sincronización ligeros](#lightweight_synchronization_types)  
-  
--   [SpinWait](#spinwait)  
-  
--   [Operaciones de bloqueo](#interlocked_operations)  
-  
-<a name="locking"></a>   
-## <a name="locking"></a>Bloqueo  
- Los bloqueos proporcionan el control de un recurso a un subproceso a la vez o a un número especificado de subprocesos. Un subproceso que solicita un bloqueo exclusivo cuando el bloqueo está en uso se bloquea hasta que el bloqueo esté disponible.  
-  
-### <a name="exclusive-locks"></a>Bloqueos exclusivos  
- La forma más sencilla de bloqueo es la instrucción `lock` en C# y la instrucción `SyncLock` en Visual Basic, que controlan el acceso a un bloque de código. Con frecuencia, estos bloques se conocen como una sección crítica. La instrucción `lock` se implementa mediante los métodos <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> y <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, y usa un bloqueo `try…finally` para asegurarse de que se libere el bloqueo.  
-  
- En general, la mejor forma de usar la clase <xref:System.Threading.Monitor> consiste en usar la instrucción `lock` o `SyncLock` para proteger pequeños bloques de código, sin abarcar más de un método. Aunque eficaz, la clase <xref:System.Threading.Monitor> es propensa a bloqueos huérfanos e interbloqueos.  
-  
-#### <a name="monitor-class"></a>Clase Monitor  
- La clase <xref:System.Threading.Monitor> proporciona funcionalidad adicional, que se puede usar junto con la instrucción `lock`:  
-  
--   El método <xref:System.Threading.Monitor.TryEnter%2A> permite que un subproceso bloqueado en espera del recurso se interrumpa una vez transcurrido un intervalo especificado. Devuelve un valor booleano que indica si la operación se ha realizado correctamente o no, que se puede usar para detectar y evitar posibles interbloqueos.  
-  
--   Un subproceso de una sección crítica llama al método <xref:System.Threading.Monitor.Wait%2A>. Interrumpe el control del recurso y se bloquea hasta que el recurso esté disponible de nuevo.  
-  
--   Los métodos <xref:System.Threading.Monitor.Pulse%2A> y <xref:System.Threading.Monitor.PulseAll%2A> permiten que un subproceso que está a punto de liberar el bloqueo o de llamar a <xref:System.Threading.Monitor.Wait%2A> ponga uno o varios subprocesos en la cola de subprocesos listos, de modo que puedan adquirir el bloqueo.  
-  
- Los tiempos de espera de las sobrecargas del método <xref:System.Threading.Monitor.Wait%2A> permiten a los subprocesos en espera situarse en la cola de subprocesos listos.  
-  
- La clase <xref:System.Threading.Monitor> puede proporcionar el bloqueo en varios dominios de aplicación si el objeto usado para el bloqueo deriva de <xref:System.MarshalByRefObject>.  
-  
- <xref:System.Threading.Monitor> tiene afinidad de subprocesos. Es decir, un subproceso que entró el monitor debe salir llamando a <xref:System.Threading.Monitor.Exit%2A> o <xref:System.Threading.Monitor.Wait%2A>.  
-  
- La clase <xref:System.Threading.Monitor> no es instanciable. Sus métodos son estáticos (`Shared` en Visual Basic) y actúan sobre un objeto de bloqueo instanciable.  
-  
- Para información conceptual, consulte [Monitores](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
-  
-#### <a name="mutex-class"></a>Mutex (Clase)  
- Los subprocesos solicitan <xref:System.Threading.Mutex> llamando a una sobrecarga de su método <xref:System.Threading.WaitHandle.WaitOne%2A>. Se proporcionan sobrecargas con tiempos de espera, para permitir que los subprocesos renuncien a la espera. A diferencia de la clase <xref:System.Threading.Monitor>, una exclusión mutua puede ser local o global. Las exclusiones mutuas globales, también denominadas exclusiones mutuas, son visibles en todo el sistema operativo y se pueden usar para sincronizar subprocesos en varios procesos o dominios de aplicación. Las exclusiones mutuas locales derivan de <xref:System.MarshalByRefObject> y se pueden usar en los límites del dominio de aplicación.  
-  
- Además, <xref:System.Threading.Mutex> deriva de <xref:System.Threading.WaitHandle>, lo que significa que se puede usar con los mecanismos de señalización proporcionados por <xref:System.Threading.WaitHandle>, como los métodos <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> y <xref:System.Threading.WaitHandle.SignalAndWait%2A>.  
-  
- Al igual que <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> tiene afinidad de subprocesos. A diferencia de <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> es un objeto instanciable.  
-  
- Para información conceptual, consulte [Exclusiones mutuas](../../../docs/standard/threading/mutexes.md).  
-  
-#### <a name="spinlock-class"></a>Clase SpinLock  
- A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar la clase <xref:System.Threading.SpinLock> cuando la sobrecarga requerida por <xref:System.Threading.Monitor> degrade el rendimiento. Cuando <xref:System.Threading.SpinLock> encuentra una sección crítica bloqueada, simplemente gira en un bucle hasta que el bloqueo esté disponible. Si el bloqueo se mantiene durante un tiempo muy breve, el giro puede proporcionar un mejor rendimiento que el bloqueo. Sin embargo, si el bloqueo se mantiene durante más de unas decenas de ciclos, <xref:System.Threading.SpinLock> tiene el mismo rendimiento que <xref:System.Threading.Monitor>, pero usará más ciclos de CPU y, por lo tanto, puede degradar el rendimiento de otros subprocesos o procesos.  
-  
-### <a name="other-locks"></a>Otros bloqueos  
- No hace falta que los bloqueos sean exclusivos. A menudo resulta útil permitir que un número limitado de subprocesos tengan acceso simultáneo a un recurso. Los semáforos y los bloqueos de lector y escritor están diseñados para controlar este tipo de acceso a los recursos agrupados.  
-  
-#### <a name="readerwriterlock-class"></a>Clase ReaderWriterLock  
- La clase <xref:System.Threading.ReaderWriterLockSlim> está pensada para los casos en que un subproceso que cambia los datos (el escritor) debe tener acceso exclusivo a un recurso. Cuando el escritor no está activo, cualquier número de lectores puede acceder al recurso (por ejemplo, llamando al método <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A>). Cuando un subproceso solicita acceso exclusivo (por ejemplo, llamando al método <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A>), las solicitudes posteriores del lector se bloquean hasta que todos los lectores existentes salgan del bloqueo y el escritor entre y salga del bloqueo.  
-  
- <xref:System.Threading.ReaderWriterLockSlim> tiene afinidad de subprocesos.  
-  
- Para información conceptual, consulte [Bloqueos de lector y escritor](../../../docs/standard/threading/reader-writer-locks.md).  
-  
-#### <a name="semaphore-class"></a>Semaphore (clase)  
- La clase <xref:System.Threading.Semaphore> permite que un número especificado de subprocesos acceda a un recurso. Los demás subprocesos que soliciten el recurso se bloquearán hasta que un subproceso libere el semáforo.  
-  
- Al igual que la clase <xref:System.Threading.Mutex>, <xref:System.Threading.Semaphore> deriva de <xref:System.Threading.WaitHandle>. Asimismo, al igual que <xref:System.Threading.Mutex>, un <xref:System.Threading.Semaphore> puede ser local o global. También se puede usar en los límites del dominio de aplicación.  
-  
- A diferencia de <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> y <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Semaphore> no tiene afinidad de subprocesos. Esto significa que se puede usar en escenarios en los que un subproceso adquiere el semáforo y otro lo libera.  
-  
- Para información conceptual, consulte [Semaphore y SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).  
-  
- <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> es un semáforo ligero para la sincronización dentro del límite de un único proceso.  
-  
- [Volver al principio](#top)  
-  
-<a name="signaling"></a>   
-## <a name="signaling"></a>Signaling  
- La manera más sencilla de esperar una señal de otro subproceso consiste en llamar al método <xref:System.Threading.Thread.Join%2A>, que se bloquea hasta que finaliza el otro subproceso. <xref:System.Threading.Thread.Join%2A> tiene dos sobrecargas que permiten que el subproceso bloqueado salga de la espera una vez transcurrido un intervalo especificado.  
-  
- Los identificadores de espera proporcionan un conjunto mucho más completo de capacidades espera y señalización.  
-  
-### <a name="wait-handles"></a>Controladores de espera  
- Los identificadores de espera derivan de la clase <xref:System.Threading.WaitHandle>, que a su vez deriva de <xref:System.MarshalByRefObject>. Por lo tanto, los identificadores de espera se pueden usar para sincronizar las actividades de subprocesos en los límites del dominio de aplicación.  
-  
- Los subprocesos se bloquean en los identificadores de espera llamando al método de instancia <xref:System.Threading.WaitHandle.WaitOne%2A> o a uno de los métodos estáticos <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> o <xref:System.Threading.WaitHandle.SignalAndWait%2A>. La manera en que se liberan depende del método que se llamase y del tipo de identificadores de espera.  
-  
- Para información conceptual, consulte [Identificadores de espera](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
-  
-#### <a name="event-wait-handles"></a>Identificadores de espera de evento  
- Los identificadores de espera de evento incluyen la clase <xref:System.Threading.EventWaitHandle> y sus clases derivadas, <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent>. Los subprocesos se liberan desde un identificador de espera de evento cuando este se señaliza llamando a su método <xref:System.Threading.EventWaitHandle.Set%2A> o mediante el método <xref:System.Threading.WaitHandle.SignalAndWait%2A>.  
-  
- Los identificadores de espera de evento pueden restablecerse automáticamente, como un torniquete que permite el paso de un solo subproceso cada vez que se señala, o bien deben restablecerse manualmente, como una puerta que está cerrada hasta que se señala y, a continuación, queda abierta hasta que alguien la cierra. Tal como indican sus nombres, <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent> representan lo primer y lo segundo respectivamente. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> es un evento ligero para la sincronización dentro del límite de un único proceso.  
-  
- <xref:System.Threading.EventWaitHandle> puede representar cualquier tipo de evento, y puede ser local o global. Las clases derivadas <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent> siempre son locales.  
-  
- Los identificadores de espera de evento no tienen afinidad de subprocesos. Cualquier subproceso puede señalar un identificador de espera de evento.  
-  
- Para información conceptual, consulte [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
-  
-#### <a name="mutex-and-semaphore-classes"></a>Clases Mutex y Semaphore  
- Dado que las clases <xref:System.Threading.Mutex> y <xref:System.Threading.Semaphore> derivan de <xref:System.Threading.WaitHandle>, se pueden usar con los métodos estáticos de <xref:System.Threading.WaitHandle>. Por ejemplo, un subproceso puede usar el método <xref:System.Threading.WaitHandle.WaitAll%2A> para esperar hasta que las tres circunstancias siguientes sean verdaderas: se señala <xref:System.Threading.EventWaitHandle>, se libera <xref:System.Threading.Mutex> y se libera <xref:System.Threading.Semaphore>. De forma similar, un subproceso puede usar el método <xref:System.Threading.WaitHandle.WaitAny%2A> para esperar hasta que se cumpla alguna de esas condiciones.  
-  
- En el caso de <xref:System.Threading.Mutex> o <xref:System.Threading.Semaphore>, el hecho de que los señalen significa que los liberan. Si cualquiera de estos tipos se usa como el primer argumento del método <xref:System.Threading.WaitHandle.SignalAndWait%2A>, se libera. En el caso de <xref:System.Threading.Mutex>, que tiene afinidad de subprocesos, se produce una excepción si el subproceso que realiza la llamada no posee la exclusión mutua. Como se indicó anteriormente, los semáforos no tienen afinidad de subprocesos.  
-  
-#### <a name="barrier"></a>Barrier  
- La clase <xref:System.Threading.Barrier> proporciona una manera de sincronizar cíclicamente varios subprocesos de modo que todos se bloqueen en el mismo punto y esperen a que los demás subprocesos se completen. Una barrera es útil cuando uno o más subprocesos requieren los resultados de otro subproceso antes de continuar con la siguiente fase de un algoritmo. Para más información, consulte [Barrier](../../../docs/standard/threading/barrier.md).  
-  
- [Volver al principio](#top)  
-  
-<a name="lightweight_synchronization_types"></a>   
-## <a name="lightweight-synchronization-types"></a>Tipos de sincronización ligeros  
- A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], puede usar primitivas de sincronización que proporcionan un rendimiento rápido al evitar el costoso uso de objetos de kernel Win32, como los identificadores de espera, siempre que sea posible. En general, debe usar estos tipos cuando los tiempos de espera son cortos y solo cuando los tipos de sincronización originales se probaron y no resultaron satisfactorios. Los tipos ligeros no se puede usar en escenarios que requieren comunicación entre procesos.  
-  
--   <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> es una versión ligera de <xref:System.Threading.Semaphore?displayProperty=nameWithType>.  
-  
--   <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> es una versión ligera de <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.  
-  
--   <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> representa un evento que se señaliza cuando su recuento es cero.  
-  
--   <xref:System.Threading.Barrier?displayProperty=nameWithType> permite que varios subprocesos se sincronicen entre sí sin necesidad de control por parte un subproceso principal. Una barrera impide que un subproceso continúe hasta que todos los subprocesos hayan alcanzado un punto especificado.  
-  
- [Volver al principio](#top)  
-  
-<a name="spinwait"></a>   
-## <a name="spinwait"></a>SpinWait  
- A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], se puede usar la estructura <xref:System.Threading.SpinWait?displayProperty=nameWithType> cuando un subproceso tiene que esperar a que se señalice un evento o se cumpla una condición, pero cuando el tiempo de espera real deba ser menor que el tiempo de espera necesario usando un identificador de espera o bloqueando de otro modo el subproceso actual. Si usa <xref:System.Threading.SpinWait>, puede especificar un breve período de tiempo para girar durante la espera y después ceder (por ejemplo, esperando o entrando en modo de suspensión) solo si la condición no se cumplió en el tiempo especificado.  
-  
- [Volver al principio](#top)  
-  
-<a name="interlocked_operations"></a>   
-## <a name="interlocked-operations"></a>Operaciones de bloqueo  
- Las operaciones de interbloqueos son operaciones atómicas simples realizadas en una ubicación de memoria por métodos estáticos de la clase <xref:System.Threading.Interlocked>. Esas operaciones atómicas incluyen la adición, el incremento y el decremento, el intercambio, el intercambio condicional en función de una comparación y las operaciones de lectura para los valores de 64 bits en plataformas de 32 bits.  
-  
+# <a name="overview-of-synchronization-primitives"></a>Información general sobre las primitivas de sincronización
+
+.NET proporciona una variedad de tipos que puede usar para sincronizar el acceso a un recurso compartido o coordinar la interacción de subprocesos.
+
+> [!IMPORTANT]
+> Use la misma instancia primitiva de sincronización para proteger todos los accesos a un recurso compartido. Varios subprocesos pueden acceder a un recurso al mismo tiempo si usa diferentes instancias primitivas de sincronización para proteger el acceso a un recurso o algunas partes del código acceden directamente a un recurso.
+
+## <a name="waithandle-class-and-lightweight-synchronization-types"></a>Clase WaitHandle y tipos de sincronización ligeros
+
+Varias primitivas de sincronización de .NET derivan de la clase <xref:System.Threading.WaitHandle?displayProperty=nameWithType>, que encapsula un controlador de sincronización del sistema operativo nativo y usa un mecanismo de señalización para la interacción de subprocesos. Esas clases incluyen:
+
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>, que concede acceso exclusivo a un recurso compartido. El estado de una exclusión mutua se señala si no es propiedad de ningún subproceso.
+- <xref:System.Threading.Semaphore?displayProperty=nameWithType>, que limita el número de subprocesos que pueden tener acceso a un recurso compartido o grupo de recursos simultáneamente. El estado de un semáforo se establece como señalizado cuando su recuento es mayor que cero y como no señalizado cuando su recuento es cero.
+- <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>, que representa un evento de sincronización de subprocesos y puede estar en un estado señalizado o no señalizado.
+- <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>, que se deriva de <xref:System.Threading.EventWaitHandle> y, cuando está señalizada, se restablece automáticamente a un estado no señalizado después de liberar un subproceso en espera único.
+- <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>, que se deriva de <xref:System.Threading.EventWaitHandle> y, cuando está señalizado, permanece en un estado señalizado hasta que se llama al método <xref:System.Threading.EventWaitHandle.Reset%2A>.
+
+En .NET Framework, dado que <xref:System.Threading.WaitHandle> deriva de <xref:System.MarshalByRefObject?displayProperty=nameWithType>, estos tipos se pueden usar para sincronizar las actividades de subprocesos en los límites del dominio de aplicación.
+
+En .NET Framework y .NET Core, algunos de estos tipos pueden representar los controladores de sincronización del sistema con nombre, que son visibles en todo el sistema operativo y se pueden usar para la sincronización entre procesos:
+
+- <xref:System.Threading.Mutex> (.NET Framework y .NET Core),
+- <xref:System.Threading.Semaphore> (.NET Framework y .NET Core en Windows),
+- <xref:System.Threading.EventWaitHandle> (.NET Framework y .NET Core en Windows).
+
+Para más información, vea la referencia de API <xref:System.Threading.WaitHandle>.
+
+Los tipos de sincronización ligeros no se basan en los controladores del sistema operativo subyacentes y suelen proporcionar un mejor rendimiento. Sin embargo, no se pueden usar para la sincronización entre procesos. Utilice esos tipos para la sincronización de subprocesos dentro de una aplicación.
+
+Algunos de esos tipos son alternativas a los tipos derivados de <xref:System.Threading.WaitHandle>. Por ejemplo, <xref:System.Threading.SemaphoreSlim> es una alternativa ligera a <xref:System.Threading.Semaphore>.
+
+## <a name="synchronization-of-access-to-a-shared-resource"></a>Sincronización del acceso a un recurso compartido
+
+.NET proporciona un intervalo de primitivas de sincronización para controlar el acceso a un recurso compartido por varios subprocesos.
+
+### <a name="monitor-class"></a>Monitor (clase)
+
+La clase <xref:System.Threading.Monitor?displayProperty=nameWithType> concede acceso mutuamente exclusivo a un recurso compartido mediante la adquisición o liberación de un bloqueo en el objeto que identifica el recurso. Mientras se mantiene un bloqueo, el subproceso que lo mantiene puede volver a adquirir y liberar dicho bloqueo. Ningún otro subproceso puede adquirir el bloqueo y el método <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> espera hasta que el bloqueo se libera. El método <xref:System.Threading.Monitor.Enter%2A> adquiere un bloqueo liberado. También puede usar el método <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> para especificar la cantidad de tiempo durante el cual un subproceso intenta adquirir un bloqueo. Dado que la clase <xref:System.Threading.Monitor> tiene afinidad de subproceso, el subproceso que adquirió un bloqueo debe liberarlo mediante una llamada al método <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>.
+
+Puede coordinar la interacción de subprocesos que adquieren un bloqueo en el mismo objeto mediante los métodos <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> y <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>.
+
+Para más información, vea la referencia de API <xref:System.Threading.Monitor>.
+
 > [!NOTE]
->  La garantía de atomicidad está limitada a operaciones individuales; cuando deben realizarse varias operaciones como una unidad, se debe usar un mecanismo de sincronización más general.  
+> Use la instrucción [lock](../../csharp/language-reference/keywords/lock-statement.md) en C# y la instrucción [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) en Visual Basic para sincronizar el acceso a un recurso compartido en lugar de usar la clase <xref:System.Threading.Monitor> directamente. Esas instrucciones se implementan mediante los métodos <xref:System.Threading.Monitor.Enter%2A> y <xref:System.Threading.Monitor.Exit%2A>, y usa un bloqueo `try…finally` para asegurarse de que se libere el bloqueo.
+
+### <a name="mutex-class"></a>Mutex (clase)
+
+La clase <xref:System.Threading.Mutex?displayProperty=nameWithType>, como <xref:System.Threading.Monitor>, concede acceso exclusivo a un recurso compartido. Utilice una de las sobrecargas del método [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) para solicitar la propiedad de una exclusión mutua. Al igual que <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> tiene afinidad de subproceso y el subproceso que adquirió una exclusión mutua debe liberarlo llamando al método <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
+
+A diferencia de <xref:System.Threading.Monitor>, la clase <xref:System.Threading.Mutex> puede usarse para la sincronización entre procesos. Para ello, use una exclusión mutua con nombre, que es visible en todo el sistema operativo. Para crear una instancia de la exclusión mutua con nombre, use un [constructor de exclusión mutua](<xref:System.Threading.Mutex.%23ctor%2A>) que especifica un nombre. También se puede llamar al método <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> para abrir una exclusión mutua del sistema existente.
   
- Aunque ninguna de estas operaciones son bloqueos o señales, se pueden usar para construir bloqueos y señales. Dado que son nativas para el sistema operativo Windows, las operaciones de interbloqueos son sumamente rápidas.  
+Para más información, vea el artículo [Mutexes](mutexes.md) y la referencia de API <xref:System.Threading.Mutex>.
+
+### <a name="spinlock-structure"></a>SpinLock (estructura)
+
+La estructura <xref:System.Threading.SpinLock?displayProperty=nameWithType>, como <xref:System.Threading.Monitor>, concede acceso exclusivo a un recurso compartido en función de la disponibilidad de un bloqueo. Cuando <xref:System.Threading.SpinLock> intenta adquirir un bloqueo que no está disponible, espera en un bucle, y realiza comprobaciones repetidamente hasta que dicho bloqueo esté disponible.
+
+Para más información sobre las ventajas e inconvenientes del uso de un bloqueo de giro, vea el artículo [SpinLock](spinlock.md) y la referencia de API <xref:System.Threading.SpinLock>.
+
+### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim (clase)
+
+La clase <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> concede acceso exclusivo a un recurso compartido para escritura y permite que varios subprocesos accedan al recurso simultáneamente para lectura. Es posible que desee utilizar <xref:System.Threading.ReaderWriterLockSlim> para sincronizar el acceso a una estructura de datos compartida que admita operaciones de lectura seguras para subprocesos, pero que requiera acceso exclusivo para realizar la operación de escritura. Cuando un subproceso solicita acceso exclusivo (por ejemplo, llamando al método <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>), las solicitudes posteriores del lector se bloquean hasta que todos los lectores existentes han salido del bloqueo y el escritor ha entrado y salido de dicho bloqueo.
   
- Las operaciones de interbloqueos se pueden usar con garantías de memoria volátil para escribir aplicaciones que poseen una simultaneidad sin bloqueo eficaz. Sin embargo, requieren una programación de bajo nivel sofisticada, por lo que los bloqueos simples son una mejor opción para la mayoría de los casos.  
-  
- Para información conceptual, consulte [Operaciones de bloqueo](../../../docs/standard/threading/interlocked-operations.md).  
-  
+Para más información, vea el artículo [Bloqueos de lector y escritor](reader-writer-locks.md) y la referencia de API <xref:System.Threading.ReaderWriterLockSlim>.
+
+### <a name="semaphore-and-semaphoreslim-classes"></a>Semaphore y SemaphoreSlim (clases)
+
+Las clases <xref:System.Threading.Semaphore?displayProperty=nameWithType> y <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> limitan el número de subprocesos que pueden tener acceso a un recurso compartido o grupo de recursos simultáneamente. Los demás subprocesos que soliciten el recurso esperarán hasta que un subproceso libere el semáforo. Dado que el semáforo no tiene afinidad de subproceso, un subproceso puede adquirir el semáforo y otro puede liberarlo.
+
+<xref:System.Threading.SemaphoreSlim> es una alternativa ligera a <xref:System.Threading.Semaphore> y solo se puede usar para la sincronización dentro de un límite de un único proceso.
+
+En Windows, puede usar <xref:System.Threading.Semaphore> para la sincronización entre procesos. Para hacerlo, cree una instancia de <xref:System.Threading.Semaphore> que represente un semáforo de sistema con nombre mediante el uso de uno de los [constructores Semaphore](<xref:System.Threading.Semaphore.%23ctor%2A>) que especifica un nombre o el método <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>. <xref:System.Threading.SemaphoreSlim> no es compatible con los semáforos con nombre del sistema.
+
+Para más información, consulte el artículo [Semaphore y SemaphoreSlim](semaphore-and-semaphoreslim.md) y la referencia de API <xref:System.Threading.Semaphore> o <xref:System.Threading.SemaphoreSlim>.
+
+## <a name="thread-interaction-or-signaling"></a>Interacción de subprocesos o señalización
+
+Interacción de subprocesos (o señalización de subprocesos) significa que un subproceso debe esperar la notificación o una señal de uno o varios subprocesos para poder continuar. Por ejemplo, si un subproceso A llama al método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> del subproceso B, un subproceso A se bloquea hasta que el subproceso B finaliza. Las primitivas de sincronización descritas en la sección anterior proporcionan un mecanismo diferente para la señalización: al liberar un bloqueo, un subproceso notifica a otro subproceso que puede continuar adquiriendo el bloqueo.
+
+En esta sección se describen construcciones adicionales de señalización proporcionados por. NET.
+
+### <a name="eventwaithandle-autoresetevent-manualresetevent-and-manualreseteventslim-classes"></a>EventWaitHandle, AutoResetEvent, ManualResetEvent y ManualResetEventSlim (clases)
+
+La clase <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> representa un evento de sincronización de subprocesos.
+
+Un evento de sincronización puede estar en un estado de no señalizado o señalizado. Cuando el estado de un evento es señalizado, un subproceso que llama a la sobrecarga <xref:System.Threading.WaitHandle.WaitOne%2A?> del evento se bloquea hasta que un evento se señaliza. El método <xref:System.Threading.EventWaitHandle.Set%2A?displayProperty=nameWithType> establece el estado de un evento en señalizado.
+
+El comportamiento de una clase <xref:System.Threading.EventWaitHandle> que se haya señalizado depende de su modo de restablecimiento:
+
+- Una clase <xref:System.Threading.EventWaitHandle> creada con la marca <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> se restablece automáticamente después de liberar un subproceso en espera único. Es como un torniquete que permite solo un subproceso cada vez que se señaliza. La clase <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>, que deriva de <xref:System.Threading.EventWaitHandle>, representa ese comportamiento.
+- Una clase <xref:System.Threading.EventWaitHandle> creada con la marca <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> permanece señalizada hasta que se llama a su método <xref:System.Threading.EventWaitHandle.Reset%2A>. Es como una puerta que está cerrada hasta que se señaliza y a partir de entonces permanece abierta hasta que alguien la cierra. La clase <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>, que deriva de <xref:System.Threading.EventWaitHandle>, representa ese comportamiento. La clase <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> es una alternativa ligera a <xref:System.Threading.ManualResetEvent>.
+
+En Windows, puede usar <xref:System.Threading.EventWaitHandle> para la sincronización entre procesos. Para hacerlo, cree una instancia de <xref:System.Threading.EventWaitHandle> que represente un semáforo de sincronización del sistema con nombre mediante el uso de uno de los [constructores EventWaitHandle](<xref:System.Threading.EventWaitHandle.%23ctor%2A>) que especifica un nombre o el método <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType>.
+
+Para más información, consulte los artículos [EventWaitHandle](eventwaithandle.md), [AutoResetEvent](autoresetevent.md) y [ManualResetEvent y ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md). Para la referencia de API, consulte <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.AutoResetEvent>, <xref:System.Threading.ManualResetEvent> y <xref:System.Threading.ManualResetEventSlim>.
+
+### <a name="countdownevent-class"></a>Clase CountdownEvent
+
+La clase <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> representa un evento que se establece cuando su recuento es cero. Mientras <xref:System.Threading.CountdownEvent.CurrentCount?displayProperty=nameWithType> sea mayor que cero, un subproceso que llama a <xref:System.Threading.CountdownEvent.Wait%2A?displayProperty=nameWithType> está bloqueado. Llame a <xref:System.Threading.CountdownEvent.Signal%2A?displayProperty=nameWithType> para reducir el recuento de un evento.
+
+En contraposición a <xref:System.Threading.ManualResetEvent> o <xref:System.Threading.ManualResetEventSlim>, que puede usar para desbloquear varios subprocesos con una señal de un subproceso, puede usar <xref:System.Threading.CountdownEvent> para desbloquear uno o varios subprocesos con las señales de varios subprocesos.
+
+Para más información, vea el artículo [CountdownEvent](countdownevent.md) y la referencia de API <xref:System.Threading.CountdownEvent>.
+
+### <a name="barrier-class"></a>Barrier (clase)
+
+La clase <xref:System.Threading.Barrier?displayProperty=nameWithType> representa una barrera de ejecución de subprocesos. Un subproceso que llama al método <xref:System.Threading.Barrier.SignalAndWait%2A?displayProperty=nameWithType> indica que ha alcanzado la barrera y espera hasta que otros subprocesos participantes alcancen la barrera. Cuando todos los subprocesos participantes alcancen la barrera, continúan y la barrera se restablece y se puede volver a usar.
+
+Puede usar <xref:System.Threading.Barrier> cuando uno o más subprocesos requieren los resultados de otros subprocesos antes de continuar con la siguiente fase del cálculo.
+
+Para más información, vea el artículo [Barrier](barrier.md) y la referencia de API <xref:System.Threading.Barrier>.
+
+## <a name="interlocked-class"></a>Interlocked (clase)
+
+La clase <xref:System.Threading.Interlocked?displayProperty=nameWithType> proporciona métodos estáticos que realizan operaciones atómicas simples en una variable. Esas operaciones atómicas incluyen la adición, el incremento y el decremento, el intercambio y el intercambio condicional que depende de una comparación, y la operación de lectura de un valor entero de 64 bits.
+
+Para más información, vea el artículo [Operaciones de bloqueo](interlocked-operations.md) y la referencia de API <xref:System.Threading.Interlocked>.
+
+## <a name="spinwait-structure"></a>SpinWait (estructura)
+
+La estructura <xref:System.Threading.SpinWait?displayProperty=nameWithType> proporciona compatibilidad para la espera basada en ciclos. Puede que le interese utilizarla cuando un subproceso tiene que esperar a que se señalice un evento o se cumpla una condición, pero cuando el tiempo de espera real deba ser menor que el tiempo de espera necesario usando un identificador de espera o bloqueando de otro modo el subproceso. Si usa <xref:System.Threading.SpinWait>, puede especificar un breve período de tiempo para girar durante la espera y después ceder (por ejemplo, esperando o entrando en modo de suspensión) solo si la condición no se cumplió en el tiempo especificado.
+
+Para más información, vea el artículo [SpinWait](spinwait.md) y la referencia de API <xref:System.Threading.SpinWait>.
+
 ## <a name="see-also"></a>Vea también
 
-- [Sincronizar datos para subprocesamiento múltiple](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
-- [Monitors](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) (Clases Monitor)  
-- [Mutexes](../../../docs/standard/threading/mutexes.md) (Clases Mutex)  
-- [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md) (Clases Semaphore y SemaphoreSlim)  
-- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
-- [Wait Handles](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489) (Clases WaitHandle)  
-- [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md) (Operaciones Interlocked)  
-- [Reader-Writer Locks](../../../docs/standard/threading/reader-writer-locks.md) (Clase ReaderWriterLockSlim)  
-- [Barrier](../../../docs/standard/threading/barrier.md) (Barrera)  
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
-- [SpinLock](../../../docs/standard/threading/spinlock.md)
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [Colecciones seguras para subprocesos](../collections/thread-safe/index.md)
+- [Objetos y características de subprocesos](threading-objects-and-features.md)

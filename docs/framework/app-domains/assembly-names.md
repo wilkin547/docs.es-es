@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1ab9609fe6b2c1e232f188db8306fc05828285
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744140"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184790"
 ---
 # <a name="assembly-names"></a>Nombres de ensamblado
 Un nombre de ensamblado se almacena en los metadatos y tiene un importante impacto en el ámbito del ensamblado y en su uso por parte de una aplicación. Un ensamblado con nombre seguro tiene un nombre completo que incluye nombre, referencia cultural, clave pública y número de versión. Se conoce como el nombre para mostrar y en los ensamblados cargados puede obtenerse mediante la propiedad <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -24,7 +24,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  La arquitectura del procesador se ha agregado a la identidad del ensamblado en la versión 2.0 de .NET Framework para permitir versiones específicas de procesador de ensamblados. Puede crear versiones de un ensamblado cuya identidad solo se diferencie por la arquitectura del procesador, por ejemplo versiones específicas del procesador de 32 y 64 bits. La arquitectura del procesador no es necesaria para los nombres seguros. Para obtener más información, consulta <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
+>  La arquitectura del procesador se ha agregado a la identidad del ensamblado en la versión 2.0 de .NET Framework para permitir versiones específicas de procesador de ensamblados. Puede crear versiones de un ensamblado cuya identidad solo se diferencie por la arquitectura del procesador, por ejemplo versiones específicas del procesador de 32 y 64 bits. La arquitectura del procesador no es necesaria para los nombres seguros. Para obtener más información, vea <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
   
  En este ejemplo, el nombre completo indica que el ensamblado `myTypes` tiene un nombre seguro con un token de clave pública, tiene el valor de referencia cultural de inglés de los Estados Unidos y tiene un número de versión de 1.0.1234.0. Su arquitectura del procesador es "msil", lo que significa que será compilado JIT (just-in-time) para código de 32 o 64 bits según el sistema operativo y el procesador.  
   
@@ -58,9 +58,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Si coloca un ensamblado con nombre seguro en la caché global de ensamblados, el nombre de archivo del ensamblado debe coincidir con el nombre del ensamblado (sin incluir la extensión de nombre de archivo, como .exe o .dll). Por ejemplo, si el nombre de archivo de un ensamblado es myAssembly.dll, el nombre del ensamblado debe ser myAssembly. Los ensamblados privados implementados solamente en el directorio de la aplicación raíz pueden tener un nombre de ensamblado diferente al nombre de archivo.  
   
 ## <a name="see-also"></a>Vea también  
- [Determinar el nombre completo de un ensamblado](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Determinar el nombre completo de un ensamblado](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)  
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

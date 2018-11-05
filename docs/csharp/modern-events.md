@@ -3,12 +3,12 @@ title: Patrón de eventos actualizado de .NET Core
 description: Obtenga información sobre cómo el patrón de eventos de .NET Core permite la flexibilidad con la compatibilidad con versiones anteriores y cómo implementar un procesamiento de eventos seguro con suscriptores asincrónicos.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827185"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188487"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Patrón de eventos actualizado de .NET Core
 

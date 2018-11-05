@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698320"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192621"
 ---
 # <a name="application-domains"></a>Dominios de aplicación
+
 Normalmente, los sistemas operativos y los entornos de Common Language Runtime proporcionan algún tipo de aislamiento entre las aplicaciones. Por ejemplo, Windows utiliza procesos para aislar las aplicaciones. Este aislamiento es necesario para garantizar que el código que se ejecuta en una aplicación no afecta negativamente a otras aplicaciones no relacionadas.  
   
  Los dominios de aplicación proporcionan un límite de aislamiento para la seguridad, confiabilidad y control de versiones, así como para descargar los ensamblados. Los dominios de aplicación suelen ser creados por hosts de motor en tiempo de ejecución, que son los responsables de arrancar automáticamente Common Language Runtime antes de que se ejecute una aplicación.  
   
- En los temas de esta sección de la documentación se explica cómo utilizar dominios de aplicación para proporcionar aislamiento entre ensamblados.  
-  
- Esta información general contiene las siguientes secciones:  
-  
--   [Ventajas de aislar aplicaciones](#benefits)  
-  
--   [Referencia](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>Ventajas de aislar aplicaciones  
+## <a name="the-benefits-of-isolating-applications"></a>Ventajas de aislar aplicaciones
+
  Tradicionalmente se han utilizado límites de proceso para aislar las aplicaciones que se ejecutan en un mismo equipo. Cada aplicación se carga en un proceso independiente que aísla la aplicación de las demás que se estén ejecutando en el mismo equipo.  
   
  Las aplicaciones se aíslan porque las direcciones de memoria son específicas de cada proceso; un puntero de memoria pasado de un proceso a otro no se puede utilizar de ninguna manera coherente en el proceso de destino. Tampoco se pueden realizar llamadas directas entre dos procesos. En su lugar, se deben utilizar servidores proxy, que proporcionan un nivel de direccionamiento indirecto.  
@@ -61,9 +54,9 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
 -   El dominio de aplicación en el que se ejecuta el código puede controlar los permisos que se conceden al código.  
   
-  
-## <a name="application-domains-and-assemblies"></a>Dominios de aplicación y ensamblados  
- En este tema se describe la relación entre los dominios de aplicación y los ensamblados. Debe cargar un ensamblado en un dominio de aplicación para poder ejecutar el código que contiene. Al ejecutar una aplicación típica, se cargan varios ensamblados en un dominio de aplicación.  
+## <a name="application-domains-and-assemblies"></a>Dominios de aplicación y ensamblados
+
+ En esta sección se describe la relación entre los dominios de aplicación y los ensamblados. Debe cargar un ensamblado en un dominio de aplicación para poder ejecutar el código que contiene. Al ejecutar una aplicación típica, se cargan varios ensamblados en un dominio de aplicación.  
   
  El modo en que se carga un ensamblado determina si varios dominios de aplicación pueden compartir el código compilado Just-in-time (JIT) del ensamblado en el proceso y si el ensamblado se puede descargar del proceso.  
   
@@ -95,21 +88,24 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
 -   Todas las dependencias de un ensamblado deben estar presentes y cargarse cuando el ensamblado se carga con dominio neutro, ya que si una dependencia no se puede cargar con dominio neutro, impedirá también que el ensamblado se cargue con dominio neutro.  
   
-## <a name="application-domains-and-threads"></a>Dominios de aplicación y subprocesos  
+## <a name="application-domains-and-threads"></a>Dominios de aplicación y subprocesos
+
  Un dominio de aplicación constituye un límite de aislamiento para la seguridad, el control de versiones, la confiabilidad y la descarga de código administrado. Los subprocesos son la construcción del sistema operativo que Common Language Runtime utiliza para ejecutar código. En tiempo de ejecución, todo el código administrado se carga en un dominio de aplicación y se ejecuta mediante uno o varios subprocesos administrados.  
   
  No existe una correlación uno a uno entre los dominios de aplicación y los subprocesos. En un momento dado haber varios subprocesos ejecutándose en un único dominio de aplicación. Además, cada subproceso concreto no está confinado a un solo dominio de aplicación. En otras palabras, los subprocesos pueden cruzar los límites del dominio de aplicación; no se crea un nuevo subproceso para cada dominio de aplicación.  
   
- En un momento dado, todos los subprocesos se ejecutan en un dominio de aplicación. Por tanto, podría haber cero, uno o varios subprocesos ejecutándose en un dominio de aplicación determinado. En tiempo de ejecución, se realiza un seguimiento de qué subprocesos se están ejecutando en qué dominios de aplicación. Se puede localizar en cualquier momento el dominio donde se está ejecutando un subproceso llamando al método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.  
-  
-### <a name="application-domains-and-cultures"></a>Dominios de aplicación y referencias culturales  
+ En un momento dado, todos los subprocesos se ejecutan en un dominio de aplicación. Por tanto, podría haber cero, uno o varios subprocesos ejecutándose en un dominio de aplicación determinado. El entorno de ejecución realiza un seguimiento de qué subprocesos se están ejecutando en qué dominios de aplicación. Se puede localizar en cualquier momento el dominio donde se está ejecutando un subproceso llamando al método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.
+
+### <a name="application-domains-and-cultures"></a>Dominios de aplicación y referencias culturales
+
  La referencia cultural, representada por un objeto <xref:System.Globalization.CultureInfo>, se asocia con subprocesos. Puede obtener la referencia cultural asociada al subproceso que está actualmente en ejecución utilizando la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, y puede utilizar la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> para obtener o establecer la referencia cultural asociada al subproceso que está actualmente en ejecución. Si la referencia cultural asociada a un subproceso se ha establecido explícitamente mediante la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, seguirá asociada a ese subproceso cuando el subproceso cruce los límites del dominio de aplicación. De lo contrario, la referencia cultural que estaba asociada al subproceso en un momento concreto vendrá determinada por el valor de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> en el dominio de aplicación en el que se está ejecutando el subproceso:  
   
 -   Si el valor de la propiedad no es `null`, se asociará al subproceso la referencia cultural devuelta por la propiedad (y por consiguiente devuelta por las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
 -   Si el valor de la propiedad es `null`, se asociará al subproceso la referencia cultural actual del sistema.  
   
-## <a name="programming-with-application-domains"></a>Programar con dominios de aplicación  
+## <a name="programming-with-application-domains"></a>Programación con dominios de aplicación
+
  Normalmente, los dominios de aplicación son creados y manipulados mediante programación por los hosts de motor en tiempo de ejecución. Sin embargo, a veces, puede darse la circunstancia de que un programa de aplicación deba trabajar con dominios de aplicación. Por ejemplo, un programa de aplicación podría cargar un componente de aplicación en un dominio para poder descargar el dominio (y el componente) sin necesidad de detener toda la aplicación.  
   
  La <xref:System.AppDomain> es la interfaz de programación para los dominios de aplicación. Esta clase incluye métodos para crear y descargar dominios, crear instancias de tipos en dominios y registrar diversas notificaciones, como por ejemplo cuando una aplicación descarga un dominio. En la tabla siguiente, se presentan los métodos <xref:System.AppDomain> más usados.  
@@ -126,7 +122,8 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  Las interfaces no administradas que se describen en la especificación de las interfaces de hospedaje de Common Language Runtime también proporcionan acceso a los dominios de aplicación. Los hosts de motor en tiempo de ejecución pueden usar interfaces de código no administrado para crear y obtener acceso a los dominios de aplicación en un proceso.  
   
-## <a name="complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization (Variable de entorno)  
+## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization (Variable de entorno)
+
  Variable de entorno que establece la directiva predeterminada de optimización de cargador de una aplicación ejecutable.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -135,7 +132,8 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Comentarios
+
  Una aplicación típica carga varios ensamblados en un dominio de aplicación antes de poder ejecutar el código que contienen.  
   
  La manera en que se carga el ensamblado determina si su código compilado Just-In-Time (JIT) se puede compartir entre varios dominios de aplicación del proceso.  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  La marca de entorno COMPLUS_LoaderOptimization se diseñó para utilizarse en escenarios de diagnóstico y prueba. Tener la marca activada puede producir una considerable ralentización y un aumento del uso de memoria.  
   
-### <a name="code-example"></a>Ejemplo de código  
+### <a name="code-example"></a>Ejemplo de código
+
  Si anexa `COMPLUS_LoaderOptimization=1` en el valor de cadena múltiple del entorno de la clave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN, podrá conseguir que no todos los ensamblados se carguen como dominio neutro para el servicio IISADMIN.  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>Referencia  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>Vea también
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [Programación con dominios de aplicación y ensamblados](index.md)
+- [Utilizar dominios de aplicación](use.md)

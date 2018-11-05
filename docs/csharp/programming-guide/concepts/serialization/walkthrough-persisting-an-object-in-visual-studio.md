@@ -1,12 +1,12 @@
 ---
 title: 'Tutorial: Conservar un objeto con C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231498"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086082"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Tutorial: Conservar un objeto con C# #
 
@@ -28,6 +28,8 @@ En este tutorial, creará un objeto `Loan` básico y conservará sus datos en un
 
 > [!TIP]
 > ¿Es necesario instalar un editor de código? Pruebe [Visual Studio](https://visualstudio.com/downloads).
+
+* El ejemplo requiere C# 7.3. Consulte [Seleccionar la versión del lenguaje C#](../../../language-reference/configure-language-version.md). 
 
 En el [repositorio de GitHub de ejemplos de .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization) puede examinar el código de ejemplo en línea.
 

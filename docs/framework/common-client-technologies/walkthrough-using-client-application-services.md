@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43788933"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194324"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Tutorial: Usar servicios de aplicaciones cliente
 En este tema se describe cómo crear una aplicación de Windows que usa los servicios de aplicaciones cliente para autenticar usuarios y recuperar la configuración y los roles de usuario.  
@@ -35,9 +35,8 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
 -   Habilite el modo sin conexión. Proporcionará una casilla para que los usuarios puedan especificar su estado de conexión. A continuación, usará este valor para especificar si los proveedores de servicios de aplicaciones cliente usarán los datos almacenados en caché localmente en lugar de acceder a sus servicios web. Por último, volverá a autenticar al usuario actual cuando la aplicación vuelva al modo en línea.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Necesita el componente siguiente para completar este tutorial:  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+
+Necesita Visual Studio para completar este tutorial.
   
 ## <a name="creating-the-client-application"></a>Crear la aplicación cliente.  
  Lo primero que hará es crear un proyecto de Windows Forms. Este tutorial usa Windows Forms porque más personas están familiarizadas con él, pero el proceso es similar para los proyectos de Windows Presentation Foundation (WPF).  
@@ -328,7 +327,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
      [!code-vb[ClientApplicationServices#110](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#110)]  
   
-9. Asegúrese de que el cursor está después de `IClientformsAuthenticationCredentialsProvider`y, a continuación, presione ENTRAR para generar el método `GetCredentials` .  
+9. Asegúrese de que el cursor está después de `IClientformsAuthenticationCredentialsProvider` y, a continuación, presione ENTRAR para generar el método `GetCredentials`.  
   
 10. Busque la implementación de <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> y, a continuación, reemplácela por el código siguiente.  
   
@@ -389,7 +388,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
- Si la autenticación es correcta, el proveedor de autenticación del cliente establece la propiedad <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> en una instancia de la clase <xref:System.Web.ClientServices.ClientRolePrincipal>. Esta clase implementa el método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> para que el trabajo se delegue en el proveedor de roles configurado. Al igual que antes, el código de aplicación no requiere una referencia directa al proveedor de servicios.  
+ Si la autenticación es correcta, el proveedor de autenticación del cliente establece la propiedad <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> en una instancia de la clase <xref:System.Web.ClientServices.ClientRolePrincipal> . Esta clase implementa el método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> para que el trabajo se delegue en el proveedor de roles configurado. Al igual que antes, el código de aplicación no requiere una referencia directa al proveedor de servicios.  
   
  Ahora puede ejecutar la aplicación e iniciar sesión como empleado para comprobar que el botón no aparece y, a continuación, iniciar sesión como administrador para ver el botón.  
   

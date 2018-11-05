@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 277ab8e094f28fd5e3cbba4de12e742bb9614730
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: abcc67a16e257a15599431a8fefe7753e6d52549
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425789"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190325"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (opciones del compilador de C#)
 
@@ -34,7 +34,7 @@ Para especificar varias rutas de acceso de origen asignadas, sepárelas con una 
 
 ## <a name="remarks"></a>Comentarios
 
-El compilador escribe la ruta de acceso de la ruta de acceso de origen en la salida por las razones siguientes:
+El compilador escribe la ruta de acceso de origen en la salida por las razones siguientes:
 
 1. La ruta de acceso de origen se sustituye por un argumento cuando se aplica <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> a un parámetro opcional.
 1. La ruta de acceso de origen se inserta en un archivo PDB.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502927"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199896"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -37,7 +37,7 @@ Utilice la tabla siguiente para obtener vínculos rápidos o siga leyendo para o
 
 |Versión de .NET Framework|Instalación para desarrolladores|Instalación de paquete redistribuible|Compatibilidad con la plataforma|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[Paquete de desarrollador de .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=874338)|[Instalador web de la versión 4.7.2 del Centro de descarga](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Instalador sin conexión de la versión 4.7.2 del Centro de descarga](https://go.microsoft.com/fwlink/?LinkId=863265)|Incluido en: <br/>Actualización de abril de 2018 de Windows 10<br /><br /> Se puede instalar en:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server, versión 1709 y anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[Paquete de desarrollador de .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=874338)|[Instalador web de la versión 4.7.2 del Centro de descarga](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Instalador sin conexión de la versión 4.7.2 del Centro de descarga](https://go.microsoft.com/fwlink/?LinkId=863265)|Incluido en: <br/>Actualización de octubre de 2018 de Windows 10<br/>Actualización de abril de 2018 de Windows 10<br /><br /> Se puede instalar en:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server, versión 1709 y anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[Paquete de desarrollador de .NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852105)|[Página de descarga del instalador web de la versión 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852107)|Incluido en: <br/>Windows 10 Fall Creators Update<br/>Windows Server, versión 1709<br /><br /> Se puede instalar en:<br/> Windows 10 Creators Update <br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2016 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[Paquete de desarrollador de .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825319)|[Página de descarga del instalador web de la versión 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.7](https://go.microsoft.com/fwlink/?LinkId=825303)|Incluido en: <br/>Windows 10 Creators Update<br /><br /> Se puede instalar en:<br /> Actualización de aniversario de Windows 10<br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2016 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[Paquete de desarrollador de .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780617)|[Página de descarga del instalador web de la versión 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Página de descarga del instalador sin conexión de la versión 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780601)|Incluido en: <br /> Actualización de aniversario de Windows 10<br /><br /> Se puede instalar en:<br /> Actualización de noviembre de Windows 10 <br/> Windows 10 <br /> Windows 8.1 y versiones anteriores<br /> Windows Server 2012 R2 y versiones anteriores<br /> (para obtener una lista completa, vea los [requisitos del sistema](~/docs/framework/get-started/system-requirements.md))|
@@ -154,7 +154,7 @@ Los instaladores web y sin conexión están diseñados para equipos con sistemas
 
 - Debe tener credenciales administrativas para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias y .NET Framework 4.7 y sus versiones secundarias.
 
-- .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible del [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft (2749655)](https://technet.microsoft.com/security/advisory/2749655) y el [Artículo 2770445 de Knowledge Base](https://support.microsoft.com/kb/2770445).
+- .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible del [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) y el [Artículo 2770445 de Knowledge Base](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>Para instalar paquetes de idioma
 

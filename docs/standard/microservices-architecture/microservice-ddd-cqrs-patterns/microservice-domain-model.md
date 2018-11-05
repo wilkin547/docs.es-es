@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106257"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048481"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
@@ -58,7 +58,7 @@ Hay usuarios que afirman que el modelo de dominio anémico es un antipatrón. En
 #### <a name="additional-resources"></a>Recursos adicionales
 
 -   **DevIQ. Entidad de dominio**
-    [*http://deviq.com/entity/*](http://deviq.com/entity/)
+    [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
 -   **Martin Fowler. El modelo de dominio**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
@@ -85,7 +85,7 @@ Los objetos de valor son difíciles de administrar en bases de datos relacionale
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 -   **Value Object (Objeto de valor)**
-    [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
+    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
 -   **Value Objects in Test-Driven Development**
     [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects) (Objetos de valor en el desarrollo controlado por pruebas)
@@ -136,11 +136,11 @@ Para identificar y trabajar con agregados se requiere investigación y experienc
 -   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate**
     [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf) (Diseño eficaz de agregados - Parte I: modelado de un único agregado)
 
--   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Diseño de agregado efectivo, parte II: Conseguir que los agregados funcionen juntos)**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
+-   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Diseño de agregados efectivo, parte II: Conseguir que los agregados funcionen juntos)**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
--   **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery (Diseño de agregado efectivo, parte II: Obtener información por medio de la detección)**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
+-   **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery (Diseño de agregado efectivo, parte III: Obtener información por medio de la detección)**
+    [ *https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
 -   **Sergey Grybniak. DDD Tactical Design Patterns (Patrones de diseño tácticos de diseño guiado por el dominio)**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
@@ -149,8 +149,7 @@ Para identificar y trabajar con agregados se requiere investigación y experienc
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 -   **DevIQ. The Aggregate pattern (El patrón de agregado)**
-    [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
-
+    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
 [Anterior](ddd-oriented-microservice.md)

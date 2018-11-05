@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c8a619021f8e398c5c3dfc974b9130ecacb44d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410038"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122784"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generador de archivos de recursos)
 El Generador de archivos de recursos (Resgen.exe) convierte archivos de texto (.txt o .restext) y archivos recursos basados en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario o en un ensamblado satélite. (Vea [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) (Crear archivos de recursos)).  
@@ -71,7 +71,7 @@ resgen filename.extension [outputDirectory]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Parámetro o modificador|Description|  
+|Parámetro o modificador|Descripción|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se admite la compilación condicional en archivos de recursos basados en texto (.txt o .restext). Si *symbol* corresponde a un símbolo incluido en el archivo de texto de entrada de una construcción `#ifdef`, el recurso de cadena asociado se incluye en el archivo .resources. Si el archivo de texto de entrada incluye una instrucción `#if !` con un símbolo que no se ha definido mediante el modificador `/define`, el recurso de cadena asociado se incluye en el archivo de recursos.<br /><br /> `/define` se omite si se usa con archivos de que no son de texto. Lo símbolos distinguen entre mayúsculas y minúsculas.<br /><br /> Para obtener más información sobre esta opción, vea [Compilar recursos de manera condicional](#Conditional) más adelante en este tema.|  
 |`useSourcePath`|Especifica que el directorio actual del archivo de entrada se usará para resolver las rutas de acceso relativas.|  
@@ -319,7 +319,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
 -   Una propiedad `static` (C#) o `Shared` (Visual Basic) de solo lectura de `ResourceManager`, que devuelve la instancia de <xref:System.Resources.ResourceManager> que administra el recurso fuertemente tipado.  
   
--   Una propiedad estática `Culture`, que permite establecer la referencia cultural usada para la recuperación de los recursos. De manera predeterminada, su valor es `null`, lo que significa que se usa la referencia cultural de la UI actual.  
+-   Una propiedad estática `Culture`, que permite establecer la referencia cultural usada para la recuperación de los recursos. De manera predeterminada, su valor es `null`, lo que significa que se usa la referencia cultural de la interfaz de usuario actual.  
   
 -   Una propiedad `static` (C#) o `Shared` (Visual Basic) de solo lectura para cada recurso del archivo .resources. El nombre de la propiedad es el nombre del recurso.  
   

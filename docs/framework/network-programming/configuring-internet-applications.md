@@ -21,14 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237051"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197241"
 ---
 # <a name="configuring-internet-applications"></a>Configuración de aplicaciones de Internet
 El elemento de configuración [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contiene información de configuración de red para las aplicaciones. Con el [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), puede establecer servidores proxy, establecer parámetros de administración de conexiones e incluir módulos personalizados de autenticación y solicitud en la aplicación.  
@@ -37,7 +35,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
   
  Es importante tener en cuenta que la configuración de Microsoft Internet Explorer se combina con los valores de configuración, que tienen preferencia.  
   
- En el siguiente ejemplo se establece la dirección del servidor proxy predeterminada en http://proxyserver, se indica que el proxy no debe usarse para las direcciones locales y se especifica que todas las solicitudes a servidores ubicados en el dominio contoso.com deben omitir el proxy.  
+ En el siguiente ejemplo se establece la dirección del servidor proxy predeterminada en `http://proxyserver`, se indica que el proxy no debe usarse para las direcciones locales y se especifica que todas las solicitudes a servidores ubicados en el dominio contoso.com deben omitir el proxy.  
   
 ```xml  
 <configuration>  
@@ -56,7 +54,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 </configuration>  
 ```  
   
- Use el [Elemento \<connectionManagement> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) para configurar el número de conexiones persistentes que pueden realizarse a un servidor concreto o a todos los demás servidores. En el ejemplo siguiente se configura la aplicación para que use dos conexiones persistentes al servidor www.contoso.com, cuatro conexiones persistentes al servidor con la dirección IP 192.168.1.2 y una conexión persistente a todos los demás servidores.  
+ Use el [Elemento \<connectionManagement> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) para configurar el número de conexiones persistentes que pueden realizarse a un servidor concreto o a todos los demás servidores. En el ejemplo siguiente se configura la aplicación para que use dos conexiones persistentes al servidor `www.contoso.com`, cuatro conexiones persistentes al servidor con la dirección IP 192.168.1.2 y una conexión persistente a todos los demás servidores.  
   
 ```xml  
 <configuration>  

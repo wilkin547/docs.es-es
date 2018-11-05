@@ -2,14 +2,12 @@
 title: Protocolo de resolución de nombres del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f17c5e7e2fa7a5eba66f0b9dd8c950a7464eea8e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196764"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185162"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo de resolución de nombres del mismo nivel
 En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolución de nombres específicos para resolver sus respectivas ubicaciones de red (direcciones, protocolos y puertos) a partir de nombres u otros tipos de identificadores. Antes, la resolución de nombres del mismo nivel resultaba complicada por la conectividad intrínsecamente transitoria y por otras limitaciones del Sistema de nombres de dominio (DNS).  
@@ -20,7 +18,7 @@ En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolu
   
  En cuanto a la seguridad, los nombres del mismo nivel pueden publicarse como seguros (protegidos) o no seguros (sin protección). PNRP usa criptografía de clave pública para proteger los nombres del mismo nivel seguros contra la suplantación de identidad; los nombres de ambos equipos y servicios pueden asignarse con PNRP.  
   
--   El Protocolo de resolución de nombres de mismo nivel tiene las propiedades siguientes:  
+El Protocolo de resolución de nombres de mismo nivel tiene las propiedades siguientes:  
   
 -   Es un protocolo distribuido prácticamente sin servidor. Solo se requieren servidores para el proceso de arranque.  
   
@@ -30,21 +28,13 @@ En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolu
   
 -   La resolución de nombres a través de PNRP va más allá de los equipos, ya que también permite la resolución de nombres para servicios.  
   
--  
-  
 ## <a name="the-systemnetpeertopeer-namespace"></a>El espacio de nombres System.Net.PeerToPeer  
   
 -   La funcionalidad PNRP está definida por el espacio de nombres <xref:System.Net.PeerToPeer> en .NET Framework versión 3.5. Proporciona un conjunto de tipos que se pueden usar para registrar y resolver nombres del mismo nivel con un servicio PNRP disponible.  
   
--  
-  
 -   (Se pueden crear resoluciones del mismo nivel personalizadas y PNRP y crear instancias de ellas mediante los tipos proporcionados en el espacio de nombres <xref:System.ServiceModel.PeerResolvers>).  
   
--  
-  
 -   Los tipos básicos que se usan para registrar y resolver los nombres con un servicio PNRP disponible son los siguientes:  
-  
--  
   
 -   <xref:System.Net.PeerToPeer.Cloud>: define la información que describe una nube PNRP disponible, incluido su ámbito.  
   
@@ -56,12 +46,8 @@ En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolu
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: define el proceso para resolver un nombre del mismo nivel en sus puntos de conexión de red, incluidos los métodos sincrónicos y asincrónicos para la resolución.  
   
--  
-  
--  
-  
 ## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.PeerResolvers>  
- <xref:System.Net.PeerToPeer>  
- [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Ejemplo de tecnología punto a punto](https://go.microsoft.com/fwlink/?LinkID=179571)
+- <xref:System.ServiceModel.PeerResolvers>  
+- <xref:System.Net.PeerToPeer>  
+- [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Ejemplo de tecnología punto a punto](https://go.microsoft.com/fwlink/?LinkID=179571)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ae36736ac7174ff7f77ae5bba45e1fd3880169c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 57c47fab98d7def3c3548769da091951819db1b1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972980"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50199687"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Herramienta PEVerify)
 La herramienta PEVerify ayuda a los desarrolladores que generan lenguaje intermedio de Microsoft (MSIL) (como autores de compiladores, desarrolladores de motores de scripts, etc.) a determinar si el código MSIL y los metadatos asociados satisfacen los requisitos de seguridad de tipos. Algunos compiladores solo generan código con seguridad de tipos comprobable si se evita el uso de determinadas construcciones de lenguaje. Si, como desarrollador, está utilizando un compilador con estas características, puede que desee comprobar que no ha puesto en peligro la seguridad de tipos del código. Para ello, ejecute la herramienta PEVerify en los archivos con el fin de comprobar el lenguaje MSIL y los metadatos.  
@@ -57,7 +57,7 @@ peverify filename [options]
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 ## <a name="remarks"></a>Comentarios  
- Common Language Runtime se basa en la ejecución con seguridad de tipos del código de la aplicación para ayudar a imponer mecanismos de aislamiento y seguridad. Normalmente, el código en el que no [se puede comprobar la seguridad de tipos](https://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) no se puede ejecutar, aunque puede establecer una directiva de seguridad para permitir la ejecución de código de confianza pero que no se puede comprobar.  
+ Common Language Runtime se basa en la ejecución con seguridad de tipos del código de la aplicación para ayudar a imponer mecanismos de aislamiento y seguridad. Normalmente, el código en el que no [se puede comprobar la seguridad de tipos](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security) no se puede ejecutar, aunque puede establecer una directiva de seguridad para permitir la ejecución de código de confianza pero que no se puede comprobar.  
   
  Si no se especifican las opciones **/md** o **/il**, Peverify.exe realiza ambos tipos de comprobaciones. Primero realiza comprobaciones de tipo **/md**. Si no hay errores, realiza comprobaciones de tipo **/il**. Si especifica ambas opciones (**/md** e **/il**), se realizarán comprobaciones de tipo **/il** aunque existan errores en los metadatos. Así, si no hay ningún error de metadatos, **peverify** *filename* es equivalente a **peverify** *filename* **/md** **/il**.  
   
@@ -122,6 +122,6 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas](../../../docs/framework/tools/index.md)  
- [NO ESTÁ EN LA COMPILACIÓN: Escribir código seguro comprobable](https://msdn.microsoft.com/library/d18f10ef-3b48-4f47-8726-96714021547b)  
- [Seguridad y protección de tipos](https://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
+ [Escritura de código con seguridad de tipos comprobable](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
+ [Seguridad y protección de tipos](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

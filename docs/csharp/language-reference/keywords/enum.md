@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: a64559ac1127f5ec296cf3892dd521c3ad8ac2be
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: de11a306937626a7dbbb184e509a9f89e63dbae5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086155"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187811"
 ---
 # <a name="enum-c-reference"></a>enum (Referencia de C#)
 
@@ -42,7 +42,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 Los tipos admitidos para una enumeración son [byte](byte.md), [sbyte](sbyte.md), [short](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [long](long.md) o [ulong](ulong.md).
 
-A una variable de tipo `Day` se le puede asignar cualquier valor en el intervalo del tipo subyacente; los valores no se limitan a las constantes con nombre.
+A una variable de un tipo de enumeración se le puede asignar cualquier valor en el intervalo del tipo subyacente; los valores no se limitan a las constantes con nombre.
 
 El valor predeterminado de `enum E` es el valor que produce la expresión `(E)0`.
 
@@ -91,7 +91,7 @@ Si quita `Flags`, el ejemplo muestra los siguientes valores:
 
 `5`
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

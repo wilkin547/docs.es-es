@@ -5,12 +5,12 @@ description: Aprenda a instalar .NET Framework en Windows 8
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: f1edc928318ec56853df06c1382465e24d9604c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2304e8e2865c00ef480cc3d595195248db3f4d2a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515889"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196549"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Instalación de .NET Framework en Windows 8 y Windows Server 2012
 
@@ -18,7 +18,7 @@ ms.locfileid: "43515889"
 
 ![No se pudo iniciar esta aplicación.](./media/this-application-could-not-be-started.png)
 
-Estas instrucciones ayudan a instalar las versiones necesarias de .NET Framework. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) es la última versión. Es compatible con Windows Server 2012, pero no con Windows 8. Se incluye con la [Actualización de abril de 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
+Estas instrucciones ayudan a instalar las versiones necesarias de .NET Framework. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) es la última versión. Es compatible con Windows Server 2012, pero no con Windows 8. Se incluye con la [Actualización de octubre de 2018 de Windows 10](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) y la [Actualización de abril de 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744088"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183105"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Cómo: Compilar un ensamblado de varios archivos
 En este artículo se explica cómo crear un ensamblado de múltiples archivos e incluye código que muestra cada paso del procedimiento.  
@@ -88,7 +88,7 @@ En este artículo se explica cómo crear un ensamblado de múltiples archivos e 
   
      En este comando, los argumentos de *nombre del módulo* especifican el nombre de todos los módulos que se van a incluir en el ensamblado. La opción **/main:** especifica el nombre del método que es el punto de entrada del ensamblado. La opción **/out:** especifica el nombre del archivo de salida, que contiene metadatos del ensamblado. La opción **/target:** especifica que el ensamblado es un archivo ejecutable de aplicación de consola (.exe), un archivo ejecutable de Windows (.win) o un archivo de biblioteca (.lib).  
   
-     En el siguiente ejemplo, Al.exe crea un ensamblado que es un ejecutable de aplicación de consola denominado `myAssembly.exe`. Esta aplicación está formada por dos módulos denominados `Client.netmodule` y `Stringer.netmodule` y por el archivo ejecutable denominado `myAssembly.exe,`, que solo contiene metadatos del ensamblado. El punto de entrada del ensamblado es el método `Main` de la clase `MainClientApp`, que se encuentra en `Client.dll`.  
+     En el siguiente ejemplo, Al.exe crea un ensamblado que es un ejecutable de aplicación de consola denominado `myAssembly.exe`. Esta aplicación está formada por dos módulos denominados `Client.netmodule` y `Stringer.netmodule`, y por el archivo ejecutable denominado `myAssembly.exe,`, que solo contiene metadatos del ensamblado. El punto de entrada del ensamblado es el método `Main` de la clase `MainClientApp`, que se encuentra en `Client.dll`.  
   
     ```  
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe   
@@ -97,7 +97,7 @@ En este artículo se explica cómo crear un ensamblado de múltiples archivos e 
      Se puede usar el [Desensamblador de MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar el contenido de un ensamblado o determinar si un archivo es un ensamblado o un módulo.  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
- [Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)

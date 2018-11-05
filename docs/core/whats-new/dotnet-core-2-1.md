@@ -1,15 +1,18 @@
 ---
 title: Novedades de .NET Core 2.1
 description: Obtenga información sobre las características nuevas de .NET Core 2.1.
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400072"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120952"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -166,9 +169,11 @@ Puede participar en la compilación en niveles de cualquiera de estas dos manera
 
 Sin estos tipos, al pasar tales elementos como una porción de una matriz o una sección de un búfer de memoria, debe hacer una copia de una parte de los datos antes de pasarlo a un método. Estos tipos proporcionan una vista virtual de los datos que elimina la necesidad de ejecutar operaciones adicionales de copia y asignación de memoria.
 
-En el ejemplo siguiente se usa una instancia de <xref:System.Span%601> para proporcionar una vista virtual de 10 elementos de una matriz.
+En el ejemplo siguiente se usa una instancia de <xref:System.Span%601> y <xref:System.Memory%601> para proporcionar una vista virtual de 10 elementos de una matriz.
 
 [!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compresión de Brotli
 

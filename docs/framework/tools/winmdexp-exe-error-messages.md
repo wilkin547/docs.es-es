@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075467"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873792"
 ---
 # <a name="winmdexpexe-error-messages"></a>Mensajes de error de Winmdexp.exe
-El proceso de compilación llama a [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) cuando se usa la plantilla **Componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)]** en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], por lo que aparecen mensajes de error de Winmdexp.exe en la **lista de errores**. Winmdexp.exe opera en un módulo compilado con la opción `/target:winmdobj`. Dado que requiere un módulo compilado como entrada, sus mensajes de error no aparecen a menos que la compilación se realice correctamente.  
+El proceso de compilación llama a [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) cuando se usa la plantilla **Componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)]** en Visual Studio 2012, por lo que aparecen mensajes de error de Winmdexp.exe en la **lista de errores**. Winmdexp.exe opera en un módulo compilado con la opción `/target:winmdobj`. Dado que requiere un módulo compilado como entrada, sus mensajes de error no aparecen a menos que la compilación se realice correctamente.  
   
  Los mensajes de error están diseñados para contener toda la información que necesita para abordar las condiciones de error sobre las que informan, pero algunos problemas requieren más información de la que cabe en el mensaje. Encontrará información adicional en [Diagnosticar condiciones de error en componentes de Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127) en el Centro de desarrollo de Windows.  
   

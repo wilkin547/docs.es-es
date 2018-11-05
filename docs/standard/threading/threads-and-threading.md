@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5049ed1b44155f3c21c53bef24a13006fe97a3fa
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188545"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452591"
 ---
 # <a name="threads-and-threading"></a>Subprocesos y subprocesamiento
 Los sistemas operativos usan procesos para separar las distintas aplicaciones que ejecutan. Los subprocesos son la unidad básica a la que el sistema operativo asigna tiempo de procesador, y más de un subproceso puede ejecutar código dentro de ese proceso. Cada subproceso mantiene controladores de excepciones, una prioridad de programación y un conjunto de estructuras que el sistema usa para guardar el contexto del subproceso hasta que esté programado. El contexto del subproceso incluye toda la información que el subproceso necesita para reanudar sin problemas la ejecución, incluido el conjunto de pila y registros de CPU del subproceso, en el espacio de direcciones del proceso de host del subproceso.  
@@ -26,7 +26,7 @@ Los sistemas operativos usan procesos para separar las distintas aplicaciones qu
  La duración del período de tiempo depende del sistema operativo y del procesador. Dado que cada intervalo de tiempo es pequeño, varios subprocesos parecen ejecutarse al mismo tiempo, aunque solo haya un procesador. Este es realmente el caso en sistemas multiprocesador, donde los subprocesos ejecutables se distribuyen entre los procesadores disponibles.  
   
 ## <a name="when-to-use-multiple-threads"></a>Cuándo utilizar varios subprocesos  
- El software que requiere la intervención del usuario debe reaccionar a las actividades del usuario lo más rápidamente posible para proporcionar una experiencia de usuario enriquecida. Sin embargo, al mismo tiempo, debe hacer los cálculos necesarios para presentar los datos al usuario lo más rápido posible. Si la aplicación utiliza solo un subproceso de ejecución, puede combinar la [programación asincrónica](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) con la [comunicación remota de .NET Framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) o los [servicios web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) creados con ASP .NET para utilizar el tiempo de procesamiento de otros equipos, además de los suyos propios, a fin de aumentar la capacidad de respuesta al usuario y reducir el tiempo de procesamiento de datos de la aplicación. Si está realizando trabajo intensivo de entrada/salida, también puede usar los puertos de terminación de E/S para aumentar la capacidad de respuesta de la aplicación.  
+ El software que requiere la intervención del usuario debe reaccionar a las actividades del usuario lo más rápidamente posible para proporcionar una experiencia de usuario enriquecida. Sin embargo, al mismo tiempo, debe hacer los cálculos necesarios para presentar los datos al usuario lo más rápido posible. Si la aplicación utiliza solo un subproceso de ejecución, puede combinar la [programación asincrónica](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) con la [comunicación remota de .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100)) o los [servicios web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100)) creados con ASP .NET para utilizar el tiempo de procesamiento de otros equipos, además de los suyos propios, a fin de aumentar la capacidad de respuesta al usuario y reducir el tiempo de procesamiento de datos de la aplicación. Si está realizando trabajo intensivo de entrada/salida, también puede usar los puertos de terminación de E/S para aumentar la capacidad de respuesta de la aplicación.  
   
 ### <a name="advantages-of-multiple-threads"></a>Ventajas de varios subprocesos  
  Sin embargo, utilizar más de un subproceso es la técnica más eficaz disponible para aumentar la capacidad de respuesta al usuario y procesar los datos necesarios para realizar el trabajo prácticamente al mismo tiempo. En un equipo con un procesador, varios subprocesos pueden crear este efecto, aprovechando los breves períodos de tiempo entre eventos de usuario para procesar los datos en segundo plano. Por ejemplo, un usuario puede editar una hoja de cálculo mientras otro subproceso vuelve a calcular otras partes de la hoja de cálculo dentro de la misma aplicación.  

@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tra
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404663"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49122856"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -281,7 +281,7 @@ El lenguaje de consulta DocumentDB es una interfaz sencilla pero eficaz para con
 
 **Referencias: DocumentDB**
 
-- Introducción a DocumentDB\
+- Introducción a DocumentDB  
   <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Otras opciones de persistencia
@@ -298,7 +298,7 @@ Además de las opciones de almacenamiento relacionales y NoSQL, en las aplicacio
 
 **Referencias: Azure Storage**
 
-- Introducción a Azure Storage
+- Introducción a Azure Storage  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Almacenamiento en memoria caché

@@ -1,0 +1,83 @@
+### YamlMime:Tutorial
+title: Obtenga información sobre la lógica condicional con instrucciones de rama y bucle
+metadata:
+  title: 'Ramas y bucles: tutorial interactivo de introducción a C#'
+  description: En este tutorial sobre las bifurcaciones y los bucles, se usará el explorador para aprender a utilizar C# de forma interactiva. Va a escribir código de C# y vea los resultados de la compilación y la ejecución del código directamente en el explorador.
+  audience: Developer
+  level: Beginner
+  ms.custom: mvc
+  ms.date: 08/24/2018
+  displayType: two-column
+  interactive: csharp
+  nextTutorialHref: interpolated-strings.yml
+  nextTutorialTitle: Interpolación de cadenas en C#
+  ms.openlocfilehash: 492922177cf213400629fac79da30a51bdbf46e5
+  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/28/2018
+  ms.locfileid: "50201673"
+items:
+- durationInMinutes: 1
+  content: >
+    En este tutorial se enseña a escribir código que analiza variables y cambia la ruta de acceso de ejecución en función de dichas variables. Va a usar el explorador para escribir C# de forma interactiva y ver los resultados de la compilación y ejecución del código. Este tutorial contiene una serie de lecciones en las que se analizan las construcciones de bifurcaciones y bucles en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
+- title: Toma de decisiones con la instrucción if
+  durationInMinutes: 4
+  content: "Ejecute el código siguiente en la ventana interactiva. Para ello, escriba el siguiente bloque de código en la ventana interactiva y haga clic en el botón **Ejecutar**:\n\n```csharp\nint a = 5;\nint b = 6;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10.\");\n```\n\nModifique la declaración de `b` para que el resultado de la suma sea menor que diez: \n\n```csharp\nint b = 3;\n```\n\nVuelva a hacer clic en el botón **Ejecutar**. Como la respuesta es menor que diez, no se imprime nada. La **condición** que está probando es false. No tiene ningún código para ejecutar porque solo ha escrito una de las bifurcaciones posibles para una instrucción `if`: la bifurcación true.\n\n> [!TIP]\n> Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El **compilador** buscará dichos errores y los notificará. Si la salida contiene mensajes de error, revise detenidamente el ejemplo de código y el código de la ventana interactiva para saber qué debe corregir.\n> Este ejercicio le ayudará a aprender la estructura del código de C#.     \n\nEn este primer ejemplo se muestran la potencia de `if` y los tipos booleanos. Un *booleano* es una variable que puede tener uno de estos dos valores: `true` o `false`. C# define un tipo especial `bool` para las variables booleanas. La instrucción `if` comprueba el valor de `bool`. Cuando el valor es `true`, se ejecuta la instrucción que sigue a `if`. De lo contrario, se omite. \n\nEste proceso de comprobación de condiciones y ejecución de instrucciones en función de esas condiciones es muy eficaz. Indaguemos más.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Operaciones conjuntas con if y else
+  durationInMinutes: 10
+  content: "\nPara ejecutar un código distinto en las bifurcaciones true y false, cree una bifurcación `else` para que se ejecute cuando la condición sea false. Pruebe esto:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nLa instrucción que sigue a la palabra clave `else` se ejecuta solo si la condición de prueba es `false`. La combinación de `if` y `else` con condiciones booleanas ofrece toda la eficacia necesaria.\n\n> [!IMPORTANT]\n> La sangría debajo de las instrucciones `if` y `else` se utiliza para los lectores humanos.\n> El lenguaje C# no considera significativos los espacios en blanco ni las sangrías. La instrucción que sigue a la palabra clave `if` o `else` se ejecutará en función de la condición. Todos los ejemplos de este tutorial siguen una práctica común para aplicar sangría a las líneas en función del flujo de control de las instrucciones.\n\nDado que la sangría no es significativa, debe usar `{` y `}` para indicar si desea que más de una instrucción forme parte del bloque que se ejecuta de forma condicional. Los programadores de C# suelen usar esas llaves en todas las cláusulas `if` y `else`. El siguiente ejemplo es igual al que acaba de crear. Pruébelo.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> En el resto de este tutorial, todos los ejemplos de código incluyen las llaves, según las prácticas aceptadas.\n\nPuede probar condiciones más complicadas:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a > b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is greater than the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not greater than the second\");\n}\n```\n\n`&&` representa \"y\". Significa que ambas condiciones deben cumplirse para ejecutar la instrucción en la bifurcación true.  En estos ejemplos también se muestra que puede tener varias instrucciones en cada bifurcación condicional, siempre que las encierre entre `{` y `}`.\n\nTambién puede usar `||` para representar \"o\":\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a > b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is greater than the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not greater than the second\");\n}\n```\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Uso de bucles para repetir las operaciones
+  durationInMinutes: 6
+  content: "El **bucle** es otro concepto importante para crear programas más grandes. Debe usar bucles para repetir las instrucciones que desee que se ejecuten más de una vez. Pruebe el código siguiente en la ventana interactiva:\n\n```csharp\nint counter = 0;\nwhile (counter < 10)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n}\n```\n\nLa instrucción `while` comprueba una condición y ejecuta la instrucción que aparece después de `while`. La comprobación de la condición y la ejecución de dichas instrucciones se repetirán hasta que la condición sea false.\n\nEn este ejemplo aparece otro operador nuevo. El código `++` que aparece después de la variable `counter` es el operador de **incremento**. Suma un valor de uno al valor del contador y almacena dicho valor en la variable del contador.\n\n> [!IMPORTANT]\n> Asegúrese de que la condición del bucle `while` no cambia a false mientras ejecuta el código. En caso contrario, se crea un **bucle infinito** donde nunca finaliza el programa. Eso no lo vamos a demostrar, porque el motor que ejecuta el código agotará el tiempo de espera y el programa no generará ninguna salida.\n\nEl bucle `while` prueba la condición antes de ejecutar el código que sigue a `while`. El bucle `do` ... `while` primero ejecuta el código y después comprueba la condición. Tiene el siguiente aspecto:\n\n```csharp\nint counter = 0;\ndo\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n} while (counter < 10);\n```\n\nEste bucle `do` y el bucle `while` anterior funcionan de la misma forma. \n\nAhora vamos a pasar a una última instrucción del bucle.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Operaciones con el bucle for
+  durationInMinutes: 5
+  content: "El bucle `for` es otra instrucción de bucle común que verá en el código de C#. Pruebe el código siguiente en la ventana interactiva:\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nFunciona de la misma forma que los bucles `while` y `do` que ya ha usado. La instrucción `for` consta de tres partes que controlan su funcionamiento. \n\nLa primera parte es el **inicializador de for**: `for counter = 0;` declara que `counter` es la variable de bucle y establece su valor inicial en `0`.\n\nLa parte central es la **condición de for**: `counter < 10` declara que este bucle `for` debe continuar ejecutándose mientras que el valor del contador sea menor que diez.\n\nLa última parte es el **iterador de for**: `counter++` especifica cómo modificar la variable de bucle después de ejecutar el bloque que sigue a la instrucción `for`. En este caso, especifica que `counter` debe incrementarse en uno cada vez que el bloque se ejecuta.\n\nExperimente con estas partes por su cuenta. Pruebe todos los pasos siguientes:\n\n- Cambie el inicializador para que se inicie en un valor distinto.\n- Cambie la condición para que se detenga en un valor diferente.\n\nCuando haya terminado, escriba algo de código para practicar con lo que ha aprendido.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Combinación de ramas y bucles
+  durationInMinutes: 12
+  content: >
+    Ahora que ya ha obtenido la información sobre el bucle `if` y las construcciones de bucles con el lenguaje C#, trate de escribir código de C# para obtener la suma de todos los enteros de uno a veinte que se puedan dividir entre tres.  Tenga en cuenta las siguientes sugerencias:
+
+
+    - El operador `%` proporciona el resto de una operación de división.
+
+    - La instrucción `if` genera la condición para saber si un número debe formar parte de la suma.
+
+    - El bucle `for` puede facilitar la repetición de una serie de pasos para todos los números comprendidos entre el uno y el veinte.
+
+
+    Pruébelo usted mismo. Después, revise cómo lo ha hecho. Sugerimos que obtenga 63 como respuesta.
+
+
+    > [!NOTE]
+
+    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
+- title: Desafío completo
+  durationInMinutes: 1
+  content: >
+    ¿Ha obtenido algo parecido a lo siguiente?
+
+
+    ```csharp
+
+    int sum = 0;
+
+    for (int number = 1; number < 21; number++)
+
+    {
+      if (number % 3 == 0)
+      {
+        sum = sum + number;
+      }
+    }
+
+    Console.WriteLine($"The sum is {sum}");
+
+    ```
+
+
+    > [!NOTE]
+
+    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
+- title: ¡Enhorabuena!
+  content: "Ha completado el tutorial \"Bifurcaciones y bucles\". \n\nPuede seguir estos tutoriales en su propio entorno de desarrollo. Eche un vistazo a los conceptos básicos sobre [desarrollo local](local-environment.md) y después seleccione un tutorial. Puede realizar este mismo ejercicio: vaya directamente al siguiente tutorial o vuelva a empezar en el principio de la serie con el tutorial [Números en C#](numbers-in-csharp-local.md).\n\nPuede obtener más información sobre estos conceptos en los temas siguientes:\n\n[Instrucciones If y else](../../language-reference/keywords/if-else.md)   \n[Instrucción while](../../language-reference/keywords/while.md)   \n[Instrucción do](../../language-reference/keywords/do.md)   \n[Instrucción for](../../language-reference/keywords/for.md)"

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251737"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196994"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas (Referencia de C#)
 
@@ -86,7 +86,7 @@ En el ejemplo siguiente, se usa la conversión implícita a <xref:System.Formatt
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Si no está familiarizado con la interpolación de cadenas, vea [Interpolación de cadenas en C#](../../quick-starts/interpolated-strings.yml). Para ver más ejemplos, eche un vistazo al tutorial [Interpolación de cadenas en C#](../../tutorials/string-interpolation.md).
+Si no está familiarizado con la interpolación de cadenas, vea el tutorial interactivo [Interpolación de cadenas en C#](../../tutorials/intro-to-csharp/interpolated-strings.yml). O bien, puede probar el tutorial [Interpolación de cadenas en C# ](../../tutorials/string-interpolation.md) localmente en el equipo.
 
 ## <a name="see-also"></a>Vea también
 

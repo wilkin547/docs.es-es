@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595566"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186075"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -49,6 +49,8 @@ En general, se recomienda elegir como destino la versión *menor* de .NET Standa
 
 1. Diríjase a la siguiente versión menor de .NET Standard y cree el proyecto.
 2. Si el proyecto se crea correctamente, repita el paso 1. De lo contrario, vuelva a dirigirse a la siguiente versión mayor, que es la que debe usar.
+
+Sin embargo, el establecimiento como destino de las versiones inferiores de .NET Standard introduce diferentes dependencias de compatibilidad. Si el proyecto establece como destino .NET Standard 1.x, le recomendamos que *también* establezca .NET Standard 2.0 como destino. Esto simplifica el gráfico de dependencias para los usuarios de la biblioteca que se ejecutan en los marcos compatibles de .NET Standard 2.0 y reduce el número de paquetes que necesitan descargar.
 
 ### <a name="net-standard-versioning-rules"></a>Reglas de control de versiones de .NET Standard
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 612550dd2e3cda4e3549bfc14c9ada712c6653bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235892"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197566"
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
 <a name="Top"></a> De forma predeterminada, al comparar una cadena de entrada con los caracteres literales de un patrón de expresión regular, se distinguen mayúsculas de minúsculas, los espacios en blanco del patrón de expresión regular se interpretan como caracteres de espacio en blanco literales, y los grupos de captura de la expresión regular se denominan tanto implícita como explícitamente. Estos y otros aspectos del comportamiento predeterminado de la expresión regular se pueden modificar mediante la especificación de las opciones de la expresión regular. Estas opciones —que aparecen enumeradas en la tabla siguiente— se pueden insertar como parte del patrón de expresión regular, o se pueden suministrar a un constructor de clases <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o a un método estático de coincidencia de patrones como valor de enumeración de <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  

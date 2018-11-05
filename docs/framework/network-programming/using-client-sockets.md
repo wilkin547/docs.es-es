@@ -16,14 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195555"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198972"
 ---
 # <a name="using-client-sockets"></a>Usar sockets de cliente
 Antes de poder iniciar una conversación a través de un <xref:System.Net.Sockets.Socket>, debe crear una canalización de datos entre su aplicación y el dispositivo remoto. Aunque existen otros protocolos y familias de direcciones de red, en este ejemplo se muestra cómo crear una conexión TCP/IP a un servicio remoto.  
@@ -42,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Internet Assigned Numbers Authority (Iana) define los números de puerto para los servicios comunes (para obtener más información, vea www.iana.org/assignments/port-numbers). Hay otros servicios que pueden tener registrados números de puerto en el intervalo comprendido entre 1024 y 65 535. El código siguiente combina la dirección IP para host.contoso.com con un número de puerto para crear un punto de conexión remoto para una conexión.  
+ Internet Assigned Numbers Authority (Iana) define números de puerto para los servicios comunes; para obtener más información, vea [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) (Registro del nombre de servicio y del número de puerto del protocolo de transporte). Hay otros servicios que pueden tener registrados números de puerto en el intervalo comprendido entre 1024 y 65 535. El código siguiente combina la dirección IP para host.contoso.com con un número de puerto para crear un punto de conexión remoto para una conexión.  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  

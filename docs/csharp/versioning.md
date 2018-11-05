@@ -3,12 +3,12 @@ title: 'Control de versiones de C#: Guía de C#'
 description: Comprender cómo funciona el control de versiones en C# y .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585938"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183235"
 ---
 # <a name="versioning-in-c"></a>Control de versiones en C# #
 
@@ -20,7 +20,7 @@ Como desarrollador que ha creado bibliotecas de .NET para uso público, probable
 
 ### <a name="semantic-versioning"></a>Control de versiones semántico
 
-[Control de versiones semántico](http://semver.org/) (SemVer para abreviar) es una convención de nomenclatura que se aplica a las versiones de su biblioteca para indicar eventos importantes específicos.
+[Control de versiones semántico](https://semver.org/) (SemVer para abreviar) es una convención de nomenclatura que se aplica a las versiones de su biblioteca para indicar eventos importantes específicos.
 De manera ideal, la información de la versión que proporciona a la biblioteca debe ayudar a los desarrolladores a determinar la compatibilidad con sus proyectos que usan versiones anteriores de la misma biblioteca.
 
 El enfoque más sencillo de SemVer es el formato de 3 componentes `MAJOR.MINOR.PATCH`, donde:

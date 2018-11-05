@@ -4,12 +4,12 @@ description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: efeb12eb43539b0a85168b1162e0f8b94ad67e90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213837"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183781"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Prueba unitaria de C# con MSTest y .NET Core
 
@@ -88,7 +88,7 @@ En el esquema siguiente se muestra el diseño de solución final:
         PrimeServiceTests.csproj
 ```
 
-Ejecute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) en el directorio *unit-testing-using-dotnet-test*. 
+Ejecute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) en el directorio *unit-testing-using-mstest*. 
 
 ## <a name="creating-the-first-test"></a>Crear la primera prueba
 

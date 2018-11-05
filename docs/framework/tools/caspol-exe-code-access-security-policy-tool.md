@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201145"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086861"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)
 La herramienta de la directiva de seguridad de acceso del código (CAS), o herramienta Caspol.exe, permite a los usuarios y administradores modificar las directivas de seguridad correspondientes a los niveles de equipo, usuario y empresa.  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica el código que tiene el editor de software especificado, indicado por un archivo de certificado, una firma en un archivo o la representación hexadecimal de un certificado X509. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Especifica el código que tiene el sitio de origen especificado. Por ejemplo:<br /><br /> `-site** www.proseware.com`<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica el código que tiene un nombre seguro determinado, que se indica por el nombre de archivo, el nombre de ensamblado en forma de cadena y la versión del ensamblado con el formato *major*.*minor*.*build*.*revision*. Por ejemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL*|Especifica el código que se origina en la dirección URL especificada. La dirección URL debe incluir un protocolo, como http:// o ftp://. Además, puede utilizarse un carácter comodín (\*) para especificar varios ensamblados desde una dirección URL en particular. **Nota**: Dado que una dirección URL puede identificarse mediante el uso de varios nombres, el uso de una dirección URL como condición de pertenencia no es una forma segura de confirmar la identidad del código. Siempre que pueda, utilice una condición de pertenencia consistente en un nombre seguro, en una compañía de software o en un hash. <br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Especifica el código que se origina en la dirección URL especificada. La dirección URL debe incluir un protocolo, como `http://` o `ftp://`. Además, puede utilizarse un carácter comodín (\*) para especificar varios ensamblados desde una dirección URL en particular. **Nota**: Dado que una dirección URL puede identificarse mediante el uso de varios nombres, el uso de una dirección URL como condición de pertenencia no es una forma segura de confirmar la identidad del código. Siempre que pueda, utilice una condición de pertenencia consistente en un nombre seguro, en una compañía de software o en un hash. <br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Especifica el código que tiene la zona de origen especificada. El argumento *zonename* puede ser uno de los valores siguientes: **MyComputer**, **Intranet**, **Trusted**, **Internet** o **Untrusted**. Para obtener más información sobre esta condición de pertenencia, vea la clase <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  El argumento *flags*, que se puede usar con las opciones **–addgroup** y **–chggroup**, se especifica mediante uno de los argumentos siguientes.  

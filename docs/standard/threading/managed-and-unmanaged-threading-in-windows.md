@@ -1,22 +1,25 @@
 ---
 title: Subprocesamiento administrado y no administrado en Windows
-ms.date: 03/30/2017
+ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
+- threading [.NET], managed
+- threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 34bd959890717a16df80d3870099757dd7400943
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864555"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199739"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Subprocesamiento administrado y no administrado en Windows
+
 La administración de todos los subprocesos se realiza mediante la clase <xref:System.Threading.Thread> , incluidos los subprocesos creados por Common Language Runtime y los creados fuera del runtime que entran en el entorno administrado para ejecutar código. El runtime supervisa todos los subprocesos del proceso que han ejecutado alguna vez código en el entorno de ejecución administrado. No realiza un seguimiento de ningún otro subproceso. Los subprocesos pueden acceder al entorno de ejecución administrado a través de la interoperabilidad COM (porque el runtime expone los objetos administrados como objetos COM a los entornos no administrados), la función COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) y la invocación de plataforma.  
   
  Cuando un subproceso no administrado entra en el runtime a través de, por ejemplo, un contenedor CCW, el sistema comprueba el almacén local del subproceso para buscar un objeto <xref:System.Threading.Thread> administrado interno. Si se encuentra uno, el runtime ya tiene en cuenta este subproceso. Si no lo encuentra, el runtime compila un nuevo objeto <xref:System.Threading.Thread> y lo instala en el almacén local de ese subproceso.  
@@ -26,7 +29,8 @@ La administración de todos los subprocesos se realiza mediante la clase <xref:S
 > [!NOTE]
 >  Un **ThreadId** de sistema operativo no tiene una relación fija con un subproceso administrado, ya que un host no administrado puede controlar la relación entre subprocesos administrados y no administrados. En concreto, un host sofisticado puede usar la API de fibras para programar muchos subprocesos administrados en el mismo subproceso de sistema operativo o para mover un subproceso administrado entre distintos subprocesos de sistema operativo.  
   
-## <a name="mapping-from-win32-threading-to-managed-threading"></a>Asignación de subprocesos de Win32 a subprocesos administrados  
+## <a name="mapping-from-win32-threading-to-managed-threading"></a>Asignación de subprocesos de Win32 a subprocesos administrados
+
  En la tabla siguiente se asignan elementos de subproceso de Win32 a sus equivalentes de runtime aproximados. Tenga en cuenta que esta asignación no representa una funcionalidad idéntica. Por ejemplo, **TerminateThread** no ejecuta cláusulas **finally** ni libera recursos, y no se puede evitar. No obstante, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ejecuta todo su código de reversión, recupera todos los recursos y se puede denegar con <xref:System.Threading.Thread.ResetAbort%2A>. Asegúrese de leer detenidamente la documentación y no realice suposiciones sobre la funcionalidad.  
   
 |En Win32|En Common Language Runtime|  
@@ -44,8 +48,9 @@ La administración de todos los subprocesos se realiza mediante la clase <xref:S
 |No equivalente|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
 |Cercano a **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
-## <a name="managed-threads-and-com-apartments"></a>Subprocesos administrados y apartamentos COM  
- Un subproceso administrado se puede marcar para indicar que hospedará un contenedor [uniproceso](/windows/desktop/com/single-threaded-apartments) o [multiproceso](/windows/desktop/com/multithreaded-apartments). (Para más información sobre la arquitectura de subprocesos COM, consulte [Procesos, subprocesos y contenedores](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)). Los métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> y <xref:System.Threading.Thread.TrySetApartmentState%2A> de la clase <xref:System.Threading.Thread> devuelven y asignan el estado de contenedor de un subproceso. Si el estado no se ha establecido, <xref:System.Threading.Thread.GetApartmentState%2A> devuelve <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+## <a name="managed-threads-and-com-apartments"></a>Subprocesos administrados y apartamentos COM
+
+Un subproceso administrado se puede marcar para indicar que hospedará un contenedor [uniproceso](/windows/desktop/com/single-threaded-apartments) o [multiproceso](/windows/desktop/com/multithreaded-apartments) . (Para más información sobre la arquitectura de subprocesos COM, consulte [Procesos, subprocesos y contenedores](/windows/desktop/com/processes--threads--and-apartments)). Los métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> y <xref:System.Threading.Thread.TrySetApartmentState%2A> de la clase <xref:System.Threading.Thread> devuelven y asignan el estado de contenedor de un subproceso. Si el estado no se ha establecido, <xref:System.Threading.Thread.GetApartmentState%2A> devuelve <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  La propiedad solo se puede establecer cuando el estado del subproceso es <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> y únicamente una vez por subproceso.  
   
@@ -61,8 +66,13 @@ La administración de todos los subprocesos se realiza mediante la clase <xref:S
  Cuando el código administrado llama a objetos COM, siempre sigue reglas COM. En otras palabras, el código llama a través de los proxy de apartamentos COM y contenedores de contexto COM+ 1.0, según lo dictado por OLE32.  
   
 ## <a name="blocking-issues"></a>Problemas de bloqueo  
- Si un subproceso realiza una llamada no administrada al sistema operativo que ha bloqueado el subproceso en código no administrado, el runtime no tomará el control de él para <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. En el caso de <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, el tiempo de ejecución marca el subproceso para **Abort** y toma el control de él cuando vuelve a introducir código administrado. Lo preferible para usted es usar un bloqueo administrado en vez de no administrado. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> y demás responden todos a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> y <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Además, si su subproceso está en un contenedor uniproceso, todas estas operaciones de bloqueo administrado suministrarán correctamente mensajes en su contenedor mientras el subproceso está bloqueado.  
-  
+
+Si un subproceso realiza una llamada no administrada al sistema operativo que ha bloqueado el subproceso en código no administrado, el runtime no tomará el control de él para <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. En el caso de <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, el runtime marca el subproceso para **Abort** y toma el control de él cuando vuelve a introducir código administrado. Lo preferible para usted es usar un bloqueo administrado en vez de no administrado. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>y demás responden todos a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> y <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Además, si su subproceso está en un contenedor uniproceso, todas estas operaciones de bloqueo administrado suministrarán correctamente mensajes en su contenedor mientras el subproceso está bloqueado.  
+
+## <a name="threads-and-fibers"></a>Subprocesos y fibras
+
+El modelo de subprocesos de .NET no admite [fibras](/windows/desktop/procthread/fibers). No debe llamar a ninguna función no administrada que se implementa mediante fibras. Tales llamadas pueden producir un bloqueo de runtime de .NET.
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  

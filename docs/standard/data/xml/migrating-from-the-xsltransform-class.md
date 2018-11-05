@@ -8,29 +8,30 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7f835cfb45848ca2790c3dcb541629564e9cc48a
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971973"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261399"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migración desde la clase XslTransform
-En la versión de [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] se ha rediseñado la arquitectura XSLT. La clase <xref:System.Xml.Xsl.XslTransform> se ha reemplazado por la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  
-  
- En las siguientes secciones se describen algunas de las principales diferencias existentes entre las clases <xref:System.Xml.Xsl.XslCompiledTransform> y <xref:System.Xml.Xsl.XslTransform>.  
-  
-## <a name="performance"></a>Rendimiento  
- La clase <xref:System.Xml.Xsl.XslCompiledTransform> incluye muchas mejoras del rendimiento. El nuevo procesador XSLT compila la hoja de estilos XSLT en un formato intermedio común, que es similar a lo que hace Common Language Runtime (CLR) para otros lenguajes de programación. Una vez compilada la hoja de estilos, se puede almacenar en caché y volver a utilizar.  
-  
- La clase <xref:System.Xml.Xsl.XslCompiledTransform> también incluye otras optimizaciones que hacen que sea mucho más rápida que la clase <xref:System.Xml.Xsl.XslTransform>.  
-  
+
+En la versión de Visual Studio 2005 se ha rediseñado la arquitectura XSLT. La clase <xref:System.Xml.Xsl.XslTransform> se reemplazó por la clase <xref:System.Xml.Xsl.XslCompiledTransform>.
+
+ En las siguientes secciones se describen algunas de las principales diferencias existentes entre las clases <xref:System.Xml.Xsl.XslCompiledTransform> y <xref:System.Xml.Xsl.XslTransform>.
+
+## <a name="performance"></a>Rendimiento
+ La clase <xref:System.Xml.Xsl.XslCompiledTransform> incluye muchas mejoras del rendimiento. El nuevo procesador XSLT compila la hoja de estilos XSLT en un formato intermedio común, que es similar a lo que hace Common Language Runtime (CLR) para otros lenguajes de programación. Una vez compilada la hoja de estilos, se puede almacenar en caché y volver a utilizar.
+
+ La clase <xref:System.Xml.Xsl.XslCompiledTransform> también incluye otras optimizaciones que hacen que sea mucho más rápida que la clase <xref:System.Xml.Xsl.XslTransform>.
+
 > [!NOTE]
->  Aunque el rendimiento total de la clase <xref:System.Xml.Xsl.XslCompiledTransform> es mejor que la clase <xref:System.Xml.Xsl.XslTransform>, el método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> de la clase <xref:System.Xml.Xsl.XslCompiledTransform> podría ser más lento que el método <xref:System.Xml.Xsl.XslTransform.Load%2A> de la clase <xref:System.Xml.Xsl.XslTransform> cuando se le llama por primera vez para una transformación. Esto se debe a que el archivo XSLT debe compilarse antes de cargarse. Para obtener más información, vea el siguiente blog: [XslCompiledTransform Slower than XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/) (¿XslCompiledTransform es más lento que XslTransform?).  
-  
-## <a name="security"></a>Seguridad  
- De forma predeterminada, la clase <xref:System.Xml.Xsl.XslCompiledTransform> deshabilita la compatibilidad para la función XSLT `document()` y los scripts incrustados. Para habilitar estas características, se puede crear un objeto <xref:System.Xml.Xsl.XsltSettings> con las características habilitadas y pasarlo al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. El siguiente ejemplo muestra cómo habilitar los scripts y cómo realizar una transformación XSLT.  
-  
+>  Aunque el rendimiento total de la clase <xref:System.Xml.Xsl.XslCompiledTransform> es mejor que la clase <xref:System.Xml.Xsl.XslTransform>, el método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> de la clase <xref:System.Xml.Xsl.XslCompiledTransform> podría ser más lento que el método <xref:System.Xml.Xsl.XslTransform.Load%2A> de la clase <xref:System.Xml.Xsl.XslTransform> cuando se le llama por primera vez para una transformación. Esto se debe a que el archivo XSLT debe compilarse antes de cargarse. Para obtener más información, vea el siguiente blog: [XslCompiledTransform Slower than XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/) (¿XslCompiledTransform es más lento que XslTransform?).
+
+## <a name="security"></a>Seguridad
+ De forma predeterminada, la clase <xref:System.Xml.Xsl.XslCompiledTransform> deshabilita la compatibilidad para la función XSLT `document()` y los scripts incrustados. Para habilitar estas características, se puede crear un objeto <xref:System.Xml.Xsl.XsltSettings> con las características habilitadas y pasarlo al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. El siguiente ejemplo muestra cómo habilitar los scripts y cómo realizar una transformación XSLT.
+
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
   
@@ -109,7 +110,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ### <a name="msxml-functions"></a>Funciones MSXML  
  Se ha agregado a la clase <xref:System.Xml.Xsl.XslCompiledTransform> compatibilidad con funciones MSXML adicionales. En la siguiente lista se describe toda la funcionalidad nueva o mejorada:  
   
--   msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> requiere que el argumento de la función [node-set Function](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) sea un fragmento del árbol resultante. La clase <xref:System.Xml.Xsl.XslCompiledTransform> no tiene este requerimiento.  
+-   msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> requiere que el argumento de la función [node-set Function](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) sea un fragmento del árbol resultante. La clase <xref:System.Xml.Xsl.XslCompiledTransform> no tiene este requisito.  
   
 -   msxsl:version: está función la admite <xref:System.Xml.Xsl.XslCompiledTransform>.  
   

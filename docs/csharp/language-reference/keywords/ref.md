@@ -1,27 +1,28 @@
 ---
 title: ref (Palabra clave) (Referencia de C#)
-ms.date: 03/06/2018
+ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208019"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195975"
 ---
 # <a name="ref-c-reference"></a>ref (Referencia de C#)
 
 La palabra clave `ref` indica un valor que se ha pasado mediante referencia. Se usa en cuatro contextos diferentes:
 
-- En una firma del método y en una llamada al método, para pasar un argumento a un método mediante referencia. Vea [Pasar un argumento mediante referencia](#passing-an-argument-by-reference) para obtener más información.
-- En una firma del método, para devolver un valor al autor de la llamada mediante referencia. Para obtener más información, vea [Valores devueltos de referencia](#reference-return-values).
-- En un cuerpo de miembro, para indicar que un valor devuelto de referencia se almacena localmente como una referencia que el autor de la llamada pretende modificar o, en general, que una variable local accede a otro valor por referencia. Vea [Variables locales de tipo ref](#ref-locals) para obtener más información.
-- En una declaración `struct` para declarar `ref struct` o `ref readonly struct`. Para obtener más información, vea [Semántica de referencia con tipos de valor](../../reference-semantics-with-value-types.md).
+- En una firma del método y en una llamada al método, para pasar un argumento a un método mediante referencia. Para más información, vea [Pasar un argumento mediante referencia](#passing-an-argument-by-reference).
+- En una firma del método, para devolver un valor al autor de la llamada mediante referencia. Para obtener más información, consulte [Valores devueltos de referencia](#reference-return-values).
+- En un cuerpo de miembro, para indicar que un valor devuelto de referencia se almacena localmente como una referencia que el autor de la llamada pretende modificar o, en general, que una variable local accede a otro valor por referencia. Para más información, vea [Variables locales de tipo ref](#ref-locals).
+- En una declaración `struct` para declarar `ref struct` o `ref readonly struct`. Para más información, vea [Tipo de estructura de referencia](#ref-struct-types).
+
 
 ## <a name="passing-an-argument-by-reference"></a>Pasar un argumento mediante referencia
 
@@ -89,6 +90,8 @@ return ref DecimalArray[0];
 
 Para que el autor de la llamada modifique el estado del objeto, el valor devuelto de referencia debe almacenarse en una variable que se defina explícitamente como una [variable local de tipo ref](#ref-locals).
 
+El método llamado también puede declarar el valor devuelto como `ref readonly` para devolver el valor por referencia y exigir que el código de llamada no pueda modificar el valor devuelto. El método de llamada puede evitar copiar el valor devuelto mediante el almacenamiento del valor en una variable de tipo [ref readonly](#ref-readonly-locals).
+
 Para obtener un ejemplo, vea [Un ejemplo de valores devueltos y variables locales de tipo ref](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Variables locales de tipo ref
@@ -111,6 +114,10 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 Tenga en cuenta que en ambos ejemplos la palabra clave `ref` debe usarse en ambos lugares. De lo contrario, el compilador genera el error CS8172, "No se puede inicializar una variable por referencia con un valor".
 
+## <a name="ref-readonly-locals"></a>Variables locales de tipo ref readonly
+
+Una variable local de tipo ref readonly se usa para hacer referencia a los valores devueltos por el método o la propiedad que tiene `ref readonly` en su firma y utiliza `return ref`. Una variable `ref readonly` combina las propiedades de una `ref` variable local con una variable `readonly`: es un alias para el almacenamiento al que se asigna y no se puede modificar. 
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Un ejemplo de valores devueltos y variables locales de tipo ref
 
 En el ejemplo siguiente se define una clase `Book` que tiene dos campos <xref:System.String>, `Title` y `Author`. También define una clase `BookCollection` que incluye una matriz privada de objetos `Book`. Los objetos book individuales se devuelven mediante referencia llamando a su método `GetBookByTitle`.
@@ -121,13 +128,30 @@ Cuando el autor de la llamada almacena el valor devuelto mediante el método `Ge
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="ref-struct-types"></a>Tipos de estructura de referencia
+
+La incorporación del modificador `ref` a una declaración `struct` define que las instancias de ese tipo se deben asignar a la pila. En otras palabras, las instancias de estos tipos no se pueden crear nunca en el montón como un miembro de otra clase. La principal motivación para esta característica era <xref:System.Span%601> y las estructuras relacionadas.
+
+El objetivo de mantener un tipo `ref struct` como una variable asignada a la pila presenta varias reglas que el compilador exige para todos los tipos `ref struct`.
+
+- No puede encerrar un valor de `ref struct`. No puede asignar un tipo `ref struct` a una variable de tipo `object`, `dynamic` o cualquier tipo de interfaz.
+- Los tipos `ref struct` no pueden implementar interfaces.
+- No puede declarar un `ref struct` como miembro de una clase o una estructura normal.
+- No puede declarar variables locales que sean tipos `ref struct` en métodos asincrónicos. Puede declararlas en los métodos sincrónicos que devuelven tipos similares a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
+- No puede declarar las variables locales de `ref struct` en iteradores.
+- No puede capturar variables `ref struct` en expresiones lambda o funciones locales.
+
+Estas restricciones aseguran que no se usará por error un valor `ref struct` de manera que pueda promoverlo al montón administrado.
+
+Puede combinar modificadores para declarar una estructura como `readonly ref`. `readonly ref struct` combina las ventajas y las restricciones de las declaraciones `ref struct` y `readonly struct`.
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Semántica de referencia con tipos de valor](../../reference-semantics-with-value-types.md)  
+- [Escritura de código seguro y eficaz](../../write-safe-efficient-code.md)  
 - [Pasar parámetros](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Parámetros de métodos](method-parameters.md)  
 - [Referencia de C#](../index.md)  

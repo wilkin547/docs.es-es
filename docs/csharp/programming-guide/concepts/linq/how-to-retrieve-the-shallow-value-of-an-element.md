@@ -2,12 +2,12 @@
 title: 'Cómo: Recuperar el valor superficial de un elemento (C#)'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 7e1a5b216a02ca72fa49785e50ed262a89abfcdf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2555b2f17120e4dce670a9fef9fc6a126a47e935
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505309"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180658"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Cómo: Recuperar el valor superficial de un elemento (C#)
 Este tema muestra cómo obtener el valor superficial de un elemento. El valor superficial es el valor del elemento específico solamente, en oposición al valor profundo, que incluye los valores de todos los elementos descendientes concatenados en una sola cadena.  

@@ -16,21 +16,19 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e6ab51da72a7cecac02a2bbd5664dee164239401
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 11b0082630fb41823173a87160344d2dfff5482e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195476"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193401"
 ---
 # <a name="using-tcp-services"></a>Usar Servicios TCP
 La clase <xref:System.Net.Sockets.TcpClient> solicita datos de un recurso de Internet mediante TCP. Los métodos y propiedades de **TcpClient** abstraen los detalles para crear un <xref:System.Net.Sockets.Socket> a fin de solicitar y recibir datos mediante TCP. Dado que la conexión al dispositivo remoto se representa como una secuencia, los datos se pueden leer y escribir empleando técnicas de control de secuencias de .NET Framework.  
   
  El protocolo TCP establece una conexión con un punto de conexión remoto y luego usa esa conexión para enviar y recibir paquetes de datos. El protocolo TCP es responsable de garantizar que los paquetes de datos se envíen al punto de conexión y que se monten en el orden correcto cuando lleguen.  
   
- Para establecer una conexión TCP, debe conocer la dirección del dispositivo de red que hospeda el servicio que necesita, así como el puerto TCP que usa el servicio para comunicarse. Internet Assigned Numbers Authority (Iana) define los números de puerto para los servicios comunes (vea www.iana.org/assignments/port-numbers). Los servicios que no están en la lista de Iana pueden tener números de puerto en el intervalo comprendido entre 1024 y 65 535.  
+ Para establecer una conexión TCP, debe conocer la dirección del dispositivo de red que hospeda el servicio que necesita, así como el puerto TCP que usa el servicio para comunicarse. Internet Assigned Numbers Authority (Iana) define números de puerto para los servicios comunes; para más información, vea [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) (Registro del nombre de servicio y del número de puerto del protocolo de transporte). Los servicios que no están en la lista de Iana pueden tener números de puerto en el intervalo comprendido entre 1024 y 65 535.  
   
  En el ejemplo siguiente se muestra cómo configurar un **TcpClient** para conectarse a un servidor horario en el puerto TCP 13.  
   

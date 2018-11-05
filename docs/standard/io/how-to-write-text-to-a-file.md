@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677154"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181243"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Cómo: Escribir texto en un archivo
 En este tema se describen diferentes formas de escribir texto en un archivo para aplicaciones de .NET Framework o aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Las clases y los métodos siguientes normalmente se usan para escribir texto en un archivo:  
@@ -27,7 +27,7 @@ En este tema se describen diferentes formas de escribir texto en un archivo para
   
 -   <xref:System.IO.File> : para usar con aplicaciones de .NET Framework. Proporciona métodos estáticos para escribir texto en un archivo (por ejemplo, <xref:System.IO.File.WriteAllLines%2A> y <xref:System.IO.File.WriteAllText%2A>) o para anexar texto a un archivo (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> o <xref:System.IO.File.AppendText%2A>).  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) : para usar con aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Contiene métodos asincrónicos para escribir texto en un archivo ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) o [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) o anexar texto a un archivo ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) o [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
+-   <xref:Windows.Storage.FileIO>: para usar con aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Contiene métodos asincrónicos para escribir texto en un archivo (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> y <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) o para anexar texto a un archivo (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> o <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).  
 
 - <xref:System.IO.Path> se usa en cadenas que contienen información de la ruta de acceso al archivo o directorio. Contiene el método <xref:System.IO.Path.Combine%2A>, que permite la concatenación de cadenas para compilar una ruta de acceso al archivo o directorio.
 
@@ -59,7 +59,7 @@ En este tema se describen diferentes formas de escribir texto en un archivo para
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestra cómo escribir asincrónicamente en un archivo de texto los datos proporcionados por el usuario en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Por cuestiones de seguridad, la apertura de un archivo desde una aplicación de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] normalmente requiere el uso de un control [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx). En este ejemplo, `FileOpenPicker` se filtra para mostrar archivos de texto.  
+ En el siguiente ejemplo se muestra cómo escribir asincrónicamente en un archivo de texto los datos proporcionados por el usuario en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Por cuestiones de seguridad, la apertura de un archivo desde una aplicación de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] normalmente requiere el uso de un control <xref:Windows.Storage.Pickers.FileOpenPicker>. En este ejemplo, `FileOpenPicker` se filtra para mostrar archivos de texto.  
   
 ```xaml  
 <Page  

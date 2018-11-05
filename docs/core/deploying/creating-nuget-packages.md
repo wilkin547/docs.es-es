@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0be8d302568bc08d2c3dacfdf5738eff4b97d4b2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205067"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848106"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Cómo crear un paquete de NuGet con herramientas multiplataforma
 
@@ -21,7 +21,7 @@ Para .NET Core 1.0, está previsto que las bibliotecas se distribuyan como paque
 
 Imagine que acaba de escribir una nueva biblioteca sorprendente que quiere distribuir a través de NuGet.  Puede crear un paquete de NuGet con herramientas multiplataforma para hacer exactamente eso.  En el ejemplo siguiente, hay una biblioteca denominada **SuperAwesomeLibrary** con destino a `netstandard1.0`.
 
-Si tiene dependencias transitivas; es decir, un proyecto que depende de otro, deberá asegurarse de restaurar los paquetes para toda la solución con el comando `dotnet restore` antes de crear un paquete de NuGet.  Si no lo hace, el comando `dotnet pack` no funcionará correctamente.
+Si tiene dependencias transitivas; es decir, un proyecto que depende de otro paquete, deberá asegurarse de restaurar los paquetes para toda la solución con el comando `dotnet restore` antes de crear un paquete de NuGet.  Si no lo hace, el comando `dotnet pack` no funcionará correctamente.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502220"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189724"
 ---
 # <a name="formatting-types-in-net"></a>Aplicar formato a tipos en .NET
 <a name="Introduction"></a> Aplicar formato es el proceso de convertir una instancia de una clase, una estructura o un valor de enumeración en su representación de cadena, a menudo para que la cadena resultante se pueda mostrar a los usuarios o deserializar para restaurar el tipo de datos original. Esta conversión puede plantear varios desafíos:  
@@ -120,9 +120,9 @@ ms.locfileid: "43502220"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  A partir de [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] incluye una interfaz [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) con un solo método, [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), que ofrece compatibilidad con el formato predeterminado. Sin embargo, es recomendable que los tipos administrados no implementen la interfaz `IStringable` . Para obtener más información, consulte la sección “[!INCLUDE[wrt](../../../includes/wrt-md.md)] y la interfaz `IStringable`” en la página de referencia de <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+>  A partir de [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] incluye una interfaz <xref:Windows.Foundation.IStringable> con un solo método, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), que ofrece compatibilidad con el formato predeterminado. Sin embargo, es recomendable que los tipos administrados no implementen la interfaz `IStringable` . Para obtener más información, consulte la sección “[!INCLUDE[wrt](../../../includes/wrt-md.md)] y la interfaz `IStringable`” en la página de referencia de <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
   
- Puesto que todos los tipos distintos de las interfaces se derivan de <xref:System.Object>, esta funcionalidad se proporciona automáticamente a sus clases o estructuras personalizadas. Sin embargo, la funcionalidad proporcionada por el método `ToString` predeterminado es limitada: aunque identifica el tipo, no proporciona ninguna información sobre una instancia del tipo. Para proporcionar una representación de cadena de un objeto que proporciona información sobre ese objeto, debe invalidar el método `ToString` .  
+ Puesto que todos los tipos distintos de las interfaces se derivan de <xref:System.Object>, esta funcionalidad se proporciona automáticamente a sus clases o estructuras personalizadas. Sin embargo, la funcionalidad proporcionada por el método `ToString` predeterminado es limitada: aunque identifica el tipo, no proporciona ninguna información sobre una instancia del tipo. Para proporcionar una representación de cadena de un objeto que proporciona información sobre ese objeto, debe invalidar el método `ToString`.  
   
 > [!NOTE]
 >  Las estructuras heredan de <xref:System.ValueType>, que a su vez se deriva de <xref:System.Object>. Aunque <xref:System.ValueType> invalida <xref:System.Object.ToString%2A?displayProperty=nameWithType>, su implementación es idéntica.  
@@ -276,7 +276,7 @@ ms.locfileid: "43502220"
   
  <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> es un método de devolución de llamada. Al llamar a una sobrecarga del método `ToString` que incluye un parámetro de <xref:System.IFormatProvider> , se llama al método <xref:System.IFormatProvider.GetFormat%2A> de ese objeto <xref:System.IFormatProvider> . El método <xref:System.IFormatProvider.GetFormat%2A> devuelve un objeto que proporciona al método `formatType` la información de formato necesaria especificada por su parámetro `ToString` .  
   
- Varios métodos de formato o de conversión de cadenas incluyen un parámetro de tipo <xref:System.IFormatProvider>pero, en muchos casos, se omite el valor del parámetro cuando se llama al método. En la tabla siguiente se muestran algunos métodos de formato que usan el parámetro y el tipo del objeto <xref:System.Type> que pasan al método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>.  
+ Varios métodos de formato o de conversión de cadenas incluyen un parámetro de tipo <xref:System.IFormatProvider>pero, en muchos casos, se omite el valor del parámetro cuando se llama al método. En la tabla siguiente se muestran algunos métodos de formato que usan el parámetro y el tipo del objeto <xref:System.Type> que pasan al método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> .  
   
 |Método|Tipo de parámetro `formatType`|  
 |------------|------------------------------------|  
@@ -302,7 +302,7 @@ ms.locfileid: "43502220"
   
 <a name="numericCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>Formato que tiene en cuenta las referencias culturales de valores numéricos  
- De forma predeterminada, el formato de los valores numéricos depende de la referencia cultural. Si no especifica una referencia cultural cuando llama a un método de formato, se utilizan las convenciones de formato de la referencia cultural del subproceso actual. Esto se muestra en el ejemplo siguiente, que cambia la referencia cultural del subproceso actual cuatro veces y después llama al método <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. En cada caso, la cadena resultante refleja las convenciones de formato de la referencia cultural actual. Esto se debe a que los métodos `ToString` y `ToString(String)` incluyen llamadas a cada tipo numérico del método `ToString(String, IFormatProvider)` .  
+ De forma predeterminada, el formato de los valores numéricos depende de la referencia cultural. Si no especifica una referencia cultural cuando llama a un método de formato, se utilizan las convenciones de formato de la referencia cultural del subproceso actual. Esto se muestra en el ejemplo siguiente, que cambia la referencia cultural del subproceso actual cuatro veces y después llama al método <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> . En cada caso, la cadena resultante refleja las convenciones de formato de la referencia cultural actual. Esto se debe a que los métodos `ToString` y `ToString(String)` incluyen llamadas a cada tipo numérico del método `ToString(String, IFormatProvider)` .  
   
  [!code-csharp[Conceptual.Formatting.Overview#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific3.cs#19)]
  [!code-vb[Conceptual.Formatting.Overview#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific3.vb#19)]  
@@ -320,14 +320,14 @@ ms.locfileid: "43502220"
   
 <a name="dateCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Formato que tiene en cuenta las referencias culturales de valores de fecha y hora  
- De forma predeterminada, el formato de los valores de fecha y hora tiene en cuenta las referencias culturales. Si no especifica una referencia cultural cuando llama a un método de formato, se utilizan las convenciones de formato de la referencia cultural del subproceso actual. Esto se muestra en el ejemplo siguiente, que cambia la referencia cultural del subproceso actual cuatro veces y después llama al método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>. En cada caso, la cadena resultante refleja las convenciones de formato de la referencia cultural actual. Esto se debe a que los métodos <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> y <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> encapsulan llamadas a los métodos <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> y <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.  
+ De forma predeterminada, el formato de los valores de fecha y hora tiene en cuenta las referencias culturales. Si no especifica una referencia cultural cuando llama a un método de formato, se utilizan las convenciones de formato de la referencia cultural del subproceso actual. Esto se muestra en el ejemplo siguiente, que cambia la referencia cultural del subproceso actual cuatro veces y después llama al método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> . En cada caso, la cadena resultante refleja las convenciones de formato de la referencia cultural actual. Esto se debe a que los métodos <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>y <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> encapsulan llamadas a los métodos <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> y <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
  [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]  
   
  También se puede dar formato a un valor de fecha y hora para una referencia cultural concreta llamando a una sobrecarga de <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> que tenga un parámetro `provider` y pasándole uno de los elementos siguientes:  
   
--   Un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural cuyas convenciones de formato se van a usar. Su método <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> devuelve el valor de la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>, que es el objeto <xref:System.Globalization.DateTimeFormatInfo> que proporciona información sobre el formato de una referencia cultural específica para valores de fecha y hora.  
+-   Un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural cuyas convenciones de formato se van a usar. Su método <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> devuelve el valor de la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> , que es el objeto <xref:System.Globalization.DateTimeFormatInfo> que proporciona información sobre el formato de una referencia cultural específica para valores de fecha y hora.  
   
 -   Un objeto <xref:System.Globalization.DateTimeFormatInfo> que define las convenciones de formato de la referencia cultural que se van a usar. Su método <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> devuelve una instancia de sí mismo.  
   
@@ -344,7 +344,7 @@ ms.locfileid: "43502220"
   
 -   Compatibilidad con la conversión de cadenas por la clase <xref:System.Convert> . Las llamadas a los métodos <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> y <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> llaman automáticamente a su implementación de <xref:System.IFormattable>.  
   
--   Compatibilidad con formatos compuestos. Si se usa un elemento de formato que incluye una cadena de formato para dar formato a su tipo personalizado, Common Language Runtime llama automáticamente a su implementación de <xref:System.IFormattable> y le pasa la cadena de formato. Para obtener más información sobre los formatos compuestos con métodos como <xref:System.String.Format%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, consulte la sección [Formatos compuestos](#CompositeFormatting).  
+-   Compatibilidad con formatos compuestos. Si se usa un elemento de formato que incluye una cadena de formato para dar formato a su tipo personalizado, Common Language Runtime llama automáticamente a su implementación de <xref:System.IFormattable> y le pasa la cadena de formato. Para obtener más información sobre los formatos compuestos con métodos como <xref:System.String.Format%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, vea la sección [Formatos compuestos](#CompositeFormatting) .  
   
  En el ejemplo siguiente se define una clase `Temperature` que implementa la interfaz <xref:System.IFormattable> . Admite los especificadores de formato "C" o "G" para mostrar la temperatura en grados centígrados, el especificador de formato "F" para mostrar la temperatura en grados Fahrenheit y el especificador de formato "K" para mostrar la temperatura en grados Kelvin.  
   
@@ -391,7 +391,7 @@ ms.locfileid: "43502220"
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- En el ejemplo siguiente se usa la clase `ByteByByteFormatter` para dar formato a valores enteros. Observe que en el ejemplo no se llama explícitamente al método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> más de una vez en la segunda llamada al método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y que el proveedor <xref:System.Globalization.NumberFormatInfo> predeterminado se usa en la tercera llamada al método porque el método `ByteByByteFormatter.Format` no reconoce la cadena de formato "N0" y devuelve una referencia nula (`Nothing` en Visual Basic).  
+ En el ejemplo siguiente se usa la clase `ByteByByteFormatter` para dar formato a valores enteros. Observe que en el ejemplo no se llama explícitamente al método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> más de una vez en la segunda llamada al método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y que el proveedor <xref:System.Globalization.NumberFormatInfo> predeterminado se usa en la tercera llamada al método porque el método`ByteByByteFormatter.Format` no reconoce la cadena de formato "N0" y devuelve una referencia nula (`Nothing` en Visual Basic).  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  

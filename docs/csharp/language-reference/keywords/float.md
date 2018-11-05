@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: da697aa6f1f429418a69d9f58a13f46a3da9ac74
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157709"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187184"
 ---
 # <a name="float-c-reference"></a>float (Referencia de C#)
 
@@ -21,7 +21,7 @@ La palabra clave `float` indica un tipo simple que almacena valores de punto flo
 
 |Tipo|Intervalo aproximado|Precisión|Tipo de .NET|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|De ±1,5 x 10<sup>-45</sup> a ±3,4 x 10<sup>38</sup>|7 dígitos|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|De ±1,5 x 10<sup>-45</sup> a ±3,4 x 10<sup>38</sup>|De 6 a 9 dígitos aproximadamente|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Literales
 
@@ -51,7 +51,7 @@ Una expresión de punto flotante puede contener los siguientes conjuntos de valo
 
 - El conjunto finito de valores distintos de cero
 
-Para obtener más información sobre estos valores, vea el estándar IEEE para aritmética binaria de punto flotante, disponible en el sitio web de [IEEE](http://www.ieee.org).
+Para obtener más información sobre estos valores, vea el estándar IEEE para aritmética binaria de punto flotante, disponible en el sitio web de [IEEE](https://www.ieee.org).
 
 ## <a name="example"></a>Ejemplo
 
@@ -59,7 +59,7 @@ En el ejemplo siguiente, se incluyen un [int](int.md), un [short](short.md) y un
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

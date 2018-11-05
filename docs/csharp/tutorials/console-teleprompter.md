@@ -3,12 +3,12 @@ title: Aplicación de consola
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937597"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183625"
 ---
 # <a name="console-application"></a>Aplicación de consola
 
@@ -155,7 +155,7 @@ Ejecute el ejemplo y podrá leer en alto a su ritmo preconfigurado.
 
 ## <a name="async-tasks"></a>Tareas asincrónicas
 
-En este paso final, agregará el código para escribir la salida de manera asincrónica en una tarea, mientras se ejecuta también otra tarea para leer la entrada del usuario si quiere aumentar o reducir la velocidad de la pantalla de texto. Incluye unos cuantos pasos y, al final, tendrá todas las actualizaciones que necesita.
+En este paso final, agregará el código para escribir la salida de manera asincrónica en una tarea, mientras se ejecuta también otra tarea para leer la entrada del usuario si quiere aumentar o reducir la velocidad de la pantalla de texto, o detendrá la presentación del texto por completo. Incluye unos cuantos pasos y, al final, tendrá todas las actualizaciones que necesita.
 El primer paso es crear un método de devolución <xref:System.Threading.Tasks.Task> asincrónico que represente el código que ha creado hasta el momento para leer y visualizar el archivo.
 
 Agregue este método a su clase `Program` (se toma del cuerpo del método `Main`):
@@ -190,7 +190,7 @@ Aquí, en `Main`, el código espera de manera sincrónica. Siempre que sea posib
 > [!NOTE]
 > Si usa C# 7.1 o una versión posterior, puede crear aplicaciones de consola con el [método `async` `Main`](../whats-new/csharp-7-1.md#async-main).
 
-A continuación, debe escribir el segundo método asincrónico para leer de la consola y controlar las teclas "<" (menor que) o ">" (mayor que). Este es el método que agrega para esa tarea:
+A continuación, debe escribir el segundo método asincrónico para leer de la consola y controlar las teclas "<" (menor que), ">" (mayor que), "X" o "x". Este es el método que agrega para esa tarea:
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-Se crea una expresión lambda que representa un delegado de <xref:System.Action> que lee una clave de la consola y modifica una variable local que representa el retraso cuando el usuario presiona las teclas "<" (menor que) o ">" (mayor que). Este método usa <xref:System.Console.ReadKey> para bloquear y esperar a que el usuario presione una tecla.
+Se crea una expresión lambda que representa un delegado de <xref:System.Action> que lee una clave de la consola y modifica una variable local que representa el retraso cuando el usuario presiona las teclas "<" (menor que) o ">" (mayor que). El método de delegado finaliza cuando el usuario presiona las teclas "X" o "x", que permiten al usuario detener la presentación del texto en cualquier momento.
+Este método usa <xref:System.Console.ReadKey> para bloquear y esperar a que el usuario presione una tecla.
 
 Para finalizar esta característica, debe crear un nuevo método de devolución `async Task` que inicie estas dos tareas (`GetInput` y `ShowTeleprompter`) y también administre los datos compartidos entre ellas.
 

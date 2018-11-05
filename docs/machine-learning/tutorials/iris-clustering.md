@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937170"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453195"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Tutorial: Uso de ML.NET para agrupar flores de iris en clústeres (agrupación en clústeres)
 
@@ -138,19 +138,19 @@ El primer paso que se va a realizar es cargar el conjunto de datos de aprendizaj
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-El siguiente paso consiste en combinar todas las columnas de característica en la columna **Features** mediante la clase de transformación <xref:Microsoft.ML.Transforms.ColumnConcatenator>. De forma predeterminada, un algoritmo de aprendizaje solo procesa las características de la columna **Features**. Agregue el código siguiente:
+El siguiente paso consiste en combinar todas las columnas de característica en la columna **Features** mediante la clase de transformación <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator>. De forma predeterminada, un algoritmo de aprendizaje solo procesa las características de la columna **Features**. Agregue el código siguiente:
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>Elegir un algoritmo de aprendizaje
 
-Después de agregar los datos a la canalización y transformarlos en el formato de entrada correcto, seleccione un algoritmo de aprendizaje (**aprendiz**). El aprendiz entrena el modelo. ML.NET proporciona un aprendiz <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer> que implementa el [algoritmo k-means](https://en.wikipedia.org/wiki/K-means_clustering) con un método mejorado para elegir los centroides de clúster iniciales.
+Después de agregar los datos a la canalización y transformarlos en el formato de entrada correcto, seleccione un algoritmo de aprendizaje (**aprendiz**). El aprendiz entrena el modelo. ML.NET proporciona un aprendiz <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer> que implementa el [algoritmo k-means](https://en.wikipedia.org/wiki/K-means_clustering) con un método mejorado para elegir los centroides de clúster iniciales.
 
 Agregue el código siguiente al método `Train` después del código de procesamiento de datos que ha agregado en el paso anterior:
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-Use la propiedad <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> para especificar el número de clústeres. En el código anterior se especifica que el conjunto de datos se debe dividir en tres clústeres.
+Use la propiedad <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> para especificar el número de clústeres. En el código anterior se especifica que el conjunto de datos se debe dividir en tres clústeres.
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 

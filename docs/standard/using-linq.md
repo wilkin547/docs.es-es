@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 4e6e361666b6b6ae36b7d4bf02af55a379c8e16e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8ce7f39d78006765a49bbd4e3d46c611761a4bd1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087035"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181740"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Por último, un ejemplo más avanzado: determinar si los valores de las propiedades de dos instancias del mismo tipo son iguales (tomado y modificado de [esta entrada de StackOverflow](http://stackoverflow.com/a/844855)):
+*   Por último, un ejemplo más avanzado: determinar si los valores de las propiedades de dos instancias del mismo tipo son iguales (tomado y modificado de [esta entrada de StackOverflow](https://stackoverflow.com/a/844855)):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -224,7 +224,7 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 
 ## <a name="plinq"></a>PLINQ
 
-PLINQ, o Parallel LINQ, es un motor de ejecución en paralelo para expresiones de LINQ. En otras palabras, se pueden paralelizar las expresiones normales de LINQ de forma trivial en cualquier número de subprocesos. Para hacerlo, se emplea una llamada a `AsParallel()` delante de la expresión.
+PLINQ, o Parallel LINQ, es un motor de ejecución en paralelo para expresiones de LINQ. En otras palabras, se puede paralelizar una expresión normal de LINQ de forma trivial en cualquier número de subprocesos. Para hacerlo, se emplea una llamada a `AsParallel()` delante de la expresión.
 
 Considere el siguiente caso:
 

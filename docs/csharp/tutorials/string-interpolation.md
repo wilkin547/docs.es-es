@@ -3,16 +3,16 @@ title: Interpolación de cadenas en C#
 description: Obtenga información sobre cómo incluir resultados de expresión con formato en una cadena de resultado en C# con la interpolación de cadenas.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086708"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188643"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolación de cadenas en C# #
 
-En este tutorial se explica cómo usar la [interpolación de cadenas](../language-reference/tokens/interpolated.md) para dar formato a resultados de expresión e incluirlos en una cadena de resultado. En los ejemplos se da por hecho que ya está familiarizado con los conceptos básicos de C# y el formato de tipos .NET. Si no conoce la interpolación de cadenas o el formato de tipos .NET, vea antes el [inicio rápido de interpolación de cadenas interactivo](../quick-starts/interpolated-strings.yml). Para más información sobre cómo aplicar formato a tipos .NET, vea el tema [Aplicar formato a tipos en .NET](../../standard/base-types/formatting-types.md).
+En este tutorial se explica cómo usar la [interpolación de cadenas](../language-reference/tokens/interpolated.md) para dar formato a resultados de expresión e incluirlos en una cadena de resultado. En los ejemplos se da por hecho que ya está familiarizado con los conceptos básicos de C# y el formato de tipos .NET. Si no conoce la interpolación de cadenas o el formato de tipos .NET, vea antes el [tutorial de interpolación de cadenas interactivo](../tutorials/intro-to-csharp/interpolated-strings.yml). Para más información sobre cómo aplicar formato a tipos .NET, vea el tema [Aplicar formato a tipos en .NET](../../standard/base-types/formatting-types.md).
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

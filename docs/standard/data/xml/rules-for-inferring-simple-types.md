@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615318"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123584"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Reglas para deducir tipos simples
 Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el tipo de datos para atributos y elementos.  
@@ -65,8 +65,9 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
   
  Cuando se encuentra el primer valor `attr2`, el tipo de `attr2` se deduce como `unsignedByte` basado en el valor `0`. Cuando se encuentra el segundo `attr2`, el tipo se promueve a `string` basado en el tipo deducido actualmente de `unsignedByte` y el valor actual `true` ya que la clase <xref:System.Xml.Schema.XmlSchemaInference> tiene en cuenta valores anteriores cuando promueve el tipo deducido. No obstante, si ambas instancias de `attr2` se encuentran en el mismo documento XML y no en dos documentos XML diferentes, tal como se ilustra arriba, `attr2` hubiese sido deducido como `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Atributos omitidos del espacio de nombres http://www.w3.org/2001/XMLSchema-instance  
- Los siguientes son atributos que definen el esquema que son omitidos durante la deducción del sistema.  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>Atributos omitidos del espacio de nombres <https://www.w3.org/2001/XMLSchema-instance>
+
+Los siguientes son atributos que definen el esquema que son omitidos durante la deducción del sistema.  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  

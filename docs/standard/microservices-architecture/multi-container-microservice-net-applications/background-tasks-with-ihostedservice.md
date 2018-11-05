@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6ce9e40334e80e8bd17ce2f3d2569a1e3c39d09e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 981a20ca80f0652a9c3597d36b960d6b44d97912
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003755"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195832"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 
@@ -236,7 +236,7 @@ La ilustración 8-26 siguiente muestra un resumen visual de las clases y las int
 
 ### <a name="deployment-considerations-and-takeaways"></a>Impresiones y consideraciones sobre implementación
 
-Es importante tener en cuenta que la forma de implementar su ASP.NET Core `WebHost` o .NET Core `Host` puede afectar a la solución final. Por ejemplo, si implementa su `WebHost` en IIS o en un servicio de Azure App Service normal, el host se puede cerrar debido a reciclajes del grupo de aplicaciones. Pero si va a implementar el host como un contenedor en un orquestador como Kubernetes o Service Fabric, puede controlar el número garantizado de instancias activas del host. Además, podría considerar otros métodos en la nube pensados especialmente para estos escenarios, como Azure Functions. 
+Es importante tener en cuenta que la forma de implementar su ASP.NET Core `WebHost` o .NET Core `Host` puede afectar a la solución final. Por ejemplo, si implementa su `WebHost` en IIS o en un servicio de Azure App Service normal, el host se puede cerrar debido a reciclajes del grupo de aplicaciones. Pero si va a implementar el host como un contenedor en un orquestador como Kubernetes o Service Fabric, puede controlar el número garantizado de instancias activas del host. Además, podría considerar otros métodos en la nube pensados especialmente para estos escenarios, como Azure Functions. Por último, si necesita que el servicio se ejecute todo el tiempo y se implemente en Windows Server, podría usar un servicio de Windows.
 
 Pero incluso para un `WebHost` implementado en un grupo de aplicaciones, hay escenarios, como el relleno o el vaciado de la memoria caché de la aplicación, en los que sería también aplicable.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084759"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086069"
 ---
 # <a name="class-c-reference"></a>class (Referencia de C#)
 
@@ -39,7 +39,7 @@ Solo la herencia simple se permite en C#. En otras palabras, una clase puede her
 
 Las clases que se declaran directamente dentro de un espacio de nombres, que no están anidadas dentro de otras clases, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md) o [internal](../../../csharp/language-reference/keywords/internal.md). De forma predeterminada, las clases son `internal`.
 
-Los miembros de clase, incluidas las clases anidadas, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [private](../../../csharp/language-reference/keywords/private.md) o `private protected`. Los miembros son [private](../../../csharp/language-reference/keywords/private.md) de forma predeterminada.
+Los miembros de clase, incluidas las clases anidadas, pueden ser [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md) o [private protected](private-protected.md). De forma predeterminada, los miembros son `private`.
 
 Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 
@@ -95,7 +95,7 @@ Los tipos declarados dentro de una clase sin un modificador de acceso adoptan el
 
 Por último, tenga en cuenta que, para el objeto creado mediante el constructor predeterminado (`child3`), el campo age se ha inicializado a cero de forma predeterminada.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -10,19 +10,17 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193153"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50199440"
 ---
 # <a name="cache-policy"></a>Directiva de caché
 Una directiva de caché define reglas que se usan para determinar si se puede satisfacer una solicitud mediante una copia almacenada en caché del recurso solicitado. Las aplicaciones especifican requisitos de caché de cliente de actualización, pero la directiva de caché en vigor viene determinada por los requisitos de caché de cliente, los requisitos de expiración del contenido del servidor y los requisitos de revalidación del servidor. La interacción de la directiva de caché de cliente y los requisitos de servidor siempre da como resultado la directiva de caché más conservadora para ayudar a garantizar que el contenido actualizado se devuelva a la aplicación cliente.  
   
- Las directivas de caché están basadas en la ubicación o en el tiempo. Una directiva de caché basada en la ubicación define la actualización de las entradas almacenadas en caché en función de dónde se puede obtener el recurso solicitado. Una directiva de caché basada en el tiempo define la actualización de las entradas almacenadas en caché según la hora a la que se ha recuperado el recurso, los encabezados devueltos con este y la hora actual. La mayoría de las aplicaciones puede usar la directiva de caché basada en el tiempo predeterminada, que implementa la directiva de caché que se especifica en RFC 2616, disponible en [http://www.ietf.org](http://www.ietf.org/).  
+ Las directivas de caché están basadas en la ubicación o en el tiempo. Una directiva de caché basada en la ubicación define la actualización de las entradas almacenadas en caché en función de dónde se puede obtener el recurso solicitado. Una directiva de caché basada en el tiempo define la actualización de las entradas almacenadas en caché según la hora a la que se ha recuperado el recurso, los encabezados devueltos con este y la hora actual. La mayoría de las aplicaciones puede usar la directiva de caché basada en el tiempo predeterminada, que implementa la directiva de caché que se especifica en RFC 2616, disponible en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/).  
   
  Las clases descritas en la siguiente tabla se usan para especificar directivas de caché.  
   

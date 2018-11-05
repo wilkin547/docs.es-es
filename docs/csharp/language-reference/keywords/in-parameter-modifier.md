@@ -4,16 +4,16 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512020"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199414"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificador del parámetro in (referencia de C#)
 
-La palabra clave `in` hace que los argumentos se pasen por referencia. Es como las palabras clave [ref](ref.md) o [out](out-parameter-modifier.md), salvo que el método al que se llama no puede modificar los argumentos `in`. Mientras que los argumentos `ref` se pueden modificar, el autor de llamada debe modificar los argumentos `out` y esas modificaciones se pueden observar en el contexto de la llamada.
+La palabra clave `in` hace que los argumentos se pasen por referencia. Es como las palabras clave [ref](ref.md) o [out](out-parameter-modifier.md), salvo que el método al que se llama no puede modificar los argumentos `in`. Mientras que los argumentos `ref` se pueden modificar, el método llamado debe modificar los argumentos `out` y esas modificaciones se pueden observar en el contexto de la llamada.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -124,4 +124,4 @@ Las palabras clave `in`, `ref` y `out` no pueden usarse para estos tipos de mét
 - [Guía de programación de C#](../../programming-guide/index.md)  
 - [Palabras clave de C#](index.md)  
 - [Parámetros de métodos](method-parameters.md)  
-- [Semántica de referencia con tipos de valor](../../reference-semantics-with-value-types.md)  
+- [Escritura de código seguro y eficaz](../../write-safe-efficient-code.md)  

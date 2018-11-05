@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 620f9e59d65630895c01aff7d47c76876f3319d1
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214828"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347804"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Administrar espacios de nombres en un documento XML
 Los espacios de nombres XML asocian nombres de elementos y de atributos de un documento XML con identificadores URI personalizados y predefinidos. Para crear estas asociaciones, puede definir los prefijos de los URI del espacio de nombres y usar dichos prefijos para calificar los nombres de los elementos y de los atributos en los datos XML. Los espacios de nombres evitan conflictos de nombres de elementos y atributos y permiten que los elementos y atributos con el mismo nombre se traten y se validen de forma diferente.  
@@ -71,13 +71,13 @@ Los espacios de nombres XML asocian nombres de elementos y de atributos de un do
 |--------|---------|  
 |Agregar un espacio de nombres|Método <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
 |Eliminar un espacio de nombres|Método <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
-|Encontrar el URI del espacio de nombres predeterminado|Propiedad <xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>|  
+|Encontrar el URI del espacio de nombres predeterminado|Propiedad<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> |  
 |Encontrar el URI de un prefijo de espacio de nombres|Método <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>|  
 |Encontrar el prefijo de un URI del espacio de nombres|Método <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>|  
 |Obtener una lista de espacios de nombres del nodo actual|Método <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>|  
 |Asignar un ámbito a un espacio de nombres|Métodos <xref:System.Xml.XmlNamespaceManager.PushScope%2A> y <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
 |Comprobar si un prefijo está definido en el ámbito actual|Método <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
-|Obtener la tabla de nombres usada para buscar prefijos e identificadores URI|Propiedad <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
+|Obtener la tabla de nombres usada para buscar prefijos e identificadores URI|Propiedad<xref:System.Xml.XmlNamespaceManager.NameTable%2A> |  
   
 ## <a name="see-also"></a>Vea también
 

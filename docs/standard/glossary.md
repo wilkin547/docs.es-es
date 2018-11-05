@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698489"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840276"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -38,7 +38,7 @@ Vea la [documentación de ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>ensamblado
 
-Un archivo *.dll*/*.exe* que puede contener una colección de API que pueden llamarse mediante aplicaciones u otros ensamblados.
+Un archivo *.dll*/*.exe* que puede contener una colección de API a la que puede llamarse mediante aplicaciones u otros ensamblados.
 
 Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumeraciones y delegados. A veces, se hace referencia a los ensamblados de la carpeta *bin* de un proyecto como *archivos binarios*. Vea también [biblioteca](#library).
 
@@ -46,13 +46,13 @@ Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumerac
 
 Common Language Runtime.
 
-El significado exacto depende del contexto, pero normalmente hace referencia al entorno de ejecución de .NET Framework. CLR controla la asignación y administración de memoria. CLR es también una máquina virtual que no solo ejecuta aplicaciones, sino que también genera y compila código sobre la marcha mediante un compilador JIT. La implementación actual de Microsoft CLR es solo Windows.
+El significado exacto depende del contexto, pero normalmente hace referencia al entorno de ejecución de .NET Framework. CLR controla la asignación y administración de memoria. CLR es también una máquina virtual que no solo ejecuta aplicaciones, sino que también genera y compila código sobre la marcha mediante un compilador [JIT](#jit). La implementación actual de Microsoft CLR es solo Windows.
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET Core Common Language Runtime.
 
-Este CLR se crea a partir del mismo código base que el CLR. Originalmente, CoreCLR era el entorno de ejecución de Silverlight y estaba diseñado para ejecutarse en varias plataformas, concretamente Windows OS X. Ahora, CoreCLR forma parte de .NET Core y representa una versión simplificada de CLR. Sigue siendo un entorno de ejecución multiplataforma y ahora incluye compatibilidad con muchas distribuciones de Linux. CoreCLR es también una máquina virtual con funciones de ejecución de código y JIT.
+Este CLR se crea a partir del mismo código base que el CLR. Originalmente, CoreCLR era el entorno de ejecución de Silverlight y estaba diseñado para ejecutarse en varias plataformas, concretamente Windows OS X. Ahora, CoreCLR forma parte de .NET Core y representa una versión simplificada de CLR. Sigue siendo un entorno de ejecución [multiplataforma](#cross-platform) y ahora incluye compatibilidad con muchas distribuciones de Linux. CoreCLR es también una máquina virtual con funciones de ejecución de código y JIT.
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ Entorno de ejecución .NET Core.
 A diferencia de CLR o CoreCLR, CoreRT no es una máquina virtual, lo que significa que no incluye las funciones para generar y ejecutar código sobre la marcha porque no incluye un [JIT](#jit). En cambio, incluye [GC](#gc), reflexión y capacidad de identificación del tipo en tiempo de ejecución (RTTI). Con todo, su sistema de tipos está diseñado para que no sean necesarios los metadatos para la reflexión. Esto permite tener una cadena de herramientas de [AOT](#aot) que puede vincular metadatos superfluos y (más importante) identificar código que no usa la aplicación. CoreRT está en desarrollo.
 
 Vea [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (Introducción a .NET Native y CoreRT).
+
+## <a name="cross-platform"></a>multiplataforma
+
+La capacidad para desarrollar y ejecutar una aplicación que se puede usar en varios sistemas operativos diferentes, como Linux, Windows e iOS, sin tener que volver a escribir específicamente para cada uno de ellos. Esto permite reutilizar el código y posibilita la coherencia entre aplicaciones en distintas plataformas.
 
 ## <a name="ecosystem"></a>ecosistema
 
@@ -136,7 +140,7 @@ Vea [Paquetes, metapaquetes y marcos de trabajo](../core/packages.md).
 
 ## <a name="mono"></a>Mono
 
-Mono es una implementación de .NET que se usa principalmente cuando se requiere un entorno de ejecución pequeño. Es el entorno de ejecución que activa las aplicaciones de Xamarin en Android, Mac, iOS, tvOS y watchOS, y se centra principalmente en aplicaciones que requieren una superficie pequeña.
+Mono es una implementación de .NET [multiplataforma](#cross-platform) y de código abierto que se usa principalmente cuando se requiere un entorno de ejecución pequeño. Es el entorno de ejecución que activa las aplicaciones de Xamarin en Android, Mac, iOS, tvOS y watchOS, y se centra principalmente en aplicaciones que requieren una superficie pequeña.
 
 Admite todas las versiones de .NET Standard publicadas actualmente.
 

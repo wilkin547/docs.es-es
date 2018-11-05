@@ -1,5 +1,5 @@
 ---
-title: Cadenas de formato de enumeración
+title: 'Cadenas de formato de enumeración: .NET'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,24 +12,46 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956dc7daad91d9daa3ac950d7f5897404dd314c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2c71592537a31527bda6db08da8c36e798270d5a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041270"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190858"
 ---
 # <a name="enumeration-format-strings"></a>Cadenas de formato de enumeración
+
 Puede usar el método <xref:System.Enum.ToString%2A?displayProperty=nameWithType> para crear un objeto de cadena que represente el valor de cadena, numérico o hexadecimal del miembro de una enumeración. Este método toma una de las cadenas de formato de enumeración para especificar el valor que quiere que se devuelva.
 
-En la tabla siguiente se enumeran las cadenas de formato de enumeración y los valores que devuelven. Estos especificadores de formato no distinguen mayúsculas de minúsculas.
+En las secciones siguientes se enumeran las cadenas de formato de enumeración y los valores que devuelven. Estos especificadores de formato no distinguen mayúsculas de minúsculas.
 
-| Cadena de formato | Resultado |
-| ------------- | ------ |
-| G o g | Si es posible, muestra la entrada de enumeración como valor de cadena y, si no, muestra el valor entero de la instancia actual. Si la enumeración se define con el conjunto de atributos **Flags**, los valores de cadena de cada entrada válida se concatenan, separados por comas. Si no se establece el atributo **Flags**, se muestra un valor no válido como entrada numérica. En el siguiente ejemplo se muestra el uso del especificador de formato G.<br /><br />[!code-csharp[Formatting.Enum#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)] [!code-vb[Formatting.Enum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)] |
-| F o f | Si es posible, muestra la entrada de enumeración como valor de cadena. Si el valor se puede mostrar por completo como suma de las entradas de la enumeración (aunque el atributo **Flags** no esté presente), los valores de cadena de cada entrada válida se concatenan, separados por comas. Si las entradas de enumeración no pueden determinar completamente el valor, a este se le da formato como valor entero. En el siguiente ejemplo se muestra el uso del especificador de formato F.<br /><br />[!code-csharp[Formatting.Enum#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)] [!code-vb[Formatting.Enum#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)] |
-| D o d | Muestra la entrada de enumeración como valor entero en la representación más corta posible. En el siguiente ejemplo se muestra el uso del especificador de formato D.<br /><br />[!code-csharp[Formatting.Enum#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)] [!code-vb[Formatting.Enum#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)] |
-| X o x | Muestra la entrada de enumeración como valor hexadecimal. En caso necesario, el valor se representa con ceros iniciales para asegurarse de que tenga como mínimo ocho dígitos de longitud. En el siguiente ejemplo se muestra el uso del especificador de formato X.<br /><br /> [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)] [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)] |
+## <a name="g-or-g"></a>G o g
+
+Si es posible, muestra la entrada de enumeración como valor de cadena y, si no, muestra el valor entero de la instancia actual. Si la enumeración se define con el conjunto de atributos **Flags**, los valores de cadena de cada entrada válida se concatenan, separados por comas. Si no se establece el atributo **Flags**, se muestra un valor no válido como entrada numérica. En el siguiente ejemplo se muestra el uso del especificador de formato G.
+
+[!code-csharp[Formatting.Enum#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)]
+[!code-vb[Formatting.Enum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]
+
+## <a name="f-or-f"></a>F o f
+
+Si es posible, muestra la entrada de enumeración como valor de cadena. Si el valor se puede mostrar por completo como suma de las entradas de la enumeración (aunque el atributo **Flags** no esté presente), los valores de cadena de cada entrada válida se concatenan, separados por comas. Si las entradas de enumeración no pueden determinar completamente el valor, a este se le da formato como valor entero. En el siguiente ejemplo se muestra el uso del especificador de formato F.
+
+[!code-csharp[Formatting.Enum#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)]
+[!code-vb[Formatting.Enum#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]
+
+## <a name="d-or-d"></a>D o d
+
+Muestra la entrada de enumeración como valor entero en la representación más corta posible. En el siguiente ejemplo se muestra el uso del especificador de formato D.
+
+[!code-csharp[Formatting.Enum#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)]
+[!code-vb[Formatting.Enum#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)]
+
+## <a name="x-or-x"></a>X o x
+
+Muestra la entrada de enumeración como valor hexadecimal. En caso necesario, el valor se representa con ceros iniciales para asegurarse de que tenga como mínimo ocho dígitos de longitud. En el siguiente ejemplo se muestra el uso del especificador de formato X.
+
+[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
+[!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
 ## <a name="example"></a>Ejemplo
 

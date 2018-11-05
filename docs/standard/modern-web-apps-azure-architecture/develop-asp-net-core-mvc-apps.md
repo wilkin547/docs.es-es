@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404650"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308596"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -290,7 +290,7 @@ Puede leer más sobre la implementación de filtros y descargar un ejemplo funci
 
 ## <a name="security"></a>Seguridad
 
-La protección de las aplicaciones web es un tema amplio, con muchas consideraciones. En su nivel más básico, la seguridad implica asegurarse de saber de quién procede una solicitud determinada y, después, asegurarse de que esa solicitud solo tiene acceso a los recursos que debe. La autenticación es el proceso de comparación de las credenciales proporcionadas con una solicitud con las de un almacén de datos de confianza, para ver si la solicitud se debe tratar como procedente de una entidad conocida. La autorización es el proceso de restringir el acceso a determinados recursos en función de la identidad del usuario. Un tercer interés de seguridad es proteger las solicitudes contra el espionaje por parte de terceros, para lo que al menos se debe [asegurar de que la aplicación usa SSL](/aspnet/core/security/enforcing-ssl).
+La protección de las aplicaciones web es un tema amplio, con muchas consideraciones. En su nivel más básico, la seguridad implica asegurarse de saber de quién procede una solicitud determinada y, después, asegurarse de que la solicitud solo tiene acceso a los recursos que debe. La autenticación es el proceso de comparación de las credenciales proporcionadas con una solicitud con las de un almacén de datos de confianza, para ver si la solicitud se debe tratar como procedente de una entidad conocida. La autorización es el proceso de restringir el acceso a determinados recursos en función de la identidad del usuario. Un tercer interés de seguridad es proteger las solicitudes contra el espionaje por parte de terceros, para lo que al menos se debe [asegurar de que la aplicación usa SSL](/aspnet/core/security/enforcing-ssl).
 
 ### <a name="authentication"></a>Autenticación
 

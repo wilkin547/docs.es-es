@@ -1,6 +1,6 @@
 ---
 title: Novedades de Visual Basic
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,18 +8,16 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925616"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194064"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
-En este tema se enumeran los nombres de las características clave de cada versión de Visual Basic con descripciones detalladas de las características nuevas y mejoradas de la versión más reciente del lenguaje.
+En este tema se enumeran los nombres de las características clave de cada versión de Visual Basic con descripciones detalladas de las características nuevas y mejoradas de las versiones más recientes del lenguaje.
   
 ## <a name="current-version"></a>Versión actual
 
@@ -50,7 +48,7 @@ Visual Basic / Visual Studio 2008
 Language Integrated Query (LINQ), literales XML, inferencia de tipo de variable local, inicializadores de objeto, tipos anónimos, métodos de extensión, inferencia de tipo de variable local `var`, expresiones lambda, operador `if`, métodos parciales, tipos de valor que aceptan valores null  
 
 Visual Basic / Visual Studio 2005   
-El tipo `My` y tipos auxiliares (acceso a la aplicación, equipo, sistema de archivos, red)
+El tipo `My` y los tipos del asistente (acceso a la aplicación, equipo, sistema de archivos, red)
 
 Visual Basic / Visual Studio .NET 2003   
 Operadores de desplazamiento de bits, declaración de variable de bucle
@@ -69,6 +67,10 @@ Por ejemplo, la siguiente llamada de método tiene dos argumentos posicionales e
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[Modificador de acceso de miembro `Private Protected`](../language-reference/modifiers/private-protected.md)
+
+Esta nueva combinación de palabras clave define un miembro al que pueden acceder todos los miembros de su clase contenedora y los tipos derivados de dicha clase, pero solo si también se encuentran en el ensamblado contenedor. Dado que las estructuras no se pueden heredar, `Private Protected` solo se pueden aplicar a los miembros de una clase.
 
 **Separador hexadecimal/binario/octal inicial**
 
@@ -139,7 +141,7 @@ En cambio, un problema con este código es que si no se detecta una coincidencia
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#2)]
 
-Una solución mejor es usar un método auxiliar en el que el valor devuelto de referencia se pase mediante una referencia. El método auxiliar puede después modificar el argumento que se ha pasado por referencia. En el siguiente ejemplo se realiza esto.
+Una solución mejor es usar un método del asistente en el que el valor devuelto de referencia se pase mediante una referencia. El método del asistente puede después modificar el argumento que se ha pasado por referencia. En el siguiente ejemplo se realiza esto.
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
@@ -153,7 +155,7 @@ Para obtener más información, vea [Valores devueltos de referencia](../program
 [Interpolación de cadenas](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Puede usar expresiones de interpolación de cadenas para construir cadenas.  Una expresión de cadena interpolada es similar a una cadena de plantilla que contiene expresiones.  Una cadena interpolada es más fácil de entender con respecto a los argumentos que el [formato compuesto](../../standard/base-types/composite-format.md).  
   
-[Acceso a miembros condicionales NULL e indexación](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Acceso a miembros condicionales NULL e indexación](../language-reference/operators/null-conditional-operators.md)  
 Puede probar si hay valores null de forma sintáctica ligera antes de realizar una operación de acceso a miembros (`?.`) o índice (`?[]`).  Estos operadores ayudan a escribir menos código para controlar las comprobaciones de null, especialmente para descender en estructuras de datos.  Si la referencia de objeto u operando izquierdo es null, la operación devuelve null.  
   
 [Literales de cadena multilínea](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

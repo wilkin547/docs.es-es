@@ -3,12 +3,12 @@ title: 'Estructuras de C#: un paseo por el lenguaje C#'
 description: 'Aprenda los conceptos básicos de los tipos de valores de C #, llamados structs.'
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058970"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323102"
 ---
 # <a name="structs"></a>Estructuras
 
@@ -24,7 +24,7 @@ Una alternativa es convertir Point en un struct.
 
 Ahora, se crea la instancia de un solo objeto: la de la matriz, y las instancias de `Point` se asignan en línea dentro de la matriz.
 
-Los structs se invocan con el operador `new`, pero eso no implica que se asigne memoria. En lugar de asignar dinámicamente un objeto y devolver una referencia a él, un constructor de structs simplemente devuelve el valor del struct propiamente dicho (normalmente en una ubicación temporal en la pila) y este valor se copia luego cuando es necesario.
+Los constructores structs se invocan con el operador `new`, similar a un constructor de clase. Sin embargo, en lugar de asignar dinámicamente un objeto en el montón administrado y devolver una referencia a él, un constructor de structs simplemente devuelve el valor del struct propiamente dicho (normalmente en una ubicación temporal en la pila) y este valor se copia luego cuando es necesario.
 
 Con las clases, es posible que dos variables hagan referencia al mismo objeto y, que por tanto, las operaciones en una variable afecten al objeto al que hace referencia la otra variable. Con los struct, cada variable tiene su propia copia de los datos y no es posible que las operaciones en una afecten a la otra. Por ejemplo, la salida producida por el fragmento de código siguiente depende de si Point es una clase o un struct.
 

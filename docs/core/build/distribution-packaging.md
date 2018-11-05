@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo empaquetar, nombrar y versionar .N
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 084de6bbb3ce280beb0846431aeceacbb57d9a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217407"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840500"
 ---
 # <a name="net-core-distribution-packaging"></a>Empaquetado de distribución de .NET Core
 
@@ -120,4 +120,4 @@ Una alternativa al uso de paquetes de revisión es _anclar_ los paquetes a una v
 
 ## <a name="building-packages"></a>Compilar paquetes
 
-El repositorio https://github.com/dotnet/source-build proporciona instrucciones sobre cómo crear un paquete tarball de origen del SDK de .NET Core y todos sus componentes. La salida del repositorio de compilación de código fuente coincide con el diseño que se describe en la primera sección de este artículo.
+El repositorio [dotnet/source-build](https://github.com/dotnet/source-build) proporciona instrucciones sobre cómo crear un paquete tarball de origen del SDK de .NET Core y todos sus componentes. La salida del repositorio de compilación de código fuente coincide con el diseño que se describe en la primera sección de este artículo.

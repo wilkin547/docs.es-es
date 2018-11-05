@@ -2,12 +2,12 @@
 title: Novedades de C# 7.2
 description: Información general sobre las nuevas características en C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400808"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181178"
 ---
 # <a name="whats-new-in-c-72"></a>Novedades de C# 7.2
 
@@ -20,7 +20,7 @@ C# 7.2 usa el elemento de configuración de [selección de versión de lenguaje]
 
 Las nuevas características de lenguaje de esta versión son las siguientes:
 
-* [Semántica de referencia con tipos de valor](#reference-semantics-with-value-types)
+* [Técnicas para escribir código eficiente seguro](#safe-efficient-code-enhancements)
   - Una combinación de mejoras en la sintaxis que permiten trabajar con tipos de valor mediante la semántica de referencia.
 * [Argumentos con nombre no finales](#non-trailing-named-arguments)
   - Los argumentos con nombre pueden ir seguidos de argumentos posicionales.
@@ -29,7 +29,7 @@ Las nuevas características de lenguaje de esta versión son las siguientes:
 * [Modificador de acceso `private protected`](#private-protected-access-modifier)
   - El modificador de acceso `private protected` permite el acceso de clases derivadas en el mismo ensamblado.
 
-## <a name="reference-semantics-with-value-types"></a>Semántica de referencia con tipos de valor
+## <a name="safe-efficient-code-enhancements"></a>Mejoras de código eficiente seguro
 
 Las características de lenguaje que presenta la versión 7.2 permiten trabajar con tipos de valor usando la semántica de referencia. Están diseñadas para aumentar el rendimiento minimizando la copia de tipos de valor sin usar las asignaciones de memoria asociadas al uso de tipos de referencia. Las características incluyen:
 
@@ -38,7 +38,7 @@ Las características de lenguaje que presenta la versión 7.2 permiten trabajar 
  - La declaración `readonly struct` para indicar que una estructura es fija y que debería pasarse como parámetro `in` a los métodos de su miembro. Agregar el modificador `readonly` a una declaración struct existente es un [cambio compatible con un elemento binario](version-update-considerations.md#binary-compatible-changes).
  - La declaración `ref struct` para indicar que un tipo de estructura tiene acceso directo a la memoria administrada y que siempre debe estar asignada a la pila. Agregar el modificador `ref` a una declaración `struct` existente es un [cambio incompatible](version-update-considerations.md#incompatible-changes). Un elemento `ref struct` no puede ser un miembro de una clase o usarse en otras ubicaciones donde puede asignarse en el montón.
 
-Puede obtener más información sobre todos los cambios en [Semántica de referencia con tipos de valor](../reference-semantics-with-value-types.md).
+Puede leer más información sobre todos estos cambios en [Write safe efficient code](../write-safe-efficient-code.md) (Escribir código eficiente seguro).
 
 ## <a name="non-trailing-named-arguments"></a>Argumentos con nombre no finales
 

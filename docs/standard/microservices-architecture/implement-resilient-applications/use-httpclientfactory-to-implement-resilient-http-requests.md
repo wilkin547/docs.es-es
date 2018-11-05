@@ -4,12 +4,12 @@ description: HttpClientFactory es una fábrica bien fundamentada, disponible des
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513218"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347934"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
 
@@ -21,7 +21,7 @@ La clase [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.http
 
 Como primer problema, aunque esta clase es descartable, usarla con la instrucción `using` no es la mejor opción porque incluso cuando se descarta el objeto `HttpClient`, el socket subyacente no se libera de forma inmediata y puede causar un problema grave denominado "agotamiento de socket". Para obtener más información sobre este problema, vea la entrada de blog [You're using HttpClient wrong and it is destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) (Está usando HttpClient mal y eso desestabiliza el software).
 
-Por tanto, `HttpClient` está diseñado para que se cree una instancia una vez y se reutilice durante la vida de una aplicación. Crear una instancia de una clase `HttpClient` para cada solicitud agotará el número de sockets disponibles bajo cargas pesadas. Ese problema generará errores `SocketException`. Los enfoques posibles para solucionar ese problema se basan en la creación del objeto `HttpClient` como singleton o estático, como se explica en este [artículo de Microsoft sobre el uso de HttpClient](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient). 
+Por tanto, `HttpClient` está diseñado para que se cree una instancia una vez y se reutilice durante la vida de una aplicación. Crear una instancia de una clase `HttpClient` para cada solicitud agotará el número de sockets disponibles bajo cargas pesadas. Ese problema generará errores `SocketException`. Los enfoques posibles para solucionar ese problema se basan en la creación del objeto `HttpClient` como singleton o estático, como se explica en este [artículo de Microsoft sobre el uso de HttpClient](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient). 
 
 Pero hay un segundo problema con `HttpClient` que puede aparecer cuando se usa como objeto singleton o estático. En este caso, un `HttpClient` singleton o estático no respeta los cambios de DNS, como se explica en este [problema en el repositorio de .NET Core de GitHub](https://github.com/dotnet/corefx/issues/11224). 
 
@@ -71,7 +71,7 @@ Al agregar las clases de cliente con tipo mediante AddHttpClient(), siempre que 
 
 ### <a name="httpclient-lifetimes"></a>Duraciones de HttpClient
 
-Cada vez que se obtiene un objeto `HttpClient` de IHttpClientFactory, se devuelve una nueva instancia de `HttpClient`. Habrá un HttpMessageHandler** por cada cliente con nombre o tipo. I`HttpClientFactory` agrupará las instancias de HttpMessageHandler creadas por la fábrica para reducir el consumo de recursos. Se puede reutilizar una instancia de HttpMessageHandler del grupo al crear una instancia de `HttpClient` si su duración aún no ha expirado.
+Cada vez que se obtiene un objeto `HttpClient` de IHttpClientFactory, se devuelve una nueva instancia de `HttpClient`. Habrá un HttpMessageHandler** por cada cliente con nombre o tipo. `IHttpClientFactory` agrupará las instancias de HttpMessageHandler creadas por la fábrica para reducir el consumo de recursos. Se puede reutilizar una instancia de HttpMessageHandler del grupo al crear una instancia de `HttpClient` si su duración aún no ha expirado.
 
 La agrupación de controladores es conveniente porque cada controlador suele administrar sus propias conexiones HTTP subyacentes. Crear más controladores de lo necesario puede provocar retrasos en la conexión. Además, algunos controladores dejan las conexiones abiertas de forma indefinida, lo que puede ser un obstáculo a la hora de reaccionar ante los cambios de DNS.
 
@@ -155,7 +155,7 @@ Hasta el momento, el código que se ha mostrado solo realiza solicitudes HTTP co
 ## <a name="additional-resources"></a>Recursos adicionales
 
 -   **Uso de HttpClientFactory en .NET Core 2.1**
-    [*https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 
 -   **Repositorio de HttpClientFactory en GitHub**
