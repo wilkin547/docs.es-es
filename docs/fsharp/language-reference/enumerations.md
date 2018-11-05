@@ -1,6 +1,6 @@
 ---
 title: Enumeraciones (F#)
-description: Obtenga información sobre cómo usar las enumeraciones de F# en lugar de literales para hacer que el código más legible y fácil de mantener.
+description: 'Obtenga información sobre cómo usar las enumeraciones de F # en lugar de literales para hacer que el código más legible y fácil de mantener.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -40,7 +40,7 @@ Puede convertir fácilmente las enumeraciones con el tipo subyacente mediante el
 
 Los tipos enumerados pueden tener uno de los siguientes tipos subyacentes: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, y `char`. Tipos de enumeración se representan en .NET Framework como tipos que se heredan de `System.Enum`, que a su vez se hereda de `System.ValueType`. Por lo tanto, son tipos de valor que se encuentran en la pila o en línea en el objeto contenedor, y cualquier valor del tipo subyacente es un valor válido de la enumeración. Esto es importante cuando los valores de coincidencia de patrones en la enumeración, ya que hay que proporcionar un patrón que detecta los valores sin nombre.
 
-El `enum` función de la biblioteca de F# puede usarse para generar un valor de enumeración, incluso un valor distinto de uno de los predefinidos, valores con nombre. Usa el `enum` funcione como se indica a continuación.
+El `enum` función de la biblioteca de F # puede usarse para generar un valor de enumeración, incluso un valor distinto de uno de los predefinidos, valores con nombre. Usa el `enum` funcione como se indica a continuación.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

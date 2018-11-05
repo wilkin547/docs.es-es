@@ -1,6 +1,6 @@
 ---
 title: Métodos (F#)
-description: Obtenga información sobre cómo un método de F# es una función asociada a un tipo que se utilizan para exponer e implementar la funcionalidad y el comportamiento de objetos y tipos.
+description: 'Obtenga información sobre cómo un método de F # es una función asociada a un tipo que se utilizan para exponer e implementar la funcionalidad y el comportamiento de objetos y tipos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -59,7 +59,7 @@ Métodos de en línea no se pueden utilizar de forma recursiva dentro del tipo; 
 
 ## <a name="instance-methods"></a>Métodos de instancia
 
-Los métodos de instancia se declaran con la `member` palabra clave y un *self-identifier*, seguido de un punto (.) y el nombre del método y los parámetros. Como es el caso de `let` enlaces, el *lista de parámetros* puede ser un modelo. Normalmente, debe encerrarlo entre método aparecen los parámetros entre paréntesis en forma de tupla, que es de los métodos de manera F# cuando se crean en otros lenguajes de .NET Framework. Sin embargo, también es común currificada (parámetros separados por espacios) y se admiten otros patrones también.
+Los métodos de instancia se declaran con la `member` palabra clave y un *self-identifier*, seguido de un punto (.) y el nombre del método y los parámetros. Como es el caso de `let` enlaces, el *lista de parámetros* puede ser un modelo. Normalmente, debe encerrarlo entre método aparecen los parámetros entre paréntesis en forma de tupla, que es de los métodos de manera F # cuando se crean en otros lenguajes de .NET Framework. Sin embargo, también es común currificada (parámetros separados por espacios) y se admiten otros patrones también.
 
 El ejemplo siguiente muestra la definición y uso de un método de instancia no abstracto.
 
@@ -97,11 +97,11 @@ El ejemplo siguiente muestra una clase derivada que reemplaza un método de clas
 
 ## <a name="overloaded-methods"></a>Métodos sobrecargados
 
-Métodos sobrecargados son métodos que tienen nombres idénticos en un tipo determinado, pero que tienen diferentes argumentos. En F#, los argumentos opcionales se suelen usar en lugar de métodos sobrecargados. Sin embargo, se permiten métodos sobrecargados en el lenguaje, siempre que los argumentos son en forma de tupla, no currificada.
+Métodos sobrecargados son métodos que tienen nombres idénticos en un tipo determinado, pero que tienen diferentes argumentos. En F #, los argumentos opcionales se suelen usar en lugar de métodos sobrecargados. Sin embargo, se permiten métodos sobrecargados en el lenguaje, siempre que los argumentos son en forma de tupla, no currificada.
 
 ## <a name="optional-arguments"></a>Argumentos opcionales
 
-A partir de F# 4.1, también puede tener argumentos opcionales con valor de parámetro predeterminado en métodos.  Esto sirve para ayudar a facilitar la interoperación con código C#.  El ejemplo siguiente muestra la sintaxis:
+A partir de F # 4.1, también puede tener argumentos opcionales con valor de parámetro predeterminado en métodos.  Esto sirve para ayudar a facilitar la interoperación con código C#.  El ejemplo siguiente muestra la sintaxis:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.

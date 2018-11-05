@@ -1,6 +1,6 @@
 ---
 title: Registros (F#)
-description: Obtenga información sobre cómo F# registros representan agregados simples de valores con nombre, opcionalmente con miembros.
+description: 'Obtenga información sobre cómo F # registros representan agregados simples de valores con nombre, opcionalmente con miembros.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48261295"
 ---
 # <a name="records"></a>Registros
 
-Los registros representan agregados simples de valores con nombre, opcionalmente con miembros.  A partir de F# 4.1, o bien pueden ser tipos de referencia o structs.  Son tipos de referencia de forma predeterminada.
+Los registros representan agregados simples de valores con nombre, opcionalmente con miembros.  A partir de F # 4.1, o bien pueden ser tipos de referencia o structs.  Son tipos de referencia de forma predeterminada.
 
 ## <a name="syntax"></a>Sintaxis
 

@@ -1,6 +1,6 @@
 ---
 title: Secuencias (F#)
-description: Obtenga información sobre cómo usar las secuencias de F#, cuando se disponga de una gran colección ordenada de datos pero no espere usar todos los elementos.
+description: 'Obtenga información sobre cómo usar las secuencias de F #, cuando se disponga de una gran colección ordenada de datos pero no espere usar todos los elementos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ Un *expresión de secuencia* es una expresión que se evalúa como una secuencia
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Las expresiones de secuencia se componen de expresiones de F# que generan valores de la secuencia. Puede usar el `yield` palabra clave para generar valores que pasan a formar parte de la secuencia.
+Las expresiones de secuencia se componen de expresiones de F # que generan valores de la secuencia. Puede usar el `yield` palabra clave para generar valores que pasan a formar parte de la secuencia.
 
 La siguiente es un ejemplo.
 
@@ -62,7 +62,7 @@ En el ejemplo siguiente se muestra el uso de `yield!` para combinar secuencias i
 
 Las secuencias admiten muchas de las mismas funciones que [enumera](lists.md). Las secuencias también admiten operaciones como la agrupación y contar con funciones de generación de claves. Las secuencias admiten también funciones más diversas para extraer subsecuencias.
 
-Muchos tipos de datos, como listas, matrices, conjuntos y asignaciones son implícitamente secuencias porque son colecciones enumerables. Una función que toma una secuencia como un argumento funciona con cualquiera de los comunes F# tipos de datos, además de a cualquier tipo de datos de .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>`. Compare esto con una función que toma una lista como argumento, que solo se puede tomar listas. El tipo `seq<'T>` es una abreviatura del tipo `IEnumerable<'T>`. Esto significa que cualquier tipo que implementa el modelo genérico `System.Collections.Generic.IEnumerable<'T>`, que incluye matrices, listas, Establece y asignaciones en F# y también mayoría .NET Framework colección de tipos, es compatible con la `seq` escriba y se puede utilizar donde se espera una secuencia.
+Muchos tipos de datos, como listas, matrices, conjuntos y asignaciones son implícitamente secuencias porque son colecciones enumerables. Una función que toma una secuencia como un argumento funciona con cualquiera de los comunes F # tipos de datos, además de a cualquier tipo de datos de .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>`. Compare esto con una función que toma una lista como argumento, que solo se puede tomar listas. El tipo `seq<'T>` es una abreviatura del tipo `IEnumerable<'T>`. Esto significa que cualquier tipo que implementa el modelo genérico `System.Collections.Generic.IEnumerable<'T>`, que incluye matrices, listas, Establece y asignaciones en F # y también mayoría .NET Framework colección de tipos, es compatible con la `seq` escriba y se puede utilizar donde se espera una secuencia.
 
 ## <a name="module-functions"></a>Funciones del módulo
 

@@ -1,6 +1,6 @@
 ---
 title: Identificadores de línea, archivo y ruta de acceso de código fuente (F#)
-description: Obtenga información sobre cómo usar F# identificador valores integrados que permiten acceder al número de línea de código fuente, directorio y el nombre de archivo en el código.
+description: 'Obtenga información sobre cómo usar F # identificador valores integrados que permiten acceder al número de línea de código fuente, directorio y el nombre de archivo en el código.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -25,7 +25,7 @@ __SOURCE_FILE__
 
 Cada uno de estos valores tiene tipo `string`.
 
-En la tabla siguiente se resume la línea de código fuente, archivos y los identificadores de ruta de acceso que están disponibles en F#. Estos identificadores no son macros de preprocesador; son valores integrados que son reconocidos por el compilador.
+En la tabla siguiente se resume la línea de código fuente, archivos y los identificadores de ruta de acceso que están disponibles en F #. Estos identificadores no son macros de preprocesador; son valores integrados que son reconocidos por el compilador.
 
 |Identificador predefinido|Descripción|
 |---------------------|-----------|

@@ -27,7 +27,7 @@ Los dos últimos criterios definen lo que se conoce como *operaciones de orden s
 
 ## <a name="give-the-value-a-name"></a>Asignar un nombre al valor
 
-Si una función es un valor de primera clase, debe ser posible asignarle un nombre al igual que en el caso de enteros, cadenas y otros tipos integrados. En la programación funcional, esto se denomina "enlazar un identificador a un valor". F# usa [ `let` enlaces](../language-reference/functions/let-bindings.md) para enlazar nombres a valores: `let <identifier> = <value>`. En el código siguiente, se muestran dos ejemplos:
+Si una función es un valor de primera clase, debe ser posible asignarle un nombre al igual que en el caso de enteros, cadenas y otros tipos integrados. En la programación funcional, esto se denomina "enlazar un identificador a un valor". F # usa [ `let` enlaces](../language-reference/functions/let-bindings.md) para enlazar nombres a valores: `let <identifier> = <value>`. En el código siguiente, se muestran dos ejemplos:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
@@ -69,7 +69,7 @@ En el siguiente ejemplo, la función `applyIt` tiene dos parámetros, `op` y `ar
 
 La capacidad para enviar una función como un argumento a otra función subyace a las abstracciones comunes en los lenguajes de programación funcional, como las operaciones de asignación o de filtrado. Por ejemplo, una operación de asignación es una función de orden superior que captura el cálculo compartido por funciones que recorren una lista, realizan alguna operación con cada elemento y, a continuación, devuelven una lista con los resultados. Quizás se desee incrementar cada elemento de una lista de enteros, elevar cada elemento al cuadrado o cambiar a mayúsculas cada uno de los elementos de una lista de cadenas. La parte del cálculo propensa a errores es el proceso recursivo que recorre la lista y compila una lista de los resultados que se van a devolver. Dicha parte se captura en la función de asignación. Lo único que hay que escribir para una aplicación concreta es la función que se desea aplicar a cada uno de los elementos de la lista (sumar, elevar al cuadrado, cambiar mayúscula a minúscula o viceversa). Dicha función se envía como argumento a la función de asignación, de la misma manera que se envía `squareIt` a `applyIt` en el ejemplo anterior.
 
-F# proporciona métodos de asignación para la mayoría de los tipos de colección, incluidos [enumera](../language-reference/lists.md), [matrices](../language-reference/arrays.md), y [secuencias](../language-reference/sequences.md). En los siguientes ejemplos, se utilizan listas. La sintaxis es `List.map <the function> <the list>`.
+F # proporciona métodos de asignación para la mayoría de los tipos de colección, incluidos [enumera](../language-reference/lists.md), [matrices](../language-reference/arrays.md), y [secuencias](../language-reference/sequences.md). En los siguientes ejemplos, se utilizan listas. La sintaxis es `List.map <the function> <the list>`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
@@ -123,7 +123,7 @@ El siguiente código llama a `makeGame`, enviando el valor `7` para `target`. El
 
 ## <a name="curried-functions"></a>Funciones currificadas
 
-Muchos de los ejemplos en la sección anterior pueden escribirse más concisa aprovechando las ventajas de implícito *currificación* en las declaraciones de función de F#. La currificación es un proceso que consiste en transformar una función con varios parámetros en una serie de funciones incrustadas, cada una de las cuales tiene un solo parámetro. En F#, las funciones con más de un parámetro se currifican de manera inherente. Por ejemplo, la función `compose` que aparece en la sección anterior se puede escribir de manera concisa con tres parámetros, tal y como se indica a continuación.
+Muchos de los ejemplos en la sección anterior pueden escribirse más concisa aprovechando las ventajas de implícito *currificación* en las declaraciones de función de F #. La currificación es un proceso que consiste en transformar una función con varios parámetros en una serie de funciones incrustadas, cada una de las cuales tiene un solo parámetro. En F#, las funciones con más de un parámetro se currifican de manera inherente. Por ejemplo, la función `compose` que aparece en la sección anterior se puede escribir de manera concisa con tres parámetros, tal y como se indica a continuación.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -176,7 +176,7 @@ En los ejemplos que figuran en las secciones anteriores, se muestra que las func
 - Se puede devolver una función como valor de una llamada de función.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-Para obtener más información sobre F#, vea el [referencia del lenguaje F#](../language-reference/index.md).
+Para obtener más información sobre F #, vea el [referencia del lenguaje F #](../language-reference/index.md).
 
 ## <a name="example"></a>Ejemplo
 

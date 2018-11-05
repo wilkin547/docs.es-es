@@ -1,6 +1,6 @@
 ---
 title: Tipos de colección F#
-description: Obtenga información sobre los tipos de colección F# y cómo se diferencian de los tipos de colección en .NET Framework.
+description: 'Obtenga información sobre los tipos de colección F # y cómo se diferencian de los tipos de colección en .NET Framework.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,13 +11,13 @@ ms.locfileid: "43864766"
 ---
 # <a name="f-collection-types"></a>Tipos de colección F#
 
-Al revisar este tema, puede determinar qué tipo F# colección mejor se adapte a una necesidad concreta. Estos tipos de colección difieren de los tipos de colección en .NET Framework, como los de la `System.Collections.Generic` espacio de nombres, en que los tipos de colección F# están diseñados desde una perspectiva de la programación funcional en lugar de una perspectiva orientada a objetos. Más concretamente, solo la colección de matriz tiene elementos mutables. Por lo tanto, cuando se modifica una colección, cree una instancia de la colección modificada en lugar de modificar la colección original.
+Al revisar este tema, puede determinar qué tipo F # colección mejor se adapte a una necesidad concreta. Estos tipos de colección difieren de los tipos de colección en .NET Framework, como los de la `System.Collections.Generic` espacio de nombres, en que los tipos de colección F # están diseñados desde una perspectiva de la programación funcional en lugar de una perspectiva orientada a objetos. Más concretamente, solo la colección de matriz tiene elementos mutables. Por lo tanto, cuando se modifica una colección, cree una instancia de la colección modificada en lugar de modificar la colección original.
 
 Tipos de colección también difieren en el tipo de estructura de datos en el que se almacenan los objetos. Estructuras de datos como tablas hash, listas vinculadas y las matrices tienen distintas características de rendimiento y un conjunto diferente de las operaciones disponibles.
 
 ## <a name="f-collection-types"></a>Tipos de colección F#
 
-La siguiente tabla muestra los tipos de colección F#.
+La siguiente tabla muestra los tipos de colección F #.
 
 |Tipo|Descripción|Vínculos relacionados|
 |----|-----------|-------------|
@@ -25,11 +25,11 @@ La siguiente tabla muestra los tipos de colección F#.
 |[matriz](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Una colección de tamaño fijo, basado en cero, mutable de elementos de datos consecutivos que son todas del mismo tipo.|[Matrices](arrays.md)<br /><br />[Array (módulo)](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D módulo](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D módulo](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Una serie lógica de elementos que son del mismo tipo. Las secuencias son especialmente útiles cuando disponga de una gran colección ordenada de datos pero no espere usar todos los elementos. Secuencia individual se calculan los elementos sólo como necesario, por lo que una secuencia puede funcionar mejor que una lista si no se usan todos los elementos. Las secuencias se representan mediante el `seq<'T>` tipo, que es un alias para `IEnumerable<T>`. Por lo tanto, cualquier tipo de .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>` puede usarse como una secuencia.|[Secuencias](sequences.md)<br /><br />[Seq (módulo)](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[Mapa](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Diccionario inmutable de elementos. Se tiene acceso a los elementos por clave.|[Map (módulo)](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un conjunto inmutable que se basa en árboles binarios, donde la comparación es la función de comparación estructural de F#, que potencialmente usa implementaciones de la `System.IComparable` interfaz en los valores de clave.|[Establecer módulo](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un conjunto inmutable que se basa en árboles binarios, donde la comparación es la función de comparación estructural de F #, que potencialmente usa implementaciones de la `System.IComparable` interfaz en los valores de clave.|[Establecer módulo](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tabla de funciones
 
-Esta sección comparan las funciones que están disponibles en los tipos de colección F#. La complejidad del cálculo de la función se especifica, donde N es el tamaño de la primera colección, y M es el tamaño de la segunda colección, si existe. Un guión (-) indica que esta función no está disponible en la colección. Dado que las secuencias se evalúan de forma diferida, una función como Seq.distinct puede ser o (1) porque devuelve inmediatamente, aunque todavía afecta al rendimiento de la secuencia cuando se enumera.
+Esta sección comparan las funciones que están disponibles en los tipos de colección F #. La complejidad del cálculo de la función se especifica, donde N es el tamaño de la primera colección, y M es el tamaño de la segunda colección, si existe. Un guión (-) indica que esta función no está disponible en la colección. Dado que las secuencias se evalúan de forma diferida, una función como Seq.distinct puede ser o (1) porque devuelve inmediatamente, aunque todavía afecta al rendimiento de la secuencia cuando se enumera.
 
 |Función|Matriz|Lista|Secuencia|Asignación|Set|Descripción|
 |--------|-----|----|--------|---|---|-----------|

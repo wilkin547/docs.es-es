@@ -1,6 +1,6 @@
 ---
 title: Funciones (F#)
-description: Obtenga información acerca de las funciones en F# y cómo F# admite construcciones de programación funcionales comunes.
+description: 'Obtenga información acerca de las funciones en F # y cómo F # admite construcciones de programación funcionales comunes.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

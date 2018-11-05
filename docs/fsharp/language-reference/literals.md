@@ -1,6 +1,6 @@
 ---
 title: Literales (F#)
-description: Obtenga información sobre los tipos literales en el lenguaje de programación F#.
+description: 'Obtenga información sobre los tipos literales en el lenguaje de programación F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,11 +14,11 @@ ms.locfileid: "44087630"
 > [!NOTE]
 Los vínculos de referencia de API en este artículo le llevará a MSDN (por ahora).
 
-En este tema se proporciona una tabla que se muestra cómo especificar el tipo de un literal en F#.
+En este tema se proporciona una tabla que se muestra cómo especificar el tipo de un literal en F #.
 
 ## <a name="literal-types"></a>Tipos literales
 
-En la tabla siguiente se muestra los tipos literales en F#. Caracteres que representan dígitos en notación hexadecimal no distinguen mayúsculas de minúsculas; caracteres que identifican el tipo distinguen mayúsculas de minúsculas.
+En la tabla siguiente se muestra los tipos literales en F #. Caracteres que representan dígitos en notación hexadecimal no distinguen mayúsculas de minúsculas; caracteres que identifican el tipo distinguen mayúsculas de minúsculas.
 
 |Tipo|Descripción|Prefijo o sufijo|Ejemplos|
 |----|-----------|----------------|--------|
@@ -47,7 +47,7 @@ En la tabla siguiente se muestra los tipos literales en F#. Caracteres que repre
 
 Las cadenas Unicode pueden contener codificaciones explícitas que se pueden especificar mediante el uso de `\u` seguido por un código hexadecimal de 16 bits o codificaciones UTF-32 que se pueden especificar mediante el uso de `\U` seguido por un código hexadecimal de 32 bits que representa un Unicode par suplente.
 
-A partir de F# 3.1, puede usar el `+` iniciar sesión combinar literales de cadena. También puede usar el bit a bit o (`|||`) operador para combinar las marcas de enumeración. Por ejemplo, el código siguiente es legal en F# 3.1:
+A partir de F # 3.1, puede usar el `+` iniciar sesión combinar literales de cadena. También puede usar el bit a bit o (`|||`) operador para combinar las marcas de enumeración. Por ejemplo, el código siguiente es legal en F # 3.1:
 
 ```fsharp
 [<Literal>]
@@ -82,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Caracteres de subrayado en literales numéricos
 
-A partir de F# 4.1, puede separar los dígitos con el carácter de subrayado (`_`).
+A partir de F # 4.1, puede separar los dígitos con el carácter de subrayado (`_`).
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF

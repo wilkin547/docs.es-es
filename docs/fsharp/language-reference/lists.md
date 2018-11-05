@@ -1,6 +1,6 @@
 ---
 title: Listas (F#)
-description: Obtenga información sobre las listas de F#, una serie ordenada e inmutable de elementos del mismo tipo.
+description: 'Obtenga información sobre las listas de F #, una serie ordenada e inmutable de elementos del mismo tipo.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -56,7 +56,7 @@ Funciones para realizar operaciones en las listas están disponibles en el [List
 
 Como en F# las listas son inmutables, las operaciones de modificación generan nuevas listas en lugar de modificar las existentes.
 
-Listas de F# se implementan como listas vinculadas individualmente, lo que significa que las operaciones que tienen acceso a solo el encabezado de la lista son o (1), y acceso de elemento es O (*n*).
+Listas de F # se implementan como listas vinculadas individualmente, lo que significa que las operaciones que tienen acceso a solo el encabezado de la lista son o (1), y acceso de elemento es O (*n*).
 
 ## <a name="properties"></a>Propiedades
 

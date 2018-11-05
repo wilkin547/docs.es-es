@@ -1,6 +1,6 @@
 ---
 title: Uniones discriminadas (F#)
-description: Obtenga información sobre cómo usar F# uniones discriminadas.
+description: 'Obtenga información sobre cómo usar F # uniones discriminadas.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Este código muestra que puede usar los campos con nombre en la inicialización, o puede confiar en el orden de los campos en la declaración y simplemente proporcionar valores para cada campo a su vez. La llamada al constructor para `rect` en el código anterior usa los campos con nombre, pero la llamada al constructor para `circ` usa la ordenación. Puede mezclar los campos ordenados y campos con nombre, como se muestra en la construcción de `prism`.
 
-El `option` tipo es una unión discriminada simple en la biblioteca básica de F#. El `option` tipo se declara como sigue.
+El `option` tipo es una unión discriminada simple en la biblioteca básica de F #. El `option` tipo se declara como sigue.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ Normalmente, los identificadores de caso pueden utilizarse sin calificarlos con 
 
 ### <a name="unwrapping-discriminated-unions"></a>Uniones discriminadas desencapsuladas
 
-En uniones discriminadas de F# suelen utilizarse en el modelado de dominio para un único tipo de ajuste. Es fácil extraer el valor subyacente a través de coincidencia de patrones también. No es necesario usar una expresión de coincidencia para un único caso:
+En uniones discriminadas de F # suelen utilizarse en el modelado de dominio para un único tipo de ajuste. Es fácil extraer el valor subyacente a través de coincidencia de patrones también. No es necesario usar una expresión de coincidencia para un único caso:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -103,7 +103,7 @@ let someMethodUsingShaderProgram shaderProgram =
 
 ## <a name="struct-discriminated-unions"></a>Las uniones discriminadas de structs
 
-A partir de F# 4.1, también pueden representar las uniones discriminadas como estructuras.  Esto se realiza con el `[<Struct>]` atributo.
+A partir de F # 4.1, también pueden representar las uniones discriminadas como estructuras.  Esto se realiza con el `[<Struct>]` atributo.
 
 ```fsharp
 [<Struct>]

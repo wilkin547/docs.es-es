@@ -1,6 +1,6 @@
 ---
 title: Herencia (F#)
-description: Obtenga información sobre cómo especificar relaciones de herencia de F# con la palabra clave 'inherit'.
+description: "Obtenga información sobre cómo especificar relaciones de herencia de F # con la palabra clave 'inherit'."
 ms.date: 05/16/2016
 ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -34,7 +34,7 @@ La palabra clave `base` está disponible en las clases derivadas y hace referenc
 
 ## <a name="virtual-methods-and-overrides"></a>Métodos virtuales y reemplazos
 
-Métodos virtuales (y propiedades) funcionan un poco distinta en F# en comparación con otros lenguajes. NET. Para declarar un nuevo miembro virtual, utilice el `abstract` palabra clave. Para ello, independientemente de si se proporciona una implementación predeterminada para ese método. Por lo tanto, una definición completa de un método virtual en una clase base sigue este patrón:
+Métodos virtuales (y propiedades) funcionan un poco distinta en F # en comparación con otros lenguajes. NET. Para declarar un nuevo miembro virtual, utilice el `abstract` palabra clave. Para ello, independientemente de si se proporciona una implementación predeterminada para ese método. Por lo tanto, una definición completa de un método virtual en una clase base sigue este patrón:
 
 ```fsharp
 abstract member [method-name] : [type]

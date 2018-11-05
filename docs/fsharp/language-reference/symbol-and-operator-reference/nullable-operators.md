@@ -1,6 +1,6 @@
 ---
 title: Operadores que aceptan valores NULL (F#)
-description: Obtenga información sobre los operadores que aceptan valores null que están disponibles en el lenguaje de programación F#.
+description: 'Obtenga información sobre los operadores que aceptan valores null que están disponibles en el lenguaje de programación F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ Los operadores que aceptan valores NULL son operadores de aritmética o de compa
 
 ## <a name="table-of-nullable-operators"></a>Tabla de operadores que aceptan valores null
 
-En la tabla siguiente se enumera los operadores que aceptan valores NULL admitidos en el lenguaje F#.
+En la tabla siguiente se enumera los operadores que aceptan valores NULL admitidos en el lenguaje F #.
 
 |Que acepta valores NULL en la izquierda|Que acepta valores NULL en la derecha|Ambos lados que acepta valores null|
 |---|---|---|
@@ -55,7 +55,7 @@ El resultado es `10.000000`
 
 En los campos de datos que acepta valores NULL, los operadores de consulta como `sumByNullable`, también existen para su uso en expresiones de consulta. Los operadores de consulta para los tipos que no aceptan valores NULL no son tipo compatible con los tipos que aceptan valores NULL, lo que debe usar la versión que acepta valores NULL del operador de consulta adecuado cuando se trabaja con valores de datos que acepta valores NULL. Para obtener más información, consulte [las expresiones de consulta](../query-expressions.md).
 
-El ejemplo siguiente muestra el uso de operadores que aceptan valores NULL en una expresión de consulta de F#. La primera consulta muestra cómo podría escribir una consulta sin un operador que acepta valores NULL. la segunda consulta muestra una consulta equivalente que usa un operador que acepta valores NULL. Para el contexto completo, incluido cómo configurar la base de datos para usar este código de ejemplo, vea [Tutorial: acceso a una base de datos SQL mediante proveedores de tipo](../../tutorials/type-providers/accessing-a-sql-database.md).
+El ejemplo siguiente muestra el uso de operadores que aceptan valores NULL en una expresión de consulta de F #. La primera consulta muestra cómo podría escribir una consulta sin un operador que acepta valores NULL. la segunda consulta muestra una consulta equivalente que usa un operador que acepta valores NULL. Para el contexto completo, incluido cómo configurar la base de datos para usar este código de ejemplo, vea [Tutorial: acceso a una base de datos SQL mediante proveedores de tipo](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System

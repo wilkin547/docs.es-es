@@ -1,6 +1,6 @@
 ---
 title: Directivas de compilador (F#)
-description: Obtenga información sobre las directivas de preprocesador de lenguaje F#, las directivas de compilación condicional, las directivas de línea y las directivas de compilador.
+description: 'Obtenga información sobre las directivas de preprocesador de lenguaje F #, las directivas de compilación condicional, las directivas de línea y las directivas de compilador.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ En la siguiente tabla se recoge una lista de las directivas de compilador dispon
 |Directiva|Descripción|
 |---------|-----------|
 |`#light` ["activado"&#124;"desactivado"]|Habilita o deshabilita la sintaxis ligera de cara a la compatibilidad con otras versiones de ML. La sintaxis ligera está habilitada de forma predeterminada. La sintaxis detallada siempre está habilitada. Por lo tanto, puede usar ambas sintaxis, la ligera y la detallada. La directiva `#light` es equivalente en sí misma a `#light "on"`. Si especifica `#light "off"`, tendrá que usar la sintaxis detallada en todas las construcciones del lenguaje. La sintaxis en la documentación de F# se muestra bajo la asunción de que se está usando la sintaxis ligera. Para obtener más información, consulte [sintaxis detallada](verbose-syntax.md).|
-Las directivas de intérprete (fsi.exe), consulte [programación interactiva con F#](../tutorials/fsharp-interactive/index.md).
+Las directivas de intérprete (fsi.exe), consulte [programación interactiva con F #](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Vea también
 

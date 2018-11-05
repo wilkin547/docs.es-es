@@ -1,6 +1,6 @@
 ---
 title: Referencia de palabras clave (F#)
-description: Encuentre vínculos a información acerca de todas las palabras clave del lenguaje F#.
+description: 'Encuentre vínculos a información acerca de todas las palabras clave del lenguaje F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43856029"
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
 
-Este tema contiene vínculos a información sobre todas las palabras clave del lenguaje F#.
+Este tema contiene vínculos a información sobre todas las palabras clave del lenguaje F #.
 
-## <a name="f-keyword-table"></a>Tabla de la palabra clave F#
+## <a name="f-keyword-table"></a>Tabla de la palabra clave F #
 
-En la tabla siguiente se muestra todas las palabras clave de F# en orden alfabético, junto con descripciones breves y vínculos a temas relevantes que contienen más información.
+En la tabla siguiente se muestra todas las palabras clave de F # en orden alfabético, junto con descripciones breves y vínculos a temas relevantes que contienen más información.
 
 |Palabra clave|Vínculo|Descripción|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ En la tabla siguiente se muestra todas las palabras clave de F# en orden alfabé
 |`yield`|[Secuencias](sequences.md)|Se utiliza en una expresión de secuencia para generar un valor para una secuencia.|
 |`yield!`|[Expresiones de cálculo](computation-expressions.md)<br /><br />[Flujos de trabajo asincrónicos](asynchronous-workflows.md)|Se usa en una expresión de cálculo para anexar el resultado de una expresión de cálculo determinado a una colección de los resultados de la expresión de cálculo que contiene.|
 
-Los tokens siguientes están reservados en F# porque son palabras clave en el lenguaje OCaml:
+Los tokens siguientes están reservados en F # porque son palabras clave en el lenguaje OCaml:
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ Los tokens siguientes están reservados en F# porque son palabras clave en el le
 
 Si usas el `--mlcompatibility` opción del compilador, las palabras clave anteriores están disponibles para su uso como identificadores.
 
-Los tokens siguientes están reservados como palabras clave para una futura ampliación del lenguaje F#:
+Los tokens siguientes están reservados como palabras clave para una futura ampliación del lenguaje F #:
 
 * `atomic`
 * `break`

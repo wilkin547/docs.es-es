@@ -1,6 +1,6 @@
 ---
 title: Atributos (F#)
-description: Obtenga información sobre cómo F# atributos permiten que los metadatos que se aplicará a una construcción de programación.
+description: 'Obtenga información sobre cómo F # atributos permiten que los metadatos que se aplicará a una construcción de programación.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -39,7 +39,7 @@ En este ejemplo, el atributo es `DllImportAttribute`, aquí se usa en forma abre
 
 Los atributos son una construcción de programación de .NET que permite a un objeto que se conoce como un *atributo* va a asociar a un tipo u otro elemento de programa. El elemento de programa al que se aplica un atributo se conoce como el *destino del atributo*. Normalmente, el atributo contiene metadatos acerca de su destino. En este contexto, los metadatos podrían ser ningún dato sobre el tipo que no sean sus campos y los miembros.
 
-Los atributos en F# se pueden aplicar a las construcciones de programación siguientes: funciones, métodos, ensamblados, módulos, tipos (clases, registros, estructuras, interfaces, delegados, enumeraciones, uniones etc.), constructores, propiedades, campos, parámetros, Escriba los parámetros y valores devueltos. No se admiten atributos en `let` enlaces dentro de clases, las expresiones o expresiones de flujo de trabajo.
+Los atributos en F # se pueden aplicar a las construcciones de programación siguientes: funciones, métodos, ensamblados, módulos, tipos (clases, registros, estructuras, interfaces, delegados, enumeraciones, uniones etc.), constructores, propiedades, campos, parámetros, Escriba los parámetros y valores devueltos. No se admiten atributos en `let` enlaces dentro de clases, las expresiones o expresiones de flujo de trabajo.
 
 Normalmente, la declaración de atributos aparece directamente antes de la declaración del destino del atributo. Juntos, como se indica a continuación, se pueden usar varias declaraciones de atributo.
 
@@ -59,7 +59,7 @@ Para los destinos de atributo `assembly` y `module`, aplicar los atributos a un 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-Si se omite el destino del atributo para un atributo aplicado a un `do` de enlace, el compilador de F# intenta determinar el destino del atributo que tenga sentido para ese atributo. Muchas clases de atributos tienen un atributo de tipo `System.AttributeUsageAttribute` que incluye información sobre los posibles destinos admitidos para ese atributo. Si el `System.AttributeUsageAttribute` indica que el atributo admite funciones como destinos, se obtendrá el atributo que se aplicará al punto de entrada principal del programa. Si el `System.AttributeUsageAttribute` indica que el atributo admite ensamblados como destinos, el compilador usa el atributo se aplique al ensamblado. La mayoría de los atributos no se aplican a las funciones y ensamblados, pero en los casos donde lo hacen, se toma el atributo que se aplicará a la función principal del programa. Si el destino del atributo se especifica explícitamente, el atributo se aplica al destino especificado.
+Si se omite el destino del atributo para un atributo aplicado a un `do` de enlace, el compilador de F # intenta determinar el destino del atributo que tenga sentido para ese atributo. Muchas clases de atributos tienen un atributo de tipo `System.AttributeUsageAttribute` que incluye información sobre los posibles destinos admitidos para ese atributo. Si el `System.AttributeUsageAttribute` indica que el atributo admite funciones como destinos, se obtendrá el atributo que se aplicará al punto de entrada principal del programa. Si el `System.AttributeUsageAttribute` indica que el atributo admite ensamblados como destinos, el compilador usa el atributo se aplique al ensamblado. La mayoría de los atributos no se aplican a las funciones y ensamblados, pero en los casos donde lo hacen, se toma el atributo que se aplicará a la función principal del programa. Si el destino del atributo se especifica explícitamente, el atributo se aplica al destino especificado.
 
 Aunque normalmente no es necesario especificar el atributo de destino explícitamente, los valores válidos para *destino* en un atributo que se muestran en la siguiente tabla, junto con ejemplos de uso.
 

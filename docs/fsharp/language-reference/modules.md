@@ -1,6 +1,6 @@
 ---
 title: Módulos (F#)
-description: Obtenga información sobre cómo un módulo de F# es una agrupación de código de F#, como valores, tipos y valores de función, en un programa de F#.
+description: 'Obtenga información sobre cómo un módulo de F # es una agrupación de código de F #, como valores, tipos y valores de función, en un programa de F #.'
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45528531"
 ---
 # <a name="modules"></a>Módulos
 
-En el contexto del lenguaje F#, un *módulo* es una agrupación de código de F#, como valores, tipos y valores de función, en un programa de F#. Agrupar el código en módulos ayuda a mantener junto el código relacionado y a evitar conflictos de nombres en los programas.
+En el contexto del lenguaje F #, un *módulo* es una agrupación de código de F #, como valores, tipos y valores de función, en un programa de F #. Agrupar el código en módulos ayuda a mantener junto el código relacionado y a evitar conflictos de nombres en los programas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,7 +26,7 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Comentarios
 
-Un módulo de F# es una agrupación de construcciones de código de F# como tipos, valores, valores de función y el código en `do` enlaces. Se implementa como una clase de common language runtime (CLR) que tenga solo miembros estáticos. Hay dos tipos de declaraciones de módulo, dependiendo de si el archivo completo se incluye en el módulo: una declaración de módulo de nivel superior y una declaración de módulo local. Una declaración de módulo de nivel superior incluye todo el archivo del módulo. Una declaración de módulo de nivel superior solo puede aparecer como la primera declaración en un archivo.
+Un módulo de F # es una agrupación de construcciones de código de F # como tipos, valores, valores de función y el código en `do` enlaces. Se implementa como una clase de common language runtime (CLR) que tenga solo miembros estáticos. Hay dos tipos de declaraciones de módulo, dependiendo de si el archivo completo se incluye en el módulo: una declaración de módulo de nivel superior y una declaración de módulo local. Una declaración de módulo de nivel superior incluye todo el archivo del módulo. Una declaración de módulo de nivel superior solo puede aparecer como la primera declaración en un archivo.
 
 En la sintaxis de la declaración de módulo de nivel superior, el elemento opcional *espacio de nombres calificado* es la secuencia de nombres de espacio de nombres anidado que contiene el módulo. El espacio de nombres calificado no tienen que ser declarados previamente.
 
@@ -44,7 +44,7 @@ Si tiene varios módulos en un archivo, debe usar una declaración de módulo lo
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Si tiene varios archivos en un proyecto o en una única compilación, o si está creando una biblioteca, debe incluir una declaración de espacio de nombres o una declaración de módulo en la parte superior del archivo. El compilador de F# solo determina un nombre de módulo implícitamente cuando hay solo un archivo en una línea de comandos de compilación o de proyecto, y va a crear una aplicación.
+Si tiene varios archivos en un proyecto o en una única compilación, o si está creando una biblioteca, debe incluir una declaración de espacio de nombres o una declaración de módulo en la parte superior del archivo. El compilador de F # solo determina un nombre de módulo implícitamente cuando hay solo un archivo en una línea de comandos de compilación o de proyecto, y va a crear una aplicación.
 
 El *modificador de accesibilidad* puede ser uno de los siguientes: `public`, `private`, `internal`. Para más información, vea [Access Control](access-control.md) (Control de acceso). El valor predeterminado es que sea pública.
 
@@ -88,7 +88,7 @@ Si desea que todo el código en un archivo en un único módulo externo y desea 
 
 ## <a name="recursive-modules"></a>Módulos recursiva
 
-F# 4.1 presenta la noción de módulos que permiten todo el código independiente para ser mutuamente recursivas.  Esto se realiza mediante `module rec`.  El uso de `module rec` puede aliviar algunas dificultades no se pueda escribir código mutuamente referencial entre los tipos y módulos.  Este es un ejemplo de esto:
+F # 4.1 presenta la noción de módulos que permiten todo el código independiente para ser mutuamente recursivas.  Esto se realiza mediante `module rec`.  El uso de `module rec` puede aliviar algunas dificultades no se pueda escribir código mutuamente referencial entre los tipos y módulos.  Este es un ejemplo de esto:
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,12 +128,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Tenga en cuenta que la excepción `DontSqueezeTheBananaException` y la clase `Banana` ambos hacen referencia entre sí.  Además, el módulo `BananaHelpers` y la clase `Banana` también hacen referencia entre sí.  Esto no sería posible expresar en F# si ha quitado el `rec` palabra clave de la `RecursiveModule` módulo.
+Tenga en cuenta que la excepción `DontSqueezeTheBananaException` y la clase `Banana` ambos hacen referencia entre sí.  Además, el módulo `BananaHelpers` y la clase `Banana` también hacen referencia entre sí.  Esto no sería posible expresar en F # si ha quitado el `rec` palabra clave de la `RecursiveModule` módulo.
 
-Esta funcionalidad también es posible en [espacios de nombres](namespaces.md) con F# 4.1.
+Esta funcionalidad también es posible en [espacios de nombres](namespaces.md) con F # 4.1.
 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia del lenguaje F#](index.md)  
 - [Espacios de nombres](namespaces.md)  
-- [F# RFC FS-1009 - permitir tipos mutuamente referenciales y módulos sobre ámbitos más amplios dentro de archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
+- [F # RFC FS-1009 - permitir tipos mutuamente referenciales y módulos sobre ámbitos más amplios dentro de archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  

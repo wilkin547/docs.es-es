@@ -7,7 +7,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25726422"
 ---
-# <a name="using-f-on-azure-service-fabric"></a>Uso de F# en Azure Service Fabric
+# <a name="using-f-on-azure-service-fabric"></a>Uso de F # en Azure Service Fabric
 
 > [!NOTE]
 > Esto todavía está en curso.

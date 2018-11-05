@@ -1,6 +1,6 @@
 ---
-title: Expresiones de coincidencia (F#)
-description: Obtenga información sobre cómo la expresión de coincidencia en F# proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.
+title: 'Expresiones de coincidencia (F #)'
+description: 'Obtenga información sobre cómo la expresión de coincidencia en F # proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.'
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

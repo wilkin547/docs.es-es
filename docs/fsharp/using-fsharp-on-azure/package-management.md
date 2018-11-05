@@ -10,7 +10,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33566981"
 ---
-# <a name="package-management-for-f-azure-dependencies"></a>Administración de paquetes para las dependencias de Azure de F#
+# <a name="package-management-for-f-azure-dependencies"></a>Administración de paquetes para las dependencias de Azure de F #
 
 Obtención de paquetes para el desarrollo de Azure es fácil cuando se usa un administrador de paquetes. Las dos opciones son [Paket](https://fsprojects.github.io/Paket/) y [NuGet](https://www.nuget.org/).
 
