@@ -9,28 +9,26 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1e08026f8d1ec8b39f7ef3c2c34efad9e51b8fe9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cdb93f802d313c0812bb50236ff5962c44251b4e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235707"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182923"
 ---
-# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a><span data-ttu-id="00800-102">Cómo establecer en una aplicación una directiva de caché predeterminada de duración definida</span><span class="sxs-lookup"><span data-stu-id="00800-102">How to: Set the Default Time-Based Cache Policy for an Application</span></span>
-<span data-ttu-id="00800-103">La directiva de caché predeterminada de duración definida permite que una aplicación tenga su comportamiento de caché definido por medio de los encabezados que se han enviado con el recurso almacenado en caché y el comportamiento de caché definido en las secciones 13 y 14 de RFC 2616, disponibles en [http://www.ietf.org](http://www.ietf.org/). Este es el comportamiento de caché apropiado para la mayoría de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="00800-103">The default time-based cache policy allows an application to have its cache behavior defined by the headers sent with the cached resource and the cache behavior defined in sections 13 and 14 of RFC 2616, available at [http://www.ietf.org](http://www.ietf.org/). This is the appropriate cache behavior for most applications.</span></span>  
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a><span data-ttu-id="e77e4-102">Cómo establecer en una aplicación una directiva de caché predeterminada de duración definida</span><span class="sxs-lookup"><span data-stu-id="e77e4-102">How to: Set the Default Time-Based Cache Policy for an Application</span></span>
+<span data-ttu-id="e77e4-103">La directiva de caché predeterminada de duración definida permite que una aplicación tenga su comportamiento de caché definido mediante los encabezados que se han enviado con el recurso almacenado en caché y el comportamiento de caché definido en las secciones 13 y 14 de RFC 2616, disponibles en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/).</span><span class="sxs-lookup"><span data-stu-id="e77e4-103">The default time-based cache policy allows an application to have its cache behavior defined by the headers sent with the cached resource and the cache behavior defined in sections 13 and 14 of RFC 2616, available at [Internet Engineering Task Force (IETF)](https://www.ietf.org/) website.</span></span> <span data-ttu-id="e77e4-104">Este es el comportamiento de caché apropiado para la mayoría de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="e77e4-104">This is the appropriate cache behavior for most applications.</span></span>  
   
-### <a name="to-set-the-default-automatic-policy-for-an-application"></a><span data-ttu-id="00800-104">Para establecer la directiva automática predeterminada para una aplicación</span><span class="sxs-lookup"><span data-stu-id="00800-104">To set the default automatic policy for an application</span></span>  
+### <a name="to-set-the-default-automatic-policy-for-an-application"></a><span data-ttu-id="e77e4-105">Para establecer la directiva automática predeterminada para una aplicación</span><span class="sxs-lookup"><span data-stu-id="e77e4-105">To set the default automatic policy for an application</span></span>  
   
-1.  <span data-ttu-id="00800-105">Cree un objeto de directiva predeterminado de duración definida.</span><span class="sxs-lookup"><span data-stu-id="00800-105">Create a default time-based policy object.</span></span>  
+1.  <span data-ttu-id="e77e4-106">Cree un objeto de directiva predeterminado de duración definida.</span><span class="sxs-lookup"><span data-stu-id="e77e4-106">Create a default time-based policy object.</span></span>  
   
-2.  <span data-ttu-id="00800-106">Establezca el objeto de directiva como el valor predeterminado para el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="00800-106">Set the policy object as the default for the application domain.</span></span>  
+2.  <span data-ttu-id="e77e4-107">Establezca el objeto de directiva como el valor predeterminado para el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="e77e4-107">Set the policy object as the default for the application domain.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="00800-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="00800-107">Example</span></span>  
- <span data-ttu-id="00800-108">Los dos ejemplos de esta sección generan directivas idénticas.</span><span class="sxs-lookup"><span data-stu-id="00800-108">The two examples in this section produce identical policies.</span></span>  
+## <a name="example"></a><span data-ttu-id="e77e4-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e77e4-108">Example</span></span>  
+ <span data-ttu-id="e77e4-109">Los dos ejemplos de esta sección generan directivas idénticas.</span><span class="sxs-lookup"><span data-stu-id="e77e4-109">The two examples in this section produce identical policies.</span></span>  
   
- <span data-ttu-id="00800-109">En el ejemplo siguiente se crea una directiva predeterminada de duración definida y se establece como el valor predeterminado para el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="00800-109">The following example creates a default time-based policy and sets it as the default for the application domain.</span></span>  
+ <span data-ttu-id="e77e4-110">En el ejemplo siguiente se crea una directiva predeterminada de duración definida y se establece como el valor predeterminado para el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="e77e4-110">The following example creates a default time-based policy and sets it as the default for the application domain.</span></span>  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy ()  
@@ -47,7 +45,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy ()
 End Sub  
 ```  
   
- <span data-ttu-id="00800-110">También puede crear la directiva de caché predeterminada de duración definida con la clase <xref:System.Net.Cache.RequestCachePolicy> como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="00800-110">You can also create the default time-based cache policy using the <xref:System.Net.Cache.RequestCachePolicy> class as shown in the following example:</span></span>  
+ <span data-ttu-id="e77e4-111">También puede crear la directiva de caché predeterminada de duración definida con la clase <xref:System.Net.Cache.RequestCachePolicy> como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="e77e4-111">You can also create the default time-based cache policy using the <xref:System.Net.Cache.RequestCachePolicy> class as shown in the following example:</span></span>  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy2()  
@@ -64,9 +62,9 @@ Public Shared Sub SetDefaultTimeBasedPolicy2()
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="00800-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="00800-111">See Also</span></span>  
- [<span data-ttu-id="00800-112">Administración de la memoria caché para aplicaciones de red</span><span class="sxs-lookup"><span data-stu-id="00800-112">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [<span data-ttu-id="00800-113">Directiva de caché</span><span class="sxs-lookup"><span data-stu-id="00800-113">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
- [<span data-ttu-id="00800-114">Location-Based Cache Policies (Directivas de caché basadas en la ubicación)</span><span class="sxs-lookup"><span data-stu-id="00800-114">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- <span data-ttu-id="00800-115">[Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) (Directivas de caché de duración definida)</span><span class="sxs-lookup"><span data-stu-id="00800-115">[Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md)</span></span>  
- [<span data-ttu-id="00800-116">Elemento \<requestCaching> (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="00800-116">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="e77e4-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="e77e4-112">See Also</span></span>  
+ [<span data-ttu-id="e77e4-113">Administración de la memoria caché para aplicaciones de red</span><span class="sxs-lookup"><span data-stu-id="e77e4-113">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="e77e4-114">Directiva de caché</span><span class="sxs-lookup"><span data-stu-id="e77e4-114">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="e77e4-115">Location-Based Cache Policies (Directivas de caché basadas en la ubicación)</span><span class="sxs-lookup"><span data-stu-id="e77e4-115">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ <span data-ttu-id="e77e4-116">[Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) (Directivas de caché de duración definida)</span><span class="sxs-lookup"><span data-stu-id="e77e4-116">[Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md)</span></span>  
+ [<span data-ttu-id="e77e4-117">Elemento \<requestCaching> (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="e77e4-117">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

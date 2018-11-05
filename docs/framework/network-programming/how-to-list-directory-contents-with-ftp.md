@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
-ms.openlocfilehash: 26a02cdacfb73b9fa75976ee67c2ef09784cfc71
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028219"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197319"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="be2d0-103">Cómo: enumerar los contenidos del directorio con FTP</span><span class="sxs-lookup"><span data-stu-id="be2d0-103">How to: List directory contents with FTP</span></span>
+# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="ac170-103">Cómo: enumerar los contenidos del directorio con FTP</span><span class="sxs-lookup"><span data-stu-id="ac170-103">How to: List directory contents with FTP</span></span>
 
-<span data-ttu-id="be2d0-104">En este ejemplo se muestra cómo enumerar el contenido del directorio de un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="be2d0-104">This sample shows how to list the directory contents of an FTP server.</span></span>
+<span data-ttu-id="ac170-104">En este ejemplo se muestra cómo enumerar el contenido del directorio de un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="ac170-104">This sample shows how to list the directory contents of an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="be2d0-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="be2d0-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ac170-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ac170-105">Example</span></span>
 
 ```csharp
 using System;
@@ -79,4 +79,14 @@ Namespace Examples.System.Net
         End Sub
     End Module
 End Namespace
+```
+
+<span data-ttu-id="ac170-106">Si necesita enumerar un directorio específico, simplemente agréguelo al final del URI que se usa en el método <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="ac170-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
+
+```csharp
+FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/your_preferred_directory");
+```
+
+```vb
+Dim request As FtpWebRequest = CType(WebRequest.Create("ftp://www.contoso.com/your_preferred_directory"), FtpWebRequest)
 ```

@@ -1,0 +1,205 @@
+### YamlMime:Tutorial
+title: <span data-ttu-id="7c407-101">Obtenga información sobre cómo administrar colecciones de datos mediante el tipo de lista genérico</span><span class="sxs-lookup"><span data-stu-id="7c407-101">Learn to manage data collections using the generic list type</span></span>
+metadata:
+  title: 'Colección de datos: tutorial interactivo de introducción a C#'
+  description: En este tutorial, usará el explorador para aprender a usar C# de forma interactiva. Escriba código de C# y vea los resultados de la compilación y la ejecución del código directamente en el explorador.
+  audience: Developer
+  ms.custom: mvc
+  ms.date: 10/23/2018
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
+  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/28/2018
+  ms.locfileid: "50200195"
+items:
+- durationInMinutes: 1
+  content: >
+    <span data-ttu-id="7c407-105">En este tutorial se enseña a usar C# de forma interactiva, con el uso del explorador para escribir código de C# y ver los resultados de la compilación y ejecución del código.</span><span class="sxs-lookup"><span data-stu-id="7c407-105">This tutorial teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id="7c407-106">Contiene una serie de lecciones en las que se crean, modifican y exploran colecciones y matrices.</span><span class="sxs-lookup"><span data-stu-id="7c407-106">It contains a series of lessons that create, modify and explore collections and arrays.</span></span>
+- title: <span data-ttu-id="7c407-107">Creación de listas</span><span class="sxs-lookup"><span data-stu-id="7c407-107">Create lists</span></span>
+  durationInMinutes: 2
+  content: >
+    <span data-ttu-id="7c407-108">Ejecute el código siguiente en la ventana interactiva.</span><span class="sxs-lookup"><span data-stu-id="7c407-108">Run the following code in the interactive window.</span></span> <span data-ttu-id="7c407-109">Para ello, escriba el bloque de código siguiente en la ventana interactiva (reemplace `<name>` con su nombre) y haga clic en el botón **Ejecutar**:</span><span class="sxs-lookup"><span data-stu-id="7c407-109">To do that, type the following code block in the interactive window (replace `<name>` with your name) and click the **Run** button:</span></span>
+
+
+    ```csharp
+
+    var names = new List<string> { "<name>", "Ana", "Felipe" };
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    <span data-ttu-id="7c407-110">Hasta ahora, solo ha creado una lista de cadenas, ha agregado tres nombres a dicha lista y ha impreso los nombres en MAYÚSCULA.</span><span class="sxs-lookup"><span data-stu-id="7c407-110">You've just created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id="7c407-111">Los conceptos aplicados ya se han aprendido en los tutoriales anteriores para recorrer en bucle la lista.</span><span class="sxs-lookup"><span data-stu-id="7c407-111">You're using concepts that you've learned in earlier tutorials to loop through the list.</span></span>
+
+
+    <span data-ttu-id="7c407-112">El código para mostrar los nombres usa la característica [interpolación de cadenas](../../language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="7c407-112">The code to display names makes use of the [string interpolation](../../language-reference/tokens/interpolated.md) feature.</span></span> <span data-ttu-id="7c407-113">Si un valor de `string` va precedido del carácter `$`, significa que puede insertar código de C# en la declaración de cadena.</span><span class="sxs-lookup"><span data-stu-id="7c407-113">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id="7c407-114">La cadena real reemplaza a ese código de C# con el valor que genera.</span><span class="sxs-lookup"><span data-stu-id="7c407-114">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id="7c407-115">En este ejemplo, reemplaza `{name.ToUpper()}` con cada nombre, convertido a mayúsculas, porque se llama al método <xref:System.String.ToUpper%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7c407-115">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A?displayProperty=nameWithType> method.</span></span>
+
+
+    <span data-ttu-id="7c407-116">Vamos a continuar indagando.</span><span class="sxs-lookup"><span data-stu-id="7c407-116">Let's keep exploring.</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="7c407-117">Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar.</span><span class="sxs-lookup"><span data-stu-id="7c407-117">This online coding experience is in preview mode.</span></span> <span data-ttu-id="7c407-118">Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="7c407-118">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="7c407-119">Modificación del contenido de las listas</span><span class="sxs-lookup"><span data-stu-id="7c407-119">Modify list contents</span></span>
+  durationInMinutes: 3
+  content: >
+    <span data-ttu-id="7c407-120">La colección creada usa el tipo <xref:System.Collections.Generic.List%601>.</span><span class="sxs-lookup"><span data-stu-id="7c407-120">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id="7c407-121">Este tipo almacena las secuencias de elementos.</span><span class="sxs-lookup"><span data-stu-id="7c407-121">This type stores sequences of elements.</span></span> <span data-ttu-id="7c407-122">Especifique el tipo de los elementos entre corchetes angulares.</span><span class="sxs-lookup"><span data-stu-id="7c407-122">You specify the type of the elements between the angle brackets.</span></span>
+
+
+    <span data-ttu-id="7c407-123">Un aspecto importante de este tipo <xref:System.Collections.Generic.List%601> es que se puede aumentar o reducir, lo que permite agregar o quitar elementos.</span><span class="sxs-lookup"><span data-stu-id="7c407-123">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id="7c407-124">Agregue el código siguiente debajo del código que ya haya escrito:</span><span class="sxs-lookup"><span data-stu-id="7c407-124">Add the following code below the code you've already written:</span></span>
+
+
+    ```csharp
+
+    Console.WriteLine();
+
+    names.Add("Maria");
+
+    names.Add("Bill");
+
+    names.Remove("Ana");
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    <span data-ttu-id="7c407-125">Se han agregado dos nombres más al final de la lista.</span><span class="sxs-lookup"><span data-stu-id="7c407-125">You've added two more names to the end of the list.</span></span> <span data-ttu-id="7c407-126">También se ha quitado uno.</span><span class="sxs-lookup"><span data-stu-id="7c407-126">You've also removed one as well.</span></span>
+
+
+    <span data-ttu-id="7c407-127"><xref:System.Collections.Generic.List%601> también permite hacer referencia a elementos individuales a través del **índice**.</span><span class="sxs-lookup"><span data-stu-id="7c407-127">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id="7c407-128">Puede acceder a los elementos con los tokens `[` y `]`.</span><span class="sxs-lookup"><span data-stu-id="7c407-128">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id="7c407-129">Agregue el código siguiente debajo del que ya haya escrito y pruébelo:</span><span class="sxs-lookup"><span data-stu-id="7c407-129">Add the following code below what you've already written and try it:</span></span>
+
+
+    ```csharp
+
+    Console.WriteLine($"My name is {names[0]}.");
+
+    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+
+    ```
+
+
+    <span data-ttu-id="7c407-130">No puede acceder a elementos que estén más allá del final de la lista.</span><span class="sxs-lookup"><span data-stu-id="7c407-130">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id="7c407-131">Puede comprobar durante cuánto tiempo la lista usa la propiedad <xref:System.Collections.Generic.List%601.Count%2A>.</span><span class="sxs-lookup"><span data-stu-id="7c407-131">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id="7c407-132">Agregue el código siguiente para probarlo:</span><span class="sxs-lookup"><span data-stu-id="7c407-132">Add the following code to try it:</span></span>
+
+
+    ```csharp
+
+    Console.WriteLine($"The list has {names.Count} people in it");
+
+    ```
+
+
+    <span data-ttu-id="7c407-133">Vuelva a hacer clic en **Ejecutar** para ver los resultados.</span><span class="sxs-lookup"><span data-stu-id="7c407-133">Click **Run** again to see the results.</span></span> <span data-ttu-id="7c407-134">En C#, los índices empiezan en 0, por lo que el índice más grande válido es uno menos que el número de elementos de la lista.</span><span class="sxs-lookup"><span data-stu-id="7c407-134">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="7c407-135">Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar.</span><span class="sxs-lookup"><span data-stu-id="7c407-135">This online coding experience is in preview mode.</span></span> <span data-ttu-id="7c407-136">Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="7c407-136">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="7c407-137">Búsqueda y orden en las listas</span><span class="sxs-lookup"><span data-stu-id="7c407-137">Search and sort lists</span></span>
+  durationInMinutes: 5
+  content: >
+    <span data-ttu-id="7c407-138">En los ejemplos se usan listas relativamente pequeñas, pero las aplicaciones a menudo pueden crear listas que contengan muchos más elementos, en ocasiones, con una numeración que engloba millares.</span><span class="sxs-lookup"><span data-stu-id="7c407-138">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id="7c407-139">Para encontrar elementos en estas colecciones más grandes, debe buscar diferentes elementos en la lista.</span><span class="sxs-lookup"><span data-stu-id="7c407-139">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id="7c407-140">El método <xref:System.Collections.Generic.List%601.IndexOf%2A> busca un elemento y devuelve su índice.</span><span class="sxs-lookup"><span data-stu-id="7c407-140">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id="7c407-141">Pruebe esto para ver cómo funciona.</span><span class="sxs-lookup"><span data-stu-id="7c407-141">Try this to see how it works.</span></span>  <span data-ttu-id="7c407-142">Agregue el código siguiente debajo del que ha escrito hasta ahora:</span><span class="sxs-lookup"><span data-stu-id="7c407-142">Add the following code below what you've written so far:</span></span>
+
+
+    ```csharp
+
+    var index = names.IndexOf("Felipe");
+
+    if (index != -1)
+      Console.WriteLine($"The name {names[index]} is at index {index}");
+
+    var notFound = names.IndexOf("Not Found");
+      Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+    ```
+
+
+    <span data-ttu-id="7c407-143">No puede saber si un elemento está en la lista, por lo que debe comprobar siempre el índice devuelto por <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span><span class="sxs-lookup"><span data-stu-id="7c407-143">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id="7c407-144">Si es -1, significa que no se encontró el elemento.</span><span class="sxs-lookup"><span data-stu-id="7c407-144">If it is -1, the item was not found.</span></span>
+
+
+    <span data-ttu-id="7c407-145">Los elementos de la lista también se pueden ordenar.</span><span class="sxs-lookup"><span data-stu-id="7c407-145">The items in your list can be sorted as well.</span></span> <span data-ttu-id="7c407-146">El método <xref:System.Collections.Generic.List%601.Sort%2A> ordena todos los elementos de la lista en su orden normal (por orden alfabético si se trata de cadenas).</span><span class="sxs-lookup"><span data-stu-id="7c407-146">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id="7c407-147">Agregue este código y vuelva a ejecutarlo:</span><span class="sxs-lookup"><span data-stu-id="7c407-147">Add this code and run again:</span></span>
+
+
+    ```csharp
+
+    names.Sort();
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="7c407-148">Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar.</span><span class="sxs-lookup"><span data-stu-id="7c407-148">This online coding experience is in preview mode.</span></span> <span data-ttu-id="7c407-149">Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="7c407-149">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="7c407-150">Listas de otros tipos</span><span class="sxs-lookup"><span data-stu-id="7c407-150">Lists of other types</span></span>
+  durationInMinutes: 5
+  content: >
+    <span data-ttu-id="7c407-151">Hasta el momento, se ha usado el tipo `string` en las listas.</span><span class="sxs-lookup"><span data-stu-id="7c407-151">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id="7c407-152">Se va a crear una lista <xref:System.Collections.Generic.List%601> con un tipo distinto.</span><span class="sxs-lookup"><span data-stu-id="7c407-152">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id="7c407-153">Se va a crear una serie de números.</span><span class="sxs-lookup"><span data-stu-id="7c407-153">Let's build a set of numbers.</span></span> <span data-ttu-id="7c407-154">Elimine el código que ha escrito hasta ahora y reemplácelo por este:</span><span class="sxs-lookup"><span data-stu-id="7c407-154">Delete the code you wrote so far, and replace it with this:</span></span>
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+    ```
+
+
+    <span data-ttu-id="7c407-155">Se crea una lista de enteros y se definen los dos primeros enteros con el valor 1.</span><span class="sxs-lookup"><span data-stu-id="7c407-155">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id="7c407-156">Son los dos primeros valores de una *sucesión de Fibonacci*, una secuencia de números.</span><span class="sxs-lookup"><span data-stu-id="7c407-156">These are the first two values of a *Fibonacci Sequence*, a sequence of numbers.</span></span> <span data-ttu-id="7c407-157">Cada número sucesivo de Fibonacci se obtiene con la suma de los dos números anteriores.</span><span class="sxs-lookup"><span data-stu-id="7c407-157">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id="7c407-158">Agregue este código:</span><span class="sxs-lookup"><span data-stu-id="7c407-158">Add this code:</span></span>
+
+
+    ```csharp
+
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+
+    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+
+    fibonacciNumbers.Add(previous + previous2);
+
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    <span data-ttu-id="7c407-159">Presione **Ejecutar** para ver los resultados.</span><span class="sxs-lookup"><span data-stu-id="7c407-159">Press **Run** to see the results;</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="7c407-160">Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar.</span><span class="sxs-lookup"><span data-stu-id="7c407-160">This online coding experience is in preview mode.</span></span> <span data-ttu-id="7c407-161">Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="7c407-161">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="7c407-162">Desafío</span><span class="sxs-lookup"><span data-stu-id="7c407-162">Challenge</span></span>
+  durationInMinutes: 10
+  content: >
+    <span data-ttu-id="7c407-163">Trate de recopilar los conceptos que ha aprendido en esta lección y en las anteriores.</span><span class="sxs-lookup"><span data-stu-id="7c407-163">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id="7c407-164">Amplíe lo que ha creado hasta el momento con los números de Fibonacci.</span><span class="sxs-lookup"><span data-stu-id="7c407-164">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id="7c407-165">Pruebe y escriba el código para generar los veinte primeros números de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="7c407-165">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id="7c407-166">(Como sugerencia, el 20º número de la serie de Fibonacci es 6765).</span><span class="sxs-lookup"><span data-stu-id="7c407-166">(As a hint, the 20th Fibonacci number is 6765.)</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="7c407-167">Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar.</span><span class="sxs-lookup"><span data-stu-id="7c407-167">This online coding experience is in preview mode.</span></span> <span data-ttu-id="7c407-168">Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="7c407-168">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="7c407-169">Desafío completo</span><span class="sxs-lookup"><span data-stu-id="7c407-169">Complete challenge</span></span>
+  durationInMinutes: 3
+  content: "<span data-ttu-id=\"7c407-170\">¿Ha obtenido algo parecido a lo siguiente?</span><span class=\"sxs-lookup\"><span data-stu-id=\"7c407-170\">Did you come up with something like this?</span></span>\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n<span data-ttu-id=\"7c407-171\">Con cada iteración del bucle, se obtienen los dos últimos enteros de la lista, se suman y se agrega el valor resultante a la lista.</span><span class=\"sxs-lookup\"><span data-stu-id=\"7c407-171\">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id=\"7c407-172\">El bucle se repite hasta que se hayan agregado veinte elementos a la lista.</span><span class=\"sxs-lookup\"><span data-stu-id=\"7c407-172\">The loop repeats until you've added 20 items to the list.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"7c407-173\">Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar.</span><span class=\"sxs-lookup\"><span data-stu-id=\"7c407-173\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"7c407-174\">Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).</span><span class=\"sxs-lookup\"><span data-stu-id=\"7c407-174\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
+- content: >-
+    <span data-ttu-id="7c407-175">Ha completado el tutorial sobre las listas.</span><span class="sxs-lookup"><span data-stu-id="7c407-175">You've completed the list tutorial.</span></span> <span data-ttu-id="7c407-176">Este tutorial es tutorial interactivo final.</span><span class="sxs-lookup"><span data-stu-id="7c407-176">This tutorial is the final interactive tutorial.</span></span> <span data-ttu-id="7c407-177">Puede seguir estos tutoriales en su propio entorno de desarrollo.</span><span class="sxs-lookup"><span data-stu-id="7c407-177">You can continue these tutorials on your own development environment.</span></span> <span data-ttu-id="7c407-178">Eche un vistazo a los conceptos básicos sobre [desarrollo local](local-environment.md) y después seleccione un tutorial.</span><span class="sxs-lookup"><span data-stu-id="7c407-178">Learn the basics of [local development](local-environment.md) and then pick a tutorial.</span></span> <span data-ttu-id="7c407-179">Puede realizar este mismo ejercicio: vaya directamente al siguiente tutorial o vuelva a empezar con el tutorial [Números en C#](numbers-in-csharp-local.md).</span><span class="sxs-lookup"><span data-stu-id="7c407-179">You can try this same exercise, move directly to the next tutorial, or start again at with the [numbers in C#](numbers-in-csharp-local.md) tutorial.</span></span>
+
+
+    <span data-ttu-id="7c407-180">Puede obtener más información sobre cómo trabajar con el tipo `List` en el tema de la [Guía de .NET](../../../standard/index.md) que trata sobre las [colecciones](../../../standard/collections/index.md).</span><span class="sxs-lookup"><span data-stu-id="7c407-180">You can learn more about working with the `List` type in the [.NET Guide](../../../standard/index.md) topic on [collections](../../../standard/collections/index.md).</span></span> <span data-ttu-id="7c407-181">Ahí también podrá conocer muchos otros tipos de colecciones.</span><span class="sxs-lookup"><span data-stu-id="7c407-181">You'll also learn about many other collection types.</span></span>
