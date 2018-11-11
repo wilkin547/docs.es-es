@@ -3,11 +3,11 @@ title: 'Servicio: errores en la validación de la seguridad y la autenticación'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
 ms.openlocfilehash: ba8da3ae6be6bd089690359f19e153da1e0b54fc
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50039996"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744254"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Servicio: errores en la validación de la seguridad y la autenticación
 Nombre del contador: errores en la autenticación y validación de la seguridad  

@@ -1,6 +1,6 @@
 ---
 title: Inferencia de tipos (F#)
-description: 'Obtenga información sobre cómo el compilador de F # infiere los tipos de valores, variables, parámetros y valores devueltos.'
+description: Obtenga información sobre cómo el compilador de F# infiere los tipos de valores, variables, parámetros y valores devueltos.
 ms.date: 05/16/2016
 ms.openlocfilehash: fd826ac48fb9a70aa6f4ff746599c11b7e21a02e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,15 +11,15 @@ ms.locfileid: "43865701"
 ---
 # <a name="type-inference"></a>Inferencia de tipos
 
-Este tema describe cómo el compilador de F # infiere los tipos de valores, variables, parámetros y valores devueltos.
+Este tema describe cómo el compilador de F# infiere los tipos de valores, variables, parámetros y valores devueltos.
 
 ## <a name="type-inference-in-general"></a>Inferencia de tipos en General
 
-La idea de inferencia de tipos es que no es necesario especificar los tipos de construcciones de F #, excepto cuando el compilador de forma concluyente no puede deducir el tipo. Omitir información de tipo explícita no significa que F # es un lenguaje dinámico o que los valores de F # estén débilmente tipados. F # es un lenguaje de tipo estático, lo que significa que el compilador deduce un tipo exacto para cada construcción durante la compilación. Si no hay información suficiente para que el compilador deduzca los tipos de cada construcción, debe proporcionar información adicional de tipo, normalmente mediante la adición de anotaciones de tipo explícitas en algún lugar en el código.
+La idea de inferencia de tipos es que no es necesario especificar los tipos de construcciones de F#, excepto cuando el compilador de forma concluyente no puede deducir el tipo. Omitir información de tipo explícita no significa que F# es un lenguaje dinámico o que los valores de F# estén débilmente tipados. F# es un lenguaje de tipo estático, lo que significa que el compilador deduce un tipo exacto para cada construcción durante la compilación. Si no hay información suficiente para que el compilador deduzca los tipos de cada construcción, debe proporcionar información adicional de tipo, normalmente mediante la adición de anotaciones de tipo explícitas en algún lugar en el código.
 
 ## <a name="inference-of-parameter-and-return-types"></a>Inferencia de parámetro y tipos de valor devuelto
 
-En una lista de parámetros, no es necesario especificar el tipo de cada parámetro. Sin embargo, F # es un lenguaje de tipo estático y, por tanto, cada valor y expresión tiene un tipo definido en tiempo de compilación. Para esos tipos que no se especifique explícitamente, el compilador deduce el tipo según el contexto. Si el tipo no es lo contrario especificado, se deduce para ser genérico. Si el código usa un valor de forma incoherente, de tal manera que no es único no puede inferir tipo que cumpla todos los usos de un valor, que el compilador notifica un error.
+En una lista de parámetros, no es necesario especificar el tipo de cada parámetro. Sin embargo, F# es un lenguaje de tipo estático y, por tanto, cada valor y expresión tiene un tipo definido en tiempo de compilación. Para esos tipos que no se especifique explícitamente, el compilador deduce el tipo según el contexto. Si el tipo no es lo contrario especificado, se deduce para ser genérico. Si el código usa un valor de forma incoherente, de tal manera que no es único no puede inferir tipo que cumpla todos los usos de un valor, que el compilador notifica un error.
 
 El tipo de valor devuelto de una función viene determinada por el tipo de la última expresión en la función.
 
@@ -59,7 +59,7 @@ El tipo se infiere para ser
 
 ## <a name="additional-information"></a>Información adicional
 
-Inferencia de tipos se describe con más detalle en la especificación del lenguaje F #.
+Inferencia de tipos se describe con más detalle en la especificación del lenguaje F#.
 
 ## <a name="see-also"></a>Vea también
 

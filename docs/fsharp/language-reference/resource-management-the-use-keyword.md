@@ -1,6 +1,6 @@
 ---
 title: 'Administración de recursos: palabra clave use (F#)'
-description: "Obtenga información acerca de la F # palabra clave 'use' y la función \"using\", que puede controlar la inicialización y la liberación de recursos."
+description: Obtenga información acerca de la F# palabra clave 'use' y la función "using", que puede controlar la inicialización y la liberación de recursos.
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -19,7 +19,7 @@ El término *recursos* se usa en más de una forma. Sí, los recursos pueden ser
 
 ## <a name="managing-resources"></a>Administrar recursos
 
-Para forma responsable y eficazmente administrar recursos en una aplicación, se deben liberar los recursos de una manera predecible y con prontitud. .NET Framework le ayuda a hacer esto proporcionando la `System.IDisposable` interfaz. Un tipo que implementa `System.IDisposable` tiene la `System.IDisposable.Dispose` método, que libera los recursos correctamente. Las aplicaciones bien escritas garantizar que `System.IDisposable.Dispose` se llama con prontitud cuando ya no se necesita cualquier objeto que contiene un recurso limitado. Afortunadamente, la mayoría de los lenguajes de .NET proporciona compatibilidad para facilitar esta tarea, y F # no es ninguna excepción. Hay dos construcciones de lenguaje útiles que admiten el patrón de dispose: el `use` enlace y el `using` función.
+Para forma responsable y eficazmente administrar recursos en una aplicación, se deben liberar los recursos de una manera predecible y con prontitud. .NET Framework le ayuda a hacer esto proporcionando la `System.IDisposable` interfaz. Un tipo que implementa `System.IDisposable` tiene la `System.IDisposable.Dispose` método, que libera los recursos correctamente. Las aplicaciones bien escritas garantizar que `System.IDisposable.Dispose` se llama con prontitud cuando ya no se necesita cualquier objeto que contiene un recurso limitado. Afortunadamente, la mayoría de los lenguajes de .NET proporciona compatibilidad para facilitar esta tarea, y F# no es ninguna excepción. Hay dos construcciones de lenguaje útiles que admiten el patrón de dispose: el `use` enlace y el `using` función.
 
 ## <a name="use-binding"></a>Usar el enlace
 

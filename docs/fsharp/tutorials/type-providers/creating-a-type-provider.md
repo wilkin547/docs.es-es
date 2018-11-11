@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Crear un proveedor de tipos (F #)'
-description: 'Obtenga información sobre cómo crear sus propios proveedores de tipo de F # en F # 3.0 mediante el examen de varios proveedores de tipo simple para ilustrar los conceptos básicos.'
+title: 'Tutorial: Crear un proveedor de tipos (F#)'
+description: Obtenga información sobre cómo crear sus propios proveedores de tipo de F# en F# 3.0 mediante el examen de varios proveedores de tipo simple para ilustrar los conceptos básicos.
 ms.date: 05/16/2016
 ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,15 +11,15 @@ ms.locfileid: "50183924"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
 
-El mecanismo de proveedores de tipo de F # es una parte importante de su compatibilidad con programación enriquecida de información. Este tutorial le explica cómo crear proveedores de tipos, a la vez que le guía en el desarrollo de varios proveedores de tipo simples para ilustrar los conceptos básicos. Para obtener más información sobre el mecanismo de proveedores de tipo de F #, vea [proveedores de tipos](index.md).
+El mecanismo de proveedores de tipo de F# es una parte importante de su compatibilidad con programación enriquecida de información. Este tutorial le explica cómo crear proveedores de tipos, a la vez que le guía en el desarrollo de varios proveedores de tipo simples para ilustrar los conceptos básicos. Para obtener más información sobre el mecanismo de proveedores de tipo de F#, vea [proveedores de tipos](index.md).
 
-El ecosistema de F # contiene una variedad de proveedores de tipos de servicios de datos empresariales y de Internet usados con frecuencia. Por ejemplo:
+El ecosistema de F# contiene una variedad de proveedores de tipos de servicios de datos empresariales y de Internet usados con frecuencia. Por ejemplo:
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/) incluye proveedores de tipos de formatos de documento JSON, XML, CSV y HTML.
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) proporciona acceso fuertemente tipado para las bases de datos SQL a través de una asignación de objetos y LINQ de F # en las consultas con estos orígenes de datos.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) proporciona acceso fuertemente tipado para las bases de datos SQL a través de una asignación de objetos y LINQ de F# en las consultas con estos orígenes de datos.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) ha comprobado un conjunto de proveedores de tipo de tiempo de compilación de inserción de T-SQL en F #.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) ha comprobado un conjunto de proveedores de tipo de tiempo de compilación de inserción de T-SQL en F#.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) es un conjunto anterior de proveedores de tipos para su uso únicamente con la programación de .NET Framework para tener acceso a servicios de datos SQL, Entity Framework, OData y WSDL.
 
@@ -53,7 +53,7 @@ Los proveedores de tipo son más adecuados en situaciones en las que el esquema 
 
 ## <a name="a-simple-type-provider"></a>Un proveedor de tipos simple
 
-Este ejemplo es encuentra en Samples.HelloWorldTypeProvider, similar a los ejemplos en los `examples` directorio de la [SDK de proveedor de tipo de F #](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). El proveedor hace que esté disponible un "espacio de tipos" que contiene 100 tipos borrados, como muestra el código siguiente, en el que se usa la sintaxis de signatura de F# y se omiten los detalles de todos los tipos excepto `Type1`. Para obtener más información sobre los tipos borrados, consulte [detalles acerca de los tipos borrados proporcionados](#details-about-erased-provided-types) más adelante en este tema.
+Este ejemplo es encuentra en Samples.HelloWorldTypeProvider, similar a los ejemplos en los `examples` directorio de la [SDK de proveedor de tipo de F#](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). El proveedor hace que esté disponible un "espacio de tipos" que contiene 100 tipos borrados, como muestra el código siguiente, en el que se usa la sintaxis de signatura de F# y se omiten los detalles de todos los tipos excepto `Type1`. Para obtener más información sobre los tipos borrados, consulte [detalles acerca de los tipos borrados proporcionados](#details-about-erased-provided-types) más adelante en este tema.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-Para utilizar este proveedor, abra una instancia independiente de Visual Studio, cree un script de F # y, a continuación, agregue una referencia al proveedor desde el script utilizando #r como se muestra en el código siguiente:
+Para utilizar este proveedor, abra una instancia independiente de Visual Studio, cree un script de F# y, a continuación, agregue una referencia al proveedor desde el script utilizando #r como se muestra en el código siguiente:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -175,7 +175,7 @@ En esta sección se muestran las etapas principales de la implementación del pr
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Este tipo debe ser pública y debe marcarse con el [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) para que el compilador reconozca el proveedor de tipos cuando un proyecto independiente de F # hace referencia al ensamblado que contiene el tipo de atributo. El *config* parámetro es opcional y, si está presente, contiene información de configuración contextual para la instancia de tipo de proveedor que crea el compilador de F #.
+Este tipo debe ser pública y debe marcarse con el [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) para que el compilador reconozca el proveedor de tipos cuando un proyecto independiente de F# hace referencia al ensamblado que contiene el tipo de atributo. El *config* parámetro es opcional y, si está presente, contiene información de configuración contextual para la instancia de tipo de proveedor que crea el compilador de F#.
 
 A continuación, implemente el [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interfaz. En este caso, puede utilizar el tipo `TypeProviderForNamespaces` de la API `ProvidedTypes` como tipo base. Este tipo del asistente puede proporcionar una colección finita de espacios de nombres proporcionados anticipadamente, cada uno de los cuales contiene directamente un número finito de tipos fijos proporcionados anticipadamente. En este contexto, el proveedor *concienzudamente* genera tipos aunque no son necesarios ni se utilicen.
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-Al obtener esta propiedad, siempre se evaluará como la cadena "Hello!". La función `GetterCode` de la propiedad utiliza una expresión de código delimitada de F# que representa el código que genera el compilador host para obtener la propiedad. Para obtener más información acerca de los presupuestos, consulte [expresiones de código delimitadas (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
+Al obtener esta propiedad, siempre se evaluará como la cadena "Hello!". La función `GetterCode` de la propiedad utiliza una expresión de código delimitada de F# que representa el código que genera el compilador host para obtener la propiedad. Para obtener más información acerca de los presupuestos, consulte [expresiones de código delimitadas (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
 
 Agregue la documentación XML a la propiedad.
 
@@ -469,7 +469,7 @@ Tenga en cuenta los puntos siguientes:
 
 - Cada grupo con nombre produce una propiedad proporcionada, y el acceso a la propiedad produce el uso de un indizador en la colección `Groups` de una coincidencia.
 
-El código siguiente es la base de la lógica para implementar un proveedor como este y este ejemplo omite la adición de todos los miembros al tipo proporcionado. Para obtener información sobre cada miembro agregado, consulte la sección correspondiente más adelante en este tema. Para el código completo, descargue el ejemplo desde el [paquete del ejemplo de F # 3.0](https://fsharp3sample.codeplex.com) en el sitio Web de Codeplex.
+El código siguiente es la base de la lógica para implementar un proveedor como este y este ejemplo omite la adición de todos los miembros al tipo proporcionado. Para obtener información sobre cada miembro agregado, consulte la sección correspondiente más adelante en este tema. Para el código completo, descargue el ejemplo desde el [paquete del ejemplo de F# 3.0](https://fsharp3sample.codeplex.com) en el sitio Web de Codeplex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

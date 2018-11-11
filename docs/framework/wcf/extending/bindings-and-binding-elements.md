@@ -5,11 +5,11 @@ helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
 ms.openlocfilehash: ca013c939e3db2136ffa1504ae0eedd7b870d773
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372545"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982833"
 ---
 # <a name="bindings-and-binding-elements"></a>Enlaces y elementos de enlace
 Los enlaces son colecciones de elementos de configuración especial, llamados *elementos de enlace*, que son evaluados por el runtime del servicio cada vez que un cliente o el punto de conexión de servicio se está construyendo. El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un punto de conexión.  

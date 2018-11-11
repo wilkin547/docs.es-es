@@ -1,6 +1,6 @@
 ---
 title: Genéricos (F#)
-description: 'Obtenga información sobre cómo usar F # funciones genéricas y tipos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código.'
+description: Obtenga información sobre cómo usar F# funciones genéricas y tipos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código.
 ms.date: 05/16/2016
 ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

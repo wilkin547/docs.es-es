@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: 1b10379e626c8e53b2e1e6eddaa964f13f9e4b62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196926"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980825"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>Tipo de datos SByte (Visual Basic)
 
@@ -58,7 +58,7 @@ Si el literal entero está fuera del intervalo de `SByte` (es decir, si es infer
 
 - Deshabilitar las comprobaciones de límites de enteros a la compilación con el `/removeintchecks` modificador del compilador.
 
-- Use un [carácter de tipo](../../programming-guide\language-features\data-types/type-characters.md) para definir explícitamente el valor literal que se desea asignar a la `SByte`. En el ejemplo siguiente se asigna un literal negativo `Short` valor a un `SByte`. Tenga en cuenta que, para los números negativos, se debe establecer el bit de orden superior de la palabra de orden superior de un literal numérico. En el caso de nuestro ejemplo, esto es de tipo bit 15 del literal `Short` valor.
+- Use un [carácter de tipo](../../programming-guide/language-features/data-types/type-characters.md) para definir explícitamente el valor literal que se desea asignar a la `SByte`. En el ejemplo siguiente se asigna un literal negativo `Short` valor a un `SByte`. Tenga en cuenta que, para los números negativos, se debe establecer el bit de orden superior de la palabra de orden superior de un literal numérico. En el caso de nuestro ejemplo, esto es de tipo bit 15 del literal `Short` valor.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 

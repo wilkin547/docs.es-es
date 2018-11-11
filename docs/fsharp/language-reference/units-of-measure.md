@@ -1,6 +1,6 @@
 ---
 title: Unidades de medida (F#)
-description: 'Obtenga información de punto flotante cómo y valores enteros con signo en F # pueden tener asociados a las unidades de medida, que normalmente se utilizan para indicar la longitud, el volumen y masivo.'
+description: Obtenga información de punto flotante cómo y valores enteros con signo en F# pueden tener asociados a las unidades de medida, que normalmente se utilizan para indicar la longitud, el volumen y masivo.
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45972522"
 ---
 # <a name="units-of-measure"></a>Unidades de medida
 
-Punto flotante y los valores enteros con signo en F # puede tener asociadas unidades de medida, que normalmente se utilizan para indicar la longitud, el volumen, masa, y así sucesivamente. Mediante el uso de las cantidades con unidades, permitir que el compilador comprobar que las relaciones aritméticas tienen las unidades correctas, que ayuda a evitar errores de programación.
+Punto flotante y los valores enteros con signo en F# puede tener asociadas unidades de medida, que normalmente se utilizan para indicar la longitud, el volumen, masa, y así sucesivamente. Mediante el uso de las cantidades con unidades, permitir que el compilador comprobar que las relaciones aritméticas tienen las unidades correctas, que ayuda a evitar errores de programación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -113,7 +113,7 @@ Para convertir un valor sin unidades en un valor que tiene unidades, puede multi
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Unidades de medida en la biblioteca básica de F #
+## <a name="units-of-measure-in-the-f-core-library"></a>Unidades de medida en la biblioteca básica de F#
 
 Una biblioteca de la unidad está disponible en el `FSharp.Data.UnitSystems.SI` espacio de nombres. Incluye las unidades en su forma de símbolos de ambos (como `m` medidor) en el `UnitSymbols` subespacio de nombres y su nombre completo (como `meter` medidor) en el `UnitNames` subespacio de nombres.
 

@@ -1,6 +1,6 @@
 ---
 title: Estructuras (F#)
-description: 'Obtenga información sobre la estructura de F #, un tipo de objeto compacto a menudo más eficaz que una clase para los tipos con una pequeña cantidad de datos y un comportamiento simple.'
+description: Obtenga información sobre la estructura de F#, un tipo de objeto compacto a menudo más eficaz que una clase para los tipos con una pequeña cantidad de datos y un comportamiento simple.
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` no implica `Struct`. Deben estar presentes en el tipo.
 
-Un "`byref`-como" struct en F # es un tipo de valor de límite de la pila. Nunca se asigna en el montón administrado. Un `byref`-como struct es útil para la programación de alto rendimiento, ya que se aplica con el conjunto de controles sólidos sobre la duración y no captura. Las reglas son:
+Un "`byref`-como" struct en F# es un tipo de valor de límite de la pila. Nunca se asigna en el montón administrado. Un `byref`-como struct es útil para la programación de alto rendimiento, ya que se aplica con el conjunto de controles sólidos sobre la duración y no captura. Las reglas son:
 
 * Se puede usar como parámetros de función, parámetros de método, las variables locales, devuelve el método.
 * Que no pueden ser estáticos o miembros de una clase o estructura normal de instancia.
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` no implica `Struct`. Debe agregar ambos para tener un `IsReadOnly` struct.
 
-Uso de este atributo emite metadatos, lo que permite F # y C# saber para tratarlo como `inref<'T>` y `in ref`, respectivamente.
+Uso de este atributo emite metadatos, lo que permite F# y C# saber para tratarlo como `inref<'T>` y `in ref`, respectivamente.
 
 Definir un valor mutable dentro de un struct de solo lectura, produce un error.
 

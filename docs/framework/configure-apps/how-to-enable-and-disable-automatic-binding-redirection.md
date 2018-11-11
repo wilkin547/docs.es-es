@@ -1,26 +1,38 @@
 ---
-title: 'Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático'
-ms.date: 09/12/2018
+title: Habilitar o deshabilitar las redirecciones de enlace generado automáticamente
+ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9b9c9cbdb89ccf67942dcccee37ea410c6fa39a5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036206"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980838"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático
 
-Al compilar aplicaciones en Visual Studio que tienen como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] y versiones posteriores, redirecciones de enlace se pueden agregar automáticamente al archivo de configuración de la aplicación para invalidar la unificación de ensamblados. Las redirecciones de enlace se agregan si la aplicación o sus componentes hacen referencia a más de una versión del mismo ensamblado, incluso si se especifican manualmente las redirecciones de enlace en el archivo de configuración de la aplicación. La característica de redirección de enlace automática afecta a aplicaciones web y aplicaciones de escritorio tradicionales que tienen como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o una versión posterior, aunque el comportamiento es ligeramente diferente para una aplicación web. Puede habilitar la redirección de enlace automática si tiene aplicaciones existentes cuyo destino son versiones anteriores de .NET Framework o puede deshabilitar esta característica si desea conservar las redirecciones de enlace creadas manualmente.
+Al compilar aplicaciones en Visual Studio que tienen como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] y versiones posteriores, redirecciones de enlace se pueden agregar automáticamente al archivo de configuración de la aplicación para invalidar la unificación de ensamblados. Las redirecciones de enlace se agregan si la aplicación o sus componentes hacen referencia a más de una versión del mismo ensamblado, incluso si se especifican manualmente las redirecciones de enlace en el archivo de configuración de la aplicación. La característica de redirección de enlace automática afecta a las aplicaciones de escritorio y aplicaciones web que tienen como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o una versión posterior, aunque el comportamiento es ligeramente diferente para una aplicación web. Puede habilitar la redirección de enlace automática si tiene aplicaciones existentes destinadas a versiones anteriores de .NET Framework o puede deshabilitar esta característica si desea crear manualmente las redirecciones de enlace.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Deshabilitar las redirecciones de enlace automáticas en aplicaciones de escritorio
 
-Las redirecciones de enlace automáticas están habilitadas de forma predeterminada para las aplicaciones de escritorio tradicionales destinadas a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] y versiones posteriores. Las redirecciones de enlace se agregan al archivo de configuración de salida (app.config) cuando la aplicación se compila y se invalida la unificación de ensamblados que puede producirse en caso contrario. El archivo app.config de origen no se modifica. Puede deshabilitar esta característica si modifica el archivo de proyecto para la aplicación.
+Redirecciones de enlace automáticas están habilitadas de forma predeterminada para las aplicaciones de escritorio de Windows que tienen como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] y versiones posteriores. Las redirecciones de enlace se agregan a la configuración de salida (**app.config**) cuando se compila la aplicación de archivo y anular la unificación de ensamblados que en caso contrario, es posible que tienen lugar. El origen **app.config** no se modifica el archivo. Puede deshabilitar esta característica si modifica el archivo de proyecto para la aplicación o anulando la selección de una casilla en las propiedades del proyecto en Visual Studio.
+
+### <a name="disable-through-project-properties"></a>Deshabilitar a través de las propiedades del proyecto
+
+Si tiene Visual Studio 2017 versión 15.7 o posterior, puede deshabilitar fácilmente las redirecciones de enlace generado automáticamente en páginas de propiedades del proyecto.
+
+1. Haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Propiedades**.
+
+2. En el **aplicación** página, desactive la **generar automáticamente redirecciones de enlace** opción.
+
+3. Presione **Ctrl**+**S** para guardar el cambio.
+
+### <a name="disable-manually-in-the-project-file"></a>Deshabilitar manualmente en el archivo de proyecto
 
 1. Abra el archivo de proyecto para editarlo mediante uno de los métodos siguientes:
 
@@ -75,9 +87,9 @@ Puede habilitar las redirecciones de enlace automáticas en las aplicaciones exi
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Habilitar las redirecciones de enlace automáticas en aplicaciones web
 
-Las redirecciones de enlace automáticas se implementan de forma diferente para las aplicaciones web. Puesto que el archivo de configuración de origen (web.config) debe modificarse para las aplicaciones web, las redirecciones de enlace no se agregan de forma automática al archivo de configuración. Sin embargo, Visual Studio le notifica los conflictos de enlace, por lo que podrá agregar redirecciones de enlace para resolverlos. Dado que siempre se le pedirá que agregue redirecciones de enlace, no es necesario deshabilitar explícitamente esta característica para una aplicación web.
+Las redirecciones de enlace automáticas se implementan de forma diferente para las aplicaciones web. Dado que la configuración de origen (**web.config**) archivo debe modificarse para las aplicaciones web, las redirecciones de enlace no se agregan automáticamente al archivo de configuración. Sin embargo, Visual Studio le notifica los conflictos de enlace, por lo que podrá agregar redirecciones de enlace para resolverlos. Dado que siempre se le pedirá que agregue redirecciones de enlace, no es necesario deshabilitar explícitamente esta característica para una aplicación web.
 
-Para agregar redirecciones de enlace a un archivo web.config:
+Para agregar redirecciones de enlace a un **web.config** archivo:
 
 1. En Visual Studio, compile la aplicación y compruebe si hay advertencias de compilación.
 
@@ -85,7 +97,7 @@ Para agregar redirecciones de enlace a un archivo web.config:
 
 2. Si hay conflictos de enlace de ensamblados, se mostrará una advertencia. Haga doble clic en la advertencia, o seleccione la advertencia y presione **ENTRAR**.
 
-   Aparecerá un cuadro de diálogo que permite agregar automáticamente las redirecciones de enlace necesarias para el archivo web.config de origen.
+   Un cuadro de diálogo que le permite agregar automáticamente el enlace es necesario que se redirige al origen de **web.config** aparece el archivo.
 
    ![Cuadro de diálogo de permiso de redireccionamiento de enlace](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 

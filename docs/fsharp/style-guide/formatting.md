@@ -1,6 +1,6 @@
 ---
-title: 'Instrucciones de formato del código de F #'
-description: 'Obtenga información sobre las directrices para dar formato al código de F #.'
+title: Instrucciones de formato del código de F#
+description: Obtenga información sobre las directrices para dar formato al código de F#.
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,19 +9,19 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858010"
 ---
-# <a name="f-code-formatting-guidelines"></a>Instrucciones de formato del código de F #
+# <a name="f-code-formatting-guidelines"></a>Instrucciones de formato del código de F#
 
-En este artículo ofrece instrucciones acerca de cómo dar formato al código para que el código de F # es:
+En este artículo ofrece instrucciones acerca de cómo dar formato al código para que el código de F# es:
 
 * Por lo general se ven como más legible
 * Está de acuerdo con las convenciones que se aplica al dar formato a otros editores y herramientas en Visual Studio
 * Similar a otro código en línea
 
-Estas instrucciones se basan en [una guía completa sobre convenciones de formato de F #](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) por [Anh-Dung Phan](https://github.com/dungpa).
+Estas instrucciones se basan en [una guía completa sobre convenciones de formato de F#](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) por [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Reglas generales para la sangría
 
-F # utiliza el espacio en blanco significativo de forma predeterminada. Las instrucciones siguientes están diseñadas para proporcionar una orientación acerca de cómo jugar con algunos desafíos que esto puede imponer.
+F# utiliza el espacio en blanco significativo de forma predeterminada. Las instrucciones siguientes están diseñadas para proporcionar una orientación acerca de cómo jugar con algunos desafíos que esto puede imponer.
 
 ### <a name="using-spaces"></a>Uso de espacios
 
@@ -62,7 +62,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Usar camelCase para funciones y los valores de límite de clase, expresión enlazados y patrón enlazadas
 
-Es común y aceptados de F # estilo usar camelCase para nombres de todos los enlazados como variables locales o en coincidencias de patrones y las definiciones de función.
+Es común y aceptados de F# estilo usar camelCase para nombres de todos los enlazados como variables locales o en coincidencias de patrones y las definiciones de función.
 
 ```fsharp
 // OK
@@ -165,13 +165,13 @@ Espacios de nombres, las excepciones, eventos y proyecto /`.dll` nombres tambié
 
 ### <a name="avoid-underscores-in-names"></a>Evite los caracteres de subrayado en nombres
 
-Históricamente, algunas bibliotecas de F # han usado los caracteres de subrayado en nombres. Sin embargo, esto es ya no amplia aceptación, en parte porque entra en conflicto con las convenciones de nomenclatura. NET. Es decir, algunos programadores de F # utilizan caracteres de subrayado mucho, en parte por motivos históricos y respeto y la tolerancia es importante. Sin embargo, tenga en cuenta que el estilo a menudo no me gustó por otros usuarios que tienen la opción de elegir si desea usarlo.
+Históricamente, algunas bibliotecas de F# han usado los caracteres de subrayado en nombres. Sin embargo, esto es ya no amplia aceptación, en parte porque entra en conflicto con las convenciones de nomenclatura. NET. Es decir, algunos programadores de F# utilizan caracteres de subrayado mucho, en parte por motivos históricos y respeto y la tolerancia es importante. Sin embargo, tenga en cuenta que el estilo a menudo no me gustó por otros usuarios que tienen la opción de elegir si desea usarlo.
 
 Algunas excepciones incluye interoperar con componentes nativos, en caracteres de subrayado son muy comunes.
 
-### <a name="use-standard-f-operators"></a>Utilizar operadores estándar de F #
+### <a name="use-standard-f-operators"></a>Utilizar operadores estándar de F#
 
-Los operadores siguientes se definen en la biblioteca estándar de F # y deben usarse en lugar de definir equivalentes. Uso de estos operadores se recomienda que tiende a hacer el código más legible e idiomático. Estar acostumbrados a idiomas distintos a los desarrolladores con experiencia en OCaml o en otro lenguaje de programación funcional. En la lista siguiente se resume los operadores de F # recomendados.
+Los operadores siguientes se definen en la biblioteca estándar de F# y deben usarse en lugar de definir equivalentes. Uso de estos operadores se recomienda que tiende a hacer el código más legible e idiomático. Estar acostumbrados a idiomas distintos a los desarrolladores con experiencia en OCaml o en otro lenguaje de programación funcional. En la lista siguiente se resume los operadores de F# recomendados.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +193,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Use la sintaxis de prefijo para los genéricos (`Foo<T>`) con preferencia a la sintaxis de postfijo (`T Foo`)
 
-F # hereda tanto el estilo de aprendizaje automático de postfijo de asignación de nombres de tipos genéricos (por ejemplo, `int list`), así como el prefijo de estilo .NET (por ejemplo, `list<int>`). Se prefiere el estilo. NET, excepto los cuatro tipos específicos:
+F# hereda tanto el estilo de aprendizaje automático de postfijo de asignación de nombres de tipos genéricos (por ejemplo, `int list`), así como el prefijo de estilo .NET (por ejemplo, `list<int>`). Se prefiere el estilo. NET, excepto los cuatro tipos específicos:
 
-1. Para F # las listas, utilice la forma de postfijo: `int list` lugar `list<int>`.
-2. Para opciones de F #, utilice la forma de postfijo: `int option` lugar `option<int>`.
-3. Para las matrices de F #, utilice el nombre sintáctico `int[]` lugar `int array` o `array<int>`.
+1. Para F# las listas, utilice la forma de postfijo: `int list` lugar `list<int>`.
+2. Para opciones de F#, utilice la forma de postfijo: `int option` lugar `option<int>`.
+3. Para las matrices de F#, utilice el nombre sintáctico `int[]` lugar `int array` o `array<int>`.
 4. Para las celdas de referencia, utilice `int ref` lugar `ref<int>` o `Ref<int>`.
 
 Para los demás tipos, use el formato de prefijo.
@@ -591,7 +591,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>Espacio en blanco en las expresiones de formato
 
-Evite los espacios en blanco en las expresiones de F #.
+Evite los espacios en blanco en las expresiones de F#.
 
 ```fsharp
 // OK

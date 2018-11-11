@@ -1,6 +1,6 @@
 ---
 title: Extensiones de tipo (F#)
-description: 'Obtenga información sobre cómo las extensiones de tipo de F # permiten que agregar a nuevos miembros a un tipo de objeto previamente definido.'
+description: Obtenga información sobre cómo las extensiones de tipo de F# permiten que agregar a nuevos miembros a un tipo de objeto previamente definido.
 ms.date: 07/20/2018
 ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -127,7 +127,7 @@ No hay ninguna manera de obtener este código funcione con una extensión de tip
 
 ## <a name="extension-methods"></a>Métodos de extensión
 
-Por último, los métodos de extensión (a veces denominados a "miembros extensión de estilo C#") pueden declararse en F # como un método de miembro estático en una clase.
+Por último, los métodos de extensión (a veces denominados a "miembros extensión de estilo C#") pueden declararse en F# como un método de miembro estático en una clase.
 
 Métodos de extensión son útiles para cuando desee definir extensiones en un tipo genérico que restringirá la variable de tipo. Por ejemplo:
 
@@ -163,7 +163,7 @@ También existen las siguientes limitaciones para las extensiones de tipo:
 * Las extensiones de tipo no se pueden definir en [abreviaturas de tipo](type-abbreviations.md).
 * Las extensiones de tipo no son válidas para `byref<'T>` (aunque se puede declarar).
 * Las extensiones de tipo no son válidas para los atributos (aunque se puede declarar).
-* Puede definir extensiones que sobrecargan otros métodos del mismo nombre, pero el compilador de F # da preferencia a los métodos que no sean de extensión si hay una llamada ambigua.
+* Puede definir extensiones que sobrecargan otros métodos del mismo nombre, pero el compilador de F# da preferencia a los métodos que no sean de extensión si hay una llamada ambigua.
 
 Por último, si existen varias extensiones de tipo intrínsecas para un tipo, todos los miembros deben ser únicos. Para las extensiones de tipo opcional, los miembros de las extensiones de tipo diferente en el mismo tipo pueden tener los mismos nombres. Se producen errores de ambigüedad sólo si el código de cliente abre dos ámbitos diferentes que definen los mismos nombres de miembro.
 

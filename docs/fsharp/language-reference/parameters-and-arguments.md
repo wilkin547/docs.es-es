@@ -1,6 +1,6 @@
 ---
 title: Parámetros y argumentos (F#)
-description: 'Obtenga información sobre la compatibilidad del lenguaje F # para definir parámetros y pasar argumentos a funciones, métodos y propiedades.'
+description: Obtenga información sobre la compatibilidad del lenguaje F# para definir parámetros y pasar argumentos a funciones, métodos y propiedades.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -105,11 +105,11 @@ En una llamada a un constructor de clase, puede establecer los valores de propie
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-Para obtener más información, consulte [constructores (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
+Para obtener más información, consulte [constructores (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Parámetros opcionales
 
-Puede especificar un parámetro opcional para un método mediante un signo de interrogación junto al nombre del parámetro. Los parámetros opcionales se interpretan como el tipo de opción de F #, por lo que puede consultar en la que se consultan los tipos de opciones mediante el uso de manera regular un `match` expresión con `Some` y `None`. Los parámetros opcionales solo se permiten en los miembros, no en las funciones creadas mediante `let` enlaces.
+Puede especificar un parámetro opcional para un método mediante un signo de interrogación junto al nombre del parámetro. Los parámetros opcionales se interpretan como el tipo de opción de F#, por lo que puede consultar en la que se consultan los tipos de opciones mediante el uso de manera regular un `match` expresión con `Some` y `None`. Los parámetros opcionales solo se permiten en los miembros, no en las funciones creadas mediante `let` enlaces.
 
 Puede pasar valores opcionales existentes al método por nombre de parámetro, como `?arg=None` o `?arg=Some(3)` o `?arg=arg`. Esto puede ser útil al crear un método que pasa argumentos opcionales a otro método.
 
@@ -151,7 +151,7 @@ En este caso, el compilador genera una advertencia y pasará por alto los dos at
 
 ## <a name="passing-by-reference"></a>Pasar por referencia
 
-Pasar un valor de F # por referencia implica [zkratka](byrefs.md), que son tipos de puntero administrado. Guía para que el tipo debe usar es el siguiente:
+Pasar un valor de F# por referencia implica [zkratka](byrefs.md), que son tipos de puntero administrado. Guía para que el tipo debe usar es el siguiente:
 
 * Use `inref<'T>` si solo necesita leer el puntero.
 * Use `outref<'T>` si solo tiene que escribir en el puntero.
@@ -186,11 +186,11 @@ Puede utilizar una tupla como valor devuelto para almacenarlas `out` parámetros
 
 En ocasiones, es necesario definir una función que toma un número arbitrario de parámetros de tipo heterogéneo. No sería práctico volver a crear todos los métodos sobrecargados posible para tener en cuenta para todos los tipos que se pueda usar. Las implementaciones de .NET proporcionan compatibilidad para dichos métodos a través de la característica de la matriz de parámetros. Con un número arbitrario de parámetros se puede proporcionar un método que toma una matriz de parámetros en la firma. Los parámetros se colocan en una matriz. El tipo de elementos de la matriz determina los tipos de parámetro que se pueden pasar a la función. Si define la matriz de parámetros con `System.Object` como el tipo de elemento, a continuación, el código de cliente puede pasar valores de cualquier tipo.
 
-En F #, las matrices de parámetros solo se pueden definir en métodos. No se usaron en las funciones que se definen en módulos o funciones independientes.
+En F#, las matrices de parámetros solo se pueden definir en métodos. No se usaron en las funciones que se definen en módulos o funciones independientes.
 
 Definir una matriz de parámetros mediante el `ParamArray` atributo. El `ParamArray` atributo solo se puede aplicar al último parámetro.
 
-El código siguiente ilustra la llamada a un método de .NET que toma una matriz de parámetros y la definición de un tipo en F # que tiene un método que toma una matriz de parámetros.
+El código siguiente ilustra la llamada a un método de .NET que toma una matriz de parámetros y la definición de un tipo en F# que tiene un método que toma una matriz de parámetros.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 

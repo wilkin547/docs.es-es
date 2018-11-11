@@ -1,5 +1,5 @@
 ---
-title: 'Introducción a Azure Blob storage mediante F #'
+title: Introducción a Azure Blob storage mediante F#
 description: Store datos no estructurados en la nube con Azure Blob storage.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037287"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure Blob storage mediante F # #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure Blob storage mediante F# #
 
 Azure Blob Storage es un servicio que almacena datos no estructurados en la nube como objetos o blobs. El almacenamiento de blobs puede almacenar cualquier tipo de texto o datos binarios, como un documento, un archivo multimedia o un instalador de aplicación. El Almacenamiento de blobs también se conoce como "almacenamiento de objetos".
 
-Este artículo muestra cómo realizar tareas comunes con almacenamiento de blobs. Los ejemplos están escritos con F # mediante la biblioteca de cliente de Azure Storage para. NET. Las tareas descritas incluyen cómo cargar, enumerar, descargar y eliminar blobs.
+Este artículo muestra cómo realizar tareas comunes con almacenamiento de blobs. Los ejemplos están escritos con F# mediante la biblioteca de cliente de Azure Storage para. NET. Las tareas descritas incluyen cómo cargar, enumerar, descargar y eliminar blobs.
 
 Información general conceptual de almacenamiento de blobs, consulte [la Guía de .NET para el almacenamiento de blobs](/azure/storage/storage-dotnet-how-to-use-blobs).
 
@@ -22,9 +22,9 @@ Información general conceptual de almacenamiento de blobs, consulte [la Guía d
 
 Para usar esta guía, primero debe [crear una cuenta de almacenamiento de Azure](/azure/storage/storage-create-storage-account). También necesitará la clave de acceso de almacenamiento para esta cuenta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Crear un Script de F # y el inicio de F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Crear un Script de F# y el inicio de F# Interactive
 
-Los ejemplos de este artículo pueden usarse en una aplicación de F # o un script de F #. Para crear un script de F #, cree un archivo con el `.fsx` extensión, por ejemplo `blobs.fsx`, en el entorno de desarrollo de F #.
+Los ejemplos de este artículo pueden usarse en una aplicación de F# o un script de F#. Para crear un script de F#, cree un archivo con el `.fsx` extensión, por ejemplo `blobs.fsx`, en el entorno de desarrollo de F#.
 
 A continuación, use un [Administrador de paquetes](package-management.md) como [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) para instalar el `WindowsAzure.Storage` y `Microsoft.WindowsAzure.ConfigurationManager` referencia y paquetes `WindowsAzure.Storage.dll` y `Microsoft.WindowsAzure.Configuration.dll` en su secuencia de comandos con un `#r` directiva.
 
@@ -230,8 +230,8 @@ Para obtener más información acerca del cifrado de datos de blob, consulte [la
 Ahora que ha aprendido los conceptos básicos del almacenamiento de blobs, siga estos vínculos para obtener más información.
 
 ### <a name="tools"></a>Herramientas
-- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) un tipo de proveedor de F # que se puede usar para explorar los recursos Blob, tabla y cola de Azure Storage y aplicar fácilmente las operaciones CRUD en ellos.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) una API de F # para usar el servicio de Microsoft Azure Table Storage
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) un tipo de proveedor de F# que se puede usar para explorar los recursos Blob, tabla y cola de Azure Storage y aplicar fácilmente las operaciones CRUD en ellos.
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) una API de F# para usar el servicio de Microsoft Azure Table Storage
 - [Microsoft Azure Storage Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) es una aplicación independiente y gratuita de Microsoft que le permite trabajar visualmente con datos de Azure Storage en Windows, OS X y Linux.
 
 ### <a name="blob-storage-reference"></a>Referencia de BLOB storage

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865558"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757431"
 ---
 # <a name="choosing-between-class-and-struct"></a>Elegir entre clases y structs
 Una de las decisiones de diseño básicos que se enfrenta a cada diseñador framework es si va a diseñar un tipo como una clase (un tipo de referencia) o como un struct (un tipo de valor). Buen conocimiento de las diferencias en el comportamiento de los tipos de referencia y tipos de valor es fundamental para tomar esta decisión.  
@@ -28,7 +28,7 @@ Una de las decisiones de diseño básicos que se enfrenta a cada diseñador fram
   
  A continuación, matrices de referencia son tipos asignan fuera de línea, lo que significa que la matriz de elementos son las referencias a las instancias del tipo de referencia que se encuentran en el montón. Matrices de tipos de valor se asignan en línea, lo que significa que los elementos de matriz son las instancias reales del tipo de valor. Por lo tanto, las asignaciones y desasignaciones de matrices de tipos de valor son mucho más baratos que las asignaciones y desasignaciones de matrices de tipos de referencia. Además, en la mayoría de los casos las matrices de tipo de valor presentan mucho mejor localidad de referencia.  
   
- La diferencia siguiente está relacionada con el uso de memoria. Tipos de valor obtengan conversión boxing cuando se convierte a un tipo de referencia o una de las interfaces que implementan. Obtienen conversión unboxing cuando se convierte al tipo de valor. Dado que los cuadros son objetos que se asignan en el montón y están recolección, demasiado conversión boxing y unboxing puede tener un impacto negativo en el montón, el recolector de elementos no utilizados y, en última instancia, el rendimiento de la aplicación.  Por el contrario, se produce ninguna conversión boxing tal como se convierten tipos de referencia.  
+ La diferencia siguiente está relacionada con el uso de memoria. Tipos de valor obtengan conversión boxing cuando se convierte a un tipo de referencia o una de las interfaces que implementan. Obtienen conversión unboxing cuando se convierte al tipo de valor. Dado que los cuadros son objetos que se asignan en el montón y están recolección, demasiado conversión boxing y unboxing puede tener un impacto negativo en el montón, el recolector de elementos no utilizados y, en última instancia, el rendimiento de la aplicación.  Por el contrario, se produce ninguna conversión boxing tal como se convierten tipos de referencia. (Para obtener más información, consulte [conversión Boxing y Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
   
  A continuación, las asignaciones de tipo de referencia copia la referencia, mientras que las asignaciones de tipo de valor copian el valor completo. Por lo tanto, las asignaciones de tipos de referencia de gran tamaño son menos costosas que las asignaciones de tipos de valor grande.  
   
