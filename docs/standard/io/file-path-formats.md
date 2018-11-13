@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424394"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214199"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -202,7 +202,7 @@ Tenga en cuenta que puede pasar rutas de acceso de más de `MAX_PATH` caracteres
 Una peculiaridad del sistema de archivos de Windows que resulta confuso para los usuarios y desarrolladores que no usan Windows es que los nombres de ruta de acceso y directorio no distinguen mayúsculas de minúsculas. Es decir, los nombres de archivos y directorios reflejan las mayúsculas y minúsculas de las cadenas que se usan cuando se crean. Por ejemplo, la llamada al método
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 crea un directorio denominado TeStDiReCtOrY. Si modifica el nombre de un directorio o archivo para cambiar sus mayúsculas y minúsculas, el nombre del directorio o archivo refleja las mayúsculas y minúsculas de la cadena usada al cambiar el nombre. Por ejemplo, en el código siguiente se cambia el nombre de un archivo de test.txt a Test.txt:
 

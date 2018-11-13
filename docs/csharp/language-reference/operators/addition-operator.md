@@ -8,18 +8,16 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 27ea47d698b20f112880750ec0bc931f1917f142
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "50192309"
 ---
 # <a name="-operator-c-reference"></a>Operador + (Referencia de C#)
 
 El operador `+` se admite de dos formas: un operador más unario o un operador de suma binario.
-
-Los tipos definidos por el usuario pueden [sobrecargar](../keywords/operator.md) los operadores unarios y binarios `+`. Cuando se sobrecarga un operador `+` binario, el [operador de asignación de suma](addition-assignment-operator.md) `+=` también se sobrecarga de modo implícito.
 
 ## <a name="unary-plus-operator"></a>Operador unario más
 
@@ -48,6 +46,10 @@ Para los tipos de [delegado](../keywords/delegate.md), el operador `+` devuelve 
 [!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
 
 Para más información sobre los tipos de delegado, vea [Delegados](../../programming-guide/delegates/index.md).
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
+Los tipos definidos por el usuario pueden [sobrecargar](../keywords/operator.md) los operadores unarios y binarios `+`. Cuando se sobrecarga un operador `+` binario, el [operador de asignación de suma](addition-assignment-operator.md) `+=` también se sobrecarga de modo implícito.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

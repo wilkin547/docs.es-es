@@ -1,6 +1,6 @@
 ---
 title: Operador &amp; (Referencia de C#)
-ms.date: 04/04/2018
+ms.date: 10/29/2018
 f1_keywords:
 - '&_CSharpKeyword'
 helpviewer_keywords:
@@ -9,32 +9,61 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: b257c7d41618464e26ab3b54bcfb1f1e2c2e420e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a8f76ded0ef9f8e8099838a903d90f1695324991
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43510983"
 ---
 # <a name="amp-operator-c-reference"></a>Operador &amp; (Referencia de C#)
-El operador `&` puede funcionar como un operador unario o binario.  
-  
-## <a name="remarks"></a>Comentarios  
- El operador `&` unario devuelve la dirección de su operando (necesita un contexto [no seguro](../../../csharp/language-reference/keywords/unsafe.md)).  
-  
- Los operadores binarios `&` están predefinidos para los tipos enteros y `bool`. Para los tipos enteros, & calcula el AND bit a bit lógico de sus operandos. Para operandos `bool`, & calcula el AND lógico de sus operandos; es decir, el resultado es `true` si y solo si ambos operandos son `true`.  
-  
- El operador `&` binario evalúa ambos operandos con independencia del valor del primero, a diferencia del [operador AND condicional](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&`. Por ejemplo:  
-  
- [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
-  
- Los tipos definidos por el usuario pueden sobrecargar el operador binario `&` (consulte [operator](../../../csharp/language-reference/keywords/operator.md)). Las operaciones de tipos enteros suelen estar permitidas en la enumeración. Cuando se sobrecarga un operador binario, el operador de asignación correspondiente, si lo hay, también se sobrecarga de modo implícito.  
-  
-## <a name="example"></a>Ejemplo  
- [!code-csharp[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
-  
+
+El operador `&` se admite de dos formas: un operador address-of unario o un operador lógico binario.
+
+## <a name="unary-address-of-operator"></a>Operador address-of unario
+
+El operador `&` unario devuelve la dirección de su operando. Para obtener más información, vea [Cómo: Obtener la dirección de una variable](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-address-of-a-variable.md).
+
+El operador address-of `&` requiere un contexto [no seguro](../keywords/unsafe.md).
+
+## <a name="integer-logical-bitwise-and-operator"></a>Operador AND bit a bit lógico entero
+
+Para los tipos enteros, el operador `&` calcula el AND bit a bit lógico de sus operandos:
+
+[!code-csharp-interactive[integer logical bitwise AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#IntegerOperands)]
+
+> [!NOTE]
+> En el ejemplo anterior se usan los literales binarios [introducidos en C# 7.0](../../whats-new/csharp-7.md#numeric-literal-syntax-improvements) y [mejorados en C# 7.2](../../whats-new/csharp-7-2.md#leading-underscores-in-numeric-literals).
+
+Como las operaciones en tipos enteros generalmente se permiten en los tipos de enumeración, el operador `&` también es compatible con los operandos [enum](../keywords/enum.md).
+
+## <a name="boolean-logical-and-operator"></a>Operador AND lógico booleano
+
+Para los operandos [bool](../keywords/bool.md), el operador `&` calcula el AND lógico de sus operandos. El resultado de `x & y` es `true` si tanto `x` como `y` son `true`. De lo contrario, el resultado es `false`.
+
+El operador `&` evalúa ambos, incluso aunque el primero se evalúe como `false`, de modo que el resultado debe ser `false` con independencia del valor del segundo operando. En el ejemplo siguiente se muestra ese comportamiento:
+
+[!code-csharp-interactive[bool logical AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#BooleanOperands)]
+
+El [operador AND condicional](conditional-and-operator.md) `&&` también calcula el AND lógico de sus operandos, pero evalúa el segundo operando solo si el primero se evalúa como `true`.
+
+Para los operandos de tipo bool que aceptan valores NULL, el comportamiento del operador `&` es coherente con la lógica de tres valores de SQL. Para obtener más información, vea la sección [Tipo bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) del artículo [Uso de tipos que aceptan valores NULL](../../programming-guide/nullable-types/using-nullable-types.md).
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
+Los tipos definidos por el usuario pueden [sobrecargar](../keywords/operator.md) el operador `&` binario. Cuando se sobrecarga un operador `&` binario, el [operador de asignación AND](and-assignment-operator.md) `&=` también se sobrecarga de modo implícito.
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para obtener más información, vea las secciones [El operador address-of](~/_csharplang/spec/unsafe-code.md#the-address-of-operator) y [Operadores lógicos](~/_csharplang/spec/expressions.md#logical-operators) de la [Especificación del lenguaje C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Operadores de C#](../../../csharp/language-reference/operators/index.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Operadores de C#](index.md)
+- [Tipos de puntero](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Operador |](or-operator.md)
+- [Operador ^](xor-operator.md)
+- [Operador ~](bitwise-complement-operator.md)
+- [Operador &&](conditional-and-operator.md)

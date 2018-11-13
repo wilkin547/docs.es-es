@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582754"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982872"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 <a name="top"></a> En el Common Language Runtime (CLR), el recolector de elementos no utilizados actúa como administrador de memoria automático. Proporciona las siguientes ventajas:  
@@ -172,7 +172,7 @@ ms.locfileid: "48582754"
   
  El recolector de elementos no utilizados utiliza la siguiente información para determinar si los objetos están activos:  
   
--   **Raíces de la pila**. Variables de pila proporcionadas por el compilador Just-In-Time (JIT) y el rastreador de pila.  
+-   **Raíces de la pila**. Variables de pila proporcionadas por el compilador Just-In-Time (JIT) y el rastreador de pila. Tenga en cuenta que las optimizaciones de JIT pueden prolongar o acortar regiones de código en las que se notifican variables de pila al recolector de elementos no utilizados.
   
 -   **Identificadores de recolección de elementos no utilizados**. Identificadores que señalan a objetos administrados y que se pueden asignar mediante código de usuario o mediante Common Language Runtime.  
   

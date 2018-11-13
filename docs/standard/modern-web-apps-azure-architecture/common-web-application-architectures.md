@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Exp
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404637"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757457"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -97,7 +97,7 @@ El enfoque más sencillo para escalar una aplicación web en Azure consiste en c
 
 ## <a name="clean-architecture"></a>Arquitectura limpia
 
-Las aplicaciones que siguen el principio de inversión de dependencias, así como los principios de diseño controlado por dominios (DDD), tienden a llegar a una arquitectura similar. Esta arquitectura ha pasado por muchos nombres con los años. Uno de los primeros nombres fue Arquitectura hexagonal, seguido por Puertos y adaptadores. Más recientemente, se ha citado como [arquitectura cebolla](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) o [arquitectura limpia](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Este último nombre, Arquitectura limpia, es el que se usa para esta arquitectura en este libro electrónico.
+Las aplicaciones que siguen el principio de inversión de dependencias, así como los principios de diseño controlado por dominios (DDD), tienden a llegar a una arquitectura similar. Esta arquitectura ha pasado por muchos nombres con los años. Uno de los primeros nombres fue Arquitectura hexagonal, seguido por Puertos y adaptadores. Más recientemente, se ha citado como [arquitectura cebolla](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) o [arquitectura limpia](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Este último nombre, Arquitectura limpia, es el que se usa para esta arquitectura en este libro electrónico.
 
 > [!NOTE]
 > El término Arquitectura limpia se puede aplicar tanto a las aplicaciones que se compilan mediante principios de DDD como a las que no. En el caso de las primeras, esta combinación se puede denominar "Arquitectura DDD limpia".
@@ -307,7 +307,7 @@ Si quiere agregar compatibilidad con Docker a la aplicación mediante Visual Stu
 > - **The Clean Architecture** (La arquitectura limpia)  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **The Onion Architecture** (La arquitectura cebolla)  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **The Repository Pattern** (El modelo de repositorio)  
 >   <https://deviq.com/repository-pattern/>
 > - **Clean Architecture Solution Sample** (Ejemplo de solución de arquitectura limpia)  
