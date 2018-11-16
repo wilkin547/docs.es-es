@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c77d063d64354bf4693ce82509f36be9d2e5b0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d786a77a0f787515ce1ab2ca61cbc1251aa14563
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003898"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50192465"
 ---
 # <a name="-doc"></a>-doc
 Procesa los comentarios de documentación generando un archivo XML.  
@@ -30,30 +28,30 @@ Procesa los comentarios de documentación generando un archivo XML.
   
 |Término|de esquema JSON|  
 |---|---|  
-|`+` &#124; `-`|Opcional. Especificar +, o simplemente `-doc`, hace que el compilador genere información de documentación y colocarla en un archivo XML. Especificar `-` equivale a no especificar `-doc`, lo que provoca ninguna información de documentación se puede crear.|  
-|`file`|Es necesario si se usa `-doc:`. Especifica el archivo XML de salida, que se rellena con los comentarios de los archivos de código fuente de la compilación. Si el nombre de archivo contiene un espacio, escriba el nombre entre comillas ("").|  
+|`+` &#124; `-`|Opcional. Si se especifica + o solo `-doc`, el compilador genera información de documentación y la coloca en un archivo XML. Especificar `-` es el equivalente a no especificar `-doc`, lo que causa que no se cree ninguna información de documentación.|  
+|`file`|Es necesario si se usa `-doc:`. Especifica el archivo XML de salida, que se rellena con los comentarios de los archivos de código fuente de la compilación. Si el nombre de archivo contiene un espacio, escríbalo entre comillas (" ").|  
   
 ## <a name="remarks"></a>Comentarios  
- El `-doc` opción controla si el compilador genera un archivo XML que contiene los comentarios de documentación. Si usas el `-doc:file` sintaxis, el `file` parámetro especifica el nombre del archivo XML. Si usas `-doc` o `-doc+`, el compilador toma el nombre del archivo XML desde el archivo ejecutable o biblioteca que está creando el compilador. Si usas `-doc-` o no especifique el `-doc` opción, el compilador no crea un archivo XML.  
+ La opción `-doc` controla si el compilador genera un archivo XML que contiene los comentarios de documentación. Si usa la sintaxis `-doc:file`, el parámetro `file` especifica el nombre del archivo XML. Si usa `-doc` o `-doc+`, el compilador toma el nombre del archivo XML desde el archivo ejecutable o la biblioteca que el compilador va a crear. Si usa `-doc-` o no especifica la opción `-doc`, el compilador no crea un archivo XML.  
   
  En los archivos de código fuente, los comentarios de documentación pueden preceder a las siguientes definiciones:  
   
--   Definido por el usuario tipos, como un [clase](../../../visual-basic/language-reference/statements/class-statement.md) o [interfaz](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   Tipos definidos por el usuario como una [clase](../../../visual-basic/language-reference/statements/class-statement.md) o una [interfaz](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   Los miembros, como un campo, [eventos](../../../visual-basic/language-reference/statements/event-statement.md), [propiedad](../../../visual-basic/language-reference/statements/property-statement.md), [función](../../../visual-basic/language-reference/statements/function-statement.md), o [subrutina](../../../visual-basic/language-reference/statements/sub-statement.md).  
+-   Miembros, como un campo, un [evento](../../../visual-basic/language-reference/statements/event-statement.md), una [propiedad](../../../visual-basic/language-reference/statements/property-statement.md), una [función](../../../visual-basic/language-reference/statements/function-statement.md) o una [subrutina](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
- Para usar el archivo XML generado con Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) de características, deje que el nombre de archivo del archivo XML a ser el mismo que el ensamblado que desea admitir. Asegúrese de que el archivo XML está en el mismo directorio que el ensamblado para que cuando se hace referencia al ensamblado en el proyecto de Visual Studio, también se encuentra el archivo .xml. Archivos de documentación XML no son necesarios para que IntelliSense funcione para el código dentro de un proyecto o dentro de los proyectos que se hace referencia un proyecto.  
+ Para usar el archivo XML generado con la característica [IntelliSense](/visualstudio/ide/using-intellisense) de Visual Studio, deje que el nombre del archivo XML sea igual que el del ensamblado que quiere admitir. Asegúrese de que el archivo XML se encuentra en el mismo directorio que el ensamblado, para que cuando se haga referencia al ensamblado en el proyecto de Visual Studio, también se encuentre el archivo .xml. Los archivos de documentación XML no son necesarios para que IntelliSense funcione para el código dentro de un proyecto o de los proyectos a los que el proyecto hace referencia.  
   
  A menos que compile con `/target:module`, el archivo XML contiene las etiquetas `<assembly></assembly>`. Estas etiquetas especifican el nombre del archivo que contiene el manifiesto del ensamblado para el archivo de salida de la compilación.  
   
- Consulte [etiquetas de comentario XML](../../../visual-basic/language-reference/xmldoc/index.md) para formas de generar documentación a partir de comentarios en el código.  
+ Vea [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md) para conocer las maneras de generar documentación a partir de comentarios en el código.  
   
-|Para establecer - doc en Visual Studio el entorno de desarrollo integrado|  
+|Para definir -doc en el entorno de desarrollo integrado de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Establezca el valor el **generar archivo de documentación** cuadro.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Establezca el valor en el cuadro **Generar archivo de documentación XML**.|  
   
 ## <a name="example"></a>Ejemplo  
- Consulte [documentar el código con XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) para obtener un ejemplo.  
+ Vea [Documentar el código con XML (Visual Basic)](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) para obtener un ejemplo.  
   
 ## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
