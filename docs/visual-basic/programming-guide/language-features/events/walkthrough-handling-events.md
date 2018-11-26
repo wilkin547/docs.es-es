@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192006"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297171"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Tutorial: Controlar eventos (Visual Basic)
 Éste es el segundo de dos temas que muestran cómo trabajar con eventos. El primer tema, [Tutorial: declarar y provocar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), se muestra cómo declarar y provocar eventos. En esta sección se usa el formulario y la clase del tutorial para mostrar cómo controlar eventos cuando tienen lugar.  
@@ -45,7 +45,7 @@ ms.locfileid: "44192006"
     > [!NOTE]
     >  El **Editor de código** es útil, pero no es necesario, para insertar nuevos controladores de eventos. En este tutorial, es más directa para copiar solo los controladores de eventos directamente en el código.  
   
-3.  Agregue el código siguiente al controlador de eventos `mWidget_PercentDone`:  
+3.  Agregue el código siguiente al controlador de eventos `mWidget_PercentDone` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
@@ -76,7 +76,7 @@ ms.locfileid: "44192006"
   
 #### <a name="to-call-the-longtask-method"></a>Para llamar al método LongTask  
   
--   Agregue el código siguiente al controlador de eventos `Button1_Click`:  
+-   Agregue el código siguiente al controlador de eventos `Button1_Click` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
@@ -95,7 +95,7 @@ ms.locfileid: "44192006"
 3.  Haga clic en el **cancelar** botón para detener la tarea. Tenga en cuenta que la apariencia de la **cancelar** botón no cambia inmediatamente al hacer clic. El `Click` no se puede producir el evento hasta el `My.Application.DoEvents` instrucción permite el procesamiento de eventos.  
   
     > [!NOTE]
-    >  El `My.Application.DoEvents` método no procesa los eventos en la misma manera como lo hace el formulario. Por ejemplo, en este tutorial, debe hacer clic en el **cancelar** botón dos veces. Para permitir que el formulario controlar los eventos directamente, puede usar multithreading. Para obtener más información, consulte [subprocesamiento](../../../../visual-basic/programming-guide/concepts/threading/index.md).
+    >  El `My.Application.DoEvents` método no procesa los eventos en la misma manera como lo hace el formulario. Por ejemplo, en este tutorial, debe hacer clic en el **cancelar** botón dos veces. Para permitir que el formulario controlar los eventos directamente, puede usar multithreading. Para obtener más información, consulte [Managed Threading](../../../../standard/threading/index.md).
   
  Es posible instructivos para ejecutar el programa con F11 y recorrer el código de una línea a la vez. Puede ver claramente cómo entra en ejecución `LongTask`y, a continuación, brevemente vuelve a introducir `Form1` cada vez que el `PercentDone` provoca el evento.  
   

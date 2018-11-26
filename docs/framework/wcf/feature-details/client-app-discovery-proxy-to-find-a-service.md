@@ -2,15 +2,15 @@
 title: 'Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b1a71f60d64e77d735a18afede7101b7a184859
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489702"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296469"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio
-Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), implementa un servicio WCF que se registra con el proxy de detección. En este tema se crea a un cliente WCF que usa al proxy de detección para encontrar el servicio WCF.  
+Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), implementa un servicio WCF que se registra con el proxy de detección. En este tema se creará a un cliente WCF que usa al proxy de detección para encontrar el servicio WCF.  
   
 ### <a name="implement-the-client"></a>Implementar el cliente  
   
@@ -29,84 +29,84 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
   
 4.  Abra el archivo Program.cs y agregue el siguiente método. Este método toma una dirección del punto de conexión y lo utiliza para inicializar el cliente del servicio (proxy).  
   
-    ```  
+    ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
-            {  
-                // Create a client  
-                CalculatorServiceClient client = new CalculatorServiceClient(new NetTcpBinding(), endpointAddress);  
-                Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress.Uri);  
-                Console.WriteLine();  
-  
-                double value1 = 100.00D;  
-                double value2 = 15.99D;  
-  
-                // Call the Add service operation.  
-                double result = client.Add(value1, value2);  
-                Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Subtract service operation.  
-                result = client.Subtract(value1, value2);  
-                Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Multiply service operation.  
-                result = client.Multiply(value1, value2);  
-                Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);  
-  
-                // Call the Divide service operation.  
-                result = client.Divide(value1, value2);  
-                Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
-                Console.WriteLine();  
-  
-                // Closing the client gracefully closes the connection and cleans up resources  
-                client.Close();  
-            }  
+    {  
+        // Create a client  
+        CalculatorServiceClient client = new CalculatorServiceClient(new NetTcpBinding(), endpointAddress);  
+        Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress.Uri);  
+        Console.WriteLine();  
+
+        double value1 = 100.00D;  
+        double value2 = 15.99D;  
+
+        // Call the Add service operation.  
+        double result = client.Add(value1, value2);  
+        Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Subtract service operation.  
+        result = client.Subtract(value1, value2);  
+        Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Multiply service operation.  
+        result = client.Multiply(value1, value2);  
+        Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);  
+
+        // Call the Divide service operation.  
+        result = client.Divide(value1, value2);  
+        Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
+        Console.WriteLine();  
+
+        // Closing the client gracefully closes the connection and cleans up resources  
+        client.Close();  
+    }  
     ```  
   
 5.  Agregue el código siguiente al método `Main`.  
   
-    ```  
+    ```csharp  
     public static void Main()  
+    {  
+        // Create a DiscoveryEndpoint that points to the DiscoveryProxy  
+        Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
+        DiscoveryEndpoint discoveryEndpoint = new DiscoveryEndpoint(new NetTcpBinding(), new EndpointAddress(probeEndpointAddress));  
+
+        // Create a DiscoveryClient passing in the discovery endpoint  
+        DiscoveryClient discoveryClient = new DiscoveryClient(discoveryEndpoint);  
+
+        Console.WriteLine("Finding ICalculatorService endpoints using the proxy at {0}", probeEndpointAddress);  
+        Console.WriteLine();  
+
+        try  
+        {  
+            // Search for services that implement ICalculatorService              
+            FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
+
+            Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
+            Console.WriteLine();  
+
+            // Check to see if endpoints were found, if so then invoke the service.  
+            if (findResponse.Endpoints.Count > 0)  
             {  
-                // Create a DiscoveryEndpoint that points to the DiscoveryProxy  
-                Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
-                DiscoveryEndpoint discoveryEndpoint = new DiscoveryEndpoint(new NetTcpBinding(), new EndpointAddress(probeEndpointAddress));  
-  
-                // Create a DiscoveryClient passing in the discovery endpoint  
-                DiscoveryClient discoveryClient = new DiscoveryClient(discoveryEndpoint);  
-  
-                Console.WriteLine("Finding ICalculatorService endpoints using the proxy at {0}", probeEndpointAddress);  
-                Console.WriteLine();  
-  
-                try  
-                {  
-                    // Search for services that implement ICalculatorService              
-                    FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
-  
-                    Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
-                    Console.WriteLine();  
-  
-                    // Check to see if endpoints were found, if so then invoke the service.  
-                    if (findResponse.Endpoints.Count > 0)  
-                    {  
-                        InvokeCalculatorService(findResponse.Endpoints[0].Address);  
-                    }  
-                }  
-                catch (TargetInvocationException)  
-                {  
-                    Console.WriteLine("This client was unable to connect to and query the proxy. Ensure that the proxy is up and running.");  
-                }  
-  
-                Console.WriteLine("Press <ENTER> to exit.");  
-                Console.ReadLine();  
+                InvokeCalculatorService(findResponse.Endpoints[0].Address);  
             }  
+        }  
+        catch (TargetInvocationException)  
+        {  
+            Console.WriteLine("This client was unable to connect to and query the proxy. Ensure that the proxy is up and running.");  
+        }  
+
+        Console.WriteLine("Press <ENTER> to exit.");  
+        Console.ReadLine();  
+    }  
     ```  
   
- Ha completado la implementación de la aplicación cliente. Ir a [Cómo: probar el Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
+ Ha completado la implementación de la aplicación cliente. Continúe con [Cómo: probar el Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Ejemplo  
  Esta es la lista de códigos completa de este tema.  
   
-```  
+```csharp  
 // GeneratedClient.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -198,7 +198,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  

@@ -3,11 +3,11 @@ title: Información general sobre la protección extendida para la autenticació
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: 6063aa7093ed6c70e835364fdf5dd1c4293dd2eb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199752"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296203"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Información general sobre la protección extendida para la autenticación
 La protección extendida para la autenticación ayuda a protegerse de los ataques de tipo "man-in-the-middle" (MITM), en los que un atacante intercepta las credenciales de un cliente y las reenvía a un servidor.  

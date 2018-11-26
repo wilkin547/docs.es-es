@@ -2,12 +2,12 @@
 title: Escribir un proveedor de datos de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 50c0555d84c5b5f180c8c49a8419e8a414a4befe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 513af001392ae0b7abe8e6c62dc74f09469b3655
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863406"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296638"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Escribir un proveedor de datos de Entity Framework
 Esta sección describe cómo escribir un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proveedor sea compatible con un origen de datos que no sean de SQL Server. El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] incluye un proveedor que admite SQL Server.  
@@ -32,7 +32,7 @@ Esta sección describe cómo escribir un [!INCLUDE[adonet_ef](../../../../../inc
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>Ejemplo  
- Consulte la [proveedor de ejemplo de Entity Framework](https://go.microsoft.com/fwlink/?LinkId=180616) para obtener un ejemplo de un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proveedor que admite un origen de datos que no sean de SQL Server.  
+ Consulte la [proveedor de ejemplo de Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) para obtener un ejemplo de un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proveedor que admite un origen de datos que no sean de SQL Server.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
