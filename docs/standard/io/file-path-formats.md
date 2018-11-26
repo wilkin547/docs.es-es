@@ -2,19 +2,18 @@
 title: Formatos de ruta de acceso de archivo en los sistemas Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214199"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296833"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -90,8 +89,8 @@ La ruta de acceso de dispositivo DOS consta de los componentes siguientes:
 
    Existe un vínculo específico para las UNC que, de forma lógica, se denomina `UNC`. Por ejemplo:
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     Para las UNC de dispositivo, la parte del servidor o recurso compartido forma el volumen. Por ejemplo, en `\\?\server1\e:\utilities\\filecomparer\`, la parte del servidor o recurso compartido es server1\utilities. Esto es importante cuando se llama a un método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> con segmentos de directorio relativos, pues nunca se puede ir más allá del volumen. 
 
@@ -114,7 +113,7 @@ Casi todas las rutas de acceso que se pasan a las API de Windows se normalizan. 
 - Evalúa los componentes de directorio relativos (`.` para el directorio actual y `..` para el directorio principal).
 - Recorta determinados caracteres.
 
-Esta normalización se produce de manera implícita, pero se puede realizar de forma explícita mediante una llamada al método <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, que encapsula una llamada a [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). También se puede llamar directamente al elemento [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) de Windows mediante P/Invoke. También se puede llamar a 
+Esta normalización se produce de manera implícita, pero se puede realizar de forma explícita mediante una llamada al método <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, que encapsula una llamada a la [función GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). También se puede llamar directamente a la [función GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) de Windows mediante P/Invoke.
 
 ### <a name="identifying-the-path"></a>Identificación de la ruta de acceso
 

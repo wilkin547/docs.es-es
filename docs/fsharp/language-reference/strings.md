@@ -1,24 +1,24 @@
 ---
 title: Cadenas (F#)
-description: Obtenga información sobre cómo el tipo 'string' F# representa texto inmutable como una secuencia de caracteres Unicode.
+description: Obtenga información sobre cómo el F# tipo 'string' representa texto inmutable como una secuencia de caracteres Unicode.
 ms.date: 05/16/2016
-ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43799348"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296797"
 ---
 # <a name="strings"></a>Cadenas
 
 > [!NOTE]
-Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
+> Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
 
 El `string` tipo representa texto inmutable como una secuencia de caracteres Unicode. `string` es un alias de `System.String` en .NET Framework.
 
 ## <a name="remarks"></a>Comentarios
 
-Literales de cadena se delimitan mediante el carácter de comillas dobles ("). El carácter de barra diagonal inversa ( \\ ) se usa para codificar caracteres especiales. La barra diagonal inversa y el carácter siguiente juntos se conocen como un *secuencia de escape*. Se admite en F# cadenas literales se muestran en la siguiente tabla de secuencias de escape.
+Literales de cadena se delimitan mediante el carácter de comillas dobles ("). El carácter de barra diagonal inversa ( \\ ) se usa para codificar caracteres especiales. La barra diagonal inversa y el carácter siguiente juntos se conocen como un *secuencia de escape*. Admitidas de secuencias de escape F# literales de cadena se muestran en la tabla siguiente.
 
 |Carácter|Secuencia de escape|
 |---------|---------------|
@@ -78,7 +78,7 @@ El ejemplo siguiente muestra la concatenación de cadenas.
 
 ## <a name="string-class"></a>Clase de cadena
 
-Dado que el tipo de cadena en F# es realmente una versión de .NET Framework `System.String` escriba todos los `System.String` miembros están disponibles. Esto incluye la `+` operador, que se utiliza para concatenar cadenas, la `Length` propiedad y el `Chars` propiedad, que devuelve la cadena como una matriz de caracteres Unicode. Para obtener más información acerca de las cadenas, vea `System.String`.
+Dado que la cadena de tipo en F# es realmente una versión de .NET Framework `System.String` escribir todo el `System.String` miembros están disponibles. Esto incluye la `+` operador, que se utiliza para concatenar cadenas, la `Length` propiedad y el `Chars` propiedad, que devuelve la cadena como una matriz de caracteres Unicode. Para obtener más información acerca de las cadenas, vea `System.String`.
 
 Mediante el uso de la `Chars` propiedad de `System.String`, puede tener acceso a los caracteres individuales de una cadena mediante la especificación de un índice, como se muestra en el código siguiente.
 

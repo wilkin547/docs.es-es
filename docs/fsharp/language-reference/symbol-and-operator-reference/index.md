@@ -1,18 +1,18 @@
 ---
 title: Referencia de símbolos y operadores (F#)
-description: Obtenga información sobre los símbolos y operadores que se utilizan en el lenguaje de programación F#.
+description: Obtenga información sobre los símbolos y operadores que se usan en el F# lenguaje de programación.
 ms.date: 04/04/2018
-ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216834"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297341"
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
 > [!NOTE]
-Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
+> Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
 
 En este tema se incluye una tabla de símbolos y operadores que se utilizan en el lenguaje F#.
 

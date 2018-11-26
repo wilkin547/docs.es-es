@@ -1,18 +1,18 @@
 ---
 title: Listas (F#)
-description: Obtenga información sobre las listas de F#, una serie ordenada e inmutable de elementos del mismo tipo.
+description: Obtenga información sobre F# muestra una serie ordenada e inmutable de elementos del mismo tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50201629"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297509"
 ---
 # <a name="lists"></a>Listas
 
 > [!NOTE]
-Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
+> Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
 
 En F#, una lista es una serie ordenada e inmutable de elementos del mismo tipo. Para realizar operaciones básicas en listas, use las funciones en el [List (módulo)](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
@@ -56,7 +56,7 @@ Funciones para realizar operaciones en las listas están disponibles en el [List
 
 Como en F# las listas son inmutables, las operaciones de modificación generan nuevas listas en lugar de modificar las existentes.
 
-Listas de F# se implementan como listas vinculadas individualmente, lo que significa que las operaciones que tienen acceso a solo el encabezado de la lista son o (1), y acceso de elemento es O (*n*).
+Se enumeran en F# se implementan como listas vinculadas individualmente, lo que significa que las operaciones que tienen acceso a solo el encabezado de la lista son o (1), y acceso de elemento es O (*n*).
 
 ## <a name="properties"></a>Propiedades
 

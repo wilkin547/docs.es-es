@@ -1,13 +1,13 @@
 ---
 title: Directivas de compilador (F#)
-description: Obtenga información sobre las directivas de preprocesador de lenguaje F#, las directivas de compilación condicional, las directivas de línea y las directivas de compilador.
+description: Obtenga información sobre F# las directivas de preprocesador de lenguaje, directivas de compilación condicional, las directivas de línea y las directivas de compilador.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50181373"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296508"
 ---
 # <a name="compiler-directives"></a>Directivas de compilador
 
@@ -35,8 +35,8 @@ El efecto de deshabilitar una advertencia que se aplica a todo el archivo, inclu
 
 Código que está desactivada de forma una de estas directivas aparece atenuado en el Editor de código de Visual Studio.
 
->[!NOTE]
-El comportamiento de las directivas de compilación condicional no es el mismo que en otros idiomas. Así, no se pueden usar expresiones booleanas con símbolos, mientras que `true` y `false` no tienen ningún significado especial. Los símbolos que se usan en la directiva `if` se tienen que definir con la línea de comandos o en la configuración del proyecto; no hay ninguna directiva de preprocesador `define`.
+> [!NOTE]
+> El comportamiento de las directivas de compilación condicional no es el mismo que en otros idiomas. Así, no se pueden usar expresiones booleanas con símbolos, mientras que `true` y `false` no tienen ningún significado especial. Los símbolos que se usan en la directiva `if` se tienen que definir con la línea de comandos o en la configuración del proyecto; no hay ninguna directiva de preprocesador `define`.
 
 El siguiente código muestra el uso de las directivas `#if`, `#else` y `#endif`. En este ejemplo, el código contiene dos versiones de la definición de `function1`. Cuando `VERSION1` se define utilizando el [-define (opción del compilador)](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), el código entre la `#if` directiva y la `#else` se activa la directiva. De lo contrario, se activará el código entre `#else` y `#endif`.
 
@@ -65,7 +65,7 @@ En la siguiente tabla se recoge una lista de las directivas de compilador dispon
 |Directiva|Descripción|
 |---------|-----------|
 |`#light` ["activado"&#124;"desactivado"]|Habilita o deshabilita la sintaxis ligera de cara a la compatibilidad con otras versiones de ML. La sintaxis ligera está habilitada de forma predeterminada. La sintaxis detallada siempre está habilitada. Por lo tanto, puede usar ambas sintaxis, la ligera y la detallada. La directiva `#light` es equivalente en sí misma a `#light "on"`. Si especifica `#light "off"`, tendrá que usar la sintaxis detallada en todas las construcciones del lenguaje. La sintaxis en la documentación de F# se muestra bajo la asunción de que se está usando la sintaxis ligera. Para obtener más información, consulte [sintaxis detallada](verbose-syntax.md).|
-Las directivas de intérprete (fsi.exe), consulte [programación interactiva con F#](../tutorials/fsharp-interactive/index.md).
+Las directivas de intérprete (fsi.exe), consulte [programación interactiva con F# ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Vea también
 

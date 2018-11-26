@@ -1,18 +1,18 @@
 ---
 title: Matrices (F#)
-description: Obtenga información sobre cómo crear y usar matrices en el lenguaje de programación F#.
+description: Obtenga información sobre cómo crear y usar matrices en la F# lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032736"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297197"
 ---
 # <a name="arrays"></a>Matrices
 
 > [!NOTE]
-El vínculo de la referencia de API le llevará a MSDN.  La referencia de API de docs.microsoft.com no está completa.
+> El vínculo de la referencia de API le llevará a MSDN.  La referencia de API de docs.microsoft.com no está completa.
 
 Las matrices son colecciones de tamaño fijo, basado en cero, mutables de elementos de datos consecutivos que son todas del mismo tipo.
 
@@ -57,7 +57,7 @@ Cuando se usa la notación de segmentos, se crea una nueva copia de la matriz.
 
 ## <a name="array-types-and-modules"></a>Los módulos y tipos de matriz
 
-El tipo de todas las matrices de F# es el tipo de .NET Framework <xref:System.Array?displayProperty=nameWithType>. Por lo tanto, las matrices de F# admiten toda la funcionalidad disponible en <xref:System.Array?displayProperty=nameWithType>.
+El tipo de todos los F# matrices es el tipo de .NET Framework <xref:System.Array?displayProperty=nameWithType>. Por lo tanto, F# matrices admiten toda la funcionalidad disponible en <xref:System.Array?displayProperty=nameWithType>.
 
 El módulo de biblioteca [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) admite operaciones en matrices unidimensionales. Los módulos `Array2D`, `Array3D`, y `Array4D` contienen funciones que admiten las operaciones en las matrices de dos, tres y cuatro dimensiones, respectivamente. Puede crear matrices de clasificación superior a 4 mediante el uso de <xref:System.Array?displayProperty=nameWithType>.
 
@@ -218,7 +218,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-A partir de F# 3.1, puede descomponer una matriz multidimensional en submatrices de la dimensión igual o inferior. Por ejemplo, puede obtener un vector de una matriz mediante la especificación de una sola fila o columna.
+Como de F# 3.1, puede descomponer una matriz multidimensional en submatrices de la dimensión igual o inferior. Por ejemplo, puede obtener un vector de una matriz mediante la especificación de una sola fila o columna.
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -228,7 +228,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-Puede utilizar esta sintaxis de fragmentación para tipos que implementan los operadores de acceso de elemento y sobrecargado `GetSlice` métodos. Por ejemplo, el código siguiente crea un tipo de matriz que contiene la matriz 2D de F#, implementa una propiedad de elemento para proporcionar compatibilidad para la indización de matrices e implementa tres versiones de `GetSlice`. Si este código puede usar como plantilla para los tipos de matriz, puede usar todas las operaciones de segmentación que se describe en esta sección.
+Puede utilizar esta sintaxis de fragmentación para tipos que implementan los operadores de acceso de elemento y sobrecargado `GetSlice` métodos. Por ejemplo, el código siguiente crea un tipo de matriz que contiene el F# matriz 2D, implementa una propiedad de elemento para proporcionar compatibilidad para la indización de matrices e implementa tres versiones de `GetSlice`. Si este código puede usar como plantilla para los tipos de matriz, puede usar todas las operaciones de segmentación que se describe en esta sección.
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =
@@ -418,4 +418,4 @@ El módulo [ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4
 ## <a name="see-also"></a>Vea también
 
 - [Referencia del lenguaje F#](index.md)
-- [F# Tipos de](fsharp-types.md)
+- [F#; Tipos de](fsharp-types.md)
