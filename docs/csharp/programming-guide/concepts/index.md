@@ -2,12 +2,12 @@
 title: Conceptos de programación (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615929"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296573"
 ---
 # <a name="programming-concepts-c"></a>Conceptos de programación (C#)
 En esta sección se explican los conceptos de programación del lenguaje C#.  
@@ -28,7 +28,6 @@ En esta sección se explican los conceptos de programación del lenguaje C#.
 |[Programación orientada a objetos (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Describe conceptos comunes orientados a objetos, incluidos la encapsulación, la herencia y el polimorfismo.|  
 |[Reflexión (C#)](../../../csharp/programming-guide/concepts/reflection.md)|Se explica cómo usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente e invocar sus métodos, o acceder a sus campos y propiedades.|  
 |[Serialización (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|Describe los conceptos clave de la serialización binaria, XML y SOAP.|  
-|[Subprocesamiento (C#)](../../../csharp/programming-guide/concepts/threading/index.md)|Proporciona información general sobre el modelo de subprocesos .NET y muestra cómo escribir código que realiza varias tareas al mismo tiempo para mejorar el rendimiento y la capacidad de respuesta de las aplicaciones.|  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195845"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296755"
 ---
 # <a name="c-guide"></a>Guía de C#
 
@@ -67,5 +67,5 @@ Hay varias secciones en la Guía de C#. Puede leerlas en orden o ir directamente
 ## <a name="see-also"></a>Vea también
 
 * [Introducción a Visual C# y Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [Desarrollo de .NET](https://msdn.microsoft.com/library/ff361664)  
+* [Guía de .NET](../standard/index.md)  
 * [Muestras de C++](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  

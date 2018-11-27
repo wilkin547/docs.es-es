@@ -1,6 +1,6 @@
 ---
 title: Retroceso en expresiones regulares
-ms.date: 03/30/2017
+ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039506"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297366"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
 <a name="top"></a> El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
@@ -99,7 +99,7 @@ ms.locfileid: "44039506"
   
 -   Compara la "s" del patrón con la "s" que sigue al carácter "e" coincidente (la primera "s" de "expressions"). La coincidencia es correcta.  
   
- Cuando se usa retroceso, la coincidencia del patrón de expresión regular con la cadena de entrada, que tiene 55 caracteres de longitud, necesita 67 operaciones de comparación. Curiosamente, si el patrón de expresión regular incluyera un cuantificador no expansivo, .`*?(es)`, la coincidencia con la expresión regular necesitaría comparaciones adicionales. En este caso, en lugar de tener que retroceder desde el final de la cadena a la "r" de "expressions", el motor de expresiones regulares tendría que retroceder hasta el principio de la cadena para buscar coincidencias de "Es" y necesitaría 113 comparaciones. Normalmente, si un patrón de expresión regular tiene una única construcción de alternancia o un único cuantificador opcional, el número de operaciones de comparación necesarias para que coincida con el patrón es más del doble del número de caracteres de la cadena de entrada.  
+ Cuando se usa retroceso, la coincidencia del patrón de expresión regular con la cadena de entrada, que tiene 55 caracteres de longitud, necesita 67 operaciones de comparación. Normalmente, si un patrón de expresión regular tiene una única construcción de alternancia o un único cuantificador opcional, el número de operaciones de comparación necesarias para que coincida con el patrón es más del doble del número de caracteres de la cadena de entrada.  
   
  [Volver al principio](#top)  
   
@@ -176,7 +176,7 @@ ms.locfileid: "44039506"
 |Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
-|`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
+|`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
 |`[-.\w]*`|Buscar coincidencias con cero o más apariciones de un guión, un punto o un carácter alfabético.|  
 |`(?<=[0-9A-Z])`|Volver a examinar el último carácter coincidente y continuar con la coincidencia si es alfanumérica. Tenga en cuenta que los caracteres alfanuméricos son un subconjunto del conjunto formado por puntos, guiones y todos los caracteres alfabéticos.|  
 |`@`|Buscar coincidencias con un signo ("\@").|  
@@ -187,7 +187,7 @@ ms.locfileid: "44039506"
   
  `(?=` *subexpression* `)` es una aserción de búsqueda anticipada positiva, es decir, el carácter o los caracteres situados después de la posición actual deben coincidir con *subexpression*. `(?!`*subexpression*`)` es una aserción de búsqueda anticipada negativa, es decir, el carácter o los caracteres situados después de la posición actual no deben coincidir con *subexpression*. Tanto las aserciones de búsqueda anticipada positivas como las negativas son más útiles cuando *subexpression* es un subconjunto de la siguiente subexpresión.  
   
- En el ejemplo siguiente se usan dos patrones de expresiones regulares que validan un nombre de tipo completo. El primer patrón tiene un rendimiento bajo debido a un retroceso excesivo. El segundo modifica la primera expresión regular reemplazando un cuantificador anidado con una aserción de búsqueda anticipada positiva. El resultado del ejemplo muestra el tiempo de ejecución del método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
+ En el ejemplo siguiente se usan dos patrones de expresiones regulares que validan un nombre de tipo completo. El primer patrón tiene un rendimiento bajo debido a un retroceso excesivo. El segundo modifica la primera expresión regular reemplazando un cuantificador anidado con una aserción de búsqueda anticipada positiva. El resultado del ejemplo muestra el tiempo de ejecución del método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking6.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking6.vb#6)]  
@@ -197,7 +197,7 @@ ms.locfileid: "44039506"
 |Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
-|`([A-Z]\w*)+\.`|Buscar coincidencias con un carácter alfabético (A-Z) seguido de cero o más caracteres alfabéticos una o más veces, seguidas de un punto. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
+|`([A-Z]\w*)+\.`|Buscar coincidencias con un carácter alfabético (A-Z) seguido de cero o más caracteres alfabéticos una o más veces, seguidas de un punto. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
 |`(([A-Z]\w*)+\.)*`|Buscar coincidencias con el patrón anterior cero o más veces.|  
 |`[A-Z]\w*`|Buscar coincidencias con un carácter alfabético seguido de cero o más caracteres alfabéticos.|  
 |`$`|Finalizar la búsqueda de coincidencias al final de la cadena de entrada.|  
@@ -207,7 +207,7 @@ ms.locfileid: "44039506"
 |Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
-|`(?=[A-Z])`|Examinar hacia delante el primer carácter y continuar la búsqueda de coincidencias si es alfabético (A-Z). Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
+|`(?=[A-Z])`|Examinar hacia delante el primer carácter y continuar la búsqueda de coincidencias si es alfabético (A-Z). Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
 |`\w+\.`|Buscar coincidencias con uno o más caracteres alfabéticos seguidos de un punto.|  
 |`((?=[A-Z])\w+\.)*`|Buscar coincidencias con el patrón de uno o varios caracteres alfabéticos seguidos de un punto una o varias veces. El carácter alfabético inicial debe ser alfabético.|  
 |`[A-Z]\w*`|Buscar coincidencias con un carácter alfabético seguido de cero o más caracteres alfabéticos.|  
@@ -221,4 +221,4 @@ ms.locfileid: "44039506"
 - [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
 - [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
 - [Construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
-- [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
