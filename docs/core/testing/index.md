@@ -1,38 +1,48 @@
 ---
 title: Pruebas unitarias en .NET Core
-description: Las pruebas unitarias nunca han sido tan fáciles. Vea cómo usar la prueba unitaria en proyectos de .NET Core y .NET Standard.
+description: Pruebas unitarias en proyectos .NET Core y .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 5b54e7936fb19a94fad9585c00904ae67a59e064
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: fe0807f93396466df7ed7d01dbb7a83e39c67770
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49314869"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297431"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Pruebas unitaria en .NET Core y .NET Standard
 
-.NET Core se ha diseñado teniendo en cuenta la capacidad de prueba, así que crear pruebas unitarias para sus aplicaciones es más fácil que nunca. Este artículo presenta brevemente pruebas unitarias (y cómo se diferencian de otros tipos de pruebas). En los recursos vinculados se muestra cómo agregar un proyecto de prueba a la solución y luego ejecutar pruebas unitarias mediante la línea de comandos o Visual Studio.
+.NET Core facilita la creación de pruebas unitarias. En este artículo se presentan las pruebas unitarias y se indican las diferencias con otros tipos de pruebas. En los recursos vinculados al final de la página se muestra cómo agregar un proyecto de prueba a una solución. Una vez que haya configurado el proyecto de prueba, podrá ejecutar las pruebas unitarias con la línea de comandos o con Visual Studio.
 
-.NET Core 2.0 admite [.NET Standard 2.0](../../standard/net-standard.md). Las bibliotecas que se usan para mostrar la prueba unitaria en esta sección se basan en .NET Standard y también funcionarán en otros tipos de proyecto.
+.NET Core 2.0 y versiones posteriores admiten [.NET Standard 2.0](../../standard/net-standard.md), cuyas bibliotecas usaremos para mostrar las pruebas unitarias.
 
-A partir de .NET Core 2.0, existen plantillas de proyecto de prueba unitaria para C#, F# y Visual Basic.
+Puede usar plantillas de proyecto de prueba unitaria integradas de .NET Core 2.0 y versiones posteriores para C#, F# y Visual Basic como punto inicial para su proyecto personal.
 
-## <a name="getting-started-with-testing"></a>Introducción a las pruebas
+## <a name="what-are-unit-tests"></a>¿Qué son las pruebas unitarias?
 
-Una de las mejores formas de garantizar que una aplicación de software hace lo que sus autores pretenden que haga es contar con un conjunto de pruebas automatizadas. Existen varios tipos de pruebas de aplicaciones de software, como pruebas de integración, pruebas web, pruebas de carga y otras. Las pruebas unitarias que prueban componentes o métodos de software individuales son las pruebas de nivel más bajo. Las pruebas unitarias solo deben probar el código dentro del control del desarrollador y no deben probar los problemas de infraestructura, como bases de datos, sistemas de archivos o recursos de red. Se pueden escribir pruebas unitarias mediante [desarrollo controlado por pruebas (TDD)](https://deviq.com/test-driven-development/), o se pueden agregar al código existente para confirmar su grado de exactitud. En cualquier caso, deben ser pequeñas, con un nombre adecuado y rápidas, dado que lo ideal es que pueda ejecutar cientos de ellas antes de insertar los cambios en el repositorio de código compartido del proyecto.
+Automatizar pruebas es un método magnífico para asegurarse de que una aplicación de software hace lo que sus autores pretenden. Hay varios tipos de pruebas para aplicaciones de software. Estas incluyen pruebas de integración, pruebas web y pruebas de carga, entre otras. Con las **pruebas unitarias** se comprueban componentes y métodos de software individuales. Estas solo deberían probar código que pueda controlar el desarrollador. No se deberían usar para comprobar problemas con la infraestructura. Estos problemas incluyen los relacionados con bases de datos, el sistema de archivos o recursos de red. 
+
+Además, es recomendable que tenga en cuenta que hay procedimientos recomendados para la escritura de pruebas. Por ejemplo, [Test Driven Development (TTD)](https://deviq.com/test-driven-development/) es un proceso en el que una prueba unitaria se escribe antes que el código que debería comprobar. Este método se puede comparar a la creación del esquema de un libro antes de escribirlo. Está diseñado para ayudar a los desarrolladores a escribir código más simple, legible y eficaz. 
 
 > [!NOTE]
-> A menudo, los desarrolladores tienen dificultades para idear buenos nombres para sus clases y métodos de prueba. Como punto de partida, el equipo de producto de ASP.NET sigue [estas convenciones](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).
+> El equipo de ASP.NET sigue [estas convenciones](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) para ayudar a los desarrolladores a asignar buenos nombres a clases de prueba y métodos.
 
-Al escribir pruebas unitarias, tenga cuidado de no introducir accidentalmente dependencias en la infraestructura. Tienden a hacerlas más lentas y frágiles, por lo que se deben reservar para pruebas de integración. Puede evitar estas dependencias ocultas en el código de aplicación siguiendo el [principio de dependencias explícitas](https://deviq.com/explicit-dependencies-principle/) y el uso de [inyección de dependencias](/aspnet/core/fundamentals/dependency-injection) para solicitar las dependencias del marco. También puede mantener sus pruebas unitarias en un proyecto aparte de sus pruebas de integración y asegurarse de que el proyecto de pruebas unitarias no tenga referencias a paquetes de infraestructura ni dependencias en ellos.
+No intente incluir dependencias en la infraestructura al escribir pruebas unitarias. Estas vuelven las pruebas lentas y frágiles, por lo que deberían reservarse para pruebas de integración. Puede evitar esas dependencias en su aplicación si sigue el [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) (Principio de dependencias explícitas) y usando la [Inserción de dependencias](/aspnet/core/fundamentals/dependency-injection). También puede mantener las pruebas unitarias en un proyecto separado de las pruebas de integración. Esto asegurará que el proyecto de pruebas unitarias no tiene referencias a paquetes de infraestructura ni dependencias de estos.
 
-Más información sobre las pruebas unitarias en proyectos de .NET Core:
+Puede encontrar más información sobre las pruebas unitarias en proyectos de .NET Core:
 
-Los proyectos de prueba unitaria para .NET Core son compatibles con [C#](../../csharp/index.md), [F#](../../fsharp/index.md) y [Visual Basic](../../visual-basic/index.md). También puede elegir entre [xUnit](https://xunit.github.io), [NUnit](https://nunit.org) y [MSTest](https://github.com/Microsoft/vstest-docs).
+Los proyectos de pruebas unitarias de .NET Core son compatibles con los siguientes lenguajes:
+* [C#](../../csharp/index.md)
+* [F#](../../fsharp/index.md)
+* [Visual Basic](../../visual-basic/index.md) 
 
-Puede leer sobre esas combinaciones en estos tutoriales:
+También puede elegir entre las siguientes opciones:
+* [xUnit](https://xunit.github.io) 
+* [NUnit](https://nunit.org)
+* [MSTest](https://github.com/Microsoft/vstest-docs)
+
+Puede obtener más información en los siguientes tutoriales:
 
 * Cree pruebas unitarias mediante [*xUnit* y *C#* con la CLI de .NET Core](unit-testing-with-dotnet-test.md).
 * Cree pruebas unitarias mediante [*NUnit* y *C#* con la CLI de .NET Core](unit-testing-with-nunit.md).
@@ -44,8 +54,8 @@ Puede leer sobre esas combinaciones en estos tutoriales:
 * Cree pruebas unitarias mediante [*NUnit* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Cree pruebas unitarias mediante [*MSTest* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-mstest.md).
 
-Puede elegir varios lenguajes para las bibliotecas de clases y las bibliotecas de pruebas unitarias. Puede obtener información sobre cómo combinar y hacer coincidir los tutoriales mencionados anteriormente.
+Puede obtener más información en los siguientes artículos:
 
 * Visual Studio Enterprise proporciona herramientas de pruebas fantásticas para .NET Core. Consulte [Live Unit Testing](/visualstudio/test/live-unit-testing) o [Cobertura de código](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) para obtener más información.
-* Para información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, consulte [Ejecución de pruebas unitarias selectivas](selective-unit-tests.md) o cómo [incluir y excluir pruebas con Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
-* El equipo de xUnit ha escrito un tutorial que muestra [cómo usar xUnit con .NET Core y Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).
+* Para obtener más información sobre cómo ejecutar pruebas unitarias, vea [Ejecución de pruebas unitarias selectivas](selective-unit-tests.md) o [Incluir y excluir proyectos de prueba y métodos de prueba](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+* [Cómo usar xUnit con .NET Core y Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).
