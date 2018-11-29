@@ -1,15 +1,15 @@
 ---
 title: Creación de un microservicio CRUD sencillo controlado por datos
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Creación de un microservicio CRUD sencillo controlado por datos
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre la creación de un microservicio CRUD sencillo (controlado por datos) en el contexto de una aplicación de microservicios.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: bba0b93ee7e68ae0320460c6a45ab252ac34c326
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.date: 10/02/2018
+ms.openlocfilehash: 9429f5616c5dbab59638cfc3b11d4b0f9ea8d28d
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873507"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297345"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creación de un microservicio CRUD sencillo controlado por datos
 
@@ -19,37 +19,35 @@ En esta sección se describe cómo crear un microservicio sencillo que lleve a c
 
 Desde un punto de vista de diseño, este tipo de microservicio en contenedor es muy sencillo. Quizás el problema para resolver es sencillo o la implementación es solo una prueba de concepto.
 
-![](./media/image4.png)
+![Un microservicio CRUD sencillo es un modelo de diseño interno.](./media/image4.png)
 
-**Figura 8-4**. Diseño interno de microservicios CRUD sencillos
+**Figura 6-4**. Diseño interno de microservicios CRUD sencillos
 
-Un ejemplo de este tipo de servicio sencillo controlado por datos es el microservicio de catálogo de la aplicación de ejemplo eShopOnContainers. Este tipo de servicio implementa toda su funcionalidad en un solo proyecto de API Web de ASP.NET Core que incluye las clases para su modelo de datos, su lógica de negocios y su código de acceso a datos. También almacena los datos relacionados en una base de datos que ejecuta SQL Server (como otro contenedor para fines de desarrollo y pruebas), pero también podría ser cualquier host de SQL Server normal, como se muestra en la Figura 8-5.
+Un ejemplo de este tipo de servicio sencillo controlado por datos es el microservicio de catálogo de la aplicación de ejemplo eShopOnContainers. Este tipo de servicio implementa toda su funcionalidad en un solo proyecto de API Web de ASP.NET Core que incluye las clases para su modelo de datos, su lógica de negocios y su código de acceso a datos. También almacena los datos relacionados en una base de datos que ejecuta SQL Server (como otro contenedor para fines de desarrollo y pruebas), pero también podría ser cualquier host de SQL Server normal, como se muestra en la Figura 6-5.
 
-![](./media/image5.png)
+![El microservicio Catalog lógico incluye su base de datos Catalog, que puede estar o no en el mismo host de Docker. La presencia de la base de datos en el mismo host de Docker es buena para el desarrollo, pero no para producción.](./media/image5.png)
 
-**Figura 8-5**. Diseño de un microservicio CRUD sencillo controlado por datos
+**Figura 6-5**. Diseño de un microservicio CRUD sencillo controlado por datos
 
 Para desarrollar este tipo de servicio, solo necesita [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) y una ORP o API de acceso a datos, como [Entity Framework Core](https://docs.microsoft.com/ef/core/index). También puede generar automáticamente metadatos [Swagger](https://swagger.io/) a través de [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), para proporcionar una descripción de lo que ofrece el servicio, tal como se describe en la sección siguiente.
 
-Tenga en cuenta que ejecutar un servidor de base de datos como SQL Server en un contenedor de Docker es muy útil para entornos de desarrollo, porque puede poner en marcha todas sus dependencias sin tener que proporcionar una base de datos local o en la nube. Esto resulta muy útil para ejecutar pruebas de integración. Pero no se recomienda ejecutar un servidor de base de datos en un contenedor para entornos de producción, ya que normalmente no se obtiene alta disponibilidad con ese método. En un entorno de producción de Azure, le recomendamos que utilice la base de datos SQL de Azure o cualquier otra tecnología de base de datos que pueda proporcionar alta disponibilidad y alta escalabilidad. Por ejemplo, para un método NoSQL, puede elegir DocumentDB.
+Tenga en cuenta que ejecutar un servidor de base de datos como SQL Server en un contenedor de Docker es muy útil para entornos de desarrollo, porque puede poner en marcha todas sus dependencias sin tener que proporcionar una base de datos local o en la nube. Esto resulta muy útil para ejecutar pruebas de integración. Pero no se recomienda ejecutar un servidor de base de datos en un contenedor para entornos de producción, ya que normalmente no se obtiene alta disponibilidad con ese método. En un entorno de producción de Azure, le recomendamos que utilice la base de datos SQL de Azure o cualquier otra tecnología de base de datos que pueda proporcionar alta disponibilidad y alta escalabilidad. Por ejemplo, para un enfoque NoSQL, es posible que elija CosmosDB.
 
 Por último, al editar los archivos de metadatos de Dockerfile y docker-compose.yml, puede configurar cómo se creará la imagen de este contenedor, es decir, la imagen base que se usará y la configuración de diseño, como los nombres internos y externos y los puertos TCP. 
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>Implementación de un microservicio CRUD sencillo con ASP.NET Core
 
-Para implementar un microservicio CRUD sencillo con .NET Core y Visual Studio, primero debe crear un proyecto de API Web de ASP.NET Core sencillo (que se ejecute en .NET Core para que pueda ejecutarse en un host de Linux Docker), como se muestra en la Figura 8-6.
+Para implementar un microservicio CRUD sencillo con .NET Core y Visual Studio, primero debe crear un proyecto de API web de ASP.NET Core sencillo (que se ejecute en .NET Core para que pueda ejecutarse en un host de Linux Docker), como se muestra en la Figura 6-6.
 
-  ------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------
-  ![](./media/image6.png)   ![](./media/image7.png)
-  ------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------
+![Para crear un proyecto de API web de ASP.NET Core, seleccione primero una aplicación web de ASP.NET Core y, después, seleccione el tipo de API.](./media/image6.png)
 
-**Figura 8-6**. Creación de un proyecto de API Web de ASP.NET Core en Visual Studio
+**Figura 6-6**. Creación de un proyecto de API Web de ASP.NET Core en Visual Studio
 
-Después de crear el proyecto, puede implementar los controladores MVC como lo haría en cualquier otro proyecto de API Web, mediante la API de Entity Framework u otra API. En un nuevo proyecto de API Web, puede ver que la única dependencia que tiene de ese microservicio es el mismo ASP.NET Core. Internamente, dentro de la dependencia `Microsoft.AspNetCore.All`, hace referencia a Entity Framework y a muchos otros paquetes de Nuget de .NET Core, tal como se muestra en la Figura 8-7.
+Después de crear el proyecto, puede implementar los controladores MVC como lo haría en cualquier otro proyecto de API Web, mediante la API de Entity Framework u otra API. En un nuevo proyecto de API Web, puede ver que la única dependencia que tiene de ese microservicio es el mismo ASP.NET Core. Internamente, dentro de la dependencia *Microsoft.AspNetCore.All*, hace referencia a Entity Framework y a muchos otros paquetes Nuget de .NET Core, como se muestra en la Figura 6-7.
 
-![](./media/image8.PNG)
+![El proyecto de API incluye referencias al paquete NuGet Microsoft.AspNetCore.App, que incluye referencias a todos los paquetes esenciales. También podría incluir otros paquetes.](./media/image8.png)
 
-**Figura 8-7**. Dependencias en un microservicio API Web de CRUD sencillo
+**Figura 6-7**. Dependencias en un microservicio API Web de CRUD sencillo
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Implementación de servicios API Web de CRUD con Entity Framework Core
 
@@ -57,10 +55,9 @@ Entity Framework (EF) Core es una versión ligera, extensible y multiplataforma 
 
 El microservicio de catálogo usa EF y el proveedor de SQL Server porque su base de datos se está ejecutando en un contenedor con la imagen de SQL Server para Linux Docker. Pero la base de datos podría implementarse en cualquier SQL Server, como en una base de datos SQL de Azure o Windows local. Lo único que debe cambiar es la cadena de conexión en el microservicio ASP.NET Web API.
 
-
 #### <a name="the-data-model"></a>El modelo de datos
 
-Con EF Core, el acceso a datos se realiza utilizando un modelo. Un modelo se compone de clases de entidad y un contexto derivado que representa una sesión con la base de datos, lo que permite consultar y guardar los datos. Puede generar un modelo a partir de una base de datos existente, codificar manualmente un modelo para que coincida con la base de datos o usar migraciones de EF para crear una base de datos a partir de su modelo (y que evolucione a medida que el modelo cambia). Para el microservicio de catálogo, usamos el último enfoque. Puede ver un ejemplo de la clase de entidad CatalogItem en el ejemplo de código siguiente, que es una clase de entidad de objeto CLR estándar ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)).
+Con EF Core, el acceso a datos se realiza utilizando un modelo. Un modelo se compone de clases de entidad (modelo de dominio) y un contexto derivado (DbContext) que representa una sesión con la base de datos, lo que permite consultar y guardar los datos. Puede generar un modelo a partir de una base de datos existente, codificar manualmente un modelo para que coincida con la base de datos, o bien usar migraciones de EF para crear una base de datos a partir del modelo, mediante el enfoque Code First (que facilita que la base de datos evolucione a medida que el modelo cambia en el tiempo). Para el microservicio de catálogo, usamos el último enfoque. Puede ver un ejemplo de la clase de entidad CatalogItem en el ejemplo de código siguiente, que es una clase de entidad de objeto CLR estándar ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)).
 
 ```csharp
 public class CatalogItem
@@ -103,7 +100,9 @@ public class CatalogContext : DbContext
 }
 ```
 
-Puede tener implementaciones `DbContext` adicionales. Por ejemplo, en el microservicio Catalog.API de ejemplo, hay un segundo `DbContext` denominado `CatalogContextSeed`, en que rellena automáticamente los datos de ejemplo la primera vez que intenta acceder a la base de datos. Este método es útil para los datos de demostración y también para escenarios de pruebas automatizadas. En `DbContext`, usa el método `OnModelCreating` para personalizar las asignaciones de entidades de objeto/base de datos con otros [puntos de extensibilidad de EF](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
+Puede tener implementaciones `DbContext` adicionales. Por ejemplo, en el microservicio Catalog.API de ejemplo, hay un segundo `DbContext` denominado `CatalogContextSeed`, en que rellena automáticamente los datos de ejemplo la primera vez que intenta acceder a la base de datos. Este método es útil para los datos de demostración y también para escenarios de pruebas automatizadas. 
+
+En `DbContext`, se usa el método `OnModelCreating` para personalizar las asignaciones de entidades de objeto y base de datos, y otros [puntos de extensibilidad de EF](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Consulta de los datos desde controladores de API web
 
@@ -169,7 +168,9 @@ _context.SaveChanges();
 
 ##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>Inserción de dependencias en los controladores de ASP.NET Core y API web
 
-En ASP.NET Core, puede usar la inserción de dependencias desde el principio. No es necesario que configure un contenedor de inversión de control (IoC) de terceros, aunque, si lo desea, puede conectar su contenedor de IoC preferido a la infraestructura de ASP.NET Core. En este caso, puede insertar directamente el DBContext de EF requerido o los repositorios adicionales a través del constructor del controlador. En el ejemplo anterior de la clase `CatalogController`, vamos a insertar un objeto del tipo `CatalogContext` junto con otros objetos a través del constructor `CatalogController()`.
+En ASP.NET Core, puede usar la inserción de dependencias desde el principio. No es necesario que configure un contenedor de inversión de control (IoC) de terceros, aunque, si lo desea, puede conectar su contenedor de IoC preferido a la infraestructura de ASP.NET Core. En este caso, puede insertar directamente el DBContext de EF requerido o los repositorios adicionales a través del constructor del controlador.
+
+En el ejemplo anterior de la clase `CatalogController`, vamos a insertar un objeto del tipo `CatalogContext` junto con otros objetos a través del constructor `CatalogController()`.
 
 Una opción importante que hay que configurar en el proyecto de Web API es el registro de la clase DbContext en el contenedor de IoC del servicio. Normalmente se hace en la clase `Startup`, mediante una llamada al método `services.AddDbContext<DbContext>()` dentro del método `ConfigureServices()`, como se muestra en el ejemplo siguiente:
 
@@ -211,17 +212,17 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Consulta de datos**
-    [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
+- **Consulta de datos** \
+  [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
--   **Guardado de datos**
-    [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
+- **Guardado de datos** \
+  [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Variables de entorno y cadena de conexión de la base de datos utilizadas por contenedores de Docker
 
 Puede usar la configuración de ASP.NET Core y agregar una propiedad ConnectionString al archivo settings.json, tal como se muestra en el ejemplo siguiente:
 
-```csharp
+```json
 {
     "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word",
     "ExternalCatalogBaseUrl": "http://localhost:5101",
@@ -238,7 +239,7 @@ Puede usar la configuración de ASP.NET Core y agregar una propiedad ConnectionS
 
 El archivo settings.json puede tener valores predeterminados para la propiedad ConnectionString o para cualquier otra propiedad. Pero estas propiedades se reemplazarán por los valores de las variables de entorno que se especifican en el archivo docker-compose.override.yml, al usar Docker.
 
-Desde los archivos docker-compose.yml o docker-compose.override.yml, puede inicializar estas variables de entorno para que Docker las configure como variables de entorno del sistema operativo, como se muestra en el siguiente archivo docker-compose.override.yml (la cadena de conexión y otras líneas se encapsulan en este ejemplo, pero no lo harán en su archivo de código).
+Desde los archivos docker-compose.yml o docker-compose.override.yml, puede inicializar estas variables de entorno para que Docker las configure como variables de entorno del sistema operativo, como se muestra en el siguiente archivo docker-compose.override.yml (la cadena de conexión y otras líneas se encapsulan en este ejemplo, pero no lo harán en su propio archivo).
 
 ```yml
 # docker-compose.override.yml
@@ -256,7 +257,15 @@ Los archivos docker-compose.yml en el nivel de solución no solo son más flexib
 
 Por último, puede obtener ese valor desde el código mediante la configuración \["ConnectionString"\], tal y como se muestra en el método ConfigureServices de un ejemplo de código anterior.
 
-Pero, en entornos de producción, puede ser que le interese analizar otras formas de almacenar secretos, como las cadenas de conexión. Por lo general, esto estará administrado por el orquestador que elija, como puede hacer con [la administración de secretos en Docker Swarm](https://docs.docker.com/engine/swarm/secrets/).
+Pero, en entornos de producción, puede ser que le interese analizar otras formas de almacenar secretos, como las cadenas de conexión. Una manera excelente de administrar los secretos de aplicación consiste en usar [Azure Key Vault}(https://azure.microsoft.com/services/key-vault/).
+
+Azure Key Vault ayuda a almacenar y proteger las claves criptográficas y los secretos que usan la aplicaciones y los servicios en la nube. Un secreto es todo aquello sobre lo que quiera mantener un control estricto, como las claves de API, las cadenas de conexión, las contraseñas, etc. Asimismo, un control estricto incluye el registro del uso, el establecimiento de la caducidad y la administración del acceso, <span class="underline">entre otros aspectos</span>.
+
+Azure Key Vault permite un nivel de control muy detallado del uso de secretos de la aplicación sin necesidad de dejar que nadie los conozca. Incluso se puede definir que los secretos vayan rotando para mejorar la seguridad sin interrumpir las operaciones ni el desarrollo.
+
+Es necesario registrar las aplicaciones en la instancia de Active Directory de la organización, de modo que puedan usar el almacén de claves.
+
+Puede consultar la <span class="underline">documentación de conceptos de Key Vault</span> para obtener más detalles.
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>Implementación del control de versiones en las API web de ASP.NET
 
@@ -264,17 +273,17 @@ A medida que cambian los requisitos empresariales, pueden agregarse nuevas colec
 
 El control de versiones permite que una API web indique las características y los recursos que expone. De este modo, una aplicación cliente puede enviar solicitudes a una versión específica de una característica o de un recurso. Existen varios enfoques para implementar el control de versiones:
 
--   Control de versiones de URI
+- Control de versiones de URI
 
--   Control de versiones de cadena de consulta
+- Control de versiones de cadena de consulta
 
--   Control de versiones de encabezado
+- Control de versiones de encabezado
 
 El control de versiones de URI y de cadena de consulta son los más fáciles de implementar. El control de versiones de encabezado es una buena opción. Pero el control de versiones de encabezado no es tan explícito y sencillo como el control de versiones de URI. Como el control de versiones de URI es el más sencillo y explícito, es el que utiliza la aplicación de ejemplo eShopOnContainers.
 
 Con el control de versiones de URI, como se muestra en la aplicación de ejemplo eShopOnContainers, cada vez que modifique la API web o cambie el esquema de recursos, agregará un número de versión al URI de cada recurso. Los URI existentes deben continuar funcionando como antes, devolviendo los recursos que conforman el esquema que coincide con la versión solicitada.
 
-Como se muestra en el ejemplo de código siguiente, la versión puede establecerse mediante el atributo de ruta en la API web, lo que hace que la versión se explicite en el URI (versión 1 en este caso).
+Como se muestra en el ejemplo de código siguiente, la versión se puede establecer mediante el atributo Route del controlador de la API web, lo que hace que la versión se explicite en el URI (v1 en este caso).
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -283,18 +292,18 @@ public class CatalogController : ControllerBase
     // Implementation ...
 ```
 
-Este mecanismo de control de versiones es sencillo y depende del servidor que enruta la solicitud al punto de conexión adecuado. Pero para utilizar un control de versiones más sofisticado y adoptar el mejor método al utilizar REST, debe usar hipermedia e implementar [HATEOAS (hipertexto como motor del estado de la aplicación)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#using-the-hateoas-approach-to-enable-navigation-to-related-resources).
+Este mecanismo de control de versiones es sencillo y depende del servidor que enruta la solicitud al punto de conexión adecuado. Pero para utilizar un control de versiones más sofisticado y adoptar el mejor método al utilizar REST, debe usar hipermedia e implementar [HATEOAS (hipertexto como motor del estado de la aplicación)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources).
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Control de versiones simplificado de ASP.NET Core RESTful Web API)**
-    [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy** \ (Control de versiones simplificado de API web RESTful de ASP.NET Core)
+  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Control de versiones de una API web RESTful**
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+- **Control de versiones de una API web RESTful** \
+  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Versioning, Hypermedia, and REST (Control de versiones, hipermedia y REST)**
-    [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
+- **Roy Fielding. Versioning, Hypermedia, and REST** \ (Control de versiones, hipermedios y REST)
+  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generación de metadatos de descripción de Swagger desde la API web de ASP.NET Core 
 
@@ -304,7 +313,7 @@ El núcleo de Swagger es su especificación, que son los metadatos de descripci�
 
 La especificación es la base de la especificación OpenAPI (OAS) y se desarrolla en una comunidad abierta, transparente y colaborativa para estandarizar la forma en que se definen las interfaces RESTful.
 
-La especificación define la estructura de descubrimiento de un servicio y la forma de entender sus capacidades. Para obtener más información, incluido un editor web y ejemplos de especificaciones de Swagger de empresas como Spotify, Uber, Slack y Microsoft, consulte el sitio web de Swagger (<https://swagger.io/>).
+La especificación define la estructura de descubrimiento de un servicio y la forma de entender sus capacidades. Para obtener más información, incluido un editor web y ejemplos de especificaciones de Swagger de empresas como Spotify, Uber, Slack y Microsoft, vea el sitio de Swagger ([https://swagger.io](https://swagger.io)).
 
 ### <a name="why-use-swagger"></a>¿Por qué usar Swagger?
 
@@ -312,17 +321,21 @@ Las razones principales para generar metadatos de Swagger para las API son las s
 
 **Capacidad de otros productos de utilizar e integrar las API automáticamente** . Swagger es compatible con docenas de productos y [herramientas comerciales](https://swagger.io/commercial-tools/), así como con muchas [bibliotecas y marcos](https://swagger.io/open-source-integrations/). Microsoft tiene productos y herramientas de alto nivel que pueden utilizar automáticamente API basadas en Swagger, como las siguientes:
 
--   [AutoRest](https://github.com/Azure/AutoRest). Puede generar automáticamente clases de cliente de .NET para llamar a Swagger. Esta herramienta se puede utilizar desde la interfaz de la línea de comandos y también se integra con Visual Studio para que pueda utilizarse fácilmente desde la interfaz gráfica de usuario.
+- [AutoRest](https://github.com/Azure/AutoRest). Puede generar automáticamente clases de cliente de .NET para llamar a Swagger. Esta herramienta se puede utilizar desde la interfaz de la línea de comandos y también se integra con Visual Studio para que pueda utilizarse fácilmente desde la interfaz gráfica de usuario.
 
--   [Microsoft Flow](https://flow.microsoft.com/en-us/). También puede [utilizar e integrar la API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) automáticamente en un flujo de trabajo de Microsoft Flow de alto nivel, aunque no tenga conocimientos de programación.
+- [Microsoft Flow](https://flow.microsoft.com/en-us/). También puede [utilizar e integrar la API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) automáticamente en un flujo de trabajo de Microsoft Flow de alto nivel, aunque no tenga conocimientos de programación.
 
--   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/). Puede utilizar la API automáticamente desde [aplicaciones móviles PowerApps](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/) creadas con [PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/), aunque no tenga conocimientos de programación.
+- [Microsoft PowerApps](https://powerapps.microsoft.com/). Puede utilizar la API automáticamente desde [aplicaciones móviles PowerApps](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) creadas con [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/), aunque no tenga conocimientos de programación.
 
--   [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps). También puede [utilizar e integrar automáticamente su API en una Azure App Service Logic App](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api), aunque no tenga conocimientos de programación.
+- [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps). También puede [utilizar e integrar automáticamente su API en una Azure App Service Logic App](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api), aunque no tenga conocimientos de programación.
 
 **Capacidad de generar documentación de la API automáticamente**. Al crear API RESTful a gran escala, como aplicaciones complejas basadas en microservicios, tiene que controlar muchos de los puntos de conexión con diferentes modelos de datos diferentes que se utilizan en las cargas de solicitud y respuesta. Tener una documentación adecuada y un explorador de API potente, como se consigue con Swagger, es fundamental para que su API tenga éxito y los desarrolladores la adopten.
 
-Microsoft Flow, PowerApps y Azure Logic Apps utilizan los metadatos de Swagger para aprender a usar las API y conectar con ellas.
+Microsoft Flow, PowerApps y Azure Logic Apps usan los metadatos de Swagger para aprender a usar las API y conectarse a ellas.
+
+Hay varias opciones para automatizar la generación de metadatos de Swagger para las aplicaciones de API REST de ASP.NET Core, en forma de páginas de ayuda de API funcionales, basadas en <span class="underline">swagger-ui</span>.
+
+Probablemente la más conocida sea [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), que actualmente se usa en [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) y que trataremos con más detalle en esta guía, pero también existe la opción de usar [NSwag](https://github.com/RSuter/NSwag), que puede generar clientes de API de Typescript y C\#, así como controladores de C\#, a partir de una especificación de OpenAPI o Swagger, e incluso mediante el análisis del archivo .dll que contiene los controladores, con [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Cómo se automatiza la generación de metadatos de la API de Swagger con el paquete NuGet de Swashbuckle
 
@@ -332,17 +345,17 @@ Swashbuckle genera automáticamente metadatos de Swagger para sus proyectos de A
 
 Swashbuckle combina el explorador de API y Swagger o [swagger-ui](https://github.com/swagger-api/swagger-ui) para proporcionar una experiencia de detección y documentación increíble a los consumidores de la API. Además de su motor generador de metadatos de Swagger, Swashbuckle también contiene una versión insertada de swagger-ui, que se usará automáticamente cuando se haya instalado Swashbuckle.
 
-Esto significa que puede complementar su API con una bonita interfaz de usuario de descubrimiento para ayudar a los desarrolladores a usar su API. Para ello se requiere una cantidad muy pequeña de código y mantenimiento, puesto que se genera automáticamente, lo que le permite centrarse en la creación de la API. El resultado para el explorador de API se parece a la Figura 8-8.
+Esto significa que puede complementar su API con una bonita interfaz de usuario de descubrimiento para ayudar a los desarrolladores a usar su API. Para ello se requiere una cantidad muy pequeña de código y mantenimiento, puesto que se genera automáticamente, lo que le permite centrarse en la creación de la API. El resultado para el explorador de API se parece a la Figura 6-8.
 
-![](./media/image9.png)
+![La documentación de API de la interfaz de usuario de Swagger generada por Swashbuckle incluye todas las acciones publicadas.](./media/image9.png)
 
-**Figura 8-8**. Explorador de API de Swashbuckle basado en metadatos de Swagger: microservicio del catálogo eShopOnContainers
+**Figura 6-8**. Explorador de API de Swashbuckle basado en metadatos de Swagger: microservicio del catálogo eShopOnContainers
 
 Pero aquí lo más importante no es el explorador de API. Cuando tenga una API web que se pueda describir en metadatos de Swagger, la API podrá usarse sin problemas desde herramientas basadas en Swagger, incluidos los generadores de código de clase proxy de cliente que pueden tener varias plataformas como destino. Por ejemplo, tal y como se ha mencionado, [AutoRest](https://github.com/Azure/AutoRest) genera automáticamente clases de cliente .NET. Pero también están disponibles herramientas como [swagger-codegen](https://github.com/swagger-api/swagger-codegen), que permiten que se genere automáticamente código de bibliotecas de cliente de API, códigos auxiliares de servidor y documentación.
 
-En la actualidad, Swashbuckle consta de varios paquetes NuGet internos que se engloban en el metapaquete general [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) versión 1.0.0 o una versión posterior para las aplicaciones ASP.NET Core.
+En la actualidad, Swashbuckle consta de cinco paquetes NuGet internos que se engloban en el metapaquete general [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) para las aplicaciones ASP.NET Core.
 
-Después de instalar estos paquetes de NuGet en su proyecto de API web, debe configurar Swagger en la clase de inicio, como en el código siguiente:
+Después de instalar estos paquetes NuGet en el proyecto de API web, debe configurar Swagger en la clase de inicio, como en el código siguiente (simplificado):
 
 ```csharp
 public class Startup
@@ -387,30 +400,36 @@ public class Startup
 
 Una vez hecho esto, puede iniciar la aplicación y examinar los siguientes puntos de conexión JSON y de interfaz de usuario de Swagger utilizando direcciones URL como estas:
 
-```json
+```url
   http://<your-root-url>/swagger/v1/swagger.json
   
   http://<your-root-url>/swagger/
 ```
 
-Anteriormente, vio la interfaz de usuario generada creada por Swashbuckle para una dirección URL como `http://<your-root-url>/swagger/ui`. En la Figura 8-9 también puede ver cómo puede probar cualquier método de API.
+Anteriormente, vio la interfaz de usuario generada creada por Swashbuckle para una dirección URL como http://\<la-dirección-URL-raíz\>/swagger. En la Figura 6-9 también puede ver cómo se puede probar cualquier método de API.
 
-![](./media/image10.png)
+![En los detalles de la API de interfaz de usuario de Swagger se muestra un ejemplo de la respuesta y se puede usar para ejecutar la API real, que es muy útil para la detección por parte de los desarrolladores.](./media/image10.png)
 
-**Figura 8-9**. Interfaz de usuario de Swashbuckle poniendo a prueba el método de API de catálogo o elementos
+**Figura 6-9**. Interfaz de usuario de Swashbuckle poniendo a prueba el método de API de catálogo o elementos
 
-En la Figura 8-10 se muestran los metadatos JSON de Swagger generados a partir del microservicio eShopOnContainers (que es lo que las herramientas usan en segundo plano) al solicitar &lt;su-url-raíz&gt;/swagger/v1/swagger.json utilizando [Postman](https://www.getpostman.com/).
+En la Figura 6-10 se muestran los metadatos JSON de Swagger generados a partir del microservicio eShopOnContainers (que es lo que las herramientas usan en segundo plano) al solicitar \<la-dirección-URL-raíz\>/swagger/v1/swagger.json mediante [Postman](https://www.getpostman.com/).
 
-![](./media/image11.png)
+![Ejemplo de interfaz de usuario de Postman en la que se muestran metadatos JSON de Swagger](./media/image11.png)
 
-**Figura 8-10**. Metadatos JSON de Swagger
+**Figura 6-10**. Metadatos JSON de Swagger
 
 Es así de sencillo. Y, como se generan automáticamente, los metadatos de Swagger crecerán cuando agregue más funcionalidad a la API.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **ASP.NET Web API Help Pages using Swagger (Páginas de ayuda de ASP.NET Web API mediante Swagger)**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+- **Páginas de ayuda de ASP.NET Core Web API con Swagger** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+
+- **Introducción a Swashbuckle y ASP.NET Core** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml)
+
+- **Introducción a NSwag y ASP.NET Core** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml)
 
 
 >[!div class="step-by-step"]

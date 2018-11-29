@@ -1,35 +1,35 @@
 ---
 title: Diseñar el nivel de aplicación de microservicios y la API web
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseñar el nivel de aplicación de microservicios y la API web
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Una breve mención de los principios SOLID para diseñar el nivel de aplicación.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: a8c03f99accf75f60fe6c21a0f09f304214b4a6c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 03e08d757917b5ff658e9d4dd282a096c8dd23d5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194116"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296780"
 ---
-# <a name="designing-the-microservice-application-layer-and-web-api"></a>Diseñar el nivel de aplicación de microservicios y la API web
+# <a name="design-the-microservice-application-layer-and-web-api"></a>Diseño del nivel de aplicación de microservicios y la API web
 
-## <a name="using-solid-principles-and-dependency-injection"></a>Uso de principios SOLID e inserción de dependencias
+## <a name="use-solid-principles-and-dependency-injection"></a>Uso de principios SOLID e inserción de dependencias
 
 Los principios SOLID son técnicas fundamentales para utilizar en cualquier aplicación moderna y crítica, como para el desarrollo de un microservicio con patrones DDD. En inglés, SOLID representa un acrónimo que agrupa cinco principios fundamentales:
 
--   Principio de responsabilidad única
+- Principio de responsabilidad única
 
--   Principio de abierto y cerrado
+- Principio de abierto y cerrado
 
--   Principio de sustitución de Liskov
+- Principio de sustitución de Liskov
 
--   Principio de segregación de interfaces
+- Principio de segregación de interfaces
 
--   Principio de inversión de dependencias
+- Principio de inversión de dependencias
 
 SOLID hace referencia a la forma de diseñar los niveles internos de una aplicación o de un microservicio, así como a separar las dependencias entre ellas. No está relacionado con el dominio, sino con el diseño técnico de la aplicación. El principio final, el de inversión de dependencias, le permite desacoplar el nivel de infraestructura del resto de niveles, lo que permite una mejor implementación desacoplada de los niveles de DDD.
 
-La inserción de dependencias (DI) es una forma de implementar el principio de inversión de dependencias. Es una técnica para lograr el acoplamiento flexible entre los objetos y sus dependencias. En lugar de crear directamente instancias de colaboradores o de usar referencias estáticas, los objetos que una clase necesita para llevar a cabo sus acciones se proporcionan (o se "insertan") a dicha clase. A menudo, las clases declaran sus dependencias a través de su constructor, lo que les permite seguir el principio de dependencias explícitas. Normalmente la inversión de dependencias está basada en determinados contenedores de Inversión de control (IoC). ASP.NET Core proporciona un sencillo contenedor de IoC integrado. Aun así, usted puede usar el contenedor de IoC que prefiera, como Autofac o Ninject.
+La inserción de dependencias (DI) es una forma de implementar el principio de inversión de dependencias. Es una técnica para lograr el acoplamiento flexible entre los objetos y sus dependencias. En lugar de crear directamente instancias de colaboradores o de usar referencias estáticas (es decir, usar new...), los objetos que una clase necesita para llevar a cabo sus acciones se proporcionan a la clase (o se "insertan" en ella). A menudo, las clases declaran sus dependencias a través de su constructor, lo que les permite seguir el principio de dependencias explícitas. Normalmente, la inserción de dependencias se basa en determinados contenedores de Inversión de control (IoC). ASP.NET Core proporciona un sencillo contenedor de IoC integrado. Aun así, usted puede usar el contenedor de IoC que prefiera, como Autofac o Ninject.
 
 Siguiendo los principios SOLID, las clases tenderán naturalmente a ser pequeñas, a estar factorizadas correctamente y a poder probarse fácilmente. Pero, ¿cómo puede saber si se van a insertar demasiadas dependencias en sus clases? Si usa la inversión de dependencias a través del constructor, le resultará fácil saberlo con solo mirar el número de parámetros de su constructor. Si hay demasiadas dependencias, esto suele ser una señal (una [intuición de código](https://deviq.com/code-smells/)) de que su clase está intentando hacer demasiado y de que probablemente esté infringiendo el principio de responsabilidad única.
 
@@ -37,15 +37,14 @@ Necesitaríamos otra guía para tratar SOLID con detalle. Para esta guía solo n
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **SOLID: Fundamental OOP Principles**
-    [*https://deviq.com/solid/*](https://deviq.com/solid/%20) (SOLID: principios fundamentales de OOP)
+- **SOLID: Fundamental OOP Principles** \ (SOLID: principios fundamentales de OOP)
+  [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
--   **Inversion of Control Containers and the Dependency Injection pattern**
-    [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html) (Inversión de los contenedores de control y el patrón de inserción de dependencias)
+- **Inversion of Control Containers and the Dependency Injection pattern** \ (Contenedores de Inversión de control y el patrón de inserción de dependencias)
+  [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith. New is Glue**
-    [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue) (New es como pegamento)
-
+- **Steve Smith. New is Glue** \ (New es como pegamento)
+  [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
 >[!div class="step-by-step"]
 [Anterior](nosql-database-persistence-infrastructure.md)

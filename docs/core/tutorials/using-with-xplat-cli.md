@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
-ms.openlocfilehash: b31a0324c0d762e9898c681cc6581b3860d41f89
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 89839596509e1ffabd28b8903600a431b5a0ed9c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025576"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296807"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introducción a .NET Core en Windows/Linux/macOS con la línea de comandos
 
@@ -47,7 +47,7 @@ Veamos un tutorial rápido:
    El archivo de proyecto especifica todo lo que es necesario para restaurar las dependencias y compilar el programa.
 
    * La etiqueta `OutputType` especifica que estamos creando un archivo ejecutable, es decir, una aplicación de consola.
-   * La etiqueta `TargetFramework` especifica la implementación .NET a la que nos dirigimos. En un escenario avanzado, con una sola operación puede especificar varios marcos de destino y compilar en todos ellos. En este tutorial, nos centraremos solo en .NET Core 1.0.
+   * La etiqueta `TargetFramework` especifica la implementación .NET a la que nos dirigimos. En un escenario avanzado, con una sola operación puede especificar varios marcos de destino y compilar en todos ellos. En este tutorial, nos centraremos en compilar únicamente para .NET Core 2.1.
 
    `Program.cs`:
 

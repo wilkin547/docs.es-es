@@ -3,12 +3,12 @@ title: Patrón de eventos estándar de .NET
 description: Obtenga información sobre los patrones de eventos de .NET y cómo crear orígenes de eventos estándar, y suscribir y procesar eventos estándar en su código.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266775"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297041"
 ---
 # <a name="standard-net-event-patterns"></a>Patrón de eventos estándar de .NET
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>Agregar otra declaración de evento
 
-Vamos a agregar una característica más y demostrar otras expresiones de lenguaje para los eventos. Vamos a agregar una sobrecarga del método `Search()` que recorre todos los subdirectorios en busca de archivos.
+Vamos a agregar una característica más y demostrar otras expresiones de lenguaje para los eventos. Vamos a agregar una sobrecarga del método `Search` que recorre todos los subdirectorios en busca de archivos.
 
 Podría llegar a ser una operación de larga duración si el directorio tuviese muchos subdirectorios. Vamos a agregar un evento que se genera cuando comienza cada nueva búsqueda en el directorio. Esto permite a los suscriptores realizar el seguimiento y actualizar al usuario sobre el progreso. Todos los ejemplos creados hasta ahora son públicos. Convertiremos este evento en un evento interno. Eso significa que también se pueden convertir en internos los tipos que se usan para los argumentos.
 
@@ -133,7 +133,7 @@ Después, defina el evento. Esta vez, usará una sintaxis diferente. Además de 
 
 En muchos aspectos, el código que se escribe aquí refleja el código que genera el compilador para las definiciones de evento de campo que se vieron anteriormente. El evento se crea mediante una sintaxis muy similar a la que se usó para las [propiedades](properties.md). Tenga en cuenta que los controladores tienen nombres diferentes: `add` y `remove`. Se llaman para suscribirse al evento o para cancelar la suscripción al evento. Tenga en cuenta que también debe declarar un campo de respaldo privado para almacenar la variable de evento. Se inicializa en null.
 
-Después, vamos a agregar la sobrecarga del método Search() que recorre los subdirectorios y genera los dos eventos. La manera más fácil de hacerlo consiste en usar un argumento predeterminado para especificar que se quiere buscar en todos los directorios:
+Después, se agregará la sobrecarga del método `Search` que recorre los subdirectorios y genera los dos eventos. La manera más fácil de hacerlo consiste en usar un argumento predeterminado para especificar que se quiere buscar en todos los directorios:
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 

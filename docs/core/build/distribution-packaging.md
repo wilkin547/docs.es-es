@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo empaquetar, nombrar y versionar .N
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840500"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297223"
 ---
 # <a name="net-core-distribution-packaging"></a>Empaquetado de distribución de .NET Core
 

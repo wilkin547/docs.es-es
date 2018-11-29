@@ -1,15 +1,15 @@
 ---
 title: Suscripción a eventos
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Suscripción a eventos
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre los detalles de la publicación y la suscripción a eventos de integración.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/02/2018
+ms.openlocfilehash: d32c643e553dfe3ce52e3e2ce8aaf1ea3a296de6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194077"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297324"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
@@ -61,7 +61,7 @@ public class CatalogController : ControllerBase
 Después, se usa desde los métodos del dispositivo, como en el método UpdateProduct:
 
 ```csharp
-[Route("update")]
+[Route("items")]
 [HttpPost]
 public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 {
@@ -91,14 +91,13 @@ En este caso, como el microservicio de origen es un microservicio CRUD simple, e
  
 En microservicios más avanzados, como cuando se usan enfoques de CQRS, se puede implementar en la clase `CommandHandler`, dentro del método `Handle()`. 
 
-
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Diseño de la atomicidad y la resistencia al publicar en el bus de eventos
 
-Al publicar eventos de integración a través de un sistema de mensajería distribuido como el bus de eventos, tiene el problema de actualizar la base de datos original de forma atómica y de publicar un evento. Por ejemplo, en el ejemplo simplificado mostrado anteriormente, el código confirma los datos en la base de datos cuando cambia el precio del producto y, después, publica un mensaje ProductPriceChangedIntegrationEvent. En principio, es posible que parezca fundamental que estas dos operaciones se realicen de forma atómica. Pero si está usando una transacción distribuida que implique la base de datos y el agente de mensajes, como se hace en sistemas anteriores como [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx), no se recomienda por las razones descritas por el [Teorema CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
+Al publicar eventos de integración a través de un sistema de mensajería distribuido como el bus de eventos, tiene el problema de actualizar la base de datos original de forma atómica y de publicar un evento (es decir, se completan las dos operaciones o ninguna de ellas). Por ejemplo, en el ejemplo simplificado mostrado anteriormente, el código confirma los datos en la base de datos cuando cambia el precio del producto y, después, publica un mensaje ProductPriceChangedIntegrationEvent. En principio, es posible que parezca fundamental que estas dos operaciones se realicen de forma atómica. Pero si está usando una transacción distribuida que implique la base de datos y el agente de mensajes, como se hace en sistemas anteriores como [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx), no se recomienda por las razones descritas por el [Teorema CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
 
-Básicamente, los microservicios se usan para crear sistemas escalables y de alta disponibilidad. Para simplificar relativamente, el teorema CAP afirma que no se puede crear una base de datos (o un microservicio que posea su modelo) que esté continuamente disponible, tenga coherencia fuerte *y* sea tolerante a cualquier partición. Debe elegir dos de estas tres propiedades.
+Básicamente, los microservicios se usan para crear sistemas escalables y de alta disponibilidad. Para simplificarlo de algún modo, el teorema CAP afirma que no se puede crear una base de datos (distribuida), o un microservicio que posea su modelo, que esté continuamente disponible, tenga coherencia fuerte *y* sea tolerante a cualquier partición. Debe elegir dos de estas tres propiedades.
 
-En las arquitecturas basadas en microservicios, debe elegir la disponibilidad y la tolerancia, y quitar énfasis a la coherencia fuerte. Por tanto, en las aplicaciones basadas en microservicios más modernas, normalmente no le interesará usar transacciones distribuidas en la mensajería, como haría al implementar [transacciones distribuidas](https://msdn.microsoft.com/library/ms978430.aspx#bdadotnetasync2_topic3c) basadas en el Coordinador de transacciones distribuidas (DTC) de Windows con [MSMQ](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx).
+En las arquitecturas basadas en microservicios, debe elegir la disponibilidad y la tolerancia, y quitar énfasis a la coherencia fuerte. Por tanto, en las aplicaciones basadas en microservicios más modernas, normalmente no le interesará usar transacciones distribuidas en la mensajería, como haría al implementar [transacciones distribuidas](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx) basadas en el Coordinador de transacciones distribuidas (DTC) de Windows con [MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx).
 
 Volvamos al problema inicial y su ejemplo. Si el servicio se bloquea después de que se actualice la base de datos (en este caso, justo después de la línea de código con \_context.SaveChangesAsync()) pero antes de que se publique el evento de integración, el sistema global puede volverse incoherente. Esto podría ser crítico para la empresa, según la operación empresarial específica con la que se esté tratando.
 
@@ -110,7 +109,7 @@ Como se mencionó anteriormente en la sección sobre arquitectura, puede tener v
 
 -   Uso del [patrón de bandeja de salida](http://gistlabs.com/2014/05/the-outbox/). Se trata de una tabla transaccional para almacenar los eventos de integración (extendiendo la transacción local).
 
-En este escenario, el uso del modelo de orígenes de evento (ES) completo es uno de los mejores métodos, si no *el* mejor. Pero en muchas situaciones, es posible que no pueda implementar un sistema de ES completo. Con los orígenes de evento solo se almacenan los eventos de dominio en la base de datos transaccional, en lugar de almacenar los datos de estado actuales. Almacenar solo los eventos de dominio puede tener grandes ventajas, como tener el historial del sistema disponible y poder determinar el estado del sistema en cualquier momento del pasado. Pero la implementación de un sistema de ES completo requiere que se cambie la arquitectura de la mayor parte del sistema y presenta otras muchas complejidades y requisitos. Por ejemplo, le interesaría usar una base de datos creada específicamente para los orígenes de eventos, como [Event Store](https://geteventstore.com/), o bien una base de datos orientada a documentos como Azure Cosmos DB, MongoDB, Cassandra, CouchDB o RavenDB. Los orígenes de evento son un buen enfoque para este problema, pero no es la solución más sencilla a menos que ya esté familiarizado con los orígenes de eventos.
+En este escenario, el uso del modelo de orígenes de evento (ES) completo es uno de los mejores métodos, si no *el* mejor. Pero en muchas situaciones, es posible que no pueda implementar un sistema de ES completo. Con los orígenes de evento solo se almacenan los eventos de dominio en la base de datos transaccional, en lugar de almacenar los datos de estado actuales. Almacenar solo los eventos de dominio puede tener grandes ventajas, como tener el historial del sistema disponible y poder determinar el estado del sistema en cualquier momento del pasado. Pero la implementación de un sistema de ES completo requiere que se cambie la arquitectura de la mayor parte del sistema y presenta otras muchas complejidades y requisitos. Por ejemplo, le interesaría usar una base de datos creada específicamente para los orígenes de eventos, como [Event Store](https://eventstore.org/), o bien una base de datos orientada a documentos como Azure Cosmos DB, MongoDB, Cassandra, CouchDB o RavenDB. Los orígenes de evento son un buen enfoque para este problema, pero no es la solución más sencilla a menos que ya esté familiarizado con los orígenes de eventos.
 
 La opción de usar la minería del registro de transacciones parece muy transparente en un principio. Pero para usar este enfoque, el microservicio debe acoplarse al registro de transacciones de RDBMS, como el registro de transacciones de SQL Server. Esto probablemente no sea deseable. Otra desventaja es que es posible que las actualizaciones de bajo nivel en el registro de transacciones no estén al mismo nivel que los eventos de integración generales. En ese caso, el proceso de utilización de técnicas de ingeniería inversa en esas operaciones de registro de transacciones puede ser complicado.
 
@@ -124,7 +123,15 @@ Por tanto, este enfoque equilibrado es un sistema de ES simplificado. Necesita u
 
 Si ya usa una base de datos relacional, puede usar una tabla transaccional para almacenar los eventos de integración. Para lograr la atomicidad en la aplicación, se usa un proceso de dos pasos basado en transacciones locales. Básicamente, dispone de una tabla IntegrationEvent en la misma base de datos donde se encuentren las entidades de dominio. Esa tabla funciona como un seguro para lograr la atomicidad, de modo que los eventos de integración guardados se incluyan en las mismas transacciones con las que se confirman los datos de dominio.
 
-Paso a paso, el proceso es el siguiente: la aplicación inicia una transacción de base de datos local. Después, actualiza el estado de las entidades de dominio e inserta un evento en la tabla de eventos de integración. Por último, confirma la transacción. Con esto se obtiene la atomicidad deseada.
+Paso a paso, el proceso es el siguiente:
+
+1.  La aplicación inicia una transacción de base de datos local.
+
+2.  Después, actualiza el estado de las entidades de dominio e inserta un evento en la tabla de eventos de integración.
+
+3.  Finalmente, confirma la transacción, por lo que obtiene la atomicidad deseada.
+
+4.  A continuación, publique el evento de algún modo.
 
 Al implementar los pasos necesarios para publicar los eventos, dispone de las opciones siguientes:
 
@@ -132,21 +139,21 @@ Al implementar los pasos necesarios para publicar los eventos, dispone de las op
 
 -   Usar la tabla como una especie de cola. Un proceso o subproceso de aplicación independiente consulta la tabla de eventos de integración, publica los eventos en el bus de eventos y, después, usa una transacción local para marcar los eventos como publicados.
 
-En la figura 8-22 se muestra la arquitectura para el primero de estos enfoques.
+En la figura 6-22 se muestra la arquitectura para el primero de estos enfoques.
 
-![](./media/image23.png)
+![Enfoque para controlar la atomicidad al publicar eventos: use una transacción para confirmar el evento en una tabla de registro de eventos y, después, otra transacción para publicarlo (como se usa en eShopOnContainers).](./media/image23.png)
 
-**Figura 8-22**. Atomicidad al publicar eventos en el bus de eventos
+**Figura 6-22**. Atomicidad al publicar eventos en el bus de eventos
 
-En el enfoque que se muestra en la figura 8-22 falta un microservicio de trabajo adicional que se encarga de comprobar y confirmar que los eventos de integración se han publicado correctamente. En caso de error, ese microservicio de trabajo de comprobación adicional puede leer los eventos de la tabla y volver a publicarlos.
+En el enfoque que se muestra en la figura 6-22 falta un microservicio de trabajo adicional que se encarga de comprobar y confirmar que los eventos de integración se han publicado correctamente. En caso de error, ese microservicio de trabajo de comprobación adicional puede leer los eventos de la tabla y volver a publicarlos, es decir, repetir el paso 2.
 
-Sobre el segundo enfoque: se usa la tabla EventLog como una cola y siempre se usa un microservicio de trabajo para publicar los mensajes. En ese caso, el proceso es similar al que se muestra en la figura 8-23. Esto muestra un microservicio adicional y la tabla es el único origen cuando se publican los eventos.
+Sobre el segundo enfoque: se usa la tabla EventLog como una cola y siempre se usa un microservicio de trabajo para publicar los mensajes. En ese caso, el proceso es similar al que se muestra en la figura 6-23. Esto muestra un microservicio adicional y la tabla es el único origen cuando se publican los eventos.
 
-![](./media/image24.png)
+![Otro enfoque para controlar la atomicidad: realice la publicación en una tabla de registro de eventos y, después, haga que otro microservicio (un trabajo en segundo plano) publique el evento.](./media/image24.png)
 
-**Figura 8-23**. Atomicidad al publicar eventos en el bus de eventos con un microservicio de trabajo
+**Figura 6-23**. Atomicidad al publicar eventos en el bus de eventos con un microservicio de trabajo
 
-Para simplificar, en el ejemplo eShopOnContainers se usa el primer enfoque (sin procesos adicionales ni microservicios de comprobador) junto con el bus de eventos. Pero en eShopOnContainers no se controlan todos los casos de error posibles. En una aplicación real implementada en la nube, debe asumir el hecho de que con el tiempo van a surgir problemas, y debe implementar esa lógica de comprobación y reenvío. El uso de la tabla como una cola puede ser más eficaz que el primer enfoque si tiene esa tabla como un único origen de eventos cuando los publica a través del bus de eventos.
+Para simplificar, en el ejemplo eShopOnContainers se usa el primer enfoque (sin procesos adicionales ni microservicios de comprobador) junto con el bus de eventos. Pero en eShopOnContainers no se controlan todos los casos de error posibles. En una aplicación real implementada en la nube, debe asumir el hecho de que con el tiempo van a surgir problemas, y debe implementar esa lógica de comprobación y reenvío. El uso de la tabla como una cola puede ser más eficaz que el primer enfoque si tiene esa tabla como un único origen de eventos cuando los publica (con el trabajo) a través del bus de eventos.
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Implementación de la atomicidad al publicar eventos de integración a través del bus de eventos
 
@@ -217,7 +224,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
 
 Después de crear el evento de integración ProductPriceChangedIntegrationEvent, la transacción que almacena la operación de dominio original (la actualización del elemento de catálogo) también incluye la persistencia del evento en la tabla EventLog. Esto crea una única transacción y siempre se podrá comprobar si los mensajes de eventos se han enviado.
 
-La tabla de registro de eventos se actualiza de forma atómica con la operación de base de datos original, mediante una transacción local en la misma base de datos. Si se produce un error en alguna de las operaciones, se produce una excepción y la transacción revierte cualquier operación completada, lo que mantiene la coherencia entre las operaciones de dominio y los mensajes de eventos enviados.
+La tabla de registro de eventos se actualiza de forma atómica con la operación de base de datos original, mediante una transacción local en la misma base de datos. Si se produce un error en cualquiera de las operaciones, se inicia una excepción y la transacción revierte cualquier operación completada, lo que mantiene la coherencia entre las operaciones de dominio y los mensajes de eventos que se guardan en la tabla.
 
 ### <a name="receiving-messages-from-subscriptions-event-handlers-in-receiver-microservices"></a>Recepción de mensajes desde suscripciones: controladores de eventos en microservicios de receptor
 
@@ -272,11 +279,11 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 }
 ```
 
-El controlador de eventos debe comprobar si el producto existe en cualquiera de las instancias de la cesta de la compra. También actualiza el precio del artículo para cada artículo de línea de la cesta de la compra relacionado. Por último, crea una alerta que se mostrará al usuario sobre el cambio de precio, como se muestra en la figura 8-24.
+El controlador de eventos debe comprobar si el producto existe en cualquiera de las instancias de la cesta de la compra. También actualiza el precio del artículo para cada artículo de línea de la cesta de la compra relacionado. Por último, crea una alerta que se mostrará al usuario sobre el cambio de precio, como se muestra en la figura 6-24.
 
-![](./media/image25.png)
+![Vista del explorador de la notificación de cambio de precio en el carro de la compra del usuario.](./media/image25.png)
 
-**Figura 8-24**. Representación de un cambio del precio de un artículo en una cesta, comunicado por eventos de integración
+**Figura 6-24**. Representación de un cambio del precio de un artículo en una cesta, comunicado por eventos de integración
 
 ## <a name="idempotency-in-update-message-events"></a>Idempotencia en los eventos de mensajes de actualización
 
@@ -286,7 +293,7 @@ Como se indicó anteriormente, idempotencia significa que una operación se pued
 
 Un ejemplo de una operación idempotente es una instrucción SQL que inserta datos en una tabla solo si esos datos no están ya en la tabla. No importa cuántas veces se ejecute esa instrucción SQL de inserción; el resultado será el mismo: la tabla contendrá esos datos. Este tipo de idempotencia también puede ser necesaria cuando se trabaja con mensajes si existe la posibilidad de que se envíen y, por tanto, se procesen más de una vez. Por ejemplo, si la lógica de reintento hace que un remitente envíe exactamente el mismo mensaje más de una vez, tendrá que asegurarse de que sea idempotente.
 
-Se pueden diseñar mensajes idempotentes. Por ejemplo, puede crear un evento que indique "establecer el precio del producto en 25 USD" en lugar de "sumar 5 USD al precio del producto." Podría procesar sin riesgos el primer mensaje cualquier número de veces y el resultado sería el mismo. Esto no es cierto para el segundo mensaje. Pero incluso en el primer caso, es posible que no le interese procesar el primer evento, porque el sistema también podría haber enviado un evento de cambio de precio más reciente y se podría sobrescribir el precio de nuevo.
+Se pueden diseñar mensajes idempotentes. Por ejemplo, puede crear un evento que indique "establecer el precio del producto en 25 USD" en lugar de "sumar 5 USD al precio del producto". Podría procesar sin riesgos el primer mensaje cualquier número de veces y el resultado sería el mismo. Esto no es cierto para el segundo mensaje. Pero incluso en el primer caso, es posible que no le interese procesar el primer evento, porque el sistema también podría haber enviado un evento de cambio de precio más reciente y se podría sobrescribir el precio de nuevo.
 
 Otro ejemplo podría ser un evento de pedido completado que se propaga a varios suscriptores. Es importante que la información del pedido se actualice una sola vez en otros sistemas, incluso si hay eventos de mensaje duplicados para el mismo evento de pedido completado.
 
@@ -296,7 +303,8 @@ Algún procesamiento de mensajes es idempotente de forma inherente. Por ejemplo,
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Honoring message idempotency** (Respetar la idempotencia de los mensajes; subencabezado de esta página) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **Honoring message idempotency** (Respeto de la idempotencia de los mensajes) <br/>
+    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Desduplicación de mensajes de eventos de integración
 
@@ -304,7 +312,7 @@ Puede asegurarse de que los eventos de mensajes se envían y se procesan una sol
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Desduplicación de eventos de mensaje en el nivel de controlador de eventos
 
-Una manera de asegurarse de que un evento se procesa solo una vez por cualquier receptor es mediante la implementación de cierta lógica al procesar los eventos de mensaje en controladores de eventos. Por ejemplo, es el enfoque que se usa en la aplicación eShopOnContainers, como se puede ver en el [código fuente](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Controllers/OrdersController.cs) de la clase OrdersController cuando recibe un comando CreateOrderCommand. (En este caso se usa un comando de solicitud HTTP, no un comando basado en mensajes, pero la lógica que se necesita para que un comando basado en mensajes sea idempotente es similar).
+Una manera de asegurarse de que un evento se procesa solo una vez por cualquier receptor es mediante la implementación de cierta lógica al procesar los eventos de mensaje en controladores de eventos. Por ejemplo, ese es el enfoque que se usa en la aplicación eShopOnContainers, como se aprecia en el [código fuente de la clase UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) cuando recibe un evento de integración UserCheckoutAcceptedIntegrationEvent. (En este caso se encapsula CreateOrderCommand con un elemento IdentifiedCommand, usando eventMsg.RequestId como un identificador, antes de enviarlo al controlador de comandos).
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>Desduplicación de mensajes cuando se usa RabbitMQ
 
@@ -316,63 +324,71 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Forked eShopOnContainers using NServiceBus (Particular Software) [Bifurcación de eShopOnContainers mediante NServiceBus (Particular Software)]**
+-   **Forked eShopOnContainers using NServiceBus (Particular Software)** [Bifurcación de eShopOnContainers mediante NServiceBus (Particular Software)] <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging) (Mensajería controlada por eventos)
+-   **Event Driven Messaging** (Mensajería controlada por eventos) <br/>
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactorización hacia la resiliencia: evaluar el acoplamiento)**
+-   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** (Refactorización hacia la resiliencia: evaluación del acoplamiento) <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel (Canal de publicación y suscripción)**
+-   **Publish-Subscribe channel** (Canal de publicación y suscripción) <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Communicating Between Bounded Contexts (Comunicación entre contextos delimitados)**
+-   **Communicating Between Bounded Contexts** (Comunicación entre contextos delimitados) <br/>
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual Consistency**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency) (Coherencia eventual)
+-   **Eventual Consistency** (Coherencia de los eventos) <br/>
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Strategies for Integrating Bounded Contexts (Estrategias para integrar contextos delimitados)**
-    [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+-   **Philip Brown. Strategies for Integrating Bounded Contexts** (Estrategias para la integración de contextos delimitados) <br/>
+    [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (Desarrollar microservicios transaccionales mediante agregados, orígenes de eventos y CQRS: parte 2)**
+-   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2** (Desarrollo de microservicios transaccionales mediante agregados, orígenes de eventos y CQRS: parte 2) <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Event Sourcing pattern (Patrón de orígenes de eventos)**
+-   **Chris Richardson. Event Sourcing pattern** (Patrón de orígenes de eventos) <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introducing Event Sourcing (Introducción a los orígenes de eventos)**
+-   **Introducing Event Sourcing** (Introducción a los orígenes de eventos) <br/>
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
--   **Base de datos Event Store**. Sitio oficial.
+-   **Base de datos Event Store**. Sitio oficial. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Event-Driven Data Management for Microservices (Administración de datos orientada a eventos para microservicios)**
+-   **Patrick Nommensen. Event-Driven Data Management for Microservices** (Administración de datos orientada a eventos para microservicios) <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **Teorema CAP**
+-   **Teorema CAP** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **What is CAP Theorem? (¿Qué es el teorema CAP?)**
+-   **What is CAP Theorem?** (¿Qué es el teorema CAP?) <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Data Consistency Primer (Manual de coherencia de datos)**
+-   **Data Consistency Primer** (Manual de coherencia de datos) <br/>
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet (Teorema CAP: por qué “todo es diferente” con la nube e Internet)**
+-   **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet** (Teorema CAP: por qué "todo es diferente" con la nube e Internet) <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP doce años después: cómo han cambiado las “reglas”)**
+-   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed** (CAP 12 años después: cómo han cambiado las "reglas") <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participating in External (DTC) Transactions** (MSMQ)[*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c) (Participación en transacciones externas (DTC) (MSMQ))
-
--   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Mensajería asincrónica: detección de duplicados)**
+-   **Azure Service Bus. Brokered Messaging: Duplicate Detection** (Mensajería asincrónica: detección de duplicados)  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide** (RabbitMQ documentation)[*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer) (Guía de confiabilidad (documentación de RabbitMQ))
+-   **Reliability Guide** (RabbitMQ documentation)* (Guía de confiabilidad [documentación de RabbitMQ]) <br/>
+    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
+
+-   **Participating in External (DTC) Transactions** (MSMQ) (Participación en transacciones externas (DTC) [MSMQ]) <br/>
+    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+
+-   **Azure Service Bus. Brokered Messaging: Duplicate Detection** (Mensajería asincrónica: detección de duplicados) <br/>
+    [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+
+-   **Reliability Guide** (RabbitMQ documentation) (Guía de confiabilidad [documentación de RabbitMQ]) <br/>
+    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

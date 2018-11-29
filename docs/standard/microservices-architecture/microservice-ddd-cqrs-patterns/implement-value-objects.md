@@ -1,37 +1,37 @@
 ---
 title: Implementar objetos de valor
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Implementar objetos de valor
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga los detalles y las opciones para implementar objetos de valor mediante las características nuevas de Entity Framework.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 4ba2e48e742e580a1c96743fa89e413c488b8dc7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 057e2e65f975c1de8f332b77c8a23d07329381e6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106728"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297483"
 ---
-# <a name="implementing-value-objects"></a>Implementar objetos de valor
+# <a name="implement-value-objects"></a>Implementación de objetos de valor
 
 Como se describe en secciones anteriores sobre las entidades y agregados, la identidad es esencial para las entidades, pero hay muchos objetos y elementos de datos en un sistema que no requieren ninguna identidad ni ningún seguimiento de identidad, como los objetos de valor.
 
 Un objeto de valor puede hacer referencia a otras entidades. Por ejemplo, en una aplicación que genera una ruta que describe cómo ir de un punto a otro, esa ruta sería un objeto de valor. Sería una instantánea de puntos en una ruta específica, pero esta ruta sugerida no tendría una identidad, aunque internamente podría hacer referencia a entidades como Ciudad, Carretera, etc.
 
-En la figura 9-13 se muestra el objeto de valor dirección en el agregado Pedido.
+En la figura 7-13 se muestra el objeto de valor Address en el agregado Order.
 
-![](./media/image14.png)
+![Objeto de valor Address dentro del agregado Order.](./media/image14.png)
 
-**Figura 9-13**. Objeto de valor Dirección en el agregado Pedido
+**Figura 7-13**. Objeto de valor Dirección en el agregado Pedido
 
-Como se muestra en la figura 9-13, una entidad suele constar de varios atributos. Por ejemplo, la entidad `Order` se puede modelar como una entidad con una identidad y puede estar formada internamente por un conjunto de atributos, como OrderId, OrderDate, OrderItems, etc. Pero la dirección, que es un valor complejo formado por el país, la calle, la ciudad, etc. y que no tiene ninguna identidad en este dominio, se debe modelar y tratar como un objeto de valor.
+Como se muestra en la figura 7-13, una entidad suele constar de varios atributos. Por ejemplo, la entidad `Order` se puede modelar como una entidad con una identidad y puede estar formada internamente por un conjunto de atributos, como OrderId, OrderDate, OrderItems, etc. Pero la dirección, que es un valor complejo formado por el país, la calle, la ciudad, etc., y que no tiene ninguna identidad en este dominio, se debe modelar y tratar como un objeto de valor.
 
 ## <a name="important-characteristics-of-value-objects"></a>Características importantes de los objetos de valor
 
 Hay dos características principales en los objetos de valor:
 
--   No tienen ninguna identidad.
+- No tienen ninguna identidad.
 
--   Son inmutables.
+- Son inmutables.
 
 La primera característica ya se ha mencionado. La inmutabilidad es un requisito importante. Los valores de un objeto de valor deben ser inmutables una vez creado el objeto. Por lo tanto, cuando se construye el objeto, debe proporcionar los valores necesarios, pero no debe permitir que cambien durante la vigencia del objeto.
 
@@ -102,11 +102,11 @@ Puede usar esta clase al implementar el objeto de valor real, al igual que con e
 ```csharp
 public class Address : ValueObject
 {
-    public String Street { get; }
-    public String City { get; }
-    public String State { get; }
-    public String Country { get; }
-    public String ZipCode { get; }
+    public String Street { get; private set; }
+    public String City { get; private set; }
+    public String State { get; private set; }
+    public String Country { get; private set; }
+    public String ZipCode { get; private set; }
 
     private Address() { }
 
@@ -131,13 +131,19 @@ public class Address : ValueObject
 }
 ```
 
+Puede ver cómo esta implementación de objeto de valor de Address no tiene ninguna identidad y, por tanto, ningún campo de identificador, ni en la clase Address ni tampoco en la clase ValueObject.
+
+Hasta EF Core 2.0 no fue posible no tener ningún campo de identificador en una clase que se fuera a usar en Entity Framework, lo que ayuda a implementar mejor los objetos de valor sin identificador. Eso es precisamente la explicación de la sección siguiente. 
+
+Se podría argumentar que los objetos de valor, al ser inmutables, deben ser de solo lectura (es decir, propiedades get-only), y realmente es cierto. Pero los objetos de valor normalmente se serializan y deserializan para recorrer colas de mensajes. Asimismo, si fueran de solo lectura, el deserializador no podría asignar los valores, por lo que simplemente se dejan como un conjunto privado, lo cual ofrece un nivel de solo lectura suficiente para que resulte práctico.
+
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Cómo conservar los objetos de valor en la base de datos con EF Core 2.0
 
 Acaba de ver cómo definir un objeto de valor en el modelo de dominio, pero ¿cómo puede conservarlo en la base de datos mediante Entity Framework (EF) Core, que suele tener como destino las entidades con identidad?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Contexto y enfoques anteriores con EF Core 1.1
 
-Para situarnos, una limitación a la hora de usar EF Core 1.0 y 1.1 era que no se podían usar [tipos complejos](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) tal y como se define en EF 6.x en el .NET Framework tradicional. Por lo tanto, si se usaba EF Core 1.0 o 1.1, era necesario almacenar el objeto de valor como una entidad de EF con un campo de identificador. Luego, para que se pareciera más a un objeto de valor sin ninguna identidad, se podía ocultar su identificador para dejar claro que la identidad de un objeto de valor no es importante en el modelo de dominio. Ese identificador se podía ocultar usándolo como [propiedad reemplazada](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Puesto que esa configuración para ocultar el identificador en el modelo está establecida en el nivel de la infraestructura de EF, resultaría algo transparente para su modelo de dominio.
+Como contexto, una limitación al usar EF Core 1.0 y 1.1 era que no se podían utilizar [tipos complejos](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) tal y como se definen en EF 6.x en .NET Framework tradicional. Por lo tanto, si se usaba EF Core 1.0 o 1.1, era necesario almacenar el objeto de valor como una entidad de EF con un campo de identificador. Luego, para que se pareciera más a un objeto de valor sin ninguna identidad, se podía ocultar su identificador para dejar claro que la identidad de un objeto de valor no es importante en el modelo de dominio. Ese identificador se podía ocultar usándolo como [propiedad reemplazada](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Puesto que esa configuración para ocultar el identificador en el modelo está establecida en el nivel de la infraestructura de EF, resultaría algo transparente para su modelo de dominio.
 
 En la versión inicial de eShopOnContainers (.NET Core 1.1), el identificador oculto necesario para la infraestructura de EF Core estaba implementado del siguiente modo en el nivel de DbContext, usando la API fluida en el proyecto de la infraestructura. Por lo tanto, el identificador quedaba oculto desde el punto de vista del modelo de dominio, pero seguía presente en la infraestructura.
 
@@ -164,10 +170,9 @@ Aunque haya algunas lagunas entre el patrón de objeto de valor canónico en el 
 
 La función del tipo de entidad de propiedad se agregó a EF Core a partir de la versión 2.0.
 
-Los tipos de entidad de propiedad le permiten asignar tipos que no tienen su propia identidad explícitamente definida en el modelo de dominio y se usan como propiedades (como los objetos de valor) en cualquiera de las entidades. Un tipo de entidad de propiedad comparte el mismo tipo CLR con otro tipo de entidad. La entidad que contiene la navegación definitoria es la entidad del propietario. Al consultar al propietario, los tipos de propiedad se incluyen de forma predeterminada.
+Un tipo de entidad de propiedad permite asignar tipos que no tienen su propia identidad definida de forma explícita en el modelo de dominio y que se usan como propiedades (como los objetos de valor) en cualquiera de las entidades. Un tipo de entidad de propiedad comparte el mismo tipo CLR con otro tipo de entidad (es decir, solo es una clase convencional). La entidad que contiene la navegación definitoria es la entidad del propietario. Al consultar al propietario, los tipos de propiedad se incluyen de forma predeterminada.
 
-Si se examina el modelo de dominio, parece que los tipos de propiedad no tienen ninguna identidad
-pero, en el fondo, los tipos de propiedad tienen identidad, aunque la propiedad de navegación del propietario forma parte de esta identidad.
+Si se examina el modelo de dominio, parece que los tipos de propiedad no tienen ninguna identidad pero, en el fondo, los tipos de propiedad tienen identidad, aunque la propiedad de navegación del propietario forma parte de esta identidad.
 
 La identidad de las instancias de los tipos de propiedad no es totalmente suya. Consta de tres componentes:
 
@@ -175,7 +180,7 @@ La identidad de las instancias de los tipos de propiedad no es totalmente suya. 
 
 - La propiedad de navegación que los señala
 
-- En el caso de las colecciones de tipos de propiedad, un componente independiente (todavía no se admite en EF Core 2.0).
+- En el caso de las colecciones de tipos de propiedad, un componente independiente (todavía no se admite en EF Core 2.0, se hará en la versión 2.2).
 
 Por ejemplo, en el modelo de dominio Ordering de eShopOnContainers, como parte de la entidad Order, el objeto de valor Address se implementa como un tipo de entidad de propiedad dentro de la entidad del propietario, que es la entidad Order. Address es un tipo sin ninguna propiedad de identidad definida en el modelo de dominio. Se usa como propiedad del tipo Order para especificar la dirección de envío de un pedido en concreto.
 
@@ -266,64 +271,64 @@ public class Address
 
 ### <a name="additional-details-on-owned-entity-types"></a>Más datos sobre los tipos de entidad de propiedad
 
-• Los tipos de propiedad se definen al establecer una propiedad de navegación en un tipo determinado mediante la API fluida de OwnsOne.
+- Los tipos de propiedad se definen al configurar una propiedad de navegación en un tipo determinado mediante la API fluida OwnsOne.
 
-• La definición de un tipo de propiedad en nuestro modelo de metadatos es una composición del tipo de propietario, la propiedad de navegación y el tipo CLR del tipo de propiedad.
+- La definición de un tipo de propiedad en nuestro modelo de metadatos es una composición del tipo de propietario, la propiedad de navegación y el tipo CLR del tipo de propiedad.
 
-• La identidad (clave) de una instancia del tipo de propiedad en nuestra pila es una composición de la identidad del tipo de propietario y la definición del tipo de propiedad.
+- La identidad (clave) de una instancia de tipo de propiedad en nuestra pila es una composición de la identidad del tipo de propietario y la definición del tipo de propiedad.
 
 #### <a name="owned-entities-capabilities"></a>Capacidades de las entidades de propiedad:
 
-• El tipo de propiedad puede hacer referencia a otras entidades, ya sean de propiedad (tipos de propiedad anidados) o de no propiedad (propiedades de navegación de referencia normal a otras entidades).
+- Los tipos de propiedad pueden hacer referencia a otras entidades, ya sean de propiedad (tipos de propiedad anidados) o de no propiedad (propiedades de navegación de referencia normal a otras entidades).
 
-• Se puede asignar el mismo tipo CLR como tipos de propiedad distintos en la misma entidad de propietario mediante propiedades de navegación independientes.
+- Se puede asignar el mismo tipo CLR como otros tipos de propiedad en la misma entidad de propietario mediante propiedades de navegación independientes.
 
-• La división de tablas se configura por convención, pero puede dejar de usarla asignando el tipo de propiedad a otra tabla usando ToTable.
+- La división de tablas se configura por convención, pero puede dejar de usarla si asigna el tipo de propiedad a otra tabla mediante ToTable.
 
-• En los tipos de propiedad se efectúa automáticamente una carga diligente; es decir, no es necesario llamar a Include() en la consulta.
+- En los tipos de propiedad se efectúa una carga diligente de forma automática; es decir, no es necesario llamar a Include() en la consulta.
+
+- Desde EF Core 2.1, se puede configurar con el atributo \[Owned\].
 
 #### <a name="owned-entities-limitations"></a>Limitaciones de las entidades de propiedad:
 
-• No se puede crear un DbSet<T> de un tipo de propiedad (por diseño).
+- No se puede crear un DbSet\<T\> de un tipo de propiedad (por diseño).
 
-• No se puede llamar a ModelBuilder.Entity<T>() en los tipos de propiedad (actualmente por cuestiones de diseño).
+- No se puede llamar a ModelBuilder.Entity\<T\>() en los tipos de propiedad (actualmente por cuestiones de diseño).
 
-• Aún no hay ninguna colección de tipos de propiedad (pero se admitirán en las versiones posteriores a EF Core 2.0).
+- Todavía no hay colecciones de tipos de propiedad (en EF Core 2.1, pero se admitirán en la versión 2.2).
 
-• No se admite su configuración mediante un atributo.
+- No se admiten los tipos de propiedad opcionales (es decir, que aceptan valores NULL) que se asignan con el propietario en la misma tabla (es decir, mediante la división de tablas). Esto se debe a que la asignación se realiza para cada propiedad; no hay un centinela independiente para el valor complejo NULL como un todo.
 
-• No se admiten los tipos de propiedad opcionales (es decir, que aceptan valores NULL) que se asignan con el propietario en la misma tabla (es decir, usando la división de tablas). Esto se debe a que no contamos con un centinela independiente para el valor NULL.
-
-• No hay compatibilidad con la asignación de herencia para los tipos de propiedad, pero se debería poder asignar dos tipos de hoja de las mismas jerarquías de herencia como tipos de propiedad diferentes. EF Core no deducirá que forman parte de la misma jerarquía.
+- No hay compatibilidad con la asignación de herencia para los tipos de propiedad, pero se deberían poder asignar dos tipos de hoja de las mismas jerarquías de herencia como otros tipos de propiedad. EF Core no deducirá que forman parte de la misma jerarquía.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principales diferencias con los tipos complejos de EF6
 
-• La división de tablas es opcional (es decir, opcionalmente se pueden asignar a una tabla independiente y pueden seguir siendo tipos de propiedad).
+- La división de tablas es opcional (es decir, opcionalmente se pueden asignar a una tabla independiente y seguir siendo tipos de propiedad).
 
-• Pueden hacer referencia a otras entidades (es decir, pueden actuar como lado dependiente en las relaciones con otros tipos que no son de propiedad).
-
+- Pueden hacer referencia a otras entidades (es decir, pueden actuar como el lado dependiente en las relaciones con otros tipos que no son de propiedad).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Martin Fowler. Patrón ValueObject**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler. ValueObject pattern** \ (El patrón ValueObject)
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software** (Diseño guiado por el dominio: abordar la complejidad en el corazón del software). (Libro; incluye una descripción de los objetos de valor) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software** (Diseño guiado por el dominio: abordar la complejidad en el corazón del software). (Libro; incluye una descripción de los objetos de valor) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon. Implementing Domain-Driven Design** (Implementación del diseño guiado por el dominio). (Libro; incluye una descripción de los objetos de valor) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+- **Vaughn Vernon. Implementing Domain-Driven Design** (Implementación del diseño guiado por el dominio). (Libro; incluye una descripción de los objetos de valor) \
+  [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Propiedades paralelas**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **Propiedades reemplazadas** \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **Complex types and/or value objects** (Tipos u objetos de valor complejos). Descripción en el repositorio de GitHub de EF Core (pestaña Problemas) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+- **Complex types and/or value objects** (Tipos u objetos de valor complejos). Descripción en el repositorio de GitHub de EF Core (pestaña Problemas) \
+  [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
--   **ValueObject.cs.** Clase base de objeto de valor en eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+- **ValueObject.cs.** Clase base de objeto de valor en eShopOnContainers.**  \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   **Clase Address.** Clase de objeto de valor de ejemplo en eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
-
-
+- **Clase Address.** Clase de objeto de valor de ejemplo en eShopOnContainers. \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
 >[!div class="step-by-step"]
 [Anterior](seedwork-domain-model-base-classes-interfaces.md)
