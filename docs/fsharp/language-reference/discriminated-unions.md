@@ -1,13 +1,13 @@
 ---
 title: Uniones discriminadas (F#)
-description: Obtenga información sobre cómo usar F# uniones discriminadas.
+description: Aprenda a usar F# uniones discriminadas.
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788128"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672252"
 ---
 # <a name="discriminated-unions"></a>Uniones discriminadas
 
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Este código muestra que puede usar los campos con nombre en la inicialización, o puede confiar en el orden de los campos en la declaración y simplemente proporcionar valores para cada campo a su vez. La llamada al constructor para `rect` en el código anterior usa los campos con nombre, pero la llamada al constructor para `circ` usa la ordenación. Puede mezclar los campos ordenados y campos con nombre, como se muestra en la construcción de `prism`.
 
-El `option` tipo es una unión discriminada simple en la biblioteca básica de F#. El `option` tipo se declara como sigue.
+El `option` tipo es una unión discriminada simple en el F# biblioteca principal. El `option` tipo se declara como sigue.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ Normalmente, los identificadores de caso pueden utilizarse sin calificarlos con 
 
 ### <a name="unwrapping-discriminated-unions"></a>Uniones discriminadas desencapsuladas
 
-En uniones discriminadas de F# suelen utilizarse en el modelado de dominio para un único tipo de ajuste. Es fácil extraer el valor subyacente a través de coincidencia de patrones también. No es necesario usar una expresión de coincidencia para un único caso:
+En F# uniones discriminadas suelen utilizarse en el modelado de dominio para un único tipo de ajuste. Es fácil extraer el valor subyacente a través de coincidencia de patrones también. No es necesario usar una expresión de coincidencia para un único caso:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -95,10 +95,18 @@ En el siguiente ejemplo se muestra esto:
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+Coincidencia de patrones también se permite directamente en los parámetros de función, por lo que puede desempaquetar un único caso:
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>Las uniones discriminadas de structs
