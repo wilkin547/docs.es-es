@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757353"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743274"
 ---
 # <a name="monolithic-applications"></a>Aplicaciones monolíticas
 
@@ -69,7 +69,6 @@ Figura 4-4: publicación de un contenedor en Azure App Service desde aplicacione
 
 Figura 4-4 también muestra que el flujo de publicación inserta una imagen a través de un registro de contenedor, que puede ser Azure Container Registry (un registro de cerca a las implementaciones en Azure y protege las cuentas y grupos de Azure Active Directory) o cualquier otro registro de Docker al igual que los registros de Docker Hub o en el entorno local.
 
-
 >[!div class="step-by-step"]
-[Anterior](common-container-design-principles.md)
-[Siguiente](state-and-data-in-docker-applications.md)
+>[Anterior](common-container-design-principles.md)
+>[Siguiente](state-and-data-in-docker-applications.md)
