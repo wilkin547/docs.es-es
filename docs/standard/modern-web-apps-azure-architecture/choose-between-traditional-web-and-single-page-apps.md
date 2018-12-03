@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo elegir entre aplicaciones web trad
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404155"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745308"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
@@ -73,7 +73,7 @@ Para escribir SPA es necesario estar familiarizado con JavaScript o TypeScript y
 > - **Angular**  
 >   <https://angular.io>
 > - **Comparison of JavaScript Frameworks** (Comparación de marcos de JavaScript)  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **La aplicación ya tiene que exponer una API para otros clientes (internos o públicos)**
 
@@ -91,5 +91,5 @@ En la tabla de decisiones siguiente se resumen algunos de los factores básicos 
 | Requisitos de la interfaz de usuario enriquecidos y complejos            | **Limitados**             | **Adecuados**             |
 
 >[!div class="step-by-step"]
-[Anterior](modern-web-applications-characteristics.md)
-[Siguiente](architectural-principles.md)
+>[Anterior](modern-web-applications-characteristics.md)
+>[Siguiente](architectural-principles.md)
