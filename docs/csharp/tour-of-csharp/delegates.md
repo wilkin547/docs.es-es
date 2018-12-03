@@ -3,12 +3,12 @@ title: 'Delegados de C#: un paseo por el lenguaje C#'
 description: Conozca los enlaces más recientes con delegados en C#.
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 1dcd078b275d951b049b0c5bb6e084a4083d042d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2744f774392ef021974535de535b063264ae9a54
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360575"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672048"
 ---
 # <a name="delegates"></a>Delegados
 
@@ -29,5 +29,5 @@ Los delegados también pueden crearse mediante funciones anónimas, que son "mé
 Una propiedad interesante y útil de un delegado es que no sabe ni necesita conocer la clase del método al que hace referencia; lo único que importa es que el método al que se hace referencia tenga los mismos parámetros y el tipo de valor devuelto que el delegado.
 
 >[!div class="step-by-step"]
-[Anterior](enums.md)
-[Siguiente](attributes.md)
+>[Anterior](enums.md)
+>[Siguiente](attributes.md)

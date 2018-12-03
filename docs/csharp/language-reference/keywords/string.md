@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: ab2e69c60872aed19d46450f17becc918ffe2a38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181465"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672009"
 ---
 # <a name="string-c-reference"></a>string (Referencia de C#)
 
@@ -108,7 +108,6 @@ Para obtener más información sobre las cadenas en C#, vea [Strings](../../prog
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Procedimientos recomendados para el uso de cadenas](../../../standard/base-types/best-practices-strings.md)
 - [Palabras clave de C#](index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Tipos de referencia](reference-types.md)
 - [Tipos de valor](value-types.md)
 - [Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)
