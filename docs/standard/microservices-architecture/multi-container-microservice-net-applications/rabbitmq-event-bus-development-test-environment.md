@@ -1,27 +1,27 @@
 ---
 title: Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Uso de RabbitMQ para implementar la mensajería de un bus de eventos para entornos de integración con fines de desarrollo de entornos de prueba.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: fb9bf51d947774cddd7b42ade0f05abc8fb3d7e9
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 6d855b56a7fd00b316dde599683900ad2db758d7
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104758"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672350"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 
 Para empezar, hay que decir que si crea el bus de eventos personalizado basado en RabbitMQ que se ejecuta en un contenedor, como hace la aplicación eShopOnContainers, debe usarse únicamente para los entornos de desarrollo y prueba. No debe usarlo para el entorno de producción, salvo que lo cree como parte de un bus de servicio para entornos de producción. En un bus de eventos personalizado simple pueden faltar muchas de las características críticas para entornos de producción que tiene un bus de servicio comercial.
 
-Una de las implementaciones personalizadas de bus de eventos en eShopOnContainers es básicamente una biblioteca que usa la API de RabbitMQ (hay otra implementación basada en Azure Service Bus). 
+Una de las implementaciones personalizadas de bus de eventos en eShopOnContainers es básicamente una biblioteca que usa la API de RabbitMQ (hay otra implementación basada en Azure Service Bus).
 
-La implementación del bus de eventos con RabbitMQ permite que los microservicios se suscriban a eventos, los publiquen y los reciban, tal como se muestra en la figura 8-21.
+La implementación del bus de eventos con RabbitMQ permite que los microservicios se suscriban a eventos, los publiquen y los reciban, tal como se muestra en la figura 6-21.
 
-![](./media/image22.png)
+![Para controlar la distribución, RabbitMQ funciona como intermediario entre el publicador de mensajes y los suscriptores.](./media/image22.png)
 
-**Figura 8-21.** Implementación de RabbitMQ de un bus de eventos
+**Figura 6-21.** Implementación de RabbitMQ de un bus de eventos
 
 En el código, la clase EventBusRabbitMQ implementa la interfaz genérica de IEventBus. Esto se basa en la inserción de dependencias para que pueda cambiar de esta versión de desarrollo/pruebas a una versión de producción.
 
@@ -32,7 +32,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
     //...
 ```
 
-La implementación de RabbitMQ de un bus de eventos de desarrollo/pruebas de ejemplo es un código reutilizable. Tiene que controlar la conexión con el servidor RabbitMQ y proporcionar código para publicar un evento de mensaje a las colas. También debe implementar un diccionario de las colecciones de controladores de eventos de integración para cada tipo de evento; estos tipos de eventos pueden tener una instancia diferente y diferentes suscripciones para cada microservicio receptor, tal como se muestra en la figura 8-21.
+La implementación de RabbitMQ de un bus de eventos de desarrollo/pruebas de ejemplo es un código reutilizable. Tiene que controlar la conexión con el servidor RabbitMQ y proporcionar código para publicar un evento de mensaje a las colas. También debe implementar un diccionario de las colecciones de controladores de eventos de integración para cada tipo de evento; estos tipos de eventos pueden tener una instancia diferente y diferentes suscripciones para cada microservicio receptor, tal como se muestra en la figura 6-21.
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementar un método de publicación sencillo con RabbitMQ
 
@@ -109,7 +109,6 @@ Cada tipo de evento tiene un canal relacionado para obtener eventos de RabbitMQ.
 
 El método Subscribe acepta un objeto IIntegrationEventHandler, que es similar a un método de devolución de llamada en el microservicio actual, además de su objeto IntegrationEvent relacionado. Después, el código agrega ese controlador de eventos a la lista de controladores de eventos que puede tener cada tipo de evento de integración por microservicio cliente. Si el código cliente ya no se ha suscrito al evento, el código crea un canal para el tipo de evento de forma que pueda recibir eventos en un estilo de inserción de RabbitMQ cuando ese evento se publique desde cualquier otro servicio.
 
-
 >[!div class="step-by-step"]
-[Anterior](integration-event-based-microservice-communications.md)
-[Siguiente](subscribe-events.md)
+>[Anterior](integration-event-based-microservice-communications.md)
+>[Siguiente](subscribe-events.md)

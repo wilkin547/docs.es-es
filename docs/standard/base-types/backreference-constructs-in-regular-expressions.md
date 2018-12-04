@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615331"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672044"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 Las referencias inversas proporcionan una forma cómoda de identificar un carácter o subcadena repetidos dentro de una cadena. Por ejemplo, si la cadena de entrada contiene varias apariciones de una subcadena arbitraria, puede buscar una coincidencia con la primera aparición con un grupo de captura y después usar una referencia inversa para buscar una coincidencia con las siguientes apariciones de la subcadena.  
@@ -64,7 +64,7 @@ Las referencias inversas proporcionan una forma cómoda de identificar un carác
   
  O bien  
   
- `\k'` *nombre* `'`  
+ `\k'` *name* `'`  
   
  donde *nombre* es el nombre de un grupo de captura definido en el patrón de expresión regular. Si *nombre* no está definido en el patrón de expresión regular, se produce un error de análisis y el motor de expresiones regulares produce una clase <xref:System.ArgumentException>.  
   
@@ -103,7 +103,7 @@ En cambio, si *nombre* es la representación de cadena de un número y al grupo 
 |Modelo|Descripción|  
 |-------------|-----------------|  
 |`(?<1>a)`|Coincide con el carácter "a" y asigna el resultado al grupo de captura denominado `1`.|  
-|`(?<1>\1b)*`|Coincide con 0 o 1 apariciones del grupo denominado `1` junto con una "b" y asigna el resultado al grupo de captura denominado `1`.|  
+|`(?<1>\1b)*`|Coincide con ninguna o más apariciones del grupo denominado `1` junto con una "b" y asigna el resultado al grupo de captura denominado `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ En cambio, si *nombre* es la representación de cadena de un número y al grupo 
   
 2.  Se desplaza hasta el segundo carácter y hace que la cadena "ab" coincida correctamente con la expresión `\1b`, o "ab". Después, asigna el resultado "ab" a `\1`.  
   
-3.  Se desplaza hasta el cuarto carácter. La expresión `(?<1>\1b)` puede coincidir cero o más veces, así que la cadena "abb" coincide correctamente con la expresión `\1b`. Vuelve a asignar el resultado, "abb", a `\1`.  
+3.  Se desplaza hasta el cuarto carácter. La expresión `(?<1>\1b)*` puede coincidir cero o más veces, así que la cadena "abb" coincide correctamente con la expresión `\1b`. Vuelve a asignar el resultado, "abb", a `\1`.  
   
  En este ejemplo, `*` es un cuantificador de bucle: se evalúa repetidas veces hasta que el motor de expresiones regulares no puede coincidir con el patrón que define. Los cuantificadores de bucle no borran las definiciones de grupo.  
   

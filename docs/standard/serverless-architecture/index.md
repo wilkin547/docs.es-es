@@ -4,16 +4,16 @@ description: Guía sobre la arquitectura sin servidor. Obtenga información sobr
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: 89e5f387e218703a2f6311ef848b3d613a9279f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404821"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745321"
 ---
-![](./media/Cover.jpg)
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicaciones sin servidor: arquitectura, patrones e implementación de Azure
+
+![](./media/Cover.jpg)
 
 > DESCARGA disponible en: <https://aka.ms/serverless-ebook>
 
@@ -61,7 +61,7 @@ Participantes y revisores:
 
 ## <a name="introduction"></a>Introducción
 
-La informática sin servidor es la evolución de las plataformas de la nube en la línea del código nativo puro de la nube. Además, acerca a los desarrolladores a la lógica de negocios a la vez que los aísla de los problemas de infraestructura. Es un patrón que no implica el uso de "ningún servidor" sino de "menos servidor". El código sin servidor está orientado a eventos. El código se puede desencadenar con solicitudes web HTTP tradicionales, temporizadores o con el resultado de cargar un archivo. La infraestructura que hay detrás de la informática sin servidor permite realizar un escalado instantáneo con el fin de satisfacer las necesidades elásticas y ofrece una microfacturación para "pagar por lo que se usa" y no más. Para usar la informática sin servidor es necesario cambiar la forma de pensar y adoptar un nuevo enfoque para compilar aplicaciones, pero no es la solución adecuada para cada problema. Como desarrollador, debe decidir lo siguiente:
+La informática [sin servidor](https://azure.microsoft.com/solutions/serverless/) es la evolución de las plataformas de la nube en la línea del código nativo puro de la nube. Además, acerca a los desarrolladores a la lógica de negocios a la vez que los aísla de los problemas de infraestructura. Es un patrón que no implica el uso de "ningún servidor" sino de "menos servidor". El código sin servidor está orientado a eventos. El código se puede desencadenar con solicitudes web HTTP tradicionales, temporizadores o con el resultado de cargar un archivo. La infraestructura que hay detrás de la informática sin servidor permite realizar un escalado instantáneo con el fin de satisfacer las necesidades elásticas y ofrece una microfacturación para "pagar por lo que se usa" y no más. Para usar la informática sin servidor es necesario cambiar la forma de pensar y adoptar un nuevo enfoque para compilar aplicaciones, pero no es la solución adecuada para cada problema. Como desarrollador, debe decidir lo siguiente:
 
 * ¿Qué ventajas e inconvenientes tiene la informática sin servidor?
 * ¿Por qué debe plantearse el uso de la informática sin servidor para sus aplicaciones?
@@ -138,4 +138,4 @@ En la primera parte de esta guía se estudia por qué la informática sin servid
 Nos gustaría que contribuyese al desarrollo constante de la guía y los ejemplos relacionados enviando sus comentarios. Si tiene algún comentario sobre cómo se puede mejorar esta guía, escríbalo en la sección de comentarios situada en la parte inferior de cualquier página creada en [Problemas de GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
-[Siguiente](architecture-approaches.md)
+>[Siguiente](architecture-approaches.md)

@@ -1,15 +1,15 @@
 ---
 title: Resistencia y alta disponibilidad en microservicios
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Resistencia y alta disponibilidad en microservicios
+description: Con el objetivo de ofrecer una alta disponibilidad, los microservicios deben estar diseñados para soportar errores en la red transitoria y las dependencias.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106322"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745334"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resistencia y alta disponibilidad en microservicios
 
@@ -19,7 +19,7 @@ Un microservicio debe ser resistente a errores y poder reiniciarse a menudo en o
 
 Los problemas de resistencia se agravan durante otros escenarios, como cuando se producen errores durante la actualización de una aplicación. El microservicio, trabajando con el sistema de implementación, debe determinar si puede avanzar a la versión más reciente o, en su lugar, revertir a una versión anterior para mantener un estado consistente. Deben tenerse en cuenta cuestiones como si están disponibles suficientes máquinas para seguir avanzando y cómo recuperar versiones anteriores del microservicio. Esto requiere que el microservicio emita información de mantenimiento para que la aplicación en conjunto y el orquestador puedan tomar estas decisiones.
 
-Además, la resistencia está relacionada con cómo deben comportarse los sistemas basados en la nube. Como se ha mencionado, un sistema basado en la nube debe estar preparado para los errores e intentar recuperarse automáticamente de ellos. Por ejemplo, en caso de errores de red o de contenedor, las aplicaciones de cliente o los servicios de cliente deben disponer de una estrategia para volver a intentar enviar mensajes o solicitudes, ya que en muchos casos, los errores en la nube son parciales. En la sección [Implementar aplicaciones resistentes](#implementing_resilient_apps) de esta guía se explica cómo controlar errores parciales. Se describen técnicas como los reintentos con retroceso exponencial o el patrón de interruptor en .NET Core en que se usan bibliotecas como [Polly](https://github.com/App-vNext/Polly), que ofrece una gran variedad de directivas para controlar este asunto.
+Además, la resistencia está relacionada con cómo deben comportarse los sistemas basados en la nube. Como se ha mencionado, un sistema basado en la nube debe estar preparado para los errores e intentar recuperarse automáticamente de ellos. Por ejemplo, en caso de errores de red o de contenedor, las aplicaciones de cliente o los servicios de cliente deben disponer de una estrategia para volver a intentar enviar mensajes o solicitudes, ya que en muchos casos, los errores en la nube son parciales. En la sección [Implementar aplicaciones resistentes](../implement-resilient-applications/index.md) de esta guía se explica cómo controlar errores parciales. Se describen técnicas como los reintentos con retroceso exponencial o el patrón de interruptor en .NET Core en que se usan bibliotecas como [Polly](https://github.com/App-vNext/Polly), que ofrece una gran variedad de directivas para controlar este asunto.
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>Administración del estado y diagnóstico en microservicios
 
@@ -29,7 +29,12 @@ Puede parecer obvio, y a menudo se pasa por alto, pero un microservicio debe not
 
 El estado es diferente del diagnóstico. El estado trata de cuando el microservicio informa sobre su estado actual para que se tomen las medidas oportunas. Un buen ejemplo es trabajar con los mecanismos de actualización e implementación para mantener la disponibilidad. Aunque un servicio podría actualmente estar en mal estado debido a un bloqueo de proceso o un reinicio de la máquina, puede que el servicio siga siendo operativo. Lo último que debe hacer es realizar una actualización que empeore esta situación. El mejor método consiste en realizar una investigación en primer lugar o dar tiempo a que el microservicio se recupere. Los eventos de estado de un microservicio nos ayudan a tomar decisiones informadas y, en efecto, ayudan a crear servicios de reparación automática.
 
-En la sección Implementación de comprobaciones de estado en servicios de ASP.NET Core de esta guía se explica cómo usar una nueva biblioteca de ASP.NET HealthChecks en sus microservicios para que puedan informar sobre su estado a un servicio de supervisión para que se tomen las medidas oportunas.
+En la sección [Implementación de comprobaciones de estado en servicios de ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) de esta guía se explica cómo usar una nueva biblioteca de ASP.NET HealthChecks en sus microservicios para que puedan informar sobre su estado a un servicio de supervisión para que se tomen las medidas oportunas.
+
+También tiene la opción de usar una biblioteca de código abierto excelente llamada Beat Pulse, que está disponible en [GitHub](https://github.com/Xabaril/BeatPulse) y como [paquete NuGet](https://www.nuget.org/packages/BeatPulse/). Además, la biblioteca realiza comprobaciones de estado, concretamente de dos tipos:
+
+- **Ejecución**: comprueba si el microservicio se está ejecutando, es decir, si puede aceptar solicitudes y responder a estas. 
+- **Preparación**: comprueba si las dependencias del microservicio, como la base de datos o los servicios, están listas, de modo que el microservicio pueda funcionar como debería. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Utilización de secuencias de eventos de diagnóstico y registro
 
@@ -43,7 +48,7 @@ Una aplicación basada en microservicio no debe intentar almacenar la secuencia 
 
 Crear una aplicación basada en microservicio implica enfrentarse a cierto grado de complejidad. Por supuesto, un único microservicio es fácil de tratar, pero docenas o cientos de tipos y miles de instancias de microservicios es un problema complejo. No solo se trata de crear la arquitectura del microservicio; también necesita alta disponibilidad, capacidad de direccionamiento, resistencia, estado y diagnóstico si pretende disponer de un sistema estable y cohesivo.
 
-![](./media/image22.png)
+![Los orquestadores proporcionan una plataforma de soporte técnico para ejecutar los microservicios.](./media/image22.png)
 
 **Figura 4-22**. Una plataforma de microservicio es fundamental para la administración del estado de una aplicación
 
@@ -53,30 +58,27 @@ Distintos orquestadores podrían parecer similares, pero las comprobaciones de d
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **La aplicación Twelve-Factor. XI. Logs: Treat logs as event streams (Registros: tratar los registros como secuencias de eventos)**
-    [*https://12factor.net/logs*](https://12factor.net/logs)
+- **La aplicación Twelve-Factor. XI. Logs: Treat logs as event streams (Registros: tratar los registros como secuencias de eventos)** \
+  [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Biblioteca EventFlow de diagnóstico de Microsoft.** Repositorio de GitHub.
+- Repositorio de GitHub **Microsoft Diagnostic EventFlow Library**. \
+  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
-    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+- **¿Qué es Azure Diagnostics?** \
+  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **¿Qué es Azure Diagnostics?**
-    [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Conexión de equipos Windows al servicio Log Analytics de Azure** \
+  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Conexión de equipos Windows al servicio Log Analytics de Azure**
-    [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Logging What You Mean: Using the Semantic Logging Application Block (Registrar lo importante: usar el bloque de aplicación de registro semántico)** \
+  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
--   **Logging What You Mean: Using the Semantic Logging Application Block (Registrar lo importante: usar el bloque de aplicación de registro semántico)**
-    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- Sitio oficial de **Splunk**. \
+  [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **Splunk.** Sitio oficial.
-    [*https://www.splunk.com/*](https://www.splunk.com/)
-
--   **Clase EventSource**. API para el seguimiento de eventos para Windows (ETW) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
-
-
-
+- API **EventSource Class** para el seguimiento de eventos para Windows (ETW)
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 >[!div class="step-by-step"]
-[Anterior](microservice-based-composite-ui-shape-layout.md)
-[Siguiente](scalable-available-multi-container-microservice-applications.md)
+>[Anterior](microservice-based-composite-ui-shape-layout.md)
+>[Siguiente](scalable-available-multi-container-microservice-applications.md)

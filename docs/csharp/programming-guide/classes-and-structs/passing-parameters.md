@@ -8,11 +8,11 @@ helpviewer_keywords:
 - methods [C#], passing parameters
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
-ms.openlocfilehash: a9538ee9f5f49554e9fe1822367404ab1d1e858d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 241beb56b0e0f00dae63e12ea775b2b982200efc
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
+ms.lasthandoff: 12/03/2018
 ms.locfileid: "44194858"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>Pasar parámetros (Guía de programación de C#)
@@ -29,7 +29,8 @@ En C#, los argumentos se pueden pasar a parámetros por valor o por referencia. 
 -   [Pasar parámetros Reference-Type](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Para obtener más información, vea la sección [Listas de argumentos](~/_csharplang/spec/expressions.md#argument-lists) de [Especificación del lenguaje C#](../../language-reference/language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
   
 ## <a name="see-also"></a>Vea también
 
