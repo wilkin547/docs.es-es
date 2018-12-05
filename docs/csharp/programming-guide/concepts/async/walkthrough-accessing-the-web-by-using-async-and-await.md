@@ -17,7 +17,7 @@ Para obtener más información sobre la característica Async, consulte [Asynchr
 
 Este tutorial comienza con una aplicación sincrónica de Windows Presentation Foundation (WPF) que suma el número de bytes de una lista de sitios web. A continuación, el tutorial convierte la aplicación en una solución asincrónica mediante el uso de las características nuevas.
 
-Si no quiere compilar las aplicaciones por su cuenta, puede descargar [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]).
+Si no quiere compilar las aplicaciones por su cuenta, puede descargar [Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 
 > [!NOTE]
 > Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior, instalado en el equipo.
@@ -691,7 +691,7 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Vea también
 
-- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic])
+- [Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
