@@ -1,21 +1,21 @@
 ---
 title: Referencia de palabras clave (F#)
-description: Encuentre vínculos a información acerca de todas las palabras clave del lenguaje F#.
+description: Encuentre vínculos a información acerca de todos los F# palabras clave del lenguaje.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/05/2018
 ms.locfileid: "43856029"
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
 
-Este tema contiene vínculos a información sobre todas las palabras clave del lenguaje F#.
+En este tema contiene vínculos a información acerca de todos los F# palabras clave del lenguaje.
 
-## <a name="f-keyword-table"></a>Tabla de la palabra clave F#
+## <a name="f-keyword-table"></a>F#Tabla de la palabra clave
 
-En la tabla siguiente se muestra todas las palabras clave de F# en orden alfabético, junto con descripciones breves y vínculos a temas relevantes que contienen más información.
+La tabla siguiente se muestran todos los F# palabras clave en orden alfabético, junto con descripciones breves y vínculos a temas relevantes que contienen más información.
 
 |Palabra clave|Vínculo|Descripción|
 |-------|----|-----------|
@@ -103,7 +103,7 @@ Los tokens siguientes están reservados en F# porque son palabras clave en el le
 
 Si usas el `--mlcompatibility` opción del compilador, las palabras clave anteriores están disponibles para su uso como identificadores.
 
-Los tokens siguientes están reservados como palabras clave para una futura ampliación del lenguaje F#:
+Los tokens siguientes están reservados como palabras clave para una futura ampliación de la F# idioma:
 
 * `atomic`
 * `break`
