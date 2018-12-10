@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 651da766bc5931f5afa06699d1ec11fa40147e82
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678274"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130239"
 ---
 # <a name="docker-containers-images-and-registries"></a>Contenedores, imágenes y registros de Docker
 
@@ -34,5 +34,5 @@ Los registros de imágenes privados, ya sean hospedados localmente o en la nube,
 -   Quiere tener una latencia de red mínima entre las imágenes y el entorno de implementación elegido. Por ejemplo, si el entorno de producción es la nube de Azure, probablemente quiera almacenar las imágenes en [Azure Container Registry](https://azure.microsoft.com/services/container-registry/), para que la latencia de red sea mínima. De forma similar, si el entorno de producción es local, puede tener un registro de confianza de Docker local disponible dentro de la misma red local.
 
 >[!div class="step-by-step"]
-[Anterior](docker-terminology.md)
-[Siguiente](../net-core-net-framework-containers/index.md)
+>[Anterior](docker-terminology.md)
+>[Siguiente](../net-core-net-framework-containers/index.md)

@@ -2,12 +2,12 @@
 title: 'Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 679dde2d2d1607c2703468f64903f3cd9e59bcb8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c95736f184f3298fb7142b8f8c7b29c65b3f7227
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083578"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130746"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)
 En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
@@ -93,7 +93,7 @@ class MergeStrings
   
             IEnumerable<string> nameMatchQuery =  
                 tempQuery1.Concat(tempQuery2).OrderBy(s => s);  
-            OutputQueryResults(nameMatchQuery, String.Format("Concat based on partial name match \"{0}\":", nameMatch));  
+            OutputQueryResults(nameMatchQuery, $"Concat based on partial name match \"{nameMatch}\":");
   
             // Keep the console window open in debug mode.  
             Console.WriteLine("Press any key to exit");  

@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Car
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 4c73ab59148325f66d3ee17db3fb78d397b73f15
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404491"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147341"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de las aplicaciones web modernas
 
@@ -77,5 +77,5 @@ Además de ASP.NET Core, ASP.NET 4.x tradicional sigue siendo una plataforma só
 >   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Siguiente](choose-between-traditional-web-and-single-page-apps.md)
+>[Anterior](index.md)
+>[Siguiente](choose-between-traditional-web-and-single-page-apps.md)

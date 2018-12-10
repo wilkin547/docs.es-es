@@ -3,12 +3,12 @@ title: 'Estructuras de C#: un paseo por el lenguaje C#'
 description: 'Aprenda los conceptos básicos de los tipos de valores de C #, llamados structs.'
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323102"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142741"
 ---
 # <a name="structs"></a>Estructuras
 
@@ -35,5 +35,5 @@ Si `Point` es una clase, la salida es 20 porque a y b hacen referencia al mismo 
 En el ejemplo anterior se resaltan dos de las limitaciones de los structs. En primer lugar, copiar un struct entero normalmente es menos eficaz que copiar una referencia a un objeto, por lo que el paso de parámetros de asignación y valor puede ser más costoso con structs que con tipos de referencia. En segundo lugar, a excepción de los parámetros `in`, `ref` y `out`, no es posible crear referencias a structs, que excluyen su uso en varias situaciones.
 
 >[!div class="step-by-step"]
-[Anterior](classes-and-objects.md)
-[Siguiente](arrays.md)
+>[Anterior](classes-and-objects.md)
+>[Siguiente](arrays.md)

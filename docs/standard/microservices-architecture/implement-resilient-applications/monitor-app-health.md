@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 62d4e9a26710a5c4b191287bf76192972f7e991b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 35f6d773d714878f56a5e9151320072ebcd51e06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106546"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145980"
 ---
 # <a name="health-monitoring"></a>Seguimiento de estado
 
@@ -196,5 +196,5 @@ Por último, si se han almacenado todos los flujos de eventos, se puede utilizar
     [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
-[Anterior](implement-circuit-breaker-pattern.md)
-[Siguiente](../secure-net-microservices-web-applications/index.md)
+>[Anterior](implement-circuit-breaker-pattern.md)
+>[Siguiente](../secure-net-microservices-web-applications/index.md)

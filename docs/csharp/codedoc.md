@@ -3,12 +3,12 @@ title: Documentar el código con comentarios XML
 description: Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453273"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129674"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
 
@@ -20,7 +20,7 @@ El compilador omite los comentarios de documentación XML, igual que los demás 
 
 Para generar el archivo XML en tiempo de compilación, realice una de las siguientes acciones:
 
-- Si está desarrollando una aplicación con .NET Core desde la línea de comandos, puede agregar un [elemento DocumentationFile](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) a la sección `<PropertyGroup>` de su archivo de proyecto .csproj. En el siguiente ejemplo se genera un archivo XML en el directorio del proyecto con el mismo nombre de archivo raíz que el ensamblado:
+- Si está desarrollando una aplicación con .NET Core desde la línea de comandos, puede agregar un [elemento DocumentationFile](/visualstudio/msbuild/common-msbuild-project-properties) a la sección `<PropertyGroup>` de su archivo de proyecto .csproj. En el siguiente ejemplo se genera un archivo XML en el directorio del proyecto con el mismo nombre de archivo raíz que el ensamblado:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -196,7 +196,7 @@ Aquí lo tiene: el código vuelve a ser legible y no se ha perdido ninguna infor
 
 El atributo `filename` representa el nombre del archivo XML que contiene la documentación.
 
-El atributo `path` representa una consulta [XPath](https://msdn.microsoft.com/library/ms256115.aspx) para el `tag name` presente en el `filename` especificado.
+El atributo `path` representa una consulta [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) para el `tag name` presente en el `filename` especificado.
 
 El atributo `name` representa el especificador de nombre en la etiqueta que precede a los comentarios.
 

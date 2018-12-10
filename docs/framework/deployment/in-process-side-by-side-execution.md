@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195208"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143849"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
@@ -90,7 +90,7 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
   
  Para ejecutar el ejemplo que se muestra a continuación, compile y registre el siguiente componente COM administrado con [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Para registrar el componente, en el menú **Proyecto**, haga clic en **Propiedades**, en la pestaña **Compilar** y, después, active la casilla **Registrar para interoperabilidad COM**.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -115,7 +115,7 @@ namespace BasicComObject
   
  Compile la siguiente aplicación de C++ no administrada, que activa el objeto COM que se crea en el ejemplo anterior.  
   
-```  
+```cpp
 #include "stdafx.h"  
 #include <string>  
 #include <iostream>  

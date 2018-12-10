@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ba47ece16c74555b58780733e14de9833718c33
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9a355c2e996ddb00dad804dfeb22987923d91aa6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873312"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144525"
 ---
 # <a name="threading-objects-and-features"></a>Objetos y características de subprocesos
 
@@ -26,8 +26,6 @@ Junto con la clase <xref:System.Threading.Thread?displayProperty=nameWithType>, 
 |[Información general sobre las primitivas de sincronización](overview-of-synchronization-primitives.md)|Describe los tipos que se pueden usar para sincronizar el acceso a un recurso compartido o la interacción del subproceso de control.|
 |[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Describe los identificadores de espera de eventos administrados, que se usan para sincronizar las actividades del subproceso mediante señalización y señales de espera.|
 |[Mutexes](mutexes.md) (Clases Mutex)|Describe <xref:System.Threading.Mutex?displayProperty=nameWithType>, que concede acceso exclusivo a un recurso compartido.|
-|[Operaciones de bloqueo](interlocked-operations.md)|Describe la clase <xref:System.Threading.Interlocked?displayProperty=nameWithType>, que proporciona operaciones atómicas para las variables compartidas por varios subprocesos.|
-|[Reader-Writer Locks](reader-writer-locks.md) (Clase ReaderWriterLockSlim)|Describe la clase <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType>, que proporciona acceso de único escritor y varios lectores a un recurso compartido.|
 |[Semaphore and SemaphoreSlim](semaphore-and-semaphoreslim.md) (Clases Semaphore y SemaphoreSlim)|Describe la clase <xref:System.Threading.Semaphore?displayProperty=nameWithType>, que limita el número de subprocesos que pueden tener acceso a un recurso compartido o grupo de recursos simultáneamente.|
 |[Barrier](barrier.md) (Barrera)|Describe la clase <xref:System.Threading.Barrier?displayProperty=nameWithType> que implementa el modelo de barrera para coordinar los subprocesos en las operaciones por fases.|
 |[SpinLock](spinlock.md)|Describe la estructura <xref:System.Threading.SpinLock?displayProperty=nameWithType>, que es una alternativa ligera a la clase <xref:System.Threading.Monitor?displayProperty=nameWithType> para algunos escenarios de bloqueo de bajo nivel.|

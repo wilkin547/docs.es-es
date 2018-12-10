@@ -4,12 +4,12 @@ description: Procedimientos recomendados para nombres de seguros de las bibliote
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201457"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129004"
 ---
 # <a name="strong-naming"></a>Nombres seguros
 
@@ -71,5 +71,5 @@ Se deben asignar un nombre seguro a las bibliotecas de .NET de código abierto. 
 > La publicación de dos paquetes bifurca el ecosistema del desarrollador. Además, si una aplicación termina dependiendo de ambos paquetes, el desarrollador puede encontrar conflictos con el nombre de tipo. En lo que respecta a .NET, son tipos distintos en diferentes ensamblados.
 
 >[!div class="step-by-step"]
-[Anterior](./cross-platform-targeting.md)
-[Siguiente](./nuget.md)
+>[Anterior](cross-platform-targeting.md)
+>[Siguiente](nuget.md)

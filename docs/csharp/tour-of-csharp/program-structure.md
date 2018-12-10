@@ -3,12 +3,12 @@ title: 'Estructura del programa de C#: un paseo por el lenguaje C#'
 description: Conozca más acerca de los bloques de compilación básicos de un programa de C#.
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 9efd2542d449da5ddcd9d3170c2e598282a34c39
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565756"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131032"
 ---
 # <a name="program-structure"></a>Estructura del programa
 
@@ -52,5 +52,5 @@ Esto crea un ensamblado ejecutable denominado `example.exe`, que, cuando se ejec
 C# permite que el texto de origen de un programa se almacene en varios archivos de origen. Cuando se compila un programa de C# de varios archivos, todos los archivos de origen se procesan juntos y los archivos de origen pueden hacerse referencia mutuamente de forma libre; desde un punto de vista conceptual, es como si todos los archivos de origen estuvieran concatenados en un archivo de gran tamaño antes de ser procesados. En C# nunca se necesitan declaraciones adelantadas porque, excepto en contadas ocasiones, el orden de declaración es insignificante. C# no limita un archivo de origen a declarar solamente un tipo público ni precisa que el nombre del archivo de origen coincida con un tipo declarado en el archivo de origen.
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Siguiente](types-and-variables.md)
+>[Anterior](index.md)
+>[Siguiente](types-and-variables.md)

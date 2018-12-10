@@ -6,11 +6,11 @@ helpviewer_keywords:
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
 ms.openlocfilehash: 4faa674f3f3d65b7c555d7feb9789637f39e9bd7
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296535"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125476"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Cómo: Probar la igualdad de referencias (identidad) (Guía de programación de C#)
 No tiene que implementar ninguna lógica personalizada para admitir las comparaciones de igualdad de referencias en los tipos. Esta funcionalidad se proporciona para todos los tipos mediante el método <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> estático.  

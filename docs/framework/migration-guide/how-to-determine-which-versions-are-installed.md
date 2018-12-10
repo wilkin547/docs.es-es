@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8fc72735c5e45fb87c503272871fc687bacd3e
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6b77775fdc7f552e6433e6364f153c5bde32d9e0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453247"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151049"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Cómo: Determinar qué versiones de .NET Framework están instaladas
 
@@ -169,7 +169,13 @@ Los usuarios pueden instalar y ejecutar varias versiones de .NET Framework en s
 - En el ejemplo siguiente se comprueba el valor de la palabra clave `Release` para determinar si .NET Framework 4.6.2 o posterior está instalado, independientemente de la versión del sistema operativo Windows (se devolverá `True` si es así o `False` en caso contrario).
 
     ```PowerShell
-    Get-ChildItem "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | ForEach-Object { $_ -ge 394802 } 
+    # PowerShell 5
+    Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\' | Get-ItemPropertyValue -Name Release | Foreach-Object { $_ -ge 394802 } 
+    ```
+
+    ```PowerShell
+    # PowerShell 4
+    (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
     ```
 
     Puede reemplazar `394802` en el ejemplo anterior con otro valor de la tabla siguiente para comprobar si hay otra versión de .NET Framework mínima requerida.

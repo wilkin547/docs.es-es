@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e5f683ff123652e312d4d8dacc614f8a451ccd91
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582884"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127399"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 
@@ -94,7 +94,7 @@ Una cadena con formato de fecha y hora define la representación de texto de un 
 |"/"|El separador de fecha.<br /><br /> Más información: [El especificador de formato personalizado "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
 |"*cadena*"<br /><br /> '*cadena*'|Delimitador de cadena literal.<br /><br /> Más información: [Literales de caracteres](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|Define el siguiente carácter como un especificador de formato personalizado.<br /><br /> Más información:[Usar especificadores de formato personalizado únicos](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|
-|\\|El carácter de escape.<br /><br /> Más información: [Literales de caracteres](#Literals) y [Usar el carácter de escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
+|&#92;|El carácter de escape.<br /><br /> Más información: [Literales de caracteres](#Literals) y [Usar el carácter de escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
 |Cualquier otro carácter|El carácter se copia en la cadena de resultado sin modificar.<br /><br /> Más información: [Literales de caracteres](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
  En las secciones siguientes se proporciona información adicional sobre cada especificador de formato de fecha y hora personalizado. A menos que se indique lo contrario, cada especificador genera una representación de cadena idéntica independientemente de que se use con un valor <xref:System.DateTime> o <xref:System.DateTimeOffset>.

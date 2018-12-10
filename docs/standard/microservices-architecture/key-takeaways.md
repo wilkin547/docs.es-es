@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: d6e09b9856396e99c9b03d595c1896e2451724fe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105519"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152270"
 ---
 # <a name="key-takeaways"></a>Puntos clave
 
@@ -38,4 +38,4 @@ A modo de resumen y puntos clave, estas son las conclusiones más importantes de
 **Orquestadores.** Los orquestadores basados en contenedor, como los que se proporcionan en Azure Container Service (Kubernetes, Mesos DC/OS y Docker Swarm) y en Azure Service Fabric, son indispensables para cualquier aplicación basada en microservicio y preparada para entornos de producción y para cualquier aplicación de múltiples contenedores con una complejidad significativa, necesidades de escalabilidad y evolución constante. En esta guía se han presentado orquestadores y su rol en las soluciones basadas en microservicio y contenedor. Si sus necesidades de aplicación lo están dirigiendo hacia aplicaciones en contenedores complejas, le resultará útil para buscar recursos adicionales que le permitan obtener más información sobre los orquestadores
 
 >[!div class="step-by-step"]
-[Anterior](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+>[Anterior](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

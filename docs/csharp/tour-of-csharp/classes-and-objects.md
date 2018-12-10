@@ -3,12 +3,12 @@ title: 'Clases y objetos en C#: un paseo por el lenguaje C#'
 description: ¿Nuevo en C#? Lea esta información general sobre clases, objetos y herencia.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140286"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147559"
 ---
 # <a name="classes-and-objects"></a>Clases y objetos
 
@@ -294,5 +294,5 @@ El recolector de elementos no utilizados tiene una amplia libertad para decidir 
 La instrucción `using` proporciona un mejor enfoque para la destrucción de objetos.
 
 >[!div class="step-by-step"]
-[Anterior](statements.md)
-[Siguiente](structs.md)
+>[Anterior](statements.md)
+>[Siguiente](structs.md)

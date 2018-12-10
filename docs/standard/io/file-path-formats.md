@@ -2,18 +2,21 @@
 title: Formatos de ruta de acceso de archivo en los sistemas Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296833"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144863"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -203,30 +206,14 @@ Una peculiaridad del sistema de archivos de Windows que resulta confuso para los
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 crea un directorio denominado TeStDiReCtOrY. Si modifica el nombre de un directorio o archivo para cambiar sus mayúsculas y minúsculas, el nombre del directorio o archivo refleja las mayúsculas y minúsculas de la cadena usada al cambiar el nombre. Por ejemplo, en el código siguiente se cambia el nombre de un archivo de test.txt a Test.txt:
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 Pero las comparaciones de nombre de directorio y archivo no distinguen mayúsculas de minúsculas. Si busca un archivo denominado "test.txt", las API del sistema de archivos de .NET ignoran las mayúsculas y minúsculas en la comparación. Test.txt, TEST.TXT, test.TXT y cualquier otra combinación de letras mayúsculas y minúsculas coincidirán con "test.txt".

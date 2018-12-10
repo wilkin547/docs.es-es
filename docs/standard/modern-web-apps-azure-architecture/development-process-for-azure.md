@@ -4,12 +4,12 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Proceso de des
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185630"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152622"
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo para Azure
 
@@ -110,5 +110,5 @@ Mientras se ejecuta la aplicación web, se puede supervisar su estado y recopila
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
-[Anterior](test-asp-net-core-mvc-apps.md)
-[Siguiente](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Anterior](test-asp-net-core-mvc-apps.md)
+>[Siguiente](azure-hosting-recommendations-for-asp-net-web-apps.md)

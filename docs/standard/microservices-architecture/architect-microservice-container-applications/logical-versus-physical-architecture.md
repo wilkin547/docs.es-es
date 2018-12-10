@@ -4,12 +4,12 @@ description: Obtenga más información sobre las diferencias entre arquitecturas
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296131"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129927"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Arquitectura lógica frente a arquitectura física
 
@@ -36,5 +36,5 @@ Los servicios del ejemplo comparten el mismo modelo de datos porque el servicio 
 En resumen, la arquitectura lógica de los microservicios no siempre tiene que coincidir con la arquitectura de implementación física. En esta guía, siempre que se mencione un microservicio, se entiende que es un microservicio empresarial o lógico que se puede asignar a uno o más servicios (físicos). En la mayoría de los casos, se trata de un servicio único, pero puede que sean más.
 
 >[!div class="step-by-step"]
-[Anterior](data-sovereignty-per-microservice.md)
-[Siguiente](distributed-data-management.md)
+>[Anterior](data-sovereignty-per-microservice.md)
+>[Siguiente](distributed-data-management.md)

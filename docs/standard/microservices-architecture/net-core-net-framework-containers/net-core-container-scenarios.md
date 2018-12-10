@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873380"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143415"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Cuándo elegir .NET Core para contenedores de Docker
 
@@ -53,7 +53,6 @@ Cuando en un sistema basado en contenedores se necesita la mejor densidad, granu
 
 Esto es especialmente importante para las arquitecturas de microservicios, donde podría tener cientos de microservicios (contenedores) en funcionamiento. Con imágenes de ASP.NET Core (basadas en el tiempo de ejecución de .NET Core) en Linux o Windows Nano, puede ejecutar el sistema con un número mucho menor de servidores o máquinas virtuales, con lo que, en última instancia, ahorra en costos de infraestructura y hospedaje.
 
-
 >[!div class="step-by-step"]
-[Anterior](general-guidance.md)
-[Siguiente](net-framework-container-scenarios.md)
+>[Anterior](general-guidance.md)
+>[Siguiente](net-framework-container-scenarios.md)

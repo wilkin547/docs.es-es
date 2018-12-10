@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7b2981579f28c083a31d7af6ae42f4e3ca8bbd88
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 53202d0f890df040480b9f54c54aaefdd025dffa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105506"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149571"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Acerca de la autorización en microservicios y aplicaciones web de .NET
 
@@ -125,9 +125,6 @@ Un ejemplo de un requisito de autorización personalizada y un controlador para 
 -   **Custom Policy-Based Authorization (Autorización personalizada basada en directivas)**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
-
-
-
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Siguiente](developer-app-secrets-storage.md)
+>[Anterior](index.md)
+>[Siguiente](developer-app-secrets-storage.md)

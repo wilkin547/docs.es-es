@@ -3,11 +3,11 @@ title: Publicación y resolución de nombres del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50184561"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143732"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Publicación y resolución de nombres del mismo nivel
 

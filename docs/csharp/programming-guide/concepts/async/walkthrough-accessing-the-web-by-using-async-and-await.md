@@ -2,12 +2,12 @@
 title: 'Tutorial: Acceso a web usando Async y Await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 8a97521bae7f5f16841aa4c8e4a157384739ee61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f06bf93f1de4de2aa70c761e1bfb101d4dde48a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453286"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127152"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Tutorial: Acceso a web usando Async y Await (C#)
 
@@ -137,8 +137,7 @@ Si no quiere compilar las aplicaciones por su cuenta, puede descargar [Muestra d
         }
 
         // Display the total count for all of the web addresses.
-        resultsTextBox.Text +=
-            string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+        resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
     }
 
     private List<string> SetUpURLList()
@@ -192,7 +191,7 @@ Si no quiere compilar las aplicaciones por su cuenta, puede descargar [Muestra d
         var bytes = content.Length;
         // Strip off the "https://".
         var displayURL = url.Replace("https://", "");
-        resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+        resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
     }
     ```
 
@@ -500,7 +499,7 @@ namespace AsyncExampleWPF
             }
             // Display the total count for all of the websites.
             resultsTextBox.Text +=
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }
 
         private List<string> SetUpURLList()
@@ -566,7 +565,7 @@ namespace AsyncExampleWPF
             var bytes = content.Length;
             // Strip off the "https://".
             var displayURL = url.Replace("https://", "");
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }
     }
 }
@@ -654,7 +653,7 @@ namespace AsyncExampleWPF
 
             // Display the total count for all of the websites.
             resultsTextBox.Text +=
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }
 
         private List<string> SetUpURLList()
@@ -683,7 +682,7 @@ namespace AsyncExampleWPF
             var bytes = content.Length;
             // Strip off the "https://".
             var displayURL = url.Replace("https://", "");
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }
     }
 }
@@ -694,7 +693,7 @@ namespace AsyncExampleWPF
 - [Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic]](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
-- [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Programación asincrónica con Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])
 - [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957) (Programación asincrónica basada en tareas [TAP])
 - [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#))

@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tec
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404611"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153896"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
@@ -165,5 +165,5 @@ Los marcos de JavaScript siguen evolucionando a una velocidad de vértigo. Use l
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Anterior](common-web-application-architectures.md)
-[Siguiente](develop-asp-net-core-mvc-apps.md)
+>[Anterior](common-web-application-architectures.md)
+>[Siguiente](develop-asp-net-core-mvc-apps.md)

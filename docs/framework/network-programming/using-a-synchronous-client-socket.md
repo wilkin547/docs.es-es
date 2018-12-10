@@ -18,11 +18,11 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192439"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147236"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Usar un Socket de cliente sincrónico
 Un socket de cliente sincrónico suspende el programa de la aplicación mientras se completa la operación de red. Los sockets sincrónicos no son adecuados para las aplicaciones que hacen un uso intensivo de la red durante su funcionamiento, pero pueden proporcionar un acceso simple a los servicios de red para otras aplicaciones.  

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453158"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147273"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
@@ -146,14 +146,11 @@ Puede implementar otra lógica que indique cuándo se debe abrir o interrumpir e
 
 Por último, otra posibilidad para `CircuitBreakerPolicy` consiste en usar `Isolate` (que fuerza y mantiene la apertura del circuito) y `Reset` (que lo cierra de nuevo). Estas características se pueden utilizar para crear un punto de conexión HTTP de utilidad que invoque Aislar y Restablecer directamente en la directiva.  Este tipo de punto de conexión HTTP, protegido adecuadamente, también se puede usar en el entorno de producción para aislar temporalmente un sistema de nivel inferior, como cuando quiere actualizarlo. También puede activar el circuito manualmente para proteger un sistema de nivel inferior que le parezca que está fallando.
 
-
 ## <a name="additional-resources"></a>Recursos adicionales
-
 
 -   **Circuit Breaker pattern (Patrón de interruptor)**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[Anterior](implement-http-call-retries-exponential-backoff-polly.md)
-[Siguiente](monitor-app-health.md)
+>[Anterior](implement-http-call-retries-exponential-backoff-polly.md)
+>[Siguiente](monitor-app-health.md)

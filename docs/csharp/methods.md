@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038310"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127451"
 ---
 # <a name="methods"></a>Métodos #
 
@@ -158,7 +158,7 @@ En el ejemplo siguiente se define un método, `ExampleMethod`, que tiene un par�
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Si se invoca un método con varios argumentos opcionales mediante argumentos posicionales, el autor de la llamada debe proporcionar un argumento para todos los parámetros opcionales, del primero al último, a los que se proporcione un argumento. Por ejemplo, en el caso del método `ExampleMethod`, si el autor de la llamada proporciona un argumento para el parámetro `description`, también debe proporcionar uno para el parámetro `optionalInt`. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` es una llamada de método válida; `opt.ExampleMethod(2, , "Addition of 2 and 0);` genera un error del compilador, "Falta un argumento".
+Si se invoca un método con varios argumentos opcionales mediante argumentos posicionales, el autor de la llamada debe proporcionar un argumento para todos los parámetros opcionales, del primero al último, a los que se proporcione un argumento. Por ejemplo, en el caso del método `ExampleMethod`, si el autor de la llamada proporciona un argumento para el parámetro `description`, también debe proporcionar uno para el parámetro `optionalInt`. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` es una llamada de método válida; `opt.ExampleMethod(2, , "Addition of 2 and 0");` genera un error del compilador, "Falta un argumento".
 
 Si se llama a un método mediante argumentos con nombre o una combinación de argumentos posicionales y con nombre, el autor de la llamada puede omitir los argumentos que siguen al último argumento posicional en la llamada al método.
 
