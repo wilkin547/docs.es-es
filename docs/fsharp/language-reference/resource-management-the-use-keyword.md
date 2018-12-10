@@ -1,15 +1,15 @@
 ---
-title: 'Administración de recursos: palabra clave use (F#)'
+title: 'Administración de recursos: La palabra clave use (F#)'
 description: Obtenga información sobre la F# palabra clave 'use' y la función "using", que puede controlar la inicialización y la liberación de recursos.
 ms.date: 05/16/2016
 ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296885"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147637"
 ---
-# <a name="resource-management-the-use-keyword"></a>Administración de recursos: palabra clave use
+# <a name="resource-management-the-use-keyword"></a>Administración de recursos: La palabra clave use
 
 Este tema describe la palabra clave `use` y `using` función, que puede controlar la inicialización y la liberación de recursos.
 

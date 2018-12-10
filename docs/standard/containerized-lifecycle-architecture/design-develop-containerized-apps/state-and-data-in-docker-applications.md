@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123233"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154182"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 
@@ -39,7 +39,7 @@ Figura 4-5 se muestra que los volúmenes de Docker normales pueden colocarse en 
 
 ![](./media/image5.png)
 
-Figura 4-5: volúmenes de datos y orígenes de datos externos para aplicaciones de contenedores, contenedores
+Figura 4-5: Volúmenes de datos y orígenes de datos externos para aplicaciones de contenedores, contenedores
 
 Debido a la incapacidad para administrar los datos que se comparten entre contenedores que se ejecutan en hosts físicos independientes, se recomienda que no utilice volúmenes de datos empresariales a menos que el host de Docker es una host o VM fija, porque cuando se usa contenedores de Docker en un orquestador, los contenedores se esperan que se ha movido de uno a otro host, según las optimizaciones que debe realizar el clúster.
 
@@ -49,7 +49,6 @@ Por lo tanto, los volúmenes de datos regulares son un buen mecanismo para traba
 
 Orígenes de datos remotos y las memorias caché, como SQL Database, DocumentDB o una caché remota como Redis sería igual a desarrollar sin contenedores. Esta es una de las formas preferidas y probadas para almacenar datos de aplicaciones empresariales.
 
-
 >[!div class="step-by-step"]
-[Anterior](monolithic-applications.md)
-[Siguiente](soa-applications.md)
+>[Anterior](monolithic-applications.md)
+>[Siguiente](soa-applications.md)

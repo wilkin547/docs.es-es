@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 39fb57af6ad97c1a0e51a2c5dcf06245ddf293ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738189"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152477"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 Define un transporte del TCP que puede ser utilizado por un canal para la transferencia de mensajes de un enlace personalizado.  
@@ -54,7 +54,7 @@ Define un transporte del TCP que puede ser utilizado por un canal para la transf
 |channelInitializationTimeout|Obtiene o establece el límite de tiempo para inicializar un canal que se va a aceptar.  El tiempo máximo que un canal puede estar en el estado de inicialización antes de que se desconecte, en segundos. Esta cuota contiene el tiempo que una conexión TCP puede tardar en autenticarse a sí misma mediante el protocolo de trama de mensajes de .Net. Un cliente debe enviar algunos datos iniciales antes de que el servidor tenga información suficiente para realizar la autenticación. El valor predeterminado es 30 segundos.|  
 |connectionBufferSize|Obtiene o establece el tamaño del búfer usado para transmitir un bloque del mensaje serializado en la conexión del cliente o servicio.|  
 |hostNameComparisonMode|Obtiene o establece un valor que indica si el nombre del host se usa para alcanzar el servicio al coincidir con el URI.|  
-|listenBacklog|El número máximo de solicitudes de conexión en cola que pueden estar pendientes para un servicio web. El atributo `connectionLeaseTimeout` limita el tiempo durante el cual el cliente espera a ser conectado antes de iniciar una excepción de conexión. Esta es una propiedad del nivel de socket que controla el número máximo de solicitudes de conexión en cola que pueden estar pendientes para un servicio web. Cuando ListenBacklog es demasiado bajo, WCF dejará de aceptar solicitudes y por consiguiente quitará las conexiones nuevas hasta que el servidor confirme algunas de las conexiones en cola existentes. El valor predeterminado es 16 * número de procesadores.|  
+|listenBacklog|El número máximo de solicitudes de conexión en cola que pueden estar pendientes para un servicio web. El atributo `connectionLeaseTimeout` limita el tiempo durante el cual el cliente espera a ser conectado antes de iniciar una excepción de conexión. Esta es una propiedad del nivel de socket que controla el número máximo de solicitudes de conexión en cola que pueden estar pendientes para un servicio web. Cuando ListenBacklog es demasiado bajo, WCF se deje de aceptar las solicitudes y colocar, por tanto, las nuevas conexiones hasta que el servidor confirme algunas de las conexiones existentes en cola. El valor predeterminado es 16 * número de procesadores.|  
 |manualAddressing|Obtiene o establece un valor que indica si se requiere la dirección manual del mensaje.|  
 |maxBufferPoolSize|Obtiene o establece el tamaño máximo de cualquier grupo de búferes utilizado por el transporte.|  
 |maxBufferSize|Obtiene o establece el tamaño máximo del búfer que se va a usar. Para mensajes transmitidos por secuencias, este valor debería ser por lo menos el tamaño máximo posible de los encabezados de mensaje, que se leen en modo almacenado en búfer.|  

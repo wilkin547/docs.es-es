@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683208"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151072"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes a las aplicaciones optimizadas para la nube
 
@@ -23,7 +23,7 @@ La conclusión es que cuando una organización crea y administra las aplicacione
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Principios y los principios de la aplicación optimizada para la nube 
 
-Mejoras en la nube se centran principalmente en cumple dos objetivos: reducir los costos y mejorar el crecimiento del negocio al mejorar la agilidad. Estos objetivos se consiguen al simplificar los procesos y reducir la fricción cuando se libera y distribuir las aplicaciones.
+Mejoras en la nube se centran principalmente en cumple dos objetivos: Reducir los costos y mejorar el crecimiento del negocio al mejorar la agilidad. Estos objetivos se consiguen al simplificar los procesos y reducir la fricción cuando se libera y distribuir las aplicaciones.
 
 La aplicación está optimizada para la nube si can en la aplicación autónoma desde otras aplicaciones locales de manera desarrollar una herramienta ágil y suéltelo, implementa, el escalado automático, supervisar y solucionar problemas de la aplicación en la nube.
 
@@ -68,5 +68,5 @@ Todas estas ventajas proporcionan en última instancia reducciones de costos imp
 En las secciones siguientes, estas ventajas se explican con más detalle y se vinculan a tecnologías específicas.
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Siguiente](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Anterior](index.md)
+>[Siguiente](microsoft-technologies-in-cloud-optimized-applications.md)

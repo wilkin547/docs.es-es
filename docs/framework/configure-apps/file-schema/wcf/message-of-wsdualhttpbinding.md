@@ -2,12 +2,12 @@
 title: Elemento &lt;message&gt; de &lt;wsDualHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-ms.openlocfilehash: 46f81f6d8a3b272d0eb8b2deb9ee22818b957c6d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 494ac3c2db209ba66a2b2c32402d1dce4f65036e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850340"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145194"
 ---
 # <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a>Elemento &lt;message&gt; de &lt;wsDualHttpBinding&gt;
 Define la seguridad de nivel de mensaje para el [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  

@@ -4,12 +4,12 @@ description: Comprender los desafíos de la arquitectura de aplicaciones sin ser
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "49370276"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155069"
 ---
 # <a name="serverless-architecture-considerations"></a>Consideraciones sobre la arquitectura sin servidor
 
@@ -71,7 +71,7 @@ Una arquitectura sin servidor puede incluir funciones que dependen de otras func
 
 ## <a name="managing-failure-and-providing-resiliency"></a>Administración de errores y proporcionar resistencia
 
-También es importante tener en cuenta la *patrón circuit breaker*: si, por algún motivo, un servicio sigue dando error, no es aconsejable llamar repetidamente a ese servicio. En su lugar, se llama a un servicio alternativo o devuelve un mensaje hasta que se restablece el estado del servicio dependiente. La arquitectura sin servidor debe tener en cuenta la estrategia para resolver y administrar las dependencias entre servicios.
+También es importante tener en cuenta la *patrón circuit breaker*: Si por algún motivo, un servicio sigue dando error, no es aconsejable llamar repetidamente a ese servicio. En su lugar, se llama a un servicio alternativo o devuelve un mensaje hasta que se restablece el estado del servicio dependiente. La arquitectura sin servidor debe tener en cuenta la estrategia para resolver y administrar las dependencias entre servicios.
 
 Para continuar con el patrón circuit breaker, servicios deben ser tolerante a errores y resistente. Tolerancia a errores hace referencia a la capacidad de la aplicación continúe ejecutándose incluso después de las excepciones inesperadas o Estados no válidos se encuentran. Tolerancia a errores normalmente es una función del propio código y cómo ha escrito controlar las excepciones. Resistencia se refiere a cómo compatibles con la aplicación se encuentra en recuperarse de errores. Resistencia a menudo se administra mediante la plataforma sin servidor. La plataforma debe ser capaz de poner en marcha una nueva instancia de la función sin servidor cuando se produce un error en uno existente. La plataforma también debe ser lo suficientemente inteligente como para detener marcha nuevas instancias cuando se produce un error en todas las instancias nuevas.
 
@@ -82,5 +82,5 @@ Para obtener más información, consulte [implementar el patrón de disyuntor](.
 Una ventaja importante de sin servidor es la capacidad para actualizar una función específica sin tener que volver a implementar toda la aplicación. Las actualizaciones se realice correctamente, las funciones deben ser con control de versiones para que los servicios al llamarlas se enrutan a la versión correcta del código. Una estrategia para implementar nuevas versiones también es importante. Un enfoque común consiste en utilizar "verde/azul implementaciones." La implementación de verde es la función actual. Una nueva versión de "blue" se implementa en producción y probada. Cuando se pasan las pruebas, se intercambian las versiones de verdes y azules para que la nueva versión viene en vivo. Si se encuentra algún problema, puede intercambiar volver. Compatibilidad con control de versiones y las implementaciones azul/verde requiere una combinación de las funciones para dar cabida a los cambios de versión de creación y trabajar con la plataforma sin servidor para controlar las implementaciones. Un posible enfoque es utilizar servidores proxy, que se describen en la [plataforma sin servidor Azure](azure-functions.md#proxies) capítulo.
 
 >[!div class="step-by-step"]
-[Anterior](serverless-architecture.md)
-[Siguiente](serverless-design-examples.md)
+>[Anterior](serverless-architecture.md)
+>[Siguiente](serverless-design-examples.md)

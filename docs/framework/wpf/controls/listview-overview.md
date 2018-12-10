@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562286"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148917"
 ---
 # <a name="listview-overview"></a>Información general sobre ListView
 El <xref:System.Windows.Controls.ListView> control proporciona la infraestructura para mostrar un conjunto de elementos de datos en distintos diseños o vistas. Por ejemplo, es posible que un usuario quiera mostrar elementos de datos en una tabla y, además, ordenar las columnas.  
@@ -75,13 +75,11 @@ El <xref:System.Windows.Controls.ListView> control proporciona la infraestructur
 ## <a name="sharing-the-same-view-mode"></a>Uso compartido del mismo modo de vista  
  Dos <xref:System.Windows.Controls.ListView> controles no pueden compartir el mismo modo de vista al mismo tiempo. Si intenta usar el mismo modo de vista con más de un <xref:System.Windows.Controls.ListView> controlar, se produce una excepción.  
   
- Para especificar un modo de vista que se puede usar simultáneamente más de un <xref:System.Windows.Controls.ListView>, use plantillas o estilos. Para obtener un ejemplo de cómo definir vistas como <xref:System.Windows.FrameworkElement.Resources%2A>, consulte [ListView con varias de las vistas de ejemplo](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Para especificar un modo de vista que se puede usar simultáneamente más de un <xref:System.Windows.Controls.ListView>, use plantillas o estilos.
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>Creación de un modo de vista personalizado  
- Personalizar las vistas como <xref:System.Windows.Controls.GridView> se derivan de la <xref:System.Windows.Controls.ViewBase> clase, que proporciona las herramientas para mostrar los elementos de datos que se representan como abstracta <xref:System.Windows.Controls.ListViewItem> objetos.  
-  
- Para ver un ejemplo de un modo de vista personalizada, consulte [Ejemplo de ListView con varias vistas](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Personalizar las vistas como <xref:System.Windows.Controls.GridView> se derivan de la <xref:System.Windows.Controls.ViewBase> clase, que proporciona las herramientas para mostrar los elementos de datos que se representan como abstracta <xref:System.Windows.Controls.ListViewItem> objetos.    
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Controls.GridView>  

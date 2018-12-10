@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296872"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143303"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent (Instrucción)
 Desencadena un evento declarado en el nivel de módulo dentro de una clase, formulario o documento.  
@@ -28,7 +28,7 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Elementos  
  `eventname`  
- Requerido. Nombre del evento para desencadenar.  
+ Obligatorio. Nombre del evento para desencadenar.  
   
  `argumentlist`  
  Opcional. Lista delimitada por comas de variables, matrices o expresiones. El `argumentlist` argumento debe estar entre paréntesis. Si no hay ningún argumento, se deben omitir los paréntesis.  

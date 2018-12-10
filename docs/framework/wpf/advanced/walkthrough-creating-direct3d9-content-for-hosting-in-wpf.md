@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 321c4ba8659bd2226fff96e74e81ef24f0077c3d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 192036836dfb010274944006feea44e5d81ff4e3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200919"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168759"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Tutorial: Crear contenido Direct3D9 para hospedarlo en WPF
 Este tutorial muestra cómo crear contenido Direct3D9 que es adecuado para el hospedaje en una aplicación de Windows Presentation Foundation (WPF). Para obtener más información sobre hospedar contenido Direct3D9 en aplicaciones de WPF, vea [interoperabilidad entre Direct3D9 y WPF](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).
@@ -30,7 +30,7 @@ Este tutorial muestra cómo crear contenido Direct3D9 que es adecuado para el ho
 
 -   Visual Studio 2010.
 
--   SDK de DirectX 9or más adelante.
+-   DirectX SDK 9 o posterior.
 
 ## <a name="creating-the-direct3d9-project"></a>Crear el proyecto de Direct3D9
  El primer paso es crear y configurar el proyecto de Direct3D9.
@@ -137,7 +137,7 @@ Este tutorial muestra cómo crear contenido Direct3D9 que es adecuado para el ho
 
 ## <a name="next-steps"></a>Pasos siguientes
 
--   Hospedar contenido Direct3D9 en una aplicación WPF. Para obtener más información, consulte [Tutorial: hospedar contenido Direct3D9 en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
+-   Hospedar contenido Direct3D9 en una aplicación WPF. Para obtener más información, consulte [Tutorial: Hospedar contenido Direct3D9 en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
 
 ## <a name="see-also"></a>Vea también
 

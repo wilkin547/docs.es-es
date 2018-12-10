@@ -1,31 +1,33 @@
 ---
 title: Espacios de nombres (F#)
-description: Obtenga información sobre cómo un espacio de nombres de F# le permite organizar el código en las áreas de funcionalidad relacionada por lo que le permite asociar un nombre a una agrupación de elementos de programa.
-ms.date: 04/24/2017
-ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+description: Obtenga información sobre cómo un F# espacio de nombres permite organizar el código en las áreas de funcionalidad relacionada por lo que le permite asociar un nombre a una agrupación de elementos de programa.
+ms.date: 12/08/2018
+ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44178265"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169039"
 ---
 # <a name="namespaces"></a>Espacios de nombres
 
-Un espacio de nombres permite organizar el código en áreas de funcionalidad relacionada, lo que permite adjuntar un nombre a una agrupación de elementos de programa.
+Un espacio de nombres permite organizar el código en áreas de funcionalidad relacionada por lo que le permite asociar un nombre a una agrupación de F# elementos del programa. Espacios de nombres son elementos de nivel superior normalmente F# archivos.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```fsharp
-namespace [parent-namespaces.]identifier
+namespace [rec] [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>Comentarios
 
-Si desea colocar el código en un espacio de nombres, la primera declaración en el archivo debe declarar el espacio de nombres. El contenido del archivo completo, a continuación, se convierten en parte del espacio de nombres.
+Si desea colocar el código en un espacio de nombres, la primera declaración en el archivo debe declarar el espacio de nombres. El contenido del archivo completo, a continuación, pasan a formar parte del espacio de nombres, siempre no existe ninguna otra declaración de espacios de nombres más en el archivo. Si es así, se considera todo el código hasta la siguiente declaración de espacio de nombres que se encuentra en el primer espacio de nombres.
 
 Los espacios de nombres no pueden contener directamente los valores y funciones. En su lugar, los valores y las funciones que deben incluirse en los módulos y los módulos se incluyen en los espacios de nombres. Los espacios de nombres pueden contener tipos de módulos.
 
-Los espacios de nombres se pueden declarar explícitamente con la palabra clave de espacio de nombres, o implícitamente cuando se declara un módulo. Para declarar un espacio de nombres explícitamente, utilice la palabra clave de espacio de nombres seguida del nombre de espacio de nombres. El ejemplo siguiente muestra un archivo de código que declara un espacio de nombres Widgets con un tipo y un módulo incluido en ese espacio de nombres.
+Comentarios de documentación XML se pueden declarar por encima de un espacio de nombres, pero se ignoran. También se pueden declarar directivas de compilador por encima de un espacio de nombres.
+
+Los espacios de nombres se pueden declarar explícitamente con la palabra clave de espacio de nombres, o implícitamente cuando se declara un módulo. Para declarar un espacio de nombres explícitamente, utilice la palabra clave de espacio de nombres seguida del nombre de espacio de nombres. El ejemplo siguiente muestra un archivo de código que declara un espacio de nombres `Widgets` con un tipo y un módulo incluido en ese espacio de nombres.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
@@ -74,7 +76,7 @@ También puede usar global para hacer referencia el espacio de nombres .NET nive
 
 ## <a name="recursive-namespaces"></a>Espacios de nombres recursivos
 
-F# 4.1 presenta la noción de espacios de nombres que permiten todo el código independiente para ser mutuamente recursivas.  Esto se realiza mediante `namespace rec`.  El uso de `namespace rec` puede aliviar algunas dificultades no se pueda escribir código mutuamente referencial entre los tipos y módulos.  Este es un ejemplo de esto:
+También se pueden declarar espacios de nombres como recursivo para permitir todo el código independiente para ser mutuamente recursivas.  Esto se realiza mediante `namespace rec`. El uso de `namespace rec` puede aliviar algunas dificultades no se pueda escribir código mutuamente referencial entre los tipos y módulos. Este es un ejemplo de esto:
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Tenga en cuenta que la excepción `DontSqueezeTheBananaException` y la clase `Banana` ambos hacen referencia entre sí.  Además, el módulo `BananaHelpers` y la clase `Banana` también hacen referencia entre sí.  Esto no sería posible expresar en F# si ha quitado el `rec` palabra clave de la `MutualReferences` espacio de nombres.
+Tenga en cuenta que la excepción `DontSqueezeTheBananaException` y la clase `Banana` ambos hacen referencia entre sí.  Además, el módulo `BananaHelpers` y la clase `Banana` también hacen referencia entre sí. Esto no sería posible expresar en F# si ha quitado el `rec` palabra clave de la `MutualReferences` espacio de nombres.
 
-Esta característica también está disponible para su nivel superior [módulos](modules.md) en F# 4.1 o superior.
+Esta característica también está disponible para su nivel superior [módulos](modules.md).
 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia del lenguaje F#](index.md)
 - [Módulos](modules.md)
-- [F# RFC FS-1009 - permitir tipos mutuamente referenciales y módulos sobre ámbitos más amplios dentro de archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009 - permitir tipos mutuamente referenciales y módulos sobre ámbitos más amplios dentro de archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

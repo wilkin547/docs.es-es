@@ -4,12 +4,12 @@ description: Comprender la variedad de escenarios admitidos por las arquitectura
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 0261b9f17f133942d635cf331d8cef414378bd90
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370220"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146717"
 ---
 # <a name="serverless-design-examples"></a>Ejemplos de diseño sin servidor
 
@@ -89,5 +89,5 @@ Una puerta de enlace de API proporciona un único punto de entrada para los clie
 * [Trabajar con el cambio de compatibilidad con la fuente en Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
-[Anterior](serverless-architecture-considerations.md)
-[Siguiente](azure-serverless-platform.md)
+>[Anterior](serverless-architecture-considerations.md)
+>[Siguiente](azure-serverless-platform.md)

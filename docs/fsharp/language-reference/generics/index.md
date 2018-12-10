@@ -1,13 +1,13 @@
 ---
 title: Genéricos (F#)
-description: Obtenga información sobre cómo usar F# funciones genéricas y tipos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código.
+description: Aprenda a usar F# funciones genéricas y tipos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código.
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44084967"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147010"
 ---
 # <a name="generics"></a>Genéricos
 
@@ -71,8 +71,8 @@ En el código siguiente se muestra el uso de las funciones que se definen en las
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-Hay dos maneras de hacer referencia a un tipo genérico por nombre. Por ejemplo, `list<int>` e `int list` son dos formas de hacer referencia a un tipo genérico `list` que tiene un único argumento de tipo `int`. Por convención, la segunda forma solo se usa con tipos de F# integrados como `list` y `option`. Si hay varios argumentos de tipo, normalmente se usa la sintaxis `Dictionary<int, string>`, pero también se puede usar la sintaxis `(int, string) Dictionary`.
+> [!NOTE]
+> Hay dos maneras de hacer referencia a un tipo genérico por nombre. Por ejemplo, `list<int>` e `int list` son dos formas de hacer referencia a un tipo genérico `list` que tiene un único argumento de tipo `int`. Por convención, la segunda forma solo se usa con tipos de F# integrados como `list` y `option`. Si hay varios argumentos de tipo, normalmente se usa la sintaxis `Dictionary<int, string>`, pero también se puede usar la sintaxis `(int, string) Dictionary`.
 
 ## <a name="wildcards-as-type-arguments"></a>Caracteres comodín como argumentos de tipo
 

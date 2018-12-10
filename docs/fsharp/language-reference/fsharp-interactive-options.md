@@ -2,17 +2,17 @@
 title: Opciones de F# Interactive
 description: Obtenga información sobre las opciones de línea de comandos admitidas por F# Interactive, fsi.exe.
 ms.date: 05/16/2016
-ms.openlocfilehash: a461dd0eeff2de3d15e557ba37138fbd62ca43ba
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565810"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128159"
 ---
 # <a name="f-interactive-options"></a>Opciones de F# Interactive
 
 > [!NOTE]
-En este artículo actualmente solo se describe la experiencia para Windows.  Se reescribirá.
+> En este artículo actualmente solo se describe la experiencia para Windows.  Se reescribirá.
 
 En este tema se describe las opciones de línea de comandos admitidas por F# interactivo, `fsi.exe`. F#Interactive acepta muchas de las mismas opciones de línea de comandos como la F# compilador, pero también acepta algunas opciones adicionales.
 

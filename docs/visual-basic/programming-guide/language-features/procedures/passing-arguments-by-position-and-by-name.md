@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296456"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151320"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Pasar argumentos por posición o por nombre (Visual Basic)
 Cuando se llama a un `Sub` o `Function` procedimiento, puede pasar argumentos *por posición* , en el orden en que aparecen en la definición del procedimiento, o puede pasarlos *por nombre*, sin cuenta la posición.  
@@ -64,7 +64,7 @@ Puede proporcionar argumentos por posición y por nombre en una llamada de proce
   
  En el ejemplo anterior, no hay ninguna coma adicional es necesaria para mantener la posición de la que se omite `age` argumento, ya que `birth` se pasó por nombre.  
   
-En las versiones de Visual Basic 15.5 antes de, al proporcionar argumentos mediante una combinación de posición y el nombre, los argumentos posicionales deben preceder al resto. Una vez que proporciona un argumento por nombre, los argumentos restantes deben todos pasarse por nombre.  Por ejemplo, la llamada siguiente a la `Display` método muestra el error del compilador [BC30241: se esperaba el argumento con nombre](../../../misc/bc30241.md).
+En las versiones de Visual Basic 15.5 antes de, al proporcionar argumentos mediante una combinación de posición y el nombre, los argumentos posicionales deben preceder al resto. Una vez que proporciona un argumento por nombre, los argumentos restantes deben todos pasarse por nombre.  Por ejemplo, la llamada siguiente a la `Display` método muestra el error del compilador [BC30241: Se esperaba el argumento con nombre](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ No se puede pasar una matriz de parámetros por nombre. Esto es porque cuando se
 ## <a name="see-also"></a>Vea también  
  [Procedimientos](./index.md)  
  [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)  
- [Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)  
+ [Cómo: Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)  
  [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)  
  [Parámetros opcionales](./optional-parameters.md)  
  [Matrices de parámetros](./parameter-arrays.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Utilizar TraceSource y filtros con agentes de escucha de seguimiento'
+title: Procedimiento Utilizar TraceSource y filtros con agentes de escucha de seguimiento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7a912386d93e727a1f4cd2253ad06be76ae3385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc81e1e13f942f5db4fec5cc607264d499b63629
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388347"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146084"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Cómo: Utilizar TraceSource y filtros con agentes de escucha de seguimiento
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procedimiento Utilizar TraceSource y filtros con agentes de escucha de seguimiento
 Una de las nuevas características de la versión 2.0 de .NET Framework es un sistema de seguimiento mejorado. La idea básica no se ha modificado: se envían mensajes de seguimiento a través de conmutadores a agentes de escucha, que notifican los datos a un medio de salida asociado. Una diferencia principal de la versión 2.0 es que los seguimientos se pueden iniciar a través de instancias de la clase <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> está pensada para funcionar como un sistema de seguimiento mejorado y se puede usar en lugar de los métodos estáticos de las clases anteriores de seguimiento <xref:System.Diagnostics.Trace> y <xref:System.Diagnostics.Debug>. Las clases <xref:System.Diagnostics.Trace> y <xref:System.Diagnostics.Debug> conocidas siguen existiendo, pero la práctica recomendada es usar la clase <xref:System.Diagnostics.TraceSource> para realizar el seguimiento.  
   
  En este tema se describe el uso de <xref:System.Diagnostics.TraceSource> junto con un archivo de configuración de aplicación.  Es posible, aunque no aconsejable, realizar el seguimiento mediante <xref:System.Diagnostics.TraceSource> sin el uso de un archivo de configuración. Para obtener información sobre el seguimiento sin un archivo de configuración, vea [Cómo: Crear e inicializar orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
@@ -32,7 +32,7 @@ Una de las nuevas características de la versión 2.0 de .NET Framework es un si
   
 1.  El primer paso para instrumentar una aplicación con el seguimiento es crear un origen de seguimiento. En proyectos grandes con diversos componentes, puede crear un origen de seguimiento independiente para cada componente. La práctica recomendada es usar el nombre de la aplicación para el nombre del origen de seguimiento. Así resultará más fácil separar los distintos seguimientos. En el código siguiente se crea un nuevo origen de seguimiento (`mySource)`) y se llama a un método (`Activity1`) que realiza el seguimiento de eventos.  El agente de escucha de seguimiento predeterminado escribe los mensajes de seguimiento.  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -101,7 +101,7 @@ Una de las nuevas características de la versión 2.0 de .NET Framework es un si
   
 1.  El archivo de configuración inicializa la configuración para el origen de traza en el momento en que se inicializa la aplicación. Para cambiar esa configuración, debe cambiar el archivo de configuración y reiniciar la aplicación, o actualizarla mediante programación usando el método <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>. La aplicación puede cambiar dinámicamente las propiedades establecidas por el archivo de configuración para reemplazar cualquier configuración especificada por el usuario.  Por ejemplo, es posible que quiera asegurarse de que los mensajes críticos siempre se envíen a un archivo de texto, independientemente de las opciones de configuración actuales.  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -168,5 +168,5 @@ Una de las nuevas características de la versión 2.0 de .NET Framework es un si
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [Creación e inicialización de orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Cómo: Crear e inicializar orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)

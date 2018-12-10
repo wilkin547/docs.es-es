@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086393"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151218"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools para Docker (Visual Studio en Windows)
 
@@ -33,7 +33,7 @@ El **agregar** > **compatibilidad con Docker** y **agregar** > **soporte técnic
 
 ![Agregar la opción de menú de la compatibilidad con Docker en Visual Studio](media/add-docker-support-menu.png)
 
-Figura 4-26: agregar compatibilidad con Docker a un proyecto de Visual Studio 2017
+Figura 4-26: Agregar compatibilidad con Docker a un proyecto de Visual Studio 2017
 
 ### <a name="add-docker-support"></a>Agregar compatibilidad con Docker
 
@@ -41,7 +41,7 @@ Puede agregar compatibilidad con Docker a un proyecto de aplicación web de .NET
 
 ![Habilitar compatibilidad con Docker para la nueva aplicación web de ASP.NET Core en Visual Studio](./media/enable-docker-support-visual-studio.png)
 
-Figura 4-27: habilitar la compatibilidad con Docker durante la creación del proyecto en Visual Studio 2017
+Figura 4-27: Habilitar la compatibilidad con Docker durante la creación del proyecto en Visual Studio 2017
 
 Al agregar o habilitar la compatibilidad con Docker, Visual Studio agrega un *Dockerfile* archivo al proyecto.
 
@@ -50,7 +50,7 @@ Al agregar o habilitar la compatibilidad con Docker, Visual Studio agrega un *Do
 >
 > ![Habilitar Docker compose de soporte técnico para un proyecto de aplicación web de .NET Framework](media/enable-docker-compose-support.png)
 
-> Figura 4-28: habilitar la compatibilidad con Docker Compose en un proyecto de aplicación web de .NET Framework en Visual Studio 2017
+> Figura 4-28: Habilitar la compatibilidad con Docker Compose en un proyecto de aplicación web de .NET Framework en Visual Studio 2017
 
 ### <a name="add-container-orchestration-support"></a>Agregar compatibilidad con la orquestación de contenedor
 
@@ -62,7 +62,7 @@ Después de agregar compatibilidad con la orquestación de contenedor para el pr
 
 ![Archivos de docker en el Explorador de soluciones en Visual Studio](media/docker-support-solution-explorer.png)
 
-Figura 4-29: archivos de Docker en el Explorador de soluciones en Visual Studio 2017
+Figura 4-29: Archivos de docker en el Explorador de soluciones en Visual Studio 2017
 
 Si *docker-compose.yml* ya existe, Visual Studio agrega simplemente las líneas de código de configuración necesarias.
 
@@ -72,7 +72,7 @@ En el menú principal, elija **herramientas** > **opciones**y expanda **herramie
 
 ![](./media/visual-studio-docker-tools-options.png)
 
-Figura 4-30: opciones de herramientas de Docker
+Figura 4-30: Opciones de herramientas de docker
 
 En la tabla siguiente puede ayudarle a decidir cómo establecer estas opciones.
 
@@ -93,5 +93,5 @@ Compilar, depurar, actualizar y actualizar aplicaciones en un contenedor de Dock
 Implementar un contenedor de Docker de ASP.NET Core en un registro de contenedor: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
-[Anterior](docker-apps-inner-loop-workflow.md)
-[Siguiente](set-up-windows-containers-with-powershell.md)
+>[Anterior](docker-apps-inner-loop-workflow.md)
+>[Siguiente](set-up-windows-containers-with-powershell.md)

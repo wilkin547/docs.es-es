@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a75efaf6703858fdb48a3f09635da1be4463d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6cf0c944fc904a50a5b652f666f50c457a60204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364706"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130845"
 ---
 # <a name="bindingfailure-mda"></a>MDA de bindingFailure
 El asistente para la depuración administrada (MDA) `bindingFailure` se activa cuando no se puede cargar un ensamblado.  
@@ -77,7 +77,7 @@ El asistente para la depuración administrada (MDA) `bindingFailure` se activa c
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra una situación que puede activar este MDA:  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Text;  

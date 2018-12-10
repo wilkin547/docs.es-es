@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 741f195a78c1716b95d8d4d88594207708ce6289
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c927ba59ccdb6e5a717fcaccde9294845a2c41cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123831"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153909"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Proporciona el control completo sobre la pila de la mensajería para el usuario.  
@@ -290,9 +290,8 @@ Proporciona el control completo sobre la pila de la mensajería para el usuario.
   
  Además, puede definir sus propios elementos de enlace e insertarlos entre cualquiera de las capas definidas anteriores.  
   
- Para obtener información sobre cómo usar un enlace personalizado para modificar un enlace proporcionado por el sistema, consulte [Cómo: personalizar un enlace proporcionados por el sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
-  
-1.  
+ Para obtener información sobre cómo usar un enlace personalizado para modificar un enlace proporcionado por el sistema, consulte [Cómo: Personalización de un enlace proporcionado por el sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+    
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Channels.Binding>  

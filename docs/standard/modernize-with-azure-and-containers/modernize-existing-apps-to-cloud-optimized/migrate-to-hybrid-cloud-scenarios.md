@@ -1,49 +1,49 @@
 ---
 title: Migrar a escenarios de nube híbrida
-description: Modernizar las aplicaciones .NET existentes con contenedores de Windows y de nube de Azure | Migrar a escenarios de nube híbrida
+description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Migrar a escenarios de nube híbrida
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 8885ee8fce4f8c11c14ee8936f3ee0ffd89ece04
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957895"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147351"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrar a escenarios de nube híbrida
 
-Algunas organizaciones y empresas no pueden migrar algunos de sus aplicaciones a nubes públicas como Microsoft Azure o cualquier otra nube pública debido a la normativa o sus propias directivas. Sin embargo, es probable que cualquier organización puede beneficiarse de tener algunos de sus aplicaciones en la nube pública y otras aplicaciones locales. Pero puede provocar un entorno mixto excesiva complejidad en los entornos debido a distintas plataformas y tecnologías que se usan en nubes públicas frente a entornos locales.
+Algunas organizaciones y empresas no pueden migrar algunos de sus aplicaciones a nubes públicas, como Microsoft Azure o cualquier otra nube pública debido a las regulaciones o sus propias directivas. Sin embargo, es probable que cualquier organización puede beneficiarse de tener algunas de sus aplicaciones en la nube pública y otras aplicaciones locales. Pero un entorno mixto puede dar lugar a una complejidad excesiva en los entornos debido a distintas plataformas y tecnologías utilizadas en las nubes públicas frente a entornos locales.
 
-Microsoft proporciona la mejor solución de nube híbrida, uno en el que se pueden optimizar sus activos existentes en local y en la nube pública, mientras se asegura la coherencia en una nube híbrida de Azure. Puede maximizar los conocimientos y obtener un enfoque flexible y unificado para la generación de aplicaciones que se ejecutan en la nube o local, gracias a la pila de Azure (local) y Azure (nube pública).
+Microsoft proporciona la mejor solución de nube híbrida, uno en el que puede optimizar los recursos existentes en el entorno local y en la nube pública, mientras que garantizar la coherencia de una nube híbrida de Azure. Puede maximizar las habilidades existentes y obtener un enfoque flexible y unificado para crear aplicaciones que se pueden ejecutar en la nube o local, gracias a Azure Stack (local) y Azure (nube pública).
 
-En cuanto a seguridad, puede centralizar la administración y la seguridad a través de la nube híbrida. Puede obtener un control sobre todos los recursos, desde el centro de datos en la nube, proporcionando un inicio de sesión único a local y las aplicaciones de nube. Esto se consigue mediante la extensión de Active Directory a una nube híbrida y mediante el uso de administración de identidades.
+En cuanto a seguridad, puede centralizar la administración y seguridad en la nube híbrida. Puede obtener el control sobre todos los recursos del centro de datos a la nube, proporcionando el inicio de sesión único en el entorno local y aplicaciones en la nube. Esto se consigue mediante la extensión de Active Directory a una nube híbrida y mediante el uso de administración de identidades.
 
-Por último, puede distribuir y analizar los datos sin problemas, use los mismos lenguajes de consulta para los activos en la nube y locales y aplicar profunda de aprendizaje de Azure para enriquecer los datos, independientemente de su origen y análisis.
+Por último, puede distribuir y analizar datos sin problemas, use los mismos lenguajes de consulta para los recursos locales y en la nube y aplicar análisis y aprendizaje profundo de Azure para enriquecer los datos, independientemente de su origen.
 
-## <a name="azure-stack"></a>Pila de Azure
+## <a name="azure-stack"></a>Azure Stack
 
-Pila de Azure es una plataforma de nube híbrida que le permite ofrecer servicios de Azure desde el centro de datos de su organización. Pila de Azure está diseñado para admitir nuevas opciones para las aplicaciones modernas en escenarios claves, como el borde y entornos no conectados o resolver determinados requisitos de seguridad y cumplimiento de normas.
+Azure Stack es una plataforma de nube híbrida que le permite proporcionar servicios de Azure desde el centro de datos de su organización. Azure Stack está diseñado para admitir las nuevas opciones para las aplicaciones modernas en escenarios clave, como borde y entornos desconectados o resolver determinados requisitos de seguridad y cumplimiento.
 
-Figura 4-13 muestra una visión general de la plataforma de nube híbrida true que ofrece Microsoft.
+Figura 4-13 se muestra una visión general de la plataforma de nube híbrida verdadera que ofrece Microsoft.
 
-![Plataforma de nube híbrida de Microsoft con la pila de Azure y Azure](./media/image13.jpg)
+![Plataforma de nube híbrida de Microsoft con Azure Stack y Azure](./media/image13.jpg)
 
-> **Figura 4-13.** Plataforma de nube híbrida de Microsoft con la pila de Azure y Azure
+> **Figura 4-13.** Plataforma de nube híbrida de Microsoft con Azure Stack y Azure
 
-Pila de Azure se ofrece en dos opciones de implementación, para satisfacer sus necesidades:
+Azure Stack se ofrece en dos opciones de implementación para satisfacer sus necesidades:
 
--   Sistemas integrados de pila de Azure
+-   Sistemas integrados de Azure Stack
 
--   Kit de desarrollo de la pila de Azure
+-   Kit de desarrollo de Azure Stack
 
-### <a name="azure-stack-integrated-systems"></a>Sistemas integrados de pila de Azure
+### <a name="azure-stack-integrated-systems"></a>Sistemas integrados de Azure Stack
 
-Sistemas de pila integrada Azure se ofrecen a través de una asociación de asociados de Microsoft y hardware. El perfil crea una solución que ofrece innovación paced en la nube que se equilibra con simplicidad de administración. Ya que Azure pila se ofrece como un sistema integrado de hardware y software, obtendrá la cantidad correcta de flexibilidad y control, mientras todavía adopta innovación de la nube. Sistemas de pila integrada Azure varían en tamaño de 4 a 12 nodos y conjuntamente son compatibles con los socios de hardware y Microsoft. Usar sistemas de pila de Azure integrado para implementar nuevos escenarios para las cargas de trabajo de producción.
+Sistemas de Azure Stack integrado se ofrecen a través de una asociación de asociados de Microsoft y de hardware. La asociación crea una solución que ofrece innovación paced en la nube que sea equilibrada con simplicidad en la administración. Dado que Azure Stack se ofrece como un sistema integrado de hardware y software, obtener la cantidad adecuada de flexibilidad y control, al seguir adoptando la innovación de la nube. Sistemas de Azure Stack integrado oscilar entre 4 a 12 nodos y son compatibles en conjunto con asociados de hardware y Microsoft. Utilice los sistemas integrados de Azure Stack para implementar nuevos escenarios para las cargas de trabajo de producción.
 
-### <a name="azure-stack-development-kit"></a>Kit de desarrollo de la pila de Azure
+### <a name="azure-stack-development-kit"></a>Kit de desarrollo de Azure Stack
 
-Kit de desarrollo de pila de Microsoft Azure es una implementación de un único nodo de pila de Azure, lo que puede usar para evaluar y obtener información sobre la pila de Azure. También puede usar el Kit de desarrollo de pila de Azure como un entorno de desarrollador, donde puede desarrollar con las API y herramientas que son coherentes con Azure. Kit de desarrollo de pila de Azure no está pensado para usarse como un entorno de producción.
+Kit de desarrollo de Microsoft Azure Stack es una implementación de nodo único de Azure Stack, que puede usar para evaluar y conocer Azure Stack. También puede usar el Kit de desarrollo de Azure Stack como entorno de desarrollo, donde puede desarrollar mediante las API y herramientas que son coherentes con Azure. El Kit de desarrollo de Azure Stack no está pensado para usarse como un entorno de producción.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
@@ -55,7 +55,7 @@ Kit de desarrollo de pila de Microsoft Azure es una implementación de un único
 
     [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
--   **Cuentas de servicio de Active Directory para los contenedores de Windows**
+-   **Cuentas de servicio de Active Directory para contenedores de Windows**
 
     [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
@@ -63,10 +63,10 @@ Kit de desarrollo de pila de Microsoft Azure es una implementación de un único
 
     [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
--   **Licencias de beneficio híbrida de Azure**
+-   **Licencias de ventaja híbrida de Azure**
 
     [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
-[Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
-[Siguiente](../walkthroughs-technical-get-started-overview.md)
+>[Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Siguiente](../walkthroughs-technical-get-started-overview.md)

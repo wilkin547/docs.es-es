@@ -1,15 +1,15 @@
 ---
-title: 'Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura migración'
+title: 'Anticipación de la adopción de Windows Communication Foundation: Cómo facilitar la futura migración'
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 171a31b375eae4c032849c2a1c2090f5d9ff856f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 306ffbae86058a2caad70d3788fb7bb4e7998eec
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837406"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129589"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura migración
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Anticipación de la adopción de Windows Communication Foundation: Cómo facilitar la futura migración
 Para garantizar una migración futura más sencilla de nuevas aplicaciones de ASP.NET a WCF, siga las recomendaciones anteriores, así como las siguientes recomendaciones.  
   
 ## <a name="protocols"></a>Protocolos  
@@ -36,7 +36,7 @@ Para garantizar una migración futura más sencilla de nuevas aplicaciones de AS
   
 -   Proporcione los nombres explícitos de las operaciones de un servicio mediante el parámetro `MessageName` de <xref:System.Web.Services.WebMethodAttribute>.  
   
-    ```  
+    ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
     string Echo(string input);  
     ```  
@@ -47,7 +47,7 @@ Para garantizar una migración futura más sencilla de nuevas aplicaciones de AS
   
 -   Utilice <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> para proporcionar los valores explícitos de los encabezados HTTP de SOAPAction por los que las solicitudes HTTP se enrutarán a los métodos.  
   
-    ```  
+    ```csharp  
     [WebMethod]  
     [SoapDocumentMethod(RequestElementName="ExplicitAction")]  
     string Echo(string input);  
@@ -63,7 +63,7 @@ Para garantizar una migración futura más sencilla de nuevas aplicaciones de AS
 ## <a name="exception-handling"></a>Control de excepciones  
  El diseño de las estructuras de los tipos de datos enviados y recibidos por un servicio, también diseña las estructuras que representan los diferentes tipos de excepciones que pueden producirse en el servicio que se desea hacer llegar a un cliente.  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(  
      Namespace="ExplicitNamespace", IsNullable=true)]  
@@ -84,7 +84,7 @@ Para garantizar una migración futura más sencilla de nuevas aplicaciones de AS
   
  Otorgue a estas clases la capacidad de serializarse a XML:  
   
-```  
+```csharp  
 public XmlNode ToXML()  
 {  
      XmlSerializer serializer = new XmlSerializer(  
@@ -103,7 +103,7 @@ public XmlNode ToXML()
   
  De este modo, pueden utilizarse para proporcionar detalles de las instancias <xref:System.Web.Services.Protocols.SoapException> explícitamente iniciadas:  
   
-```  
+```csharp  
 AnctipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
@@ -113,7 +113,7 @@ throw new SoapException(
      exception.ToXML());  
 ```  
   
- Estas clases de excepción pronto podrán reutilizarse con WCF<xref:System.ServiceModel.FaultException%601> clase para iniciar una nueva `FaultException<AnticipatedException>(anticipatedException);`  
+ Estas clases de excepción pronto podrán reutilizarse con WCF <xref:System.ServiceModel.FaultException%601> clase para iniciar una nueva `FaultException<AnticipatedException>(anticipatedException);`  
   
 ## <a name="security"></a>Seguridad  
  A continuación se indican algunas recomendaciones de seguridad.  
@@ -125,4 +125,4 @@ throw new SoapException(
 -   Considere la utilización de los proveedores de funciones de ASP.NET 2.0 para autorizar el acceso a los recursos de un servicio.  
   
 ## <a name="see-also"></a>Vea también  
- [Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura integración](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+ [Anticipación de la adopción de Windows Communication Foundation: Cómo facilitar la futura integración](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
