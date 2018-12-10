@@ -2,20 +2,19 @@
 title: Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística
 description: Descubra cómo usar la programación probabilística con Infer.NET para crear una aplicación de listas de enfrentamientos en juegos basada en una versión simplificada de TrueSkill.
 ms.date: 10/04/2018
-ms.topic: how-to
-ms.custom: mvc
-ms.openlocfilehash: 990fd60d809c893730bf2682946f89dbe59f36a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.custom: mvc,how-to
+ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "49401705"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152478"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística
 
 Esta guía paso a paso le enseña la programación probabilística mediante Infer.NET. La programación probabilística es un enfoque de aprendizaje automático donde los modelos personalizados se expresan como programas. Permite la incorporación del conocimiento del dominio en los modelos y hace que el sistema de aprendizaje automático sea más interpretable. También admite la inferencia en línea (proceso de aprendizaje a medida que llegan nuevos datos). Infer.NET se usa en varios productos de Microsoft, como Azure, Xbox y Bing.
 
-## <a name="what-is-probabilistic-programming"></a>¿Qué es la programación probabilística? 
+## <a name="what-is-probabilistic-programming"></a>¿Qué es la programación probabilística?
 
 La programación probabilística nos permite crear modelos estadísticos de los procesos reales. 
 

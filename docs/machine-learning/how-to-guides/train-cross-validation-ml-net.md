@@ -4,11 +4,11 @@ description: Descubra cómo entrenar un modelo de Machine Learning mediante la v
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: 41b99415d736b6583a8d43434c031e677e6f3ac8
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297582"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145967"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Entrenamiento de un modelo de Machine Learning con validación cruzada: ML.NET
 

@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
 ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296846"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149957"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Creación de una solución completa de .NET Core en Windows con Visual Studio 2017
 

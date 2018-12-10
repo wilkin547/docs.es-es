@@ -30,8 +30,6 @@
 ### [Uso de Azure Service Fabric](architect-microservice-container-applications/using-azure-service-fabric.md)
 ## [Proceso de desarrollo de aplicaciones basadas en Docker](docker-application-development-process/index.md)
 ### [Flujo de trabajo de desarrollo para aplicaciones de Docker](docker-application-development-process/docker-app-development-workflow.md)
-## [Implementar aplicaciones web de .NET Core basadas en un solo contenedor en hosts de Linux o Windows Nano Server](net-core-single-containers-linux-windows-server-hosts/index.md)
-## [Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows](containerize-net-framework-applications/index.md)
 ## [Diseñar y desarrollar aplicaciones .NET basadas en varios contenedores y microservicios](multi-container-microservice-net-applications/index.md)
 ### [Diseñar una aplicación orientada a microservicios](multi-container-microservice-net-applications/microservice-application-design.md)
 ### [Crear un microservicio CRUD sencillo controlado por datos](multi-container-microservice-net-applications/data-driven-crud-microservice.md)

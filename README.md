@@ -1,4 +1,4 @@
-﻿# <a name="net-docs"></a>Documentos de .NET
+# <a name="net-docs"></a>Documentos de .NET
 
 Este repositorio contiene documentación conceptual de .NET. El [sitio de documentación de .NET](https://docs.microsoft.com/dotnet) se ha creado a partir de varios repositorios, además de este:
 
@@ -8,7 +8,7 @@ Este repositorio contiene documentación conceptual de .NET. El [sitio de docume
 
 En esta sección se hace un seguimiento de los problemas y de las tareas de esos tres repositorios. Existe una amplia comunidad que utiliza estos recursos. Nos esforzamos al máximo para responder de manera puntual a los problemas. Encontrará más información sobre los procedimientos que seguimos para clasificar y resolver los problemas en el tema [Issues policy](issues-policy.md) (Directiva sobre problemas).
 
-Agradecemos la colaboración de los usuarios para mejorar y completar la documentación de .NET. Si quiere colaborar, vea [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35) (Proyectos para colaboradores de la comunidad de .NET) para obtener ideas. La [guía de colaboración](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) contiene instrucciones sobre los procedimientos que seguimos. También puede consultar la [lista de problemas](https://github.com/dotnet/docs/issues) para ver tareas que le pueden resultar interesantes.
+Agradecemos la colaboración de los usuarios para mejorar y completar la documentación de .NET. Si quiere colaborar, vea [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35) (Proyectos para colaboradores de la comunidad de .NET) para obtener ideas. La [guía de colaboración](CONTRIBUTING.md) contiene instrucciones sobre los procedimientos que seguimos. También puede consultar la [lista de problemas](https://github.com/dotnet/docs/issues) para ver tareas que le pueden resultar interesantes.
 
 Prevemos que [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) y [Unity](http://docs.unity3d.com/Manual/index.html) también usarán esta documentación.
 

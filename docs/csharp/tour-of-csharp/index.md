@@ -3,12 +3,12 @@ title: Un paseo por C# - Guía de C#
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359012"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150399"
 ---
 # <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C#  
 
@@ -76,4 +76,4 @@ Hay mucha más información sobre C#.  Los temas siguientes proporcionan introdu
     * Los ***atributos*** permiten a los programas especificar información declarativa adicional sobre los tipos, miembros y otras entidades.
 
 >[!div class="step-by-step"]
-[Siguiente](program-structure.md)
+>[Siguiente](program-structure.md)

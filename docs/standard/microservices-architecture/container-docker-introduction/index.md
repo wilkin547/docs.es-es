@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45658436"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147956"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introducción a Containers y Docker
 
@@ -29,7 +29,6 @@ Otra ventaja de la inclusión en contenedores es la escalabilidad. La creación 
 
 En resumen, los contenedores ofrecen las ventajas del aislamiento, la portabilidad, la agilidad, la escalabilidad y el control a lo largo de todo el flujo de trabajo del ciclo de vida de la aplicación. La ventaja más importante es el aislamiento del entorno que se proporciona entre el desarrollo y las operaciones.
 
-
 >[!div class="step-by-step"]
-[Anterior](../index.md)
-[Siguiente](docker-defined.md)
+>[Anterior](../index.md)
+>[Siguiente](docker-defined.md)
