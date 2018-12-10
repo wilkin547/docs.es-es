@@ -2,17 +2,17 @@
 title: 'Cómo: Buscar archivos duplicados en un árbol de directorios (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 09ce574c68cbf11c0ee50df663692fd207038758
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 66bdcf1b713a80f2a7cda753cb0f39c016178b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189240"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126606"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="a5c12-102">Cómo: Buscar archivos duplicados en un árbol de directorios (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="a5c12-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>
-<span data-ttu-id="a5c12-103">A veces, los archivos que tienen el mismo nombre pueden estar en más de una carpeta.</span><span class="sxs-lookup"><span data-stu-id="a5c12-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="a5c12-104">Por ejemplo, en la carpeta de instalación de Visual Studio, hay varias carpetas que tienen un archivo readme.htm.</span><span class="sxs-lookup"><span data-stu-id="a5c12-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="a5c12-105">En este ejemplo se muestra cómo buscar estos nombres de archivos duplicados en una carpeta raíz especificada.</span><span class="sxs-lookup"><span data-stu-id="a5c12-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="a5c12-106">En el segundo ejemplo se muestra cómo buscar archivos cuyo tamaño y fecha de creación también coinciden.</span><span class="sxs-lookup"><span data-stu-id="a5c12-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="8ff3d-102">Cómo: Buscar archivos duplicados en un árbol de directorios (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="8ff3d-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>
+<span data-ttu-id="8ff3d-103">A veces, los archivos que tienen el mismo nombre pueden estar en más de una carpeta.</span><span class="sxs-lookup"><span data-stu-id="8ff3d-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="8ff3d-104">Por ejemplo, en la carpeta de instalación de Visual Studio, hay varias carpetas que tienen un archivo readme.htm.</span><span class="sxs-lookup"><span data-stu-id="8ff3d-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="8ff3d-105">En este ejemplo se muestra cómo buscar estos nombres de archivos duplicados en una carpeta raíz especificada.</span><span class="sxs-lookup"><span data-stu-id="8ff3d-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="8ff3d-106">En el segundo ejemplo se muestra cómo buscar archivos cuyo tamaño y fecha de creación también coinciden.</span><span class="sxs-lookup"><span data-stu-id="8ff3d-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a5c12-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a5c12-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8ff3d-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8ff3d-107">Example</span></span>  
   
 ```csharp  
 class QueryDuplicateFileNames  
@@ -74,12 +74,12 @@ class QueryDuplicateFileNames
   
         public override int GetHashCode()  
         {  
-            string str = String.Format("{0}{1}{2}", this.CreationTime, this.Length, this.Name);  
+            string str = $"{this.CreationTime}{this.Length}{this.Name}";
             return str.GetHashCode();  
         }  
         public override string ToString()  
         {  
-            return String.Format("{0} {1} {2}", this.Name, this.Length, this.CreationTime);  
+            return $"{this.Name} {this.Length} {this.CreationTime}";
         }  
     }  
     static void QueryDuplicates2()  
@@ -167,12 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- <span data-ttu-id="a5c12-108">En la primera consulta se usa una clave simple para determinar una coincidencia; se buscan archivos que tengan el mismo nombre, pero cuyo contenido podría ser diferente.</span><span class="sxs-lookup"><span data-stu-id="a5c12-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="a5c12-109">En la segunda consulta se usa una clave compuesta para coincidir con tres propiedades del objeto <xref:System.IO.FileInfo>.</span><span class="sxs-lookup"><span data-stu-id="a5c12-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="a5c12-110">En esta consulta es mucho más probable que se encuentren archivos que tienen el mismo nombre y un contenido similar o idéntico.</span><span class="sxs-lookup"><span data-stu-id="a5c12-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
+ <span data-ttu-id="8ff3d-108">En la primera consulta se usa una clave simple para determinar una coincidencia; se buscan archivos que tengan el mismo nombre, pero cuyo contenido podría ser diferente.</span><span class="sxs-lookup"><span data-stu-id="8ff3d-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="8ff3d-109">En la segunda consulta se usa una clave compuesta para coincidir con tres propiedades del objeto <xref:System.IO.FileInfo>.</span><span class="sxs-lookup"><span data-stu-id="8ff3d-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="8ff3d-110">En esta consulta es mucho más probable que se encuentren archivos que tienen el mismo nombre y un contenido similar o idéntico.</span><span class="sxs-lookup"><span data-stu-id="8ff3d-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a5c12-111">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="a5c12-111">Compiling the Code</span></span>  
- <span data-ttu-id="a5c12-112">Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.</span><span class="sxs-lookup"><span data-stu-id="a5c12-112">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8ff3d-111">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="8ff3d-111">Compiling the Code</span></span>  
+ <span data-ttu-id="8ff3d-112">Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.</span><span class="sxs-lookup"><span data-stu-id="8ff3d-112">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5c12-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="a5c12-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ff3d-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="8ff3d-113">See Also</span></span>
 
-- [<span data-ttu-id="a5c12-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="a5c12-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [<span data-ttu-id="a5c12-115">LINQ y directorios de archivos (C#)</span><span class="sxs-lookup"><span data-stu-id="a5c12-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="8ff3d-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="8ff3d-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [<span data-ttu-id="8ff3d-115">LINQ y directorios de archivos (C#)</span><span class="sxs-lookup"><span data-stu-id="8ff3d-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
