@@ -2,12 +2,12 @@
 title: Token personalizado
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 03a1f8bd6a5f2ec57e7af865d2aadde77b40326d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261529"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243054"
 ---
 # <a name="custom-token"></a>Token personalizado
 Este ejemplo muestra cómo agregar una implementación de token personalizada en una aplicación de Windows Communication Foundation (WCF). El ejemplo utiliza `CreditCardToken` para pasar de manera segura información sobre las tarjetas de crédito del cliente al servicio. El token se pasa en el encabezado de mensaje WS-Security y se firma y cifra utilizando el elemento de enlace de seguridad simétrico junto con el cuerpo del mensaje y otros encabezados del mensaje. Esto es útil en casos donde los tokens integrados no son suficiente. Este ejemplo muestra cómo proporcionar un token de seguridad personalizado a un servicio en lugar de utilizar uno de los tokens integrados. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.
@@ -28,7 +28,7 @@ Este ejemplo muestra cómo agregar una implementación de token personalizada en
 ## <a name="client-authentication-using-a-custom-security-token"></a>Autenticación del Cliente utilizando un token de seguridad personalizado
  El servicio expone un extremo único que se crea mediante programación usando las clases `BindingHelper` y `EchoServiceHost`. El extremo está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un enlace personalizado utilizando `SymmetricSecurityBindingElement` y `HttpTransportBindingElement`. Este ejemplo establece `SymmetricSecurityBindingElement` para utilizar el certificado X.509 de un servicio para proteger la clave simétrica durante la transmisión y pasar un `CreditCardToken` personalizado en un encabezado de mensaje de WS-Security como un token de seguridad firmado y cifrado. El comportamiento especifica las credenciales del servicio que se van a utilizar para la autenticación del cliente además de la información sobre el certificado X.509 del servicio.
 
-```
+```csharp
 public static class BindingHelper
 {
     public static Binding CreateCreditCardBinding()
@@ -49,7 +49,7 @@ public static class BindingHelper
 
  Para utilizar un token de tarjeta de crédito en el mensaje, el ejemplo utiliza las credenciales del servicio personalizadas para proporcionar esta funcionalidad. La clase de credenciales de servicio se encuentra en la clase `CreditCardServiceCredentials` y se agrega a las colecciones de comportamientos del host de servicio en el método `EchoServiceHost.InitializeRuntime`.
 
-```
+```csharp
 class EchoServiceHost : ServiceHost
 {
     string creditCardFile;
@@ -64,7 +64,6 @@ class EchoServiceHost : ServiceHost
         }
 
         creditCardFile = String.Format("{0}\\{1}", System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath, creditCardFile);
-
     }
 
     override protected void InitializeRuntime()
@@ -86,13 +85,12 @@ class EchoServiceHost : ServiceHost
 
  El extremo del cliente se configura de una manera similar al extremo de servicio. El cliente utiliza la misma clase `BindingHelper` para crear un enlace. El resto de la instalación se encuentra en la clase `Client`. El cliente también establece información que se va a contener en `CreditCardToken` e información sobre el certificado X.509 del servicio en el código de instalación agregando una instancia `CreditCardClientCredentials` con los datos apropiados a la colección de comportamientos de extremo del cliente. El ejemplo utiliza el certificado X.509 con nombre sujeto establecido en `CN=localhost` como el certificado del servicio.
 
-```
+```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
 EndpointAddress serviceAddress = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
 
 // Create a client with given client endpoint configuration
-channelFactory =
-new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
+channelFactory = new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
 
 // configure the credit card credentials on the channel factory
 CreditCardClientCredentials credentials =
@@ -119,7 +117,7 @@ channelFactory.Close();
 
  La siguiente sección describe lo que debe hacer para permitir un token personalizado que se transmitan a través del cable y consumir un extremo de WCF.
 
-```
+```csharp
 class CreditCardToken : SecurityToken
 {
     CreditCardInfo cardInfo;
@@ -161,7 +159,7 @@ class CreditCardToken : SecurityToken
 
  En el cliente, la clase `CreditCardSecurityTokenSerializer` escribe la información contenida en la representación de objeto del token de seguridad en el sistema de escritura de XML.
 
-```
+```csharp
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 {
     public CreditCardSecurityTokenSerializer(SecurityTokenVersion version) : base() { }
@@ -257,7 +255,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  En el servicio, la funcionalidad reside en las clases `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` y `CreditCardTokenAuthorizationPolicy`.
 
-```
+```csharp
     public class CreditCardClientCredentials : ClientCredentials
     {
         CreditCardInfo creditCardInfo;
@@ -287,7 +285,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         }
     }
 
-public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentialsSecurityTokenManager
+    public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         CreditCardClientCredentials creditCardClientCredentials;
 
@@ -342,7 +340,7 @@ public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentials
         }
     }
 
-public class CreditCardServiceCredentials : ServiceCredentials
+    public class CreditCardServiceCredentials : ServiceCredentials
     {
         string creditCardFile;
 
@@ -371,8 +369,8 @@ public class CreditCardServiceCredentials : ServiceCredentials
         }
     }
 
-public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentialsSecurityTokenManager
-{
+    public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentialsSecurityTokenManager
+    {
         CreditCardServiceCredentials creditCardServiceCredentials;
 
         public CreditCardServiceCredentialsSecurityTokenManager(CreditCardServiceCredentials creditCardServiceCredentials)
@@ -502,12 +500,11 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
 ## <a name="displaying-the-callers-information"></a>Mostrar la información de los llamadores
  Para mostrar la información del autor de la llamada, use `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` tal y como se muestra en el código muestra siguiente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene notificaciones de autorización asociadas con el autor de la llamada actual. La clase `CreditCardToken` proporciona las notificaciones en su colección `AuthorizationPolicies`.
 
-```
+```csharp
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)
 {
     claimValue = null;
-    IEnumerable<Claim> matchingClaims = claimSet.FindClaims(claimType,
-        Rights.PossessProperty);
+    IEnumerable<Claim> matchingClaims = claimSet.FindClaims(claimType, Rights.PossessProperty);
     if (matchingClaims == null)
         return false;
     IEnumerator<Claim> enumerator = matchingClaims.GetEnumerator();
@@ -532,9 +529,7 @@ string GetCallerCreditCardNumber()
                  {
                      issuer = "Unknown";
                  }
-                 return String.Format(
-                   "Credit card '{0}' issued by '{1}'",
-                   creditCardNumber, issuer);
+                 return $"Credit card '{creditCardNumber}' issued by '{issuer}'";
         }
     }
     return "Credit card is not known";

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: c80f65ad2a4c7c48e32615c3cfdf754996f91bc1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6fb1883812237c778e1ecfab3e86fb57de52efc5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187876"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237966"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicaciones Windows que usan devoluciones de llamada
 En la mayoría de las situaciones de procesamiento asincrónico, desea iniciar una operación de base de datos y seguir ejecutando otros procesos sin tener que esperar a que se complete dicha operación. No obstante, en muchas situaciones es necesario hacer algo una vez que ha finalizado la operación de base de datos. En las aplicaciones para Windows, por ejemplo, quizás podría delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano, al tiempo que permite que el subproceso de interfaz de usuario permanezca alerta. Sin embargo, cuando la operación de base de datos se complete, deseará utilizar los resultados para rellenar el formulario. Este tipo de situación se implementa mejor con una devolución de llamada.  
@@ -127,9 +127,7 @@ Imports System.Data.SqlClient
   
             Catch ex As Exception  
                 isExecuting = False  
-                DisplayStatus( _  
-                    String.Format("Ready (last error: {0})", _  
-                    ex.Message))  
+                DisplayStatus($"Ready (last error: {ex.Message})")
                 If connection IsNot Nothing Then  
                     connection.Close()  
                 End If  
@@ -183,7 +181,7 @@ Imports System.Data.SqlClient
             ' invoke it, like this:  
             Me.Invoke(New _  
                 DisplayInfoDelegate(AddressOf DisplayStatus), _  
-                String.Format("Ready(last error: {0}", ex.Message))  
+                $"Ready (last error: {ex.Message}")
         Finally  
             isExecuting = False  
             If connection IsNot Nothing Then  
@@ -301,8 +299,7 @@ private void button1_Click(object sender, System.EventArgs e)
         catch (Exception ex)  
         {  
             isExecuting = false;  
-            DisplayStatus(   
-             string.Format("Ready (last error: {0})", ex.Message));  
+            DisplayStatus($"Ready (last error: {ex.Message})");
             if (connection != null)  
             {  
                 connection.Close();  
@@ -358,7 +355,7 @@ private void HandleCallback(IAsyncResult result)
         // You can create the delegate instance as you   
         // invoke it, like this:  
         this.Invoke(new DisplayInfoDelegate(DisplayStatus),  
-        String.Format("Ready(last error: {0}", ex.Message));  
+            $"Ready (last error: {ex.Message}");
     }  
     finally  
     {  

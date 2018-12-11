@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 0086bdd41b9f87c14b3a9d0653a8f8982235b1ad
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d35798ea2cd5f2fe6285bce4e465e4c79f44cb50
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188604"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242664"
 ---
 # <a name="datacontractserializer-sample"></a>Ejemplo de DataContractSerializer
 El ejemplo de DataContractSerializer muestra el <xref:System.Runtime.Serialization.DataContractSerializer>, que realiza la serialización general y los servicios de deserialización para las clases de contrato de datos. El ejemplo se crea un `Record` objeto, o lo serializa como una secuencia de memoria y deserializa la secuencia de memoria como otro `Record` objeto para demostrar el uso de la <xref:System.Runtime.Serialization.DataContractSerializer>. El ejemplo serializa a continuación el objeto `Record` utilizando un sistema de escritura binario para mostrar cómo el sistema de escritura afecta a la serialización.  
@@ -66,8 +66,7 @@ internal class Record
   
     public override string ToString()  
     {  
-        return string.Format("Record: {0} {1} {2} = {3}", n1,  
-            operation, n2, result);  
+        return $"Record: {n1} {operation} {n2} = {result}";
     }  
 }  
 ```  

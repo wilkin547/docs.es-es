@@ -1,15 +1,15 @@
 ---
-title: 'Codificador de mensaje personalizado: codificador de texto personalizado'
+title: 'Codificador de mensaje personalizado: Codificador de texto personalizado'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 39f09fd2ca58bfe7eb38afe536194ecad104d394
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192689"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236549"
 ---
-# <a name="custom-message-encoder-custom-text-encoder"></a>Codificador de mensaje personalizado: codificador de texto personalizado
+# <a name="custom-message-encoder-custom-text-encoder"></a>Codificador de mensaje personalizado: Codificador de texto personalizado
 Este ejemplo muestra cómo implementar un codificador de mensajes de texto personalizado mediante Windows Communication Foundation (WCF).  
   
 > [!WARNING]
@@ -65,8 +65,7 @@ public class CustomTextMessageEncoder : MessageEncoder
   
         this.writerSettings = new XmlWriterSettings();  
         this.writerSettings.Encoding = Encoding.GetEncoding(factory.CharSet);  
-        this.contentType = string.Format("{0}; charset={1}",   
-            this.factory.MediaType, this.writerSettings.Encoding.HeaderName);  
+        this.contentType = $"{this.factory.MediaType}; charset={this.writerSettings.Encoding.HeaderName}";
     }  
   
     public override string ContentType  
@@ -214,7 +213,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
  Para este ejemplo, la configuración del cliente se hace manualmente. No puede utilizar Svcutil.exe para generar la configuración del cliente porque `CustomTextMessageBindingElement` no exporta una aserción de directiva para describir su comportamiento. Generalmente debería implementar la interfaz <xref:System.ServiceModel.Description.IPolicyExportExtension> en un elemento de enlace personalizado para exportar una aserción de directiva personalizada que describa el comportamiento o la función implementada por el elemento de enlace. Para obtener un ejemplo de cómo exportar una aserción de directiva para un elemento de enlace personalizado, vea el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>Controlador de configuración de enlace de codificación de mensajes  
- La sección anterior muestra cómo utilizar mediante programación el codificador de mensajes de texto personalizado. `CustomTextMessageEncodingBindingSection` implementa un controlador de configuración que le permite especificar el uso de un codificador de mensajes de texto personalizado dentro de un archivo de configuración. La clase `CustomTextMessageEncodingBindingSection` se deriva de la clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. La propiedad `BindingElementType` informa al sistema de configuración del tipo de elemento de enlace que se va a crear para esta sección.  
+ La sección anterior muestra cómo utilizar mediante programación el codificador de mensajes de texto personalizado. `CustomTextMessageEncodingBindingSection` implementa un controlador de configuración que le permite especificar el uso de un codificador de mensajes de texto personalizado dentro de un archivo de configuración. La clase `CustomTextMessageEncodingBindingSection` se deriva de la clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> . La propiedad `BindingElementType` informa al sistema de configuración del tipo de elemento de enlace que se va a crear para esta sección.  
   
  Todos los valores definidos por `CustomTextMessageBindingElement` se exponen como propiedades en `CustomTextMessageEncodingBindingSection`. <xref:System.Configuration.ConfigurationPropertyAttribute> ayuda en la asignación de atributos de elemento de configuración para las propiedades y en la definición de valores predeterminados si el atributo no está definido. Después de cargar y aplicar los valores de la configuración a las propiedades del tipo, se llama al método <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>, que convierte las propiedades en una instancia concreta de un elemento de enlace.  
   

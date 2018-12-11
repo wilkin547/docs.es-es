@@ -1,22 +1,22 @@
 ---
-title: 'Cómo: Crear un servicio transaccional'
+title: Procedimiento Crear un servicio transaccional
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: bba3a1f9c1d08e882cd5e4117c97f9f84d0c2be8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4d2db0ca912be8840788bc363f86d621fa76e34
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509872"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245644"
 ---
-# <a name="how-to-create-a-transactional-service"></a>Cómo: Crear un servicio transaccional
+# <a name="how-to-create-a-transactional-service"></a>Procedimiento Crear un servicio transaccional
 Este ejemplo muestra varios aspectos sobre la creación de un servicio transaccional y el uso de una transacción iniciada por el cliente para coordinar las operaciones de servicio.  
   
 ### <a name="creating-a-transactional-service"></a>Creación de un servicio transaccional  
   
 1.  Cree un contrato de servicios y anote las operaciones con el valor deseado de la enumeración <xref:System.ServiceModel.TransactionFlowOption> para especificar los requisitos de las transacciones entrantes. Tenga en cuenta que también puede colocar <xref:System.ServiceModel.TransactionFlowAttribute> en la clase de servicio que se va a implementar. Esto permite una implementación única de una interfaz para utilizar estos valores de transacción, en lugar de cada implementación.  
   
-    ```  
+    ```csharp
     [ServiceContract]  
     public interface ICalculator  
     {  
@@ -33,7 +33,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 2.  Cree una clase de implementación y utilice <xref:System.ServiceModel.ServiceBehaviorAttribute> para especificar opcionalmente <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> y <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>. Debería tener en cuenta que, en muchos casos, el valor predeterminado de <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> de 60 segundos y el de <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> de `Unspecified` son adecuados. Para cada operación, puede utilizar el atributo <xref:System.ServiceModel.OperationBehaviorAttribute> para especificar si el trabajo realizado dentro del método debería producirse dentro del ámbito de la transacción según el valor del atributo <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>. En este caso, la transacción utilizada para el método `Add` es igual que la transacción entrante obligatoria que fluye desde el cliente y la transacción utilizada para el método `Subtract` es igual que la transacción entrante si una fluye desde el cliente, o una transacción nueva creada implícitamente y localmente.  
   
-    ```  
+    ```csharp
     [ServiceBehavior(  
         TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
         TransactionTimeout = "00:00:45")]  
@@ -43,7 +43,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
         public double Add(double n1, double n2)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Adding {0} to {1}", n1, n2));  
+            RecordToLog($"Adding {n1} to {n2}");
             return n1 + n2;  
         }  
   
@@ -51,7 +51,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
         public double Subtract(double n1, double n2)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Subtracting {0} from {1}", n2, n1));  
+            RecordToLog($"Subtracting {n2} from {n1}");
             return n1 - n2;  
         }  
   
@@ -65,7 +65,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
     }  
     ```  
   
-3.  Configure los enlaces en el archivo de configuración, especificando que debería fluir el contexto de la transacción, y los protocolos que se van a utilizar para ello. Para obtener más información, consulte [configuración de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Concretamente, se especifica el tipo de enlace en el atributo `binding` del elemento del extremo. El [ \<punto de conexión >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `transactionalOleTransactionsTcpBinding`, como se muestra en el siguiente ejemplo de configuración.  
+3.  Configure los enlaces en el archivo de configuración, especificando que debería fluir el contexto de la transacción, y los protocolos que se van a utilizar para ello. Para obtener más información, consulte [configuración de transacción de ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Concretamente, se especifica el tipo de enlace en el atributo `binding` del elemento del punto de conexión. El [ \<punto de conexión >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `transactionalOleTransactionsTcpBinding`, como se muestra en el siguiente ejemplo de configuración.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -128,7 +128,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 1.  De forma predeterminada, las operaciones de WCF completan automáticamente las transacciones si se produce ninguna excepción no controlada. Puede modificar este comportamiento mediante la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> y el método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>. Cuando es necesario que se produzca una operación dentro de la misma transacción como otra operación (por ejemplo, una operación de débito y crédito), puede deshabilitar el comportamiento de autocompletar definiendo la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> en `false` tal y como se muestra en el ejemplo de operación `Debit` siguiente. La transacción que la operación `Debit` utiliza no se completa hasta que se llama a un método con la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> definida en `true`, tal y como se muestra en la operación `Credit1` o cuando se llama al método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> para marcar explícitamente la transacción como completada, tal y como se muestra en la operación `Credit2`. Tenga en cuenta que las dos operaciones de crédito se muestran para fines informativos, y que una operación de crédito única sería más típica.  
   
-    ```  
+    ```csharp
     [ServiceBehavior]  
     public class CalculatorService : IAccount  
     {  
@@ -164,7 +164,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 2.  Para la correlación de transacción, establecer la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> en `false` requiere el uso de un enlace con sesión. Este requisito se especifica con la propiedad `SessionMode` en <xref:System.ServiceModel.ServiceContractAttribute>.  
   
-    ```  
+    ```csharp
     [ServiceContract(SessionMode = SessionMode.Required)]  
     public interface IAccount  
     {  
@@ -184,7 +184,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 1.  WCF usa la <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propiedad para especificar si la instancia del servicio subyacente se libera cuando se completa una transacción. Puesto que el valor predeterminado es `true`, a menos que configure de otra manera, comportamiento de activación de WCF exhibiciones una eficaz y predecible "just-in-time". Las llamadas a un servicio en una transacción subsiguiente aseguran una nueva instancia del servicio sin restos del estado de la transacción anterior. Aunque esto resulta a menudo útil, a veces puede querer mantener el estado dentro de la instancia del servicio más allá de la realización de la transacción. Algunos ejemplos de ello serían cuándo resulta costoso recuperar o volver a constituir el estado necesario o los controladores a los recursos. Puede hacer esto al definir la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> en `false`. Con ese valor, la instancia y cualquier estado asociado estarán disponibles en llamadas subsiguientes. Al utilizar esto, proporcione la consideración adecuada a cuándo y cómo se borrarán y completarán las transacciones y el estado. El ejemplo siguiente muestra cómo hacer esto manteniendo la instancia con la variable `runningTotal`.  
   
-    ```  
+    ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
         ReleaseServiceInstanceOnTransactionComplete = false)]  
     public class CalculatorService : ICalculator  
@@ -195,7 +195,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
         public double Add(double n)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Adding {0} to {1}", n, runningTotal));  
+            RecordToLog($"Adding {n} to {runningTotal}");
             runningTotal = runningTotal + n;  
             return runningTotal;  
         }  
@@ -204,7 +204,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
         public double Subtract(double n)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Subtracting {0} from {1}", n, runningTotal));  
+            RecordToLog($"Subtracting {n} from {runningTotal}");
             runningTotal = runningTotal - n;  
             return runningTotal;  
         }  

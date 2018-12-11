@@ -2,12 +2,12 @@
 title: Crear aplicaciones de multidifusión mediante el transporte UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324758"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241858"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Crear aplicaciones de multidifusión mediante el transporte UDP
 Las aplicaciones de multidifusión envían pequeños mensajes a un gran número de destinatarios al mismo tiempo sin necesidad de establecer conexiones punto a punto. El énfasis de esas aplicaciones es la velocidad sobre la conconfiabilidad. Es decir es más importante enviar datos puntualmente que asegurarse de que cualquier mensaje concreto se reciba realmente. WCF admite ahora la escritura de aplicaciones de multidifusión mediante <xref:System.ServiceModel.UdpBinding>. Este transporte es útil en escenarios donde un servicio necesita enviar pequeños mensajes a varios clientes simultáneamente. Una aplicación de cotización bursátil es un ejemplo de este tipo de servicio.  
@@ -15,7 +15,7 @@ Las aplicaciones de multidifusión envían pequeños mensajes a un gran número 
 ## <a name="implementing-a-multicast-application"></a>Implementar una aplicación de multidifusión  
  Para implementar una aplicación de multidifusión, defina un contrato de servicio y para cada componente de software que necesite responder a los mensajes de multidifusión, implemente el contrato de servicio. Por ejemplo, una aplicación de cotización bursátil podría definir un contrato de servicio:  
   
-```  
+```csharp
 // Shared contracts between the client and the service  
 [ServiceContract]
 interface IStockTicker
@@ -43,7 +43,7 @@ class StockInfo
   
  Cada aplicación que desea recibir mensajes de multidifusión debe hospedar un servicio que expone esta interfaz.  Por ejemplo, aquí tiene un ejemplo de código que muestra cómo recibir mensajes de multidifusión:  
   
-```  
+```csharp
 // Service Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 // Binding
@@ -63,7 +63,7 @@ Console.ReadLine();
   
  En este tipo de escenario es el cliente quien envía realmente mensajes de multidifusión. Cada servicio que está escuchando en la dirección UDP correcta recibirá los mensajes de multidifusión. A continuación se muestra un ejemplo de un cliente que envía mensajes de multidifusión:  
   
-```  
+```csharp
 // Multicast Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 
@@ -82,7 +82,7 @@ while (true)
 {
     // This will continue to mulicast stock information
     proxy.SendStockInfo(GetStockInfo());
-    Console.WriteLine(String.Format("sent stock info at {0}", DateTime.Now));
+    Console.WriteLine($"sent stock info at {DateTime.Now}");
     // Wait for one second before sending another update
     System.Threading.Thread.Sleep(new TimeSpan(0, 0, 1));
 }
@@ -96,7 +96,7 @@ while (true)
 ### <a name="two-way-multicast-messaging"></a>Mensajería bidireccional de multidifusión  
  Mientras que los mensajes de multidifusión suelen ser unidireccionales, el UdpBinding admite intercambio de mensajes de solicitud y respuesta. Los mensajes enviados mediante el transporte UDP contienen direcciones From y To. Se ha de tener cuidado al usar la dirección From porque podría cambiarse malintencionadamente en la ruta.  La dirección se puede comprobar mediante el código siguiente:  
   
-```  
+```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
 {
     // IPv4

@@ -2,12 +2,12 @@
 title: Tokens auxiliares
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: b5834a0ae8fa987f243617fdf291223725ed5f6d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b1fda39903c39811187fe3701d2a4c143b637544
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261607"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237706"
 ---
 # <a name="supporting-tokens"></a>Tokens auxiliares
 El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a un mensaje que utiliza WS-Security. El ejemplo agrega un token de seguridad binario de X.509 además de un token de seguridad del nombre de usuario. El token se pasa en un encabezado de mensaje de WS-Security desde el cliente al servicio y parte del mensaje se firma con una clave privada asociada con el token de seguridad de X.509 para demostrar la posesión del certificado X.509 al receptor. Esto es útil cuando es un requisito tener varias solicitudes asociadas con un mensaje para autenticar o autorizar el remitente. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.
@@ -27,7 +27,7 @@ El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a u
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>El cliente se autentica con el token del nombre de usuario y el token de seguridad X.509 compatible
  El servicio expone un extremo único para comunicarse que se crea mediante programación usando las clases `BindingHelper` y `EchoServiceHost`. El extremo está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un enlace personalizado utilizando `SymmetricSecurityBindingElement` y `HttpTransportBindingElement`. Este ejemplo establece `SymmetricSecurityBindingElement` para utilizar un certificado X.509 de servicio para proteger la clave simétrica durante la transmisión y pasar `UserNameToken` junto con el `X509SecurityToken` compatible en un encabezado de mensaje de WS-Security. La clave simétrica se utiliza para cifrar el cuerpo del mensaje y el token de seguridad del nombre de usuario. El token auxiliar se pasa como un token de seguridad binario adicional en el encabezado de mensaje de WS-Security. La autenticidad del token auxiliar se demuestra firmando parte del mensaje con la clave privada asociada con el token de seguridad X.509 compatible.
 
-```
+```csharp
 public static Binding CreateMultiFactorAuthenticationBinding()
 {
     HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();
@@ -55,7 +55,7 @@ public static Binding CreateMultiFactorAuthenticationBinding()
 
  El comportamiento especifica las credenciales del servicio que se van a utilizar para la autenticación del cliente además de la información sobre el certificado X.509 del servicio. El ejemplo utiliza `CN=localhost` como un nombre de asunto en el certificado X.509 del servicio.
 
-```
+```csharp
 override protected void InitializeRuntime()
 {
     // Extract the ServiceCredentials behavior or create one.
@@ -88,7 +88,7 @@ This setting is less secure than the default, ChainTrust. The security implicati
 
  Código del servicio:
 
-```
+```csharp
 [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
 public class EchoService : IEchoService
 {
@@ -100,8 +100,7 @@ public class EchoService : IEchoService
             OperationContext.Current.ServiceSecurityContext,
             out userName,
             out certificateSubjectName);
-            return String.Format("Hello {0}, {1}",
-                    userName, certificateSubjectName);
+            return $"Hello {userName}, {certificateSubjectName}";
     }
 
     public void Dispose()
@@ -174,7 +173,7 @@ public class EchoService : IEchoService
 
  El extremo del cliente se configura de una manera similar al extremo de servicio. El cliente utiliza la misma clase `BindingHelper` para crear un enlace. El resto de la instalación se encuentra en la clase `Client`. El cliente establece información sobre el token de seguridad del nombre de usuario, el token de seguridad X.509 compatible y la información sobre el certificado X.509 de servicio en el código de configuración en la colección de comportamientos del extremo del cliente.
 
-```
+```csharp
  static void Main()
  {
      // Create the custom binding and an endpoint address for
@@ -285,7 +284,7 @@ public class EchoService : IEchoService
 ## <a name="displaying-callers-information"></a>Visualización de la información de los autores de la llamada
  Para mostrar la información del autor de la llamada, puede usar `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` tal y como se muestra en el código siguiente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene notificaciones de autorización asociadas con el autor de la llamada actual. Dichas notificaciones se proporcionan automáticamente por Windows Communication Foundation (WCF) para cada token recibido en el mensaje.
 
-```
+```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
                          claimType, out TClaimResource resourceValue)
     where TClaimResource : class
