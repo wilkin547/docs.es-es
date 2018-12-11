@@ -6,43 +6,43 @@ dev_langs:
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 ms.openlocfilehash: dbfcd7ea7b8422c79274e7bc65929080da6f11af
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180490"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153428"
 ---
-# <a name="message-security-with-a-windows-client"></a><span data-ttu-id="fc7dd-102">Seguridad del mensaje con un cliente de Windows</span><span class="sxs-lookup"><span data-stu-id="fc7dd-102">Message Security with a Windows Client</span></span>
-<span data-ttu-id="fc7dd-103">Este escenario muestra un cliente de Windows Communication Foundation (WCF) y un servidor protegido por el modo de seguridad de mensaje.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-103">This scenario shows a Windows Communication Foundation (WCF) client and server secured by message security mode.</span></span> <span data-ttu-id="fc7dd-104">El cliente y el servicio se autentican utilizando las credenciales de Windows.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-104">The client and service are authenticated using Windows credentials.</span></span>  
+# <a name="message-security-with-a-windows-client"></a><span data-ttu-id="48238-102">Seguridad del mensaje con un cliente de Windows</span><span class="sxs-lookup"><span data-stu-id="48238-102">Message Security with a Windows Client</span></span>
+<span data-ttu-id="48238-103">Este escenario muestra un cliente de Windows Communication Foundation (WCF) y un servidor protegido por el modo de seguridad de mensaje.</span><span class="sxs-lookup"><span data-stu-id="48238-103">This scenario shows a Windows Communication Foundation (WCF) client and server secured by message security mode.</span></span> <span data-ttu-id="48238-104">El cliente y el servicio se autentican utilizando las credenciales de Windows.</span><span class="sxs-lookup"><span data-stu-id="48238-104">The client and service are authenticated using Windows credentials.</span></span>  
   
- <span data-ttu-id="fc7dd-105">![Modo de seguridad con un cliente Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")</span><span class="sxs-lookup"><span data-stu-id="fc7dd-105">![Message security with a Windows client](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")</span></span>  
+ <span data-ttu-id="48238-105">![Modo de seguridad con un cliente Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")</span><span class="sxs-lookup"><span data-stu-id="48238-105">![Message security with a Windows client](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")</span></span>  
   
-|<span data-ttu-id="fc7dd-106">Característica</span><span class="sxs-lookup"><span data-stu-id="fc7dd-106">Characteristic</span></span>|<span data-ttu-id="fc7dd-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="fc7dd-107">Description</span></span>|  
+|<span data-ttu-id="48238-106">Característica</span><span class="sxs-lookup"><span data-stu-id="48238-106">Characteristic</span></span>|<span data-ttu-id="48238-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="48238-107">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="fc7dd-108">Modo de seguridad</span><span class="sxs-lookup"><span data-stu-id="fc7dd-108">Security Mode</span></span>|<span data-ttu-id="fc7dd-109">Mensaje</span><span class="sxs-lookup"><span data-stu-id="fc7dd-109">Message</span></span>|  
-|<span data-ttu-id="fc7dd-110">Interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="fc7dd-110">Interoperability</span></span>|<span data-ttu-id="fc7dd-111">WCF solo</span><span class="sxs-lookup"><span data-stu-id="fc7dd-111">WCF Only</span></span>|  
-|<span data-ttu-id="fc7dd-112">Autenticación (servidor)</span><span class="sxs-lookup"><span data-stu-id="fc7dd-112">Authentication (Server)</span></span>|<span data-ttu-id="fc7dd-113">Autenticación mutua del servidor y el cliente</span><span class="sxs-lookup"><span data-stu-id="fc7dd-113">Mutual authentication of the server and client</span></span>|  
-|<span data-ttu-id="fc7dd-114">Autenticación (cliente)</span><span class="sxs-lookup"><span data-stu-id="fc7dd-114">Authentication (Client)</span></span>|<span data-ttu-id="fc7dd-115">Autenticación mutua del servidor y el cliente</span><span class="sxs-lookup"><span data-stu-id="fc7dd-115">Mutual authentication of the server and client</span></span>|  
-|<span data-ttu-id="fc7dd-116">Integridad</span><span class="sxs-lookup"><span data-stu-id="fc7dd-116">Integrity</span></span>|<span data-ttu-id="fc7dd-117">Sí, mediante el contexto de seguridad compartido</span><span class="sxs-lookup"><span data-stu-id="fc7dd-117">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="fc7dd-118">Confidencialidad</span><span class="sxs-lookup"><span data-stu-id="fc7dd-118">Confidentiality</span></span>|<span data-ttu-id="fc7dd-119">Sí, mediante el contexto de seguridad compartido</span><span class="sxs-lookup"><span data-stu-id="fc7dd-119">Yes, using shared security context</span></span>|  
-|<span data-ttu-id="fc7dd-120">Transporte</span><span class="sxs-lookup"><span data-stu-id="fc7dd-120">Transport</span></span>|<span data-ttu-id="fc7dd-121">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="fc7dd-121">NET.TCP</span></span>|  
-|<span data-ttu-id="fc7dd-122">Enlaces</span><span class="sxs-lookup"><span data-stu-id="fc7dd-122">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="48238-108">Modo de seguridad</span><span class="sxs-lookup"><span data-stu-id="48238-108">Security Mode</span></span>|<span data-ttu-id="48238-109">Mensaje</span><span class="sxs-lookup"><span data-stu-id="48238-109">Message</span></span>|  
+|<span data-ttu-id="48238-110">Interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="48238-110">Interoperability</span></span>|<span data-ttu-id="48238-111">WCF solo</span><span class="sxs-lookup"><span data-stu-id="48238-111">WCF Only</span></span>|  
+|<span data-ttu-id="48238-112">Autenticación (servidor)</span><span class="sxs-lookup"><span data-stu-id="48238-112">Authentication (Server)</span></span>|<span data-ttu-id="48238-113">Autenticación mutua del servidor y el cliente</span><span class="sxs-lookup"><span data-stu-id="48238-113">Mutual authentication of the server and client</span></span>|  
+|<span data-ttu-id="48238-114">Autenticación (cliente)</span><span class="sxs-lookup"><span data-stu-id="48238-114">Authentication (Client)</span></span>|<span data-ttu-id="48238-115">Autenticación mutua del servidor y el cliente</span><span class="sxs-lookup"><span data-stu-id="48238-115">Mutual authentication of the server and client</span></span>|  
+|<span data-ttu-id="48238-116">Integridad</span><span class="sxs-lookup"><span data-stu-id="48238-116">Integrity</span></span>|<span data-ttu-id="48238-117">Sí, mediante el contexto de seguridad compartido</span><span class="sxs-lookup"><span data-stu-id="48238-117">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="48238-118">Confidencialidad</span><span class="sxs-lookup"><span data-stu-id="48238-118">Confidentiality</span></span>|<span data-ttu-id="48238-119">Sí, mediante el contexto de seguridad compartido</span><span class="sxs-lookup"><span data-stu-id="48238-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="48238-120">Transporte</span><span class="sxs-lookup"><span data-stu-id="48238-120">Transport</span></span>|<span data-ttu-id="48238-121">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="48238-121">NET.TCP</span></span>|  
+|<span data-ttu-id="48238-122">Enlaces</span><span class="sxs-lookup"><span data-stu-id="48238-122">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="fc7dd-123">Servicio</span><span class="sxs-lookup"><span data-stu-id="fc7dd-123">Service</span></span>  
- <span data-ttu-id="fc7dd-124">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-124">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="fc7dd-125">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="fc7dd-125">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="48238-123">Servicio</span><span class="sxs-lookup"><span data-stu-id="48238-123">Service</span></span>  
+ <span data-ttu-id="48238-124">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="48238-124">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="48238-125">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="48238-125">Do one of the following:</span></span>  
   
--   <span data-ttu-id="fc7dd-126">Cree un servicio independiente mediante el código sin configuración.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-126">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="48238-126">Cree un servicio independiente mediante el código sin configuración.</span><span class="sxs-lookup"><span data-stu-id="48238-126">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="fc7dd-127">Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-127">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="48238-127">Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.</span><span class="sxs-lookup"><span data-stu-id="48238-127">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="fc7dd-128">Código</span><span class="sxs-lookup"><span data-stu-id="fc7dd-128">Code</span></span>  
- <span data-ttu-id="fc7dd-129">El código siguiente muestra cómo crear un punto de conexión de servicio que utiliza la seguridad del mensaje para establecer un contexto seguro con una máquina Windows.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-129">The following code shows how to create a service endpoint that uses message security to establish a secure context with a Windows machine.</span></span>  
+### <a name="code"></a><span data-ttu-id="48238-128">Código</span><span class="sxs-lookup"><span data-stu-id="48238-128">Code</span></span>  
+ <span data-ttu-id="48238-129">El código siguiente muestra cómo crear un punto de conexión de servicio que utiliza la seguridad del mensaje para establecer un contexto seguro con una máquina Windows.</span><span class="sxs-lookup"><span data-stu-id="48238-129">The following code shows how to create a service endpoint that uses message security to establish a secure context with a Windows machine.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### <a name="configuration"></a><span data-ttu-id="fc7dd-130">Configuración</span><span class="sxs-lookup"><span data-stu-id="fc7dd-130">Configuration</span></span>  
- <span data-ttu-id="fc7dd-131">Se puede usar la configuración siguiente en lugar del código para preparar el servicio:</span><span class="sxs-lookup"><span data-stu-id="fc7dd-131">The following configuration can be used instead of the code to set up the service:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="48238-130">Configuración</span><span class="sxs-lookup"><span data-stu-id="48238-130">Configuration</span></span>  
+ <span data-ttu-id="48238-131">Se puede usar la configuración siguiente en lugar del código para preparar el servicio:</span><span class="sxs-lookup"><span data-stu-id="48238-131">The following configuration can be used instead of the code to set up the service:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -72,24 +72,24 @@ ms.locfileid: "50180490"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="fc7dd-132">Cliente</span><span class="sxs-lookup"><span data-stu-id="fc7dd-132">Client</span></span>  
- <span data-ttu-id="fc7dd-133">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-133">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="fc7dd-134">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="fc7dd-134">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="48238-132">Cliente</span><span class="sxs-lookup"><span data-stu-id="48238-132">Client</span></span>  
+ <span data-ttu-id="48238-133">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="48238-133">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="48238-134">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="48238-134">Do one of the following:</span></span>  
   
--   <span data-ttu-id="fc7dd-135">Cree un cliente independiente mediante el código (y el código de cliente).</span><span class="sxs-lookup"><span data-stu-id="fc7dd-135">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="48238-135">Cree un cliente independiente mediante el código (y el código de cliente).</span><span class="sxs-lookup"><span data-stu-id="48238-135">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="fc7dd-136">Cree un cliente que no defina direcciones de extremo.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-136">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="fc7dd-137">En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-137">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="fc7dd-138">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="fc7dd-138">For example:</span></span>  
+-   <span data-ttu-id="48238-136">Cree un cliente que no defina direcciones de extremo.</span><span class="sxs-lookup"><span data-stu-id="48238-136">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="48238-137">En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento.</span><span class="sxs-lookup"><span data-stu-id="48238-137">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="48238-138">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="48238-138">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="fc7dd-139">Código</span><span class="sxs-lookup"><span data-stu-id="fc7dd-139">Code</span></span>  
- <span data-ttu-id="fc7dd-140">El siguiente código crea un cliente.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-140">The following code creates a client.</span></span> <span data-ttu-id="fc7dd-141">El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido para `Windows`.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-141">The binding is to Message mode security, and the client credential type is set to `Windows`.</span></span>  
+### <a name="code"></a><span data-ttu-id="48238-139">Código</span><span class="sxs-lookup"><span data-stu-id="48238-139">Code</span></span>  
+ <span data-ttu-id="48238-140">El siguiente código crea un cliente.</span><span class="sxs-lookup"><span data-stu-id="48238-140">The following code creates a client.</span></span> <span data-ttu-id="48238-141">El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido para `Windows`.</span><span class="sxs-lookup"><span data-stu-id="48238-141">The binding is to Message mode security, and the client credential type is set to `Windows`.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### <a name="configuration"></a><span data-ttu-id="fc7dd-142">Configuración</span><span class="sxs-lookup"><span data-stu-id="fc7dd-142">Configuration</span></span>  
- <span data-ttu-id="fc7dd-143">La configuración siguiente se utiliza para establecer las propiedades del cliente.</span><span class="sxs-lookup"><span data-stu-id="fc7dd-143">The following configuration is used to set the client properties.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="48238-142">Configuración</span><span class="sxs-lookup"><span data-stu-id="48238-142">Configuration</span></span>  
+ <span data-ttu-id="48238-143">La configuración siguiente se utiliza para establecer las propiedades del cliente.</span><span class="sxs-lookup"><span data-stu-id="48238-143">The following configuration is used to set the client properties.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -116,6 +116,6 @@ ms.locfileid: "50180490"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fc7dd-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="fc7dd-144">See Also</span></span>  
- [<span data-ttu-id="fc7dd-145">Información general sobre seguridad</span><span class="sxs-lookup"><span data-stu-id="fc7dd-145">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="fc7dd-146">Modelo de seguridad de Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="fc7dd-146">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="48238-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="48238-144">See Also</span></span>  
+ [<span data-ttu-id="48238-145">Información general sobre seguridad</span><span class="sxs-lookup"><span data-stu-id="48238-145">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="48238-146">Modelo de seguridad de Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="48238-146">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

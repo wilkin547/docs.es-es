@@ -2,24 +2,24 @@
 title: '&lt;IDN&gt; elemento (configuración de Uri)'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 96d70f76f8d29368505dd5054edf3db253b89016
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: e68fa040123180ee31af40e82f45d6efd076d8aa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50037014"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153363"
 ---
-# <a name="ltidngt-element-uri-settings"></a><span data-ttu-id="91089-102">&lt;IDN&gt; elemento (configuración de Uri)</span><span class="sxs-lookup"><span data-stu-id="91089-102">&lt;idn&gt; Element (Uri Settings)</span></span>
-<span data-ttu-id="91089-103">Especifica si el análisis de nombres de dominio internacionalizados (IDN) se aplican a un nombre de dominio.</span><span class="sxs-lookup"><span data-stu-id="91089-103">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name.</span></span>  
+# <a name="ltidngt-element-uri-settings"></a><span data-ttu-id="05f6c-102">&lt;IDN&gt; elemento (configuración de Uri)</span><span class="sxs-lookup"><span data-stu-id="05f6c-102">&lt;idn&gt; Element (Uri Settings)</span></span>
+<span data-ttu-id="05f6c-103">Especifica si el análisis de nombres de dominio internacionalizados (IDN) se aplican a un nombre de dominio.</span><span class="sxs-lookup"><span data-stu-id="05f6c-103">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name.</span></span>  
   
-## <a name="schema-hierarchy"></a><span data-ttu-id="91089-104">Jerarquía del esquema</span><span class="sxs-lookup"><span data-stu-id="91089-104">Schema Hierarchy</span></span>  
- [<span data-ttu-id="91089-105">Elemento \<configuration></span><span class="sxs-lookup"><span data-stu-id="91089-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a><span data-ttu-id="05f6c-104">Jerarquía del esquema</span><span class="sxs-lookup"><span data-stu-id="05f6c-104">Schema Hierarchy</span></span>  
+ [<span data-ttu-id="05f6c-105">Elemento \<configuration></span><span class="sxs-lookup"><span data-stu-id="05f6c-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [<span data-ttu-id="91089-106">\<URI > elemento (configuración de Uri)</span><span class="sxs-lookup"><span data-stu-id="91089-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [<span data-ttu-id="05f6c-106">\<URI > elemento (configuración de Uri)</span><span class="sxs-lookup"><span data-stu-id="05f6c-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [<span data-ttu-id="91089-107">\<IDN ></span><span class="sxs-lookup"><span data-stu-id="91089-107">\<idn></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [<span data-ttu-id="05f6c-107">\<IDN ></span><span class="sxs-lookup"><span data-stu-id="05f6c-107">\<idn></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
-## <a name="syntax"></a><span data-ttu-id="91089-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="91089-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05f6c-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="05f6c-108">Syntax</span></span>  
   
 ```xml  
 <idn  
@@ -27,62 +27,62 @@ ms.locfileid: "50037014"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="91089-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="91089-109">Attributes and Elements</span></span>  
- <span data-ttu-id="91089-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="91089-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="05f6c-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="05f6c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="05f6c-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="05f6c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="91089-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="91089-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="05f6c-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="05f6c-111">Attributes</span></span>  
   
-|<span data-ttu-id="91089-112">**Element**</span><span class="sxs-lookup"><span data-stu-id="91089-112">**Element**</span></span>|<span data-ttu-id="91089-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="91089-113">**Description**</span></span>|  
+|<span data-ttu-id="05f6c-112">**Element**</span><span class="sxs-lookup"><span data-stu-id="05f6c-112">**Element**</span></span>|<span data-ttu-id="05f6c-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="05f6c-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|`enabled`|<span data-ttu-id="91089-114">Especifica que si se aplican el análisis de nombres de dominio internacionalizados (IDN) para un nombre de dominio, el valor predeterminado es none.</span><span class="sxs-lookup"><span data-stu-id="91089-114">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name The default value is none.</span></span>|  
+|`enabled`|<span data-ttu-id="05f6c-114">Especifica que si se aplican el análisis de nombres de dominio internacionalizados (IDN) para un nombre de dominio, el valor predeterminado es none.</span><span class="sxs-lookup"><span data-stu-id="05f6c-114">Specifies if Internationalized Domain Name (IDN) parsing is applied to a domain name The default value is none.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="91089-115">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="91089-115">Child Elements</span></span>  
- <span data-ttu-id="91089-116">Ninguna</span><span class="sxs-lookup"><span data-stu-id="91089-116">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="05f6c-115">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="05f6c-115">Child Elements</span></span>  
+ <span data-ttu-id="05f6c-116">Ninguna</span><span class="sxs-lookup"><span data-stu-id="05f6c-116">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="91089-117">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="91089-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="05f6c-117">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="05f6c-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="91089-118">**Element**</span><span class="sxs-lookup"><span data-stu-id="91089-118">**Element**</span></span>|<span data-ttu-id="91089-119">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="91089-119">**Description**</span></span>|  
+|<span data-ttu-id="05f6c-118">**Element**</span><span class="sxs-lookup"><span data-stu-id="05f6c-118">**Element**</span></span>|<span data-ttu-id="05f6c-119">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="05f6c-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="91089-120">Identificador URI</span><span class="sxs-lookup"><span data-stu-id="91089-120">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="91089-121">Contiene valores que especifican cómo .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).</span><span class="sxs-lookup"><span data-stu-id="91089-121">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
+|[<span data-ttu-id="05f6c-120">Identificador URI</span><span class="sxs-lookup"><span data-stu-id="05f6c-120">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="05f6c-121">Contiene valores que especifican cómo .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).</span><span class="sxs-lookup"><span data-stu-id="05f6c-121">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="91089-122">Comentarios</span><span class="sxs-lookup"><span data-stu-id="91089-122">Remarks</span></span>  
- <span data-ttu-id="91089-123">Existente <xref:System.Uri> se ha ampliado la clase en .NET Framework 3.5.</span><span class="sxs-lookup"><span data-stu-id="91089-123">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="91089-124">3.0 SP1 y 2.0 SP1 con compatibilidad para los identificadores de recursos internacionales (IRI) y los nombres de dominio internacionalizados (IDN).</span><span class="sxs-lookup"><span data-stu-id="91089-124">3.0 SP1, and 2.0 SP1 with support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="91089-125">Los usuarios actuales no verán ningún cambio respecto al comportamiento de .NET Framework 2.0, a menos que habiliten específicamente IRI e IDN admite.</span><span class="sxs-lookup"><span data-stu-id="91089-125">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="91089-126">Esto garantiza la compatibilidad de las aplicaciones con versiones anteriores de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="91089-126">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="05f6c-122">Comentarios</span><span class="sxs-lookup"><span data-stu-id="05f6c-122">Remarks</span></span>  
+ <span data-ttu-id="05f6c-123">Existente <xref:System.Uri> se ha ampliado la clase en .NET Framework 3.5.</span><span class="sxs-lookup"><span data-stu-id="05f6c-123">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="05f6c-124">3.0 SP1 y 2.0 SP1 con compatibilidad para los identificadores de recursos internacionales (IRI) y los nombres de dominio internacionalizados (IDN).</span><span class="sxs-lookup"><span data-stu-id="05f6c-124">3.0 SP1, and 2.0 SP1 with support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="05f6c-125">Los usuarios actuales no verán ningún cambio respecto al comportamiento de .NET Framework 2.0, a menos que habiliten específicamente IRI e IDN admite.</span><span class="sxs-lookup"><span data-stu-id="05f6c-125">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="05f6c-126">Esto garantiza la compatibilidad de las aplicaciones con versiones anteriores de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="05f6c-126">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
   
- <span data-ttu-id="91089-127">Para habilitar la compatibilidad con IRI, se requieren los siguientes dos cambios:</span><span class="sxs-lookup"><span data-stu-id="91089-127">To enable support for IRI, the following two changes are required:</span></span>  
+ <span data-ttu-id="05f6c-127">Para habilitar la compatibilidad con IRI, se requieren los siguientes dos cambios:</span><span class="sxs-lookup"><span data-stu-id="05f6c-127">To enable support for IRI, the following two changes are required:</span></span>  
   
-1.  <span data-ttu-id="91089-128">Agregue la siguiente línea al archivo machine.config en el directorio de .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="91089-128">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
+1.  <span data-ttu-id="05f6c-128">Agregue la siguiente línea al archivo machine.config en el directorio de .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="05f6c-128">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  <span data-ttu-id="91089-129">Especifique si desea analizar el nombre de dominio internacionalizado (IDN) aplicado en el nombre de dominio y si debe aplicarse las reglas de análisis de IRI.</span><span class="sxs-lookup"><span data-stu-id="91089-129">Specify whether you want Internationalized Domain Name (IDN) parsing applied to the domain name and whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="91089-130">Esto puede hacerse en el archivo machine.config o app.config.</span><span class="sxs-lookup"><span data-stu-id="91089-130">This can be done in the machine.config or in the app.config file.</span></span>  
+2.  <span data-ttu-id="05f6c-129">Especifique si desea analizar el nombre de dominio internacionalizado (IDN) aplicado en el nombre de dominio y si debe aplicarse las reglas de análisis de IRI.</span><span class="sxs-lookup"><span data-stu-id="05f6c-129">Specify whether you want Internationalized Domain Name (IDN) parsing applied to the domain name and whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="05f6c-130">Esto puede hacerse en el archivo machine.config o app.config.</span><span class="sxs-lookup"><span data-stu-id="05f6c-130">This can be done in the machine.config or in the app.config file.</span></span>  
   
- <span data-ttu-id="91089-131">Hay tres valores posibles para IDN dependiendo de los servidores DNS que se usan:</span><span class="sxs-lookup"><span data-stu-id="91089-131">There are three possible values for IDN depending on the DNS servers that are used:</span></span>  
+ <span data-ttu-id="05f6c-131">Hay tres valores posibles para IDN dependiendo de los servidores DNS que se usan:</span><span class="sxs-lookup"><span data-stu-id="05f6c-131">There are three possible values for IDN depending on the DNS servers that are used:</span></span>  
   
--   <span data-ttu-id="91089-132">IDN habilitado = All</span><span class="sxs-lookup"><span data-stu-id="91089-132">idn enabled = All</span></span>  
+-   <span data-ttu-id="05f6c-132">IDN habilitado = All</span><span class="sxs-lookup"><span data-stu-id="05f6c-132">idn enabled = All</span></span>  
   
-     <span data-ttu-id="91089-133">Este valor convierte cualquier nombre de dominio Unicode a su equivalente Punycode (nombres IDN).</span><span class="sxs-lookup"><span data-stu-id="91089-133">This value will convert any Unicode domain names to their Punycode equivalents (IDN names).</span></span>  
+     <span data-ttu-id="05f6c-133">Este valor convierte cualquier nombre de dominio Unicode a su equivalente Punycode (nombres IDN).</span><span class="sxs-lookup"><span data-stu-id="05f6c-133">This value will convert any Unicode domain names to their Punycode equivalents (IDN names).</span></span>  
   
--   <span data-ttu-id="91089-134">IDN habilitado = AllExceptIntranet</span><span class="sxs-lookup"><span data-stu-id="91089-134">idn enabled = AllExceptIntranet</span></span>  
+-   <span data-ttu-id="05f6c-134">IDN habilitado = AllExceptIntranet</span><span class="sxs-lookup"><span data-stu-id="05f6c-134">idn enabled = AllExceptIntranet</span></span>  
   
-     <span data-ttu-id="91089-135">Este valor convertirá todos los nombres de dominio Unicode no en la Intranet local para que utilicen sus equivalentes Punycode (nombres IDN).</span><span class="sxs-lookup"><span data-stu-id="91089-135">This value will convert all Unicode domain names not on the local Intranet to use the Punycode equivalents (IDN names).</span></span> <span data-ttu-id="91089-136">En este caso para controlar los nombres internacionales en la Intranet local, los servidores DNS que se usan para la Intranet deben admitir la resolución de nombre de Unicode.</span><span class="sxs-lookup"><span data-stu-id="91089-136">In this case to handle international names on the local Intranet, the DNS servers that are used for the Intranet should support Unicode name resolution.</span></span>  
+     <span data-ttu-id="05f6c-135">Este valor convertirá todos los nombres de dominio Unicode no en la Intranet local para que utilicen sus equivalentes Punycode (nombres IDN).</span><span class="sxs-lookup"><span data-stu-id="05f6c-135">This value will convert all Unicode domain names not on the local Intranet to use the Punycode equivalents (IDN names).</span></span> <span data-ttu-id="05f6c-136">En este caso para controlar los nombres internacionales en la Intranet local, los servidores DNS que se usan para la Intranet deben admitir la resolución de nombre de Unicode.</span><span class="sxs-lookup"><span data-stu-id="05f6c-136">In this case to handle international names on the local Intranet, the DNS servers that are used for the Intranet should support Unicode name resolution.</span></span>  
   
--   <span data-ttu-id="91089-137">IDN habilitado = ninguno</span><span class="sxs-lookup"><span data-stu-id="91089-137">idn enabled = None</span></span>  
+-   <span data-ttu-id="05f6c-137">IDN habilitado = ninguno</span><span class="sxs-lookup"><span data-stu-id="05f6c-137">idn enabled = None</span></span>  
   
-     <span data-ttu-id="91089-138">Este valor no convierte cualquier nombre de dominio Unicode para que se use Punycode.</span><span class="sxs-lookup"><span data-stu-id="91089-138">This value will not convert any Unicode domain names to use Punycode.</span></span> <span data-ttu-id="91089-139">Este es el valor predeterminado que es coherente con el comportamiento de .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="91089-139">This is the default value which is consistent with the .NET Framework 2.0 behaviour.</span></span>  
+     <span data-ttu-id="05f6c-138">Este valor no convierte cualquier nombre de dominio Unicode para que se use Punycode.</span><span class="sxs-lookup"><span data-stu-id="05f6c-138">This value will not convert any Unicode domain names to use Punycode.</span></span> <span data-ttu-id="05f6c-139">Este es el valor predeterminado que es coherente con el comportamiento de .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="05f6c-139">This is the default value which is consistent with the .NET Framework 2.0 behaviour.</span></span>  
   
- <span data-ttu-id="91089-140">La activación de IDN convertirá todas la etiquetas Unicode de un nombre de dominio en sus equivalentes de Punycode.</span><span class="sxs-lookup"><span data-stu-id="91089-140">Enabling IDN will convert all Unicode labels in a domain name to their Punycode equivalents.</span></span> <span data-ttu-id="91089-141">Los nombres de Punycode solo contienen caracteres ASCII y siempre empiezan con el prefijo xn--.</span><span class="sxs-lookup"><span data-stu-id="91089-141">Punycode names contain only ASCII characters and always start with the xn-- prefix.</span></span> <span data-ttu-id="91089-142">De este modo, se admiten los servidores DNS existentes en Internet, ya que la mayoría de los servidores DNS solo admite caracteres ASCII (vea RFC 3940).</span><span class="sxs-lookup"><span data-stu-id="91089-142">The reason for this is to support existing DNS servers on the Internet, since most DNS servers only support ASCII characters (see RFC 3940).</span></span>  
+ <span data-ttu-id="05f6c-140">La activación de IDN convertirá todas la etiquetas Unicode de un nombre de dominio en sus equivalentes de Punycode.</span><span class="sxs-lookup"><span data-stu-id="05f6c-140">Enabling IDN will convert all Unicode labels in a domain name to their Punycode equivalents.</span></span> <span data-ttu-id="05f6c-141">Los nombres de Punycode solo contienen caracteres ASCII y siempre empiezan con el prefijo xn--.</span><span class="sxs-lookup"><span data-stu-id="05f6c-141">Punycode names contain only ASCII characters and always start with the xn-- prefix.</span></span> <span data-ttu-id="05f6c-142">De este modo, se admiten los servidores DNS existentes en Internet, ya que la mayoría de los servidores DNS solo admite caracteres ASCII (vea RFC 3940).</span><span class="sxs-lookup"><span data-stu-id="05f6c-142">The reason for this is to support existing DNS servers on the Internet, since most DNS servers only support ASCII characters (see RFC 3940).</span></span>  
   
-### <a name="configuration-files"></a><span data-ttu-id="91089-143">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="91089-143">Configuration Files</span></span>  
- <span data-ttu-id="91089-144">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="91089-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+### <a name="configuration-files"></a><span data-ttu-id="05f6c-143">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="05f6c-143">Configuration Files</span></span>  
+ <span data-ttu-id="05f6c-144">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="05f6c-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="91089-145">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="91089-145">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="05f6c-145">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="05f6c-145">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="91089-146">Descripción</span><span class="sxs-lookup"><span data-stu-id="91089-146">Description</span></span>  
- <span data-ttu-id="91089-147">El ejemplo siguiente muestra una configuración utilizada por el <xref:System.Uri> clase para admitir el análisis de IRI y nombres de IDN.</span><span class="sxs-lookup"><span data-stu-id="91089-147">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
+### <a name="description"></a><span data-ttu-id="05f6c-146">Descripción</span><span class="sxs-lookup"><span data-stu-id="05f6c-146">Description</span></span>  
+ <span data-ttu-id="05f6c-147">El ejemplo siguiente muestra una configuración utilizada por el <xref:System.Uri> clase para admitir el análisis de IRI y nombres de IDN.</span><span class="sxs-lookup"><span data-stu-id="05f6c-147">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="91089-148">Código</span><span class="sxs-lookup"><span data-stu-id="91089-148">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="05f6c-148">Código</span><span class="sxs-lookup"><span data-stu-id="05f6c-148">Code</span></span>  
   
 ```xml  
 <configuration>  
@@ -93,7 +93,7 @@ ms.locfileid: "50037014"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="91089-149">Vea también</span><span class="sxs-lookup"><span data-stu-id="91089-149">See Also</span></span>  
- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [<span data-ttu-id="91089-150">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="91089-150">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="05f6c-149">Vea también</span><span class="sxs-lookup"><span data-stu-id="05f6c-149">See Also</span></span>  
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- [<span data-ttu-id="05f6c-150">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="05f6c-150">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
