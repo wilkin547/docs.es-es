@@ -1,29 +1,39 @@
 ---
-title: 'Cómo: Definir la cadena de conexión'
+title: Procedimiento Definir la cadena de conexión
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: f40b8bc68eda1cb4b64b34d12b2922da69929203
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7fb722acbb13b3502d004978581701cc70118ff8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210174"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129693"
 ---
-# <a name="how-to-define-the-connection-string"></a>Cómo: Definir la cadena de conexión
-En este tema se muestra cómo definir la cadena de conexión que se usa al conectarse a un modelo conceptual. En este tema se basa en el [AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) modelo conceptual. El modelo AdventureWorks Sales se usa en todos los temas relacionados con tareas de la documentación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. En este tema se da por supuesto que ya ha configurado la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] y define el modelo AdventureWorks Sales. Para obtener más información, consulte [Cómo: definir manualmente los archivos de asignación y modelo](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a). Los procedimientos descritos en este tema también se incluyen en [Cómo: configurar manualmente un proyecto de Entity Framework](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
-  
+# <a name="how-to-define-the-connection-string"></a>Procedimiento Definir la cadena de conexión
+
+En este tema se muestra cómo definir la cadena de conexión que se usa al conectarse a un modelo conceptual. En este tema se basa en el [AdventureWorks Sales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) modelo conceptual. El modelo AdventureWorks Sales se usa en todos los temas relacionados con tareas de la documentación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. En este tema se da por supuesto que ya ha configurado la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] y define el modelo AdventureWorks Sales. Para obtener más información, vea [Cómo: Archivos de asignación y definir el modelo manualmente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)). Los procedimientos descritos en este tema también se incluyen en [Cómo: Configurar manualmente un proyecto de Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).
+
 > [!NOTE]
->  Si usas el [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] asistente en un proyecto de Visual Studio genera automáticamente un archivo .edmx y configura el proyecto para usar el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Para obtener más información, vea [Cómo: usar el Asistente para Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)  
-  
-### <a name="to-define-the-entity-framework-connection-string"></a>Para definir la cadena de conexión de Entity Framework  
-  
--   Abra el archivo de configuración de la aplicación del proyecto (app.config) y, a continuación, agregue la siguiente cadena de conexión:  
-  
-  
-  
-     Si el proyecto no tiene un archivo de configuración de aplicación, puede agregar uno seleccionando **Agregar nuevo elemento** desde el **proyecto** menú, seleccione el **General** categoría, seleccionar **archivo de configuración de aplicación**y, a continuación, haga clic en **agregar**.  
-  
-## <a name="see-also"></a>Vea también  
- [Inicio rápido](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675)  
- [Cómo: crear un nuevo archivo .edmx](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2)  
- [Herramientas de Entity Data Model de ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+> Si usas el [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] asistente en un proyecto de Visual Studio genera automáticamente un archivo .edmx y configura el proyecto para usar el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Para obtener más información, vea [Cómo: Utilice al Asistente para Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))
+
+## <a name="to-define-the-entity-framework-connection-string"></a>Para definir la cadena de conexión de Entity Framework
+
+- Abra el archivo de configuración de la aplicación del proyecto (app.config) y, a continuación, agregue la siguiente cadena de conexión:
+
+```xml
+<connectionStrings>
+    <add name="AdventureWorksEntities" 
+         connectionString="metadata=.\AdventureWorks.csdl|.\AdventureWorks.ssdl|.\AdventureWorks.msl;
+         provider=System.Data.SqlClient;provider connection string='Data Source=localhost;
+         Initial Catalog=AdventureWorks;Integrated Security=True;Connection Timeout=60;
+         multipleactiveresultsets=true'" providerName="System.Data.EntityClient" />
+</connectionStrings>
+```
+
+Si el proyecto no tiene un archivo de configuración de aplicación, puede agregar uno seleccionando **Agregar nuevo elemento** desde el **proyecto** menú, seleccione el **General** categoría, seleccionar **archivo de configuración de aplicación**y, a continuación, haga clic en **agregar**.
+
+## <a name="see-also"></a>Vea también
+
+- [Inicio rápido](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
+- [Cómo: Crear un nuevo archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
+- [Herramientas de Entity Data Model de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

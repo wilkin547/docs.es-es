@@ -1,6 +1,6 @@
 ---
 title: Abstracciones (Tipos e interfaces abstractos)
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ad8b2dd3dbf2a7a75c98a3115d4351dfea4e1a0
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+author: KrzysztofCwalina
+ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480687"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149918"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstracciones (Tipos e interfaces abstractos)
 Una abstracción es un tipo que describe un contrato, pero no proporciona una implementación completa del contrato. Abstracciones normalmente se implementan como interfaces o clases abstractas y vienen con un conjunto de documentación de referencia que describe la semántica necesaria de los tipos que implementan el contrato bien definido. Algunas de las abstracciones más importantes en .NET Framework incluyen <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, y <xref:System.Object>.  
@@ -36,7 +35,7 @@ Una abstracción es un tipo que describe un contrato, pero no proporciona una im
   
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
+ *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también
 

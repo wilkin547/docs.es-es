@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear una sesión segura'
+title: Procedimiento Crear una sesión segura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297119"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147599"
 ---
-# <a name="how-to-create-a-secure-session"></a>Cómo: Crear una sesión segura
+# <a name="how-to-create-a-secure-session"></a>Procedimiento Crear una sesión segura
 Con la excepción de la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) enlace, los enlaces proporcionados por el sistema en Windows Communication Foundation (WCF) utilizan automáticamente sesiones seguras cuando está habilitada la seguridad del mensaje.  
   
- De forma predeterminada, las sesiones seguras no permanecen en ningún servidor reciclado. Cuando se establece una sesión segura, el cliente y el servicio almacenan en memoria caché la clave asociada a la sesión segura. Cuando se intercambian los mensajes, se intercambia solo un identificador de la clave almacenada en memoria caché. Si se recicla el servidor web, también se recicla la memoria en caché, de manera que el servidor web no puede recuperar la clave almacenada en memoria caché para el identificador. Si ocurre esto, se produce una excepción que se devuelve al cliente. Las sesiones seguras que usan un token de contexto de seguridad (SCT) con estado pueden sobrevivir en un servidor web que se recicle. Para obtener más información acerca de cómo utilizar un SCT con estado en una sesión segura, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+ De forma predeterminada, las sesiones seguras no permanecen en ningún servidor reciclado. Cuando se establece una sesión segura, el cliente y el servicio almacenan en memoria caché la clave asociada a la sesión segura. Cuando se intercambian los mensajes, se intercambia solo un identificador de la clave almacenada en memoria caché. Si se recicla el servidor web, también se recicla la memoria en caché, de manera que el servidor web no puede recuperar la clave almacenada en memoria caché para el identificador. Si ocurre esto, se produce una excepción que se devuelve al cliente. Las sesiones seguras que usan un token de contexto de seguridad (SCT) con estado pueden sobrevivir en un servidor web que se recicle. Para obtener más información acerca de cómo utilizar un SCT con estado en una sesión segura, consulte [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Para especificar que un servicio utiliza las sesiones seguras utilizando uno de los enlaces proporcionados por el sistema  
   
@@ -60,7 +60,7 @@ Con la excepción de la [ \<basicHttpBinding >](../../../../docs/framework/confi
   
 -   Cree un enlace personalizado que especifica que una sesión segura protege los mensajes SOAP.  
   
-     Para obtener más información acerca de cómo crear un enlace personalizado, vea [Cómo: personalizar un enlace proporcionados por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+     Para obtener más información acerca de cómo crear un enlace personalizado, vea [Cómo: Personalización de un enlace proporcionado por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
      El ejemplo de código siguiente utiliza la configuración para especificar un enlace personalizado que envía mensajes utilizando una sesión segura.  
   

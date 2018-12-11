@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Generar SQL'
+title: 'Tutorial: Generación de SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672022"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149047"
 ---
-# <a name="walkthrough-sql-generation"></a>Tutorial: Generar SQL
+# <a name="walkthrough-sql-generation"></a>Tutorial: Generación de SQL
 En este tema se muestra cómo se produce la generación de SQL en el [proveedor de ejemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). La siguiente consulta de Entity SQL utiliza el modelo incluido con el proveedor de ejemplo:  
   
 ```  
@@ -105,7 +105,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Primera fase de la generación de SQL: visitar el árbol de expresiones  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Primera fase de generación de SQL: Visitar el árbol de expresión  
  La siguiente figura muestra el estado vacío inicial del visitante.  A lo largo de este tema, solo se muestran las propiedades pertinentes a la explicación del tutorial.  
   
  ![Diagrama](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
@@ -136,7 +136,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagrama](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- Para Join3, IsParentAJoin devuelve "false" y necesita iniciar una nueva instrucción SqlSelectStatement (SelectStatement1) e insertarla en la pila. El procesamiento continúa de la misma forma que en las combinaciones anteriores, se inserta un nuevo ámbito en la pila y se procesan los elementos secundarios. El elemento secundario izquierdo es una extensión (Extent3) y el elemento secundario derecho es una combinación (Join2) que también necesita iniciar una nueva instrucción SqlSelectStatement: SelectStatement2. Los elementos secundarios de Join2 también son extensiones y se agregan en SelectStatement2.  
+ Para Join3, IsParentAJoin devuelve "false" y necesita iniciar una nueva instrucción SqlSelectStatement (SelectStatement1) e insertarla en la pila. El procesamiento continúa de la misma forma que en las combinaciones anteriores, se inserta un nuevo ámbito en la pila y se procesan los elementos secundarios. El elemento secundario izquierdo es una extensión (Extent3) y el elemento secundario derecho es una combinación (Join2) que también se necesita para iniciar una nueva instrucción SqlSelectStatement: SelectStatement2. Los elementos secundarios de Join2 también son extensiones y se agregan en SelectStatement2.  
   
  En la siguiente figura se muestra el estado del visitante justo después de visitar Join2, pero antes de que se realice su procesamiento posterior (ProcessJoinInputResult):  
   
@@ -192,7 +192,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase de la generación de SQL: Generar el comando String  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase de generación de SQL: Generar el comando String  
  La segunda fase genera los nombres reales de los símbolos; únicamente nos centraremos en los símbolos que representan las columnas denominadas "OrderID", ya que en este caso es necesario resolver un conflicto. Estas columnas se resaltan en la instrucción SqlSelectStatement. Tenga en cuenta que los sufijos utilizados en la figura solo pretenden destacar que se trata de instancias diferentes y no representan ningún nuevo nombre, ya que en esta fase todavía no se han asignado sus nombres finales (posiblemente diferentes de los nombres originales).  
   
  El primer símbolo localizado que necesita cambiar de nombre es <symbol_OrderID>. Su nuevo nombre se asigna como "OrderID1", 1 se marca como el último sufijo utilizado para "OrderID" y el símbolo se marca como símbolo que no necesita cambio de nombre. A continuación se localiza el primer uso de <symbol_OrderID_2>. Se cambia el nombre para utilizar el siguiente sufijo disponible ("OrderID2") y de nuevo se marca como símbolo que no necesita cambio de nombre, para que la próxima vez que se utilice no se cambie el nombre. Esto también se lleva a cabo para <symbol_OrderID_3>.  

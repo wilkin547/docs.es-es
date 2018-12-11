@@ -10,11 +10,11 @@ helpviewer_keywords:
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
 ms.openlocfilehash: db70749f28592ae6711b6d9544f8704af9416490
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181727"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128172"
 ---
 # <a name="-filealign"></a>-filealign
 Especifica dónde se alinean las secciones del archivo de salida.  
@@ -27,7 +27,7 @@ Especifica dónde se alinean las secciones del archivo de salida.
   
 ## <a name="arguments"></a>Argumentos  
  `number`  
- Requerido. Un valor que especifica la alineación de las secciones del archivo de salida. Los valores válidos son 512, 1024, 2048, 4096 y 8192. Estos valores están en bytes.  
+ Obligatorio. Un valor que especifica la alineación de las secciones del archivo de salida. Los valores válidos son 512, 1024, 2048, 4096 y 8192. Estos valores están en bytes.  
   
 ## <a name="remarks"></a>Comentarios  
  Puede usar el `-filealign` opción para especificar la alineación de las secciones en el archivo de salida. Las secciones son bloques de memoria contigua en un archivo ejecutable Portable (PE) que contiene el código o datos. El `-filealign` opción le permite compilar la aplicación con una alineación no estándar; la mayoría de los desarrolladores no es necesario usar esta opción.  

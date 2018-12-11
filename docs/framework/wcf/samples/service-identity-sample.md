@@ -3,11 +3,11 @@ title: Ejemplo de identidad de servicio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
 ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49633916"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152739"
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 Este ejemplo de identidad de servicio muestra cómo establecer la identidad para un servicio. En el momento del diseño, un cliente puede recuperar la identidad mediante los metadatos del servicio y, en el tiempo de ejecución, el cliente puede autenticar la identidad del servicio. El concepto de identidad del servicio es permitir a un cliente autenticar un servicio antes de llamar a cualquiera de sus operaciones, protegiendo por lo tanto al cliente de llamadas no autenticadas. En una conexión segura, el servicio autentica también las credenciales de un cliente antes de permitirle acceso, pero éste no es el objetivo de este ejemplo. Consulte los ejemplos en [cliente](../../../../docs/framework/wcf/samples/client.md) que muestran la autenticación de servidor.
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1.  En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o [!INCLUDE[wv](../../../../includes/wv-md.md)], importe el archivo de certificado Identity.pfx de la carpeta de la solución de identidad al almacén de certificados LocalMachine/My (Personal) mediante la herramienta del complemento MMC. Este archivo está protegido con contraseña. Durante la importación se pide una contraseña. Tipo `xyz` en el cuadro de contraseña. Para obtener más información, consulte el [Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) tema. Una vez hecho esto, ejecute el archivo Setup.bat en un símbolo del sistema de Visual Studio con privilegios de administrador. De este modo, este certificado se copiará en el almacén CurrentUser/Trusted People para su uso en el cliente.
+1.  En [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o [!INCLUDE[wv](../../../../includes/wv-md.md)], importe el archivo de certificado Identity.pfx de la carpeta de la solución de identidad al almacén de certificados LocalMachine/My (Personal) mediante la herramienta del complemento MMC. Este archivo está protegido con contraseña. Durante la importación se pide una contraseña. Tipo `xyz` en el cuadro de contraseña. Para obtener más información, consulte el [Cómo: Ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) tema. Una vez hecho esto, ejecute el archivo Setup.bat en un símbolo del sistema de Visual Studio con privilegios de administrador. De este modo, este certificado se copiará en el almacén CurrentUser/Trusted People para su uso en el cliente.
 
 2.  En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012 con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 

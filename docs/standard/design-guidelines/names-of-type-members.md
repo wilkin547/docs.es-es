@@ -1,6 +1,6 @@
 ---
 title: Nombres de miembros de tipos
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 264627f49a3d2a083f8f46f23f71e8b34d042c8e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964532"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127581"
 ---
 # <a name="names-of-type-members"></a>Nombres de miembros de tipos
 Los tipos están conformados por miembros: métodos, propiedades, eventos, constructores y campos. En las siguientes secciones se detallan las instrucciones para asignar un nombre a los miembros de tipos.  
@@ -100,7 +99,7 @@ public class Control {
   
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
+ *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también
 

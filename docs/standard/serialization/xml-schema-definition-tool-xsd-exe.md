@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01f980162a2d356c6c3ff31e4a0c01644b74d461
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850868"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143940"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 La herramienta Definición de esquemas XML (Xsd.exe) genera clases de esquemas XML o de Common Language Runtime a partir de archivos XDR, XML y XSD, o a partir de clases de un ensamblado de motor en tiempo de ejecución.  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Opción|Descripción|  
 |------------|-----------------|  
 |**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
-|**/o**[**utputdir**] **: *** directorio*|Especifica el directorio de los archivos de salida. Este argumento sólo puede aparecer una vez. El valor predeterminado es el directorio actual.|  
+|**/o**[**utputdir**]**:**_directory_|Especifica el directorio de los archivos de salida. Este argumento sólo puede aparecer una vez. El valor predeterminado es el directorio actual.|  
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |**/P[arameters]:** *file.xml*|Lee las opciones de los distintos modos de operación desde el archivo .xml especificado. La forma abreviada es '/p:'. Para obtener más información, vea la sección Comentarios que se muestra más adelante.|  
   
@@ -51,22 +51,22 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/e**[**lemento**] **: *** elemento*|Especifica el elemento del esquema para el que se genera código. De forma predeterminada se escriben todos los elementos. Este argumento se puede especificar varias veces.|  
+|**/e**[**lement**]**:**_element_|Especifica el elemento del esquema para el que se genera código. De forma predeterminada se escriben todos los elementos. Este argumento se puede especificar varias veces.|  
 |**/enableDataBinding**|Implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> en todos los tipos generados para habilitar el enlace de datos. La forma abreviada es `/edb`.|  
 |**/enableLinqDataSet**|(Forma abreviada: `/eld`.) Especifica que el Conjunto de datos generado se puede consultar utilizando LINQ a Conjunto de datos. Esta opción se utiliza cuando también se especifica la opción /dataset. Para más información, vea [LINQ to DataSet Overview (Información general sobre LINQ to DataSet)](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) y [Querying Typed DataSets (Consultar objetos DataSet con tipo)](../../../docs/framework/data/adonet/querying-typed-datasets.md). Para más información sobre el empleo de LINQ, vea [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Genera campos en lugar de propiedades. De manera predeterminada, se generan propiedades.|  
-|**/l**[**anguage**] **: *** idioma*|Especifica el lenguaje de programación que se utiliza. Se puede elegir entre `CS` (C#, que es el valor predeterminado), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). También se puede especificar un nombre completo para una clase que implemente <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>.|  
-|**/n**[**espacio ombres**] **: *** espacio de nombres*|Especifica el espacio de nombres del motor en tiempo de ejecución para los tipos generados. El espacio de nombres predeterminado es `Schemas`.|  
+|**/l**[**anguage**]**:**_language_|Especifica el lenguaje de programación que se utiliza. Se puede elegir entre `CS` (C#, que es el valor predeterminado), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). También se puede especificar un nombre completo para una clase que implemente <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>.|  
+|**/n**[**espacio ombres**]**:**_espacio de nombres_|Especifica el espacio de nombres del motor en tiempo de ejecución para los tipos generados. El espacio de nombres predeterminado es `Schemas`.|  
 |**/nologo**|Suprime la pancarta.|  
 |**/order**|Genera identificadores de orden explícitos en todos los miembros de partícula.|  
 |**/o[ut]:** *directoryName*|Especifica el directorio de salida en el que se colocan los archivos. El valor predeterminado es el directorio actual.|  
-|**/u**[**ri**]**:***uri*|Especifica el identificador URI de los elementos del esquema para el que se genera código. Este identificador URI, si existe, se aplica a todos los elementos especificados con la opción `/element`.|  
+|**/u**[**ri**]**:**_uri_|Especifica el identificador URI de los elementos del esquema para el que se genera código. Este identificador URI, si existe, se aplica a todos los elementos especificados con la opción `/element`.|  
   
 ## <a name="dll-and-exe-file-options"></a>Opciones de archivos DLL y EXE  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/t**[**ipo**] **: *** typename*|Especifica el nombre del tipo para el que se crea un esquema. Se pueden especificar varios argumentos de tipo. Si *typename* no especifica un espacio de nombres, Xsd.exe busca todos los tipos del ensamblado con el tipo especificado. Si *typename* especifica un espacio de nombres, solo se busca ese tipo. Si *typename* termina con carácter de asterisco (\*), la herramienta busca todos los tipos que empiezan con la cadena anterior a \*. Si se omite la opción `/type`, Xsd.exe genera esquemas para todos los tipos del ensamblado.|  
+|**/t**[**ype**]**:**_typename_|Especifica el nombre del tipo para el que se crea un esquema. Se pueden especificar varios argumentos de tipo. Si *typename* no especifica un espacio de nombres, Xsd.exe busca todos los tipos del ensamblado con el tipo especificado. Si *typename* especifica un espacio de nombres, solo se busca ese tipo. Si *typename* termina con carácter de asterisco (\*), la herramienta busca todos los tipos que empiezan con la cadena anterior a \*. Si se omite la opción `/type`, Xsd.exe genera esquemas para todos los tipos del ensamblado.|  
   
 ## <a name="remarks"></a>Comentarios  
  En la siguiente tabla se muestran las operaciones que realiza Xsd.exe.  
