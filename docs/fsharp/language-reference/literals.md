@@ -1,24 +1,24 @@
 ---
 title: Literales (F#)
-description: Obtenga información sobre los tipos literales en el lenguaje de programación F#.
+description: Obtenga información sobre los tipos literales en la F# lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087630"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131344"
 ---
 # <a name="literals"></a>Literales
 
 > [!NOTE]
-Los vínculos de referencia de API en este artículo le llevará a MSDN (por ahora).
+> Los vínculos de referencia de API en este artículo le llevará a MSDN (por ahora).
 
-En este tema se proporciona una tabla que se muestra cómo especificar el tipo de un literal en F#.
+Este tema proporciona una tabla que se muestra cómo especificar el tipo de un literal en F#.
 
 ## <a name="literal-types"></a>Tipos literales
 
-En la tabla siguiente se muestra los tipos literales en F#. Caracteres que representan dígitos en notación hexadecimal no distinguen mayúsculas de minúsculas; caracteres que identifican el tipo distinguen mayúsculas de minúsculas.
+La siguiente tabla muestra los tipos literales en F#. Caracteres que representan dígitos en notación hexadecimal no distinguen mayúsculas de minúsculas; caracteres que identifican el tipo distinguen mayúsculas de minúsculas.
 
 |Tipo|Descripción|Prefijo o sufijo|Ejemplos|
 |----|-----------|----------------|--------|
@@ -47,20 +47,20 @@ En la tabla siguiente se muestra los tipos literales en F#. Caracteres que repre
 
 Las cadenas Unicode pueden contener codificaciones explícitas que se pueden especificar mediante el uso de `\u` seguido por un código hexadecimal de 16 bits o codificaciones UTF-32 que se pueden especificar mediante el uso de `\U` seguido por un código hexadecimal de 32 bits que representa un Unicode par suplente.
 
-A partir de F# 3.1, puede usar el `+` iniciar sesión combinar literales de cadena. También puede usar el bit a bit o (`|||`) operador para combinar las marcas de enumeración. Por ejemplo, el código siguiente es legal en F# 3.1:
+Como de F# 3.1, puede usar el `+` iniciar sesión combinar literales de cadena. También puede usar el bit a bit o (`|||`) operador para combinar las marcas de enumeración. Por ejemplo, el código siguiente es legal en F# 3.1:
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 No se permite el uso de otros operadores bit a bit.
@@ -85,11 +85,11 @@ let Numbers = (0x9F, 0o77, 0b1010)
 A partir de F# 4.1, puede separar los dígitos con el carácter de subrayado (`_`).
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>Vea también
