@@ -1,27 +1,30 @@
 ---
 title: Implementación de aplicaciones .NET Core
-description: Implementación de una aplicación .NET Core.
+description: Conozca las formas de implementar una aplicación .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836633"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144720"
 ---
 # <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core
 
-Puede crear dos tipos de implementaciones para aplicaciones .NET Core:
+Puede crear tres tipos de implementaciones para aplicaciones .NET Core:
 
 - Implementación dependiente de Framework. Como su nombre indica, la implementación dependiente de marco de trabajo (FDD) se basa en la presencia de una versión compartida de .NET Core en todo el sistema en el sistema de destino. Como .NET Core ya está presente, la aplicación también es portátil entre instalaciones de .NET Core. La aplicación solo contiene su propio código y dependencias de terceros que están fuera de las bibliotecas .NET Core. FDD contiene archivos *.dll* que se pueden iniciar utilizando la [utilidad dotnet](../tools/dotnet.md) desde la línea de comandos. Por ejemplo, `dotnet app.dll` ejecuta una aplicación denominada `app`.
 
 - Implementación autocontenida. A diferencia de FDD, una implementación autocontenida (SCD) no depende de la presencia de los componentes compartidos en el sistema de destino. Todos los componentes, incluidas las bibliotecas y el entorno de ejecución de .NET Core, se incluyen con la aplicación y están aislados de otras aplicaciones .NET Core. Las SCD incluyen un archivo ejecutable (como *app.exe* en plataformas de Windows para una aplicación denominada `app`), que es una versión con otro nombre del host de .NET Core específico de la plataforma y un archivo *.dll* (como *app.dll*), que es la aplicación real.
 
+- Archivos ejecutables dependiente de la plataforma. Genera un archivo ejecutable que se ejecuta en una plataforma de destino. De manera parecida a las FDD, los archivos ejecutables dependientes de la plataforma (FDE) son específicos de la plataforma y no son independientes. Estas implementaciones aún dependen de la presencia de una versión compartida de .NET Core en todo el sistema para ejecutarse. A diferencia de una SCD, la aplicación solo contiene su código y las dependencias de terceros que están fuera de las bibliotecas .NET Core. Las FDE generan un archivo ejecutable que se ejecuta en la plataforma de destino.
+
 ## <a name="framework-dependent-deployments-fdd"></a>Implementaciones dependientes de Framework (FDD)
 
-En una implementación dependiente del marco de trabajo, solo se implementa la aplicación y las dependencias de terceros. No tiene que implementar .NET Core, puesto que la aplicación usará la versión de .NET Core que esté presente en el sistema de destino. Este es el modelo de implementación predeterminado para las aplicaciones .NET Core y ASP.NET Core que tienen como destino .NET Core.
+En una implementación dependiente del marco de trabajo, solo se implementa la aplicación y las dependencias de terceros. La aplicación usará la versión de .NET Core que exista en el sistema de destino. Este es el modelo de implementación predeterminado para las aplicaciones .NET Core y ASP.NET Core que tienen como destino .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>¿Por qué crear una implementación dependiente del marco?
 
@@ -31,11 +34,13 @@ La implementación de FDD tienen varias ventajas:
 
 - El tamaño de su paquete de implementación es pequeño. Solo tendrá que implementar la aplicación y sus dependencias, .NET Core propiamente dicho.
 
+- A menos que se reemplace, las FDD usarán el entorno de ejecución atendido más reciente instalado en el sistema de destino. De esta forma, la aplicación puede usar la versión revisada más reciente del entorno de ejecución de .NET Core. 
+
 - Varias aplicaciones usan la misma instalación de .NET Core, lo que reduce tanto el espacio en disco y el uso de memoria en sistemas host.
 
 Hay también algunas desventajas:
 
-- Su aplicación solo se puede ejecutar si la versión de .NET Core de destino, o una versión posterior, ya está instalada en el sistema host.
+- Su aplicación solo se puede ejecutar si la versión de .NET Core de destino de la aplicación, [o una versión posterior](../versions/selection.md#framework-dependent-apps-roll-forward), ya está instalada en el sistema host.
 
 - Es posible que el entorno de tiempo de ejecución y las bibliotecas .NET Core cambien en futuras versiones sin su conocimiento. En raras ocasiones, esto puede cambiar el comportamiento de la aplicación.
 
@@ -65,9 +70,31 @@ También tiene algunos inconvenientes:
 
 - La implementación de numerosas aplicaciones .NET Core autocontenidas en un sistema puede consumir importantes cantidades de espacio en disco, puesto que cada aplicación duplica archivos de .NET Core.
 
+## <a name="framework-dependent-executables-fde"></a>Archivos ejecutables dependiente de la plataforma (FDE)
+
+A partir de .NET Core 2.2, puede implementar la aplicación como una FDE, junto con cualquier dependencia de terceros necesaria. La aplicación usará la versión de .NET Core que está instalada en el sistema de destino.
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>¿Por qué implementar un archivo ejecutable dependiente de la plataforma?
+
+La implementación de un FDE tiene una serie de ventajas:
+
+- El tamaño de su paquete de implementación es pequeño. Solo tendrá que implementar la aplicación y sus dependencias, .NET Core propiamente dicho.
+
+- Varias aplicaciones usan la misma instalación de .NET Core, lo que reduce tanto el espacio en disco y el uso de memoria en sistemas host.
+
+- Para ejecutar la aplicación se puede llamar al archivo ejecutable publicado sin invocar la utilidad `dotnet` directamente.
+
+Hay también algunas desventajas:
+
+- Su aplicación solo se puede ejecutar si la versión de .NET Core de destino de la aplicación, [o una versión posterior](../versions/selection.md#framework-dependent-apps-roll-forward), ya está instalada en el sistema host.
+
+- Es posible que el entorno de tiempo de ejecución y las bibliotecas .NET Core cambien en futuras versiones sin su conocimiento. En raras ocasiones, esto puede cambiar el comportamiento de la aplicación.
+
+- Se debe publicar la aplicación para cada plataforma de destino.
+
 ## <a name="step-by-step-examples"></a>Ejemplos paso a paso
 
-Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Implementación de aplicaciones de .NET Core con herramientas de la CLI). Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Implementación de aplicaciones de .NET Core con Visual Studio). Cada tema incluye ejemplos de las siguientes implementaciones:
+Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Implementación de aplicaciones de .NET Core con herramientas de la CLI). Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Implementación de aplicaciones de .NET Core con Visual Studio). Cada artículo incluye ejemplos de las siguientes implementaciones:
 
 - Implementación dependiente de marco de trabajo
 - Implementación dependiente de marco de trabajo con dependencias de terceros
