@@ -74,7 +74,7 @@ La siguiente tabla sigue las convenciones de mayúsculas y minúsculas y nomencl
 |-----------|------|------|----------|-------|
 | Tipos concretos | PascalCase | Sustantivo o adjetivo | Lista, Double, complejo | Tipos concretos son clases, structs, enumeraciones, delegados, registros y uniones. Aunque los nombres de tipo son tradicionalmente en minúsculas en OCaml, F# ha adoptado el esquema de nomenclatura .NET para los tipos.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Etiquetas de unión     | PascalCase | Sustantivo | Algunos, agregar, correcto | No use un prefijo en las API públicas. Utilizar opcionalmente un prefijo cuando interno, como ' Escriba equipos = TAlpha | TBeta | TDelta. " |
+| Etiquetas de unión     | PascalCase | Sustantivo | Algunos, agregar, correcto | No use un prefijo en las API públicas. Utilizar opcionalmente un prefijo cuando interno, como `Escriba equipos = TAlpha | TBeta | TDelta.` |
 | evento          | PascalCase | Verbo | ValueChanged / ValueChanging |  |
 | Excepciones     | PascalCase |      | WebException | Nombre debe terminar con "Exception". |
 | Campo          | PascalCase | Sustantivo | CurrentName  | |
