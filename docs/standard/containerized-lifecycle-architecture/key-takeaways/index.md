@@ -4,16 +4,16 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646251"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148640"
 ---
 # <a name="key-takeaways"></a>Puntos clave
 
--   Las soluciones basadas en contenedores ofrecen importantes ventajas de ahorro de costos porque los contenedores son una solución para los problema de implementación causados por la falta de dependencias en los entornos de producción, por lo que se mejoran significativamente las operaciones de producción y de DevOps.
+-   Soluciones basadas en contenedores ofrecen importantes ventajas de ahorro de costos porque los contenedores son una solución de problemas de implementación causados por la falta de dependencias en entornos de producción, por lo tanto, mejorar significativamente las operaciones de DevOps y producción .
 
 -   Docker se está convirtiendo en el estándar de facto del sector de los contenedores, ya que es compatible con los proveedores más importantes de los ecosistemas Linux y Windows, incluido Microsoft. En el futuro, Docker estará omnipresente en todos los centros de datos en la nube o locales.
 
@@ -26,4 +26,4 @@ ms.locfileid: "45646251"
 Servicios de Azure DevOps simplifica en gran medida el entorno de DevOps designado para entornos de Docker desde sus canalizaciones de implementación continua, incluidos los entornos de Docker sencillos o los orquestadores de contenedores y microservicios más avanzados basados en Azure.
 
 >[!div class="step-by-step"]
-[Anterior](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[Anterior](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

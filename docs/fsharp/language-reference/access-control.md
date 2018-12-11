@@ -1,13 +1,13 @@
 ---
 title: Control de acceso (F#)
-description: Obtenga información sobre cómo controlar el acceso a elementos de programación como tipos, métodos y funciones, en el lenguaje de programación F#.
+description: Obtenga información sobre cómo controlar el acceso a elementos de programación como tipos, métodos y funciones, en el F# lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 136eba5ec33fa6128e677b614fc0ace3c71d17df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43803979"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153714"
 ---
 # <a name="access-control"></a>Control de acceso
 
@@ -15,7 +15,7 @@ ms.locfileid: "43803979"
 
 ## <a name="basics-of-access-control"></a>Conceptos básicos de Control de acceso
 
-En F#, el acceso de control especificadores `public`, `internal`, y `private` puede aplicarse a los módulos, tipos, métodos, las definiciones de valor, funciones, propiedades y campos explícitos.
+En F#, los especificadores de control de acceso `public`, `internal`, y `private` puede aplicarse a los módulos, tipos, métodos, las definiciones de valor, funciones, propiedades y campos explícitos.
 
 - `public` indica que la entidad puede tener acceso a todos los llamadores.
 
@@ -23,14 +23,14 @@ En F#, el acceso de control especificadores `public`, `internal`, y `private` pu
 
 - `private` indica que la entidad se puede acceder solo desde el tipo o módulo envolvente.
 
->[!NOTE]
-El especificador de acceso `protected` no se utiliza en F#, aunque es aceptable si se utilizan tipos creados en lenguajes que admiten `protected` acceso. Por lo tanto, si invalida un método protegido, el método sigue siendo accesible únicamente dentro de la clase y sus descendientes.
+> [!NOTE]
+> El especificador de acceso `protected` no se utiliza en F#, aunque es aceptable si se utilizan tipos creados en lenguajes que admiten `protected` acceso. Por lo tanto, si invalida un método protegido, el método sigue siendo accesible únicamente dentro de la clase y sus descendientes.
 
 En general, el especificador se coloca delante del nombre de la entidad, excepto cuando una `mutable` o `inline` especificador se usa, que aparecen después del especificador de control de acceso.
 
 Si no se utiliza ningún especificador de acceso, el valor predeterminado es `public`, excepto para `let` enlaces en un tipo, que siempre son `private` al tipo.
 
-Las firmas en F# proporcionan otro mecanismo para controlar el acceso a los elementos de programa F#. Las firmas no son necesarias para el control de acceso. Para más información, vea [Signatures](signatures.md) (Firmas).
+Las firmas en F# proporcionan otro mecanismo para controlar el acceso a F# elementos del programa. Las firmas no son necesarias para el control de acceso. Para más información, vea [Signatures](signatures.md) (Firmas).
 
 ## <a name="rules-for-access-control"></a>Reglas de Control de acceso
 

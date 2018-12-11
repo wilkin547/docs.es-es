@@ -1,20 +1,19 @@
 ---
 title: Clases no selladas
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET Framework], unsealed
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef0f1c4c9b2d1928d6f96d62ab12df9786756498
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: 8d7b1500506ec73a0d33d5352756cb85039358e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891382"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153233"
 ---
 # <a name="unsealed-classes"></a>Clases no selladas
 Clases selladas no se puede heredar de y evitar la extensibilidad. En cambio, las clases que se pueden heredar se denominan clases no selladas.  
@@ -27,7 +26,7 @@ Clases selladas no se puede heredar de y evitar la extensibilidad. En cambio, la
   
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
+ *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también
 

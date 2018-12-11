@@ -2,12 +2,12 @@
 title: Compatibilidad de transmisión de datos de SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191053"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152895"
 ---
 # <a name="sqlclient-streaming-support"></a>Compatibilidad de transmisión de datos de SqlClient
 Compatibilidad entre SQL Server y una aplicación de streaming (nuevo en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) es compatible con los datos no estructurados en el servidor (archivos de documentos, imágenes y multimedia). Una base de datos de SQL Server puede almacenar objetos binarios grandes (BLOB), pero al recuperar los BLOBS puede usar una gran cantidad de memoria.  
@@ -76,7 +76,7 @@ Compatibilidad entre SQL Server y una aplicación de streaming (nuevo en [!INCLU
 ## <a name="sample----streaming-from-sql-server"></a>Ejemplo: Streaming desde SQL Server  
  Use el código [!INCLUDE[tsql](../../../../includes/tsql-md.md)] siguiente para crear la base de datos de ejemplo:  
   
-```  
+```sql
 CREATE DATABASE [Demo]  
 GO  
 USE [Demo]  
@@ -105,7 +105,7 @@ GO
   
 -   Transferir archivos grandes (BLOB) de una base de datos de SQL Server a otra sin quedarse sin memoria.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -297,7 +297,7 @@ namespace StreamingFromServer {
 ## <a name="sample----streaming-to-sql-server"></a>Ejemplo: Streaming a SQL Server  
  Use el código [!INCLUDE[tsql](../../../../includes/tsql-md.md)] siguiente para crear la base de datos de ejemplo:  
   
-```  
+```sql
 CREATE DATABASE [Demo2]  
 GO  
 USE [Demo2]  
@@ -330,7 +330,7 @@ GO
   
 -   Transmisión por secuencias desde un servidor SQL Server a otro mediante la nueva característica asincrónica.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -453,7 +453,7 @@ namespace StreamingToServer {
 ## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Ejemplo: Streaming desde un servidor SQL Server a otro servidor SQL Server  
  Este ejemplo muestra cómo hacer streaming de forma asincrónica un BLOB grande desde un servidor SQL Server a otro, con compatibilidad con la cancelación.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  

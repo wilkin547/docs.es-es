@@ -2,12 +2,12 @@
 title: Configuración del servicio de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 99585bb05364b6b0b3ee093823dc599519c8a12a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7232fc587aa7f63167034f7474d6c5e7476048ed
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489523"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153480"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configuración del servicio de uso compartido de puertos Net.TCP
 Los servicios autohospedados que utilizan el transporte Net.TCP pueden controlar varios ajustes avanzados, como `ListenBacklog` y `MaxPendingAccepts`, que rigen el comportamiento del socket de TCP subyacente utilizado para la comunicación por red. Sin embargo, esta configuración para cada socket solo se aplica en el nivel de enlace si el enlace de transporte ha deshabilitado el uso compartido de puertos, que está habilitado de forma predeterminada.  
@@ -15,9 +15,7 @@ Los servicios autohospedados que utilizan el transporte Net.TCP pueden controlar
  Cuando un enlace net.tcp habilita el uso compartido de puertos (estableciendo `portSharingEnabled =true` en el elemento de enlace de transporte), permite implícitamente a un proceso externo (concretamente SMSvcHost.exe, que hospeda el servicio de uso compartido de puertos Net.TCP) que administre el socket TCP en su nombre. Por ejemplo, al utilizar TCP, especifique:  
   
 ```xml  
-    <tcpTransport   
-        portSharingEnabled="true"  
-/>  
+<tcpTransport portSharingEnabled="true"  />  
 ```  
   
  Cuando se configura de esta manera, los valores de socket especificados en el elemento de enlace de transporte del servicio se omiten a favor de los valores de socket especificados por SMSvcHost.exe.  
@@ -58,7 +56,7 @@ Los servicios autohospedados que utilizan el transporte Net.TCP pueden controlar
  SMSvcHost.exe.config también contiene información sobre las identidades de proceso que pueden utilizar el servicio de uso compartido de puertos. Cuando un proceso se conecta al servicio de uso compartido de puertos para utilizar un puerto TCP compartido, la identidad del proceso de conexión se compara frente a una lista de identidades a las que se permite el uso del servicio de uso compartido de puertos. Estas identidades se especifican como identificadores de seguridad (SID) en el \<allowAccounts > sección del archivo SMSvcHost.exe.config. De forma predeterminada, el permiso de uso del servicio de uso compartido de puertos se concede a las cuentas del sistema (LocalService, LocalSystem y NetworkService) así como a los miembros del grupo Administradores. Las aplicaciones que permiten a un proceso se ejecuta como otra identidad (por ejemplo, una identidad de usuario) que se conecten al servicio de uso compartido de puertos deben agregar explícitamente el SID adecuado a SMSvcHost.exe.config (estos cambios no se aplican hasta que se reinicie el proceso de SMSvc.exe).  
   
 > [!NOTE]
->  En los sistemas [!INCLUDE[wv](../../../../includes/wv-md.md)] con el Control de cuentas de usuario (UAC) habilitado, los usuarios locales necesitan permisos elevados aun cuando su cuenta sea miembro del grupo Administradores. Para permitir que estos usuarios utilizar el uso compartido de puertos servicio sin elevación, el SID del usuario (o el SID de un grupo en el que el usuario es miembro) debe agregarse explícitamente a la \<allowAccounts > sección de SMSvcHost.exe.config.  
+>  En los sistemas [!INCLUDE[wv](../../../../includes/wv-md.md)] con el Control de cuentas de usuario (UAC) habilitado, los usuarios locales necesitan permisos elevados aun cuando su cuenta sea miembro del grupo Administradores. Para permitir a estos usuarios utilizar el uso compartido de puertos servicio sin elevación, el SID del usuario (o el SID de un grupo en el que el usuario es miembro) debe agregarse explícitamente a la \<allowAccounts > sección de SMSvcHost.exe.config.  
   
 > [!WARNING]
 >  El archivo SMSvcHost.exe.config predeterminado especifica un valor `etwProviderId` personalizado para evitar que el seguimiento de SMSvcHost.exe interfiera con los seguimientos del servicio.  

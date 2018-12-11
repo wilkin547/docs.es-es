@@ -4,12 +4,12 @@ description: Azure Event Grid es una solución sin servidor para la entrega de e
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b2507da61cbea3b4bdc51c6eecfe4d784737e924
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143667"
 ---
 # <a name="event-grid"></a>Cuadrícula de eventos
 
@@ -142,5 +142,5 @@ En este capítulo, aprendió sobre la plataforma Azure sin servidor que se compo
 * [Trabajar con Azure Functions Proxies](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
-[Anterior](logic-apps.md)
-[Siguiente](durable-azure-functions.md)
+>[Anterior](logic-apps.md)
+>[Siguiente](durable-azure-functions.md)

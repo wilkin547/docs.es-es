@@ -1,6 +1,6 @@
 ---
 title: Crear una aplicación de WPF en Visual Studio
-ms.date: 04/12/2018
+ms.date: 10/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,16 +11,16 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1a9c82a0bca25fa1242b29393e41e6eb4ce7f3b9
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007261"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150750"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio WPF
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio de WPF
 
-Este artículo muestra cómo desarrollar una aplicación de Windows Presentation Foundation (WPF) simple que incluye los elementos que son comunes a la mayoría de las aplicaciones de WPF: marcado del lenguaje de marcado de aplicaciones Extensible (XAML), el código subyacente, definiciones de aplicación los controles, diseño, enlace de datos y estilos.
+Este artículo muestra cómo desarrollar una aplicación de Windows Presentation Foundation (WPF) simple que incluye los elementos que son comunes a la mayoría de las aplicaciones de WPF: Extensible Application Markup Language (XAML) marcado, código subyacente, definiciones de aplicación, controles, diseño, enlace de datos y estilos.
 
 En este tutorial incluye los siguientes pasos:
 
@@ -43,7 +43,7 @@ Al final del tutorial, habrá creado una aplicación de Windows que permite a lo
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Visual Studio 2012 o posterior (en este artículo se basa en Visual Studio 2017)
+- Visual Studio 2017 o posterior
 
    Para obtener más información acerca de cómo instalar la versión más reciente de Visual Studio, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
 
@@ -57,7 +57,7 @@ El primer paso es crear la infraestructura de aplicación, que incluye una defin
 
       El **nuevo proyecto** abre el cuadro de diálogo.
 
-   2. En el **instalado** categoría, expanda el **Visual C#** o **Visual Basic** nodo y, a continuación, seleccione **escritorio clásico de Windows**.
+   2. En el **instalado** categoría, expanda el **Visual C#**  o **Visual Basic** nodo y, a continuación, seleccione **Windows Desktop**.
 
    3. Seleccione el **aplicación de WPF (.NET Framework)** plantilla. Escriba el nombre **`ExpenseIt`** y, a continuación, seleccione **Aceptar**.
 
@@ -66,7 +66,7 @@ El primer paso es crear la infraestructura de aplicación, que incluye una defin
       Visual Studio crea el proyecto y abre el Diseñador de la ventana de aplicación predeterminada denominado **MainWindow.xaml**.
 
    > [!NOTE]
-   > Este tutorial utiliza el <xref:System.Windows.Controls.DataGrid> control que está disponible en .NET Framework 4 y versiones posteriores. Estar seguro de que el proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, consulte [Cómo: Usar como destino una versión de .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+   > Este tutorial utiliza el <xref:System.Windows.Controls.DataGrid> control que está disponible en .NET Framework 4 y versiones posteriores. Estar seguro de que el proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, vea [Cómo: Una versión de .NET Framework de destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 2. Abra *Application.xaml* (Visual Basic) o *App.xaml* (C#).
 
@@ -254,7 +254,7 @@ En la sección, creará una tabla de una sola columna con tres filas y un margen
 
     [!code-xaml[ExpenseIt#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    El <xref:System.Windows.Controls.RowDefinition.Height%2A> de dos filas se establece en <xref:System.Windows.GridLength.Auto%2A>, lo que significa que las filas se ajusta el tamaño de base en el contenido de las filas. El valor predeterminado <xref:System.Windows.Controls.RowDefinition.Height%2A> es <xref:System.Windows.GridUnitType.Star> ajuste de tamaño, lo que significa que el alto de fila es una proporción ponderada del espacio disponible. Por ejemplo, si dos filas tienen un <xref:System.Windows.Controls.RowDefinition.Height%2A> de "*", cada uno de ellos tiene un alto que sea la mitad del espacio disponible.
+    El <xref:System.Windows.Controls.RowDefinition.Height%2A> de dos filas se establece en <xref:System.Windows.GridLength.Auto%2A>, lo que significa que las filas se ajusta el tamaño en función del contenido de las filas. El valor predeterminado <xref:System.Windows.Controls.RowDefinition.Height%2A> es <xref:System.Windows.GridUnitType.Star> ajuste de tamaño, lo que significa que el alto de fila es una proporción ponderada del espacio disponible. Por ejemplo, si dos filas tienen un <xref:System.Windows.Controls.RowDefinition.Height%2A> de "*", cada uno de ellos tiene un alto que sea la mitad del espacio disponible.
 
     Su <xref:System.Windows.Controls.Grid> debería parecerse ahora el XAML siguiente:
 
@@ -327,7 +327,7 @@ La ilustración siguiente muestra los resultados de lo que acaba de agregar:
 
 1. Abra *`ExpenseItHome.xaml`*.
 
-2. Agregar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controlador de eventos para el <xref:System.Windows.Controls.Button> elemento. Para obtener más información, consulte [Cómo: crear un controlador de eventos simple](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Agregar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controlador de eventos para el <xref:System.Windows.Controls.Button> elemento. Para obtener más información, vea [Cómo: Crear un controlador de eventos simple](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ La ilustración siguiente muestra los resultados de lo que acaba de agregar:
 3. Compile y ejecute la aplicación.
 
     > [!NOTE]
-    > Si se produce un error que el <xref:System.Windows.Controls.DataGrid> no se encontró o no existe, asegúrese de que el proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, consulte [Cómo: Usar como destino una versión de .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+    > Si se produce un error que el <xref:System.Windows.Controls.DataGrid> no se encontró o no existe, asegúrese de que el proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, vea [Cómo: Una versión de .NET Framework de destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 4. Seleccione el **vista** botón.
 
@@ -375,15 +375,15 @@ La apariencia de los diversos elementos a menudo es el mismo para todos los elem
 
     Este código XAML agrega los estilos siguientes:
 
-    - `headerTextStyle`: para dar formato al título de la página <xref:System.Windows.Controls.Label>.
+    - `headerTextStyle`: Para dar formato al título de página <xref:System.Windows.Controls.Label>.
 
-    - `labelStyle`: para dar formato a los controles <xref:System.Windows.Controls.Label> .
+    - `labelStyle`: Para dar formato a la <xref:System.Windows.Controls.Label> controles.
 
-    - `columnHeaderStyle`: para dar formato a <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
+    - `columnHeaderStyle`: Para dar formato a la <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
 
-    - `listHeaderStyle`: para dar formato a los controles del encabezado de lista <xref:System.Windows.Controls.Border> .
+    - `listHeaderStyle`: Aplica formato al encabezado de lista <xref:System.Windows.Controls.Border> controles.
 
-    - `listHeaderTextStyle`: Para dar formato el encabezado de lista <xref:System.Windows.Controls.Label>.
+    - `listHeaderTextStyle`: Aplica formato al encabezado de lista <xref:System.Windows.Controls.Label>.
 
     - `buttonStyle`: Para dar formato a la <xref:System.Windows.Controls.Button> en `ExpenseItHome.xaml`.
 

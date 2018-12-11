@@ -1,19 +1,23 @@
 ---
 title: Paseo por F#
 description: Examine algunas de las características claves del lenguaje en esta visita con ejemplos de código de programación F#.
-ms.date: 02/28/2018
-ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.date: 11/06/2018
+ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50235718"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143753"
 ---
 # <a name="tour-of-f"></a>Paseo por F# #
 
-Es la mejor manera para obtener información sobre F# leer y escribir código de F#.  En este artículo actuará como un paseo por algunas de las características clave del lenguaje F# y proporcionarle algunos fragmentos de código que se pueden ejecutar en el equipo.  Para obtener información acerca de cómo configurar un entorno de desarrollo, visite [Introducción](tutorials/getting-started/index.md).
+Es la mejor manera para obtener información sobre F# leer y escribir código de F#. En este artículo actuará como un paseo por algunas de las características clave del lenguaje F# y proporcionarle algunos fragmentos de código que se pueden ejecutar en el equipo. Para obtener información acerca de cómo configurar un entorno de desarrollo, visite [Introducción](tutorials/getting-started/index.md).
 
 Hay dos conceptos principales en F#: tipos y funciones.  Este paseo realzan características del lenguaje que se dividen en estas dos conceptos.
+
+## <a name="executing-the-code-online"></a>Ejecutar el código en línea
+
+Si no tienes F# instalado en el equipo, puede ejecutar todos los ejemplos en línea con el [Fable REPL](http://fable.io/repl/). Fable es un dialecto de F# que se ejecuta directamente en el explorador. Para ver los ejemplos que siguen en la replicación, consulte **ejemplos > más información > paseo F#**  en la barra de menú de la izquierda de la REPL Fable.
 
 ## <a name="functions-and-modules"></a>Funciones y módulos
 
@@ -81,8 +85,8 @@ Las listas, matrices y las secuencias son tres tipos de colección principal en 
 
 Procesamiento de colecciones o secuencias de elementos se suele realizar con [recursividad](language-reference/functions/index.md#recursive-functions) en F#.  Aunque F# tiene compatibilidad con bucles y la programación imperativa, recursividad es preferible porque es más fácil de garantizar la corrección.
 
->[!NOTE]
-El ejemplo siguiente se usa la coincidencia de patrones a través de la `match` expresión.  Esta construcción fundamental se trata más adelante en este artículo.
+> [!NOTE]
+> El ejemplo siguiente se usa la coincidencia de patrones a través de la `match` expresión.  Esta construcción fundamental se trata más adelante en este artículo.
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 

@@ -3,11 +3,11 @@ title: Traza analítica de WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181662"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147429"
 ---
 # <a name="wcf-analytic-tracing"></a>Traza analítica de WCF
 Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secuencia de los seguimientos analíticos que Windows Communication Foundation (WCF) se escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado. En este ejemplo se muestra cómo usar el <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API para escribir los eventos que se integran con los servicios WCF.  
@@ -106,7 +106,7 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secu
 4.  Haga clic en **borrar** para borrar los eventos.  
   
 ## <a name="known-issue"></a>Problema conocido  
- Hay un problema conocido en el **Visor de eventos** donde no puede descodificar eventos de ETW. Es posible que vea un mensaje de error que dice: "la descripción del Id. de evento \<id > de origen no se puede encontrar aplicaciones de servidor de aplicaciones de Microsoft Windows. El componente que genera este evento no está instalado en el equipo local, o bien la instalación está dañada. Puede instalar o reparar el componente en el equipo local." Si se produce este error, seleccione **actualizar** desde el **acciones** menú. El evento debería descodificarse entonces correctamente.  
+ Hay un problema conocido en el **Visor de eventos** donde no puede descodificar eventos de ETW. Verá un mensaje de error que dice: "La descripción del Id. de evento \<id > de origen no se puede encontrar aplicaciones de servidor de aplicaciones de Microsoft Windows. El componente que genera este evento no está instalado en el equipo local, o bien la instalación está dañada. Puede instalar o reparar el componente en el equipo local." Si se produce este error, seleccione **actualizar** desde el **acciones** menú. El evento debería descodificarse entonces correctamente.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

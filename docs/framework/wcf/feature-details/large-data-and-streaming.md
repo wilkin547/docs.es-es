@@ -2,12 +2,12 @@
 title: Datos de gran tamaño y secuencias
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192579"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145142"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 Windows Communication Foundation (WCF) es una infraestructura de comunicaciones basado en XML. Dado que los datos XML se codifican habitualmente en el formato de texto estándar definido en el [especificación XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de la conexión (o tamaño) de los mensajes enviados a través de la red y la codificación basada en texto de XML plantea desafíos especiales para la transferencia eficaz de los datos binarios.  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
 ## <a name="basic-considerations"></a>Consideraciones básicas  
  Para proporcionar información general acerca de la siguiente información para WCF, esta sección resaltan algunos aspectos y consideraciones generales para las codificaciones, datos binarios, y secuencias que generalmente se aplican a las infraestructuras de sistemas conectados.  
   
-### <a name="encoding-data-text-vs-binary"></a>Codificar datos: Texto y Binary  
+### <a name="encoding-data-text-vs-binary"></a>Codificar datos: Texto de vs. Binary  
  Entre las preocupaciones que suelen expresar los programadores se incluyen la percepción de que XML supone un exceso de trabajo significativo en comparación con los formatos binarios debido a la naturaleza repetitiva de las etiquetas de inicio y de cierre, que la codificación de los valores numéricos es significativamente más larga porque se expresan en valores de texto y que esos datos binarios no se pueden expresar eficazmente porque deben codificarse de forma especial para incrustarse en un formato de texto.  
   
  Aunque muchos de estos aspectos y otros similares son válidos, la diferencia real entre los mensajes codificados en texto XML en un entorno de servicios Web XML y los mensajes con codificación binaria en un entorno de llamada a procedimiento remoto (RPC) heredado es, a menudo, mucho menos significativa que la consideración inicial podría sugerir.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
  Al enviar grandes cantidades de datos deberá establecer el `maxAllowedContentLength` configuración de IIS (para obtener más información, consulte [configuración de los límites de solicitudes de IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) y el `maxReceivedMessageSize` de enlace (por ejemplo [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). El `maxAllowedContentLength` propiedad tiene como valor predeterminado 28,6 M y `maxReceivedMessageSize` propiedad el valor predeterminado es 64 KB.  
   
 ## <a name="encodings"></a>Codificaciones  
- Un *codificación* define un conjunto de reglas sobre cómo presentar los mensajes en la conexión. Un *codificador* implementa este tipo de codificación y es responsable, en el lado del remitente, para activar un <xref:System.ServiceModel.Channels.Message> mensajes en memoria en una secuencia de bytes o búfer de bytes que se puede enviar a través de la red. En el lado del receptor, el codificador convierte una secuencia de bytes en un mensaje en memoria.  
+ Un *codificación* define un conjunto de reglas sobre cómo presentar los mensajes en la conexión. Un *codificador* implementa este tipo de codificación y es responsable, en el lado del remitente, para activar una memoria <xref:System.ServiceModel.Channels.Message> en una secuencia de bytes o búfer de bytes que se puede enviar a través de la red. En el lado del receptor, el codificador convierte una secuencia de bytes en un mensaje en memoria.  
   
  WCF incluye tres codificadores y le permite escribir y complementar sus propios codificadores, si es necesario.  
   
@@ -185,7 +185,7 @@ class MyData
  Puede activar transmisiones por secuencias para las solicitudes y respuestas o para ambas direcciones independientemente en cualquier lado de las partes en comunicación sin afectar a la funcionalidad. Sin embargo, siempre debería suponer que el tamaño de datos transferido es tan significativo que habilitar la transmisión por secuencias se justifica en ambos puntos de conexión de un enlace de comunicación. Para la comunicación multiplataforma donde uno de los puntos de conexión no está implementado con WCF, la capacidad para usar la transmisión por secuencias depende de la funcionalidad de la plataforma de streaming. Otra excepción poco frecuente podría ser un escenario conducido por consumo de memoria donde un cliente o servicio debe minimizar su espacio de trabajo y permitir solo los tamaños de búfer pequeños.  
   
 ### <a name="enabling-asynchronous-streaming"></a>Habilitar la transmisión de datos asincrónica  
- Para habilitar el streaming asincrónico, agregue el comportamiento de extremo <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`. También hemos agregado la capacidad de transmisión de datos asincrónica verdadera en el lado de envío. Esto mejora la escalabilidad del servicio en escenarios donde transmite por secuencias mensajes para varios clientes, algunos de los cuales son lentos en la lectura; posiblemente debido a la congestión de red o que no leen en absoluto. En estos escenarios ahora no bloqueamos subprocesos individuales en el servicio por cliente. Esto garantiza que el servicio pueda procesar muchos más clientes, mejorando así la escalabilidad del servicio.  
+ Para habilitar el streaming asincrónico, agregue el comportamiento de punto de conexión <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`. También hemos agregado la capacidad de transmisión de datos asincrónica verdadera en el lado de envío. Esto mejora la escalabilidad del servicio en escenarios donde transmite por secuencias mensajes para varios clientes, algunos de los cuales son lentos en la lectura; posiblemente debido a la congestión de red o que no leen en absoluto. En estos escenarios ahora no bloqueamos subprocesos individuales en el servicio por cliente. Esto garantiza que el servicio pueda procesar muchos más clientes, mejorando así la escalabilidad del servicio.  
   
 ### <a name="programming-model-for-streamed-transfers"></a>Modelo de programación para las transferencias de transmisión  
  El modelo de programación para transmisión es sencillo. Para recibir los datos transmitidos, especifique un contrato de operación que tiene un parámetro de entrada único de tipo <xref:System.IO.Stream>. Para devolver los datos transmitidos, devuelva una referencia <xref:System.IO.Stream>.  
@@ -239,4 +239,4 @@ public class UploadStreamMessage
 >  La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. Para los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores proxy y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar a un cliente WCF para un servicio, debe editar el archivo de configuración para los servicios pensados para ser utilizado con transferencias transmitidas para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  
   
 ## <a name="see-also"></a>Vea también  
- [Habilitar el streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

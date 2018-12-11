@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202183"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152882"
 ---
 # <a name="common-container-design-principles"></a>Principios de diseño comunes de contenedor
 
@@ -21,7 +21,6 @@ En el modelo de contenedor, un contenedor representa un único proceso. Mediante
 
 Podría encontrar un escenario en el que desea que varios procesos en ejecución en un único contenedor. En cualquier documento de arquitectura, nunca hay un "nunca", así como tampoco hay siempre una "siempre". Para los escenarios que requieren varios procesos, un patrón común es usar [Supervisor](http://supervisord.org/).
 
-
 >[!div class="step-by-step"]
-[Anterior](design-docker-applications.md)
-[Siguiente](monolithic-applications.md)
+>[Anterior](design-docker-applications.md)
+>[Siguiente](monolithic-applications.md)

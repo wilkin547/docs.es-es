@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20a04e76fb26409396a4f0b9fbfc7d86f253e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ebc449985a8e2617b278f04c91d243ca11b637e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392091"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145207"
 ---
 # <a name="memberinfocachecreation-mda"></a>MDA de memberInfoCacheCreation
 El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se activa cuando se crea una caché de <xref:System.Reflection.MemberInfo>. Esto es una indicación clara de un programa que está usando características de reflexión que consumen muchos recursos.  
@@ -52,7 +52,7 @@ El asistente para la depuración administrada (MDA) `memberInfoCacheCreation` se
 ## <a name="example"></a>Ejemplo  
  Este código de ejemplo activará el MDA `memberInfoCacheCreation`.  
   
-```  
+```csharp
 using System;  
   
 public class Exe  

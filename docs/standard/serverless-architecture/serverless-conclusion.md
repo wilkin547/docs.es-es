@@ -4,12 +4,12 @@ description: Sin servidor proporciona muchas ventajas y tiene sus propios desaf�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370087"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128848"
 ---
 # <a name="conclusion"></a>Conclusión
 
@@ -30,4 +30,4 @@ Los siguientes puntos clave son las conclusiones más importantes de esta guía.
 **Sin servidor como una herramienta, no en el cuadro de herramientas.** Sin servidor es no la solución exclusiva para la arquitectura de la aplicación. Es una herramienta que puede usarse como parte de una aplicación híbrida que puede contener capas tradicionales, monolito back-end y contenedores. Sin servidor se puede usar para mejorar las soluciones existentes y no es un enfoque de todo o nada al desarrollo de aplicaciones.
 
 >[!div class="step-by-step"]
-[Anterior](serverless-business-scenarios.md)
+>[Anterior](serverless-business-scenarios.md)

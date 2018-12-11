@@ -1,24 +1,24 @@
 ---
-title: Cuándo se debe implementar contenedores de Windows en sus instalaciones de infraestructura de IaaS VM
-description: Modernizar las aplicaciones .NET existentes con contenedores de Windows y de nube de Azure | Cuándo se debe implementar contenedores de Windows en sus instalaciones de infraestructura de IaaS VM
+title: Cuándo se deben implementar contenedores de Windows en sus instalaciones infraestructura IaaS VM
+description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Cuándo se deben implementar contenedores de Windows en sus instalaciones infraestructura IaaS VM
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 5583386a31b9a76a8413703ec611e8452d452eb1
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: ed9b64927372837c3ecf9377261150d4ee29d323
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958165"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149255"
 ---
-# <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Cuándo se debe implementar contenedores de Windows en sus instalaciones de infraestructura de IaaS VM
+# <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Cuándo se deben implementar contenedores de Windows en sus instalaciones infraestructura IaaS VM
 
--   Su organización podría no estar listo para pasarse a la nube, o es posible que no pueda mover a la nube a un motivo empresarial. Sin embargo, todavía puede obtener las ventajas de utilizar los contenedores de Windows en sus propios centros de datos.
+-   Su organización podría no estar listo para pasar a la nube, o es posible que no pueda mover a la nube para una razón empresarial. Sin embargo, todavía puede obtener las ventajas de utilizar contenedores de Windows en sus propios centros de datos.
 
--   Puede que tenga otros artefactos que se va a usar de forma local y que podría ralentizar su trabajo al intentar mover a la nube. Por ejemplo, seguridad o autenticación dependencias con local Windows Server Active Directory o cualquier otro activo local.
+-   Es posible que tenga otros artefactos que se va a utilizar localmente y lo que podría ralentizar su trabajo al intentar mover a la nube. Por ejemplo, seguridad o autenticación de dependencias con en el entorno local de Windows Server Active Directory o cualquier otro activo en el entorno local.
 
--   Si empieza a usar contenedores de Windows de hoy en día, puede realizar una migración por fases en la nube de mañana desde una posición mucho mejor. Contenedores de Windows se está convirtiendo en una unidad de implementación para cualquier nube, con ningún bloqueo.
+-   Si empieza a usar contenedores de Windows hoy en día, puede realizar una migración por fases en la nube mañana desde una posición mucho mejor. Contenedores de Windows se está convirtiendo en una unidad de implementación para cualquier nube, con ningún bloqueo en el repositorio.
 
 >[!div class="step-by-step"]
-[Anterior](when-not-to-deploy-to-windows-containers.md)
-[Siguiente](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[Anterior](when-not-to-deploy-to-windows-containers.md)
+>[Siguiente](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)

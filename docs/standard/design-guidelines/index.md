@@ -1,27 +1,26 @@
 ---
 title: Instrucciones de diseño de .NET Framework
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - libraries, .NET Framework class library
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df2ccf3d778e26e16937554304ae847f624cfec0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085645"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147611"
 ---
 # <a name="framework-design-guidelines"></a>Instrucciones de diseño de .NET Framework
 Esta sección proporciona directrices para diseñar bibliotecas que extenderán e interactúan con .NET Framework. El objetivo es ayudar a los diseñadores de bibliotecas a garantizar la coherencia de la API y facilidad de uso, ya que proporciona un modelo de programación unificado que es independiente del lenguaje de programación usado para el desarrollo. Se recomienda que siga estas directrices de diseño al desarrollar clases y componentes que extiendan .NET Framework. Diseño de la biblioteca incoherente negativamente afecta a la productividad del desarrollador y disuaden del adopción.  
   
  Las instrucciones se organizan como recomendaciones sencillas precedidas por los términos `Do`, `Consider`, `Avoid`, y `Do not`. Estas instrucciones están pensadas para ayudar a los diseñadores de bibliotecas de clase a comprender las ventajas y desventajas entre las distintas soluciones. Puede haber situaciones donde buen diseño de bibliotecas requiere que infringen estas directrices de diseño. Estos casos deberían ser excepcionales y es importante que tenga un motivo claro y atractivo para su decisión.  
   
- Estas instrucciones son un extracto de la libreta de *instrucciones de diseño de Framework: convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición*, Krzysztof Cwalina y Brad Abrams.  
+ Estas instrucciones son un extracto de la libreta de *instrucciones de diseño de Framework: Convenciones, expresiones y patrones para las bibliotecas reutilizables. NET, 2ª edición*, Krzysztof Cwalina y Brad Abrams.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)  
@@ -47,7 +46,7 @@ Esta sección proporciona directrices para diseñar bibliotecas que extenderán 
   
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
+ *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también
 

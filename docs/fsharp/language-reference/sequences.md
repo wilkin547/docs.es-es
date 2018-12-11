@@ -1,18 +1,18 @@
 ---
 title: Secuencias (F#)
-description: Obtenga información sobre cómo usar las secuencias de F#, cuando se disponga de una gran colección ordenada de datos pero no espere usar todos los elementos.
+description: Aprenda a usar F# secuencias, si tiene una gran colección ordenan de datos pero no necesariamente espere usar todos los elementos.
 ms.date: 05/16/2016
-ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 835aa5fdc32f98efdc7e1795efd09541a5f1b791
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838915"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129212"
 ---
 # <a name="sequences"></a>Secuencias
 
 > [!NOTE]
-Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
+> Los vínculos de la referencia de API de este artículo le llevarán a MSDN.  La referencia de API de docs.microsoft.com no está completa.
 
 Un *secuencia* es una serie lógica de elementos del mismo tipo. Las secuencias son especialmente útiles cuando se disponga de una gran colección ordenada de datos pero que no pretenda usar todos los elementos. Secuencia individual se calculan los elementos sólo como necesario, por lo que una secuencia puede proporcionar un rendimiento mejor que una lista en situaciones en que no se usan todos los elementos. Las secuencias se representan mediante el `seq<'T>` tipo, que es un alias para `System.Collections.Generic.IEnumerable`. Por lo tanto, cualquier tipo de .NET Framework que implementa `System.IEnumerable` puede usarse como una secuencia. El [Seq (módulo)](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) proporciona compatibilidad para las manipulaciones que implican las secuencias.
 
@@ -22,7 +22,7 @@ Un *expresión de secuencia* es una expresión que se evalúa como una secuencia
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Las expresiones de secuencia se componen de expresiones de F# que generan valores de la secuencia. Puede usar el `yield` palabra clave para generar valores que pasan a formar parte de la secuencia.
+Las expresiones de secuencia se componen de F# las expresiones que producen valores de la secuencia. Puede usar el `yield` palabra clave para generar valores que pasan a formar parte de la secuencia.
 
 La siguiente es un ejemplo.
 
@@ -62,7 +62,7 @@ En el ejemplo siguiente se muestra el uso de `yield!` para combinar secuencias i
 
 Las secuencias admiten muchas de las mismas funciones que [enumera](lists.md). Las secuencias también admiten operaciones como la agrupación y contar con funciones de generación de claves. Las secuencias admiten también funciones más diversas para extraer subsecuencias.
 
-Muchos tipos de datos, como listas, matrices, conjuntos y asignaciones son implícitamente secuencias porque son colecciones enumerables. Una función que toma una secuencia como un argumento funciona con cualquiera de los comunes F# tipos de datos, además de a cualquier tipo de datos de .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>`. Compare esto con una función que toma una lista como argumento, que solo se puede tomar listas. El tipo `seq<'T>` es una abreviatura del tipo `IEnumerable<'T>`. Esto significa que cualquier tipo que implementa el modelo genérico `System.Collections.Generic.IEnumerable<'T>`, que incluye matrices, listas, Establece y asignaciones en F# y también mayoría .NET Framework colección de tipos, es compatible con la `seq` escriba y se puede utilizar donde se espera una secuencia.
+Muchos tipos de datos, como listas, matrices, conjuntos y asignaciones son implícitamente secuencias porque son colecciones enumerables. Una función que toma una secuencia como un argumento funciona con cualquiera de los comunes F# tipos de datos, además de cualquier tipo de datos de .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>`. Compare esto con una función que toma una lista como argumento, que solo se puede tomar listas. El tipo `seq<'T>` es una abreviatura del tipo `IEnumerable<'T>`. Esto significa que cualquier tipo que implementa el modelo genérico `System.Collections.Generic.IEnumerable<'T>`, que incluye matrices, listas, se establece y se asigna en F#y también mayoría .NET Framework colección de tipos, es compatible con la `seq` escriba y se puede utilizar donde se espera una secuencia .
 
 ## <a name="module-functions"></a>Funciones del módulo
 
@@ -120,7 +120,7 @@ El código siguiente es un ejemplo que usa muchas de las funciones del módulo d
 
 ## <a name="searching-and-finding-elements"></a>Buscar y encontrar elementos
 
-Las secuencias admiten la funcionalidad disponible con las listas: [Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [ Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), y [Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Las versiones de estas funciones que están disponibles para las secuencias de evaluarán la secuencia solo hasta el elemento que se va a buscar. Para obtener ejemplos, vea [enumera](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
+Las secuencias admiten la funcionalidad disponible con las listas de: [Seq.Exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq.tryFind ](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), y [Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Las versiones de estas funciones que están disponibles para las secuencias de evaluarán la secuencia solo hasta el elemento que se va a buscar. Para obtener ejemplos, vea [enumera](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
 
 ## <a name="obtaining-subsequences"></a>Obtener subsecuencias
 

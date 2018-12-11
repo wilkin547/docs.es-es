@@ -1,25 +1,25 @@
 ---
-title: Cuándo no se debe implementar en los contenedores de Windows
-description: Modernizar las aplicaciones .NET existentes con contenedores de Windows y de nube de Azure | Cuándo no se debe implementar en los contenedores de Windows
+title: Cuándo no se debe implementar en contenedores de Windows
+description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Cuándo no se debe implementar en contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 819f32955ff019414bef8820d17d272eddc11bf8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957965"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129901"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>Cuándo no se debe implementar en los contenedores de Windows
+# <a name="when-not-to-deploy-to-windows-containers"></a>Cuándo no se debe implementar en contenedores de Windows
 
-Algunas tecnologías de Windows no son compatibles con los contenedores de Windows. En esos casos, deberá migrar a las máquinas virtuales de estándares, normalmente con solo Windows e IIS.
+Algunas tecnologías de Windows no se admiten los contenedores de Windows. En esos casos, deberá migrar a máquinas virtuales de los estándares, normalmente con solo Windows e IIS.
 
-No se admite en los contenedores de Windows, a partir de mayo de 2018 los casos: 
+Casos que no se admite en los contenedores de Windows, a partir de mayo de 2018: 
 
 -   Actualmente solo está disponible en los contenedores de Windows basada en Windows Server v1803 versión, pero no en cualquier otra versión anterior Microsoft Message Queuing (MSMQ). 
 
-    -   [Foro de solicitud de UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
+    -   [Foro de la solicitud de UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
 
     -   [Foro de discusión](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
 
@@ -29,21 +29,21 @@ No se admite en los contenedores de Windows, a partir de mayo de 2018 los casos:
 
 -   Microsoft Office no admite actualmente los contenedores.
 
-    -   [Foro de solicitud de UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
+    -   [Foro de la solicitud de UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
 
--   Aplicaciones de interfaz de usuario (aplicaciones de cliente con una interfaz de usuario visual) no están admitidas.
+-   Las aplicaciones de interfaz de usuario (aplicaciones de cliente con una interfaz de usuario visual) no son escenarios admitidos.
 
--   Roles de infraestructura de Windows (DNS, DHCP, DC, NTP, impresión, servidor de archivos, etc. IAM) no están admitidas.
+-   Roles de infraestructura de Windows (DNS, DHCP, DC, NTP, impresión, servidor de archivos, etc. IAM) no son escenarios admitidos.
 
 
-Para las solicitudes de la Comunidad y otros escenarios no admitidos, vea el foro de UserVoice para contenedores de Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
+Para otros escenarios no admitidos y las solicitudes de la Comunidad, vea el foro de UserVoice para contenedores de Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Máquinas virtuales y contenedores en Azure**
+-   **Las máquinas virtuales y contenedores en Azure**
 
     [https://docs.microsoft.com/azure/virtual-machines/windows/containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
 
 >[!div class="step-by-step"]
-[Anterior](deploy-existing-net-apps-as-windows-containers.md)
-[Siguiente](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+>[Anterior](deploy-existing-net-apps-as-windows-containers.md)
+>[Siguiente](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)

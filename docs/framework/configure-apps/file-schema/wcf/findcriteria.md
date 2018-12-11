@@ -1,16 +1,16 @@
 ---
-title: '&lt;findCriteria&gt;'
+title: '&lt;FindCriteria&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: fc9cd3b87d0f47ae0f16b5c5bfcaa4a1167bae9f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38941e4afb0cfa4fea8657c90c1105a5ab771d49
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748651"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144213"
 ---
-# <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
-Elemento de configuración que proporciona un conjunto de criterios utilizado por una aplicación cliente para buscar un servicio de detección. Criterios pueden agruparse en criterios de búsqueda (que especifican qué servicios está buscando) y encuentra criterios de finalización (cuánto tiempo debe durar la búsqueda).  
+# <a name="ltfindcriteriagt"></a>&lt;FindCriteria&gt;
+Elemento de configuración que proporciona un conjunto de criterios utilizado por una aplicación cliente para buscar un servicio de detección. Los criterios pueden agruparse en criterios de búsqueda (que especifican qué servicios está buscando) y encuentra criterios de finalización (cuánto tiempo debe durar la búsqueda).  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -54,8 +54,8 @@ Elemento de configuración que proporciona un conjunto de criterios utilizado po
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Colección de elementos de configuración que contiene los nombres de tipos de contrato de servicios de flujo de trabajo.|  
-|\<las extensiones > de \<findCriteria >|Colección de objetos de elementos XML que proporcionan las extensiones.|  
+|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Una colección de elementos de configuración que contienen los nombres de tipos de contrato de servicio de flujo de trabajo.|  
+|\<Extensiones > de \<findCriteria >|Colección de objetos de elementos XML que proporcionan las extensiones.|  
 |[\<ámbitos >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Colección de objetos que contienen URI absolutos que se usan durante una operación de búsqueda para localizar un servicio o servicios concretos.<br /><br /> Si se encuentra el servicio concreto, se ha establecido una coincidencia correcta entre el URI del servicio y el URI del ámbito, en ocasiones con la ayuda de las reglas de ámbito que se ocupan de las complicaciones relativas a las coincidencias.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  

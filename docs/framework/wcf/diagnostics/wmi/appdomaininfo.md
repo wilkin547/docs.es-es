@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170229"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127087"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 Información del dominio de aplicaciones  
@@ -41,84 +41,84 @@ class AppDomainInfo
 ### <a name="appdomainid"></a>AppDomainId  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El id. de appdomain.  
   
 ### <a name="isdefault"></a>IsDefault  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Indica si appdomain es el appdomain predeterminado.  
   
 ### <a name="logmalformedmessages"></a>LogMalformedMessages  
  Tipo de datos: booleano  
   
- Tipo de acceso: lectura/escritura  
+ Tipo de acceso: Lectura/escritura  
   
  Valor booleano que especifica si se registran los mensajes con formato erróneo.  
   
 ### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  Tipo de datos: booleano  
   
- Tipo de acceso: lectura/escritura  
+ Tipo de acceso: Lectura/escritura  
   
  Valor booleano que especifica si los mensajes se siguen en el nivel de servicio (antes del cifrado y las transformaciones relacionadas con transporte).  
   
 ### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  Tipo de datos: booleano  
   
- Tipo de acceso: lectura/escritura  
+ Tipo de acceso: Lectura/escritura  
   
  Valor booleano que especifica si los mensajes se siguen en el nivel de transporte.  
   
 ### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
- Matriz TraceListener de tipo de datos  
+ Tipo de datos: Matriz TraceListener  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Los agentes de escucha de seguimiento de colección que escuchan el origen de seguimiento de System.Wmi.MessageLogging.  
   
 ### <a name="name"></a>nombre  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El nombre de appdomain.  
   
 ### <a name="performancecounters"></a>PerformanceCounters  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El ámbito de contadores de rendimiento activos en el appdomain.  
   
 ### <a name="processid"></a>ProcessId  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El id. de proceso.  
   
 ### <a name="serviceconfigpath"></a>ServiceConfigPath  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Ruta de acceso a la configuración del servicio.  
   
 ### <a name="tracelevel"></a>TraceLevel  
  Tipo de datos: cadena  
   
- Tipo de acceso: lectura/escritura  
+ Tipo de acceso: Lectura/escritura  
   
  El nivel de seguimiento del origen de seguimiento de System.Wmi.  
   
 ### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
- Matriz TraceListener de tipo de datos  
+ Tipo de datos: Matriz TraceListener  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Una colección de agentes de escucha del origen de seguimiento de System.ServiceModel.  
   

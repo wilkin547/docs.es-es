@@ -5,16 +5,16 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199713"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152531"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native y compilación
 Las aplicaciones de Windows 8.1 y del escritorio de Windows destinadas a.NET Framework se escriben en un lenguaje de programación determinado y se compilan en lenguaje intermedio (IL). En runtime, el compilador Just-In-Time (JIT) es el responsable de compilar el IL en código nativo para la máquina local antes de que un método se ejecute por primera vez. En cambio, la cadena de herramientas de .NET Native convierte código fuente en código nativo en tiempo de compilación. En este tema se compara .NET Native con otras tecnologías de compilación disponibles para las aplicaciones de .NET Framework. Asimismo, también se proporciona información general práctica sobre el modo en que .NET Native genera código nativo que sirve para comprender por qué las excepciones que se producen en el código compilado con .NET Native no se producen en código compilado JIT.  
   
-## <a name="net-native-generating-native-binaries"></a>.NET Native: generación de archivos binarios nativos  
+## <a name="net-native-generating-native-binaries"></a>.NET native: Generar archivos binarios nativos  
  Una aplicación que está destinada a .NET Framework y no se compila mediante la cadena de herramientas de .NET Native se compone del ensamblado de aplicación, que incluye lo siguiente:  
   
 -   Los [metadatos](../../../docs/standard/metadata-and-self-describing-components.md) que describen el ensamblado, sus dependencias, los tipos que contiene y sus miembros. Los metadatos se usan para la reflexión y acceso en tiempo de ejecución y en algunos casos también por el compilador y las herramientas de compilación.  

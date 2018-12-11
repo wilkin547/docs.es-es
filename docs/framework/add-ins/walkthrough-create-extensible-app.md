@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear una aplicación extensible'
+title: 'Tutorial: Crear una aplicación Extensible'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744618"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155082"
 ---
-# <a name="walkthrough-creating-an-extensible-application"></a>Tutorial: Crear una aplicación extensible
+# <a name="walkthrough-creating-an-extensible-application"></a>Tutorial: Crear una aplicación Extensible
 Este tutorial describe cómo crear una canalización para un complemento que realiza funciones de la calculadora simple. No se muestra un escenario real; en su lugar, muestra la funcionalidad básica de una canalización y cómo un complemento puede proporcionar servicios para un host.  
   
  En este tutorial se describe las tareas siguientes:  
@@ -43,11 +43,11 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
   
 -   Ejecutar la aplicación host.  
   
- Esta canalización sólo pasa tipos serializables (<xref:System.Double> y <xref:System.String>), entre el host y el complemento. Para obtener un ejemplo que muestra cómo pasar colecciones de tipos de datos complejos, vea [Tutorial: pasar colecciones entre Hosts y complementos](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Esta canalización sólo pasa tipos serializables (<xref:System.Double> y <xref:System.String>), entre el host y el complemento. Para obtener un ejemplo que muestra cómo pasar colecciones de tipos de datos complejos, vea [Tutorial: Pasar colecciones entre Hosts y complementos](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  El contrato de esta canalización define un modelo de objetos de cuatro operaciones aritméticas: agregar, restar, multiplicar y dividir. El host proporciona el complemento con una ecuación para calcular, por ejemplo, 2 + 2, y el complemento devuelve el resultado al host.  
   
- Versión 2 del complemento de calculadora proporciona otras posibilidades de cálculo y muestra el control de versiones. Se describe en [Tutorial: habilitar la compatibilidad con versiones anteriores como los cambios de Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Versión 2 del complemento de calculadora proporciona otras posibilidades de cálculo y muestra el control de versiones. Se describe en [Tutorial: Habilita la compatibilidad con versiones anteriores como los cambios de Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesitas lo siguiente para poder llevar a cabo este tutorial:  
@@ -86,7 +86,7 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
      No es necesario poner la estructura de carpetas de la canalización en la carpeta de aplicación; se hace aquí solo por comodidad. En el paso correspondiente, el tutorial explica cómo cambiar el código si la estructura de carpetas de la canalización está en una ubicación diferente. Vea la explicación de los requisitos de directorio de canalización en [Pipeline Development Requirements](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  El `CalcV2` carpeta no se usa en este tutorial; es un marcador de posición para [Tutorial: habilitar la compatibilidad con versiones anteriores como los cambios de Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  El `CalcV2` carpeta no se usa en este tutorial; es un marcador de posición [Tutorial: Habilita la compatibilidad con versiones anteriores como los cambios de Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Crear el contrato y vistas  
  El segmento de contrato de esta canalización define la `ICalc1Contract` interfaz, que define cuatro métodos: `add`, `subtract`, `multiply`, y `divide`.  
@@ -355,7 +355,7 @@ Este tutorial describe cómo crear una canalización para un complemento que rea
 4.  Tipo **salir** y presione la **ENTRAR** tecla para cerrar la aplicación.  
   
 ## <a name="see-also"></a>Vea también  
-- [Tutorial: Habilitar la compatibilidad con versiones anteriores como los cambios de Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+- [Tutorial: Habilita la compatibilidad con versiones anteriores como los cambios de Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
 -  [Tutorial: Pasar colecciones entre Hosts y complementos](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
 -  [Requisitos del desarrollo de canalizaciones](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
 -  [Contratos, vistas y adaptadores](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  

@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197683"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152727"
 ---
 # <a name="what-is-docker"></a>¿Qué es Docker?
 
@@ -49,9 +49,8 @@ Cuando se usa Docker, no podrá escuchar a los desarrolladores dicen, "Funciona 
 
 ![](./media/image3.png)
 
-Figura 1-3: comparación de las máquinas virtuales tradicionales en contenedores de Docker
-
+Figura 1-3: Comparación de las máquinas virtuales tradicionales en contenedores de Docker
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Siguiente](docker-terminology.md)
+>[Anterior](index.md)
+>[Siguiente](docker-terminology.md)

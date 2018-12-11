@@ -1,16 +1,16 @@
 ---
-title: 'Servicio: errores en la validación de la seguridad y la autenticación'
+title: 'Servicio: Errores de autenticación y validación de la seguridad'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
 ms.openlocfilehash: ba8da3ae6be6bd089690359f19e153da1e0b54fc
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744254"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150906"
 ---
-# <a name="service-security-validation-and-authentication-failures"></a>Servicio: errores en la validación de la seguridad y la autenticación
-Nombre del contador: errores en la autenticación y validación de la seguridad  
+# <a name="service-security-validation-and-authentication-failures"></a>Servicio: Errores de autenticación y validación de la seguridad
+Nombre del contador: Errores de autenticación y validación de la seguridad  
   
 ## <a name="description"></a>Descripción  
  Este contador se incrementa siempre que se rechaza un mensaje debido a un problema de seguridad que no abarca el contador "Llamadas de seguridad no autorizadas". Entre estos problemas se incluyen:  

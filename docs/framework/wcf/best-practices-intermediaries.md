@@ -1,15 +1,15 @@
 ---
-title: 'Procedimientos recomendados: intermediarios'
+title: 'Procedimientos recomendados: Intermediarios'
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
 ms.openlocfilehash: 8b0e0e635c0e790b342115b988905ba29a6b8ad1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296409"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144005"
 ---
-# <a name="best-practices-intermediaries"></a>Procedimientos recomendados: intermediarios
+# <a name="best-practices-intermediaries"></a>Procedimientos recomendados: Intermediarios
 Se debe tener cuidado para controlar los errores correctamente al llamar a intermediarios para asegurarse de que los canales en el lado servicio se han cerrado correctamente.  
   
  Considere el caso siguiente. Un cliente realiza una llamada a un intermedio que llama a un servicio de back-end.  El servicio back-end no define ningún contrato de error, de modo que cualquier error de ese servicio se tratará como un error no tipado.  El servicio back-end se produce un <xref:System.ApplicationException> y WCF anula correctamente el canal del servicio. <xref:System.ApplicationException> emerge como <xref:System.ServiceModel.FaultException> que se inicia en el intermediario. El intermediario vuelve a iniciar <xref:System.ApplicationException>. WCF interpreta esto como un error no tipado del intermediario y se lo reenvía al cliente. Al recibir el error, el intermediario y el cliente generan errores en los canales de lado de cliente. Sin embargo, el canal del lado de servicio del intermediario permanece abierto porque WCF no sabe que el error es irrecuperable.  

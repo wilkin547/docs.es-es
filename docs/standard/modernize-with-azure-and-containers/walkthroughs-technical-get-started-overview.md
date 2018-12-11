@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372856"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150595"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Técnicas y tutoriales de introducción
 
@@ -55,7 +55,7 @@ Todas estas aplicaciones están disponibles en el [repositorio de GitHub eShopMo
 
 El objetivo principal de este tutorial es simplemente para familiarizarse con estas aplicaciones y con su código y la configuración. Puede configurar las aplicaciones para que puedan generarán y usar datos simulados, sin usar la base de datos SQL, con fines de prueba. Esta configuración opcional se basa en la inserción de dependencias, de forma desacoplada.
 
-### <a name="scenario-1-aspnet-web-apps"></a>Escenario 1: Las aplicaciones Web ASP.NET
+### <a name="scenario-1-aspnet-web-apps"></a>Escenario 1: Aplicaciones Web de ASP.NET
 
 La siguiente ilustración muestra el escenario sencillo de las aplicaciones de web ASP.NET heredadas originales.
 
@@ -70,7 +70,7 @@ En la ilustración siguiente se muestra las capturas de pantalla de la aplicaci�
 
 Dependencias en ASP.NET 4.x o versiones anteriores (ya sea para MVC o Web Forms) significa que estas aplicaciones no se ejecutarán en .NET Core a menos que el código se vuelve a escribir por completo mediante el uso de ASP.NET Core MVC. 
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Escenario 2: Servicio de WCF y aplicación de cliente de WinForms (aplicación de capa 3)
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Escenario 2: Servicio de WCF y la aplicación de cliente de WinForms (aplicación de capa 3)
 
 La siguiente ilustración muestra el escenario sencillo de la aplicación heredada de 3 niveles original.
 
@@ -79,7 +79,7 @@ La siguiente ilustración muestra el escenario sencillo de la aplicación hereda
 
 ### <a name="benefits"></a>Ventajas
 
-Las ventajas de este tutorial son sencillas: familiarizarse con el código y aplicaciones iniciales.
+Las ventajas de este tutorial son sencillas: Simplemente familiarizarse con el código y aplicaciones iniciales.
 
 ### <a name="next-steps"></a>Pasos siguientes
 
@@ -89,7 +89,7 @@ Explore este contenido más detallada en el sitio wiki de GitHub:
   - [Paseo por en el servicio WCF de línea de base y la aplicación de formularios Windows Forms (nivel 3) "heredado"](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 
-## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Tutorial 2: Incluir las aplicaciones .NET existentes con contenedores de Windows
+## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Tutorial 2: Incluya las aplicaciones .NET existentes con contenedores de Windows
 
 ### <a name="overview"></a>Información general
 
@@ -107,7 +107,7 @@ El objetivo de este tutorial es mostrar varias opciones para incluir en contened
 
 En este tutorial se centra en Visual Studio 2017 Tools para el enfoque de Docker, pero los otros dos enfoques son bastante similares, lo que respecta al uso Dockerfiles.
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>Escenario 1: Las aplicaciones web ASP.NET en contenedores
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Escenario 1: Aplicaciones web ASP.NET en contenedores
 
 La figura siguiente muestra el escenario para aplicaciones de las aplicaciones web heredadas eShop en contenedores.
 
@@ -115,7 +115,7 @@ La figura siguiente muestra el escenario para aplicaciones de las aplicaciones w
 >
 
 
-### <a name="scenario-2-containerized-wcf-service"></a>Escenario 2: Servicio WCF en contenedores
+### <a name="scenario-2-containerized-wcf-service"></a>Escenario 2: Servicio WCF en contenedor
 
 La figura siguiente muestra el escenario para una aplicación de 3 niveles con un servicio WCF en contenedores. 
 
@@ -159,19 +159,19 @@ El objetivo de este tutorial es mostrar la varias alternativas de que tener al i
 
 Varios escenarios se tratan en este tutorial.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Escenario A: implementar en una máquina virtual de Azure desde un equipo de desarrollo a través de la conexión con el motor de Docker
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Escenario A: Implementar en una máquina virtual de Azure desde un equipo de desarrollo a través de la conexión con el motor de Docker
 
 ![Implementar en una máquina virtual de Azure desde un equipo de desarrollo a través de una conexión con el motor de Docker](./media/image5-4.png)
 
 > **Figura 5-4.** Implementar en una máquina virtual de Azure desde un equipo de desarrollo a través de una conexión con el motor de Docker
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Escenario B: implementar en una máquina virtual de Azure a través de un registro de Docker
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Escenario B: Implementar en una máquina virtual de Azure a través de un registro de Docker
 
 ![Implementar en una máquina virtual de Azure a través de un registro de Docker](./media/image5-5.png)
 
 > **Figura 5-5.** Implementar en una máquina virtual de Azure a través de un registro de Docker
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Escenario C: implementación en una máquina virtual de Azure desde las canalizaciones de CI/CD en servicios de Azure DevOps
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Escenario de C: Implementar en una máquina virtual de Azure desde las canalizaciones de CI/CD en servicios de Azure DevOps
 
 ![Implementar en una máquina virtual de Azure desde las canalizaciones de CI/CD en servicios de Azure DevOps](./media/image5-6.png)
 
@@ -254,13 +254,13 @@ Es el objetivo de este tutorial aprender a implementar una aplicación basada en
 
 ### <a name="scenarios"></a>Escenarios
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Escenario A: implementar directamente a un clúster de Kubernetes desde un entorno de desarrollo
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Escenario A: Implementar directamente en un clúster de Kubernetes desde un entorno de desarrollo
 
 ![Implementar directamente en un clúster de Kubernetes desde un entorno de desarrollo](./media/image5-7.png)
 
 > **Figura 5-7.** Implementar directamente en un clúster de Kubernetes desde un entorno de desarrollo
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Escenario B: implementar en un clúster de Kubernetes de CI/CD canalizaciones en servicios de Azure DevOps
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Escenario B: Implementar en un clúster de Kubernetes desde las canalizaciones de CI/CD en servicios de Azure DevOps
 
 ![Implementar en un clúster de Kubernetes desde las canalizaciones de CI/CD en servicios de Azure DevOps](./media/image5-8.png)
 
@@ -314,13 +314,13 @@ Es el objetivo de este tutorial aprender a implementar una aplicación basada en
 
 ### <a name="scenarios"></a>Escenarios
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Escenario A: implementar directamente a un clúster de Service Fabric desde un entorno de desarrollo
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Escenario A: Implementar directamente en un clúster de Service Fabric desde un entorno de desarrollo
 
 ![Implementar directamente en un clúster de Service Fabric desde un entorno de desarrollo](./media/image5-9.png)
 
 > **Figura 5-9.** Implementar directamente en un clúster de Service Fabric desde un entorno de desarrollo
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Escenario B: implementar en un clúster de Service Fabric de CI/CD canalizaciones en servicios de Azure DevOps
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Escenario B: Implementar en un clúster de Service Fabric desde canalizaciones de CI/CD en servicios de Azure DevOps
 
 ![Implementar en un clúster de Service Fabric desde canalizaciones de CI/CD en servicios de Azure DevOps](./media/image5-10.png)
 
@@ -367,5 +367,5 @@ Explore este contenido más detallada en el sitio wiki de GitHub:
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
-[Anterior](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
-[Siguiente](conclusions.md)
+>[Anterior](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+>[Siguiente](conclusions.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297067"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126827"
 ---
 # <a name="wcf-security-terminology"></a>Terminología de seguridad en WCF
 Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco familiar. Este tema proporciona breves explicaciones sobre algunos términos de seguridad, pero no está diseñado para proporcionar una documentación completa sobre cada elemento.  
@@ -120,7 +120,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  La CA que se encuentra en la parte superior de una jerarquía de la CA. La entidad emisora raíz certifica CA en el siguiente nivel de la jerarquía.  
   
  Algoritmo hash seguro (SHA)  
- Un algoritmo hash que genera una síntesis del mensaje. SHA se utiliza con el Algoritmo de firma digital (DSA) en el Estándar de firmas digitales (DSS), entre otros. Hay cuatro variedades de SHA: SHA-1, SHA-256, SHA-384 y SHA-512. SHA-1 genera una síntesis del mensaje de 160 bits. SHA-256, SHA-384 y SHA-512 generan síntesis de mensajes de 256, 384 y 512 bits, respectivamente. SHA fue desarrollado por el National Institute of Standards and Technology (NIST, Instituto nacional de estándares y tecnología) y la National Security Agency (NSA, Agencia de seguridad nacional).  
+ Un algoritmo hash que genera una síntesis del mensaje. SHA se utiliza con el Algoritmo de firma digital (DSA) en el Estándar de firmas digitales (DSS), entre otros. Hay cuatro variedades de SHA: SHA-1, SHA-256, SHA-384 y SHA-512. SHA-1, SHA-256, SHA-384 y SHA-512. SHA-1 genera una síntesis del mensaje de 160 bits. SHA-256, SHA-384 y SHA-512 generan síntesis de mensajes de 256, 384 y 512 bits, respectivamente. SHA fue desarrollado por el National Institute of Standards and Technology (NIST, Instituto nacional de estándares y tecnología) y la National Security Agency (NSA, Agencia de seguridad nacional).  
   
  Secure Sockets Layer (SSL)  
  Un protocolo que proporciona comunicaciones de red seguras mediante una combinación de tecnología de claves públicas y secretas.  

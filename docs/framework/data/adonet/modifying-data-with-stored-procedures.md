@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: c975913ab5df9c2e7f792ed73f8c5d20bdca1c5a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c868528edbccfeb32e6aca02c92b87d51bb0b829
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526890"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144772"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modificar datos con procedimientos almacenados
 Los procedimientos almacenados pueden aceptar datos como parámetros de entrada y pueden devolver datos como parámetros de salida, conjuntos de resultados o valores de retorno. En el ejemplo siguiente se muestra cómo ADO.NET envía y recibe parámetros de entrada, parámetros de salida y valores de retorno. El ejemplo inserta un nuevo registro en una tabla cuya columna de clave principal es una columna de identidad en una base de datos de SQL Server.  
@@ -21,7 +21,7 @@ Los procedimientos almacenados pueden aceptar datos como parámetros de entrada 
 ## <a name="example"></a>Ejemplo  
  El ejemplo usa el siguiente procedimiento almacenado para insertar una nueva categoría en la **Northwind** **categorías** tabla. El procedimiento almacenado toma el valor el **CategoryName** columna como un parámetro de entrada y usa el SCOPE_IDENTITY () la función para recuperar el nuevo valor del campo de identidad, **CategoryID**y devolverlo en un parámetro de salida. La instrucción RETURN utiliza el @@ROWCOUNT función para devolver el número de filas insertadas.  
   
-```  
+```sql
 CREATE PROCEDURE dbo.InsertCategory  
   @CategoryName nvarchar(15),  
   @Identity int OUT  

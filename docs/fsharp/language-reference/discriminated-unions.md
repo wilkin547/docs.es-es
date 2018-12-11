@@ -3,11 +3,11 @@ title: Uniones discriminadas (F#)
 description: Aprenda a usar F# uniones discriminadas.
 ms.date: 05/16/2016
 ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672252"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154416"
 ---
 # <a name="discriminated-unions"></a>Uniones discriminadas
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-El código anterior declara una unión discriminada forma, que puede tener valores de cualquiera de los tres casos: rectángulo, círculo y prisma. Cada caso tiene un conjunto diferente de campos. El caso del rectángulo tiene dos denominado campos, ambos de tipo `float`, que tienen los nombres ancho y longitud. El caso de círculo tiene un solo campo con nombre, radius. El caso prisma tiene tres campos, dos de qué (ancho y alto) son campos con nombre. Campos sin nombre se conocen como campos anónimos.
+El código anterior declara una unión discriminada forma, que puede tener valores de cualquiera de los tres casos: Rectángulo, círculo y prisma. Cada caso tiene un conjunto diferente de campos. El caso del rectángulo tiene dos denominado campos, ambos de tipo `float`, que tienen los nombres ancho y longitud. El caso de círculo tiene un solo campo con nombre, radius. El caso prisma tiene tres campos, dos de qué (ancho y alto) son campos con nombre. Campos sin nombre se conocen como campos anónimos.
 
 Construir objetos proporcionando los valores para los campos con nombre y anónimos según los ejemplos siguientes.
 

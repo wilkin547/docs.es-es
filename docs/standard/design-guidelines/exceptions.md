@@ -1,6 +1,6 @@
 ---
 title: Instrucciones de diseño de excepciones
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions [.NET Framework], design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+author: KrzysztofCwalina
+ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030660"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153205"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instrucciones de diseño de excepciones
 Control de excepciones presenta muchas ventajas respecto a los informes de errores basado en el valor de retorno. Diseño de buen marco ayuda a los desarrolladores de aplicaciones aprovechar las ventajas de las excepciones. En esta sección se describe las ventajas de las excepciones y se muestra instrucciones para usar de forma eficaz.  
@@ -26,7 +25,7 @@ Control de excepciones presenta muchas ventajas respecto a los informes de error
  [Excepciones y rendimiento](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
+ *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también
 

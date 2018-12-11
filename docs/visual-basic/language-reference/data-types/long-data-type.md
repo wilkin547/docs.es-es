@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 040306b49bbf6b0f30556309457510ca873d8a74
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 357b7b42c7ad609b2a86ec3ee79a0f6f38dd9471
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197228"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155124"
 ---
 # <a name="long-data-type-visual-basic"></a>Tipo de datos Long (Visual Basic)
 
@@ -60,7 +60,7 @@ Dim number As Long = &H_0FAC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-También pueden incluir literales numéricos el `L` [carácter de tipo](../../programming-guide\language-features\data-types/type-characters.md) para denotar el `Long` tipo de datos, como se muestra en el ejemplo siguiente.
+También pueden incluir literales numéricos el `L` [carácter de tipo](../../programming-guide/language-features/data-types/type-characters.md) para denotar el `Long` tipo de datos, como se muestra en el ejemplo siguiente.
 
 ```vb
 Dim number = &H_0FAC_0326_1489_D68CL

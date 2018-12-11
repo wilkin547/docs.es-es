@@ -3,11 +3,11 @@ title: Ejemplo de seguridad de la detección
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50041211"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129355"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admiten tanto el [especificación de detección 2005](https://go.microsoft.com/fwlink/?LinkId=177912) y [versión 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -47,13 +47,13 @@ La especificación de la detección no requiere que los puntos de conexión que 
 ## <a name="sample-details"></a>Detalles del ejemplo  
  En el ejemplo se incluyen una biblioteca y cuatro aplicaciones de consola:  
   
--   **DiscoverySecurityChannels**: una biblioteca que expone el enlace seguro. La biblioteca calcula y comprueba la firma compacta para los mensajes entrantes o salientes.  
+-   **DiscoverySecurityChannels**: Una biblioteca que expone el enlace seguro. La biblioteca calcula y comprueba la firma compacta para los mensajes entrantes o salientes.  
   
--   **Servicio**: un servicio que expone el contrato de ICalculatorService, autohospedado. El servicio se marca como detectable. El usuario especifica los detalles del certificado utilizados para firmar los mensajes especificando la ubicación del almacén y nombre, y el nombre de asunto u otro identificador único para el certificado, y el almacén donde se encuentran los certificados de cliente (que se usan para comprobar la firma de los mensajes entrantes). Según estos detalles, se compila y se usa un UdpDiscoveryEndpoint.  
+-   **Servicio**: Un servicio que expone el contrato de ICalculatorService, autohospedado. El servicio se marca como detectable. El usuario especifica los detalles del certificado utilizados para firmar los mensajes especificando la ubicación del almacén y nombre, y el nombre de asunto u otro identificador único para el certificado, y el almacén donde se encuentran los certificados de cliente (que se usan para comprobar la firma de los mensajes entrantes). Según estos detalles, se compila y se usa un UdpDiscoveryEndpoint.  
   
--   **Cliente**: esta clase intenta detectar un ICalculatorService y llamar a métodos en el servicio. De nuevo, se crea un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con seguridad agregada y se usa para firmar y comprobar los mensajes.  
+-   **Cliente**: Esta clase intenta detectar un ICalculatorService y llamar a métodos en el servicio. De nuevo, se crea un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con seguridad agregada y se usa para firmar y comprobar los mensajes.  
   
--   **AnnouncementListener**: un servicio autohospedado que realiza escuchas de anuncios en línea y sin conexión y usa el punto de conexión del anuncio seguro.  
+-   **AnnouncementListener**: Un servicio autohospedado que realiza escuchas de anuncios en línea y sin conexión y usa el punto de conexión del anuncio seguro.  
   
 > [!NOTE]
 >  Si Setup.bat se ejecuta varias veces, el administrador de certificados le solicita que elija un certificado que agregar, ya que hay certificados duplicados. En ese caso, Setup.bat se debería anular y se debería llamar a Cleanup.bat, porque los duplicados ya se han creado. Cleanup.bat también le solicita que elija un certificado que eliminar. Seleccione un certificado en la lista y siga ejecutando Cleanup.bat hasta que no quede ningún certificado.  

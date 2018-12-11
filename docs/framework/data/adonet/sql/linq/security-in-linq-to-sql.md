@@ -2,12 +2,12 @@
 title: Seguridad de LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: b2c7de75295722da643d64ff22bc769e0633629d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c078d2b19629ed4b99180af85528952548d92045
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364400"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127321"
 ---
 # <a name="security-in-linq-to-sql"></a>Seguridad de LINQ to SQL
 Siempre hay riesgos de seguridad al conectarse a una base de datos. Aunque LINQ to SQL puede incluir algunos modos nuevos de trabajar con datos de SQL Server, no proporciona ningún mecanismo de seguridad adicional.  
@@ -16,12 +16,12 @@ Siempre hay riesgos de seguridad al conectarse a una base de datos. Aunque LINQ 
  LINQ to SQL no tiene su propio modelo de usuario o sus propios mecanismos de autenticación. Use la seguridad de SQL Server para controlar el acceso a la base de datos, las tablas de base de datos, las vistas y los procedimientos almacenados que están asignados a su modelo de objetos. Conceda a los usuarios el acceso mínimo necesario y solicite contraseñas seguras para la autenticación de los usuarios.  
   
 ## <a name="mapping-and-schema-information"></a>Asignación e información de esquema  
- La asignación de tipos SQL-CLR y la información de esquema de base de datos del modelo de objetos o el archivo de asignación externa está disponible para todos los usuarios que tengan acceso a esos archivos del sistema de archivos. Asuma que la información de esquema estará disponible para todos los usuarios que tengan acceso al modelo de objetos o al archivo de asignación externa. Para impedir un acceso más extendido a la información de esquema, use mecanismos de seguridad de archivo para proteger los archivos de origen o de asignación.  
+ La asignación de tipos SQL-CLR y la información de esquema de base de datos del modelo de objetos o el archivo de asignación externa está disponible para todos los usuarios que tengan acceso a esos archivos del sistema de archivos. Se supone que la información de esquema estará disponible para todos los que puede acceder al modelo de objetos o un archivo de asignación externo. Para evitar un acceso más extendido a la información de esquema, use mecanismos de seguridad de archivos para proteger los archivos de código fuente y los archivos de asignación.  
   
 ## <a name="connection-strings"></a>Cadenas de conexión  
  Siempre que sea posible se debe evitar el uso de contraseñas en las cadenas de conexión. No solo una cadena de conexión supone un riesgo de seguridad por derecho propio, sino que ésta se puede añadir también en texto no cifrado al modelo de objetos o al archivo de asignación externa al usar Object Relational Designer o la herramienta de línea de comandos SQLMetal. Cualquiera que tenga acceso al modelo de objetos o al archivo de asignación externo mediante el sistema de archivos podría ver la contraseña de conexión (si está incluida en la cadena de conexión).  
   
- Para minimizar tales riesgos, use seguridad integrada para establecer una conexión de confianza con SQL Server. Con este enfoque no es necesario almacenar una contraseña en la cadena de conexión. Para obtener más información, consulte [seguridad de SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Para minimizar tales riesgos, use seguridad integrada para realizar una conexión confiable con SQL Server. Con este enfoque no es necesario almacenar una contraseña en la cadena de conexión. Para obtener más información, consulte [seguridad de SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
  Sin la seguridad integrada, se necesitará una contraseña de texto no cifrado en la cadena de conexión. El mejor modo de ayudar a proteger la seguridad de la cadena de conexión, en lo que respecta al aumento de orden de riesgos, se detalla a continuación:  
   

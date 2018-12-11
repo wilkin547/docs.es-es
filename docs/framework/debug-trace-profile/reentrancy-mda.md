@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aea903a7b16491a84998d8290270044e167b79f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2e725ecb2208256f6d0e025d4cc79339f385cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387866"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130122"
 ---
 # <a name="reentrancy-mda"></a>MDA de reentrada
 El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuando se realiza un intento de realizar la transición de código nativo a código administrado en casos donde no se realizó un cambio anterior desde código administrado a código nativo a través de una transición ordenada.  
@@ -69,7 +69,7 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 ## <a name="example"></a>Ejemplo  
  El siguiente código de ejemplo hace que se inicie una excepción <xref:System.AccessViolationException>.  En versiones de Windows que admiten el control de excepciones orientado, esto hará que se llame al controlador de excepciones orientado.  Si el MDA `reentrancy` está habilitado, se activará durante el intento de llamada a `MyHandler` desde el código de soporte de control de excepciones orientado del sistema operativo.  
   
-```  
+```csharp
 using System;  
 public delegate int ExceptionHandler(IntPtr ptrExceptionInfo);  
   

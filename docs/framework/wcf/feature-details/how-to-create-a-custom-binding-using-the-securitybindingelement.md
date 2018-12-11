@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un enlace personalizado mediante SecurityBindingElement'
+title: Procedimiento Crear un enlace personalizado mediante SecurityBindingElement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181139"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155254"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Cómo: Crear un enlace personalizado mediante SecurityBindingElement
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Procedimiento Crear un enlace personalizado mediante SecurityBindingElement
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que se pueden configurar pero no proporcionan completa flexibilidad al configurar todas las opciones de seguridad que WCF admite. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
   
  Por el contrario, para crear un enlace personalizado, se crean y configuran los elementos de enlace y se crea un objeto <xref:System.ServiceModel.Channels.CustomBinding> a partir de los elementos de enlace.  
   
- Para ello, se agregan los elementos de enlace individuales a una colección representada por una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y, a continuación, se establece la propiedad `Elements` de `CustomBinding` en ese objeto. Debe agregar los elementos de enlace en el orden siguiente: flujo de transacciones, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de secuencia, codificación de mensajes y transporte. Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace.  
+ Para ello, se agregan los elementos de enlace individuales a una colección representada por una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y, a continuación, se establece la propiedad `Elements` de `CustomBinding` en ese objeto. Debe agregar los elementos de enlace en el orden siguiente: Flujo de transacciones, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de Stream, codificación de mensajes y transporte. Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  Tres elementos de enlace guardan relación con la seguridad, y todos se derivan de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. Los tres elementos son <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> y <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> se utiliza para proporcionar seguridad de modo mixto. Se utilizan los otros dos elementos cuando la capa del mensaje proporciona seguridad.  

@@ -1,16 +1,16 @@
 ---
-title: 'punto de conexión: errores por segundo en la validación de seguridad y en la autenticación'
+title: 'Punto de conexión: Errores de autenticación y validación de la seguridad por segundo'
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
 ms.openlocfilehash: 43886f79585fb9a63eeb51360cc869365c100a1d
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744241"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129056"
 ---
-# <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>punto de conexión: errores por segundo en la validación de seguridad y en la autenticación
-Nombre del contador: validación de la seguridad y errores de autenticación por segundo  
+# <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Punto de conexión: Errores de autenticación y validación de la seguridad por segundo
+Nombre del contador: Errores de autenticación y validación de la seguridad por segundo  
   
 ## <a name="description"></a>Descripción  
  Este contador se incrementa siempre que se rechaza un mensaje debido a un problema de seguridad que no abarca el contador "Llamadas de seguridad no autorizadas". Entre estos problemas se incluyen:  

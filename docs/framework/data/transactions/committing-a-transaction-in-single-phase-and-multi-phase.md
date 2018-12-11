@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: 0647f5aa4dd5bac054ed424780aa9fbe1c4bfa69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad0b639aec60fc1dc9b594ff774232699001db5d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142929"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Confirmar una transacción en fase única y múltiple
-Un administrador de recursos (RM) administra cada recurso utilizado, cuyas acciones coordina un administrador de transacciones (TM). El [dar de alta los recursos como los participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) tema describe cómo pueden inscribirla en una transacción de un recurso (o varios recursos). En este tema se trata cómo la confirmación de la transacción se puede coordinar entre los recursos inscritos.  
+Un administrador de recursos (RM) administra cada recurso utilizado, cuyas acciones coordina un administrador de transacciones (TM). El [dar de alta recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) tema explica cómo pueden inscribirse en una transacción de un recurso (o varios recursos). En este tema se trata cómo la confirmación de la transacción se puede coordinar entre los recursos inscritos.  
   
  Al final de la transacción, la aplicación pide confirmar la transacción o revertirla El administrador de transacciones debe eliminar los riesgos como algunos administradores de recursos que votan para confirmar mientras que otros votan para deshacer la transacción.  
   
- Si su transacción implica más de un recurso, debe realizar una confirmación en dos fases (2PC). El protocolo de confirmación en dos fases (la fase de preparación y la de confirmación) asegura que cuando la transacción finaliza, todos los cambios a todos los recursos se confirman o se deshacen. Todos los participantes se informan a continuación del resultado final. Para obtener una explicación detallada del protocolo de confirmación en dos fases, consulte el libro "*procesamiento de transacciones: conceptos y técnicas (Morgan Kaufmann Series en sistemas de administración de datos) ISBN:1558601902*" Jim Gray.  
+ Si su transacción implica más de un recurso, debe realizar una confirmación en dos fases (2PC). El protocolo de confirmación en dos fases (la fase de preparación y la de confirmación) asegura que cuando la transacción finaliza, todos los cambios a todos los recursos se confirman o se deshacen. Todos los participantes se informan a continuación del resultado final. Para obtener una explicación detallada del protocolo de confirmación en dos fases, consulte el libro "*procesamiento de transacciones: Conceptos y técnicas (serie de Morgan Kaufmann en sistemas de administración de datos) ISBN: 1558601902*"por Jim Gray.  
   
- También puede optimizar el rendimiento de su transacción tomando parte en el protocolo de confirmación de fase única. Para obtener más información, consulte [optimización con la única fase de confirmación y notificación de la fase única promocionable](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+ También puede optimizar el rendimiento de su transacción tomando parte en el protocolo de confirmación de fase única. Para obtener más información, consulte [optimización con la confirmación de fase única y fase única Promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
  Si solo desea ser informado del resultado de una transacción, y no desea participar para votar, se debería registrar para el evento <xref:System.Transactions.Transaction.TransactionCompleted>.  
   
@@ -36,7 +36,7 @@ Un administrador de recursos (RM) administra cada recurso utilizado, cuyas accio
   
  Su administrador de recursos que implementa la interfaz <xref:System.Transactions.IEnlistmentNotification> debería implementar primero el método <xref:System.Transactions.IEnlistmentNotification.Prepare%28System.Transactions.PreparingEnlistment%29> como las presentaciones del ejemplo simples siguientes.  
   
-```  
+```csharp
 public void Prepare(PreparingEnlistment preparingEnlistment)  
 {  
      Console.WriteLine("Prepare notification received");  
@@ -75,7 +75,7 @@ public void Prepare(PreparingEnlistment preparingEnlistment)
   
  Así, su administrador de recursos debería implementar los métodos siguientes.  
   
-```  
+```csharp
 public void Commit (Enlistment enlistment)  
 {  
      // Do any work necessary when commit notification is received  
@@ -98,7 +98,7 @@ public void Rollback (Enlistment enlistment)
 ### <a name="implementing-indoubt"></a>Implementar InDoubt  
  Finalmente, debería implementar el método <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A> para el administrador de recursos volátil. Se llama a este método si el administrador de transacciones pierde el contacto con uno o más participantes, por lo que su estado es desconocido. Si esto se produce, debería registrar este hecho para que se pueda investigar después si cualquiera de los participantes de la transacción ha quedado en un estado incoherente.  
   
-```  
+```csharp
 public void InDoubt (Enlistment enlistment)  
 {  
      // log this  
@@ -107,7 +107,7 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>Optimización de confirmación de fase única  
- La fase única el protocolo de confirmación es más eficaz en el tiempo de ejecución porque todas las actualizaciones se hacen sin ninguna coordinación explícita. Para obtener más información sobre este protocolo, consulte [optimización con la única fase de confirmación y notificación de la fase única promocionable](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+ La fase única el protocolo de confirmación es más eficaz en el tiempo de ejecución porque todas las actualizaciones se hacen sin ninguna coordinación explícita. Para obtener más información sobre este protocolo, consulte [optimización con la confirmación de fase única y fase única Promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Optimización mediante el uso de la confirmación de fase única y de la inscripción de fase única promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  

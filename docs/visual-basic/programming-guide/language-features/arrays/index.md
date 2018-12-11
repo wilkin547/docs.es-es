@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297457"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149905"
 ---
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
 
@@ -126,7 +126,7 @@ Se puede hacer para las matrices unidimensionales, puede confiar en la inferenci
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Para consultar ejemplos adicionales, vea [Cómo: Inicializar una variable de matriz en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
+Para obtener ejemplos adicionales, vea [Cómo: Inicializar una Variable de matriz en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
 ## <a name="iterating-through-an-array"></a>Recorrer en iteración una matriz
 
@@ -299,9 +299,9 @@ Para más información sobre las colecciones, vea [Colecciones](../../concepts/c
 |Término|de esquema JSON|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Explica el rango y las dimensiones de las matrices.|
-|[Cómo: Inicializar una variable de matriz en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Describe cómo se llenan las matrices con valores iniciales.|
+|[Cómo: Inicializar una Variable de matriz en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Describe cómo se llenan las matrices con valores iniciales.|
 |[Cómo: Ordenar una matriz en Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Muestra cómo ordenar alfabéticamente los elementos de una matriz.|
-|[Asignar una matriz a otra](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Describe las reglas y los pasos para asignar una matriz a otra variable de matriz.|
+|[Cómo: Asignar una matriz a otra](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Describe las reglas y los pasos para asignar una matriz a otra variable de matriz.|
 |[Solución de problemas de matrices](../../language-features/arrays/troubleshooting-arrays.md)|Describe algunos problemas comunes que surgen al trabajar con matrices.|
 
 ## <a name="see-also"></a>Vea también

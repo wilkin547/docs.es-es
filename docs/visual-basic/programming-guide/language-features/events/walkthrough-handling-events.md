@@ -10,14 +10,14 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297171"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153389"
 ---
-# <a name="walkthrough-handling-events-visual-basic"></a>Tutorial: Controlar eventos (Visual Basic)
-Éste es el segundo de dos temas que muestran cómo trabajar con eventos. El primer tema, [Tutorial: declarar y provocar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), se muestra cómo declarar y provocar eventos. En esta sección se usa el formulario y la clase del tutorial para mostrar cómo controlar eventos cuando tienen lugar.  
+# <a name="walkthrough-handling-events-visual-basic"></a>Tutorial: Control de eventos (Visual Basic)
+Éste es el segundo de dos temas que muestran cómo trabajar con eventos. El primer tema, [Tutorial: Declarar y provocar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), se muestra cómo declarar y provocar eventos. En esta sección se usa el formulario y la clase del tutorial para mostrar cómo controlar eventos cuando tienen lugar.  
   
  El `Widget` ejemplo de clase utiliza instrucciones tradicionales de control de eventos. Visual Basic ofrece otras técnicas para trabajar con eventos. Como ejercicio, puede modificar este ejemplo, para usar el `AddHandler` y `Handles` instrucciones.  
   

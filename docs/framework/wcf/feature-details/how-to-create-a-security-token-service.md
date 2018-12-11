@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un servicio de token de seguridad'
+title: Procedimiento Crear un servicio de Token de seguridad
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036507"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143914"
 ---
-# <a name="how-to-create-a-security-token-service"></a>Cómo: Crear un servicio de token de seguridad
+# <a name="how-to-create-a-security-token-service"></a>Procedimiento Crear un servicio de Token de seguridad
 Un servicio de token de seguridad implementa el protocolo definido en la especificación de WS-Trust. Este protocolo define formatos de mensaje y patrones de intercambio de mensajes para emitir, renovar, cancelar y validar tokens de seguridad. Un servicio de token de seguridad determinado proporciona uno o más de estas funciones. Este tema aborda el escenario común: implementación de la emisión de token.  
   
 ## <a name="issuing-tokens"></a>Emitir tokens  

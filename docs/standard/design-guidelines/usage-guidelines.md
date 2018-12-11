@@ -1,18 +1,17 @@
 ---
 title: Instrucciones de uso
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e583bf7768c60477effb6c1cf9b838ae4c8c182
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+author: KrzysztofCwalina
+ms.openlocfilehash: 761570b899a2a36391eb81dc7f42e13fff1f14ef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197943"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155410"
 ---
 # <a name="usage-guidelines"></a>Instrucciones de uso
 
@@ -34,7 +33,7 @@ El <xref:System.IDisposable?displayProperty=nameWithType> interfaz no está cubi
 
 *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*
 
-*Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
+*Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*
   
 ## <a name="see-also"></a>Vea también
 

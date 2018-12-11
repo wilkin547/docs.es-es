@@ -3,13 +3,13 @@ title: Crear un proyecto de LINQ to DataSet en Visual Studio
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297021"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154039"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Cómo: crear un proyecto de LINQ to DataSet en Visual Studio
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Procedimiento Crear un proyecto de LINQ to DataSet en Visual Studio
 
 Los distintos tipos de proyectos LINQ requieren determinadas referencias a ensamblados y espacios de nombres importados (Visual Basic) o [mediante](../../../csharp/language-reference/keywords/using-directive.md) directivas (C#). El requisito mínimo para LINQ es una referencia a *System.Core.dll* y un `using` directiva <xref:System.Linq>.
 

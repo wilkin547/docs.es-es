@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/10/2018
-ms.openlocfilehash: a03853a508cfb3d5dd5fbfe66e4ef484b685faaa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653244"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143654"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
@@ -17,7 +17,7 @@ Figura 5-1 presenta una representación to-end de los pasos que componen el fluj
 
 ![](./media/image1.png)
 
-Figura 5-1: flujo de trabajo de bucle externo de DevOps para aplicaciones de Docker con herramientas de Microsoft
+Figura 5-1: Flujo de trabajo de bucle externo de DevOps para aplicaciones de Docker con herramientas de Microsoft
 
 Ahora, vamos a examinar cada uno de estos pasos con mayor detalle.
 
@@ -35,7 +35,7 @@ Las imágenes locales generadas por los desarrolladores a sí mismos deben usars
 
 Azure DevOps Services y Team Foundation Server admiten Git y Team Foundation Version Control. Puede elegir entre ellas y usarlo para una experiencia de Microsoft to-end. Sin embargo, también puede administrar el código en repositorios externos (como GitHub, repositorios de Git local o Subversion) y seguir siendo capaces de conectarse a ella y obtener el código como punto de partida para la canalización de CI de DevOps.
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Paso 3: Compilación, integración continua, integrar y probar con Azure DevOps servicios y Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Paso 3: Compilación de CI, integrar y probar con Azure DevOps servicios y Docker
 
 CI ha surgido como un estándar para las pruebas de software moderno y entrega. La solución de Docker mantiene una separación clara de intereses entre los equipos de desarrollo y operaciones. La inmutabilidad de imágenes de Docker garantiza una implementación repetible entre lo que ha desarrollado, probado a través de los elementos de configuración y ejecución en producción. Motor de docker implementados en los equipos portátiles de desarrollador e infraestructura de prueba hace que los contenedores portátiles entre entornos.
 
@@ -47,11 +47,11 @@ Puede usar servicios de Azure DevOps como base para crear sus aplicaciones y la 
 
 Al usar Docker para la implementación, "los artefactos finales" implementar imágenes de Docker con la aplicación o servicios incrustadas dentro de ellos. Esas imágenes se insertan o se publican en un *Docker Registry* (un repositorio privado, como los que puede tener en Azure Container Registry, o una pública, como el registro de Docker Hub, que se utiliza habitualmente las imágenes oficiales de bases).
 
-Este es el concepto básico: canalización de CI The será inicia mediante una confirmación en un repositorio de control de código fuente como Git. La confirmación hará que Servicios de DevOps de Azure ejecutar un trabajo de compilación dentro de un contenedor de Docker y, tras la finalización correcta de ese trabajo, insertar una imagen de Docker en el registro de Docker, como se muestra en la figura 5-2.
+Este es el concepto básico: La canalización de CI será inicia mediante una confirmación en un repositorio de control de código fuente como Git. La confirmación hará que Servicios de DevOps de Azure ejecutar un trabajo de compilación dentro de un contenedor de Docker y, tras la finalización correcta de ese trabajo, insertar una imagen de Docker en el registro de Docker, como se muestra en la figura 5-2.
 
 ![](./media/image2.png)
 
-Figura 5-2: los pasos implicados en el elemento de configuración
+Figura 5-2: Los pasos implicados en el elemento de configuración
 
 Estos son los pasos básicos de flujo de trabajo de CI con Docker y los servicios de DevOps de Azure:
 
@@ -73,7 +73,7 @@ El [extensión de Docker de servicios de Azure DevOps](https://aka.ms/vstsdocker
 
 ![](./media/image3.png)
 
-Figura 5-3: la canalización de CI de Docker en los servicios de Azure DevOps
+Figura 5-3: La canalización de CI de Docker en los servicios de Azure DevOps
 
 La extensión de Docker puede utilizar los puntos de conexión de servicio para hosts de Docker y de contenedor o los registros de imágenes. El valor predeterminado de las tareas al uso de un host de Docker local si está disponible (Esto requiere actualmente un agente de servicios de Azure DevOps personalizado); en caso contrario, requieren que proporcione una conexión de host de Docker. Las acciones que dependen de que se autentica con un registro de Docker, como la inserción de una imagen, requieren que proporcione a un Docker conexión de registro.
 
@@ -145,7 +145,7 @@ Normalmente, desea tener sus repositorios privados para sus imágenes personaliz
 
 ![](./media/image4.png)
 
-Figura 5-4: publicar imágenes personalizadas en el registro de Docker
+Figura 5-4: Publicar imágenes personalizadas en el registro de Docker
 
 Hay varias ofertas de los registros de Docker de proveedores de nube como Azure Container Registry, registro de contenedor de servicios Web de Amazon, Google Container Registry, registro del muelle y así sucesivamente.
 
@@ -153,7 +153,7 @@ Con la extensión de Docker de servicios de Azure DevOps, puede insertar un conj
 
 ![](./media/image5.png)
 
-Figura 5-5: uso de servicios de Azure DevOps para publicar imágenes personalizadas a un registro de Docker
+Figura 5-5: Uso de servicios de Azure DevOps para publicar imágenes personalizadas a un registro de Docker
 
 **Obtener más información** para obtener más información acerca de la extensión Docker para los servicios de Azure DevOps, vaya a <https://aka.ms/vstsdockerextension>. Para obtener más información sobre Azure Container Registry, vaya a <https://aka.ms/azurecontainerregistry>.
 
@@ -169,13 +169,13 @@ Veamos primero el escenario menos complejo: implementar en hosts de Docker simpl
 
 ![](./media/image6.png)
 
-Figura 5-6: implementación de contenedores de aplicación para el registro de los entornos de host de Docker simple
+Figura 5-6: Implementación de contenedores de aplicación para el registro de los entornos de host de Docker simple
 
 Figura 5-7 destaca cómo pueden conectar los elementos de configuración de compilación para entornos de control de calidad y pruebas a través de servicios de Azure DevOps haciendo clic en Docker Compose en el cuadro de diálogo Agregar tarea. Sin embargo, al implementar en entornos de ensayo o producción, normalmente usaría las características de Release Management para administrar varios entornos (como el control de calidad, ensayo y producción). Si va a implementar en hosts de Docker único, que utiliza los servicios de Azure DevOps tarea "Docker Compose" (que está invocando a docker-compose comando debajo del capó). Si va a implementar en Azure Container Service, utiliza la tarea de implementación de Docker, como se explica en la sección siguiente.
 
 ![](./media/image7.png)
 
-Figura 5-7: agregar una tarea de Docker Compose en una canalización de servicios de Azure DevOps
+Figura 5-7: Agregar una tarea de Docker Compose en una canalización de servicios de Azure DevOps
 
 Cuando se crea una versión en los servicios de Azure DevOps, toma un conjunto de artefactos de entrada. Estos están diseñados para ser inmutable durante la vigencia de la versión en varios entornos. Cuando introduzca contenedores, los artefactos de entrada identifican imágenes en un registro para implementar. Dependiendo de cómo éstas vienen identificadas, no se garantiza que no cambian a lo largo de la duración de la versión, el caso más obvio que se va a cuando se hace referencia "myimage:latest" desde un archivo docker-Compose.
 
@@ -187,7 +187,7 @@ Mediante las extensiones de servicios de Azure DevOps, puede cree una nueva imag
 
 ![](./media/image8.png)
 
-Figura 5-8: configurar tareas de Docker Compose de servicios de DevOps de Azure desde Release Management para servicios de Azure DevOps
+Figura 5-8: Configurar tareas de Docker Compose de servicios de DevOps de Azure desde Release Management para servicios de Azure DevOps
 
 Sin embargo, tenga en cuenta que el escenario se muestra en la figura 5-6 y se implementa en la figura 5-8 es bastante básico (que se está implementando en los hosts de Docker simple y máquinas virtuales, y habrá un único contenedor o una instancia por imagen) y probablemente se debe usar solo para desarrollo o prueba sc Router. En la mayoría de los escenarios de producción empresarial, querría tener alta disponibilidad (HA) y fácil de administrar la escalabilidad mediante Equilibrio de carga entre varios nodos, los servidores y las máquinas virtuales, además de "inteligente las conmutaciones por error" así que si un servidor o un nodo produce un error, sus servicios y los contenedores se moverá a otro servidor host o máquina virtual. En ese caso, necesita las tecnologías más avanzadas, como clústeres de contenedor, los orquestadores y los programadores. Por lo tanto, la forma de implementar dichos clústeres es precisamente a través de los escenarios avanzados que se explica en la sección siguiente.
 
@@ -201,19 +201,19 @@ Desde un punto de vista de CD y servicios de Azure DevOps en concreto, puede eje
 
 ![](./media/image9.png)
 
-Figura 5-9: implementación de aplicaciones distribuidas en Container Service
+Figura 5-9: Implementación de aplicaciones distribuidas en Container Service
 
 Inicialmente, al implementar en ciertas clústeres u orquestadores, tradicionalmente usaría los scripts de implementación específicos y mecanismos por cada orquestador (es decir, Mesosphere DC/OS o Kubernetes tienen mecanismos de implementación diferentes que Docker y Docker Swarm) en lugar de hacerlo más sencillo y fácil de usar docker-componen tool basándose en el archivo de definición de docker-compose.yml. Sin embargo, gracias a la tarea de implementación de Docker de servicios de Microsoft Azure DevOps, que se muestra en la figura 5-10, ahora también puede implementar en DC/OS si solo se usa el archivo docker-compose.yml familiar ya que Microsoft realiza esa traducción de"" por usted (desde la archivo docker-compose.yml a otros formatos necesarios para DC/OS).
 
 ![](./media/image10.png)
 
-Figura 5-10: agregar la tarea de implementación de Docker a su entorno de RM
+Figura 5-10: Agregar la tarea de implementación de Docker al entorno de RM
 
 Figura 5-11 se muestra cómo puede modificar la tarea de implementación de Docker y especificar el tipo de destino (Azure Container Service DC/OS, en este caso), el archivo de Docker Compose y la conexión de registro de Docker (como Azure Container Registry o Docker Hub). Esto es donde la tarea recuperará las imágenes de Docker listos para usar personalizadas que desee implementar como contenedores en el clúster de DC/OS.
 
 ![](./media/image11.png)
 
-Figura 5-11: implementar Docker tarea definición implementar a Azure Container Service DC/OS
+Figura 5-11: Implementación de docker implementar tareas definición a Azure Container Service DC/OS
 
 **Obtener más información** para obtener más información acerca de la canalización de CD con Docker y servicios de DevOps de Azure, visite los sitios siguientes:
 
@@ -227,12 +227,12 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 
 Porque está ejecutando y administración de aplicaciones en producción de la empresa nivel es un asunto principal de sí mismo y debido al tipo de operaciones y personas que trabajan en ese nivel (operaciones de TI), así como el ámbito de esta área de gran tamaño, nos hemos dedicado todo el contenido a continuación capítulo a explicarlo.
 
-## <a name="step-6-monitor-and-diagnose"></a>Paso 6: Supervisar y diagnosticar
+## <a name="step-6-monitor-and-diagnose"></a>Paso 6: Supervisión y diagnóstico
 
 Este tema también se trata en el capítulo siguiente como parte de las tareas que realiza las operaciones de TI en sistemas de producción; Sin embargo, es importante resaltar que deben suministrar los conocimientos obtenidos en este paso hasta que el equipo de desarrollo para que la aplicación se mejora constantemente. Desde ese punto de vista, también forma parte de DevOps, aunque normalmente se realizan las tareas y operaciones por TI.
 
 Solo cuando la supervisión y diagnóstico es 100% en el ámbito de DevOps son los procesos de supervisión y análisis realizadas por el equipo de desarrollo frente a entornos de prueba o beta. Esto se hace mediante la realización de pruebas de carga o simplemente mediante la supervisión de la versión beta o entornos de preguntas y respuestas, donde los evaluadores de beta están tratando de las nuevas versiones.
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Siguiente](../run-manage-monitor-docker-environments/index.md)
+>[Anterior](index.md)
+>[Siguiente](../run-manage-monitor-docker-environments/index.md)

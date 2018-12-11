@@ -1,23 +1,23 @@
 ---
 title: Introducción a F# en Visual Studio Code
-description: Obtenga información sobre cómo usar F# con Visual Studio Code y Ionide complemento suite.
+description: Aprenda a usar F# con Visual Studio Code y Ionide complemento suite.
 ms.date: 05/28/2018
-ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2db587b5614c5a7ca9285cad9b719970d53afd55
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50192673"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129797"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introducción a F# en Visual Studio Code
 
 Puede escribir F# en [Visual Studio Code](https://code.visualstudio.com) con el [Ionide complemento](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp) para obtener una gran experiencia de entorno de desarrollo integrado (IDE) ligero en varias plataformas, con IntelliSense y el código básico refactorizaciones. Visite [Ionide.io](http://ionide.io) para obtener más información sobre el complemento.
 
-Para empezar, asegúrese de que tiene [F# y ha instalado correctamente el complemento de Ionide](install-fsharp.md#install-f-with-visual-studio-code).
+Para empezar, asegúrese de que tiene [ F# y ha instalado correctamente el complemento de Ionide](install-fsharp.md#install-f-with-visual-studio-code).
 
 ## <a name="creating-your-first-project-with-ionide"></a>Crear su primer proyecto con Ionide
 
-Para crear un nuevo proyecto de F#, abra Visual Studio Code en una nueva carpeta (puede denominarlo que prefiera).
+Para crear un nuevo F# del proyecto, abra Visual Studio Code en una nueva carpeta (puede denominarlo que prefiera).
 
 A continuación, abra la paleta de comandos (**Vista > Paleta de comandos**) y escriba lo siguiente:
 
@@ -28,19 +28,19 @@ A continuación, abra la paleta de comandos (**Vista > Paleta de comandos**) y e
 Esto funciona con el [FALSIFICAR](https://github.com/fsharp-editing/Forge) proyecto.
 
 > [!NOTE]
-Si no ve las opciones de plantilla, pruebe a actualizar las plantillas ejecutando el siguiente comando en la paleta de comandos: `>F#: Refresh Project Templates`.
+> Si no ve las opciones de plantilla, pruebe a actualizar las plantillas ejecutando el siguiente comando en la paleta de comandos: `>F#: Refresh Project Templates`.
 
-Seleccione ": nuevo proyecto de F#" pulsando **ENTRAR**. Esto le lleva al paso siguiente, que es para seleccionar una plantilla de proyecto.
+Seleccione "F#: Nuevo proyecto"pulsando **ENTRAR**. Esto le lleva al paso siguiente, que es para seleccionar una plantilla de proyecto.
 
 Elegir el `classlib` plantilla del sistema y presione **ENTRAR**.
 
 A continuación, seleccione un directorio para crear el proyecto en. Si se deja en blanco, usa el directorio actual.
 
-Por último, nombre del proyecto en el paso final. F# usa [mayúsculas y minúsculas Pascal](http://c2.com/cgi/wiki?PascalCase) los nombres de proyecto. Este artículo se usa `ClassLibraryDemo` como el nombre. Una vez que haya escrito el nombre que desee para el proyecto, presione **ENTRAR**.
+Por último, nombre del proyecto en el paso final. F#usa [mayúsculas y minúsculas Pascal](http://c2.com/cgi/wiki?PascalCase) los nombres de proyecto. Este artículo se usa `ClassLibraryDemo` como el nombre. Una vez que haya escrito el nombre que desee para el proyecto, presione **ENTRAR**.
 
 Si ha seguido el paso anterior, debería obtener Visual Studio código de área de trabajo en el lado izquierdo que aparezca con el siguiente:
 
-1. F# propio proyecto, debajo de la directiva el `ClassLibraryDemo` carpeta.
+1. El F# propio proyecto, debajo de la directiva el `ClassLibraryDemo` carpeta.
 2. Para agregar paquetes a través de la estructura de directorio correcto [ `Paket` ](https://fsprojects.github.io/Paket/).
 3. Una multiplataforma crear secuencia de comandos con [ `FAKE` ](https://fsharp.github.io/FAKE/).
 4. El `paket.exe` ejecutable que puede capturar paquetes y resolver las dependencias para usted.
@@ -50,20 +50,20 @@ Si ha seguido el paso anterior, debería obtener Visual Studio código de área 
 
 Abra el *ClassLibraryDemo* carpeta.  Debería ver los archivos siguientes:
 
-1. `ClassLibraryDemo.fs`, un archivo de implementación de F# con una clase definida.
-2. `ClassLibraryDemo.fsproj`, un archivo de proyecto de F# para compilar este proyecto.
-3. `Script.fsx`, un archivo de script F# que se carga el archivo de origen.
+1. `ClassLibraryDemo.fs`, un F# archivo de implementación con una clase definida.
+2. `ClassLibraryDemo.fsproj`, un F# archivo de proyecto utilizado para compilar el proyecto.
+3. `Script.fsx`, un F# archivo de script que se carga el archivo de origen.
 4. `paket.references`, un archivo Paket que especifica las dependencias del proyecto.
 
 Abra `Script.fsx`y agregue el código siguiente al final de la misma:
 
 [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-Esta función convierte una palabra en un formulario de [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin). El siguiente paso es evaluar con F# Interactive (FSI).
+Esta función convierte una palabra en un formulario de [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin). El siguiente paso es evaluar mediante F# interactivo (FSI).
 
 Resaltar toda la función (debe ser 11 líneas de largo). Una vez que se resalta, mantenga el **Alt** clave y posicionamiento **ENTRAR**. Verá una ventana emergente a continuación, y debe aparecer algo parecido a esto:
 
-![Ejemplo de salida de F# Interactive con Ionide](media/getting-started-vscode/vscode-fsi.png)
+![Ejemplo de F# interactivo de salida con Ionide](media/getting-started-vscode/vscode-fsi.png)
 
 Esto hizo tres cosas:
 
@@ -95,10 +95,10 @@ Debería ver el resultado siguiente:
 val it : string = "appleyay"
 ```
 
-La función parece que funciona según lo previsto. Enhorabuena, acaba de escribió su primera función de F# en Visual Studio Code y se evalúa con FSI.
+La función parece que funciona según lo previsto. Enhorabuena, acaba de escribir su primer F# funcionan en Visual Studio Code y se evalúa con FSI!
 
->[!NOTE]
-Como habrá advertido, las líneas en FSI terminan con `;;`. Esto es porque FSI le permite escribir varias líneas. El `;;` al final sabrá FSI cuando finalice el código.
+> [!NOTE]
+> Como habrá advertido, las líneas en FSI terminan con `;;`. Esto es porque FSI le permite escribir varias líneas. El `;;` al final sabrá FSI cuando finalice el código.
 
 ## <a name="explaining-the-code"></a>Que explica el código
 
@@ -114,7 +114,7 @@ Es podrán que haya observado lo siguiente en FSI:
 val toPigLatin : word:string -> string
 ```
 
-Esto indica que `toPigLatin` es una función que toma un `string` como entrada (denominado `word`) y devuelve otra `string`. Esto se conoce como el [signatura de tipo de la función](https://fsharpforfunandprofit.com/posts/function-signatures/), una parte fundamental de F# que es clave para comprender el código de F#. También podrá observar si mantiene el mouse sobre la función en Visual Studio Code.
+Esto indica que `toPigLatin` es una función que toma un `string` como entrada (denominado `word`) y devuelve otra `string`. Esto se conoce como el [signatura de tipo de la función](https://fsharpforfunandprofit.com/posts/function-signatures/), una parte fundamental de F# que es clave para comprender F# código. También podrá observar si mantiene el mouse sobre la función en Visual Studio Code.
 
 En el cuerpo de la función, verá dos partes distintas:
 
@@ -130,13 +130,13 @@ El flujo de `toPigLatin` por tanto, es:
 
 Compruebe si el primer carácter de la palabra de entrada sea una vocal. Si es así, adjuntar "¡viva" al final de la palabra. En caso contrario, mueva ese primer carácter al final de la palabra y "ay" Agregar a ella.
 
-Hay una última cosa a tener en cuenta sobre esto: no hay ninguna instrucción explícita para devolver de la función, a diferencia de muchos otros lenguajes ahí. Esto es porque F# es basadas en expresiones y la última expresión en el cuerpo de una función es el valor devuelto. Dado que `if..then..else` es en sí mismo una expresión, el cuerpo de la `then` bloque o en el cuerpo de la `else` bloque se devolverán según el valor de entrada.
+Hay una última cosa a tener en cuenta sobre esto: no hay ninguna instrucción explícita para devolver de la función, a diferencia de muchos otros lenguajes ahí. Esto es porque F# está basado en la expresión, y la última expresión en el cuerpo de una función es el valor devuelto. Dado que `if..then..else` es en sí mismo una expresión, el cuerpo de la `then` bloque o en el cuerpo de la `else` bloque se devolverán según el valor de entrada.
 
 ## <a name="moving-your-script-code-into-the-implementation-file"></a>Migración de código de script en el archivo de implementación
 
-Las secciones anteriores de este artículo muestran un primer paso comunes en la escritura de código de F#: escritura de una función inicial y se ejecuta interactivamente con FSI. Esto se conoce como el desarrollo controlado por REPL, donde [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) es el acrónimo "Read-Evaluate-Print Loop". Es una excelente manera de experimentar con la funcionalidad hasta que haya algo funcione.
+Las secciones anteriores de este artículo muestran un primer paso común escrito F# código: escribir una función inicial y se ejecuta interactivamente con FSI. Esto se conoce como el desarrollo controlado por REPL, donde [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) es el acrónimo "Read-Evaluate-Print Loop". Es una excelente manera de experimentar con la funcionalidad hasta que haya algo funcione.
 
-El siguiente paso en el desarrollo controlado por REPL es mover el código de trabajo a un archivo de implementación de F#. A continuación, se puede compilar si el compilador de F# en un ensamblado que se puede ejecutar.
+El siguiente paso en el desarrollo controlado por REPL es mover el código de trabajo en un F# archivo de implementación. A continuación, se puede compilar si la F# compilador en un ensamblado que se puede ejecutar.
 
 Para comenzar, abra `ClassLibraryDemo.fs`.  Observará que algún código ya está en no existe. Siga adelante y eliminar la definición de clase, pero asegúrese de dejar el [ `namespace` ](../language-reference/namespaces.md) declaración en la parte superior.
 
@@ -162,36 +162,36 @@ val it : string = "ananabay"
 val it : string = "appleyay"
 ```
 
-Correcto Obtener los mismos resultados que antes, pero ahora se cargan desde un archivo de implementación de F#. La principal diferencia es que los archivos de código fuente de F# se compilan en ensamblados que se pueden ejecutar en cualquier lugar, no solo en FSI.
+Correcto Obtener los mismos resultados como antes, pero ahora se cargan desde un F# archivo de implementación. La principal diferencia es que F# archivos de código fuente se compilan en ensamblados que se pueden ejecutar en cualquier lugar, no solo en FSI.
 
 ## <a name="summary"></a>Resumen
 
 En este artículo, ha aprendido:
 
 1. Cómo configurar Visual Studio Code con Ionide.
-2. Cómo crear su primer proyecto de F# con Ionide.
-3. Cómo usar Scripting F# para escribir su primera función de F# en Ionide y, a continuación, ejecútelo en FSI.
-4. Cómo migrar el código de script a código fuente de F# y, a continuación, invocar dicho código desde FSI.
+2. Cómo crear su primer F# proyecto con Ionide.
+3. Cómo usar F# secuencias de comandos para escribir su primer F# funcionar en Ionide y, a continuación, ejecútelo de FSI.
+4. Cómo migrar el código de script a F# de origen y, a continuación, invocar dicho código desde FSI.
 
-Ahora está equipado para escribir mucho más código F# con Visual Studio Code y Ionide.
+Ahora está equipado para escribir mucho más F# del código mediante Visual Studio Code y Ionide.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
 Estas son algunas maneras de que solucionar ciertos problemas que pueden surgir:
 
-1. Para obtener el código de las características de Ionide de edición, los archivos de F# deben guardarse en el disco y dentro de una carpeta que está abierta en el área de trabajo de Visual Studio Code.
+1. Para obtener el código en la edición de las características de Ionide, su F# los archivos deben guardarse en el disco y dentro de una carpeta que está abierta en el área de trabajo de Visual Studio Code.
 2. Si ha realizado cambios en el sistema o instalar requisitos previos de Ionide con código de Visual Studio abierta, reinicie Visual Studio Code.
-3. Compruebe que puede utilizar el compilador de F# y F# interactivo desde la línea de comandos sin una ruta de acceso completa. Puede hacerlo escribiendo `fsc` en una línea de comandos para el compilador de F#, y `fsi` o `fsharpi` para Visual F# de las herramientas de Windows y Mono en Mac/Linux, respectivamente.
+3. Compruebe que puede usar el F# compilador y F# interactivo desde la línea de comandos sin una ruta de acceso completa. Puede hacerlo escribiendo `fsc` en una línea de comandos para el F# compilador, y `fsi` o `fsharpi` para el objeto Visual F# herramientas en Windows y Mono en Mac/Linux, respectivamente.
 4. Si tiene caracteres no válidos en los directorios del proyecto, Ionide podría no funcionar.  Cambiar el nombre de los directorios de proyecto si este es el caso.
 5. Si ninguno de los comandos Ionide está trabajando, compruebe su [enlaces de teclado de Visual Studio Code](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) para ver si se está reemplazando por accidente.
 6. Si Ionide se divide en el equipo y ninguno de los anteriores ha se ha corregido el problema, pruebe a quitar el `ionide-fsharp` directorio en el equipo y vuelva a instalar el conjunto de complemento.
 
-Ionide es un proyecto de código abierto creado y mantenido por miembros de la Comunidad de F#. Por favor, notificar problemas y no dude en contribuir en el [Ionide VSCode: repositorio de FSharp GitHub](https://github.com/ionide/ionide-vscode-fsharp).
+Ionide es un proyecto de código abierto creado y mantenido por los miembros de la F# Comunidad. Por favor, notificar problemas y no dude en contribuir en el [Ionide VSCode: Repositorio de FSharp GitHub](https://github.com/ionide/ionide-vscode-fsharp).
 
 Si tiene un problema al informe, siga [las instrucciones para obtener los registros que se usará al informar de un problema](https://github.com/ionide/ionide-vscode-fsharp#how-to-get-logs-for-debugging--issue-reporting).
 
-También puede pedir más ayuda de los desarrolladores de Ionide y la Comunidad de F# en el [Ionide Gitter canal](https://gitter.im/ionide/ionide-project).
+También puede pedir ayuda adicional de los desarrolladores Ionide y F# Comunidad en el [Ionide Gitter canal](https://gitter.im/ionide/ionide-project).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre F# y las características del lenguaje, consulte [paseo por F#](../tour.md).
+Para obtener más información sobre F# y las características del lenguaje, eche un vistazo [paseo F# ](../tour.md).

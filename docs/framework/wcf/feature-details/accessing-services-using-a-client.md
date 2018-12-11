@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 1369403b493683f58640047fe042708afc5d5b46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ac7acda0b9065fde4ab04c80e9d26a1ec23fa6e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496001"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130993"
 ---
 # <a name="accessing-services-using-a-client"></a>Acceso a los servicios utilizando un cliente
-Las aplicaciones cliente deben crear, configurar y usar objetos de cliente o canal WCF para comunicarse con los servicios. El [información general sobre el cliente de WCF](../../../../docs/framework/wcf/wcf-client-overview.md) tema proporciona información general de los objetos y los pasos necesarios para crear objetos de cliente y el canal básicos y usarlas.  
+Las aplicaciones cliente deben crear, configurar y usar objetos de cliente o canal WCF para comunicarse con los servicios. El [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) tema proporciona información general de los objetos y pasos necesarios para crear objetos de cliente y el canal básicos y usarlas.  
   
  Este tema proporciona información detallada sobre algunos de los problemas surgidos en las aplicaciones cliente y clientes y objetos de canal que pueden ser útiles en función de su escenario.  
   
@@ -31,9 +31,9 @@ Las aplicaciones cliente deben crear, configurar y usar objetos de cliente o can
 ### <a name="channel-and-session-lifetimes"></a>Duración de canales y sesiones  
  Las aplicaciones de Windows Communication Foundation (WCF) incluye dos categorías de canales, datagrama y canal con sesión.  
   
- A *datagrama* canal es un canal en el que todos los mensajes están correlacionados. Con un canal de datagrama, si una operación de entrada o de salida produce un error, normalmente la operación siguiente no estará afectada y se puede reutilizar el mismo canal. Por ello, normalmente, los canales de datagrama no producen errores.  
+ Un *datagrama* canal es un canal en el que todos los mensajes están correlacionados. Con un canal de datagrama, si una operación de entrada o de salida produce un error, normalmente la operación siguiente no estará afectada y se puede reutilizar el mismo canal. Por ello, normalmente, los canales de datagrama no producen errores.  
   
- *Con sesión* canales, sin embargo, son canales con una conexión con el otro extremo. Los mensajes de una sesión en un lado siempre están correlacionados con la misma sesión en el otro lado. Además, para que se considere correcta está sesión, ambos participantes de una sesión deben coincidir en que los requisitos de su conversación se han cumplido. Si no pueden coincidir, el canal con sesión puede producir un error.  
+ *Canal con sesión* canales, sin embargo, son canales con una conexión a otro punto de conexión. Los mensajes de una sesión en un lado siempre están correlacionados con la misma sesión en el otro lado. Además, para que se considere correcta está sesión, ambos participantes de una sesión deben coincidir en que los requisitos de su conversación se han cumplido. Si no pueden coincidir, el canal con sesión puede producir un error.  
   
  Abra explícitamente o implícitamente los clientes llamando a la primera operación.  
   
@@ -51,7 +51,7 @@ Las aplicaciones cliente deben crear, configurar y usar objetos de cliente o can
  Administrar las excepciones en las aplicaciones cliente es sencillo. Si se abre, se utiliza y se cierra un canal dentro de un bloque try, la conversación ha se ha completado correctamente, a menos que se produzca una excepción. En general, si se produce una excepción se anula la conversación.  
   
 > [!NOTE]
->  El uso de la `using` instrucción (`Using` en Visual Basic) no se recomienda. Esto es debido a que el fin de la instrucción `using` puede producir excepciones que pueden enmascarar otras excepciones que usted pueden necesitar conocer. Para obtener más información, consulte [evitar problemas con la instrucción Using](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+>  El uso de la `using` instrucción (`Using` en Visual Basic) no se recomienda. Esto es debido a que el fin de la instrucción `using` puede producir excepciones que pueden enmascarar otras excepciones que usted pueden necesitar conocer. Para obtener más información, consulte [uso cierre y anulación para liberar los recursos del cliente WCF](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
  El ejemplo de código siguiente muestra el patrón del cliente recomendado mediante un try/bloque catch y no la instrucción `using`.  
   
@@ -63,16 +63,16 @@ Las aplicaciones cliente deben crear, configurar y usar objetos de cliente o can
   
  Los canales de datagrama nunca producen errores, incluso si se producen excepciones cuando se cierran. Además, los clientes no dúplex que no se autentican mediante una conversación segura, normalmente, inician <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>. Sin embargo, si el cliente dúplex que utiliza una conversación segura no se autentica, el cliente recibe en su lugar <xref:System.TimeoutException?displayProperty=nameWithType>.  
   
- Para obtener información más completa acerca de cómo trabajar con información de error en el nivel de aplicación, consulte [especificar y control de errores en contactos y servicios](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Las excepciones esperadas](../../../../docs/framework/wcf/samples/expected-exceptions.md) describe las excepciones esperadas y muestra cómo controlarlos. Para obtener más información sobre cómo controlar errores durante el desarrollo de canales, vea [control de excepciones y errores](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ Para obtener información completa sobre cómo trabajar con información de error en el nivel de aplicación, consulte [especificar y controlar errores en contratos y servicios](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Las excepciones esperadas](../../../../docs/framework/wcf/samples/expected-exceptions.md) describe excepciones esperadas y muestra cómo controlarlas. Para obtener más información acerca de cómo controlar los errores cuando se desarrollan canales, consulte [control de excepciones y errores](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Bloqueo de clientes  y rendimiento  
- Cuando una aplicación llama sincrónicamente a una operación de solicitud-respuesta, el cliente se bloquea hasta que se reciba un valor devuelto o se produzca una excepción (como un <xref:System.TimeoutException?displayProperty=nameWithType>). Este comportamiento es similar al comportamiento local. Cuando una aplicación invoca sincrónicamente una operación en un objeto de cliente WCF o un canal, el cliente no vuelve hasta que la capa del canal pueda escribir los datos a la red o hasta que se produce una excepción. Y mientras el patrón de intercambio de mensaje unidireccional (especificado marcando una operación con <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> establecida en `true`) puede hacer que algunos clientes sean más receptivos, las operaciones unidireccionales también se pueden bloquear, dependiendo del enlace y de los mensajes que ya se han enviado. Las operaciones unidireccionales son solo sobre intercambio de mensajes, nada más y nada menos. Para obtener más información, consulte [unidireccional servicios](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Cuando una aplicación llama sincrónicamente a una operación de solicitud-respuesta, el cliente se bloquea hasta que se reciba un valor devuelto o se produzca una excepción (como un <xref:System.TimeoutException?displayProperty=nameWithType>). Este comportamiento es similar al comportamiento local. Cuando una aplicación invoca sincrónicamente una operación en un objeto de cliente WCF o un canal, el cliente no vuelve hasta que la capa del canal pueda escribir los datos a la red o hasta que se produce una excepción. Y mientras el patrón de intercambio de mensaje unidireccional (especificado marcando una operación con <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> establecida en `true`) puede hacer que algunos clientes sean más receptivos, las operaciones unidireccionales también se pueden bloquear, dependiendo del enlace y de los mensajes que ya se han enviado. Las operaciones unidireccionales son solo sobre intercambio de mensajes, nada más y nada menos. Para obtener más información, consulte [servicios unidireccional](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
- Los fragmentos de datos grandes pueden desacelerar el procesamiento del cliente, independientemente del patrón de intercambio de mensajes. Para entender cómo administrar estos problemas, vea [datos de gran tamaño y la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Los fragmentos de datos grandes pueden desacelerar el procesamiento del cliente, independientemente del patrón de intercambio de mensajes. Para entender cómo controlar estos problemas, vea [Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Si la aplicación debe hacer más trabajo mientras se completa una operación, debe crear un par de métodos asincrónicos en la interfaz de contrato de servicio que implementa el cliente WCF. La manera más fácil de hacerlo es usar el `/async` activar la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener un ejemplo, vea [Cómo: llamar a las operaciones de servicio de forma asincrónica](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Si la aplicación debe hacer más trabajo mientras se completa una operación, debe crear un par de métodos asincrónicos en la interfaz de contrato de servicio que implementa el cliente WCF. La manera más fácil de hacerlo es usar el `/async` encender el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener un ejemplo, vea [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- Para obtener más información sobre el rendimiento de cliente cada vez mayor, consulte [aplicaciones de cliente de nivel intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+ Para obtener más información sobre el rendimiento de cliente cada vez más, consulte [las aplicaciones cliente de nivel intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Permitir que el usuario seleccione credenciales dinámicamente  
  La interfaz <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> permite a las aplicaciones mostrar una interfaz de usuario que permite al usuario elegir credenciales con las que crear un canal antes del inicio de los temporizadores de tiempo de espera.  
@@ -95,9 +95,9 @@ Las aplicaciones cliente deben crear, configurar y usar objetos de cliente o can
   
 ## <a name="see-also"></a>Vea también  
  [Servicios dúplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [Acceso a los servicios con contratos unidireccionales y de solicitud-respuesta](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Acceso a los servicios con un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Acceso a un servicio WSE 3.0](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [Uso de ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [Llamada a operaciones de servicio de forma asincrónica](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [Cómo: Obtener acceso a servicios con unidireccional y contratos de solicitud-respuesta](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [Cómo: Servicios de Access con un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Cómo: Obtener acceso a un WSE 3.0 servicio](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [Cómo: Uso de ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
+ [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
  [Aplicaciones cliente de nivel intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

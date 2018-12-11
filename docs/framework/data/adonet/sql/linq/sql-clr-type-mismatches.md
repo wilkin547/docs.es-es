@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 8b072c739b56d191e79b4cc2eff195adfe9da2eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61731c4d9590892bdae8e90717d77b4dddf1d71d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365675"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147624"
 ---
 # <a name="sql-clr-type-mismatches"></a>Desajustes de tipos entre SQL y CLR
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatiza gran parte de la conversión entre el modelo de objetos y SQL Server. No obstante, algunas situaciones impiden la exactitud de la conversión. Estas discordancias clave entre los tipos de Common Language Runtime (CLR) y los de base de datos de SQL Server se resumen en las siguientes secciones. Puede encontrar más detalles acerca de las asignaciones de tipo específico y la traducción de la función en [asignación de tipo de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) y [tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatiza gran parte de la conversión entre el modelo de objetos y SQL Server. No obstante, algunas situaciones impiden la exactitud de la conversión. Estas discordancias clave entre los tipos de Common Language Runtime (CLR) y los de base de datos de SQL Server se resumen en las siguientes secciones. Puede encontrar más detalles sobre las asignaciones de tipo específico y conversión de funciones en [asignación de tipos de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) y [tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
   
 ## <a name="data-types"></a>Tipos de datos  
  La conversión entre CLR y SQL Server se produce cuando se envía una consulta a la base de datos y cuando los resultados se devuelven al modelo de objetos. Por ejemplo, la siguiente consulta de Transact-SQL requiere dos conversiones de valores:  
@@ -29,27 +29,27 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
 -   Discordancias del espacio de nombres <xref:System> de CLR:  
   
-    -   **Números enteros sin signo**. Estos tipos suelen asignarse a sus equivalentes con signo de mayor tamaño para evitar el desbordamiento. Los literales se pueden convertir a un tipo numérico con signo del mismo tamaño o de un tamaño inferior, según su valor.  
+    -   **Enteros sin signo**. Estos tipos suelen asignarse a sus equivalentes con signo de mayor tamaño para evitar el desbordamiento. Los literales se pueden convertir a un tipo numérico con signo del mismo tamaño o de un tamaño inferior, según su valor.  
   
     -   **Booleano**. Estos tipos pueden asignarse a un valor numérico en bits o mayor, o a una cadena. Un literal se puede asignar a una expresión que se evalúe en el mismo valor (por ejemplo, `1=1` en SQL para `True` en CLS).  
   
     -   **Intervalo de tiempo**. Este tipo representa la diferencia entre dos valores `DateTime` y no se corresponde con `timestamp` en SQL Server. El elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR también se puede asignar al tipo de elemento `TIME` de SQL Server en algunos casos. La única finalidad del tipo de elemento `TIME` de SQL Server era representar valores positivos menores que 24 horas. El ámbito del elemento <xref:System.TimeSpan> de CLR es mucho más amplio.  
   
     > [!NOTE]
-    >  Específicas de SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tipos de <xref:System.Data.SqlTypes> no se incluyen en esta comparación.  
+    >  Específica de SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tipos <xref:System.Data.SqlTypes> no están incluidos en esta comparación.  
   
 -   Discordancias de SQL Server:  
   
-    -   **Tipos de caracteres de longitud fija**. Transact-SQL distingue entre las categorías Unicode y no Unicode y tiene tres tipos distintos en cada categoría: una longitud fija `nchar` / `char`, longitud variable `nvarchar` / `varchar`, y mayor tamaño `ntext` / `text`. Los tipos de caracteres de longitud fija podrían asignarse al tipo de elemento <xref:System.Char?displayProperty=nameWithType> de CLR para recuperar los caracteres, pero realmente no se corresponden con el mismo tipo en conversiones y comportamiento.  
+    -   **Tipos de caracteres de longitud fija**. Transact-SQL distingue entre las categorías Unicode y no Unicode y tiene tres tipos distintos en cada categoría: una longitud fija `nchar` / `char`, de longitud variable `nvarchar` / `varchar`, y mayor tamaño `ntext` / `text`. Los tipos de caracteres de longitud fija podrían asignarse al tipo de elemento <xref:System.Char?displayProperty=nameWithType> de CLR para recuperar los caracteres, pero realmente no se corresponden con el mismo tipo en conversiones y comportamiento.  
   
-    -   **Bits**. Aunque el dominio `bit` tiene el mismo número de valores que `Nullable<Boolean>`, ambos son tipos diferentes. `Bit` toma los valores `1` y `0` en lugar de `true` / `false`y no se puede usar como equivalente de expresiones booleanas.  
+    -   **Bit**. Aunque el dominio `bit` tiene el mismo número de valores que `Nullable<Boolean>`, ambos son tipos diferentes. `Bit` toma valores `1` y `0` en lugar de `true` / `false`y no se puede utilizar como equivalente de expresiones booleanas.  
   
     -   **Marca de tiempo**. A diferencia del tipo de elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR, el tipo de elemento `TIMESTAMP` de SQL Server representa un número de 8 bits generado por la base de datos que es único para cada actualización y no se basa en la diferencia entre los valores de <xref:System.DateTime>.  
   
     -   **Money** y **SmallMoney**. Estos tipos pueden asignarse a <xref:System.Decimal>, pero básicamente son tipos diferentes y son tratados como tales en las conversiones y por las funciones basadas en servidor.  
   
 ### <a name="multiple-mappings"></a>Asignaciones múltiples  
- Existen muchos tipos de datos de SQL Server que se pueden asignar a uno o más tipos de datos de CLR. Asimismo, existen muchos tipos de datos de CLR que se pueden asignar a uno o más tipos de SQL Server. Aunque LINQ to SQL pueda admitir una asignación, no significa que dos tipos asignados entre CLR y SQL Server tengan una coincidencia perfecta en precisión, ámbito y semántica. Algunas asignaciones pueden incluir diferencias en alguna o todas estas dimensiones. Puede encontrar más información sobre estas diferencias posibles para las diversas posibilidades de asignación en [asignación de tipos de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Existen muchos tipos de datos de SQL Server que se pueden asignar a uno o más tipos de datos de CLR. Asimismo, existen muchos tipos de datos de CLR que se pueden asignar a uno o más tipos de SQL Server. Aunque LINQ to SQL pueda admitir una asignación, no significa que dos tipos asignados entre CLR y SQL Server tengan una coincidencia perfecta en precisión, ámbito y semántica. Algunas asignaciones pueden incluir diferencias en alguna o todas estas dimensiones. Puede encontrar detalles sobre estas posibles diferencias para las diversas posibilidades de asignación en [asignación de tipos SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ### <a name="user-defined-types"></a>Tipos definidos por el usuario  
  Los tipos de CLR definidos por el usuario están diseñados para eliminar las lagunas del sistema de tipos. No obstante, revelan problemas interesantes con el control de versiones de los tipos. Un cambio de versión en el cliente podría no corresponderse con un cambio en el tipo almacenado en el servidor de bases de datos. Esto generaría otra discordancia de tipos según la cual no coincidiría la semántica de tipos y es probable que saltase a la vista la diferencia entre las versiones. Esto se complica todavía más cuando las jerarquías de herencia se refactorizan en sucesivas versiones.  
@@ -107,7 +107,7 @@ or col1 != col2
   
  En el caso anterior, puede obtener un comportamiento equivalente para generar SQL, pero la conversión podría no reflejar su intención de manera precisa.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no impone C# `null` o Visual Basic `nothing` una semántica de comparación en SQL. Los operadores de comparación se convierten sintácticamente en sus equivalentes SQL. La semántica refleja la semántica de SQL tal como la define la configuración del servidor o de la conexión. Dos valores nulos se consideran distintos según la configuración predeterminada de SQL Server (aunque se puede cambiar la configuración para cambiar la semántica). Sea como fuere, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no considera la configuración del servidor en la conversión de consultas.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no impone C# `null` o Visual Basic `nothing` semántica de comparación en SQL. Los operadores de comparación se convierten sintácticamente en sus equivalentes SQL. La semántica refleja la semántica de SQL tal como la define la configuración del servidor o de la conexión. Dos valores nulos se consideran distintos según la configuración predeterminada de SQL Server (aunque se puede cambiar la configuración para cambiar la semántica). Sea como fuere, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no considera la configuración del servidor en la conversión de consultas.  
   
  Una comparación con el literal `null` (`nothing`) se convierte a la versión de SQL correcta (`is null` o `is not null`).  
   
@@ -144,7 +144,7 @@ Where Col1 = Col2
 -- Error, collation conflict.  
 ```  
   
- De hecho, la subcláusula de intercalación crea un *restringido tipo* que no es sustituible.  
+ De hecho, se crea la subcláusula de intercalación una *restringido tipo* que no es sustituible.  
   
  De forma similar, el criterio de ordenación puede ser bastante diferente entre los sistemas de tipos. Esta diferencia afecta a la ordenación de los resultados. <xref:System.Guid> se ordena en los 16 bytes por orden lexicográfico (`IComparable()`), mientras que T-SQL compara los GUID en el orden siguiente: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Esta ordenación era la habitual en SQL 7.0, cuando los GUID generados por NT tenían este orden de octetos. Este enfoque garantizaba que los GUID generados en el mismo clúster de nodos se obtenían juntos y ordenados secuencialmente, según la marca de tiempo. También era útil para compilar índices (las inserciones se convertían en anexos en lugar de E/S aleatorias). Posteriormente, el orden se codificó en Windows por cuestiones de privacidad, pero SQL debe mantener la compatibilidad. Una solución alternativa es usar <xref:System.Data.SqlTypes.SqlGuid> en lugar de <xref:System.Guid>.  
   
@@ -153,9 +153,9 @@ Where Col1 = Col2
   
 -   C# especifica una semántica de cortocircuito basada en el orden léxico de los operandos para los operadores lógicos `&&` y `||`. Por otro lado, SQL está orientado a consultas basadas en conjuntos y, por consiguiente, proporciona más libertad al optimizador para que decida el orden de ejecución. Algunas de las implicaciones se exponen a continuación:  
   
-    -   Conversión semánticamente equivalente requeriría "`CASE` ... `WHEN` … `THEN`"construir en SQL para evitar la reordenación de ejecución de los operandos.  
+    -   Conversión semánticamente equivalente requeriría "`CASE` ... `WHEN` … `THEN`"construcción de SQL para evitar la reordenación de ejecución de los operandos.  
   
-    -   Una conversión libre a `AND` / `OR` podría producir errores inesperados si la expresión de C# basa en la evaluación del segundo operando se basa en el resultado de la evaluación del primer operando.  
+    -   Una conversión libre a `AND` / `OR` podría producir errores inesperados si los C# expresión basa en la evaluación del segundo operando se basa en el resultado de la evaluación del primer operando.  
   
 -   La función `Round()` tiene una semántica diferente en [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] y en T-SQL.  
   
@@ -257,7 +257,7 @@ Where Col1 + Col2 > 4
 ```  
   
 ## <a name="performance-issues"></a>Problemas de rendimiento  
- Si se tienen en cuenta algunas de las diferencias de los tipos de SQL Server-CLR, el resultado puede ser una reducción del rendimiento si se entrecruzan los sistemas de tipos de CLR y SQL Server. A continuación se muestran ejemplos de escenarios cuyo rendimiento se ve muy afectado:  
+ Teniendo en cuenta para algunos-CLR de SQL Server diferencias de tipo pueden provocar una disminución del rendimiento si se entrecruzan los sistemas de tipos CLR y SQL Server. A continuación se muestran ejemplos de escenarios cuyo rendimiento se ve muy afectado:  
   
 -   Orden forzado de evaluación de los operadores lógicos AND/OR  
   

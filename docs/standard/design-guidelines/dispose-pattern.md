@@ -1,6 +1,6 @@
 ---
 title: Patrón de Dispose
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - Dispose method
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff52e17cfe4a4236e4d165c0961ca3a23fed9a72
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: ee6e9898ae93e2e6628eadec150a3c9c05f5d9c5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864649"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147722"
 ---
 # <a name="dispose-pattern"></a>Patrón de Dispose
 Todos los programas adquieren uno o más recursos del sistema, como memoria, identificadores del sistema o las conexiones de base de datos, durante el transcurso de su ejecución. Los desarrolladores tienen que tener cuidado al usar estos recursos del sistema, porque debe liberarse tras la adquisición y uso.  
@@ -213,7 +212,7 @@ public class ComplexResourceHolder : IDisposable {
     }  
   
     protected virtual void Dispose(bool disposing) {  
-            ReleaseBuffer(buffer); // release unmanaged memory  
+        ReleaseBuffer(buffer); // release unmanaged memory  
         if (disposing) { // release other disposable objects  
             if (resource!= null) resource.Dispose();  
         }  
@@ -277,7 +276,7 @@ public class ComplexResourceHolder : IDisposable {
   
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
+ *Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vea también
 

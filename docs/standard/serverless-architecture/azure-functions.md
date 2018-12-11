@@ -4,12 +4,12 @@ description: Las funciones de Azure proporcionan funcionalidades sin servidor en
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: f08ba20b485197acd3bb5cdfe5699cd6be991d7c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370193"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145168"
 ---
 # <a name="azure-functions"></a>Comprobación de
 
@@ -17,17 +17,17 @@ Azure functions proporciona una experiencia de proceso sin servidor. Invoca una 
 
 ![Logotipo de Azure functions](./media/azure-functions-logo.png)
 
-Hay dos versiones de framework de Azure Functions. La versión heredada es compatible con la versión completa de .NET Framework y el nuevo tiempo de ejecución es compatible con aplicaciones de .NET Core multiplataforma. Compatibilidad para idiomas adicionales además de C#, como JavaScript, F # y Java. Las funciones creadas en el portal proporcionan una sintaxis de scripting enriquecida. Las funciones que se crean como proyectos independientes pueden implementarse con capacidades y compatibilidad de plataforma completa.
+Hay dos versiones de framework de Azure Functions. La versión heredada es compatible con la versión completa de .NET Framework y el nuevo tiempo de ejecución es compatible con aplicaciones de .NET Core multiplataforma. Otros idiomas además C# como JavaScript, F#, y son compatibles con Java. Las funciones creadas en el portal proporcionan una sintaxis de scripting enriquecida. Las funciones que se crean como proyectos independientes pueden implementarse con capacidades y compatibilidad de plataforma completa.
 
 Para obtener más información, consulte [documentación de Azure Functions](https://docs.microsoft.com/azure/azure-functions).
 
 ## <a name="functions-v1-vs-v2"></a>Funciones v1 y v2
 
-Hay dos versiones del runtime de Azure Functions: 1.x y 2.x. Versión 1.x está disponible con carácter general (GA). Admite el desarrollo de .NET desde el portal o las máquinas Windows y usa .NET Framework. 1.x es compatible con C#, JavaScript y F #, con compatibilidad experimental con Python, PHP, TypeScript, Batch, Bash y PowerShell.
+Hay dos versiones del runtime de Azure Functions: 1.x y 2.x. Versión 1.x está disponible con carácter general (GA). Admite el desarrollo de .NET desde el portal o las máquinas Windows y usa .NET Framework. 1.x es compatible con C#, JavaScript, y F#, con compatibilidad experimental con Python, PHP, TypeScript, Batch, Bash y PowerShell.
 
 Versión 2.x está en versión preliminar. Aprovecha .NET Core y admite el desarrollo multiplataforma en máquinas Linux, macOS y Windows. 2.x agrega soporte de primera clase para Java pero todavía no directamente admite cualquiera de los lenguajes experimentales. Versión 2.x usa un nuevo modelo de extensibilidad de enlace que permite a las extensiones de terceros a la plataforma, crear versiones independientes de los enlaces, y una más simplificado de entorno de ejecución.
 
-> **Hay un problema conocido en la versión 1.x con [compatibilidad de redireccionamiento de enlace](https://github.com/Azure/azure-functions-host/issues/992).** El problema es específico para el desarrollo de. NET. Los proyectos con dependencias en las bibliotecas que son una versión diferente de las bibliotecas incluidas en el tiempo de ejecución se ven afectados. El equipo de funciones se ha comprometido a progresar concreta en el problema. El equipo abordará redirecciones de enlace en 2.x antes de que entre en disponibilidad general. La instrucción del equipo oficial con correcciones sugeridas y soluciones alternativas está disponible aquí: [resolución de ensamblado en Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
+> **Hay un problema conocido en la versión 1.x con [compatibilidad de redireccionamiento de enlace](https://github.com/Azure/azure-functions-host/issues/992).** El problema es específico para el desarrollo de. NET. Los proyectos con dependencias en las bibliotecas que son una versión diferente de las bibliotecas incluidas en el tiempo de ejecución se ven afectados. El equipo de funciones se ha comprometido a progresar concreta en el problema. El equipo abordará redirecciones de enlace en 2.x antes de que entre en disponibilidad general. La instrucción del equipo oficial con correcciones sugeridas y soluciones alternativas está disponible aquí: [Resolución de ensamblado en Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
 Para obtener más información, consulte [comparación entre 1.x y 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions).
 
@@ -175,10 +175,10 @@ El `Domain Redirect` proxy toma una ruta abreviada y lo asigna al recurso de fun
 
 El `Root` proxy toma todo lo envía a la dirección URL raíz (`https://--shorturl--/`) y lo redirige a la documentación del sitio.
 
-Se muestra un ejemplo del uso de los servidores proxy en el vídeo [Azure: traiga su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/events/Connect/2017/E102). En tiempo real, se migra una aplicación de ASP.NET Core que se ejecutan en el servidor SQL Server local a la nube de Azure. Los servidores proxy se utilizan para ayudar a refactorizar un proyecto de API Web tradicional para usar las funciones.
+Se muestra un ejemplo del uso de los servidores proxy en el vídeo [Azure: Traiga su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/events/Connect/2017/E102). En tiempo real, se migra una aplicación de ASP.NET Core que se ejecutan en el servidor SQL Server local a la nube de Azure. Los servidores proxy se utilizan para ayudar a refactorizar un proyecto de API Web tradicional para usar las funciones.
 
 Para obtener más información acerca de los servidores proxy, consulte [trabajar con Azure Functions Proxies](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 
 >[!div class="step-by-step"]
-[Anterior](azure-serverless-platform.md)
-[Siguiente](application-insights.md)
+>[Anterior](azure-serverless-platform.md)
+>[Siguiente](application-insights.md)

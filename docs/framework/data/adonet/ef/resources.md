@@ -2,12 +2,12 @@
 title: Recursos de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: d32b88e0df0b29ccf7fb5e9ba2d5a43585e0fb44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc1a5b76ecc038d8059b04f4dc222126e796f03d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509169"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128679"
 ---
 # <a name="entity-framework-resources"></a>Recursos de Entity Framework
 Los recursos externos siguientes proporcionan información y compatibilidad para la creación de aplicaciones de Entity Framework.  
@@ -24,8 +24,8 @@ Los recursos externos siguientes proporcionan información y compatibilidad para
  [¿Plataforma de datos de vídeos de procedimientos? Vídeos: Entity Framework Series](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Contiene un conjunto de capturas de pantalla en vídeo que muestran cómo compilar aplicaciones usando algunos de los componentes de Entity Framework.  
   
- [Preguntas más frecuentes de Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213877)  
- Blog que contiene las preguntas más frecuentes sobre Entity Framework.  
+ [Preguntas más frecuentes de Entity Framework](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
+ Sección de wiki que contiene preguntas más frecuentes sobre Entity Framework.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  

@@ -4,12 +4,12 @@ description: Exploración de varias arquitecturas y las aplicaciones que son com
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370201"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150308"
 ---
 # <a name="serverless-architecture"></a>Arquitectura sin servidor
 
@@ -42,9 +42,9 @@ Un desafío común migra una aplicación monolítica existente a la nube. El enf
 
 ![Migración de un monolito sin servidor](./media/serverless-monolith-migration.png)
 
-Para obtener más información sobre este enfoque, vea el vídeo: [traiga su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/Events/Connect/2017/E102).
+Para obtener más información sobre este enfoque, vea el vídeo: [Traiga su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/Events/Connect/2017/E102).
 
-## <a name="web-apps"></a>Aplicaciones Web
+## <a name="web-apps"></a>Aplicaciones web
 
 Las aplicaciones Web son buenos candidatos para las aplicaciones sin servidor. Actualmente, existen dos enfoques comunes para aplicaciones web: controlada por servidor y controladas por cliente (por ejemplo, la aplicación de página única o SPA). Las aplicaciones web controladas por el servidor utilizan normalmente una capa de middleware para emitir llamadas de API para representar la interfaz de usuario web. Las aplicaciones de SPA realizan llamadas API de REST directamente desde el explorador. En ambos escenarios, sin servidor puede alojar el software intermedio o una solicitud de API de REST, ya que proporciona la lógica empresarial necesaria. Es una arquitectura común crear un servidor web estático ligera. La aplicación de página única (SPA) sirve HTML, CSS, JavaScript y otros activos de explorador. La aplicación web, a continuación, se conecta a un back-end de microservicios.
 
@@ -74,5 +74,5 @@ El volumen real de dispositivos y a menudo información dicta una arquitectura o
 La omnipresencia de IoT ha traducido en varios productos sin servidor que se centran específicamente en las preocupaciones de IoT, como [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Serverless automatiza las tareas como el registro de dispositivos, la aplicación de directivas, seguimiento e incluso implementación de código a los dispositivos en *el borde*. El borde se refiere a los dispositivos, como los sensores y accionadores que están conectados a, pero no parte activa de Internet.
 
 >[!div class="step-by-step"]
-[Anterior](architecture-approaches.md)
-[Siguiente](serverless-architecture-considerations.md)
+>[Anterior](architecture-approaches.md)
+>[Siguiente](serverless-architecture-considerations.md)

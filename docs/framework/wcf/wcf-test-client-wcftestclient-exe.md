@@ -3,11 +3,11 @@ title: Cliente de prueba de WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149008"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de prueba de WCF (WcfTestClient.exe)
 Cliente de Windows Communication Foundation (WCF) prueba (WcfTestClient.exe) es una herramienta de GUI que permite a los usuarios introducir parámetros de prueba, enviar esa entrada al servicio y ver la respuesta que devuelve el servicio. Proporciona un servicio sin problemas las pruebas cuando se combina con el Host de servicio WCF.  
@@ -136,7 +136,7 @@ Cliente de Windows Communication Foundation (WCF) prueba (WcfTestClient.exe) es 
 ## <a name="features-supported-by-wcf-test-client"></a>Características admitidas por WCF Test Client  
  La siguiente es una lista de las características admitidas por WCF Test Client:  
   
--   Invocación de servicio: solicitud/respuesta y mensaje unidireccional.  
+-   Invocación del servicio: Solicitud/respuesta y mensaje unidireccional.  
   
 -   Enlaces: todos los enlaces admitidos por Svcutil.exe.  
   
@@ -156,7 +156,7 @@ Cliente de Windows Communication Foundation (WCF) prueba (WcfTestClient.exe) es 
   
 -   Seguridad: [!INCLUDE[infocard](../../../includes/infocard-md.md)], mediante certificado y mediante nombre de usuario/contraseña.  
   
--   Enlaces: WSFederationbinding, cualquier enlace de contexto y enlace HTTPS, WebHttpbinding (compatibilidad con mensajes de respuesta JSON).  
+-   Enlaces: WSFederationbinding, cualquier contexto y enlace Https, WebHttpbinding (compatibilidad con mensajes de respuesta de Json).  
   
 ## <a name="closing-wcf-test-client"></a>Cerrar el cliente de prueba de WCF  
  Puede cerrar el cliente de prueba WCF de las maneras siguientes:  

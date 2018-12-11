@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850881"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155189"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de colección en contratos de datos
 Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tales listas se pueden representar utilizando matrices o una variedad de otros tipos (Lista genérica, <xref:System.ComponentModel.BindingList%601>genérica, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Por ejemplo, una colección puede albergar una lista de direcciones para un determinado cliente. Estas colecciones se denominan *colecciones de lista*, con independencia de cual sea su tipo real.  
@@ -87,7 +87,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
 -   Cuando no se aplica el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , el nombre predeterminado y el espacio de nombres para los tipos de colección dependen de los nombres y espacios de nombres de tipos contenidos dentro de la colección. No se ven afectados por el nombre ni el espacio de nombres del propio tipo de colección. Para obtener un ejemplo, vea los tipos siguientes.  
   
-    ```  
+    ```csharp  
     public CustomerList1 : Collection<string> {}  
     public StringList1 : Collection<string> {}  
     ```  
@@ -226,7 +226,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
  De forma predeterminada, no se generan tipos para las colecciones no personalizadas en el código importado. Los miembros de datos de tipos de colección de listas se importan como matrices, y los miembros de datos de tipos de colección de diccionarios se importan como diccionario genérico.  
   
- Sin embargo, para las colecciones personalizadas, se generan tipos separados, marcados con el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> . (Un tipo de colección personalizado en el esquema es tipo que no utiliza el espacio de nombres, el nombre, el nombre de elemento de repetición o los nombres de elementos clave/valor predeterminados.) Estos tipos son tipos vacíos que derivan de <xref:System.Collections.Generic.List%601> genérica para tipos de lista y diccionario genérico para tipos de diccionario.  
+ Sin embargo, para las colecciones personalizadas, se generan tipos separados, marcados con el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute>. (Un tipo de colección personalizado en el esquema es tipo que no utiliza el espacio de nombres, el nombre, el nombre de elemento de repetición o los nombres de elementos clave/valor predeterminados.) Estos tipos son tipos vacíos que derivan de <xref:System.Collections.Generic.List%601> genérica para tipos de lista y diccionario genérico para tipos de diccionario.  
   
  Por ejemplo, puede tener los tipos siguientes en el servidor.  
   
@@ -249,7 +249,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
  Por ejemplo, para que todas las listas se importen como de tipo <xref:System.Collections.Generic.List%601>genérico.  
   
-```  
+```console  
 svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1  
 ```  
   
@@ -287,8 +287,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Tipo de referencia|Interfaz implementada por el tipo de referencia|Ejemplo|Tipo tratado como|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |No genérico o genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> o<br /><br /> `MyType<T> : IDictionary` donde T=`int`|Genérico cerrado `IDictionary<object,object>`|  
-|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>, cerrado|`MyType<T> : IDictionary<string, bool>` donde T =`int`|Genérico cerrado (por ejemplo, `IDIctionary<string,bool>`)|  
-|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, o clave o valor está cerrado, el otro está abierto y utiliza uno de los parámetros de tipo|`MyType<T,U,V> : IDictionary<string,V>` donde T =`int`, U =`float`, V =`bool`<br /><br /> o<br /><br /> `MyType<Z> : IDictionary<Z,bool>` donde Z =`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|  
+|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>, cerrado|`MyType<T> : IDictionary<string, bool>` donde T=`int`|Genérico cerrado (por ejemplo, `IDIctionary<string,bool>`)|  
+|Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, o clave o valor está cerrado, el otro está abierto y utiliza uno de los parámetros de tipo|`MyType<T,U,V> : IDictionary<string,V>` donde T=`int`, U=`float`, V=`bool`<br /><br /> o<br /><br /> `MyType<Z> : IDictionary<Z,bool>` donde Z=`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|  
 |Genérico cerrado (cualquier número de parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, tanto clave como valor están abiertos y cada uno utiliza uno de los parámetros del tipo|`MyType<T,U,V> : IDictionary<V,U>` donde T=`int`, U=`bool`, V=`string`|Genérico cerrado (por ejemplo, `IDictionary<string,bool>`)|  
 |Genérico abierto (dos parámetros)|<xref:System.Collections.Generic.IDictionary%602>genérico, abrir, utiliza los dos parámetros genéricos del tipo en el orden que aparecen|`MyType<K,V> : IDictionary<K,V>`, tanto K como V están abiertos|Genérico abierto (por ejemplo, `IDictionary<K,V>`)|  
   

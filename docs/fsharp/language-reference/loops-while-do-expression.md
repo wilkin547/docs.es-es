@@ -2,12 +2,12 @@
 title: 'Bucles: expresión while...do (F#)'
 description: Vea cómo el while... hacer expresión se utiliza para realizar la ejecución iterativa (bucle) mientras una condición de prueba especificada es true.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45664714"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127282"
 ---
 # <a name="loops-whiledo-expression"></a>Bucles: expresión while...do
 
@@ -35,11 +35,11 @@ La salida del código anterior es una secuencia de números aleatorios entre 1 y
 Found a 10!
 ```
 
->[!NOTE]
-Puede usar `while...do` en las expresiones de secuencia y otras expresiones de cálculo, en cuyo caso una versión personalizada de la `while...do` se usa la expresión. Para obtener más información, consulte [secuencias](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md), y [expresiones de cálculo](computation-expressions.md).
+> [!NOTE]
+> Puede usar `while...do` en las expresiones de secuencia y otras expresiones de cálculo, en cuyo caso una versión personalizada de la `while...do` se usa la expresión. Para obtener más información, consulte [secuencias](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md), y [expresiones de cálculo](computation-expressions.md).
 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia del lenguaje F#](index.md)
-- [Bucles: expresión `for...in`](loops-for-in-expression.md)
-- [Bucles: expresión `for...to`](loops-for-to-expression.md)
+- [Bucles: `for...in` Expresión](loops-for-in-expression.md)
+- [Bucles: `for...to` Expresión](loops-for-to-expression.md)

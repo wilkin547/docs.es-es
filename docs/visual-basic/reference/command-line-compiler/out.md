@@ -7,11 +7,11 @@ helpviewer_keywords:
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
 ms.openlocfilehash: b619505f6e87efd1c3b18e1bed2862d3467984a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199934"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152618"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 Especifica el nombre del archivo de salida.  
@@ -26,7 +26,7 @@ Especifica el nombre del archivo de salida.
   
 |Término|Definición|  
 |---|---|  
-|`filename`|Requerido. El nombre del archivo de salida que crea el compilador. Si el nombre de archivo contiene un espacio, escriba el nombre entre comillas ("").|  
+|`filename`|Obligatorio. El nombre del archivo de salida que crea el compilador. Si el nombre de archivo contiene un espacio, escriba el nombre entre comillas ("").|  
   
 ## <a name="remarks"></a>Comentarios  
  Especifique el nombre completo y la extensión de archivo que se creará. Si no lo hace, el archivo .exe toma su nombre de archivo de código fuente que contiene el `Sub Main` procedimiento y el archivo .dll adopta el nombre del primer archivo de código fuente.  

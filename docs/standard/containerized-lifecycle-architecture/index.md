@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e9f81c5fecc06b19ebd84cc4b2cc232686768a90
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106637"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148826"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introducción a Containers y Docker
 
@@ -23,14 +23,13 @@ Cada contenedor puede ejecutar una aplicación web o un servicio al completo, co
 
 ![](./media/image1.png)
 
-Figura 1-1: Varios contenedores ejecutándose en un host de contenedor
+Figura 1-1: Varios contenedores ejecutándose en un host de contenedor.
 
 En este ejemplo, el host de Docker es un host de contenedor, y App 1, App 2, Svc 1 y Svc 2 son aplicaciones o servicios en contenedor.
 
-Otra ventaja derivada de la inclusión en contenedores es la escalabilidad. La creación de contenedores para tareas a corto plazo permite escalar horizontalmente con gran rapidez. Desde el punto de vista de la aplicación, *la creación de instancias de una imagen* (la creación de un contenedor) es similar a la creación de instancias de un proceso como un servicio o una aplicación web. Pero con fines de confiabilidad, cuando ejecute varias instancias de la misma imagen en varios servidores host, seguramente le interesará que cada contenedor (instancia de imagen) se ejecute en un servidor host o máquina virtual diferente en dominios de error distintos.
+Otra ventaja derivada de la inclusión en contenedores es la escalabilidad. La creación de contenedores para tareas a corto plazo permite escalar horizontalmente con gran rapidez. Desde el punto de vista de la aplicación, *la creación de instancias de una imagen* (la creación de un contenedor) es similar a la creación de instancias de un proceso como un servicio o una aplicación web. Para mayor confiabilidad, sin embargo, al ejecutar varias instancias de la misma imagen en varios servidores de host, normalmente desea que cada contenedor (instancia de imagen) para ejecutar en un servidor host diferente o una máquina virtual en distintos dominios de error.
 
 En resumen, los contenedores ofrecen las ventajas del aislamiento, la portabilidad, la agilidad, la escalabilidad y el control a lo largo de todo el flujo de trabajo del ciclo de vida de la aplicación. La ventaja más importante es el aislamiento que se proporciona entre el desarrollo y las operaciones.
 
-
 >[!div class="step-by-step"]
-[Siguiente](what-is-docker.md)
+>[Siguiente](what-is-docker.md)

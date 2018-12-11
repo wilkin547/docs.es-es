@@ -1,17 +1,17 @@
 ---
 title: Expresiones de cálculo (F#)
-description: Obtenga información sobre cómo crear una sintaxis adecuada para escribir cálculos en F# que se pueden secuenciar y combinar mediante enlaces y construcciones de flujo de control.
+description: Obtenga información sobre cómo crear una sintaxis adecuada para escribir cálculos F# que puedan ser secuenciada y combinados utilizando controlar los enlaces y construcciones de flujo.
 ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839874"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169851"
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
-Las expresiones de cálculo en F# proporcionan una sintaxis adecuada para escribir cálculos que se pueden secuenciar y combinar mediante enlaces y construcciones de flujo de control. Según el tipo de expresión de cálculo, puede considerarse como una forma de expresar monads, monoids, transformadores monad y functors desplazados. Sin embargo, a diferencia de otros lenguajes (como *notación* en Haskell), que no están asociados a una sola abstracción y no confíe en las macros u otras formas de metaprogramación para lograr una sintaxis adecuada y contextual.
+Expresiones de cálculo en F# proporcionan una sintaxis adecuada para escribir cálculos que se pueden secuenciar y combinar mediante enlaces y construcciones de flujo de control. Según el tipo de expresión de cálculo, puede considerarse como una forma de expresar monads, monoids, transformadores monad y functors desplazados. Sin embargo, a diferencia de otros lenguajes (como *notación* en Haskell), que no están asociados a una sola abstracción y no confíe en las macros u otras formas de metaprogramación para lograr una sintaxis adecuada y contextual.
 
 ## <a name="overview"></a>Información general
 
@@ -22,7 +22,7 @@ Los cálculos pueden adoptar muchas formas. La forma más común de cálculo es 
 * Cálculos effectful
 * Cálculos generativas
 
-Por lo general, hay *contextual* cálculos que se deben realizar en determinadas partes de una aplicación. Puede resultar complicado la escritura de código contextual, puesto que es fácil para los cálculos de "pérdida" fuera de un contexto determinado sin abstracciones para evitar que lo hagan. Estas abstracciones a menudo son difíciles de escribir por sí mismo, motivo por el cual F# tiene de forma generalizada llamados **expresiones de cálculo**.
+Por lo general, hay *contextual* cálculos que se deben realizar en determinadas partes de una aplicación. Puede resultar complicado la escritura de código contextual, puesto que es fácil para los cálculos de "pérdida" fuera de un contexto determinado sin abstracciones para evitar que lo hagan. Estas abstracciones a menudo son difíciles de escribir por sí mismo, motivo por el cual F# tiene forma generalizada llamados **expresiones de cálculo**.
 
 Las expresiones de cálculo ofrecen un modelo de sintaxis y abstracción uniforme para codificación cálculos contextuales.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Cada una de estas palabras clave y otras palabras clave de F# estándar solo están disponibles en una expresión de cálculo si se han definido en el tipo de generador de respaldo. La única excepción a esto es `match!`, que es en sí mismo azúcar sintáctica para el uso de `let!` seguida por una coincidencia de patrones en el resultado.
+Cada una de estas palabras clave y otro estándar F# palabras clave solo están disponibles en una expresión de cálculo si se han definido en el tipo de generador de respaldo. La única excepción a esto es `match!`, que es en sí mismo azúcar sintáctica para el uso de `let!` seguida por una coincidencia de patrones en el resultado.
 
-El tipo de generador es un objeto que define los métodos especiales que rigen la manera en que se combinan los fragmentos de la expresión de cálculo; es decir, sus métodos controlan cómo se comporta la expresión de cálculo. Es decir que permite personalizar la operación de muchas construcciones de F#, como bucles y enlaces de otra manera de describir una clase de generador.
+El tipo de generador es un objeto que define los métodos especiales que rigen la manera en que se combinan los fragmentos de la expresión de cálculo; es decir, sus métodos controlan cómo se comporta la expresión de cálculo. Es otra manera de describir una clase de generador decir que permite personalizar el funcionamiento de muchos F# construcciones, como bucles y enlaces.
 
 ### `let!`
 
@@ -194,7 +194,7 @@ Al llamar a una expresión de cálculo con `match!`, obtendrá el resultado de l
 
 ## <a name="built-in-computation-expressions"></a>Expresiones de cálculo integradas
 
-La biblioteca básica de F# define tres expresiones de cálculo integradas: [las expresiones de secuencia](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md), y [las expresiones de consulta](query-expressions.md).
+El F# biblioteca principal define tres expresiones de cálculo integradas: [Las expresiones de secuencia](sequences.md), [flujos de trabajo asincrónicos](asynchronous-workflows.md), y [las expresiones de consulta](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Crear un nuevo tipo de expresión de cálculo
 
@@ -227,7 +227,7 @@ La expresión anidada tiene el formato siguiente:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-En el código anterior, las llamadas a `Run` y `Delay` se omite si no están definidos en la clase de generador de expresiones de cálculo. El cuerpo de la expresión de cálculo, aquí se indica como `{| cexpr |}`, se convierten en llamadas que implican los métodos de la clase de generador por las traducciones se describe en la tabla siguiente. La expresión de cálculo `{| cexpr |}` está definido de forma recursiva según estas traducciones donde `expr` es una expresión de F# y `cexpr` es una expresión de cálculo.
+En el código anterior, las llamadas a `Run` y `Delay` se omite si no están definidos en la clase de generador de expresiones de cálculo. El cuerpo de la expresión de cálculo, aquí se indica como `{| cexpr |}`, se convierten en llamadas que implican los métodos de la clase de generador por las traducciones se describe en la tabla siguiente. La expresión de cálculo `{| cexpr |}` está definido de forma recursiva según estas traducciones donde `expr` es un F# expresión y `cexpr` es una expresión de cálculo.
 
 |Expresión|Conversión|
 |----------|-----------|
@@ -251,6 +251,7 @@ En el código anterior, las llamadas a `Run` y `Delay` se omite si no están def
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 En la tabla anterior, `other-expr` describe una expresión que en caso contrario, no se muestra en la tabla. Una clase de generador no es necesario implementar todos los métodos y admite todas las traducciones que se muestran en la tabla anterior. Las construcciones que no se implementan no están disponibles en las expresiones de cálculo de ese tipo. Por ejemplo, si no desea admitir la `use` palabra clave en las expresiones de cálculo, puede omitir la definición de `Use` en la clase de generador.
 
 El ejemplo de código siguiente muestra una expresión de cálculo que encapsula un cálculo con una serie de pasos que se puede evaluar un paso a la vez. Un tipo de unión, de discriminadas `OkOrException`, codifica el estado de error de la expresión evalúa hasta ahora. Este código muestra varios patrones típicos que puede usar en las expresiones de cálculo, como son implementaciones reutilizables de algunos de los métodos del generador.
@@ -266,7 +267,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +373,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 Una expresión de cálculo tiene un tipo subyacente, que devuelve la expresión. El tipo subyacente puede representar un resultado calculado o un cálculo diferido que se puede realizar, o puede proporcionar una manera de recorrer en iteración a través de algún tipo de colección. En el ejemplo anterior, el tipo subyacente era **finalmente**. Una expresión de secuencia, el tipo subyacente es <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Una expresión de consulta, el tipo subyacente es <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Para un flujo de trabajo asincrónico, el tipo subyacente es [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). La `Async` objeto representa el trabajo que se realizará para calcular el resultado. Por ejemplo, se llama [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) para ejecutar un cálculo y devolver el resultado.

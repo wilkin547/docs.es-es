@@ -1,17 +1,17 @@
 ---
 title: Tipos básicos (F#)
-description: Descubra los tipos básicos fundamentales que se usan en el lenguaje F#.
+description: Detectar los tipos básicos fundamentales que se usan en el F# lenguaje.
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026952"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145129"
 ---
 # <a name="basic-types"></a>Tipos básicos
 
-En este tema se enumera los tipos básicos que se definen en el lenguaje F#. Estos tipos son más importantes en F#, que forman la base de casi todos los programas F#. Son un superconjunto de los tipos primitivos. NET.
+Este tema enumeran los tipos básicos que se definen en el F# lenguaje. Estos tipos son las más importantes en F#, forman la base de casi todos F# programa. Son un superconjunto de los tipos primitivos. NET.
 
 |Tipo|Tipo de .NET|Descripción|
 |----|---------|-----------|
@@ -34,8 +34,8 @@ En este tema se enumera los tipos básicos que se definen en el lenguaje F#. Est
 |`float32`, `single`|<xref:System.Single>|Tipo de punto flotante de 32 bits.|
 |`float`, `double`|<xref:System.Double>|Tipo de punto flotante de 64 bits.|
 
->[!NOTE]
-Puede realizar cálculos con números enteros demasiado grandes para el tipo de entero de 64 bits mediante el [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` no se considera un tipo básico; es la abreviatura de `System.Numerics.BigInteger`.
+> [!NOTE]
+> Puede realizar cálculos con números enteros demasiado grandes para el tipo de entero de 64 bits mediante el [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` no se considera un tipo básico; es la abreviatura de `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Vea también
 
