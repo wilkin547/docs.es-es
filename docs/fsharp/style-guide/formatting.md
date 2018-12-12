@@ -2,12 +2,12 @@
 title: F#instrucciones de formato de código
 description: Obtenga información sobre las directrices para dar formato a F# código.
 ms.date: 11/26/2018
-ms.openlocfilehash: 993ba8d42570d92789a9fc1967b8185b45643d56
-ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
+ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "43858010"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286551"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#instrucciones de formato de código
 
@@ -343,16 +343,23 @@ type PostalAddress =
     }
 ```
 
-Al colocar el símbolo (token) de apertura en la misma línea y el token de cierre en una nueva línea también está bien, pero tenga en cuenta que debe usar el [sintaxis detallada](../language-reference/verbose-syntax.md) para definir los miembros (el `with` palabra clave):
+Al colocar el símbolo (token) de apertura en una nueva línea y el token de cierre en una línea nueva es preferible si va a declarar implementaciones de interfaz o los miembros en el registro:
 
 ```fsharp
-//  OK, but verbose syntax required
-type PostalAddress = { 
-    Address: string
-    City: string
-    Zip: string
-} with
+// Declaring additional members on PostalAddress
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
 ```
 
 ## <a name="formatting-records"></a>Formato de registros
@@ -371,27 +378,51 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Al colocar el símbolo (token) de apertura en la misma línea y el token de cierre en una nueva línea también está bien:
+Colocar la apertura token en una nueva línea, el contenido con pestañas en un ámbito, y es preferible si es el token de cierre en una nueva línea:
+
+* Mover los registros en el código con ámbitos diferentes de sangría
+* Canalización de en una función
 
 ```fsharp
-let rainbow = {
-    Boss1 = "Jeffrey"
-    Boss2 = "Jeffrey"
-    Boss3 = "Jeffrey"
-    Boss4 = "Jeffrey"
-    Boss5 = "Jeffrey"
-    Boss6 = "Jeffrey"
-    Boss7 = "Jeffrey"
-    Boss8 = "Jeffrey"
-    Lackeys = ["Zippy"; "George"; "Bungle"]
-}
+let rainbow =
+    {
+        Boss1 = "Jeffrey"
+        Boss2 = "Jeffrey"
+        Boss3 = "Jeffrey"
+        Boss4 = "Jeffrey"
+        Boss5 = "Jeffrey"
+        Boss6 = "Jeffrey"
+        Boss7 = "Jeffrey"
+        Boss8 = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"]
+    }
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
+
+let foo a =
+    a
+    |> Option.map (fun x ->
+        {
+            MyField = x
+        })
 ```
 
 Se aplican las mismas reglas para los elementos de lista y matriz.
 
 ## <a name="formatting-lists-and-arrays"></a>Aplicar formato a las listas y matrices
 
-Escribir `x :: l` con espacios alrededor de la `::` operador (`::` es un operador infijo, por lo tanto, rodeado por espacios) y `[1; 2; 3]` (`;` es un delimitador, por lo tanto, seguido por un espacio).
+Escribir `x :: l` con espacios alrededor de la `::` operador (`::` es un operador infijo, por lo tanto, rodeado por espacios).
+
+Las matrices declaradas en una sola línea y lista deben tener un espacio después del corchete de apertura y antes del corchete de cierre:
+
+```fsharp
+let xs = [ 1; 2; 3 ]
+let ys = [| 1; 2; 3; |]
+```
 
 Use siempre al menos un espacio entre dos operadores llave similar a distinct. Por ejemplo, deje un espacio entre un `[` y un `{`.
 
@@ -414,18 +445,21 @@ Use siempre al menos un espacio entre dos operadores llave similar a distinct. P
 Listas y matrices que se dividen en varias líneas siguen una regla similar como hacen los registros:
 
 ```fsharp
-let pascalsTriangle = [|
-    [|1|]
-    [|1; 1|]
-    [|1; 2; 1|]
-    [|1; 3; 3; 1|]
-    [|1; 4; 6; 4; 1|]
-    [|1; 5; 10; 10; 5; 1|]
-    [|1; 6; 15; 20; 15; 6; 1|]
-    [|1; 7; 21; 35; 35; 21; 7; 1|]
-    [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
-|]
+let pascalsTriangle =
+    [|
+        [|1|]
+        [|1; 1|]
+        [|1; 2; 1|]
+        [|1; 3; 3; 1|]
+        [|1; 4; 6; 4; 1|]
+        [|1; 5; 10; 10; 5; 1|]
+        [|1; 6; 15; 20; 15; 6; 1|]
+        [|1; 7; 21; 35; 35; 21; 7; 1|]
+        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+    |]
 ```
+
+Y al igual que con los registros, declarar la apertura y el corchete de cierre en su propia línea facilitarán mover código alrededor y canalizar en funciones.
 
 ## <a name="formatting-if-expressions"></a>Formato if expresiones
 
