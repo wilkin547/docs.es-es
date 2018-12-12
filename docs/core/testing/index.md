@@ -1,16 +1,16 @@
 ---
 title: Pruebas unitaria en .NET Core y .NET Standard
-description: Pruebas unitarias en proyectos .NET Core y .NET Standard.
+description: En este artículo se proporciona información general breve de las pruebas unitarias para los proyectos de .NET Core y .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170020"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243989"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Pruebas unitaria en .NET Core y .NET Standard
 
@@ -30,6 +30,8 @@ Además, es recomendable que tenga en cuenta que hay procedimientos recomendados
 > El equipo de ASP.NET sigue [estas convenciones](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) para ayudar a los desarrolladores a asignar buenos nombres a clases de prueba y métodos.
 
 No intente incluir dependencias en la infraestructura al escribir pruebas unitarias. Estas vuelven las pruebas lentas y frágiles, por lo que deberían reservarse para pruebas de integración. Puede evitar esas dependencias en su aplicación si sigue el [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) (Principio de dependencias explícitas) y usando la [Inserción de dependencias](/aspnet/core/fundamentals/dependency-injection). También puede mantener las pruebas unitarias en un proyecto separado de las pruebas de integración. Esto asegurará que el proyecto de pruebas unitarias no tiene referencias a paquetes de infraestructura ni dependencias de estos.
+
+## <a name="next-steps"></a>Pasos siguientes
 
 Puede encontrar más información sobre las pruebas unitarias en proyectos de .NET Core:
 

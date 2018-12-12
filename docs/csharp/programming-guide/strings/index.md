@@ -1,16 +1,17 @@
 ---
-title: Cadenas (Guía de programación de C#)
+title: 'Cadenas: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143927"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236367"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -36,7 +37,7 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
   
  [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
- Para más información acerca de cómo crear cadenas nuevas basadas en modificaciones como las operaciones de buscar y reemplazar en la cadena original, consulte [Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md).  
+ Para más información acerca de cómo crear cadenas basadas en modificaciones como las operaciones de buscar y reemplazar en la cadena original, consulte [Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md)  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Literales de cadena regulares y textuales  
  Utilice literales de cadena regulares cuando tenga que insertar caracteres de escape proporcionados por C#, tal como se muestra en el ejemplo siguiente:  
@@ -87,7 +88,7 @@ Use la interpolación de cadenas para mejorar la legibilidad y el mantenimiento 
 Para más información sobre cómo dar formato a los tipos .NET, consulte [Aplicar formato a tipos en .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Subcadenas  
- Una subcadena es cualquier secuencia de caracteres que se encuentra en una cadena. Use el método <xref:System.String.Substring%2A> para crear una nueva cadena de una parte de la cadena original. Puede buscar una o más apariciones de una subcadena con el método <xref:System.String.IndexOf%2A>. Use el método <xref:System.String.Replace%2A> para reemplazar todas las apariciones de una subcadena especificada por una nueva cadena. Al igual que el método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> devuelve una cadena nueva y no modifica la cadena original. Para más información, consulte [Cómo: Buscar cadenas](../../how-to/search-strings.md) y [Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md).  
+ Una subcadena es cualquier secuencia de caracteres que se encuentra en una cadena. Use el método <xref:System.String.Substring%2A> para crear una nueva cadena de una parte de la cadena original. Puede buscar una o más apariciones de una subcadena con el método <xref:System.String.IndexOf%2A>. Use el método <xref:System.String.Replace%2A> para reemplazar todas las apariciones de una subcadena especificada por una nueva cadena. Al igual que el método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> devuelve una cadena nueva y no modifica la cadena original. Para más información, consulte [Cómo: Buscar cadenas](../../how-to/search-strings.md) y [Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md)  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   

@@ -2,14 +2,14 @@
 title: Migración de .NET Core desde project.json
 description: Aprenda a migrar un proyecto anterior de .NET Core con project.json.
 author: blackdwarf
-ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: 47d9cab48d83581afb9deb2fd91c4c9a6dc85201
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143290"
+ms.locfileid: "53170696"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migración de proyectos de .NET Core desde project.json
 
@@ -60,7 +60,7 @@ Consulte [Una asignación entre propiedades project.json y csproj](../tools/proj
 
 ### <a name="common-issues"></a>Problemas comunes
 
-- Si se produce un error: "No se encuentra ningún archivo que coincida con el comando dotnet-migrate":
+- Si se produce un error que indica que no se encuentra ningún archivo que coincida con el comando dotnet-migrate:
 
 Ejecute `dotnet --version` para ver qué versión está usando. [`dotnet migrate`](../tools/dotnet-migrate.md) requiere .NET Core CLI RC3 o superior.
 Obtendrá este error si tiene un archivo *global.json* en el directorio actual o principal y la versión de `sdk` está establecida en una versión anterior.

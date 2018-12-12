@@ -1,5 +1,6 @@
 ---
-title: Tipos que aceptan valores NULL (Guía de programación de C#)
+title: 'Tipos que aceptan valores NULL: Guía de programación de C#'
+ms.custom: seodec18
 description: Más información sobre los tipos que aceptan valores NULL de C# y su uso
 ms.date: 07/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658709"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245136"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que aceptan valores NULL (Guía de programación de C#)
 
@@ -52,7 +53,7 @@ Los tipos que aceptan valores NULL tienen la siguientes características:
   
 - No se permiten los tipos anidados que aceptan valores NULL. La línea siguiente no se compilará: `Nullable<Nullable<int>> n;`  
 
-Para obtener más información, consulte los temas [Uso de tipos que aceptan valores NULL](using-nullable-types.md) y [Cómo: Identificar tipos que aceptan valores NULL ](how-to-identify-a-nullable-type.md).
+Para más información, consulte los temas [Uso de tipos que aceptan valores NULL ](using-nullable-types.md) y [Cómo: Identificar tipos que aceptan valores NULL](how-to-identify-a-nullable-type.md)
   
 ## <a name="see-also"></a>Vea también
 

@@ -6,12 +6,12 @@ title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c79e7cd77c637ad06854be6a1372fec351a0c45d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127347"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240260"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -27,7 +27,7 @@ ms.locfileid: "53127347"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Introducción a C#</h3>
+                                    <h3>Aprender C#</h3>
                                 </div>
                             </div>
                         </div>
@@ -172,9 +172,9 @@ ms.locfileid: "53127347"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Guía de C#</a></h3>
-                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">Aprender C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Primeros pasos</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Paseo por C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">What's New in C# (Novedades de C#)</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Referencia del lenguaje C#</a></p>
                                             </div>
                                         </div>
