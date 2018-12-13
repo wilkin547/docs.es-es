@@ -128,7 +128,6 @@
 ### [Salida publicada de prueba unitaria](core/testing/unit-testing-published-output.md)
 ### [Proyectos de .NET Core de Live Unit Testing con Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Control de versiones](core/versions/index.md)
-### [Historial de versiones de .NET Core](core/versions/version-history.md)
 ### [Selección de la versión de .NET Core](core/versions/selection.md)
 ### [Eliminación de runtimes y SDK obsoletos](core/versions/remove-runtime-sdk-versions.md)
 ## [Catálogo de identificadores de tiempo de ejecución](core/rid-catalog.md)
