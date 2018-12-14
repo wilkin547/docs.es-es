@@ -1,6 +1,6 @@
 ---
 title: Contenedor CCW
-ms.date: 03/30/2017
+ms.date: 10/23/2018
 dev_langs:
 - csharp
 - vb
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394971"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145181"
 ---
 # <a name="com-callable-wrapper"></a>Contenedor CCW
 Cuando un cliente COM llama a un objeto .NET, Common Language Runtime crea el objeto administrado y un contenedor CCW (COM callable wrapper) para el objeto. Como no pueden hacer referencia a los objetos .NET directamente, los clientes COM usan el CCW como un proxy del objeto administrado.  
@@ -48,7 +48,7 @@ Interfaces COM y el contenedor CCW
   
  Además de exponer las interfaces implementadas explícitamente por una clase en el entorno administrado, .NET Framework proporciona implementaciones de las interfaces COM enumeradas en la tabla siguiente en nombre del objeto. Una clase .NET puede proporcionar su propia implementación de estas interfaces para invalidar el comportamiento predeterminado. El tiempo de ejecución proporciona siempre la implementación de las interfaces **IUnknown** e **IDispatch**.  
   
-|Interfaz|Description|  
+|Interfaz|Descripción|  
 |---------------|-----------------|  
 |**Idispatch**|Proporciona un mecanismo para el enlace en tiempo de ejecución al tipo.|  
 |**IerrorInfo**|Proporciona una descripción textual del error, su origen, un archivo de ayuda, contexto de ayuda y el GUID de la interfaz que definió el error (siempre **GUID_NULL** para las clases. NET).|  
@@ -59,10 +59,10 @@ Interfaces COM y el contenedor CCW
   
  Una clase administrada también puede proporcionar las interfaces COM que se describe en la tabla siguiente.  
   
-|Interfaz|Description|  
+|Interfaz|Descripción|  
 |---------------|-----------------|  
 |Interfaz de clase (\_*nombreDeClase*)|Interfaz, expuesta por el runtime y no definida explícitamente, que expone todas las interfaces públicas, métodos, propiedades y campos que se exponen explícitamente en un objeto administrado.|  
-|**IConnectionPoint** e **IconnectionPointContainer**|Interfaz para objetos que son origen de eventos basados en delegados (interfaz para registrar suscriptores de eventos).|  
+|**IConnectionPoint** e **IConnectionPointContainer**|Interfaz para objetos que son origen de eventos basados en delegados (interfaz para registrar suscriptores de eventos).|  
 |**IdispatchEx**|Interfaz proporcionada por el tiempo de ejecución si la clase implementa **IExpando**. La interfaz **IDispatchEx** es una extensión de la interfaz **IDispatch** que, a diferencia de **IDispatch**, permite enumerar, agregar, eliminar y llamar a miembros con distinción de mayúsculas y minúsculas.|  
 |**IEnumVARIANT**|Interfaz para clases de tipo de colección que enumera los objetos de la colección si la clase implementa **IEnumerable**.|  
   
@@ -84,17 +84,17 @@ Public Class Mammal
 End Class  
 ```  
   
-```csharp  
-// Applies the ClassInterfaceAttribute to set the interface to dual.  
-[ClassInterface(ClassInterfaceType.AutoDual)]  
-// Implicitly extends System.Object.  
-public class Mammal  
-{  
-    void  Eat();  
-    void  Breathe():  
-    void  Sleep();  
-}  
-```  
+```csharp
+// Applies the ClassInterfaceAttribute to set the interface to dual.
+[ClassInterface(ClassInterfaceType.AutoDual)]
+// Implicitly extends System.Object.
+public class Mammal
+{
+    public void Eat() {}
+    public void Breathe() {}
+    public void Sleep() {}
+}
+```
   
  El cliente COM puede obtener un puntero a una interfaz de clase denominada `_Mammal`, que se describe en la biblioteca de tipos que genera la herramienta [Exportador de la biblioteca de tipos (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md). Si la clase `Mammal` implementó una o más interfaces, estas aparecerán bajo la coclase.  
   
@@ -139,12 +139,13 @@ coclass Mammal
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.None)]  
-public class LoanApp : IExplicit {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.None)]
+public class LoanApp : IExplicit
+{
+    int IExplicit.M() { return 0; }
+}
+```
   
  El valor **ClassInterfaceType.None** impide que la interfaz de clase se genere cuando los metadatos de la clase se exportan a una biblioteca de tipos. En el ejemplo anterior, los clientes COM tan solo pueden tener acceso a la clase `LoanApp` a través de la interfaz `IExplicit`.  
   
@@ -163,20 +164,31 @@ public class LoanApp : IExplicit {
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.AutoDispatch]  
-public class LoanApp : IAnother {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.AutoDispatch)]
+public class LoanApp
+{
+    public int M() { return 0; }
+}
+```
   
  Para obtener el DispId de un miembro de interfaz en tiempo de ejecución, los clientes COM pueden llamar a **IDispatch.GetIdsOfNames**. Para invocar un método en la interfaz, pase el DispId devuelto como argumento a **IDispatch.Invoke**.  
   
 ### <a name="restrict-using-the-dual-interface-option-for-the-class-interface"></a>Restrinja el uso de la opción de interfaz dual en la interfaz de clase.  
  Las interfaces duales permiten el enlace en tiempo de diseño y en tiempo de ejecución de los clientes COM con los miembros de interfaz. El establecimiento de la interfaz de clase en dual puede ser útil en tiempo de diseño y durante las pruebas. Esta opción también es aceptable para una clase administrada (y sus clases base) que no se va a modificar nunca. En todos los demás casos, no es necesario establecer la interfaz de clase en dual.  
   
- Una interfaz dual generada automáticamente puede ser apropiada en algunos casos, pero a menudo genera complicaciones de control de versiones. Por ejemplo, los clientes COM que usen la interfaz de clase de una clase derivada se pueden interrumpir con facilidad si se hacen cambios en la clase base. Si la clase base es de terceros, el usuario no tiene control sobre el diseño de la interfaz de clase. Además, a diferencia de una interfaz de solo envío, una interfaz dual (**ClassInterface.AutoDual**) proporciona una descripción de la interfaz de clase en la biblioteca de tipos exportada. Dicha descripción hace que los clientes enlazados en tiempo de ejecución almacenen en caché los identificadores DispId en tiempo de ejecución.  
+ Una interfaz dual generada automáticamente puede ser apropiada en algunos casos, pero a menudo genera complicaciones de control de versiones. Por ejemplo, los clientes COM que usen la interfaz de clase de una clase derivada se pueden interrumpir con facilidad si se hacen cambios en la clase base. Si la clase base es de terceros, el usuario no tiene control sobre el diseño de la interfaz de clase. Además, a diferencia de una interfaz de solo envío, una interfaz dual (**ClassInterfaceType.AutoDual**) proporciona una descripción de la interfaz de clase en la biblioteca de tipos exportada. Dicha descripción hace que los clientes enlazados en tiempo de ejecución almacenen en caché los identificadores DispId en tiempo de ejecución.  
   
+### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Asegúrese de que todas las notificaciones de eventos COM están enlazadas tardíamente.
+
+De forma predeterminada, la información de tipos COM se inserta directamente en los ensamblados administrados, lo que elimina la necesidad de ensamblados de interoperabilidad primarios (PIA). Sin embargo, una de las limitaciones de la información de tipo insertada es que no admite la entrega de notifications de eventos COM mediante llamadas enlazadas tempranamente vtable, sino que solo admite llamadas `IDispatch::Invoke` enlazadas tardíamente.
+
+Si la aplicación requiere las llamadas enlazadas tempranamente a los métodos de interfaz de eventos COM, puede establecer la propiedad **Incrustar tipos de interoperabilidad** en Visual Studio en `true` o incluir el siguiente elemento en el archivo de proyecto:
+
+```xml
+<EmbedInteropTypes>True</EmbedInteropTypes>
+```
+
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
  [Contenedores COM](com-wrappers.md)  
