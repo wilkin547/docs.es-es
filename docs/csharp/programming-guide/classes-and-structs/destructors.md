@@ -1,20 +1,20 @@
 ---
 title: Finalizadores (Guía de programación de C#)
-ms.date: 05/10/2017
+ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b24884d2650a5e799eda630bc65f3c5a5c2508a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526040"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127269"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
-Los finalizadores se usan para destruir instancias de clases.  
+Los finalizadores (también denominados **destructores**) se usan para realizar cualquier limpieza final necesaria cuando el recolector de elementos no utilizados recopila una instancia de clase.  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -63,7 +63,7 @@ protected override void Finalize()
   
  Es posible forzar la recolección de elementos no utilizados llamando a <xref:System.GC.Collect%2A>, pero en general debe evitarse su uso por razones de rendimiento.  
   
-## <a name="using-finalizers-to-release-resources"></a>Usar finalizadores para liberar recursos  
+## <a name="using-finalizers-to-release-resources"></a>Uso de finalizadores para liberar recursos  
  En general, C# no requiere tanta administración de memoria como se necesita al desarrollar con un lenguaje que no está diseñado para un runtime con recolección de elementos no utilizados. Esto es debido a que el recolector de elementos no utilizados de .NET Framework administra implícitamente la asignación y liberación de memoria para los objetos. En cambio, cuando la aplicación encapsule recursos no administrados como ventanas, archivos y conexiones de red, debería usar finalizadores para liberar dichos recursos. Cuando el objeto cumple los requisitos para su finalización, el recolector de elementos no utilizados ejecuta el método `Finalize` del objeto.  
   
 ## <a name="explicit-release-of-resources"></a>Liberación explícita de recursos  
@@ -83,7 +83,8 @@ protected override void Finalize()
  [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Para más información, vea la sección sobre [destructores](~/_csharplang/spec/classes.md#destructors) de la [Especificación del lenguaje C#](../../language-reference/language-specification/index.md).
   
 ## <a name="see-also"></a>Vea también
 

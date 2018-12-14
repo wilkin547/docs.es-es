@@ -4,12 +4,12 @@ description: Obtenga información sobre las plantillas personalizadas para cualq
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126268"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -129,7 +129,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>Para desinstalar una plantilla de un archivo nupkg local
 
-Si quiere desinstalar la plantilla, no intente usar la ruta de acceso al archivo *nupkg*. *Si intenta desinstalar una plantilla mediante `dotnet new -u <PATH_TO_NUPKG_FILE>`, se produce un error.* Haga referencia al paquete por su `id`:
+Para desinstalar la plantilla, no intente usar la ruta de acceso al archivo *nupkg*. Si intenta desinstalar una plantilla con `dotnet new -u <PATH_TO_NUPKG_FILE>`, se produce un error. Haga referencia al paquete por su `id`:
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +137,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>Para desinstalar una plantilla desde un directorio de sistema de archivos
 
-`FILE_SYSTEM_DIRECTORY` es la carpeta del proyecto que contiene el proyecto y la carpeta *.template.config*:
+`FILE_SYSTEM_DIRECTORY` es la carpeta del proyecto que contiene el proyecto y la carpeta *.template.config*. La ruta de acceso especificada debe ser la ruta de acceso absoluta. Si intenta desinstalar una plantilla con una ruta de acceso relativa, se produce un error. Para más información, vea el artículo sobre [dotnet new](dotnet-new.md).
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Vea también
 
-* [Creación de una plantilla personalizada para dotnet new (tutorial)](../tutorials/create-custom-template.md)  
-* [Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)  
-* [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-* [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) (Cómo crear sus propias plantillas para dotnet new)  
-* [Esquema *template.json* en el Almacenamiento del esquema JSON](http://json.schemastore.org/template)  
+* [Creación de una plantilla personalizada para dotnet new (tutorial)](../tutorials/create-custom-template.md)
+* [Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki)
+* [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
+* [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) (Cómo crear sus propias plantillas para dotnet new)
+* [Esquema *template.json* en el Almacenamiento del esquema JSON](http://json.schemastore.org/template)

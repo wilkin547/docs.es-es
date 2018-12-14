@@ -3,12 +3,12 @@ title: Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 description: El Visualizador de sintaxis proporciona una herramienta visual para explorar los modelos que genera el SDK de .NET Compiler Platform para el código.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750211"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143572"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 
@@ -32,7 +32,7 @@ Cree un nuevo proyecto con los comandos **Archivo** > **Nuevo proyecto**. Puede 
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualizar un árbol de sintaxis de C#](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![Visualizar un árbol de sintaxis de VB](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -62,7 +62,7 @@ Haga clic con el botón derecho en cualquier elemento del árbol y haga clic en 
 El visualizador muestra una representación gráfica del subárbol cuya raíz se encuentra en el elemento seleccionado. Siga estos pasos para el nodo **MethodDeclaration** correspondiente al método `Main()` en el ejemplo de C#. El visualizador muestra un gráfico de sintaxis que tiene este aspecto:
 
 ![Ver un gráfico de sintaxis de C#](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 Pruebe lo mismo para el nodo **SubBlock** correspondiente al método `Main()` en el ejemplo de VB anterior. El visualizador muestra un gráfico de sintaxis que tiene este aspecto:
 
@@ -128,7 +128,7 @@ Inspeccione el símbolo correspondiente a cualquier tipo, método o propiedad de
 
 Los ejemplos de VB anteriores se pueden replicar fácilmente en C#. Escriba `using C = System.Console;` en lugar de `Imports C = System.Console` para el alias. Los pasos anteriores en C# producen resultados idénticos en la ventana del visualizador.
 
-Las operaciones de inspección semántica solo están disponibles en los nodos. No están disponibles en tokens o curiosidades. No todos los nodos tienen información semántica interesante que inspeccionar. Cuando un nodo no tiene información semántica interesante, al hacer clic en **View * Symbol (if any)** [Ver símbolo * (si existe)] se muestra una cuadrícula de propiedades en blanco.
+Las operaciones de inspección semántica solo están disponibles en los nodos. No están disponibles en tokens o curiosidades. No todos los nodos tienen información semántica interesante que inspeccionar. Cuando un nodo no tiene información semántica interesante, al hacer clic en **View \* Symbol (if any)** [Ver símbolo * (si existe)] se muestra una cuadrícula de propiedades en blanco.
 
 Puede leer más sobre las API para realizar análisis semánticos en el documento introductorio [Trabajar con semántica](work-with-semantics.md).
 

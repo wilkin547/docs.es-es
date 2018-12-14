@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44260076"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145600"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Crear y producir excepciones (Guía de programación de C#)
 Las excepciones se usan para indicar que se ha producido un error mientras se ejecutaba el programa. Se crean los objetos de excepción que describen un error y, luego, se *producen* con la palabra clave [throw](../../../csharp/language-reference/keywords/throw.md). Después, el tiempo de ejecución busca el controlador de excepciones más compatible.  
@@ -41,7 +41,7 @@ Las excepciones se usan para indicar que se ha producido un error mientras se ej
   
  Todas las excepciones contienen una propiedad denominada <xref:System.Exception.Message%2A>. Esta cadena debe establecerse para que explique el motivo de la excepción. Tenga en cuenta que no se debe colocar información confidencial en materia de seguridad en el texto del mensaje. Además de <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> contiene una propiedad denominada <xref:System.ArgumentException.ParamName%2A> que debe establecerse en el nombre del argumento que ha provocado que se genere la excepción. En el caso de un establecedor de propiedades, <xref:System.ArgumentException.ParamName%2A> debe establecerse en `value`.  
   
- Los miembros de métodos públicos y protegidos deben producir excepciones cada vez que no puedan finalizar sus funciones previstas. La clase de excepciones que se produce debe ser la excepción más específica disponible que se ajuste a las condiciones del error. Estas excepciones se deben documentar como parte de la funcionalidad de la clase, y las clases derivadas o actualizaciones de la clase original deben mantener el mismo comportamiento para la compatibilidad con versiones anteriores.  
+ Los métodos públicos y protegidos deben producir excepciones cada vez que no puedan finalizar sus funciones previstas. La clase de excepciones que se produce debe ser la excepción más específica disponible que se ajuste a las condiciones del error. Estas excepciones se deben documentar como parte de la funcionalidad de la clase, y las clases derivadas o actualizaciones de la clase original deben mantener el mismo comportamiento para la compatibilidad con versiones anteriores.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Aspectos que se deben evitar al producir excepciones  
  En la siguiente lista se identifican los procedimientos que se deben evitar al producir excepciones:  

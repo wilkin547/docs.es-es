@@ -1,6 +1,6 @@
 ---
 title: 'Operador ?: (Referencia de C#)'
-ms.date: 07/20/2015
+ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -9,76 +9,83 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 3e45ff6eaaefa5829c3ed9415abe1a12b7a1d069
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.openlocfilehash: cc9bde1d60a3272e2f24cfc05761171a31029c75
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "50980627"
 ---
 # <a name="-operator-c-reference"></a>Operador ?: (Referencia de C#)
 
-El operador condicional (`?:`), normalmente conocido como un operador condicional ternario, devuelve uno de dos valores según el valor de una expresión booleana. A continuación se muestra la sintaxis del operador condicional.  
+El operador condicional `?:`, normalmente conocido como operador condicional ternario, evalúa una expresión booleana y devuelve el resultado de evaluar una de dos expresiones, en función de que la expresión booleana se evalúe como `true` o `false`. A partir C# 7.2, la [expresión condicional ref](#conditional-ref-expression) devuelve la referencia al resultado de una de las dos expresiones.
+
+La sintaxis del operador condicional es la siguiente:
 
 ```csharp
-condition ? first_expression : second_expression;  
+condition ? consequence : alternative
 ```
 
-A partir C# 7.2, `first_expression` y `second_expression` pueden ser [ expresiones `ref`](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md):
+La expresión `condition` debe evaluarse como `true` o `false`. Si `condition` se evalúa como `true`, se evalúa la expresión `consequence` y su resultado se convierte en el resultado de la operación. Si `condition` se evalúa como `false`, se evalúa la expresión `alternative` y su resultado se convierte en el resultado de la operación. Solo se evalúan `consequence` o `alternative`.
+
+Los tipos de `consequence` y `alternative` deben coincidir o debe haber una conversión implícita de un tipo al otro.
+
+El operador condicional es asociativo a la derecha, es decir, una expresión de la forma
 
 ```csharp
-ref condition ? ref first_expression : ref second_expression;  
+a ? b : c ? d : e
 ```
 
-El resultado se puede asignar a una variable `ref` o `ref readonly`, o bien a una variable sin ninguno de los modificadores.
-
-## <a name="remarks"></a>Comentarios
-
-`condition` debe evaluarse como `true` o `false`. Si `condition` es `true`, `first_expression` se evalúa y se convierte en el resultado. Si `condition` es `false`, `second_expression` se evalúa y se convierte en el resultado. Solo se evalúa una de las dos expresiones. Esto es especialmente importante para las expresiones donde el resultado es `ref`, como en el ejemplo siguiente válido:
+se evalúa como
 
 ```csharp
-ref (storage != null) ? ref storage[3] : ref defaultValue;
+a ? b : (c ? d : e)
 ```
 
-La referencia a `storage` no se evalúa cuando `storage` es NULL.
+En el siguiente ejemplo se muestra el uso del operador condicional:
 
-Cuando el resultado es un valor, el tipo de `first_expression` y `second_expression` debe coincidir, o bien debe existir una conversión implícita de un tipo al otro. Cuando el resultado es `ref`, el tipo de `first_expression` y `second_expression` debe ser el mismo.
+[!code-csharp[non ref condtional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
 
-Puede expresar cálculos que, de lo contrario, podrían requerir una construcción `if-else` más concisa mediante el operador condicional. Por ejemplo, el código siguiente usa primero una instrucción `if` y después un operador condicional para clasificar un entero como positivo o negativo.
+## <a name="conditional-ref-expression"></a>Expresión condicional ref
+
+A partir C# 7.2, puede utilizar la expresión condicional ref para devolver la referencia al resultado de una de las dos expresiones. Puede asignar esa referencia a una variable [ref local](../keywords/ref.md#ref-locals) o [ref readonly local](../keywords/ref.md#ref-readonly-locals), o bien usarla como un [valor devuelto de referencia](../keywords/ref.md#reference-return-values) o como un [parámetro de método `ref`](../keywords/ref.md#passing-an-argument-by-reference).
+
+La sintaxis de la expresión condicional ref es la siguiente:
 
 ```csharp
-int input = Convert.ToInt32(Console.ReadLine());  
-string classify;  
-  
-// if-else construction.  
-if (input > 0)  
-    classify = "positive";  
-else  
-    classify = "negative";  
-  
-// ?: conditional operator.  
-classify = (input > 0) ? "positive" : "negative";  
+condition ? ref consequence : ref alternative
 ```
 
-El operador condicional es asociativo a la derecha. La expresión `a ? b : c ? d : e` se evalúa como `a ? b : (c ? d : e)`, no como `(a ? b : c) ? d : e`.  
-  
+Al igual que el operador condicional original, la expresión condicional ref evalúa solo una de las dos expresiones: ya sea `consequence` o `alternative`.
+
+En el caso de la expresión condicional ref, los tipos de `consequence` y `alternative` deben coincidir.
+
+En el siguiente ejemplo se muestra el uso de la expresión condicional ref:
+
+[!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+
+Para más información, vea la [nota de propuesta de características](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md).
+
+## <a name="conditional-operator-and-an-ifelse-statement"></a>Operador condicional y una instrucción `if..else`
+
+El uso del operador condicional a través de una instrucción [if-else](../keywords/if-else.md) podría traducirse en código más conciso en aquellos casos en los que potencialmente tenga que calcular un valor. El ejemplo siguiente muestra dos maneras de clasificar un entero como negativo o no negativo:
+
+[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
 El operador condicional no se puede sobrecargar.
-  
-## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra el operador condicional cuyo resultado es un valor:
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-[!code-csharp[csRefOperators?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
-
-En el ejemplo siguiente alternativo se muestra el operador condicional cuando el resultado es una referencia:
-
-[!code-csharp[csRefOperatorsRef?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+Para más información, vea la sección sobre [operadores condicionales](~/_csharplang/spec/expressions.md#conditional-operator) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Operadores de C#](../../../csharp/language-reference/operators/index.md)  
-- [if-else](../../../csharp/language-reference/keywords/if-else.md)  
-- [Operadores ?. y ?[]](../../../csharp/language-reference/operators/null-conditional-operators.md)  
-- [Operador !](../../../csharp/language-reference/operators/null-coalescing-operator.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Operadores de C#](index.md)
+- [Instrucción if-else](../keywords/if-else.md)
+- [Operadores ?. y ?[]](null-conditional-operators.md)
+- [Operador !](null-coalescing-operator.md)
+- [ref (palabra clave)](../keywords/ref.md)

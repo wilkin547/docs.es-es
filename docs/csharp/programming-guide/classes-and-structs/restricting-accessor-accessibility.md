@@ -9,15 +9,15 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 66e6f0da417e62bb592fdd8654f85cdb80ccf9bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1dd0f81a454475d6d668324198eb498cdfe20310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197211"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149554"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Restringir la accesibilidad del descriptor de acceso (Guía de programación de C#)
-Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) de una propiedad o un indexador se denominan *descriptores de acceso*. De forma predeterminada, estos descriptores de acceso tienen la misma visibilidad o nivel de acceso: los de la propiedad o el indexador al que pertenecen. Para obtener más información, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). En cambio, a veces resulta útil restringir el acceso a uno de estos descriptores de acceso. Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, mientras que se mantiene el descriptor de acceso `get` accesible públicamente. Por ejemplo:  
+Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) de una propiedad o un indexador se denominan *descriptores de acceso*. De forma predeterminada, estos descriptores de acceso tienen la misma visibilidad o nivel de acceso de la propiedad o el indexador al que pertenecen. Para obtener más información, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). En cambio, a veces resulta útil restringir el acceso a uno de estos descriptores de acceso. Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, mientras que se mantiene el descriptor de acceso `get` accesible públicamente. Por ejemplo:  
   
  [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
@@ -35,7 +35,7 @@ Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../
 -   El nivel de accesibilidad del descriptor de acceso debe ser más restrictivo que el nivel de accesibilidad de la propiedad o el indexador.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>Modificadores de acceso en descriptores de acceso de invalidación  
- Al invalidar una propiedad o un indexador, los descriptores de acceso invalidados deben ser accesibles para el código de invalidación. Además, el nivel de accesibilidad de la propiedad y el indexador (y el de los descriptores de acceso) debe coincidir con la propiedad y el indexador invalidados correspondientes y los descriptores de acceso. Por ejemplo:  
+ Al invalidar una propiedad o un indexador, los descriptores de acceso invalidados deben ser accesibles para el código de invalidación. Además, la accesibilidad de la propiedad y el indexador y sus descriptores de acceso debe coincidir con la propiedad y el indexador invalidados correspondientes y sus descriptores de acceso. Por ejemplo:  
   
  [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   

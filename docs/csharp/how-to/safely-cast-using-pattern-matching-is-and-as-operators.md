@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 88289099864293b3b19da62155d58ba4797948bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216182"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149320"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as
 
@@ -23,7 +23,7 @@ El código siguiente muestra la instrucción `is` de coincidencia de patrones. C
 
 [!code-csharp-interactive[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
-El ejemplo anterior muestra una serie de características de sintaxis de coincidencia de patrones. Las instrucciones `if (a is Mammal m)` e `if (o is Mammal m)` combinan la prueba con una asignación de inicialización. La asignación solo produce cuando la prueba se realiza correctamente. La variable `m` solo está en ámbito en la instrucción `if` insertada donde se ha asignado. No se puede acceder a `m` más adelante en el mismo método. Pruébela en la ventana interactiva.
+El ejemplo anterior muestra una serie de características de sintaxis de coincidencia de patrones. Las instrucciones `if (a is Mammal m)` e `if (o is Mammal m)` combinan la prueba con una asignación de inicialización. La asignación solo se produce cuando la prueba se realiza correctamente. La variable `m` solo está en ámbito en la instrucción `if` insertada donde se ha asignado. No se puede acceder a `m` más adelante en el mismo método. Pruébela en la ventana interactiva.
 
 También puede usar la misma sintaxis para probar si un [tipo que acepta valores NULL](../programming-guide/nullable-types/index.md) tiene un valor, como se muestra en el código de ejemplo siguiente:
 

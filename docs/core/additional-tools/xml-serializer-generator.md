@@ -1,17 +1,17 @@
 ---
-title: Usar el generador de serializador XML de Microsoft en .NET Core
-description: Información general sobre el generador de serializador XML de Microsoft.
+title: 'Generador de serializador XML de Microsoft: .NET Core'
+description: Información general sobre el generador de serializador XML de Microsoft. Use el generador de serializador XML para generar un ensamblado de serialización XML para los tipos contenidos en el proyecto.
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 98d85821784757db903c97e240c55a3d7bb656d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214561"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151764"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Usar el generador de serializador XML de Microsoft en .NET Core
 
@@ -24,13 +24,13 @@ Este tutorial muestra cómo usar el generador de serializador XML de Microsoft e
 > * Cómo agregar una clase y un XmlSerializer
 > * Cómo compilar y ejecutar la aplicación 
 
-Tal y como sucede con el [generador de serializador de XML (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) para .NET Framework, el [paquete Microsoft.XmlSerializer.Generator de NuGet ](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) es el equivalente para proyectos de .NET Core y .NET Standard. Crea un ensamblado de serialización de XML para los tipos incluidos en un ensamblado para mejorar el rendimiento de inicio de la serialización XML al serializar o deserializar objetos de esos tipos con <xref:System.Xml.Serialization.XmlSerializer>.
+Tal y como sucede con el [generador de serializador de XML (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) para .NET Framework, el [paquete Microsoft.XmlSerializer.Generator de NuGet ](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) es el equivalente para proyectos de .NET Core y .NET Standard. Crea un ensamblado de serialización de XML para los tipos contenidos en un ensamblado para mejorar el rendimiento de inicio de la serialización XML al serializar o deserializar objetos de esos tipos con <xref:System.Xml.Serialization.XmlSerializer>.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para realizar este tutorial:
 
-* Instalar [.NET Core SDK 2.1.3 o posterior](https://www.microsoft.com/net/download)
+* Instale el [SDK de .NET Core 2.1 o versiones posteriores](https://www.microsoft.com/net/download).
 * Instale el editor de código que prefiera si aún no lo ha hecho.
 
 > [!TIP]

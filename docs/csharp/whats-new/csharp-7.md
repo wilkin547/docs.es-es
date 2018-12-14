@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general sobre las nuevas características que entran en la próxima versión 7 del lenguaje C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237389"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155293"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
@@ -22,7 +22,7 @@ C# 7.0 incorpora varias características nuevas al lenguaje C#:
 * [Coincidencia de patrones](#pattern-matching)
     - Puede crear la lógica de bifurcación en función de tipos y valores arbitrarios de los miembros de esos tipos.
 * [Devoluciones y variables locales `ref`](#ref-locals-and-returns)
-    - Los argumentos de método y las variables locales pueden ser referencias a otro dispositivo de almacenamiento.
+    - Las variables locales de método y los valores devueltos pueden ser referencias a otro almacenamiento.
 * [Funciones locales](#local-functions)
     - Puede anidar funciones en otras funciones para limitar su ámbito y visibilidad.
 * [Más miembros con forma de expresión](#more-expression-bodied-members)
@@ -280,6 +280,8 @@ El lenguaje C# tiene otras tres reglas que protegen del uso incorrecto de las va
 La incorporación de variables locales ref y devoluciones de ref permite usar algoritmos que resultan más eficientes si se evita copiar los valores o se realizan operaciones de desreferencia varias veces.
 
 Agregar `ref` al valor devuelto es un [cambio compatible con el origen](version-update-considerations.md#source-compatible-changes). El código existente se compila, pero el valor devuelto de referencia se copia cuando se asigna. Los autores de las llamadas deben actualizar el almacenamiento para el valor devuelto en una variable local `ref` para almacenar el valor devuelto como referencia.
+
+Para más información, consulte el artículo sobre la [palabra clave ref](../language-reference/keywords/ref.md).
 
 ## <a name="local-functions"></a>Funciones locales
 

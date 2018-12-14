@@ -1,1 +1,1 @@
-**Este tema se aplica a: ✓** .NET Core SDK 2.0 y versiones posteriores
+**Este tema se aplica a: ✓** SDK de .NET Core 2.0 y versiones posteriores

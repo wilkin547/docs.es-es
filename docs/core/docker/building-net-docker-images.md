@@ -1,21 +1,21 @@
 ---
-title: Creación de imágenes de Docker de .NET Core
-description: Descripción de las imágenes de Docker y .NET Core
+title: 'Introducción a las imágenes de Docker: .NET Core'
+description: Obtenga información sobre cómo usar las imágenes de Docker de .NET Core publicadas desde el registro de Docker. También aprenderá cómo extraer imágenes y crear sus propias imágenes.
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841169"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145837"
 ---
-# <a name="building-docker-images-for-net-core-applications"></a>Creación de imágenes de Docker para aplicaciones de .NET Core
+# <a name="learn-about-docker-images-for-net-core"></a>Obtener información sobre imágenes de Docker para .NET Core
 
- Este tutorial se centra en cómo usar .NET Core en Docker. En primer lugar se analizan las distintas imágenes de Docker que ofrece y mantiene Microsoft, además de los casos de uso. Luego se aprende a compilar una aplicación de ASP.NET Core y a aplicarle Docker.
+Este tutorial se centra en cómo usar .NET Core en Docker. En primer lugar se analizan las distintas imágenes de Docker que ofrece y mantiene Microsoft, además de los casos de uso. Luego se aprende a compilar una aplicación de ASP.NET Core y a aplicarle Docker.
 
 Este tutorial ayuda a:
 > [!div class="checklist"]

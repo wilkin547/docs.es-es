@@ -4,12 +4,12 @@ description: Obtenga información sobre el modelo de programación asincrónico 
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349100"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126502"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -108,7 +108,7 @@ A continuación, se indican dos preguntas que debe hacerse antes de escribir el 
     
 Si el trabajo que tiene está **enlazado a E/S**, use `async` y `await` *sin* `Task.Run`.  *No debe* usar la Biblioteca TPL.  Esto se explica en el artículo [Async en profundidad](../standard/async-in-depth.md).
 
-Si el trabajo que tiene está **enlazado a la CPU** y le interesa la capacidad de respuesta, use `async` y `await`, pero genere el trabajo en otro subproceso *con* `Task.Run`.  Si el trabajo es adecuado para la simultaneidad y el paralelismo, también debe plantearse el uso de la Biblioteca TPL.
+Si el trabajo que tiene está **enlazado a la CPU** y le interesa la capacidad de respuesta, use `async` y `await`, pero genere el trabajo en otro subproceso *con* `Task.Run`.  Si el trabajo es adecuado para la simultaneidad y el paralelismo, también debe plantearse el uso de la [biblioteca TPL](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 Además, siempre debe medir la ejecución del código.  Por ejemplo, puede verse en una situación en la que el trabajo enlazado a la CPU no sea suficientemente costoso en comparación con la sobrecarga de cambios de contexto cuando realice multithreading.  Cada opción tiene su compensación y debe elegir el equilibrio correcto para su situación.
 

@@ -4,12 +4,12 @@ description: El comando dotnet new crea proyectos de .NET Core basados en la pla
 author: mairaw
 ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188212"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131487"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -71,6 +71,7 @@ El comando contiene una lista predeterminada de plantillas. Use `dotnet new -l` 
 | Biblioteca de clases                                | `classlib`       | [C#], F#, VB  |
 | Proyecto de prueba unitaria                            | `mstest`         | [C#], F#, VB  |
 | Proyecto de prueba xUnit                           | `xunit`          | [C#], F#, VB  |
+| Proyecto de prueba de NUnit                           | `nunit`          | [C#], F#, VB  |
 | Página de Razor                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |

@@ -1,16 +1,16 @@
 ---
 title: Mage.exe (Herramienta de generación y edición de manifiestos)
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 86aec7bbdc7b57b43e9b547aabd36f808d84d05e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46009786"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146201"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 
@@ -24,7 +24,7 @@ En Visual Studio se incluyen dos versiones de *Mage.exe* y *MageUI.exe*. Para ve
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```console
 Mage [commands] [commandOptions]
 ```
 
@@ -38,6 +38,7 @@ En la tabla siguiente se muestran los comandos que admite *Mage.exe*. Para más 
 |**-n, -New** *fileType [newOptions]*|Crea un nuevo archivo del tipo especificado. Los tipos válidos son:<br /><br /> -   `Deployment`: crea un nuevo manifiesto de implementación.<br />-   `Application`: crea un nuevo manifiesto de aplicación.<br /><br /> Si no especifica parámetros adicionales con este comando, se creará un archivo del tipo adecuado con etiquetas y valores de atributo predeterminados adecuados.<br /><br /> Use la opción **-ToFile** (consulte la tabla siguiente) para especificar el nombre de archivo y la ruta de acceso del nuevo archivo.<br /><br /> Use la opción **-FromDirectory** (consulte la tabla siguiente) para crear un manifiesto de aplicación con todos los ensamblados de una aplicación agregados a la sección \<dependency> del manifiesto.|
 |**-u, -Update** *[filePath] [updateOptions]*|Realiza uno o varios cambios en un archivo de manifiesto. No tiene que especificar el tipo de archivo que va a editar. Mage.exe examinará el archivo mediante un conjunto de técnicas heurísticas para determinar si se trata de un manifiesto de implementación o de aplicación.<br /><br /> Si ya ha firmado un archivo con un certificado, **-Update** quitará el bloque de firma clave. Esto se debe a que la firma clave contiene un hash del archivo, y al modificar el archivo se invalida el hash.<br /><br /> Use la opción **-ToFile** (consulte la tabla siguiente) para especificar un nuevo nombre de archivo y una nueva ruta de acceso en lugar de sobrescribir el archivo existente.|
 |**-s, -Sign** `[signOptions]`|Usa un par de claves o un certificado X509 para firmar un archivo. Las firmas se insertan como elementos XML dentro de los archivos.<br /><br /> Debe estar conectado a Internet al firmar un manifiesto que especifica un valor **-TimestampUri** .|
+|**-ver, -Verify** *[manifest-filename]*|Comprueba que el manifiesto esté firmado correctamente. No se puede combinar con otros comandos. <br/><br/>**Disponible en .NET Framework 4.7 y versiones posteriores.**|
 |**-h, -?, -Help** *[verbose]*|Describe todos los comandos disponibles y sus opciones. Especifique `verbose` para obtener ayuda detallada.|
 
 ## <a name="new-and-update-command-options"></a>Opciones de los comandos New y Update
@@ -49,12 +50,14 @@ En la tabla siguiente se muestran las opciones que admiten los comandos `-New` y
 |**-a, -Algorithm**|sha1RSA|Manifiestos de aplicación.<br /><br /> Manifiestos de implementación.|Especifica el algoritmo con el que se generarán los resúmenes de dependencia. El valor debe ser "sha256RSA" o "sha1RSA.<br /><br /> Úselo con la opción "-Update". Esta opción se omite cuando se usa la opción "-Sign".|
 |**-appc, -AppCodeBase** `manifestReference`||Manifiestos de implementación.|Inserta una dirección URL o una referencia a la ruta de acceso del archivo en el archivo de manifiesto de aplicación. Este valor debe ser la ruta de acceso completa al manifiesto de aplicación.|
 |**-appm, -AppManifest** `manifestPath`||Manifiestos de implementación.|Inserta una referencia al manifiesto de aplicación de una implementación en su manifiesto de implementación.<br /><br /> El archivo indicado en `manifestPath` debe existir; de lo contrario, *Mage.exe* emitirá un error. Si el archivo al que se hace referencia mediante `manifestPath` no es un manifiesto de aplicación, *Mage.exe* emitirá un error.|
-|**-cf, -CertFile** `filePath`||Todos los tipos de archivo.|Especifica la ubicación de un certificado digital X509 para firmar un manifiesto. Esta opción se puede usar junto con la opción **-Password** si el certificado requiere una contraseña.<br/><br/>A partir del SDK de .NET Framework 4.6.2, que se distribuye con Visual Studio, con Windows SDK y con el paquete de desarrollador de .NET Framework 4.6.2, *Mage.exe* firma los manifiestos con CNG, así como con certificados CAPI.|
+|**-cf, -CertFile** `filePath`||Todos los tipos de archivo.|Especifica la ubicación de un certificado digital X509 para firmar un manifiesto o archivo de licencia. Esta opción se puede usar junto con la opción **-Password** si el certificado requiere una contraseña para archivos de intercambio de información personal (PFX). A partir de .NET Framework 4.7, si el archivo no contiene una clave privada, se necesita una combinación de las opciones **-CryptoProvider** y **-KeyContainer** opciones.<br/><br/>A partir de .NET Framework 4.6.2, *Mage.exe* firma manifiestos con CNG así como certificados CAPI.|
 |**-ch, -CertHash** `hashSignature`||Todos los tipos de archivo.|El hash de un certificado digital guardado en el almacén de certificados personal del equipo cliente. Corresponde a la cadena de huella digital de un certificado digital que aparece en la consola de certificados de Windows.<br /><br /> `hashSignature` puede ir en mayúsculas o minúsculas y puede especificarse como cadena única, o bien, separando cada octeto de la huella digital mediante espacios y poniendo toda la huella digital entre comillas.|
+|**-csp, -CryptoProvider** `provider-name`||Todos los tipos de archivo.|Especifica el proveedor de servicios criptográficos (CSP) que contiene el contenedor de claves privadas. Esta opción requiere la opción **-KeyContainer**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
 |**-fd, -FromDirectory** `directoryPath`||Manifiestos de aplicación.|Rellena el manifiesto de aplicación con las descripciones de todos los ensamblados y archivos existentes en `directoryPath`, incluidos todos los subdirectorios, donde `directoryPath` es el directorio que contiene la aplicación que desea implementar. Para cada archivo del directorio, *Mage.exe* decide si se trata de un ensamblado o un archivo estático. Si es un ensamblado, agrega una etiqueta `<dependency>` y un atributo `installFrom` a la aplicación con el nombre del ensamblado, la base de código y la versión. Si es un archivo estático, agrega una etiqueta `<file>` . *Mage.exe* también usa un conjunto simple de técnicas heurísticas para detectar el archivo ejecutable principal de la aplicación, y lo marca como punto de entrada de la aplicación ClickOnce en el manifiesto.<br /><br /> *Mage.exe* nunca marca automáticamente un archivo como archivo de "datos". Esto debe hacerlo manualmente. Para obtener más información, consulta [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> *Mage.exe* también genera un hash para cada archivo basándose en su tamaño. ClickOnce usa estos hashes para garantizar que nadie haya manipulado los archivos de implementación desde que se creó el manifiesto. Si se modifica alguno de los archivos de la implementación, puede ejecutar *Mage.exe* con el comando **-Update** y la opción **-FromDirectory**, para actualizar los hashes y las versiones del ensamblado de todos los archivos a los que se hace referencia.<br /><br /> **-FromDirectory** incluirá todos los archivos de todos los subdirectorios de `directoryPath`.<br /><br /> Si usa **-FromDirectory** con el comando **-Update**, *Mage.exe* quitará todos los archivos del manifiesto de aplicación que no existan en el directorio.|
 |**-if, -IconFile**  `filePath`||Manifiestos de aplicación.|Especifica la ruta de acceso completa a un archivo de icono .ICO. Este icono aparece junto al nombre de la aplicación en el menú Inicio y en su entrada Agregar o quitar programas. Si no se especifica ningún icono, se usa el icono predeterminado.|
 |**-ip, -IncludeProviderURL**  `url`|true|Manifiestos de implementación.|Indica si el manifiesto de implementación incluye el valor de ubicación de actualizaciones establecido por **-ProviderURL**.|
 |**-i, -Install** `willInstall`|true|Manifiestos de implementación.|Indica si la aplicación ClickOnce debe instalarse en el equipo local o si debe ejecutarse desde la Web. Cuando se instala una aplicación, esta aparece en el menú **Inicio** de Windows. Los valores válidos son "true" o "t", y "false" o "f".<br /><br /> Si especifica la opción **-MinVersion** y un usuario tiene instalada una versión anterior a **-MinVersion** , forzará la instalación de la aplicación, independientemente del valor que pase a **-Install**.<br /><br /> Esta opción no se puede combinar con la opción **-ProviderURL** . Si intenta especificar ambas para el mismo manifiesto, provocará un error.|
+|**-kc, -KeyContainer** `name`||Todos los tipos de archivo.|Especifica el contenedor de claves que contiene el nombre de la clave privada. Esta opción requiere la opción **CyproProvider**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
 |**-mv, -MinVersion**  `[version]`|La versión indicada en el manifiesto de implementación de ClickOnce tal y como especifica la marca **-Version** .|Manifiestos de implementación.|La versión mínima de esta aplicación que un usuario puede ejecutar. Esta marca hace que la versión con nombre de la aplicación sea una actualización necesaria. Si publica una versión del producto con una actualización para un cambio importante o una reparación de un error crítico de seguridad, puede usar esta marca para especificar que se debe instalar esta actualización y que el usuario no puede continuar ejecutando las versiones anteriores.<br /><br /> `version` tiene la misma semántica que el argumento de la marca **-Version** .|
 |**-n, -Name** `nameString`|Implementar|Todos los tipos de archivo.|El nombre usado para identificar la aplicación. ClickOnce usará este nombre para identificar la aplicación en el menú **Inicio** (si la aplicación se ha configurado para instalarse automáticamente) y en los cuadros de diálogo Elevación de permisos. **Nota:** Si va a actualizar un manifiesto existente y no especifica el nombre del publicador con esta opción, *Mage.exe* actualiza el manifiesto con el nombre de la organización definido en el equipo. Si desea usar otro nombre, utilice esta opción y especifique el nombre del publicador deseado.|
 |**-pwd, -Password** `passwd`||Todos los tipos de archivo.|La contraseña usada para firmar un manifiesto con un certificado digital. Se debe usar junto con la opción **-CertFile** .|
@@ -75,8 +78,10 @@ En la siguiente tabla se muestran las opciones que admite el comando `-Sign` y q
 
 |Opciones|Descripción|
 |-------------|-----------------|
-|**-cf, -CertFile** `filePath`|Especifica la ubicación de un certificado digital para firmar un manifiesto. Esta opción se puede usar junto con la opción **-Password** .|
+|**-cf, -CertFile** `filePath`|Especifica la ubicación de un certificado digital para firmar un manifiesto. Esta opción se puede usar junto con la opción **-Password** si el certificado requiere una contraseña para archivos de intercambio de información personal (PFX). A partir de .NET Framework 4.7, si el archivo no contiene una clave privada, se necesita una combinación de las opciones **-CryptoProvider** y **-KeyContainer** opciones.<br/><br/>A partir de .NET Framework 4.6.2, *Mage.exe* firma manifiestos con CNG así como certificados CAPI.|
 |**-ch, -CertHash** `hashSignature`|El hash de un certificado digital guardado en el almacén de certificados personal del equipo cliente. Corresponde a la propiedad de huella digital de un certificado digital que aparece en la consola de certificados de Windows.<br /><br /> `hashSignature` puede ir en mayúsculas o minúsculas y puede especificarse como cadena única, o bien, separando cada octeto de la huella digital mediante espacios y poniendo toda la huella digital entre comillas.|
+**-csp, -CryptoProvider** `provider-name`|Especifica el proveedor de servicios criptográficos (CSP) que contiene el contenedor de claves privadas. Esta opción requiere la opción **-KeyContainer**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
+|**-kc, -KeyContainer** `name`|Especifica el contenedor de claves que contiene el nombre de la clave privada. Esta opción requiere la opción **CyproProvider**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
 |**-pwd, -Password** `passwd`|La contraseña usada para firmar un manifiesto con un certificado digital. Se debe usar junto con la opción **-CertFile** .|
 |**-t, -ToFile** `filePath`|Especifica la ruta de acceso de salida del archivo que se ha creado o modificado.|
 
@@ -86,7 +91,7 @@ Ninguno de los argumentos de *Mage.exe* distingue entre mayúsculas y minúscula
 
 Todos los argumentos que se usan con el comando **-Sign** se pueden usar en cualquier momento con los comandos **-New** o **-Update** . Los siguientes comandos son equivalentes.
 
-```
+```console
 mage -Sign c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ```
@@ -146,58 +151,70 @@ El siguiente es un elemento `<framework>` de ejemplo cuyo destino es [!INCLUDE[n
 
 En el siguiente ejemplo se abre la interfaz de usuario para Mage (*MageUI.exe*).
 
-```
+```console
 mage
 ```
 
 En los ejemplos siguientes se crean un manifiesto de implementación y un manifiesto de aplicación predeterminados. Estos archivos se crean en el directorio de trabajo actual y reciben los nombres deploy.application y application.exe.manifest respectivamente.
 
-```
+```console
 mage -New Deployment
 mage -New Application
 ```
 
 En el siguiente ejemplo se crea un manifiesto de aplicación con todos los ensamblados y archivos de recursos del directorio actual.
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0
 ```
 
 El ejemplo siguiente es la continuación del ejemplo anterior; en él se especifican el nombre de implementación y el microprocesador de destino. También se especifica la dirección URL donde ClickOnce debe comprobar si hay actualizaciones.
 
-```
+```console
 mage -New Application -FromDirectory . -Name "Hello, World! Application" -Version 1.0.0.0 -Processor "x86" -ProviderUrl http://internalserver/HelloWorld/
 ```
 
 En el ejemplo siguiente se muestra cómo crear un par de manifiestos para implementar una aplicación WPF que se hospedará en Internet Explorer.
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0 -WPFBrowserApp true
 mage -New Deployment -AppManifest 1.0.0.0\application.manifest -WPFBrowserApp true
 ```
 
+En el siguiente ejemplo se crea un manifiesto de aplicación con todos los ensamblados y archivos de recursos del directorio actual y se firma.
+
+```console
+mage -New Application -FromDirectory . -Version 1.0.0.0 -KeyContainer keypair.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
+```
+
 En el siguiente ejemplo se actualiza un manifiesto de implementación con información procedente de un manifiesto de aplicación, y se establece la base de código para la ubicación del manifiesto de aplicación.
 
-```
+```console
 mage -Update HelloWorld.deploy -AppManifest 1.0.0.0\application.manifest -AppCodeBase http://internalserver/HelloWorld.deploy
 ```
 
 En el siguiente ejemplo se edita el manifiesto de implementación para forzar una actualización de la versión instalada del usuario.
 
-```
+```console
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -MinVersion 1.1.0.0
 ```
 
 En el ejemplo siguiente se indica al manifiesto de implementación que recupere el manifiesto de aplicación de otro directorio.
 
-```
+```console
 mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.0.0/
 ```
 
 En el ejemplo siguiente se firma un manifiesto de implementación existente mediante un certificado digital del directorio de trabajo actual.
 
-```
+```console
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
+```
+
+En el ejemplo siguiente se firma un manifiesto de implementación existente mediante un certificado digital y una clave privada del directorio de trabajo actual.
+
+```console
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>Vea también

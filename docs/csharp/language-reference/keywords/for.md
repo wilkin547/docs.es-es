@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511733"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149242"
 ---
 # <a name="for-c-reference"></a>for (Referencia de C#)
 
@@ -103,16 +103,14 @@ En el ejemplo siguiente se define el bucle `for` infinito:
 
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para más información, vea la sección [La declaración for](~/_csharplang/spec/statements.md#the-for-statement) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [La instrucción for (especificación del lenguaje C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
-- [foreach, in](foreach-in.md)
-- [for (Instrucción) (C++)](/cpp/cpp/for-statement-cpp)
 - [Instrucciones de iteración](iteration-statements.md)
+- [foreach, in](foreach-in.md)

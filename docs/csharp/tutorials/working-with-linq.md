@@ -1,14 +1,14 @@
 ---
 title: Trabajar con LINQ
 description: En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida.
-ms.date: 03/28/2017
+ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086757"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126323"
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -40,26 +40,23 @@ Si nunca ha usado C# antes, en [este tutorial](console-teleprompter.md) se expli
 
 ## <a name="creating-the-data-set"></a>Creación del conjunto de datos
 
-Comencemos por crear una baraja de cartas. Para ello, debe usar una consulta LINQ que tenga dos orígenes (uno para los cuatro palos y otro para los valores trece). Podrá combinar esos orígenes en una baraja de 52 cartas. Una instrucción `Console.WriteLine` dentro de un bucle `foreach` muestra las cartas.
-
-Aquí está la consulta:
+Antes de empezar, asegúrese de que las líneas siguientes se encuentran al principio del archivo `Program.cs` generado por `dotnet new console`:
 
 ```csharp
-var startingDeck = from s in Suits()
-                   from r in Ranks()
-                   select new { Suit = s, Rank = r };
-
-foreach (var c in startingDeck)
-{
-    Console.WriteLine(c);
-}
+// Program.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
 ```
 
-Las cláusulas múltiples `from` generan una salida `SelectMany`, que crea una única secuencia a partir de la combinación de cada elemento de la primera secuencia con cada elemento de la segunda secuencia. El orden es importante para nuestros propósitos. El primer elemento de la primera secuencia de origen (palos) se combina con cada elemento de la segunda secuencia (valores). Esto genera las trece cartas del primer palo. Dicho proceso se repite con cada elemento de la primera secuencia (palos). El resultado final es una baraja de cartas ordenadas por palos, seguidos de valores.
+Si estas tres líneas (instrucciones `using`) no se encuentran al principio del archivo, nuestro programa no se compilará.
 
-A continuación, necesita compilar los métodos Suits() y Ranks(). Comencemos con un conjunto muy sencillo de *métodos iteradores* que generan la secuencia como una enumeración de cadenas:
+Ahora que tiene todas las referencias que necesitará, tenga en cuenta lo que constituye una baraja de cartas. Habitualmente, una baraja de cartas tiene cuatro palos y cada palo tiene trece valores. Normalmente, podría plantearse crear una clase `Card` directamente del archivo bat y rellenar manualmente una colección de objetos `Card`. Con LINQ, puede ser más conciso que de costumbre al tratar con la creación de una baraja de cartas. En lugar de crear una clase `Card`, puede crear dos secuencias que representen conjuntos y clasificaciones, respectivamente. Podrá crear un par sencillo de [*métodos iterator*](../iterators.md#enumeration-sources-with-iterator-methods) que generará las clasificaciones y palos como objetos <xref:System.Collections.Generic.IEnumerable%601> de cadenas:
 
 ```csharp
+// Program.cs
+// The Main() method
+
 static IEnumerable<string> Suits()
 {
     yield return "clubs";
@@ -85,64 +82,96 @@ static IEnumerable<string> Ranks()
     yield return "ace";
 }
 ```
+Colóquelos debajo del método `Main` en el archivo `Program.cs`. Estos dos métodos utilizan la sintaxis `yield return` para generar una secuencia mientras se ejecutan. El compilador crea un objeto que implementa <xref:System.Collections.Generic.IEnumerable%601> y genera la secuencia de cadenas conforme se solicitan.
 
-Estos dos métodos utilizan la sintaxis `yield return` para generar una secuencia mientras se ejecutan. El compilador crea un objeto que implementa `IEnumerable<T>` y genera la secuencia de cadenas conforme se solicitan.
-
-Para compilar esto, deberá agregar las dos líneas siguientes a la parte superior del archivo:
+Ahora, puede usar estos métodos iterator para crear la baraja de cartas. Insertará la consulta LINQ en nuestro método `Main`. Aquí tiene una imagen:
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
+// Program.cs
+static void Main(string[] args)
+{
+    var startingDeck = from s in Suits()
+                       from r in Ranks()
+                       select new { Suit = s, Rank = r };
+
+    // Display each card that we've generated and placed in startingDeck in the console
+    foreach (var card in startingDeck)
+    {
+        Console.WriteLine(card);
+    } 
+}
 ```
 
-Continúe y ejecute el ejemplo que se ha creado en este punto. Mostrará todas las 52 cartas de la baraja. Puede ser muy útil ejecutar este ejemplo en un depurador para observar cómo se ejecutan los métodos `Suits()` y `Values()`. Puede ver claramente que cada cadena de cada secuencia se genera solo según sea necesario.
+Las cláusulas múltiples `from` generan una salida <xref:System.Linq.Enumerable.SelectMany%2A>, que crea una única secuencia a partir de la combinación de cada elemento de la primera secuencia con cada elemento de la segunda secuencia. El orden es importante para nuestros propósitos. El primer elemento de la primera secuencia de origen (palos) se combina con todos los elementos de la segunda secuencia (clasificaciones). Esto genera las trece cartas del primer palo. Dicho proceso se repite con cada elemento de la primera secuencia (palos). El resultado final es una baraja de cartas ordenadas por palos, seguidos de valores.
+
+Es importante tener en cuenta que si decide escribir las instrucciones LINQ en la sintaxis de consulta usada anteriormente o utilizar la sintaxis de método en su lugar, siempre es posible pasar de una forma de sintaxis a la otra. La consulta anterior escrita en la sintaxis de consulta puede escribirse en la sintaxis de método como:
+```csharp
+var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
+```
+El compilador convierte las instrucciones LINQ escritas en la sintaxis de consulta a la sintaxis de llamada de método equivalente. Por consiguiente, independientemente de la sintaxis que prefiera, las dos versiones de la consulta producen el mismo resultado. Elija la sintaxis más adecuada a su situación: por ejemplo, si trabaja en un equipo en el que algunos de sus miembros tienen dificultades con la sintaxis de método, procure usar la sintaxis de consulta.
+
+Continúe y ejecute el ejemplo que se ha creado en este punto. Mostrará todas las 52 cartas de la baraja. Puede ser muy útil ejecutar este ejemplo en un depurador para observar cómo se ejecutan los métodos `Suits()` y `Ranks()`. Puede ver claramente que cada cadena de cada secuencia se genera solo según sea necesario.
 
 ![Ventana de la consola que muestra la aplicación escribiendo 52 cartas](./media/working-with-linq/console.png)
 
 ## <a name="manipulating-the-order"></a>Manipulación del orden
 
-A continuación, se va a crear un método de utilidad que puede llevar a cabo el orden aleatorio. El primer paso consiste en dividir la baraja en dos. Los métodos `Take()` y `Skip()` que forman parte de las API de LINQ ofrecen esa característica:
+Seguidamente, céntrese en cómo va a establecer el orden aleatorio de las cartas de la baraja. El primer paso en cualquier orden aleatorio consiste en dividir la baraja en dos. Los métodos <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> que forman parte de las LINQ API le ofrecen esa característica: Colóquelos debajo del bucle `foreach`:
 
 ```csharp
-var top = startingDeck.Take(26);
-var bottom = startingDeck.Skip(26);
+// Program.cs
+public static void Main(string[] args)
+{
+    var startingDeck = from s in Suits()
+                       from r in Ranks()
+                       select new { Suit = s, Rank = r };
+
+    foreach (var c in startingDeck)
+    {
+        Console.WriteLine(c);
+    }
+
+    // 52 cards in a deck, so 52 / 2 = 26    
+    var top = startingDeck.Take(26);
+    var bottom = startingDeck.Skip(26);
+}
 ```
 
-El método de orden aleatorio no existe en la biblioteca estándar, por lo que tendrá que escribir el suyo propio. Este nuevo método muestra varias técnicas que va a utilizar con programas basados en LINQ, cuyas partes se van a explicar en distintos pasos.
+Pero no existe ningún método de orden aleatorio en la biblioteca estándar que pueda aprovechar, por lo que tendrá que escribir el suyo propio. El método de orden aleatorio que cree mostrará varias técnicas que se utilizan con programas basados en LINQ, por lo que cada parte de este proceso se explica en pasos.
 
-La firma del método crea un *método de extensión*:
+Para agregar alguna funcionalidad a la forma de interactuar con el elemento <xref:System.Collections.Generic.IEnumerable%601> que obtendrá de las consultas LINQ, tendrá que escribir algunos tipos especiales de métodos llamados [métodos de extensión](../../csharp/programming-guide/classes-and-structs/extension-methods.md). En resumen, un método de extensión es un *método estático* con una finalidad específica que agrega nueva funcionalidad a un tipo existente sin tener que modificar el tipo original al que quiere agregar la funcionalidad.
 
-```csharp
-public static IEnumerable<T> InterleaveSequenceWith<T>
-    (this IEnumerable<T> first, IEnumerable<T> second)
-```
-
-Un método de extensión es un *método estático* para un fin especial. Puede ver la incorporación del modificador `this` del primer argumento al método. Esto significa que se llama al método como si fuese un método de miembro del tipo del primer argumento.
-
-Los métodos de extensión se pueden declarar únicamente dentro de las clases `static`, así que se va a crear una nueva clase estática llamada `extensions` para esta funcionalidad. A medida que avance en este tutorial, va a crear más métodos de extensión, que se colocarán en la misma clase.
-
-Esta declaración de método también sigue una expresión estándar donde los tipos de entrada y salida son `IEnumerable<T>`. Dicha práctica permite que los métodos LINQ se encadenen entre sí para realizar consultas más complejas.
+Proporcione un nuevo espacio a sus métodos de extensión agregando un nuevo archivo de clase *estática* al programa denominado `Extensions.cs` y comience a compilar el primer método de extensión: 
 
 ```csharp
+// Extensions.cs
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LinqFaroShuffle
 {
     public static class Extensions
     {
-        public static IEnumerable<T> InterleaveSequenceWith<T>
-            (this IEnumerable<T> first, IEnumerable<T> second)
+        public static IEnumerable<T> InterleaveSequenceWith<T>(this IEnumerable<T> first, IEnumerable<T> second)
         {
-            // implementation coming.
+            // Your implementation will go here soon enough
         }
     }
 }
 ```
 
-Debe enumerar ambas secuencias al mismo tiempo, de tal forma que se intercalarán los elementos y se creará un objeto.  Escribir un método LINQ que funciona con dos secuencias requiere que comprenda cómo funciona `IEnumerable`.
+Mire la firma del método por un momento, concretamente los parámetros:
 
-La interfaz `IEnumerable` tiene un método: `GetEnumerator()`. El objeto devuelto por `GetEnumerator()` tiene un método para desplazarse al siguiente elemento, así como una propiedad que recupera el elemento actual de la secuencia. Utilizará estos dos miembros para enumerar la colección y devolver los elementos. Este método de intercalación será un método iterador, por lo que en lugar de crear una colección y devolverla, usará la sintaxis `yield return` anterior. 
+```csharp
+public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> first, IEnumerable<T> second)
+```
+
+Puede ver la incorporación del modificador `this` del primer argumento al método. Esto significa que se llama al método como si fuese un método de miembro del tipo del primer argumento. Esta declaración de método también sigue una expresión estándar donde los tipos de entrada y salida son `IEnumerable<T>`. Dicha práctica permite que los métodos LINQ se encadenen entre sí para realizar consultas más complejas.
+
+Naturalmente, dado que dividió la baraja en mitades, tendrá que unir esas mitades. En el código, esto significa que enumerará las dos secuencias adquiridas a través de <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> a la vez, *`interleaving`* los elementos y crear una sola secuencia: su baraja de cartas recién ordenada aleatoriamente. Escribir un método LINQ que funciona con dos secuencias requiere que comprenda cómo funciona <xref:System.Collections.Generic.IEnumerable%601>.
+
+La interfaz <xref:System.Collections.Generic.IEnumerable%601> tiene un método: <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>. El objeto devuelto por <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> tiene un método para desplazarse al siguiente elemento, así como una propiedad que recupera el elemento actual de la secuencia. Utilizará estos dos miembros para enumerar la colección y devolver los elementos. Este método de intercalación será un método iterador, por lo que en lugar de crear una colección y devolverla, usará la sintaxis `yield return` anterior.
 
 A continuación se muestra la implementación de ese método:
 
@@ -151,6 +180,7 @@ A continuación se muestra la implementación de ese método:
 Ahora que ha escrito este método, vuelva al método `Main` y ordene la baraja aleatoriamente una vez:
 
 ```csharp
+// Program.cs
 public static void Main(string[] args)
 {
     var startingDeck = from s in Suits()
@@ -175,41 +205,49 @@ public static void Main(string[] args)
 
 ## <a name="comparisons"></a>Comparaciones
 
-Se va a ver cuántos órdenes aleatorios se necesitan para devolver la baraja a su orden original. Debe escribir un método que determine si dos secuencias son iguales. Cuando ya disponga del método, debe colocar el código que ordena la baraja aleatoriamente en un bucle y comprobarlo para ver cuándo la baraja vuelve a tener su orden original.
+¿Cuántos órdenes aleatorios se necesitan para devolver la baraja a su orden original? Para averiguarlo, debe escribir un método que determine si dos secuencias son iguales. Cuando ya disponga del método, debe colocar el código que ordena la baraja aleatoriamente en un bucle y comprobarlo para ver cuándo la baraja vuelve a tener su orden original.
 
-Debe ser sencillo escribir un método para determinar si las dos secuencias son iguales. Presenta una estructura similar al método que se escribió para ordenar la baraja aleatoriamente. Solo esta vez, en lugar de devolver el resultado de cada elemento, se compararán los elementos coincidentes de cada secuencia. Después de que se haya enumerado la secuencia completa, si cada elemento coincide, las secuencias son las mismas:
+Debe ser sencillo escribir un método para determinar si las dos secuencias son iguales. Presenta una estructura similar al método que se escribió para ordenar la baraja aleatoriamente. Solo que esta vez, en lugar de aplicar `yield return` a cada elemento, se compararán los elementos coincidentes de cada secuencia. Después de que se haya enumerado la secuencia completa, si cada elemento coincide, las secuencias son las mismas:
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-Esto muestra una segunda expresión LINQ: métodos de terminales. Adoptan una secuencia como entrada (o, en este caso, dos secuencias) y devuelven un único valor escalar. Estos métodos, cuando se utilizan, son siempre el método final de una consulta. (Por lo tanto, el nombre). 
+Esto muestra una segunda expresión LINQ: los métodos de terminal. Adoptan una secuencia como entrada (o, en este caso, dos secuencias) y devuelven un único valor escalar. Cuando se utilizan métodos de terminal, siempre son el método final en una cadena de métodos para una consulta LINQ, de ahí el nombre "terminal". 
 
 Puede ver esto en acción cuando lo usa para determinar cuándo la baraja vuelve a tener su orden original. Coloque el código de orden aleatorio dentro de un bucle y deténgalo cuando la secuencia vuelva a su orden original, mediante la aplicación del método `SequenceEquals()`. Puede observar que siempre se tratará del método final de cualquier consulta, porque devuelve un único valor en lugar de una secuencia:
 
 ```csharp
-var times = 0;
-var shuffle = startingDeck;
-
-do
+// Program.cs
+static void Main(string[] args)
 {
-    shuffle = shuffle.Take(26).InterleaveSequenceWith(shuffle.Skip(26));
+    // Query for building the deck
 
-    foreach (var c in shuffle)
+    // Shuffling using InterleaveSequenceWith<T>();
+
+    var times = 0;
+    // We can re-use the shuffle variable from earlier, or you can make a new one
+    shuffle = startingDeck;
+    do
     {
-        Console.WriteLine(c);
-    }
+        shuffle = shuffle.Take(26).InterleaveSequenceWith(shuffle.Skip(26));
 
-    Console.WriteLine();
-    times++;
-} while (!startingDeck.SequenceEquals(shuffle));
+        foreach (var card in shuffle)
+        {
+            Console.WriteLine(card);
+        }
+        Console.WriteLine();
+        times++;
 
-Console.WriteLine(times);
+    } while (!startingDeck.SequenceEquals(shuffle));
+
+    Console.WriteLine(times);
+}
 ```
 
-Ejecute el ejemplo y observe cómo la baraja se reorganiza en cada orden aleatorio, hasta que vuelva a su configuración original después de 8 iteraciones.
+Ejecute el código que tenga hasta el momento y tome nota de cómo la baraja se reorganiza en cada orden aleatorio. Después de ocho órdenes aleatorios (iteraciones del bucle do-while), la baraja vuelve a la configuración original en que se encontraba cuando la creó a partir la consulta LINQ inicial.
 
 ## <a name="optimizations"></a>Optimizaciones
 
-El ejemplo creado hasta el momento se ejecuta *en orden no aleatorio*, donde las cartas superiores e inferiores son las mismas en cada ejecución. Se va a realizar un cambio y realice una ejecución *en orden no aleatorio*, donde las 52 cartas cambian de posición. Si se trata de un orden aleatorio, intercale la baraja de tal forma que la primera carta de la mitad inferior sea la primera carta de la baraja. Esto significa que la última carta de la mitad superior será la carta inferior. Se trata solo de un cambio de línea. Actualice la llamada al orden aleatorio para cambiar el orden de las mitades superior e inferior de la baraja:
+El ejemplo creado hasta el momento se ejecuta *en orden no aleatorio*, donde las cartas superiores e inferiores son las mismas en cada ejecución. Vamos a realizar un cambio: utilizaremos una ejecución *en orden aleatorio* en su lugar, donde las 52 cartas cambian de posición. Si se trata de un orden aleatorio, intercale la baraja de tal forma que la primera carta de la mitad inferior sea la primera carta de la baraja. Esto significa que la última carta de la mitad superior será la carta inferior. Se trata de un cambio simple en una única línea de código. Actualice la consulta de orden aleatorio actual cambiando las posiciones de <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A>. Se cambiará al orden de las mitades superior e inferior de la baraja:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -217,19 +255,20 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 Vuelva a ejecutar el programa y verá que, para que la baraja se reordene, se necesitan 52 iteraciones. También empezará a observar algunas degradaciones graves de rendimiento a medida que el programa continúa en ejecución.
 
-Esto se debe a varias razones. Vamos a tratar una de las causas principales: un uso ineficaz de la *evaluación diferida*.
+Esto se debe a varias razones. Puede que se trate de una de las principales causas de este descenso de rendimiento: un uso ineficaz de la [*evaluación diferida*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
-Las consultas LINQ se evalúan de forma diferida. Las secuencias se generan solo a medida que se solicitan los elementos. Normalmente, es una ventaja importante de LINQ. Sin embargo, en un uso como el que hace este programa, se produce un aumento exponencial del tiempo de ejecución.
+En pocas palabras, la evaluación diferida indica que no se realiza la evaluación de una instrucción hasta que su valor es necesario. Las consultas LINQ son instrucciones se evalúan de forma diferida. Las secuencias se generan solo a medida que se solicitan los elementos. Normalmente, es una ventaja importante de LINQ. Sin embargo, en un uso como el que hace este programa, se produce un aumento exponencial del tiempo de ejecución.
 
-La baraja original se ha generado mediante una consulta LINQ. Cada orden aleatorio se genera mediante la realización de tres consultas LINQ sobre la baraja anterior. Todas se realizan de forma diferida. Eso también significa que se vuelven a llevar a cabo cada vez que se solicita la secuencia. Cuando llegue a la iteración número 52, habrá regenerado la baraja original demasiadas veces. Se va a escribir un registro para mostrar este comportamiento. A continuación, podrá corregirlo.
+Recuerde que la baraja original se generó con una consulta LINQ. Cada orden aleatorio se genera mediante la realización de tres consultas LINQ sobre la baraja anterior. Todas se realizan de forma diferida. Eso también significa que se vuelven a llevar a cabo cada vez que se solicita la secuencia. Cuando llegue a la iteración número 52, habrá regenerado la baraja original demasiadas veces. Se va a escribir un registro para mostrar este comportamiento. A continuación, podrá corregirlo.
 
-Se trata de un método de registro que se puede anexar a una consulta para marcar que esta se ha ejecutado.
+En su archivo `Extensions.cs`, escriba o copie el siguiente método. Este método de extensión crea otro archivo denominado `debug.log` en el directorio del proyecto y registra la consulta que se ejecuta actualmente en el archivo de registro. Este método de extensión se puede anexar a una consulta para marcar que se ha ejecutado.
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 A continuación, instrumente la definición de cada consulta con un mensaje de registro:
 
 ```csharp
+// Program.cs
 public static void Main(string[] args)
 {
     var startingDeck = (from s in Suits().LogQuery("Suit Generation")
@@ -247,6 +286,7 @@ public static void Main(string[] args)
 
     do
     {
+        // Out shuffle
         /*
         shuffle = shuffle.Take(26)
             .LogQuery("Top Half")
@@ -255,10 +295,10 @@ public static void Main(string[] args)
             .LogQuery("Shuffle");
         */
 
-        shuffle = shuffle.Skip(26)
-            .LogQuery("Bottom Half")
-            .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half"))
-            .LogQuery("Shuffle");
+        // In shuffle
+        shuffle = shuffle.Skip(26).LogQuery("Bottom Half")
+                .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half"))
+                .LogQuery("Shuffle");
 
         foreach (var c in shuffle)
         {
@@ -273,64 +313,33 @@ public static void Main(string[] args)
 }
 ```
 
-Observe que no se genera un registro cada vez que accede a una consulta. El registro solo se genera cuando crea la consulta original. El programa todavía tarda mucho tiempo en ejecutarse, pero ahora puede ver por qué. Si se le agota la paciencia al ejecutar el orden aleatorio interno con los registros activados, cambie de nuevo al orden aleatorio externo. Aún puede ver los efectos de la evaluación diferida. En una ejecución, ejecuta 2592 consultas, incluida toda la generación de palos y valores.
+Observe que no se genera un registro cada vez que accede a una consulta. El registro solo se genera cuando crea la consulta original. El programa todavía tarda mucho tiempo en ejecutarse, pero ahora puede ver por qué. Si se le agota la paciencia al ejecutar el orden aleatorio interno con los registros activados, vuelva al orden aleatorio externo. Aún puede ver los efectos de la evaluación diferida. En una ejecución, ejecuta 2592 consultas, incluida toda la generación de palos y valores.
 
-Hay una manera fácil de actualizar este programa para evitar todas esas ejecuciones. Existen los métodos LINQ `ToArray()` y `ToList()` que hacen que la consulta se ejecute y almacenan los resultados en una matriz o en una lista, respectivamente. Utilice estos métodos para almacenar en caché los resultados de una consulta, en lugar de volver a ejecutar la consulta de origen.  Anexe las consultas que generan las barajas con una llamada a `ToArray()` y vuelva a ejecutar la consulta:
+Aquí puede mejorar el rendimiento del código para reducir el número de ejecuciones que realiza. Una corrección sencilla que puede hacer es almacenar en *caché* los resultados de la consulta LINQ original que construye la baraja de cartas. Actualmente, ejecuta las consultas una y otra vez siempre que el bucle do-while pasa por una iteración, lo que vuelve a construir la baraja de cartas y cambia continuamente el orden aleatorio. Para almacenar en caché la baraja de cartas, puede aprovechar los métodos LINQ <xref:System.Linq.Enumerable.ToArray%2A> y <xref:System.Linq.Enumerable.ToList%2A>; cuando los anexe a las consultas, realizarán las mismas acciones que les ha indicado que hagan, pero ahora almacenarán los resultados en una matriz o una lista, según el método al que elija llamar. Anexe el método <xref:System.Linq.Enumerable.ToArray%2A> de LINQ a las dos consultas y ejecute de nuevo el programa:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Vuelva a realizar la ejecución, y el orden aleatorio externo baja a 30 consultas. Ejecute de nuevo con el orden aleatorio interno y verá mejoras similares. (Ahora ejecuta 162 consultas).
+Ahora el orden aleatorio externo se reduce a 30 consultas. Vuelva a ejecutarlo con el orden aleatorio interno y verá mejoras similares: ahora ejecuta 162 consultas.
 
-No interprete este ejemplo incorrectamente al pensar que todas las consultas deben ejecutarse de manera diligente. Este ejemplo está diseñado para resaltar los casos de uso en que la evaluación diferida puede generar dificultades de rendimiento. Eso se debe a que cada nueva disposición de la baraja de cartas se crea a partir de la disposición anterior. La evaluación diferida supone que cada nueva configuración de la baraja se realiza a partir de la baraja original, incluso con la ejecución del código que crea el elemento `startingDeck`. Esto conlleva una gran cantidad de trabajo adicional. 
+Este ejemplo está **diseñado** para resaltar los casos de uso en que la evaluación diferida puede generar dificultades de rendimiento. Si bien es importante ver dónde la evaluación diferida puede afectar al rendimiento del código, es igualmente importante entender que no todas las consultas deben ejecutarse de manera diligente. El resultado de rendimiento en el que incurre sin usar <xref:System.Linq.Enumerable.ToArray%2A> se debe a que cada nueva disposición de la baraja de cartas se crea a partir de la disposición anterior. La evaluación diferida supone que cada nueva configuración de la baraja se realiza a partir de la baraja original, incluso con la ejecución del código que crea el elemento `startingDeck`. Esto conlleva una gran cantidad de trabajo adicional. 
 
-En la práctica, algunos algoritmos se ejecutan mucho mejor con la evaluación diligente y otros, con la evaluación diferida. (En general, la evaluación diferida es una opción mucho más conveniente cuando el origen de datos es un proceso independiente, como un motor de base de datos. En esos casos, la evaluación diferida permite realizar consultas más complejas para ejecutarlas solo con un recorrido de ida y vuelta en el procesamiento de la base de datos). LINQ permite realizar la evaluación diferida y diligente. Piénselo y elija la mejor opción.
-
-## <a name="preparing-for-new-features"></a>Preparación de las nuevas características
-
-El código que ha escrito para este ejemplo es un ejemplo de creación de un prototipo sencillo que realiza el trabajo. Se trata de una manera excelente de explorar un espacio de problemas y, para muchas características, puede ser la mejor solución permanente. Ha aprovechado *tipos anónimos* para las cartas, y cada carta se representa mediante cadenas.
-
-Los *tipos anónimos* ofrecen numerosas ventajas de productividad. No es necesario definir una clase para representar el almacenamiento. El compilador genera el tipo. El tipo generado por el compilador usa muchos de los procedimientos recomendados para objetos de datos sencillos. Es *inmutable*, lo que significa que no se pueden cambiar ninguna de sus propiedades después de que se haya construido. Los tipos anónimos son internos a un ensamblado, por lo que no se ven como parte de la API pública de ese ensamblado. Los tipos anónimos también contienen una invalidación del método `ToString()` que devuelve una cadena con formato con cada uno de los valores.
-
-Los tipos anónimos también tienen desventajas. No tienen nombres accesibles, por lo que no puede utilizarlos como argumentos o valores devueltos. Observará que los métodos anteriores que usan estos tipos anónimos son métodos genéricos. La invalidación de `ToString()` puede no ser la opción más conveniente a medida que la aplicación incorpora más características. 
-
-El ejemplo también utiliza cadenas para el palo y la clasificación de cada carta. Se trata de un ejemplo de amplio alcance. El sistema de tipos de C# facilita la escritura de un código mejor, aprovechando los tipos `enum` para esos valores.
-
-Empieza con los palos. Este es el momento perfecto para usar `enum`:
-
-[!CODE-csharp[Suit enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
-
-El método `Suits()` también cambia el tipo y la implementación:
-
-[!CODE-csharp[Suit IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet4)]
-
-A continuación, realice los mismos cambios con la clasificación de las cartas:
-
-[!CODE-csharp[Rank enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
-
-Y el método que las genera:
-
-[!CODE-csharp[Rank IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet5)]
-
-Para terminar, se va a crear un tipo para representar la carta, en lugar de depender de un tipo anónimo. Los tipos anónimos son excelentes para tipos ligeros locales, pero, en este ejemplo, el juego de naipes es uno de los principales conceptos. Debe ser un tipo concreto.
-
-[!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
-
-Este tipo utiliza *propiedades autoimplementadas de solo lectura* que se establece en el constructor y, por tanto, no se puede modificar. También usa la nueva característica de [interpolación de cadena](../language-reference/tokens/interpolated.md) que simplifica la salida de la cadena de formato.
-
-Actualice la consulta que genera la baraja original para usar el nuevo tipo:
-
-```csharp
-var startingDeck = (from s in Suits().LogQuery("Suit Generation")
-                    from r in Ranks().LogQuery("Value Generation")
-                    select new PlayingCard(s, r))
-                    .LogQuery("Starting Deck")
-                    .ToArray();
-```
-
-Realice la compilación y vuelva a ejecutarla. La salida está un poco más limpia, y el código es algo más claro y puede extenderse con más facilidad.
+En la práctica, algunos algoritmos se ejecutan bien con la evaluación diligente y otros, con la evaluación diferida. Para el uso diario, la evaluación diferida suele ser una mejor opción cuando el origen de datos es un proceso independiente, como un motor de base de datos. Para las bases de datos, la evaluación diferida permite realizar consultas más complejas que ejecuten un solo recorrido de ida y vuelta al procesamiento de la base de datos y vuelvan al resto del código. LINQ es flexible tanto si decide usar la evaluación diligente como la diferida, así que calibre sus procesos y elija el tipo de evaluación que le ofrece el mejor rendimiento.
 
 ## <a name="conclusion"></a>Conclusión
 
-En este ejemplo se han mostrado algunos de los métodos usados en LINQ, como la forma de crear métodos propios que pueden usarse con facilidad con código habilitado para LINQ. También se presentan las diferencias entre la evaluación diligente y diferida, y el efecto que puede tener la decisión en el rendimiento.
+En este proyecto ha tratado lo siguiente:
+* Uso de consultas LINQ para agregar datos a una secuencia significativa
+* Escritura de métodos de extensión para agregar nuestra propia funcionalidad personalizada a las consultas LINQ
+* Localización de áreas en nuestro código donde nuestras consultas LINQ pueden tener problemas de rendimiento como la degradación de la velocidad
+* Evaluación diligente y diferida en lo que respecta a las consultas LINQ y las implicaciones que podrían tener en el rendimiento de la consulta
 
-Ha obtenido un poco de información sobre una técnica de magia. Los magos usan la mezcla faro porque les permite controlar dónde está cada carta en la baraja. En algunos trucos, el mago pide a un miembro de la audiencia que coloque una carta en la parte superior de la baraja, y la mezcla en orden aleatorio durante algunos minutos, pero puede controlar dónde se encuentra la carta en cuestión. En otras ilusiones, es necesario organizar la baraja de una forma determinada. Un mago debe organizar la baraja antes de realizar el truco. Después, mezclará la baraja en orden aleatorio 5 veces usando un orden aleatorio externo. En el escenario, el mago puede mostrar qué aspecto tiene una baraja aleatoria, ordenarla aleatoriamente 3 veces más y organizar la baraja exactamente como lo desea.
+Aparte de LINQ, ha aprendido algo sobre una técnica que los magos utilizan para hacer trucos de cartas. Los magos usan el orden aleatorio Faro porque les permite controlar dónde está cada carta en la baraja. Ahora que lo conoce, no se lo estropee a los demás.
+
+Para más información sobre LINQ, vea:
+* [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
+    * [Introducción a LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+    * [Introducción a LINQ en C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+        - [Operaciones básicas de consulta LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+        - [Transformaciones de datos con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+        - [Sintaxis de consultas y sintaxis de métodos en LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+        - [Características de C# compatibles con LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 60a75946d30b1555aea01507d846e790dd00f767
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6709344002ebc433c8d13d9cfa48a179fae9991b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122730"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125998"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Clases estáticas y sus miembros (Guía de programación de C#)
 Una clase [estática](../../../csharp/language-reference/keywords/static.md) es básicamente lo mismo que una clase no estática, con la diferencia de que no se pueden crear instancias de una clase estática. En otras palabras, no puede usar la palabra clave [new](../../../csharp/language-reference/keywords/new.md) para crear una variable del tipo de clase. Dado que no hay ninguna variable de instancia, para tener acceso a los miembros de una clase estática, debe usar el nombre de la clase. Por ejemplo, si tiene una clase estática denominada `UtilityClass` que tiene un método público denominado `MethodA`, llame al método tal como se muestra en el ejemplo siguiente:  
@@ -39,7 +39,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Como sucede con todos los tipos de clase, Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] carga la información de tipo para una clase estática cuando se carga el programa que hace referencia a la clase. El programa no puede especificar exactamente cuándo se carga la clase, pero existe la garantía de que se cargará, de que sus campos se inicializarán y de que se llamará a su constructor estático antes de que se haga referencia a la clase por primera vez en el programa. Solo se llama una vez a un constructor estático, y una clase estática permanece en memoria durante la vigencia del dominio de aplicación en el que reside el programa.  
   
 > [!NOTE]
->  Para crear una clase no estática que solo permita la creación de una instancia de sí misma, vea [Implementing Singleton in C#](https://msdn.microsoft.com/library/ms998558.aspx) (Implementar un singleton en C#).  
+>  Para crear una clase no estática que solo permita la creación de una instancia de sí misma, vea [Implementing Singleton in C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29) (Implementar un singleton en C#).  
   
  La siguiente lista contiene las características principales de una clase estática:  
   
@@ -84,7 +84,8 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Una llamada a un método estático genera una instrucción de llamada en Lenguaje Intermedio de Microsoft (MSIL), mientras que una llamada a un método de instancia genera una instrucción `callvirt`, que también comprueba si hay referencias a un objeto NULL, pero la mayoría de las veces la diferencia de rendimiento entre las dos no es significativo.  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Para más información, vea las secciones sobre [clases estáticas](~/_csharplang/spec/classes.md#static-classes) y sobre [miembros de instancia y estáticos](~/_csharplang/spec/classes.md#static-and-instance-members) de la [Especificación del lenguaje C#](../../language-reference/language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
   
 ## <a name="see-also"></a>Vea también
 

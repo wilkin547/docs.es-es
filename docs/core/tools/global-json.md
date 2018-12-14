@@ -3,14 +3,14 @@ title: Información general de global.json
 description: Obtenga información sobre cómo usar el archivo global.json para establecer la versión del SDK de .NET Core al ejecutar comandos de la CLI de .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/30/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7cb118c16460ed593d210f5e816b2a6fd5af2ee3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838083"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150868"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
@@ -46,14 +46,14 @@ En el ejemplo siguiente se muestra el contenido de un archivo *global.json*:
 ```json
 {
   "sdk": {
-    "version": "2.1.300"
+    "version": "2.2.100"
   }
 }
 ```
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json y la CLI de .NET Core
 
-Resulta útil saber qué versiones están disponibles con el fin de establecer una en el archivo *global.json*. Puede encontrar la lista completa de los SDK disponibles admitidos en el sitio de [descargas de .NET](https://www.microsoft.com/net/download/all). A partir de .NET Core SDK 2.1, puede ejecutar el comando siguiente para comprobar qué versiones del SDK ya están instaladas en el equipo:
+Resulta útil saber qué versiones están disponibles con el fin de establecer una en el archivo *global.json*. Puede encontrar la lista completa de los SDK disponibles admitidos en el sitio de [descargas de .NET](https://www.microsoft.com/net/download/all). A partir del SDK de .NET Core SDK 2.1, puede ejecutar el comando siguiente para comprobar qué versiones del SDK ya están instaladas en el equipo:
 
 ```console
 dotnet --list-sdks
@@ -64,7 +64,7 @@ Para instalar otras versiones del SDK de .NET Core en el equipo, visite el sitio
 Puede crear un archivo *global.json* en el directorio actual mediante la ejecución del comando [dotnet new](dotnet-new.md), similar al ejemplo siguiente:
 
 ```console
-dotnet new globaljson --sdk-version 2.1.300
+dotnet new globaljson --sdk-version 2.2.100
 ```
 
 ## <a name="matching-rules"></a>Reglas de coincidencia
@@ -103,8 +103,8 @@ Esta advertencia indica que el proyecto se está compilando con una versión pre
 > [!WARNING]
 > El proyecto de inicio "{proyectoDeInicio}" está destinado a la versión "{versiónPlataformaDeDestino}" de ".NETCoreApp". Esta versión de las herramientas de línea de comandos de Entity Framework Core .NET solo admite la versión 2.0 o superior. Para obtener información sobre el uso de las versiones anteriores de las herramientas, vea <https://go.microsoft.com/fwlink/?linkid=871254>
 
-A partir de .NET Core SDK 2.1 (v. 2.1.300), el comando `dotnet ef` se incluye en el SDK. Esta advertencia indica que el proyecto tiene como destino EF Core 1.0 ó 1.1, que no es compatible con .NET Core SDK 2.1 y versiones posteriores. Para compilar el proyecto, instale el SDK de .NET Core 2.0 (v. 2.1.201) y versiones anteriores en el equipo y defina la versión SDK deseada mediante el archivo *global.json*. Para obtener más información sobre el comando `dotnet ef`, vea [EF Core .NET Command-line Tools](/ef/core/miscellaneous/cli/dotnet) (Herramientas de línea de comandos de EF Core .NET).
+A partir del SDK de .NET Core 2.1 (versión 2.1.300), el comando `dotnet ef` se incluye en el SDK. Esta advertencia indica que el proyecto tiene como destino EF Core 1.0 ó 1.1, que no es compatible con el SDK de .NET Core 2.1 y versiones posteriores. Para compilar el proyecto, instale el SDK de .NET Core 2.0 (versión 2.1.201) y versiones anteriores en el equipo y defina la versión del SDK deseada mediante el archivo *global.json*. Para obtener más información sobre el comando `dotnet ef`, vea [EF Core .NET Command-line Tools](/ef/core/miscellaneous/cli/dotnet) (Herramientas de línea de comandos de EF Core .NET).
 
 ## <a name="see-also"></a>Vea también
 
-* [Resolución de los SDK de proyecto](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [Resolución de los SDK de proyecto](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

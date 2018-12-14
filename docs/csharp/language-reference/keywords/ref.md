@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195975"
 ---
 # <a name="ref-c-reference"></a>ref (Referencia de C#)
@@ -114,6 +114,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 Tenga en cuenta que en ambos ejemplos la palabra clave `ref` debe usarse en ambos lugares. De lo contrario, el compilador genera el error CS8172, "No se puede inicializar una variable por referencia con un valor".
 
+A partir C# 7.3, la variable de iteración de la instrucción `foreach` puede ser una variable ref local o ref readonly local. Para más información, vea el artículo sobre la [instrucción foreach](foreach-in.md).
+
 ## <a name="ref-readonly-locals"></a>Variables locales de tipo ref readonly
 
 Una variable local de tipo ref readonly se usa para hacer referencia a los valores devueltos por el método o la propiedad que tiene `ref readonly` en su firma y utiliza `return ref`. Una variable `ref readonly` combina las propiedades de una `ref` variable local con una variable `readonly`: es un alias para el almacenamiento al que se asigna y no se puede modificar. 
@@ -152,6 +154,9 @@ Puede combinar modificadores para declarar una estructura como `readonly ref`. `
 ## <a name="see-also"></a>Vea también
 
 - [Escritura de código seguro y eficaz](../../write-safe-efficient-code.md)  
+- [Devoluciones y variables locales ref](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Expresión condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
+- [Operador de asignación ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Pasar parámetros](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Parámetros de métodos](method-parameters.md)  
 - [Referencia de C#](../index.md)  

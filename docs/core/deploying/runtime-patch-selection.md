@@ -1,19 +1,20 @@
 ---
-title: Puesta al día del runtime de implementación autocontenida
+title: Puesta al día del runtime para implementaciones de aplicaciones autocontenidas de .NET Core.
 description: Obtenga información sobre los cambios de dotnet publish para implementaciones autocontenidas.
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.custom: seodec18
+ms.openlocfilehash: dde00cf71f0d67c8c4380748e01a4ef5c17ebb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071037"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126684"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Puesta al día del runtime de implementación autocontenida
 
-Las [implementaciones de aplicaciones autocontenidas](index.md) de .NET Core incluyen las bibliotecas de .NET Core y el runtime de .NET Core. A partir del SDK de .NET Core 2.1.300 (.NET Core 2.1), una implementación de aplicación autocontenida [publica el runtime con la revisión superior en el equipo](https://github.com/dotnet/designs/pull/36). De forma predeterminada, el comando [`dotnet publish`](../tools/dotnet-publish.md) para una implementación autocontenida selecciona la versión más reciente instalada como parte del SDK en el equipo de publicación. Esto permite que la aplicación implementada se ejecute con las revisiones de seguridad (y otras correcciones) disponibles en el momento de usar el comando `publish`. La aplicación debe volver a publicarse para obtener una nueva revisión. Para crear una aplicación autocontenida, se especifica `-r <RID>` en el comando `dotnet publish`, o se especifica el [identificador de runtime (RID)](../rid-catalog.md) en el archivo de proyecto (csproj / vbproj) o en la línea de comandos.
+Las [implementaciones de aplicaciones autocontenidas](index.md) de .NET Core incluyen las bibliotecas de .NET Core y el runtime de .NET Core. A partir del SDK de .NET Core 2.1 (versión 2.1.300), una implementación de aplicación autocontenida [publica el runtime con la revisión superior en el equipo](https://github.com/dotnet/designs/pull/36). De forma predeterminada, el comando [`dotnet publish`](../tools/dotnet-publish.md) para una implementación autocontenida selecciona la versión más reciente instalada como parte del SDK en el equipo de publicación. Esto permite que la aplicación implementada se ejecute con las revisiones de seguridad (y otras correcciones) disponibles en el momento de usar el comando `publish`. La aplicación debe volver a publicarse para obtener una nueva revisión. Para crear una aplicación autocontenida, se especifica `-r <RID>` en el comando `dotnet publish` o se especifica el [identificador de runtime (RID)](../rid-catalog.md) en el archivo de proyecto (csproj o vbproj) o en la línea de comandos.
 
 ## <a name="patch-version-roll-forward-overview"></a>Información general sobre la puesta al día de una versión de revisión
 

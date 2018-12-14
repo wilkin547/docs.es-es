@@ -1,20 +1,20 @@
 ---
-title: Compilación de una aplicación Hola a todos con .NET Core y Visual Basic en Visual Studio 2017
+title: Aplicación Hola mundo de .NET Core con Visual Basic en Visual Studio 2017
 description: Obtenga información sobre cómo crear una sencilla aplicación de consola .NET Core con Visual Basic mediante Visual Studio 2017.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: d6b58e491b2857f83fe9b2e55ed35630c42b79ed
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 612de47c4d40d1272eb330a0343302109040f434
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969881"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149386"
 ---
-# <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilación de una aplicación Hola a todos en Visual Basic con .NET Core en Visual Studio 2017
+# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Compilación de una aplicación Hola mundo de .NET Core con Visual Basic en Visual Studio 2017
 
 En este tema se proporciona una introducción detallada para compilar, depurar y publicar una sencilla aplicación de consola .NET Core con Visual Basic en Visual Studio 2017. Visual Studio 2017 proporciona un entorno de desarrollo completo para la compilación de aplicaciones .NET Core. Siempre que la aplicación no tenga dependencias específicas de la plataforma, la aplicación puede ejecutarse en cualquier plataforma que tenga como destino .NET Core y en cualquier sistema que tenga instalado .NET Core.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 675e6b7fa925fe1822c2fc321d79afd13b5e4c51
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347688"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128627"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referencia de C#)
 
@@ -22,6 +22,8 @@ La instrucción `foreach` ejecuta una instrucción o un bloque de instrucciones 
 
 - tiene el método público sin parámetros `GetEnumerator` cuyo tipo de valor devuelto es clase, estructura o tipo de interfaz,
 - el tipo de valor devuelto del método `GetEnumerator` tiene la propiedad pública `Current` y el método público sin parámetros `MoveNext` cuyo tipo de valor devuelto es <xref:System.Boolean>.
+
+A partir de C# 7.3, si la propiedad `Current` del enumerador devuelve un [valor devuelto de referencia](ref.md#reference-return-values) (`ref T` donde `T` es el tipo del elemento de colección), se puede declarar la variable de iteración con el modificador `ref` o `ref readonly`.
 
 En cualquier punto del bloque de instrucciones `foreach`, se puede salir del bucle mediante la instrucción [break](break.md), o bien se puede ir a la siguiente iteración del bucle mediante la instrucción [continue](continue.md). También se puede salir de un bucle `foreach` mediante las instrucciones [goto](goto.md), [return](return.md) o [throw](throw.md).
 
@@ -37,20 +39,19 @@ El siguiente ejemplo utiliza la instrucción `foreach` con una instancia del tip
 
 [!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-A partir de C# 7.3, si la propiedad `Current` del enumerador devuelve un [valor devuelto de referencia](../../programming-guide/classes-and-structs/ref-returns.md) (`ref T` donde `T` es el tipo del elemento de colección), se puede declarar la variable de iteración con el modificador `ref` o `ref readonly`. En el ejemplo siguiente se usa una variable de iteración `ref` para establecer el valor de cada elemento de una matriz stackalloc. La versión `ref readonly` recorre en iteración la colección para imprimir todos los valores. En la declaración de `readonly`, se usa una declaración de variable local implícita. Las declaraciones de variables implícitas se pueden usar con las declaraciones `ref` o `ref readonly`, al igual que las declaraciones de variables con tipo explícito.
+En el ejemplo siguiente se usa una variable de iteración `ref` para establecer el valor de cada elemento de una matriz stackalloc. La versión `ref readonly` recorre en iteración la colección para imprimir todos los valores. En la declaración de `readonly`, se usa una declaración de variable local implícita. Las declaraciones de variables implícitas se pueden usar con las declaraciones `ref` o `ref readonly`, al igual que las declaraciones de variables con tipo explícito.
 
 [!code-csharp-interactive[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para más información, vea la sección sobre la [instrucción foreach](~/_csharplang/spec/statements.md#the-foreach-statement) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [La instrucción foreach (especificación del lenguaje C#)](~/_csharplang/spec/statements.md#the-foreach-statement)
-- [Utilizar foreach con matrices](../../programming-guide/arrays/using-foreach-with-arrays.md)
-- [for](for.md)
-- [Instrucciones de iteración](iteration-statements.md)
-- [Palabras clave de C#](index.md)
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](index.md)
+- [Instrucciones de iteración](iteration-statements.md)
+- [Utilizar foreach con matrices](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [for (Instrucción)](for.md)

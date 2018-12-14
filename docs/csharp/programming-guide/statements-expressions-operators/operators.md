@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514190"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150978"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guía de programación de C#)
 En C#, un *operador* es un elemento de programa que se aplica a uno o varios *operandos* en una expresión o instrucción. Los operadores que toman un operando, como el operador de incremento (`++`) o `new`, se conocen como operadores *unarios* . Los operadores que toman dos operandos, como los operadores aritméticos (`+`,`-`,`*`,`/`) se conocen como operadores *binarios* . Un operador, el operador condicional (`?:`), toma tres operandos y es el único operador ternario de C#.  
@@ -111,7 +111,7 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
 |Categoría|Expresión|Descripción|  
 |--------------|----------------|-----------------|  
 |AND lógico|x [&](../../../csharp/language-reference/operators/and-operator.md) y|AND bit a bit entero, AND lógico booleano|  
-|XOR lógico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR bit a bit entero, XOR lógico booleano|  
+|XOR lógico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR bit a bit entero, XOR lógico boolean|  
 |OR lógico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR bit a bit entero, OR lógico booleano|  
 |AND condicional|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Evalúa y solo si x es true|  
 |OR condicional|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Evalúa y solo si x es false|  

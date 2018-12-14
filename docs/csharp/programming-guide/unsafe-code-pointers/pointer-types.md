@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509283"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146847"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de puntero (Guía de programación de C#)
 

@@ -1,19 +1,20 @@
 ---
-title: Organización del proyecto para admitir .NET Framework y .NET Core
+title: Organización de proyectos para .NET Framework y .NET Core
 description: Ayuda para los propietarios del proyecto que quieren compilar su solución en .NET Framework y en .NET Core, en paralelo.
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512271"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146932"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organización del proyecto para admitir .NET Framework y .NET Core
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organización del proyecto para admitir .NET Framework y .NET Core
 
-En este artículo se ofrece ayuda a los propietarios del proyecto que quieren compilar su solución en .NET Framework y en .NET Core, en paralelo. Se proporcionan varias opciones para organizar los proyectos a fin de permitir que los desarrolladores alcancen este objetivo. En la lista siguiente se proporcionan algunos escenarios típicos que debe considerar cuando decida cómo va a configurar el diseño del proyecto con .NET Core. Es posible que la lista no abarque todos los aspectos que quiere, pero debe darles prioridad en función de las necesidades del proyecto.
+Aprenda a crear una solución que se compila para .NET Framework y .NET Core en paralelo. Consulte varias opciones para organizar los proyectos para alcanzar este objetivo. Los siguientes son algunos escenarios típicos que debe considerar cuando decida cómo va a configurar el diseño del proyecto con .NET Core. Es posible que la lista no abarque todos los aspectos que quiere, pero debe darles prioridad en función de las necesidades del proyecto.
 
 * [**Combinar los proyectos existentes y los proyectos de .NET Core en proyectos únicos**][option-csproj]
 

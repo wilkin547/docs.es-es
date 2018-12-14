@@ -3,12 +3,12 @@ title: 'Tipos de tupla: Guía de C#'
 description: Más información sobre tipos de tupla con nombre y sin nombre en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186036"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155137"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C# #
 
@@ -88,7 +88,7 @@ Estas situaciones no causan errores de compilador dado que sería un cambio impo
 
 ## <a name="equality-and-tuples"></a>Igualdad y tuplas
 
-Comenzando con C# 7.3, los tipos de tupla admiten los operadores `==` y `!=`. Estos operadores funcionan comparando cada uno de los miembros del argumento izquierdo con los miembros del argumento derecho en orden. Estas comparaciones cortocircuitan. El operador `==` deja de evaluar a los miembros en cuanto un par no es igual. El operador `!=` deja de evaluar a los miembros en cuanto un par es igual. Los siguientes ejemplos de código usan `==`, pero todas las reglas de comparación se aplican a `!=`. En el siguiente ejemplo de código se muestra una comparación de igualdad para dos pares de enteros:
+Comenzando con C# 7.3, los tipos de tupla admiten los operadores `==` y `!=`. Estos operadores funcionan comparando cada uno de los miembros del argumento izquierdo con los miembros del argumento derecho en orden. Estas comparaciones cortocircuitan. Dejarán de evaluar a los miembros en cuanto un par no sea igual. Los siguientes ejemplos de código usan `==`, pero todas las reglas de comparación se aplican a `!=`. En el siguiente ejemplo de código se muestra una comparación de igualdad para dos pares de enteros:
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 

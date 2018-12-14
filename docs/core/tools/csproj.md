@@ -4,12 +4,12 @@ description: Conozca las diferencias entre los archivos csproj de .NET Core y lo
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143706"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -75,9 +75,6 @@ Para deshabilitar **todos los globs implícitos**, puede establecer la propiedad
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>Recomendación
-Con csproj, se recomienda quitar los globs predeterminados del proyecto y agregar solo rutas de archivos con globs para aquellos artefactos que su aplicación o biblioteca necesita para varios escenarios (por ejemplo, tiempo de ejecución y empaquetado NuGet).
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Visualización del proyecto completo tal como MSBuild lo ve
 
@@ -195,8 +192,12 @@ Un título fácil de usar del paquete, que se usa normalmente en las visualizaci
 ### <a name="authors"></a>Authors
 Una lista separada por punto y coma de los autores de los paquetes, que coinciden con los nombres de perfil de nuget.org. Estos se muestran en la galería de NuGet, en nuget.org, y se usan para hacer referencias cruzadas a paquetes de los mismos autores.
 
-### <a name="description"></a>Description
+### <a name="packagedescription"></a>PackageDescription
+
 Una descripción larga del paquete para su visualización en la interfaz de usuario.
+
+### <a name="description"></a>Descripción
+Una descripción larga del ensamblado. Si `PackageDescription` no se especifica, esta propiedad también se utiliza como la descripción del paquete.
 
 ### <a name="copyright"></a>Copyright
 Detalles de copyright del paquete.
@@ -247,7 +248,7 @@ Especifica la versión mínima del cliente de NuGet que puede instalar este paqu
 Este valor booleano especifica si se deben empaquetar los ensamblados de salida de la compilación en el archivo *.nupkg* o no.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
-Este valor booleano especifica si los elementos del tipo `Content` se incluirán automáticamente en el paquete resultante. De manera predeterminada, es `true`. 
+Este valor booleano especifica si los elementos del tipo `Content` se incluirán automáticamente en el paquete resultante. El valor predeterminado es `true`. 
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 Especifica la carpeta en la que se colocarán los ensamblados de salida. Los ensamblados de salida (y otros archivos de salida) se copian en sus respectivas carpetas de marco.

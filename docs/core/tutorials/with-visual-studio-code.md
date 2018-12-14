@@ -3,13 +3,13 @@ title: 'Introducción a C# y Visual Studio Code: Guía de C#'
 description: Obtenga información sobre cómo crear y depurar su primera aplicación .NET Core en C# mediante Visual Studio Code.
 author: kendrahavens
 ms.author: mairaw
-ms.date: 09/27/2017
-ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/05/2018
+ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192588"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129602"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -81,12 +81,56 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 6. Para comenzar a depurar, seleccione <kbd>F5</kbd> o la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
     * Mientras depura, puede ver las variables locales en el panel superior izquierdo o usar la consola de depuración.
 
-    ![Ejecutar y depurar](media/with-visual-studio-code/rundebug.png)
+7. Seleccione la flecha azul de la parte superior para continuar la depuración o seleccione el cuadrado rojo de la parte superior para detenerla.
 
-7. Seleccione la flecha verde en la parte superior para continuar la depuración o seleccione el cuadrado rojo que se encuentra arriba para detenerla.
+    ![Ejecutar y depurar](media/with-visual-studio-code/rundebug.png)
 
 > [!TIP]
 > Para obtener más información y sugerencias sobre solución de problemas en relación con la depuración de .NET Core con OmniSharp en Visual Studio Code, vea [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Instrucciones para configurar el depurador de .NET Core).
+
+## <a name="add-a-class"></a>Agregar una clase
+
+1. Para agregar una nueva clase, haga clic con el botón derecho en el Explorador de Visual Studio Code y seleccione **Nuevo archivo**. Asé se agrega un nuevo archivo a la carpeta abierta en Visual Studio Code.
+2. Asigne un nombre al archivo `Class1.cs`. Debe guardarlo con una extensión `.cs` al final para que se reconozca como archivo csharp.
+3. Agregue el código siguiente para crear la primera clase. Asegúrese de incluir el espacio de nombres correcto para poder hacer referencia a él desde el archivo `Program.cs`.
+``` csharp
+using System;
+
+namespace HelloWorld
+{
+    public class Class1
+    {
+        public string ReturnMessage()
+        {
+            return "Happy coding!";
+        }
+    }
+}
+```
+
+4. Llame a la nueva clase con el método principal de `Program.cs` agregando el código siguiente.
+
+```csharp
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Class1 c1 = new Class1();
+            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+        }
+    }
+}
+```
+
+5. Guarde los cambios y vuelva a ejecutar el programa. El nuevo mensaje debe aparecer con la cadena anexada.
+```console
+> dotnet run
+Hello World! Happy coding!
+```
 
 ## <a name="faq"></a>Preguntas más frecuentes
 

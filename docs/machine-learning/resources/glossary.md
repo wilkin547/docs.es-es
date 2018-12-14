@@ -1,18 +1,18 @@
 ---
-title: Glosario de aprendizaje automático
-description: Un glosario de términos sobre aprendizaje automático.
-ms.date: 05/31/2018
-ms.topic: conceptual
-ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+title: 'Glosario de aprendizaje automático: ML.NET'
+description: Un glosario de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
+ms.custom: seodec18
+ms.date: 12/06/2018
+ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453208"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150581"
 ---
-# <a name="machine-learning-glossary"></a>Glosario de aprendizaje automático
+# <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
-La lista siguiente es una compilación de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados.
+La lista siguiente es una compilación de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
 
 ## <a name="accuracy"></a>Exactitud
 

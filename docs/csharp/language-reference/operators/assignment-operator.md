@@ -1,29 +1,59 @@
 ---
 title: Operador = (Referencia de C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 9cd1af400a9afdb7942a49dee7e7f7bb78387f2d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 123674f37d17db6dcfe6ae9d45c7176bdff1eda7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507359"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149229"
 ---
 # <a name="-operator-c-reference"></a>Operador = (Referencia de C#)
-El operador de asignación (`=`) almacena el valor de su operando de la derecha en la ubicación de almacenamiento, propiedad o indexador indicado por su operando de la izquierda y devuelve el valor como su resultado. Los operandos deben ser del mismo tipo (o el operando de la derecha debe poder convertirse implícitamente en el tipo del operando de la izquierda).  
-  
-## <a name="remarks"></a>Comentarios  
- El operador de asignación no se puede sobrecargar. En cambio, puede definir operadores de conversión implícitos para un tipo, que le permiten usar el operador de asignación con esos tipos. Para obtener más información, vea [Usar operadores de conversión (Guía de programación de C#)](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
-  
-## <a name="example"></a>Ejemplo  
- [!code-csharp[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]  
-  
+
+El operador de asignación `=` asigna el valor de su operando de la derecha a una variable, una [propiedad](../../programming-guide/classes-and-structs/properties.md) o un elemento de [indizador](../../../csharp/programming-guide/indexers/index.md) proporcionado por el operando de la izquierda. El resultado de una expresión de asignación es el valor asignado al operando izquierdo. El tipo del operando de la derecha debe ser el mismo que el del operando de la izquierda o debe poder convertirse implícitamente en él.
+
+El operador de asignación es asociativo a la derecha, es decir, una expresión de la forma
+
+```csharp
+a = b = c
+```
+
+se evalúa como
+
+```csharp
+a = (b = c)
+```
+
+El ejemplo siguiente muestra el uso del operador de asignación para asignar valores a una variable local, una propiedad y un elemento de indizador:
+
+[!code-csharp-interactive[assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+
+## <a name="ref-assignment-operator"></a>Operador de asignación ref
+
+A partir C# 7.3, puede usar el operador de asignación ref `= ref` para reasignar una variable [local de tipo ref](../keywords/ref.md#ref-locals) o [local de tipo ref readonly](../keywords/ref.md#ref-readonly-locals). En el siguiente ejemplo se muestra el uso del operador de asignación ref:
+
+[!code-csharp[ref assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+
+En el caso del operador de asignación ref, el tipo del operando de la izquierda y el operando de la derecha debe ser los mismos.
+
+Para más información, vea la [nota de propuesta de características](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/ref-local-reassignment.md).
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
+Un tipo definido por el usuario no puede sobrecargar el operador de asignación. Sin embargo, un tipo definido por el usuario puede definir una conversión implícita a otro tipo. De este modo, el valor de un tipo definido por el usuario puede asignarse a una variable, una propiedad o un elemento de indizador de otro tipo. Para más información, consulte el artículo sobre la palabra clave [implicit](../keywords/implicit.md).
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para más información, vea la sección [Asignación simple](~/_csharplang/spec/expressions.md#simple-assignment) de la [Especificación del lenguaje C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Operadores de C#](../../../csharp/language-reference/operators/index.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Operadores de C#](index.md)
+- [ref (palabra clave)](../keywords/ref.md)

@@ -7,22 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C#]
 ms.assetid: a11aa532-efe2-442b-9fcc-8fdb33b8c8b4
-ms.openlocfilehash: 15243d4d7ecfe4600fbd6afbd0d1276ce25a58cc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 99818df4963a3797d5bd1a897c302abcd5ede0fd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44198236"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128835"
 ---
 # <a name="false-c-reference"></a>false (Referencia de C#)
-Se usa como un operador sobrecargado o como un literal:  
-  
--   [false (operador)](../../../csharp/language-reference/keywords/false-operator.md)  
-  
--   [false (literal)](../../../csharp/language-reference/keywords/false-literal.md)  
-  
+
+Se usa como un operador sobrecargado o como un literal:
+
+- [Operador false](false-operator.md)
+- [Literal false](false-literal.md)
+
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](index.md)
+- [true](true.md)

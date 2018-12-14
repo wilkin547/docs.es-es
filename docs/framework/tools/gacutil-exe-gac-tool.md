@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399599"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144889"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Herramienta Caché global de ensamblados)
 La herramienta Caché global de ensamblados permite ver y manipular el contenido de la caché global de ensamblados y la memoria caché de descarga.  
@@ -41,13 +41,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*assemblyName*|El nombre de un ensamblado. Puede especificar parte del nombre del ensamblado, como `myAssembly`, o puede especificar un nombre de ensamblado completo, como `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|  
 |*assemblyPath*|El nombre de un archivo que contiene un manifiesto del ensamblado.|  
 |*assemblyListFile*|La ruta de acceso a un archivo de texto ANSI donde se enumeran los ensamblados que se van a instalar o desinstalar. Si desea usar un archivo de texto para instalar ensamblados, especifique la ruta de acceso de cada ensamblado en una línea independiente del archivo. La herramienta interpreta las rutas de acceso relativas en relación con la ubicación de *assemblyListFile*. Si desea usar un archivo de texto para desinstalar ensamblados, especifique el nombre completo de cada ensamblado en una línea independiente del archivo. Puede ver algunos ejemplos del contenido de *assemblyListFile* más adelante en este tema.|  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/cdl**|Elimina el contenido de la memoria caché de descarga.|  
 |**/f**|Especifique esta opción con las opciones **/i** o **/il** para forzar la reinstalación de un ensamblado. Si ya existe un ensamblado con el mismo nombre en la caché global de ensamblados, la herramienta sobrescribe dicho ensamblado.|  
@@ -93,7 +93,23 @@ myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
-  
+
+> [!NOTE]
+>  Al intentar instalar a un ensamblado con un nombre de archivo que tenga entre 79 y 91 caracteres (sin incluir la extensión de archivo) se puede producir el error siguiente:
+> ```
+> Failure adding assembly to the cache:   The file name is too long.
+> ```
+> Esto es porque Gacutil.exe crea internamente una ruta de acceso de hasta MAX_PATH caracteres que consta de los siguientes elementos:
+> - Raíz de GAC: 34 caracteres (es decir, `C:\Windows\Microsoft.NET\assembly\`)
+> - Arquitectura: 7 o 9 caracteres (es decir, `GAC_32\`, `GAC_64\` y `GAC_MSIL`)
+> - AssemblyName: hasta 91 caracteres, según el tamaño de los demás elementos (por ejemplo, `System.Xml.Linq\`)
+> - AssemblyInfo: de 31 a 48 caracteres o más que constan de:
+>   - Framework: 5 caracteres (por ejemplo, `v4.0_`)
+>   - AssemblyVersion: de 8 a 24 caracteres (por ejemplo, `9.0.1000.0_`)
+>   - AssemblyLanguage: de 1 a 8 caracteres (por ejemplo, `de_`, `sr-Cyrl_`)
+>   - PublicKey: 17 caracteres (por ejemplo, `31bf3856ad364e35\`)
+> - DllFileName: hasta 91 + 4 caracteres (es decir, `<AssemblyName>.dll`)
+
 ## <a name="examples"></a>Ejemplos  
  El comando siguiente instala el ensamblado `mydll.dll` en la caché global de ensamblados.  
   

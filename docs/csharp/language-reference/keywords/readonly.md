@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d09ce4ea972a3064298eebdf0b8b80999ee8441e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397548"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146175"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referencia de C#)
 
@@ -44,7 +44,7 @@ public readonly int y = 5;
 Estos contextos de constructor son también los únicos en los que es válido pasar un campo `readonly` como parámetro [out](out-parameter-modifier.md) o [ref](ref.md).
 
 > [!NOTE]
-> La palabra clave `readonly` es diferente de la palabra clave [const](const.md). Un campo `const` solo se puede inicializar en la declaración del campo. Un campo `readonly` se puede inicializar en la declaración o en un constructor. Por lo tanto, los campos `readonly` pueden tener diferentes valores en función del constructor que se use. Además, mientras que un campo `const` es una constante en tiempo de compilación, el campo `readonly` puede usarse para constantes en tiempo de ejecución, como muestra el siguiente ejemplo:
+> La palabra clave `readonly` es diferente de la palabra clave [const](const.md). Un campo `const` solo se puede inicializar en la declaración del campo. Un campo `readonly` se puede asignar varias veces en la declaración de campo o en cualquier constructor. Por lo tanto, los campos `readonly` pueden tener diferentes valores en función del constructor que se use. Además, mientras que un campo `const` es una constante en tiempo de compilación, el campo `readonly` puede usarse para constantes en tiempo de ejecución, como muestra el siguiente ejemplo:
 
 ```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -89,7 +89,7 @@ El modificador `readonly` en una `ref return` indica que la referencia devuelta 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
 No es necesario que el tipo devuelto sea una `readonly struct`. Cualquier tipo que `ref` pueda devolver `ref readonly` también puede devolver.
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

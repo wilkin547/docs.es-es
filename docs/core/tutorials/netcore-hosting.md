@@ -1,17 +1,18 @@
 ---
-title: Hospedaje de .NET Core
-description: Hospedar el runtime de .NET Core desde código nativo
+title: Escritura de un host en tiempo de ejecución personalizado de .NET Core
+description: Obtenga información sobre cómo hospedar el entorno de tiempo de ejecución de .NET Core desde código nativo para admitir escenarios avanzados que necesitan controlar cómo funciona dicho entorno.
 author: mjrousos
 ms.author: mairaw
-ms.date: 2/3/2017
-ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 02/03/2017
+ms.custom: seodec18
+ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218611"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146966"
 ---
-# <a name="hosting-net-core"></a>Hospedaje de .NET Core
+# <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
 Como todo el código administrado, las aplicaciones de .NET Core se ejecutan mediante un host. El host es el responsable de iniciar el runtime (incluidos los componentes como el JIT y el recolector de elementos no utilizados), crear AppDomains e invocar puntos de entrada administrados.
 
@@ -82,7 +83,6 @@ Las propiedades comunes de AppDomain incluyen:
 *  `APP_NI_PATHS` Esta lista es muy similar a APP_PATHS excepto que está diseñada para ser rutas de acceso que se explorarán para imágenes nativas.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Esta propiedad es una lista de rutas de acceso que el cargador debe explorar cuando busca archivos DLL nativos que se han llamado mediante p/invoke.
 *  `PLATFORM_RESOURCE_ROOTS` Esta lista incluye rutas de acceso que se van a explorar para ensamblados satélite de recursos (en subdirectorios específicos de la referencia cultural).
-*  `AppDomainCompatSwitch` Esta cadena especifica qué modos de interpretación de compatibilidad deben usarse para los ensamblados sin un moniker de la versión de .NET Framework de destino explícito (un atributo de nivel de ensamblado que indica en qué marco está pensado que se ejecute un ensamblado). Normalmente, esto debe establecerse en `"UseLatestBehaviorWhenTFMNotSpecified"`, pero algunos hosts pueden preferir obtener en su lugar modos de interpretación de compatibilidad más antiguos de Silverlight o Windows Phone.
 
 En nuestro [host de ejemplo sencillo](https://github.com/dotnet/samples/tree/master/core/hosting), estas propiedades se configuran de la siguiente manera:
 

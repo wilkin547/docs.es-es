@@ -1,21 +1,21 @@
 ---
 title: Implementación de aplicaciones de .NET Core con Visual Studio
-description: Obtenga información sobre la implementación de aplicaciones de .NET Core con Visual Studio
+description: Aprenda a implementar una aplicación de .NET Core con Visual Studio.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 095c0f02df0de0b276c3677095e224316ac76cff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584400"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127113"
 ---
-# <a name="deploying-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Implementación de aplicaciones de .NET Core con Visual Studio
 
 Puede implementar una aplicación de .NET Core como una *implementación dependiente de la plataforma*, que incluye los archivos binarios de la aplicación pero depende de la presencia de .NET Core en el sistema de destino, o como una *implementación independiente*, que incluye la aplicación y los archivos binarios de .NET Core. Para obtener información general sobre la implementación de aplicaciones de NET Core, vea [Implementación de aplicaciones .NET Core](index.md).
 
@@ -144,7 +144,7 @@ Para publicar la aplicación desde Visual Studio, siga estos pasos:
 
       1. En la pestaña **Publicar**, seleccione **Publicar**. Visual Studio escribe los archivos que componen la aplicación en el sistema de archivos local.
 
-      1. La pestaña **Publicar** muestra ahora un solo perfil, **FolderProfile**. Los valores de configuración del perfil se muestran en la sección **Resumen** de la pestaña. Tiempo de ejecución de destino identifica qué tiempo de ejecución se ha publicado, y **Ubicación de destino** identifica dónde se escriben los archivos de la implementación independiente.
+      1. La pestaña **Publicar** muestra ahora un solo perfil, **FolderProfile**. Los valores de configuración del perfil se muestran en la sección **Resumen** de la pestaña. **Tiempo de ejecución de destino** identifica qué tiempo de ejecución se ha publicado, y **Ubicación de destino** identifica dónde se escriben los archivos de la implementación independiente.
 
       1. De forma predeterminada, Visual Studio escribe todos los archivos publicados en un único directorio. Para mayor comodidad, es mejor crear perfiles distintos para cada tiempo de ejecución de destino y colocar los archivos publicados en un directorio específico de la plataforma. Esto implica la creación de un perfil de publicación independiente para cada plataforma de destino. Por tanto, vuelva a compilar la aplicación para cada plataforma siguiendo estos pasos:
 

@@ -1,17 +1,18 @@
 ---
-title: Selección de la versión de .NET Core
-description: Obtenga información sobre cómo .NET Core busca y elige las versiones de runtime para el programa.
+title: Selección de la versión de .NET Core que se va a usar
+description: Obtenga información sobre cómo .NET Core busca y elige las versiones de runtime para el programa. Además, este artículo le enseña cómo forzar una versión específica.
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841545"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127243"
 ---
-# <a name="net-core-version-selection"></a>Selección de la versión de .NET Core
+# <a name="select-the-net-core-version-to-use"></a>Selección de la versión de .NET Core que se va a usar
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ Las plataformas de destino de .NET Standard también se limitan a la plataforma 
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Puesta al día de las aplicaciones dependientes de la plataforma
 
-Una aplicación se puede ejecutar desde código fuente con [`dotnet run`](../tools/dotnet-run.md). `dotnet run` compila y ejecuta la aplicación. El archivo ejecutable `dotnet` es el **host** para la aplicación en los entornos de desarrollo.
+Cuando una aplicación se ejecuta desde el origen con [`dotnet run`](../tools/dotnet-run.md), desde una [**implementación dependiente del marco**](../deploying/index.md#framework-dependent-deployments-fdd) con [`dotnet myapp.dll`](../tools/dotnet.md#description) o desde un [**ejecutable dependiente del marco**](../deploying/index.md#framework-dependent-executables-fde) con `myapp.exe`, el ejecutable `dotnet` es el **host** de la aplicación.
 
 El host elige la versión de revisión más reciente instalada en el equipo. Por ejemplo, si se especifica `netcoreapp2.0` en el archivo de proyecto, y `2.0.4` es el runtime de .NET instalado más reciente, se usa el runtime `2.0.4`.
 

@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 3694699466f7a200eecd5eef85f60fa19f9584a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862308"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129953"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Operaciones aritméticas en punteros (Guía de programación de C#)
-En este tema se describe el uso de los operadores aritméticos `+` y **-** para manipular punteros.  
+En este tema se describe el uso de los operadores aritméticos `+` y `-` para manipular punteros.  
   
 > [!NOTE]
 >  No se pueden realizar operaciones aritméticas en punteros void.  
   
-## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Suma y resta de valores numéricos a punteros  
- Se puede sumar un valor `n` de tipo [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) o [ulong](../../../csharp/language-reference/keywords/ulong.md) a un puntero, `p`, de cualquier tipo excepto `void*`. El `p+n` resultante es el puntero que resulta de sumar `n * sizeof(p) to the address of p`. De forma similar, `p-n` es el puntero resultante de restar `n * sizeof(p)` de la dirección de `p`.  
+## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Suma y resta de valores numéricos en punteros  
+ Se puede sumar un valor `n` de tipo [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) o [ulong](../../../csharp/language-reference/keywords/ulong.md) a un puntero. Si `p` es un puntero de tipo `pointer-type*`, el resultado `p+n` es el puntero resultante de sumar `n * sizeof(pointer-type)` a la dirección de `p`. De forma similar, `p-n` es el puntero resultante de restar `n * sizeof(pointer-type)` de la dirección de `p`.  
   
-## <a name="subtracting-pointers"></a>Restar punteros  
+## <a name="subtracting-pointers"></a>Resta de punteros  
  También se pueden restar punteros del mismo tipo. El resultado siempre es de tipo `long`. Por ejemplo, si `p1` y `p2` son punteros de tipo `pointer-type*`, la expresión `p1-p2` da como resultado:  
   
- `((long)p1 - (long)p2)/sizeof(pointer_type)`  
+ `((long)p1 - (long)p2)/sizeof(pointer-type)`  
   
  No se genera ninguna excepción cuando la operación aritmética desborda el dominio del puntero y el resultado depende de la implementación.  
   

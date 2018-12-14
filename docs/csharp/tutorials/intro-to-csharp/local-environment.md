@@ -2,12 +2,12 @@
 title: 'Introducción a C#: familiarización con las herramientas de desarrollo'
 description: En este artículo se proporciona una introducción básica a las herramientas que usará para desarrollar de C# y .NET en el equipo.
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200194"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129992"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Familiarización con las herramientas de desarrollo de .NET
 
@@ -22,7 +22,7 @@ Podrá crear aplicaciones mediante el comando [`dotnet new`](../../../core/tools
 
 Los otros comandos que se van a utilizar son [`dotnet build`](../../../core/tools/dotnet-build.md) para compilar el archivo ejecutable, y [`dotnet run`](../../../core/tools/dotnet-run.md) para ejecutar el archivo ejecutable.
 
-## <a name="pick-your-turorial"></a>Elección del tutorial
+## <a name="pick-your-tutorial"></a>Elección del tutorial
 
 Puede empezar con cualquiera de los siguientes tutoriales:
 

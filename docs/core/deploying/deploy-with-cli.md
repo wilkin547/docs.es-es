@@ -1,20 +1,21 @@
 ---
-title: Implementación de aplicaciones de .NET Core con herramientas de la CLI
-description: Obtenga información sobre la implementación de aplicaciones de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
+title: Implementación de aplicaciones de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
+description: Aprenda a implementar una aplicación de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454454"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151101"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implementación de aplicaciones de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Implementación de aplicaciones de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
 
 Puede implementar una aplicación de .NET Core como una *implementación dependiente de la plataforma*, que incluye los archivos binarios de aplicación pero depende de la presencia de .NET Core en el sistema de destino, o como una *implementación independiente*, que incluye la aplicación y los archivos binarios de .NET Core. Para obtener información general, vea [Implementación de aplicaciones .NET Core](index.md).
 

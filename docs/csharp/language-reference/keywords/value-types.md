@@ -1,6 +1,6 @@
 ---
 title: Tipos de valor (Referencia de C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -8,51 +8,55 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: baf0db751cd70d50d4cf440626dd405b01c8d7ad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526468"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147728"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
-Los tipos de valor constan de dos categorías principales:  
+
+Existen dos clases de tipos de valor:
+
+- [Structs](struct.md)
+
+- [Enumeraciones](enum.md)
+
+## <a name="main-features-of-value-types"></a>Características principales de los tipos de valor
+
+Una variable de un tipo de valor contiene un valor del tipo. Por ejemplo, una variable del tipo `int` podría contener el valor `42`. Esto difiere de una variable de un tipo de referencia, que contiene una referencia a una instancia del tipo y que también se conoce como un objeto. Al asignar un nuevo valor a una variable de un tipo de valor, se copia ese valor. Al asignar un nuevo valor a una variable de un tipo de referencia, se copia la referencia, no el propio objeto.
+
+Todos los tipos de valor se derivan implícitamente de <xref:System.ValueType?displayProperty=nameWithType>.  
   
--   [Structs](../../../csharp/language-reference/keywords/struct.md)  
+A diferencia de los tipos de referencia, no puede derivar un tipo nuevo de un tipo de valor. En cambio, como los tipos de referencia, los structs pueden implementar interfaces.  
   
--   [Enumeraciones](../../../csharp/language-reference/keywords/enum.md)  
+Las variables de tipo de valor no pueden ser `null` de forma predeterminada. Sin embargo, las variables de los [tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md) correspondientes pueden ser `null`.
   
- Los structs se dividen en estas categorías:  
+Cada tipo de valor tiene un constructor predeterminado implícito que inicializa el valor predeterminado de ese tipo. Para información sobre los valores predeterminados de los tipos de valor, vea [Tabla de valores predeterminados](default-values-table.md).  
   
--   Tipos numéricos  
+## <a name="simple-types"></a>Tipos simples
+
+Los *tipos simples* son un conjunto de tipos struct predefinidos proporcionados por C# y comprenden los siguientes tipos:
+
+- [Tipos enteros](integral-types-table.md): tipos numéricos enteros y tipo [char](char.md)
+- [Tipos de punto flotante](floating-point-types-table.md)
+- [bool](bool.md)
+
+Los tipos simples se identifican mediante palabras clave, pero estas palabras clave son simplemente los alias para tipos struct predefinidos en el espacio de nombres <xref:System>. Por ejemplo, [int](int.md) es un alias de <xref:System.Int32?displayProperty=nameWithType>. Para una lista completa de alias, vea [Tabla de tipos integrados](built-in-types-table.md).
+
+Los tipos simples se diferencian de otros tipos struct en que permiten determinadas operaciones adicionales:
+
+- Los tipos simples pueden inicializarse mediante el uso de literales. Por ejemplo, `'A'` es un literal del tipo `char` y `2001` es un literal del tipo `int`.
+
+- Puede declarar constantes de los tipos simples con la palabra clave [const](const.md). No es posible tener constantes de otros tipos struct.
+
+- Las expresiones constantes, cuyos operandos son todas constantes de tipo simple, se evalúan en tiempo de compilación.
+
+Para más información, vea la sección [Tipos simples](~/_csharplang/spec/types.md#simple-types) de la [Especificación del lenguaje C#](../language-specification/index.md).
   
-    -   [Tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
-  
-    -   [Tipos de punto flotante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
--   [bool](../../../csharp/language-reference/keywords/bool.md)  
-  
--   Structs definidos por el usuario.  
-  
-## <a name="main-features-of-value-types"></a>Características principales de los tipos de valor  
- Las variables que se basan en tipos de valor directamente contienen valores. Asignar una variable de tipo de valor a otra copia el valor incluido. Esto difiere de la asignación de variables de tipo de referencia, que copia una referencia al objeto pero no el propio objeto.  
-  
- Todos los tipos de valor se derivan implícitamente de <xref:System.ValueType?displayProperty=nameWithType>.  
-  
- A diferencia de los tipos de referencia, no puede derivar un tipo nuevo de un tipo de valor. En cambio, como los tipos de referencia, los structs pueden implementar interfaces.  
-  
- A diferencia de los tipos de referencia, un tipo de valor no puede contener el valor `null`. En cambio, la característica [tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md) se permite para los tipos de valor que se van a asignar a `null`.  
-  
- Cada tipo de valor tiene un constructor predeterminado implícito que inicializa el valor predeterminado de ese tipo. Para obtener información sobre los valores predeterminados de los tipos de valor, vea [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md).  
-  
-## <a name="main-features-of-simple-types"></a>Características principales de los tipos simples  
- Todos los tipos simples, integrales del lenguaje de C#, son alias de los tipos de sistema de .NET Framework. Por ejemplo, [int](../../../csharp/language-reference/keywords/int.md) es un alias de <xref:System.Int32?displayProperty=nameWithType>. Para obtener una lista completa de los alias, vea [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md).  
-  
- Las expresiones constantes, cuyos operandos son todos constantes de tipo simple, se evalúan en tiempo de compilación.  
-  
- Los tipos simples pueden inicializarse mediante el uso de literales. Por ejemplo, "A" es un literal del tipo `char` y 2001 es un literal del tipo `int`.  
-  
-## <a name="initializing-value-types"></a>Inicializar tipos de valor  
+## <a name="initializing-value-types"></a>Inicialización de tipos de valor
+
  Las variables locales en C# deben inicializarse antes de usarse. Por ejemplo, puede declarar una variable local sin inicialización como en el ejemplo siguiente:  
   
 ```csharp  
@@ -83,9 +87,9 @@ int myInt = new int();
 int myInt = 0;  
 ```  
   
- Con el operador [new](../../../csharp/language-reference/keywords/new.md) se llama al constructor predeterminado del tipo específico y asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor predeterminado ha asignado el valor `0` a `myInt`. Para obtener más información sobre los valores que se han asignado llamando a los constructores predeterminados, vea [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md).  
+ Con el operador [new](new.md) se llama al constructor predeterminado del tipo específico y asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor predeterminado ha asignado el valor `0` a `myInt`. Para más información sobre los valores que se han asignado llamando a los constructores predeterminados, vea [Tabla de valores predeterminados](default-values-table.md).  
   
- Con los tipos definidos por el usuario, use [new](../../../csharp/language-reference/keywords/new.md) para invocar al constructor predeterminado. Por ejemplo, la siguiente instrucción invoca al constructor predeterminado del struct `Point`:  
+ Con los tipos definidos por el usuario, use [new](new.md) para invocar al constructor predeterminado. Por ejemplo, la siguiente instrucción invoca al constructor predeterminado del struct `Point`:  
   
 ```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
@@ -93,16 +97,16 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Después de esta llamada, el struct se considera asignado definitivamente; es decir, todos sus miembros se inicializan a sus valores predeterminados.  
   
- Para obtener más información sobre el operador new, vea [new](../../../csharp/language-reference/keywords/new.md).  
+ Para obtener más información acerca del operador `new`, vea [new](new.md).  
   
- Para obtener información sobre cómo aplicar formato al resultado de los tipos numéricos, vea [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
+ Para información sobre cómo aplicar formato al resultado de los tipos numéricos, vea [Tabla de formatos de presentación para valores numéricos](formatting-numeric-results-table.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tipos](../../../csharp/language-reference/keywords/types.md)  
-- [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Referencia de C#](../index.md)  
+- [Guía de programación de C#](../../programming-guide/index.md)  
+- [Palabras clave de C#](index.md)  
+- [Tipos](types.md)  
+- [Tablas de referencia para tipos](reference-tables-for-types.md)  
+- [Tipos de referencia](reference-types.md)  
 - [Nullable types](../../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])  

@@ -1,19 +1,19 @@
 ---
 title: Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
-description: Obtenga información sobre cómo llamar a los miembros de una biblioteca de clases con Visual Studio 2017.
+description: Cree una aplicación de .NET Core que llame a los miembros de otra biblioteca de clases con Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518170"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147325"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
 
@@ -57,7 +57,7 @@ Así como se incluyen pruebas unitarias en la misma solución que la biblioteca 
 1. Si es necesario, cambie la barra de herramientas para compilar la versión de **depuración** del proyecto `ShowCase`. Compile y ejecute el programa haciendo clic en la flecha verde en el botón **Presentación**.
 
    ![Imagen](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Abra la solución `ClassLibraryProjects` creada en el tema [Building a class Library with Visual Basic and .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017). En el **Explorador de soluciones**, haga clic con el botón derecho en la solución **ClassLibraryProject** y seleccione **Agregar** > **Nuevo proyecto** en el menú contextual.
 
 1. En el cuadro de diálogo **Agregar nuevo proyecto**, expanda el nodo **Visual Basic** y seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "Presentación" y pulse el botón **Aceptar**.

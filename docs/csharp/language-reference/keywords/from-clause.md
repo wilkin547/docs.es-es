@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9af24d9c2a99a9c763c6ad3aac9895e7dddcf8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033407"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129043"
 ---
 # <a name="from-clause-c-reference"></a>from (Cláusula, Referencia de C#)
 
@@ -33,7 +33,7 @@ En el ejemplo siguiente, `numbers` es el origen de datos y `num` es la variable 
 
 El compilador deduce el tipo de la variable de rango cuando el origen de datos implementa <xref:System.Collections.Generic.IEnumerable%601>. Por ejemplo, si el origen tiene un tipo de `IEnumerable<Customer>`, entonces se deduce que la variable de rango es `Customer`. La única vez en que debe especificar el tipo explícitamente es cuando el origen es un tipo `IEnumerable` no genérico como <xref:System.Collections.ArrayList>. Para obtener más información, vea [How to: Query an ArrayList with LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) (Consultar un objeto ArrayList con LINQ).
 
-En el ejemplo anterior, `num` se deduce que es de tipo `int`. Como la variable de rango está fuertemente tipada, puede llamar a los métodos en ella o usarla en otras operaciones. Por ejemplo, en lugar de escribir `select num`, podría escribir `select num.ToString()` para hacer que la expresión de consulta devuelva una secuencia de cadenas en lugar de enteros. O podría escribir `select n + 10` para hacer que la expresión devuelva la secuencia 14, 11, 13, 12, 10. Para obtener más información, vea [Cláusula select](select-clause.md).
+En el ejemplo anterior, `num` se deduce que es de tipo `int`. Como la variable de rango está fuertemente tipada, puede llamar a los métodos en ella o usarla en otras operaciones. Por ejemplo, en lugar de escribir `select num`, podría escribir `select num.ToString()` para hacer que la expresión de consulta devuelva una secuencia de cadenas en lugar de enteros. O podría escribir `select num + 10` para hacer que la expresión devuelva la secuencia 14, 11, 13, 12, 10. Para obtener más información, vea [Cláusula select](select-clause.md).
 
 La variable de rango es como una variable de iteración en una instrucción [foreach](foreach-in.md) excepto por una diferencia muy importante: una variable de rango realmente nunca almacena datos del origen. Es solo una comodidad sintáctica que permite a la consulta describir lo que ocurrirá cuando se ejecute la consulta. Para obtener más información, vea [Introduction to LINQ queries (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].
 

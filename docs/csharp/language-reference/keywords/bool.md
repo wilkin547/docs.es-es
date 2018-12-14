@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a5a5fa37905df9fb9369e9c0c26a2e39d03353f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042405"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128328"
 ---
 # <a name="bool-c-reference"></a>bool (Referencia de C#)
 
-La palabra clave `bool` es un alias de <xref:System.Boolean?displayProperty=nameWithType>. Se usa para declarar variables que almacenan los valores booleanos [true](../../../csharp/language-reference/keywords/true.md) y [false](../../../csharp/language-reference/keywords/false.md).
+La palabra clave `bool` es un alias de <xref:System.Boolean?displayProperty=nameWithType>. Se usa para declarar variables que almacenan los valores booleanos [true](true-literal.md) y [false](false-literal.md).
 
 > [!NOTE]
-> Si necesita una variable booleana que también pueda tener un valor de `null`, use `bool?`. Para más información, consulte [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL).
+> Si necesita una variable booleana que también pueda tener un valor de `null`, use `bool?`. Para más información, vea la sección [Tipo bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) del artículo [Uso de tipos que aceptan valores NULL](../../programming-guide/nullable-types/using-nullable-types.md).
 
 ## <a name="literals"></a>Literales
 
@@ -45,7 +45,7 @@ En este ejemplo, se escribe un carácter desde el teclado y el programa comprueb
 
 [!code-csharp[csrefKeywordsTypes#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#4)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

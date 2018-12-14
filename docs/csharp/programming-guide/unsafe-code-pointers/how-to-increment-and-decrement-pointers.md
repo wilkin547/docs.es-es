@@ -5,17 +5,18 @@ helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: 39cefc5dcebf1331a5e0ac0fadb8284e9041eb27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c75432d88a1e96742573a6e69a4e035066a387c4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44206476"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128341"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Cómo: Aumentar y disminuir punteros (Guía de programación de C#)
-Use los operadores de incremento y decremento, `++` y `--`, para cambiar la ubicación del puntero en [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) para un puntero de tipo pointer-type*. Las expresiones de incremento y decremento adquieren la forma siguiente:  
+
+Use los operadores de incremento y decremento (`++` y `--`) para cambiar la ubicación del puntero en `sizeof(pointer-type)` para un puntero de tipo `pointer-type*`. Las expresiones de incremento y decremento adquieren la forma siguiente:  
   
-```  
+```csharp
 ++p;  
 p++;  
 --p;  
@@ -24,9 +25,9 @@ p--;
   
  Los operadores de incremento y decremento se pueden aplicar a punteros de cualquier tipo, a excepción del tipo `void*`.  
   
- El efecto de aplicar el operador de incremento a un puntero del tipo `pointer-type` es agregar [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) a la dirección que está en la variable del puntero.  
+ El efecto de aplicar el operador de incremento a un puntero del tipo `pointer-type*` es agregar `sizeof(pointer-type)` a la dirección incluida en la variable del puntero.  
   
- El efecto de aplicar el operador de decremento a un puntero del tipo `pointer-type` es restar `sizeof` (`pointer-type`) de la dirección que está en la variable del puntero.  
+ El efecto de aplicar el operador de decremento a un puntero del tipo `pointer-type*` es restar `sizeof(pointer-type)` de la dirección incluida en la variable del puntero.  
   
  No se genera ninguna excepción cuando la operación desborda el dominio del puntero y el resultado depende de la implementación.  
   
@@ -54,3 +55,4 @@ p--;
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
 - [fixed (instrucción)](../../../csharp/language-reference/keywords/fixed-statement.md)  
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+- [sizeof](../../../csharp/language-reference/keywords/sizeof.md)

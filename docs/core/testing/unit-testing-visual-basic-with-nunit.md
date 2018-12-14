@@ -5,19 +5,20 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1cfca0939d4c4055aece69cae066c365cd2a1dc0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836934"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143576"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Bibliotecas de .NET Core de prueba unitaria de Visual Basic con pruebas de dotnet y NUnit
 
 Este tutorial le guía por una experiencia interactiva de creación de una solución de ejemplo paso a paso para aprender los conceptos de pruebas unitarias. Si prefiere seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) antes de comenzar. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Requisitos previos 
-- [SDK de .NET Core 2.1 (v. 2.1.400](https://www.microsoft.com/net/download) o versiones posteriores. 
+## <a name="prerequisites"></a>Requisitos previos
+
+- [SDK de .NET Core 2.1](https://www.microsoft.com/net/download) o versiones posteriores.
 - Un editor de texto o un editor de código de su elección.
 
 ## <a name="creating-the-source-project"></a>Crear el proyecto de origen

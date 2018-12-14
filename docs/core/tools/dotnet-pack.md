@@ -1,15 +1,13 @@
 ---
 title: 'Comando dotnet pack: CLI de .NET Core'
 description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: 434f1c97af24d1417cd79edd52b63814fd4c6512
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/04/2018
+ms.openlocfilehash: 77770e715ef11595e8c95bb40be960138cd7ec61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840482"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149606"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -49,65 +47,65 @@ Puede proporcionar propiedades de MSBuild en el comando `dotnet pack` para el pr
 
 ## <a name="arguments"></a>Argumentos
 
-`PROJECT`
+* **`PROJECT`**
 
-El proyecto para empaquetar. O bien una ruta de acceso a un [archivo csproj](csproj.md) o a un directorio. Si no se especifica, se toma como predeterminado el directorio actual.
+  El proyecto para empaquetar. O bien una ruta de acceso a un [archivo csproj](csproj.md) o a un directorio. Si no se especifica, se toma como predeterminado el directorio actual.
 
 ## <a name="options"></a>Opciones
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-Define la configuración de compilación. El valor predeterminado es `Debug`.
+  Define la configuración de compilación. El valor predeterminado es `Debug`.
 
-`--force`
+* **`--force`**
 
-Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
+  Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
 
-`-h|--help`
+* **`-h|--help`**
 
-Imprime una corta ayuda para el comando.
+  Imprime una corta ayuda para el comando.
 
-`--include-source`
+* **`--include-source`**
 
-Incluye los archivos de origen en el paquete de NuGet. Los archivos de origen se incluyen en la carpeta `src` dentro de `nupkg`.
+  Incluye los archivos de origen en el paquete de NuGet. Los archivos de origen se incluyen en la carpeta `src` dentro de `nupkg`.
 
-`--include-symbols`
+* **`--include-symbols`**
 
-Genera símbolos `nupkg`.
+  Genera símbolos `nupkg`.
 
-`--no-build`
+* **`--no-build`**
 
-No compila el proyecto antes de empaquetarlo. También establece la marca `--no-restore` de forma implícita.
+  No compila el proyecto antes de empaquetarlo. También establece la marca `--no-restore` de forma implícita.
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.
+  Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.
 
-`--no-restore`
+* **`--no-restore`**
 
-No ejecuta una restauración implícita al ejecutar el comando.
+  No ejecuta una restauración implícita al ejecutar el comando.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Coloca los paquetes compilados en el directorio especificado.
+  Coloca los paquetes compilados en el directorio especificado.
 
-`--runtime <RUNTIME_IDENTIFIER>`
+* **`--runtime <RUNTIME_IDENTIFIER>`**
 
-Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
+  Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
 
-`-s|--serviceable`
+* **`-s|--serviceable`**
 
-Establece la marca de servicio en el paquete. Para más información, consulte [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing) (Blog de .NET: .NET 4.5.1 admite actualizaciones de seguridad de Microsoft para bibliotecas NuGet de .NET).
+  Establece la marca de servicio en el paquete. Para más información, consulte [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing) (Blog de .NET: .NET 4.5.1 admite actualizaciones de seguridad de Microsoft para bibliotecas NuGet de .NET).
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-Define el valor de la propiedad de `$(VersionSuffix)` en el proyecto.
+  Define el valor de la propiedad de `$(VersionSuffix)` en el proyecto.
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
 
 > [!NOTE]
 > Los proyectos web no están empaquetados de forma predeterminada. Para invalidar el comportamiento predeterminado, agregue la siguiente propiedad a su archivo *.csproj*:
@@ -119,74 +117,96 @@ Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`,
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-Define la configuración de compilación. El valor predeterminado es `Debug`.
+  Define la configuración de compilación. El valor predeterminado es `Debug`.
 
-`-h|--help`
+* **`-h|--help`**
 
-Imprime una corta ayuda para el comando.
+  Imprime una corta ayuda para el comando.
 
-`--include-source`
+* **`--include-source`**
 
-Incluye los archivos de origen en el paquete de NuGet. Los archivos de origen se incluyen en la carpeta `src` dentro de `nupkg`.
+  Incluye los archivos de origen en el paquete de NuGet. Los archivos de origen se incluyen en la carpeta `src` dentro de `nupkg`.
 
-`--include-symbols`
+* **`--include-symbols`**
 
-Genera símbolos `nupkg`.
+  Genera símbolos `nupkg`.
 
-`--no-build`
+* **`--no-build`**
 
-No compila el proyecto antes de empaquetarlo.
+  No compila el proyecto antes de empaquetarlo.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Coloca los paquetes compilados en el directorio especificado.
+  Coloca los paquetes compilados en el directorio especificado.
 
-`-s|--serviceable`
+* **`-s|--serviceable`**
 
-Establece la marca de servicio en el paquete. Para más información, consulte [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing) (Blog de .NET: .NET 4.5.1 admite actualizaciones de seguridad de Microsoft para bibliotecas NuGet de .NET).
+  Establece la marca de servicio en el paquete. Para más información, consulte [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing) (Blog de .NET: .NET 4.5.1 admite actualizaciones de seguridad de Microsoft para bibliotecas NuGet de .NET).
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-Define el valor de la propiedad de `$(VersionSuffix)` en el proyecto.
+  Define el valor de la propiedad de `$(VersionSuffix)` en el proyecto.
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+  Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
 
 ---
 
 ## <a name="examples"></a>Ejemplos
 
-Empaquetado del proyecto en el directorio actual:
+* Empaquetado del proyecto en el directorio actual:
 
-`dotnet pack`
+  ```console
+  dotnet pack
+  ```
 
-Empaquetar el proyecto `app1`:
+* Empaquetar el proyecto `app1`:
 
-`dotnet pack ~/projects/app1/project.csproj`
+  ```console
+  dotnet pack ~/projects/app1/project.csproj
+  ```
 
-Empaquetar el proyecto en el directorio actual y colocar los paquetes resultantes en la carpeta `nupkgs`:
+* Empaquetar el proyecto en el directorio actual y colocar los paquetes resultantes en la carpeta `nupkgs`:
 
-`dotnet pack --output nupkgs`
+  ```console
+  dotnet pack --output nupkgs
+  ```
 
-Empaquetar el proyecto en el directorio actual en la carpeta `nupkgs` y omitir del paso de compilación:
+* Empaquetar el proyecto en el directorio actual en la carpeta `nupkgs` y omitir del paso de compilación:
 
-`dotnet pack --no-build --output nupkgs`
+  ```console
+  dotnet pack --no-build --output nupkgs
+  ```
 
-Con el sufijo de la versión del proyecto configurado como `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` en el archivo *.csproj*, empaquetar el proyecto actual y actualizar la versión del paquete resultante con el sufijo dado:
+* Con el sufijo de la versión del proyecto configurado como `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` en el archivo *.csproj*, empaquetar el proyecto actual y actualizar la versión del paquete resultante con el sufijo dado:
 
-`dotnet pack --version-suffix "ci-1234"`
+  ```console
+  dotnet pack --version-suffix "ci-1234"
+  ```
 
-Establecer la versión del paquete en `2.1.0` con la propiedad de MSBuild `PackageVersion`:
+* Establecer la versión del paquete en `2.1.0` con la propiedad de MSBuild `PackageVersion`:
 
-`dotnet pack -p:PackageVersion=2.1.0`
+  ```console
+  dotnet pack -p:PackageVersion=2.1.0
+  ```
 
-Empaquete el proyecto para un determinado [marco de destino](../../standard/frameworks.md):
+* Empaquete el proyecto para un determinado [marco de destino](../../standard/frameworks.md):
 
-`dotnet pack -p:TargetFrameworks=net45`
+  ```console
+  dotnet pack -p:TargetFrameworks=net45
+  ```
 
-Empaquete el proyecto y use un tiempo de ejecución específico (Windows 10) para la operación de restauración (SDK de .NET Core 2.0 y versiones superiores):
+* Empaquete el proyecto y use un tiempo de ejecución específico (Windows 10) para la operación de restauración (SDK de .NET Core 2.0 y versiones superiores):
 
-`dotnet pack --runtime win10-x64`
+  ```console
+  dotnet pack --runtime win10-x64
+  ```
+
+* Empaquetar el proyecto mediante un [archivo .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+
+  ```console
+  dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  ```

@@ -1,20 +1,18 @@
 ---
-title: Depuración de una aplicación Hola mundo de .NET Core en C# o Visual Basic con Visual Studio 2017
+title: Depuración de la aplicación Hola mundo de .NET Core con Visual Studio 2017
 description: Obtenga información sobre cómo depurar una aplicación Hola mundo, escrita en C# o Visual Basic, con Visual Studio 2017.
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200129"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147533"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Depuración de la aplicación Hola a todos con Visual Studio 2017
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depuración de la aplicación Hola mundo de .NET Core en C# o Visual Basic con Visual Studio 2017
 
-Hasta ahora, ha seguido los pasos descritos en [Compilación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017](.\with-visual-studio.md) o [Compilación de una aplicación Hola a todos en Visual Basic con .NET Core en Visual Studio 2017](vb-with-visual-studio.md) para crear y ejecutar una aplicación de consola sencilla. Cuando haya escrito y compilado la aplicación, puede comenzar a probarla. Visual Studio incluye un conjunto completo de herramientas de depuración que puede usar para probar y solucionar problemas de la aplicación.
+Hasta ahora, ha seguido los pasos descritos en [Compilación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017](with-visual-studio.md) o [Compilación de una aplicación Hola a todos en Visual Basic con .NET Core en Visual Studio 2017](vb-with-visual-studio.md) para crear y ejecutar una aplicación de consola sencilla. Cuando haya escrito y compilado la aplicación, puede comenzar a probarla. Visual Studio incluye un conjunto completo de herramientas de depuración que puede usar para probar y solucionar problemas de la aplicación.
 
 ## <a name="debugging-in-debug-mode"></a>Depuración en modo de depuración
 
@@ -228,4 +226,4 @@ Para compilar y probar la versión de lanzamiento de la aplicación de la consol
 
 Cuando presiona F5 o selecciona **Compilar solución** en el menú **Compilar**, Visual Studio compila la versión de lanzamiento de la aplicación de consola. Puede probarla como hizo con la versión de depuración de la aplicación.
 
-Cuando haya terminado de depurar la aplicación, el siguiente paso es publicar una versión implementable de la aplicación. Para obtener más información sobre cómo hacerlo, vea [Publicación de la aplicación Hola a todos con Visual Studio 2017](./publishing-with-visual-studio.md).
+Cuando haya terminado de depurar la aplicación, el siguiente paso es publicar una versión implementable de la aplicación. Para obtener más información sobre cómo hacerlo, vea [Publicación de la aplicación Hola a todos con Visual Studio 2017](publishing-with-visual-studio.md).

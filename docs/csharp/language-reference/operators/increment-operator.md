@@ -1,34 +1,53 @@
 ---
 title: Operador ++ (Referencia de C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - ++_CSharpKeyword
 helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b29f4f1ab00c0f8026f118cb72b090e3b728bfc5
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "48030475"
 ---
 # <a name="-operator-c-reference"></a>Operador ++ (Referencia de C#)
-El operador de incremento (`++`) incrementa su operando en 1. El operador de incremento puede aparecer antes o después de su operando: `++variable` y `variable++`.  
-  
-## <a name="remarks"></a>Comentarios  
- La primera forma es una operación de incremento de prefijo. El resultado de la operación es el valor del operando después del incremento.  
-  
- La segunda forma es una operación de incremento de postfijo. El resultado de la operación es el valor del operando antes del incremento.  
-  
- Los tipos numéricos y de enumeración poseen operadores de incremento predefinidos. Los tipos definidos por el usuario pueden sobrecargar el operador `++` . Las operaciones de tipos enteros suelen estar permitidas en la enumeración.  
-  
-## <a name="example"></a>Ejemplo  
- [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
-  
+
+El operador de incremento unario `++` incrementa su operando en 1. Se admite en dos formas: el operador de incremento postfijo (`x++`) y el operador de incremento prefijo (`++x`).
+
+## <a name="postfix-increment-operator"></a>Operador de incremento de postfijo
+
+El resultado de `x++` es el valor de `x` *antes* de la operación, tal y como se muestra en el ejemplo siguiente:
+
+[!code-csharp-interactive[postfix increment](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PostfixIncrement)]
+
+## <a name="prefix-increment-operator"></a>Operador de incremento prefijo
+
+El resultado de `++x` es el valor de `x` *después* de la operación, tal y como se muestra en el ejemplo siguiente:
+
+[!code-csharp-interactive[prefix increment](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PrefixIncrement)]
+
+## <a name="remarks"></a>Comentarios
+
+El operador de incremento está predefinido para todos los [tipos enteros](../keywords/integral-types-table.md) (incluido el tipo [char](../keywords/char.md)), los [tipos de punto flotante](../keywords/floating-point-types-table.md) y cualquier tipo [enum](../keywords/enum.md).
+
+Un operando del operador de incremento debe ser una variable, un acceso de [propiedad](../../programming-guide/classes-and-structs/properties.md) o un acceso de [indizador](../../../csharp/programming-guide/indexers/index.md).
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
+Los tipos definidos por el usuario pueden [sobrecargar](../keywords/operator.md) el operador `++`.
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para más información, vea las secciones [Operadores postfijos de incremento y decremento](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) y [Prefijo de incremento y decremento de operadores](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) de la [Especificación del lenguaje C# ](../language-specification/index.md).
+
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Operadores de C#](../../../csharp/language-reference/operators/index.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Operadores de C#](index.md)
+- [Operador --](decrement-operator.md)
+- [Cómo: Aumentar y disminuir punteros](../../programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)

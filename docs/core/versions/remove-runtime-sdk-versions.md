@@ -1,23 +1,32 @@
 ---
-title: Cómo quitar los componentes .NET Runtime y SDK
-description: Instrucciones para quitar los componentes .NET Core Runtime y SDK en Windows, Mac y Linux
+title: Eliminación de .NET Core Runtime y el SDK
+description: En este artículo se describe cómo determinar las versiones de .NET Core Runtime y el SDK instaladas y, luego, cómo quitarlas en Windows, Mac, and Linux.
 ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
-ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989818"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129706"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Cómo quitar los componentes .NET Core Runtime y SDK
 
 Con el tiempo, a medida que instale versiones actualizadas del runtime y el SDK de .NET Core, es posible que quiera quitar del equipo versiones obsoletas de .NET Core. Al quitar versiones anteriores de runtime puede cambiar el runtime elegido para ejecutar aplicaciones de marco compartidas, tal como se detalla en el artículo sobre [selección de la versión de .NET Core](selection.md).
 
+## <a name="should-i-remove-a-version"></a>¿Puedo quitar una versión?
+
+Los comportamientos de la [selección de la versión de .NET Core](selection.md) y la compatibilidad de runtime de .NET Core en diferentes actualizaciones permite quitar de forma segura las versiones anteriores. Las actualizaciones de .NET Core Runtime son compatibles con una "banda" de versión principal, como 1.x y 2.x. Además, normalmente las versiones más recientes del SDK de .NET Core mantienen la capacidad de crear aplicaciones destinadas a versiones anteriores del tiempo de ejecución de una forma compatible.
+
+En general, solo se necesita el SDK más reciente y la última versión de revisión de los runtimes necesarios para la aplicación. Los casos en los que se conservan versiones anteriores del SDK o Runtime incluyen el mantenimiento de aplicaciones basadas en **project.json**. A menos que la aplicación tenga motivos concretos para utilizar SDK o runtimes anteriores, puede quitar las versiones anteriores.
+
+## <a name="determine-what-is-installed"></a>Determinación de lo instalado
+
 A partir de .NET Core 2.1, la CLI de .NET tiene opciones que puede utilizar para enumerar las versiones del SDK y de runtime que están instaladas en el equipo.  Use [`dotnet --list-sdks`](../tools/dotnet.md#options) para ver la lista de los SDK instalados en el equipo. Use [`dotnet --list-runtimes`](../tools/dotnet.md#options) para ver la lista de los runtimes instalados en el equipo. En el texto siguiente se muestra el resultado típico para Windows, macOS o Linux:
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 ```console
 C:\> dotnet --list-sdks
@@ -55,7 +64,7 @@ Microsoft.NETCore.App 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.2 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 ```console
 $ dotnet --list-sdks
@@ -89,7 +98,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 ```console
 $ dotnet --list-sdks
@@ -127,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="uninstalling-net-core"></a>Desinstalación de .NET Core
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 .NET Core usa el cuadro de diálogo **Agregar o quitar programas** de Windows para quitar las versiones del runtime de .NET Core y del SDK. En la siguiente ilustración se muestra el cuadro de diálogo **Agregar o quitar programas** con varias versiones del runtime y SDK de .NET instaladas.
 
@@ -135,7 +144,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 Seleccione las versiones que quiera quitar de su equipo y haga clic en **Desinstalar**.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 Para desinstalar .NET Core (SDK o runtime) en Linux tiene más opciones. La mejor forma de desinstalar .NET Core es repetir la misma acción que se usó para instalarlo. Los detalles específicos dependerán de la distribución que elija y del método de instalación.
 
@@ -178,7 +187,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 Los directorios primarios para el SDK y runtime se enumeran en el resultado de los comandos `dotnet --list-sdks` y `dotnet --list-runtimes`, como se muestra en la tabla anterior.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 En Mac, debe quitar los SDK y runtimes por separado, quitando el directorio que contiene dicha versión. Por ejemplo, para quitar el runtime y el SDK 1.0.1, tendrá que usar los siguientes comandos de bash:
 
@@ -190,7 +199,5 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 ```
 
 Los directorios primarios para el SDK y runtime se enumeran en el resultado de los comandos `dotnet --list-sdks` y `dotnet --list-runtimes`, como se muestra en la tabla anterior.
-
-A partir de .NET Core 2.1, no hace falta desinstalar el SDK de .NET Core al actualizarlo mediante un administrador de paquetes. Los comandos `update` o `refresh` del administrador de paquetes quitarán automáticamente la versión anterior tras la instalación correcta de una versión más reciente.
 
 ---

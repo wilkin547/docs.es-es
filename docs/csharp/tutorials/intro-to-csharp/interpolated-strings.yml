@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Colecciones en C#
-  ms.openlocfilehash: f1262beab39b78966d2be10fc983dfe1d4be998b
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200203"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53149216"
 items:
 - durationInMinutes: 2
   content: >
@@ -96,4 +96,8 @@ items:
     > [!NOTE]
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
-- content: "Ha completado la guía de inicio rápido sobre interpolación de cadenas. \n\nPuede continuar con estas guías de inicio rápido en su entorno de desarrollo local. Eche un vistazo a los conceptos básicos sobre [desarrollo local](local-environment.md) y después seleccione un inicio rápido. Puede probar esta misma guía de inicio rápido, ir directamente a la siguiente o volver a empezar con la guía de inicio rápido [Números en C#](numbers-in-csharp-local.md).\n\nPara más información, vea el tema [Interpolación de cadenas](../../language-reference/tokens/interpolated.md) y el tutorial [Interpolación de cadenas en C#](../../tutorials/string-interpolation.md)."
+- content: >-
+    Ha completado el tutorial interactivo sobre interpolación de cadenas. Puede hacer clic en el vínculo **Números en C# ** siguiente para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. El paso "Mantenimiento del aprendizaje" le lleva de vuelta a estos tutoriales.
+
+
+    Para más información, vea [Interpolación de cadenas](../../language-reference/tokens/interpolated.md).

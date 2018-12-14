@@ -1,15 +1,16 @@
 ---
 title: Desarrollo de bibliotecas con herramientas multiplataforma
-description: Obtenga información sobre cómo crear bibliotecas de .NET con las herramientas de la CLI de .NET Core.
+description: Obtenga información sobre cómo crear bibliotecas de .NET Core con las herramientas de la CLI de .NET Core. Creará una biblioteca que admite varios marcos de trabajo.
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.custom: seodec18
+ms.openlocfilehash: a8028883b3424588d0fb926dcb73f400a8c620dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256201"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148540"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Desarrollo de bibliotecas con herramientas multiplataforma
 
@@ -19,9 +20,9 @@ En este artículo se explica cómo escribir bibliotecas para .NET mediante el us
 
 Necesita [la CLI y el SDK de .NET Core](https://www.microsoft.com/net/core) que están instalados en la máquina.
 
-En las secciones de este documento que se refieren a las versiones de .NET Framework, necesita tener instalado [.NET Framework](http://getdotnet.azurewebsites.net/) en una máquina con Windows.
+En las secciones de este documento que se refieren a las versiones de .NET Framework, necesita tener instalado [.NET Framework](https://dotnet.microsoft.com) en una máquina con Windows.
 
-Además, si desea admitir destinos de .NET Framework anteriores, deberá instalar paquetes de compatibilidad/desarrollador para versiones anteriores del marco de trabajo que se encuentran en la [página de plataformas de destino .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html). Consulte la tabla siguiente:
+Además, si desea admitir destinos de .NET Framework anteriores, deberá instalar paquetes de compatibilidad/desarrollador para versiones anteriores del marco que se encuentran en la [página de archivos de descarga de .NET](https://dotnet.microsoft.com/download/archives). Consulte la tabla siguiente:
 
 | Versión de .NET Framework | Qué debe descargar                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +40,7 @@ Si no conoce bien el estándar .NET, consulte el tema [Estándar .NET](../../sta
 
 En ese artículo podrá ver una tabla que asigna las versiones del estándar .NET a diversas implementaciones:
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 Este es el significado de la tabla para crear una biblioteca:
 
@@ -136,7 +137,7 @@ Observará tres cambios principales aquí:
 
 El sistema de compilación conoce los siguientes símbolos del preprocesador que se usan en las directivas `#if`:
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 Aquí se muestra un ejemplo en el que se usa la compilación condicional por destino:
 
@@ -167,7 +168,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +188,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +214,7 @@ Cada uno de ellos contiene los archivos `.dll` para cada destino.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Prueba de las bibliotecas en .NET Core
 
-Es importante poder probar las plataformas. Puede usar [xUnit](http://xunit.github.io/) o MSTest de fábrica. Ambos son perfectamente adecuados para las pruebas unitarias de su biblioteca en .NET Core. Cómo configurar la solución con proyectos de prueba dependerá de la [estructura de la solución](#structuring-a-solution). En el ejemplo siguiente se presupone que los directorios de origen y de prueba residen en el mismo directorio de nivel superior.
+Es importante poder probar las plataformas. Puede usar [xUnit](https://xunit.github.io/) o MSTest de fábrica. Ambos son perfectamente adecuados para las pruebas unitarias de su biblioteca en .NET Core. Cómo configurar la solución con proyectos de prueba dependerá de la [estructura de la solución](#structuring-a-solution). En el ejemplo siguiente se presupone que los directorios de origen y de prueba residen en el mismo directorio de nivel superior.
 
 > [!NOTE]
 > Esto usa algunos [comandos de la CLI de .NET Core](../tools/index.md). Vea [dotnet new](../tools/dotnet-new.md) y [dotnet sln](../tools/dotnet-sln.md) para obtener más información.
@@ -253,7 +254,7 @@ Es importante poder probar las plataformas. Puede usar [xUnit](http://xunit.gith
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Compruebe que xUnit se ejecuta mediante la ejecución del comando `dotnet test`. Si decide usar MSTest, entonces debe ejecutarse en su lugar el ejecutor de la consola de MSTest.
     

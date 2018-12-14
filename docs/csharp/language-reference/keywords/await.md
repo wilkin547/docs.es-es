@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511950"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147390"
 ---
 # <a name="await-c-reference"></a>await (Referencia de C#)
 El operador `await` se aplica a una tarea de un método asincrónico para insertar un punto de suspensión en la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.  
@@ -65,7 +65,7 @@ En el ejemplo siguiente se devuelve el número total de caracteres en las págin
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-Como no se admite el uso de `async` y `await` en un punto de entrada de la aplicación, no podemos aplicar el atributo `async` al método `Main`, ni podemos esperar la llamada al método `GetPageLengthsAsync`. Podemos garantizar que el método `Main` espera a que se complete la operación asincrónica recuperando el valor de la propiedad <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>. Para las tareas que no devuelven un valor, puede llamar al método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. 
+El ejemplo anterior utiliza C# 7.1, que admite el método [`async` `Main`](../../programming-guide/main-and-command-args/index.md). Dado que las versiones anteriores de C# no admiten los puntos de entrada de aplicación que devuelven <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>, no se puede aplicar el modificador `async` al método `Main` y esperar la llamada al método `GetPageLengthsAsync`. En ese caso, podemos garantizar que el método `Main` espera a que se complete la operación asincrónica recuperando el valor de la propiedad <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>. Para las tareas que no devuelven un valor, puede llamar al método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. Para información sobre cómo seleccionar la versión de idioma, consulte [Seleccionar la versión del lenguaje C#](../configure-language-version.md).
 
 ## <a name="see-also"></a>Vea también  
 - [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md)   

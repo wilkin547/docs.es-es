@@ -4,18 +4,18 @@ description: En este artículo se le enseña cómo se crean versiones del entorn
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170722"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334813"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
 
 .NET Core se refiere al runtime y el SDK de .NET Core, que contiene las herramientas que necesita para desarrollar aplicaciones. Los SDK de .NET Core están diseñados para funcionar con cualquier versión anteriores del runtime de .NET Core. En este artículo se explican el runtime y la estrategia de la versión del SDK. En el artículo [.NET Standard](../../standard/net-standard.md#net-implementation-support) se ofrece una explicación de los números de versión de .NET Standard.
 
-El runtime y el SDK de .NET Core agregan características a un ritmo diferente; en general, el SDK de .NET Core incluye herramientas actualizadas antes de que el runtime de .NET Core cambie el runtime que se usa en producción. Desafortunadamente, este problema ha generado varias estrategias de control de versiones durante los últimos años. Vea el artículo [Control de versiones de .NET Core](version-history.md) para obtener más información sobre este tema.
+El runtime y el SDK de .NET Core agregan características a un ritmo diferente; en general, el SDK de .NET Core incluye herramientas actualizadas antes de que el runtime de .NET Core cambie el runtime que se usa en producción.
 
 ## <a name="versioning-details"></a>Detalles de control de versiones
 
@@ -32,7 +32,7 @@ La tercera posición del número de versión del SDK comunica tanto la versión 
 | Runtime y revisión del SDK | 2.2.1             | 2.2.102           |
 | Cambio de características del SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Este gráfico usa un runtime futuro (2.2) de .NET Core a modo de ejemplo, puesto que un artefacto histórico indica que el primer SDK de .NET Core 2.1 es el de la versión 2.1.300. Para obtener más información, vea el [historial de control de versiones de .NET Core](version-history.md).
+(\*) Este gráfico usa un runtime futuro (2.2) de .NET Core a modo de ejemplo, puesto que un artefacto histórico indica que el primer SDK de .NET Core 2.1 es el de la versión 2.1.300. Para obtener más información, consulte [.Selección de la versión de .NET Core](selection.md).
 
 NOTAS:
 

@@ -1,15 +1,13 @@
 ---
 title: 'Comando dotnet list reference: CLI de .NET Core'
 description: El comando dotnet list reference constituye una opción práctica para enumerar referencias entre proyectos.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/03/2018
+ms.openlocfilehash: 58b4e07abfe95d1febdd54d117825ecedf502e61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697188"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152616"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -23,28 +21,32 @@ ms.locfileid: "34697188"
 
 `dotnet list [<PROJECT>] reference [-h|--help]`
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
-El comando `dotnet list reference` constituye una opción práctica para enumerar las referencias de proyecto de un proyecto concreto.
+El comando `dotnet list reference` constituye una opción práctica para enumerar las referencias de proyecto de un proyecto o solución concreta.
 
 ## <a name="arguments"></a>Argumentos
 
-`PROJECT`
+* **`PROJECT`**
 
-Especifica el archivo de proyecto que se usará para enumerar las referencias. Si no se especifica, el comando busca un archivo del proyecto en el directorio actual.
+  Especifica el archivo de proyecto que se usará para enumerar las referencias. Si no se especifica, el comando busca un archivo del proyecto en el directorio actual.
 
 ## <a name="options"></a>Opciones
 
-`-h|--help`
+* **`-h|--help`**
 
-Imprime una corta ayuda para el comando.
+  Imprime una corta ayuda para el comando.
 
 ## <a name="examples"></a>Ejemplos
 
-Enumerar las referencias del proyecto para el proyecto especificado:
+* Enumerar las referencias del proyecto para el proyecto especificado:
 
-`dotnet list app/app.csproj reference`
+  ```console
+  dotnet list app/app.csproj reference
+  ```
 
-Enumerar las referencias del proyecto para el proyecto en el directorio actual:
+* Enumerar las referencias del proyecto para el proyecto en el directorio actual:
 
-`dotnet list reference`
+  ```console
+  dotnet list reference
+  ```

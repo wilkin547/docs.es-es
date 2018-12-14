@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4dd5f4034bcd60b714071eb7eb9518e66ac0c848
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994473"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129030"
 ---
 # <a name="do-c-reference"></a>do (Referencia de C#)
 
-La instrucción `do` ejecuta una instrucción o un bloque de instrucciones mientras una expresión booleana especificada se evalúa como `true`. Como esa expresión se evalúa después de cada ejecución del bucle, un bucle `do-while` se ejecuta una o varias veces. Esto es diferente del bucle [while](while.md), que se ejecuta cero o varias veces.
+La instrucción `do` ejecuta una instrucción o un bloque de instrucciones mientras que una expresión booleana especificada se evalúa como `true`. Como esa expresión se evalúa después de cada ejecución del bucle, un bucle `do-while` se ejecuta una o varias veces. Esto es diferente del bucle [while](while.md), que se ejecuta cero o varias veces.
 
 En cualquier punto del bloque de instrucciones `do`, se puede salir del bucle mediante la instrucción [break](break.md).
 
@@ -30,15 +30,14 @@ En el ejemplo siguiente se muestra el uso de la instrucción `do`. Haga clic en 
 
 [!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
 
-## <a name="c-language-specification"></a>especificación del lenguaje C#
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para más información, vea la sección sobre la [instrucción do](~/_csharplang/spec/statements.md#the-do-statement) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../index.md)  
-- [Guía de programación de C#](../../programming-guide/index.md)  
-- [Palabras clave de C#](index.md)  
-- [do-while (Instrucción) (C++)](/cpp/cpp/do-while-statement-cpp)  
-- [Instrucciones de iteración](iteration-statements.md)  
-- [while (Instrucción)](while.md)  
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](index.md)
+- [Instrucciones de iteración](iteration-statements.md)
+- [while (Instrucción)](while.md)

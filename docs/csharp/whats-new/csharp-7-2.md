@@ -2,12 +2,12 @@
 title: Novedades de C# 7.2
 description: Información general sobre las nuevas características en C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181178"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148180"
 ---
 # <a name="whats-new-in-c-72"></a>Novedades de C# 7.2
 
@@ -28,6 +28,8 @@ Las nuevas características de lenguaje de esta versión son las siguientes:
   - Los literales numéricos ahora pueden tener caracteres de subrayado iniciales antes de los dígitos impresos.
 * [Modificador de acceso `private protected`](#private-protected-access-modifier)
   - El modificador de acceso `private protected` permite el acceso de clases derivadas en el mismo ensamblado.
+* [Expresiones `ref` condicionales](#conditional-ref-expressions)
+  - El resultado de una expresión condicional (`?:`) ahora puede ser una referencia.
 
 ## <a name="safe-efficient-code-enhancements"></a>Mejoras de código eficiente seguro
 
@@ -56,6 +58,18 @@ int binaryValue = 0b_0101_0101;
 
 ## <a name="private-protected-access-modifier"></a>Modificador de acceso _private protected_
 
-Por último, presentamos un nuevo modificador de acceso compuesto: `private protected` indica que se puede tener acceso a un miembro mediante una clase o clases derivadas declaradas en un mismo ensamblado. Mientras que `protected internal` permite el acceso a las clases derivadas o clases que se encuentran en un mismo ensamblado, `private protected` limita el acceso a los tipos derivados que se declaran en un mismo ensamblado.
+Presentamos un nuevo modificador de acceso compuesto: `private protected` indica que se puede tener acceso a un miembro mediante una clase o clases derivadas declaradas en un mismo ensamblado. Mientras que `protected internal` permite el acceso a las clases derivadas o clases que se encuentran en un mismo ensamblado, `private protected` limita el acceso a los tipos derivados que se declaran en un mismo ensamblado.
 
 Para obtener más información, vea los [modificadores de acceso](../language-reference/keywords/access-modifiers.md) en el material de referencia del lenguaje.
+
+## <a name="conditional-ref-expressions"></a>Expresiones `ref` condicionales
+
+Por último, la expresión condicional puede producir un resultado de referencia en lugar de un resultado de valor. Por ejemplo, podría escribir lo siguiente para recuperar una referencia al primer elemento en una de dos matrices:
+
+```csharp
+ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+```
+
+La variable `r` es una referencia al primer valor de `arr` o `otherArr`.
+
+Para más información, vea el [operador condicional (?:)](../language-reference/operators/conditional-operator.md) en la referencia del lenguaje.

@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: Interpolación de cadenas en C#
-  ms.openlocfilehash: 492922177cf213400629fac79da30a51bdbf46e5
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: a3db445f522bc3360629c17386cad4423fcd1b43
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50201673"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53147166"
 items:
 - durationInMinutes: 1
   content: >
@@ -32,7 +32,7 @@ items:
   content: "El **bucle** es otro concepto importante para crear programas más grandes. Debe usar bucles para repetir las instrucciones que desee que se ejecuten más de una vez. Pruebe el código siguiente en la ventana interactiva:\n\n```csharp\nint counter = 0;\nwhile (counter < 10)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n}\n```\n\nLa instrucción `while` comprueba una condición y ejecuta la instrucción que aparece después de `while`. La comprobación de la condición y la ejecución de dichas instrucciones se repetirán hasta que la condición sea false.\n\nEn este ejemplo aparece otro operador nuevo. El código `++` que aparece después de la variable `counter` es el operador de **incremento**. Suma un valor de uno al valor del contador y almacena dicho valor en la variable del contador.\n\n> [!IMPORTANT]\n> Asegúrese de que la condición del bucle `while` no cambia a false mientras ejecuta el código. En caso contrario, se crea un **bucle infinito** donde nunca finaliza el programa. Eso no lo vamos a demostrar, porque el motor que ejecuta el código agotará el tiempo de espera y el programa no generará ninguna salida.\n\nEl bucle `while` prueba la condición antes de ejecutar el código que sigue a `while`. El bucle `do` ... `while` primero ejecuta el código y después comprueba la condición. Tiene el siguiente aspecto:\n\n```csharp\nint counter = 0;\ndo\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n} while (counter < 10);\n```\n\nEste bucle `do` y el bucle `while` anterior funcionan de la misma forma. \n\nAhora vamos a pasar a una última instrucción del bucle.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Operaciones con el bucle for
   durationInMinutes: 5
-  content: "El bucle `for` es otra instrucción de bucle común que verá en el código de C#. Pruebe el código siguiente en la ventana interactiva:\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nFunciona de la misma forma que los bucles `while` y `do` que ya ha usado. La instrucción `for` consta de tres partes que controlan su funcionamiento. \n\nLa primera parte es el **inicializador de for**: `for counter = 0;` declara que `counter` es la variable de bucle y establece su valor inicial en `0`.\n\nLa parte central es la **condición de for**: `counter < 10` declara que este bucle `for` debe continuar ejecutándose mientras que el valor del contador sea menor que diez.\n\nLa última parte es el **iterador de for**: `counter++` especifica cómo modificar la variable de bucle después de ejecutar el bloque que sigue a la instrucción `for`. En este caso, especifica que `counter` debe incrementarse en uno cada vez que el bloque se ejecuta.\n\nExperimente con estas partes por su cuenta. Pruebe todos los pasos siguientes:\n\n- Cambie el inicializador para que se inicie en un valor distinto.\n- Cambie la condición para que se detenga en un valor diferente.\n\nCuando haya terminado, escriba algo de código para practicar con lo que ha aprendido.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "El bucle `for` es otra instrucción de bucle común que verá en el código de C#. Pruebe el código siguiente en la ventana interactiva:\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nFunciona de la misma forma que los bucles `while` y `do` que ya ha usado. La instrucción `for` consta de tres partes que controlan su funcionamiento. \n\nLa primera parte es el **inicializador de for**: `int counter = 0;` declara que `counter` es la variable de bucle y establece su valor inicial en `0`.\n\nLa parte central es la **condición de for**: `counter < 10` declara que este bucle `for` debe continuar ejecutándose mientras que el valor del contador sea menor que diez.\n\nLa última parte es el **iterador de for**: `counter++` especifica cómo modificar la variable de bucle después de ejecutar el bloque que sigue a la instrucción `for`. En este caso, especifica que `counter` debe incrementarse en uno cada vez que el bloque se ejecuta.\n\nExperimente con estas partes por su cuenta. Pruebe todos los pasos siguientes:\n\n- Cambie el inicializador para que se inicie en un valor distinto.\n- Cambie la condición para que se detenga en un valor diferente.\n\nCuando haya terminado, escriba algo de código para practicar con lo que ha aprendido.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Combinación de ramas y bucles
   durationInMinutes: 12
   content: >
@@ -80,4 +80,17 @@ items:
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: ¡Enhorabuena!
-  content: "Ha completado el tutorial \"Bifurcaciones y bucles\". \n\nPuede seguir estos tutoriales en su propio entorno de desarrollo. Eche un vistazo a los conceptos básicos sobre [desarrollo local](local-environment.md) y después seleccione un tutorial. Puede realizar este mismo ejercicio: vaya directamente al siguiente tutorial o vuelva a empezar en el principio de la serie con el tutorial [Números en C#](numbers-in-csharp-local.md).\n\nPuede obtener más información sobre estos conceptos en los temas siguientes:\n\n[Instrucciones If y else](../../language-reference/keywords/if-else.md)   \n[Instrucción while](../../language-reference/keywords/while.md)   \n[Instrucción do](../../language-reference/keywords/do.md)   \n[Instrucción for](../../language-reference/keywords/for.md)"
+  content: >-
+    Ha completado el tutorial interactivo "Bifurcaciones y bucles". Puede hacer clic en el vínculo **Cadenas interpoladas** a continuación para iniciar el siguiente tutorial interactivo, o bien puede visitar el [sitio de .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para descargar el SDK de .NET Core, crear un proyecto en el equipo y continuar la codificación. El paso "Mantenimiento del aprendizaje" le lleva de vuelta a estos tutoriales.
+
+
+    Puede obtener más información sobre estos conceptos en los temas siguientes:
+
+
+    - [Instrucciones If y else](../../language-reference/keywords/if-else.md)
+
+    - [Instrucción while](../../language-reference/keywords/while.md)
+
+    - [Instrucción do](../../language-reference/keywords/do.md)
+
+    - [Instrucción for](../../language-reference/keywords/for.md)
