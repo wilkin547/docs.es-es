@@ -1622,7 +1622,7 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-Los nombres de tipos genéricos se codifican con el formato *name**n*, donde *name* es el nombre del tipo, *`* es un carácter literal y *n* es el número de parámetros declarados en el tipo o, en el caso de tipos genéricos anidados, el número de parámetros de tipo recién incorporados. Esta codificación de nombres de tipo genérico tiene interés fundamentalmente para los desarrolladores que utilizan la reflexión a fin de acceder a los tipos genéricos conformes a CLS de una biblioteca. 
+Los nombres de tipos genéricos se codifican con el formato *name* *n*, donde *name* es el nombre del tipo, *`* es un carácter literal y *n* es el número de parámetros declarados en el tipo o, en el caso de tipos genéricos anidados, el número de parámetros de tipo recién incorporados. Esta codificación de nombres de tipo genérico tiene interés fundamentalmente para los desarrolladores que utilizan la reflexión a fin de acceder a los tipos genéricos conformes a CLS de una biblioteca. 
 
 Si las restricciones se aplican a un tipo genérico, los tipos utilizados como restricciones también deben ser conformes a CLS. En el ejemplo siguiente se define una clase denominada `BaseClass` que no es conforme a CLS y una clase genérica denominada `BaseCollection` cuyo parámetro de tipo debe derivarse de `BaseClass`. Sin embargo, puesto que `BaseClass` no es conforme a CLS, el compilador emite una advertencia. 
 
