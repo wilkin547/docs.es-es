@@ -1,5 +1,6 @@
 ---
-title: Construcciones de alternancia en expresiones regulares
+title: Construcciones de alternancia en expresiones regulares de .NET
+description: Obtenga información sobre cómo usar construcciones de alternancia para la coincidencia condicional en expresiones regulares.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839756"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142936"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construcciones de alternancia en expresiones regulares
 <a name="top"></a> Las construcciones de alternancia modifican una expresión regular para habilitar la coincidencia condicional o “either/or”. .NET admite tres construcciones de alternancia:  

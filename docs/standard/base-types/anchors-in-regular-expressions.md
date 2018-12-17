@@ -1,5 +1,6 @@
 ---
-title: Delimitadores en expresiones regulares
+title: Delimitadores en expresiones regulares de .NET
+description: Obtenga información sobre cómo usar delimitadores en patrones de expresiones regulares.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085191"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155043"
 ---
 # <a name="anchors-in-regular-expressions"></a>Delimitadores en expresiones regulares
 <a name="top"></a> Los delimitadores, o aserciones atómicas de ancho cero, especifican la posición de la cadena en que se debe producir una coincidencia. Cuando se usa un delimitador en una expresión de búsqueda, el motor de expresiones regulares no avanza por la cadena o ni consume caracteres, sino que solo busca una coincidencia en la posición especificada. Por ejemplo, `^` especifica que la coincidencia debe empezar al principio de una cadena o línea. Por consiguiente, la expresión regular `^http:` coincide con "http": solo cuando se encuentra al principio de una línea. En la tabla siguiente, se enumeran los delimitadores que admiten las expresiones regulares de .NET.  
@@ -73,7 +75,7 @@ ms.locfileid: "44085191"
   
  Si usa `$` con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, la coincidencia también se puede producir al final de una línea. Observe que `$` coincide con `\n` , pero no coincide con `\r\n` (la combinación de caracteres de retorno de carro y nueva línea, o CR/LF). Para buscar la combinación de caracteres CR/LF, incluya `\r?$` en el patrón de expresión regular.  
   
- En el ejemplo siguiente se agrega el delimitador `$` al patrón de expresión regular usado en el ejemplo de la sección [Principio de cadena o línea](#Start) . Cuando se usa con la cadena de entrada original, que incluye cinco líneas de texto, el método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> no puede encontrar una coincidencia, porque el final de la primera línea no coincide con el patrón `$`. Cuando la cadena de entrada original se divide en una matriz de cadenas, el método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> consigue encontrar coincidencias en cada una de las cinco líneas. Cuando se llama al método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> con el parámetro `options` establecido en <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, no se encuentra ninguna coincidencia porque el patrón de la expresión regular no tiene en cuenta el elemento de retorno de carro (\u+000D). Sin embargo, cuando el patrón de la expresión regular se modifica al remplazar `$` por `\r?$`, si se llama al método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> con el parámetro `options` establecido en <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, ahora encuentra cinco coincidencias.  
+ En el ejemplo siguiente se agrega el delimitador `$` al patrón de expresión regular usado en el ejemplo de la sección [Principio de cadena o línea](#Start) . Cuando se usa con la cadena de entrada original, que incluye cinco líneas de texto, el método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> no puede encontrar una coincidencia, porque el final de la primera línea no coincide con el patrón `$` . Cuando la cadena de entrada original se divide en una matriz de cadenas, el método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> consigue encontrar coincidencias en cada una de las cinco líneas. Cuando se llama al método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> con el parámetro `options` establecido en <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, no se encuentra ninguna coincidencia porque el patrón de la expresión regular no tiene en cuenta el elemento de retorno de carro (\u+000D). Sin embargo, cuando el patrón de la expresión regular se modifica al remplazar `$` por `\r?$`, si se llama al método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> con el parámetro `options` establecido en <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> , ahora encuentra cinco coincidencias.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -82,7 +84,7 @@ ms.locfileid: "44085191"
   
 <a name="StartOnly"></a>   
 ## <a name="start-of-string-only-a"></a>Principio de cadena solamente: \A  
- El delimitador `\A` especifica que debe producirse una coincidencia al principio de la cadena de entrada. Es idéntico al delimitador `^`, salvo en que `\A` omite la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Por consiguiente, solo puede coincidir con el principio de la primera línea en una cadena de entrada de varias líneas.  
+ El delimitador `\A` especifica que debe producirse una coincidencia al principio de la cadena de entrada. Es idéntico al delimitador `^` , salvo en que `\A` omite la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Por consiguiente, solo puede coincidir con el principio de la primera línea en una cadena de entrada de varias líneas.  
   
  El ejemplo siguiente es similar a los ejemplos de los delimitadores `^` y `$` . Usa el delimitador `\A` en una expresión regular que extrae información sobre los años durante los que existieron algunos equipos de béisbol profesionales. La cadena de entrada incluye cinco líneas. La llamada al método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> encuentra solo la primera subcadena que coincide con el patrón de la expresión regular en la cadena de entrada. Como muestra el ejemplo, la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline> no tiene ningún efecto.  
   

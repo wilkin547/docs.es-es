@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308596"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152789"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -83,7 +83,7 @@ ASP.NET Core tiene compatibilidad integrada con una técnica conocida como [inse
 
 La estática se produce cuando las clases realizan llamadas a métodos estáticos, o bien tienen acceso a propiedades estáticas, que tienen efectos secundarios o dependencias en la infraestructura. Por ejemplo, si tiene un método que llama a un método estático, que a su vez escribe en una base de datos, el método está estrechamente acoplado a la base de datos. Todo lo que interrumpa esa llamada a la base de datos interrumpirá el método. Es muy difícil probar este tipo de métodos, ya que esas pruebas requieren bibliotecas de simulación comerciales para simular las llamadas estáticas o solo se pueden probar con una base de datos de prueba. Las llamadas estáticas que no tienen ninguna dependencia de la infraestructura, sobre todo las que son completamente sin estado, se pueden llamar sin problemas y no tienen ningún impacto en el acoplamiento o la capacidad de prueba (más allá del acoplamiento de código a la propia llamada estática).
 
-Muchos desarrolladores comprenden los riesgos de la estática y el estado global, pero siguen acoplando estrechamente el código a implementaciones específicas a través de la creación directa de instancias. "Lo nuevo se pega" está pensado para ser un aviso de este acoplamiento y no un rechazo general del uso de la palabra clave new. Como sucede con las llamadas de métodos estáticos, las instancias nuevas de tipos que no tienen dependencias externas normalmente no acoplan estrechamente código a los detalles de implementación ni dificultan las pruebas. Pero cada vez que se crea una instancia de una clase, dedique un instante a considerar si tiene sentido integrar como parte del código esa instancia específica en esa ubicación concreta, o si un mejor diseño sería solicitar esa instancia como una dependencia.
+Muchos desarrolladores comprenden los riesgos de la estática y el estado global, pero siguen acoplando estrechamente el código a implementaciones específicas a través de la creación directa de instancias. "Lo nuevo se pega" está pensado para ser un aviso de este acoplamiento y no un rechazo general del uso de la palabra clave `new`. Como sucede con las llamadas de métodos estáticos, las instancias nuevas de tipos que no tienen dependencias externas normalmente no acoplan estrechamente código a los detalles de implementación ni dificultan las pruebas. Pero cada vez que se crea una instancia de una clase, dedique un instante a considerar si tiene sentido integrar como parte del código esa instancia específica en esa ubicación concreta, o si un mejor diseño sería solicitar esa instancia como una dependencia.
 
 ### <a name="declare-your-dependencies"></a>Declarar las dependencias
 
@@ -559,5 +559,5 @@ _Más información sobre las opciones de implementación de Azure en el [capítu
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Anterior](common-client-side-web-technologies.md)
-[Siguiente](work-with-data-in-asp-net-core-apps.md)
+>[Anterior](common-client-side-web-technologies.md)
+>[Siguiente](work-with-data-in-asp-net-core-apps.md)

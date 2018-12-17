@@ -1,5 +1,6 @@
 ---
 title: Sistema de tipos comunes
+description: Obtenga información sobre el sistema de tipos en .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: e35ddc0346f73eafaece1bd17ab52e1b847e8e11
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204207"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151231"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 Common Type System define cómo se declaran, usan y administran los tipos en Common Language Runtime. Es también una parte importante de la compatibilidad en tiempo de ejecución con la integración entre lenguajes. El sistema de tipos común realiza las funciones siguientes:  

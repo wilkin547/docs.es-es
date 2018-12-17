@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 2ef25c3d7db3f445ddf7f925eb73c85760f34dc5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 492542743b27c709901267d5fd4e066a65158b85
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211936"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129641"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Información general sobre el modelo asincrónico basado en eventos
 Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen respondiendo a la interacción del usuario, a menudo exigen un diseño que utiliza varios subprocesos. El espacio de nombres <xref:System.Threading> proporciona todas las herramientas necesarias para crear aplicaciones multiproceso de gran rendimiento, pero, para usar estas herramientas de forma eficaz, es necesario atesorar una gran experiencia en ingeniería de software multiproceso. Para aplicaciones multiproceso relativamente simples, el componente <xref:System.ComponentModel.BackgroundWorker> ofrece una solución sencilla. Para aplicaciones asincrónicas más sofisticadas, considere la opción de implementar una clase que se adhiera al modelo asincrónico basado en eventos.  
@@ -36,7 +36,7 @@ Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen r
   
 -   Comunicarse con operaciones asincrónicas pendientes mediante el modelo conocido de eventos y delegados. Para obtener más información sobre el uso de controladores de eventos y delegados, vea [Eventos](../../../docs/standard/events/index.md).  
   
- Una clase que admita el modelo asincrónico basado en eventos tendrá uno o varios métodos denominados *MethodName***Async**. Estos métodos pueden reflejar versiones sincrónicas, que desempeñan la misma operación en el subproceso actual. La clase también puede tener un evento *MethodName***Completed** y un método *MethodName***AsyncCancel** (o simplemente **CancelAsync**).  
+ Una clase que admita el modelo asincrónico basado en eventos tendrá uno o varios métodos denominados _NombreDeMétodo_**Async**. Estos métodos pueden reflejar versiones sincrónicas, que desempeñan la misma operación en el subproceso actual. La clase también puede tener un evento _NombreDeMétodo_**Completed** y un método _NombreDeMétodo_**AsyncCancel** (o simplemente **CancelAsync**).  
   
  <xref:System.Windows.Forms.PictureBox> es un componente que admite el modelo asincrónico basado en eventos. Puede descargar una imagen sincrónicamente mediante una llamada a su método <xref:System.Windows.Forms.PictureBox.Load%2A>, pero si la imagen es grande o si la conexión de red es lenta, la aplicación se detendrá («quedará colgada») hasta que la operación finalice y la llamada a <xref:System.Windows.Forms.PictureBox.Load%2A> responda.  
   
@@ -48,7 +48,7 @@ Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen r
 >  Es posible que la descarga finalice justo en el momento de realizar la solicitud <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> y, por tanto, puede que <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> no refleje la solicitud de cancelación. Esto se denomina *condición de carrera* y es un problema habitual en la programación multiproceso. Para obtener más información sobre problemas en la programación multiproceso, vea [Procedimientos recomendados para el subprocesamiento administrado](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Características del modelo asincrónico basado en eventos  
- El modelo asincrónico basado en eventos puede tener varias formas, en función de la complejidad de las operaciones admitidas por una clase en particular. Las clases más simples pueden tener un único método *MethodName***Async** y su correspondiente evento *MethodName***Completed**. Las clases más complejas pueden tener varios métodos *MethodName***Async**, cada uno con su correspondiente evento *MethodName***Completed**, así como versiones sincrónicas de estos métodos. Opcionalmente, las clases pueden admitir cancelación, informes de progreso y resultados incrementales para los métodos asincrónicos.  
+ El modelo asincrónico basado en eventos puede tener varias formas, en función de la complejidad de las operaciones admitidas por una clase en particular. Las clases más simples pueden tener un único método _NombreDeMétodo_**Async** y su correspondiente evento _NombreDeMétodo_**Completed**. Las clases más complejas pueden tener varios métodos _NombreDeMétodo_**Async**, cada uno con su correspondiente evento _NombreDeMétodo_**Completed**, así como versiones sincrónicas de estos métodos. Opcionalmente, las clases pueden admitir cancelación, informes de progreso y resultados incrementales para los métodos asincrónicos.  
   
  Un método asincrónico también puede admitir varias llamadas pendientes (varias invocaciones simultáneas), lo que permite que su código pueda llamarlo todas las veces que quiera sin que se hayan completado las otras operaciones pendientes. La gestión correcta de esta situación puede exigir a la aplicación realizar un seguimiento de la finalización de cada operación.  
   
@@ -118,14 +118,14 @@ public class AsyncExample
 >  Asegúrese de proporcionar un valor único para `userState` en las llamadas a sobrecargas de invocación múltiple. Los id. de tarea que no sean únicos provocarán que la clase asincrónica genere una <xref:System.ArgumentException>.  
   
 ### <a name="canceling-pending-operations"></a>Cancelación de operaciones pendientes  
- Es importante ser capaz cancelar operaciones asincrónicas en cualquier momento antes de la finalización. Las clases que implementan el modelo asincrónico basado en eventos tendrán un método `CancelAsync` (si solo hay un método asincrónico) o un método *MethodName***AsyncCancel** (si hay varios métodos asincrónicos).  
+ Es importante ser capaz cancelar operaciones asincrónicas en cualquier momento antes de la finalización. Las clases que implementan el modelo asincrónico basado en eventos tendrán un método `CancelAsync` (si solo hay un método asincrónico) o un método _NombreDeMétodo_**AsyncCancel** (si hay varios métodos asincrónicos).  
   
  Los métodos que permiten varias invocaciones toman un parámetro `userState` que puede usarse para seguir la duración de cada tarea. `CancelAsync` toma un parámetro `userState` que permite cancelar tareas pendientes concretas.  
   
  Los métodos que solo admiten una única operación pendiente a la vez, como `Method1Async(string param)`, no son cancelables.  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>Recibir actualizaciones de progreso y resultados incrementales  
- Una clase que se adhiera al modelo asincrónico basado en eventos puede, como opción, proporcionar un evento para seguir el progreso y los resultados incrementales. Por lo general, se llamará `ProgressChanged` o *MethodName***ProgressChanged**, y su controlador de eventos correspondiente tomará un parámetro <xref:System.ComponentModel.ProgressChangedEventArgs>.  
+ Una clase que se adhiera al modelo asincrónico basado en eventos puede, como opción, proporcionar un evento para seguir el progreso y los resultados incrementales. Por lo general, se denominará `ProgressChanged` o _NombreDeMétodo_**ProgressChanged**, y su controlador de eventos correspondiente tomará un parámetro <xref:System.ComponentModel.ProgressChangedEventArgs>.  
   
  El controlador de eventos del evento `ProgressChanged` puede examinar la propiedad <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> para determinar el progreso de una tarea asincrónica expresado mediante porcentaje. Esta propiedad estará comprendida entre 0 y 100 y se puede usar para actualizar la propiedad <xref:System.Windows.Forms.ProgressBar.Value%2A> de un <xref:System.Windows.Forms.ProgressBar>. Si hay varias operaciones asincrónicas pendientes, puede usar la propiedad <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> para distinguir cuál de ellas está informando del progreso.  
   

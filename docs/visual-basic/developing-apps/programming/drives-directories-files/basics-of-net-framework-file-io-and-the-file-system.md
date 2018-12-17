@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155030"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con unidades, archivos y directorios.  
@@ -32,7 +32,7 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
 ## <a name="stream-operations"></a>Operaciones con secuencias  
  Los datos contenidos en la secuencia pueden proceder de la memoria, de un archivo o de un socket TCP/IP. Las secuencias tienen una serie de operaciones fundamentales que se les pueden aplicar:  
   
--   Lectura. Puede leer de una secuencia transfiriendo los datos desde la secuencia a una estructura de datos, como una matriz de bytes.  
+-   **Lectura**. Puede leer de una secuencia transfiriendo los datos desde la secuencia a una estructura de datos, como una matriz de bytes.  
   
 -   **Escritura**. Puede escribir en una secuencia transfiriendo datos desde un origen de datos a la secuencia.  
   
@@ -101,5 +101,5 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
 ## <a name="see-also"></a>Vea también  
  [Crear secuencias](../../../../standard/io/composing-streams.md)  
  [E/S de archivos y secuencias](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

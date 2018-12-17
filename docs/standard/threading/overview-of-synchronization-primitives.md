@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201603"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146581"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Información general sobre las primitivas de sincronización
 
@@ -79,9 +79,9 @@ Para más información sobre las ventajas e inconvenientes del uso de un bloqueo
 
 ### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim (clase)
 
-La clase <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> concede acceso exclusivo a un recurso compartido para escritura y permite que varios subprocesos accedan al recurso simultáneamente para lectura. Es posible que desee utilizar <xref:System.Threading.ReaderWriterLockSlim> para sincronizar el acceso a una estructura de datos compartida que admita operaciones de lectura seguras para subprocesos, pero que requiera acceso exclusivo para realizar la operación de escritura. Cuando un subproceso solicita acceso exclusivo (por ejemplo, llamando al método <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>), las solicitudes posteriores del lector se bloquean hasta que todos los lectores existentes han salido del bloqueo y el escritor ha entrado y salido de dicho bloqueo.
+La clase <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> concede acceso exclusivo a un recurso compartido para escritura y permite que varios subprocesos accedan al recurso simultáneamente para lectura. Es posible que desee utilizar <xref:System.Threading.ReaderWriterLockSlim> para sincronizar el acceso a una estructura de datos compartida que admita operaciones de lectura seguras para subprocesos, pero que requiera acceso exclusivo para realizar la operación de escritura. Cuando un subproceso solicita acceso exclusivo (por ejemplo, llamando al método <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>), las solicitudes posteriores del lector y el escritor se bloquean hasta que todos los lectores existentes han salido del bloqueo y el escritor ha entrado y salido de dicho bloqueo.
   
-Para más información, vea el artículo [Bloqueos de lector y escritor](reader-writer-locks.md) y la referencia de API <xref:System.Threading.ReaderWriterLockSlim>.
+Para más información, vea la referencia de API <xref:System.Threading.ReaderWriterLockSlim>.
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Semaphore y SemaphoreSlim (clases)
 
@@ -134,7 +134,7 @@ Para más información, vea el artículo [Barrier](barrier.md) y la referencia d
 
 La clase <xref:System.Threading.Interlocked?displayProperty=nameWithType> proporciona métodos estáticos que realizan operaciones atómicas simples en una variable. Esas operaciones atómicas incluyen la adición, el incremento y el decremento, el intercambio y el intercambio condicional que depende de una comparación, y la operación de lectura de un valor entero de 64 bits.
 
-Para más información, vea el artículo [Operaciones de bloqueo](interlocked-operations.md) y la referencia de API <xref:System.Threading.Interlocked>.
+Para más información, vea la referencia de API <xref:System.Threading.Interlocked>.
 
 ## <a name="spinwait-structure"></a>SpinWait (estructura)
 

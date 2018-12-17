@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743968"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143381"
 ---
 # <a name="framework-libraries"></a>Bibliotecas de Framework
 
@@ -53,7 +53,8 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 
 *   <xref:System.Net.Http.HttpClient>: una API para enviar solicitudes HTTP y recibir respuestas HTTP de un recurso identificado por un URI.
 *   <xref:System.Xml.Linq.XDocument>: una API para cargar y consultar documentos XML con LINQ.
-*   <xref:System.IO.StreamReader>: una API para leer archivos. <xref:System.IO.StringWriter>: se puede usar para escribir archivos.
+*   <xref:System.IO.StreamReader>: una API para leer archivos. 
+*   <xref:System.IO.StreamWriter>: una API para escribir archivos.
 
 ## <a name="app-model-apis"></a>API del modelo de aplicaciones
 

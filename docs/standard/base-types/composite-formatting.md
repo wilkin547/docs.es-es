@@ -1,6 +1,6 @@
 ---
 title: Formatos compuestos
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397938"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126866"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
+
 La característica de formato compuesto de .NET toma una lista de objetos y una cadena de formato compuesto como entrada. Una cadena de formato compuesto está formada por texto fijo combinado con marcadores de posición indizados, que reciben el nombre de elementos de formato, y que se corresponden con los objetos de la lista. La operación de formato genera una cadena de resultado compuesta por el texto fijo original combinado con la representación de cadena de los objetos de la lista.  
   
- La característica de formato compuesto se admite mediante métodos como los siguientes:  
+> [!IMPORTANT]
+> En lugar de usar cadenas de formato compuesto, puede usar *cadenas interpoladas* si el idioma y la versión de idioma que está usando son compatibles con ellos. Una cadena interpolada es una cadena que contiene *expresiones interpoladas*. Cada expresión interpolada se resuelve con el valor de la expresión y se incluye en la cadena de resultado cuando se asigna la cadena. Para obtener más información, vea [Interpolación de cadenas (Referencia de C#)](../../csharp/language-reference/tokens/interpolated.md) e [Interpolated strings (Visual Basic Reference)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) (Cadenas interpoladas [referencia de Visual Basic]).
+
+La característica de formato compuesto se admite mediante métodos como los siguientes:  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>, que devuelve una cadena de resultado con formato.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>, que devuelve una cadena de resultado con formato.  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, que anexa una cadena de resultado con formato a un objeto <xref:System.Text.StringBuilder>.  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, que anexa una cadena de resultado con formato a un objeto <xref:System.Text.StringBuilder>.   
+- Algunas sobrecargas del método <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que muestran una cadena de resultado con formato en la consola.  
   
--   Algunas sobrecargas del método <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que muestran una cadena de resultado con formato en la consola.  
+- Algunas sobrecargas del método <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, que escriben la cadena de resultado con formato en una secuencia o un archivo. Las clases derivadas de <xref:System.IO.TextWriter>, como <xref:System.IO.StreamWriter> y <xref:System.Web.UI.HtmlTextWriter>, también comparten esta funcionalidad.  
   
--   Algunas sobrecargas del método <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, que escriben la cadena de resultado con formato en una secuencia o un archivo. Las clases derivadas de <xref:System.IO.TextWriter>, como <xref:System.IO.StreamWriter> y <xref:System.Web.UI.HtmlTextWriter>, también comparten esta funcionalidad.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que genera un mensaje con formato para los agentes de escucha de traza.  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que genera un mensaje con formato para los agentes de escucha de traza.  
+- Los métodos <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que generan mensajes con formato para los agentes de escucha de traza.  
   
--   Los métodos <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que generan mensajes con formato para los agentes de escucha de traza.  
-  
--   El método <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que escribe un método informativo para los agentes de escucha de traza.  
+- El método <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que escribe un método informativo para los agentes de escucha de traza.  
   
 ## <a name="composite-format-string"></a>Cadena de formato compuesto  
  Los métodos compatibles con la característica de formato compuesto utilizan como argumentos una cadena de formato compuesto y una lista de objetos. Una cadena de formato compuesto consta de cero o más ejecuciones de texto fijo combinadas con uno o varios elementos de formato. El texto fijo es cualquier cadena que elija y cada elemento de formato se corresponde con un objeto o estructura de conversión boxing de la lista. La característica de formato compuesto devuelve una nueva cadena de resultado donde cada elemento de formato se reemplaza por la representación de cadena del objeto correspondiente de la lista.  

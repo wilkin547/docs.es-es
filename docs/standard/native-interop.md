@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 7da86cfe483a2355c53206f4c491fbd07e4c3046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591929"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143193"
 ---
 # <a name="native-interoperability"></a>Interoperabilidad nativa
 
@@ -260,7 +260,7 @@ Los dos ejemplos anteriores dependen de parámetros y, en ambos casos, los pará
 
 La **serialización** es el proceso de transformación de tipos cuando tienen que cruzar el límite de administrado a nativo y viceversa.
 
-La serialización es necesaria porque los tipos del código administrado y del código no administrado son diferentes. En el código administrado, por ejemplo, tiene `String`, mientras que en el entorno no administrado, las cadenas pueden ser Unicode ("anchas"), no Unicode, terminadas en un valor nulo, ASCII, etc. De forma predeterminada, el subsistema de P/Invoke intentará hacer "lo correcto" según el comportamiento predeterminado que se puede ver en [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Pero en aquellas situaciones en las que necesita un control adicional, puede emplear el atributo `MarshalAs` para especificar qué tipo se espera en el lado no administrado. Por ejemplo, si queremos que la cadena se envíe como una cadena ANSI terminada en un valor nulo, podemos hacerlo de la manera siguiente:
+La serialización es necesaria porque los tipos del código administrado y del código no administrado son diferentes. En el código administrado, por ejemplo, tiene `String`, mientras que en el entorno no administrado, las cadenas pueden ser Unicode ("anchas"), no Unicode, terminadas en un valor nulo, ASCII, etc. De forma predeterminada, el subsistema de P/Invoke intentará hacer "lo correcto" según el [comportamiento predeterminado](../../docs/framework/interop/default-marshaling-behavior.md). Pero en aquellas situaciones en las que necesita un control adicional, puede emplear el atributo [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) para especificar qué tipo se espera en el lado no administrado. Por ejemplo, si queremos que la cadena se envíe como una cadena ANSI terminada en un valor nulo, podemos hacerlo de la manera siguiente:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

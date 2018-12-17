@@ -1,15 +1,15 @@
 ---
 title: Identificación de los límites del modelo de dominio para cada microservicio
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Identificación de los límites del modelo de dominio para cada microservicio
+description: Explore la esencia de crear particiones de una aplicación grande en microservicios para lograr una arquitectura sólida.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: bb02d2102659abd910f9a7e62652511c65574ab7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 9142c5abbbd3839caac377876ba54258cdf916b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106241"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152505"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificar los límites del modelo de dominio para cada microservicio
 
@@ -21,15 +21,15 @@ Un modelo de dominio con entidades de dominio específicas se aplica en un BC o 
 
 Otra herramienta que informa sobre su elección de diseño es la [ley de Conway](https://en.wikipedia.org/wiki/Conway%27s_law), que indica que una aplicación reflejará los límites sociales de la organización que la produjo. Pero a veces sucede lo contrario: el software forma la organización de una empresa. Tal vez deba invertir la ley de Conway y establecer los límites de la forma que quiere que la empresa se organice, decantándose por la consultoría de procesos empresariales.
 
-Con el fin de identificar los contextos limitados, un patrón DDD que puede usarse para esto es el [patrón de asignación de contexto](https://www.infoq.com/articles/ddd-contextmapping). Con la asignación de contexto, puede identificar los distintos contextos de la aplicación y sus límites. Es habitual tener un contexto y un límite diferentes para cada subsistema pequeño, por ejemplo. La asignación de contexto es una manera de definir y establecer explícitamente esos límites entre dominios. Un BC es autónomo, incluye los detalles de un único dominio, como las entidades de dominio, y define los contratos de integración con otros BC. Esto es similar a la definición de un microservicio: es autónomo, implementa cierta capacidad de dominio y debe proporcionar interfaces. Esta es la razón por la que la asignación de contexto y el patrón de contexto limitado son enfoques excelentes para identificar los límites del modelo de dominio de sus microservicios.
+Para identificar los contextos limitados, puede usar un patrón DDD denominado [patrón de asignación de contexto](https://www.infoq.com/articles/ddd-contextmapping). Con la asignación de contexto, puede identificar los distintos contextos de la aplicación y sus límites. Es habitual tener un contexto y un límite diferentes para cada subsistema pequeño, por ejemplo. La asignación de contexto es una manera de definir y establecer explícitamente esos límites entre dominios. Un BC es autónomo, incluye los detalles de un único dominio, como las entidades de dominio, y define los contratos de integración con otros BC. Esto es similar a la definición de un microservicio: es autónomo, implementa cierta capacidad de dominio y debe proporcionar interfaces. Esta es la razón por la que la asignación de contexto y el patrón de contexto limitado son enfoques excelentes para identificar los límites del modelo de dominio de sus microservicios.
 
-Al diseñar una aplicación grande, verá cómo se puede fragmentar su modelo de dominio; por ejemplo, un experto en dominios del dominio de catálogo denominará las entidades de una manera diferente en los dominios de catálogo e inventario que un experto en dominios de envío. O puede que la entidad de dominio de usuario sea diferente en tamaño y número de atributos cuando se trata de un experto de CRM que quiere almacenar todos los detalles sobre el cliente, en comparación con un experto en dominios de pedido que solo necesita datos parciales sobre el cliente. Es muy difícil eliminar la ambigüedad de todos los términos del dominio en todos los dominios relacionados con una aplicación grande. Pero lo más importante es que no debe intentar unificar los términos, sino aceptar las diferencias y la riqueza que cada dominio proporciona. Si intenta tener una base de datos unificada para toda la aplicación, los intentos de establecer un vocabulario unificado serán difíciles y los resultados no sonarán bien a ninguno de los múltiples expertos en dominios. Por tanto, con los BC (implementados como microservicios) será más fácil aclarar dónde puede usar determinados términos del dominio y dónde debe dividir el sistema y crear BC adicionales con dominios diferentes.
+Al diseñar una aplicación grande, verá cómo se puede fragmentar su modelo de dominio; por ejemplo, un experto en dominios del dominio de catálogo denominará las entidades de una manera diferente en los dominios de catálogo e inventario que un experto en dominios de envío. O puede que la entidad de dominio de usuario sea diferente en tamaño y número de atributos cuando se trata de un experto de CRM que quiere almacenar todos los detalles sobre el cliente, en comparación con un experto en dominios de pedido que solo necesita datos parciales sobre el cliente. Es muy difícil eliminar la ambigüedad de todos los términos del dominio en todos los dominios relacionados con una aplicación grande. Pero lo más importante es que no debe intentar unificar los términos. En su lugar, acepte las diferencias y la riqueza que cada dominio proporciona. Si intenta tener una base de datos unificada para toda la aplicación, los intentos de establecer un vocabulario unificado serán difíciles y los resultados no sonarán bien a ninguno de los múltiples expertos en dominios. Por tanto, con los BC (implementados como microservicios) será más fácil aclarar dónde puede usar determinados términos del dominio y dónde debe dividir el sistema y crear BC adicionales con dominios diferentes.
 
 Sabrá que obtuvo los límites y los tamaños correctos de cada BC y modelo de dominio si tiene pocas relaciones sólidas entre los modelos de dominio y normalmente no necesita combinar información de varios modelos de dominio al realizar operaciones de aplicaciones típicas.
 
 Quizá la mejor respuesta a la pregunta de qué tamaño debe tener un modelo de dominio para cada microservicio es la siguiente: debe tener un BC autónomo, tan aislado como sea posible, que le permita trabajar sin tener que cambiar constantemente a otros contextos (otros modelos de microservicio). En la figura 4-10 puede ver cómo varios microservicios (varios BC) tienen su propio modelo y cómo se pueden definir sus entidades, según los requisitos específicos para cada uno de los dominios identificados en la aplicación.
 
-![](./media/image10.png)
+![Las entidades en varios límites de modelo (contextos delimitados), donde la misma entidad aparece como "Users", "Buyers", "Payers" y "Customers" en función del contexto delimitado](./media/image10.png)
 
 **Figura 4-10**. Identificación de las entidades y de los límites del modelo de microservicio
 
@@ -39,7 +39,7 @@ Sin embargo, también puede tener entidades que tienen una forma diferente, pero
 
 Un enfoque similar se muestra en la figura 4-11.
 
-![](./media/image11.png)
+![Al descomponer un modelo de datos tradicionales entre contextos limitados, puede tener distintas entidades que comparten la misma identidad (un comprador también es un usuario) con otros atributos en cada contexto delimitado.](./media/image11.png)
 
 **Figura 4-11**. Descomponer los modelos de datos tradicionales en varios modelos de dominio
 
@@ -51,7 +51,6 @@ Básicamente, hay un concepto compartido de un usuario que existe en varios serv
 
 No compartir la misma entidad de usuario con el mismo número de atributos entre dominios tiene varias ventajas. Una ventaja es reducir la duplicación, por lo que los modelos de microservicio no tienen ningún dato que no necesiten. Otra ventaja es tener un microservicio maestro que posee un determinado tipo de datos por entidad para que solo ese microservicio dirija las actualizaciones y las consultas para ese tipo de datos.
 
-
 >[!div class="step-by-step"]
-[Anterior](distributed-data-management.md)
-[Siguiente](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[Anterior](distributed-data-management.md)
+>[Siguiente](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

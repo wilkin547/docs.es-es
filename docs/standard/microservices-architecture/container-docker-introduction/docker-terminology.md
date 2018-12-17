@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 39a3c0e0aac2980e67a1c87a472d1a77baed6113
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8bf26087564e4f592d5f89afc6da211c5d1cff57
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216856"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150659"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -19,7 +19,7 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Archivo Docker**: un archivo de texto que contiene instrucciones sobre cómo crear una imagen de Docker. Es como un script por lotes, la primera línea indica la imagen de base con la que comenzar y, a continuación, siga las instrucciones para instalar programas necesarios, copiar archivos y así sucesivamente, hasta que llegue al entorno de trabajo que necesita.
 
-**Compilación**: la acción de crear una imagen de contenedor basada en la información y el contexto que proporciona su archivo Docker, así como archivos adicionales en la carpeta en que se crea la imagen. Puede crear imágenes con el comando de **compilación de acoplador** de Docker. 
+**Compilación**: la acción de crear una imagen de contenedor basada en la información y el contexto que proporciona su archivo Docker, así como archivos adicionales en la carpeta en que se crea la imagen. Puede crear imágenes con el comando de **docker build** de Docker. 
 
 **Contenedor**: una instancia de una imagen de Docker. Un contenedor representa la ejecución de una sola aplicación, proceso o servicio. Está formado por el contenido de una imagen de Docker, un entorno de ejecución y un conjunto estándar de instrucciones. Al escalar un servicio, crea varias instancias de un contenedor a partir de la misma imagen. O bien, un proceso por lotes puede crear varios contenedores a partir de la misma imagen y pasar parámetros diferentes a cada instancia.
 
@@ -51,7 +51,6 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Orquestador**: herramienta que simplifica la administración de clústeres y hosts de Docker. Los orquestadores permiten administrar las imágenes, los contenedores y los hosts a través de una interfaz de línea de comandos (CLI) o una interfaz gráfica de usuario. Puede administrar las redes de contenedor, las configuraciones, el equilibrio de carga, la detección de servicios, la alta disponibilidad, la configuración del host de Docker y muchas cosas más. Un orquestador se encarga de ejecutar, distribuir, escalar y reparar las cargas de trabajo a través de una colección de nodos. Normalmente, los productos del orquestador son los mismos que proporcionan infraestructura de clúster, como Kubernetes y Azure Service Fabric, entre otras ofertas del mercado. 
 
-
 >[!div class="step-by-step"]
-[Anterior](docker-defined.md)
-[Siguiente](docker-containers-images-registries.md)
+>[Anterior](docker-defined.md)
+>[Siguiente](docker-containers-images-registries.md)

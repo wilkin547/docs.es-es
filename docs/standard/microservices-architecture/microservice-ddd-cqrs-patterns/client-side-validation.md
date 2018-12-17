@@ -1,19 +1,19 @@
 ---
 title: Validación del lado cliente (validación de los niveles de presentación)
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Validación del lado cliente (validación de los niveles de presentación)
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Explore los conceptos clave de las validaciones del lado del cliente.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 10/08/2018
+ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582429"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130083"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validación del lado cliente (validación de los niveles de presentación)
 
-Incluso cuando el origen de verdad es el modelo del dominio y, en última instancia, debe tener validación en el nivel de modelo de dominio, la validación todavía puede controlarse en el nivel de modelo de dominio (servidor) y en el lado cliente.
+Incluso cuando el origen de verdad es el modelo del dominio y, en última instancia, debe tener validación en el nivel de modelo de dominio, la validación todavía puede controlarse en el nivel de modelo de dominio (servidor) y la IU (lado cliente).
 
 La validación del lado cliente es una gran ventaja para los usuarios. Les permite ahorrar un tiempo que, de otro modo, pasarían esperando un viaje de ida y vuelta al servidor que podría devolver errores de validación. En términos comerciales, incluso unas pocas fracciones de segundos multiplicadas por cientos de veces al día suman una gran cantidad de tiempo, gastos y frustración. La validación inmediata y sencilla permite a los usuarios trabajar de forma más eficiente y generar una entrada y salida de datos de mayor calidad.
 
@@ -29,27 +29,27 @@ La implementación de la validación del lado cliente depende del tipo de aplica
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validación en aplicaciones móviles de Xamarin
 
--   **Validate Text Input and Show Errors**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/) (Validar la entrada de texto y mostrar errores)
+- **Validate Text Input and Show Errors** \ (Validar la entrada de texto y mostrar errores)
+  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback (Devolución de llamada de validación)**
-    [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+- **Validation Callback** \ (Devolución de llamada de validación)
+  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Validación en aplicaciones ASP.NET Core
 
--   **Rick Anderson. Adding validation (Adición de validación)**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson. Agregar validación a una aplicación ASP.NET Core MVC** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validación en aplicaciones SPA Web (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation (Validación de formularios de Angular 2)**
-    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+- **Ado Kukic. Angular 2 Form Validation** \ (Validación de formularios de Angular 2)
+  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation (Validación de formularios)**
-    [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- **Form Validation** \ (Validación de formularios)
+  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Validation (Validación).** Documentación de Breeze.
-    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+- **Validation (Validación).** Documentación de Breeze. \
+  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 En resumen, estos son los conceptos más importantes en lo que respecta a la validación:
 
@@ -59,10 +59,8 @@ En resumen, estos son los conceptos más importantes en lo que respecta a la val
 
 - Si necesita crear varios objetos relacionados, como un agregado, y solo son válidos una vez que todos ellos se han creado, considere la posibilidad de usar el patrón Factory.
 
-- Los marcos de validación son más útiles en niveles específicos, como el nivel de presentación o el nivel de aplicación/servicio, pero normalmente no en el nivel de modelo de dominio, ya que es necesario tomar una dependencia fuerte en un marco de infraestructura.
-
 - En la mayoría de los casos, tener validación redundante en el lado cliente es adecuado, porque la aplicación puede ser proactiva.
 
 >[!div class="step-by-step"]
-[Anterior](domain-model-layer-validations.md)
-[Siguiente](domain-events-design-implementation.md)
+>[Anterior](domain-model-layer-validations.md)
+>[Siguiente](domain-events-design-implementation.md)

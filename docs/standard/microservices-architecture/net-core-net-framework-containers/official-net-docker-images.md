@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075592"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131383"
 ---
 # <a name="official-net-docker-images"></a>Imágenes oficiales de Docker de .NET
 
@@ -50,7 +50,6 @@ Al explorar los repositorios de imágenes de .NET en Docker Hub, encontrará var
 | microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core, solo con tiempo de ejecución y las optimizaciones de ASP.NET Core, en Linux y Windows (multiarquitectura) |
 | microsoft/dotnet:**2.1-sdk**                | .NET Core, con los SDK incluidos, en Linux y Windows (multiarquitectura)                                  |
 
-
 >[!div class="step-by-step"]
-[Anterior](net-container-os-targets.md)
-[Siguiente](../architect-microservice-container-applications/index.md)
+>[Anterior](net-container-os-targets.md)
+>[Siguiente](../architect-microservice-container-applications/index.md)

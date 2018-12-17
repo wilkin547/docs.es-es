@@ -1,5 +1,6 @@
 ---
 title: Procedimientos recomendados para el uso de cadenas en .NET
+description: Obtenga información sobre cómo usar cadenas de forma eficaz en aplicaciones .NET.
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080343"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150984"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
 <a name="top"></a> .NET proporciona una gran compatibilidad para desarrollar aplicaciones localizadas y globalizadas, y simplifica la aplicación de las convenciones de la referencia cultural actual o de una referencia cultural concreta al realizar operaciones comunes como ordenar y mostrar cadenas. Pero ordenar o comparar cadenas no es siempre una operación dependiente de la referencia cultural. Por ejemplo, las cadenas usadas internamente por una aplicación normalmente se deben administrar de forma idéntica en todas las referencias culturales. Cuando los datos de cadenas independientes de la referencia cultural (como etiquetas XML, etiquetas HTML, nombres de usuario, rutas de acceso de archivos y nombres de objetos del sistema) se interpretan como si fueran dependientes de la referencia cultural, el código de aplicación puede estar sujeto a errores imperceptibles, un rendimiento inadecuado y, en algunos casos, a problemas de seguridad.  
@@ -142,17 +144,17 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
   
  Las comparaciones que usan semántica de la referencia cultural actual son el valor predeterminado para los métodos siguientes:  
   
--   Sobrecargas de <xref:System.String.Compare%2A?displayProperty=nameWithType> que no incluyen un parámetro <xref:System.StringComparison>.  
+-   Sobrecargas de<xref:System.String.Compare%2A?displayProperty=nameWithType> que no incluyen un parámetro <xref:System.StringComparison> .  
   
--   Sobrecargas de <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.  
+-   Sobrecargas de<xref:System.String.CompareTo%2A?displayProperty=nameWithType> .  
   
--   El método predeterminado <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo>.  
+-   El método predeterminado <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo> .  
   
--   El método predeterminado <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo>.  
+-   El método predeterminado <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> y el método <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parámetro `null`<xref:System.Globalization.CultureInfo> .  
   
--   Sobrecargas de <xref:System.String.IndexOf%2A?displayProperty=nameWithType> que aceptan <xref:System.String> como un parámetro de búsqueda y que no tienen un parámetro <xref:System.StringComparison>.  
+-   Sobrecargas de<xref:System.String.IndexOf%2A?displayProperty=nameWithType> que aceptan <xref:System.String> como un parámetro de búsqueda y que no tienen un parámetro <xref:System.StringComparison> .  
   
--   Sobrecargas de <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> que aceptan <xref:System.String> como un parámetro de búsqueda y que no tienen un parámetro <xref:System.StringComparison>.  
+-   Sobrecargas de<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> que aceptan <xref:System.String> como un parámetro de búsqueda y que no tienen un parámetro <xref:System.StringComparison> .  
   
  En cualquier caso, se recomienda llamar a una sobrecarga que tenga un parámetro <xref:System.StringComparison> para aclarar la intención de la llamada al método.  
   
@@ -183,7 +185,7 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
  En .NET, las cadenas pueden contener caracteres nulos incrustados. Una de las diferencias más claras entre la comparación ordinal y dependiente de la referencia cultural (incluyendo las comparaciones que usan la referencia cultural de todos los idiomas) tiene que ver con el control de caracteres nulos incrustados en una cadena. Estos caracteres se omiten cuando usa métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> y <xref:System.String.Equals%2A?displayProperty=nameWithType> para realizar comparaciones dependientes de la referencia cultural (incluyendo las comparaciones que usan la referencia cultural de todos los idiomas). Por tanto, en las comparaciones dependientes de la referencia cultural, las cadenas que contienen caracteres nulos incrustados pueden considerarse iguales que las cadenas que no los contienen.  
   
 > [!IMPORTANT]
->  Aunque los métodos de comparación de cadenas hacen caso omiso de los caracteres nulos incrustados, los métodos de búsqueda de cadenas como <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> y <xref:System.String.StartsWith%2A?displayProperty=nameWithType> sí los tienen en cuenta.  
+>  Aunque los métodos de comparación de cadenas hacen caso omiso de los caracteres nulos incrustados, los métodos de búsqueda de cadenas como <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>y <xref:System.String.StartsWith%2A?displayProperty=nameWithType> sí los tienen en cuenta.  
   
  En el ejemplo siguiente se realiza una comparación dependiente de la referencia cultural de la cadena "Aa" con una cadena similar que contiene varios caracteres nulos incrustados entre "A" y "a", y se muestra cómo las dos cadenas se consideran iguales.  
   
@@ -254,7 +256,7 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
 ### <a name="stringcompare"></a>String.Compare  
  Interpretación predeterminada: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- Al ser la operación fundamental para la interpretación de cadenas, todas las instancias de estas llamadas al método se deben examinar para determinar si las cadenas se deben interpretar según la referencia cultural actual o se deben separar de la referencia cultural (simbólicamente). Normalmente, se trata del último caso y se debe usar en su lugar una comparación <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.  
+ Al ser la operación fundamental para la interpretación de cadenas, todas las instancias de estas llamadas al método se deben examinar para determinar si las cadenas se deben interpretar según la referencia cultural actual o se deben separar de la referencia cultural (simbólicamente). Normalmente, se trata del último caso y se debe usar en su lugar una comparación <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> .  
   
  La clase <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>, devuelta por la propiedad <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType>, también incluye un método <xref:System.Globalization.CompareInfo.Compare%2A> que proporciona un gran número de opciones de coincidencia (ordinal, omitir el espacio en blanco, omitir el tipo de kana, etc.) por medio de la enumeración de marca <xref:System.Globalization.CompareOptions>.  
   
@@ -297,7 +299,7 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
   
  No hay coherencia en cómo las sobrecargas predeterminadas de estos métodos realizan las comparaciones. Todos los métodos <xref:System.String.IndexOf%2A?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> que incluyen un parámetro <xref:System.Char> realizan una comparación ordinal, pero los métodos <xref:System.String.IndexOf%2A?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> predeterminados que incluyen un parámetro <xref:System.String> realizan una comparación dependiente de la referencia cultural.  
   
- Si llama al método <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> o <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> y le pasa una cadena para ubicar en la instancia actual, se recomienda llamar a una sobrecarga que especifique explícitamente el tipo <xref:System.StringComparison>. Las sobrecargas que incluyen un argumento <xref:System.Char> no le permiten especificar un tipo <xref:System.StringComparison> .  
+ Si llama al método <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> o <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> y le pasa una cadena para ubicar en la instancia actual, se recomienda llamar a una sobrecarga que especifique explícitamente el tipo <xref:System.StringComparison> . Las sobrecargas que incluyen un argumento <xref:System.Char> no le permiten especificar un tipo <xref:System.StringComparison> .  
   
  [Volver al principio](#top)  
   
@@ -305,17 +307,17 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>Métodos que realizan la comparación de cadenas indirectamente  
  Algunos métodos sin cadenas que tienen la comparación de cadenas como operación fundamental usan el tipo <xref:System.StringComparer> . La clase <xref:System.StringComparer> incluye seis propiedades estáticas que devuelven instancias de <xref:System.StringComparer> cuyos métodos <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> realizan los siguientes tipos de comparaciones de cadenas:  
   
--   Comparaciones de cadenas dependientes de la referencia cultural usando la referencia cultural actual. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType>.  
+-   Comparaciones de cadenas dependientes de la referencia cultural usando la referencia cultural actual. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> .  
   
--   Comparaciones sin distinción entre mayúsculas y minúsculas usando la referencia cultural actual. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType>.  
+-   Comparaciones sin distinción entre mayúsculas y minúsculas usando la referencia cultural actual. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> .  
   
--   Comparaciones independientes de la referencia cultural usando las reglas de comparación de palabras de la referencia cultural de todos los idiomas. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType>.  
+-   Comparaciones independientes de la referencia cultural usando las reglas de comparación de palabras de la referencia cultural de todos los idiomas. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> .  
   
 -   Comparaciones sin distinción entre mayúsculas y minúsculas e independientes de la referencia cultural usando las reglas de comparación de palabras de la referencia cultural de todos los idiomas. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType>.  
   
--   Comparación ordinal. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType>.  
+-   Comparación ordinal. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> .  
   
--   Comparación ordinal sin distinción entre mayúsculas y minúsculas. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>.  
+-   Comparación ordinal sin distinción entre mayúsculas y minúsculas. Este objeto <xref:System.StringComparer> está devuelto por la propiedad <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> .  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort y Array.BinarySearch  
  Interpretación predeterminada: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
@@ -347,7 +349,7 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
   
 <a name="Formatted"></a>   
 ## <a name="displaying-and-persisting-formatted-data"></a>Mostrar y conservar datos con formato  
- Cuando muestre a los usuarios datos que no sean de cadena, como números, y fechas y horas, asígneles formato mediante la configuración de la referencia cultural del usuario. De forma predeterminada, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y los métodos `ToString` de los tipos numéricos y los tipos de fecha y hora usan la referencia cultural del subproceso actual para las operaciones de formato. Para especificar explícitamente que el método de formato debe usar la referencia cultural actual, puede llamar a una sobrecarga de un método de formato que tenga un parámetro `provider`, como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, y pasarle la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.  
+ Cuando muestre a los usuarios datos que no sean de cadena, como números, y fechas y horas, asígneles formato mediante la configuración de la referencia cultural del usuario. De forma predeterminada, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y los métodos `ToString` de los tipos numéricos y los tipos de fecha y hora usan la referencia cultural del subproceso actual para las operaciones de formato. Para especificar explícitamente que el método de formato debe usar la referencia cultural actual, puede llamar a una sobrecarga de un método de formato que tenga un parámetro `provider` , como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, y pasarle la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> .  
   
  Puede conservar datos que no son de cadena como datos binarios o como datos con formato. Si decide guardarlos como datos con formato, debe llamar a una sobrecarga del método de formato que incluya un parámetro `provider` y pasarle la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. La referencia cultural de todos los idiomas proporciona un formato coherente para los datos con formato que es independiente de la referencia cultural y del equipo. En cambio, si se conservan datos a los que se aplica formato con referencias culturales distintas de la referencia cultural de todos los idiomas, se presentan varias limitaciones:  
   

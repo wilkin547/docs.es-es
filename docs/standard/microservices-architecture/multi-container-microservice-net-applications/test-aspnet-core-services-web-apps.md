@@ -1,15 +1,15 @@
 ---
 title: Probar aplicaciones web y servicios ASP.NET Core
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Probar aplicaciones web y servicios ASP.NET Core
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Descubra una arquitectura para probar aplicaciones web y servicios ASP.NET Core en contenedores.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/02/2018
+ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232864"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148033"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -23,13 +23,13 @@ Debe probar cómo se comporta el controlador según las entradas válidas o no v
 
 -   Pruebas funcionales para cada microservicio. Esto garantiza que la aplicación funcione según lo esperado desde la perspectiva del usuario.
 
--   Pruebas de servicio. Esto garantiza que se pongan a prueba todos los casos de uso de servicio de un extremo a otro, incluidas pruebas de servicios múltiples al mismo tiempo. Para este tipo de prueba, primero debe preparar el entorno. En este caso, esto significa iniciar los servicios (por ejemplo, mediante el uso de Docker Compose).
+-   Pruebas de servicio. Esto garantiza que se pongan a prueba todos los casos de uso de servicio de un extremo a otro, incluidas pruebas de servicios múltiples al mismo tiempo. Para este tipo de prueba, primero debe preparar el entorno. En este caso, esto significa iniciar los servicios (por ejemplo, mediante el uso de docker-compose up).
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementación de pruebas unitarias para las API web de ASP.NET Core
 
 Las pruebas unitarias conllevan probar una parte de una aplicación de forma aislada con respecto a su infraestructura y dependencias. Cuando se realizan pruebas unitarias de la lógica de controlador, solo se comprueba el método o el contenido de una única acción, no el comportamiento de sus dependencias o del marco en sí. Con todo, las pruebas unitarias no detectan problemas de interacción entre componentes; este es el propósito de las pruebas de integración.
 
-Cuando realice pruebas unitarias de sus acciones de controlador, asegúrese de centrarse solamente en su comportamiento. Una prueba unitaria de controlador evita tener que recurrir a elementos como los filtros, el enrutamiento o el enlace de modelos. Como se centran en comprobar solo una cosa, las pruebas unitarias suelen ser fáciles de escribir y rápidas de ejecutar. Un conjunto de pruebas unitarias bien escrito se puede ejecutar con frecuencia sin demasiada sobrecarga.
+Cuando realice pruebas unitarias de sus acciones de controlador, asegúrese de centrarse solamente en su comportamiento. Una prueba unitaria de controlador evita elementos como filtros, el enrutamiento o enlaces de modelos (la asignación de datos de solicitud a un ViewModel o DTO). Como se centran en comprobar solo una cosa, las pruebas unitarias suelen ser fáciles de escribir y rápidas de ejecutar. Un conjunto de pruebas unitarias bien escrito se puede ejecutar con frecuencia sin demasiada sobrecarga.
 
 Las pruebas unitarias se implementan en función de los marcos de pruebas como xUnit.net, MSTest, Moq o NUnit. En la aplicación de ejemplo eShopOnContainers, se usa XUnit.
 
@@ -37,19 +37,26 @@ Al escribir una prueba unitaria para un controlador de API web, puede ejemplific
 
 ```csharp
 [Fact]
-public void Add_new_Order_raises_new_event()
+public async Task Get_order_detail_success()
 {
-    // Arrange
-    var street = " FakeStreet ";
-    var city = "FakeCity";
-    // Other variables omitted for brevity ...
-    // Act
-    var fakeOrder = new Order(new Address(street, city, state, country, zipcode),
-        cardTypeId, cardNumber,
-        cardSecurityNumber, cardHolderName,
-        cardExpiration);
-    // Assert
-    Assert.Equal(fakeOrder.DomainEvents.Count, expectedResult);
+    //Arrange
+    var fakeOrderId = "12";
+    var fakeOrder = GetFakeOrder();
+ 
+    //...
+
+    //Act
+    var orderController = new OrderController(
+        _orderServiceMock.Object, 
+        _basketServiceMock.Object, 
+        _identityParserMock.Object);
+
+    orderController.ControllerContext.HttpContext = _contextMock.Object;
+    var actionResult = await orderController.Detail(fakeOrderId);
+ 
+    //Assert
+    var viewResult = Assert.IsType<ViewResult>(actionResult);
+    Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
 }
 ```
 
@@ -63,7 +70,7 @@ A diferencia de las pruebas unitarias, las pruebas de integración suelen inclui
 
 Como las pruebas de integración usan segmentos de código más grandes que las pruebas unitarias y dependen de los elementos de infraestructura, tienden a ser órdenes de envergadura, más lentas que las pruebas unitarias. Por lo tanto, es conveniente limitar el número de pruebas de integración que va a escribir y a ejecutar.
 
-ASP.NET Core incluye un host de web de prueba integrado que puede usarse para controlar las solicitudes HTTP sin causar una sobrecarga en la red, lo que significa que puede ejecutar dichas pruebas más rápidamente si usa un host de web real. El host de web de prueba está disponible en un componente NuGet como Microsoft.AspNetCore.TestHost. Se puede agregar a proyectos de prueba de integración y utilizarlo para hospedar aplicaciones de ASP.NET Core.
+ASP.NET Core incluye un host de web de prueba integrado que puede usarse para controlar las solicitudes HTTP sin causar una sobrecarga en la red, lo que significa que puede ejecutar dichas pruebas más rápidamente si usa un host de web real. El host web de prueba (TestServer) está disponible en un componente NuGet como Microsoft.AspNetCore.TestHost. Se puede agregar a proyectos de prueba de integración y utilizarlo para hospedar aplicaciones de ASP.NET Core.
 
 Como puede ver en el código siguiente, al crear pruebas de integración para controladores de ASP.NET Core, los controladores se ejemplifican a través del host de prueba. Esto se puede comparar a una solicitud HTTP, pero se ejecuta con mayor rapidez.
 
@@ -96,33 +103,111 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Steve Smith. Testing controllers** (ASP.NET Core) (Probar controladores [ASP.NET Core])[*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Probar la lógica del controlador en ASP.NET Core** <br/>
+    [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Integration testing** (ASP.NET Core) (Pruebas de integración [ASP.NET Core])[*https://docs.microsoft.com/aspnet/core/test/integration-tests*](/aspnet/core/test/integration-tests)
+-   **Steve Smith. Integration testing** (ASP.NET Core) (Pruebas de integración [ASP.NET Core]) <br/>
+    [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **Unit testing in .NET Core using dotnet test (Pruebas unitarias de .NET Core con dotnet test)**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
+-   **Pruebas unitarias de .NET Core mediante dotnet test** <br/>
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
--   **xUnit.net**. Sitio oficial.
+-   **xUnit.net**. Sitio oficial. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Conceptos básicos de prueba unitaria**
+-   **Unit Test Basics** (Conceptos básicos de prueba unitaria). <br/>
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**. Repositorio de GitHub.
+-   **Moq**. Repositorio de GitHub. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**. Sitio oficial.
+-   **NUnit**. Sitio oficial. <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementación de pruebas de servicio en una aplicación con varios contenedores 
 
-Como se indicó anteriormente, al probar aplicaciones con varios contenedores, todos los microservicios deben ejecutarse en el host de Docker o en un clúster de contenedor. Las pruebas de servicio de un extremo a otro que incluyen varias operaciones que implican varios microservicios requieren que implemente e inicie la aplicación en el host de Docker mediante la ejecución de Docker Compose (o un mecanismo comparable si usa un orquestador). Cuando la aplicación y todos sus servicios se estén ejecutando, podrá ejecutar pruebas funcionales y de integración de un extremo a otro.
+Como se indicó anteriormente, al probar aplicaciones con varios contenedores, todos los microservicios deben ejecutarse en el host de Docker o en un clúster de contenedor. Las pruebas de servicio de un extremo a otro que incluyen varias operaciones que implican varios microservicios requieren que implemente e inicie la aplicación en el host de Docker mediante la ejecución de docker-compose up (o un mecanismo comparable si usa un orquestador). Cuando la aplicación y todos sus servicios se estén ejecutando, podrá ejecutar pruebas funcionales y de integración de un extremo a otro.
 
-Puede usar diferentes enfoques. En el archivo docker-compose.yml que va a usar para implementar la aplicación (o en archivos similares, como docker-compose.ci.build.yml), en el nivel de solución puede expandir el punto de entrada para usar la [prueba de dotnet](../../../core/tools/dotnet-test.md). También puede usar otro archivo de composición que ejecute las pruebas en la imagen de destino. Si utiliza otro archivo de composición para las pruebas de integración, que incluyan sus microservicios y bases de datos en contenedores, puede comprobar que los datos relacionados siempre se restablecen a su estado original antes de ejecutar las pruebas.
+Puede usar diferentes enfoques. En el archivo docker-compose.yml que se usa para implementar la aplicación en el nivel de solución puede expandir el punto de entrada para usar [dotnet test](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test). También puede usar otro archivo de composición que ejecute las pruebas en la imagen de destino. Si utiliza otro archivo de composición para las pruebas de integración, que incluyan sus microservicios y bases de datos en contenedores, puede comprobar que los datos relacionados siempre se restablecen a su estado original antes de ejecutar las pruebas.
 
 Si ejecuta Visual Studio, cuando la aplicación de redacción esté en funcionamiento, podrá aprovechar los puntos de interrupción y las excepciones. También podrá ejecutar las pruebas de integración automáticamente en la canalización de integración continua en Azure DevOps Services o en cualquier otro sistema de integración continua o de entrega continua que admita los contenedores de Docker.
 
+## <a name="testing-in-eshoponcontainers"></a>Realización de pruebas en eShopOnContainers
+
+Recientemente se han reestructurado las pruebas de referencia de la aplicación (eShopOnContainers) y ahora hay cuatro categorías:
+
+1.  **Pruebas unitarias**, simples pruebas unitarias normales, incluidas en los proyectos **{MicroserviceName}.UnitTests**
+
+2.  **Pruebas de integración o funcionales de microservicio**, con casos de prueba que implican la infraestructura para cada microservicio, pero aisladas de los demás, y están incluidas en los proyectos **{MicroserviceName}. FunctionalTests**.
+
+3.  **Pruebas funcionales o de integración de aplicación**, que se centran en la integración de microservicios, con casos de prueba para ejercer varios microservicios. Estas pruebas se encuentran en el proyecto **Application.FunctionalTests**.
+
+4.  **Pruebas de carga**, que se centran en los tiempos de respuesta para cada microservicio. Estas pruebas se encuentran en el proyecto **LoadTest** y necesitan Visual Studio 2017 Enterprise Edition.
+
+Las pruebas unitarias y de integración por microservicio se incluyen en una carpeta de prueba en cada microservicio y las pruebas de carga y aplicación se incluyen en la carpeta de pruebas de la carpeta de soluciones, como se muestra en la figura 6-25.
+
+![Estructura de las pruebas en eShopOnContainers: cada servicio tiene una carpeta "prueba" que incluye pruebas unitarias y funcionales. En la carpeta "prueba" de la solución hay pruebas funcionales y de carga para toda la aplicación.](./media/image42.png)
+
+**Figura 6-25**. Estructura de carpetas de prueba en eShopOnContainers
+
+Las pruebas de integración y funcionales de microservicios y aplicaciones se ejecutan desde Visual Studio, mediante el ejecutor de pruebas periódicas, pero primero debe iniciar los servicios de infraestructura necesarios, por medio de un conjunto de archivos docker-compose incluidos en la carpeta de prueba de la solución:
+
+**docker-compose-test.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    image: redis:alpine
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+  nosql.data:
+    image: mongo
+```
+
+**docker-compose-test.override.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672" 
+  sql.data:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+  nosql.data:
+    ports:
+      - "27017:27017"
+```
+
+Por tanto, para ejecutar las pruebas de integración y funcionales primero debe ejecutar este comando, desde la carpeta de prueba de la solución:
+
+``` console
+docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
+```
+
+Como puede ver, estos archivos docker-compose solo inician los microservicios Redis, RabitMQ, SQL Server y MongoDB.
+
+### <a name="additionl-resources"></a>Recursos adicionales
+
+-   **Archivo Léame de las pruebas** en el repositorio de eShopOnContainers en GitHub <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+
+-   **Archivo Léame de las pruebas de carga** en el repositorio de eShopOnContainers en GitHub <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+
 >[!div class="step-by-step"]
-[Anterior](subscribe-events.md)
-[Siguiente](../microservice-ddd-cqrs-patterns/index.md)
+>[Anterior](subscribe-events.md)
+>[Siguiente](background-tasks-with-ihostedservice.md)

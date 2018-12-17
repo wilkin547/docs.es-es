@@ -1,6 +1,6 @@
 ---
 title: Procedimientos recomendados para el subprocesamiento administrado
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562377"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150620"
 ---
 # <a name="managed-threading-best-practices"></a>Procedimientos recomendados para el subprocesamiento administrado
 El multithreading requiere que la programación sea cuidadosa. La complejidad de muchas tareas se puede reducir poniendo las solicitudes de ejecución en cola por subprocesos del grupo de subprocesos. En este tema se tratan situaciones más complicadas, como coordinar el trabajo de múltiples subprocesos, o controlar los subprocesos que se bloquean.  
@@ -70,37 +70,18 @@ else {
   
  También se pueden producir condiciones de carrera al sincronizar las actividades de varios subprocesos. Siempre que escriba una línea de código, debe tener en cuenta qué puede ocurrir si otro subproceso adelanta a un subproceso antes de ejecutar la línea (o antes de cualquiera de las instrucciones máquina que forman la línea).  
   
-## <a name="number-of-processors"></a>Número de procesadores  
- La mayoría de los equipos tienen ahora varios procesadores (también llamados núcleos), incluso los pequeños dispositivos como tabletas y teléfonos. Si está desarrollando software que también se ejecutará en equipos con un solo procesador, tenga en cuenta que el multithreading resuelve distintos problemas en equipos con varios procesadores y en equipos con un solo procesador.  
-  
-### <a name="multiprocessor-computers"></a>Equipos multiprocesador  
- El multithreading proporciona un mayor rendimiento. Diez procesadores pueden hacer diez veces el trabajo de uno, pero sólo si el trabajo se divide de forma que los diez trabajen al mismo tiempo; los subprocesos proporcionan una forma fácil de dividir el trabajo y de aprovechar la eficacia de procesamiento adicional. Si utiliza el multithreading en un equipo multiprocesador:  
-  
--   El número de subprocesos que se pueden ejecutar de forma simultánea está limitado por el número de procesadores.  
-  
--   Sólo se ejecuta un subproceso en segundo plano si el número de subprocesos que se ejecutan en primer plano es menor que el número de procesadores.  
-  
--   Cuando se llama al método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> en un subproceso, ese subproceso se puede ejecutar o no inmediatamente dependiendo del número de procesadores y de subprocesos en espera de ejecución.  
-  
--   Las condiciones de carrera se pueden producir no sólo debido a las prioridades imprevistas de subprocesos, sino también porque dos subprocesos que se ejecutan en procesadores diferentes pueden competir para alcanzar el mismo bloque de código.  
-  
-### <a name="single-processor-computers"></a>Equipos de un solo procesador  
- El multithreading ofrece una gran capacidad de respuesta al usuario del equipo, y utiliza el tiempo de inactividad para realizar tareas en segundo plano. Si utiliza el multithreading en un equipo de un solo procesador:  
-  
--   Sólo se ejecuta un subproceso cada vez.  
-  
--   Se ejecuta un subproceso en segundo plano sólo cuando el subproceso principal del usuario está inactivo. Un subproceso en primer plano que se ejecuta continuamente agota el tiempo de procesador de los subprocesos en segundo plano.  
-  
--   Cuando se llama al método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> en un subproceso, ese subproceso no se ejecuta hasta que el subproceso en curso le cede la ejecución o es relegado por el sistema operativo.  
-  
--   Generalmente, las condiciones de carrera se producen debido a que el programador no tuvo en cuenta el hecho de que un subproceso puede ser adelantado por otro en un momento difícil permitiendo, algunas veces, que otro subproceso llegue el primero al bloque de código.  
-  
 ## <a name="static-members-and-static-constructors"></a>Miembros estáticos y constructores estáticos  
  No se inicializa una clase hasta que su constructor de clase (constructor`static` en C#, `Shared Sub New` en Visual Basic) haya terminado de ejecutarse. Para evitar la ejecución de código en un tipo no inicializado, Common Language Runtime bloquea todas las llamadas de otros subprocesos a los miembros `static` de la clase (miembros`Shared` en Visual Basic) hasta que el constructor de clase termina de ejecutarse.  
   
  Por ejemplo, si un constructor de clase inicia un nuevo subproceso, y el procedimiento del subproceso llama a un miembro `static` de la clase, el nuevo subproceso se bloquea hasta que el constructor de clase finalice.  
   
  Esto se aplica a cualquier tipo que pueda tener un constructor `static`.  
+
+## <a name="number-of-processors"></a>Número de procesadores
+
+Si hay varios procesadores o uno solo disponibles en un sistema puede influir en la arquitectura de multiproceso. Para obtener más información, vea [Número de procesadores](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
+
+Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> para determinar el número de procesadores disponibles en tiempo de ejecución.
   
 ## <a name="general-recommendations"></a>Recomendaciones generales  
  Tenga en cuenta las siguientes instrucciones cuando utilice varios subprocesos:  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  En la versión 2.0 de .NET Framework, el método <xref:System.Threading.Interlocked.Add%2A> proporciona actualizaciones atómicas en incrementos mayores que 1.  
+    > En .NET Framework 2.0 y versiones posteriores, use el método <xref:System.Threading.Interlocked.Add%2A> para incrementos atómicos mayores que 1.  
   
      En el segundo ejemplo, se actualiza una variable de tipo de referencia sólo si es una referencia nula (`Nothing` en Visual Basic).  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  En la versión 2.0 de .NET Framework, el método <xref:System.Threading.Interlocked.CompareExchange%2A> tiene una sobrecarga genérica que se puede utilizar para el reemplazo con seguridad de tipos de cualquier tipo de referencia.  
+    > A partir de .NET Framework 2.0, la sobrecarga del método <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> proporciona una alternativa de seguridad de tipos para tipos de referencia.
   
 ## <a name="recommendations-for-class-libraries"></a>Recomendaciones para las bibliotecas de clases  
  Tenga en cuenta las instrucciones siguientes cuando diseñe bibliotecas de clases para el multithreading:  

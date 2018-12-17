@@ -1,15 +1,15 @@
 ---
 title: Eventos de dominio, diseño e implementación
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Eventos de dominio, diseño e implementación
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga una vista detallada de los eventos de dominio, un concepto clave para establecer la comunicación entre agregados.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 3daab93a97c57521ae6f16ea2498c3f36f30d795
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.date: 10/08/2018
+ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937132"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127854"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -17,11 +17,19 @@ Uso de eventos de dominio para implementar explícitamente los efectos secundari
 
 ## <a name="what-is-a-domain-event"></a>¿Qué es un evento de dominio?
 
-Un evento es algo que ha sucedido en el pasado. Un evento de dominio es, lógicamente, algo que ha sucedido en un dominio concreto, y algo que le interesa que otros elementos del mismo dominio (en proceso) tengan en cuenta y ante lo que puedan reaccionar.
+Un evento es algo que ha sucedido en el pasado. Un evento de dominio es algo que ha sucedido en el dominio que quiere que otras partes del mismo dominio (en curso) tengan en cuenta. Normalmente las partes notificadas reaccionan de alguna manera a los eventos.
 
-Una ventaja importante de los eventos de dominio es que los efectos secundarios que se producen después de que suceda algo en un dominio se pueden expresar de forma explícita en lugar de implícitamente. Esos efectos secundarios deben ser coherentes para que se produzcan todas o ninguna de las operaciones relacionadas con la tarea de negocio. Además, los eventos de dominio permiten una mejor separación de cuestiones entre clases dentro del mismo dominio.
+Una ventaja importante de los eventos de dominio es que los efectos secundarios se pueden expresar explícitamente.
 
-Por ejemplo, si simplemente usa Entity Framework y entidades o incluso agregados, si tienen que producirse efectos secundarios provocados por un caso de uso, se implementarán como un concepto implícito en el código de acoplamiento después de que suceda algo. Pero si solo ve ese código, es posible que no sepa si ese código (el efecto secundario) forma parte de la operación principal o si realmente se trata de un efecto secundario. Por otro lado, el uso de eventos de dominio hace que el concepto sea explícito y forme parte del lenguaje ubicuo. Por ejemplo, en la aplicación eShopOnContainers, la creación de un pedido no se centra solo en el pedido; actualiza o crea un agregado de comprador en función del usuario original, porque el usuario no es un comprador hasta que se realiza un pedido. Si usa eventos de dominio, puede expresar explícitamente esa regla de dominio en función del lenguaje ubicuo proporcionado por los expertos de dominio.
+Por ejemplo, si simplemente usa Entity Framework y debe haber una reacción a algún evento, probablemente codificaría cualquier cosa que necesite cerca de lo que desencadena el evento. Por tanto, la regla se acopla, implícitamente, en el código, y tendrá que mirar el código para, con suerte, descubrir que la regla se implementa allí.
+
+Por otro lado, el uso de los eventos de dominio hace el concepto explícito, porque hay un `DomainEvent` y al menos un `DomainEventHandler` implicados.
+
+Por ejemplo, en la aplicación eShopOnContainers, cuando se crea un pedido, el usuario se convierte en un comprador, por tanto se genera un `OrderStartedDomainEvent` y se controla en el `ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler`, por lo que el concepto subyacente es evidente.
+
+En resumen, los eventos de dominio le ayudan a expresar explícitamente las reglas de dominio, en función del lenguaje ubicuo proporcionado por los expertos de dominio. Además, los eventos de dominio permiten una mejor separación de cuestiones entre clases dentro del mismo dominio.
+
+Es importante asegurarse de que, al igual que en una transacción de base de datos, o todas las operaciones relacionadas con un evento de dominio finalizan correctamente o ninguna lo hace.
 
 Los eventos de dominio son similares a los eventos de estilo de mensajería, con una diferencia importante. Con la mensajería real, las colas de mensajes, los agentes de mensajes o un bus de servicio con AMPQ, un mensaje siempre se envía de forma asincrónica y se comunica entre procesos y equipos. Esto es útil para integrar varios contextos delimitados, microservicios o incluso otras aplicaciones. Pero con los eventos de dominio, le interesa generar un evento desde la operación de dominio que se está ejecutando actualmente, pero que los efectos secundarios se produzcan dentro del mismo dominio.
 
@@ -31,52 +39,58 @@ Los eventos de dominio y sus efectos secundarios (las acciones iniciadas despué
 
 Semánticamente, los eventos de dominio y los de integración son lo mismo: notificaciones sobre algo que acaba de ocurrir. Pero su implementación debe ser diferente. Los eventos de dominio son simplemente mensajes insertados en un distribuidor de eventos de dominio, que se puede implementar como un mediador en memoria basado en un contenedor de IoC o cualquier otro método.
 
-Por otro lado, el propósito de los eventos de integración es propagar las transacciones confirmadas y actualizaciones a subsistemas adicionales, con independencia de que sean otros microservicios, contextos delimitados o incluso aplicaciones externas. Por tanto, solo se deben producir si la entidad se conserva correctamente, porque en muchos escenarios si se produce un error, es como si toda la operación nunca se hubiera producido.
+Por otro lado, el propósito de los eventos de integración es propagar las transacciones confirmadas y actualizaciones a subsistemas adicionales, con independencia de que sean otros microservicios, contextos delimitados o incluso aplicaciones externas. Por tanto, solo se deben producir si la entidad se conserva correctamente, de otra forma será como si toda la operación nunca se hubiera producido.
 
-Además y como se ha mencionado, los eventos de integración se deben basar en la comunicación asincrónica entre varios microservicios (otros contextos delimitados) o incluso sistemas o aplicaciones externos. Por tanto, la interfaz de bus de eventos necesita una infraestructura que permita la comunicación entre procesos y distribuida entre servicios potencialmente remotos. Se pueden basar en un bus de servicio comercial, colas, una base de datos compartida que se use como un buzón o cualquier otro sistema de mensajería distribuido e, idealmente, basado en inserciones.
+Como se ha mencionado anteriormente, los eventos de integración se deben basar en la comunicación asincrónica entre varios microservicios (otros contextos delimitados) o incluso sistemas o aplicaciones externos.
+
+Por tanto, la interfaz de bus de eventos necesita una infraestructura que permita la comunicación entre procesos y distribuida entre servicios potencialmente remotos. Se pueden basar en un bus de servicio comercial, colas, una base de datos compartida que se use como un buzón o cualquier otro sistema de mensajería distribuido e, idealmente, basado en inserciones.
 
 ## <a name="domain-events-as-a-preferred-way-to-trigger-side-effects-across-multiple-aggregates-within-the-same-domain"></a>Eventos de dominio como método preferido para desencadenar efectos secundarios entre varios agregados dentro del mismo dominio
 
-Si la ejecución de un comando relacionado con una instancia de agregado requiere reglas de dominio adicionales para ejecutarse en uno o varios agregados adicionales, debe diseñar e implementar esos efectos secundarios para que se desencadenen mediante eventos de dominio. Como se muestra en la figura 9-14 y como uno de los casos de uso más importantes, se debe usar un evento de dominio para propagar los cambios de estado entre varios agregados dentro del mismo modelo de dominio.
+Si la ejecución de un comando relacionado con una instancia de agregado requiere reglas de dominio adicionales para ejecutarse en uno o varios agregados adicionales, debe diseñar e implementar esos efectos secundarios para que se desencadenen mediante eventos de dominio. Como se muestra en la figura 7-14 y como uno de los casos de uso más importantes, se debe usar un evento de dominio para propagar los cambios de estado entre varios agregados dentro del mismo modelo de dominio.
 
-![](./media/image15.png)
+![La coherencia entre agregados se logra mediante eventos de dominio, el agregado Order envía un evento de dominio OrderStarted que se controla para actualizar el agregado Buyer. ](./media/image15.png)
 
-**Figura 9-14**. Eventos de dominio para exigir la coherencia entre varios agregados dentro del mismo dominio
+**Figura 7-14**. Eventos de dominio para exigir la coherencia entre varios agregados dentro del mismo dominio
 
 En la figura, cuando el usuario inicia un pedido, el evento de dominio OrderStarted desencadena la creación de un objeto Buyer en el microservicio de pedidos, según la información de usuario original del microservicio de identidades (con la información proporcionada en el comando CreateOrder). El evento de dominio lo genera el agregado de pedido cuando se crea por primera vez.
 
 Como alternativa, puede hacer que la raíz agregada se suscriba a los eventos generados por los miembros de sus agregados (las entidades secundarias). Por ejemplo, cada entidad secundaria OrderItem puede generar un evento cuando el precio del artículo sea mayor que una cantidad específica, o bien cuando la cantidad del elemento de producto sea demasiado alta. Después, la raíz agregada puede recibir esos eventos y realizar un cálculo o una agregación global.
 
-Es importante comprender que este tipo de comunicación basada en eventos no se implementa de forma directa dentro de los agregados; tendrá que implementar controladores de eventos de dominio. El control de los eventos de dominio es una cuestión de la aplicación. El nivel de modelo de dominio solo debe centrarse en la lógica del dominio, en lo que un experto de dominio debería entender, no en la infraestructura de la aplicación como controladores y acciones de persistencia de efectos secundarios mediante repositorios. Por tanto, el nivel de aplicación es donde los controladores de eventos de dominio deberían desencadenar acciones cuando se produzca un evento de dominio.
+Es importante comprender que este tipo de comunicación basada en eventos no se implementa de forma directa dentro de los agregados; tendrá que implementar controladores de eventos de dominio.
+
+El control de los eventos de dominio es una cuestión de la aplicación. El nivel de modelo de dominio solo debe centrarse en la lógica del dominio, en lo que un experto de dominio debería entender, no en la infraestructura de la aplicación como controladores y acciones de persistencia de efectos secundarios mediante repositorios. Por tanto, el nivel de aplicación es donde los controladores de eventos de dominio deberían desencadenar acciones cuando se produzca un evento de dominio.
 
 Los eventos de dominio también se pueden usar para desencadenar cualquier número de acciones de la aplicación y, lo que es más importante, deben ser abiertos para aumentar ese número en el futuro de forma desacoplada. Por ejemplo, al iniciar el pedido, es posible que le interese publicar un evento de dominio para propagar esa información a otros agregados o incluso para generar acciones de la aplicación como notificaciones.
 
-El punto clave es el número abierto de acciones que se van a ejecutar cuando se produce un evento de dominio. Con el tiempo, las acciones y reglas en el dominio y la aplicación aumentarán. Aumentará la complejidad o el número de acciones de efectos secundarios cuando ocurra algo, pero si el código se acoplara con "adherencia" (es decir, simplemente la creación de instancias de objetos con la palabra clave new en C\#), cada vez que necesitara agregar una acción nueva tendría que cambiar el código original. Esto podría provocar errores nuevos, porque con cada nuevo requisito tendría que cambiar el flujo de código original. Esto es contrario al [principio de abierto y cerrado](https://en.wikipedia.org/wiki/Open/closed_principle) de [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)). No solo eso, la clase original que orquestaba las operaciones no dejaría de crecer, algo contrario al [Principio de responsabilidad única (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
+El punto clave es el número abierto de acciones que se van a ejecutar cuando se produce un evento de dominio. Con el tiempo, las acciones y reglas en el dominio y la aplicación aumentarán. La complejidad o el número de acciones de efectos secundarios aumentará cuando ocurra algo, pero si el código se acoplara con "adherencia" (es decir, la creación de objetos específicos con `new`), cada vez que necesitara agregar una acción nueva también tendría que cambiar el código funcional y probado.
+
+Este cambio podría provocar nuevos errores y este enfoque también va en contra del [principio abierto/cerrado](https://en.wikipedia.org/wiki/Open/closed_principle) de [SOLID](https://en.wikipedia.org/wiki/SOLID). No solo eso, la clase original que orquestaba las operaciones no dejaría de crecer, algo contrario al [Principio de responsabilidad única (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
 Por otro lado, si usa eventos de dominio, puede crear una implementación específica y desacoplada mediante la separación de las responsabilidades de esta manera:
 
-1.  Envíe un comando (por ejemplo, CreateOrder).
-2.  Reciba el comando en un controlador de comandos.
-    -   Ejecute la transacción de un solo agregado.
-    -   (Opcional) Genere eventos de dominio para los efectos secundarios (por ejemplo, OrderStartedDomainEvent).
-1.  Controle los eventos de dominio (en el proceso actual) que van a ejecutar un número abierto de efectos secundarios en varios agregados o acciones de la aplicación. Por ejemplo:
-    -   Compruebe o cree el comprador y el método de pago.
-    -   Cree y envíe un evento de integración relacionado al bus de eventos para propagar los estados entre los microservicios o desencadenar acciones externas como enviar un correo electrónico al comprador.
-    -   Controle otros efectos secundarios.
+1. Envíe un comando (por ejemplo, CreateOrder).
+2. Reciba el comando en un controlador de comandos.
+   - Ejecute la transacción de un solo agregado.
+   - (Opcional) Genere eventos de dominio para los efectos secundarios (por ejemplo, OrderStartedDomainEvent).
+3. Controle los eventos de dominio (en el proceso actual) que van a ejecutar un número abierto de efectos secundarios en varios agregados o acciones de la aplicación. Por ejemplo:
+   - Compruebe o cree el comprador y el método de pago.
+   - Cree y envíe un evento de integración relacionado al bus de eventos para propagar los estados entre los microservicios o desencadenar acciones externas como enviar un correo electrónico al comprador.
+   - Controle otros efectos secundarios.
 
-Como se muestra en la figura 9-15, empezando desde el mismo evento de dominio, puede controlar varias acciones relacionadas con otros agregados en el dominio o acciones de la aplicación adicionales que tenga que realizar entre los microservicios conectados con eventos de integración y el bus de eventos.
+Como se muestra en la figura 7-15, empezando desde el mismo evento de dominio, puede controlar varias acciones relacionadas con otros agregados en el dominio o acciones de la aplicación adicionales que tenga que realizar entre los microservicios conectados con eventos de integración y el bus de eventos.
 
-![](./media/image16.png)
+![Puede haber varios controladores para el mismo evento de dominio en el nivel de aplicación, un controlador puede resolver la coherencia entre agregados y otro controlador puede publicar un evento de integración, por lo que otros microservicios pueden hacer algo con él.](./media/image16.png)
 
-**Figura 9-15**. Control de varias acciones por dominio
+**Figura 7-15**. Control de varias acciones por dominio
 
 Normalmente los controladores de eventos se encuentran en el nivel de aplicación, porque los objetos de infraestructura como los repositorios o una API de aplicación se usarán para el comportamiento del microservicio. En ese sentido, los controladores de eventos son similares a los controladores de comandos, por lo que ambos forman parte del nivel de aplicación. La diferencia más importante es que un comando solo se debe procesar una vez. Un evento de dominio se podría procesar cero o *n* veces, porque lo pueden recibir varios receptores o controladores de eventos con un propósito diferente para cada controlador.
 
-La posibilidad de un número abierto de controladores de eventos de dominio permite agregar muchas más reglas de dominio sin que el código actual se vea afectado. Por ejemplo, la implementación de la siguiente regla de negocio que tiene que producirse después de un evento podría ser tan fácil como agregar algunos controladores de eventos (o incluso solo uno):
+Tener un número abierto de controladores de eventos de dominio permite agregar tantas reglas de dominio como sea necesario sin que el código actual se vea afectado. Por ejemplo, la implementación de la siguiente regla de negocio podría ser tan fácil como agregar algunos controladores de eventos (o incluso solo uno):
 
-Cuando la cantidad total adquirida por un cliente en el almacén, en cualquier número de pedidos, supera los 6000 dólares, se aplica un 10 % de descuento a cada pedido nuevo y se notifica ese descuento para futuros pedidos a los clientes con un correo electrónico.
+> Cuando la cantidad total adquirida por un cliente en el almacén, en cualquier número de pedidos, supera los 6000 dólares, se aplica un 10 % de descuento a cada pedido nuevo y se notifica ese descuento para futuros pedidos a los clientes con un correo electrónico.
 
-## <a name="implementing-domain-events"></a>Implementación de eventos de dominio
+## <a name="implement-domain-events"></a>Implementación de eventos de dominio
 
 En C#, un evento de dominio es simplemente una estructura o clase que almacena datos, como un DTO, con toda la información relacionada con lo que ha sucedido en el dominio, como se muestra en el ejemplo siguiente:
 
@@ -110,17 +124,19 @@ Esto es básicamente una clase que contiene todos los datos relacionados con el 
 
 En cuanto al lenguaje ubicuo del dominio, como un evento es algo que tuvo lugar en el pasado, el nombre de clase del evento se debe representar como un verbo en pasado, como OrderStartedDomainEvent u OrderShippedDomainEvent. Esta es la forma de implementar el evento de dominio en el microservicio de pedidos en eShopOnContainers.
 
-Como se indicó anteriormente, una característica importante de los eventos es que, como un evento es algo que se produjo en el pasado, no debe cambiar. Por tanto, debe ser una clase inmutable. En el código anterior se puede ver que las propiedades son de solo lectura desde fuera del objeto. La única manera de actualizar el objeto es a través del constructor al crear el objeto de evento.
+Como se indicó anteriormente, una característica importante de los eventos es que, como un evento es algo que se produjo en el pasado, no debe cambiar. Por tanto, debe ser una clase inmutable. En el código anterior se puede ver que las propiedades son de solo lectura. No hay ninguna manera de actualizar el objeto, solo se pueden establecer valores al crearlo.
 
-### <a name="raising-domain-events"></a>Generación de eventos de dominio
+Es importante destacar aquí que si los eventos de dominio tuvieran que administrarse de forma asincrónica, mediante una cola que necesitase serializar y deserializar los objetos de eventos, las propiedades tendrían que ser "conjunto privado" en lugar de solo lectura, por lo que el deserializador podría asignar los valores tras quitar de la cola. Esto no es un problema en el microservicio Ordering, ya que el evento de dominio pub/sub se implementa sincrónicamente con MediatR.
+
+### <a name="raise-domain-events"></a>Generación de eventos de dominio
 
 La siguiente pregunta es cómo generar un evento de dominio para que llegue a sus controladores de eventos relacionados. Se pueden usar varios enfoques.
 
-Originalmente, Udi Dahan propuso el uso de una clase estática para administrar y generar los eventos (por ejemplo, en algunas publicaciones relacionadas, como [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) [Eventos de dominio: Toma 2]). Esto podría incluir una clase estática denominada DomainEvents que generaría los eventos de dominio inmediatamente cuando se llama, con una sintaxis similar a DomainEvents.Raise(Event myEvent). Jimmy Bogard escribió una entrada de blog ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) [Reforzar el dominio: eventos de dominio]) en la que recomienda un enfoque similar.
+Originalmente, Udi Dahan propuso el uso de una clase estática para administrar y generar los eventos (por ejemplo, en algunas publicaciones relacionadas, como [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) [Eventos de dominio: Toma 2]). Esto podría incluir una clase estática denominada DomainEvents que generaría los eventos de dominio inmediatamente cuando se llama, con una sintaxis similar a `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard escribió una entrada de blog ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) [Reforzar el dominio: eventos de dominio]) en la que recomienda un enfoque similar.
 
 Pero cuando la clase de eventos de dominio es estática, también lo envía a los controladores inmediatamente. Esto dificulta las pruebas y la depuración, dado que los controladores de eventos con la lógica de efectos secundarios se ejecutan inmediatamente después de que se genera el evento. Durante las pruebas y la depuración, le interesa centrarse únicamente en lo que sucede en las clases agregadas actuales; no le interesa que repentinamente se le redirija a otros controladores de eventos para los efectos secundarios relacionados con otros agregados o la lógica de la aplicación. Es el motivo de que otros métodos hayan evolucionado, como se explica en la sección siguiente.
 
-#### <a name="the-deferred-approach-for-raising-and-dispatching-events"></a>El enfoque diferido para generar y enviar eventos
+#### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>El enfoque diferido para generar y enviar eventos
 
 En lugar de enviar a un controlador de eventos de dominio de forma inmediata, un enfoque más adecuado consiste en agregar los eventos de dominio a una colección y, después, enviarlos *justo antes* o *justo* *después* de confirmar la transacción (como ocurre con SaveChanges en EF). (Este enfoque lo describió Jimmy Bogard en esta publicación [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) [Un patrón de eventos de dominio mejor]).
 
@@ -132,21 +148,20 @@ El enfoque diferido es el que se usa en eShopOnContainers. En primer lugar, se a
 public abstract class Entity
 {
      //... 
-    private List<INotification> _domainEvents;
-    public List<INotification> DomainEvents => _domainEvents;
+     private List<INotification> _domainEvents;
+     public List<INotification> DomainEvents => _domainEvents; 
 
-    public void AddDomainEvent(INotification eventItem)
-    {
-        _domainEvents = _domainEvents ?? new List<INotification>();
-        _domainEvents.Add(eventItem);
-    }
+     public void AddDomainEvent(INotification eventItem)
+     {
+         _domainEvents = _domainEvents ?? new List<INotification>();
+         _domainEvents.Add(eventItem);
+     }
 
-    public void RemoveDomainEvent(INotification eventItem)
-    {
-        if (_domainEvents is null) return;
-        _domainEvents.Remove(eventItem);
-    }
-    // ...
+     public void RemoveDomainEvent(INotification eventItem)
+     {
+         _domainEvents?.Remove(eventItem);
+     }
+     //... Additional code
 }
 ```
 
@@ -195,33 +210,33 @@ Con este código, los eventos de entidad se envían a sus controladores de event
 
 El resultado general es que se separa la generación de un evento de dominio (una sencilla adición a una lista en memoria) de su envío a un controlador de eventos. Además, en función del tipo de distribuidor que se use, los eventos se podrían enviar de forma sincrónica o asincrónica.
 
-Tenga en cuenta que aquí los límites transaccionales tienen una importancia especial. Si la unidad de trabajo y la transacción pueden abarcar más de un agregado (como ocurre cuando se usa EF Core y una base de datos relacional), esto puede funcionar bien. Pero si la transacción no puede abarcar agregados, como cuando se usa una base de datos NoSQL como Azure DocumentDB, se deben implementar pasos adicionales para lograr la coherencia. Este es otro motivo por el que la omisión de persistencia no es universal; depende del sistema de almacenamiento que se use.
+Tenga en cuenta que aquí los límites transaccionales tienen una importancia especial. Si la unidad de trabajo y la transacción pueden abarcar más de un agregado (como ocurre cuando se usa EF Core y una base de datos relacional), esto puede funcionar bien. Pero si la transacción no puede abarcar agregados, como cuando se usa una base de datos NoSQL como Azure CosmosDB, se deben implementar pasos adicionales para lograr la coherencia. Este es otro motivo por el que la omisión de persistencia no es universal; depende del sistema de almacenamiento que se use. 
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>Transacción única entre agregados frente a coherencia final entre agregados
 
 La pregunta de si se debe realizar una única transacción entre agregados en lugar de depender de la coherencia final entre esos agregados es controvertida. Muchos autores de DDD, como Eric Evans y Vaughn Vernon, promueven la regla "una transacción = un agregado" y argumentan, por tanto, la coherencia final entre agregados. Por ejemplo, en su libro *Domain-Driven Design* (Diseño controlado por eventos), Eric Evans afirma lo siguiente:
 
-No se espera que las reglas que abarcan agregados estén actualizadas en todo momento. A través del procesamiento de eventos, el procesamiento por lotes u otros mecanismos de actualización, se pueden resolver otras dependencias dentro de un periodo determinado. (página 128)
+> No se espera que las reglas que abarcan agregados estén actualizadas en todo momento. A través del procesamiento de eventos, el procesamiento por lotes u otros mecanismos de actualización, se pueden resolver otras dependencias dentro de un periodo determinado. (página 128)
 
 Vaughn Vernon afirma lo siguiente en [Effective Aggregate Design. Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta):
 
-Por tanto, si la ejecución de un comando en una instancia del agregado requiere que se ejecuten reglas de negocio adicionales en uno o varios agregados, use la coherencia final \[...\] Hay una forma práctica de admitir la coherencia final en un modelo de DDD. Un método de agregado publica un evento de dominio que con el tiempo se entrega a uno o varios suscriptores asincrónicos.
+> Por tanto, si la ejecución de un comando en una instancia del agregado requiere que se ejecuten reglas de negocio adicionales en uno o varios agregados, use la coherencia final \[...\] Hay una forma práctica de admitir la coherencia final en un modelo de DDD. Un método de agregado publica un evento de dominio que con el tiempo se entrega a uno o varios suscriptores asincrónicos.
 
 Esta lógica se basa en la adopción de transacciones específicas en lugar de transacciones distribuidas entre varios agregados o entidades. La idea es que, en el segundo caso, el número de bloqueos de base de datos será relevante en aplicaciones a gran escala con necesidades de alta escalabilidad. Asumir el hecho de que las aplicaciones de alta escalabilidad no necesitan coherencia transaccional entre varios agregados ayudará a aceptar el concepto de la coherencia final. A menudo los cambios atómicos no son necesarios por parte de la empresa y, en cualquier caso, es la responsabilidad de los expertos de dominio indicar si determinadas operaciones necesitan transacciones atómicas o no. Si una operación siempre necesita una transacción atómica entre varios agregados, podría preguntarse si el agregado debe ser mayor o no se ha diseñado correctamente.
 
 Pero otros desarrolladores y arquitectos como Jimmy Bogard se conforman con una sola transacción que abarque varios agregados, pero solo cuando esos agregados adicionales estén relacionados con efectos secundarios para el mismo comando original. Por ejemplo, en [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/), Bogard afirma lo siguiente:
 
-Normalmente, me interesa que los efectos secundarios de un evento de dominio se produzcan en la misma transacción lógica, pero no necesariamente en el mismo ámbito de generación del evento de dominio \[...\] Justo antes de que se confirme la transacción, los eventos se envían a sus correspondientes controladores.
+> Normalmente, me interesa que los efectos secundarios de un evento de dominio se produzcan en la misma transacción lógica, pero no necesariamente en el mismo ámbito de generación del evento de dominio \[...\] Justo antes de que se confirme la transacción, los eventos se envían a sus correspondientes controladores.
 
 Si los eventos de dominio se envían justo *antes* de confirmar la transacción original, es porque interesa que los efectos secundarios de esos eventos se incluyan en la misma transacción. Por ejemplo, si se produce un error en el método SaveChanges de DbContext de EF, la transacción revertirá todos los cambios, incluido el resultado de cualquier operación de efecto secundario implementada por los controladores de eventos de dominio relacionados. Esto se debe a que el ámbito de la duración de DbContext se define de forma predeterminada como "en ámbito". Por tanto, el objeto DbContext se comparte entre varios objetos de repositorio de los que se crean instancias en el mismo ámbito o gráfico de objetos. Esto coincide con el ámbito de HttpRequest al desarrollar aplicaciones de API web o MVC.
 
-En realidad, ambos enfoques (única transacción atómica y coherencia final) pueden ser correctos. Realmente depende de los requisitos empresariales o de dominio, y de lo que los expertos de dominio digan. También depende de la capacidad de escalabilidad que deba tener el servicio (las transacciones más granulares tienen un impacto menor en relación con los bloqueos de base de datos). Y depende de la inversión que esté dispuesto a realizar en el código, puesto que la coherencia final requiere un código más complejo con el fin de detectar posibles incoherencias entre los agregados y la necesidad de implementar acciones de compensación. Tenga en cuenta que si confirma los cambios en el agregado original y después, cuando los eventos se distribuyan, se produce un problema y los controladores de eventos no pueden confirmar sus efectos secundarios, tendrá incoherencias entre los agregados.
+En realidad, ambos enfoques (única transacción atómica y coherencia final) pueden ser correctos. Realmente depende de los requisitos empresariales o de dominio, y de lo que los expertos de dominio digan. También depende de la capacidad de escalabilidad que deba tener el servicio (las transacciones más granulares tienen un impacto menor en relación con los bloqueos de base de datos). Y depende de la inversión que esté dispuesto a realizar en el código, puesto que la coherencia final requiere un código más complejo con el fin de detectar posibles incoherencias entre los agregados y la necesidad de implementar acciones de compensación. Tenga en cuenta que si confirma los cambios en el agregado original y después, cuando los eventos se distribuyan, si se produce un problema y los controladores de eventos no pueden confirmar sus efectos secundarios, tendrá incoherencias entre los agregados.
 
 Una manera de permitir acciones de compensación sería almacenar los eventos de dominio en tablas de base de datos adicionales para que puedan formar parte de la transacción original. Después, podría tener un proceso por lotes que detectara las incoherencias y ejecutara acciones de compensación comparando la lista de eventos con el estado actual de los agregados. Las acciones de compensación forman parte de un tema complejo que requerirá un análisis profundo por su parte, incluido su análisis con los usuarios empresariales y expertos de dominio.
 
 En cualquier caso, puede elegir el enfoque que necesite. Pero el enfoque diferido inicial (generar los eventos antes de la confirmación y usar una sola transacción) es el más sencillo cuando se usa EF Core y una base de datos relacional. Es más fácil de implementar y resulta válido en muchos casos empresariales. También es el enfoque que se usa en el microservicio de pedidos de eShopOnContainers.
 
-¿Pero cómo se envían realmente los eventos a sus correspondientes controladores de eventos? ¿Qué es el objeto \_mediator que se ve en el ejemplo anterior? Esto tiene que ver con las técnicas y los artefactos que se pueden usar para la asignación entre eventos y sus controladores de eventos.
+¿Pero cómo se envían realmente los eventos a sus correspondientes controladores de eventos? ¿Qué es el objeto `_mediator` que ve en el ejemplo anterior? Tiene que ver con las técnicas y los artefactos que se usan para la asignación entre eventos y sus controladores de eventos.
 
 ### <a name="the-domain-event-dispatcher-mapping-from-events-to-event-handlers"></a>El distribuidor de eventos de dominio: asignación de eventos a controladores de eventos
 
@@ -229,11 +244,11 @@ Una vez que se puedan enviar o publicar los eventos, se necesita algún tipo de 
 
 Un enfoque es un sistema de mensajería real o incluso un bus de eventos, posiblemente basado en un bus de servicio en lugar de en eventos en memoria. Pero para el primer caso, la mensajería real sería excesiva para el procesamiento de eventos de dominio, ya que solo es necesario procesar los eventos dentro del mismo proceso (es decir, dentro del mismo nivel de dominio y aplicación).
 
-Otra manera de asignar eventos a varios controladores de eventos consiste en usar el registro de tipos en un contenedor de IoC para poder inferir de forma dinámica a dónde enviar los eventos. En otras palabras, debe saber qué controladores de eventos tienen que obtener un evento específico. En la figura 9-16 se muestra un enfoque simplificado para esto.
+Otra manera de asignar eventos a varios controladores de eventos consiste en usar el registro de tipos en un contenedor de IoC para poder inferir de forma dinámica a dónde enviar los eventos. En otras palabras, debe saber qué controladores de eventos tienen que obtener un evento específico. En la figura 7-16 se muestra un enfoque simplificado para esto.
 
-![](./media/image17.png)
+![La inserción de dependencias puede usarse para asociar eventos a controladores de eventos, que es el enfoque usado por MediatR](./media/image17.png)
 
-**Figura 9-16**. Distribuidor de eventos de dominio con IoC
+**Figura 7-16**. Distribuidor de eventos de dominio con IoC
 
 Puede crear usted mismo todos los artefactos para implementar este enfoque. Pero también puede usar bibliotecas disponibles como [MediatR](https://github.com/jbogard/MediatR), que interiormente usa el contenedor de IoC. Por tanto, puede usar directamente las interfaces predefinidas y los métodos de publicación y distribución del objeto de mediador.
 
@@ -323,7 +338,7 @@ El código anterior de controlador de eventos de dominio se considera código de
 
 #### <a name="domain-events-can-generate-integration-events-to-be-published-outside-of-the-microservice-boundaries"></a>Los eventos de dominio pueden generar eventos de integración para publicarse fuera de los límites del microservicio
 
-Por último, es importante mencionar que en ocasiones es posible que le interese propagar los eventos a través de varios microservicios. Eso se considera un evento de integración y se podría publicar a través de un bus de eventos desde cualquier controlador de eventos de dominio específico.
+Por último, es importante mencionar que en ocasiones es posible que le interese propagar los eventos a través de varios microservicios. Dicha propagación es un evento de integración y se podría publicar a través de un bus de eventos desde cualquier controlador de eventos de dominio específico.
 
 ## <a name="conclusions-on-domain-events"></a>Conclusiones sobre los eventos de dominio
 
@@ -331,40 +346,39 @@ Como se mencionó, los eventos de dominio se usan para implementar explícitamen
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Greg Young. What is a Domain Event?**
-    [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/) (¿Qué es un evento de dominio?)
+- **Greg Young. What is a Domain Event?** (¿Qué es un evento de dominio?) \
+  [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg. Domain Events and Eventual Consistency**
-    [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency) (Eventos de dominio y coherencia definitiva)
+- **Jan Stenberg. Domain Events and Eventual Consistency** \ (Eventos de dominio y coherencia definitiva)
+  [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Jimmy Bogard. A better domain events pattern**
-    [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (Un mejor patrón de eventos de dominio)
+- **Jimmy Bogard. A better domain events pattern** \ (Un mejor patrón de eventos de dominio)
+  [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together (Diseño de agregados efectivo, parte II: Conseguir que los agregados funcionen juntos)**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+- **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together** \ (Diseño de agregados efectivo, parte II: Conseguir que los agregados funcionen juntos)
+  [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard. Strengthening your domain: Domain Events**
-    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> * (Reforzar el dominio: eventos de dominio)
+- **Jimmy Bogard. Strengthening your domain: Domain Events** \ (Reforzar el dominio: eventos de dominio)
+  [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
--   **Tony Truong. Domain Events Pattern Example**
-    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/) (Ejemplo de patrón de eventos de dominio)
+- **Tony Truong. Domain Events Pattern Example** \ (Ejemplo de patrón de eventos de dominio)
+  [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models**
-    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/) (Cómo crear modelos de dominio totalmente encapsulados)
+- **Udi Dahan. How to create fully encapsulated Domain Models** \ (Cómo crear modelos de dominio totalmente encapsulados)
+  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan. Domain Events – Take 2**
-    [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20) (Eventos de dominio: parte 2)
+- **Udi Dahan. Domain Events – Take 2** \ (Eventos de dominio: parte 2)
+  [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan. Domain Events – Salvation**
-    [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/) (Eventos de dominio: salvación)
+- **Udi Dahan. Domain Events – Salvation** \ (Eventos de dominio: salvación)
+  [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist. Don't publish Domain Events, return them!**
-    [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/) (No publique eventos de dominio, devuélvalos)
+- **Jan Kronquist. Don't publish Domain Events, return them!** (No publique eventos de dominio, devuélvalos) \
+  [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/) (Eventos de integración en DDD y arquitecturas de microservicios)
-
+- **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures** \ (Eventos de integración en DDD y arquitecturas de microservicios)
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 >[!div class="step-by-step"]
-[Anterior](client-side-validation.md)
-[Siguiente](infrastructure-persistence-layer-design.md)
+>[Anterior](client-side-validation.md)
+>[Siguiente](infrastructure-persistence-layer-design.md)

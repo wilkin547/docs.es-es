@@ -1,17 +1,17 @@
 ---
 title: Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre cómo se implementa CQRS en el microservicio de pedidos en eShopOnContainers.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106754"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143641"
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
+# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicación de enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 
 El diseño del microservicio Ordering de la aplicación de referencia eShopOnContainers se basa en los principios CQRS. Pero usa el enfoque más sencillo, que consiste simplemente en separar las consultas de los comandos y usar la misma base de datos para ambas acciones.
 
@@ -23,7 +23,7 @@ Los patrones DDD presentados en esta guía no se deben aplicar de forma general,
 
 Un patrón de este tipo es el patrón Aggregate, que se analiza en más detalle en secciones posteriores. En pocas palabras, en el patrón Aggregate, muchos objetos de dominio se tratan como una sola unidad como resultado de su relación en el dominio. Es posible que no siempre obtenga ventajas de este patrón en las consultas; puede aumentar la complejidad de la lógica de consulta. En las consultas de solo lectura no se obtienen las ventajas de tratar varios objetos como un único agregado. Solo se obtiene la complejidad.
 
-Como se muestra en la figura 9-2, esta guía sugiere usar patrones DDD solo en el área transaccional o de actualizaciones del microservicio (es decir, como se desencadena con comandos). Las consultas pueden seguir un enfoque más simple y deben separarse de los comandos, según un enfoque CQRS.
+Como se muestra en la figura 7-2, esta guía sugiere usar patrones DDD solo en el área transaccional o de actualizaciones del microservicio (es decir, como se desencadena con comandos). Las consultas pueden seguir un enfoque más simple y deben separarse de los comandos, según un enfoque CQRS.
 
 Para implementar el "lado de consultas", puede elegir entre varios enfoques, desde un ORM completo como EF Core, proyecciones de AutoMapper, procedimientos almacenados, vistas, vistas materializadas o un micro ORM.
 
@@ -41,28 +41,27 @@ Solo hay una arquitectura de aplicación: la arquitectura del sistema o la aplic
 
 ####  <a name="additional-resources"></a>Recursos adicionales
 
--   **Martin Fowler. CQRS**
-    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
+- **Martin Fowler. CQRS** \
+  [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Greg Young. CQS vs. CQRS**
-    [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+- **Greg Young. CQS vs. CQRS** \
+  [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. CQRS Documents**
-    [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf) (Documentos de CQRS)
+- **Greg Young. CQRS Documents** \ (Documentos de CQRS)
+  [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young. CQRS, Task Based UIs and Event Sourcing (CQRS, interfaces de usuario basadas en tareas y origen de eventos)**
-    [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+- **Greg Young. CQRS, Task Based UIs and Event Sourcing** \ (CQRS, interfaces de usuario basadas en tareas y origen de eventos)
+  [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan. Clarified CQRS (CQRS aclarado)**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Udi Dahan. Clarified CQRS** \ (CQRS aclarado)
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **CQRS** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Event-Sourcing (ES) (Orígenes de eventos)**
-    [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
-
+- **Event-Sourcing (ES)** \ (Orígenes de eventos)
+  [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 >[!div class="step-by-step"]
-[Anterior](apply-simplified-microservice-cqrs-ddd-patterns.md)
-[Siguiente](cqrs-microservice-reads.md)
+>[Anterior](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Siguiente](cqrs-microservice-reads.md)
