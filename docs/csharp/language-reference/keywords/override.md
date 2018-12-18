@@ -1,5 +1,6 @@
 ---
-title: override (Modificador) (Referencia de C#)
+title: 'Modificador override: Referencia de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - override
@@ -7,53 +8,53 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: cbd5e21e7ca71a4986099a0386c684a6db37c3e8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6a8e79da3897e867fa3becab5fcfc70afe72e614
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45591178"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244445"
 ---
-# <a name="override-c-reference"></a><span data-ttu-id="b096c-102">override (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="b096c-102">override (C# Reference)</span></span>
+# <a name="override-c-reference"></a><span data-ttu-id="c9b5d-102">override (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="c9b5d-102">override (C# Reference)</span></span>
 
-<span data-ttu-id="b096c-103">El modificador `override` es necesario para ampliar o modificar la implementación abstracta o virtual de un método, propiedad, indexador o evento heredado.</span><span class="sxs-lookup"><span data-stu-id="b096c-103">The `override` modifier is required to extend or modify the abstract or virtual implementation of an inherited method, property, indexer, or event.</span></span>
+<span data-ttu-id="c9b5d-103">El modificador `override` es necesario para ampliar o modificar la implementación abstracta o virtual de un método, propiedad, indexador o evento heredado.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-103">The `override` modifier is required to extend or modify the abstract or virtual implementation of an inherited method, property, indexer, or event.</span></span>
 
-## <a name="example"></a><span data-ttu-id="b096c-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b096c-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c9b5d-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c9b5d-104">Example</span></span>
 
-<span data-ttu-id="b096c-105">En este ejemplo, la clase `Square` debe proporcionar una implementación de invalidación de `Area` porque `Area` se hereda de la clase abstracta `ShapesClass`:</span><span class="sxs-lookup"><span data-stu-id="b096c-105">In this example, the `Square` class must provide an overridden implementation of `Area` because `Area` is inherited from the abstract `ShapesClass`:</span></span>
+<span data-ttu-id="c9b5d-105">En este ejemplo, la clase `Square` debe proporcionar una implementación de invalidación de `Area` porque `Area` se hereda de la clase abstracta `ShapesClass`:</span><span class="sxs-lookup"><span data-stu-id="c9b5d-105">In this example, the `Square` class must provide an overridden implementation of `Area` because `Area` is inherited from the abstract `ShapesClass`:</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 
-<span data-ttu-id="b096c-106">Un método `override` proporciona una nueva implementación de un miembro que se hereda de una clase base.</span><span class="sxs-lookup"><span data-stu-id="b096c-106">An `override` method provides a new implementation of a member that is inherited from a base class.</span></span> <span data-ttu-id="b096c-107">El método invalidado por una declaración `override` se conoce como método base invalidado.</span><span class="sxs-lookup"><span data-stu-id="b096c-107">The method that is overridden by an `override` declaration is known as the overridden base method.</span></span> <span data-ttu-id="b096c-108">El método base invalidado debe tener la misma firma que el método `override`.</span><span class="sxs-lookup"><span data-stu-id="b096c-108">The overridden base method must have the same signature as the `override` method.</span></span> <span data-ttu-id="b096c-109">Para obtener información sobre la herencia, vea [Herencia](../../programming-guide/classes-and-structs/inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="b096c-109">For information about inheritance, see [Inheritance](../../programming-guide/classes-and-structs/inheritance.md).</span></span>
+<span data-ttu-id="c9b5d-106">Un método `override` proporciona una nueva implementación de un miembro que se hereda de una clase base.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-106">An `override` method provides a new implementation of a member that is inherited from a base class.</span></span> <span data-ttu-id="c9b5d-107">El método invalidado por una declaración `override` se conoce como método base invalidado.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-107">The method that is overridden by an `override` declaration is known as the overridden base method.</span></span> <span data-ttu-id="c9b5d-108">El método base invalidado debe tener la misma firma que el método `override`.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-108">The overridden base method must have the same signature as the `override` method.</span></span> <span data-ttu-id="c9b5d-109">Para obtener información sobre la herencia, vea [Herencia](../../programming-guide/classes-and-structs/inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="c9b5d-109">For information about inheritance, see [Inheritance](../../programming-guide/classes-and-structs/inheritance.md).</span></span>
 
-<span data-ttu-id="b096c-110">No se puede invalidar un método estático o no virtual.</span><span class="sxs-lookup"><span data-stu-id="b096c-110">You cannot override a non-virtual or static method.</span></span> <span data-ttu-id="b096c-111">El método base invalidado debe ser `virtual`, `abstract` o `override`.</span><span class="sxs-lookup"><span data-stu-id="b096c-111">The overridden base method must be `virtual`, `abstract`, or `override`.</span></span>
+<span data-ttu-id="c9b5d-110">No se puede invalidar un método estático o no virtual.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-110">You cannot override a non-virtual or static method.</span></span> <span data-ttu-id="c9b5d-111">El método base invalidado debe ser `virtual`, `abstract` o `override`.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-111">The overridden base method must be `virtual`, `abstract`, or `override`.</span></span>
 
-<span data-ttu-id="b096c-112">Una declaración `override` no puede cambiar la accesibilidad del método `virtual`.</span><span class="sxs-lookup"><span data-stu-id="b096c-112">An `override` declaration cannot change the accessibility of the `virtual` method.</span></span> <span data-ttu-id="b096c-113">El método `override` y el método `virtual` deben tener el mismo [modificador de nivel de acceso](access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="b096c-113">Both the `override` method and the `virtual` method must have the same [access level modifier](access-modifiers.md).</span></span>
+<span data-ttu-id="c9b5d-112">Una declaración `override` no puede cambiar la accesibilidad del método `virtual`.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-112">An `override` declaration cannot change the accessibility of the `virtual` method.</span></span> <span data-ttu-id="c9b5d-113">El método `override` y el método `virtual` deben tener el mismo [modificador de nivel de acceso](access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="c9b5d-113">Both the `override` method and the `virtual` method must have the same [access level modifier](access-modifiers.md).</span></span>
 
-<span data-ttu-id="b096c-114">No se pueden usar los modificadores `new`, `static` o `virtual` para modificar un método `override`.</span><span class="sxs-lookup"><span data-stu-id="b096c-114">You cannot use the `new`, `static`, or `virtual` modifiers to modify an `override` method.</span></span>
+<span data-ttu-id="c9b5d-114">No se pueden usar los modificadores `new`, `static` o `virtual` para modificar un método `override`.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-114">You cannot use the `new`, `static`, or `virtual` modifiers to modify an `override` method.</span></span>
 
-<span data-ttu-id="b096c-115">Una declaración de propiedad de invalidación debe especificar exactamente el mismo modificador de acceso, tipo y nombre que la propiedad heredada, y la propiedad invalidada debe ser `virtual`, `abstract` o `override`.</span><span class="sxs-lookup"><span data-stu-id="b096c-115">An overriding property declaration must specify exactly the same access modifier, type, and name as the inherited property, and the overridden property must be `virtual`, `abstract`, or `override`.</span></span>
+<span data-ttu-id="c9b5d-115">Una declaración de propiedad de invalidación debe especificar exactamente el mismo modificador de acceso, tipo y nombre que la propiedad heredada, y la propiedad invalidada debe ser `virtual`, `abstract` o `override`.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-115">An overriding property declaration must specify exactly the same access modifier, type, and name as the inherited property, and the overridden property must be `virtual`, `abstract`, or `override`.</span></span>
 
-<span data-ttu-id="b096c-116">Para obtener más información sobre cómo usar la palabra clave `override`, vea [Control de versiones con las palabras clave Override y New](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) y [Saber cuándo usar las palabras clave Override y New (Guía de programación de C#)](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="b096c-116">For more information about how to use the `override` keyword, see [Versioning with the Override and New Keywords](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing when to use Override and New Keywords](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>
+<span data-ttu-id="c9b5d-116">Para obtener más información sobre cómo usar la palabra clave `override`, vea [Control de versiones con las palabras clave Override y New](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) y [Saber cuándo usar las palabras clave Override y New (Guía de programación de C#)](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="c9b5d-116">For more information about how to use the `override` keyword, see [Versioning with the Override and New Keywords](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing when to use Override and New Keywords](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="b096c-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b096c-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c9b5d-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c9b5d-117">Example</span></span>
 
-<span data-ttu-id="b096c-118">En este ejemplo se define una clase base denominada `Employee` y una clase derivada denominada `SalesEmployee`.</span><span class="sxs-lookup"><span data-stu-id="b096c-118">This example defines a base class named `Employee`, and a derived class named `SalesEmployee`.</span></span> <span data-ttu-id="b096c-119">La clase `SalesEmployee` incluye un campo adicional, `salesbonus`, e invalida el método `CalculatePay` para tenerlo en cuenta.</span><span class="sxs-lookup"><span data-stu-id="b096c-119">The `SalesEmployee` class includes an extra field, `salesbonus`, and overrides the method `CalculatePay` in order to take it into account.</span></span>
+<span data-ttu-id="c9b5d-118">En este ejemplo se define una clase base denominada `Employee` y una clase derivada denominada `SalesEmployee`.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-118">This example defines a base class named `Employee`, and a derived class named `SalesEmployee`.</span></span> <span data-ttu-id="c9b5d-119">La clase `SalesEmployee` incluye un campo adicional, `salesbonus`, e invalida el método `CalculatePay` para tenerlo en cuenta.</span><span class="sxs-lookup"><span data-stu-id="c9b5d-119">The `SalesEmployee` class includes an extra field, `salesbonus`, and overrides the method `CalculatePay` in order to take it into account.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#9)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="b096c-120">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="b096c-120">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="c9b5d-120">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="c9b5d-120">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="b096c-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="b096c-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9b5d-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="c9b5d-121">See also</span></span>
 
-- [<span data-ttu-id="b096c-122">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="b096c-122">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="b096c-123">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="b096c-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="b096c-124">Herencia</span><span class="sxs-lookup"><span data-stu-id="b096c-124">Inheritance</span></span>](../../programming-guide/classes-and-structs/inheritance.md)
-- [<span data-ttu-id="b096c-125">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="b096c-125">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="b096c-126">Modificadores</span><span class="sxs-lookup"><span data-stu-id="b096c-126">Modifiers</span></span>](modifiers.md)
-- [<span data-ttu-id="b096c-127">abstract</span><span class="sxs-lookup"><span data-stu-id="b096c-127">abstract</span></span>](abstract.md)
-- [<span data-ttu-id="b096c-128">virtual</span><span class="sxs-lookup"><span data-stu-id="b096c-128">virtual</span></span>](virtual.md)
-- [<span data-ttu-id="b096c-129">new</span><span class="sxs-lookup"><span data-stu-id="b096c-129">new</span></span>](new.md)
-- [<span data-ttu-id="b096c-130">Polimorfismo</span><span class="sxs-lookup"><span data-stu-id="b096c-130">Polymorphism</span></span>](../../programming-guide/classes-and-structs/polymorphism.md)
+- [<span data-ttu-id="c9b5d-122">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="c9b5d-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="c9b5d-123">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="c9b5d-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c9b5d-124">Herencia</span><span class="sxs-lookup"><span data-stu-id="c9b5d-124">Inheritance</span></span>](../../programming-guide/classes-and-structs/inheritance.md)
+- [<span data-ttu-id="c9b5d-125">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="c9b5d-125">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="c9b5d-126">Modificadores</span><span class="sxs-lookup"><span data-stu-id="c9b5d-126">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="c9b5d-127">abstract</span><span class="sxs-lookup"><span data-stu-id="c9b5d-127">abstract</span></span>](abstract.md)
+- [<span data-ttu-id="c9b5d-128">virtual</span><span class="sxs-lookup"><span data-stu-id="c9b5d-128">virtual</span></span>](virtual.md)
+- [<span data-ttu-id="c9b5d-129">new</span><span class="sxs-lookup"><span data-stu-id="c9b5d-129">new</span></span>](new.md)
+- [<span data-ttu-id="c9b5d-130">Polimorfismo</span><span class="sxs-lookup"><span data-stu-id="c9b5d-130">Polymorphism</span></span>](../../programming-guide/classes-and-structs/polymorphism.md)

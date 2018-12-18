@@ -1,5 +1,6 @@
 ---
-title: Palabra clave protected (Referencia de C#)
+title: 'Palabra clave protected: Referencia de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - protected
@@ -7,58 +8,58 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: 6e3f72226d10910152f7a2139a5a1be35e681ec7
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 6d625b2fd0a1f42a0bde7f68ebc332510a4e56ef
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50183183"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239662"
 ---
-# <a name="protected-c-reference"></a><span data-ttu-id="2ba91-102">protected (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="2ba91-102">protected (C# Reference)</span></span>
+# <a name="protected-c-reference"></a><span data-ttu-id="cc882-102">protected (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="cc882-102">protected (C# Reference)</span></span>
 
-<span data-ttu-id="2ba91-103">La palabra clave `protected` es un modificador de acceso de miembro.</span><span class="sxs-lookup"><span data-stu-id="2ba91-103">The `protected` keyword is a member access modifier.</span></span>
+<span data-ttu-id="cc882-103">La palabra clave `protected` es un modificador de acceso de miembro.</span><span class="sxs-lookup"><span data-stu-id="cc882-103">The `protected` keyword is a member access modifier.</span></span>
 
- > <span data-ttu-id="2ba91-104">Esta página trata sobre el modificador de acceso `protected`.</span><span class="sxs-lookup"><span data-stu-id="2ba91-104">This page covers `protected` access.</span></span> <span data-ttu-id="2ba91-105">La palabra clave `protected` también forma parte de los modificadores de acceso [`protected internal`](protected-internal.md) y [`private protected`](private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="2ba91-105">The `protected` keyword is also part of the [`protected internal`](protected-internal.md) and [`private protected`](private-protected.md) access modifiers.</span></span>
+ > <span data-ttu-id="cc882-104">Esta página trata sobre el modificador de acceso `protected`.</span><span class="sxs-lookup"><span data-stu-id="cc882-104">This page covers `protected` access.</span></span> <span data-ttu-id="cc882-105">La palabra clave `protected` también forma parte de los modificadores de acceso [`protected internal`](protected-internal.md) y [`private protected`](private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="cc882-105">The `protected` keyword is also part of the [`protected internal`](protected-internal.md) and [`private protected`](private-protected.md) access modifiers.</span></span>
 
-<span data-ttu-id="2ba91-106">Un miembro protegido es accesible dentro de su clase y por parte de instancias de clase derivadas.</span><span class="sxs-lookup"><span data-stu-id="2ba91-106">A protected member is accessible within its class and by derived class instances.</span></span>
+<span data-ttu-id="cc882-106">Un miembro protegido es accesible dentro de su clase y por parte de instancias de clase derivadas.</span><span class="sxs-lookup"><span data-stu-id="cc882-106">A protected member is accessible within its class and by derived class instances.</span></span>
 
-<span data-ttu-id="2ba91-107">Para obtener una comparación de `protected` con los demás modificadores de acceso, vea [Niveles de accesibilidad](accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="2ba91-107">For a comparison of `protected` with the other access modifiers, see [Accessibility Levels](accessibility-levels.md).</span></span>
+<span data-ttu-id="cc882-107">Para obtener una comparación de `protected` con los demás modificadores de acceso, vea [Niveles de accesibilidad](accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="cc882-107">For a comparison of `protected` with the other access modifiers, see [Accessibility Levels](accessibility-levels.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="2ba91-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2ba91-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cc882-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cc882-108">Example</span></span>
 
-<span data-ttu-id="2ba91-109">Un miembro protegido de una clase base es accesible en una clase derivada únicamente si el acceso se produce a través del tipo de clase derivada.</span><span class="sxs-lookup"><span data-stu-id="2ba91-109">A protected member of a base class is accessible in a derived class only if the access occurs through the derived class type.</span></span> <span data-ttu-id="2ba91-110">Por ejemplo, vea el siguiente segmento de código:</span><span class="sxs-lookup"><span data-stu-id="2ba91-110">For example, consider the following code segment:</span></span>
+<span data-ttu-id="cc882-109">Un miembro protegido de una clase base es accesible en una clase derivada únicamente si el acceso se produce a través del tipo de clase derivada.</span><span class="sxs-lookup"><span data-stu-id="cc882-109">A protected member of a base class is accessible in a derived class only if the access occurs through the derived class type.</span></span> <span data-ttu-id="cc882-110">Por ejemplo, vea el siguiente segmento de código:</span><span class="sxs-lookup"><span data-stu-id="cc882-110">For example, consider the following code segment:</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#11)]
 
-<span data-ttu-id="2ba91-111">La instrucción `a.x = 10` genera un error porque se ha creado en el método estático Main y no en una instancia de clase B.</span><span class="sxs-lookup"><span data-stu-id="2ba91-111">The statement `a.x = 10` generates an error because it is made within the static method Main, and not an instance of class B.</span></span>
+<span data-ttu-id="cc882-111">La instrucción `a.x = 10` genera un error porque se ha creado en el método estático Main y no en una instancia de clase B.</span><span class="sxs-lookup"><span data-stu-id="cc882-111">The statement `a.x = 10` generates an error because it is made within the static method Main, and not an instance of class B.</span></span>
 
-<span data-ttu-id="2ba91-112">Los miembros de estructura no se pueden proteger porque la estructura no puede heredarse.</span><span class="sxs-lookup"><span data-stu-id="2ba91-112">Struct members cannot be protected because the struct cannot be inherited.</span></span>
+<span data-ttu-id="cc882-112">Los miembros de estructura no se pueden proteger porque la estructura no puede heredarse.</span><span class="sxs-lookup"><span data-stu-id="cc882-112">Struct members cannot be protected because the struct cannot be inherited.</span></span>
 
-## <a name="example"></a><span data-ttu-id="2ba91-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2ba91-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cc882-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cc882-113">Example</span></span>
 
-<span data-ttu-id="2ba91-114">En este ejemplo, la clase `DerivedPoint` se deriva de `Point`.</span><span class="sxs-lookup"><span data-stu-id="2ba91-114">In this example, the class `DerivedPoint` is derived from `Point`.</span></span> <span data-ttu-id="2ba91-115">Por lo tanto, puede acceder a los miembros protegidos de la clase base directamente desde la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="2ba91-115">Therefore, you can access the protected members of the base class directly from the derived class.</span></span>
+<span data-ttu-id="cc882-114">En este ejemplo, la clase `DerivedPoint` se deriva de `Point`.</span><span class="sxs-lookup"><span data-stu-id="cc882-114">In this example, the class `DerivedPoint` is derived from `Point`.</span></span> <span data-ttu-id="cc882-115">Por lo tanto, puede acceder a los miembros protegidos de la clase base directamente desde la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="cc882-115">Therefore, you can access the protected members of the base class directly from the derived class.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#12)]  
 
-<span data-ttu-id="2ba91-116">Si cambia los niveles de acceso de `x` y `y` a [private](private.md), el compilador genera los mensajes de error:</span><span class="sxs-lookup"><span data-stu-id="2ba91-116">If you change the access levels of `x` and `y` to [private](private.md), the compiler will issue the error messages:</span></span>
+<span data-ttu-id="cc882-116">Si cambia los niveles de acceso de `x` y `y` a [private](private.md), el compilador genera los mensajes de error:</span><span class="sxs-lookup"><span data-stu-id="cc882-116">If you change the access levels of `x` and `y` to [private](private.md), the compiler will issue the error messages:</span></span>
 
 `'Point.y' is inaccessible due to its protection level.`
 
 `'Point.x' is inaccessible due to its protection level.`
 
-## <a name="c-language-specification"></a><span data-ttu-id="2ba91-117">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="2ba91-117">C# language specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="cc882-117">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="cc882-117">C# language specification</span></span>  
 
-<span data-ttu-id="2ba91-118">Para obtener más información, vea la sección [Accesibilidad declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) de la [Especificación del lenguaje C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="2ba91-118">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="2ba91-119">La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.</span><span class="sxs-lookup"><span data-stu-id="2ba91-119">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="cc882-118">Para obtener más información, vea la sección [Accesibilidad declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) de la [Especificación del lenguaje C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="cc882-118">For more information, see [Declared accessibility](~/_csharplang/spec/basic-concepts.md#declared-accessibility) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="cc882-119">La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.</span><span class="sxs-lookup"><span data-stu-id="cc882-119">The language specification is the definitive source for C# syntax and usage.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2ba91-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ba91-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc882-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="cc882-120">See also</span></span>
 
-- [<span data-ttu-id="2ba91-121">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="2ba91-121">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="2ba91-122">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="2ba91-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="2ba91-123">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="2ba91-123">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="2ba91-124">Modificadores de acceso</span><span class="sxs-lookup"><span data-stu-id="2ba91-124">Access Modifiers</span></span>](access-modifiers.md)
-- [<span data-ttu-id="2ba91-125">Niveles de accesibilidad</span><span class="sxs-lookup"><span data-stu-id="2ba91-125">Accessibility Levels</span></span>](accessibility-levels.md)
-- [<span data-ttu-id="2ba91-126">Modificadores</span><span class="sxs-lookup"><span data-stu-id="2ba91-126">Modifiers</span></span>](modifiers.md)
-- [<span data-ttu-id="2ba91-127">public</span><span class="sxs-lookup"><span data-stu-id="2ba91-127">public</span></span>](public.md)
-- [<span data-ttu-id="2ba91-128">private</span><span class="sxs-lookup"><span data-stu-id="2ba91-128">private</span></span>](private.md)
-- [<span data-ttu-id="2ba91-129">internal</span><span class="sxs-lookup"><span data-stu-id="2ba91-129">internal</span></span>](internal.md)
-- <span data-ttu-id="2ba91-130">[Security concerns for internal virtual keywords](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100)) (Problemas de seguridad de palabras clave virtuales internas)</span><span class="sxs-lookup"><span data-stu-id="2ba91-130">[Security concerns for internal virtual keywords](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))</span></span>
+- [<span data-ttu-id="cc882-121">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="cc882-121">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="cc882-122">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="cc882-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="cc882-123">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="cc882-123">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="cc882-124">Modificadores de acceso</span><span class="sxs-lookup"><span data-stu-id="cc882-124">Access Modifiers</span></span>](access-modifiers.md)
+- [<span data-ttu-id="cc882-125">Niveles de accesibilidad</span><span class="sxs-lookup"><span data-stu-id="cc882-125">Accessibility Levels</span></span>](accessibility-levels.md)
+- [<span data-ttu-id="cc882-126">Modificadores</span><span class="sxs-lookup"><span data-stu-id="cc882-126">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="cc882-127">public</span><span class="sxs-lookup"><span data-stu-id="cc882-127">public</span></span>](public.md)
+- [<span data-ttu-id="cc882-128">private</span><span class="sxs-lookup"><span data-stu-id="cc882-128">private</span></span>](private.md)
+- [<span data-ttu-id="cc882-129">internal</span><span class="sxs-lookup"><span data-stu-id="cc882-129">internal</span></span>](internal.md)
+- <span data-ttu-id="cc882-130">[Security concerns for internal virtual keywords](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100)) (Problemas de seguridad de palabras clave virtuales internas)</span><span class="sxs-lookup"><span data-stu-id="cc882-130">[Security concerns for internal virtual keywords](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))</span></span>
