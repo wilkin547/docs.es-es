@@ -1,5 +1,6 @@
 ---
-title: Retroceso en expresiones regulares
+title: Retroceso en expresiones regulares de .NET
+description: Obtenga información sobre cómo controlar el retroceso en la coincidencia de patrones de expresiones regulares.
 ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297366"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130096"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
 <a name="top"></a> El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  

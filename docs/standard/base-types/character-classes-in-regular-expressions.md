@@ -1,5 +1,6 @@
 ---
-title: Clases de carácter en expresiones regulares
+title: Clases de carácter en expresiones regulares de .NET
+description: Obtenga información sobre cómo usar las clases de carácter para representar un conjunto de caracteres en expresiones regulares de .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180155"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131474"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de carácter en expresiones regulares
 <a name="Top"></a> Una clase de caracteres define un conjunto de caracteres, cualquiera de los cuales puede estar en una cadena de entrada para que se produzca una coincidencia. El lenguaje de expresiones regulares de .NET admite las siguientes clases de caracteres:  
@@ -158,7 +160,7 @@ ms.locfileid: "44180155"
 ## <a name="any-character-"></a>Cualquier carácter: .  
  El carácter de punto (.) coincide con cualquier carácter excepto con `\n` (carácter de nueva línea, \u000A), con los dos requisitos siguientes:  
   
--   Si la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> modifica un patrón de expresión regular o si la opción `.` modifica la parte del patrón que contiene la clase de caracteres `s`, `.` coincide con cualquier carácter. Para obtener más información, consulte [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
+-   Si la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> modifica un patrón de expresión regular o si la opción `.` modifica la parte del patrón que contiene la clase de caracteres `s`, `.` coincide con cualquier carácter. Para obtener más información, consulta [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
   
      El ejemplo siguiente muestra el comportamiento predeterminado de la clase de caracteres `.` y con la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. La expresión regular `^.+` comienza en el principio de la cadena y coincide con todos los caracteres. De forma predeterminada, la coincidencia termina al final de la primera línea; el patrón de la expresión regular coincide con el carácter de retorno de carro, `\r` o \u000D, pero no coincide con `\n`. Dado que la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpreta la cadena de entrada completa como una sola línea, coincide con cada carácter de la cadena de entrada, incluido `\n`.  
   
@@ -174,7 +176,7 @@ ms.locfileid: "44180155"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Dado que coincide con cualquier carácter, el elemento del lenguaje `.` se utiliza a menudo con un cuantificador no expansivo si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter. Para más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Dado que coincide con cualquier carácter, el elemento del lenguaje `.` se utiliza a menudo con un cuantificador no expansivo si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter. Para obtener más información, consulta [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Volver al principio](#Top)  
   
@@ -246,7 +248,7 @@ ms.locfileid: "44180155"
  Si se especifica un comportamiento conforme a ECMAScript, `\w` es equivalente a `[a-zA-Z_0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Dado que coincide con cualquier carácter de palabra, el elemento del lenguaje `\w` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter de palabra, seguido de un carácter de palabra específico. Para más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Dado que coincide con cualquier carácter de palabra, el elemento del lenguaje `\w` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter de palabra, seguido de un carácter de palabra específico. Para obtener más información, consulta [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  En el ejemplo siguiente se usa el elemento del lenguaje `\w` para buscar coincidencias de caracteres duplicados en una palabra. El ejemplo define un patrón de expresión regular, `(\w)\1`, que se puede interpretar de la siguiente manera.  
   
@@ -284,7 +286,7 @@ ms.locfileid: "44180155"
  Si se especifica un comportamiento conforme a ECMAScript, `\W` es equivalente a `[^a-zA-Z_0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Dado que coincide con cualquier carácter que no sea de palabra, el elemento del lenguaje `\W` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter que no sea de palabra, seguido de un carácter que no sea de palabra específico. Para más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Dado que coincide con cualquier carácter que no sea de palabra, el elemento del lenguaje `\W` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter que no sea de palabra, seguido de un carácter que no sea de palabra específico. Para obtener más información, consulta [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  En el ejemplo siguiente se ilustra la clase de caracteres `\W`.  Define un patrón de expresión regular, `\b(\w+)(\W){1,2}`, que coincide con una palabra seguida de uno o dos caracteres que no son de palabra, como un espacio en blanco o un signo de puntuación. La expresión regular se interpreta como se muestra en la tabla siguiente.  
   

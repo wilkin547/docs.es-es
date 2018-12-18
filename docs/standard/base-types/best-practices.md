@@ -1,5 +1,6 @@
 ---
 title: Procedimientos recomendados con expresiones regulares en .NET
+description: Obtenga información sobre cómo crear expresiones regulares eficaces y efectivas en .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.custom: serodec18
+ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925729"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152817"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 <a name="top"></a> El motor de expresiones regulares de .NET es una herramienta eficaz y completa que procesa texto basándose en coincidencias de patrones en lugar de comparar y buscar coincidencias con texto literal. En la mayoría de los casos, realiza la coincidencia de modelos de manera rápida y eficaz. Sin embargo, en algunos casos, puede parecer que el motor de expresiones regulares es muy lento. En casos extremos, incluso puede parecer que deja de responder mientras procesa una entrada relativamente pequeña a lo largo de las horas o incluso los días.  
@@ -218,7 +220,7 @@ ms.locfileid: "42925729"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para obtener más información, consulta [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 |Elemento del lenguaje|Descripción|  
 |----------------------|-----------------|  
@@ -283,7 +285,7 @@ ms.locfileid: "42925729"
   
 -   Use la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Deshabilita todas las capturas sin nombre o implícitas en el patrón de expresión regular. Cuando se usa esta opción, solo se pueden capturar las subcadenas que coinciden con grupos con nombre definidos con el elemento de lenguaje `(?<name>subexpression)`. La marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> se puede pasar al parámetro `options` de un constructor de clase <xref:System.Text.RegularExpressions.Regex> o al parámetro `options` de un método coincidente estático <xref:System.Text.RegularExpressions.Regex>.  
   
--   Use la opción `n` del elemento de lenguaje `(?imnsx)`. Esta opción deshabilita todas las capturas sin nombre o implícitas desde el punto del patrón de expresión regular en el que aparece el elemento. Las capturas se deshabilitan hasta el final del modelo o hasta que la opción `(-n)` habilita las capturas sin nombre o implícitas. Para más información, consulte [Construcciones misceláneas](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
+-   Use la opción `n` del elemento de lenguaje `(?imnsx)`. Esta opción deshabilita todas las capturas sin nombre o implícitas desde el punto del patrón de expresión regular en el que aparece el elemento. Las capturas se deshabilitan hasta el final del modelo o hasta que la opción `(-n)` habilita las capturas sin nombre o implícitas. Para obtener más información, consulta [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
 -   Use la opción `n` del elemento de lenguaje `(?imnsx:subexpression)`. Esta opción deshabilita todas las capturas sin nombre o implícitas en `subexpression`. Las capturas por grupos de captura anidados sin nombre o implícitos también se deshabilitan.  
   
