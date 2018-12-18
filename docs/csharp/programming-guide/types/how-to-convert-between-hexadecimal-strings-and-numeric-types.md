@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Convertir cadenas hexadecimales en tipos numéricos (Guía de programación de C#)'
+title: 'Procedimiento Convertir cadenas hexadecimales en tipos numéricos: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 5acbfd121698cf0d2b6d78ccea810baf624c7981
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d61d48ca05e93743ef3afa894ad0cbc98d6d2ab0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076049"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237173"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Cómo: Convertir cadenas hexadecimales en tipos numéricos (Guía de programación de C#)
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Procedimiento Convertir cadenas hexadecimales en tipos numéricos (Guía de programación de C#)
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
   
 -   Obtener el valor hexadecimal de cada uno de los caracteres de un elemento [string](../../../csharp/language-reference/keywords/string.md).  
@@ -54,6 +55,6 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
   
 ## <a name="see-also"></a>Vea también
 
-- [Cadenas con formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)  
 - [Tipos](../../../csharp/programming-guide/types/index.md)  
 - [Cómo: Determinar si una cadena representa un valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

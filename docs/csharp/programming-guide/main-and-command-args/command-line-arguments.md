@@ -1,15 +1,16 @@
 ---
-title: Argumentos de la línea de comandos (Guía de programación de C#)
+title: 'Argumento de la línea de comandos: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5bc73ece0560abfde7966678518ff57a8af3733f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083954"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236081"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
 Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes maneras:  
@@ -43,7 +44,7 @@ long num = long.Parse(args[0]);
 long num = Convert.ToInt64(s);  
 ```  
   
- Para obtener más información, consulte <xref:System.Int64.Parse%2A> y <xref:System.Convert>.  
+ Para obtener más información, vea <xref:System.Int64.Parse%2A> y <xref:System.Convert>.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar argumentos de la línea de comandos en una aplicación de consola. La aplicación toma un argumento en tiempo de ejecución, lo convierte en un entero y calcula el factorial del número. Si no se proporciona ningún argumento, la aplicación emite un mensaje en el que se explica el uso correcto del programa.  
@@ -71,7 +72,7 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Para ver más ejemplos sobre cómo usar los argumentos de la línea de comandos, vea [How to: Create and Use Assemblies Using the Command Line](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md) (Cómo: Crear y usar ensamblados mediante la línea de comandos).  
+ Para obtener más ejemplos sobre cómo usar argumentos de la línea de comandos, consulte [Cómo: Crear y utilizar ensamblados mediante la línea de comandos](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="see-also"></a>Vea también
 

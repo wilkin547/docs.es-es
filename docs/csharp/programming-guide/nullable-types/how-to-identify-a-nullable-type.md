@@ -1,18 +1,19 @@
 ---
-title: 'Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)'
+title: 'Procedimiento Identificar tipos que aceptan valores NULL: Guía de programación de C#'
+ms.custom: seodec18
 description: Obtenga información sobre cómo determinar si un tipo es un tipo que acepta valores NULL o una instancia es de un tipo que acepta valores NULL.
 ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 88c8c9d881719bd1d09a8879112b26d1c484f827
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261347"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240273"
 ---
-# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)
+# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Procedimiento Identificar tipos que aceptan valores NULL (Guía de programación de C#)
 
 El ejemplo siguiente muestra cómo determinar si una instancia <xref:System.Type?displayProperty=nameWithType> representa un tipo genérico cerrado que acepta valores NULL, es decir, el tipo <xref:System.Nullable%601?displayProperty=nameWithType> con un parámetro de tipo especificado `T`:
 

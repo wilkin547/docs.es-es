@@ -1,19 +1,20 @@
 ---
-title: 'Cómo: Utilizar el alias del espacio de nombres global (Guía de programación de C#)'
+title: 'Procedimiento Utilizar el alias del espacio de nombres global: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "44514623"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236614"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Cómo: Utilizar el alias del espacio de nombres global (Guía de programación de C#)
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Procedimiento Utilizar el alias del espacio de nombres global (Guía de programación de C#)
 La capacidad de tener acceso a un miembro en el [espacio de nombres](../../../csharp/language-reference/keywords/namespace.md) global es útil cuando el miembro puede estar oculto por otra entidad del mismo nombre.  
   
  Por ejemplo, en el código siguiente, `Console` se resuelve como `TestApp.Console` en lugar de como el tipo `Console` en el espacio de nombres <xref:System>.  
@@ -49,6 +50,6 @@ La capacidad de tener acceso a un miembro en el [espacio de nombres](../../../cs
 
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
 - [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)  
-- [. .](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [. !](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: !](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

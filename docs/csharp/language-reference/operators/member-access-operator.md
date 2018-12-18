@@ -1,5 +1,6 @@
 ---
-title: . Operador (Referencia de C#)
+title: '. Operador: Referencia de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ._CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: a092c1a916e3dc4bf6d96660c532540945e57554
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5048761973e10bec9650469383e2f52cee74da4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520713"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235051"
 ---
 # <a name="-operator-c-reference"></a>. Operador (Referencia de C#)
 El operador punto (`.`) se usa para el acceso a miembros. El operador punto especifica un miembro de un tipo o espacio de nombres. Por ejemplo, el operador punto se usa para tener acceso a métodos específicos de las bibliotecas de clases de .NET Framework:  

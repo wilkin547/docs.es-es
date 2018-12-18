@@ -3,16 +3,28 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145337"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245605"
 ---
 # <a name="the-history-of-c"></a>Historia de C# #
 
-¿Qué aspecto tenía el lenguaje en sus primeras versiones? ¿Y cómo ha evolucionado en los años posteriores?
+En este artículo se proporciona un historial de cada versión principal del lenguaje C#. El equipo de C# continúa innovando y agregando nuevas características. Se puede encontrar información sobre el estado detallado de las características de lenguaje, incluidas las características consideradas para las próximas versiones, [en el repositorio dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) de GitHub.
+
+> [!IMPORTANT]
+> El lenguaje C# se basa en tipos y métodos en lo que la especificación de C# define como una *biblioteca estándar* para algunas de las características. La plataforma .NET ofrece los tipos y métodos en un número de paquetes. Un ejemplo es el procesamiento de excepciones. Cada expresión o instrucción `throw` se comprueba para asegurarse de que el objeto que se genera deriva de <xref:System.Exception>. Del mismo modo, cada `catch` se comprueba para asegurarse de que el tipo que se captura deriva de <xref:System.Exception>. Cada versión puede agregar requisitos nuevos. Para usar las características más recientes del lenguaje en entornos anteriores, es posible que tenga que instalar bibliotecas específicas. Estas dependencias están documentadas en la página de cada versión específica. Puede obtener más información sobre las [relaciones entre lenguaje y biblioteca](relationships-between-language-and-library.md) para tener más antecedentes sobre esta dependencia.
+
+Las herramientas de compilación de C# consideran que la última versión principal del lenguaje es la versión predeterminada. Puede haber versiones secundarias entre versiones principales, que se detallan en los otros artículos de esta sección. Para usar las características más recientes en una versión secundaria, tendrá que [configurar la versión del idioma de compilador](../language-reference/configure-language-version.md) y seleccionar la versión. Ha habido tres versiones secundarias desde C# 7.0:
+
+* [C# 7.3](csharp-7-3.md):
+  - C# 7.3 se encuentra disponible actualmente en la [versión 15.7 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) y en el [SDK 2.1.300 RC1 de .NET Core 2.1](../../core/whats-new/index.md).
+* [C# 7.2](csharp-7-2.md):
+  - C# 7.2 se encuentra disponible actualmente en la [versión 15.5 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) y en el [SDK de .NET Core 2.0](../../core/whats-new/index.md).
+* [C# 7.1](csharp-7-1.md):
+  - Estas características se agregaron en la [versión 15.3 de Visual Studio 2017](https://visualstudio.microsoft.com/vs/whatsnew/) y en el [SDK de .NET Core 2.0](../../core/whats-new/index.md).
 
 ## <a name="c-version-10"></a>C# versión 1.0
 
@@ -113,7 +125,7 @@ La versión 5.0 de C# era una versión del lenguaje centrada. Casi todo el traba
 
 ### <a name="see-also"></a>Vea también
 
-* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Proyecto de código: Atributos de información del autor de la llamada en C# 5.0)
+* [Proyecto de código: Atributos de información del autor de llamada en C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 El atributo de información del autor de la llamada permite recuperar fácilmente información sobre el contexto donde se está ejecutando sin tener que recurrir a una gran cantidad de código de reflexión reutilizable. Tiene muchos usos en tareas de registro y diagnóstico.
 

@@ -1,15 +1,16 @@
 ---
-title: Pasar matrices como argumentos (Guía de programación de C#)
+title: 'Pasar matrices como argumentos: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: b2e6c0134af3b5814e9c9321e1486820311aa5c6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6e11020491c36349f035abb333aa3396c246dd68
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042431"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245618"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Pasar matrices como argumentos (Guía de programación de C#)
 

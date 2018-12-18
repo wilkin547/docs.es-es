@@ -1,5 +1,6 @@
 ---
-title: Operador || (Referencia de C#)
+title: 'Operador||: Referencia de C#'
+ms.custom: seodec18
 ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: f4bb7ada12fbcebcb90fb7cd22d6e6bccad5fb57
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "42925545"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244575"
 ---
 # <a name="-operator-c-reference"></a>Operador || (Referencia de C#)
 
@@ -25,7 +26,7 @@ El [operador OR lógico](or-operator.md) `|` también calcula el OR lógico de s
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-Un tipo definido por el usuario no puede sobrecargar el operador OR lógico condicional. Pero si un tipo definido por el usuario sobrecarga los operadores [OR lógico](or-operator.md), [true](../keywords/true-operator.md) y [false](../keywords/false-operator.md) de una manera determinada, la operación `||` se puede evaluar para los operandos de ese tipo. Para obtener más información, vea la sección [Operadores lógicos condicionales definidos por el usuario](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) de la [Especificación del lenguaje C#](../language-specification/index.md).
+Un tipo definido por el usuario no puede sobrecargar el operador OR lógico condicional. Pero si un tipo definido por el usuario sobrecarga los operadores [OR lógico](or-operator.md) y [true y false](../keywords/true-false-operators.md) de una manera determinada, la operación `||` se puede evaluar para los operandos de ese tipo. Para obtener más información, vea la sección [Operadores lógicos condicionales definidos por el usuario](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

@@ -1,5 +1,6 @@
 ---
-title: Palabra clave class (Referencia de C#)
+title: 'Palabra clave class: Referencia de C#'
+ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: d436dee14280d86062834ac131bbe4775705d748
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086069"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286499"
 ---
 # <a name="class-c-reference"></a>class (Referencia de C#)
 
@@ -93,7 +94,7 @@ El acceso a miembros privados de `Child` desde `Main` solo sería posible si `Ma
 
 Los tipos declarados dentro de una clase sin un modificador de acceso adoptan el valor predeterminado de `private`, por lo que los miembros de datos de este ejemplo seguirían siendo `private` si se quitara la palabra clave.
 
-Por último, tenga en cuenta que, para el objeto creado mediante el constructor predeterminado (`child3`), el campo age se ha inicializado a cero de forma predeterminada.
+Por último, tenga en cuenta que, para el objeto creado mediante el constructor predeterminado (`child3`), el campo `age` se ha inicializado a cero de forma predeterminada.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

@@ -1,17 +1,18 @@
 ---
-title: 'Cómo: Usar expresiones lambda en una consulta (Guía de programación de C#)'
+title: 'Procedimiento Usar expresiones lambda en una consulta: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 1632466aaa29cb79f053bd3ac2ca42e8b03ea89c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b8adfde95cd2122136cb75e97b4113ee1d80cf9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506489"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238811"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Cómo: Usar expresiones lambda en una consulta (Guía de programación de C#)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Procedimiento Usar expresiones lambda en una consulta (Guía de programación de C#)
 No se pueden usar expresiones lambda directamente en la sintaxis de consulta, pero sí en llamadas de método, y las expresiones de consulta pueden contener llamadas de método. De hecho, algunas operaciones de consulta solo se pueden expresar con la sintaxis de método. Para obtener más información sobre la diferencia entre la sintaxis de consulta y la sintaxis de método, vea [Query Syntax and Method Syntax in LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ).  
   
 ## <a name="example"></a>Ejemplo  
@@ -27,7 +28,7 @@ No se pueden usar expresiones lambda directamente en la sintaxis de consulta, pe
  [!code-csharp[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_2.cs)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Para ejecutar este código, copie y pegue el método en la `StudentClass` que se especifica en [Cómo: Realizar una consulta en una colección de objetos (Guía de programación de C#)](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) y llámelo desde el método `Main`.  
+ Para ejecutar este código, copie y pegue el método en la clase `StudentClass` que se proporciona en [Cómo: Consultar una colección de objetos](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) y llámela desde el método `Main`.  
   
 ## <a name="see-also"></a>Vea también
 

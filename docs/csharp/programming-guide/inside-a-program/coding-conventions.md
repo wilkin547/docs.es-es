@@ -1,17 +1,18 @@
 ---
-title: Convenciones de código de C# (Guía de programación de C#)
+title: 'Convenciones de código de C#: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 430cf3f1bc5e0b5ebe1a05530059516f36a473a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 598f0e75a96a43162d0c626d00320effb418c7fd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209464"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241436"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
  Las convenciones de codificación tienen los objetivos siguientes:  
@@ -162,7 +163,7 @@ ms.locfileid: "44209464"
   
 ### <a name="static-members"></a>Miembros estáticos  
   
--   Llame a miembros [estáticos](../../../csharp/language-reference/keywords/static.md) con el nombre de clase *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
+-   Llame a miembros [estáticos](../../../csharp/language-reference/keywords/static.md) con el nombre de clase: *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
   
 ### <a name="linq-queries"></a>Consultas LINQ  
   

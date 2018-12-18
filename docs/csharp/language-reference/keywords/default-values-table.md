@@ -1,5 +1,6 @@
 ---
-title: Tabla de valores predeterminados (Referencia de C#)
+title: 'Tabla de valores predeterminados: Referencia de C#'
+ms.custom: seodec18
 description: Obtenga información sobre los valores predeterminados de los tipos de valor de C#.
 ms.date: 08/23/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], default constructor
 - types [C#], default constructor return values
-ms.openlocfilehash: 184a9f42ddd3654a81aef0b7ce35e404de2d4bb9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43737988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237043"
 ---
 # <a name="default-values-table-c-reference"></a>Tabla de valores predeterminados (Referencia de C#)
 

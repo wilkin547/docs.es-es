@@ -1,5 +1,6 @@
 ---
-title: alias externo (Referencia de C#)
+title: 'alias externo: Referencia de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - alias_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 66210bc1a84e2c3239dcac72cdc194b14dcccf30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0fd917d1af38ba558634dfcf5e3a1abf95420a9d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524033"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235377"
 ---
 # <a name="extern-alias-c-reference"></a>alias externo (Referencia de C#)
 Es posible que deba hacer referencia a dos versiones de ensamblados que tienen los mismos nombres de tipo completos. Por ejemplo, es posible que tenga que usar dos o más versiones de un ensamblado en la misma aplicación. Mediante el uso de un alias de ensamblado externo, los espacios de nombres de cada ensamblado pueden ajustarse en espacios de nombres de nivel de raíz denominados por el alias, lo que permite que se usen en el mismo archivo.  
@@ -46,5 +47,5 @@ Es posible que deba hacer referencia a dos versiones de ensamblados que tienen l
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
 - [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
 - [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [:: !](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [/reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

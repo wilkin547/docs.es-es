@@ -1,5 +1,6 @@
 ---
-title: '&lt;seealso&gt; (Guía de programación de C#)'
+title: '&lt;seealso&gt;: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cref
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: bb881c5309aaa721f12cfd60469aeeddd0a68446
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eec4a0c2041d7d10b5887950bfec03ec8847c82b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865805"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244796"
 ---
 # <a name="ltseealsogt-c-programming-guide"></a>&lt;seealso&gt; (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -28,7 +29,7 @@ ms.locfileid: "43865805"
   
 #### <a name="parameters"></a>Parámetros  
  cref = "`member`"  
- Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML.`member`  debe aparecer entre comillas dobles (" ").  
+ Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML.`member` debe aparecer entre comillas dobles (" ").  
   
  Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
   

@@ -1,17 +1,18 @@
 ---
-title: '#undef (Referencia de C#)'
+title: '#undef: Referencia de C#'
+ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#undef'
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: 3957d58f61e51fab01618f5e1146be9cd0da58fd
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5a3658c4e6bb32158e6f81c3ac5014fbedba0713
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034589"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235774"
 ---
 # <a name="undef-c-reference"></a>#undef (Referencia de C#)
 `#undef` le permite anular la definición de un símbolo, de tal forma que, si se usa como la expresión en una directiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), la expresión se evaluará como `false`.  

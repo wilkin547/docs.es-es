@@ -1,5 +1,6 @@
 ---
-title: Clases y miembros de clase abstractos y sellados (Guía de programación de C#)
+title: 'Clases y miembros de clase abstractos y sellados: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract classes [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 0e80357a51bde270d5ed012f16f7b2e821f084c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8c0b8e9814bf692e486624dd8a4a99d98337bca9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517347"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235860"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Clases y miembros de clase abstractos y sellados (Guía de programación de C#)
 La palabra clave [abstract](../../../csharp/language-reference/keywords/abstract.md) permite crear clases y miembros [class](../../../csharp/language-reference/keywords/class.md) que están incompletos y se deben implementar en una clase derivada.  
@@ -54,4 +55,4 @@ La palabra clave [abstract](../../../csharp/language-reference/keywords/abstract
 - [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
 - [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
 - [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [Cómo: Definir propiedades abstractas](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+- [Cómo: Definir las propiedades abstractas](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

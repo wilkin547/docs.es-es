@@ -1,5 +1,6 @@
 ---
-title: Palabra clave contextual equals (Referencia de C#)
+title: 'Palabra clave contextual equals: Referencia de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - equals_CSharpKeyword
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - equals keyword [C#]
 ms.assetid: e981309a-e4bf-444c-8a2b-5c695e6114b1
-ms.openlocfilehash: 30a8be7e81bae65e565d2a3ed28e225ac3094f13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6026cbe606ff80f5ae1bc13435c67eaa3f57330
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47208096"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237836"
 ---
 # <a name="equals-c-reference"></a>equals (Referencia de C#)
 
-La palabra clave contextual `equals` se usa en una cláusula `join` en una expresión de consulta para comparar los elementos de dos secuencias. Para obtener más información, consulte [join (Cláusula, Referencia de C#)](join-clause.md).
+La palabra clave contextual `equals` se usa en una cláusula `join` en una expresión de consulta para comparar los elementos de dos secuencias. Para obtener más información, vea [join (Cláusula, Referencia de C#)](join-clause.md).
 
 ## <a name="example"></a>Ejemplo
 

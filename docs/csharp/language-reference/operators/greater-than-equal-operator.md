@@ -1,5 +1,6 @@
 ---
-title: Operador &gt;= (Referencia de C#)
+title: 'Operador &gt;=: Referencia de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '>=_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - greater than or equal to operator (>=) [C#]
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
-ms.openlocfilehash: 8749d1dc0670a5a76bda5ee0d69a4a142671c1e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9bea9034d2998a589fefca19f41444c9aced6e13
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511098"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237719"
 ---
 # <a name="gt-operator-c-reference"></a>Operador &gt;= (Referencia de C#)
 Todos los tipos de enumeración y numéricos definen un operador relacional "mayor o igual que", `>=`, que devuelve `true` si el primer operando es mayor o igual que el segundo, `false` de otro modo.  

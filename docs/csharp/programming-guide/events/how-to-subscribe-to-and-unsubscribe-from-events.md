@@ -1,19 +1,20 @@
 ---
-title: 'Cómo: Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)'
+title: 'Procedimiento Suscribir y cancelar la suscripción a eventos: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 89647687c73cdb9b81625b830f0c9a77f1c67d13
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999145"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241092"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Cómo: Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedimiento Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
 La suscripción a un evento publicado por otra clase se realiza cuando quiere escribir código personalizado al que se llama cuando se produce ese evento. Por ejemplo, puede suscribirse al evento `click` de un botón para que la aplicación realice alguna operación cuando el usuario haga clic en el botón.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Para suscribirse a eventos mediante el IDE de Visual Studio  
@@ -69,7 +70,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
     }  
     ```  
   
-     Para obtener más información, vea [Cómo: Usar expresiones lambda fuera de LINQ (Guía de programación de C#)](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
+     Para obtener más información, vea [Cómo: Usar expresiones lambda fuera de LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Para suscribirse a eventos mediante un método anónimo  
   

@@ -1,15 +1,16 @@
 ---
-title: 'Cómo: Acceder a un miembro con un puntero (Guía de programación de C#)'
+title: 'Cómo: Acceder a un miembro con un puntero: Guía de programación de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-ms.openlocfilehash: b51239be8da8c45aa2d7f1ff0700884c43c07299
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 777c6e1aa057bd0abe81adc63bed1d947f11b837
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130853"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240598"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Cómo: Acceder a un miembro con un puntero (Guía de programación de C#)
 Para tener acceso a un miembro de un struct que se declara en un contexto no seguro, puede usar el operador de acceso a miembros, como se muestra en el ejemplo siguiente en el que `p` es un puntero a un [struct](../../../csharp/language-reference/keywords/struct.md) que contiene un miembro `x`.  

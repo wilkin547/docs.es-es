@@ -1,5 +1,6 @@
 ---
-title: int (Referencia de C#)
+title: 'int: Referencia de C#'
+ms.custom: seodec18
 ms.date: 03/14/2017
 f1_keywords:
 - int_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: 95ac267bc70d2e7873593c08e0b10cb50fefd8c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3436d2ceeec9eed80f346c28231ba376cf6d5fb6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524049"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243821"
 ---
 # <a name="int-c-reference"></a>int (Referencia de C#)
 
@@ -76,7 +77,8 @@ int y = (int)3.0;    // OK: explicit conversion.
  Para obtener más información sobre las expresiones aritméticas con combinaciones de tipos de punto flotante y tipos enteros, vea [float](../../../csharp/language-reference/keywords/float.md) y [double](../../../csharp/language-reference/keywords/double.md).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Para obtener más información, vea la sección [Tipos enteros](~/_csharplang/spec/types.md#integral-types) de la [Especificación del lenguaje C#](../language-specification/index.md). La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.
   
 ## <a name="see-also"></a>Vea también
 
