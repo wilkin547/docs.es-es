@@ -4,7 +4,7 @@ description: Use F# opciones del compilador de línea de comandos para controlar
 ms.date: 12/10/2018
 ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
 ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170878"
@@ -25,7 +25,7 @@ La siguiente tabla muestra las opciones del compilador por orden alfabético. Al
 |`--baseaddress:address`|Especifica la dirección base preferida para cargar una DLL.<br /><br />Esta opción del compilador es equivalente a la C# opción del compilador del mismo nombre. Para obtener más información, consulte [ &#47;baseaddress &#40;C&#35; opciones del compilador&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
 |`--codepage:id`|Especifica qué página de códigos que se usará durante la compilación si la página necesaria no es la página de códigos predeterminada actual para el sistema.<br /><br />Esta opción del compilador es equivalente a la C# opción del compilador del mismo nombre. Para obtener más información, consulte [ &#47;páginas de códigos &#40;C&#35; opciones del compilador&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md).|
 |`--consolecolors`|Especifica en la consola de errores y advertencias utilizan texto codificado por colores.|
-|'--crossoptimize [+|-]`|Habilita o deshabilita las optimizaciones entre módulos.|
+|`--crossoptimize[+|-]`|Habilita o deshabilita las optimizaciones entre módulos.|
 |<code>--delaysign[+&#124;-]</code>|Retrasa la firma del ensamblado utilizando sólo la parte pública de la clave de nombre seguro.<br /><br />Esta opción del compilador es equivalente a la C# opción del compilador del mismo nombre. Para obtener más información, consulte [ &#47;delaysign &#40;C&#35; opciones del compilador&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx).|
 |<code>--checked[+&#124;-]</code>|Habilita o deshabilita la generación de comprobaciones de desbordamiento.<br /><br />Esta opción del compilador es equivalente a la C# opción del compilador del mismo nombre. Para obtener más información, consulte [ &#47;comprueban &#40;C&#35; opciones del compilador&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx).|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Habilita o deshabilita la generación de información de depuración o especifica el tipo de información de depuración para generar. El valor predeterminado es full, lo que permite la asociación a un programa en ejecución. Elija **pdbonly** para obtener información de depuración limitada almacenada en un archivo pdb (base de datos de programa).<br /><br />Equivalente a la C# opción del compilador del mismo nombre. Para obtener más información, consulte<br /><br />[&#47;depurar &#40;C&#35; opciones del compilador&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx).|
