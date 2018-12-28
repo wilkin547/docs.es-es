@@ -1,13 +1,13 @@
 ---
-title: Tipos flexibles (F#)
-description: Obtenga información sobre cómo usar F# anotación de tipo flexible, que indica que un parámetro, una variable o un valor tiene un tipo que es compatible con un tipo especificado.
+title: Tipos flexibles
+description: Aprenda a usar F# anotación de tipo flexible, que indica que un parámetro, una variable o un valor tiene un tipo que es compatible con un tipo especificado.
 ms.date: 05/16/2016
-ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47210050"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613679"
 ---
 # <a name="flexible-types"></a>Tipos flexibles
 
@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-En F#, como en otros lenguajes orientados a objetos, hay contextos en los que los tipos derivados o tipos que implementan interfaces se convierten automáticamente en un tipo base o interfaz. Estas conversiones automáticas se producen en argumentos directos, pero no cuando el tipo está en una posición subordinada, como parte de un tipo más complejo, como un tipo de valor devuelto de un tipo de función, o como un argumento de tipo. Por lo tanto, la notación de tipo flexible es especialmente útil cuando el tipo que aplica a forma parte de un tipo más complejo.
+En F#, al igual que en otros lenguajes orientados a objetos, hay contextos en los que los tipos derivados o tipos que implementan interfaces se convierten automáticamente en un tipo base o interfaz. Estas conversiones automáticas se producen en argumentos directos, pero no cuando el tipo está en una posición subordinada, como parte de un tipo más complejo, como un tipo de valor devuelto de un tipo de función, o como un argumento de tipo. Por lo tanto, la notación de tipo flexible es especialmente útil cuando el tipo que aplica a forma parte de un tipo más complejo.
 
 ## <a name="see-also"></a>Vea también
 

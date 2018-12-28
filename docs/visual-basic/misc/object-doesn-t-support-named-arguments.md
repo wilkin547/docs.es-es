@@ -1,17 +1,17 @@
 ---
-title: Objeto&#39;soporte t argumentos con nombre
+title: El objeto no admite argumentos con nombre
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID446
 ms.assetid: f4812db8-e85d-4d5b-b7c9-d54a1f850034
-ms.openlocfilehash: 0691dc31d6ac1a1af5e31d9c3e8ef0bb2ef100f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6021a438fa8a5d8e4840f085fd5d824a407681cf
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636746"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770096"
 ---
-# <a name="object-doesn39t-support-named-arguments"></a>Objeto&#39;soporte t argumentos con nombre
+# <a name="object-doesnt-support-named-arguments"></a>El objeto no admite argumentos con nombre
 Se intentó acceder a un objeto cuyos métodos no admiten argumentos con nombre.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

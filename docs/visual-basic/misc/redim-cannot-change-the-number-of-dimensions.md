@@ -1,17 +1,17 @@
 ---
-title: '&#39;ReDim&#39; no se puede cambiar el número de dimensiones'
+title: "'ReDim' no puede cambiar el número de dimensiones."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_RankMismatch
 ms.assetid: 52505298-9985-4682-8f6e-ff7d56077f34
-ms.openlocfilehash: bfd4096141833b85a2126340ef549e1e1d1f8e3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba3e389e3732d39f16e2c8ae884fae4e935e6ac9
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640386"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53778728"
 ---
-# <a name="39redim39-cannot-change-the-number-of-dimensions"></a>&#39;ReDim&#39; no se puede cambiar el número de dimensiones
+# <a name="redim-cannot-change-the-number-of-dimensions"></a>'ReDim' no puede cambiar el número de dimensiones.
 Una operación intenta usar la instrucción `ReDim` para cambiar el rango (número de dimensiones) de una matriz. `ReDim` puede cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado formalmente, pero no puede cambiar el rango de la matriz.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

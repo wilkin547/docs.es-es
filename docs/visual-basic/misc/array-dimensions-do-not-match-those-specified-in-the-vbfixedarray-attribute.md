@@ -1,18 +1,18 @@
 ---
-title: Dimensiones de la matriz no coinciden con los especificados en el &#39;VBFixedArray&#39; atributo
+title: Las dimensiones de la matriz no coinciden con las especificadas en el atributo 'VBFixedArray'.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_ArrayDimensionsDontMatch
 ms.assetid: 71809e3b-8147-4314-9c4c-e4a5bc9a5530
-ms.openlocfilehash: 75ce46a0ba73a64cfed1fe62d2981a95490e355b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c7909f80de6d8a18b0ef06f1b15113fca610b38
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599296"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770252"
 ---
-# <a name="array-dimensions-do-not-match-those-specified-in-the-39vbfixedarray39-attribute"></a>Dimensiones de la matriz no coinciden con los especificados en el &#39;VBFixedArray&#39; atributo
-Las dimensiones de la matriz no coinciden con las dimensiones que ha especificado en el atributo `VBFixedArray` .  
+# <a name="array-dimensions-do-not-match-those-specified-in-the-vbfixedarray-attribute"></a>Las dimensiones de la matriz no coinciden con las especificadas en el atributo 'VBFixedArray'.
+Las dimensiones de la matriz no coinciden con las dimensiones que ha especificado en el atributo `VBFixedArray`.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

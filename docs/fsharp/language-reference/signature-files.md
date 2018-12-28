@@ -1,13 +1,13 @@
 ---
-title: Archivos de firma (F#)
-description: Obtenga información sobre cómo usar los archivos de signatura de F# para almacenar información sobre las signaturas públicas de un conjunto de F# elementos de programa, como módulos, tipos y espacios de nombres.
+title: Archivos de firma
+description: Aprenda a usar F# archivos de firma para almacenar información sobre las signaturas públicas de un conjunto de F# elementos, como tipos, espacios de nombres y los módulos del programa.
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991238"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613419"
 ---
 # <a name="signatures"></a>Prototipos
 
@@ -29,6 +29,7 @@ Si no hay suficiente información en la signatura de tipo para indicar si un tip
 |---------|-----------|
 |`[<Sealed>]`|Para un tipo que no tiene ningún miembro abstracto o que no debe ampliarse.|
 |`[<Interface>]`|Para un tipo que es una interfaz.|
+
 El compilador genera un error si los atributos no son coherentes entre la signatura y la declaración del archivo de implementación.
 
 Use la palabra clave `val` para crear una firma para un valor o valor de función. La palabra clave `type` presenta una signatura de tipo.

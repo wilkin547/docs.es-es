@@ -1,13 +1,13 @@
 ---
-title: 'Funciones recursivas: La palabra clave rec (F#)'
+title: 'Funciones recursivas: La palabra clave rec'
 description: Obtenga información sobre cómo el F# palabra clave 'rec' se utiliza con la palabra clave 'let' para definir una función recursiva.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0db3ed7f85a1380654f2827b4773985b661589c7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9f9c7e1a4468de9551b3852d0e7b4381025b2699
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127737"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612912"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funciones recursivas: La palabra clave rec
 

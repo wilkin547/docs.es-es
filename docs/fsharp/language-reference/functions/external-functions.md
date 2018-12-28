@@ -1,17 +1,17 @@
 ---
-title: Funciones externas (F#)
-description: Obtenga información sobre la compatibilidad del lenguaje F# para llamar a funciones en código nativo.
+title: Funciones externas
+description: Obtenga información sobre la F# compatibilidad de lenguaje para llamar a funciones en código nativo.
 ms.date: 05/16/2016
-ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973110"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611736"
 ---
 # <a name="external-functions"></a>Funciones externas
 
-Este tema describe la compatibilidad del lenguaje F# para llamar a funciones en código nativo.
+Este tema se describe F# compatibilidad de lenguaje para llamar a funciones en código nativo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-Puede llamar a esta función de F# con el código siguiente.
+Puede llamar a esta función desde F# con el código siguiente.
 
 ```fsharp
 open System.Runtime.InteropServices
