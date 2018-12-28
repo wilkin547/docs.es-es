@@ -1,21 +1,21 @@
 ---
-title: Coincidencia de modelos [F#]
-description: Obtenga información sobre cómo se usan los patrones en F# para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos.
+title: Coincidencia de modelos
+description: Obtenga información sobre cómo se usan patrones en F# para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991429"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613588"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
-Los modelos son reglas para transformar los datos de entrada. Se utilizan en todo el lenguaje F# para comparar los datos con una o más estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos de varias maneras.
+Los modelos son reglas para transformar los datos de entrada. Se usan en toda la F# lenguaje para comparar los datos con una estructura lógica o las estructuras, descomponer datos en sus partes constituyentes o extraer información de los datos de varias maneras.
 
 ## <a name="remarks"></a>Comentarios
 
-Los modelos se utilizan en muchas construcciones de lenguaje, como el `match` expresión. Se utilizan cuando se procesan argumentos para funciones en `let` enlaces, las expresiones lambda y en los controladores de excepción asociados del `try...with` expresión. Para obtener más información, consulte [expresiones de coincidencia](match-expressions.md), [enlaces let](functions/let-bindings.md), [expresiones Lambda: la `fun` palabra clave](functions/lambda-expressions-the-fun-keyword.md), y [excepciones: la `try...with` Expresión](exception-handling/the-try-with-expression.md).
+Los modelos se utilizan en muchas construcciones de lenguaje, como el `match` expresión. Se utilizan cuando se procesan argumentos para funciones en `let` enlaces, las expresiones lambda y en los controladores de excepción asociados del `try...with` expresión. Para obtener más información, consulte [expresiones de coincidencia](match-expressions.md), [enlaces let](functions/let-bindings.md), [expresiones Lambda: El `fun` palabra clave](functions/lambda-expressions-the-fun-keyword.md), y [excepciones: El `try...with` expresión](exception-handling/the-try-with-expression.md).
 
 Por ejemplo, en el `match` expresión, el *patrón* lo que sigue el símbolo de canalización.
 
@@ -39,7 +39,7 @@ Modelos admitidos se muestran en la tabla siguiente. En tiempo de ejecución, la
 |Y el patrón|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Modelo de cons|*identificador* :: *identificador de la lista*|`h :: t`|
 |Modelo de lista|[ *modelo_1*;...; *modelo_n* ]|`[ a; b; c ]`|
-|Patrón de matriz|[&#124; *modelo_1*;.; *modelo_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Patrón de matriz|[&#124; *modelo_1*;..; *modelo_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Modelo entre paréntesis|( *patrón* )|`( a )`|
 |Modelo de tupla|( *modelo_1*,..., *modelo_n* )|`( a, b )`|
 |Modelo de registro|{ *identificador1* = *modelo_1*;...; *identificador_n* = *modelo_n* }|`{ Name = name; }`|
@@ -103,7 +103,7 @@ match shape with
 
 Modelos activos permiten definir coincidencias de modelos personalizadas más complejas. Para obtener más información acerca de los patrones activos, vea [modelos activos](active-patterns.md).
 
-El caso en que el identificador es una excepción se usa en la coincidencia de patrones en el contexto de los controladores de excepciones. Para obtener información acerca de la coincidencia de patrones en el control de excepciones, vea [excepciones: la `try...with` expresión](exception-handling/the-try-with-expression.md).
+El caso en que el identificador es una excepción se usa en la coincidencia de patrones en el contexto de los controladores de excepciones. Para obtener información acerca de la coincidencia de patrones en el control de excepciones, vea [excepciones: El `try...with` expresión](exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Modelos de variable
 
