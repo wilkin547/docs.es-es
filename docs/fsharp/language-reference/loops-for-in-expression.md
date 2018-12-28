@@ -1,13 +1,13 @@
 ---
-title: 'Bucles: expresión for...in (F#)'
-description: Vea cómo la estructura de F# for.. en expresión de construcción de bucle se utiliza para recorrer en iteración las coincidencias de un patrón en una colección enumerable.
+title: 'Bucles: expresión for...in'
+description: Vea cómo el F# for.. en expresión de construcción de bucle se utiliza para recorrer en iteración las coincidencias de un patrón en una colección enumerable.
 ms.date: 05/16/2016
-ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48027239"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614416"
 ---
 # <a name="loops-forin-expression"></a>Bucles: expresión for...in
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>Vea también
 
 - [Referencia del lenguaje F#](index.md)
-- [Bucles: expresión `for...to`](loops-for-to-expression.md)
-- [Bucles: expresión `while...do`](loops-while-do-expression.md)
+- [Bucles: `for...to` Expresión](loops-for-to-expression.md)
+- [Bucles: `while...do` Expresión](loops-while-do-expression.md)

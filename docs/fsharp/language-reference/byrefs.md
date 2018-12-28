@@ -1,17 +1,17 @@
 ---
-title: Tipos de referencia (F#)
-description: Obtenga información sobre byref y similar a byref tipos en F#, que se usan para la programación de bajo nivel.
+title: Tipos de referencia
+description: Obtenga información sobre byref y tipos byref en F#, que se usan para la programación de bajo nivel.
 ms.date: 09/02/2018
-ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48836886"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611586"
 ---
 # <a name="byrefs"></a>Tipos de referencia
 
-F# tiene dos áreas de características principales que se tratan en el espacio de la programación de bajo nivel:
+F#tiene dos áreas de características principales que se tratan en el espacio de la programación de bajo nivel:
 
 * El `byref` / `inref` / `outref` tipos, que son los punteros administrados. Tienen restricciones de uso para que no se puede compilar un programa que no es válido en tiempo de ejecución.
 * Un `byref`-como estructura, que es un [estructura](structures.md) que tiene una semántica similar y las mismas restricciones de tiempo de compilación que `byref<'T>`. Un ejemplo es <xref:System.Span%601>.
@@ -97,7 +97,7 @@ El siguiente también es cierto:
 * No hay ninguna implicación que otros subprocesos o alias no tienen acceso de escritura a `x`.
 * No hay ninguna implicación que `SomeStruct` es inmutable en virtud de `x` que se va a un `inref`.
 
-Sin embargo, F# para tipos de valor que **son** inmutable, la `this` puntero se infiere para ser un `inref`.
+Sin embargo, para F# tipos de valores que **son** inmutable, la `this` puntero se infiere para ser un `inref`.
 
 Todas estas reglas juntas significan que el titular de un `inref` puntero no puede modificar el contenido de la memoria que se apunta inmediato.
 
@@ -107,18 +107,18 @@ El propósito de `outref<'T>` consiste en indicar que el puntero solo se debe le
 
 ### <a name="interop-with-c"></a>Interoperabilidad con C# #
 
-C# admite la `in ref` y `out ref` palabras clave, además de `ref` devuelve. En la tabla siguiente se muestra cómo F# interpreta qué C# emite:
+C# admite la `in ref` y `out ref` palabras clave, además de `ref` devuelve. La tabla siguiente muestra cómo F# lo interpreta C# emite:
 
-|Construcción de C#|F# infiere|
+|Construcción de C#|F#deduce|
 |------------|---------|
 |`ref` Valor devuelto|`outref<'T>`|
 |`ref readonly` Valor devuelto|`inref<'T>`|
 |`in ref` Parámetro|`inref<'T>`|
 |`out ref` Parámetro|`outref<'T>`|
 
-En la tabla siguiente se muestra lo que F# emite:
+La siguiente tabla muestra qué F# emite:
 
-|Construcción de F#|Construcción emitido|
+|F#construcción|Construcción emitido|
 |------------|-----------------|
 |`inref<'T>` argumento|`[In]` atributo de argumento|
 |`inref<'T>` devolver|`modreq` atributo de valor|
@@ -127,7 +127,7 @@ En la tabla siguiente se muestra lo que F# emite:
 
 ### <a name="type-inference-and-overloading-rules"></a>Inferencia de tipos y las reglas de sobrecarga
 
-Un `inref<'T>` tipo se deduce el compilador de F# en los casos siguientes:
+Un `inref<'T>` infiere el tipo del F# compilador en los casos siguientes:
 
 1. Un tipo de parámetro o valor devuelto de .NET que tiene un `IsReadOnly` atributo.
 2. El `this` puntero en un tipo de estructura que no tiene ningún campo mutable.
@@ -178,7 +178,7 @@ Aunque estas reglas encarecidamente restringen el uso, lo hacen para cumplir la 
 
 ## <a name="byref-returns"></a>Devuelve ByRef
 
-ByRef devuelve de las funciones de F# o los miembros pueden produce y consume. Al consumir un `byref`-método de devolución, el valor se ha desreferenciado implícitamente. Por ejemplo:
+Devuelve ByRef de F# funciones o miembros de pueden ser producidos y utilizados. Al consumir un `byref`-método de devolución, el valor se ha desreferenciado implícitamente. Por ejemplo:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

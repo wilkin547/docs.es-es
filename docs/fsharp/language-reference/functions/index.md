@@ -1,13 +1,13 @@
 ---
-title: Funciones (F#)
+title: Funciones
 description: Obtenga información acerca de las funciones en F# y cómo F# admite construcciones de programación funcionales comunes.
 ms.date: 05/16/2016
-ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839583"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610923"
 ---
 # <a name="functions"></a>Funciones
 
@@ -142,7 +142,7 @@ Una *expresión lambda* es una función sin nombre. En los ejemplos anteriores, 
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Las expresiones lambda se definen mediante la palabra clave `fun`. Una expresión lambda es similar a una definición de función, salvo que en lugar del token `=` se usa el token `->` para separar la lista de argumentos del cuerpo de la función. Al igual que en una definición de función normal, se pueden deducir o especificar explícitamente los tipos de argumento, y el tipo de valor devuelto de la expresión lambda se deduce del tipo de la última expresión en el cuerpo. Para más información, vea [Lambda Expressions: The `fun` Keyword](../functions/lambda-expressions-the-fun-keyword.md) (Expresiones lambda: la palabra clave `fun`).
+Las expresiones lambda se definen mediante la palabra clave `fun`. Una expresión lambda es similar a una definición de función, salvo que en lugar del token `=` se usa el token `->` para separar la lista de argumentos del cuerpo de la función. Al igual que en una definición de función normal, se pueden deducir o especificar explícitamente los tipos de argumento, y el tipo de valor devuelto de la expresión lambda se deduce del tipo de la última expresión en el cuerpo. Para obtener más información, consulte [expresiones Lambda: El `fun` palabra clave](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Composición de funciones y canalización
 

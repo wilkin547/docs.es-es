@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a11b9a008878e716e9b3d8cd54abe5eb4169672a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 23a38297526090f1df35f8541026accd5a5cb9bc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745492"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613796"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; elemento
-Usan las solicitudes que common language runtime (CLR) reduce la memoria mediante la especificación de tamaños de pila explícitos cuando crea ciertos subprocesos que utiliza internamente, en lugar de usar el tamaño de pila predeterminado para esos subprocesos.  
+Usan las solicitudes que common language runtime (CLR) Reduzca la memoria mediante la especificación de tamaños de pila explícitos al crear determinados subprocesos que utiliza internamente, en lugar de usar el tamaño de pila predeterminado para esos subprocesos.  
   
  \<Configuración > elemento  
 \<en tiempo de ejecución > elemento  
@@ -34,14 +34,14 @@ Usan las solicitudes que common language runtime (CLR) reduce la memoria mediant
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|enabled|Atributo necesario.<br /><br /> Especifica si se solicita que los tamaños de pila explícito de uso CLR en lugar del tamaño de pila predeterminado cuando crea ciertos subprocesos que utiliza internamente. Los tamaños de pila explícitos son menores que el tamaño de pila predeterminado de 1 MB.|  
+|enabled|Atributo necesario.<br /><br /> Especifica si se solicita que los tamaños de pila explícitos de uso CLR en lugar del tamaño de pila predeterminado al crear determinados subprocesos que utiliza internamente. Los tamaños de pila explícitos son menores que el tamaño de pila predeterminado de 1 MB.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|true|Tamaños de pila explícito de la solicitud.|  
-|False|Usar el tamaño de pila predeterminado. Este es el valor predeterminado para el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|true|Solicitar los tamaños de pila explícito.|  
+|False|Use el tamaño de pila predeterminado. Este es el valor predeterminado para el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -54,15 +54,15 @@ Usan las solicitudes que common language runtime (CLR) reduce la memoria mediant
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento de configuración se usa para solicitar el uso de memoria virtual reducida en un proceso, porque los tamaños de subproceso explícitos que usa CLR para sus subprocesos internos, si se respeta la solicitud, son menores que el tamaño predeterminado.  
+ Este elemento de configuración se utiliza para solicitar el uso de memoria virtual reducido en un proceso, ya que los tamaños de subproceso explícitos que usa CLR para sus subprocesos internos, si se respeta la solicitud, son menores que el tamaño predeterminado.  
   
 > [!IMPORTANT]
->  Este elemento de configuración es una solicitud a CLR en lugar de un requisito imprescindible. En el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], la solicitud solo se admite para la x86 arquitectura. Este elemento podría omite por completo en versiones futuras de CLR, o se reemplaza por tamaños de pila explícitos que se usan siempre para los subprocesos internos seleccionados.  
+>  Este elemento de configuración es una solicitud a CLR en lugar de un requisito imprescindible. En el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], la solicitud solo se admite para la x86 arquitectura. Este elemento podría omite completamente en futuras versiones de CLR, o reemplazado por los tamaños de pila explícitos que se utilizan siempre para los subprocesos internos seleccionados.  
   
- Especificar que este elemento de configuración reduce la confiabilidad pero menor uso de memoria virtual si el CLR admite la solicitud, porque el tamaño de pila menor podría provocar pila desborda más frecuente.  
+ Especificando que este elemento de configuración transacciones de confiabilidad para su uso de memoria virtual más pequeño si CLR respeta la solicitud, porque los tamaños de pila más pequeños podrían hacer que stack desborda es más probable.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo solicitar que el CLR use tamaños de pila explícitos para ciertos subprocesos que utiliza internamente.  
+ El ejemplo siguiente muestra cómo solicitar que el CLR use tamaños de pila explícitos para determinados subprocesos que utiliza internamente.  
   
 ```xml  
 <configuration>  
@@ -73,5 +73,5 @@ Usan las solicitudes que common language runtime (CLR) reduce la memoria mediant
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,13 +1,13 @@
 ---
-title: Enlaces let (F#)
-description: Obtenga información sobre cómo usar un 'let' enlace, que asocia un identificador a un valor o una función de F#.
+title: Enlaces let
+description: Aprenda a usar un F# 'let' enlace, que asocia un identificador a un valor o una función.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43777475"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612678"
 ---
 # <a name="let-bindings"></a>Enlaces let
 
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-Algunos módulos tienen el atributo [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), lo que significa que las funciones que exponen se deben calificar con el nombre del módulo. Por ejemplo, el módulo de F# lista tiene este atributo.
+Algunos módulos tienen el atributo [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), lo que significa que las funciones que exponen se deben calificar con el nombre del módulo. Por ejemplo, el F# List (módulo) tiene este atributo.
 
 Para obtener más información sobre los módulos y control de acceso, consulte [módulos](../modules.md) y [Control de acceso](../access-control.md).
 

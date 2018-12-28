@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 422888a595e8fdea01f9cb9d256830467d6822ac
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78ca269dacc33fb441310ad00ba2548826f5403e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745684"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610520"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt; elemento
-Especifica si se deshabilita el almacenamiento en caché de errores que se producen porque el ensamblado no se encontró mediante sondeo de enlace.  
+Especifica si se deshabilita el almacenamiento en caché de errores que se producen porque no se encontró el ensamblado mediante sondeo de enlace.  
   
  \<Configuración > elemento  
 \<en tiempo de ejecución > elemento  
@@ -39,14 +39,14 @@ Especifica si se deshabilita el almacenamiento en caché de errores que se produ
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|enabled|Atributo necesario.<br /><br /> Especifica si se deshabilita el almacenamiento en caché de errores que se producen porque el ensamblado no se encontró mediante sondeo de enlace.|  
+|enabled|Atributo necesario.<br /><br /> Especifica si se deshabilita el almacenamiento en caché de errores que se producen porque no se encontró el ensamblado mediante sondeo de enlace.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0|Deshabilitar el almacenamiento en caché de errores que se producen porque el ensamblado no se encontró mediante sondeo de enlace. Éste es el comportamiento de enlace de forma predeterminada a partir de la versión 2.0 de .NET Framework.|  
-|1|Deshabilitar el almacenamiento en caché de errores que se producen porque el ensamblado no se encontró mediante sondeo de enlace. Esta configuración revierte el comportamiento de enlace de la versión 1.1 de .NET Framework.|  
+|0|No deshabilite el almacenamiento en caché de errores que se producen porque no se encontró el ensamblado mediante sondeo de enlace. Este es el comportamiento de enlace predeterminada a partir de la versión 2.0 de .NET Framework.|  
+|1|Deshabilitar el almacenamiento en caché de errores que se producen porque no se encontró el ensamblado mediante sondeo de enlace. Esta opción revierte el comportamiento de enlace de la versión 1.1 de .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -59,18 +59,18 @@ Especifica si se deshabilita el almacenamiento en caché de errores que se produ
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- A partir de la versión 2.0 de .NET Framework, el comportamiento predeterminado para cargar ensamblados es almacenar en caché todos los enlaces y los errores de carga. Es decir, si falla un intento para cargar un ensamblado, las posteriores solicitudes para cargar el mismo ensamblado producirá un error inmediatamente, sin ningún intento de localizar el ensamblado. Este elemento deshabilita ese comportamiento predeterminado para los errores que se producen porque no se encontró el ensamblado en la ruta de acceso de búsqueda de enlace. Estos errores se producen <xref:System.IO.FileNotFoundException>.  
+ A partir de la versión 2.0 de .NET Framework, el comportamiento predeterminado para la carga de ensamblados es almacenar en caché todos los enlaces y errores de carga. Es decir, si se produce un error en un intento de cargar un ensamblado, las solicitudes posteriores para cargar el mismo ensamblado producirá un error inmediatamente, sin intentar localizar el ensamblado. Este elemento deshabilita ese comportamiento predeterminado para los errores que se producen porque no se encontró el ensamblado en la ruta de acceso de sondeo de enlace. Producen estos errores <xref:System.IO.FileNotFoundException>.  
   
- Algunos de los enlaces y los errores de carga, no se ven afectados por este elemento y siempre se almacenan en caché. Estos errores se producen porque se encontró el ensamblado, pero no se puede cargar. Producen <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>. En la lista siguiente incluye algunos ejemplos de tales errores.  
+ Algunos enlaces de errores de carga no se ven afectados por este elemento y siempre se almacenan en caché. Estos errores se producen porque se encontró el ensamblado, pero no se pudo cargar. Producen <xref:System.BadImageFormatException> o <xref:System.IO.FileLoadException>. En la lista siguiente incluye algunos ejemplos de tales errores.  
   
--   Si intenta cargar un archivo no es un ensamblado válido, se producirá un error en los intentos subsiguientes para cargar el ensamblado incluso si se reemplaza el archivo incorrecto con el ensamblado correcto.  
+-   Si intenta cargar un archivo no es un ensamblado válido, se producirá un error en los intentos posteriores para cargar el ensamblado incluso si se reemplaza el archivo incorrecto con el ensamblado correcto.  
   
--   Si intenta cargar un ensamblado que está bloqueado por el sistema de archivos, se producirá un error en los intentos subsiguientes para cargar el ensamblado incluso después de que el ensamblado se libera por el sistema de archivos.  
+-   Si intenta cargar un ensamblado que está bloqueado por el sistema de archivos, se producirá un error en los intentos posteriores para cargar el ensamblado incluso después de que el ensamblado se libera por el sistema de archivos.  
   
--   Si una o varias versiones del ensamblado que está intentando cargar está en la ruta de acceso de búsqueda, pero la versión específica que solicita no está entre ellos, se producirá un error en los intentos subsiguientes para cargar esa versión incluso si se mueve la versión correcta en la ruta de acceso de búsqueda.  
+-   Si una o varias versiones del ensamblado que está intentando cargar es en la ruta de acceso de sondeo, pero la versión específica que solicita no está entre ellos, se producirá un error en los intentos posteriores para cargar esa versión incluso si se mueve la versión correcta en la ruta de acceso de sondeo.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo deshabilitar el almacenamiento en caché de errores de enlace de ensamblado que se producen porque el ensamblado no se encontró mediante sondeo.  
+ El ejemplo siguiente muestra cómo deshabilitar el almacenamiento en caché de errores de enlace de ensamblado que se producen porque no se encontró el ensamblado mediante sondeo.  
   
 ```xml  
 <configuration>  
@@ -81,6 +81,6 @@ Especifica si se deshabilita el almacenamiento en caché de errores que se produ
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

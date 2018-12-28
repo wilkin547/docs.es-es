@@ -1,13 +1,13 @@
 ---
-title: Enlaces do (F#)
-description: Obtenga información sobre cómo un 'do', enlace de F# se usa para ejecutar código sin definir una función o un valor.
+title: do (Enlaces)
+description: Obtenga información sobre cómo un F# 'do' enlace se usa para ejecutar código sin definir una función o un valor.
 ms.date: 05/16/2016
-ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d29f8557fda06097d2e85748ab6286f0415730b3
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973149"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614524"
 ---
 # <a name="do-bindings"></a>do (Enlaces)
 

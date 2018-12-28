@@ -1,17 +1,17 @@
 ---
-title: 'Excepciones: función failwith (F#)'
-description: Obtenga información sobre cómo la función 'failwith' genera una excepción de F#.
+title: 'Excepciones: Función failwith'
+description: Obtenga información sobre cómo la función 'failwith' genera un F# excepción.
 ms.date: 05/16/2016
-ms.openlocfilehash: 69a2eb69e0157d3bde8cb8884cb0ae960634dddc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43863434"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610117"
 ---
-# <a name="exceptions-the-failwith-function"></a>Excepciones: función failwith
+# <a name="exceptions-the-failwith-function"></a>Excepciones: Función failwith
 
-El `failwith` función genera una excepción de F#.
+El `failwith` función genera una F# excepción.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,7 +23,7 @@ failwith error-message-string
 
 El *cadena de mensaje de error* en la sintaxis anterior es una cadena literal o un valor de tipo `string`. Se convierte en el `Message` propiedad de la excepción.
 
-La excepción generada por `failwith` es un `System.Exception` excepción, que es una referencia que tiene el nombre `Failure` en código de F#. El código siguiente muestra el uso de `failwith` para producir una excepción.
+La excepción generada por `failwith` es un `System.Exception` excepción, que es una referencia que tiene el nombre `Failure` en F# código. El código siguiente muestra el uso de `failwith` para producir una excepción.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
 
@@ -31,6 +31,6 @@ La excepción generada por `failwith` es un `System.Exception` excepción, que e
 
 - [Control de excepciones](index.md)
 - [Tipos de excepción](exception-types.md)
-- [Exceptions: The `try...with` Expression](the-try-with-expression.md) (Excepciones: la expresión `try...with`)
-- [Exceptions: The `try...finally` Expression](the-try-finally-expression.md) (Excepciones: la expresión `try...finally`)
+- [Excepciones: El `try...with` expresión](the-try-with-expression.md)
+- [Excepciones: El `try...finally` expresión](the-try-finally-expression.md)
 - [Exceptions: the `raise` Function](the-raise-function.md) (Excepciones: la función `raise`)

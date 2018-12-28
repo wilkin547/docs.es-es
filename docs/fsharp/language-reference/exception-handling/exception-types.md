@@ -1,17 +1,17 @@
 ---
-title: Tipos de excepción (F#)
-description: Obtenga información sobre cómo definir y usar los tipos de excepción de F#.
+title: Tipos de excepción
+description: Obtenga información sobre cómo definir y usar F# tipos de excepción.
 ms.date: 05/16/2016
-ms.openlocfilehash: b8d648a3649153a3604856deb61ce41db8c40bf2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ed721dd0dc46a486fafeac2fa4c096800995ccb7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43858826"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612834"
 ---
 # <a name="exception-types"></a>Tipos de excepción
 
-Existen dos categorías de excepciones en F#: tipos de excepción de .NET y los tipos de excepción de F#. Este tema describe cómo definir y usar los tipos de excepción de F#.
+Existen dos categorías de excepciones en F#: tipos de excepción de .NET y F# tipos de excepción. Este tema describe cómo definir y usar F# tipos de excepción.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,9 +21,9 @@ exception exception-type of argument-type
 
 ## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, *tipo de excepción* es el nombre de un nuevo tipo F# excepción, y *tipos de argumento* representa el tipo de argumento que se puede proporcionar al generar una excepción de este tipo. Puede especificar varios argumentos utilizando un tipo de tupla para *tipos de argumento*.
+En la sintaxis anterior, *tipo de excepción* es el nombre de un nuevo F# tipo de excepción, y *tipos de argumento* representa el tipo de argumento que se puede proporcionar al generar una excepción de este tipo. Puede especificar varios argumentos utilizando un tipo de tupla para *tipos de argumento*.
 
-Una definición típica para una excepción de F# es similar al siguiente.
+Una definición típica para un F# excepción es similar al siguiente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5501.fs)]
 
@@ -31,7 +31,7 @@ Puede generar una excepción de este tipo mediante el `raise` funcione, como se 
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5502.fs)]
 
-Puede usar un tipo de excepción de F# directamente en los filtros de un `try...with` expresión, tal como se muestra en el ejemplo siguiente.
+Puede usar un F# tipo de excepción directamente en los filtros en un `try...with` expresión, tal como se muestra en el ejemplo siguiente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5503.fs)]
 

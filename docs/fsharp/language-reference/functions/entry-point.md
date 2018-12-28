@@ -1,17 +1,17 @@
 ---
-title: Punto de entrada (F#)
-description: Obtenga información sobre cómo establecer el punto de entrada a un programa de F# que se compila como un archivo ejecutable, dónde formalmente comienza la ejecución.
+title: Punto de entrada
+description: Aprenda a configurar el punto de entrada un F# programa que se compila como un archivo ejecutable, dónde formalmente comienza la ejecución.
 ms.date: 05/16/2016
-ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45698398"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614375"
 ---
 # <a name="entry-point"></a>Punto de entrada
 
-Este tema describe el método que se utiliza para establecer el punto de entrada a un programa de F#.
+En este tema se describe el método que use para establecer el punto de entrada en un F# programa.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,7 +24,7 @@ let-function-binding
 
 En la sintaxis anterior, *enlace de función permiten* es la definición de una función en un `let` enlace.
 
-El punto de entrada a un programa que se compila como un archivo ejecutable es dónde formalmente comienza la ejecución. Especificar el punto de entrada a una aplicación de F# aplicando el `EntryPoint` atributo para el programa `main` función. Esta función (creada mediante un `let` enlace) debe ser la última función en el último archivo compilado. El último archivo compilado es el último archivo del proyecto o el último archivo que se pasa a la línea de comandos.
+El punto de entrada a un programa que se compila como un archivo ejecutable es dónde formalmente comienza la ejecución. Especifique el punto de entrada a un F# aplicación aplicando la `EntryPoint` atributo para el programa `main` función. Esta función (creada mediante un `let` enlace) debe ser la última función en el último archivo compilado. El último archivo compilado es el último archivo del proyecto o el último archivo que se pasa a la línea de comandos.
 
 La función de punto de entrada tiene el tipo `string array -> int`. Los argumentos proporcionados en la línea de comandos se pasan a la `main` función en la matriz de cadenas. El primer elemento de la matriz es el primer argumento; el nombre del archivo ejecutable no se incluye en la matriz, como en otros lenguajes. El valor devuelto se utiliza como el código de salida para el proceso. Cero indica normalmente correctamente; valores distintos de cero indican un error. No hay ninguna convención para el significado específico de los códigos de retorno distinto de cero; los significados de los códigos de retorno son específicos de la aplicación.
 

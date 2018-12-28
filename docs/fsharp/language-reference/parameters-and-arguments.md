@@ -1,13 +1,13 @@
 ---
-title: Parámetros y argumentos (F#)
-description: Obtenga información sobre la compatibilidad del lenguaje F# para definir parámetros y pasar argumentos a funciones, métodos y propiedades.
+title: Parámetros y argumentos
+description: Obtenga información sobre F# compatibilidad con lenguajes para definir parámetros y pasar argumentos a funciones, métodos y propiedades.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744462"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612483"
 ---
 # <a name="parameters-and-arguments"></a>Parámetros y argumentos
 
@@ -109,7 +109,7 @@ Para obtener más información, consulte [constructores (F#)](https://msdn.micro
 
 ## <a name="optional-parameters"></a>Parámetros opcionales
 
-Puede especificar un parámetro opcional para un método mediante un signo de interrogación junto al nombre del parámetro. Los parámetros opcionales se interpretan como el tipo de opción de F#, por lo que puede consultar en la que se consultan los tipos de opciones mediante el uso de manera regular un `match` expresión con `Some` y `None`. Los parámetros opcionales solo se permiten en los miembros, no en las funciones creadas mediante `let` enlaces.
+Puede especificar un parámetro opcional para un método mediante un signo de interrogación junto al nombre del parámetro. Los parámetros opcionales se interpretan como el F# opción tipo, por lo que puede consultar en la que se consultan los tipos de opciones mediante el uso de manera regular un `match` expresión con `Some` y `None`. Los parámetros opcionales solo se permiten en los miembros, no en las funciones creadas mediante `let` enlaces.
 
 Puede pasar valores opcionales existentes al método por nombre de parámetro, como `?arg=None` o `?arg=Some(3)` o `?arg=arg`. Esto puede ser útil al crear un método que pasa argumentos opcionales a otro método.
 
@@ -151,7 +151,7 @@ En este caso, el compilador genera una advertencia y pasará por alto los dos at
 
 ## <a name="passing-by-reference"></a>Pasar por referencia
 
-Pasar un valor de F# por referencia implica [zkratka](byrefs.md), que son tipos de puntero administrado. Guía para que el tipo debe usar es el siguiente:
+Pasar un F# valor por referencia implica [zkratka](byrefs.md), que son tipos de puntero administrado. Guía para que el tipo debe usar es el siguiente:
 
 * Use `inref<'T>` si solo necesita leer el puntero.
 * Use `outref<'T>` si solo tiene que escribir en el puntero.
@@ -186,7 +186,7 @@ Puede utilizar una tupla como valor devuelto para almacenarlas `out` parámetros
 
 En ocasiones, es necesario definir una función que toma un número arbitrario de parámetros de tipo heterogéneo. No sería práctico volver a crear todos los métodos sobrecargados posible para tener en cuenta para todos los tipos que se pueda usar. Las implementaciones de .NET proporcionan compatibilidad para dichos métodos a través de la característica de la matriz de parámetros. Con un número arbitrario de parámetros se puede proporcionar un método que toma una matriz de parámetros en la firma. Los parámetros se colocan en una matriz. El tipo de elementos de la matriz determina los tipos de parámetro que se pueden pasar a la función. Si define la matriz de parámetros con `System.Object` como el tipo de elemento, a continuación, el código de cliente puede pasar valores de cualquier tipo.
 
-En F#, las matrices de parámetros solo se pueden definir en métodos. No se usaron en las funciones que se definen en módulos o funciones independientes.
+En F#, solo se pueden definir matrices de parámetros en métodos. No se usaron en las funciones que se definen en módulos o funciones independientes.
 
 Definir una matriz de parámetros mediante el `ParamArray` atributo. El `ParamArray` atributo solo se puede aplicar al último parámetro.
 

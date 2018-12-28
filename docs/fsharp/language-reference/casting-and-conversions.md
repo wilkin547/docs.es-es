@@ -1,21 +1,21 @@
 ---
-title: Conversiones (F#)
-description: Obtenga información sobre cómo el lenguaje de programación F# proporciona operadores de conversión para las conversiones aritméticas entre los distintos tipos primitivos.
+title: Conversiones
+description: Obtenga información sobre cómo el F# lenguaje de programación proporciona operadores de conversión para las conversiones aritméticas entre los distintos tipos primitivos.
 ms.date: 05/16/2016
-ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2a12d48106a267edfc67c9e7b3d3a7bd41d8261c
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45677936"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655990"
 ---
 # <a name="casting-and-conversions-f"></a>Conversiones (F#)
 
-Este tema describe la compatibilidad con las conversiones de tipos en F#.
+En este tema se describe la compatibilidad con las conversiones de tipos en F#.
 
 ## <a name="arithmetic-types"></a>Tipos aritméticos
 
-F# proporciona operadores de conversión para las conversiones aritméticas entre los distintos tipos primitivos, como entre valores enteros y tipos de punto flotante. Han comprobado los operadores de conversión de enteros y char y formularios desactivadas; los operadores de tipo flotante y el `enum` no lo hace el operador de conversión. Los formularios unchecked se definen en `Microsoft.FSharp.Core.Operators` y se definen las formas comprobadas en `Microsoft.FSharp.Core.Operators.Checked`. Los formularios activados comprobación el desbordamiento y generan una excepción en tiempo de ejecución si el valor resultante supera los límites del tipo de destino.
+F#proporciona operadores de conversión para las conversiones aritméticas entre los distintos tipos primitivos, como entre valores enteros y tipos de punto flotante. Han comprobado los operadores de conversión de enteros y char y formularios desactivadas; los operadores de tipo flotante y el `enum` no lo hace el operador de conversión. Los formularios unchecked se definen en `Microsoft.FSharp.Core.Operators` y se definen las formas comprobadas en `Microsoft.FSharp.Core.Operators.Checked`. Los formularios activados comprobación el desbordamiento y generan una excepción en tiempo de ejecución si el valor resultante supera los límites del tipo de destino.
 
 Cada uno de estos operadores tiene el mismo nombre que el nombre del tipo de destino. Por ejemplo, en el código siguiente, en el que los tipos se anotan explícitamente, `byte` aparece con dos significados diferentes. La primera aparición es el tipo y el segundo es el operador de conversión.
 
@@ -40,6 +40,7 @@ La siguiente tabla muestra los operadores de conversión definidos en F#.
 |`decimal`|Convertir en `System.Decimal`.|
 |`char`|Convertir en `System.Char`, un carácter Unicode.|
 |`enum`|Convertir en un tipo enumerado.|
+
 Además de los tipos primitivos integrados, puede usar estos operadores con tipos que implementan `op_Explicit` o `op_Implicit` métodos con firmas adecuadas. Por ejemplo, el `int` operador de conversión funciona con cualquier tipo que proporciona un método estático `op_Explicit` que toma el tipo como parámetro y devuelve `int`. Como excepción especial a la regla general que no se puede sobrecargar métodos de tipo de valor devuelto, puede hacerlo para `op_Explicit` y `op_Implicit`.
 
 ## <a name="enumerated-types"></a>Tipos enumerados
@@ -67,7 +68,7 @@ Para obtener más información, consulte [enumeraciones](enumerations.md).
 
 Conversión entre tipos en una jerarquía de objetos es fundamental para la programación orientada a objetos. Hay dos tipos básicos de conversiones: conversión de (conversión hacia arriba) y de conversión hacia abajo (conversión). Conversión de una jerarquía significa que la conversión de una referencia de objeto derivado a una referencia de objeto base. Dicha conversión garantiza que funcionar, siempre que la clase base se encuentra en la jerarquía de herencia de la clase derivada. Conversión de una jerarquía, desde una referencia de objeto base para una referencia de objeto derivado, se realiza correctamente sólo si el objeto es realmente una instancia del tipo correcto de destino (derivado) o un tipo derivado del tipo de destino.
 
-F# proporciona operadores para estos tipos de conversiones. El `:>` operador convierte la jerarquía y el `:?>` operador convierte hacia abajo en la jerarquía.
+F#proporciona operadores para estos tipos de conversiones. El `:>` operador convierte la jerarquía y el `:?>` operador convierte hacia abajo en la jerarquía.
 
 ### <a name="upcasting"></a>Conversión hacia arriba
 

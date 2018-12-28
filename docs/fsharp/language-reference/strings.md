@@ -1,13 +1,13 @@
 ---
-title: Cadenas (F#)
+title: Cadenas
 description: Obtenga información sobre cómo el F# tipo 'string' representa texto inmutable como una secuencia de caracteres Unicode.
 ms.date: 05/16/2016
-ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5b55b0c87b6636346677b973e093e7bcba324e98
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127685"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610663"
 ---
 # <a name="strings"></a>Cadenas
 

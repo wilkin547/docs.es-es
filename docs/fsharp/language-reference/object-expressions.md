@@ -1,13 +1,13 @@
 ---
-title: Expresiones de objeto (F#)
-description: Obtenga información sobre cómo usar expresiones de objeto de F# cuando desea evitar el código adicional y la sobrecarga necesaria para crear un nuevo tipo con nombre.
+title: Expresiones de objeto
+description: Aprenda a usar F# expresiones de objeto cuando desea evitar el código adicional y la sobrecarga necesaria para crear un nuevo tipo con nombre.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cb15983543fde2459c589b3de2554575d73db686
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865467"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613926"
 ---
 # <a name="object-expressions"></a>Expresiones de objeto
 

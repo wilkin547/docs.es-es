@@ -1,13 +1,13 @@
 ---
-title: Estructuras (F#)
-description: Obtenga información sobre la estructura de F#, un tipo de objeto compacto a menudo más eficaz que una clase para los tipos con una pequeña cantidad de datos y un comportamiento simple.
+title: Estructuras
+description: Obtenga información sobre la F# estructura, un tipo de objeto compacto a menudo más eficaz que una clase para los tipos con una pequeña cantidad de datos y un comportamiento simple.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845308"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612158"
 ---
 # <a name="structures"></a>Estructuras
 
@@ -40,7 +40,7 @@ Las estructuras no pueden participar en la herencia, no pueden contener enlaces 
 
 Dado que las estructuras no permiten enlaces `let`, debe declarar campos en estructuras mediante el uso de la palabra clave `val`. La palabra clave `val` define un campo y su tipo, pero no permite la inicialización. En su lugar, las declaraciones `val` se inicializan en cero o null. Por este motivo, las estructuras que tienen un constructor implícito (es decir, los parámetros que se proporcionan inmediatamente después del nombre de la estructura en la declaración) requieren que las declaraciones `val` se anoten con el atributo `DefaultValue`. Las estructuras que tienen un constructor definido todavía admiten la inicialización en cero. Por lo tanto, el atributo `DefaultValue` es una declaración de que ese valor cero es válido para el campo. Los constructores implícitos de las estructuras no realizan ninguna acción porque los enlaces `let` y `do` no están permitidos en el tipo, pero los valores de parámetro de constructor implícito pasados están disponibles como campos privados.
 
-Los constructores explícitos podrían implicar la inicialización de los valores de campo. Cuando se tiene una estructura con un constructor explícito, se admite la inicialización en cero; sin embargo, no se utiliza el atributo `DefaultValue` en las declaraciones `val` porque entra en conflicto con el constructor explícito. Para obtener más información acerca de `val` declaraciones, vea [campos explícitos: el `val` palabra clave](members/explicit-fields-the-val-keyword.md).
+Los constructores explícitos podrían implicar la inicialización de los valores de campo. Cuando se tiene una estructura con un constructor explícito, se admite la inicialización en cero; sin embargo, no se utiliza el atributo `DefaultValue` en las declaraciones `val` porque entra en conflicto con el constructor explícito. Para obtener más información acerca de `val` declaraciones, vea [campos explícitos: El `val` palabra clave](members/explicit-fields-the-val-keyword.md).
 
 Los atributos y modificadores de accesibilidad están permitidos en las estructuras y siguen las mismas reglas que las de otros tipos. Para obtener más información, consulte [atributos](attributes.md) y [Control de acceso](access-control.md).
 
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` no implica `Struct`. Debe agregar ambos para tener un `IsReadOnly` struct.
 
-Uso de este atributo emite metadatos, lo que permite F# y C# saber para tratarlo como `inref<'T>` y `in ref`, respectivamente.
+Uso de este atributo emite metadatos que le permite F# y C# saber para tratarlo como `inref<'T>` y `in ref`, respectivamente.
 
 Definir un valor mutable dentro de un struct de solo lectura, produce un error.
 

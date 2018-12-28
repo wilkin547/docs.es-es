@@ -1,13 +1,13 @@
 ---
-title: Expresiones de coincidencia (F#)
-description: Obtenga información sobre cómo la expresión de coincidencia en F# proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.
+title: Expresiones de coincidencia.
+description: Obtenga información sobre cómo el F# expresión de coincidencia proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221849"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611573"
 ---
 # <a name="match-expressions"></a>Expresiones de coincidencia.
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-Para obtener más información sobre las expresiones lambda, vea [expresiones Lambda: la `fun` palabra clave](functions/lambda-expressions-the-fun-keyword.md).
+Para obtener más información sobre las expresiones lambda, vea [expresiones Lambda: El `fun` palabra clave](functions/lambda-expressions-the-fun-keyword.md).
 
 El conjunto completo de patrones debe cubrir a todas las coincidencias de la variable de entrada. Con frecuencia, puede usar el patrón de carácter comodín (`_`) como el último patrón para que coincida con los valores de entrada anteriormente no coincidentes.
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia del lenguaje F#](index.md)  
-- [Patrones activos](active-patterns.md)  
-- [Coincidencia de patrones](pattern-matching.md)  
+- [Referencia del lenguaje F#](index.md)
+- [Patrones activos](active-patterns.md)
+- [Coincidencia de patrones](pattern-matching.md)

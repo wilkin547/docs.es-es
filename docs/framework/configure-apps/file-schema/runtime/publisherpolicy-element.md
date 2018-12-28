@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cc3b7220fe34f5dc049a3da71b160a88f82fdb1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4c81b403fa4d633428946d36960d5df32df76d21
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746103"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613783"
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt; elemento
 Especifica si el tiempo de ejecución aplica la directiva de editor.  
@@ -43,7 +43,7 @@ Especifica si el tiempo de ejecución aplica la directiva de editor.
 |---------------|-----------------|  
 |`apply`|Especifica si se debe aplicar la directiva de edición.|  
   
-## <a name="apply-attribute"></a>aplicar atributos  
+## <a name="apply-attribute"></a>aplicar el atributo  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -61,14 +61,14 @@ Especifica si el tiempo de ejecución aplica la directiva de editor.
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando un proveedor lanza una nueva versión de un ensamblado, el proveedor puede incluir una directiva de publicador para que las aplicaciones que utilizan la versión anterior ahora usen la nueva versión. Para especificar si se debe aplicar la directiva de publicador para un ensamblado determinado, coloque el  **\<publisherPolicy >** elemento en el  **\<dependentAssembly >** elemento.  
+ Cuando un proveedor lanza una nueva versión de un ensamblado, el proveedor puede incluir una directiva de publicador para que las aplicaciones que usan la versión anterior ahora usar la nueva versión. Para especificar si se debe aplicar la directiva de edición para un ensamblado determinado, coloque el  **\<publisherPolicy >** elemento en el  **\<dependentAssembly >** elemento.  
   
- El valor predeterminado para la **aplicar** atributo es **Sí**. Establecer el **aplicar** atribuir a **no** invalida cualquier anterior **Sí** valores de un ensamblado.  
+ La configuración predeterminada para el **aplicar** atributo es **Sí**. Establecer el **aplicar** atributo **ningún** invalida cualquier anterior **Sí** configuración de un ensamblado.  
   
- Se requiere permiso para una aplicación pueda omitir explícitamente la directiva del Editor mediante el [ \<aplicar publisherPolicy = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elemento en el archivo de configuración de aplicación. El permiso se otorga estableciendo la <xref:System.Security.Permissions.SecurityPermissionFlag> marca en el <xref:System.Security.Permissions.SecurityPermission>. Para obtener más información, consulte [permiso de seguridad de redirección de enlace de ensamblado](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ Se requiere permiso para una aplicación para omitir explícitamente la directiva de publicador con el [ \<publisherPolicy aplicar = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elemento en el archivo de configuración de la aplicación. El permiso se otorga estableciendo el <xref:System.Security.Permissions.SecurityPermissionFlag> marca en el <xref:System.Security.Permissions.SecurityPermission>. Para obtener más información, consulte [permiso de seguridad de redirección de enlace de ensamblado](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se desactiva la directiva de edición para el ensamblado, `myAssembly`.  
+ El ejemplo siguiente se desactiva la directiva de publicador para el ensamblado, `myAssembly`.  
   
 ```xml  
 <configuration>  
@@ -86,7 +86,7 @@ Especifica si el tiempo de ejecución aplica la directiva de editor.
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Redirigir versiones de ensamblado](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Redirigir versiones de ensamblado](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

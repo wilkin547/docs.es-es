@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195897"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613523"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#. 
@@ -31,17 +31,17 @@ En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de l
 ### <a name="fact-1-dont-prematurely-optimize"></a>Hecho 1: No optimice prematuramente  
  Escribir código más complejo de lo necesario conlleva costes de mantenimiento, depuración y pulido. Los programadores experimentados saben intuitivamente cómo resolver problemas de código y cómo escribir un código más eficaz. Sin embargo, a veces optimizan el código de forma prematura. Por ejemplo, usan una tabla hash cuando con una simple matriz bastaría, o utilizan un almacenamiento en caché complicado que puede consumir memoria en vez de simplemente recalcular los valores. Incluso los programadores experimentados deben probar el rendimiento y analizar el código cuando se detectan problemas. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Hecho 2: Si no realiza mediciones, solo tiene conjeturas  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Hecho 2: Si no mide, conjetura  
  Los perfiles y las medidas no mienten. Los perfiles muestran si la CPU está totalmente cargada o si hay un bloqueo en E/S de disco. Los perfiles indican el tipo y la cantidad de memoria que se está asignando y si la CPU emplea mucho tiempo en la [recolección de elementos no utilizados](../../../docs/standard/garbage-collection/index.md). 
   
  Establezca objetivos de rendimiento para los escenarios o las experiencias de cliente claves de la aplicación y escriba pruebas para medir el rendimiento.  Investigue los errores de las pruebas mediante el método científico: use perfiles como guía, cree hipótesis sobre el origen del problema y pruebe esas hipótesis con un experimento o cambio de código. Establezca una línea base de medidas de rendimiento a lo largo del tiempo con pruebas periódicas para así aislar los cambios que causan regresiones en el rendimiento. Si enfoca de manera rigurosa el trabajo de rendimiento, evitará perder el tiempo con actualizaciones de código que no necesita. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Hecho 3: Las herramientas de calidad marcan la diferencia  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Hecho 3: Unas herramientas buenas marcan la diferencia  
  Unas herramientas de calidad permiten profundizar rápidamente en los problemas de rendimiento más importantes (CPU, memoria o disco) y sirven para localizar el código que provoca esos cuellos de botella. Microsoft distribuye diversas herramientas de rendimiento, como el [generador de perfiles de Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), la [herramienta de análisis de Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) y [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView es una herramienta gratuita muy potente que sirve para centrarse en los problemas con raíces profundas como, por ejemplo, E/S de disco, eventos de GC y memoria. Puede capturar eventos de [Seguimiento de eventos para Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) relacionados con el rendimiento y ver fácilmente información por aplicación, por proceso, por pila y por subproceso. PerfView muestra la cantidad y el tipo de memoria que asigna la aplicación, así como las funciones o pilas de llamadas que contribuyen en determinada medida a las asignaciones de memoria. Para más información, vea los completos artículos de ayuda, las demostraciones y los vídeos que se incluyen con la herramienta (como los [tutoriales de PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) de Channel 9). 
   
-### <a name="fact-4-its-all-about-allocations"></a>Hecho 4: La clave está en las asignaciones  
+### <a name="fact-4-its-all-about-allocations"></a>Hecho 4: La clave son las asignaciones.  
  Podría pensarse que la compilación de una aplicación de .NET Framework que muestre una buena capacidad de respuesta depende de la utilización de los algoritmos —como usar una ordenación rápida en vez de una de burbuja—, pero no es así. El factor de mayor peso a la hora de compilar una aplicación diligente es la asignación de memoria, sobre todo cuando la aplicación es muy grande o procesa grandes cantidades de datos. 
   
  Casi todo el trabajo de compilar las experiencias de IDE con las nuevas API de compilador se invirtió en evitar las asignaciones y administrar las estrategias de almacenamiento en caché. El seguimiento de PerfView muestra que el rendimiento de los nuevos compiladores de C# y Visual Basic rara vez está asociado a la CPU. Los compiladores pueden estar asociados a E/S al leer miles o millones de líneas de código, al leer metadatos o al emitir código generado. Los retrasos del subproceso de la interfaz de usuario se deben prácticamente todos a la recolección de elementos no utilizados. La GC de .NET Framework está ajustada para optimizar el rendimiento y una gran parte de su trabajo se realiza mientras se ejecuta el código de la aplicación. Pero una única asignación puede desencadenar una costosa recolección [gen2](../../../docs/standard/garbage-collection/fundamentals.md) y detener todos los subprocesos. 
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ y lambdas  
 Language-Integrated Query (LINQ), junto con las expresiones lambda, es un ejemplo de una característica de productividad. Sin embargo, su uso puede tener un impacto significativo en el rendimiento con el tiempo y es posible que necesite volver a escribir el código.
   
- **Ejemplo 5: lambdas, List\<T> e IEnumerable\<T>**  
+ **Ejemplo 5: Las expresiones lambda, lista\<T > e IEnumerable\<T >**  
   
  En este ejemplo se usa [LINQ y código de estilo funcional](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
   
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  El código no utiliza métodos de extensión LINQ, lambdas ni enumeradores, y no crea asignaciones. No hay asignaciones porque el compilador puede ver que la colección `symbols` es una <xref:System.Collections.Generic.List%601> y puede vincular el enumerador resultante (una estructura) a una variable local con el tipo correcto para evitar la conversión boxing. La versión original de esta función es un gran ejemplo del poder expresivo de C# y de la productividad .NET Framework. Esta nueva y más eficaz versión conserva esas cualidades sin agregar ningún código complejo que haya que mantener. 
   
 ### <a name="async-method-caching"></a>Almacenamiento en caché del método asincrónico  
- En el ejemplo siguiente se muestra un problema común al intentar usar resultados de la caché en un método [async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7). 
+
+En el ejemplo siguiente se muestra un problema común al intentar usar resultados de la caché en un método [async](../../csharp/programming-guide/concepts/async/index.md).
   
  **Ejemplo 6: almacenamiento en caché en métodos asincrónicos**  
   

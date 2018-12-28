@@ -1,17 +1,17 @@
 ---
 title: Deshabilitar el reconocimiento de PPP en Visual Studio
 description: Se describen los límites del Diseñador de Windows Forms en monitores HDPI y cómo ejecutar Visual Studio como un proceso no reconocen el PPP.
-ms.date: 08/14/2018
+ms.date: 12/17/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151270"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656003"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deshabilitar el reconocimiento de PPP en Visual Studio
 
@@ -29,7 +29,7 @@ En Visual Studio 2017 versión 15,8 y versiones posterior, cuando se abre un for
 
 Lee el mensaje **ajuste de escala en la pantalla principal está establecido en 200% (192 PPP). Esto podría provocar problemas de representación en la ventana del diseñador.**
 
-Si no está trabajando en el diseñador y no es necesario ajustar el diseño del formulario, puede omitir la barra informativa y seguir trabajando en el editor de código o en otros tipos de diseñadores. Solo el **Diseñador de Windows Forms** se ve afectado. Si necesita trabajar el **Diseñador de Windows Forms**, la siguiente sección le ayuda a [resolver el problema](#to-resolve-the-problem).
+Si no está trabajando en el diseñador y no es necesario ajustar el diseño del formulario, puede omitir la barra informativa y seguir trabajando en el editor de código o en otros tipos de diseñadores. (También puede [deshabilitar las notificaciones](#disable-notifications) para que la barra informativa no seguirán apareciendo.) Solo el **Diseñador de Windows Forms** se ve afectado. Si necesita trabajar el **Diseñador de Windows Forms**, la siguiente sección le ayuda a [resolver el problema](#to-resolve-the-problem).
 
 ## <a name="to-resolve-the-problem"></a>Para resolver el problema
 
@@ -68,6 +68,16 @@ Visual Studio se puede marcar como no reconocen el PPP modificando el registro. 
 Para establecer la pantalla de configuración al 100% de escala en Windows 10, escriba **Mostrar configuración** en la tarea de la barra de cuadro de búsqueda y, a continuación, seleccione **cambiar la configuración de presentación**. En el **configuración** ventana, establezca **cambiar el tamaño de texto, las aplicaciones y otros elementos** a **100%**.
 
 Establecer el ajuste de escala al 100% de pantalla puede no ser deseable, ya que puede que la interfaz de usuario demasiado pequeño para ser utilizable.
+
+## <a name="disable-notifications"></a>Deshabilitar las notificaciones
+
+Puede elegir no recibir una notificación de PPP escalar problemas en Visual Studio. Es posible que desee deshabilitar las notificaciones si no trabaja en el diseñador, por ejemplo.
+
+Para deshabilitar las notificaciones, elija **herramientas** > **opciones** para abrir el **opciones** cuadro de diálogo. A continuación, elija **Diseñador de Windows Forms** > **General**y establezca **notificaciones de ajuste de escala de PPP** a **False**.
+
+![Ajuste de PPP opción notificaciones en Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+
+Si desea volver a habilitar más adelante las notificaciones de escalado, establezca la propiedad en **True**.
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 

@@ -12,21 +12,21 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 2e5d133a4744124723c0373e3d5974b505936190
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402106"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397038"
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
-<a name="Introduction"></a>El[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] incluye un modelo de complementos que los desarrolladores pueden usar para crear aplicaciones que admiten la extensibilidad de los complementos. Dicho modelo permite la creación de complementos que se integran con las aplicaciones y amplían su funcionalidad. En algunos escenarios, las aplicaciones también necesitan mostrar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que proporcionan los complementos. En este tema se muestra la forma en que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta el modelo del complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
+<a name="Introduction"></a> .NET Framework incluye un modelo de complemento que los desarrolladores pueden usar para crear aplicaciones que admiten la extensibilidad de complemento. Dicho modelo permite la creación de complementos que se integran con las aplicaciones y amplían su funcionalidad. En algunos escenarios, las aplicaciones también necesitan mostrar interfaces de usuario que se proporcionan los complementos. En este tema se muestra cómo WPF amplía el modelo de complemento de .NET Framework para habilitar estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
   
 
   
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- Se requieren conocimientos del modelo del complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Para más información, consulte [Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md).  
+ Es necesario estar familiarizado con el modelo de complemento de .NET Framework. Para más información, consulte [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="AddInsOverview"></a>   
 ## <a name="add-ins-overview"></a>Información general sobre los complementos  
@@ -48,48 +48,48 @@ ms.locfileid: "43402106"
   
  Para que se usen los complementos, es preciso que las aplicaciones host los encuentren y los carguen en tiempo de ejecución. En consecuencia, las aplicaciones que admiten complementos tienen las siguientes responsabilidades adicionales:  
   
--   **Detección**: buscar complementos que se adhieran a los contratos que admiten las aplicaciones host.  
+-   **Detección**: Buscar complementos que se adhieran a los contratos admitidos por las aplicaciones host.  
   
--   **Activación**: cargar, ejecutar y establecer de comunicación con complementos.  
+-   **Activación**: Cargar, ejecutar y establecer comunicación con complementos.  
   
--   **Aislamiento**: usar dominios de aplicación o procesos para establecer límites de aislamiento que protejan las aplicaciones frente a posibles problemas de seguridad y de ejecución con los complementos.  
+-   **Aislamiento**: Uso de dominios de aplicación o procesos para establecer los límites de aislamiento que protejan las aplicaciones de seguridad potencial y problemas de ejecución de complementos.  
   
--   **Comunicación**: permitir a los complementos y aplicaciones host comunicarse entre sí en los límites de aislamiento llamando a métodos y pasando datos.  
+-   **Comunicación**: Los complementos y aplicaciones host comunicarse entre sí a través de límites de aislamiento llamando a métodos y pasando datos.  
   
--   **Administración de la duración**: cargar y descargar dominios de aplicación y procesos de una manera limpia y predecible (consulte [Dominios de aplicación](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Administración de la duración**: Cargar y descargar dominios de aplicación y los procesos de una manera limpia y predecible (consulte [dominios de aplicación](../../../../docs/framework/app-domains/application-domains.md)).  
   
--   **Control de versiones**: asegurarse de que las aplicaciones host y los complementos se pueden comunicar cuando se crean nuevas versiones de cualquiera de ellos.  
+-   **Control de versiones**: Lo que garantiza que las aplicaciones de host y los complementos puedan comunicarse cuando se crean las nuevas versiones de cualquiera.  
   
- Por último, el desarrollo de un sólido modelo de complemento es una empresa que no es trivial. Por este motivo, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona una infraestructura para compilar modelos de complementos.  
+ Por último, el desarrollo de un sólido modelo de complemento es una empresa que no es trivial. Por este motivo, .NET Framework proporciona una infraestructura para la creación de modelos de complementos.  
   
 > [!NOTE]
->  Para más información acerca de los complementos, consulte [Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md).  
+>  Para más información acerca de los complementos, consulte [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="NETFrameworkAddInModelOverview"></a>   
 ## <a name="net-framework-add-in-model-overview"></a>Introducción al modelo de complemento de .NET Framework  
- El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelo de complemento, se encuentra en la <xref:System.AddIn> espacio de nombres contiene un conjunto de tipos que están diseñadas para simplificar el desarrollo de extensibilidad. La unidad fundamental del modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] es el *contrato*, que define cómo se comunican una aplicación host y un complemento entre sí. Un contrato se expone a una aplicación host mediante una *vista* específica de la aplicación host del contrato. Del mismo modo, se expone una *vista* específica del complemento al complemento. Se usa un *adaptador* para que una aplicación host y un complemento se comuniquen entre sus respectivas vistas del contrato. Los contratos, vistas y adaptadores se conocen como segmentos y un conjunto de segmentos relacionados constituye una *canalización*. Las canalizaciones son la base sobre la que el modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] admite la detección, la activación, el aislamiento de el seguridad, aislamiento de ejecución (mediante procesos y dominios de aplicación), la comunicación, la administración de la duración y el control de versiones.  
+ El modelo de complemento de .NET Framework, que se encuentra en la <xref:System.AddIn> espacio de nombres contiene un conjunto de tipos que están diseñadas para simplificar el desarrollo de extensibilidad. La unidad fundamental del modelo de complementos de .NET Framework es la *contrato*, que define cómo una aplicación host y un complemento comunicarse entre sí. Un contrato se expone a una aplicación host mediante una *vista* específica de la aplicación host del contrato. Del mismo modo, se expone una *vista* específica del complemento al complemento. Se usa un *adaptador* para que una aplicación host y un complemento se comuniquen entre sus respectivas vistas del contrato. Los contratos, vistas y adaptadores se conocen como segmentos y un conjunto de segmentos relacionados constituye una *canalización*. Las canalizaciones son la base en el que el modelo de complemento de .NET Framework admite la detección, la activación, aislamiento de seguridad, aislamiento de ejecución (mediante procesos y dominios de aplicación), comunicación, administración de la duración y control de versiones.  
   
- La suma de todo ello permite a los desarrolladores compilar complementos que se integran con la funcionalidad de una aplicación host. Sin embargo, algunos escenarios requieren que las aplicaciones host muestren [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que proporcionan los complementos. Dado que cada una de las tecnologías de presentación de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tiene su propio modelo de implementación [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], el modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] no admite ninguna tecnología de presentación concreta. En su lugar, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] amplía el modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] con la compatibilidad de los complementos con la i[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ La suma de todo ello permite a los desarrolladores compilar complementos que se integran con la funcionalidad de una aplicación host. Sin embargo, algunos escenarios requieren las aplicaciones host muestren las interfaces de usuario proporcionadas por complementos. Dado que cada tecnología de presentación de .NET Framework tiene su propio modelo de implementación de interfaces de usuario, el modelo de complemento de .NET Framework no admite ninguna tecnología de presentación determinado. En su lugar, WPF amplía el modelo de complemento de .NET Framework con compatibilidad de UI para complementos.  
   
 <a name="WPFAddInModel"></a>   
 ## <a name="wpf-add-ins"></a>Complementos WPF  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], junto con el modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], permite abordar una amplia variedad de escenarios que requieren que las aplicaciones host muestren las interfaces de usuario [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] de los complementos. En concreto, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aborda estos escenarios con los dos modelos de programación siguientes:  
+ WPF, junto con el modelo de complemento de .NET Framework, le permite abordar una amplia variedad de escenarios que requieren las aplicaciones host muestren las interfaces de usuario de complementos. En concreto, estos escenarios se tratan por WPF con los dos modelos de programación siguientes:  
   
-1.  **El complemento devuelve una interfaz de usuario**. Un complemento devuelve una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a la aplicación host mediante la llamada a un método, como se define en el contrato. Este escenario se utiliza en los casos siguientes:  
+1.  **El complemento devuelve una interfaz de usuario**. Un complemento devuelve una interfaz de usuario a la aplicación host mediante una llamada de método, tal como se define el contrato. Este escenario se utiliza en los casos siguientes:  
   
-    -   La apariencia de una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que devuelve un complemento depende de datos o condiciones que solo existen en tiempo de ejecución, como los informes generados dinámicamente.  
+    -   La apariencia de una interfaz de usuario devuelto por un complemento es dependiente de datos o condiciones que existen en tiempo de ejecución, como dinámicamente los informes generan.  
   
-    -   La [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de los servicios que proporciona un complemento no es la misma que la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de las aplicaciones host que pueden usar el complemento.  
+    -   La interfaz de usuario para los servicios proporcionados por un complemento difiere de la interfaz de usuario de las aplicaciones de host que puede usar el complemento.  
   
-    -   El complemento realiza principalmente un servicio para la aplicación host y notifica el estado a esta con una interfaz de usuario [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+    -   El complemento principalmente realiza un servicio para la aplicación host y notifica el estado a la aplicación host con una interfaz de usuario.  
   
-2.  **El complemento es una interfaz de usuario**. Un complemento es una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], como define el contrato. Este escenario se utiliza en los casos siguientes:  
+2.  **El complemento es una interfaz de usuario**. Un complemento es una interfaz de usuario, como se define en el contrato. Este escenario se utiliza en los casos siguientes:  
   
     -   Los complementos solo muestran los servicios que se muestran, como un anuncio.  
   
-    -   La [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de los servicios que proporciona un complemento es común a todas las aplicaciones host que pueden utilizar dicho complemento, como una calculadora o un selector de colores.  
+    -   La interfaz de usuario para los servicios proporcionados por un complemento es común a todas las aplicaciones host que pueden usar ese complemento, como una calculadora o un selector de colores.  
   
- Estos escenarios requieren que [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se puedan pasar objetos de la interfaz de usuario entre la aplicación host y los dominios de aplicaciones del complemento. Dado que el modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se basa en la comunicación remota entre dominios de aplicación, los objetos que se pasan entre ellos deben poder utilizarse de forma remota.  
+ Estos escenarios requieren que se pueden pasar objetos de interfaz de usuario entre la aplicación host y los dominios de aplicación del complemento. Desde el modelo de complementos se basa en la comunicación remota entre dominios de aplicación de .NET Framework, los objetos que se pasan entre ellos deben ser utilizables de forma remota.  
   
  Un objeto que se puede usar de forma remota es una instancia de una clase que realiza una o varias de las siguientes acciones:  
   
@@ -100,13 +100,13 @@ ms.locfileid: "43402106"
 -   Tiene la <xref:System.SerializableAttribute> atributo aplicado.  
   
 > [!NOTE]
->  Para más información acerca de la creación de objetos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remotos, consulte [Hacer que los objetos sean remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Para obtener más información acerca de la creación de objetos de .NET Framework utilizable de forma remota, consulte [utilizable de forma remota los objetos que hace](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
- Los tipo de interfaz de usuario de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no se pueden usar de forma remota. Para solucionar el problema, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] amplía el modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar la interfaz de usuario de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] creada por los complementos que se muestran desde las aplicaciones host. Esta compatibilidad se proporciona por [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] por dos tipos: el <xref:System.AddIn.Contract.INativeHandleContract> interfaz y dos métodos estáticos implementados por el <xref:System.AddIn.Pipeline.FrameworkElementAdapters> clase: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. A un nivel alto, estos tipos y métodos se utilizan como se indica a continuación:  
+ Los tipos de UI de WPF no son utilizables de forma remota. Para solucionar el problema, WPF amplía el modelo de complemento de .NET Framework para habilitar la UI de WPF crea los complementos que se muestran desde las aplicaciones host. Esta compatibilidad se proporciona por WPF en dos tipos: el <xref:System.AddIn.Contract.INativeHandleContract> interfaz y dos métodos estáticos implementados por el <xref:System.AddIn.Pipeline.FrameworkElementAdapters> clase: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. A un nivel alto, estos tipos y métodos se utilizan como se indica a continuación:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] requiere que [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] proporcionadas por complementos son clases que derivan directa o indirectamente de <xref:System.Windows.FrameworkElement>, como formas, controles, controles de usuario, paneles de diseño y las páginas.  
+1.  WPF requiere que las interfaces de usuario proporcionadas por complementos sean clases que derivan directa o indirectamente de <xref:System.Windows.FrameworkElement>, como formas, controles, controles de usuario, paneles de diseño y las páginas.  
   
-2.  Siempre que el contrato declare que se pasará una interfaz de usuario entre el complemento y la aplicación host, debe declararse como un <xref:System.AddIn.Contract.INativeHandleContract> (no un <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> es una representación utilizable de forma remota el complemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que se puede pasar a través de límites de aislamiento.  
+2.  Siempre que el contrato declare que se pasará una interfaz de usuario entre el complemento y la aplicación host, debe declararse como un <xref:System.AddIn.Contract.INativeHandleContract> (no un <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> es una representación utilizable de forma remota de la IU del complemento que se puede pasar entre los límites de aislamiento.  
   
 3.  Antes de que se pasa desde dominio de aplicación del complemento, un <xref:System.Windows.FrameworkElement> se empaqueta como un <xref:System.AddIn.Contract.INativeHandleContract> mediante una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
@@ -116,27 +116,27 @@ ms.locfileid: "43402106"
   
 <a name="ReturnUIFromAddInContract"></a>   
 ## <a name="add-in-returns-a-user-interface"></a>El complemento devuelve una interfaz de usuario  
- Para que un complemento devuelva una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a una aplicación host, se necesita lo siguiente:  
+ Para que un complemento devolver una interfaz de usuario a una aplicación host, se requiere lo siguiente:  
   
-1.  La aplicación host, el complemento y la canalización deben crearse, como se describe en el documento [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] [Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md).  
+1.  La aplicación host y la canalización deben crearse, como se describe en .NET Framework [complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentación.  
   
-2.  El contrato debe implementar <xref:System.AddIn.Contract.IContract> y, para devolver un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], el contrato debe declarar un método con un valor devuelto de tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
+2.  El contrato debe implementar <xref:System.AddIn.Contract.IContract> y, para devolver una interfaz de usuario, el contrato debe declarar un método con un valor devuelto de tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que se pasa entre el complemento y el host de aplicación debe derivar directa o indirectamente de <xref:System.Windows.FrameworkElement>.  
+3.  La interfaz de usuario que se pasa entre el complemento y la aplicación host debe derivar directa o indirectamente de <xref:System.Windows.FrameworkElement>.  
   
-4.  El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] devuelto por el complemento se debe convertir de un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar el límite de aislamiento.  
+4.  La interfaz de usuario devuelto por el complemento se debe convertir de un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar el límite de aislamiento.  
   
-5.  El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] devuelto debe convertirse de un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> después de cruzar el límite de aislamiento.  
+5.  La interfaz de usuario devuelto debe convertirse de un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> después de cruzar el límite de aislamiento.  
   
 6.  La aplicación host muestra el valor devuelto <xref:System.Windows.FrameworkElement>.  
   
- Para ver un ejemplo en el que se muestra cómo implementar un complemento que devuelve una interfaz de usuario [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], consulte [Cómo: Crear un complemento que devuelva una interfaz de usuario](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Para obtener un ejemplo que muestra cómo implementar un complemento que devuelva una interfaz de usuario, consulte [crear un complemento que devuelva una interfaz de usuario](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>El complemento es una interfaz de usuario  
- Cuando un complemento es una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], se requiere lo siguiente:  
+ Cuando un complemento es una interfaz de usuario, se requiere lo siguiente:  
   
-1.  La aplicación host, el complemento y la canalización deben crearse, como se describe en el documento [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] [Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md).  
+1.  La aplicación host y la canalización deben crearse, como se describe en .NET Framework [complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentación.  
   
 2.  Debe implementar la interfaz de contrato para el complemento <xref:System.AddIn.Contract.INativeHandleContract>.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "43402106"
   
 6.  La aplicación host muestra el valor devuelto <xref:System.Windows.FrameworkElement>.  
   
- Para ver un ejemplo en el que se muestra cómo implementar un complemento que es una interfaz de usuario [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], consulte [Cómo: Crear un complemento que sea una interfaz de usuario](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Para obtener un ejemplo que muestra cómo implementar un complemento es una interfaz de usuario, consulte [crear un complemento, que es una interfaz de usuario](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Devolución de varias interfaces de usuario desde un complemento  
- Los complementos a menudo proporcionan varias [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] para que se muestren las aplicaciones host. Por ejemplo, considere un complemento que sea una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] y que también proporcione información de estado a la aplicación host, también como una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Un complemento como este se puede implementar mediante una combinación de técnicas de los modelos de [El complemento devuelve una interfaz de usuario](#ReturnUIFromAddInContract) y [El complemento es una interfaz de usuario](#AddInIsAUI).  
+ Complementos a menudo proporcionan varias interfaces de usuario para las aplicaciones host muestren. Por ejemplo, considere un complemento que es una interfaz de usuario que también proporciona información de estado a la aplicación host, también como una interfaz de usuario. Un complemento como este se puede implementar mediante una combinación de técnicas de los modelos de [El complemento devuelve una interfaz de usuario](#ReturnUIFromAddInContract) y [El complemento es una interfaz de usuario](#AddInIsAUI).  
   
 <a name="AddInsAndXBAPs"></a>   
 ## <a name="add-ins-and-xaml-browser-applications"></a>Complementos y aplicaciones del explorador XAML  
@@ -171,7 +171,7 @@ ms.locfileid: "43402106"
   
  Por consiguiente, el primer paso es crear el ensamblado de la canalización y del complemento para la raíz del proyecto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] estableciendo la salida de la compilación de cada proyecto de ensamblado de canalización y ensamblado de complemento. La siguiente tabla muestra las rutas de la salida de la compilación de los proyectos de ensamblado de canalización el proyecto de ensamblado de complemento que se encuentran en la misma carpeta de solución y raíz que el proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host.  
   
- Tabla 1: Crear rutas de la salida de la compilación para los ensamblados de canalización que hospeda una aplicación XBAP  
+ Tabla 1: Crear rutas de acceso de salida para los ensamblados de canalización que se hospedan en una aplicación XBAP  
   
 |Proyecto de ensamblado de canalización|Ruta de acceso de salida de la compilación|  
 |-------------------------------|-----------------------|  
@@ -194,7 +194,7 @@ ms.locfileid: "43402106"
 2.  En el cuadro de diálogo **Archivos de aplicación**, establezca el **estado de la publicación** de la DLL de cada canalización y complemento en **Incluir (automático)** y establezca el **grupo de descarga** de la DLL de cada canalización y complemento en **(Requerido)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Uso de la canalización y del complemento de la base de aplicación  
- Cuando la canalización y el complemento están configurados para la implementación de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], se descargan en la misma carpeta de caché de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar la canalización y el complemento de la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], el código de la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debe obtenerlos de la base de la aplicación. Los distintos tipos y miembros del modelo de complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para el uso de canalizaciones y complementos proporcionan una compatibilidad especial con este escenario. En primer lugar, la ruta de acceso se identifica mediante el <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valor de enumeración. Este valor se utiliza en las sobrecargas de los miembros del complemento pertinentes para usar canalizaciones que incluyan los siguientes:  
+ Cuando la canalización y el complemento están configurados para la implementación de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], se descargan en la misma carpeta de caché de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar la canalización y el complemento de la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], el código de la [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debe obtenerlos de la base de la aplicación. Los distintos tipos y miembros del modelo de complemento de .NET Framework para el uso de canalizaciones y complementos proporcionan una compatibilidad especial para este escenario. En primer lugar, la ruta de acceso se identifica mediante el <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valor de enumeración. Este valor se utiliza en las sobrecargas de los miembros del complemento pertinentes para usar canalizaciones que incluyan los siguientes:  
   
 -   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
@@ -209,82 +209,82 @@ ms.locfileid: "43402106"
   
 <a name="WPFAddInModelArchitecture"></a>   
 ## <a name="wpf-add-in-architecture"></a>Arquitectura de complemento WPF  
- En el nivel más alto, como hemos visto, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] permite [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] complementos para implementar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] (que se derivan directa o indirectamente de <xref:System.Windows.FrameworkElement>) mediante <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. El resultado es que la aplicación host se devuelve un <xref:System.Windows.FrameworkElement> que se muestra desde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] en la aplicación host.  
+ En el nivel más alto, como hemos visto, WPF habilita complementos de .NET Framework implementar las interfaces de usuario (que se derivan directa o indirectamente de <xref:System.Windows.FrameworkElement>) mediante <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. El resultado es que la aplicación host se devuelve un <xref:System.Windows.FrameworkElement> que se muestra en la interfaz de usuario en la aplicación host.  
   
- En el caso de escenarios de complementos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] simples, este es todo el detalle que necesita el desarrollador. Para escenarios más complejos, especialmente las que intente utilizar adicionales [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] servicios, como el diseño, los recursos y enlace de datos, más un conocimiento detallan de cómo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] amplía la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelo con [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] soporte técnico debe conocer sus ventajas y limitaciones.  
+ Para la interfaz de usuario-en escenarios simples, se trata como nivel de detalle que necesita el desarrollador. Para escenarios más complejos, especialmente aquellas que intenten usar servicios adicionales de WPF como diseño, recursos y enlace de datos, se requiere un conocimiento más detallado de cómo WPF amplía el modelo de complemento de .NET Framework con compatibilidad de UI para comprender sus ventajas y las limitaciones.  
   
- Fundamentalmente, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no pasa una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] interfaz de usuario desde un complemento a una aplicación host; en su lugar, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pasa el identificador de ventana de Win32 para la interfaz [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de usuario mediante la interoperabilidad de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Por lo tanto, cuando una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de un complemento se pasa a una aplicación host, ocurre lo siguiente:  
+ Fundamentalmente, WPF no pasa una interfaz de usuario desde un complemento a una aplicación host; en su lugar, WPF pasa el identificador de ventana de Win32 para la interfaz de usuario mediante el uso de la interoperabilidad con WPF. Por lo tanto, cuando se pasa una interfaz de usuario desde un complemento a una aplicación host, ocurre lo siguiente:  
   
--   En el lado del complemento, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] adquiere un identificador de ventana para la interfaz de usuario [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que mostrará la aplicación host. El identificador de ventana está encapsulado por una instancia interna [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] clase que derive de <xref:System.Windows.Interop.HwndSource> e implementa <xref:System.AddIn.Contract.INativeHandleContract>. Devuelve una instancia de esta clase <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> y se calculan las referencias de dominio de aplicación del complemento al dominio de aplicación de la aplicación host.  
+-   En el lado del complemento, WPF adquiere un identificador de ventana de la interfaz de usuario que se mostrará la aplicación host. El identificador de ventana está encapsulado por una clase interna de WPF que se deriva de <xref:System.Windows.Interop.HwndSource> e implementa <xref:System.AddIn.Contract.INativeHandleContract>. Devuelve una instancia de esta clase <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> y se calculan las referencias de dominio de aplicación del complemento al dominio de aplicación de la aplicación host.  
   
--   En el lado de la aplicación host, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] vuelve a empaquetar la <xref:System.Windows.Interop.HwndSource> como una instancia interna [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] clase que derive de <xref:System.Windows.Interop.HwndHost> y consume <xref:System.AddIn.Contract.INativeHandleContract>. Devuelve una instancia de esta clase <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> a la aplicación host.  
+-   En el lado de la aplicación host, WPF, vuelve a empaquetar la <xref:System.Windows.Interop.HwndSource> como una clase interna de WPF que se derive de <xref:System.Windows.Interop.HwndHost> y consume <xref:System.AddIn.Contract.INativeHandleContract>. Devuelve una instancia de esta clase <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> a la aplicación host.  
   
- <xref:System.Windows.Interop.HwndHost> existe para mostrar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], identificados por los identificadores de ventana, de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Para más información, consulte [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> existe para mostrar interfaces de usuario, identificadas por los identificadores de ventana, de las interfaces de usuario WPF. Para más información, consulte [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
- En resumen, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> existen para permitir que el identificador de ventana para un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para pasar de un complemento a una aplicación host, donde se encapsula mediante un <xref:System.Windows.Interop.HwndHost> y muestra el host la aplicación [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ En resumen, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> existen para permitir que el identificador de ventana para una UI de WPF se pase de un complemento a una aplicación host, donde se encapsula mediante un <xref:System.Windows.Interop.HwndHost> y muestra la interfaz de usuario de la aplicación host.  
   
 > [!NOTE]
 >  Dado que la aplicación host obtiene un <xref:System.Windows.Interop.HwndHost>, la aplicación host no puede convertir el objeto devuelto por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> para el tipo se implementa como mediante el complemento (por ejemplo, un <xref:System.Windows.Controls.UserControl>).  
   
- Por su naturaleza, <xref:System.Windows.Interop.HwndHost> tiene ciertas limitaciones que afectan a cómo las aplicaciones host pueden usarlos. Sin embargo, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] extiende <xref:System.Windows.Interop.HwndHost> con varias funcionalidades para escenarios de inicio. A continuación se describen estas ventajas y limitaciones.  
+ Por su naturaleza, <xref:System.Windows.Interop.HwndHost> tiene ciertas limitaciones que afectan a cómo las aplicaciones host pueden usarlos. Sin embargo, WPF amplía <xref:System.Windows.Interop.HwndHost> con varias funcionalidades para escenarios de inicio. A continuación se describen estas ventajas y limitaciones.  
   
 <a name="WPFAddInModelBenefits"></a>   
 ## <a name="wpf-add-in-benefits"></a>Ventajas del complemento de WPF  
- Dado que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] complemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] se muestran desde las aplicaciones host mediante una clase interna que deriva de <xref:System.Windows.Interop.HwndHost>, dichos [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] están restringidas por las capacidades de <xref:System.Windows.Interop.HwndHost> con respecto a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] servicios como diseño, representación, enlace de datos, estilos, plantillas y recursos. Sin embargo, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta su interno <xref:System.Windows.Interop.HwndHost> subclase con capacidades adicionales que incluyen lo siguiente:  
+ Dado que las interfaces de usuario WPF se muestran desde las aplicaciones host mediante una clase interna que deriva de <xref:System.Windows.Interop.HwndHost>, esas interfaces de usuario están restringidas por las capacidades de <xref:System.Windows.Interop.HwndHost> con respecto a los servicios de la UI de WPF como diseño, representación, enlace de datos, estilos, plantillas y recursos. Sin embargo, aumenta su interno WPF <xref:System.Windows.Interop.HwndHost> subclase con capacidades adicionales que incluyen lo siguiente:  
   
--   Desplazamiento mediante tabulador entre la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de una aplicación host y la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de un complemento. Tenga en cuenta que el "complemento es un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" modelo de programación requiere que el adaptador de complemento en el lado invalidar <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> para habilitar la tabulación, si el complemento es de plena confianza o de confianza parcial.  
+-   Tabulación entre la interfaz de usuario de la aplicación host e interfaz de usuario de un complemento. Tenga en cuenta que el modelo de programación "complemento es una interfaz de usuario" requiere que el adaptador de complemento en el lado invalidar <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> para habilitar la tabulación, si el complemento es de plena confianza o de confianza parcial.  
   
--   Cumplimiento de los requisitos de accesibilidad para las [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] del complemento de que se muestran en las [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] de la aplicación host.  
+-   Teniendo en cuenta los requisitos de accesibilidad para las interfaces de usuario que se muestran desde las interfaces de usuario de aplicación host.  
   
--   Habilitación de aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que se ejecutan de forma segura en varios escenarios de dominio de aplicación.  
+-   Habilitación de las aplicaciones de WPF se ejecutan de forma segura en diversos escenarios de dominio de aplicación.  
   
--   Se impide el acceso no válido a los identificadores de la ventana de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del complemento cuando los complementos se ejecutan con aislamiento de seguridad (es decir, un espacio aislado de seguridad de confianza parcial). Una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> garantiza esta seguridad:  
+-   Impedir el acceso no válido para la interfaz de usuario del complemento los identificadores de ventana cuando los complementos se ejecutan con aislamiento de seguridad (es decir, un recinto de seguridad de confianza parcial). Una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> garantiza esta seguridad:  
   
-    -   Para el "complemento devuelve una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" modelo de programación, la única manera de pasar el identificador de ventana para un complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] entre el aislamiento es llamar a límites <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+    -   Para el modelo de programación "complemento devuelve una interfaz de usuario", la única manera de pasar el identificador de ventana para un complemento de la interfaz de usuario a través del límite de aislamiento es llamar a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-    -   Para el "complemento es un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" programación de modelos, reemplazar <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> en el adaptador del complemento y llamar al método <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (como se muestra en los ejemplos anteriores), es necesario, tal como está llamando a agregar en el lado del adaptador `QueryContract` implementación desde el adaptador del host.  
+    -   Para el modelo de programación "complemento es una interfaz de usuario" reemplazar <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> en el adaptador del complemento y llamar al método <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (como se muestra en los ejemplos anteriores), es necesario, tal como está llamando a agregar en el lado del adaptador `QueryContract` implementación desde el adaptador del host.  
   
--   Se proporciona protección para la ejecución de varios dominios de aplicaciones. Dadas las limitaciones de los dominios de aplicación, las excepciones no controladas que se producen en los dominios de aplicación del complemento provocan que toda la aplicación se bloquee, aunque exista el límite de aislamiento. Sin embargo, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y el modelo del complemento de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporcionan una manera sencilla de evitar este problema y mejorar la estabilidad de la aplicación. Un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] complemento que muestra un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] crea un <xref:System.Windows.Threading.Dispatcher> para el subproceso que el dominio de aplicación se ejecuta, si la aplicación host es un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación. Puede detectar excepciones no controladas de todos los que se producen en el dominio de aplicación controlando el <xref:System.Windows.Threading.Dispatcher.UnhandledException> eventos de la [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] del complemento <xref:System.Windows.Threading.Dispatcher>. Puede obtener el <xref:System.Windows.Threading.Dispatcher> desde el <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> propiedad.  
+-   Se proporciona protección para la ejecución de varios dominios de aplicaciones. Dadas las limitaciones de los dominios de aplicación, las excepciones no controladas que se producen en los dominios de aplicación del complemento provocan que toda la aplicación se bloquee, aunque exista el límite de aislamiento. Sin embargo, WPF y el modelo de complemento de .NET Framework proporcionan una manera sencilla de solucionar este problema y mejorar la estabilidad de la aplicación. Un complemento de WPF que muestra una interfaz de usuario crea un <xref:System.Windows.Threading.Dispatcher> para el subproceso que el dominio de aplicación se ejecuta, si la aplicación host es una aplicación de WPF. Puede detectar excepciones no controladas de todos los que se producen en el dominio de aplicación controlando el <xref:System.Windows.Threading.Dispatcher.UnhandledException> eventos del complemento WPF <xref:System.Windows.Threading.Dispatcher>. Puede obtener el <xref:System.Windows.Threading.Dispatcher> desde el <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> propiedad.  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>Limitaciones del complemento de WPF  
- Más allá de las ventajas que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] agrega a los comportamientos predeterminados proporcionados por <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>y los identificadores de ventana, también hay limitaciones para el complemento de [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que se muestran desde las aplicaciones host:  
+ Más allá de las ventajas que WPF se agrega a los comportamientos predeterminados proporcionados por <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>y los identificadores de ventana, también hay limitaciones para las interfaces de usuario que se muestran desde las aplicaciones host:  
   
--   Complemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] muestra desde un host de aplicación no respeta comportamiento de recorte de la aplicación host.  
+-   Interfaces de usuario muestra desde una aplicación host no respetan el comportamiento de recorte de la aplicación host.  
   
 -   El concepto de *espacio aéreo* en los escenarios de interoperabilidad también se aplica a los complementos (consulte [Información general sobre áreas de la tecnología](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
   
--   Una aplicación host [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] servicios, como la herencia de los recursos, el enlace de datos y comandos, no están disponibles automáticamente para el complemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Para proporcionar estos servicios al complemento, es preciso actualizar la canalización.  
+-   La interfaz de usuario de la aplicación host de servicios, como la herencia de los recursos, el enlace de datos y comandos, no están disponibles automáticamente para el complemento de interfaces de usuario. Para proporcionar estos servicios al complemento, es preciso actualizar la canalización.  
   
--   Una interfaz de usuario del complemento no se puede girar, escalar, sesgar ni verse afectada de ninguna otra forma por una transformación (consulte [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]Información general sobre [transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Un complemento de la interfaz de usuario no se puede girar, escalar, sesgar o verse afectada por una transformación (consulte [información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
   
--   Contenido dentro de complemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que se representa mediante el dibujo de las operaciones desde el <xref:System.Drawing> espacio de nombres puede incluir la combinación alfa. Sin embargo, tanto la interfaz de usuario del complemento como la de aplicación host [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que la contiene deben ser 100 % opacas; es decir, la `Opacity` propiedad [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de ambas se debe establecer en 1.  
+-   Contenido dentro de las interfaces de usuario que se representa mediante el dibujo de las operaciones desde el <xref:System.Drawing> espacio de nombres puede incluir la combinación alfa. Sin embargo, un complemento de la interfaz de usuario y la aplicación host de la interfaz de usuario que lo contiene deben ser 100% opacas; en otras palabras, la `Opacity` propiedad en ambos debe establecerse en 1.  
   
--   Si el <xref:System.Windows.Window.AllowsTransparency%2A> propiedad de una ventana en la aplicación host que contiene un complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] está establecido en `true`, el complemento no es visible. Esto es cierto incluso si el complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] es 100% opaca (es decir, el `Opacity` propiedad tiene un valor de 1).  
+-   Si el <xref:System.Windows.Window.AllowsTransparency%2A> propiedad de una ventana en la aplicación host que contiene un complemento de la interfaz de usuario se establece en `true`, el complemento no es visible. Esto es así incluso si el complemento de la interfaz de usuario es 100% opaco (es decir, el `Opacity` propiedad tiene un valor de 1).  
   
--   Una interfaz de usuario del complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aparece encima de los restantes elementos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en la misma ventana de nivel superior.  
+-   Un complemento de la interfaz de usuario debe aparecer encima de otros elementos WPF en la misma ventana de nivel superior.  
   
--   Ninguna parte de un complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] puede representarse mediante un <xref:System.Windows.Media.VisualBrush>. En su lugar, el complemento puede tomar una instantánea de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] generada para crear un mapa de bits que se puede pasar a la aplicación host mediante los métodos que se definen en el contrato.  
+-   Ninguna parte de interfaz de usuario de un complemento se puede representar mediante un <xref:System.Windows.Media.VisualBrush>. En su lugar, el complemento puede tardar una instantánea de la interfaz de usuario generada para crear un mapa de bits que se puede pasar a la aplicación host mediante los métodos definidos por el contrato.  
   
--   No se puede reproducir archivos multimedia desde un <xref:System.Windows.Controls.MediaElement> en un complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   No se puede reproducir archivos multimedia desde un <xref:System.Windows.Controls.MediaElement> en un complemento de la interfaz de usuario.  
   
--   Los eventos del mouse generados para la interfaz de usuario del complemento no los genera ni los recibe la aplicación host y la propiedad [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de la interfaz de usuario de la aplicación host [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] tiene un valor de `IsMouseOver``false`.  
+-   Eventos del mouse generados para el complemento de la interfaz de usuario no recibe ni generados por la aplicación host y el `IsMouseOver` propiedad de interfaz de usuario de la aplicación host tiene un valor de `false`.  
   
--   Cuando el foco cambia entre los controles de una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del complemento, la aplicación host no recibe ni genera los eventos `GotFocus` y `LostFocus`.  
+-   Cuando el foco cambia entre los controles en un complemento de la interfaz de usuario, el `GotFocus` y `LostFocus` eventos no recibe ni generados por la aplicación host.  
   
--   La parte de una aplicación host que contiene un complemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aparecerá en blanco cuando se imprima.  
+-   La parte de una aplicación host que contiene un complemento de la interfaz de usuario aparece en blanco cuando se imprimen.  
   
--   Todos los distribuidores (consulte <xref:System.Windows.Threading.Dispatcher>) creados por el complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se debe apagar manualmente antes de que el complemento propietario se descargue si continúa la ejecución de la aplicación host. El contrato puede implementar métodos que permiten la aplicación de host señalar el complemento antes de que el complemento se descarga, lo que permite que el complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para cerrar sus distribuidores.  
+-   Todos los distribuidores (consulte <xref:System.Windows.Threading.Dispatcher>) creados por el complemento de interfaz de usuario se debe apagar manualmente antes de que el complemento propietario se descargue si continúa la ejecución de la aplicación host. El contrato puede implementar métodos que permiten la aplicación host señalar el complemento antes de que el complemento se descarga, lo que permite que la interfaz de usuario complemento apagar sus distribuidores.  
   
--   Si un complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] es un <xref:System.Windows.Controls.InkCanvas> o contiene un <xref:System.Windows.Controls.InkCanvas>, no se puede descargar el complemento.  
+-   Si un complemento de la interfaz de usuario es un <xref:System.Windows.Controls.InkCanvas> o contiene un <xref:System.Windows.Controls.InkCanvas>, no se puede descargar el complemento.  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Optimización del rendimiento  
- De manera predeterminada, si se utilizan varios dominios de aplicación, los distintos ensamblados de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que requiere cada aplicación se cargan en el dominio de la aplicación. Como consecuencia, el tiempo requerido para crear nuevos dominios de aplicación e iniciar aplicaciones en ellas puede afectar al rendimiento. Sin embargo, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona una manera de reducir los tiempos de inicio indicando a las aplicaciones que compartan ensamblados entre los dominios de aplicación si ya están cargados. Para ello, uso el <xref:System.LoaderOptimizationAttribute> atributo, que debe aplicarse al método de punto de entrada (`Main`). En este caso, solo debe usar el código para implementar la definición de aplicación (consulte [Información general sobre la administración de aplicaciones](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ De forma predeterminada, cuando se utilizan varios dominios de aplicación, los distintos ensamblados de .NET Framework requeridos por cada aplicación todas cargados en el dominio de la aplicación. Como consecuencia, el tiempo requerido para crear nuevos dominios de aplicación e iniciar aplicaciones en ellas puede afectar al rendimiento. Sin embargo, .NET Framework proporciona una manera de reducir los tiempos de inicio indicando a las aplicaciones pueden compartir ensamblados entre dominios de aplicación si ya están cargados. Para ello, uso el <xref:System.LoaderOptimizationAttribute> atributo, que debe aplicarse al método de punto de entrada (`Main`). En este caso, solo debe usar el código para implementar la definición de aplicación (consulte [Información general sobre la administración de aplicaciones](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.LoaderOptimizationAttribute>  
- [Complementos y extensibilidad](../../../../docs/framework/add-ins/index.md)  
+ [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
  [Dominios de aplicación](../../../../docs/framework/app-domains/application-domains.md)  
  [Información general de .NET framework Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Hacer que los objetos sean remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d9312d25842ccfcdf84e678d34b9bfde3fe7dd0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7045623872364160d76f4bc0c1522b0450a81bd2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753988"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611599"
 ---
 # <a name="ltnetfx40legacysecuritypolicygt-element"></a>&lt;NetFx40_LegacySecurityPolicy&gt; elemento
 Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.  
@@ -57,24 +57,24 @@ Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS
 ## <a name="remarks"></a>Comentarios  
  En la versión de .NET Framework 3.5 y versiones anteriores, la directiva CAS siempre está en efecto. En el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], debe estar habilitada la directiva CAS.  
   
- La directiva CAS es específico de la versión. Directivas personalizadas de entidades emisoras de certificados que existen en las versiones anteriores de .NET Framework deben especificarla en el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ La directiva CAS es específico de la versión. Deben volver a especificar las directivas personalizadas de las entidades de certificación que existen en versiones anteriores de .NET Framework en el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
   
- Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento a una [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] ensamblado no afecta a [código transparente en seguridad](../../../../../docs/framework/misc/security-transparent-code.md); las reglas de transparencia se siguen aplican.  
+ Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento a una [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] no afecta al ensamblado [código transparente en seguridad](../../../../../docs/framework/misc/security-transparent-code.md); las reglas de transparencia se siguen aplican.  
   
 > [!IMPORTANT]
->  Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento puede dar lugar a reducciones importantes del rendimiento para los ensamblados de imagen nativa creados por el [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que no están instalados en el [caché global de ensamblados ](../../../../../docs/framework/app-domains/gac.md). La degradación del rendimiento se debe a la incapacidad del runtime para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que resulta en los que se va a carga ensamblados como just-in-time.  
+>  Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento puede producir reducciones de rendimiento importantes para los ensamblados de imagen nativa creados por el [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que no están instalados en el [caché global de ensamblados ](../../../../../docs/framework/app-domains/gac.md). La degradación del rendimiento se debe a la imposibilidad de que el tiempo de ejecución para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que sus carga los ensamblados como just-in-time.  
   
 > [!NOTE]
->  Si especifica una versión de .NET Framework de destino que es anterior a la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] en la configuración del proyecto para el proyecto de Visual Studio, la directiva CAS se habilitará, incluyendo cualquier directiva CAS personalizada que especificó para esa versión. Sin embargo, no podrá utilizar new [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] tipos y miembros. También puede especificar una versión anterior de .NET Framework mediante el [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) en el esquema de configuración de inicio en su [archivo de configuración de aplicación](../../../../../docs/framework/configure-apps/index.md).  
+>  Si especifica una versión de .NET Framework de destino es anterior a la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] en la configuración del proyecto para el proyecto de Visual Studio, la directiva CAS se habilita, incluyendo cualquier directiva CAS personalizada especificada para esa versión. Sin embargo, no podrá usar new [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] tipos y miembros. También puede especificar una versión anterior de .NET Framework mediante la [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) en el esquema de configuración de inicio en su [archivo de configuración de aplicación](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
->  Sintaxis del archivo de configuración distingue mayúsculas de minúsculas. Debe usar la sintaxis como se indica en las secciones de sintaxis y ejemplo.  
+>  Sintaxis del archivo de configuración distingue mayúsculas de minúsculas. Debe usar la sintaxis que se proporciona en las secciones de sintaxis y ejemplo.  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede usar únicamente en el archivo de configuración de aplicación.  
+ Este elemento se puede usar solo en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo habilitar la directiva CAS heredada para una aplicación.  
+ El ejemplo siguiente muestra cómo se habilita la directiva CAS heredada para una aplicación.  
   
 ```xml  
 <configuration>  
@@ -85,5 +85,5 @@ Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,13 +1,13 @@
 ---
-title: Sobrecarga de operadores (F#)
+title: Sobrecarga de operadores
 description: Obtenga información sobre cómo sobrecargar los operadores aritméticos en una clase o tipo de registro y en el nivel global en F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087304"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610767"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operadores
 
@@ -47,7 +47,7 @@ El carácter operador `.` no afecta a la prioridad, de modo que, por ejemplo, pa
 
 Solo los operadores `?` y `?<-` puede empezar por `?`.
 
-Puede encontrar en una tabla que muestra la prioridad de todos los operadores en F# [referencia de símbolos y operador](symbol-and-operator-reference/index.md).
+Una tabla que muestra la prioridad de todos los operadores de F# puede encontrarse en [referencia de símbolos y operador](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Nombres de operador sobrecargados
 

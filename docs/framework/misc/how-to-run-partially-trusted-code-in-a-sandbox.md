@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Ejecutar código de confianza parcial en un recinto'
+title: Procedimiento Ejecutar código de confianza parcial en un espacio aislado
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5728bac27ae7de649806a3e026bb16560fffefa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393278"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613224"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Cómo: Ejecutar código de confianza parcial en un recinto
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedimiento Ejecutar código de confianza parcial en un espacio aislado
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  El uso de espacios aislados consiste en ejecutar código en un entorno de seguridad restringido que limita los permisos de acceso concedidos al código. Por ejemplo, si tiene una biblioteca administrada procedente de un origen en el que no confía plenamente, no la ejecute como si fuese de plena confianza. En su lugar, coloque el código en un espacio aislado que limite los permisos a los que considere necesarios (por ejemplo, el permiso <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
   
  También puede usar el espacio aislado para probar el código que va a distribuir y que se ejecutará en entornos de confianza parcial.  
   
- <xref:System.AppDomain> es una forma eficaz de proporcionar un espacio aislado para las aplicaciones administradas. Los dominios de aplicación que se usan para ejecutar código de confianza parcial tienen permisos que definen los recursos protegidos que están disponibles cuando se ejecuta dentro de ese <xref:System.AppDomain>. El código que se ejecuta dentro de <xref:System.AppDomain> está limitado por los permisos asociados a <xref:System.AppDomain> y tan solo puede tener acceso a los recursos especificados. <xref:System.AppDomain> también incluye una matriz <xref:System.Security.Policy.StrongName> que se usa para identificar los ensamblados que cargan con plena confianza. Esto permite que el creador de un <xref:System.AppDomain> inicie un nuevo dominio en espacio aislado que permita confiar plenamente en ensamblados de aplicación auxiliar concretos. Otra opción para cargar ensamblados como de plena confianza es colocarlos en la caché de ensamblados global. Sin embargo, eso cargará los ensamblados con plena confianza en todos los dominios de aplicación creados en ese equipo. La lista de nombres seguros admite una decisión por <xref:System.AppDomain> que proporciona una determinación más restrictiva.  
+ <xref:System.AppDomain> es una forma eficaz de proporcionar un espacio aislado para las aplicaciones administradas. Los dominios de aplicación que se usan para ejecutar código de confianza parcial tienen permisos que definen los recursos protegidos que están disponibles cuando se ejecuta dentro de ese <xref:System.AppDomain>. El código que se ejecuta dentro de <xref:System.AppDomain> está limitado por los permisos asociados a <xref:System.AppDomain> y tan solo puede tener acceso a los recursos especificados. <xref:System.AppDomain> también incluye una matriz <xref:System.Security.Policy.StrongName> que se usa para identificar los ensamblados que cargan con plena confianza. Esto permite que el creador de un <xref:System.AppDomain> inicie un nuevo dominio en espacio aislado que permita confiar plenamente en ensamblados del asistente concretos. Otra opción para cargar ensamblados como de plena confianza es colocarlos en la caché de ensamblados global. Sin embargo, eso cargará los ensamblados con plena confianza en todos los dominios de aplicación creados en ese equipo. La lista de nombres seguros admite una decisión por <xref:System.AppDomain> que proporciona una determinación más restrictiva.  
   
  La sobrecarga del método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> se puede usar para especificar el conjunto de permisos para las aplicaciones que se ejecutan en un espacio aislado. Esta sobrecarga permite especificar el nivel exacto de seguridad de acceso del código que se desea. Los ensamblados que se cargan en <xref:System.AppDomain> mediante esta sobrecarga pueden tener únicamente el conjunto de permisos especificado o pueden ser de plena confianza. Si el ensamblado está en la caché global de ensamblados o aparece enumerado en el parámetro de matrices `fullTrustAssemblies` (<xref:System.Security.Policy.StrongName>), se le concede confianza plena. Tan solo deben agregarse a la lista `fullTrustAssemblies` los ensamblados que se sabe que son de plena confianza.  
   
  La sobrecarga tiene la siguiente firma:  
   
-```  
+```csharp
 AppDomain.CreateDomain( string friendlyName,  
                         Evidence securityInfo,  
                         AppDomainSetup info,  
@@ -50,7 +50,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 1.  Cree el conjunto de permisos que se concederán a la aplicación no confiable. El permiso mínimo que se puede conceder es <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. También puede conceder permisos adicionales si piensa que son seguros para el código no seguro, por ejemplo, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. El siguiente código crea un nuevo conjunto de permisos que contiene únicamente el permiso <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
   
-    ```  
+    ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
     permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
     ```  
@@ -67,7 +67,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 2.  Firme el ensamblado que contiene la clase host (denominada `Sandboxer` en este ejemplo) que llama al código de confianza. Agregue el <xref:System.Security.Policy.StrongName> usado para firmar el ensamblado a la matriz <xref:System.Security.Policy.StrongName> del parámetro `fullTrustAssemblies` de la llamada <xref:System.AppDomain.CreateDomain%2A>. La clase host debe ejecutarse como de plena confianza para habilitar la ejecución del código de confianza parcial u ofrecer servicios a la aplicación de confianza parcial. Así es como se lee el <xref:System.Security.Policy.StrongName> de un ensamblado:  
   
-    ```  
+    ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
     ```  
   
@@ -75,7 +75,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 3.  Inicialice el parámetro <xref:System.AppDomainSetup> del método <xref:System.AppDomain.CreateDomain%2A>. Con este parámetro, puede controlar muchas de las opciones del nuevo <xref:System.AppDomain>. La propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> es un valor importante y debe ser diferente de la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> para el <xref:System.AppDomain> de la aplicación host. Si los valores de <xref:System.AppDomainSetup.ApplicationBase%2A> son iguales, la aplicación de confianza parcial puede hacer que la aplicación host cargue (como de plena confianza) una excepción que define y, por tanto, aprovecharse de ella. Este es otro motivo por el que no se recomienda un bloque catch (excepción). El riesgo de ataques se reduce si la base de la aplicación del host y la base de la aplicación de la aplicación en espacio aislado se configuran de forma diferente.  
   
-    ```  
+    ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
@@ -84,7 +84,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      La firma de este método es:  
   
-    ```  
+    ```csharp
     public static AppDomain CreateDomain(string friendlyName,   
         Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
         params StrongName[] fullTrustAssemblies)  
@@ -102,7 +102,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   El código para crear el dominio de aplicación es:  
   
-    ```  
+    ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
@@ -118,7 +118,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Puede realizar la creación en un <xref:System.Security.CodeAccessPermission.Assert%2A> de plena confianza (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), lo que le permite crear una instancia de una clase crítica. (Esto ocurre siempre que el ensamblado no tiene ninguna marca de transparencia y se carga como de plena confianza). Por lo tanto, hay que tener cuidado y crear solamente código de confianza con esta función. Le recomendamos que cree solo instancias de clases de plena confianza en el nuevo dominio de aplicación.  
   
-    ```  
+    ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
     newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
            typeof(Sandboxer).FullName );  
@@ -126,53 +126,53 @@ AppDomain.CreateDomain( string friendlyName,
   
      Tenga en cuenta que para crear una instancia de una clase en un nuevo dominio, la clase debe extender la clase <xref:System.MarshalByRefObject>.  
   
-    ```  
+    ```csharp
     class Sandboxer:MarshalByRefObject  
     ```  
   
 6.  Desempaquete la nueva instancia del dominio en una referencia en este dominio. Esta referencia se usa para ejecutar el código no confiable.  
   
-    ```  
+    ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
 7.  Llame al método `ExecuteUntrustedCode` en la instancia de la clase `Sandboxer` que acaba de crear.  
   
-    ```  
+    ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     ```  
   
      Esta llamada se ejecuta en el dominio de la aplicación en espacio aislado, que tiene permisos restringidos.  
   
-    ```  
+    ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
+    {  
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //you can use Assembly.EntryPoint to get to the entry point in an executable.  
+        MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
+        try  
         {  
-            //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
-            //you can use Assembly.EntryPoint to get to the entry point in an executable.  
-            MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
-            try  
-            {  
-                // Invoke the method.  
-                target.Invoke(null, parameters);  
-            }  
-            catch (Exception ex)  
-            {  
-            //When information is obtained from a SecurityException extra information is provided if it is   
-            //accessed in full-trust.  
-                (new PermissionSet(PermissionState.Unrestricted)).Assert();  
-                Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
-    CodeAccessPermission.RevertAssert();  
-                Console.ReadLine();  
-            }  
+            // Invoke the method.  
+            target.Invoke(null, parameters);  
         }  
+        catch (Exception ex)  
+        {  
+        //When information is obtained from a SecurityException extra information is provided if it is   
+        //accessed in full-trust.  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
+            Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
+            CodeAccessPermission.RevertAssert();  
+            Console.ReadLine();  
+        }  
+    }  
     ```  
   
      <xref:System.Reflection> se usa para obtener el identificador de un método en el ensamblado de confianza parcial. El identificador puede usarse para ejecutar código de forma segura con permisos mínimos.  
   
      En el código anterior, observe <xref:System.Security.PermissionSet.Assert%2A> para el permiso de plena confianza antes de imprimir <xref:System.Security.SecurityException>.  
   
-    ```  
-    new PermissionSet(PermissionState.Unrestricted)).Assert()  
+    ```csharp
+    new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
      La aserción de plena confianza se usa para obtener la información ampliada de <xref:System.Security.SecurityException>. Sin <xref:System.Security.PermissionSet.Assert%2A>, el método <xref:System.Security.SecurityException.ToString%2A> de <xref:System.Security.SecurityException> detectará que hay código de confianza parcial en la pila y restringirá la información devuelta. Esto podría provocar problemas de seguridad si el código de confianza parcial llega a leer esa información, pero el riesgo se mitiga al no conceder <xref:System.Security.Permissions.UIPermission>. La aserción de plena confianza debe usarse con moderación y solo cuando si se está seguro de que no se permite al código de confianza parcial elevarse a plena confianza. Como norma general, no llame a un código en el que no confía en la misma función y tras invocar una aserción de plena confianza. Le recomendamos que revierta siempre la aserción cuando acabe de usarla.  
@@ -180,7 +180,7 @@ AppDomain.CreateDomain( string friendlyName,
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se implementa el procedimiento de la sección anterior. En el ejemplo, un proyecto denominado `Sandboxer` en una solución de Visual Studio también contiene un proyecto denominado `UntrustedCode` que implementa la clase `UntrustedClass`. En este escenario se supone que ha descargado un ensamblado de biblioteca que contiene un método que debe devolver `true` o `false` para indicar si el número proporcionado es un número de Fibonacci. En su lugar, el método intenta leer un archivo de su equipo. En el ejemplo siguiente se muestra el código no confiable.  
   
-```  
+```csharp
 using System;  
 using System.IO;  
 namespace UntrustedCode  
@@ -200,7 +200,7 @@ namespace UntrustedCode
   
  En el ejemplo siguiente se muestra el código de la aplicación `Sandboxer` que ejecuta el código no confiable.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -264,7 +264,7 @@ class Sandboxer : MarshalByRefObject
         {  
             // When we print informations from a SecurityException extra information can be printed if we are   
             //calling it with a full-trust stack.  
-            (new PermissionSet(PermissionState.Unrestricted)).Assert();  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
             CodeAccessPermission.RevertAssert();  
             Console.ReadLine();  

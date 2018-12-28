@@ -1,17 +1,17 @@
 ---
-title: Enlaces let en clases (F#)
-description: Obtenga información sobre cómo definir los campos privados y funciones privadas para las clases de F# mediante el uso de enlaces 'let' en la definición de clase.
+title: Enlaces let en clases
+description: Obtenga información sobre cómo definir los campos privados y funciones privadas para F# clases mediante el uso de 'let' enlaces en la definición de clase.
 ms.date: 05/16/2016
-ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033225"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611131"
 ---
 # <a name="let-bindings-in-classes"></a>Enlaces let en clases
 
-Puede definir campos privados y funciones privadas para las clases de F# mediante `let` enlaces en la definición de clase.
+Puede definir campos privados y funciones privadas para F# clases mediante el uso de `let` enlaces en la definición de clase.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,7 +45,7 @@ La salida es la siguiente.
 
 ## <a name="alternative-ways-to-create-fields"></a>Maneras alternativas de crear campos
 
-También puede usar el `val` palabra clave para crear un campo privado. Cuando se usa el `val` palabra clave, el campo no tiene un valor cuando se crea el objeto, pero en su lugar se inicializa con un valor predeterminado. Para obtener más información, consulte [campos explícitos: val (palabra clave)](explicit-fields-the-val-keyword.md).
+También puede usar el `val` palabra clave para crear un campo privado. Cuando se usa el `val` palabra clave, el campo no tiene un valor cuando se crea el objeto, pero en su lugar se inicializa con un valor predeterminado. Para obtener más información, consulte [campos explícitos: Val (palabra clave)](explicit-fields-the-val-keyword.md).
 
 También puede definir los campos privados en una clase mediante una definición de miembro y agregar la palabra clave `private` a la definición. Esto puede ser útil si piensa cambiar la accesibilidad de un miembro sin tener que reescribir el código. Para más información, vea [Access Control](../access-control.md) (Control de acceso).
 
