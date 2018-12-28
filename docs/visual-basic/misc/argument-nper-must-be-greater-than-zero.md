@@ -1,18 +1,18 @@
 ---
-title: Argumento &#39;NPer&#39; debe ser mayor que cero.
+title: El argumento 'NPer' debe ser mayor que cero
 ms.date: 07/20/2015
 f1_keywords:
 - vbrRate_NPerMustBeGTZero
 ms.assetid: d49242df-dbd1-4b26-bd8c-ed56d24fdfcd
-ms.openlocfilehash: 5939262d2a58a17d8af88ebc0ba0c7597983e4aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86bbf892997ee512b6042ef400e2485edabe731d
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601197"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773489"
 ---
-# <a name="argument-39nper39-must-be-greater-than-zero"></a>Argumento &#39;NPer&#39; debe ser mayor que cero.
-La función `NPer` , que devuelve un `Double` que especifica el número de períodos de una anualidad basada en pagos fijos periódicos y en tipo de interés fijo, requiere un argumento mayor que cero.  
+# <a name="argument-nper-must-be-greater-than-zero"></a>El argumento 'NPer' debe ser mayor que cero
+La función `NPer`, que devuelve un `Double` que especifica el número de períodos de una anualidad basada en pagos fijos periódicos y en tipo de interés fijo, requiere un argumento mayor que cero.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

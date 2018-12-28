@@ -1,13 +1,13 @@
 ---
-title: 'Bucles: expresión for...to (F#)'
-description: Vea cómo la estructura de F# for … para la expresión se utiliza para iterar en un bucle a través de un intervalo de valores de una variable de bucle.
+title: 'Bucles: expresión for...to'
+description: Vea cómo el F# for … para la expresión se utiliza para iterar en un bucle a través de un intervalo de valores de una variable de bucle.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800474"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612327"
 ---
 # <a name="loops-forto-expression"></a>Bucles: expresión for...to
 
@@ -39,5 +39,5 @@ La salida del código anterior es la siguiente.
 ## <a name="see-also"></a>Vea también
 
 - [Referencia del lenguaje F#](index.md)
-- [Bucles: expresión `for...in`](loops-for-in-expression.md)
-- [Bucles: expresión `while...do`](loops-while-do-expression.md)
+- [Bucles: `for...in` Expresión](loops-for-in-expression.md)
+- [Bucles: `while...do` Expresión](loops-while-do-expression.md)

@@ -1,17 +1,17 @@
 ---
-title: La palabra clave Fixed (F#)
-description: Obtenga información sobre cómo puede 'pin' local en la pila para evitar que la colección con F# 'fixed' palabra clave.
+title: La palabra clave fixed
+description: Aprenda cómo puede 'pin', una variable local en la pila para evitar que la colección con el F# 'fixed' palabra clave.
 ms.date: 04/24/2017
-ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45624514"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614368"
 ---
-# <a name="the-fixed-keyword"></a>La palabra clave Fixed
+# <a name="the-fixed-keyword"></a>La palabra clave fixed
 
-F# 4.1 presenta el `fixed` palabra clave, lo que permite que una variable local en la pila para evitar que se recopilan o movido durante la recolección de elementos no utilizados "anclar".  Se usa para escenarios de programación de bajo nivel.
+F#4.1 presenta el `fixed` palabra clave, lo que permite que una variable local en la pila para evitar que se recopilan o movido durante la recolección de elementos no utilizados "anclar".  Se usa para escenarios de programación de bajo nivel.
 
 ## <a name="syntax"></a>Sintaxis
 

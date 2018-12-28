@@ -2,12 +2,12 @@
 title: Compatibilidad de transmisión de datos de SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eeec8f2a88894762fd8dab93bf0b3b11941ba17a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152895"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613003"
 ---
 # <a name="sqlclient-streaming-support"></a>Compatibilidad de transmisión de datos de SqlClient
 Compatibilidad entre SQL Server y una aplicación de streaming (nuevo en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) es compatible con los datos no estructurados en el servidor (archivos de documentos, imágenes y multimedia). Una base de datos de SQL Server puede almacenar objetos binarios grandes (BLOB), pero al recuperar los BLOBS puede usar una gran cantidad de memoria.  
@@ -326,7 +326,7 @@ GO
   
 -   Usar la nueva característica asincrónica y la palabra clave await para transferir un BLOB grande.  
   
--   Cancelar la transferencia de un BLOB grande.  
+-   Cancelando a la transferencia de un BLOB grande.  
   
 -   Transmisión por secuencias desde un servidor SQL Server a otro mediante la nueva característica asincrónica.  
   

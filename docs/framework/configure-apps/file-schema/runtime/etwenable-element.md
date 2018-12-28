@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 267a4a29282881d18201d0cb2062e91b4ff974a9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6ea2f8a32a18dfce6be54ce52ce8fef4abf92ce
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745180"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610780"
 ---
 # <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt; elemento
 Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para los eventos de Common Language Runtime.  
@@ -40,7 +40,7 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|true|Habilitar ETW. Este es el valor predeterminado para las versiones de Windows empezando por los sistemas operativos Windows Vista y Windows Server 2008.|  
+|true|Habilitar ETW. Este es el valor predeterminado para las versiones de Windows empezando con los sistemas operativos Windows Vista y Windows Server 2008.|  
 |False|Deshabilitar ETW. Este es el valor predeterminado para las versiones anteriores de Windows.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -54,13 +54,13 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Comenzando con Windows Vista, ETW está habilitado de forma predeterminada. Utilice este elemento para deshabilitar ETW para una aplicación. En versiones anteriores de Windows, utilice este elemento para habilitar ETW para una aplicación.  
+ Comenzando con Windows Vista, ETW está habilitado de forma predeterminada. Utilice este elemento para deshabilitar ETW para una aplicación. En versiones anteriores de Windows, use este elemento para habilitar ETW para una aplicación.  
   
 > [!NOTE]
->  ETW puede ser habilitado o deshabilitado globalmente en un servidor mediante una configuración del registro. Vea [controlar el registro de .NET Framework](../../../../../docs/framework/performance/controlling-logging.md).  
+>  Puede ser habilitado o deshabilitado globalmente en un servidor mediante una configuración del registro ETW. Consulte [controlar el registro de .NET Framework](../../../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo habilitar el seguimiento de ETW para una aplicación.  
+ El ejemplo siguiente muestra cómo habilitar el seguimiento de ETW para una aplicación.  
   
 ```xml  
 <configuration>  
@@ -71,6 +71,6 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Controlar el registro de .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Controlar el registro de .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)

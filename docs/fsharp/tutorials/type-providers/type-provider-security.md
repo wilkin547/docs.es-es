@@ -1,17 +1,17 @@
 ---
 title: Seguridad del proveedor de tipos
-description: Obtenga información sobre la seguridad del proveedor de tipos en F#, incluida la forma de cambiar la configuración de confianza de un proveedor de tipos.
+description: Obtenga información sobre la seguridad del proveedor de tipos en F#, incluyendo cómo cambiar la configuración de confianza para un proveedor de tipos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861912"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611196"
 ---
 # <a name="type-provider-security"></a>Seguridad del proveedor de tipos
 
-Los proveedores de tipos son ensamblados (DLL) al que hace referencia su proyecto de F# o script que contienen código para conectarse a orígenes de datos externos y la información de este tipo de superficie para el entorno de tipo de F#. Normalmente, solo se ejecuta código en ensamblados de referencia, cuando compile y, a continuación, ejecute el código (o en el caso de una secuencia de comandos, envíe el código de F# Interactive). Sin embargo, un ensamblado de proveedor de tipo se ejecutará dentro de Visual Studio cuando simplemente se puede examinar el código en el editor. Esto sucede porque los proveedores de tipos deben ejecutar para agregar información adicional en el editor, como información rápida sobre herramientas, las finalizaciones de IntelliSense y así sucesivamente. Como resultado, hay consideraciones de seguridad adicional para el tipo de ensamblados de proveedor, ya que se ejecutan automáticamente dentro del proceso de Visual Studio.
+Los proveedores de tipos son ensamblados (DLL) al que hace referencia su F# proyecto o script que contienen código para conectarse a orígenes de datos externos y exponer esta información de tipo para el F# entorno de tipo. Normalmente, el código en ensamblados de referencia solo se ejecuta cuando se compila y, a continuación, ejecute el código (o en el caso de una secuencia de comandos, enviar el código para F# interactivo). Sin embargo, un ensamblado de proveedor de tipo se ejecutará dentro de Visual Studio cuando simplemente se puede examinar el código en el editor. Esto sucede porque los proveedores de tipos deben ejecutar para agregar información adicional en el editor, como información rápida sobre herramientas, las finalizaciones de IntelliSense y así sucesivamente. Como resultado, hay consideraciones de seguridad adicional para el tipo de ensamblados de proveedor, ya que se ejecutan automáticamente dentro del proceso de Visual Studio.
 
 ## <a name="security-warning-dialog"></a>Cuadro de diálogo de advertencia de seguridad
 

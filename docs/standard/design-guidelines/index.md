@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147611"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396934"
 ---
 # <a name="framework-design-guidelines"></a>Instrucciones de diseño de .NET Framework
 Esta sección proporciona directrices para diseñar bibliotecas que extenderán e interactúan con .NET Framework. El objetivo es ayudar a los diseñadores de bibliotecas a garantizar la coherencia de la API y facilidad de uso, ya que proporciona un modelo de programación unificado que es independiente del lenguaje de programación usado para el desarrollo. Se recomienda que siga estas directrices de diseño al desarrollar clases y componentes que extiendan .NET Framework. Diseño de la biblioteca incoherente negativamente afecta a la productividad del desarrollador y disuaden del adopción.  
@@ -42,7 +42,7 @@ Esta sección proporciona directrices para diseñar bibliotecas que extenderán 
  Describe las instrucciones para el uso de tipos comunes, como matrices, atributos y colecciones, admitir la serialización y la sobrecarga de operadores de igualdad.  
   
  [Patrones de diseño comunes](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Proporciona directrices para elegir e implemente las propiedades de dependencia y el patrón dispose.  
+ Proporciona directrices para elegir e implemente las propiedades de dependencia.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509488"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611404"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
 Especifica si los ensamblados cargados desde orígenes remotos se deben conceder plena confianza en .NET Framework 4 y versiones posteriores.
   
 > [!NOTE]
->  Si llega a este tema debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un error de compilación, véase [Cómo: usar un ensamblado desde la Web en Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Si llega a este tema debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un error de compilación, véase [Cómo: Usar un ensamblado desde la Web en Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<configuration>  
 \<en tiempo de ejecución >  
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 Para cargar el ensamblado y ejecutar su código, debe:
 
-- Cree explícitamente un espacio aislado para el ensamblado (vea [Cómo: ejecutar código de confianza parcial en un espacio aislado](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Cree explícitamente un espacio aislado para el ensamblado (vea [Cómo: Ejecutar código de confianza parcial en un recinto](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
 - Ejecutar código de ensamblado de plena confianza. Ello, configure el `<loadFromRemoteSources>` elemento. Le permite especificar que los ensamblados que se ejecutan en confianza parcial en versiones anteriores de .NET Framework ahora se ejecutan con plena confianza en .NET Framework 4 y versiones posteriores.
 
@@ -117,8 +117,8 @@ El ejemplo siguiente muestra cómo conceder plena confianza a los ensamblados ca
 
 ## <a name="see-also"></a>Vea también
 
-[Los usos más implícitos de la directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [Los usos más implícitos de la directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
