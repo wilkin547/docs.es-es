@@ -1,13 +1,13 @@
 ---
-title: 'Excepciones: función raise (F#)'
-description: Obtenga información sobre cómo se utiliza la función 'raise' de F# para indicar que se ha producido un error o una condición excepcional.
+title: 'Excepciones: función raise'
+description: Obtenga información sobre cómo el F# 'raise' función se utiliza para indicar que se ha producido un error o una condición excepcional.
 ms.date: 05/16/2016
-ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43778264"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610156"
 ---
 # <a name="exceptions-the-raise-function"></a>Excepciones: función raise
 
@@ -37,7 +37,7 @@ El `raise` función también se puede utilizar para generar excepciones de. NET,
 
 - [Control de excepciones](index.md)
 - [Tipos de excepción](exception-types.md)
-- [Exceptions: The `try...with` Expression](the-try-with-expression.md) (Excepciones: la expresión `try...with`)
-- [Exceptions: The `try...finally` Expression](the-try-finally-expression.md) (Excepciones: la expresión `try...finally`)
-- [Exceptions: the `failwith` Function](the-failwith-function.md) (Excepciones: la función `failwith`)
-- [Exceptions: the `invalidArg` Function](the-invalidArg-function.md) (Excepciones: la función `invalidArg`)
+- [Excepciones: El `try...with` expresión](the-try-with-expression.md)
+- [Excepciones: El `try...finally` expresión](the-try-finally-expression.md)
+- [Excepciones: El `failwith` (función)](the-failwith-function.md)
+- [Excepciones: El `invalidArg` (función)](the-invalidArg-function.md)

@@ -2,12 +2,12 @@
 title: Autenticación en SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0172259446724e0be85bd7ca2d15cf299db04e27
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521522"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613107"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
 SQL Server admite dos modos de autenticación, el modo de autenticación de Windows y el modo mixto.  
@@ -19,7 +19,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 > [!IMPORTANT]
 >  Se recomienda utilizar la autenticación de Windows siempre que sea posible. Este modo de autenticación usa una serie de mensajes cifrados para autenticar usuarios en SQL Server. Cuando se utilizan inicios de sesión de SQL Server, los nombres de inicio de sesión de SQL Server y las contraseñas cifradas se pasan a través de la red, lo que hace que sea menos segura.  
   
- Con la autenticación de Windows, los usuarios ya registrados en Windows no tienen que iniciar sesión por separado en SQL Server. El siguiente valor de `SqlConnection.ConnectionString` especifica la autenticación de Windows sin que sea necesario especificar un nombre de usuario ni una contraseña.  
+ Con la autenticación de Windows, los usuarios ya registrados en Windows no tienen que iniciar sesión por separado en SQL Server. La siguiente `SqlConnection.ConnectionString` especifica autenticación de Windows sin necesidad de que los usuarios proporcionen un nombre de usuario o contraseña.  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  

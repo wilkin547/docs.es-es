@@ -1,21 +1,21 @@
 ---
-title: Generalización automática (F#)
+title: Generalización automática
 description: Obtenga información sobre cómo F# generaliza automáticamente los argumentos y tipos de funciones para que funcionen con varios tipos cuando sea posible.
 ms.date: 05/16/2016
-ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43855782"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611716"
 ---
 # <a name="automatic-generalization"></a>Generalización automática
 
-F# usa la inferencia para evaluar los tipos de funciones y expresiones. Este tema describe cómo F# generaliza automáticamente los argumentos y tipos de funciones para que funcionen con varios tipos cuando sea posible.
+F#usa la inferencia para evaluar los tipos de funciones y expresiones. Este tema se describe cómo F# generaliza automáticamente los argumentos y tipos de funciones para que funcionen con varios tipos cuando sea posible.
 
 ## <a name="automatic-generalization"></a>Generalización automática
 
-El compilador de F#, cuando realiza la inferencia de tipos en una función, determina si un parámetro determinado puede ser genérico. El compilador examina cada parámetro y determina si la función tiene una dependencia en el tipo específico de ese parámetro. Si no es así, el tipo se infiere para ser genérico.
+El F# compilador cuando realiza la inferencia de tipos en una función, determina si un parámetro determinado puede ser genérico. El compilador examina cada parámetro y determina si la función tiene una dependencia en el tipo específico de ese parámetro. Si no es así, el tipo se infiere para ser genérico.
 
 En el ejemplo de código siguiente se muestra una función que el compilador infiere para ser genérico.
 
@@ -82,7 +82,7 @@ let emptyList10 = Array.create 10 []
 let emptyList10 () = Array.create 10 []
 ```
 
-Caso 4: Agregar los parámetros de tipo.
+Caso 4: Agregar parámetros de tipo.
 
 ```fsharp
 let arrayOf10Lists = Array.create 10 []

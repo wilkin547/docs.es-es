@@ -1,13 +1,13 @@
 ---
-title: Información del llamador (F#)
+title: Información del llamador
 description: Describe cómo utilizar atributos de argumento de información del autor de llamada para obtener información del llamador de un método.
 ms.date: 04/25/2017
-ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216375"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613822"
 ---
 # <a name="caller-information"></a>Información del llamador
 
@@ -72,6 +72,6 @@ El siguiente gráfico muestra al miembro de los nombres que se devuelven cuando 
 
 ## <a name="see-also"></a>Vea también
 
-- [Atributos](attributes.md)  
-- [Argumentos con nombre](parameters-and-arguments.md#named-arguments)  
-- [Parámetros opcionales](parameters-and-arguments.md#optional-parameters)  
+- [Atributos](attributes.md)
+- [Argumentos con nombre](parameters-and-arguments.md#named-arguments)
+- [Parámetros opcionales](parameters-and-arguments.md#optional-parameters)

@@ -1,17 +1,17 @@
 ---
-title: Argumento &#39; &lt;nombredeargumento&gt; &#39; debe ser mayor o igual a cero.
+title: Argumento '&lt;argumentname&gt;' debe ser mayor o igual a cero.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_ArgGEZero1
 ms.assetid: 7b901c2a-3447-4afc-91f8-8fa5f6f961d7
-ms.openlocfilehash: 786c18bc1e23323f5bd5bc6ad88ea163396296bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e66a1b62fc68c420a648f29dd08c44e4baa1332
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598275"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53763518"
 ---
-# <a name="argument-39ltargumentnamegt39-must-be-greater-than-or-equal-to-zero"></a>Argumento &#39; &lt;nombredeargumento&gt; &#39; debe ser mayor o igual a cero.
+# <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>Argumento '&lt;argumentname&gt;' debe ser mayor o igual a cero.
 Un argumento no es válido porque es menor que cero.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

@@ -1,17 +1,17 @@
 ---
-title: E/S de archivos con el tipo de &#39; &lt;typename&gt; &#39; no es válido
+title: E/S de archivos con el tipo '&lt;typename&gt;' no es válido
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedIOType1
 ms.assetid: b6c527e3-b75a-4c1a-b6f1-ee9f7460b5f0
-ms.openlocfilehash: 1016c989ec889b40c846a52fad6e81314f044ca2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcffd83f6ee527e73c3c99c13d6a91441b4ea352
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636492"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53764194"
 ---
-# <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a>E/S de archivos con el tipo de &#39; &lt;typename&gt; &#39; no es válido
+# <a name="file-io-with-type-lttypenamegt-is-not-valid"></a>E/S de archivos con el tipo '&lt;typename&gt;' no es válido
 Está intentando escribir un tipo no compatible en un archivo.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

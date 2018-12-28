@@ -1,17 +1,17 @@
 ---
-title: Un argumento con nombre &#39; &lt;nombredeargumento&gt; &#39; especificó varias veces
+title: Argumento con nombre '&lt;argumentname&gt;' se especificó varias veces
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
 ms.assetid: a5113d23-ca66-4961-909f-74f97a0eaf87
-ms.openlocfilehash: 4704c9184faa1b4091e17e4b4385419b96597ec1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91594ab01267881732981db959a483485743e53b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635764"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53771526"
 ---
-# <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a>Un argumento con nombre &#39; &lt;nombredeargumento&gt; &#39; especificó varias veces
+# <a name="named-argument-ltargumentnamegt-specified-multiple-times"></a>Argumento con nombre '&lt;argumentname&gt;' se especificó varias veces
 Se especificó un argumento con nombre más de una vez.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

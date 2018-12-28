@@ -1,13 +1,13 @@
 ---
-title: Registros (F#)
+title: Registros
 description: Obtenga información sobre cómo F# registros representan agregados simples de valores con nombre, opcionalmente con miembros.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261295"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656146"
 ---
 # <a name="records"></a>Registros
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>Crear mutuamente recursivas registros
+
+En algún momento al crear un registro, desea hacer que dependen de otro tipo que le gustaría definir posteriormente. Se trata de un error de compilación a menos que defina los tipos de registro para ser mutuamente recursivas.
+
+Definición mutuamente recursivas registros se realiza con el `and` palabra clave. Esto le permite vincular los tipos de 2 o más registros.
+
+Por ejemplo, el código siguiente define un `Person` y `Address` tipo como mutuamente recursivas:
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+Si tuviera que definir en el ejemplo anterior sin los `and` palabra clave, entonces no se compilará. El `and` palabra clave es necesaria para mutuamente recursivas definiciones.
 
 ## <a name="pattern-matching-with-records"></a>Coincidencia de patrones con registros
 

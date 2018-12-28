@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17f521be31fa4082d9418c7dad734e37994bbb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752824"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611079"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; elemento
-Determina si la fecha y hora en métodos de análisis usan un conjunto de reglas ajustado para analizar cadenas de fecha que contienen un día, el mes, la hora y el designador AM/PM.  
+Determina si la fecha y hora en que los métodos de análisis usan un conjunto ajustado de reglas para analizar las cadenas de fecha que contienen un día, mes, hora y designador AM/PM.  
   
  \<configuration>  
  \<en tiempo de ejecución >  
@@ -31,14 +31,14 @@ Determina si la fecha y hora en métodos de análisis usan un conjunto de reglas
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si la fecha y hora en métodos de análisis utilizan un conjunto de reglas ajustado para analizar cadenas de fecha que contienen solo un día, mes, hora y designador AM/PM.|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica si la fecha y hora en que los métodos de análisis utilizan un conjunto ajustado de reglas para analizar las cadenas de fecha que contienen solo un día, mes, hora y designador AM/PM.|  
   
 ### <a name="enabled-attribute"></a>Atributo enabled  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0|Fecha y hora en métodos de análisis no utilizan reglas ajustadas para analizar cadenas de fecha que contienen solo un día, mes, hora y designador AM/PM.|  
-|1|Fecha y hora en métodos de análisis usan reglas ajustadas para analizar las cadenas de fecha que contienen solo un día, mes, hora y designador AM/PM.|  
+|0|Fecha y hora en que los métodos de análisis no utilizan reglas ajustadas para analizar cadenas de fecha que contienen solo un día, mes, hora y designador AM/PM.|  
+|1|Fecha y hora en que los métodos de análisis usan ajustadas reglas para analizar las cadenas de fecha que contienen solo un día, mes, hora y designador AM/PM.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -51,7 +51,7 @@ Determina si la fecha y hora en métodos de análisis usan un conjunto de reglas
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `<EnableAmPmParseAdjustment>` elemento controla cómo los métodos siguientes para analizar una cadena de fecha que contiene un número de día y mes seguido de una hora y un designador AM/PM (por ejemplo, "4/10 6 A.M."):  
+ El `<EnableAmPmParseAdjustment>` elemento controla cómo los métodos siguientes para analizar una cadena de fecha que contiene un número de día y mes seguido de una hora y un designador AM/PM (por ejemplo, "4/10 6 a. M."):  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -63,24 +63,24 @@ Determina si la fecha y hora en métodos de análisis usan un conjunto de reglas
   
 -   <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
- Otros patrones que no se ven afectados.  
+ No hay otros patrones se ven afectados.  
   
  El `<EnableAmPmParseAdjustment>` elemento no tiene ningún efecto el <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, y <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> métodos.  
   
 > [!IMPORTANT]
->  En .NET Core y .NET Native, las reglas de análisis de AM/PM ajustadas están habilitadas de forma predeterminada.  
+>  En .NET Core y .NET Native, se habilitan las reglas de análisis de A.M./P.M. ajustadas de forma predeterminada.  
   
- Si no está habilitada la regla de ajuste de análisis, el primer dígito de la cadena se interpreta como la hora del reloj de 12 horas, y se omite el resto de la cadena excepto el designador AM/PM. La fecha y hora devuelto por el método de análisis consta de la fecha actual y la hora del día que se extrae de la cadena de fecha.  
+ Si no está habilitada la regla de ajuste de análisis, el primer dígito de la cadena se interpreta como la hora del reloj de 12 horas, y se omite el resto de la cadena, excepto el designador AM/PM. La fecha y hora devuelto por el método de análisis consta de la fecha actual y la hora del día extraído de la cadena de fecha.  
   
- Si está habilitada la regla de ajuste de análisis, en el método de análisis interpretar el día y el mes como pertenecientes al año actual e interpretar al tiempo que la hora del reloj de 12 horas.  
+ Si está habilitada la regla de ajuste de análisis, el método de análisis interpretar el día y mes como pertenecientes al año actual e interpretar al tiempo que la hora del reloj de 12 horas.  
   
- En la tabla siguiente se ilustra la diferencia entre el <xref:System.DateTime> valor cuando la <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> método se utiliza para analizar la cadena "" 4/10 6 AM"con el `<EnableAmPmParseAdjustment>` del elemento `enabled` propiedad establecida en"0"o"1". Se supone que la fecha actual es el 5 de enero de 2017 y muestra la fecha como si se da formato con la cadena de formato "G" de la referencia cultural especificada.  
+ En la tabla siguiente se ilustra la diferencia en el <xref:System.DateTime> valor cuando la <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> método se utiliza para analizar la cadena "" 4/10 6 a. M."con el `<EnableAmPmParseAdjustment>` del elemento `enabled` propiedad establecida en"0"o"1". Se supone que la fecha de hoy es del 5 de enero de 2017 y muestra la fecha como si se da formato con la cadena de formato "G" de la referencia cultural especificada.  
   
-|Nombre de referencia cultural|habilitada = "0"|habilitada = "1"|  
+|Nombre de referencia cultural|habilitado = "0"|habilitado = "1"|  
 |------------------|------------------|------------------|  
 |en-US|1/5/2017 4:00:00 A.M.|4/10/2017 6:00:00 A.M.|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Vea también  
- [\<en tiempo de ejecución > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<en tiempo de ejecución > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

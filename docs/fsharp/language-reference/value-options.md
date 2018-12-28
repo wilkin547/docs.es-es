@@ -1,22 +1,22 @@
 ---
-title: Opciones de valores (F#)
-description: Obtenga información sobre el tipo de opción de valor de F#, que es una versión de la estructura del tipo de opción.
+title: Opciones de valor
+description: Obtenga información sobre la F# tipo de opción de valor, que es una versión de la estructura del tipo de opción.
 ms.date: 06/16/2018
-ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50185841"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613432"
 ---
 # <a name="value-options"></a>Opciones de valor
 
-El tipo de opción de valor en F# se utiliza cuando mantiene los siguientes dos casos:
+El tipo de opción de valor F# se utiliza cuando mantiene los siguientes dos casos:
 
-1. Un escenario es adecuado para un [opción F#](options.md).
+1. Un escenario es adecuado para un [ F# opción](options.md).
 2. Uso de un struct mejora el rendimiento en su escenario.
 
-No todos los escenarios sensibles al rendimiento se "solucionar" mediante el uso de estructuras. Debe tener en cuenta el costo adicional de copia cuando se usan en lugar de tipos de referencia. Sin embargo, programas de gran tamaño F# crear una instancia normalmente muchos tipos opcionales que fluyen a través de las rutas de acceso frecuente, porque structs a veces puede producir el mejor rendimiento general durante la vigencia de un programa.
+No todos los escenarios sensibles al rendimiento se "solucionar" mediante el uso de estructuras. Debe tener en cuenta el costo adicional de copia cuando se usan en lugar de tipos de referencia. Sin embargo, gran F# programas suele crear una instancia de muchos tipos opcionales que fluyen a través de las rutas de acceso frecuente, porque las estructuras a veces pueden producir un mejor rendimiento general durante la vigencia de un programa.
 
 ## <a name="definition"></a>de esquema JSON
 
