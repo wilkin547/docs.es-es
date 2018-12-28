@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c9932d1328f010158535b096e4ead599c7b3f47
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: daa08bb8a92a13941093a77f580318558dc14e9c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202138"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610377"
 ---
-# <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="67378-102">&lt;System.Runtime.Caching&gt; elemento (configuración de caché)</span><span class="sxs-lookup"><span data-stu-id="67378-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
-<span data-ttu-id="67378-103">Proporciona la configuración para la implementación predeterminada en memoria de la clase <xref:System.Runtime.Caching.ObjectCache> mediante la entrada `memoryCache` en el archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="67378-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  
+# <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="0c297-102">&lt;System.Runtime.Caching&gt; elemento (configuración de caché)</span><span class="sxs-lookup"><span data-stu-id="0c297-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
+<span data-ttu-id="0c297-103">Proporciona la configuración para la implementación predeterminada en memoria de la clase <xref:System.Runtime.Caching.ObjectCache> mediante la entrada `memoryCache` en el archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="0c297-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  
   
- <span data-ttu-id="67378-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="67378-104">\<configuration></span></span>  
-<span data-ttu-id="67378-105">\<System.Runtime.Caching ></span><span class="sxs-lookup"><span data-stu-id="67378-105">\<system.runtime.caching></span></span>  
+ <span data-ttu-id="0c297-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0c297-104">\<configuration></span></span>  
+<span data-ttu-id="0c297-105">\<System.Runtime.Caching ></span><span class="sxs-lookup"><span data-stu-id="0c297-105">\<system.runtime.caching></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67378-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="67378-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c297-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0c297-106">Syntax</span></span>  
   
 ```xml  
 <system.runtime.caching >  
@@ -29,34 +29,34 @@ ms.locfileid: "50202138"
 </system.runtime.caching >  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="67378-107">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="67378-107">Attributes and Elements</span></span>  
- <span data-ttu-id="67378-108">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="67378-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0c297-107">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="0c297-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="0c297-108">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="0c297-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="67378-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="67378-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0c297-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="0c297-109">Attributes</span></span>  
  `None`  
   
-### <a name="child-elements"></a><span data-ttu-id="67378-110">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="67378-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0c297-110">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="0c297-110">Child Elements</span></span>  
   
-|<span data-ttu-id="67378-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="67378-111">Element</span></span>|<span data-ttu-id="67378-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="67378-112">Description</span></span>|  
+|<span data-ttu-id="0c297-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="0c297-111">Element</span></span>|<span data-ttu-id="0c297-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="0c297-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="67378-113">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="67378-113">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="67378-114">Define un elemento que se usa para configurar una memoria caché basada en la clase <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="67378-114">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
+|[<span data-ttu-id="0c297-113">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="0c297-113">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="0c297-114">Define un elemento que se usa para configurar una memoria caché basada en la clase <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="0c297-114">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="67378-115">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="67378-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0c297-115">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="0c297-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="67378-116">Elemento</span><span class="sxs-lookup"><span data-stu-id="67378-116">Element</span></span>|<span data-ttu-id="67378-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="67378-117">Description</span></span>|  
+|<span data-ttu-id="0c297-116">Elemento</span><span class="sxs-lookup"><span data-stu-id="0c297-116">Element</span></span>|<span data-ttu-id="0c297-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="0c297-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="67378-118">\<configuration></span><span class="sxs-lookup"><span data-stu-id="67378-118">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="67378-119">Especifica el elemento raíz necesario en cada archivo de configuración usado por Common Language Runtime y por las aplicaciones de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="67378-119">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
+|[<span data-ttu-id="0c297-118">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0c297-118">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="0c297-119">Especifica el elemento raíz necesario en cada archivo de configuración usado por Common Language Runtime y por las aplicaciones de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0c297-119">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="67378-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="67378-120">Remarks</span></span>  
- <span data-ttu-id="67378-121">Las clases de este espacio de nombres proporcionan una manera de usar las funciones de almacenamiento en caché, como las de ASP.NET, pero sin una dependencia en el ensamblado `System.Web` .</span><span class="sxs-lookup"><span data-stu-id="67378-121">The classes in this namespace provide a way to use caching facilities like those in ASP.NET, but without a dependency on the `System.Web` assembly.</span></span> <span data-ttu-id="67378-122">Para obtener más información, consulta [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span><span class="sxs-lookup"><span data-stu-id="67378-122">For more information, see [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0c297-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0c297-120">Remarks</span></span>  
+ <span data-ttu-id="0c297-121">Las clases de este espacio de nombres proporcionan una manera de usar las funciones de almacenamiento en caché, como las de ASP.NET, pero sin una dependencia en el ensamblado `System.Web` .</span><span class="sxs-lookup"><span data-stu-id="0c297-121">The classes in this namespace provide a way to use caching facilities like those in ASP.NET, but without a dependency on the `System.Web` assembly.</span></span> <span data-ttu-id="0c297-122">Para obtener más información, consulta [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span><span class="sxs-lookup"><span data-stu-id="0c297-122">For more information, see [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="67378-123">La funcionalidad y los tipos de almacenamiento en caché de salida del espacio de nombres <xref:System.Runtime.Caching> son nuevos en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="67378-123">The output caching functionality and types in the <xref:System.Runtime.Caching> namespace are new in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>  
+>  <span data-ttu-id="0c297-123">La funcionalidad y los tipos de almacenamiento en caché de salida del espacio de nombres <xref:System.Runtime.Caching> son nuevos en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0c297-123">The output caching functionality and types in the <xref:System.Runtime.Caching> namespace are new in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="example"></a><span data-ttu-id="67378-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="67378-124">Example</span></span>  
- <span data-ttu-id="67378-125">En el ejemplo siguiente se muestra cómo configurar una memoria caché basada en la clase <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="67378-125">The following example shows how to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="67378-126">En el ejemplo se muestra cómo configurar una instancia de la entrada `namedCaches` de la memoria caché.</span><span class="sxs-lookup"><span data-stu-id="67378-126">The example shows how to configure an instance of the `namedCaches` entry for memory cache.</span></span> <span data-ttu-id="67378-127">El nombre de la memoria caché se establece en el nombre predeterminado de la entrada de caché estableciendo el atributo `name` en "default".</span><span class="sxs-lookup"><span data-stu-id="67378-127">The name of the cache is set to the default cache entry name by setting the `name` attribute to "default".</span></span>  
+## <a name="example"></a><span data-ttu-id="0c297-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0c297-124">Example</span></span>  
+ <span data-ttu-id="0c297-125">En el ejemplo siguiente se muestra cómo configurar una memoria caché basada en la clase <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="0c297-125">The following example shows how to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="0c297-126">En el ejemplo se muestra cómo configurar una instancia de la entrada `namedCaches` de la memoria caché.</span><span class="sxs-lookup"><span data-stu-id="0c297-126">The example shows how to configure an instance of the `namedCaches` entry for memory cache.</span></span> <span data-ttu-id="0c297-127">El nombre de la memoria caché se establece en el nombre predeterminado de la entrada de caché estableciendo el atributo `name` en "default".</span><span class="sxs-lookup"><span data-stu-id="0c297-127">The name of the cache is set to the default cache entry name by setting the `name` attribute to "default".</span></span>  
   
- <span data-ttu-id="67378-128">Los atributos `cacheMemoryLimitMegabytes` y `physicalMemoryPercentage` se establecen en cero.</span><span class="sxs-lookup"><span data-stu-id="67378-128">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="67378-129">El hecho de establecer estos atributos en cero implica que la heurística de ajuste automático de tamaño de <xref:System.Runtime.Caching.MemoryCache> se usa de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="67378-129">Setting these attributes to zero means that the <xref:System.Runtime.Caching.MemoryCache> autosizing heuristics are used by default.</span></span> <span data-ttu-id="67378-130">La implementación de la memoria caché debe comparar cada dos minutos la carga de memoria actual con los límites de memoria absoluto y de porcentaje.</span><span class="sxs-lookup"><span data-stu-id="67378-130">The cache implementation should compare the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
+ <span data-ttu-id="0c297-128">Los atributos `cacheMemoryLimitMegabytes` y `physicalMemoryPercentage` se establecen en cero.</span><span class="sxs-lookup"><span data-stu-id="0c297-128">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="0c297-129">El hecho de establecer estos atributos en cero implica que la heurística de ajuste automático de tamaño de <xref:System.Runtime.Caching.MemoryCache> se usa de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="0c297-129">Setting these attributes to zero means that the <xref:System.Runtime.Caching.MemoryCache> autosizing heuristics are used by default.</span></span> <span data-ttu-id="0c297-130">La implementación de la memoria caché debe comparar cada dos minutos la carga de memoria actual con los límites de memoria absoluto y de porcentaje.</span><span class="sxs-lookup"><span data-stu-id="0c297-130">The cache implementation should compare the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
   
 ```xml  
 <configuration>  
@@ -73,5 +73,5 @@ ms.locfileid: "50202138"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="67378-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="67378-131">See Also</span></span>  
- [<span data-ttu-id="67378-132">\<memoryCache > elemento (configuración de caché)</span><span class="sxs-lookup"><span data-stu-id="67378-132">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="0c297-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="0c297-131">See Also</span></span>  
+- [<span data-ttu-id="0c297-132">\<memoryCache > elemento (configuración de caché)</span><span class="sxs-lookup"><span data-stu-id="0c297-132">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
