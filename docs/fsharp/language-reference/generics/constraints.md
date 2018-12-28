@@ -1,13 +1,13 @@
 ---
-title: Restricciones (F#)
+title: Restricciones
 description: Obtenga información sobre F# restricciones que se aplican a los parámetros de tipo genérico para especificar los requisitos para un argumento de tipo en una función o tipo genérico.
 ms.date: 05/16/2016
-ms.openlocfilehash: 2dfc99e0ef41a224fbd03f325582365b7caab78b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152499"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612236"
 ---
 # <a name="constraints"></a>Restricciones
 
