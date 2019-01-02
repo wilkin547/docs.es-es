@@ -2,14 +2,13 @@
 title: Plantillas personalizadas para dotnet new
 description: Obtenga información sobre las plantillas personalizadas para cualquier tipo de proyecto o archivo de .NET.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60ae9a6f0af7e75ba721a739ec51d77c59d7792e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126268"
+ms.locfileid: "53169426"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 

@@ -2,15 +2,14 @@
 title: Escritura de un host en tiempo de ejecución personalizado de .NET Core
 description: Obtenga información sobre cómo hospedar el entorno de tiempo de ejecución de .NET Core desde código nativo para admitir escenarios avanzados que necesitan controlar cómo funciona dicho entorno.
 author: mjrousos
-ms.author: mairaw
 ms.date: 02/03/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 861a02d2e409637d11c874f16ecd56a1a0fcd92a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146966"
+ms.locfileid: "53169643"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 

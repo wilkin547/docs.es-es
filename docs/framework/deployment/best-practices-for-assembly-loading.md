@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201587"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397051"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedimientos recomendados para cargar ensamblados
 En este artículo se abordan formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros. En él se ofrecen las siguientes recomendaciones:  
@@ -44,7 +44,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
 -   El contexto de origen de carga contiene ensamblados que se cargan desde ubicaciones en las que no busca el cargador. Por ejemplo, los complementos podrían instalarse en un directorio que no esté bajo la ruta de acceso de la aplicación. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> y <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> son ejemplos de métodos que cargan por ruta de acceso.  
   
--   El contexto de solo reflexión contiene ensamblados cargados con los métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> y <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. No se puede ejecutar código en este contexto, por lo que no se trata aquí. Para más información, vea [How to: Load Assemblies into the Reflection-Only Context (Cómo: Cargar ensamblados en el contexto de solo reflexión)](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   El contexto de solo reflexión contiene ensamblados cargados con los métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> y <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. No se puede ejecutar código en este contexto, por lo que no se trata aquí. Para obtener más información, vea [Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 -   Si ha generado un ensamblado dinámico transitorio mediante la reflexión de la emisión, el ensamblado no está en ningún contexto. Además, la mayoría de los ensamblados que se carga mediante el método <xref:System.Reflection.Assembly.LoadFile%2A> lo hace sin contexto, mientras que los ensamblados que se cargan desde matrices de bytes lo hacen sin contexto a menos que su identidad (una vez aplicada la directiva) establezca que están en la caché global de ensamblados.  
   
@@ -154,7 +154,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
  Si no es posible colocar todos los ensamblados en la ruta de acceso de sondeo, considere alternativas como usar el modelo de complementos de .NET Framework, colocar los ensamblados en la caché global de ensamblados o crear dominios de aplicación.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Considere la posibilidad de usar el modelo de complementos de .NET Framework  
- Si está usando el contexto de origen de carga para implementar complementos, que normalmente no están instalados en la base de la aplicación, use el modelo de complementos de .NET Framework. Este modelo proporciona aislamiento en el nivel del proceso o el dominio de la aplicación sin exigirle que administre los dominios de aplicación usted mismo. Para más información sobre el modelo de complementos, vea [Complementos y extensibilidad](../../../docs/framework/add-ins/index.md).  
+ Si está usando el contexto de origen de carga para implementar complementos, que normalmente no están instalados en la base de la aplicación, use el modelo de complementos de .NET Framework. Este modelo proporciona aislamiento en el nivel del proceso o el dominio de la aplicación sin exigirle que administre los dominios de aplicación usted mismo. Para más información sobre el modelo de complementos, vea [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Considere la posibilidad de usar la caché global de ensamblados  
  Coloque los ensamblados en la caché global de ensamblados para beneficiarse de una ruta de acceso de ensamblado compartida que esté fuera de la base de la aplicación, sin perder las ventajas del contexto de carga predeterminado ni asumir las desventajas de los otros contextos.  
@@ -170,4 +170,3 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [Complementos y extensibilidad](../../../docs/framework/add-ins/index.md)

@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 612de47c4d40d1272eb330a0343302109040f434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149386"
+ms.locfileid: "53170033"
 ---
 # <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Compilación de una aplicación Hola mundo de .NET Core con Visual Basic en Visual Studio 2017
 
@@ -30,11 +30,11 @@ Comience creando una aplicación de consola "Hola mundo" sencilla. Siga estos pa
 
 1. Inicie Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo *Nuevo proyecto**, seleccione el nodo **Visual Basic** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "Hola mundo". Seleccione el botón **Aceptar**.
 
-   ![Cuadro de diálogo Nuevo proyecto con la aplicación de consola seleccionada](./media/vb-with-visual-studio/new-project.png)
+   ![Cuadro de diálogo Nuevo proyecto con la aplicación de consola seleccionada](./media/vb-with-visual-studio/visual-studio-new-project.png)
    
 1. Visual Studio usa la plantilla para crear el proyecto. La plantilla de aplicación de consola de Visual Basic para .NET Core define automáticamente una clase, `Program`, con un único método, `Main`, que adopta una matriz <xref:System.String> como argumento. `Main` es el punto de entrada de la aplicación, el método que se llama automáticamente mediante el tiempo de ejecución cuando inicia la aplicación. Los argumentos de línea de comandos proporcionados cuando se inicia la aplicación están disponibles en la matriz *args*.
 
-   ![Visual Studio y el nuevo proyecto Hola mundo](./media/vb-with-visual-studio/devenv.png)
+   ![Visual Studio y el nuevo proyecto Hola mundo](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
    La plantilla crea una aplicación "Hola mundo" sencilla. Llama al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> para mostrar la cadena literal "Hola mundo" en la ventana de la consola. Al seleccionar el botón **HelloWorld** con la flecha verde en la barra de herramientas, puede ejecutar el programa en modo de depuración. Si lo hace, la ventana de la consola se mostrará durante poco tiempo antes de cerrarse. Esto ocurre porque el método `Main` finaliza y la aplicación termina en cuanto se ejecuta la única instrucción en el método `Main`.
 
@@ -50,7 +50,7 @@ Comience creando una aplicación de consola "Hola mundo" sencilla. Siga estos pa
 
 1. Seleccione el botón **HelloWorld** con la flecha verde en la barra de herramientas para ejecutar el programa.
 
-   ![Ventana de la consola que muestra Hola mundo Presione cualquier tecla para continuar](./media/with-visual-studio/helloworld1.png)
+   ![Ventana de la consola que muestra Hola mundo Presione cualquier tecla para continuar](./media/with-visual-studio/hello-world-console.png)
 
 1. Presione cualquier tecla para cerrar la ventana de consola.
 
@@ -64,7 +64,7 @@ Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la f
 
    Este código reemplaza las instrucciones <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> y <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> existentes.
 
-   ![Archivo del programa Visual Studio con el método Main actualizado](./media/vb-with-visual-studio/codewindow.png)
+   ![Archivo del programa Visual Studio con el método Main actualizado](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
    Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena seguida de la tecla Entrar. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `currentDate`. Por último, usa una [cadena interpolada](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) para mostrar estos valores en la ventana de la consola.
 
@@ -72,7 +72,7 @@ Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la f
 
 1. Ejecute el programa en modo de depuración en Visual Studio; para ello, seleccione la flecha verde en la barra de herramientas, presione F5 o seleccione el elemento de menú **Depurar** > **Iniciar depuración**. Responda a la solicitud escribiendo un nombre y presionando la tecla Entrar.
 
-   ![Ventana de la consola con el resultado del programa modificado](./media/with-visual-studio/helloworld2.png)
+   ![Ventana de la consola con el resultado del programa modificado](./media/with-visual-studio/hello-world-update.png)
 
 1. Presione cualquier tecla para cerrar la ventana de consola.
 
