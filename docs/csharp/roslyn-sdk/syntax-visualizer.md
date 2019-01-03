@@ -128,7 +128,7 @@ Inspeccione el símbolo correspondiente a cualquier tipo, método o propiedad de
 
 Los ejemplos de VB anteriores se pueden replicar fácilmente en C#. Escriba `using C = System.Console;` en lugar de `Imports C = System.Console` para el alias. Los pasos anteriores en C# producen resultados idénticos en la ventana del visualizador.
 
-Las operaciones de inspección semántica solo están disponibles en los nodos. No están disponibles en tokens o curiosidades. No todos los nodos tienen información semántica interesante que inspeccionar. Cuando un nodo no tiene información semántica interesante, al hacer clic en **View \* Symbol (if any)** [Ver símbolo * (si existe)] se muestra una cuadrícula de propiedades en blanco.
+Las operaciones de inspección semántica solo están disponibles en los nodos. No están disponibles en tokens o curiosidades. No todos los nodos tienen información semántica interesante que inspeccionar. Cuando un nodo no tiene información semántica interesante, al hacer clic en **View \* Symbol (if any)** [Ver símbolo (si existe)] se muestra una cuadrícula de propiedades en blanco.
 
 Puede leer más sobre las API para realizar análisis semánticos en el documento introductorio [Trabajar con semántica](work-with-semantics.md).
 
