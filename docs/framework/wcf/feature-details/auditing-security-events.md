@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198087"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030573"
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden registrar los eventos de seguridad (ya sea correcto, error o ambos) con la característica de auditoría. Los eventos se escriben al registro de eventos del sistema de Windows y se pueden examinar utilizando el Visor de eventos.  
@@ -28,7 +28,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
  Puede comprobar ambos niveles de éxito o error, que se conoce como auditoría la *comportamiento de auditoría*.  
   
 ## <a name="audit-log-location"></a>Ubicación del registro de auditoría  
- Una vez que determina el nivel y comportamiento de una auditoría, usted (o un administrador) puede especificar una ubicación para el registro de auditoría. Hay tres opciones: valor predeterminado, aplicación y seguridad. Al especificar Predeterminado, el registro real depende de qué sistema esté usando y de si el sistema permite escribir en el registro de seguridad. Para obtener más información, consulte la sección "Sistema operativo" más adelante en este tema.  
+ Una vez que determina el nivel y comportamiento de una auditoría, usted (o un administrador) puede especificar una ubicación para el registro de auditoría. Las tres opciones incluyen: Valor predeterminado, aplicación y seguridad. Al especificar Predeterminado, el registro real depende de qué sistema esté usando y de si el sistema permite escribir en el registro de seguridad. Para obtener más información, consulte la sección "Sistema operativo" más adelante en este tema.  
   
  Para escribir en el registro de seguridad es necesario el `SeAuditPrivilege`. De forma predeterminada, solo las cuentas de Sistema local y Servicio de red tienen este privilegio. Para administrar las funciones del registro de seguridad `read` y `delete` es necesario `SeSecurityPrivilege`. De forma predeterminada, solo los administradores tienen este privilegio.  
   
@@ -51,7 +51,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Especifica qué tipos de eventos de autorización de servicio se auditan en el nivel de servicio. Las opciones son `None`, `Failure`, `Success` y `SuccessOrFailure`.|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Especifica lo que pasa a la solicitud de cliente cuando se produce un error al auditar. Por ejemplo, cuando el servicio intenta escribir en el registro de seguridad, pero no tiene `SeAuditPrivilege`. El valor predeterminado de `true` indica que se pasan por alto los errores, y se procesa la solicitud de cliente como de costumbre.|  
   
- Para obtener un ejemplo de cómo configurar una aplicación para registrar eventos de auditoría, consulte [Cómo: auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Para obtener un ejemplo de cómo configurar una aplicación para registrar eventos de auditoría, consulte [Cómo: Auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ### <a name="configuration"></a>Configuración  
  También puede usar la configuración para especificar el comportamiento de la auditoría mediante la adición de un [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) bajo el [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Debe agregar el elemento bajo un [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) tal como se muestra en el código siguiente.  
@@ -61,7 +61,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  
@@ -103,7 +103,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
  <xref:System.ServiceModel.AuditLogLocation>  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Auditoría de eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [Cómo: Auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

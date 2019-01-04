@@ -2,12 +2,12 @@
 title: BasicBinding con seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: d3d1aa9b4ee35e4ef96f1494ee79b3e60bba50a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a1e08b2fd97f7eee8903de8c396e6eacd9e7184e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195715"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030248"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding con seguridad de transporte
 El ejemplo muestra el uso de seguridad de transporte de SSL con el enlace básico. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -42,8 +42,8 @@ El ejemplo muestra el uso de seguridad de transporte de SSL con el enlace básic
    </services>  
   <bindings>  
     <basicHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -- >  
-      <!-- mode and clientCredentialType set to None.-->  
+      <!-- Configure basicHttpBinding with Transport security -->  
+      <!-- mode and clientCredentialType set to None. -->  
       <binding name="Binding1">  
         <security mode="Transport">  
           <transport clientCredentialType="None"/>  

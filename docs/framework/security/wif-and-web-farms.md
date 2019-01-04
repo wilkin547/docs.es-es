@@ -3,12 +3,12 @@ title: WIF y granjas de servidores web
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: f65e10fa44c9d245bc7d275ac0e1d8fe914bae0b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d1d3d67dd578957b5d7f4dc70cd2710143b699d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199468"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029468"
 ---
 # <a name="wif-and-web-farms"></a>WIF y granjas de servidores web
 Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de una aplicación de usuario de confianza (RP) implementada en una granja de servidores web, debe realizar determinados pasos para garantizar que WIF pueda procesar tokens de instancias de la aplicación de RP que se ejecutan en equipos diferentes de la granja de servidores. Este proceso implica la validación de firmas de token de sesión, el cifrado y descifrado de tokens de sesión, el almacenamiento en caché de tokens de sesión y la detección de tokens de seguridad reproducidos.  
@@ -45,7 +45,7 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
     ```xml  
     <caches>  
       <sessionSecurityTokenCache type="MyCacheLibrary.MySharedSessionSecurityTokenCache, MyCacheLibrary">  
-        <!—optional child configuration elements, if implemented by the derived class -->  
+        <!--optional child configuration elements, if implemented by the derived class -->  
       </sessionSecurityTokenCache>  
     </caches>  
     ```  

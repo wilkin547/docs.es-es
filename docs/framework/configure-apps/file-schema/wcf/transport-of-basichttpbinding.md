@@ -2,12 +2,12 @@
 title: Elemento &lt;transport&gt; de &lt;basicHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: f4e37281539106fef93dc4ab566d94d781c39d29
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01fe2bc98326e3cef2b3df8bdf4aa03055df5e65
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845682"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030339"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>Elemento &lt;transport&gt; de &lt;basicHttpBinding&gt;
 Define las propiedades que controlan los parámetros de autenticación para el transporte HTTP.  
@@ -67,8 +67,8 @@ Define las propiedades que controlan los parámetros de autenticación para el t
 |Valor|Descripción|  
 |-----------|-----------------|  
 |Ninguna|-Los mensajes no están protegidos durante la transferencia.|  
-|Básico|Especifica la autenticación básica como se define en la autenticación RFC 2617 de HTTP: Autenticación básica e implícita.|  
-|Implícita|Especifica la autenticación implícita como se define en la autenticación RFC 2617 de HTTP: Autenticación básica e implícita|  
+|Básico|Especifica la autenticación básica como se define en RFC 2617 – HTTP Authentication: Básica y autenticación implícita.|  
+|Implícita|Especifica la autenticación implícita, como se define en RFC 2617 – HTTP Authentication: Básica y autenticación implícita.|  
 |Ntlm|Especifica la autenticación NTLM cuando sea posible y si la autenticación de Windows falla.|  
 |Windows|Especifica la autenticación de Windows integrada.|  
 |Certificado|Realiza la autenticación del cliente mediante un certificado. Esta opción solo funciona si el atributo `Mode` del elemento `security` primario se establece como Transport, y no funciona si está establecido como TransportCredentialOnly.|  
@@ -99,8 +99,8 @@ Define las propiedades que controlan los parámetros de autenticación para el t
    </services>  
     <bindings>  
         <basicHttpBinding>  
-        <!-- Configure basicHttpBinding with Transport security -- >  
-        <!-- mode and clientCredentialType set to None.-->  
+        <!-- Configure basicHttpBinding with Transport security -->  
+        <!-- mode and clientCredentialType set to None. -->  
            <binding name="Binding1">  
                <security mode="Transport">  
                    <transport clientCredentialType="None"  

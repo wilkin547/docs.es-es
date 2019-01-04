@@ -2,12 +2,12 @@
 title: Configuración del servicio de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 7232fc587aa7f63167034f7474d6c5e7476048ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3afc4cf50ac0dda0198ca8986177fd3028f9837e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153480"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029364"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configuración del servicio de uso compartido de puertos Net.TCP
 Los servicios autohospedados que utilizan el transporte Net.TCP pueden controlar varios ajustes avanzados, como `ListenBacklog` y `MaxPendingAccepts`, que rigen el comportamiento del socket de TCP subyacente utilizado para la comunicación por red. Sin embargo, esta configuración para cada socket solo se aplica en el nivel de enlace si el enlace de transporte ha deshabilitado el uso compartido de puertos, que está habilitado de forma predeterminada.  
@@ -27,10 +27,10 @@ Los servicios autohospedados que utilizan el transporte Net.TCP pueden controlar
 ```xml  
 <configuration>  
    <system.serviceModel.activation>  
-       <net.tcp listenBacklog="16" <!—16 * # of processors -->  
-          maxPendingAccepts="4"<!— 4 * # of processors -->  
+       <net.tcp listenBacklog="16" <!--16 * # of processors -->  
+          maxPendingAccepts="4"<!-- 4 * # of processors -->  
           maxPendingConnections="100"  
-          receiveTimeout="00:00:30" <!—30 seconds -->  
+          receiveTimeout="00:00:30" <!--30 seconds -->  
           teredoEnabled="false">  
           <allowAccounts>  
              <!-- LocalSystem account -->  

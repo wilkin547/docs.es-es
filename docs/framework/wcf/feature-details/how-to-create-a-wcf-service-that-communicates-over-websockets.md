@@ -1,15 +1,15 @@
 ---
-title: Cómo crear un servicio WCF que se comunique a través de WebSockets
+title: Procedimiento Crear un servicio WCF que se comunica a través de WebSockets
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd9b1be3751d499ee3c6ee38ff4cee0e12046e6a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196205"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030586"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Cómo crear un servicio WCF que se comunique a través de WebSockets
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedimiento Crear un servicio WCF que se comunica a través de WebSockets
 Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  WebSockets se usará cuando <xref:System.ServiceModel.NetHttpBinding> determine que el contrato de servicio define un contrato de devolución de llamada. En este tema se describe cómo implementar un servicio de WCF y un cliente que use <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  
   
 ### <a name="define-the-service"></a>Definir el servicio  
@@ -158,7 +158,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
         </configuration>  
         ```  
   
-         No es necesario hacer nada especial en la configuración de cliente, simplemente especificar el extremo del lado cliente mediante `NetHttpBinding`.  
+         No es necesario hacer nada especial en la configuración de cliente, simplemente especificar el punto de conexión del lado cliente mediante `NetHttpBinding`.  
   
 ## <a name="example"></a>Ejemplo  
  A continuación, se muestra el código completo que se emplea en este tema.  
@@ -295,7 +295,7 @@ namespace Client
 ```  
   
 ```xml  
-<!—App.config -->  
+<!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <startup>   

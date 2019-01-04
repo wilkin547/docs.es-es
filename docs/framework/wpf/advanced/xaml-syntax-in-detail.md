@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485734"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030300"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 Este tema definen los términos que se utilizan para describir los elementos de sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente y otros marcos que utilizan XAML o los conceptos básicos de XAML habilitados por la compatibilidad del lenguaje XAML en el nivel de System.Xaml. En este tema se amplía la terminología básica presentada en el tema [información general sobre XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -288,7 +288,7 @@ Este tema definen los términos que se utilizan para describir los elementos de 
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>Usos de XAML no recomendados y opcionales  
- Las secciones siguientes describen los usos de XAML que son técnicamente compatibles con procesadores XAML, pero que producen nivel de detalle u otros problemas estéticos que interfieren con archivos XAML restantes legible cuando su desarrollo de aplicaciones que contienen los orígenes de XAML .  
+ Las secciones siguientes describen los usos de XAML que son técnicamente compatibles con procesadores XAML, pero que producen nivel de detalle u otros problemas estéticos que interfieren con archivos XAML restantes legible al desarrollar aplicaciones que contienen los orígenes de XAML.  
   
 ### <a name="optional-property-element-usages"></a>Usos de elemento de propiedad opcional  
  Usos de elemento de propiedad opcional incluir acciones como escribir explícitamente las propiedades de contenido del elemento que el procesador XAML considera implícito. Por ejemplo, cuando se declara el contenido de un <xref:System.Windows.Controls.Menu>, podría optar por declarar explícitamente el <xref:System.Windows.Controls.ItemsControl.Items%2A> colección de la <xref:System.Windows.Controls.Menu> como un `<Menu.Items>` etiqueta de elemento de propiedad y coloque cada <xref:System.Windows.Controls.MenuItem> dentro de `<Menu.Items>`, en lugar que el uso del comportamiento del procesador XAML implícito que todos los elementos secundarios de un <xref:System.Windows.Controls.Menu> debe ser un <xref:System.Windows.Controls.MenuItem> y se colocan en el <xref:System.Windows.Controls.ItemsControl.Items%2A> colección. A veces los usos opcionales pueden ayudar a clarificar visualmente la estructura de objetos, como se representa en el marcado. O bien, en ocasiones, el uso de un elemento de propiedad explícita puede evitar el marcado que es técnicamente funcional pero visualmente confuso, como las extensiones de marcado anidados dentro de un valor de atributo.  
@@ -317,7 +317,7 @@ Este tema definen los términos que se utilizan para describir los elementos de 
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Características de lenguaje (x:) de espacios de nombres XAML](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [XAML Namespace (x:) Características del lenguaje](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [Extensiones XAML de WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [Clases TypeConverter y XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  

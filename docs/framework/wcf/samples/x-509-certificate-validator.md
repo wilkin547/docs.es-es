@@ -2,17 +2,17 @@
 title: Validador de certificado X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ece96c04245434853169c458f8f0c0ebe91da724
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8bc5c1976e61cbb81d0bc8463a57cfad750a2a7
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123428"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030313"
 ---
 # <a name="x509-certificate-validator"></a>Validador de certificado X.509
 Este ejemplo muestra cómo implementar un validador de certificado X.509 personalizado. Esto es útil en casos donde ninguno de los modos de validación de certificado X.509 integrado es adecuado para los requisitos de la aplicación. Este ejemplo muestra un servicio que tiene un validador personalizado que acepta certificados emitidos por sí mismos. El cliente utiliza un certificado para autenticar al servicio.
 
- Nota: como cualquiera puede construir un certificado emitido por sí mismo, el validador personalizado utilizado por el servicio es menos seguro que el comportamiento predeterminado proporcionado por X509CertificateValidationMode de ChainTrust. Las implicaciones de seguridad que conlleva deberían considerarse cuidadosamente antes de utilizar esta lógica de validación en el código de producción.
+ Nota: Como cualquiera puede construir un certificado emitido automáticamente el validador personalizado utilizado por el servicio es menos seguro que el comportamiento predeterminado proporcionado por el ChainTrust X509CertificateValidationMode. Las implicaciones de seguridad que conlleva deberían considerarse cuidadosamente antes de utilizar esta lógica de validación en el código de producción.
 
  En resumen, este ejemplo muestra cómo:
 
@@ -59,16 +59,16 @@ Este ejemplo muestra cómo implementar un validador de certificado X.509 persona
         <behavior name="CalculatorServiceBehavior">
           <serviceDebug includeExceptionDetailInFaults ="true"/>
           <serviceCredentials>
-            <!--The serviceCredentials behavior allows one -->
+            <!-- The serviceCredentials behavior allows one -->
             <!-- to specify authentication constraints on -->
             <!-- client certificates. -->
             <clientCertificate>
               <!-- Setting the certificateValidationMode to -->
               <!-- Custom means that if the custom -->
               <!-- X509CertificateValidator does NOT throw -->
-              <!-- an exception, then the provided certificate -- >
+              <!-- an exception, then the provided certificate -->
               <!-- will be trusted without performing any -->
-              <!-- validation beyond that performed by the custom-->
+              <!-- validation beyond that performed by the custom -->
               <!-- validator. The security implications of this -->
               <!-- setting should be carefully considered before -->
               <!-- using Custom in production code. -->
@@ -77,13 +77,13 @@ Este ejemplo muestra cómo implementar un validador de certificado X.509 persona
                  customCertificateValidatorType =
 "Microsoft.ServiceModel.Samples.CustomX509CertificateValidator, service" />
             </clientCertificate>
-            <!-- The serviceCredentials behavior allows one to -- >
-            <!--define a service certificate. -->
-            <!--A service certificate is used by a client to  -->
-            <!--authenticate the service and provide message  -->
-            <!--protection. This configuration references the  -->
-            <!--"localhost" certificate installed during the setup  -->
-            <!--instructions. -->
+            <!-- The serviceCredentials behavior allows one to -->
+            <!-- define a service certificate. -->
+            <!-- A service certificate is used by a client to -->
+            <!-- authenticate the service and provide message -->
+            <!-- protection. This configuration references the -->
+            <!-- "localhost" certificate installed during the setup -->
+            <!-- instructions. -->
             <serviceCertificate findValue="localhost"
                  storeLocation="LocalMachine"
                  storeName="My" x509FindType="FindBySubjectName" />
@@ -232,10 +232,10 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     <clientCertificate>
     <!-- Setting the certificateValidationMode to Custom means -->
     <!--that if the custom X509CertificateValidator does NOT -->
-    <!--throw an exception, then the provided certificate will-- >
-    <!-- be trusted without performing any validation beyond that-- >
-    <!-- performed by the custom validator. The security -- >
-    <!--implications of this setting should be carefully -- >
+    <!--throw an exception, then the provided certificate will -->
+    <!--be trusted without performing any validation beyond that -->
+    <!--performed by the custom validator. The security -->
+    <!--implications of this setting should be carefully -->
     <!--considered before using Custom in production code. -->
     <authentication certificateValidationMode="Custom"
        customCertificateValidatorType =

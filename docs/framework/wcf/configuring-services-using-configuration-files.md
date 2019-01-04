@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200867"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029676"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
 Configuración de un servicio de Windows Communication Foundation (WCF) con un archivo de configuración le ofrece la flexibilidad de proporcionar el punto de conexión y los datos de comportamiento de servicio en el punto de distribución en lugar de en tiempo de diseño. En este tema se describen las principales técnicas disponibles.  
@@ -37,7 +37,7 @@ Configuración de un servicio de Windows Communication Foundation (WCF) con un a
 <system.ServiceModel>  
   
    <services>  
-   <!—- Define the service endpoints. This section is optional in the new  
+   <!-- Define the service endpoints. This section is optional in the new  
     default configuration model in .NET Framework 4. -->  
       <service>  
          <endpoint/>  
@@ -126,7 +126,7 @@ Configuración de un servicio de Windows Communication Foundation (WCF) con un a
     <basicHttpBinding>  
      <binding name="myBindingConfiguration1" closeTimeout="00:01:00" />  
      <binding name="myBindingConfiguration2" closeTimeout="00:02:00" />  
-     <binding closeTimeout="00:03:00" />  <!—- Default binding for basicHttpBinding -->  
+     <binding closeTimeout="00:03:00" />  <!-- Default binding for basicHttpBinding -->  
     </basicHttpBinding>  
      </bindings>  
      <services>  

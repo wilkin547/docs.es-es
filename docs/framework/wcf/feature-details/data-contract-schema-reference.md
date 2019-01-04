@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873724"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030534"
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
@@ -202,7 +202,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
  \* Cuando se usa el `simpleType` y `complexType,` asignación para tipos anónimos es el mismo que los tipos no anónimos, salvo que no hay ningún contrato de datos anónimos, por lo que se crea un contrato de datos con nombre, con un nombre generado derivado del nombre de elemento. Las reglas para los tipos anónimos están en la lista siguiente:  
   
--   Detalle de implementación de WCF: si el `xs:element` nombre no contiene puntos, el tipo anónimo asigna a un tipo interno del tipo de contrato de datos externo. Si el nombre contiene puntos, el tipo de contrato de datos resultante es independiente (no un tipo interno).  
+-   Detalle de implementación de WCF: Si el `xs:element` nombre no contiene puntos, el tipo anónimo asigna a un tipo interno del tipo de contrato de datos externo. Si el nombre contiene puntos, el tipo de contrato de datos resultante es independiente (no un tipo interno).  
   
 -   El nombre de contrato de datos generado del tipo interno es el nombre de contrato de datos del tipo exterior seguido por un punto, el nombre del elemento, y la cadena “Type”.  
   
@@ -290,15 +290,14 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
  En el siguiente código se muestra una clase de enumeración de C#.  
   
-```  
+```csharp  
 public enum MyEnum  
 {  
-   first = 3,  
-   second = 4,  
-   third =5  
+  first = 3,  
+  second = 4,  
+  third =5  
+}  
 ```  
-  
- }  
   
  Esta clase se asigna al esquema siguiente mediante el `DataContractSerializer`. Si los valores de la enumeración se inician en 1, no se generan bloques `xs:annotation` .  
   
@@ -349,7 +348,7 @@ public enum MyEnum
   
  Por ejemplo, el código siguiente marca un tipo de enumeración.  
   
-```  
+```csharp  
 [Flags]  
 public enum AuthFlags  
 {    
@@ -402,7 +401,7 @@ rialization/">64</EnumerationValue>
   
  Por ejemplo, el código siguiente es un contrato de datos.  
   
-```  
+```csharp  
 [DataContract]  
 public class Person  
 {  
@@ -619,7 +618,7 @@ public class Employee : Person
 ## <a name="importing-non-datacontract-schemas"></a>Importación de esquemas no DataContract  
  `DataContractSerializer` tiene la opción `ImportXmlTypes` para permitir la importación de esquemas que no cumplen el perfil XSD `DataContractSerializer` (vea la propiedad <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> ). Establecer esta opción en `true` habilita la aceptación de tipos de esquema no conformes y la asignación de ellos a la implementación siguiente, <xref:System.Xml.Serialization.IXmlSerializable> ajuste de una matriz de <xref:System.Xml.XmlNode> (solo difiere el nombre de la clase).  
   
-```  
+```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
 [System.Xml.Serialization.XmlSchemaProviderAttribute("ExportSchema")]  
 [System.Xml.Serialization.XmlRootAttribute(IsNullable=false)]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c4c96b874456297ede61c96e46fee8d90ebcafb6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123623"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030132"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirigir versiones de ensamblado
 
@@ -67,7 +67,7 @@ Si otro proyecto de la aplicación hace referencia a la versión 1.0.0.0 del mis
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Puede habilitar la redirección de enlace automático si su aplicación tiene como destino versiones anteriores de .NET Framework. Puede invalidar este comportamiento predeterminado al proporcionar información de redirección de enlace en el archivo app.config para cualquier ensamblado o si se desactiva la característica de redirección de enlace. Para obtener información acerca de cómo activar o desactivar esta característica, consulte [Cómo: habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+Puede habilitar la redirección de enlace automático si su aplicación tiene como destino versiones anteriores de .NET Framework. Puede invalidar este comportamiento predeterminado al proporcionar información de redirección de enlace en el archivo app.config para cualquier ensamblado o si se desactiva la característica de redirección de enlace. Para obtener información acerca de cómo activar o desactivar esta característica, vea [Cómo: Habilitar y deshabilitar la redirección de enlace automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Omisión de la directiva de edición
@@ -142,11 +142,11 @@ Puede habilitar la redirección de enlace automático si su aplicación tiene co
 
 ```xml
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">
-  <!—.NET Framework version 3.5 redirects here -->
+  <!--.NET Framework version 3.5 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="..." appliesTo="v4.0.30319">
-  <!—.NET Framework version 4.0 redirects here -->
+  <!--.NET Framework version 4.0 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="...">
@@ -156,7 +156,7 @@ Puede habilitar la redirección de enlace automático si su aplicación tiene co
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Cómo: Habilitar y deshabilitar la redirección de enlace automática](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > elemento](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Permiso de seguridad para la redirección de enlaces de ensamblados](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)
 - [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

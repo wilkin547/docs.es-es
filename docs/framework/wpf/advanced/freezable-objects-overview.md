@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999447"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030378"
 ---
 # <a name="freezable-objects-overview"></a>Información general sobre objetos Freezable
 En este tema se describe cómo usar de forma eficaz y crear <xref:System.Windows.Freezable> objetos, que proporcionan características especiales que pueden ayudar a mejorar el rendimiento de la aplicación. Pinceles, lápices, transformaciones, geometrías y las animaciones son ejemplos de objetos freezable.  
@@ -126,7 +126,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Seguridad para subprocesos: inmovilizado <xref:System.Windows.Freezable> se pueden compartir entre subprocesos.  
   
--   Detallada de la notificación de cambio: a diferencia de otras <xref:System.Windows.DependencyObject>s, objetos Freezable proporcionan notificaciones de cambio cuando cambian los valores de la subpropiedad.  
+-   Notificación de cambios detallada: A diferencia de otras <xref:System.Windows.DependencyObject>s, objetos Freezable proporcionan notificaciones de cambio cuando cambian los valores de la subpropiedad.  
   
 -   Clonación fácil: la clase Freezable ya ha implementado varios métodos que generan clones perfectos.  
   
