@@ -2,14 +2,14 @@
 title: Creación de una plantilla personalizada para dotnet new
 description: Obtenga información sobre cómo crear una plantilla personalizada para el comando dotnet new en este ameno tutorial.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516658"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169741"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creación de una plantilla personalizada para dotnet new
 
@@ -64,7 +64,7 @@ Ha terminado la plantilla. Una vez hecho esto, tiene dos opciones para la distri
 1. Copie el contenido de la carpeta del proyecto, junto con el archivo *.template.config/template.json*, en la carpeta *content* que ha creado.
 1. Junto a la carpeta *content*, agregue un [archivo *nuspec*](/nuget/create-packages/creating-a-package). El archivo nuspec es un archivo de manifiesto XML en el que se describe el contenido de un paquete y que controla el proceso de creación del paquete de NuGet.
 
-   ![Estructura de directorios en la que se muestra el diseño del paquete de NuGet](./media/create-custom-template/nugetdirectorylayout.png)
+   ![Estructura de directorios en la que se muestra el diseño del paquete de NuGet](./media/create-custom-template/nuget-directory-layout.png)
 
 1. Dentro de un elemento **\<packageTypes>** en el archivo *nuspec*, incluya un elemento **\<packageType>** con un valor de atributo `name` de `Template`. Tanto la carpeta *content* como el archivo *nuspec* deben estar en el mismo directorio. En la tabla se muestran los elementos de archivo *nuspec* mínimos necesarios para generar una plantilla como un paquete NuGet.
 
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 Al enumerar las plantillas con `dotnet new -l`, verá el *proyecto de prueba de NUnit 3* con el breve nombre de *nunit* en la lista de plantillas. Está listo para usar la plantilla en la sección siguiente.
 
-![Ventana de consola en la que muestra la plantilla de NUnit junto a otras plantillas instaladas](./media/create-custom-template/nunit1.png)
+![Ventana de consola en la que muestra la plantilla de NUnit con otras plantillas](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>Creación de un proyecto a partir de la plantilla
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 En la consola se muestra que se crea el proyecto y que se restauran los paquetes de este. Después de ejecutar el comando, el proyecto estará listo para usarse.
 
-![Ventana de consola en la que se muestra la salida del comando dotnet new en el proceso de creación del proyecto de NUnit y de restauración de las dependencias del proyecto](./media/create-custom-template/nunit2.png)
+![Ventana de consola en la que se muestra la salida de dotnet new nunit incluida la restauración de las dependencias del proyecto](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>Desinstalación de una plantilla de un paquete de NuGet almacenado en nuget.org
 

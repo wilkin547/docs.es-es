@@ -1,15 +1,15 @@
 ---
-title: 'Introducción a C# y Visual Studio Code: Guía de C#'
+title: Introducción a C# y Visual Studio Code
 description: Obtenga información sobre cómo crear y depurar su primera aplicación .NET Core en C# mediante Visual Studio Code.
 author: kendrahavens
-ms.author: mairaw
 ms.date: 12/05/2018
-ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129602"
+ms.locfileid: "53168980"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -31,20 +31,20 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
     * Haga clic en el icono del explorador en el menú de la izquierda y después haga clic en **Abrir carpeta**.
     * Seleccione **Archivo** > **Abrir carpeta** en el menú principal para abrir la carpeta en la que quiere que esté el proyecto de C# y haga clic en **Seleccionar carpeta**. En el ejemplo se va a crear una carpeta para el proyecto denominada *HelloWorld*.
 
-      ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
+      ![Abrir carpeta de Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. Inicializar un proyecto de C#:
     * Abra el terminal integrado de Visual Studio Code al seleccionar **Ver** > **Terminal integrado** en el menú principal.
     * En la ventana de terminal, escriba `dotnet new console`.
     * Este comando crea un archivo `Program.cs` en la carpeta con un programa "Hello World" sencillo ya escrito, junto con un archivo de proyecto de C# denominado `HelloWorld.csproj`.
 
-      ![El nuevo comando de dotnet](media/with-visual-studio-code/dotnetnew.png)
+      ![El nuevo comando de dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. Resolver los recursos de compilación:
 
     * En **.NET Core 1.x**, escriba `dotnet restore`. Al ejecutar `dotnet restore`, se concede acceso a los paquetes de .NET Core necesarios para compilar el proyecto.
 
-      ![El comando de restauración de dotnet](media/with-visual-studio-code/dotnetrestore.png)
+      ![El comando de restauración de dotnet](media/with-visual-studio-code/dotnet-restore-command.png)
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
 
     * Escriba `dotnet run`.
 
-      ![El comando de ejecución de dotnet](media/with-visual-studio-code/dotnetrun.png)
+      ![El comando de ejecución de dotnet](media/with-visual-studio-code/dotnet-run-command.png)
 
 También puede ver un breve tutorial de vídeo para obtener ayuda del programa de instalación en [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) o [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
@@ -60,7 +60,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 1. Haga clic en el archivo *Program.cs* para abrirlo. La primera vez que se abre un archivo de C# en Visual Studio Code, se carga [OmniSharp](https://www.omnisharp.net/) en el editor.
 
-    ![Abrir el archivo Program.cs](media/with-visual-studio-code/opencs.png)
+    ![Abrir el archivo Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
 2. Visual Studio Code debe pedirle que agregue los recursos que faltan para compilar y depurar la aplicación. Seleccione **Sí**.
 
@@ -68,22 +68,22 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 
 3. Para abrir la vista Depurar, haga clic en el icono de depuración en el menú de la izquierda.
 
-    ![Abrir la pestaña Depurar](media/with-visual-studio-code/opendebug.png)
+    ![Apertura de la pestaña Depurar en Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
 4. Busque la flecha verde en la parte superior del panel. Asegúrese de que `.NET Core Launch (console)` está seleccionado en el menú desplegable que está junto a la flecha.
 
-    ![Selección de .NET Core](media/with-visual-studio-code/selectcore.png)
+    ![Selección de .NET Core en Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
 5. Agregue un punto de interrupción al proyecto; para ello, haga clic en el **margen del editor**, que es el espacio a la izquierda de los números de línea del editor, junto a la línea 9 o mueva el cursor del texto de la línea 9 en el editor y presione <kbd>F9</kbd>.
 
-    ![Establecer un punto de interrupción](media/with-visual-studio-code/setbreakpoint.png)
+    ![Establecer un punto de interrupción](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. Para comenzar a depurar, seleccione <kbd>F5</kbd> o la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
     * Mientras depura, puede ver las variables locales en el panel superior izquierdo o usar la consola de depuración.
 
 7. Seleccione la flecha azul de la parte superior para continuar la depuración o seleccione el cuadrado rojo de la parte superior para detenerla.
 
-    ![Ejecutar y depurar](media/with-visual-studio-code/rundebug.png)
+    ![Ejecución y depuración en Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
 
 > [!TIP]
 > Para obtener más información y sugerencias sobre solución de problemas en relación con la depuración de .NET Core con OmniSharp en Visual Studio Code, vea [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Instrucciones para configurar el depurador de .NET Core).
@@ -136,7 +136,7 @@ Hello World! Happy coding!
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Me faltan los recursos necesarios para compilar y depurar C# en Visual Studio Code. Mi depurador dice "Sin configuración".
 
-La extensión C# de Visual Studio Code puede generar recursos para compilar y depurar por usted. Visual Studio Code le pedirá que genere estos recursos al abrir un proyecto de C#. Aunque no genere los recursos, podrá seguir ejecutando este comando abriendo la paleta de comandos (**Vista > Paleta de comandos**) y escribiendo ">.NET: Generate Assets for Build and Debug". Al seleccionar esta opción se generan los archivos de configuración .vscode, launch.json y tasks.json que necesita.
+La extensión C# de Visual Studio Code puede generar recursos para compilar y depurar por usted. Visual Studio Code le pedirá que genere estos recursos al abrir un proyecto de C#. Aunque no genere los recursos, podrá seguir ejecutando este comando si abre la paleta de comandos (**Vista > Paleta de comandos**) y escribe ">.NET: Generar recursos para la compilación y depuración". Al seleccionar esta opción se generan los archivos de configuración .vscode, launch.json y tasks.json que necesita.
 
 ## <a name="see-also"></a>Vea también
 

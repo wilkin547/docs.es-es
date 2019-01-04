@@ -2,22 +2,21 @@
 title: Sobre .NET Core
 description: Obtenga información sobre .NET Core.
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126983"
+ms.locfileid: "53170410"
 ---
 # <a name="about-net-core"></a>Sobre .NET Core
 
 .NET Core tiene las siguientes características:
 
 - **Multiplataforma:** se ejecuta en los [sistemas operativos](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS y Linux.
-- **Coherente en todas las arquitecturas:** se ejecuta el código con el mismo comportamiento en varias arquitecturas, como x64, x86 y ARM.
-- **Herramientas de línea de comandos:** incluye herramientas de línea de comandos fáciles de usar que pueden utilizarse para el desarrollo local y en escenarios de integración continua.
+- **Coherente entre arquitecturas:** el código se ejecuta con el mismo comportamiento en varias arquitecturas, como x64, x86 y ARM.
+- **Herramientas de línea de comandos:**  incluye herramientas de línea de comandos sencillas que se pueden usar para el desarrollo local y en escenarios de integración continua.
 - **Implementación flexible:** se puede incluir en la aplicación o se puede instalar de forma paralela a nivel de usuario o de equipo. Se puede usar con [contenedores de Docker](docker/index.md).
 - **Compatible:** .NET Core es compatible con .NET Framework, Xamarin y Mono, mediante [.NET Standard](../standard/net-standard.md).
 - **Código abierto:** la plataforma .NET Core es de código abierto, con licencias de MIT y Apache 2. .NET Core es un proyecto de [.NET Foundation](https://dotnetfoundation.org/).

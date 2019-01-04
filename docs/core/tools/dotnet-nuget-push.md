@@ -1,14 +1,14 @@
 ---
-title: 'Comando dotnet nuget push: CLI de .NET Core'
+title: Comando dotnet nuget push
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 090dbfbe3db83b2bb234867aed295ac416b27865
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f0d127d8b9f37b1c381d8981f54035a2fc3b0e5
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143067"
+ms.locfileid: "53169357"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -62,7 +62,7 @@ Imprime una corta ayuda para el comando.
 
 * **`--interactive`**
 
-  Permite usar el comando para bloquear y requerir la acción manual para operaciones como la autenticación. Opción disponible desde el SDK de .NET Core 2.2.
+  Permite que el comando se bloquee y requiere una acción manual para operaciones tales como la autenticación. Opción disponible a partir del SDK de .NET Core 2.2.
 
 * **`-k|--api-key <API_KEY>`**
 

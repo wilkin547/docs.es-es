@@ -1,23 +1,24 @@
 ---
 title: Procedimientos recomendados para escribir pruebas unitarias
-description: Obtenga información sobre procedimientos recomendados para escribir pruebas unitarias que mejoren la calidad y la resistencia del código
+description: Obtenga información sobre los procedimientos recomendados para escribir pruebas unitarias que mejoren la calidad y la resistencia del código para proyectos de NET Core y .NET Standard.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143420"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240728"
 ---
-# <a name="unit-testing-best-practices"></a>Procedimientos recomendados para pruebas unitarias
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
-De [John Reese](http://reesespieces.io), con agradecimientos especiales a [Roy Osherove](http://osherove.com/)
-
-La escritura de pruebas unitarias reporta muchos beneficios; las pruebas ayudan con la regresión, proporcionan documentación y facilitan un buen diseño. Pero también son difíciles de leer y, si son frágiles, pueden causar estragos en el código base.
+La escritura de pruebas unitarias reporta muchos beneficios; las pruebas ayudan con la regresión, proporcionan documentación y facilitan un buen diseño. Pero también son difíciles de leer y, si son frágiles, pueden causar estragos en el código base. En este artículo se describen algunos procedimientos recomendados sobre el diseño de pruebas unitarias para proyectos de .NET Core y .NET Standard.
 
 En esta guía, aprenderá algunos procedimientos recomendados para escribir pruebas unitarias resistentes y fáciles de entender.
+
+De [John Reese](http://reesespieces.io), con agradecimientos especiales a [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>El porqué de las pruebas unitarias
 

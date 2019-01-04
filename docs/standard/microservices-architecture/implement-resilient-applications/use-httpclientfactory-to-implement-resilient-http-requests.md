@@ -4,12 +4,12 @@ description: HttpClientFactory es una fábrica bien fundamentada, disponible des
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145116"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611040"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
 
@@ -71,7 +71,7 @@ Al agregar las clases de cliente con tipo mediante AddHttpClient(), siempre que 
 
 ### <a name="httpclient-lifetimes"></a>Duraciones de HttpClient
 
-Cada vez que se obtiene un objeto `HttpClient` de IHttpClientFactory, se devuelve una nueva instancia de `HttpClient`. Habrá un HttpMessageHandler** por cada cliente con nombre o tipo. `IHttpClientFactory` agrupará las instancias de HttpMessageHandler creadas por la fábrica para reducir el consumo de recursos. Se puede reutilizar una instancia de HttpMessageHandler del grupo al crear una instancia de `HttpClient` si su duración aún no ha expirado.
+Cada vez que se obtiene un objeto `HttpClient` de IHttpClientFactory, se devuelve una nueva instancia de `HttpClient`. Habrá una instancia de **HttpMessageHandler** por cada cliente con nombre o tipo. `IHttpClientFactory` agrupará las instancias de HttpMessageHandler creadas por la fábrica para reducir el consumo de recursos. Se puede reutilizar una instancia de HttpMessageHandler del grupo al crear una instancia de `HttpClient` si su duración aún no ha expirado.
 
 La agrupación de controladores es conveniente porque cada controlador suele administrar sus propias conexiones HTTP subyacentes. Crear más controladores de lo necesario puede provocar retrasos en la conexión. Además, algunos controladores dejan las conexiones abiertas de forma indefinida, lo que puede ser un obstáculo a la hora de reaccionar ante los cambios de DNS.
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c6e1db7d1edacfd0ce8770b9cc7b7f3f9c8ca2a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7bfa35b8361f154fcbaa2ea7d7f8ddff5321003d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025326"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610442"
 ---
 # <a name="asynchronous-file-io"></a>E/S de archivos asincrónica
 
@@ -40,7 +40,7 @@ C# y Visual Basic tienen dos palabras clave para la programación asincrónica:
 
 - El operador`Await` (Visual Basic) o `await` (C#), que se aplica al resultado de un método asincrónico.
 
-Para implementar operaciones de E/S asincrónicas, use estas palabras clave junto con los métodos asincrónicos, como se muestra en los ejemplos siguientes. Para más información, consulte [Programación asincrónica con Async y Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).
+Para implementar operaciones de E/S asincrónicas, use estas palabras clave junto con los métodos asincrónicos, como se muestra en los ejemplos siguientes. Para obtener más información, vea [Programación asincrónica con Async y Await (C#)](../../csharp/programming-guide/concepts/async/index.md) y [Programación asincrónica con Async y Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
 
 En el ejemplo siguiente se muestra cómo usar dos objetos <xref:System.IO.FileStream> para copiar archivos de forma asincrónica de un directorio en otro. Observe que el controlador de eventos <xref:System.Web.UI.WebControls.Button.Click> para el control <xref:System.Windows.Controls.Button> está marcado con el modificador `async` porque llama a un método asincrónico.
 
@@ -62,5 +62,6 @@ En el ejemplo siguiente se muestra el archivo de código subyacente y el archivo
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.IO.Stream>
-- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)
-- [Programación asincrónica con Async y Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+- [E/S de archivos y secuencias](index.md)
+- [Programación asincrónica con async y await (C#)](../../csharp/programming-guide/concepts/async/index.md)
+- [Programación asincrónica con Async y Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

@@ -1,15 +1,16 @@
 ---
-title: Programación asincrónica
+title: 'Programación asincrónica: C#'
 description: Obtenga información sobre el modelo de programación asincrónico de nivel de lenguaje de C# que proporciona .NET Core.
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126502"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612132"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -264,5 +265,5 @@ Un objetivo recomendado es lograr una [transparencia referencial](https://en.wik
 ## <a name="other-resources"></a>Otros recursos
 
 * En el artículo [Async en profundidad](../standard/async-in-depth.md) se proporciona más información sobre cómo funcionan las tareas.
-* [Programación asincrónica con async y await (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [Programación asincrónica con async y await (C#)](./programming-guide/concepts/async/index.md)
 * Los vídeos [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (Seis consejos esenciales para la programación asincrónica) de Lucian Wischik son un recurso fantástico para este tipo de programación.

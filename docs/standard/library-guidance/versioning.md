@@ -3,13 +3,13 @@ title: Control de versiones y bibliotecas de .NET
 description: Procedimientos recomendados para el control de versiones de las bibliotecas de .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144564"
+ms.locfileid: "53169604"
 ---
 # <a name="versioning"></a>Control de versiones
 
@@ -63,7 +63,7 @@ La asignación de nombres seguros junto con la versión de ensamblado permite la
 
 > AssemblyVersion se incluye en algunos mensajes informativos que se muestran al usuario, por ejemplo, el nombre del ensamblado y los nombres de tipo completos del ensamblado en los mensajes de excepción. Mantener una relación entre las versiones proporciona más información a los desarrolladores sobre qué versión están usando.
 
-**❌ NO** tiene una AssemblyVersion fija.
+ **NO** tiene una AssemblyVersion fija.
 
 > Aunque una AssemblyVersion invariable evita la necesidad de redirecciones de enlace, significa que se puede instalar solo una única versión del ensamblado en la memoria caché de ensamblados global (GAC). Además, las aplicaciones que hacen referencia al ensamblado en la memoria caché de ensamblados global se interrumpirán si otra aplicación actualiza el ensamblado de dicha memoria con cambios importantes.
 
@@ -77,12 +77,13 @@ La versión del archivo de ensamblado se usa para mostrar una versión de archiv
 
 ![Explorador de Windows](./media/versioning/win-properties.png "Windows Explorer")
 
-> [!NOTE]
-> Se produce una advertencia inofensiva de compilación si esta versión no sigue el formato `Major.Minor.Build.Revision`. La advertencia se puede omitir sin ningún problema.
-
 **✔️ ES RECOMENDABLE**  incluir un número de compilación de integración continua como la revisión AssemblyFileVersion.
 
 > Por ejemplo, si va a compilar la versión 1.0.0 del proyecto y el número de compilación de integración continua es 99, su AssemblyFileVersion es 1.0.0.99.
+
+**✔️ DEBE** usar el formato `Major.Minor.Build.Revision` para la versión de archivo.
+
+> Aunque en .NET nunca se usa la versión de archivo, [Windows espera que la versión de archivo](/windows/desktop/menurc/versioninfo-resource) tenga el formato `Major.Minor.Build.Revision`. Se genera una advertencia si la versión no sigue este formato.
 
 ### <a name="assembly-informational-version"></a>Versión informativa del ensamblado
 
@@ -92,7 +93,10 @@ La versión informativa de ensamblado se usa para registrar información de vers
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
 
-**❌ EVITE** establecer usted mismo la versión informativa del ensamblado.
+> [!NOTE]
+> Las versiones anteriores de Visual Studio generan una advertencia de compilación si esta versión no sigue el formato `Major.Minor.Build.Revision`. La advertencia se puede omitir sin ningún problema.
+
+ **EVITE** establecer usted mismo la versión informativa del ensamblado.
 
 > Permita que SourceLink genere automáticamente la versión que contiene los metadatos de control de código fuente y NuGet.
 

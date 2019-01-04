@@ -7,15 +7,13 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom:
-- vs-dotnet
-- seodoc18
-ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: vs-dotnet, seodoc18
+ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144902"
+ms.locfileid: "53170800"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017
 
@@ -30,14 +28,14 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
 1. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **Visual C#**. Después seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Proyecto de prueba MSTest (.NET Core)**. En el cuadro de texto **Nombre**, escriba "StringLibraryTest" como nombre del proyecto. Seleccione **Aceptar** para crear el proyecto de prueba unitaria.
 
-   ![Cuadro de diálogo Agregar nuevo proyecto](./media/testing-library-with-visual-studio/testproject.png)
+   ![Cuadro de diálogo Agregar nuevo proyecto en el que se muestra el proyecto de prueba unitaria: C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
    > [!NOTE]  
    > Además de un proyecto de prueba MSTest, también puede usar Visual Studio para crear un proyecto de prueba xUnit para .NET Core.
 
 1. Visual Studio crea el proyecto y abre el archivo *UnitTest1.cs* en la ventana de código.
 
-   ![Ventana de código de Visual Studio que muestra la clase UnitTest1 del proyecto de prueba unitaria predeterminado y el método TestMethod1](./media/testing-library-with-visual-studio/unittestwindow.png)
+   ![Ventana de código de Visual Studio para la clase y el método del proyecto de prueba unitaria: C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
 
    El código fuente creado por la plantilla de prueba unitaria hace lo siguiente:
 
@@ -49,24 +47,24 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto **StringLibraryTest** y seleccione **Agregar referencia** del menú contextual.
 
-   ![Menú contextual de las dependencias de StringLibraryTest](./media/testing-library-with-visual-studio/addreference.png)
+   ![Menú contextual de las dependencias de StringLibraryTest: C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. En el cuadro de diálogo **Administrador de referencias**, expanda el nodo **Proyectos** y marque la casilla junto a **StringLibrary**. Agregar una referencia al ensamblado `StringLibrary` permite al compilador buscar métodos **StringLibrary**. Seleccione el botón **Aceptar**. Se agrega una referencia a su proyecto de biblioteca de clases, `StringLibrary`.
 
-   ![Administrador de referencias](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Cuadro de diálogo Agregar referencia de proyecto de Visual Studio](./media/testing-library-with-visual-studio/project-reference-manager.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. En el **Explorador de soluciones**, abra el menú contextual del nodo de solución **ClassLibraryProjects** y seleccione **Agregar** > **Nuevo proyecto**.
 
 1. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **Visual Basic**. Después seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Proyecto de prueba MSTest (.NET Core)**. En el cuadro de texto **Nombre**, escriba "StringLibraryTest" como nombre del proyecto. Seleccione **Aceptar** para crear el proyecto de prueba unitaria.
 
-   ![Cuadro de diálogo Agregar nuevo proyecto](./media/testing-library-with-visual-studio/vb-testproject.png)
+   ![Cuadro de diálogo Agregar nuevo proyecto en el que se muestra el proyecto de prueba unitaria: Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
    > [!NOTE]  
    > Además de un proyecto de prueba MSTest, también puede usar Visual Studio para crear un proyecto de prueba xUnit para .NET Core.
 
 1. Visual Studio crea el proyecto y abre el archivo *UnitTest1.vb* en la ventana de código.
 
-   ![Ventana de código de Visual Studio que muestra la clase UnitTest1 del proyecto de prueba unitaria predeterminado y el método TestMethod1](./media/testing-library-with-visual-studio/vb-unittestwindow.png)
+   ![Ventana de código de Visual Studio para la clase y el método del proyecto de prueba unitaria: Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
 
    El código fuente creado por la plantilla de prueba unitaria hace lo siguiente:
 
@@ -78,11 +76,11 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del proyecto **StringLibraryTest** y seleccione **Agregar referencia** del menú contextual.
 
-   ![Menú contextual de las dependencias de StringLibraryTest](./media/testing-library-with-visual-studio/addreference.png)
+   ![Menú contextual de las dependencias de StringLibraryTest](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. En el cuadro de diálogo **Administrador de referencias**, expanda el nodo **Proyectos** y marque la casilla junto a **StringLibrary**. Agregar una referencia al ensamblado `StringLibrary` permite al compilador buscar métodos **StringLibrary**. Seleccione el botón **Aceptar**. Se agrega una referencia a su proyecto de biblioteca de clases, `StringLibrary`.
 
-   ![Administrador de referencias](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Cuadro de diálogo Agregar referencia de proyecto de Visual Studio: Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>Adición y ejecución de métodos de prueba unitaria
@@ -117,7 +115,7 @@ Para crear los métodos de prueba:
 
 1. En la barra de menús, seleccione **Archivo** > **Guardar UnitTest1.cs como**. En el cuadro de diálogo **Guardar archivo como**, seleccione la flecha junto al botón **Guardar** y seleccione **Guardar con codificación**.
 
-   ![Cuadro de diálogo Guardar archivo como](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Cuadro de diálogo Guardar archivo como de Visual Studio: C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Reemplace el código de la ventana de código *UnitTest1.vb* por el código siguiente:
 
@@ -127,20 +125,20 @@ Para crear los métodos de prueba:
 
 1. En la barra de menús, seleccione **Archivo** > **Guardar UnitTest1.vb como**. En el cuadro de diálogo **Guardar archivo como**, seleccione la flecha junto al botón **Guardar** y seleccione **Guardar con codificación**.
 
-   ![Cuadro de diálogo Guardar archivo como](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Cuadro de diálogo Guardar archivo como de Visual Studio: Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
 
 1. En el cuadro de diálogo **Confirmar guardar como**, seleccione el botón **Sí** para guardar el archivo.
 
 1. En el cuadro de diálogo **Opciones avanzadas para guardar**, seleccione **Unicode (UTF-8 con firma) - Página de códigos 65001** desde la lista desplegable **Codificación** y seleccione **Aceptar**.
 
-   ![Cuadro de diálogo Opciones avanzadas para guardar](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
+   ![Cuadro de diálogo Opciones avanzadas para guardar de Visual Studio](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    Si obtiene un error al guardar el código fuente en un archivo con codificación UTF-8, Visual Studio puede guardarlo como un archivo ASCII. Cuando eso suceda, el tiempo de ejecución no descodifica correctamente los caracteres UTF-8 del rango ASCII, y los resultados de la prueba no serán precisos.
 
 1. En la barra de menús, seleccione **Prueba** > **Ejecutar** > **Todas las pruebas**. Se abre la ventana del **Explorador de pruebas** y muestra que las pruebas se han ejecutado correctamente. Las tres pruebas se muestran en la sección **Pruebas superadas** y en la sección **Resumen** se informa del resultado de la serie de pruebas.
 
-   ![Ventana del Explorador de pruebas](./media/testing-library-with-visual-studio/firsttest.png)
+   ![Ventana Explorador de pruebas con pruebas superadas](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
 ## <a name="handling-test-failures"></a>Control de errores en las pruebas
 
@@ -159,11 +157,11 @@ Su serie de pruebas no tuvo errores, pero vamos a cambiarla un poco para que uno
    ```
 1. Ejecute la prueba seleccionando **Prueba** > **Ejecutar** > **Todas las pruebas** de la barra de menús. En la ventana **Explorador de pruebas** se indica que dos pruebas se han realizado correctamente y que una ha finalizado con errores.
 
-   ![Ventana del Explorador de pruebas](./media/testing-library-with-visual-studio/failedtest.png)
+   ![Ventana Explorador de pruebas con pruebas no superadas](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. Seleccione la prueba que ha dado error, `TestDoesNotStartWith`, en la sección **Pruebas no superadas**. En la ventana **Explorador de pruebas** se muestra el mensaje generado por la aserción: "Error de Assert.IsFalse. Se esperaba para "Error": false; real: True". Debido al error, no se probaron todas las cadenas de la matriz después de "Error".
+1. Seleccione la prueba que ha dado error, `TestDoesNotStartWith`, en la sección **Pruebas no superadas**. En la ventana **Explorador de pruebas** se muestra el mensaje generado por la instrucción Assert: "Error de Assert.IsFalse. Se esperaba para "Error": false; real: True". Debido al error, no se probaron todas las cadenas de la matriz después de "Error".
 
-   ![Ventana del Explorador de pruebas que muestra el error de aserción Is False](./media/testing-library-with-visual-studio/failedtestdetail.png)
+   ![Ventana del Explorador de pruebas que muestra el error de aserción Is False](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
 1. Quite el código que ha agregado (`"Error", `) y vuelva a ejecutar la prueba. Se superarán las pruebas.
 
@@ -175,11 +173,11 @@ Para probar la compilación de versión:
 
 1. En la barra de herramientas de Visual Studio, cambie la configuración de compilación de **Depurar** a **Versión**.
 
-   ![Barra de herramientas de Visual Studio](./media/testing-library-with-visual-studio/toolbar.png)
+   ![Barra de herramientas de Visual Studio con compilación de versión resaltado](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. En el  **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **StringLibrary** y seleccione **Compilar** desde el menú contextual para volver a compilar la biblioteca.
 
-   ![Menú contextual StringLibrary](./media/testing-library-with-visual-studio/buildlibrary.png)
+   ![Menú contextual de StringLibrary con el comando Compilar](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. Ejecute las pruebas unitarias seleccionando **Prueba** > **Ejecutar** > **Todas las pruebas** de la barra de menús. Las pruebas se superan.
 

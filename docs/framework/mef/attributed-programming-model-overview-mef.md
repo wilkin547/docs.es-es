@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453403"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656367"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Información general del modelo de programación con atributos (MEF)
 En Managed Extensibility Framework (MEF), un *modelo de programación* es una manera específica de definir el conjunto de objetos conceptuales en los que opera MEF. Estos objetos conceptuales incluyen partes, importaciones y exportaciones. MEF utiliza estos objetos, pero no especifica cómo se deben representar. Por consiguiente, es posible una gran variedad de modelos de programación, incluidos modelos personalizados.  
@@ -548,7 +548,7 @@ Public Class User
         logger = Nothing  
   
         For Each Plugin As Lazy(Of IPlugin, IPluginMetadata) In plugins  
-            If (Plugin.Metadata.Name = "Logger") Then  
+            If Plugin.Metadata.Name = "Logger" Then  
                 logger = Plugin.Value  
             End If  
         Next  
@@ -564,13 +564,14 @@ public class User
     [ImportMany]  
     public IEnumerable<Lazy<IPlugin, IPluginMetadata>> plugins;  
   
-    public IPlugin InstantiateLogger ()  
+    public IPlugin InstantiateLogger()  
     {  
         IPlugin logger = null;  
   
         foreach (Lazy<IPlugin, IPluginMetadata> plugin in plugins)  
         {  
-            if (plugin.Metadata.Name = "Logger") logger = plugin.Value;  
+            if (plugin.Metadata.Name == "Logger")
+                logger = plugin.Value;  
         }  
         return logger;  
     }  
@@ -957,5 +958,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` contiene un método denominado `OnImportsSatisfied`. El contenedor de composición llama a este método en cualquier parte que implemente la interfaz cuando se ha completado la composición y las importaciones de la parte están listas para el uso. El motor de la composición crea las partes para completar las importaciones de otras partes. Antes de que las importaciones de una parte se hayan establecido, no puede realizar ninguna inicialización que confíe o manipule los valores importados en el constructor de la parte, a menos que esos valores se hayan especificado como requisitos previos mediante el atributo `ImportingConstructor` . Éste es normalmente el método preferido, pero en algunos casos, la inyección de constructor tal vez no esté disponible. En esos casos, la inicialización se puede realizar en `OnImportsSatisfied`y la parte debería implementar `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>Vea también  
- [Channel 9 Video: Open Up Your Applications with the Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328) (Vídeo de Channel 9: Abrir las aplicaciones con Managed Extensibility Framework)  
- [Channel 9 Video: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20) [Vídeo de Channel 9: Managed Extensibility Framework (MEF) 2.0]
+ [Vídeo de Channel 9: Abrir las aplicaciones con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Vídeo de Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

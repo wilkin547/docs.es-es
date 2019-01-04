@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50186075"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613601"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -35,7 +35,7 @@ Para encontrar la versión más reciente de .NET Standard que puede usar como de
 
 1. Busque la fila en la que se indica la implementación de .NET en la que quiere realizar la ejecución.
 2. Busque la columna de esa fila que indica la versión de derecha a izquierda.
-3. El encabezado de columna indica la versión de .NET Standard que admite el destino (y las versiones de .NET Standard inferiores también lo admitirán).
+3. El encabezado de columna indica la versión de .NET Standard que admite el destino. También se puede seleccionar como destino cualquier versión anterior de .NET Standard. Las versiones superiores de .NET Standard también serán compatibles con la implementación.
 4. Repita este proceso para cada plataforma a la que quiera dirigirse. Si tiene más de una plataforma de destino, debe elegir la versión más baja. Por ejemplo, si quiere ejecutar en .NET Framework 4.5 y .NET Core 1.0, la versión de .NET Standard más alta que puede usar es .NET Standard 1.1.
 
 ### <a name="which-net-standard-version-to-target"></a>Versión de .NET Standard de destino
@@ -57,7 +57,7 @@ Sin embargo, el establecimiento como destino de las versiones inferiores de .NET
 Hay dos reglas de control de versiones principales:
 
 - Adición: las versiones de .NET Standard son círculos lógicamente concéntricos: las versiones superiores incorporan todas las API de las versiones anteriores. No hay ningún cambio importante entre versiones.
-- Inmutable: una vez publicadas, las versiones de .NET Standard se congelan. Las nuevas API primero están disponibles en implementaciones de .NET concretas, como .NET Core. Si el consejo de revisión de .NET Standard cree que las nuevas API deben estar disponibles para todas las implementaciones de .NET, se agregan en una nueva versión de .NET Standard.
+- Inmutable: Una vez publicadas, las versiones de .NET Standard se congelan. Las nuevas API primero están disponibles en implementaciones de .NET concretas, como .NET Core. Si el consejo de revisión de .NET Standard cree que las nuevas API deben estar disponibles para todas las implementaciones de .NET, se agregan en una nueva versión de .NET Standard.
 
 ## <a name="specification"></a>Especificación
 

@@ -1,15 +1,15 @@
 ---
-title: 'Uso de SDK de .NET Core y herramientas de integración continua (CI): CLI de .NET Core'
+title: Uso de .NET Core SDK y herramientas de integración continua (CI)
 description: Información sobre el uso del SDK de .NET Core y sus herramientas en el servidor de compilación.
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7891430654b416a2b55fa837f276d991b56370cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131396"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611560"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso de .NET Core SDK y herramientas de integración continua (CI)
 
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 Puede configurar [Travis CI](https://travis-ci.org/) para instalar el SDK de .NET Core con el lenguaje `csharp` y la clave `dotnet`. Para más información, consulte los documentos oficiales de Travis CI en [Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/) (Compilación de un proyecto de C#, F# o Visual Basic). Al acceder a la información de Travis CI, observará que el identificador de lenguaje `language: csharp` de cuyo mantenimiento se encarga la comunidad funciona con todos los lenguajes de .NET, incluidos F# y Mono.
 
-Travis CI se ejecuta tanto en trabajos de macOS como de Linux en una *matriz de compilación*, donde debe especificar una combinación de runtime, entorno y exclusiones/inclusiones para aceptar las combinaciones de compilación de la aplicación. Para más información, consulte el archivo [.travis.yml example](https://github.com/dotnet/docs/blob/master/.travis.yml) y [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (Personalización de la compilación) en la documentación de Travis CI. Las herramientas basadas en MSBuild incluyen los runtimes LTS (1.0.x) y Current (1.1.x) en el paquete; por tanto, cuando instala el SDK, recibe todo lo que necesita para la compilación.
+Travis CI se ejecuta tanto en trabajos de macOS como de Linux en una *matriz de compilación*, donde debe especificar una combinación de runtime, entorno y exclusiones/inclusiones para aceptar las combinaciones de compilación de la aplicación. Para más información, vea el artículo [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (Personalización de la compilación) en la documentación de Travis CI. Las herramientas basadas en MSBuild incluyen los runtimes LTS (1.0.x) y Current (1.1.x) en el paquete; por tanto, cuando instala el SDK, recibe todo lo que necesita para la compilación.
 
 ### <a name="appveyor"></a>AppVeyor
 
@@ -161,7 +161,7 @@ Para usar un script de instalación manual en Azure DevOps Services, cree una de
 
    ![Agregar un paso de compilación](./media/using-ci-with-cli/add-build-step.png)
 
-1. Se abre el **Catálogo de tareas**. El catálogo contiene tareas que se utilizan en la compilación. Como ya tiene un script, seleccione el botón **Agregar** en **PowerShell: Ejecute un script de PowerShell**.
+1. Se abre el **Catálogo de tareas**. El catálogo contiene tareas que se utilizan en la compilación. Como ya tiene un script, haga clic en el botón **Agregar** en **PowerShell: Ejecute un script de PowerShell**.
 
    ![Paso para agregar un script de PowerShell](./media/using-ci-with-cli/add-powershell-script.png)
 

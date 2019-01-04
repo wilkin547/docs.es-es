@@ -1,13 +1,13 @@
 ---
 title: Requisitos previos para .NET Core en Windows
 description: Obtenga información sobre qué dependencias necesita en la máquina con Windows para desarrollar y ejecutar aplicaciones .NET Core.
-ms.date: 12/05/2018
-ms.openlocfilehash: 8f9a823ab3eea15d7e33da6ff00992057c8c4e38
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130935"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656120"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Requisitos previos para .NET Core en Windows
 
@@ -35,12 +35,12 @@ También, si desarrolla en Windows con Visual Studio 2017, en la sección [Requi
 
 Los artículos siguientes incluyen una lista completa de sistemas operativos de .NET Core compatibles por versión:
 
+* [.NET Core 3.0 (versión preliminar)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1-supported-os.md)
 * [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
-Para vínculos de descarga y más información, vaya a [Descargas de .NET](https://www.microsoft.com/net/download) para descargar la versión más reciente o al [archivo de descargas de .NET](https://dotnet.microsoft.com/download/archives#dotnet-core) para versiones anteriores.
+Para vínculos de descarga y más información, vaya a [Descargas de .NET](https://dotnet.microsoft.com/download) para descargar la versión más reciente o al [archivo de descargas de .NET](https://dotnet.microsoft.com/download/archives#dotnet-core) para versiones anteriores.
 
 ## <a name="net-core-dependencies"></a>Dependencias de .NET Core
 
@@ -62,8 +62,12 @@ Para vínculos de descarga y más información, vaya a [Descargas de .NET](https
 >
 > Además de KB2999226, asegúrese de que también tiene instalada [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot). Si no tiene instalada esta actualización, verá un error similar al siguiente al iniciar una aplicación de .NET Core: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
-## <a name="prerequisites-with-visual-studio-2017"></a>Requisitos previos con Visual Studio 2017
+## <a name="prerequisites-for-net-core-30-preview-1"></a>Requisitos previos para la versión preliminar 1 de .NET Core 3.0
 
+La versión preliminar 1 de .NET Core 3.0 tiene los mismos requisitos previos que otras versiones de .NET Core. Pero si quiere usar Visual Studio para crear proyectos de .NET Core 3.0, debe usar [Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/). Visual Studio 2019 Preview se puede instalar en paralelo con otras versiones de Visual Studio sin conflictos.
+
+## <a name="prerequisites-with-visual-studio-2017"></a>Requisitos previos con Visual Studio 2017
+    
 Puede usar cualquier editor para desarrollar aplicaciones .NET Core con el SDK de .NET Core. Visual Studio 2017 proporciona un entorno de desarrollo integrado para las aplicaciones de .NET Core en Windows.
 
 Puede leer más sobre los cambios en Visual Studio 2017 en las [notas de la versión](/visualstudio/releasenotes/vs2017-relnotes).

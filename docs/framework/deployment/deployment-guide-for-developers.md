@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453481"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396999"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [Detecte](#detecting-the-language-packs) si los paquetes de idioma ya están instalados en el equipo del usuario.
 
-- Si desea controlar la implementación, inicie la instalación de forma silenciosa y lleve un seguimiento del proceso de instalación de .NET Framework (vea [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
+- Si quiere controlar la implementación, inicie la instalación de forma silenciosa y realice el seguimiento del proceso de instalación de .NET Framework (vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Si está implementando el instalador sin conexión, [encadene los paquetes de idioma por separado](#chain_langpack).
 
@@ -247,9 +247,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Versión|Valor DWORD de la versión|
 |-------------|--------------------------------|
-|.NET Framework 4.7.2 instalado en la Actualización de octubre de 2018 de Windows 10|461814|
 |.NET Framework 4.7.2 instalado en la Actualización de abril de 2018 de Windows 10 y en Windows Server, versión 1803|461808|
-|.NET Framework 4.7.2 instalado en todas las versiones del sistema operativo diferentes de la Actualización de octubre de 2018 de Windows 10, la Actualización de abril de 2018 de Windows 10 y Windows Server, versión 1803|461814|
+|.NET Framework 4.7.2 instalado en todas las versiones del sistema operativo diferentes de la Actualización de abril de 2018 de Windows 10 y Windows Server, versión 1803. Esto incluye la Actualización de octubre de 2018 de Windows 10. |461814|
 |.NET Framework 4.7.1 instalado en Windows 10 Fall Creators Update y en Windows Server, versión 1709|461308|
 |.NET Framework 4.7.1 instalado en todas las versiones del sistema operativo diferentes de Windows 10 Fall Creators Update y Windows Server, versión 1709|461310|
 |.NET Framework 4.7 instalado en Windows 10 Creators Update|460798|
@@ -360,7 +359,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|
 |**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"**. Para obtener un ejemplo de un paquete de encadenamiento, vea [Obtener información de progreso de un paquete de instalación](https://go.microsoft.com/fwlink/?LinkId=181926) en MSDN Library.|
-|**/LCID**  `LCID`<br /><br /> donde `LCID` especifica un identificador de configuración regional (vea [Idiomas compatibles](#supported-languages))|Instala el paquete de idioma especificado por `LCID` y obliga a mostrar la interfaz de usuario indicada en ese idioma, a no ser que se establezca el modo silencio.<br /><br /> En el instalador web, esta opción instala de forma encadenada el paquete de idioma desde Internet. **Nota:** Use esta opción solo con el instalador web.|
+|**/LCID**  `LCID`<br /><br /> donde `LCID` especifica un identificador de configuración regional (vea [Idiomas compatibles](#supported-languages))|Instala el paquete de idioma especificado por `LCID` y obliga a mostrar la interfaz de usuario indicada en ese idioma, a no ser que se establezca el modo silencio.<br /><br /> En el instalador web, esta opción instala de forma encadenada el paquete de idioma desde Internet. **Nota:**  Utilice esta opción solo con el instalador web.|
 |**/log** `file` &#124; `folder`|Especifica la ubicación del archivo de registro. El valor predeterminado es la carpeta temporal para el proceso y el nombre de archivo predeterminado se basa en el paquete. Si la extensión de archivo es .txt, se genera un registro de texto. Si especifica cualquier otra extensión o no especifica ninguna, se crea un registro HTML.|
 |**/msioptions**|Especifica opciones que se pasarán para los elementos .msi y .msp; por ejemplo: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si utiliza esta opción, la aplicación de encadenamiento tiene que capturar el código de retorno y controlar el reinicio (vea [Obtener información de progreso de un paquete de instalación](https://go.microsoft.com/fwlink/?LinkId=179606) en MSDN Library).|

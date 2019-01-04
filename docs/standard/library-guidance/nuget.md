@@ -4,12 +4,12 @@ description: Procedimientos recomendados para el empaquetado con NuGet para bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129615"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614550"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -36,7 +36,7 @@ Hay dos formas principales de crear un paquete NuGet. Es la forma más reciente 
 
 La forma anterior de crear un paquete NuGet es con un archivo `*.nuspec` y la herramienta de línea de comandos `nuget.exe`. Un archivo nuspec ofrece un excelente control pero debe especificar meticulosamente qué ensamblados y destinos se van a incluir en el paquete NuGet final. Es fácil cometer un error o que alguien se olvide de actualizar nuspec al realizar cambios. La ventaja de nuspec es que se puede usar para crear paquetes NuGet para marcos que aún no admiten un archivo de proyecto de estilo SDK.
 
- **✔️ ES RECOMENDABLE** usar un archivo de proyecto de estilo SDK para crear el paquete NuGet.
+**✔️ ES RECOMENDABLE** usar un archivo de proyecto de estilo SDK para crear el paquete NuGet.
 
 ## <a name="package-dependencies"></a>Dependencias de paquetes
 
@@ -44,7 +44,7 @@ Las dependencias de paquetes NuGet se tratan detalladamente en el artículo [Dep
 
 ## <a name="important-nuget-package-metadata"></a>Metadatos importantes del paquete NuGet
 
-Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nuspec). La tabla siguiente contiene los metadatos principales que deben proporcionar todos los proyectos de código abierto:
+Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nuspec). La tabla siguiente contiene los metadatos principales que deben proporcionar todos los paquetes de NuGet.org:
 
 | Nombre de la propiedad de MSBuild              | Nombre de nuspec              | Descripción  |
 | ---------------------------------- | ------------------------ | ------------ |
@@ -56,14 +56,12 @@ Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nu
 | `PackageTags`                      | `tags`                     | Una lista delimitada por espacios de etiquetas y palabras clave que describen el paquete. Las etiquetas se usan al buscar paquetes.             |
 | `PackageIconUrl`                   | `iconUrl`                  | Una dirección URL para una imagen que se va a usar como icono para el paquete. La dirección URL debe ser HTTPS y la imagen debe ser de 64x64 y tener un fondo transparente.             |
 | `PackageProjectUrl`                | `projectUrl`               | Una dirección URL para la página principal del proyecto o el repositorio de origen.             |
-| `PackageLicenseUrl`                | `licenseUrl`               | Una dirección URL a la licencia del proyecto. Puede ser la dirección URL al archivo `LICENSE` en el control de código fuente.             |
-
-**✔️ ES RECOMENDABLE** elegir un nombre de paquete NuGet con un prefijo que cumpla los [criterios](/nuget/reference/id-prefix-reservation) de la reserva de prefijo de NuGet.
-
-**✔️ ES RECOMENDABLE** usar el archivo `LICENSE` en el control de código fuente como `LicenseUrl`. Por ejemplo, [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
+| `PackageLicenseExpression`         | `license`                  | El [identificador SPDX](https://spdx.org/licenses/) de la licencia de proyecto. Solo las licencias OSI y FSF aprobadas pueden usar un identificador. Otras licencias deben usar `PackageLicenseFile`. Más información sobre los [metadatos de `license`](/nuget/reference/nuspec#license). |
 
 > [!IMPORTANT]
-> Un proyecto sin una licencia se establece en [copyright exclusivo](https://choosealicense.com/no-permission/) de forma predeterminada, lo que impide que otras personas lo usen.
+> Un proyecto sin una licencia se establece en [copyright exclusivo](https://choosealicense.com/no-permission/) de forma predeterminada, lo que legalmente impide que otras personas lo usen.
+
+**✔️ ES RECOMENDABLE** elegir un nombre de paquete NuGet con un prefijo que cumpla los [criterios](/nuget/reference/id-prefix-reservation) de la reserva de prefijo de NuGet.
 
 **✔️ DEBE** utilizar una href HTTPS en el icono de paquete.
 
@@ -73,9 +71,7 @@ Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nu
 
 **✔️ ES RECOMENDABLE** configurar [SourceLink](./sourcelink.md) para agregar metadatos de control de código fuente a los ensamblados y los paquetes NuGet.
 
-> SourceLink agrega automáticamente metadatos de `RepositoryUrl` y `RepositoryType` al paquete NuGet.
-> SourceLink también agrega información sobre el código de origen exacto para el que se creó el paquete.
-> Por ejemplo, en un paquete creado a partir de un repositorio de Git se agregará el hash de confirmación como metadatos.
+> SourceLink agrega automáticamente metadatos de `RepositoryUrl` y `RepositoryType` al paquete NuGet. SourceLink también agrega información sobre el código de origen exacto para el que se creó el paquete. Por ejemplo, en un paquete creado a partir de un repositorio de Git se agregará el hash de confirmación como metadatos.
 
 ## <a name="pre-release-packages"></a>Paquetes de versión preliminar
 

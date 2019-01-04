@@ -1,15 +1,15 @@
 ---
-title: 'Inclusión de una aplicación en un contenedor con Docker: .NET Core'
+title: Inclusión de una aplicación en un contenedor con Docker
 description: Este tutorial enseña cómo crear una aplicación básica de .NET Core e incluirla en un contenedor con Docker.
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126373"
+ms.locfileid: "53169591"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Cómo incluir una aplicación de .NET Core en un contenedor
 

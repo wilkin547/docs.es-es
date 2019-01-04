@@ -1,17 +1,18 @@
 ---
-title: Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y xUnit
+title: Prueba unitaria de F# en .NET Core con dotnet test y xUnit
 description: 'Aprenda los conceptos de pruebas unitarias para F# en .NET Core: cree paso a paso una solución de ejemplo mediante pruebas de dotnet y xUnit.'
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 dev_langs:
 - fsharp
-ms.openlocfilehash: 1989c82680cd0824780fa3c127318dc3b656476e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 08ebe39fd6e992fdcdc10e19d87d565e76d909a2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214511"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239204"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y xUnit
 

@@ -1,14 +1,14 @@
 ---
-title: 'Comando dotnet nuget delete: CLI de .NET Core'
+title: Comando dotnet nuget delete
 description: El comando dotnet-nuget-delete elimina o quita de la lista un paquete del servidor.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 451352ea652b77e44dcaf731d5b6cce230d1ef78
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 827d295d7a52b6c9c82adbcf3d25281bd1cc98fd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126840"
+ms.locfileid: "53168317"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 

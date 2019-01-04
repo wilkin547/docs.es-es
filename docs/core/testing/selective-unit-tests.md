@@ -1,20 +1,19 @@
 ---
-title: 'Ejecución de pruebas unitarias selectivas: .NET Core'
+title: Ejecución de pruebas unitarias selectivas
 description: Cómo usar una expresión de filtro para ejecutar pruebas unitarias selectivas con el comando de prueba de dotnet en .NET Core.
 author: smadala
-ms.author: mairaw
 ms.date: 03/22/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c24fb8cc5024399ae523801373b0fd8eff85f45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2ec6dc770f33acc4acea79e60cf6f9c33f1077d8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151751"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239948"
 ---
 # <a name="running-selective-unit-tests"></a>Ejecución de pruebas unitarias selectivas
 
-En los siguientes ejemplos, se utiliza `dotnet test`. Si está usando `vstest.console.exe`, reemplace `--filter ` por `--testcasefilter:`.
+Con el comando `dotnet test` en .NET Core, se puede usar una expresión de filtro para ejecutar pruebas selectivas. En este artículo se muestra cómo filtrar qué pruebas se ejecutan. En los siguientes ejemplos, se utiliza `dotnet test`. Si está usando `vstest.console.exe`, reemplace `--filter ` por `--testcasefilter:`.
 
 ## <a name="mstest"></a>MSTest
 

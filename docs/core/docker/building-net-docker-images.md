@@ -1,17 +1,15 @@
 ---
-title: 'Introducción a las imágenes de Docker: .NET Core'
+title: Introducción a las imágenes de Docker
 description: Obtenga información sobre cómo usar las imágenes de Docker de .NET Core publicadas desde el registro de Docker. También aprenderá cómo extraer imágenes y crear sus propias imágenes.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd8c6c500dc2177768e6cba0c1e303950e20d4f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145837"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656042"
 ---
 # <a name="learn-about-docker-images-for-net-core"></a>Obtener información sobre imágenes de Docker para .NET Core
 
@@ -36,11 +34,11 @@ Al crear imágenes de Docker para desarrolladores, nos centramos en tres escenar
 ¿Por qué tres imágenes?
 Al desarrollar, compilar y ejecutar aplicaciones en contenedor, hay prioridades diferentes.
 
-* **Desarrollo:** la prioridad se centra en la iteración rápida de los cambios y en la posibilidad de depurarlos. El tamaño de la imagen no es tan importante; lo que importa es si se pueden hacer cambios en el código y verlos rápidamente.
+* **Desarrollo:**  la prioridad se centra en la iteración rápida de los cambios y en la posibilidad de depurarlos. El tamaño de la imagen no es tan importante; lo que importa es si se pueden hacer cambios en el código y verlos rápidamente.
 
 * **Compilación:** esta imagen contiene todo lo necesario para compilar la aplicación, lo que incluye el compilador y las demás dependencias para optimizar los archivos binarios.  La imagen de compilación se usa para crear los recursos que se colocan en una imagen de producción. La imagen de compilación se usaría para la integración continua, o en un entorno de compilación. Este enfoque permite a un agente de compilación compilar y generar la aplicación (con todas las dependencias necesarias) en una instancia de imagen de compilación. El agente de compilación solo necesita saber cómo ejecutar la imagen de Docker.
 
-* **Producción:** velocidad a la que puede implementar e iniciar la imagen. Esta imagen es pequeña, así que el rendimiento de red desde el Registro de Docker hasta los hosts de Docker está optimizado. El contenido está listo para ejecutar, lo que permite el tiempo más rápido desde la ejecución de Docker hasta el procesamiento de los resultados. En el modelo de Docker no se necesita compilación de código dinámico. El contenido que se coloca en esta imagen estaría limitado a los archivos binarios y al contenido necesario para ejecutar la aplicación.
+* **Producción:** velocidad a la que se puede implementar e iniciar la imagen. Esta imagen es pequeña, así que el rendimiento de red desde el Registro de Docker hasta los hosts de Docker está optimizado. El contenido está listo para ejecutar, lo que permite el tiempo más rápido desde la ejecución de Docker hasta el procesamiento de los resultados. En el modelo de Docker no se necesita compilación de código dinámico. El contenido que se coloca en esta imagen estaría limitado a los archivos binarios y al contenido necesario para ejecutar la aplicación.
 
     Por ejemplo, la salida `dotnet publish` contiene:
 
@@ -63,7 +61,7 @@ Para lograr los objetivos anteriores, en [`microsoft/dotnet`](https://hub.docker
 > [!TIP]
 > Si no está seguro de sus necesidades, se recomienda usar la imagen `microsoft/dotnet:<version>-sdk`. Como imagen "de facto", se ha diseñado para usarse como contenedor desechable (monte el código fuente e inicie el contenedor para iniciar la aplicación) y como imagen base para compilar otras imágenes.
 
-* `microsoft/dotnet:<version>-runtime`: esta imagen contiene .NET Core (runtime y bibliotecas) y está optimizada para ejecutar aplicaciones de .NET Core en **producción**.
+* `microsoft/dotnet:<version>-runtime`: esta imagen contiene .NET Core (runtime y bibliotecas) y está optimizada para ejecutar aplicaciones .NET Core en **producción**.
 
 ## <a name="alternative-images"></a>Imágenes nativas
 

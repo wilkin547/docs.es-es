@@ -68,6 +68,8 @@ Asegúrese de seguir la sintaxis de Markdown adecuada. Para más información, v
 
 **Paso 4:** Envíe una solicitud de incorporación de cambios (PR) desde su rama a `dotnet/docs/master`.
 
+La PR *siempre* debe tener como destino la rama principal. *Nunca* debe abrir una PR que tenga como destino la rama en vivo.
+
 Normalmente, cada PR debe abordar las incidencias una a una. La PR puede modificar uno o varios archivos. Si se abordan varias correcciones en distintos archivos, es preferible usar PR independientes.
 
 Si la PR aborda una incidencia existente, agregue la palabra clave `Fixes #Issue_Number` al mensaje de confirmación o a la descripción de la PR. De este modo, la incidencia se podrá cerrar automáticamente cuando se combine la PR. Para obtener más información, vea [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/) (Cierre de asuntos mediante mensajes de confirmación).

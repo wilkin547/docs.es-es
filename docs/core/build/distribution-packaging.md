@@ -2,14 +2,14 @@
 title: Empaquetado de distribución de .NET Core
 description: Obtenga información sobre cómo empaquetar, nombrar y versionar .NET Core para su distribución.
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145652"
+ms.locfileid: "53170423"
 ---
 # <a name="net-core-distribution-packaging"></a>Empaquetado de distribución de .NET Core
 
@@ -68,14 +68,14 @@ La carpeta **shared** contiene marcos. Un marco compartido proporciona un conjun
 
 El control de versiones de .NET Core se basa en los números de versión `[major].[minor]` del componente del entorno de ejecución.
 La versión del SDK usa el mismo valor `[major].[minor]` y tiene un valor `[patch]` independiente que combina la semántica de la característica y la revisión del SDK.
-Por ejemplo: el SDK versión 2.2.302 es la segunda versión de revisión de la tercera versión de característica del SDK que admite el entorno de ejecución 2.2.
+Por ejemplo: la versión 2.2.302 del SDK es la segunda versión de revisión de la tercera versión de características del SDK que admite el runtime 2.2.
 
 Algunos de los paquetes incluyen parte del número de versión en su nombre. Esto permite al usuario final instalar una versión específica.
 El resto de la versión no se incluye en el nombre de la versión. Esto permite al administrador de paquetes del sistema operativo actualizar los paquetes (por ejemplo, instalar automáticamente correcciones de seguridad).
 
 En las siguientes tablas, se muestran los paquetes recomendados.
 
-| nombre                                    | Ejemplo                | Caso de uso: instalar...           | Contiene           | Dependencias                                   | Versión            |
+| nombre                                    | Ejemplo                | Caso de uso: Instalar...           | Contiene           | Dependencias                                   | Versión            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[versión principal]                      | dotnet-sdk-2           | SDK más reciente del entorno de ejecución principal    |                    | dotnet-sdk-[versión principal].[versión secundaria más reciente]               | \<versión del sdk>     |
 | dotnet-sdk-[versión principal].[versión secundaria]              | dotnet-sdk-2.1         | SDK más reciente del entorno de ejecución concreto |                    | dotnet-sdk-[versión principal].[versión secundaria].[característica del SDK más reciente]xx | \<versión del SDK>     |

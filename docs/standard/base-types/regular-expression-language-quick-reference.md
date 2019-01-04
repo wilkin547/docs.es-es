@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041621"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779391"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 <a name="top"></a> Una expresión regular es un patrón con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras.  Para obtener una breve introducción, consulte [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "44041621"
   
  [Escapes de carácter](#character_escapes)  
  [Clases de carácter](#character_classes)  
- [Delimitadores](#atomic_zerowidth_assertions)  
+ [Delimitadores](#anchors)  
  [Construcciones de agrupamiento](#grouping_constructs)  
  [Cuantificadores](#quantifiers)  
  [Construcciones de referencia inversa](#backreference_constructs)  
@@ -41,7 +41,7 @@ ms.locfileid: "44041621"
   
  Esta información también se proporciona en dos formatos que se puede descargar e imprimir para facilitar su consulta:  
   
- [Descarga en formato Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Descargar en formato Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Descarga en formato PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
@@ -74,7 +74,7 @@ ms.locfileid: "44041621"
 |---------------------|-----------------|-------------|-------------|  
 |`[` *grupo_caracteres* `]`|Coincide con cualquier carácter individual de *grupo_caracteres*. De forma predeterminada, la coincidencia distingue entre mayúsculas y minúsculas.|`[ae]`|"a" en "casa"<br /><br /> "a", "e" en "ave"|  
 |`[^` *grupo_caracteres* `]`|Negación: coincide con cualquier carácter individual que no esté en *grupo_caracteres*. De forma predeterminada, los caracteres de *grupo_caracteres* distinguen entre mayúsculas y minúsculas.|`[^aei]`|"r", "n", "o" en "reino"|  
-|`[` *first* `-` *last* `]`|Intervalo de caracteres: coincide con cualquier carácter individual en el intervalo de *primero* a *último*.|`[A-Z]`|"A", "B" en "AB123"|  
+|`[` *first* `-` *last* `]`|Intervalo de caracteres: coincide con cualquier carácter individual en el intervalo de *primero* to *último*.|`[A-Z]`|"A", "B" en "AB123"|  
 |`.`|Carácter comodín: coincide con cualquier carácter excepto con \n.<br /><br /> Para coincidir con un carácter de punto literal (. o `\u002E`), debe anteponerle el carácter de escape (`\.`).|`a.e`|"ave" en "llave"<br /><br /> "ate" en "yate"|  
 |`\p{` *name* `}`|Coincide con cualquier carácter individual que pertenezca a la categoría general Unicode o al bloque con nombre especificado por *name*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"C", "L" en "City Lights"<br /><br /> "Д", "Ж" in "ДЖem"|  
 |`\P{` *name* `}`|Coincide con cualquier carácter individual que no pertenezca a la categoría general Unicode o al bloque con nombre especificado por *name*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"i", "t", "y" en "City"<br /><br /> "e", "m" in "ДЖem"|  
@@ -87,7 +87,6 @@ ms.locfileid: "44041621"
   
  [Volver al principio](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Delimitadores  
  Los delimitadores, o aserciones atómicas de ancho cero, hacen que una coincidencia tenga éxito o no dependiendo de la posición actual en la cadena, pero no hacen que el motor avance por la cadena ni consuma caracteres. Los metacaracteres enumerados en la tabla siguiente son delimitadores. Para obtener más información, consulta [Delimitadores](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
@@ -163,7 +162,7 @@ ms.locfileid: "44041621"
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Coincide con cualquier elemento separado por el carácter de barra vertical (*&#124;).|<code>th(e&#124;is&#124;at)</code>|"the", "this" en "this is the day. " "|  
 |`(?(` *expresión* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si el patrón de expresión regular designado por *expresión* coincide; de lo contrario, coincide con la parte opcional *no* . *expresión* se interpreta como una aserción de ancho cero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" en "A10 C103 910"|  
-|`(?(` *nombre* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si *nombre*, un grupo de captura con nombre o numerado, tiene una coincidencia; de lo contrario, coincide con la parte opcional *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Dogs.jpg, "Yiska playing.jpg" en "Dogs.jpg "Yiska playing.jpg""|  
+|`(?(` *name* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si *nombre*, un grupo de captura con nombre o numerado, tiene una coincidencia; de lo contrario, coincide con la parte opcional *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Dogs.jpg, "Yiska playing.jpg" en "Dogs.jpg "Yiska playing.jpg""|  
   
  [Volver al principio](#top)  
   
@@ -179,7 +178,7 @@ ms.locfileid: "44041621"
 |`$&`|Sustituye una copia de toda la coincidencia.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Sustituye todo el texto de la cadena de entrada delante de la coincidencia.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
 |`$'`|Sustituye todo el texto de la cadena de entrada detrás de la coincidencia.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|Sustituye el último grupo capturado.|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
+|`$+`|Sustituye el último grupo capturado.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Sustituye toda la cadena de entrada.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
  [Volver al principio](#top)  

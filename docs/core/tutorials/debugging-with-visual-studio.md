@@ -3,12 +3,12 @@ title: Depuración de la aplicación Hola mundo de .NET Core con Visual Studio 2
 description: Obtenga información sobre cómo depurar una aplicación Hola mundo, escrita en C# o Visual Basic, con Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147533"
+ms.locfileid: "53170670"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depuración de la aplicación Hola mundo de .NET Core en C# o Visual Basic con Visual Studio 2017
 
@@ -18,7 +18,7 @@ Hasta ahora, ha seguido los pasos descritos en [Compilación de una aplicación 
 
 El modo de *depuración* y *versión* son dos de las configuraciones de compilación predeterminadas de Visual Studio. La configuración de compilación actual se muestra en la barra de herramientas. En la siguiente imagen de la barra de herramientas se muestra que Visual Studio está configurado para compilar la aplicación en el modo de **depuración**.
 
-   ![Barra de herramientas de Visual Studio](./media/debugging-with-visual-studio/toolbar1.png)
+   ![Barra de herramientas predeterminada de Visual Studio con Depuración resaltado](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
 
 Siempre debe empezar probando el programa en modo de depuración. El modo de depuración desactiva la mayoría de las optimizaciones del compilador y proporciona información más completa durante el proceso de compilación.
 
@@ -31,7 +31,7 @@ Ejecute su programa en el modo de depuración y pruebe algunas características 
 
    Establezca un punto de interrupción en la línea que dice `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` haciendo clic en el margen izquierdo de la ventana de código en esa línea o seleccione el elemento de menú **Depurar** > **Alternar punto de interrupción** con la línea seleccionada. Como se muestra en la siguiente ilustración, para indicar la línea en la que se establece el punto de interrupción, Visual Studio lo resalta y muestra un círculo rojo en el margen izquierdo.
 
-   ![Ventana del programa Visual Studio con el punto de interrupción establecido](./media/debugging-with-visual-studio/setbreakpoint.png)
+   ![Ventana del programa Visual Studio con el punto de interrupción establecido](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
 
 1. Ejecute el programa en el modo de depuración seleccionando el botón **HelloWorld** con la flecha verde en la barra de herramientas, presionando F5 o seleccionando **Depurar** > **Iniciar depuración**.
 
@@ -49,11 +49,11 @@ Ejecute su programa en el modo de depuración y pruebe algunas características 
 
    La **ventana Inmediato** muestra el valor de la variable de cadena y las propiedades del valor <xref:System.DateTime>. Además, el valor de las variables se actualiza en las ventanas **Automático** y **Variables locales**.
 
-   ![Ventana Automático y ventana Inmediato](./media/debugging-with-visual-studio/autosimmediate.png)
+   ![Ventana Automático y ventana Inmediato](./media/debugging-with-visual-studio/autos-immediate-window.png)
 
 1. Seleccione el botón **Continuar** en la barra de herramientas para continuar con la ejecución del programa, o seleccione el elemento de menú **Depurar** > **Continuar**. Los valores mostrados en la ventana de la consola corresponden a los cambios realizados en la **ventana Inmediato**.
 
-   ![Ventana de la consola que muestra el valor de tipo Jack en el mensaje What is your name? seguido de Hello Gracie el 1/11/2016 a las 11:59](./media/debugging-with-visual-studio/changed.png)
+   ![Ventana de la consola en la que se muestra el valor Jack en el mensaje What is your name? seguido de Hello Gracie](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Presione cualquier tecla para salir de la aplicación y finalice el modo de depuración.
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
@@ -61,7 +61,7 @@ Ejecute su programa en el modo de depuración y pruebe algunas características 
 
    Establezca un punto de interrupción en la línea que dice `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` haciendo clic en el margen izquierdo de la ventana de código en esa línea o seleccione el elemento de menú **Depurar** > **Alternar punto de interrupción** con la línea seleccionada. Como se muestra en la siguiente ilustración, para indicar la línea en la que se establece el punto de interrupción, Visual Studio lo resalta y muestra un círculo rojo en el margen izquierdo.
 
-   ![Ventana del programa Visual Studio con el punto de interrupción establecido](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+   ![Ventana del programa Visual Studio con el punto de interrupción establecido](./media/debugging-with-visual-studio/vb-set-breakpoint-in-editor.png)
 
 1. Ejecute el programa en el modo de depuración seleccionando el botón **HelloWorld** con la flecha verde en la barra de herramientas, presionando F5 o seleccionando **Depurar** > **Iniciar depuración**.
 
@@ -69,7 +69,7 @@ Ejecute su programa en el modo de depuración y pruebe algunas características 
 
 1. La ejecución del programa se detiene cuando llega al punto de interrupción y antes de que se ejecute el método `Console.WriteLine`. La ventana **Automático** muestra los valores de variables que se usan en torno a la línea actual. La ventana **Variables locales** (que puede ver haciendo clic en la pestaña **Variables locales**) muestra los valores de las variables definidas en el método que se ejecuta actualmente.
 
-   ![Ventana de la aplicación de Visual Studio](./media/debugging-with-visual-studio/vb-break.png)
+   ![Ventana de la aplicación de Visual Studio en un punto de interrupción](./media/debugging-with-visual-studio/vb-stop-at-breakpoint.png)
 
 1. Puede cambiar el valor de las variables para ver cómo afecta esto a su programa. Si la **ventana Inmediato** no está visible, muéstrela, para ello, seleccione el elemento de menú **Depurar** > **Ventanas** > **Inmediato**. La **ventana Inmediato** le permite interactuar con la aplicación que está depurando.
 
@@ -79,7 +79,7 @@ Ejecute su programa en el modo de depuración y pruebe algunas características 
 
 1. Seleccione el botón **Continuar** en la barra de herramientas para continuar con la ejecución del programa, o seleccione el elemento de menú **Depurar** > **Continuar**. Los valores mostrados en la ventana de la consola corresponden a los cambios realizados en la **ventana Inmediato**.
 
-   ![Ventana de consola que muestra los valores cambiados especificados en la ventana Inmediato](./media/debugging-with-visual-studio/changed.png)
+   ![Ventana de consola que muestra los valores cambiados especificados en la ventana Inmediato](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Presione cualquier tecla para salir de la aplicación y finalice el modo de depuración.
 ---
@@ -93,7 +93,7 @@ Para establecer un punto de interrupción condicional y probar lo que sucede cua
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Haga clic con el botón derecho en el punto rojo que representa al punto de interrupción. En el menú contextual, seleccione **Condiciones** para abrir el cuadro diálogo **Configuración del punto de interrupción**. Marque la casilla **Condiciones**.
 
-   ![Panel de configuración de punto de interrupción](./media/debugging-with-visual-studio/breakpointsettings.png)
+   ![Editor con el panel de configuración de puntos de interrupción: C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
 
 1. Para la **expresión condicional**, reemplace "por ejemplo, x == 5" por lo siguiente:
 
@@ -119,7 +119,7 @@ Para establecer un punto de interrupción condicional y probar lo que sucede cua
    ? name == String.Empty
    ```
 
-   ![La ventana Inmediato devolviendo un valor de True después de que se ejecute la instrucción](./media/debugging-with-visual-studio/emptystring.png)
+   ![Ventana Inmediato en la que se devuelve un valor de True después de que se ejecute la instrucción: C#](./media/debugging-with-visual-studio/immediate-window-output.png)
 
 1. Seleccione el botón **Continuar** en la barra de herramientas para continuar la ejecución del programa.
 
@@ -129,7 +129,7 @@ Para establecer un punto de interrupción condicional y probar lo que sucede cua
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Haga clic con el botón derecho en el punto rojo que representa al punto de interrupción. En el menú contextual, seleccione **Condiciones** para abrir el cuadro diálogo **Configuración del punto de interrupción**. Marque la casilla **Condiciones**.
 
-   ![Panel de configuración de punto de interrupción](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+   ![Editor con el panel de configuración de puntos de interrupción: Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
 
 1. Para la **expresión condicional**, reemplace "por ejemplo, x = 5" por lo siguiente:
 
@@ -154,7 +154,7 @@ Para establecer un punto de interrupción condicional y probar lo que sucede cua
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
-  ![La ventana Inmediato devolviendo un valor de True después de que se ejecute la instrucción](./media/debugging-with-visual-studio/vb-emptystring.png)
+  ![Ventana Inmediato en la que se devuelve un valor de True después de que se ejecute la instrucción: Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Seleccione el botón **Continuar** en la barra de herramientas para continuar la ejecución del programa.
 
@@ -169,13 +169,13 @@ Visual Studio también le permite recorrer línea a línea un programa y supervi
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. En la barra de menús, seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio resalta y muestra una flecha junto a la siguiente línea de ejecución.
 
-   ![Ventana de Visual Studio](./media/debugging-with-visual-studio/stepinto1.png)
+   ![Método Paso a paso por instrucciones de Visual Studio: C#](./media/debugging-with-visual-studio/step-into-method.png)
 
    En este punto, la ventana **Automático** muestra que su programa ha definido solo una variable, `args`. Dado que no ha pasado ningún argumento de línea de comandos al programa, su valor es una matriz de cadena vacía. Además, Visual Studio ha abierto una ventana de consola en blanco.
 
 1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio ahora resalta la siguiente línea de ejecución. Como se muestra en la ilustración, el código tarda en ejecutarse menos de una milésima de segundo entre la última instrucción y esta. `args` sigue siendo la única variable declarada y la ventana de consola sigue estando en blanco.
 
-   ![Ventana de Visual Studio](./media/debugging-with-visual-studio/stepinto2.png)
+   ![Origen del método Paso a paso por instrucciones de Visual Studio: C#](./media/debugging-with-visual-studio/step-into-source-method.png)
 
 1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio resalta la instrucción que incluye la asignación de variables `name`. La ventana **Automático** muestra que `name` es `null`, y la ventana de consola muestra la cadena "What is your name?".
 
@@ -193,13 +193,13 @@ Visual Studio también le permite recorrer línea a línea un programa y supervi
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. En la barra de menús, seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio resalta y muestra una flecha junto a la siguiente línea de ejecución.
 
-   ![Ventana de Visual Studio](./media/debugging-with-visual-studio/vb-stepinto1.png)
+   ![Método Paso a paso por instrucciones de Visual Studio: Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
 
    En este punto, como no ha pasado ningún argumento de línea de comandos al programa, la ventana **Automático** muestra que el valor de la variable `args` es una matriz de cadena vacía. Además, Visual Studio ha abierto una ventana de consola en blanco.
 
 1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio ahora resalta la siguiente línea de ejecución. Como se muestra en la ilustración, el código tarda en ejecutarse menos de una milésima de segundo entre la última instrucción y esta. `args` sigue siendo la única variable declarada y la ventana de consola sigue estando en blanco.
 
-   ![Ventana de Visual Studio](./media/debugging-with-visual-studio/vb-stepinto2.png)
+   ![Origen del método Paso a paso por instrucciones de Visual Studio: Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
 
 1. Seleccione **Depurar** > **Paso a paso por instrucciones** o presione la tecla F11. Visual Studio resalta la instrucción que incluye la asignación de variables `name`. La ventana **Automático** muestra que `name` es `Nothing`, y la ventana de consola muestra la cadena "What is your name?".
 
@@ -222,7 +222,7 @@ Una vez que ha probado la compilación de depuración de la aplicación, tambié
 
 Para compilar y probar la versión de lanzamiento de la aplicación de la consola, cambie la configuración de compilación en la barra de herramientas de **Depurar** a **Versión**.
 
-![Imagen](./media/debugging-with-visual-studio/toolbar2.png)
+![Barra de herramientas predeterminada de Visual Studio con Depuración resaltado](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
 
 Cuando presiona F5 o selecciona **Compilar solución** en el menú **Compilar**, Visual Studio compila la versión de lanzamiento de la aplicación de consola. Puede probarla como hizo con la versión de depuración de la aplicación.
 

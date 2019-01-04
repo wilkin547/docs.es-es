@@ -3,12 +3,13 @@ title: Prueba unitaria de C# con NUnit y .NET Core
 description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree paso a paso una solución de ejemplo mediante pruebas de dotnet y NUnit.'
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146968"
+ms.locfileid: "53169045"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Prueba unitaria de C# con NUnit y .NET Core
 
@@ -166,7 +167,7 @@ En el directorio *unit-testing-using-nunit*, vuelva a ejecutar `dotnet test`. El
 
 ## <a name="adding-more-features"></a>Agregar más características
 
-Ahora que la prueba se ha superado, es el momento de escribir más. Hay algunos otros casos simples para números primos: 0, -1. Puede agregar pruebas nuevas con el atributo `[Test]`, pero enseguida este proceso se hace tedioso. Hay otros atributos de NUnit que le permiten escribir un conjunto de pruebas similares.  Un atributo `[TestCase]` se usa para crear un conjunto de pruebas que ejecutan el mismo código pero tienen diferentes argumentos de entrada. Puede usar el atributo `[TestCase]` para especificar valores para esas entradas.
+Ahora que la prueba se ha superado, es el momento de escribir más. Hay otros casos simples para números primos: 0, -1. Puede agregar pruebas nuevas con el atributo `[Test]`, pero enseguida este proceso se hace tedioso. Hay otros atributos de NUnit que le permiten escribir un conjunto de pruebas similares.  Un atributo `[TestCase]` se usa para crear un conjunto de pruebas que ejecutan el mismo código pero tienen diferentes argumentos de entrada. Puede usar el atributo `[TestCase]` para especificar valores para esas entradas.
 
 En lugar de crear pruebas, aplique este atributo para crear una sola prueba controlada por datos. La prueba controlada por datos es un método que prueba varios valores menores que dos, que es el número primo menor:
 

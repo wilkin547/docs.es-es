@@ -1,17 +1,16 @@
 ---
-title: 'Generador de serializador XML de Microsoft: .NET Core'
+title: Generador de serializador XML de Microsoft
 description: Información general sobre el generador de serializador XML de Microsoft. Use el generador de serializador XML para generar un ensamblado de serialización XML para los tipos contenidos en el proyecto.
 author: mlacouture
-ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151764"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244783"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Usar el generador de serializador XML de Microsoft en .NET Core
 
@@ -22,7 +21,7 @@ Este tutorial muestra cómo usar el generador de serializador XML de Microsoft e
 > * Cómo agregar una referencia al paquete Microsoft.XmlSerializer.Generator
 > * Cómo editar MyApp.csproj para agregar dependencias
 > * Cómo agregar una clase y un XmlSerializer
-> * Cómo compilar y ejecutar la aplicación 
+> * Cómo compilar y ejecutar la aplicación
 
 Tal y como sucede con el [generador de serializador de XML (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) para .NET Framework, el [paquete Microsoft.XmlSerializer.Generator de NuGet ](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) es el equivalente para proyectos de .NET Core y .NET Standard. Crea un ensamblado de serialización de XML para los tipos contenidos en un ensamblado para mejorar el rendimiento de inicio de la serialización XML al serializar o deserializar objetos de esos tipos con <xref:System.Xml.Serialization.XmlSerializer>.
 
@@ -30,8 +29,8 @@ Tal y como sucede con el [generador de serializador de XML (sgen.exe)](../../sta
 
 Para realizar este tutorial:
 
-* Instale el [SDK de .NET Core 2.1 o versiones posteriores](https://www.microsoft.com/net/download).
-* Instale el editor de código que prefiera si aún no lo ha hecho.
+* [SDK de .NET Core 2.1](https://www.microsoft.com/net/download) o versiones posteriores
+* Su editor de código favorito.
 
 > [!TIP]
 > ¿Es necesario instalar un editor de código? Pruebe [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
@@ -53,11 +52,11 @@ dotnet new console
 Use el comando [`dotnet add package`](../tools//dotnet-add-package.md) para agregar la referencia en el proyecto. 
 
 Tipo:
- 
- ```console
- dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
- ```
- 
+
+```console
+dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
+```
+
 ### <a name="verify-changes-to-myappcsproj-after-adding-the-package"></a>Comprobar los cambios en MyApp.csproj después de agregar el paquete
 
 Abra el editor de código para empezar. Todavía estamos trabajando desde el directorio *MyApp* en el que hemos compilado la aplicación.
@@ -71,17 +70,17 @@ Después de ejecutar el comando [`dotnet add package`](../tools//dotnet-add-pack
     <PackageReference Include="Microsoft.XmlSerializer.Generator" Version="1.0.0" />
  </ItemGroup>
  ```
- 
+
 ### <a name="add-another-itemgroup-section-for-net-core-cli-tool-support"></a>Agregar otra sección ItemGroup para admitir la herramienta CLI de .NET Core
- 
- Agregue estas líneas después de la sección `ItemGroup` que hemos inspeccionado:
- 
+
+Agregue estas líneas después de la sección `ItemGroup` que hemos inspeccionado:
+
  ```xml
  <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.XmlSerializer.Generator" Version="1.0.0" />
  </ItemGroup>
  ```
- 
+
 ### <a name="add-a-class-in-the-application"></a>Agregar una clase en la aplicación
 
 Abra *Program.cs* en el editor de texto. Agregue la clase con el nombre *MyClass* en *Program.cs*.
@@ -107,9 +106,10 @@ Seguimos en la carpeta *MyApp*, desde donde vamos a ejecutar la aplicación a tr
 
 Escriba el siguiente comando en la ventana de consola:
 
- ```console
- $ dotnet run
- ```
+```console
+$ dotnet run
+```
+
 > [!NOTE]
 > [`dotnet run`](../tools/dotnet-run.md) llama a [`dotnet build`](../tools/dotnet-build.md) para asegurarse de que los destinos de la compilación se han creado y, después, llama a `dotnet <assembly.dll>` para ejecutar la aplicación de destino.
 
@@ -118,18 +118,16 @@ Escriba el siguiente comando en la ventana de consola:
 
 Si todo se realiza correctamente, se genera un ensamblado con el nombre *.dll MyApp.XmlSerializers.dll* en la carpeta de salida. 
 
-
-
 ¡Enhorabuena! Acaba de:
 > [!div class="checklist"]
 > * Crear una aplicación .NET Core.
 > * Agregar una referencia al paquete Microsoft.XmlSerializer.Generator.
 > * Editar MyApp.csproj para agregar dependencias.
 > * Agregue una clase y un XmlSerializer.
-> * Compilar y ejecutar la aplicación. 
+> * Compilar y ejecutar la aplicación.
 
 ## <a name="related-resources"></a>Recursos relacionados
 
 * [Introducción a la serialización XML](../../standard/serialization/introducing-xml-serialization.md)
-* [How to: Serialize Using XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md) (Cómo: Serializar con XmlSerializer (C#))
-* [Cómo: serializar con XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+* [Cómo: Serializar con XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+* [Cómo: Serializar con XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

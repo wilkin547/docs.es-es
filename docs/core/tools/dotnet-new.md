@@ -1,15 +1,13 @@
 ---
-title: 'Comando dotnet new: CLI de .NET Core'
+title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
-author: mairaw
-ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131487"
+ms.locfileid: "53169696"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
