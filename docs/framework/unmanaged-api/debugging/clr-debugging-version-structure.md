@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4be232ab557d582f3521b8775108c004b5a3dd78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fecd5af43f4b984a4ab626e9832b3318715c0516
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403310"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058365"
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION (Estructura)
 Define la versión de producto de Common Language Runtime (CLR) con fines de depuración.  
@@ -29,37 +29,37 @@ Define la versión de producto de Common Language Runtime (CLR) con fines de dep
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-Typedef struct _CLR_DEBUGGING_VERSION  
+typedef struct _CLR_DEBUGGING_VERSION  
 {  
-WORD wStructVersion;  
-WORD wMajor;   
-WORD wMinor;  
-WORD wBuild;  
-WORD wRevision;  
-}  CLR_DEBUGGING_VERSION;  
+    WORD wStructVersion;
+    WORD wMajor;
+    WORD wMinor;
+    WORD wBuild;
+    WORD wRevision;
+} CLR_DEBUGGING_VERSION;
 ```  
   
 ## <a name="members"></a>Miembros  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`wStructVersion`|El número de versión de estructura|  
+|`wStructVersion`|El número de versión de la estructura|  
 |`wMajor`|Número de versión principal.|  
 |`wMinor`|Número de versión secundaria.|  
 |`wBuild`|El número de compilación.|  
 |`wRevision`|El número de revisión.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `CLR_DEBUGGING_VERSION` estructura es el mismo que el COR_VERSION (estructura), sin embargo, el `CLR_DEBUGGING_VERSION` estructura proporciona un campo de versión de una estructura adicional (`wStructVersion`). Actualmente, este campo debe establecerse en cero.  
+ El `CLR_DEBUGGING_VERSION` estructura es igual que el COR_VERSION (estructura), sin embargo, el `CLR_DEBUGGING_VERSION` estructura proporciona un campo de versión de una estructura adicional (`wStructVersion`). Actualmente, este campo debe establecerse en cero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
