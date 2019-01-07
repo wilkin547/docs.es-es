@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ec34d6f49a538ac106196c342a7ff0f9dad8b6d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242781"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451214"
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 
@@ -34,7 +34,7 @@ Una propiedad es un miembro que proporciona un mecanismo flexible para leer, esc
 
 Un patrón básico para implementar una propiedad conlleva el uso de un campo de respaldo privado para establecer y recuperar el valor de la propiedad. El descriptor de acceso `get` devuelve el valor del campo privado y el descriptor de acceso `set` puede realizar alguna validación de datos antes de asignar un valor al campo privado. Ambos descriptores de acceso además pueden realizar algún cálculo o conversión en los datos antes de que se almacenen o se devuelvan.
 
-En el ejemplo siguiente se muestra este patrón. En este ejemplo, la clase `TimePeriod` representa un intervalo de tiempo. Internamente, la clase almacena el intervalo de tiempo en segundos en un campo privado denominado `seconds`. Una propiedad de lectura y escritura denominada `Hours` permite al cliente especificar el intervalo de tiempo en horas. Los descriptores de acceso `get` y `set` realizan la conversión necesaria entre horas y segundos. Además, el descriptor de acceso `set` valida los datos e inicia una excepción <xref:System.ArgumentOutOfRangeException> si el número de horas no es válido. 
+En el ejemplo siguiente se muestra este patrón. En este ejemplo, la clase `TimePeriod` representa un intervalo de tiempo. Internamente, la clase almacena el intervalo de tiempo en segundos en un campo privado denominado `_seconds`. Una propiedad de lectura y escritura denominada `Hours` permite al cliente especificar el intervalo de tiempo en horas. Los descriptores de acceso `get` y `set` realizan la conversión necesaria entre horas y segundos. Además, el descriptor de acceso `set` valida los datos e inicia una excepción <xref:System.ArgumentOutOfRangeException> si el número de horas no es válido. 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   

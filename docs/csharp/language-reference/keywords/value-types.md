@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9fe75cf9524f6280bc649fb3784c21e4dd88adea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235795"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612730"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -28,14 +28,14 @@ Existen dos clases de tipos de valor:
 
 Una variable de un tipo de valor contiene un valor del tipo. Por ejemplo, una variable del tipo `int` podría contener el valor `42`. Esto difiere de una variable de un tipo de referencia, que contiene una referencia a una instancia del tipo y que también se conoce como un objeto. Al asignar un nuevo valor a una variable de un tipo de valor, se copia ese valor. Al asignar un nuevo valor a una variable de un tipo de referencia, se copia la referencia, no el propio objeto.
 
-Todos los tipos de valor se derivan implícitamente de <xref:System.ValueType?displayProperty=nameWithType>.  
-  
-A diferencia de los tipos de referencia, no puede derivar un tipo nuevo de un tipo de valor. En cambio, como los tipos de referencia, los structs pueden implementar interfaces.  
-  
+Todos los tipos de valor se derivan implícitamente de <xref:System.ValueType?displayProperty=nameWithType>.
+
+A diferencia de los tipos de referencia, no puede derivar un tipo nuevo de un tipo de valor. En cambio, como los tipos de referencia, los structs pueden implementar interfaces.
+
 Las variables de tipo de valor no pueden ser `null` de forma predeterminada. Sin embargo, las variables de los [tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md) correspondientes pueden ser `null`.
-  
-Cada tipo de valor tiene un constructor predeterminado implícito que inicializa el valor predeterminado de ese tipo. Para información sobre los valores predeterminados de los tipos de valor, vea [Tabla de valores predeterminados](default-values-table.md).  
-  
+
+Cada tipo de valor tiene un constructor predeterminado implícito que inicializa el valor predeterminado de ese tipo. Para información sobre los valores predeterminados de los tipos de valor, vea [Tabla de valores predeterminados](default-values-table.md).
+
 ## <a name="simple-types"></a>Tipos simples
 
 Los *tipos simples* son un conjunto de tipos struct predefinidos proporcionados por C# y comprenden los siguientes tipos:
@@ -55,59 +55,59 @@ Los tipos simples se diferencian de otros tipos struct en que permiten determina
 - Las expresiones constantes, cuyos operandos son todas constantes de tipo simple, se evalúan en tiempo de compilación.
 
 Para más información, vea la sección [Tipos simples](~/_csharplang/spec/types.md#simple-types) de la [Especificación del lenguaje C#](../language-specification/index.md).
-  
+
 ## <a name="initializing-value-types"></a>Inicialización de tipos de valor
 
- Las variables locales en C# deben inicializarse antes de usarse. Por ejemplo, puede declarar una variable local sin inicialización como en el ejemplo siguiente:  
-  
-```csharp  
-int myInt;  
-```  
-  
- No puede usarla antes de inicializarla. Puede inicializarla con la siguiente instrucción:  
-  
-```csharp  
-myInt = new int();  // Invoke default constructor for int type.  
-```  
-  
- Esta instrucción es equivalente a la instrucción siguiente:  
-  
-```csharp  
-myInt = 0;         // Assign an initial value, 0 in this example.  
-```  
-  
- Por supuesto, puede tener la declaración y la inicialización en la misma instrucción como en los ejemplos siguientes:  
-  
-```csharp  
-int myInt = new int();  
-```  
-  
- -O bien-  
-  
-```csharp  
-int myInt = 0;  
-```  
-  
- Con el operador [new](new.md) se llama al constructor predeterminado del tipo específico y asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor predeterminado ha asignado el valor `0` a `myInt`. Para más información sobre los valores que se han asignado llamando a los constructores predeterminados, vea [Tabla de valores predeterminados](default-values-table.md).  
-  
- Con los tipos definidos por el usuario, use [new](new.md) para invocar al constructor predeterminado. Por ejemplo, la siguiente instrucción invoca al constructor predeterminado del struct `Point`:  
-  
-```csharp  
-Point p = new Point(); // Invoke default constructor for the struct.  
-```  
-  
- Después de esta llamada, el struct se considera asignado definitivamente; es decir, todos sus miembros se inicializan a sus valores predeterminados.  
-  
- Para obtener más información acerca del operador `new`, vea [new](new.md).  
-  
- Para información sobre cómo aplicar formato al resultado de los tipos numéricos, vea [Tabla de formatos de presentación para valores numéricos](formatting-numeric-results-table.md).  
-  
+Las variables locales en C# deben inicializarse antes de usarse. Por ejemplo, puede declarar una variable local sin inicialización como en el ejemplo siguiente:
+
+```csharp
+int myInt;
+```
+
+No puede usarla antes de inicializarla. Puede inicializarla con la siguiente instrucción:
+
+```csharp
+myInt = new int();  // Invoke default constructor for int type.
+```
+
+Esta instrucción es equivalente a la instrucción siguiente:
+
+```csharp
+myInt = 0;         // Assign an initial value, 0 in this example.
+```
+
+Por supuesto, puede tener la declaración y la inicialización en la misma instrucción como en los ejemplos siguientes:
+
+```csharp
+int myInt = new int();
+```
+
+-O bien-
+
+```csharp
+int myInt = 0;
+```
+
+Con el operador [new](new.md) se llama al constructor predeterminado del tipo específico y asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor predeterminado ha asignado el valor `0` a `myInt`. Para más información sobre los valores que se han asignado llamando a los constructores predeterminados, vea [Tabla de valores predeterminados](default-values-table.md).
+
+Con los tipos definidos por el usuario, use [new](new.md) para invocar al constructor predeterminado. Por ejemplo, la siguiente instrucción invoca al constructor predeterminado del struct `Point`:
+
+```csharp
+Point p = new Point(); // Invoke default constructor for the struct.
+```
+
+Después de esta llamada, el struct se considera asignado definitivamente; es decir, todos sus miembros se inicializan a sus valores predeterminados.
+
+Para obtener más información acerca del operador `new`, vea [new](new.md).
+
+Para información sobre cómo aplicar formato al resultado de los tipos numéricos, vea [Tabla de formatos de presentación para valores numéricos](formatting-numeric-results-table.md).
+
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../index.md)  
-- [Guía de programación de C#](../../programming-guide/index.md)  
-- [Palabras clave de C#](index.md)  
-- [Tipos](types.md)  
-- [Tablas de referencia para tipos](reference-tables-for-types.md)  
-- [Tipos de referencia](reference-types.md)  
-- [Nullable types](../../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])  
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](index.md)
+- [Tipos](types.md)
+- [Tablas de referencia para tipos](reference-tables-for-types.md)
+- [Tipos de referencia](reference-types.md)
+- [Nullable types](../../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])
