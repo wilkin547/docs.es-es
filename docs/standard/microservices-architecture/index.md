@@ -4,18 +4,18 @@ description: Arquitectura de Microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152687"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030443"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservicios de .NET: arquitectura para aplicaciones .NET en contenedor
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor
 
 ![Portada del libro](./media/cover-small.png)
 
-**EDICIÓN v2.1.02**: actualizada a ASP.NET Core 2.1
+**EDICIÓN v2.1.03**: actualizada a ASP.NET Core 2.1
 
 Esta guía es una introducción al desarrollo de aplicaciones basadas en microservicios y a su administración mediante contenedores. En ella se trata el diseño de la arquitectura y los métodos de implementación con .NET Core y contenedores de Docker. 
 
@@ -43,7 +43,7 @@ Además, la arquitectura de [microservicios](https://martinfowler.com/articles/m
 
 Esta guía es una introducción al desarrollo de aplicaciones basadas en microservicios y a su administración mediante contenedores. En ella se trata el diseño de la arquitectura y los métodos de implementación con .NET Core y contenedores de Docker. Para que sea más fácil empezar a trabajar con contenedores y microservicios, la guía se centra en una aplicación de referencia en contenedor y basada en microservicios que puede explorar. Esta misma aplicación de ejemplo está disponible en el repositorio de GitHub [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
 
-En esta guía se proporciona el desarrollo fundamental y una guía de arquitectura principalmente en el nivel del entorno de desarrollo con especial hincapié en dos tecnologías: Docker y .NET Core. Nuestra intención es que lea esta guía cuando reflexione sobre el diseño de las aplicaciones sin centrarse en la infraestructura (en la nube o local) de su entorno de producción. Tomará decisiones sobre la infraestructura más adelante, cuando cree aplicaciones listas para la producción. Por lo tanto, esta guía está diseñada para ser independiente de la infraestructura y centrarse en el desarrollo y el entorno.
+Esta guía incluye el desarrollo fundamental y una guía de arquitectura principalmente en el nivel del entorno de desarrollo con especial hincapié en dos tecnologías: Docker y .NET Core. Nuestra intención es que lea esta guía cuando reflexione sobre el diseño de las aplicaciones sin centrarse en la infraestructura (en la nube o local) de su entorno de producción. Tomará decisiones sobre la infraestructura más adelante, cuando cree aplicaciones listas para la producción. Por lo tanto, esta guía está diseñada para ser independiente de la infraestructura y centrarse en el desarrollo y el entorno.
 
 Una vez que haya estudiado esta guía, el siguiente paso que debería dar es obtener información sobre los microservicios listos para la producción en Microsoft Azure.
 
@@ -88,7 +88,7 @@ Hemos creado esta guía para ayudarle a entender la arquitectura de aplicaciones
 
 Coautores:
 
-> **Cesar de la Torre**, administrador de programas sénior del equipo del producto de .NET, Microsoft Corp.
+> **Cesar de la Torre**, administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
 >
 > **Bill Wagner**, desarrollador de contenido sénior de C+E, Microsoft Corp.
 >
@@ -116,9 +116,9 @@ Participantes y revisores:
 >
 > **Diego Vega**, responsable de administración de programas del equipo de Entity Framework, Microsoft
 >
-> **Barry Dorrans**, administrador de programas de seguridad sénior
+> **Barry Dorrans**, director de programas de seguridad sénior
 >
-> **Rowan Miller**, administrador de programas sénior, Microsoft
+> **Rowan Miller**, director de programas sénior, Microsoft
 >
 > **Ankit Asthana**, director principal de administración de programas del equipo de .NET, Microsoft
 >
@@ -140,7 +140,7 @@ Participantes y revisores:
 >
 > **Javier Valero**, director de operaciones de Grupo Solutio
 >
-> **Pierre Millet**, asesor sénior de Microsoft
+> **Pierre Millet**, consultor sénior, Microsoft
 >
 > **Michael Friis**, administrador de productos de Docker Inc.
 >

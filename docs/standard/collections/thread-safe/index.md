@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e0d5e53b255ab59eabace01e69784d88aec8aca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fad67c1a3c53cd83dec6bfa161333b5e20ab4c4
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575536"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058326"
 ---
 # <a name="thread-safe-collections"></a>Colecciones seguras para subprocesos
-[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que incluye varias clases de colección que son a la vez seguras para subprocesos y escalables. Varios subprocesos pueden agregar o quitar elementos de estas colecciones sin ningún riesgo y de un modo eficaz, sin requerir una sincronización adicional en código de usuario. Al escribir un nuevo código, utilice las clases de colección simultáneas siempre que la colección se escriba en varios subprocesos simultáneamente. Si solo está leyendo en una colección compartida, puede utilizar las clases en el espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Recomendamos no utilizar clases de colección 1.0 a menos que estén destinadas a .NET Framework 1.1. o un runtime de una versión anterior.  
+[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que incluye varias clases de colección que son a la vez seguras para subprocesos y escalables. Varios subprocesos pueden agregar o quitar elementos de estas colecciones sin ningún riesgo y de un modo eficaz, sin requerir una sincronización adicional en código de usuario. Al escribir un código nuevo, utilice las clases de colección simultáneas siempre que varios subprocesos se vayan a escribir en la colección de forma simultánea. Si solo está leyendo en una colección compartida, puede utilizar las clases en el espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Recomendamos no utilizar clases de colección 1.0 a menos que estén destinadas a .NET Framework 1.1. o un runtime de una versión anterior.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Sincronización de subprocesos en las colecciones de .NET Framework 1.0 y 2.0  
  Las colecciones introducidas en .NET Framework 1.0 se encuentran en el espacio de nombres <xref:System.Collections?displayProperty=nameWithType>. Estas colecciones, que incluyen <xref:System.Collections.ArrayList> y <xref:System.Collections.Hashtable> utilizados habitualmente, proporcionan cierta seguridad para subprocesos mediante la propiedad `Synchronized`, que devuelve un contenedor seguro para subprocesos en torno a la colección. El contenedor funciona bloqueando toda la colección en cada operación de agregar o quitar. Por consiguiente, cada subproceso que intenta tener acceso a la colección debe esperar su turno para tomar el único bloqueo. Esto no es escalable y puede producir una degradación significativa del rendimiento en las colecciones grandes. Asimismo, el diseño no está totalmente protegido de las condiciones de carrera. Para obtener más información, vea [Synchronization in Generic Collections](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/) (Sincronización de colecciones genéricas).  
@@ -34,7 +34,7 @@ ms.locfileid: "33575536"
   
  La siguiente tabla enumera los tipos de colección en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Tipo|Description|  
+|Tipo|Descripción|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Proporciona funcionalidad de límite y bloqueo para cualquier tipo que implemente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Para obtener más información, consulte [Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementación segura para subprocesos de un diccionario de pares clave-valor.|  
@@ -45,15 +45,15 @@ ms.locfileid: "33575536"
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Describe la funcionalidad proporcionada por el tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Cómo agregar y quitar elementos de ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Describe cómo agregar y quitar los elementos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
-|[Cómo agregar y tomar elementos de forma individual en una clase BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Describe cómo agregar y recuperar elementos de una colección de bloqueo sin utilizar el enumerador de solo lectura.|  
-|[Cómo agregar la funcionalidad de límite y bloqueo a una colección](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Describe cómo utilizar cualquier clase de colección como mecanismo de almacenamiento subyacente para una colección <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
-|[Cómo utilizar ForEach para quitar elementos de BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Describe cómo utilizar `foreach`, (`For Each` en Visual Basic) para quitar todos los elementos en una colección de bloqueo.|  
-|[Cómo usar matrices de colecciones de bloqueo en una canalización](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Describe cómo utilizar varias colecciones de bloqueo para implementar una canalización al mismo tiempo.|  
-|[Cómo crear un grupo de objetos usando ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Muestra cómo usar un controlador simultáneo para mejorar el rendimiento en escenarios donde puede reutilizar objetos en lugar de crear continuamente otros nuevos.|  
+|[Cómo: agregar y quitar elementos de ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Describe cómo agregar y quitar los elementos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
+|[Cómo: agregar y tomar elementos de forma individual en una clase BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Describe cómo agregar y recuperar elementos de una colección de bloqueo sin utilizar el enumerador de solo lectura.|  
+|[Cómo: agregar la funcionalidad de límite y bloqueo a una colección](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Describe cómo utilizar cualquier clase de colección como mecanismo de almacenamiento subyacente para una colección <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
+|[Cómo: utilizar ForEach para quitar elementos de BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Describe cómo utilizar `foreach`, (`For Each` en Visual Basic) para quitar todos los elementos en una colección de bloqueo.|  
+|[Cómo: usar matrices de colecciones de bloqueo en una canalización](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Describe cómo utilizar varias colecciones de bloqueo para implementar una canalización al mismo tiempo.|  
+|[Cómo: crear un grupo de objetos usando ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Muestra cómo usar un controlador simultáneo para mejorar el rendimiento en escenarios donde puede reutilizar objetos en lugar de crear continuamente otros nuevos.|  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>
