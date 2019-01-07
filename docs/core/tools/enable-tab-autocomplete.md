@@ -4,14 +4,14 @@ description: En este artículo se describe cómo habilitar la finalización con 
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 10b2e13aad9821295efc5c36d1cad04f1a95477c
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53784401"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029611"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
 
 A partir del SDK de .NET Core 2.0, la CLI de .NET Core admite la finalización con tabulación. En este artículo se describe cómo configurar la finalización con tabulación para tres shells: PowerShell, Bash y zsh. Otros shells pueden tener compatibilidad con la finalización automática. Consulte su documentación sobre cómo configurar la finalización automática, los pasos deben ser similares a los que se describen en este artículo.
 
@@ -28,7 +28,7 @@ migrate
 pack
 ```
 
-Si ese comando no funciona, asegúrese de que está instalado el SDK de .NET Core 2.0 o una versión superior. Si está instalado pero ese comando sigue sin funcionar, asegúrese de que el comando `dotnet` se resuelve en una versión de .NET Core 2.0 y posteriores. Use el comando `dotnet --version` para ver en qué versión de `dotnet` se resuelve la ruta de acceso actual. Para obtener más información, vea [Selección de la versión de .NET Core que se va a usar](../versions/selection.md).
+Si ese comando no funciona, asegúrese de que está instalado el SDK de .NET Core 2.0 o una versión superior. Si está instalado, pero el comando sigue sin funcionar, asegúrese de que `dotnet` se resuelva como mínimo en la versión 2.0 del SDK de .NET Core. Use el comando `dotnet --version` para ver en qué versión de `dotnet` se resuelve la ruta de acceso actual. Para obtener más información, vea [Selección de la versión de .NET Core que se va a usar](../versions/selection.md).
 
 ### <a name="examples"></a>Ejemplos
 

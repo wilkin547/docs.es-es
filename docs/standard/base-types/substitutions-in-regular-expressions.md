@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087335"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030163"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
-<a name="Top"></a> Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  
+<a name="Top"></a> Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  
   
  .NET Framework define los elementos de sustitución que se enumeran en la siguiente tabla.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47087335"
 |`${` *name* `}`|Incluye la última subcadena coincidente por el grupo con nombre que designa `(?<`*name*`> )` en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo con nombre](#Named).|  
 |`$$`|Incluye un literal "$" único en la cadena de reemplazo. Para obtener más información, vea [Sustituir un símbolo "$"](#DollarSign).|  
 |`$&`|Incluye una copia de la coincidencia completa en la cadena de reemplazo. Para obtener más información, vea [Sustituir toda la coincidencia](#EntireMatch).|  
-|<code>$\`</code>|Incluye todo el texto de la cadena de entrada delante de la coincidencia en la cadena de reemplazo. Para obtener más información, vea [Sustituir el texto delante de la coincidencia](#BeforeMatch).|  
+|``$` ``|Incluye todo el texto de la cadena de entrada delante de la coincidencia en la cadena de reemplazo. Para obtener más información, vea [Sustituir el texto delante de la coincidencia](#BeforeMatch).|  
 |`$'`|Incluye todo el texto de la cadena de entrada detrás de la coincidencia en la cadena de reemplazo. Para obtener más información, vea [Sustituir el texto detrás de la coincidencia](#AfterMatch).|  
 |`$+`|Incluye el último grupo capturado en la cadena de reemplazo. Para obtener más información, vea [Sustituir el último grupo capturado](#LastGroup).|  
 |`$_`|Incluye la cadena de entrada completa en la cadena de reemplazo. Para obtener más información, vea [Sustituir toda la cadena de entrada](#EntireString).|  
@@ -142,14 +142,14 @@ ms.locfileid: "47087335"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Sustituir el texto delante de la coincidencia  
- La sustitución <code>$\`</code> reemplaza la cadena coincidente por la cadena de entrada completa delante de la coincidencia. Es decir, duplica la cadena de entrada hasta la coincidencia quitando el texto coincidente. Cualquier texto que siga al texto coincidente no cambia en la cadena de resultado. Si hay varias coincidencias en una cadena de entrada, el texto de reemplazo se deriva de la cadena de entrada original, en lugar de la cadena en la que coincidencias anteriores han reemplazado el texto. \(En el ejemplo se ofrece una ilustración.\) Si no hay ninguna coincidencia, la sustitución <code>$\`</code> no tiene ningún efecto.  
+ La sustitución ``$` `` reemplaza la cadena coincidente por la cadena de entrada completa delante de la coincidencia. Es decir, duplica la cadena de entrada hasta la coincidencia quitando el texto coincidente. Cualquier texto que siga al texto coincidente no cambia en la cadena de resultado. Si hay varias coincidencias en una cadena de entrada, el texto de reemplazo se deriva de la cadena de entrada original, en lugar de la cadena en la que coincidencias anteriores han reemplazado el texto. \(En el ejemplo se ofrece una ilustración.\) Si no hay ninguna coincidencia, la sustitución ``$` `` no tiene ningún efecto.  
   
- En el ejemplo siguiente, se usa el patrón de expresión regular `\d+` para que coincida con una secuencia de uno o más dígitos decimales en la cadena de entrada. La cadena de reemplazo <code>$`</code> reemplaza estos dígitos por el texto que antecede a la coincidencia.  
+ En el ejemplo siguiente, se usa el patrón de expresión regular `\d+` para que coincida con una secuencia de uno o más dígitos decimales en la cadena de entrada. La cadena de reemplazo ``$` `` reemplaza estos dígitos por el texto que antecede a la coincidencia.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- En este ejemplo, la cadena de entrada `"aa1bb2cc3dd4ee5"` contiene cinco coincidencias. En la siguiente tabla se muestra cómo la sustitución <code>$`</code> hace que el motor de expresiones regulares reemplace cada coincidencia en la cadena de entrada. El texto insertado se muestra en negrita en la columna de resultados.  
+ En este ejemplo, la cadena de entrada `"aa1bb2cc3dd4ee5"` contiene cinco coincidencias. En la siguiente tabla se muestra cómo la sustitución ``$` `` hace que el motor de expresiones regulares reemplace cada coincidencia en la cadena de entrada. El texto insertado se muestra en negrita en la columna de resultados.  
   
 |Coincidir con|Posición|Cadena antes de la coincidencia|Cadena de resultado|  
 |-----------|--------------|-------------------------|-------------------|  

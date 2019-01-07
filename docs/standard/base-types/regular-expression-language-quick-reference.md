@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779391"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030404"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 <a name="top"></a> Una expresión regular es un patrón con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras.  Para obtener una breve introducción, consulte [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -176,7 +176,7 @@ ms.locfileid: "53779391"
 |`${` *name* `}`|Sustituye la subcadena que coincide con el grupo con nombre *nombre*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|Sustituye un "$" literal.|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|Sustituye una copia de toda la coincidencia.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|Sustituye todo el texto de la cadena de entrada delante de la coincidencia.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
+|``$` ``|Sustituye todo el texto de la cadena de entrada delante de la coincidencia.|`B+`|``$` ``|"AABBCC"|"AAAACC"|  
 |`$'`|Sustituye todo el texto de la cadena de entrada detrás de la coincidencia.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
 |`$+`|Sustituye el último grupo capturado.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Sustituye toda la cadena de entrada.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
