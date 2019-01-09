@@ -2,12 +2,12 @@
 title: '&lt;msmqTransportSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: f178ac3132e3c5880daef1d59480edae88f1d27e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6ed7402ac7ec50a98b7d685813448edb173266d9
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180983"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152000"
 ---
 # <a name="ltmsmqtransportsecuritygt"></a>&lt;msmqTransportSecurity&gt;
 Especifica la configuración de seguridad de transporte MSMQ para un enlace personalizado.  
@@ -22,12 +22,11 @@ Especifica la configuración de seguridad de transporte MSMQ para un enlace pers
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<msmqTransportSecurity>  
-   msmqAuthenticationMode="None/Windows/Certificate"  
-   msmqEncryptionAlgorithm="RC4Stream/AES"  
-   msmqProtectionLevel="None/Sign/EncryptAndSign"  
-   msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-</msmqTransportSecurity>  
+<msmqTransportSecurity msmqAuthenticationMode="None/Windows/Certificate"
+                       msmqEncryptionAlgorithm="RC4Stream/AES"
+                       msmqProtectionLevel="None/Sign/EncryptAndSign"
+                       msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+</msmqTransportSecurity>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -37,9 +36,9 @@ Especifica la configuración de seguridad de transporte MSMQ para un enlace pers
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|Especifica cómo el transporte de MSMQ debe autenticar el mensaje. Si esto está establecido en `None`, el valor del atributo `msmqProtectionLevel` también debe estar establecido en `None`.<br /><br /> Los valores válidos son los siguientes:<br /><br /> -None: Sin autenticación.<br />-Windows: El mecanismo de autenticación usa Active Directory para obtener el certificado X.509 para el SID asociado con el mensaje. Esto se utiliza a continuación para comprobar el ACL de la cola para asegurarse que el usuario tiene el permiso de escritura para la cola.<br />-Certificate: El canal recupera el certificado del almacén de certificados.<br /><br /> El valor predeterminado es Windows. Este atributo es del tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
+|`msmqAuthenticationMode`|Especifica cómo el transporte de MSMQ debe autenticar el mensaje. Si esto está establecido en `None`, el valor del atributo `msmqProtectionLevel` también debe estar establecido en `None`.<br /><br /> Los valores válidos son los siguientes:<br /><br /> -None: Sin autenticación.<br />-Windows: El mecanismo de autenticación usa Active Directory para obtener el certificado X.509 para el SID asociado con el mensaje. Esto se utiliza a continuación para comprobar el ACL de la cola para asegurarse que el usuario tiene el permiso de escritura para la cola.<br />-Certificado: El canal recupera el certificado del almacén de certificados.<br /><br /> El valor predeterminado es Windows. Este atributo es del tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
 |`msmqEncryptionAlgorithm`|Especifica el algoritmo que se va a utilizar para el cifrado de mensajes en la conexión al transferir los mensajes entre los administradores de la cola de mensajes. Los valores válidos son los siguientes:<br /><br /> -RC4Stream<br />-AES<br /><br /> El valor predeterminado RC4Stream. Este atributo es del tipo <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|Especifica cómo el mensaje se protege en el nivel del transporte de MSMQ. El cifrado asegura la integridad del mensaje mientras EncryptAndSign asegura la integridad del mensaje y el no repudio; es decir, el mensaje procede de hecho del remitente y el remitente es quien dice que es. Los valores válidos son los siguientes:<br /><br /> -None: Sin protección.<br />-Inicio de sesión: Se firman los mensajes.<br />-EncryptAndSign: Los mensajes se cifran y firman.<br /><br /> El valor predeterminado es Sign. Este atributo es del tipo <xref:System.Net.Security.ProtectionLevel>.|  
+|`msmqProtectionLevel`|Especifica cómo el mensaje se protege en el nivel del transporte de MSMQ. El cifrado asegura la integridad del mensaje mientras EncryptAndSign asegura la integridad del mensaje y el no repudio; es decir, el mensaje procede de hecho del remitente y el remitente es quien dice que es. Los valores válidos son los siguientes:<br /><br /> -None: Ninguna protección<br />-Inicio de sesión: Se firman los mensajes.<br />-EncryptAndSign: Los mensajes se cifran y firman.<br /><br /> El valor predeterminado es Sign. Este atributo es del tipo <xref:System.Net.Security.ProtectionLevel>.|  
 |`msmqSecureHashAlgorithm`|Especifica el algoritmo que se va a utilizar para calcular el resumen como parte de las firmas. Los valores válidos son los siguientes:<br /><br /> -MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> El valor predeterminado es SHA1. Este atributo es del tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

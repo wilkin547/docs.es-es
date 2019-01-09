@@ -2,12 +2,12 @@
 title: '&lt;add&gt; de &lt;defaultPorts&gt;'
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 28ddc98bd66c1f74f857448aa710d3998ddbd3dc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0932ef9afacb6278c4857dcfd6ba545595ff8f9d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748755"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147725"
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;add&gt; de &lt;defaultPorts&gt;
 punto de conexión de las comunicaciones predeterminado que escucha la aplicación cliente.  
@@ -23,7 +23,12 @@ punto de conexión de las comunicaciones predeterminado que escucha la aplicaci�
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<useRequestHeadersForMetadataAddress>   <defaultPorts>      <add port="Integer" scheme="String" />   </defaultPorts></useRequestHeadersForMetadataAddress>  
+<useRequestHeadersForMetadataAddress>
+  <defaultPorts>
+    <add port="Integer"
+         scheme="String" />
+  </defaultPorts>
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

@@ -2,12 +2,12 @@
 title: '&lt;localServiceSettings&gt; (elemento)'
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 1257b151f75d05b610fe3463f8bef5f78d2b2fcd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d5150590bc0a8a0d21662eadc7dda67aad872ef
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751160"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150284"
 ---
 # <a name="ltlocalservicesettingsgt-element"></a>&lt;localServiceSettings&gt; (elemento)
 Especifica la configuración de seguridad de un servicio local para este enlace.  
@@ -21,22 +21,22 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<security>  
-   <localServiceSettings detectReplays="Boolean"  
-      inactivityTimeout="TimeSpan"  
-      issuedCookieLifeTime="TimeSpan"  
-      maxCachedCookies="Integer"   
-      maxClockSkew="TimeSpan"   
-      maxPendingSessions="Integer"  
-      maxStatefulNegotiations="Integer"  
-      negotiationTimeout="TimeSpan"  
-      reconnectTransportOnFailure="Boolean"  
-            replayCacheSize="Integer"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      timestampValidityDuration="TimeSpan" />  
-</security>  
+<security>
+  <localServiceSettings detectReplays="Boolean"
+                        inactivityTimeout="TimeSpan"
+                        issuedCookieLifeTime="TimeSpan"
+                        maxCachedCookies="Integer"
+                        maxClockSkew="TimeSpan"
+                        maxPendingSessions="Integer"
+                        maxStatefulNegotiations="Integer"
+                        negotiationTimeout="TimeSpan"
+                        reconnectTransportOnFailure="Boolean"
+                        replayCacheSize="Integer"
+                        replayWindow="TimeSpan"
+                        sessionKeyRenewalInterval="TimeSpan"
+                        sessionKeyRolloverInterval="TimeSpan"
+                        timestampValidityDuration="TimeSpan" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -96,5 +96,5 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

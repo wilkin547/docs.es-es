@@ -2,18 +2,18 @@
 title: Elemento &lt;behavior&gt; de &lt;serviceBehaviors&gt;
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: 9cb5676897255d11b502080f4f7f3fb897027917
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6d477229a7c8a9b18ad6819bad1ad9f19696ac
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362115"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146893"
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt"></a>Elemento &lt;behavior&gt; de &lt;serviceBehaviors&gt;
-El elemento `behavior` contiene una colección de valores para el comportamiento de un servicio. Su `name` indiza cada comportamiento. Servicios pueden vincularse a cada comportamiento a través de este nombre mediante la `behaviorConfiguration` atributo de la [ \<extremo >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. De esta forma, los puntos de conexión pueden compartir configuraciones de comportamientos comunes sin volver a definir la configuración. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y enlaces anónimos y los comportamientos, consulte [configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+El elemento `behavior` contiene una colección de valores para el comportamiento de un servicio. Su `name` indiza cada comportamiento. Servicios pueden vincularse a cada comportamiento a través de este nombre mediante el `behaviorConfiguration` atributo de la [ \<punto de conexión >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. De esta forma, los puntos de conexión pueden compartir configuraciones de comportamientos comunes sin volver a definir la configuración. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!NOTE]
->  Elementos de comportamiento específicos a las actividades de flujo de trabajo de Windows, como el [ \<sendMessageChannelCache >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md) elemento, se documentan en el [ \<comportamiento > de \< serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) página.  
+>  Los elementos de comportamiento específicos para las actividades de flujo de trabajo de Windows, como el [ \<sendMessageChannelCache >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md) elemento, se documentan en el [ \<comportamiento > de \< serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) página.  
   
  \<system.ServiceModel>  
 \<comportamientos >  
@@ -23,13 +23,13 @@ El elemento `behavior` contiene una colección de valores para el comportamiento
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<system.ServiceModel>  
-  <behaviors>  
-    <serviceBehaviors>  
-       <behavior name="String" />  
-    </serviceBehaviors>  
-  </behaviors>  
-</system.ServiceModel>  
+<system.ServiceModel>
+  <behaviors>
+    <serviceBehaviors>
+       <behavior name="String" />
+    </serviceBehaviors>
+  </behaviors>
+</system.ServiceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -39,7 +39,7 @@ El elemento `behavior` contiene una colección de valores para el comportamiento
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|name|Una cadena única que contiene el nombre de la configuración del comportamiento. Este valor es una cadena definida por el usuario que debe ser única, ya que actúa como cadena de identificación del elemento. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y enlaces anónimos y los comportamientos, consulte [configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Una cadena única que contiene el nombre de la configuración del comportamiento. Este valor es una cadena definida por el usuario que debe ser única, ya que actúa como cadena de identificación del elemento. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -51,7 +51,7 @@ El elemento `behavior` contiene una colección de valores para el comportamiento
 |[\<serviceAuthenticationManager >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthenticationmanager.md)|Proporciona un elemento de configuración del flujo de trabajo que establece la validez de una transmisión, mensaje o autor en el nivel del servicio.|  
 |[\<serviceAuthorization >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)|Especifica valores que autorizan que el acceso repare las operaciones.|  
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.|  
-|[\<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)|Especifica las características de información de depuración y ayuda para un servicio de Windows Communication Foundation (WCF).|  
+|[\<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)|Especifica las características de información de depuración y de ayuda para un servicio de Windows Communication Foundation (WCF).|  
 |[\<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|Especifica la detectabilidad de puntos de conexión de servicio.|  
 |[\<serviceMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|Especifica la publicación de metadatos e información asociada del servicio.|  
 |[\<serviceSecurityAudit >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|Especifica valores que habilitan la auditoría de eventos de seguridad durante las operaciones del servicio.|  

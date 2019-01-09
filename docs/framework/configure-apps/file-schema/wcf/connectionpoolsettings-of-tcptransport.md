@@ -2,12 +2,12 @@
 title: Elemento &lt;connectionPoolSettings&gt; de &lt;tcpTransport&gt;
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 1fbc4e179fa5f59a903dad51728638a1e182b23e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8780709a5713c0192d6be1139e3425747b0b07ca
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753084"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145697"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>Elemento &lt;connectionPoolSettings&gt; de &lt;tcpTransport&gt;
 Especifica los valores de grupo de conexiones adicionales para un transporte TCP.  
@@ -22,11 +22,10 @@ Especifica los valores de grupo de conexiones adicionales para un transporte TCP
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<connectionPoolSettings  
-    groupName="String"  
-    idleTimeout"TimeSpan"  
-        leaseTimeout="TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<connectionPoolSettings groupName="String"
+                        idleTimeout="TimeSpan"
+                        leaseTimeout="TimeSpan"
+                        maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

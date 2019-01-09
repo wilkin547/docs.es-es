@@ -2,12 +2,12 @@
 title: '&lt;mexHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: d56e90162f2a852ff4d0b66abcf3fe03c4110c37
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e39a4e1e6b1b2346f3a6e0ca36d91d3719009be1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846492"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151922"
 ---
 # <a name="ltmexhttpsbindinggt"></a>&lt;mexHttpsBinding&gt;
 Especifica los valores para un enlace utilizado para el intercambio de mensajes de WS-MetadataExchange (WS-MEX) sobre HTTPS.  
@@ -19,15 +19,14 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<mexHttpsBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       name="string"   
-       openTimeout="TimeSpan"   
-       receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan">  
-   </binding>  
-</mexHttpsBinding>  
+<mexHttpsBinding>
+  <binding closeTimeout="TimeSpan"
+            name="string"
+            openTimeout="TimeSpan"
+            receiveTimeout="TimeSpan"
+            sendTimeout="TimeSpan">
+  </binding>
+</mexHttpsBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -53,15 +52,15 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 |[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este enlace es esencialmente un enlace `WSHttpBinding` que admite seguridad de nivel de transporte mediante los certificados. Para obtener más información sobre cómo configurar y usar un punto de conexión de metadatos, vea [Cómo: configurar un enlace de Custom WS-Metadata Exchange](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [Cómo: recuperar metadatos sobre un enlace que no sea - MEX](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)y el ejemplo [extremo de metadatos personalizada Secure](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+ Este enlace es esencialmente un enlace `WSHttpBinding` que admite seguridad de nivel de transporte mediante los certificados. Para obtener más información sobre cómo configurar y usar un punto de conexión de metadatos, vea [Cómo: Configurar un personalizados WS-Metadata Exchange Binding](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [Cómo: Recuperar metadatos mediante un enlace que no sea - MEX](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)y el ejemplo [extremo de metadatos personalizada Secure](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>  
  <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>  
- [Publicación de metadatos para un servicio mediante un archivo de configuración](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [Publicación y recuperación de metadatos a través de un enlace personalizado](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
- [Configuración de un enlace de WS-Metadata Exchange personalizado](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
- [Recuperación de metadatos mediante un enlace que no sea MEX](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)  
+ [Cómo: Configurar un personalizados WS-Metadata Exchange Binding](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [Cómo: Recuperar metadatos mediante un enlace que no sea - MEX](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)  
  [Punto de conexión personalizado de metadatos seguros](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
  [Metadatos](../../../../../docs/framework/wcf/feature-details/metadata.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  

@@ -2,12 +2,12 @@
 title: '&lt;certificate&gt; de &lt;peer&gt;'
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 59aaee5549aae5df173174651ee3a520a0ac10fb
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 067168742636878b836f315f79a49c2cf0c99613
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084019"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147166"
 ---
 # <a name="ltcertificategt-of-ltpeergt"></a>&lt;certificate&gt; de &lt;peer&gt;
 Especifica un certificado usado por un igual.  
@@ -23,11 +23,10 @@ Especifica un certificado usado por un igual.
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<certificate findValue = "String"   
-storeLocation = "CurrentUser/LocalMachine"  
-storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"  
-/>  
+<certificate findValue = "String"
+             storeLocation = "CurrentUser/LocalMachine"
+             storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+             X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -39,7 +38,7 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |---------------|-----------------|  
 |`findValue`|Una cadena que contiene el valor que se va a buscar en el almacén de certificados X.509. El tipo contenido en este atributo debe satisfacer los requisitos del `x509FindType` especificado. El valor predeterminado es una cadena vacía.|  
 |`storeLocation`|Especifica la ubicación del almacén de certificados X.509 que el cliente utiliza para validar el certificado del igual. Los valores válidos son los siguientes:<br /><br /> -LocalMachine: almacén de certificados asignado al equipo local.<br />-CurrentUser: almacén de certificados asignado al usuario actual.<br /><br /> El valor predeterminado es LocalMachine.|  
-|`storeName`|Especifica el nombre del almacén del certificado X.509 que se va a abrir. Los valores válidos son los siguientes:<br /><br /> -AddressBook: Almacén de certificados para otros usuarios.<br />-AuthRoot: Almacén de certificados para entidades emisoras de certificados de terceros (CAs).<br />-CertificateAuthority: Almacén de certificados intermedios de certificación (CA).<br />-Disallowed: Almacén de certificados para los certificados revocados.<br />-My: Almacén de certificados para los certificados personales.<br />-Root: Almacén de certificados para entidades emisoras de certificados raíz de confianza (CA).<br />-TrustedPeople: Almacén de certificados de personas de confianza directa y recursos.<br />-TrustedPublisher: Almacén de certificados para publicadores de confianza directa.<br /><br /> El valor predeterminado es My.|  
+|`storeName`|Especifica el nombre del almacén del certificado X.509 que se va a abrir. Los valores válidos son los siguientes:<br /><br /> -Libreta de direcciones: Almacén de certificados para otros usuarios.<br />-AuthRoot: Almacén de certificados para entidades de certificación de terceros (CAs).<br />-CertificateAuthority: Almacén de certificados intermedios de certificación (CA).<br />-No permitido: Almacén de certificados para los certificados revocados.<br />-Mi: Almacén de certificados para los certificados personales.<br />-Raíz: Almacén de certificados entidades emisoras de certificados raíz de confianza (CA).<br />-TrustedPeople: Almacén de certificados de personas de confianza directa y recursos.<br />-TrustedPublisher: Almacén de certificados para publicadores de confianza directa.<br /><br /> El valor predeterminado es My.|  
 |`X509FindType`|Define el tipo de búsqueda de X.509 que se va a ejecutar. Los valores válidos son los siguientes:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-   FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> El tipo contenido en el atributo `findValue` debe satisfacer los requisitos del `X509FindType` especificado.<br /><br /> El valor predeterminado es FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

@@ -1,5 +1,5 @@
 ---
-title: Campo de ServicePointManager.s_ServicePointTable
+title: Campo ServicePointManager.s_ServicePointTable
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 5450a0cb3e5bd39a86365b16d372c7e573a43496
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebcf5c3f13b3bd30a8e091be09ae546eee1eaffe
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351763"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147452"
 ---
 # <a name="servicepointmanagersservicepointtable-field"></a>ServicePointManager.s\_ServicePointTable campo
 
@@ -30,14 +30,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> El `ServicePointManager.s_ServicePointTable` campo es privado y no están hechos para usarse directamente en el código.
+> El `ServicePointManager.s_ServicePointTable` campo es privado y no está pensado para usarse directamente en el código.
 > 
 > Microsoft no admite el uso de este campo en una aplicación de producción bajo ninguna circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Net>
+**Espacio de nombres:** <xref:System.Net>
 
-**Ensamblado:** sistema (en System.dll)
+**Ensamblado:** Sistema (en System.dll)
 
-**Versiones de .NET framework:** disponible desde la versión 2.0.
+**Versiones de .NET framework:** Disponible desde la versión 2.0.

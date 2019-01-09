@@ -2,12 +2,12 @@
 title: '&lt;textMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e684c21c0b1360a9b270214ebe7b3ad00b42657f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0ee50a4b5adeede2dd531ba734ac9fb420f3b713
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861965"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150245"
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 Especifica la codificación de caracteres y la versión del mensaje utilizadas para los mensajes XML basados en texto.  
@@ -21,10 +21,10 @@ Especifica la codificación de caracteres y la versión del mensaje utilizadas p
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<textMessageEncoding maxReadPoolSize="Integer"  
-   maxWritePoolSize="Integer"  
-   messageVersion="Soap11Addressing10/Soap12Addressing10"  
-      writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+<textMessageEncoding maxReadPoolSize="Integer"
+                     maxWritePoolSize="Integer"
+                     messageVersion="Soap11Addressing10/Soap12Addressing10"
+                     writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -37,7 +37,7 @@ Especifica la codificación de caracteres y la versión del mensaje utilizadas p
 |maxReadPoolSize|Un entero que especifica cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 64.|  
 |maxWritePoolSize|Un entero que especifica cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 16.|  
 |messageVersion|Especifica la versión SOAP de los mensajes enviados utilizando el enlace. Los valores válidos son<br /><br /> -Soap11Addressing10<br />-Soap12Addressing10<br /><br /> El valor predeterminado es Soap12Addressing10. Este atributo es del tipo <xref:System.ServiceModel.Channels.MessageVersion>.|  
-|writeEncoding|Especifica el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son<br /><br /> -UnicodeFffeTextEncoding: Codificación de Unicode BigEndian<br />-Utf16TextEncoding: Codificación de Unicode<br />-Utf8TextEncoding: codificación de 8 bits<br /><br /> El valor predeterminado es Utf8TextEncoding. Este atributo es del tipo <xref:System.Text.Encoding>.|  
+|writeEncoding|Especifica el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son<br /><br /> -UnicodeFffeTextEncoding: Codificación Unicode BigEndian<br />-Utf16TextEncoding: Codificación Unicode<br />-Utf8TextEncoding: codificación de 8 bits<br /><br /> El valor predeterminado es Utf8TextEncoding. Este atributo es del tipo <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -52,17 +52,17 @@ Especifica la codificación de caracteres y la versión del mensaje utilizadas p
 |[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
- La codificación es el proceso de transformación de un mensaje en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Texto, Binario y Mecanismo de optimización de transmisión del mensaje (MTOM).  
+ La codificación es el proceso de transformación de un mensaje en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Texto, binario y mecanismo de optimización de transmisión de mensajes (MTOM).  
   
  La codificación de texto representada por el elemento `textMessageEncoding` es el codificador más interoperable, pero el menos eficaz para los mensajes XML.  El codificador de texto crea mensajes basados en texto en la conexión. Los mensajes generados por este codificador son adecuados para la interoperabilidad basada en WS - *. Un servicio web o un cliente de servicios web, por lo general, pueden entender XML textual. Sin embargo, transmitir bloques grandes de datos binarios como texto es el método menos eficaz para codificar mensajes XML.  
   
 ## <a name="example"></a>Ejemplo  
   
 ```xml  
-<textMessageEncoding maxReadPoolSize="211"  
-    maxWritePoolSize="2132"  
-    messageVersion="Soap12Addressing10"  
-    textEncoding="utf-8" />  
+<textMessageEncoding maxReadPoolSize="211"
+                     maxWritePoolSize="2132"
+                     messageVersion="Soap12Addressing10"
+                     textEncoding="utf-8" />
 ```  
   
 ## <a name="see-also"></a>Vea también  

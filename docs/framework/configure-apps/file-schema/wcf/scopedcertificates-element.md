@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt; (elemento)'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6f2acd1078090f7680f1909d68afbcaa09d080fd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838285"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150726"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; (elemento)
 Representa una colección de certificados X.509 proporcionada por servicios concretos (con ámbito) para la autenticación. Esta colección se utiliza normalmente para especificar los certificados de servicio para los servicios de token de seguridad en un escenario asociado externo.  
@@ -24,13 +24,13 @@ sección endpointBehaviors
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<scopedCertificates>  
-      <add findValue="String"  
-                storeLocation="CurrentUser/LocalMachine"  
-                storeName=" CurrentUser/LocalMachine"  
-                targetUri="string"  
-            x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />   
-</scopedCertificates>   
+<scopedCertificates>
+  <add findValue="String"
+       storeLocation="CurrentUser/LocalMachine"
+       storeName=" CurrentUser/LocalMachine"
+       targetUri="string"
+       x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
+</scopedCertificates>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -56,19 +56,21 @@ sección endpointBehaviors
   
  Si un enlace requiere un certificado para el servicio y no se encuentra ningún certificado concreto para la dirección URL del servicio en ScopedCertificates, se utilizará el certificado predeterminado.  
   
- Para obtener más información, vea la sección "Certificados con ámbito" de [Cómo: crear un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Para obtener más información, vea la sección "Certificados con ámbito" de [Cómo: Crear un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente especifica un certificado de servicio para el cliente que se usará al comunicarse con puntos de conexión cuyo nombre de dominio es `http://www.contoso.com` a través del protocolo HTTP.  
   
 ```xml  
-<serviceCertificate>  
-  <scopedCertificates>  
-     <add targetUri="http://www.contoso.com"   
-          findValue="www.contoso.com" storeLocation="LocalMachine"  
-                  storeName="Root" x509FindType="FindByIssuerName" />  
-  </scopedCertificates>  
-</serviceCertificate>  
+<serviceCertificate>
+  <scopedCertificates>
+    <add targetUri="http://www.contoso.com"
+         findValue="www.contoso.com"
+         storeLocation="LocalMachine"
+         storeName="Root"
+         x509FindType="FindByIssuerName" />
+  </scopedCertificates>
+</serviceCertificate>
 ```  
   
 ## <a name="see-also"></a>Vea también  
@@ -78,7 +80,7 @@ sección endpointBehaviors
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
  [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Creación de un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Cómo: Crear a un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)  
  [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)  
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

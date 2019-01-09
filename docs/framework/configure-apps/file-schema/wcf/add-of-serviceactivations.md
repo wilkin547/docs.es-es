@@ -2,28 +2,28 @@
 title: '&lt;add&gt; de &lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 1a25ad517e26e037c588bb14844e38147e251d96
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b40127d531926f103f3e367c8721e8f5ff8e1a99
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745830"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151545"
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;add&gt; de &lt;serviceActivations&gt;
-Un elemento de configuración que le permite definir la configuración de activación de servicio virtual que se asignan a los tipos de servicio de Windows Communication Foundation (WCF). Esto hace posible activar servicios hospedados en WAS/IIS sin un archivo .svc.  
+Un elemento de configuración que le permite definir la configuración de activación de servicio virtual que se asignan a tipos de servicio Windows Communication Foundation (WCF). Esto hace posible activar servicios hospedados en WAS/IIS sin un archivo .svc.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
+\<serviceHostingEnvironment >  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<serviceHostingEnvironment>   
-   <serviceActivations>  
-      <add factory="String"  
-           service="String"/>  
-   </serviceActivations>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+    <serviceActivations>
+      <add factory="String"
+           service="String" />
+  </serviceActivations>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -50,15 +50,15 @@ Un elemento de configuración que le permite definir la configuración de activa
  En el siguiente ejemplo se muestra cómo configurar los valores de activación dentro del archivo web.config.  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <serviceHostingEnvironment>  
-      <serviceActivations>  
-        <add service="GreetingService"/>  
-      </serviceActivations>  
-    </serviceHostingEnvironment>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <serviceHostingEnvironment>
+      <serviceActivations>
+        <add service="GreetingService" />
+      </serviceActivations>
+    </serviceHostingEnvironment>
+  </system.serviceModel>
+</configuration>
 ```  
   
  Con esta configuración, puede activar GreetingService sin usar un archivo .svc.  

@@ -2,12 +2,12 @@
 title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 296993f1a91a6da93f01610357f35dac4cfab9e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1eef89290b4fda08dd7145c0615edde2fa56676c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210154"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152013"
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -18,19 +18,19 @@ Define el comportamiento del punto de conexión de cliente usado para serializar
 &nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comportamiento >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing >**
-
-## <a name="syntax"></a>Sintaxis
-
-```xml
+  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <soapProcessing processMessages="true|false" />
-```
-
-## <a name="attributes-and-elements"></a>Atributos y elementos
-
-En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
-
-### <a name="attributes"></a>Atributos
-
+```  
+  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
+  
+En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+  
+### <a name="attributes"></a>Atributos  
+  
 |                   | Descripción |
 | ----------------- | ----------- |
 | `processMessages` | Valor booleano que especifica si se deberían calcular las referencias a los mensajes entre las versiones del mensaje SOAP. |
@@ -53,4 +53,4 @@ El servicio de enrutamiento de Windows Communication Foundation (WCF) puede conv
 
 La colocación de un encabezado en el mensaje de salida está determinada por si se marcó o no como comprendido al atravesar la capa del canal de entrada. Los encabezados que no se entienden (como los encabezados personalizados) no se quitan y pasan así por el servicio del enrutamiento copiándose en el mensaje de salida. El cuerpo del mensaje se copia en el mensaje de salida. A continuación, el mensaje se envía al canal de salida en el que se señalan todos los encabezados y se crearán y agregarán otros datos del sobre específicos de dicho protocolo/transporte de comunicaciones.
 
-Dichos pasos de procesamiento tienen lugar cuando se especifica el comportamiento del procesamiento SOAP. Esto [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) comportamiento es un comportamiento del punto de conexión que se aplica a todos los puntos de conexión de cliente (salientes) cuando se inicia el servicio de enrutamiento. de forma predeterminada, el [ \<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) comportamiento crea y adjunta un nuevo [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) comportamiento con `processMessages` establecido en `true` para cada uno punto de conexión de cliente. Si tiene un protocolo que el servicio de enrutamiento no entiende, o desea invalidar el comportamiento del procesamiento predeterminado, puede deshabilitar el procesamiento SOAP para el servicio de enrutamiento completo o solo para puntos de conexión determinados.  Para deshabilitar el procesamiento SOAP para el servicio de enrutamiento completo en todos los extremos, establezca el `soapProcessing` atributo de la [ \<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) comportamiento `false`. Para desactivar el procesamiento SOAP para un extremo determinado, use este comportamiento y establezca el atributo `processMessages` en `false`; a continuación, adjunte este comportamiento al extremo en el que no desea que se ejecute el código de procesamiento predeterminado.  Cuando el [ \<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) comportamiento configura el servicio de enrutamiento, omitirá la Reaplicación del comportamiento del extremo puesto que ya existe uno.
+Dichos pasos de procesamiento tienen lugar cuando se especifica el comportamiento del procesamiento SOAP. Esto [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) comportamiento es un comportamiento del punto de conexión que se aplica a todos los puntos de conexión de cliente (salientes) cuando se inicia el servicio de enrutamiento. de forma predeterminada, el [ \<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) comportamiento crea y adjunta un nuevo [ \<soapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) comportamiento con `processMessages` establecido en `true` para cada uno punto de conexión de cliente. Si tiene un protocolo que el servicio de enrutamiento no entiende, o desea invalidar el comportamiento del procesamiento predeterminado, puede deshabilitar el procesamiento SOAP para el servicio de enrutamiento completo o solo para puntos de conexión determinados.  Para deshabilitar el procesamiento SOAP para el servicio de enrutamiento completo en todos los extremos, establezca el `soapProcessing` atributo de la [ \<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) comportamiento `false`. Para desactivar el procesamiento SOAP para un punto de conexión determinado, use este comportamiento y establezca el atributo `processMessages` en `false`; a continuación, adjunte este comportamiento al punto de conexión en el que no desea que se ejecute el código de procesamiento predeterminado.  Cuando el [ \<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) comportamiento configura el servicio de enrutamiento, omitirá la Reaplicación del comportamiento del extremo puesto que ya existe uno.

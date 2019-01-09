@@ -2,12 +2,12 @@
 title: '&lt;add&gt; de &lt;claimTypeRequirements&gt; (elemento)'
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 88e78db824d969c303fc5d494d4884c4d00284e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7f86073d0ecce353c63f31fd28c4bfeffb2411ed
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745414"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145554"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;add&gt; de &lt;claimTypeRequirements&gt; (elemento)
 Especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada. Por ejemplo, los servicios indican los requisitos en las credenciales de entrada, que deben poseer un cierto conjunto de tipos de notificaciones.  
@@ -23,10 +23,10 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<claimTypeRequirements>  
-      <add claimType="URI"  
-        isOptional="Boolean" />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <add claimType="URI"
+       isOptional="Boolean" />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -55,23 +55,21 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
  La siguiente configuración agrega dos requisitos de tipo de notificación a un enlace de seguridad.  
   
 ```xml  
-<bindings>  
-    <wsFederationHttpBinding>  
-      <binding name="myFederatedBinding">  
-        <security mode="Message">  
-          <message issuedTokenType="urn:oasis:names:tc:SAML:1.0:assertion">  
-            <claimTypeRequirements>  
-              <add claimType=  
-"http://schemas.microsoft.com/ws/2005/05/identity/claims/EmailAddress"/>  
-              <add claimType=  
-"http://schemas.microsoft.com/ws/2005/05/identity/claims/UserName"    
-optional="true" />  
-            </claims>  
-          </message>  
-        </security>  
-      </binding>  
-    </wsFederationHttpBinding>  
-</bindings>  
+<bindings>
+  <wsFederationHttpBinding>
+    <binding name="myFederatedBinding">
+      <security mode="Message">
+        <message issuedTokenType="urn:oasis:names:tc:SAML:1.0:assertion">
+          <claimTypeRequirements>
+            <add claimType="http://schemas.microsoft.com/ws/2005/05/identity/claims/EmailAddress" />
+            <add claimType="http://schemas.microsoft.com/ws/2005/05/identity/claims/UserName"
+                 optional="true" />
+          </claimTypeRequirements>
+        </message>
+      </security>
+    </binding>
+  </wsFederationHttpBinding>
+</bindings>
 ```  
   
 ## <a name="see-also"></a>Vea también  

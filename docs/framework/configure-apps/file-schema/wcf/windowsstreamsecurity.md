@@ -2,12 +2,12 @@
 title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: e117c30ba2583158ee21fd11ff4a38b094c18fd9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cce178910767d7fd197aff0d007b7cc3f4e60f3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197644"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151129"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 Especifique configuración de seguridad de secuencia de Windows del enlace personalizado.  
@@ -21,7 +21,7 @@ Especifique configuración de seguridad de secuencia de Windows del enlace perso
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign"/>  
+<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -31,7 +31,7 @@ Especifique configuración de seguridad de secuencia de Windows del enlace perso
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|protectionLevel|Define la seguridad del nivel de mensaje. Al firmar los mensajes se reduce el riesgo de que un tercero manipule el mensaje mientras se transfiere. El cifrado proporciona privacidad de nivel de datos durante el transporte. Los valores válidos son los siguientes:<br /><br /> -None: Sin protección.<br />-Inicio de sesión: Se firman los mensajes.<br />-EncryptAndSign: Los mensajes se firman y cifran.<br /><br /> El valor predeterminado es EncryptAndSign.<br /><br /> Este atributo es del tipo <xref:System.Net.Security.ProtectionLevel>.|  
+|protectionLevel|Define la seguridad del nivel de mensaje. Al firmar los mensajes se reduce el riesgo de que un tercero manipule el mensaje mientras se transfiere. El cifrado proporciona privacidad de nivel de datos durante el transporte. Los valores válidos son los siguientes:<br /><br /> -None: Ninguna protección<br />-Inicio de sesión: Se firman los mensajes.<br />-EncryptAndSign: Los mensajes se firman y cifran.<br /><br /> El valor predeterminado es EncryptAndSign.<br /><br /> Este atributo es del tipo <xref:System.Net.Security.ProtectionLevel>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  

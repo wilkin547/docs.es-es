@@ -2,12 +2,12 @@
 title: '&lt;issuedTokenAuthentication&gt; de &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: 87e96e5942a02069371462b8c6301e03f681d5ce
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 43f03ad32345195324c9ba2a3977d294a7a2b789
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749974"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151493"
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a>&lt;issuedTokenAuthentication&gt; de &lt;serviceCredentials&gt;
 Especifica un token personalizado emitido como una credencial de servicio.  
@@ -22,24 +22,23 @@ Especifica un token personalizado emitido como una credencial de servicio.
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<issuedTokenAuthentication   
-   allowUntrustedRsaIssuers="Boolean"  
-   audienceUriMode="Always/BearerKeyOnly/Never"  
-      customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
-certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
-   revocationMode="NoCheck/Online/Offline"  
-   samlSerializer="String"  
-    trustedStoreLocation="CurrentUser/LocalMachine">  
-      <allowedAudienceUris>  
-      <add allowedAudienceUri="String"/>  
-      </allowedAudienceUris>  
-      <knownCertificates>   
-         <add findValue="String"  
-                 storeLocation="CurrentUser/LocalMachine"  
-                storeName=" CurrentUser/LocalMachine"  
-                x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"/>  
-      </knownCertificates>  
-</issuedTokenAuthentication>  
+<issuedTokenAuthentication allowUntrustedRsaIssuers="Boolean"
+                           audienceUriMode="Always/BearerKeyOnly/Never"
+                           customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
+                           certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
+                           revocationMode="NoCheck/Online/Offline"
+                           samlSerializer="String"
+                           trustedStoreLocation="CurrentUser/LocalMachine">
+  <allowedAudienceUris>
+    <add allowedAudienceUri="String" />
+  </allowedAudienceUris>
+  <knownCertificates>
+    <add findValue="String"
+         storeLocation="CurrentUser/LocalMachine"
+         storeName=" CurrentUser/LocalMachine"
+         x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
+  </knownCertificates>
+</issuedTokenAuthentication>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -71,23 +70,24 @@ certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
- El escenario del token emitido tiene tres etapas. En la primera fase, un cliente intenta tener acceso a un servicio se remite a un *del servicio de token seguro*. El servicio de token seguro autentica, a continuación, al cliente y como consecuencia el cliente emite un token, normalmente un token del lenguaje de marcado de aserción de seguridad (SAML). El cliente vuelve a continuación al servicio con el token. El servicio examina el token para los datos que permite al servicio autenticar el token y, por consiguiente, al cliente. Para autenticar el token, el servicio debe conocer el certificado que usa el servicio de token seguro.  
+ El escenario del token emitido tiene tres etapas. En la primera fase, un cliente intenta tener acceso a un servicio se conoce un *servicio de token seguro*. El servicio de token seguro autentica, a continuación, al cliente y como consecuencia el cliente emite un token, normalmente un token del lenguaje de marcado de aserción de seguridad (SAML). El cliente vuelve a continuación al servicio con el token. El servicio examina el token para los datos que permite al servicio autenticar el token y, por consiguiente, al cliente. Para autenticar el token, el servicio debe conocer el certificado que usa el servicio de token seguro.  
   
  Este elemento es el repositorio para todos los certificados de servicio de token seguro. Para agregar certificados, use el [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). Insertar un [ \<Agregar >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) para cada certificado, tal como se muestra en el ejemplo siguiente.  
   
 ```xml  
-<issuedTokenAuthorization>  
-   <knownCertificates>  
-      <add findValue="www.contoso.com"   
-           storeLocation="LocalMachine" storeName="My"   
-           X509FindType="FindBySubjectName" />  
-    </knownCertificates>  
-</issuedTokenAuthentication>  
+<issuedTokenAuthentication>
+  <knownCertificates>
+    <add findValue="www.contoso.com"
+         storeLocation="LocalMachine"
+         storeName="My"
+         X509FindType="FindBySubjectName" />
+  </knownCertificates>
+</issuedTokenAuthentication>
 ```  
   
  De forma predeterminada, los certificados se deben obtener a partir de un servicio de token de seguridad. Estos certificados "conocidos" garantizan que solo los clientes legítimos pueden obtener acceso a un servicio.  
   
- Para obtener más información sobre el uso de este elemento de configuración, consulte [Cómo: configurar las credenciales en un servicio de federación](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Para obtener más información sobre el uso de este elemento de configuración, vea [Cómo: Configurar las credenciales en un servicio de federación](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
@@ -98,4 +98,4 @@ certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
  <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>  
  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>  
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Configuración de las credenciales en un servicio de federación](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+ [Cómo: Configurar las credenciales en un servicio de federación](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

@@ -2,12 +2,12 @@
 title: Elemento &lt;transport&gt; de &lt;netNamedPipeBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: c42132f774257589b9020248188ee8d972eb92ba
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837055"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148986"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>Elemento &lt;transport&gt; de &lt;netNamedPipeBinding&gt;
 Define los valores de seguridad de transporte para una canalización con nombre.  
@@ -22,13 +22,13 @@ Define los valores de seguridad de transporte para una canalización con nombre.
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<netNamedPipeBinding>  
-   <binding>  
-      <security mode="None/Transport">  
-            <transport protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-   </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -38,7 +38,7 @@ Define los valores de seguridad de transporte para una canalización con nombre.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|protectionLevel|Define el nivel de protección de la canalización con nombre. Al firmar los mensajes se reduce el riesgo de que un tercero manipule el mensaje mientras se transfiere. El cifrado proporciona privacidad de nivel de datos durante el transporte. Los valores válidos son los siguientes:<br /><br /> -None: Sin protección.<br />-Inicio de sesión: Se firman los mensajes.<br />-EncryptAndSign: Los mensajes se cifran y firman.<br /><br /> El valor predeterminado es EncryptAndSign.|  
+|protectionLevel|Define el nivel de protección de la canalización con nombre. Al firmar los mensajes se reduce el riesgo de que un tercero manipule el mensaje mientras se transfiere. El cifrado proporciona privacidad de nivel de datos durante el transporte. Los valores válidos son los siguientes:<br /><br /> -None: Ninguna protección<br />-Inicio de sesión: Se firman los mensajes.<br />-EncryptAndSign: Los mensajes se cifran y firman.<br /><br /> El valor predeterminado es EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  

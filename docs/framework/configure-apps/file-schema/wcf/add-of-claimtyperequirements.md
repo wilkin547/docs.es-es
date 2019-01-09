@@ -2,12 +2,12 @@
 title: '&lt;add&gt; de &lt;claimTypeRequirements&gt;'
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: b4f9275fdc36ea3c7ba79c6609f039c3b1f4c3ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d4f0cd71ab9bf69921704300018207c9f7af107
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750601"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145216"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt"></a>&lt;add&gt; de &lt;claimTypeRequirements&gt;
 Especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada. Por ejemplo, los servicios indican los requisitos en las credenciales de entrada, que deben poseer un cierto conjunto de tipos de notificaciones.  
@@ -23,10 +23,10 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<claimTypeRequirements>  
-      <add claimType="URI"  
-           isOptional="Boolean" />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <add claimType="URI"
+       isOptional="Boolean" />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -55,23 +55,21 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
  La siguiente configuración agrega dos requisitos de tipo de notificación a un enlace de seguridad.  
   
 ```xml  
-<bindings>  
-    <wsFederationHttpBinding>  
-      <binding name="myFederatedBinding">  
-        <security mode="Message">  
-          <message issuedTokenType="urn:oasis:names:tc:SAML:1.0:assertion">  
-            <claimTypeRequirements>  
-              <add claimType=  
-"http://schemas.microsoft.com/ws/2005/05/identity/claims/EmailAddress"/>  
-              <add claimType=  
-"http://schemas.microsoft.com/ws/2005/05/identity/claims/UserName"    
-optional="true" />  
-            </claims>  
-          </message>  
-        </security>  
-      </binding>  
-    </wsFederationHttpBinding>  
-</bindings>  
+<bindings>
+  <wsFederationHttpBinding>
+    <binding name="myFederatedBinding">
+      <security mode="Message">
+        <message issuedTokenType="urn:oasis:names:tc:SAML:1.0:assertion">
+          <claimTypeRequirements>
+            <add claimType="http://schemas.microsoft.com/ws/2005/05/identity/claims/EmailAddress" />
+            <add claimType="http://schemas.microsoft.com/ws/2005/05/identity/claims/UserName"
+                 optional="true" />
+          </claimTypeRequirements>
+        </message>
+      </security>
+    </binding>
+  </wsFederationHttpBinding>
+</bindings>
 ```  
   
 ## <a name="see-also"></a>Vea también  
@@ -86,5 +84,5 @@ optional="true" />
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

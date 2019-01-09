@@ -2,12 +2,12 @@
 title: '&lt;BasicHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: 065371a86f8ed82b09f81a9f57682a93c14fa1c9
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ed115a736b9dc98164537269cb4e49d66e46ad6c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840607"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147205"
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;BasicHttpContextBinding&gt;
 Especificar un enlace que proporciona el contexto para que <xref:System.ServiceModel.BasicHttpBinding> se intercambie habilitando las cookie de HTTP como el mecanismo de intercambio.  
@@ -19,34 +19,38 @@ Especificar un enlace que proporciona el contexto para que <xref:System.ServiceM
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<basicHttpContextBinding>  
-   <binding   
-       allowCookies="Boolean"  
-       bypassProxyOnLocal="Boolean"  
-       closeTimeout="TimeSpan"   
-       envelopeVersion="None/Soap11/Soap12"  
-       hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-       maxBufferPoolSize="Integer"  
-       maxBufferSize="Integer"  
-       maxReceivedMessageSize="Integer"  
-       messageEncoding="Text/Mtom"  
-       name="string"   
-       openTimeout="TimeSpan"   
-       proxyAddress="URI"  
-       receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan"  
-       textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-       transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-       useDefaultWebProxy="Boolean"  
-       <security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">  
-           <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"  
-                  proxyCredentialType="None/Basic/Digest/Ntlm/Windows"  
-                                    realm="string" />  
-           <message  algorithmSuite="Aes128/Aes192/Aes256/Rsa15Aes128/ Rsa15Aes256/TripleDes"  
-                                    clientCredentialType="UserName/Certificate"/>  
-       </security>  
-       <readerQuotas             maxArrayLength="Integer"            maxBytesPerRead="Integer"            maxDepth="Integer"             maxNameTableCharCount="Integer"                     maxStringContentLength="Integer" />   </binding>  
-</basicHttpContextBinding>  
+<basicHttpContextBinding>
+  <binding allowCookies="Boolean"
+           bypassProxyOnLocal="Boolean"
+           closeTimeout="TimeSpan"
+           envelopeVersion="None/Soap11/Soap12"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="Integer"
+           maxBufferSize="Integer"
+           maxReceivedMessageSize="Integer"
+           messageEncoding="Text/Mtom"
+           name="String"
+           openTimeout="TimeSpan"
+           proxyAddress="URI"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
+           useDefaultWebProxy="Boolean">
+    <security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">
+      <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"
+                 proxyCredentialType="None/Basic/Digest/Ntlm/Windows"
+                 realm="String" />
+      <message algorithmSuite="Aes128/Aes192/Aes256/Rsa15Aes128/ Rsa15Aes256/TripleDes"
+               clientCredentialType="UserName/Certificate" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</basicHttpContextBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -64,10 +68,10 @@ Especificar un enlace que proporciona el contexto para que <xref:System.ServiceM
 |`maxBufferPoolSize`|Un valor entero que especifica la cantidad de memoria máxima que se asigna para el uso realizado por el administrador de los búferes que reciben los mensajes del canal. El valor predeterminado es 524288 (0x80000) bytes.<br /><br /> El administrador de búfer reduce el coste de utilizar los búferes con un grupo de búferes. Es necesario que los búferes procesen los mensajes del servicio cuando salen del canal. Si no hay memoria suficiente en el grupo de búferes para procesar la carga de mensajes, el administrador de búfer debe asignar memoria adicional del montón CLR, que aumenta la carga de recolección de elementos no utilizados. La amplia asignación del montón de elementos no utilizados de CLR es una indicación de que el tamaño del grupo de búferes es demasiado pequeño y de que el rendimiento podría mejorar con una asignación mayor aumentando el límite especificado por este atributo.|  
 |`maxBufferSize`|Un valor entero que especifica el tamaño máximo, en bytes, de un búfer que almacena los mensajes mientras se procesan para un extremo configurado con este enlace. El valor predeterminado es 65.536 bytes.|  
 |`maxReceivedMessageSize`|Un entero positivo que define el tamaño máximo del mensaje, en bytes, incluidos los encabezados, para un mensaje que se puede recibir en un canal configurado con este enlace. El remitente recibe un error SOAP cuando el mensaje es demasiado grande para el receptor. El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento. El valor predeterminado es 65.536 bytes.|  
-|`messageEncoding`|Define el codificador utilizado para codificar el mensaje SOAP. Los valores válidos son los siguientes:<br /><br /> -Text: Utiliza un codificador de mensajes de texto.<br />-Mtom: Usa un codificador Message Transmission organización Mechanism 1.0 (MTOM).<br /><br /> El valor predeterminado es Text. Este atributo es del tipo <xref:System.ServiceModel.WSMessageEncoding>.|  
+|`messageEncoding`|Define el codificador utilizado para codificar el mensaje SOAP. Los valores válidos son los siguientes:<br /><br /> -Texto: Usar un codificador de mensajes de texto.<br />-Mtom: Usar un codificador Message Transmission organización Mechanism 1.0 (MTOM).<br /><br /> El valor predeterminado es Text. Este atributo es del tipo <xref:System.ServiceModel.WSMessageEncoding>.|  
 |`messageVersion`|Especifica la versión del mensaje utilizada por los clientes y servicios configurados con el enlace. Este atributo es del tipo <xref:System.ServiceModel.Channels.MessageVersion>.|  
 |`name`|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. Cada enlace tiene los atributos `name` y `namespace` que, juntos, lo identifican de forma exclusiva en los metadatos del servicio. Además, este nombre es único entre los enlaces del mismo tipo. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|`namespace`|Especifica el espacio de nombres XML del enlace. El valor predeterminado es " http://tempuri.org/Bindings ". Cada enlace tiene los atributos `name` y `namespace` que, juntos, lo identifican de forma exclusiva en los metadatos del servicio.|  
+|`namespace`|Especifica el espacio de nombres XML del enlace. El valor predeterminado es "http://tempuri.org/Bindings". Cada enlace tiene los atributos `name` y `namespace` que, juntos, lo identifican de forma exclusiva en los metadatos del servicio.|  
 |`openTimeout`|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |`proxyAddress`|Un URI que contiene la dirección del proxy HTTP. Si `useSystemWebProxy` se establece como `true`, esta configuración debe ser `null`. De manera predeterminada, es `null`.|  
 |`receiveTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  

@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 213f775fd3804e6d64e7dae7fe1649a4fe1868f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 545148d1f663078b8182029817f0f22d33036200
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841195"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152039"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Define un enlace que es seguro, confiable y optimizado para la comunicación del proceso cruzado en equipo. De forma predeterminada, genera una pila de comunicación de tiempo de ejecución con WS-ReliableMessaging para la fiabilidad, seguridad de transporte para la seguridad de transferencia, canalizaciones con nombre para la entrega de mensajes y codificación binaria de los mensajes.  
@@ -19,26 +19,30 @@ Define un enlace que es seguro, confiable y optimizado para la comunicación del
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<netNamedPipeBinding>  
-   <binding   
-      closeTimeout="TimeSpan"  
-      hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-      maxBufferPoolSize="Integer"  
-      maxBufferSize="Integer"  
-      maxConnections="Integer"   
-      maxReceivedMessageSize="Integer"  
-            name="string"  
-      openTimeout="TimeSpan"   
-      receiveTimeout="TimeSpan"  
-      sendTimeout="TimeSpan"  
-      transactionFlow="Boolean"  
-      transactionProtocol="OleTransactions/WS-AtomicTransactionOctober2004"  
-            transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-      <security mode="None/Transport">  
-            <transport  protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-       <readerQuotas             maxArrayLength="Integer"            maxBytesPerRead="Integer"            maxDepth="Integer"             maxNameTableCharCount="Integer"                     maxStringContentLength="Integer" />   </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding closeTimeout="TimeSpan"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="Integer"
+           maxBufferSize="Integer"
+           maxConnections="Integer"
+           maxReceivedMessageSize="Integer"
+           name="String"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           transactionFlow="Boolean"
+           transactionProtocol="OleTransactions/WS-AtomicTransactionOctober2004"
+           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -86,60 +90,57 @@ Define un enlace que es seguro, confiable y optimizado para la comunicación del
  El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el atributo de `binding` del elemento `<endpoint>`. Si desea configurar el enlace netNamedPipeBinding y cambiar algunos de sus valores, debe definir una configuración de enlace. El extremo debe hacer referencia a la configuración de enlace por el nombre con un atributo `bindingConfiguration`. En este ejemplo, la configuración de enlace se denomina Binding1.  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <services>  
-      <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
-               behaviorConfiguration="CalculatorServiceBehavior">  
-        <host>  
-          <baseAddresses>  
-            <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
-          </baseAddresses>  
-        </host>  
-        <!-- this endpoint is exposed at the base address provided by host: net.pipe://localhost/ServiceModelSamples/service  -->  
-        <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
-                  binding="netNamedPipeBinding"  
-                  contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-        <!-- the mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex -->  
-        <endpoint address="mex"  
-                  binding="mexHttpBinding"  
-                  contract="IMetadataExchange" />  
-      </service>  
-    </services>  
-  
-    <bindings>  
-      <netNamedPipeBinding>  
-        <binding   
-                 closeTimeout="00:01:00"  
-                 openTimeout="00:01:00"   
-                 receiveTimeout="00:10:00"   
-                 sendTimeout="00:01:00"  
-                 transactionFlow="false"   
-                 transferMode="Buffered"   
-                 transactionProtocol="OleTransactions"  
-                 hostNameComparisonMode="StrongWildcard"   
-                 maxBufferPoolSize="524288"  
-                 maxBufferSize="65536"   
-                 maxConnections="10"   
-                 maxReceivedMessageSize="65536">  
-          <security mode="Transport">  
-            <transport protectionLevel="EncryptAndSign" />  
-          </security>  
-        </binding>  
-      </netNamedPipeBinding>  
-    </bindings>  
-  
-    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata httpGetEnabled="True"/>  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <services>
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+               behaviorConfiguration="CalculatorServiceBehavior">
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8000/ServiceModelSamples/service" />
+          </baseAddresses>
+        </host>
+        <!-- this endpoint is exposed at the base address provided by host: net.pipe://localhost/ServiceModelSamples/service  -->
+        <endpoint address="net.pipe://localhost/ServiceModelSamples/service"
+                  binding="netNamedPipeBinding"
+                  contract="Microsoft.ServiceModel.Samples.ICalculator" />
+        <!-- the mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex -->
+        <endpoint address="mex"
+                  binding="mexHttpBinding"
+                  contract="IMetadataExchange" />
+      </service>
+    </services>
+    <bindings>
+      <netNamedPipeBinding>
+        <binding closeTimeout="00:01:00"
+                 openTimeout="00:01:00"
+                 receiveTimeout="00:10:00"
+                 sendTimeout="00:01:00"
+                 transactionFlow="false"
+                 transferMode="Buffered"
+                 transactionProtocol="OleTransactions"
+                 hostNameComparisonMode="StrongWildcard"
+                 maxBufferPoolSize="524288"
+                 maxBufferSize="65536"
+                 maxConnections="10"
+                 maxReceivedMessageSize="65536">
+          <security mode="Transport">
+            <transport protectionLevel="EncryptAndSign" />
+          </security>
+        </binding>
+      </netNamedPipeBinding>
+    </bindings>
+    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="CalculatorServiceBehavior">
+          <serviceMetadata httpGetEnabled="True" />
+          <serviceDebug includeExceptionDetailInFaults="False" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Vea también  

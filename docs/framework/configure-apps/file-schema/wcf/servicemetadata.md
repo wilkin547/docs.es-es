@@ -2,12 +2,12 @@
 title: '&lt;serviceMetadata&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: a5f69093a8eca7bfbdfd3b0d933a2689b552ec8f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 4cff141d7e012e865280e4397e6e3d65075a8f45
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086718"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150986"
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Especifica la publicación de metadatos e información asociada del servicio.  
@@ -20,17 +20,17 @@ Especifica la publicación de metadatos e información asociada del servicio.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```xml
-<serviceMetadata externalMetadataLocation="String"  
-                 httpGetBinding="String" 
-                 httpGetBindingConfiguration="String"  
-                 httpGetEnabled="Boolean" 
-                 httpGetUrl="String" 
-                 httpsGetBinding="String" 
-                 httpsGetBindingConfiguration="String"  
-                 httpsGetEnabled="Boolean"   
-                 httpsGetUrl="String"  
-                 policyVersion="Policy12/Policy15" />  
+```xml  
+<serviceMetadata externalMetadataLocation="String"
+                 httpGetBinding="String"
+                 httpGetBindingConfiguration="String"
+                 httpGetEnabled="Boolean"
+                 httpGetUrl="String"
+                 httpsGetBinding="String"
+                 httpsGetBindingConfiguration="String"
+                 httpsGetEnabled="Boolean"
+                 httpsGetUrl="String"
+                 policyVersion="Policy12/Policy15" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -69,55 +69,51 @@ Especifica la publicación de metadatos e información asociada del servicio.
   
  Para reducir la exposición de un servicio a los usuarios malintencionados, es posible proteger la transferencia mediante el mecanismo SSL sobre HTTP (HTTPS). Para realizar esto, debe enlazar primero un certificado X.509 adecuado a un puerto concreto en el equipo que esté hospedando el servicio. (Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Segundo, agregue este elemento a la configuración de servicio y establezca el atributo `httpsGetEnabled` en `true`. Finalmente, establezca el atributo `httpsGetUrl` en la dirección URL del punto de conexión de metadatos del servicio, tal y como se muestra en el ejemplo siguiente.  
   
-```xml
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name="NewBehavior">  
-      <serviceMetadata httpsGetEnabled="true"   
-                       httpsGetUrl="https://myComputerName/myEndpoint" />  
-    </behavior>  
-  </serviceBehaviors>  
-</behaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="NewBehavior">
+      <serviceMetadata httpsGetEnabled="true"
+                       httpsGetUrl="https://myComputerName/myEndpoint" />
+    </behavior>
+  </serviceBehaviors>
+</behaviors>
 ```  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente configura un servicio para exponer los metadatos mediante el \<serviceMetadata > elemento. También configura un punto de conexión para exponer el contrato `IMetadataExchange` como una implementación de un protocolo WS-MetadataExchange (MEX). El ejemplo usa `mexHttpBinding`, que es un enlace estándar de conveniencia equivalente a `wsHttpBinding` con el modo de seguridad establecido en `None`. Se usa una dirección relativa de "mex" en el punto de conexión, que cuando se resuelve con los servicios de bases dirección da como resultado una dirección de punto de conexión de `http://localhost/servicemodelsamples/service.svc/mex`.  
   
-```xml
-<configuration>  
-  <system.serviceModel>  
-    <services>  
-      <service name="Microsoft.ServiceModel.Samples.CalculatorService" 
-               behaviorConfiguration="CalculatorServiceBehavior">  
-        <!-- This endpoint is exposed at the base address provided by the host: http://localhost/servicemodelsamples/service.svc -->  
-        <endpoint address=""  
-                  binding="wsHttpBinding"  
-                  contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-        <!-- The mex endpoint is exposed at http://localhost/servicemodelsamples/service.svc/mex   
-             To expose the IMetadataExchange contract, you must enable the serviceMetadata behavior as demonstrated below. -->  
-        <endpoint address="mex"  
-                  binding="mexHttpBinding"  
-                  contract="IMetadataExchange" />  
-      </service>  
-    </services>  
-
-    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <!-- The serviceMetadata behavior publishes metadata through   
-               the IMetadataExchange contract. When this behavior is   
-               present, you can expose this contract through an endpoint   
-               as shown above. Setting httpGetEnabled to true publishes   
-               the service's WSDL at the <baseaddress>?wsdl  
-               eg. http://localhost/servicemodelsamples/service.svc?wsdl -->  
-          <serviceMetadata httpGetEnabled="True"/>  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-        </behavior>  
-      </serviceBehaviors>  
+```xml  
+<configuration>
+  <system.serviceModel>
+    <services>
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+               behaviorConfiguration="CalculatorServiceBehavior">
+        <!-- This endpoint is exposed at the base address provided by the host: http://localhost/servicemodelsamples/service.svc -->
+        <endpoint address=""
+                  binding="wsHttpBinding"
+                  contract="Microsoft.ServiceModel.Samples.ICalculator" />
+        <!-- The mex endpoint is exposed at http://localhost/servicemodelsamples/service.svc/mex
+             To expose the IMetadataExchange contract, you must enable the serviceMetadata behavior as demonstrated below. -->
+        <endpoint address="mex"
+                  binding="mexHttpBinding"
+                  contract="IMetadataExchange" />
+      </service>
+    </services>
+    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="CalculatorServiceBehavior">
+          <!-- The serviceMetadata behavior publishes metadata through the IMetadataExchange contract. When this behavior is
+               present, you can expose this contract through an endpoint as shown above. Setting httpGetEnabled to true publishes
+               the service's WSDL at the <baseaddress>?wsdl eg. http://localhost/servicemodelsamples/service.svc?wsdl -->
+          <serviceMetadata httpGetEnabled="True" />
+          <serviceDebug includeExceptionDetailInFaults="False" />
+        </behavior>
+      </serviceBehaviors>
     </behaviors>
-  </system.serviceModel>  
-</configuration>  
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Vea también  

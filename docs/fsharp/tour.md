@@ -2,12 +2,12 @@
 title: Paseo por F#
 description: Examine algunas de las características claves del lenguaje en esta visita con ejemplos de código de programación F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143753"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145528"
 ---
 # <a name="tour-of-f"></a>Paseo por F# #
 
@@ -17,7 +17,7 @@ Hay dos conceptos principales en F#: tipos y funciones.  Este paseo realzan cara
 
 ## <a name="executing-the-code-online"></a>Ejecutar el código en línea
 
-Si no tienes F# instalado en el equipo, puede ejecutar todos los ejemplos en línea con el [Fable REPL](http://fable.io/repl/). Fable es un dialecto de F# que se ejecuta directamente en el explorador. Para ver los ejemplos que siguen en la replicación, consulte **ejemplos > más información > paseo F#**  en la barra de menú de la izquierda de la REPL Fable.
+Si no tienes F# instalado en el equipo, puede ejecutar todos los ejemplos en línea con el [Fable REPL](https://fable.io/repl/). Fable es un dialecto de F# que se ejecuta directamente en el explorador. Para ver los ejemplos que siguen en la replicación, consulte **ejemplos > más información > paseo F#**  en la barra de menú de la izquierda de la REPL Fable.
 
 ## <a name="functions-and-modules"></a>Funciones y módulos
 

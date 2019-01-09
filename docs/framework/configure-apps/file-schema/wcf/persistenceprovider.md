@@ -2,12 +2,12 @@
 title: '&lt;persistenceProvider&gt;'
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: 3c7fd74a84184ddbf8cc8db90141174ed84e5774
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ba02977a7df44931ae195040949e9a8eb0c141b5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746662"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152026"
 ---
 # <a name="ltpersistenceprovidergt"></a>&lt;persistenceProvider&gt;
 Especifica el tipo de la implementación de proveedor de persistencia que se va a usar, así como el tiempo de espera que se va a utilizar en las operaciones de persistencia.  
@@ -21,8 +21,8 @@ Especifica el tipo de la implementación de proveedor de persistencia que se va 
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<persistenceProvider persistenceOperationTimeout="TimeSpan"  
-   type="String" />  
+<persistenceProvider persistenceOperationTimeout="TimeSpan"
+                     type="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

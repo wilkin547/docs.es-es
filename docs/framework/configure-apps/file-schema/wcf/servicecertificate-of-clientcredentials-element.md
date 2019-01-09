@@ -2,12 +2,12 @@
 title: Elemento &lt;serviceCertificate&gt; de &lt;clientCredentials&gt;
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 1d54c39fd681e0686e419b7b73243703e9184d1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82fb39f15ea0dbf38d9c9b41d7fbdd50daebb823
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750250"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151987"
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>Elemento &lt;serviceCertificate&gt; de &lt;clientCredentials&gt;
 Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.  
@@ -22,7 +22,7 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<serviceCertificate />  
+<serviceCertificate />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -37,7 +37,7 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
 |-------------|-----------------|  
 |[\<defaultCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|Especifica un certificado X.509 que se usará cuando un servicio o STS no proporcione uno a través de un protocolo de negociación.|  
 |[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Representa una colección de certificados X.509 proporcionada por servicios concretos (con ámbito) para la autenticación. Esta colección se utiliza normalmente para especificar los certificados de servicio para los servicios de token de seguridad en un escenario asociado externo.|  
-|[\<autenticación >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|Especifica los comportamientos de autenticación para los certificados de servicio utilizados por un cliente.|  
+|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|Especifica los comportamientos de autenticación para los certificados de servicio utilizados por un cliente.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -48,7 +48,7 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
 ## <a name="remarks"></a>Comentarios  
  Este elemento de configuración especifica la configuración utilizada por el cliente para validar el certificado presentado por el servicio utilizando la autenticación SSL. También contiene cualquier certificado para el servicio que se configura explícitamente en el cliente y que se utiliza para cifrar los mensajes para el servicio, utilizando la seguridad de mensaje.  
   
- Los atributos de la `serviceCertificate` elemento son idénticos a los atributos de la [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
+ Los atributos de la `serviceCertificate` son idénticos a los atributos del elemento de la [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

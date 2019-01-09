@@ -2,12 +2,12 @@
 title: '&lt;add&gt; de &lt;authorizationPolicies&gt;'
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f4afe0a0a72d7f45dd0ed38cbcc7a0d89d17d44
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753959"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148466"
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; de &lt;authorizationPolicies&gt;
 Especifica una directiva de autorización para la transformación de notificaciones.  
@@ -22,9 +22,9 @@ Especifica una directiva de autorización para la transformación de notificacio
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<authorizationPolicies>  
-   <add policyType="String" />  
-</authorizationPolicies>  
+<authorizationPolicies>
+  <add policyType="String" />
+</authorizationPolicies>
 ```  
   
 ## <a name="type"></a>Tipo  
@@ -37,7 +37,7 @@ Especifica una directiva de autorización para la transformación de notificacio
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`policyType`|Atributo de cadena requerido.<br /><br /> El modelo de control de acceso de Windows Communication Foundation (WCF) es compatible con un conjunto de directivas de autorización como tipos de aprovisionamiento. Este atributo especifica una directiva de autorización que permite la transformación de un conjunto de notificaciones de entrada en otro conjunto de notificaciones. Se puede permitir o denegar el acceso en base a eso.|  
+|`policyType`|Atributo de cadena requerido.<br /><br /> El modelo de control de acceso de Windows Communication Foundation (WCF) admite el aprovisionamiento de un conjunto de directivas de autorización como tipos. Este atributo especifica una directiva de autorización que permite la transformación de un conjunto de notificaciones de entrada en otro conjunto de notificaciones. Se puede permitir o denegar el acceso en base a eso.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -60,6 +60,6 @@ Especifica una directiva de autorización para la transformación de notificacio
  <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  [Autorización de acceso a operaciones de servicio](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Creación de un administrador de autorización personalizado para un servicio](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)  
  [Directiva de autorización](../../../../../docs/framework/wcf/samples/authorization-policy.md)

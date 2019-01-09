@@ -2,12 +2,12 @@
 title: '&lt;unrecognizedPolicyAssertion&gt;'
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: 0c1d39c6891b1160dab3b22e76c48e514a493d9f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 27ec88c5e59170e4dea087747d196aa0291f13c8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766925"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150999"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a>&lt;unrecognizedPolicyAssertion&gt;
 Representa un elemento de enlace que especifica la aserción de directiva. Este elemento no tiene ningún atributo y está presente como modificador vacío.  
@@ -21,7 +21,7 @@ Representa un elemento de enlace que especifica la aserción de directiva. Este 
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<unrecognizedPolicyAssertion/>  
+<unrecognizedPolicyAssertion />
 ```  
   
 ## <a name="type"></a>Tipo  

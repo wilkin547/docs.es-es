@@ -2,12 +2,12 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 74c88df867efa82d48693a3df86b4c7813c40eba
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8d4074319a10abc1ce4aafe15e3b51381398c39c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200051"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146516"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 El elemento de identidad permite a un programador del cliente especificar en tiempo de diseño la identidad esperada del servicio. En el proceso de negociación entre el cliente y el servicio, la infraestructura de Windows Communication Foundation (WCF) asegurará la identidad del servicio esperado coincide con los valores de este elemento y, por tanto, se puede autenticar. Para obtener más información, consulte [autenticación e identidad de servicio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
@@ -19,18 +19,18 @@ El elemento de identidad permite a un programador del cliente especificar en tie
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<identity>  
-    <certificate encodedValue="String"/>  
-    <certificateReference findValue="String"   
-       isChainIncluded="Boolean"  
-       storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-       storeLocation="LocalMachine/CurrentUser"  
-       X509FindType= Enumeration./>  
-    <dns value="String"/>  
-    <rsa value="String"/>  
-    <servicePrincipalName value="String"/>  
-    <usePrincipalName value="String"/>  
-</identity>  
+<identity>
+  <certificate encodedValue="String" />
+  <certificateReference findValue="String"
+                        isChainIncluded="Boolean"
+                        storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                        storeLocation="LocalMachine/CurrentUser"
+                        X509FindType="Enumeration" />
+  <dns value="String" />
+  <rsa value="String" />
+  <servicePrincipalName value="String" />
+  <usePrincipalName value="String" />
+</identity>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -66,4 +66,4 @@ El elemento de identidad permite a un programador del cliente especificar en tie
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Puntos de conexión: direcciones, enlaces y contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

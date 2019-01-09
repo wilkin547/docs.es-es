@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: a3d60747400d570a3e5a930377e9be9c0aca4f35
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: f1ccb2f2e297ecac8f5ac96c0af42ff6bfb9363b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982716"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146048"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Tipo de datos UShort (Visual Basic)
 
@@ -66,7 +66,7 @@ Dim number = &H_5826us
   
 -   **Números negativos.** Dado que `UShort` es un tipo sin signo, que no puede representar un número negativo. Si usa el operador unario menos (`-`) operador en una expresión que se evalúa como tipo `UShort`, Visual Basic convierte la expresión a `Integer` primero.  
   
--   **Conformidad con CLS.** El `UShort` es de tipo de datos no forma parte de la [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.
+-   **Conformidad con CLS.** El `UShort` es de tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.
   
 -   **Ampliación.** El `UShort` tipo de datos se amplía a `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, y `Double`. Esto significa que se puede convertir `UShort` a cualquiera de estos tipos sin que se produzca una <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
@@ -79,5 +79,5 @@ Dim number = &H_5826us
  [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
  [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

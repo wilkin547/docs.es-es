@@ -2,12 +2,12 @@
 title: elemento de &lt;extremo&gt;
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ef436acca40eaac135a54042b62abd76ec55febf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749509"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147491"
 ---
 # <a name="ltendpointgt-element"></a>elemento de &lt;extremo&gt;
 Especifica enlace, contrato y propiedades de dirección para un punto de conexión de servicio, que se utiliza para exponer los servicios.  
@@ -19,16 +19,19 @@ Especifica enlace, contrato y propiedades de dirección para un punto de conexi�
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   bindingName="String"  
-   bindingNamespace="String"  
-   contract="String"  
-   endpointConfiguration="String"   isSystemEndpoint="Boolean"   kind="String"   listenUriMode="Explicit/Unique"  
-   listenUri="Uri"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          bindingName="String"
+          bindingNamespace="String"
+          contract="String"
+          endpointConfiguration="String"
+          isSystemEndpoint="Boolean"
+          kind="String"
+          listenUriMode="Explicit/Unique"
+          listenUri="Uri">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -48,9 +51,9 @@ Especifica enlace, contrato y propiedades de dirección para un punto de conexi�
 |endpointConfiguration|Cadena que especifica el nombre del extremo estándar establecido por el atributo `kind`, que hace referencia a la información de configuración adicional de este extremo estándar. El mismo nombre se debe definir en la sección `<standardEndpoints>`.|  
 |isSystemEndpoint|Valor booleano que especifica si un extremo es un extremo de la infraestructura.|  
 |kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la sección `<extensions>` o en machine.config. Si no se especifica nada, se crea un extremo de servicio común.|  
-|listenUriMode|Especifica cómo el transporte trata el `ListenUri` proporcionado para el servicio en el que se realizan escuchas. Los valores válidos son<br /><br /> -Explícita<br />-Único<br /><br /> El valor predeterminado es Explicito.|  
+|listenUriMode|Especifica cómo el transporte trata el `ListenUri` proporcionado para el servicio en el que se realizan escuchas. Los valores válidos son<br /><br /> -Explícita<br />-Unique<br /><br /> El valor predeterminado es Explicito.|  
 |listenUri|Una cadena que especifica el URI en el que el extremo de servicio realiza escuchas. El valor predeterminado es una cadena vacía.|  
-|name|Atributo opcional. Cadena que especifica el nombre del extremo del servicio. El valor predeterminado es la concatenación del nombre de enlace y el nombre de la descripción de contrato. Los servicios pueden tener varios extremos, por lo que el atributo `name` del extremo es distinto del nombre del servicio.|  
+|name|Atributo opcional. Cadena que especifica el nombre del extremo del servicio. El valor predeterminado es la concatenación del nombre de enlace y el nombre de la descripción de contrato. Los servicios pueden tener varios puntos de conexión, por lo que el atributo `name` del punto de conexión es distinto del nombre del servicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -69,22 +72,21 @@ Especifica enlace, contrato y propiedades de dirección para un punto de conexi�
  Éste es un ejemplo de una configuración del punto de conexión de servicio.  
   
 ```xml  
-<endpoint   
-    address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    bindingName="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-    <Headers>  
-       <Region xmlns="http://tempuri.org/">EastCoast</Region>  
-       <Member xmlns="http://tempuri.org/">Gold</Member>  
-    </Headers>  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          bindingName="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+  <headers>
+    <region xmlns="http://tempuri.org/">EastCoast</region>
+    <member xmlns="http://tempuri.org/">Gold</member>
+  </headers>
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [Puntos de conexión: direcciones, enlaces y contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Creación de un punto de conexión de servicio en configuración](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+ [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Cómo: Crear un punto de conexión de servicio en la configuración](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

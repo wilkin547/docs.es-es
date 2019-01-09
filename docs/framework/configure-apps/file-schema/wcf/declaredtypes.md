@@ -8,17 +8,17 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: d6690722f743c74ee9909f029133f506e05ecb1d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0fadb13d4fcfbe87eb2c08fc35323c726c0ac2a6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747621"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146425"
 ---
 # <a name="ltdeclaredtypesgt"></a>&lt;declaredTypes&gt;
 Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContractSerializer> usa al deserializar.  
   
- Para obtener más información acerca de los contratos de datos y los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Para obtener más información acerca de los contratos de datos y los tipos conocidos, consulte [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  system.runtime.serialization  
 \<dataContractSerializer >  
@@ -27,19 +27,19 @@ Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContract
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<configuration>  
-  <system.runtime.serialization>  
-    <dataContractSerializer>  
-      <declaredTypes>  
-        <add type="String ">  
-          <knownType type="String">  
-                <parameter index="Integer"/>  
-          </knownType>  
-        </add>  
-      </declaredTypes>  
-    <dataContractSerializer>  
-  </system.runtime.serialization>  
-</configuration>  
+<configuration>
+  <system.runtime.serialization>
+    <dataContractSerializer>
+      <declaredTypes>
+        <add type="String ">
+          <knownType type="String">
+            <parameter index="Integer"/>
+          </knownType>
+        </add>
+      </declaredTypes>
+    <dataContractSerializer>
+  </system.runtime.serialization>
+</configuration>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -61,31 +61,31 @@ Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContract
 |[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información sobre los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) y <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Para obtener más información sobre los tipos conocidos, consulte [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) y <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código XML muestra tipos declarados y tipos conocidos agregados a un `DataContractSerializer` elemento. El ejemplo muestra tres tipos que se va a agregar. El primero es un tipo personalizado denominado "Orders" que usa un tipo conocido denominado "Item". El segundo el tipo declarado es <xref:System.Collections.Generic.List%601> que usa `Item` como un tipo conocido. Finalmente, el tercer tipo declarado es <xref:System.Collections.Generic.Dictionary%602>. El tipo de clase <xref:System.Collections.Generic.Dictionary%602> es un tipo genérico, con dos parámetros de tipo. El primero representa la clave y el segundo representa el valor. El ejemplo siguiente agrega <xref:System.Collections.Generic.List%601> del segundo tipo (el valor) a la lista de tipos conocidos. Debe usar el atributo `index` para especificar qué parámetro de tipo se va a usar en el tipo conocido. En este caso, el atributo de índice indica el tipo de valor establecido en "1" (la colección está basada en cero).  
   
 ```xml  
-<configuration>  
-  <system.runtime.serialization>  
-    <dataContractSerializer>  
-      <declaredTypes>  
-        <add type="Examples.Types.Orders, SerializationTypes, Version = 2.0.0.0, Culture = neutral, PublicKeyToken=null">  
-          <knownType type="Examples.Types.Item, SerializationTypes, Version=2.0.0.0, Culture=neutral, PublicKey=null" />  
-        </add>  
-        <add type="System.Collections.Generic.List`1, SerializationTypes, Version = 2.0.0.0, Culture = neutral, PublicKeyToken=null">  
-          <knownType type="Examples.Types.Item, SerializationTypes, Version=2.0.0.0, Culture=neutral, PublicKey=null" />  
-        </add>  
-        <add type="System.Collections.Generic.Dictionary`2, SerializationTypes, Version = 2.0.0.0, Culture = neutral, PublicKeyToken=null">  
-          <knownType type="System.Collections.Generic.List`1, SerializationTypes, Version = 2.0.0.0, Culture = neutral, PublicKeyToken=null">  
-            <parameter index="1"/>  
-          </knownType>  
-        </add>  
-      </declaredTypes>  
-    <dataContractSerializer>  
-  </system.runtime.serialization>  
-</configuration>  
+<configuration>
+  <system.runtime.serialization>
+    <dataContractSerializer>
+      <declaredTypes>
+        <add type="Examples.Types.Orders, SerializationTypes, Version = 2.0.0.0, Culture = neutral, PublicKeyToken=null">
+          <knownType type="Examples.Types.Item, SerializationTypes, Version=2.0.0.0, Culture=neutral, PublicKey=null" />
+        </add>
+        <add type="System.Collections.Generic.List`1, SerializationTypes, Version = 2.0.0.0, Culture = neutral, PublicKeyToken=null">
+          <knownType type="Examples.Types.Item, SerializationTypes, Version=2.0.0.0, Culture=neutral, PublicKey=null" />
+        </add>
+        <add type="System.Collections.Generic.Dictionary`2, SerializationTypes, Version = 2.0.0.0, Culture = neutral, PublicKeyToken=null">
+          <knownType type="System.Collections.Generic.List`1, SerializationTypes, Version = 2.0.0.0, Culture = neutral, PublicKeyToken=null">
+            <parameter index="1"/>
+          </knownType>
+        </add>
+      </declaredTypes>
+    <dataContractSerializer>
+  </system.runtime.serialization>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Vea también  

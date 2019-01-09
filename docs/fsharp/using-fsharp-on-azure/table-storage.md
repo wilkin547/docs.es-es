@@ -1,16 +1,16 @@
 ---
-title: Introducción a Azure Table storage mediante F#
+title: Empezar a trabajar con Azure Table storageF#
 description: Store datos estructurados en la nube con Azure Table storage o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43519540"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152078"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introducción a Azure Table storage y Azure Cosmos DB Table API con F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introducción a Azure Table storage y el uso de Azure Cosmos DB Table APIF# # 
 
 Azure Table storage es un servicio que almacena datos NoSQL estructurados en la nube. Table storage es un almacén de claves/atributos con un diseño sin esquema. Dado que el almacenamiento de tabla no tiene esquema, es fácil adaptar los datos como el evolucionan necesidades de la aplicación. Acceso a datos es rápido y rentable para todos los tipos de aplicaciones. Almacenamiento de tabla suele ser significativamente menor costo que SQL tradicional para volúmenes de datos similares.
 
@@ -30,16 +30,16 @@ Para obtener más información, consulte [Introducción a Azure Cosmos DB Table 
 
 ## <a name="about-this-tutorial"></a>Acerca de este tutorial
 
-Este tutorial muestra cómo escribir código de F# para realizar algunas tareas comunes con Azure Table storage o Azure Cosmos DB Table API, incluida la creación y eliminación de una tabla e Insertar, actualizar, eliminar y consultar datos de tabla.
+Este tutorial muestra cómo escribir F# código para realizar algunas tareas comunes con Azure Table storage o Azure Cosmos DB Table API, incluida la creación y eliminación de una tabla e Insertar, actualizar, eliminar y consultar datos de tabla.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para usar esta guía, primero debe [crear una cuenta de almacenamiento de Azure](/azure/storage/storage-create-storage-account) o [cuenta de Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Crear un Script de F# y el inicio de F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Crear un F# Script e iniciar F# interactivo
 
-Los ejemplos de este artículo pueden usarse en una aplicación de F# o un script de F#. Para crear un script de F#, cree un archivo con el `.fsx` extensión, por ejemplo `tables.fsx`, en el entorno de desarrollo de F#.
+Los ejemplos de este artículo pueden usarse en cualquiera un F# aplicación o un F# secuencia de comandos. Para crear un F# de script, cree un archivo con el `.fsx` extensión, por ejemplo `tables.fsx`, en su F# entorno de desarrollo.
 
 A continuación, use un [Administrador de paquetes](package-management.md) como [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) para instalar el `WindowsAzure.Storage` paquete y referencia `WindowsAzure.Storage.dll` en el script mediante un `#r`directiva. Hacerlo nuevamente por `Microsoft.WindowsAzure.ConfigurationManager` con el fin de obtener el espacio de nombres Microsoft.Azure.
 
@@ -196,7 +196,7 @@ Ahora que ha aprendido los conceptos básicos del almacenamiento de tablas, siga
 
 - [Introducción a Azure Cosmos DB Table API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [Biblioteca de cliente de almacenamiento para la referencia de .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Proveedor de tipos de almacenamiento de Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Proveedor de tipos de almacenamiento de Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog del equipo de almacenamiento de Azure](https://blogs.msdn.com/b/windowsazurestorage/)
 - [Configurar cadenas de conexión](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [Introducción a Azure Table Storage en .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

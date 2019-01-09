@@ -1,15 +1,15 @@
 ---
-title: '&lt;diagnósticos&gt;'
+title: '&lt;Diagnósticos&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 0854ce6525fd7c96cf7c19d2c86dadef1b9a53bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747312"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149350"
 ---
-# <a name="ltdiagnosticsgt"></a>&lt;diagnósticos&gt;
+# <a name="ltdiagnosticsgt"></a>&lt;Diagnósticos&gt;
 El elemento `diagnostics` define valores que pueden ser utilizados por un administrador para la inspección y control en tiempo de ejecución.  
   
  \<system.ServiceModel>  
@@ -18,28 +18,25 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<system.serviceModel>  
-  <diagnostics 
-      etwProviderId="String"       
-      performanceCounters="Off/ServiceOnly/All/Default"              
-      wmiProviderEnabled="Boolean" >       
-    <endToEndTracing 
-        activityTracing="Boolean"  
-        messageFlowTracing="Boolean"  
-        propagateActivity="Boolean" />  
-    <messageLogging 
-        logEntireMessage="Boolean"  
-        logMalformedMessages="Boolean"  
-        logMessagesAtServiceLevel="Boolean"  
-        logMessagesAtTransportLevel="Boolean"  
-        maxMessagesToLog="Integer"  
-        maxSizeOfMessageToLog="Integer" >  
-      <filters>  
-        <clear />  
-      </filters>  
-    </messageLogging>  
-  </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics etwProviderId="String"
+               performanceCounters="Off/ServiceOnly/All/Default"
+               wmiProviderEnabled="Boolean">
+    <endToEndTracing activityTracing="Boolean"
+                     messageFlowTracing="Boolean"
+                     propagateActivity="Boolean" />
+    <messageLogging logEntireMessage="Boolean"
+                    logMalformedMessages="Boolean"
+                    logMessagesAtServiceLevel="Boolean"
+                    logMessagesAtTransportLevel="Boolean"
+                    maxMessagesToLog="Integer"
+                    maxSizeOfMessageToLog="Integer">
+      <filters>
+        <clear />
+      </filters>
+    </messageLogging>
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -50,7 +47,7 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |etwProviderId|Cadena que especifica el identificador del proveedor de la traza de eventos, que escribe los eventos en las sesiones de ETW.|  
-|performanceCounters|Especifica si se habilitan los contadores de rendimiento para el ensamblado. Los valores válidos son<br /><br /> -Off: Los contadores de rendimiento están deshabilitados.<br />-ServiceOnly: Sólo los contadores de rendimiento relacionados con este servicio está habilitado.<br />-Todo: Rendimiento contadores pueden consultarse en tiempo de ejecución.<br />-Valor predeterminado: Se crea un _WCF_Admin de instancia del contador de rendimiento único. Esta instancia se utiliza para habilitar la colección de datos de SQM usados por la infraestructura. Ninguno de los valores de contador para esta instancia está actualizado y por consiguiente permanecerá a cero. Éste es el valor predeterminado si ninguna configuración está presente para WCF.|  
+|performanceCounters|Especifica si se habilitan los contadores de rendimiento para el ensamblado. Los valores válidos son<br /><br /> -Off: Los contadores de rendimiento están deshabilitados.<br />-ServiceOnly: Solo los contadores de rendimiento relevantes para este servicio están habilitados.<br />-Todo: Los contadores de rendimiento se pueden ver en tiempo de ejecución.<br />-Default: Se crea un _WCF_Admin de instancia de contador de rendimiento único. Esta instancia se utiliza para habilitar la colección de datos de SQM usados por la infraestructura. Ninguno de los valores de contador para esta instancia está actualizado y por consiguiente permanecerá a cero. Éste es el valor predeterminado si ninguna configuración está presente para WCF.|  
 |wmiProviderEnabled|Un valor booleano que especifica si el proveedor de WMI para el ensamblado está habilitado. El proveedor de WMI se requiere para que el usuario obtenga acceso en tiempo de ejecución a las características de control e inspección de Windows Communication Foundation (WCF). De manera predeterminada, es `false`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -58,7 +55,7 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Elemento de configuración que le permite habilitar y deshabilitar aspectos diferentes de traza de un punto de conexión a otro durante el funcionamiento de una aplicación de servicio.|  
-|[\<registro de mensajes >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Describe los valores para el registro de mensajes WCF.|  
+|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Describe los valores para el registro de mensajes WCF.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -72,21 +69,19 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 ## <a name="example"></a>Ejemplo  
   
 ```xml  
-<diagnostics
-    wmiProviderEnabled="false"  
-    performanceCounters="all">  
-  <messageLogging 
-      logEntireMessage="true"  
-      logMalformedMessages="true"  
-      logMessagesAtServiceLevel="true"  
-      logMessagesAtTransportLevel="true"  
-      maxMessagesToLog="42"  
-      maxSizeOfMessageToLog="42">  
-    <filters>  
-      <clear />  
-    </filters>  
-  </messageLogging>  
-</diagnostics>  
+<diagnostics wmiProviderEnabled="false"
+             performanceCounters="all">
+  <messageLogging logEntireMessage="true"
+                  logMalformedMessages="true"
+                  logMessagesAtServiceLevel="true"
+                  logMessagesAtTransportLevel="true"
+                  maxMessagesToLog="42"
+                  maxSizeOfMessageToLog="42">
+    <filters>
+      <clear />
+    </filters>
+  </messageLogging>
+</diagnostics>
 ```  
   
 ## <a name="see-also"></a>Vea también  

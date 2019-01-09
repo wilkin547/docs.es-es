@@ -1,15 +1,15 @@
 ---
-title: '&lt;userNameAuthentication&gt;'
+title: '&lt;UserNameAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: d81bf3441f4999683b9dc9ab956fff517c20e80e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754868"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150050"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
 Especifica las credenciales de un servicio basadas en el nombre de usuario y contraseña.  
   
  \<system.ServiceModel>  
@@ -22,14 +22,13 @@ Especifica las credenciales de un servicio basadas en el nombre de usuario y con
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<userNameAuthentication  
-   cacheLogonTokenLifetime="TimeSpan"  
-   cacheLogonTokens="Boolean"   
-   customUserNamePasswordValidatorType="String"  
-   includeWindowsGroups="Boolean"   
-   maxCacheLogonTokens="Integer"  
-   membershipProviderName="String"  
-   userNamePasswordValidationMode="Windows/MembershipProvider/Custom" />  
+<userNameAuthentication cacheLogonTokenLifetime="TimeSpan"
+                        cacheLogonTokens="Boolean"
+                        customUserNamePasswordValidatorType="String"
+                        includeWindowsGroups="Boolean"
+                        maxCacheLogonTokens="Integer"
+                        membershipProviderName="String"
+                        userNamePasswordValidationMode="Windows/MembershipProvider/Custom" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

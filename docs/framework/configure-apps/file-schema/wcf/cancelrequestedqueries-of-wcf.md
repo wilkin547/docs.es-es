@@ -2,12 +2,12 @@
 title: '&lt;cancelRequestedQueries&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 40fbcafd641e93be6ba21635f4f6e6428be62c12
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9cf2761bdab36d95b5077e36174565659230b512
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193791"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145450"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>&lt;cancelRequestedQueries&gt; de WCF
 Representa una colección de consultas que se usan para realizar el seguimiento de las solicitudes para cancelar una actividad secundaria por parte de la actividad primaria. La consulta es necesaria para que un participante del seguimiento se suscriba con el fin de cancelar los objetos de registro de solicitud.  
@@ -22,21 +22,21 @@ Para obtener más información sobre las consultas de perfil de seguimiento, vea
   
 ## <a name="syntax"></a>Sintaxis  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <cancelRequestQueries>
           <cancelRequestQuery activityName="String"
-                              childActivityName="String"/>
+                              childActivityName="String" />
         </cancelRequestQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
 
 En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  

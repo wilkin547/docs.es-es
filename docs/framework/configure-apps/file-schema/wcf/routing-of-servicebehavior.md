@@ -2,12 +2,12 @@
 title: '&lt;routing&gt; de &lt;serviceBehavior&gt;'
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 5fb7febe365f73acf09ba74b07215fe9cc659efb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a007eb33063f8f44098a8c63708255b884b5fdc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750757"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146854"
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;routing&gt; de &lt;serviceBehavior&gt;
 Proporciona acceso en tiempo de ejecución al servicio de enrutamiento para permitir la modificación dinámica de la configuración del enrutamiento.  
@@ -24,12 +24,12 @@ Proporciona acceso en tiempo de ejecución al servicio de enrutamiento para perm
 <behaviors>
   <serviceBehaviors>
     <behavior name="String">
-      <routing filterTable="String" 
-               routeOnHeadersOnly="Boolean" 
+      <routing filterTable="String"
+               routeOnHeadersOnly="Boolean"
                SoapProcessingEnabled="Boolean" />
     </behavior>
   </serviceBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

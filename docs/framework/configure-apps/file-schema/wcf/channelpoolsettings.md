@@ -1,15 +1,15 @@
 ---
-title: '&lt;channelPoolSettings&gt;'
+title: '&lt;ChannelPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: ad722fbc34617ef7f424d5f1c4418e1e1cb45344
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e55d3a989ae35d6e29062337cc79114a204608bb
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747241"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149103"
 ---
-# <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
+# <a name="ltchannelpoolsettingsgt"></a>&lt;ChannelPoolSettings&gt;
 Especifica los valores de grupo de canal para un enlace personalizado.  
   
  \<system.serviceModel>  
@@ -22,10 +22,9 @@ Especifica los valores de grupo de canal para un enlace personalizado.
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<channelPoolSettings  
-    idleTimeout"TimeSpan"  
-        leaseTimeout"TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<channelPoolSettings idleTimeout="TimeSpan"
+                     leaseTimeout="TimeSpan"
+                     maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

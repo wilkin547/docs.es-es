@@ -4,16 +4,16 @@ description: Azure Event Grid es una solución sin servidor para la entrega de e
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143667"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145904"
 ---
 # <a name="event-grid"></a>Cuadrícula de eventos
 
-[Azure Event Grid](/azure-event-grid/overview) proporciona infraestructura sin servidor para las aplicaciones basadas en eventos. Puede publicar en Event Grid desde cualquier origen y consumir mensajes desde cualquier plataforma. Event Grid también tiene compatibilidad integrada para eventos de recursos de Azure para simplificar la integración con sus aplicaciones. Por ejemplo, puede suscribirse a eventos para notificar a la aplicación cuando se carga un archivo de blob storage. La aplicación, a continuación, puede publicar un mensaje de cuadrícula de eventos personalizados que se consume en otra nube o aplicaciones locales. Event Grid se creó para controlar de forma confiable escala masiva. Obtenga las ventajas de publicar y suscribirse a mensajes sin la sobrecarga de configurar la infraestructura necesaria.
+[Azure Event Grid](/azure/event-grid/overview) proporciona infraestructura sin servidor para las aplicaciones basadas en eventos. Puede publicar en Event Grid desde cualquier origen y consumir mensajes desde cualquier plataforma. Event Grid también tiene compatibilidad integrada para eventos de recursos de Azure para simplificar la integración con sus aplicaciones. Por ejemplo, puede suscribirse a eventos para notificar a la aplicación cuando se carga un archivo de blob storage. La aplicación, a continuación, puede publicar un mensaje de cuadrícula de eventos personalizados que se consume en otra nube o aplicaciones locales. Event Grid se creó para controlar de forma confiable escala masiva. Obtenga las ventajas de publicar y suscribirse a mensajes sin la sobrecarga de configurar la infraestructura necesaria.
 
 ![Logotipo de la cuadrícula de eventos](./media/event-grid-logo.png)
 

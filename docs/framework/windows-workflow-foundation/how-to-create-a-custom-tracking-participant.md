@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 74c0e8ac025d69f0fd1ee7d451033165a1c8e615
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611860"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150640"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Procedimiento Crear un participante de seguimiento personalizados
 El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejecución del flujo de trabajo. El runtime de flujo de trabajo emite registros de seguimiento que describen los eventos de ciclo de vida de flujo de trabajo, los eventos de ciclo de vida de actividad, los errores y la reanudación de marcadores. Los participantes de seguimiento usan estos registros de seguimiento. Windows Workflow Foundation (WF) incluye a un participante de seguimiento estándar que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado. Este paso del tutorial describe cómo crear un participante y un perfil de seguimiento personalizados que capturen la salida de las actividades `WriteLine` para poder mostrarla al usuario.  
@@ -92,7 +92,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     }  
     ```  
   
-     Cuando no se especifica ningún perfil de seguimiento, se usa el perfil de seguimiento predeterminado. Cuando se usa el perfil de seguimiento predeterminado, los registros de seguimiento se emiten para todos `ActivityStates`. Dado que solo debemos capturar el texto una vez durante el ciclo de vida de la actividad `WriteLine` , solo extraemos el texto del estado `ActivityStates.Executing` . En [para crear el perfil de seguimiento y registrar el participante de seguimiento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), se crea un perfil de seguimiento que especifica que solo `WriteLine` `ActivityStates.Executing` se emiten los registros de seguimiento.  
+     Cuando no se especifica ningún perfil de seguimiento, se usa el perfil de seguimiento predeterminado. Cuando se usa el perfil de seguimiento predeterminado, los registros de seguimiento se emiten para todos `ActivityStates`. Dado que solo debemos capturar el texto una vez durante el ciclo de vida de la actividad `WriteLine` , solo extraemos el texto del estado `ActivityStates.Executing` . En [para crear el perfil de seguimiento y registrar el participante de seguimiento](#to-create-the-tracking-profile-and-register-the-tracking-participant), se crea un perfil de seguimiento que especifica que solo `WriteLine` `ActivityStates.Executing` se emiten los registros de seguimiento.  
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>Para crear el perfil de seguimiento y registrar el participante de seguimiento  
   

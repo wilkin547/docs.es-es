@@ -2,12 +2,12 @@
 title: '&lt;serviceAuthenticationManager&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 34c50e0e8c259190d3f66aa7ad1369befc629d44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3456ffa952372b014d579b5c420f7c44222fdad5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154089"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145359"
 ---
 # <a name="ltserviceauthenticationmanagergt"></a>&lt;serviceAuthenticationManager&gt;
 Proporciona un elemento de configuración del flujo de trabajo que establece la validez de una transmisión, un mensaje o un autor en el nivel del servicio.  
@@ -27,7 +27,7 @@ Proporciona un elemento de configuración del flujo de trabajo que establece la 
       <serviceAuthenticationManager serviceAuthenticationManagerType="String" />
     </behavior>
   </serviceBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
