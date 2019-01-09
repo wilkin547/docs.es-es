@@ -1,64 +1,64 @@
 ---
-title: '&lt;Personalizado&gt;'
+title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1978c898039a6ff9ab3303427951c214cde96e24
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838966"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145762"
 ---
-# <a name="ltcustomgt"></a><span data-ttu-id="5455a-102">&lt;Personalizado&gt;</span><span class="sxs-lookup"><span data-stu-id="5455a-102">&lt;custom&gt;</span></span>
-<span data-ttu-id="5455a-103">Especifica la configuración concreta para un servicio de resolución del mismo nivel personalizado.</span><span class="sxs-lookup"><span data-stu-id="5455a-103">Specifies settings for a custom peer resolver service.</span></span>  
+# <a name="ltcustomgt"></a><span data-ttu-id="ff940-102">&lt;custom&gt;</span><span class="sxs-lookup"><span data-stu-id="ff940-102">&lt;custom&gt;</span></span>
+<span data-ttu-id="ff940-103">Especifica la configuración concreta para un servicio de resolución del mismo nivel personalizado.</span><span class="sxs-lookup"><span data-stu-id="ff940-103">Specifies settings for a custom peer resolver service.</span></span>  
   
-<span data-ttu-id="5455a-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="5455a-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="5455a-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="5455a-105">\<bindings></span></span>  
-<span data-ttu-id="5455a-106">\<netPeerBinding ></span><span class="sxs-lookup"><span data-stu-id="5455a-106">\<netPeerBinding></span></span>  
-<span data-ttu-id="5455a-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="5455a-107">\<binding></span></span>  
-<span data-ttu-id="5455a-108">\<resolución ></span><span class="sxs-lookup"><span data-stu-id="5455a-108">\<resolver></span></span>  
-<span data-ttu-id="5455a-109">\<personalizado ></span><span class="sxs-lookup"><span data-stu-id="5455a-109">\<custom></span></span>  
+<span data-ttu-id="ff940-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="ff940-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="ff940-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="ff940-105">\<bindings></span></span>  
+<span data-ttu-id="ff940-106">\<netPeerBinding ></span><span class="sxs-lookup"><span data-stu-id="ff940-106">\<netPeerBinding></span></span>  
+<span data-ttu-id="ff940-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="ff940-107">\<binding></span></span>  
+<span data-ttu-id="ff940-108">\<resolución ></span><span class="sxs-lookup"><span data-stu-id="ff940-108">\<resolver></span></span>  
+<span data-ttu-id="ff940-109">\<personalizado ></span><span class="sxs-lookup"><span data-stu-id="ff940-109">\<custom></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5455a-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5455a-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ff940-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ff940-110">Syntax</span></span>  
   
-```xml
-<custom address="Uri" 
-        resolverType="String">  
-  <headers/>  
-  <identity/>  
-</custom>  
+```xml  
+<custom address="Uri"
+        resolverType="String">
+  <headers/>
+  <identity/>
+</custom>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5455a-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="5455a-111">Attributes and Elements</span></span>  
- <span data-ttu-id="5455a-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="5455a-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ff940-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="ff940-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="ff940-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="ff940-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5455a-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="5455a-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ff940-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="ff940-113">Attributes</span></span>  
   
-|<span data-ttu-id="5455a-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="5455a-114">Attribute</span></span>|<span data-ttu-id="5455a-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="5455a-115">Description</span></span>|  
+|<span data-ttu-id="ff940-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="ff940-114">Attribute</span></span>|<span data-ttu-id="ff940-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="ff940-115">Description</span></span>|  
 |---------------|-----------------|  
-|`address`|<span data-ttu-id="5455a-116">Un URI que especifica la dirección de extremo del nodo de iguales que hospeda el servicio de resolución del mismo nivel personalizado.</span><span class="sxs-lookup"><span data-stu-id="5455a-116">A URI that specifies the endpoint address of the peer node that hosts the custom peer resolver service.</span></span>|  
-|`resolverType`|<span data-ttu-id="5455a-117">Una cadena que especifica el tipo de servicio de resolución del mismo nivel personalizado.</span><span class="sxs-lookup"><span data-stu-id="5455a-117">A string that specifies the type of the custom peer resolver service.</span></span>|  
+|`address`|<span data-ttu-id="ff940-116">Un URI que especifica la dirección de extremo del nodo de iguales que hospeda el servicio de resolución del mismo nivel personalizado.</span><span class="sxs-lookup"><span data-stu-id="ff940-116">A URI that specifies the endpoint address of the peer node that hosts the custom peer resolver service.</span></span>|  
+|`resolverType`|<span data-ttu-id="ff940-117">Una cadena que especifica el tipo de servicio de resolución del mismo nivel personalizado.</span><span class="sxs-lookup"><span data-stu-id="ff940-117">A string that specifies the type of the custom peer resolver service.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="5455a-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="5455a-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ff940-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="ff940-118">Child Elements</span></span>  
   
-|<span data-ttu-id="5455a-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="5455a-119">Element</span></span>|<span data-ttu-id="5455a-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="5455a-120">Description</span></span>|  
+|<span data-ttu-id="ff940-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="ff940-119">Element</span></span>|<span data-ttu-id="ff940-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="ff940-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5455a-121">\<identidad ></span><span class="sxs-lookup"><span data-stu-id="5455a-121">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="5455a-122">Especifica la identidad para las resoluciones del mismo nivel personalizadas configuradas con este elemento.</span><span class="sxs-lookup"><span data-stu-id="5455a-122">Specifies the identity for custom peer resolvers configured with this element.</span></span> <span data-ttu-id="5455a-123">Este elemento es del tipo <xref:System.ServiceModel.Configuration.IdentityElement>.</span><span class="sxs-lookup"><span data-stu-id="5455a-123">This element is of type <xref:System.ServiceModel.Configuration.IdentityElement>.</span></span>|  
-|[<span data-ttu-id="5455a-124">\<encabezados ></span><span class="sxs-lookup"><span data-stu-id="5455a-124">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="5455a-125">Una colección de encabezado de dirección usada para mensajes SOAP administrados por la resolución del mismo nivel personalizada.</span><span class="sxs-lookup"><span data-stu-id="5455a-125">A collection of address header used for SOAP messages handled by the custom peer resolver.</span></span>|  
+|[<span data-ttu-id="ff940-121">\<identidad ></span><span class="sxs-lookup"><span data-stu-id="ff940-121">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="ff940-122">Especifica la identidad para las resoluciones del mismo nivel personalizadas configuradas con este elemento.</span><span class="sxs-lookup"><span data-stu-id="ff940-122">Specifies the identity for custom peer resolvers configured with this element.</span></span> <span data-ttu-id="ff940-123">Este elemento es del tipo <xref:System.ServiceModel.Configuration.IdentityElement>.</span><span class="sxs-lookup"><span data-stu-id="ff940-123">This element is of type <xref:System.ServiceModel.Configuration.IdentityElement>.</span></span>|  
+|[<span data-ttu-id="ff940-124">\<encabezados ></span><span class="sxs-lookup"><span data-stu-id="ff940-124">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="ff940-125">Una colección de encabezado de dirección usada para mensajes SOAP administrados por la resolución del mismo nivel personalizada.</span><span class="sxs-lookup"><span data-stu-id="ff940-125">A collection of address header used for SOAP messages handled by the custom peer resolver.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="5455a-126">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="5455a-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ff940-126">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="ff940-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="5455a-127">Elemento</span><span class="sxs-lookup"><span data-stu-id="5455a-127">Element</span></span>|<span data-ttu-id="5455a-128">Descripción</span><span class="sxs-lookup"><span data-stu-id="5455a-128">Description</span></span>|  
+|<span data-ttu-id="ff940-127">Elemento</span><span class="sxs-lookup"><span data-stu-id="ff940-127">Element</span></span>|<span data-ttu-id="ff940-128">Descripción</span><span class="sxs-lookup"><span data-stu-id="ff940-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5455a-129">\<resolución ></span><span class="sxs-lookup"><span data-stu-id="5455a-129">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="5455a-130">Una resolución del mismo nivel que se usa para resolver un Id. de malla del mismo nivel como un conjunto de direcciones del nodo del mismo nivel que representa varios nodos que participan en la malla.</span><span class="sxs-lookup"><span data-stu-id="5455a-130">A peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>|  
+|[<span data-ttu-id="ff940-129">\<resolución ></span><span class="sxs-lookup"><span data-stu-id="ff940-129">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="ff940-130">Una resolución del mismo nivel que se usa para resolver un Id. de malla del mismo nivel como un conjunto de direcciones del nodo del mismo nivel que representa varios nodos que participan en la malla.</span><span class="sxs-lookup"><span data-stu-id="ff940-130">A peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5455a-131">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5455a-131">Remarks</span></span>  
- <span data-ttu-id="5455a-132">Este elemento define la configuración básica para un servicio de la resolución del mismo nivel personalizado, incluso la dirección de punto de conexión del igual que hospeda el servicio y cualquier configuración de enlace concreta.</span><span class="sxs-lookup"><span data-stu-id="5455a-132">This element defines the basic settings for a custom peer resolver service, including the endpoint address of the peer hosting the service and any specific binding settings.</span></span> <span data-ttu-id="5455a-133">Para obtener más información sobre la creación de un solucionador personalizado, consulte [agregando un solucionador personalizado a una aplicación PeerChannel](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span><span class="sxs-lookup"><span data-stu-id="5455a-133">For more information on creating a custom resolver, see [Adding a Custom Resolver to a PeerChannel Application](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ff940-131">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ff940-131">Remarks</span></span>  
+ <span data-ttu-id="ff940-132">Este elemento define la configuración básica para un servicio de la resolución del mismo nivel personalizado, incluso la dirección de punto de conexión del igual que hospeda el servicio y cualquier configuración de enlace concreta.</span><span class="sxs-lookup"><span data-stu-id="ff940-132">This element defines the basic settings for a custom peer resolver service, including the endpoint address of the peer hosting the service and any specific binding settings.</span></span> <span data-ttu-id="ff940-133">Para obtener más información sobre la creación de un solucionador personalizado, consulte [agregando un solucionador personalizado a una aplicación PeerChannel](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span><span class="sxs-lookup"><span data-stu-id="ff940-133">For more information on creating a custom resolver, see [Adding a Custom Resolver to a PeerChannel Application](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5455a-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="5455a-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ff940-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="ff940-134">See Also</span></span>  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
  <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
- [<span data-ttu-id="5455a-135">Resoluciones del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="5455a-135">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [<span data-ttu-id="5455a-136">Adición de un solucionador personalizado a una aplicación PeerChannel</span><span class="sxs-lookup"><span data-stu-id="5455a-136">Adding a Custom Resolver to a PeerChannel Application</span></span>](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [<span data-ttu-id="ff940-135">Resoluciones del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="ff940-135">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
+ [<span data-ttu-id="ff940-136">Adición de un solucionador personalizado a una aplicación PeerChannel</span><span class="sxs-lookup"><span data-stu-id="ff940-136">Adding a Custom Resolver to a PeerChannel Application</span></span>](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

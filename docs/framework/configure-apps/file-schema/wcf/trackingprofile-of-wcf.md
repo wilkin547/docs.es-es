@@ -2,44 +2,44 @@
 title: '&lt;trackingProfile&gt; de WCF'
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: bb6a99de0125100d5a604276aad82379b5ff34c4
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a50e0e566bf0f605defeb7158817b37aa8c4047d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454387"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147907"
 ---
-# <a name="lttrackingprofilegt-of-wcf"></a><span data-ttu-id="93d2e-102">&lt;trackingProfile&gt; de WCF</span><span class="sxs-lookup"><span data-stu-id="93d2e-102">&lt;trackingProfile&gt; of WCF</span></span>
-<span data-ttu-id="93d2e-103">Representa una sección de configuración para crear una suscripción a los registros en un participante de seguimiento de seguimiento del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93d2e-103">Represents a configuration section for creating a subscription to workflow tracking records in a tracking participant.</span></span> <span data-ttu-id="93d2e-104">Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="93d2e-104">A tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="93d2e-105">Las consultas definidas dentro de la sección de perfil de seguimiento definen los tipos de eventos que devuelve la suscripción.</span><span class="sxs-lookup"><span data-stu-id="93d2e-105">The queries defined within the tracking profile section define the kinds of events that are returned by the subscription.</span></span>  
+# <a name="lttrackingprofilegt-of-wcf"></a><span data-ttu-id="5284f-102">&lt;trackingProfile&gt; de WCF</span><span class="sxs-lookup"><span data-stu-id="5284f-102">&lt;trackingProfile&gt; of WCF</span></span>
+<span data-ttu-id="5284f-103">Representa una sección de configuración para crear una suscripción a los registros en un participante de seguimiento de seguimiento del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5284f-103">Represents a configuration section for creating a subscription to workflow tracking records in a tracking participant.</span></span> <span data-ttu-id="5284f-104">Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="5284f-104">A tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="5284f-105">Las consultas definidas dentro de la sección de perfil de seguimiento definen los tipos de eventos que devuelve la suscripción.</span><span class="sxs-lookup"><span data-stu-id="5284f-105">The queries defined within the tracking profile section define the kinds of events that are returned by the subscription.</span></span>  
   
- <span data-ttu-id="93d2e-106">Para obtener más información del seguimiento de flujo de trabajo y su configuración, consulte [seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="93d2e-106">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="5284f-106">Para obtener más información del seguimiento de flujo de trabajo y su configuración, consulte [seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="5284f-106">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
- <span data-ttu-id="93d2e-107">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="93d2e-107">\<system.serviceModel></span></span>  
-<span data-ttu-id="93d2e-108">\<seguimiento ></span><span class="sxs-lookup"><span data-stu-id="93d2e-108">\<tracking></span></span>  
-<span data-ttu-id="93d2e-109">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="93d2e-109">\<trackingProfile></span></span>  
+ <span data-ttu-id="5284f-107">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="5284f-107">\<system.serviceModel></span></span>  
+<span data-ttu-id="5284f-108">\<seguimiento ></span><span class="sxs-lookup"><span data-stu-id="5284f-108">\<tracking></span></span>  
+<span data-ttu-id="5284f-109">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="5284f-109">\<trackingProfile></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93d2e-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="93d2e-110">Syntax</span></span>  
-
-```xml
+## <a name="syntax"></a><span data-ttu-id="5284f-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5284f-110">Syntax</span></span>  
+  
+```xml  
 <system.serviceModel>
   <tracking>
     <profiles>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String" />
           </activityScheduledQueries>
           <activityStateQueries>
             <activityStateQuery activityName="String">
               <arguments>
-                <argument name="String"/>
+                <argument name="String" />
               </arguments>
               <states>
-                <state name="String"/>
+                <state name="String" />
               </states>
               <variables>
-                <variable name="String"/>
+                <variable name="String" />
               </variables>
             </activityStateQuery>
           </activityStateQueries>
@@ -47,16 +47,16 @@ ms.locfileid: "49454387"
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestedQueries>
-            <cancelRequestedQuery activityName="String" 
-                                childActivityName="String"/>
+            <cancelRequestedQuery activityName="String"
+                                  childActivityName="String" />
           </cancelRequestedQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
-                                 name="String"/>
+            <customTrackingQuery activityName="String"
+                                 name="String" />
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery faultSourceActivityName="String" 
-                                   faultHandlerActivityName="String"/>
+            <faultPropagationQuery faultSourceActivityName="String"
+                                   faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <stateMachineStateQueries>
             <stateMachineStateQuery activityName="String" />
@@ -75,36 +75,36 @@ ms.locfileid: "49454387"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="93d2e-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="93d2e-111">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5284f-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="5284f-111">Attributes and Elements</span></span>  
 
-<span data-ttu-id="93d2e-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="93d2e-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="5284f-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="5284f-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="93d2e-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="93d2e-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5284f-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="5284f-113">Attributes</span></span>  
   
-|<span data-ttu-id="93d2e-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="93d2e-114">Attribute</span></span>|<span data-ttu-id="93d2e-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="93d2e-115">Description</span></span>|  
+|<span data-ttu-id="5284f-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="5284f-114">Attribute</span></span>|<span data-ttu-id="5284f-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="5284f-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="93d2e-116">name</span><span class="sxs-lookup"><span data-stu-id="93d2e-116">name</span></span>|<span data-ttu-id="93d2e-117">Una cadena que especifica el nombre de un perfil de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="93d2e-117">A string that specifies the name of the tracking profile.</span></span>|  
+|<span data-ttu-id="5284f-116">name</span><span class="sxs-lookup"><span data-stu-id="5284f-116">name</span></span>|<span data-ttu-id="5284f-117">Una cadena que especifica el nombre de un perfil de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="5284f-117">A string that specifies the name of the tracking profile.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="93d2e-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="93d2e-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5284f-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="5284f-118">Child Elements</span></span>  
   
-|<span data-ttu-id="93d2e-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="93d2e-119">Element</span></span>|<span data-ttu-id="93d2e-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="93d2e-120">Description</span></span>|  
+|<span data-ttu-id="5284f-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="5284f-119">Element</span></span>|<span data-ttu-id="5284f-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="5284f-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="93d2e-121">\<los participantes ></span><span class="sxs-lookup"><span data-stu-id="93d2e-121">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="93d2e-122">Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="93d2e-122">A configuration element that contains all queries for a specific workflow identified by the <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType> property.</span></span>|  
+|[<span data-ttu-id="5284f-121">\<los participantes ></span><span class="sxs-lookup"><span data-stu-id="5284f-121">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="5284f-122">Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5284f-122">A configuration element that contains all queries for a specific workflow identified by the <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType> property.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="93d2e-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="93d2e-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5284f-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="5284f-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="93d2e-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="93d2e-124">Element</span></span>|<span data-ttu-id="93d2e-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="93d2e-125">Description</span></span>|  
+|<span data-ttu-id="5284f-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="5284f-124">Element</span></span>|<span data-ttu-id="5284f-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="5284f-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="93d2e-126">\<seguimiento ></span><span class="sxs-lookup"><span data-stu-id="93d2e-126">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="93d2e-127">Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93d2e-127">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
+|[<span data-ttu-id="5284f-126">\<seguimiento ></span><span class="sxs-lookup"><span data-stu-id="5284f-126">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="5284f-127">Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5284f-127">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="93d2e-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="93d2e-128">Remarks</span></span>  
- <span data-ttu-id="93d2e-129">Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="93d2e-129">Tracking profiles contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="93d2e-130">Dependiendo de sus requisitos de supervisión, puede escribir un perfil muy general que se suscribe a un conjunto pequeño de cambios de estado de alto nivel en un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93d2e-130">Depending on your monitoring requirements you may write a profile that is very coarse, which subscribes to a small set of high-level state changes on a workflow.</span></span> <span data-ttu-id="93d2e-131">A la inversa, puede crear un perfil específico cuyos eventos resultantes estén lo suficientemente enriquecidos para reconstruir un flujo de ejecución detallado posteriormente.</span><span class="sxs-lookup"><span data-stu-id="93d2e-131">Conversely, you may create a very specific profile whose resulting events are rich enough to reconstruct a detailed execution flow later.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5284f-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5284f-128">Remarks</span></span>  
+ <span data-ttu-id="5284f-129">Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="5284f-129">Tracking profiles contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="5284f-130">Dependiendo de sus requisitos de supervisión, puede escribir un perfil muy general que se suscribe a un conjunto pequeño de cambios de estado de alto nivel en un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5284f-130">Depending on your monitoring requirements you may write a profile that is very coarse, which subscribes to a small set of high-level state changes on a workflow.</span></span> <span data-ttu-id="5284f-131">A la inversa, puede crear un perfil específico cuyos eventos resultantes estén lo suficientemente enriquecidos para reconstruir un flujo de ejecución detallado posteriormente.</span><span class="sxs-lookup"><span data-stu-id="5284f-131">Conversely, you may create a very specific profile whose resulting events are rich enough to reconstruct a detailed execution flow later.</span></span>  
   
- <span data-ttu-id="93d2e-132">Los perfiles de seguimiento se estructuran como suscripciones declarativas para los registros de seguimiento que le permiten consultar el tiempo de ejecución de flujo de trabajo para registros de seguimiento específicos.</span><span class="sxs-lookup"><span data-stu-id="93d2e-132">Tracking profiles are structured as declarative subscriptions for tracking records that allow you to query the workflow runtime for specific tracking records.</span></span> <span data-ttu-id="93d2e-133">Hay una serie de tipos de consultas que le permiten suscribirse a las distintas clases de <xref:System.Activities.Tracking.TrackingRecord> objetos.</span><span class="sxs-lookup"><span data-stu-id="93d2e-133">There are a handful of query types that allow you subscribe to different classes of <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="93d2e-134">Para obtener una lista completa de las consultas, vea [ \<participantes >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) y [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="93d2e-134">For a complete list of queries, see [\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>
+ <span data-ttu-id="5284f-132">Los perfiles de seguimiento se estructuran como suscripciones declarativas para los registros de seguimiento que le permiten consultar el tiempo de ejecución de flujo de trabajo para registros de seguimiento específicos.</span><span class="sxs-lookup"><span data-stu-id="5284f-132">Tracking profiles are structured as declarative subscriptions for tracking records that allow you to query the workflow runtime for specific tracking records.</span></span> <span data-ttu-id="5284f-133">Hay una serie de tipos de consultas que le permiten suscribirse a las distintas clases de <xref:System.Activities.Tracking.TrackingRecord> objetos.</span><span class="sxs-lookup"><span data-stu-id="5284f-133">There are a handful of query types that allow you subscribe to different classes of <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="5284f-134">Para obtener una lista completa de las consultas, vea [ \<participantes >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) y [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="5284f-134">For a complete list of queries, see [\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>
   
-<span data-ttu-id="93d2e-135">El ejemplo siguiente muestra un perfil de seguimiento en un archivo de configuración que permite a un participante de seguimiento para suscribirse a la `Started` y `Completed` eventos de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="93d2e-135">The following example shows a tracking profile in a configuration file that allows a tracking participant to subscribe to the `Started` and `Completed` workflow events.</span></span>  
+<span data-ttu-id="5284f-135">El ejemplo siguiente muestra un perfil de seguimiento en un archivo de configuración que permite a un participante de seguimiento para suscribirse a la `Started` y `Completed` eventos de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5284f-135">The following example shows a tracking profile in a configuration file that allows a tracking participant to subscribe to the `Started` and `Completed` workflow events.</span></span>  
   
-```xml
+```xml  
 <system.serviceModel>
   <tracking>
     <profiles>
@@ -113,8 +113,8 @@ ms.locfileid: "49454387"
           <workflowInstanceQueries>
             <workflowInstanceQuery>
               <states>
-                <state name="Started"/>
-                <state name="Completed"/>
+                <state name="Started" />
+                <state name="Completed" />
               </states>
             </workflowInstanceQuery>
           </workflowInstanceQueries>
@@ -125,9 +125,9 @@ ms.locfileid: "49454387"
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="93d2e-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="93d2e-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5284f-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="5284f-136">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>  
 - <xref:System.Activities.Tracking.TrackingProfile>  
-- [<span data-ttu-id="93d2e-137">Seguimiento y traza de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="93d2e-137">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
-- [<span data-ttu-id="93d2e-138">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="93d2e-138">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="5284f-137">Seguimiento y traza de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="5284f-137">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- [<span data-ttu-id="5284f-138">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="5284f-138">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
