@@ -2,12 +2,12 @@
 title: Elemento &lt;authentication&gt; de &lt;serviceCertificate&gt;
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 811d54b49d8cd4fddbf196dbb524c5d303805c4f
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 556310846f8ac307ff9c92c06784eae16937c92c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316459"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147959"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>Elemento &lt;authentication&gt; de &lt;serviceCertificate&gt;
 Especifica la configuración utilizada por el proxy del cliente para autenticar certificados del servicio que se obtienen utilizando la negociación de SSL/TLS.  
@@ -23,9 +23,10 @@ sección endpointBehaviors
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<authentication customCertificateValidatorType="String" certificateValidationMode="None/PeerTrust/ChainTrust/PeerOrChainTrust/Custom"  
-revocationMode="NoCheck/Online/Offline"   
-trustedStoreLocation="LocalMachine/CurrentUser" />  
+<authentication customCertificateValidatorType="String"
+                certificateValidationMode="None/PeerTrust/ChainTrust/PeerOrChainTrust/Custom"
+                revocationMode="NoCheck/Online/Offline"
+                trustedStoreLocation="LocalMachine/CurrentUser" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -50,19 +51,19 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Uno de los valores siguientes: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Enumeración|Uno de los siguientes valores: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>Atributo revocationMode  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Uno de los valores siguientes: NoCheck, Online, Offline.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Enumeración|Uno de los siguientes valores: NoCheck, Online, Offline.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>Atributo trustedStoreLocation  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Uno de los valores siguientes: LocalMachine o CurrentUser. El valor predeterminado es CurrentUser. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente en LocalMachine. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en CurrentUser.|  
+|Enumeración|Uno de los siguientes valores: LocalMachine o CurrentUser. El valor predeterminado es CurrentUser. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente en LocalMachine. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en CurrentUser.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -74,7 +75,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
- El atributo `certificateValidationMode` de este elemento de configuración especifica el nivel de confianza utilizado para autenticar certificados. De forma predeterminada, el nivel se establece en `ChainTrust`, que especifica que cada certificado debe encontrarse en una jerarquía de certificados que finalizan en una entidad emisora de certificados de confianza en la parte superior de la cadena. Este es el modo más seguro. También puede establecer el valor en `PeerOrChainTrust`, que especifica que los certificados autoemitidos (confianza del mismo nivel) se aceptan, así como los certificados que están en una cadena de confianza. Se utiliza este valor cuando se desarrollan y depuran clientes y servicios porque los certificados autoemitidos no necesitan adquirirse desde una autoridad de confianza. Al implementar un cliente, utilice en su lugar el valor `ChainTrust`. También puede establecer el valor como `Custom` o `None`. Para utilizar el valor `Custom`, también debe establecer el atributo `customCertificateValidator` en un ensamblado y tipo utilizado para validar el certificado. Para crear su propio validador personalizado, debe heredar a partir de la clase abstracta X509CertificateValidator. Para obtener más información, consulte [Cómo: crear un servicio que emplee un validador de certificado personalizada](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ El atributo `certificateValidationMode` de este elemento de configuración especifica el nivel de confianza utilizado para autenticar certificados. De forma predeterminada, el nivel se establece en `ChainTrust`, que especifica que cada certificado debe encontrarse en una jerarquía de certificados que finalizan en una entidad emisora de certificados de confianza en la parte superior de la cadena. Este es el modo más seguro. También puede establecer el valor en `PeerOrChainTrust`, que especifica que los certificados autoemitidos (confianza del mismo nivel) se aceptan, así como los certificados que están en una cadena de confianza. Se utiliza este valor cuando se desarrollan y depuran clientes y servicios porque los certificados autoemitidos no necesitan adquirirse desde una autoridad de confianza. Al implementar un cliente, utilice en su lugar el valor `ChainTrust`. También puede establecer el valor como `Custom` o `None`. Para utilizar el valor `Custom`, también debe establecer el atributo `customCertificateValidator` en un ensamblado y tipo utilizado para validar el certificado. Para crear su propio validador personalizado, debe heredar a partir de la clase abstracta X509CertificateValidator. Para obtener más información, vea [Cómo: Crear un servicio que emplee un validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
  El atributo `revocationMode` especifica cómo se comprueba la revocación de los certificados. El valor predeterminado es `online` que indica que se comprobará automáticamente la revocación de los certificados. Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -82,19 +83,21 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  El siguiente ejemplo realiza dos tareas: Primero especifica un certificado de servicio para el cliente que se usará al comunicarse con puntos de conexión cuyo nombre de dominio es `www.contoso.com` a través del protocolo HTTP. En segundo lugar, especifica el modo de revocación y ubicación del almacén utilizado durante la autenticación.  
   
 ```xml  
-<serviceCertificate>  
-  <defaultCertificate findValue="www.contoso.com"   
-                      storeLocation="LocalMachine"  
-                      storeName="TrustedPeople"   
-                      x509FindType="FindByIssuerDistinguishedName" />  
-  <scopedCertificates>  
-     <add targetUri="http://www.contoso.com"   
-          findValue="www.contoso.com" storeLocation="LocalMachine"  
-                  storeName="Root" x509FindType="FindByIssuerName" />  
-  </scopedCertificates>  
-  <authentication revocationMode="Online"   
-   trustedStoreLocation="LocalMachine" />  
-</serviceCertificate>  
+<serviceCertificate>
+  <defaultCertificate findValue="www.contoso.com"
+                      storeLocation="LocalMachine"
+                      storeName="TrustedPeople"
+                      x509FindType="FindByIssuerDistinguishedName" />
+  <scopedCertificates>
+     <add targetUri="http://www.contoso.com"
+          findValue="www.contoso.com"
+          storeLocation="LocalMachine"
+          storeName="Root"
+          x509FindType="FindByIssuerName" />
+  </scopedCertificates>
+  <authentication revocationMode="Online"
+                  trustedStoreLocation="LocalMachine" />
+</serviceCertificate>
 ```  
   
 ## <a name="see-also"></a>Vea también  
@@ -104,7 +107,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>  
  [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Creación de un servicio que emplee un validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [Cómo: Crear un servicio que emplee un validador de certificado personalizada](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
  [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)  
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

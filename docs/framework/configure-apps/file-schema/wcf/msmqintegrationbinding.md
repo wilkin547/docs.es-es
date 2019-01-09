@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 1493cb6f9588ee618b085186b3bb63476a9a8930
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 09ac3fe2ea86745b9c88ffe9ec999a4978b343fe
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841023"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145901"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;MsmqIntegrationBinding&gt;
 Define un enlace que proporciona la compatibilidad de uso de colas enrutando los mensajes a través de MSMQ.  
@@ -21,28 +21,28 @@ msmqIntegrationBinding
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<msmqIntegrationBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       customDeadLetterQueue="Uri"  
-       deadLetterQueue="Uri"  
-       durable="Boolean"  
-       exactlyOnce="Boolean"   
-       maxReceivedMessageSize"Integer"  
-       maxRetryCycles="Integer"   
-       name="string"   
-       openTimeout="TimeSpan"        receiveContextEnabled="Boolean"  
-       receiveErrorHandling="Drop/Fault/Move/Reject"  
-       receiveTimeout="TimeSpan"   
-       receiveRetryCount="Integer"  
-       retryCycleDelay="TimeSpan"    
-       sendTimeout="TimeSpan"   
-       serializationFormat="XML/Binary/ActiveX/ByteArray/Stream">  
-       timeToLive="TimeSpan"    
-       useMsmqTracing="Boolean  
-       useSourceJournal="Boolean"  
-   </binding>  
-</msmqIntegrationBinding>   
+<msmqIntegrationBinding>
+  <binding closeTimeout="TimeSpan"
+           customDeadLetterQueue="Uri"
+           deadLetterQueue="Uri"
+           durable="Boolean"
+           exactlyOnce="Boolean"
+           maxReceivedMessageSize="Integer"
+           maxRetryCycles="Integer"
+           name="String"
+           openTimeout="TimeSpan"
+           receiveContextEnabled="Boolean"
+           receiveErrorHandling="Drop/Fault/Move/Reject"
+           receiveTimeout="TimeSpan"
+           receiveRetryCount="Integer"
+           retryCycleDelay="TimeSpan"
+           sendTimeout="TimeSpan"
+           serializationFormat="XML/Binary/ActiveX/ByteArray/Stream"
+           timeToLive="TimeSpan"
+           useMsmqTracing="Boolean"
+           useSourceJournal="Boolean">
+  </binding>
+</msmqIntegrationBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -95,39 +95,38 @@ msmqIntegrationBinding
 |[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento de enlace puede utilizarse para habilitar aplicaciones de Windows Communication Foundation (WCF) enviar y recibir mensajes desde aplicaciones MSMQ existentes que utilicen COM, API nativas de MSMQ o los tipos definidos en el <xref:System.Messaging?displayProperty=nameWithType> espacio de nombres Puede usar este elemento de configuración para especificar cómo direccionar la cola, las garantías de transferencia, si los mensajes deben estar almacenados duraderamente y cómo deben proteger y autenticar mensajes. Para obtener más información, consulte [Cómo: los mensajes de Exchange con extremos de WCF y las aplicaciones de Message Queue Server](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+ Este elemento de enlace puede utilizarse para habilitar aplicaciones de Windows Communication Foundation (WCF) enviar y recibir mensajes desde aplicaciones MSMQ existentes que utilicen COM, API nativas de MSMQ o los tipos definidos en el <xref:System.Messaging?displayProperty=nameWithType> espacio de nombres Puede usar este elemento de configuración para especificar cómo direccionar la cola, las garantías de transferencia, si los mensajes deben estar almacenados duraderamente y cómo deben proteger y autenticar mensajes. Para obtener más información, vea [Cómo: Intercambiar mensajes con puntos de conexión WCF y aplicaciones de Message Queuing](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 ## <a name="example"></a>Ejemplo  
   
 ```xml  
-<configuration>  
-<system.ServiceModel>  
-    <bindings>  
-       <msmqIntegrationBinding>  
-           <binding   
-                    closeTimeout="00:00:10"   
-                    openTimeout="00:00:20"   
-                    receiveTimeout="00:00:30"   
-                    sendTimeout="00:00:40"   
-                    deadLetterQueue="net.msmq://localhost/blah"   
-                    durable="true"   
-                    exactlyOnce="true"   
-                    maxReceivedMessageSize="1000"   
-                    maxImmediateRetries="11"   
-                    maxRetryCycles="12"  
-                    poisonMessageHandling="Disabled"   
-                    rejectAfterLastRetry="false"   
-                    retryCycleDelay="00:05:55"   
-                    timeToLive="00:11:11"   
-                    useSourceJournal="true"   
-                    useMsmqTracing="true"   
-                    serializationFormat="Binary">  
-                    <security mode="None" />  
-           </binding>  
-       </msmqIntegrationBinding  
-   </bindings>  
-</system.ServiceModel>  
-</configuration>  
+<configuration>
+  <system.ServiceModel>
+    <bindings>
+      <msmqIntegrationBinding>
+        <binding closeTimeout="00:00:10"
+                 openTimeout="00:00:20"
+                 receiveTimeout="00:00:30"
+                 sendTimeout="00:00:40"
+                 deadLetterQueue="net.msmq://localhost/blah"
+                 durable="true"
+                 exactlyOnce="true"
+                 maxReceivedMessageSize="1000"
+                 maxImmediateRetries="11"
+                 maxRetryCycles="12"
+                 poisonMessageHandling="Disabled"
+                 rejectAfterLastRetry="false"
+                 retryCycleDelay="00:05:55"
+                 timeToLive="00:11:11"
+                 useSourceJournal="true"
+                 useMsmqTracing="true"
+                 serializationFormat="Binary">
+          <security mode="None" />
+        </binding>
+      </msmqIntegrationBinding>
+    </bindings>
+  </system.ServiceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Vea también  

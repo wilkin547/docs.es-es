@@ -1,15 +1,15 @@
 ---
-title: '&lt;dynamicEndpoint&gt;'
+title: '&lt;DynamicEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: 215bc9d8540b2d782a0c63f2f5be96f6fcde6812
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78ec2d4639161f8e10105f205576f052c8a5567c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746766"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146841"
 ---
-# <a name="ltdynamicendpointgt"></a>&lt;dynamicEndpoint&gt;
+# <a name="ltdynamicendpointgt"></a>&lt;DynamicEndpoint&gt;
 Este elemento de configuración define un punto de conexión estándar que contiene información para permitir que una aplicación funcione como un programa cliente que pueda buscar la dirección del punto de conexión dinámicamente en tiempo de ejecución.  
   
 \<system.ServiceModel>  
@@ -18,27 +18,28 @@ Este elemento de configuración define un punto de conexión estándar que conti
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <dynamicEndpoint>
       <standardEndpoint>
-      <discoveryClientSettings discoveryEndpoint="String">
-        <findCriteria duration="TimeSpan" 
-                      maxResults="Integer" 
-                      scopeMatchBy="Uri">
-          <contractTypeNames>
-            <add name="String" namespace="String" />
-          <contractTypeNames>
-          <extensions />
-          <scopes>
-            <add scope="URI" />
-          </scopes>
-        </findCriteria>
-      </discoveryClientSettings>
+        <discoveryClientSettings discoveryEndpoint="String">
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
+                        scopeMatchBy="Uri">
+            <contractTypeNames>
+              <add name="String"
+                   namespace="String" />
+            <contractTypeNames>
+            <extensions />
+            <scopes>
+              <add scope="URI" />
+            </scopes>
+          </findCriteria>
+        </discoveryClientSettings>
       <standardEndpoint>
     </dynamicEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

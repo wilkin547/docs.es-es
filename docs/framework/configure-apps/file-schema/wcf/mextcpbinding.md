@@ -2,12 +2,12 @@
 title: '&lt;mexTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: dbe9e6c3b7a515ee4b5bb147f973423df0f175ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a69f0af60d3f6723285ceb239a86775c9a1b510f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187704"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147179"
 ---
 # <a name="ltmextcpbindinggt"></a>&lt;mexTcpBinding&gt;
 Especifica los valores para un enlace utilizado para el intercambio de mensajes de WS-MetadataExchange (WS-MEX) sobre TCP.  
@@ -19,15 +19,14 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<mexTcpBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       name="string"   
-       openTimeout="TimeSpan"   
-       receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan">  
-   </binding>  
-</mexTcpBinding>  
+<mexTcpBinding>
+  <binding closeTimeout="TimeSpan"
+           name="string"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan">
+  </binding>
+</mexTcpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -55,7 +54,7 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.MexTcpBindingElement>  
  <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>  
- [Publicación de metadatos para un servicio mediante un archivo de configuración](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [Publicación y recuperación de metadatos a través de un enlace personalizado](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
  [Metadatos](../../../../../docs/framework/wcf/feature-details/metadata.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  

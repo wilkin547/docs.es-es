@@ -2,12 +2,12 @@
 title: '&lt;bindingExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: f99b38ede66dbecb44f9e8e67f921943071672ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c2b097926ac21dda6a86e1e21958e15c9b63b1c4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750780"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148440"
 ---
 # <a name="ltbindingextensionsgt"></a>&lt;bindingExtensions&gt;
 En esta sección se habilita el uso de un enlace definido por el usuario desde un equipo o archivo de configuración de la aplicación. Puede agregar un enlace definido por el usuario a esta colección utilizando la palabra clave `add` y estableciendo el atributo de `type` del elemento en un enlace definido por el usuario, así como el atributo de `name` al nombre del enlace definido por el usuario.  
@@ -17,14 +17,15 @@ En esta sección se habilita el uso de un enlace definido por el usuario desde u
  El ejemplo siguiente utiliza el elemento `add`, así como el atributo de `name` para agregar una extensión obligatoria a la sección `bindingElementExtensions` del archivo de configuración.  
   
 ```xml  
-<system.serviceModel>  
-    <extensions>  
-        <bindingExtensions>  
-           <add name="MyBinding" type="Microsoft.ServiceModel.Samples.MyBinding, MyBinding,  
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-        </bindingExtensions>  
-    </extensions>  
-</system.serviceModel>  
+<system.serviceModel>
+  <extensions>
+    <bindingExtensions>
+      <add name="MyBinding"
+           type="Microsoft.ServiceModel.Samples.MyBinding, MyBinding,
+                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bindingExtensions>
+  </extensions>
+</system.serviceModel>
 ```  
   
  Para agregar las capacidad de configuración al elemento, las necesidades de usuario de escribir y registrar un elemento `bindingSection`. Para obtener más información, consulte la documentación existente sobre <xref:System.Configuration>.  
@@ -32,11 +33,12 @@ En esta sección se habilita el uso de un enlace definido por el usuario desde u
  Después de la definición del elemento y de su tipo de configuración, se puede utilizar la extensión como parte del punto de conexión como se muestra en el ejemplo siguiente.  
   
 ```xml  
-<services>  
-    <service name="MyService">  
-        <endpoint address="myAddress" binding="MyBinding" />  
-    </service>  
-</services>  
+<services>
+  <service name="MyService">
+    <endpoint address="myAddress"
+              binding="MyBinding" />
+  </service>
+</services>
 ```  
   
 ## <a name="see-also"></a>Vea también  

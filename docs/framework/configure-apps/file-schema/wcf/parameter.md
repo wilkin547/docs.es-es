@@ -2,12 +2,12 @@
 title: '&lt;Parámetro&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: b9cccfe37e7658afbf2e49555e6c505497598fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82a2f5c46c698508695fe5f13f67059860a50713
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754059"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148297"
 ---
 # <a name="ltparametergt"></a>&lt;Parámetro&gt;
 Especifica el parámetro genérico cuando el tipo declarado es un tipo genérico.  
@@ -15,15 +15,15 @@ Especifica el parámetro genérico cuando el tipo declarado es un tipo genérico
  \<System.Runtime.Serialization >  
 \<dataContractSerializer >  
 \<declaredTypes > elemento  
-\<Agregar > (elemento) para \<declaredTypes >  
+\<Agregar > elemento para \<declaredTypes >  
 \<knownType > elemento  
 \<parámetro > elemento  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<parameter index="integer"  
-                      type=String" />  
+<parameter index="Integer"
+           type="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -53,7 +53,7 @@ Especifica el parámetro genérico cuando el tipo declarado es un tipo genérico
 |[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Especifica un tipo conocido que un campo o propiedad de un tipo declarado puede devolver.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información sobre los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) y <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Para obtener más información sobre los tipos conocidos, consulte [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) y <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  Consulte la [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) para obtener un ejemplo del uso de este elemento.  
   

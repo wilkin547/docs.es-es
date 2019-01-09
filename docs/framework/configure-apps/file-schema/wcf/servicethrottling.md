@@ -2,12 +2,12 @@
 title: '&lt;serviceThrottling&gt;'
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: b0f5197bf4e9017007f29f86048756b43e3b15fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 000124c8d0dda81f99668cd330f7cc97c2520464
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750172"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145268"
 ---
 # <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
 Especifica el mecanismo de limitación de peticiones de un servicio de Windows Communication Foundation (WCF).  
@@ -21,9 +21,9 @@ Especifica el mecanismo de limitación de peticiones de un servicio de Windows C
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<serviceThrottling maxConcurrentCalls="Integer"  
-    maxConcurrentInstances="Integer"  
-    maxConcurrentSessions="Integer" />  
+<serviceThrottling maxConcurrentCalls="Integer"
+                   maxConcurrentInstances="Integer"
+                   maxConcurrentSessions="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -55,17 +55,17 @@ Especifica el mecanismo de limitación de peticiones de un servicio de Windows C
  El ejemplo de configuración siguiente especifica que el servicio limita el máximo de llamadas simultáneas a 2, y el número máximo de instancias simultáneas a 10. Para obtener un ejemplo detallado de la ejecución de este ejemplo, vea [limitación](../../../../../docs/framework/wcf/samples/throttling.md).  
   
 ```xml  
-<behaviors>   
-  <serviceBehaviors>   
-    <behavior name="CalculatorServiceBehavior">   
-      <serviceDebug includeExceptionDetailInFaults="False" />   
-      <serviceMetadata httpGetEnabled="True"/>   
-      <!-- Specify throttling behavior -->  
-      <serviceThrottling maxConcurrentCalls="2"   
-           maxConcurrentInstances="10"/>   
-    </behavior>  
-  </serviceBehaviors>  
-</behaviors>  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="CalculatorServiceBehavior">
+      <serviceDebug includeExceptionDetailInFaults="False" />
+      <serviceMetadata httpGetEnabled="True" />
+      <!-- Specify throttling behavior -->
+      <serviceThrottling maxConcurrentCalls="2"
+                         maxConcurrentInstances="10" />
+    </behavior>
+  </serviceBehaviors>
+</behaviors>
 ```  
   
 ## <a name="see-also"></a>Vea también  

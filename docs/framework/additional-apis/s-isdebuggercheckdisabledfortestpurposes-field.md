@@ -1,5 +1,5 @@
 ---
-title: s_isDebuggerCheckDisabledForTestPurposes campo
+title: Campo s_isDebuggerCheckDisabledForTestPurposes
 ms.date: 03/30/2017
 ms.technology:
 - dotnet-wpf
@@ -10,17 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-robots: noindex,nofollow
-ms.openlocfilehash: fbbd8d33ea163efaad1417ab4a1435df729e4897
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f490ccb4675a434e3f3336723e321f256b10093d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752213"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149181"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes campo
+# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>Campo s_isDebuggerCheckDisabledForTestPurposes
 
-Este campo privado en la `System.Windows.Diagnostics.VisualDiagnostics` clase se utiliza Visual Studio para determinar si se realizará una comprobación interna de un depurador activo.
+Este campo privado en la `System.Windows.Diagnostics.VisualDiagnostics` clase se usa Visual Studio para determinar si se realizará una comprobación interna de un depurador activo.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -35,8 +34,8 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 
 ## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Windows.Diagnostics>
+**Espacio de nombres:** <xref:System.Windows.Diagnostics>
 
 **Ensamblado:** PresentationCore (en PresentationCore.dll)
 
-**Versiones de .NET framework:** disponible desde la versión 4.6.
+**Versiones de .NET framework:** Disponible desde la versión 4.6.

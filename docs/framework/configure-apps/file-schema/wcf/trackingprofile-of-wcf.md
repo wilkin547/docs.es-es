@@ -2,12 +2,12 @@
 title: '&lt;trackingProfile&gt; de WCF'
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: bb6a99de0125100d5a604276aad82379b5ff34c4
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a50e0e566bf0f605defeb7158817b37aa8c4047d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454387"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147907"
 ---
 # <a name="lttrackingprofilegt-of-wcf"></a>&lt;trackingProfile&gt; de WCF
 Representa una sección de configuración para crear una suscripción a los registros en un participante de seguimiento de seguimiento del flujo de trabajo. Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución. Las consultas definidas dentro de la sección de perfil de seguimiento definen los tipos de eventos que devuelve la suscripción.  
@@ -19,27 +19,27 @@ Representa una sección de configuración para crear una suscripción a los regi
 \<trackingProfile >  
   
 ## <a name="syntax"></a>Sintaxis  
-
-```xml
+  
+```xml  
 <system.serviceModel>
   <tracking>
     <profiles>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String" />
           </activityScheduledQueries>
           <activityStateQueries>
             <activityStateQuery activityName="String">
               <arguments>
-                <argument name="String"/>
+                <argument name="String" />
               </arguments>
               <states>
-                <state name="String"/>
+                <state name="String" />
               </states>
               <variables>
-                <variable name="String"/>
+                <variable name="String" />
               </variables>
             </activityStateQuery>
           </activityStateQueries>
@@ -47,16 +47,16 @@ Representa una sección de configuración para crear una suscripción a los regi
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestedQueries>
-            <cancelRequestedQuery activityName="String" 
-                                childActivityName="String"/>
+            <cancelRequestedQuery activityName="String"
+                                  childActivityName="String" />
           </cancelRequestedQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
-                                 name="String"/>
+            <customTrackingQuery activityName="String"
+                                 name="String" />
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery faultSourceActivityName="String" 
-                                   faultHandlerActivityName="String"/>
+            <faultPropagationQuery faultSourceActivityName="String"
+                                   faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <stateMachineStateQueries>
             <stateMachineStateQuery activityName="String" />
@@ -104,7 +104,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 El ejemplo siguiente muestra un perfil de seguimiento en un archivo de configuración que permite a un participante de seguimiento para suscribirse a la `Started` y `Completed` eventos de flujo de trabajo.  
   
-```xml
+```xml  
 <system.serviceModel>
   <tracking>
     <profiles>
@@ -113,8 +113,8 @@ El ejemplo siguiente muestra un perfil de seguimiento en un archivo de configura
           <workflowInstanceQueries>
             <workflowInstanceQuery>
               <states>
-                <state name="Started"/>
-                <state name="Completed"/>
+                <state name="Started" />
+                <state name="Completed" />
               </states>
             </workflowInstanceQuery>
           </workflowInstanceQueries>

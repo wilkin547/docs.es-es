@@ -2,12 +2,12 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: ddce1053a7494a84d0266c7ad14f6b1937365fa5
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: d03b92dc1e7b53a182b8065a6d4ac652f76291ba
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316433"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147439"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Especifica un transporte HTTP para transmitir los mensajes SOAP para un enlace personalizado.  
@@ -21,20 +21,18 @@ Especifica un transporte HTTP para transmitir los mensajes SOAP para un enlace p
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<httpTransport  
-    allowCookies=Boolean"  
-    authenticationScheme="Digest/Negotiate/Ntlm/Basic/Anonymous"  
-    bypassProxyOnLocal=Boolean"  
-    hostnameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-    keepAliveEnabled="Boolean"  
-    maxBufferSize="Integer"  
-    proxyAddress="Uri"  
-    proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous"  
-IntegratedWindowsAuthentication: Specifies Windows authentication"  
-    realm="String"  
-    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-        unsafeConnectionNtlmAuthentication="Boolean"  
-        useDefaultWebProxy="Boolean" />  
+<httpTransport allowCookies="Boolean"
+               authenticationScheme="Digest/Negotiate/Ntlm/Basic/Anonymous"
+               bypassProxyOnLocal="Boolean"
+               hostnameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+               keepAliveEnabled="Boolean"
+               maxBufferSize="Integer"
+               proxyAddress="Uri"
+               proxyAuthenticationScheme="None/Digest/Negotiate/Ntlm/Basic/Anonymous/IntegratedWindowsAuthentication"
+               realm="String"
+               transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
+               unsafeConnectionNtlmAuthentication="Boolean"
+               useDefaultWebProxy="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -45,15 +43,15 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |allowCookies|Un valor booleano que especifica si el cliente acepta las cookies y las propaga en solicitudes futuras. De manera predeterminada, es `false`.<br /><br /> Puede usar este atributo al interactuar con los servicios Web ASMX que utilizan cookies. De esta manera, puede estar seguro de que las cookies devueltas del servidor se copian automáticamente en todas las solicitudes de cliente futuras para ese servicio.|  
-|authenticationScheme|Especifica el protocolo utilizado para autenticar solicitudes de cliente que son procesadas por un agente de escucha HTTP. Los valores válidos son los siguientes:<br /><br /> -Digest: Especifica la autenticación implícita.<br />-Negotiate: Negocia con el cliente para determinar el esquema de autenticación. Si cliente y el servidor son compatibles con Kerberos, se utiliza; de lo contrario, se utiliza NTLM.<br />-Ntlm: Especifica la autenticación NTLM.<br />-Basic: Especifica la autenticación básica.<br />-Anonymous: Especifica la autenticación anónima.<br /><br /> El valor predeterminado es Anonymous. Este atributo es del tipo <xref:System.Net.AuthenticationSchemes>. Se puede establecer este atributo sólo una vez.|  
+|authenticationScheme|Especifica el protocolo utilizado para autenticar solicitudes de cliente que son procesadas por un agente de escucha HTTP. Los valores válidos son los siguientes:<br /><br /> -Digest: Especifica la autenticación implícita.<br />-Negotiate: Negocia con el cliente para determinar el esquema de autenticación. Si cliente y el servidor son compatibles con Kerberos, se utiliza; de lo contrario, se utiliza NTLM.<br />-Ntlm: Especifica la autenticación de NTLM.<br />-Básicas: Especifica la autenticación básica.<br />-Anónimo: Especifica la autenticación anónima.<br /><br /> El valor predeterminado es Anonymous. Este atributo es del tipo <xref:System.Net.AuthenticationSchemes>. Se puede establecer este atributo sólo una vez.|  
 |bypassProxyOnLocal|Valor de tipo booleano que indica si se omitirá el servidor proxy para las direcciones locales. De manera predeterminada, es `false`.<br /><br /> Una dirección local es la que está en la LAN local o intranet.<br /><br /> Windows Communication Foundation (WCF) siempre omite el proxy si la dirección del servicio comienza con `http://localhost`.<br /><br /> Debería utilizar el nombre del host en lugar del localhost si desea que los clientes pasen por un proxy al comunicarse con los servicios en el mismo equipo.|  
 |hostnameComparisonMode|Especifica el modo de comparación de nombres de host HTTP usado para analizar los URI. Los valores válidos son<br /><br /> -StrongWildcard: ("+") coincide con todos los posibles nombres de host en el contexto de esquema especificado, puerto y URI relativo.<br />-Exact: ningún carácter comodín<br />-WeakWildcard: ("\*") coincide con el nombre de host de todas las posibles en el contexto de esquema especificado, puerto y URI relativo con los que no han coincidido explícitamente o a través del mecanismo de carácter comodín seguro.<br /><br /> El valor predeterminado es StrongWildcard. Este atributo es del tipo `System.ServiceModel.HostnameComparisonMode`.|  
 |keepAliveEnabled|Un valor booleano que especifica si se debe establecer una conexión continua con el recurso de Internet.|  
 |maxBufferSize|Un entero positivo que especifica el tamaño máximo del búfer. El valor predeterminado es 524288.|  
 |proxyAddress|Un URI que especifica la dirección del proxy HTTP. Si `useSystemWebProxy` es `true`, este valor debe ser `null`. De manera predeterminada, es `null`.|  
-|proxyAuthenticationScheme|Especifica el protocolo utilizado para autenticar solicitudes de cliente que son procesadas por un proxy HTTP. Los valores válidos son los siguientes:<br /><br /> -None: Se realiza ninguna autenticación.<br />-Digest: Especifica la autenticación implícita.<br />-Negotiate: Negocia con el cliente para determinar el esquema de autenticación. Si cliente y el servidor son compatibles con Kerberos, se utiliza; de lo contrario, se utiliza NTLM.<br />-Ntlm: Especifica la autenticación NTLM.<br />-Basic: Especifica la autenticación básica.<br />-Anonymous: Especifica la autenticación anónima.<br />-IntegratedWindowsAuthentication: Especifica la autenticación de Windows.<br /><br /> El valor predeterminado es Anonymous. Este atributo es del tipo <xref:System.Net.AuthenticationSchemes>.|  
+|proxyAuthenticationScheme|Especifica el protocolo utilizado para autenticar solicitudes de cliente que son procesadas por un proxy HTTP. Los valores válidos son los siguientes:<br /><br /> -None: Se realiza ninguna autenticación.<br />-Digest: Especifica la autenticación implícita.<br />-Negotiate: Negocia con el cliente para determinar el esquema de autenticación. Si cliente y el servidor son compatibles con Kerberos, se utiliza; de lo contrario, se utiliza NTLM.<br />-Ntlm: Especifica la autenticación de NTLM.<br />-Básicas: Especifica la autenticación básica.<br />-Anónimo: Especifica la autenticación anónima.<br />-IntegratedWindowsAuthentication: Especifica la autenticación de Windows.<br /><br /> El valor predeterminado es Anonymous. Este atributo es del tipo <xref:System.Net.AuthenticationSchemes>.|  
 |realm|Una cadena que especifica el dominio kerberos que se utilizará en el proxy/servidor. El valor predeterminado es una cadena vacía.<br /><br /> Los servidores usan los dominios para particionar recursos protegidos. Cada partición puede tener su propio esquema de autenticación y/o base de datos de autorización. Los dominios sólo se utilizan para la autenticación básica e implícita. Cuando un cliente se autentica correctamente, la autenticación es válida para todos los recursos de un dominio kerberos determinado. Para obtener una descripción detallada de dominios Kerberos, consulte RFC 2617 en el [sitio Web IETF](https://www.ietf.org).|  
-|transferMode|Especifica si los mensajes se almacenan en búfer, se transmiten o si son una solicitud o una respuesta. Los valores válidos son los siguientes:<br /><br /> -Buffered: Los mensajes de solicitud y respuesta se almacenan en búfer.<br />-Transmiten: Se transmiten los mensajes de solicitud y respuesta.<br />-StreamedRequest: Se transmite el mensaje de solicitud y se almacena en búfer el mensaje de respuesta.<br />-StreamedResponse: El mensaje de solicitud se almacena en búfer y se transmite el mensaje de respuesta.<br /><br /> El valor predeterminado es Buffered. Este atributo es del tipo <xref:System.ServiceModel.TransferMode>.|  
+|transferMode|Especifica si los mensajes se almacenan en búfer, se transmiten o si son una solicitud o una respuesta. Los valores válidos son los siguientes:<br /><br /> -En el búfer: Se almacenan en búfer los mensajes de solicitud y respuesta.<br />-Transmite por secuencias: Se transmiten los mensajes de solicitud y respuesta.<br />-StreamedRequest: Se transmite el mensaje de solicitud y se almacena en búfer el mensaje de respuesta.<br />-StreamedResponse: Se almacena en búfer el mensaje de solicitud y se transmite el mensaje de respuesta.<br /><br /> El valor predeterminado es Buffered. Este atributo es del tipo <xref:System.ServiceModel.TransferMode>.|  
 |unsafeConnectionNtlmAuthentication|Un valor booleano que especifica si la conexión compartida no segura está habilitada en el servidor. De manera predeterminada, es `false`. Si está habilitado, la autenticación NTLM se realiza una vez en cada conexión TCP.|  
 |useDefaultWebProxy|Un valor que especifica si se utiliza la configuración del proxy del equipo en lugar de la configuración específica del usuario. De manera predeterminada, es `true`.|  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b2ef4f083cd9b6f38dc91bf8bf0eac9cd21c2618
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145691"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148089"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>Tipo de datos SByte (Visual Basic)
 
@@ -64,7 +64,7 @@ Si el literal entero está fuera del intervalo de `SByte` (es decir, si es infer
 
 ## <a name="programming-tips"></a>Sugerencias de programación
   
--   **Conformidad con CLS.** El `SByte` es de tipo de datos no forma parte de la [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.
+-   **Conformidad con CLS.** El `SByte` es de tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.
 
 -   **Ampliación.** El `SByte` tipo de datos se amplía a `Short`, `Integer`, `Long`, `Decimal`, `Single`, y `Double`. Esto significa que se puede convertir `SByte` a cualquiera de estos tipos sin que se produzca una <xref:System.OverflowException?displayProperty=nameWithType> error.
   

@@ -2,12 +2,12 @@
 title: '&lt;clear&gt; del elemento &lt;claimTypeRequirements&gt;'
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: ca8ea91f5806a6cedc98729de1c45ab6b5de6afb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e77e3c978c1e385aec983d5e2d4bea64697c43e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747130"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145294"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a>&lt;clear&gt; del elemento &lt;claimTypeRequirements&gt;
 Especifica que se quiten todos los tipos de notificaciones en la credencial aliada. Esto asegura que la colección se inicia vacía.  
@@ -23,9 +23,9 @@ Especifica que se quiten todos los tipos de notificaciones en la credencial alia
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<claimTypeRequirements>  
-      <clear />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <clear />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

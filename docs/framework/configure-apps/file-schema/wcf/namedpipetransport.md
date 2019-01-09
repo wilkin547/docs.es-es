@@ -2,12 +2,12 @@
 title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 652cb551fb318d43d4284dbee48aeb994f056692
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746802"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149605"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 Define un transporte que hace que un canal transfiera mensajes mediante las canalizaciones con nombre cuando está incluido en un enlace personalizado.  
@@ -20,22 +20,22 @@ Define un transporte que hace que un canal transfiera mensajes mediante las cana
   
 ## <a name="syntax"></a>Sintaxis  
   
-```xml
-<namedPipeTransport channelInitializationTimeout="TimeSpan"   
-                    connectionBufferSize="Integer"   
-                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-                    manualAddressing="Boolean"   
-                    maxBufferPoolSize="Integer"  
-                    maxBufferSize="Integer"  
-                    maxOutputDelay="TimeSpan"  
-                    maxPendingAccepts="Integer"   
-                    maxPendingConnections="Integer"  
-                    maxReceivedMessageSize="Integer"   
-                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">  
-  <connectionPoolSettings groupName="String" 
-                          idleTimeout"TimeSpan"  
-                          maxOutboundConnectionsPerEndpopint="Integer" />  
-</namedPipeTransport>  
+```xml  
+<namedPipeTransport channelInitializationTimeout="TimeSpan"
+                    connectionBufferSize="Integer"
+                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+                    manualAddressing="Boolean"
+                    maxBufferPoolSize="Integer"
+                    maxBufferSize="Integer"
+                    maxOutputDelay="TimeSpan"
+                    maxPendingAccepts="Integer"
+                    maxPendingConnections="Integer"
+                    maxReceivedMessageSize="Integer"
+                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+  <connectionPoolSettings groupName="String"
+                          idleTimeout="TimeSpan"
+                          maxOutboundConnectionsPerEndpopint="Integer" />
+</namedPipeTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -55,7 +55,7 @@ Ninguno.
 |maxBufferPoolSize|Obtiene o establece el tamaño máximo, en bytes, de cualquier grupo de búferes utilizado por el transporte.|  
 |maxBufferSize|Obtiene o establece el tamaño máximo del búfer que se va a usar. Para mensajes transmitidos por secuencias, este valor debería ser por lo menos el tamaño máximo posible de los encabezados de mensaje, que se leen en modo almacenado en búfer.|  
 |maxOutputDelay|Obtiene o establece el intervalo máximo de tiempo que un bloque de mensaje o un mensaje completo pueden estar almacenados en búfer en memoria antes de que se envíen.|  
-|maxPendingAccepts|Obtiene o establece el número máximo de canales de que un servicio puede tener en espera en un agente de escucha para procesar conexiones entrantes en el servicio.|  
+|maxPendingAccepts|Obtiene o establece el número máximo de canales de que un servicio puede tener en espera en un agente de escucha para procesar conexiones entrantes al servicio.|  
 |maxPendingConnections|Obtiene o establece el número máximo de conexiones pendientes de distribución en el servicio.|  
 |maxReceivedMessageSize|Obtiene y establece el tamaño máximo permitido del mensaje, en bytes, que se pueden recibir.|  
 |transferMode|Obtiene o establece un valor que indica si los mensajes están almacenados en búfer o se transmiten por secuencias mediante el transporte orientado a la conexión.|  
@@ -78,8 +78,8 @@ El elemento `namedPipeTransport` es el punto inicial para crear un enlace person
 <xref:System.ServiceModel.Channels.TransportBindingElement>   
 <xref:System.ServiceModel.Channels.CustomBinding>   
 [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)   
-[Elegir un transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
-[Enlaces](../../../../../docs/framework/wcf/bindings.md)   
+[Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
+[enlaces](../../../../../docs/framework/wcf/bindings.md)   
 [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
 [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
 [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

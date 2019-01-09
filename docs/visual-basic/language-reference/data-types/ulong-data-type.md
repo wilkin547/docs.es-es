@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 60f39d7bd294a737b5e3c6d5877f5d7e46269dc1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d901dc6c0a11db1beb08be821aec4dc1179832ff
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125514"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148375"
 ---
 # <a name="ulong-data-type-visual-basic"></a>Tipo de datos de ULong (Visual Basic)
 
@@ -66,7 +66,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
 -   **Números negativos.** Dado que `ULong` es un tipo sin signo, que no puede representar un número negativo. Si usa el operador unario menos (`-`) operador en una expresión que se evalúa como tipo `ULong`, Visual Basic convierte la expresión a `Decimal` primero.  
   
--   **Conformidad con CLS.** El `ULong` es de tipo de datos no forma parte de la [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.  
+-   **Conformidad con CLS.** El `ULong` es de tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.  
   
 -   **Consideraciones de interoperabilidad.** Si interactúa con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, tenga en cuenta que los tipos, como `ulong` puede tener un ancho de datos diferente (32 bits) en otros entornos. Si se pasa un argumento de 32 bits a esos componentes, declárelo como `UInteger` en lugar de `ULong` en el código administrado de Visual Basic.  
   

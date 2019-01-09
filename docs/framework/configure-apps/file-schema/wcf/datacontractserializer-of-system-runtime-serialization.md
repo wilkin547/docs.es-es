@@ -2,12 +2,12 @@
 title: '&lt;dataContractSerializer&gt; de &lt;system.runtime.serialization&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: 96802100fe1b91d3e375363d2c36e239b1a1d330
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f31dd8479f3bd6b36915b3ff00ff53babe3c0248
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747712"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150180"
 ---
 # <a name="ltdatacontractserializergt-of-ltsystemruntimeserializationgt"></a>&lt;dataContractSerializer&gt; de &lt;system.runtime.serialization&gt;
 Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -18,21 +18,21 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<configuration>  
-  <system.runtime.serialization>  
-    <dataContractSerializer ignoreExtensionDataObject="Boolean"  
-            maxItemsInObjectGraph="Integer">  
-      <declaredTypes>  
-        <add type="String">  
-          <knownType type="String">  
-             <parameter index="Integer"  
-                        type="String" />  
-          </knownType>  
-        </add>  
-      </declaredTypes>  
-    <dataContractSerializer>  
-  </system.runtime.serialization>  
-</configuration>  
+<configuration>
+  <system.runtime.serialization>
+    <dataContractSerializer ignoreExtensionDataObject="Boolean"
+                            maxItemsInObjectGraph="Integer">
+      <declaredTypes>
+        <add type="String">
+          <knownType type="String">
+            <parameter index="Integer"
+                       type="String" />
+          </knownType>
+        </add>
+      </declaredTypes>
+    <dataContractSerializer>
+  </system.runtime.serialization>
+</configuration>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -49,7 +49,7 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContractSerializer> usa al deserializar.<br /><br /> Para obtener más información acerca de los contratos de datos y los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).|  
+|[\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContractSerializer> usa al deserializar.<br /><br /> Para obtener más información acerca de los contratos de datos y los tipos conocidos, consulte [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -58,7 +58,7 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 |[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información sobre los tipos conocidos, consulte <xref:System.Runtime.Serialization.DataContractSerializer> y [tipos conocidos de contrato de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Para obtener más información sobre los tipos conocidos, consulte <xref:System.Runtime.Serialization.DataContractSerializer> y [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

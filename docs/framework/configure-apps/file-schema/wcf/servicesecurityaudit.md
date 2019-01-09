@@ -2,12 +2,12 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 36215709f0ede32c25739ea47f2f285e4122f098
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3202b5055d16f0daa1bd829aa53ff6662a687b5d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144445"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150258"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Especifica valores que habilitan la auditoría de eventos de seguridad durante las operaciones del servicio.  
@@ -21,11 +21,10 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<serviceSecurityAudit   
-   auditLogLocation="Default/Application/Security"  
-   messageAuthenticationAuditLevel= None/Success/Failure/SuccessOrFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"  
-   suppressAuditFailure="Boolean"  
-/>  
+<serviceSecurityAudit auditLogLocation="Default/Application/Security"
+                      messageAuthenticationAuditLevel="None/Success/Failure/SuccessOrFailure"
+                      serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"
+                      suppressAuditFailure="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -65,16 +64,18 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
 ## <a name="example"></a>Ejemplo  
   
 ```xml  
-<system.serviceModel>  
-   <serviceBehaviors>  
-      <behavior name="NewBehavior">  
-         <serviceSecurityAudit auditLogLocation="Application"   
-             suppressAuditFailure="true"  
-             serviceAuthorizationAuditLevel="Success"   
-             messageAuthenticationAuditLevel="Success" />  
-      </behavior>  
-   </serviceBehaviors>  
-</behaviors>  
+<system.serviceModel>
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="NewBehavior">
+        <serviceSecurityAudit auditLogLocation="Application"
+                              suppressAuditFailure="true"
+                              serviceAuthorizationAuditLevel="Success"
+                              messageAuthenticationAuditLevel="Success" />
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>Vea también  

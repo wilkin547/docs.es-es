@@ -2,12 +2,12 @@
 title: '&lt;serviceDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 78f1c7be1d8285cd2fdf79af1e1220a7e48b2893
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b3061274ef670ccd672c3155ca7285d567834bd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751251"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146906"
 ---
 # <a name="ltservicediscoverygt"></a>&lt;serviceDiscovery&gt;
 Especifica la detectabilidad de puntos de conexión de servicio.  
@@ -26,17 +26,17 @@ Especifica la detectabilidad de puntos de conexión de servicio.
     <behavior name="String">
       <serviceDiscovery>
         <announcementEndpoints>
-          <endpoint name="String" 
+          <endpoint name="String"
                     kind="Type" />
         </announcementEndpoints>
         <discoveryEndpoints>
-          <endpoint name="String" 
+          <endpoint name="String"
                     kind="Type" />
         </discoveryEndpoints>
       </serviceDiscovery>
     </behavior>
   </serviceBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -59,31 +59,30 @@ Especifica la detectabilidad de puntos de conexión de servicio.
 |[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se agrega a la configuración de comportamiento del servicio, este elemento de configuración convierte todos los puntos de conexión de ese servicio en detectables. Puede configurar aún más las características de detección de estos puntos de conexión mediante el uso de la [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) o [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) los elementos secundarios. Utilice la [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) sección para configurar los anuncios mediante la especificación de la configuración del extremo que se debe usar para enviar anuncios de servicio (en línea/Hello y Bye de sin conexión /). Use la [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) sección para especificar manualmente el punto de conexión en la que se va a escuchar los mensajes de detección.  
+ Cuando se agrega a la configuración de comportamiento del servicio, este elemento de configuración convierte todos los puntos de conexión de ese servicio en detectables. Puede configurar aún más las características de detección de tales puntos de conexión con el [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) o [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) elementos secundarios. Utilice la [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) sección para configurar los anuncios especificando la configuración de punto de conexión que debe usarse para enviar anuncios de servicio (en línea/Hola y sin conexión/Adiós). Use la [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) sección para especificar manualmente el punto de conexión en el que se va a escuchar los mensajes de detección.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de configuración especifica que CalculatorService va a ser detectable y especifica opcionalmente el punto de conexión del anuncio que se va a utilizar.  
   
 ```xml  
-<services>  
-  <service name="CalculatorService"  
-           behaviorConfiguration="CalculatorServiceBehavior">  
-  ...  
-  </service>  
-</services>  
-  
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name="CalculatorServiceBehavior">  
-      <serviceDiscovery>  
-        <announcementEndpoints>  
-              <endpoint name="udpEndpoint"  
-                        kind="udpAnnouncementEndpoint" />  
-        </announcementEndpoints>  
-      </serviceDiscovery>  
-    </behavior>  
-  </serviceBehaviors>  
-</behaviors>  
+<services>
+  <service name="CalculatorService"
+           behaviorConfiguration="CalculatorServiceBehavior">
+    ...
+  </service>
+</services>
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="CalculatorServiceBehavior">
+      <serviceDiscovery>
+        <announcementEndpoints>
+          <endpoint name="udpEndpoint"
+                    kind="udpAnnouncementEndpoint" />
+        </announcementEndpoints>
+      </serviceDiscovery>
+    </behavior>
+  </serviceBehaviors>
+</behaviors>
 ```  
   
 ## <a name="see-also"></a>Vea también  

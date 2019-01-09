@@ -2,12 +2,12 @@
 title: '&lt;allowedAudienceUris&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0f4dc73d-d95d-4193-9755-7df4cf2b8e1c
-ms.openlocfilehash: b7a4ae230e9b8788d9ac23147a3fcf21637dadaf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cbbe817cb647589bf30dfeb6068c2c37536277fe
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754085"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151865"
 ---
 # <a name="ltallowedaudienceurisgt"></a>&lt;allowedAudienceUris&gt;
 Representa una colección de los URI de destino para los que el token de seguridad <xref:System.IdentityModel.Tokens.SamlSecurityToken> se puede destinar con el fin de que una instancia de <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> lo considere válido.  
@@ -23,9 +23,9 @@ Representa una colección de los URI de destino para los que el token de segurid
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<allowedAudienceUris>  
-      <add allowedAudienceUri="String"/>  
-</allowedAudienceUris>  
+<allowedAudienceUris>
+  <add allowedAudienceUri="String" />
+</allowedAudienceUris>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -55,7 +55,7 @@ Representa una colección de los URI de destino para los que el token de segurid
   
  Para obtener más información, consulta <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- Para obtener más información sobre el uso de este elemento de configuración, consulte [Cómo: configurar las credenciales en un servicio de federación](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Para obtener más información sobre el uso de este elemento de configuración, vea [Cómo: Configurar las credenciales en un servicio de federación](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
@@ -69,4 +69,4 @@ Representa una colección de los URI de destino para los que el token de segurid
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)  
  [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Configuración de las credenciales en un servicio de federación](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+ [Cómo: Configurar las credenciales en un servicio de federación](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

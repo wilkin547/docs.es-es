@@ -2,12 +2,12 @@
 title: '&lt;activityScheduledQueries&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: 35bcb0dc0c33d30eee566869579edb32f131f495
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d6bc2360ccdeebe291de495e6ee5c7e22f26590a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452701"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145580"
 ---
 # <a name="ltactivityscheduledqueriesgt-of-wcf"></a>&lt;activityScheduledQueries&gt; de WCF
 Representa una colección de consultas que se utilizan para realizar el seguimiento de una actividad programada para su ejecución por parte de una actividad primaria. La consulta es necesaria para que un participante de seguimiento se suscriba a los registros programados de la actividad.  
@@ -29,8 +29,8 @@ Para obtener más información sobre las consultas de perfil de seguimiento, vea
     <trackingProfile name="Name">
       <workflow>
         <activityScheduledQueries>
-          <activityScheduledQuery activityName="String"   
-                                  childActivityName="String"/>
+          <activityScheduledQuery activityName="String"
+                                  childActivityName="String" />
         </activityScheduledQueries>
       </workflow>
     </trackingProfile>

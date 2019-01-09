@@ -2,12 +2,12 @@
 title: '&lt;userPrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff38a6975d1ec73c1a3014b94198ba630c3fec31
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358682"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149985"
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 Especifica el Nombre principal de usuario (UPN) de un servicio que va a autenticar el cliente.  
@@ -20,7 +20,7 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<userPrincipalName value="String" />  
+<userPrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -30,7 +30,7 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|value|Un nombre de cuenta de usuario (a veces denominado nombre de inicio de sesión de usuario) y un nombre de dominio que identifica el dominio en el que se ubica la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (para una dirección de correo electrónico).|  
+|value|Un nombre de cuenta de usuario (a veces denominado nombre de inicio de sesión de usuario) y un nombre de dominio que identifica el dominio en el que se ubica la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (como en una dirección de correo electrónico).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -42,15 +42,15 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
 |[\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un cliente seguro de Windows Communication Foundation (WCF) que se conecta a un extremo con esta identidad utiliza UPN al realizar la autenticación de SSPI con el punto de conexión.  
+ Un cliente segura de Windows Communication Foundation (WCF) que se conecta a un punto de conexión con esta identidad utiliza UPN al realizar la autenticación de SSPI con el punto de conexión.  
   
 ## <a name="example"></a>Ejemplo  
  El código de configuración siguiente especifica el UPN del servicio que va a autenticar el cliente.  
   
 ```xml  
-<identity>  
-  <userPrincipalName value="someone@cohowinery.com" />  
-</identity>  
+<identity>
+  <userPrincipalName value="someone@cohowinery.com" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>Vea también  

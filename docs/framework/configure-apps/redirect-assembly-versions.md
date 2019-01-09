@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: f6e139a4e10ca10fac45510715110d156ddf82ff
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030132"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145975"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirigir versiones de ensamblado
 
@@ -156,14 +156,13 @@ Puede habilitar la redirección de enlace automático si su aplicación tiene co
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Habilitar y deshabilitar la redirección de enlace automática](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > elemento](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Permiso de seguridad para la redirección de enlaces de ensamblados](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)
 - [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Configurar aplicaciones](../../../docs/framework/configure-apps/index.md)
-- [Configurar aplicaciones de .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [Esquema de la configuración de Common Language Runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Cómo: Crear una directiva de publicador](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

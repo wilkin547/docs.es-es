@@ -2,12 +2,12 @@
 title: '&lt;FindCriteria&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: 38941e4afb0cfa4fea8657c90c1105a5ab771d49
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0a2fb7ae641f8ec34c518d8dc2c11fbc2ae26190
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144213"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146932"
 ---
 # <a name="ltfindcriteriagt"></a>&lt;FindCriteria&gt;
 Elemento de configuración que proporciona un conjunto de criterios utilizado por una aplicación cliente para buscar un servicio de detección. Los criterios pueden agruparse en criterios de búsqueda (que especifican qué servicios está buscando) y encuentra criterios de finalización (cuánto tiempo debe durar la búsqueda).  
@@ -18,15 +18,18 @@ Elemento de configuración que proporciona un conjunto de criterios utilizado po
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <dynamicEndpoint>
       <standardEndpoint>
         <discoveryClientSettings discoveryEndpoint="String">
-          <findCriteria duration="TimeSpan" maxResults="Integer" scopeMatchBy="Uri">
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
+                        scopeMatchBy="Uri">
             <contractTypeNames>
-              <add name="String" namespace="String" />
-            <contractTypeNames>
+              <add name="String"
+                   namespace="String" />
+            </contractTypeNames>
             <extensions />
             <scopes>
               <add scope="URI" />
@@ -35,8 +38,8 @@ Elemento de configuración que proporciona un conjunto de criterios utilizado po
         </discoveryClientSettings>
       </standardEndpoint>
     </dynamicEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

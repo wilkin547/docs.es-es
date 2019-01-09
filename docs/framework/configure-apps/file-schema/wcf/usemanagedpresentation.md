@@ -2,12 +2,12 @@
 title: '&lt;useManagedPresentation&gt;'
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: 35af7f5e10594617807384c20ab706ad675d11ef
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a60e1e16b9b41cc5df4ded51cc05d6109dd7b3dc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755297"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147712"
 ---
 # <a name="ltusemanagedpresentationgt"></a>&lt;useManagedPresentation&gt;
 Elemento de enlace utilizado para comunicarse con un Servicio de token de seguridad de CardSpace que admite el perfil CardSpace de WS-Trust. Este elemento no tiene ningún atributo y está presente como modificador vacío.  
@@ -21,7 +21,7 @@ Elemento de enlace utilizado para comunicarse con un Servicio de token de seguri
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<useManagedPresentation/>  
+<useManagedPresentation />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

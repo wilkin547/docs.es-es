@@ -1,15 +1,15 @@
 ---
-title: '&lt;direcciones base&gt;'
+title: '&lt;BaseAddresses&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 8de962cc70e1399dd1e9459473055651f9aca5fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0af5dee41c6adf560c90874e6e9a44b62c5decc6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747491"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147361"
 ---
-# <a name="ltbaseaddressesgt"></a>&lt;direcciones base&gt;
+# <a name="ltbaseaddressesgt"></a>&lt;BaseAddresses&gt;
 Representa una colección de elementos `baseAddress`, que son las direcciones base para un host del servicio en un entorno autohospedado. Si una dirección base está presente, los puntos de conexión se pueden configurar con direcciones relativas a la dirección base.  
   
  \<system.ServiceModel>  
@@ -21,9 +21,9 @@ Representa una colección de elementos `baseAddress`, que son las direcciones ba
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<baseAddresses>  
-   <add baseAddress="string" />  
-</baseAddresses>  
+<baseAddresses>
+  <add baseAddress="string" />
+</baseAddresses>
 ```  
   
 ## <a name="type"></a>Tipo  

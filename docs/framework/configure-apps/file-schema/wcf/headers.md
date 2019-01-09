@@ -1,15 +1,15 @@
 ---
-title: '&lt;encabezados&gt;'
+title: '&lt;Encabezados&gt;'
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: 7683b07093719cda6b210a4174d47e5785d4644d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 84b9a9437d4b0dfae72a6e625b21f2b830eb28d8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747156"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147868"
 ---
-# <a name="ltheadersgt"></a>&lt;encabezados&gt;
+# <a name="ltheadersgt"></a>&lt;Encabezados&gt;
 Uno o más encabezados SOAP pueden direccionar un punto de conexión además de su URI básico. Un conjunto de escenarios donde esto es útil es un conjunto de escenarios intermediarios de SOAP donde un extremo requiere que los clientes de ese extremo incluyan encabezados SOAP destinados a intermediarios. Este elemento de configuración se puede usar para definir tales encabezados de dirección personalizados. Las entradas en la colección de encabezado de extremo son los elementos XML definidos por el usuario. Cada elemento tiene que ser XML correcto.  
   
  \<system.ServiceModel>  
@@ -19,10 +19,10 @@ Uno o más encabezados SOAP pueden direccionar un punto de conexión además de 
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<headers>  
-    <Region xmlns="Uri">"String"</Region>  
-        <Member xmlns="Uri">"String"</Member>  
-</headers>  
+<headers>
+  <region xmlns="Uri">"String"</region>
+  <member xmlns="Uri">"String"</member>
+</headers>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -52,4 +52,4 @@ Uno o más encabezados SOAP pueden direccionar un punto de conexión además de 
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Headers%2A>  
  <xref:System.ServiceModel.Channels.AddressHeaderCollection>  
- [Puntos de conexión: direcciones, enlaces y contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

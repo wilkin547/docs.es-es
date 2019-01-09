@@ -2,12 +2,12 @@
 title: '&lt;UdpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 01808594d54d5c79a6530bc7f6a03b66dde7ee99
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6508f73de7920a339e40284c86b0d1d649e7eabe
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144759"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145437"
 ---
 # <a name="ltudpdiscoveryendpointgt"></a>&lt;UdpDiscoveryEndpoint&gt;
 Este elemento de configuración define un punto de conexión estándar que está preconfigurado para las operaciones de detección sobre un enlace de multidifusión UDP. Este punto de conexión tiene un contrato fijo y admite dos versiones del protocolo WS-Discovery. Además, tiene un enlace de UDP fijo y una dirección predeterminada según se indica en las especificaciones de WS-Discovery (WS-Discovery April 2005 o WS-Discovery V1.1).  
@@ -18,9 +18,17 @@ Este elemento de configuración define un punto de conexión estándar que está
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<system.serviceModel>  
-    <standardEndpoints>       <discoveryEndpoint>           <standardEndpoint                  discoveryMode="Adhoc/Managed"                  discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"                  maxResponseDelay="Timespan"                  multicastAddress="Uri"                   name="String" />       </discoveryEndpoint>            </standardEndpoints>  
-</system.serviceModel>  
+<system.serviceModel>
+  <standardEndpoints>
+    <discoveryEndpoint>
+      <standardEndpoint discoveryMode="Adhoc/Managed"
+                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxResponseDelay="Timespan"
+                        multicastAddress="Uri"
+                        name="String" />
+    </discoveryEndpoint>
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -51,21 +59,21 @@ Este elemento de configuración define un punto de conexión estándar que está
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra un servicio que realiza escuchas de mensajes de detección sobre un transporte de multidifusión UDP.  
   
-```xml
-<services>  
-  <service name="CalculatorService"  
-           behaviorConfiguration="CalculatorServiceBehavior">  
-    <endpoint binding="basicHttpBinding"   
-              address="calculator" 
-              contract="ICalculatorService" />  
-    <endpoint name="DiscoveryEndpoint"  
-              kind="udpDiscoveryEndpoint" />  
-  </service>  
-  <standardEndpoints>  
-    <udpDiscoveryEndpoint>  
-      <standardEndpoint name="DiscoveryEndpoint"                         
-                        version="WSDiscoveryApril2005" />  
-    </udpDiscoveryEndpoint>  
+```xml  
+<services>
+  <service name="CalculatorService"
+           behaviorConfiguration="CalculatorServiceBehavior">
+    <endpoint binding="basicHttpBinding"
+              address="calculator"
+              contract="ICalculatorService" />
+    <endpoint name="DiscoveryEndpoint"
+              kind="udpDiscoveryEndpoint" />
+  </service>
+  <standardEndpoints>
+    <udpDiscoveryEndpoint>
+      <standardEndpoint name="DiscoveryEndpoint"
+                        version="WSDiscoveryApril2005" />
+    </udpDiscoveryEndpoint>
   </standardEndpoints>
 </services>
 ```  

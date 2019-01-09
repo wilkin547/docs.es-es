@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; de &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: aeadf23b4ae6b4b0be18755c43585cbfea418567
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c82e91543920522f0ed6232036ec1b5a94189fa8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756428"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148948"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transport&gt; de &lt;peerTransport&gt;
 Especifica el tipo de transporte para mensajes seguros enviados por pares configurados con este enlace.  
@@ -23,9 +23,9 @@ Especifica el tipo de transporte para mensajes seguros enviados por pares config
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-<security>  
-   <transport credentialType="Certificate/Password" />  
-</security>         
+<security>
+  <transport credentialType="Certificate/Password" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  

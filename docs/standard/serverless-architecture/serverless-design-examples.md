@@ -4,12 +4,12 @@ description: Comprender la variedad de escenarios admitidos por las arquitectura
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146717"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149682"
 ---
 # <a name="serverless-design-examples"></a>Ejemplos de diseño sin servidor
 
@@ -65,7 +65,7 @@ Funciones sin servidor se pueden usar para facilitar una canalización de datos.
 
 ## <a name="stream-processing"></a>Procesamiento de Stream
 
-Dispositivos y sensores suelen generan flujos de datos que se deben procesar en tiempo real. Hay una serie de tecnologías que pueden capturar los mensajes y secuencias de [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) y [IoT Hub](https://docs.microsoft.com/azure/iot-hub) a [Service Bus](/service-bus). Independientemente del transporte, sin servidor es un mecanismo ideal para procesar los mensajes y los flujos de datos tal y como vienen. Sin servidor puede escalar con rapidez para satisfacer la demanda de grandes volúmenes de datos. El código sin servidor puede aplicar la lógica de negocios para analizar los datos y la salida en un formato estructurado para el análisis y acción.
+Dispositivos y sensores suelen generan flujos de datos que se deben procesar en tiempo real. Hay una serie de tecnologías que pueden capturar los mensajes y secuencias de [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) y [IoT Hub](https://docs.microsoft.com/azure/iot-hub) a [Service Bus](https://docs.microsoft.com/azure/service-bus). Independientemente del transporte, sin servidor es un mecanismo ideal para procesar los mensajes y los flujos de datos tal y como vienen. Sin servidor puede escalar con rapidez para satisfacer la demanda de grandes volúmenes de datos. El código sin servidor puede aplicar la lógica de negocios para analizar los datos y la salida en un formato estructurado para el análisis y acción.
 
 ![Procesamiento de secuencias sin servidor](./media/serverless-stream-processing.png)
 
