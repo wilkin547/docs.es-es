@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502169"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656198"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET
 
@@ -33,7 +33,7 @@ Para crear y ejecutar los ejemplos de este tutorial, use la utilidad [dotnet](..
 
 1. Escriba el comando [dotnet run](../../core/tools/dotnet-run.md) para compilar y ejecutar el ejemplo.
 
-## <a name="background-what-is-inheritance"></a>Contexto: ¿Qué es la herencia?
+## <a name="background-what-is-inheritance"></a>Información previa: ¿Qué es la herencia?
 
 La *herencia* es uno de los atributos fundamentales de la programación orientada a objetos. Permite definir una clase secundaria que reutiliza (hereda), amplía o modifica el comportamiento de una clase primaria. La clase cuyos miembros son heredados se conoce como *clase base*. La clase que hereda los miembros de la clase base se conoce como *clase derivada*.
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-La herencia solo se aplica a clases e interfaces. Other type categories (structs, delegates, and enums) do not support inheritance. Debido a estas reglas, al intentar compilar código como el siguiente se genera el error de compilador CS0527: "El tipo "ValueType" de la lista de interfaces no es una interfaz". El mensaje de error indica que, aunque se pueden definir las interfaces que implementa un struct, no se admite la herencia.
+La herencia solo se aplica a clases e interfaces. Other type categories (structs, delegates, and enums) do not support inheritance. Debido a estas reglas, al intentar compilar código como el siguiente se genera el error de compilador CS0527: "El tipo 'ValueType' de la lista de interfaces no es una interfaz". El mensaje de error indica que, aunque se pueden definir las interfaces que implementa un struct, no se admite la herencia.
 
 ```csharp
 using System;
@@ -249,7 +249,7 @@ Además de los miembros que hereda de `Publication`, la clase `Book` define los 
 
 - Dos constructores
 
-  Los dos constructores `Book` comparten tres parámetros comunes. Dos, *title* y *publisher*, corresponden a los parámetros del constructor `Publication`. El tercero, *author*, se almacena en un campo privado `authorName`. Un constructor incluye un parámetro *isbn*, que se almacena en la propiedad automática `ISBN`.
+  Los dos constructores `Book` comparten tres parámetros comunes. Dos, *title* y *publisher*, corresponden a los parámetros del constructor `Publication`. La tercera es *author*, que se almacena para una propiedad `Author` pública inmutable. Un constructor incluye un parámetro *isbn*, que se almacena en la propiedad automática `ISBN`.
 
   El primer constructor usa [esta](../language-reference/keywords/this.md) palabra clave para llamar al otro constructor. El encadenamiento de constructores es un patrón común en la definición de constructores. Los constructores con menos parámetros proporcionan valores predeterminados al llamar al constructor con el mayor número de parámetros.
 
@@ -257,11 +257,11 @@ Además de los miembros que hereda de `Publication`, la clase `Book` define los 
 
 - Una propiedad `ISBN` de solo lectura, que devuelve el ISBN (International Standard Book Number) del objeto `Book`, un número exclusivo de 10 y 13 caracteres. El ISBN se proporciona como argumento para uno de los constructores `Book`. El ISBN se almacena en un campo de respaldo privado, generado automáticamente por el compilador.
 
-- Una propiedad `Author` de solo lectura. El nombre del autor se proporciona como argumento para ambos constructores `Book` y se almacena en el campo privado `authorName`.
+- Una propiedad `Author` de solo lectura. El nombre del autor se proporciona como argumento para ambos constructores `Book` y se almacena en la propiedad.
 
-- Dos propiedades relacionadas con el precio de solo lectura, `Price` y `Currency`. Sus valores se proporcionan como argumentos en una llamada al método `SetPrice`. El precio se almacena en un campo privado, `bookPrice`. La propiedad `Currency` es el símbolo de moneda ISO de tres dígitos (por ejemplo, USD para el dólar estadounidense) y se almacena en el campo privado `ISOCurrencySymbol`. Los símbolos de moneda ISO se pueden recuperar de la propiedad <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>.
+- Dos propiedades relacionadas con el precio de solo lectura, `Price` y `Currency`. Sus valores se proporcionan como argumentos en una llamada al método `SetPrice`. La propiedad `Currency` es el símbolo de moneda ISO de tres dígitos (por ejemplo, USD para el dólar estadounidense). Los símbolos de moneda ISO se pueden recuperar de la propiedad <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>. Ambas propiedades son de solo lectura desde ubicaciones externas, pero se pueden establecer mediante código en la clase `Book`.
 
-- Un método `SetPrice`, que establece los valores de los campos `bookPrice` y `ISOCurrencySymbol`. Esos son los valores devueltos por las propiedades `Price` y `Currency`.
+- Un método `SetPrice`, que establece los valores de las propiedades `Price` y `Currency`. Esos son los valores devueltos por dichas propiedades.
 
 - Invalida el método `ToString` (heredado de `Publication`) y los métodos <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> y <xref:System.Object.GetHashCode%2A> (heredados de <xref:System.Object>).
 

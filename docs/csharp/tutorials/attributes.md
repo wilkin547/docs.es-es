@@ -4,12 +4,12 @@ description: Aprenda cómo funcionan los atributos en C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390524"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029832"
 ---
 # <a name="using-attributes-in-c"></a>Uso de atributos en C# #
 
@@ -110,7 +110,7 @@ Los atributos actúan como metadatos. Sin algo de fuerza exterior, no harían re
 
 Para buscar y actuar sobre los atributos, se requiere en general [reflexión](../programming-guide/concepts/reflection.md). En este tutorial no se tratará la reflexión de forma detallada, pero la idea básica es que la reflexión le permite escribir código en C# que examina otro código.
 
-Por ejemplo, puede usar reflexión para obtener información sobre una clase: 
+Por ejemplo, puede usar reflexión para obtener información sobre una clase (agregue `using System.Reflection;` al principio del código): 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 

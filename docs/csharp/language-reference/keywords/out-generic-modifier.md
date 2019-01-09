@@ -6,18 +6,18 @@ helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-ms.openlocfilehash: 8ad190e8653063f1461e4ff61a62310e59f48cf7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1316228a186976f313bb9f10032262974243a3ae
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239503"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334891"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (Modificador genérico) (Referencia de C#)
 
 Para los parámetros de tipo genérico, la palabra clave `out` especifica que el parámetro de tipo es covariante. Puede usar la palabra clave `out` en las interfaces y delegados genéricos.
 
-La covarianza le permite usar un tipo más derivado que el que se especifica en el parámetro genérico. Esto permite la conversión implícita de las clases que implementan interfaces variantes y la conversión implícita de los tipos de delegado. La covarianza y la contravarianza son compatibles con los tipos de referencia, pero no lo son con los tipos de valor.
+La covarianza le permite usar un tipo más derivado que el que se especifica en el parámetro genérico. Esto permite la conversión implícita de las clases que implementan interfaces covariantes y la conversión implícita de los tipos de delegado. La covarianza y la contravarianza son compatibles con los tipos de referencia, pero no lo son con los tipos de valor.
 
 Una interfaz con un parámetro de tipo covariante permite que sus métodos devuelvan tipos más derivados que los especificados por el parámetro de tipo. Por ejemplo, dado que en .NET Framework 4, en <xref:System.Collections.Generic.IEnumerable%601>, el tipo T es covariante, puede asignar un objeto del tipo `IEnumerable(Of String)` a otro objeto del tipo `IEnumerable(Of Object)` sin usar ningún método de conversión especial.
 

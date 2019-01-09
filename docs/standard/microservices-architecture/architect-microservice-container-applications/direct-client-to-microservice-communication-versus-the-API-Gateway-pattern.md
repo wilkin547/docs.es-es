@@ -4,12 +4,12 @@ description: Obtenga más información sobre las diferencias y los usos del patr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152648"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030547"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -41,7 +41,7 @@ Interactuar con varios microservicios para crear una única pantalla de interfaz
 
 La implementación de seguridad y cuestiones transversales como la seguridad y la autorización en cada microservicio pueden requerir un esfuerzo de desarrollo importante. Un posible enfoque es tener esos servicios en el host de Docker o en un clúster interno para así restringir el acceso directo a ellos desde el exterior, e implementar estas cuestiones transversales en un lugar centralizado, como una puerta de enlace de API.
 
-- ¿Cómo pueden las aplicaciones cliente comunicarse con servicios que usan protocolos no compatibles con Internet?*
+- *¿Cómo pueden las aplicaciones cliente comunicarse con servicios que usan protocolos no compatible con Internet?*
 
 Normalmente, los protocolos usados en el lado del servidor (por ejemplo, AMQP o protocolos binarios) no se admiten en aplicaciones cliente. Por lo tanto, las solicitudes deben realizarse a través de protocolos como HTTP/HTTPS y convertirse posteriormente a los demás protocolos. Un enfoque *man-in-the-middle* puede ser útil en esta situación.
 
@@ -55,13 +55,13 @@ En una arquitectura de microservicios, las aplicaciones cliente generalmente nec
 
 Por lo tanto, disponer de un nivel intermedio o un nivel de direccionamiento indirecto (puerta de enlace) puede ser muy práctico para las aplicaciones basadas en microservicios. Si no dispone de las puertas de enlace de API, las aplicaciones cliente deben enviar solicitudes directamente a los microservicios y eso genera problemas, como los siguientes:
 
-- **Acoplamiento**: sin el patrón de puerta de enlace de API, las aplicaciones cliente se acoplan a los microservicios internos. Las aplicaciones cliente necesitan saber cómo se descomponen las diferentes áreas de la aplicación en microservicios. Al evolucionar y refactorizar los microservicios internos, esas acciones tienen un impacto bastante negativo en el mantenimiento porque provocan cambios bruscos en las aplicaciones cliente debido a la referencia directa a los microservicios internos desde las aplicaciones cliente. Las aplicaciones cliente deben actualizarse con frecuencia, lo que dificulta la evolución de la solución.
+- **Acoplamiento**: Sin el patrón de puerta de enlace de API, las aplicaciones cliente se acoplan a los microservicios internos. Las aplicaciones cliente necesitan saber cómo se descomponen las diferentes áreas de la aplicación en microservicios. Al evolucionar y refactorizar los microservicios internos, esas acciones tienen un impacto bastante negativo en el mantenimiento porque provocan cambios bruscos en las aplicaciones cliente debido a la referencia directa a los microservicios internos desde las aplicaciones cliente. Las aplicaciones cliente deben actualizarse con frecuencia, lo que dificulta la evolución de la solución.
 
-- **Demasiados recorridos de ida y vuelta**: una única pantalla o página en la aplicación cliente puede requerir varias llamadas a varios servicios. Esto puede dar como resultado múltiples recorridos de ida y vuelta entre el cliente y el servidor, lo cual agrega una latencia significativa. La agregación controlada en un nivel intermedio podría mejorar el rendimiento y la experiencia del usuario para la aplicación cliente.
+- **Demasiados ciclos de ida y vuelta**: Una única pantalla o página en la aplicación cliente puede requerir varias llamadas a varios servicios. Esto puede dar como resultado múltiples recorridos de ida y vuelta entre el cliente y el servidor, lo cual agrega una latencia significativa. La agregación controlada en un nivel intermedio podría mejorar el rendimiento y la experiencia del usuario para la aplicación cliente.
 
-- **Problemas de seguridad**: sin una puerta de enlace, todos los microservicios se deben exponer al "mundo externo", haciendo que la superficie del ataque sea mayor que si se ocultan los microservicios internos que las aplicaciones cliente no usan de forma directa. Cuanto menor sea la superficie de ataque, más segura será la aplicación.
+- **Problemas de seguridad**: Sin una puerta de enlace, todos los microservicios se deben exponer al "mundo externo", haciendo que la superficie del ataque sea mayor que si se ocultan los microservicios internos que las aplicaciones cliente no usan de forma directa. Cuanto menor sea la superficie de ataque, más segura será la aplicación.
 
-- **Preocupaciones transversales**: cada microservicio publicado públicamente debe ocuparse de cuestiones tales como autorización, SSL, etc. En muchos casos, estas cuestiones podrían controlarse en un solo nivel de manera que se simplifiquen los microservicios internos.
+- **Intereses transversales**: Cada microservicio publicado públicamente debe ocuparse de cuestiones tales como autorización, SSL, etc. En muchos casos, estas cuestiones podrían controlarse en un solo nivel de manera que se simplifiquen los microservicios internos.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>¿Qué es el patrón de puerta de enlace de API?
 
@@ -172,7 +172,7 @@ Después de las secciones iniciales de explicación de arquitectura y patrones, 
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Charles Richardson. Pattern: API Gateway / Backend for Front-End** \ (Patrón: puerta de enlace de API o back-end para front-end)
+- **Charles Richardson. Patrón: API Gateway / Backend for Front-End** \ (Puerta de enlace de API o back-end para front-end)
   [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 - **Puertas de enlace de API** \

@@ -1,5 +1,5 @@
 ---
-title: 'using static (Directiva): Referencia de C#'
+title: using static (Directiva, Referencia de C#)
 ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c17f74fc16e8c9774086c5270a66e9e9d7cc425b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 29610a77eadf587162731b5bddbcc4bbe7fa0714
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237784"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610533"
 ---
 # <a name="using-static-directive-c-reference"></a>using static (Directiva, Referencia de C#)
 
@@ -29,34 +29,34 @@ La directiva `using static` se aplica a cualquier tipo que tenga miembros estát
 La directiva `using static` se ha agregado en C# 6.
 
 ## <a name="remarks"></a>Comentarios
- 
+
 Normalmente, cuando se llama a un miembro estático, se especifica el nombre de tipo junto con el nombre de miembro. Especificar varias veces el mismo nombre de tipo para invocar los miembros del tipo puede traducirse en código detallado y poco claro. Por ejemplo, la siguiente definición de una clase `Circle` hace referencia a un número de miembros de la clase <xref:System.Math>.
-  
-[!code-csharp[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
+
+[!code-csharp[using-static#1](~/samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
 
 Al eliminar la necesidad de hacer referencia explícitamente a la clase <xref:System.Math> cada vez que se hace referencia a un miembro, la directiva `using static` genera un código mucho más limpio:
 
-[!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
+[!code-csharp[using-static#2](~/samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
-`using static` importa solo los miembros estáticos accesibles y los tipos anidados declarados en el tipo especificado.  Los miembros heredados no se importan.  Puede importar desde cualquier tipo con nombre con una directiva estática using, incluidos los módulos de Visual Basic.  Las funciones de nivel superior F# pueden importarse si aparecen en los metadatos como miembros estáticos de un tipo con nombre cuyo nombre es un identificador de C# válido.  
-  
- `using static` habilita los métodos de extensión declarados en el tipo especificado estén para la búsqueda de métodos de extensión.  Pero los nombres de los métodos de extensión no se importan en el ámbito de referencia sin calificar del código.  
-  
- Los métodos con el mismo nombre que se importen desde tipos distintos con distintas directivas `using static` en la misma unidad de compilación o espacio de nombres forman un grupo de métodos.  La resolución de sobrecarga dentro de estos grupos de método sigue reglas normales de C#.  
-  
+`using static` importa solo los miembros estáticos accesibles y los tipos anidados declarados en el tipo especificado.  Los miembros heredados no se importan.  Puede importar desde cualquier tipo con nombre con una directiva estática using, incluidos los módulos de Visual Basic.  Las funciones de nivel superior F# pueden importarse si aparecen en los metadatos como miembros estáticos de un tipo con nombre cuyo nombre es un identificador de C# válido.
+
+ `using static` habilita los métodos de extensión declarados en el tipo especificado estén para la búsqueda de métodos de extensión.  Pero los nombres de los métodos de extensión no se importan en el ámbito de referencia sin calificar del código.
+
+ Los métodos con el mismo nombre que se importen desde tipos distintos con distintas directivas `using static` en la misma unidad de compilación o espacio de nombres forman un grupo de métodos.  La resolución de sobrecarga dentro de estos grupos de método sigue reglas normales de C#.
+
 ## <a name="example"></a>Ejemplo
 
 En el ejemplo siguiente se usa la directiva `using static` para que los miembros estáticos de las clases <xref:System.Console>, <xref:System.Math> y <xref:System.String> estén disponibles sin tener que especificar su nombre de tipo.
 
-[!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
+[!code-csharp[using-static#3](~/samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
 En el ejemplo, también podría haberse aplicado la directiva `using static` al tipo <xref:System.Double>. Esto habría permitido llamar al método <xref:System.Double.TryParse(System.String,System.Double@)> sin especificar un nombre de tipo. Pero esto crea un código menos legible, ya que es necesario comprobar las instrucciones `using static` para determinar el método `TryParse` de tipo numérico al que se llama.
 
 ## <a name="see-also"></a>Vea también
 
 - [using (directiva)](using-directive.md)
-- [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
-- [Utilizar espacios de nombres](../../../csharp/programming-guide/namespaces/using-namespaces.md)
-- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)
+- [Referencia de C#](../index.md)
+- [Palabras clave de C#](index.md)
+- [Utilizar espacios de nombres](../../programming-guide/namespaces/using-namespaces.md)
+- [Palabras clave del espacio de nombres](namespace-keywords.md)
+- [Espacios de nombres](../../programming-guide/namespaces/index.md)

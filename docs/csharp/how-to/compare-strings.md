@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Comparar cadenas - Guía de C#'
+title: Procedimiento Comparar cadenas - Guía de C#
 description: Aprenda a comparar y ordenar valores de cadena, ya sea con caso o sin él, o con orden específico de referencia cultural o sin él.
 ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334839"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Cómo comparar cadenas en C\#
 
@@ -29,23 +29,27 @@ Cuando se comparan cadenas, se define un orden entre ellas. Las comparaciones se
 
 ## <a name="default-ordinal-comparisons"></a>Comparaciones de ordinales predeterminadas
 
-Las operaciones más habituales, <xref:System.String.CompareTo%2A?displayProperty=nameWithType> y <xref:System.String.Equals%2A?displayProperty=nameWithType> o <xref:System.String.op_Equality%2A?displayProperty=nameWithType> usan una comparación ordinal, una comparación con distinción entre mayúsculas y minúsculas y la referencia cultural actual. Los resultados se muestran en el ejemplo siguiente.
+Los métodos más comunes para probar la igualdad, <xref:System.String.Equals%2A?displayProperty=nameWithType> y <xref:System.String.op_Equality%2A?displayProperty=nameWithType>, usan una comparación ordinal que distingue mayúsculas de minúsculas. Los resultados se muestran en el ejemplo siguiente.
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-Las comparaciones de ordinales no tienen en cuenta reglas lingüísticas cuando se comparan cadenas. Comparan las cadenas carácter por carácter. Las comparaciones con distinción entre mayúsculas y minúsculas usan mayúsculas y minúsculas en las comparaciones. El punto más importante sobre estos métodos de comparación predeterminada es que, puesto que usan la referencia cultural actual, los resultados dependen de la configuración regional y de idioma de la máquina donde se ejecutan. Estas comparaciones no son adecuadas para las comparaciones en las que el orden debe ser coherente en varias máquinas o ubicaciones.
+La comparación de ordinales predeterminada no tiene en cuenta reglas lingüísticas cuando se comparan cadenas. Compara el valor binario de cada objeto <xref:System.Char> en dos cadenas. Como resultado, la comparación de ordinales predeterminada también distingue mayúsculas de minúsculas. 
+
+Tenga en cuenta que la prueba de igualdad con <xref:System.String.Equals%2A?displayProperty=nameWithType> y <xref:System.String.op_Equality%2A?displayProperty=nameWithType> es diferente de la comparación de cadenas que usa los métodos <xref:System.String.CompareTo%2A?displayProperty=nameWithType> y <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Mientras que las pruebas de igualdad realizan una comparación ordinal que distingue mayúsculas de minúsculas, el método de comparación realiza una comparación que distingue mayúsculas de minúsculas y entre referencias culturales usando la referencia cultural actual. Puesto que los métodos de comparación predeterminados suelen realizan diferentes tipos de comparaciones, le recomendamos que especifique claramente la intención de su código llamando a una sobrecarga que especifique explícitamente el tipo de comparación que se realizará.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Comparaciones de ordinales sin distinción entre mayúsculas y minúsculas
 
-El método <xref:System.String.Equals%2A?displayProperty=nameWithType> le permite especificar un valor <xref:System.StringComparison> de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
-para especificar una comparación sin distinción entre mayúsculas y minúsculas. También hay un método <xref:System.String.Compare%2A> estático que incluye un argumento booleano para especificar comparaciones sin distinción entre mayúsculas y minúsculas. Se muestran en este código:
+El método <xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> le permite especificar un valor <xref:System.StringComparison> de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
+para una comparación ordinal sin distinción entre mayúsculas y minúsculas. También hay un método <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> estático que realiza una comparación ordinal que distingue mayúsculas de minúsculas. Para usarlo, debe especificar un valor de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para el argumento <xref:System.StringComparison>. Se muestran en este código:
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
+
+Al realizar una comparación ordinal que distingue mayúsculas de minúsculas, estos métodos usarán las convenciones de mayúsculas y minúsculas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture).
 
 ## <a name="linguistic-comparisons"></a>Comparaciones lingüísticas
 
 También se pueden ordenar cadenas mediante reglas lingüísticas para la referencia cultural actual.
-Esto se conoce a veces como "criterio de ordenación por palabras". Cuando se realiza una comparación lingüística, algunos caracteres Unicode no alfanuméricos pueden tener asignados pesos especiales. Por ejemplo, el guion ("-") podría tener asignado un peso muy pequeño, por lo que las cadenas "coop" y "co-op" aparecerían una junto a la otra en una ordenación. Además, algunos caracteres Unicode pueden ser equivalentes a una secuencia de caracteres alfanuméricos. En este ejemplo se usa una frase en alemán que significa "Bailan en la calle", pero se ha escrito de manera distinta en cada frase, una con "ss" y la otra con "ß". Lingüísticamente (en Windows), "ss" es igual que el carácter 'ß' en alemán, en ambas referencias culturales "en-US" y "de-DE".
+Esto se conoce a veces como "criterio de ordenación por palabras". Cuando se realiza una comparación lingüística, algunos caracteres Unicode no alfanuméricos pueden tener asignados pesos especiales. Por ejemplo, el guion ("-") podría tener asignado un peso muy pequeño, por lo que las cadenas "coop" y "co-op" aparecerían una junto a la otra en una ordenación. Además, algunos caracteres Unicode pueden ser equivalentes a una secuencia de instancias de <xref:System.Char>. En este ejemplo se usa una frase en alemán que significa "Bailan en la calle", en alemán, con "ss" (U+0073 U+0073) en una cadena y "ß" (U+00DF) en otra. Lingüísticamente (en Windows), "ss" es igual que el carácter 'ß' en alemán, en ambas referencias culturales "en-US" y "de-DE".
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -64,8 +68,8 @@ En Windows, el criterio de ordenación de "cop", "coop" y "co-op" cambia al camb
 
 ## <a name="comparisons-using-specific-cultures"></a>Comparaciones con referencias culturales específicas
 
-Este ejemplo almacena <xref:System.Globalization.CultureInfo> para la referencia cultural actual.
-La referencia cultural original se puede establecer y recuperar en el objeto de subproceso actual. Las comparaciones se realizan con el valor <xref:System.StringComparison.CurrentCulture> para garantizar una comparación específica de la referencia cultural.
+En esta muestra se almacenan los objetos <xref:System.Globalization.CultureInfo> de las referencias culturales en-US y de-DE.
+Las comparaciones se realizan con el objeto <xref:System.Globalization.CultureInfo> para garantizar una comparación específica de la referencia cultural.
 
 La referencia cultural usada afecta a las comparaciones lingüísticas. En este ejemplo se muestra el resultado de comparar las dos frases en alemán usando la referencia cultural "en-US" y la referencia cultural "de-DE":
 
@@ -92,7 +96,7 @@ En este ejemplo se muestra cómo ordenar una matriz de cadenas con la referencia
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
-Una vez que se ordena la matriz, puede buscar entradas mediante una búsqueda binaria. Una búsqueda binaria empieza en medio de la colección para determinar qué mitad de la colección debe contener la cadena buscada. Cada comparación posterior divide la parte restante de la colección por la mitad.  La matriz se ordena usando <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>. La función local `ShowWhere` muestra información sobre dónde se encuentra la cadena. Si no se encuentra la cadena, el valor devuelto indica dónde estaría si se encontrara.
+Una vez que se ordena la matriz, puede buscar entradas mediante una búsqueda binaria. Una búsqueda binaria empieza en medio de la colección para determinar qué mitad de la colección debe contener la cadena buscada. Cada comparación posterior divide la parte restante de la colección por la mitad.  La matriz se ordena con el elemento <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>. La función local `ShowWhere` muestra información sobre dónde se encuentra la cadena. Si no se encuentra la cadena, el valor devuelto indica dónde estaría si se encontrara.
 
 [!code-csharp-interactive[Searching in a sorted array](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#6)]
 
@@ -118,6 +122,8 @@ Ninguno de los ejemplos ha usado <xref:System.Object.ReferenceEquals%2A>. Este m
 
 > [!NOTE]
 > Cuando se prueba la igualdad de cadenas, debe usar los métodos que especifican explícitamente el tipo de comparación que va a realizar. El código se vuelve mucho más legible y fácil de mantener. Use sobrecargas de los métodos de las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Array?displayProperty=nameWithType> que toman un parámetro de enumeración <xref:System.StringComparison>. Especifique qué tipo de comparación se va a realizar. Evite usar los operadores `==` y `!=` cuando pruebe la igualdad. Los métodos de instancia <xref:System.String.CompareTo%2A?displayProperty=nameWithType> siempre realizan una comparación ordinal con distinción entre mayúsculas y minúsculas. Son adecuados principalmente para ordenar alfabéticamente las cadenas.
+
+Puede internalizar una cadena o recuperar una referencia a una cadena internalizada existente llamando al método <xref:System.String.Intern%2A?displayProperty=nameWithType>. Para determinar si una cadena se aplica el método Intern, llame al método <xref:System.String.IsInterned%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Vea también
 

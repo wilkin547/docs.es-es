@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: ad5c6f68f5eb2f62d7c6f389e374e1b2db5417c6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8c0d145fab69e60a12ebb8b28f087ab643e508b9
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241923"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397064"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Uso de indizadores (Guía de programación de C#)
 
@@ -57,7 +57,7 @@ En el ejemplo siguiente, se muestra cómo declarar un campo de matriz privada, `
   
 ## <a name="indexing-using-other-values"></a>Indexación con otros valores
 
-C# no limita el tipo de índice a un entero. Por ejemplo, puede ser útil usar una cadena con un indexador. Este tipo de indexador podría implementarse al buscar la cadena de la colección y devolver el valor adecuado. Ya que los descriptores de acceso se pueden sobrecargar, las versiones de cadena y entero pueden coexistir.  
+C# no limita el tipo de parámetro indizador a un entero. Por ejemplo, puede ser útil usar una cadena con un indexador. Este tipo de indexador podría implementarse al buscar la cadena de la colección y devolver el valor adecuado. Ya que los descriptores de acceso se pueden sobrecargar, las versiones de cadena y entero pueden coexistir.  
   
 ## <a name="example-2"></a>Ejemplo 2  
   
