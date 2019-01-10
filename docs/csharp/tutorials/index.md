@@ -2,12 +2,12 @@
 title: Tutoriales de C#
 description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
 ms.date: 10/25/2018
-ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195130"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084672"
 ---
 # <a name="c-tutorials"></a>Tutoriales de C#
 
@@ -47,20 +47,18 @@ En este tutorial se presupone que ha completado las lecciones que se muestran an
 
 Todos los tutoriales de introducción posteriores a la lección Hola mundo se encuentran disponibles en el entorno de desarrollo local. Al final de cada tutorial, decida si desea continuar con la siguiente lección en línea o en su propia máquina. Hay vínculos que le ayudarán a configurar el entorno y continuar con el siguiente tutorial en su máquina.
 
+## <a name="explore-new-features-in-c"></a>Explore las nuevas características en C# #
+
+Pruebe las nuevas características en [C# 6](../whats-new/csharp-6.md) en esta [exploración interactiva](exploration/csharp-6.yml).
+
 ## <a name="general-tutorials"></a>Tutoriales generales
 
 Los siguientes tutoriales le permiten crear programas de C# mediante [.NET Core](../../core/index.md):
 
 * [Aplicación de consola](console-teleprompter.md): muestra la E/S de consola, la estructura de una aplicación de consola y los aspectos básicos del modelo de programación asincrónica basado en tareas.
-
 * [Cliente de REST](console-webapiclient.md): muestra las comunicaciones web, la serialización de JSON y las características orientadas a objetos del lenguaje C#.
-
 * [Inheritance in C# and .NET](inheritance.md) (Herencia en C# y .NET): muestra la herencia en C#, incluido el uso de la herencia para definir clases base, clases base abstractas y clases derivadas.
-
 * [Working with LINQ](working-with-linq.md) (Trabajar con LINQ): muestra muchas de las características de LINQ y los elementos del lenguaje compatibles.
-
-* [Microservices hosted in Docker](microservices.md) (Microservicios hospedados en Docker): muestra la creación de un microservicio de ASP.NET Core y el hospedaje en Docker.
-
 * [Interpolación de cadenas](string-interpolation.md): muestra cómo usar la interpolación de cadenas para crear cadenas con formato en C#.
-
 * [Uso de atributos](attributes.md): muestra cómo crear y usar atributos en C#.
+* [Tipos de referencia que aceptan valores NULL](nullable-reference-types.md): se muestra cómo usar los tipos de referencia que aceptan valores NULL para expresar la intención de referencias nulas.
