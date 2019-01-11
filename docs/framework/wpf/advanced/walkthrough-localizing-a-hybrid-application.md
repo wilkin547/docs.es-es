@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6b7db8182b5764e3df65ccbdef3b54330c1ee64a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402703"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223014"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Tutorial: Localizar una aplicación híbrida
 
@@ -48,7 +48,7 @@ El primer paso es crear el [!INCLUDE[TLA#tla_winforms](../../../../includes/tlas
 
 2.  Agregar un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> elemento llamado `SimpleControl` al proyecto.
 
-3.  Use la <xref:System.Windows.Forms.Integration.ElementHost> control se coloque un `SimpleControl` elemento en el formulario. Para obtener más información, consulte [Tutorial: hospedar un Control compuesto 3D de WPF en Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3.  Use la <xref:System.Windows.Forms.Integration.ElementHost> control se coloque un `SimpleControl` elemento en el formulario. Para obtener más información, vea [Tutorial: Hospedar un Control compuesto 3D de WPF en Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Agregar contenido localizable
 
@@ -118,7 +118,7 @@ Puede asignar el contenido localizable a ensamblados de recursos usando identifi
 
 ### <a name="to-assign-resource-identifiers"></a>Para asignar identificadores de recursos
 
-1.  En el menú Inicio, abra el símbolo del sistema de Visual Studio.
+1.  En el menú Inicio, abra el símbolo del sistema para desarrolladores de Visual Studio.
 
 2.  Use el siguiente comando para asignar identificadores de recursos al contenido localizable.
 
@@ -177,5 +177,5 @@ El contenido localizado se almacena en un recurso solo *ensamblado satélite*. U
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Localizar una aplicación](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [Tutorial: Adaptar Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [Tutorial: Adaptar formularios de Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

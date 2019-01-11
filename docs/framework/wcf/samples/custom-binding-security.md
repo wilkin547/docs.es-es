@@ -2,12 +2,12 @@
 title: Seguridad de enlace personalizado
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192894"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221705"
 ---
 # <a name="custom-binding-security"></a>Seguridad de enlace personalizado
 Este ejemplo muestra cómo configurar la seguridad mediante un enlace personalizado. Muestra cómo utilizar un enlace personalizado para habilitar la seguridad de nivel de mensaje junto con un transporte seguro. Esto es útil cuando se exige un transporte seguro que transmita los mensajes entre el cliente y servicio y simultáneamente los mensajes deben ser seguros en el nivel de mensaje. Los enlaces proporcionados por el sistema no admiten esta configuración.
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1.  Abra una ventana de símbolo del sistema de Visual Studio con privilegios de administrador y ejecute Setup.bat desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1.  Abra un símbolo del sistema para desarrolladores para la ventana de Visual Studio con privilegios de administrador y ejecute Setup.bat desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
     >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. El conjunto de variables de entorno de ruta de acceso en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  Copie los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
   
-    4.  Ejecute el siguiente comando en un símbolo del sistema de Visual Studio abierto con privilegios de administrador: `Setup.bat service`. Así se crea el certificado del servicio con un nombre de sujeto que coincide con el nombre del equipo en el que se ejecutó el archivo por lotes.  
+    4.  Ejecute el siguiente comando en un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador: `Setup.bat service`. Así se crea el certificado del servicio con un nombre de sujeto que coincide con el nombre del equipo en el que se ejecutó el archivo por lotes.  
   
         > [!NOTE]
         >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio 2010. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio 2010.
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  Ejecute Cleanup.bat para quitar cualquier certificado antiguo de ejemplos anteriores.
 
-    3.  Exporte el certificado del servicio abriendo un símbolo del sistema de Visual Studio con privilegios de administrador y ejecutando el comando siguiente en el equipo del servicio (sustituya `%SERVER_NAME%` por el nombre completo del equipo donde se está ejecutando el servicio):
+    3.  Exporte el certificado del servicio abriendo un símbolo del sistema para desarrolladores de Visual Studio con privilegios de administrador y ejecute el comando siguiente en el equipo del servicio (sustituya `%SERVER_NAME%` con el nombre completo del equipo donde el servicio se ejecuta):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  Copie % SERVER_NAME%.cer en el equipo cliente (sustituya % SERVER_NAME% con el nombre completo del equipo donde se está ejecutando el servicio).
 
-    5.  Importe el certificado del servicio abriendo un símbolo del sistema de Visual Studio con privilegios de administrador y ejecutando el comando siguiente en el equipo cliente (sustituya %SERVER_NAME% por el nombre completo del equipo donde se está ejecutando el servicio):
+    5.  Importe el certificado del servicio abriendo un símbolo del sistema para desarrolladores de Visual Studio con privilegios de administrador y ejecutando el comando siguiente en el equipo cliente (sustituya % SERVER_NAME % con el nombre completo del equipo donde el se ejecuta el servicio):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople

@@ -2,12 +2,12 @@
 title: Autenticador de tokens
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582650"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222901"
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
 Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens de Windows Communication Foundation (WCF) se utiliza para validar el token utilizado con el mensaje, comprobando que es coherente y autenticar la identidad asociada al token.
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2.  Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
   
-3.  Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo App.config del servicio debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear uno utilizando el archivo Setup.bat si establece la variable `%SERVER_NAME%` en el nombre de host completo del equipo en el que se ejecutará el servicio. Observe que el archivo setup.bat se debe ejecutar desde un símbolo del sistema de Visual Studio abierto con privilegios de administrador.  
+3.  Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo App.config del servicio debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear uno utilizando el archivo Setup.bat si establece la variable `%SERVER_NAME%` en el nombre de host completo del equipo en el que se ejecutará el servicio. Tenga en cuenta que el archivo setup.bat se debe ejecutar desde un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador.  
   
 4.  Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. No necesita hacerlo excepto cuando un emisor de confianza del cliente emite el certificado de servidor.  
   

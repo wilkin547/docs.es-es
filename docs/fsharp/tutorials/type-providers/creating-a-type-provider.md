@@ -2,12 +2,12 @@
 title: 'Tutorial: Crear un proveedor de tipos'
 description: Aprenda a crear su propio F# escriba proveedores en F# 3.0 mediante el examen de varios proveedores de tipo simple para ilustrar los conceptos básicos.
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614537"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223213"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
 
@@ -156,7 +156,7 @@ Para depurar este proveedor mediante instrucciones de impresión, cree un script
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Para depurar este proveedor mediante Visual Studio, abra el símbolo del sistema de Visual Studio con credenciales administrativas y ejecute el comando siguiente:
+Para depurar este proveedor mediante el uso de Visual Studio, abra el símbolo del sistema para desarrolladores de Visual Studio con credenciales administrativas y ejecute el siguiente comando:
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx

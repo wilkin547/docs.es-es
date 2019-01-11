@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 3b19886b11def5c15425fc27f907b10314c73e0c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 376106ff6c5c19c517c9e116112319b6e9d08c51
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181571"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222303"
 ---
 # <a name="message-security-certificate"></a>Certificado de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509 v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509 v3 del servidor. Este ejemplo utiliza la configuración predeterminada de tal modo que todos los mensajes de la aplicación entre el cliente y el servidor se firman y cifran. En este ejemplo se basa en el [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) y consta de un programa de consola de cliente y una biblioteca de servicios hospedados por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
@@ -202,7 +202,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- El archivo por lotes Setup.bat incluido con los ejemplos de Message Security permite configurar el cliente y el servidor con los certificados pertinentes para ejecutar una aplicación hospedada que exija seguridad basada en certificado. El archivo por lotes se puede ejecutar en tres modos. Para ejecutarlo en modo de equipo único, escriba **setup.bat** en un símbolo del sistema de Visual Studio; para el modo de servicio escriba **setup.bat service**; y para el modo de cliente escriba **setup.bat client** . Utilice el modo de cliente y servidor cuando ejecute el ejemplo en varios equipos. Para obtener más detalles, vea el procedimiento de configuración al final de este tema. A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.  
+ El archivo por lotes Setup.bat incluido con los ejemplos de Message Security permite configurar el cliente y el servidor con los certificados pertinentes para ejecutar una aplicación hospedada que exija seguridad basada en certificado. El archivo por lotes se puede ejecutar en tres modos. Para ejecutarlo en modo de equipo único, escriba **setup.bat** en un símbolo para Visual Studio; para el modo de servicio escriba **setup.bat service**; y para el modo de cliente escriba **setup.bat client**. Utilice el modo de cliente y servidor cuando ejecute el ejemplo en varios equipos. Para obtener más detalles, vea el procedimiento de configuración al final de este tema. A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.  
   
 -   Crear el certificado del cliente.  
   
@@ -269,7 +269,7 @@ Press <ENTER> to terminate client.
     >  Si está utilizando una edición que no esté en inglés de EE. UU. de Windows, debe editar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" con su equivalente regional.  
   
 > [!NOTE]
->  Las herramientas utilizadas en este archivo por lotes se encuentran en C:\Program Files\Microsoft Visual Studio 8\Common7\tools o C:\Program Files\Microsoft SDKs\Windows\v6.0\bin Uno de estos directorios debe estar en su ruta de acceso del sistema. Si tiene Visual Studio instalado, la manera más fácil de obtener este directorio en su ruta de acceso es abrir el símbolo del sistema de Visual Studio. Haga clic en **iniciar**y, a continuación, seleccione **todos los programas**, **Visual Studio 2012**, **herramientas**. Este símbolo del sistema tiene las rutas de acceso adecuadas ya configuradas. De lo contrario, debe agregar manualmente el directorio correcto a su ruta de acceso.  
+>  Las herramientas utilizadas en este archivo por lotes se encuentran en C:\Program Files\Microsoft Visual Studio 8\Common7\tools o C:\Program Files\Microsoft SDKs\Windows\v6.0\bin Uno de estos directorios debe estar en su ruta de acceso del sistema. Si tiene instalado Visual Studio, es la manera más fácil de obtener este directorio en la ruta de acceso abrir el símbolo del sistema para desarrolladores de Visual Studio. Haga clic en **iniciar**y, a continuación, seleccione **todos los programas**, **Visual Studio 2012**, **herramientas**. Este símbolo del sistema tiene las rutas de acceso adecuadas ya configuradas. De lo contrario, debe agregar manualmente el directorio correcto a su ruta de acceso.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar:  
@@ -288,10 +288,10 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1.  Abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute Setup.bat desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
+1.  Abra un símbolo del sistema para desarrolladores de Visual Studio con privilegios de administrador y ejecute Setup.bat desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio (2010).  
+    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de desarrollador para Visual Studio. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de desarrollador para Visual Studio (2010).  
   
 2.  Comprobar el acceso al servicio utilizando un explorador escribiendo la dirección `http://localhost/servicemodelsamples/service.svc`.  
   
@@ -309,21 +309,21 @@ Press <ENTER> to terminate client.
   
 4.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-5.  En el servidor, ejecute **setup.bat service** en un símbolo del sistema de Visual Studio con privilegios de administrador. Ejecutando **setup.bat** con el **servicio** argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado Service.cer.  
+5.  En el servidor, ejecute **setup.bat service** en una línea de comandos para desarrolladores para Visual Studio con privilegios de administrador. Ejecutando **setup.bat** con el **servicio** argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado Service.cer.  
   
 6.  Edite el archivo Web.config para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo.  
   
 7.  Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
-8.  En el cliente, ejecute **setup.bat client** en un símbolo del sistema de Visual Studio con privilegios de administrador. Ejecutando **setup.bat** con el **cliente** argumento crea un certificado de cliente denominado client.com y exporta el certificado de cliente a un archivo denominado Client.cer.  
+8.  En el cliente, ejecute **setup.bat client** en una línea de comandos para desarrolladores para Visual Studio con privilegios de administrador. Ejecutando **setup.bat** con el **cliente** argumento crea un certificado de cliente denominado client.com y exporta el certificado de cliente a un archivo denominado Client.cer.  
   
 9. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.  
   
 10. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.  
   
-11. En el cliente, ejecute ImportServiceCert.bat en un símbolo del sistema de Visual Studio con privilegios de administrador. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
+11. En el cliente, ejecute ImportServiceCert.bat en un símbolo del sistema de desarrollador para Visual Studio con privilegios administrativos. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
   
-12. En el servidor, ejecute ImportClientCert.bat en un símbolo del sistema de Visual Studio con privilegios de administrador. De esta forma se importa el certificado del cliente desde el archivo Client.cer al almacén LocalMachine - TrustedPeople.  
+12. En el servidor, ejecute ImportClientCert.bat en un símbolo del sistema de desarrollador para Visual Studio con privilegios administrativos. De esta forma se importa el certificado del cliente desde el archivo Client.cer al almacén LocalMachine - TrustedPeople.  
   
 13. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   

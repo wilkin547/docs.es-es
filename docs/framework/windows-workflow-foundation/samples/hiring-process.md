@@ -2,12 +2,12 @@
 title: Proceso de contratación
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520643"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223226"
 ---
 # <a name="hiring-process"></a>Proceso de contratación
 Este ejemplo muestra cómo implementar un proceso de negocio mediante actividades de mensajería y dos flujos de trabajo hospedados como servicios de flujo de trabajo. Estos flujos de trabajo son parte de la infraestructura de TI de una compañía ficticia denominada Contoso, Inc.  
@@ -131,13 +131,13 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 ## <a name="data-storage"></a>Almacenamiento de datos  
  Los datos están almacenados en una base de datos de SQL Server llamada `ContosoHR` (el script para crear esta base de datos se encuentra en la carpeta `DbSetup` ). Las instancias del flujo de trabajo se almacenan en una base de datos de SQL Server llamada `InstanceStore` (los scripts para crear el almacén de instancias forman parte de la distribución de [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
   
- Ambas bases de datos se crean ejecutando el script Setup.cmd desde un símbolo del sistema de Visual Studio.  
+ Ambas bases de datos se crean ejecutando el script Setup.cmd desde un símbolo del sistema de desarrollador para Visual Studio.  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
   
 #### <a name="to-create-the-databases"></a>Para crear las bases de datos  
   
-1.  Abra un símbolo del sistema de Visual Studio 2010.  
+1.  Abra un símbolo del sistema para desarrolladores de Visual Studio.  
   
 2.  Navegue hasta la carpeta del ejemplo.  
   

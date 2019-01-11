@@ -2,12 +2,12 @@
 title: Proveedor de pertenencia y roles
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 716aeeb57dc78ea9ff9205f75880b974d63fe39b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864034"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221250"
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
 El ejemplo de proveedor de pertenencia y función muestra el modo en que un servicio puede utilizar los proveedores de pertenencia y función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autenticar y autorizar a los clientes.  
@@ -114,7 +114,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
 </system.serviceModel>  
 ```  
   
- Al ejecutar el ejemplo, el cliente llama a las distintas operaciones de servicio en tres cuentas de usuario diferentes: Alice, Bob y Charlie. Las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Las cuatro llamadas que se efectúan como el usuario "Alice" deberían poder realizarse correctamente. El usuario "Bob" debería obtener un error de acceso denegado al intentar llamar al método Divide. El usuario "Charlie" debería obtener un error de acceso denegado al intentar llamar al método Multiply. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ Al ejecutar el ejemplo, el cliente llama a varias operaciones de servicio en tres distintas cuentas de usuario: Alice, Bob y Charlie. Las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Las cuatro llamadas que se efectúan como el usuario "Alice" deberían poder realizarse correctamente. El usuario "Bob" debería obtener un error de acceso denegado al intentar llamar al método Divide. El usuario "Charlie" debería obtener un error de acceso denegado al intentar llamar al método Multiply. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
@@ -134,7 +134,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 1.  Asegúrese de que la ruta de acceso incluye la carpeta donde se encuentra Makecert.exe.  
   
-2.  Ejecute el archivo Setup.bat de la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio con privilegios de administrador. De esta forma se instalan los certificados de servicio necesarios para ejecutar el ejemplo.  
+2.  Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de desarrollador de Visual Studio que se ejecute con privilegios de administrador. De esta forma se instalan los certificados de servicio necesarios para ejecutar el ejemplo.  
   
 3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
@@ -150,7 +150,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 4.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-5.  En el servidor, abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute `setup.bat service`. Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado Service.cer.  
+5.  En el servidor, abra un símbolo del sistema para desarrolladores de Visual Studio con privilegios administrativos y ejecute `setup.bat service`. Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado Service.cer.  
   
 6.  Edite el archivo Web.config para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es el mismo que el nombre de dominio completo del equipo.  
   
@@ -158,7 +158,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
   
-9. En el cliente, abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute ImportServiceCert.bat. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
+9. En el cliente, abra un símbolo del sistema para desarrolladores de Visual Studio con privilegios administrativos y ejecute ImportServiceCert.bat. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
   
 10. En el equipo cliente, inicie Client.exe desde un símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
