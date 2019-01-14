@@ -5,35 +5,41 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: a39a7dd3ebdbb7483f0b69169c8e00382f581788
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: dc4cb8aa63d4a63325e887e134fcda6aeb9d27fa
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252901"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221120"
 ---
 # <a name="inside-a-c-program"></a>Dentro de un programa de C#
-En esta sección, se describe la estructura general de un programa de C# y se incluye el ejemplo estándar "Hola mundo".  
-  
-## <a name="in-this-section"></a>En esta sección  
-  
--   [Hello World, su primer programa](../../../csharp/programming-guide/inside-a-program/hello-world-your-first-program.md)  
-  
--   [Estructura general de un programa de C#](../../../csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program.md)  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
-  
--   [Introducción a C#](../../../csharp/getting-started/index.md)  
-  
--   [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-  
--   [Referencia de C#](../../../csharp/language-reference/index.md)  
-  
--   [\<paveover>Aplicaciones de ejemplo de C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
-  
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+En esta sección, se describe la estructura general de un programa de C# y se incluye el ejemplo estándar "Hola mundo".
+
+## <a name="in-this-section"></a>En esta sección
+
+- [Hello World, su primer programa](hello-world-your-first-program.md)
+
+- [Estructura general de un programa de C#](general-structure-of-a-csharp-program.md)
+
+- [Nombres de identificador](identifier-names.md)
+
+- [Convenciones de código de C#](coding-conventions.md)
+
+## <a name="related-sections"></a>Secciones relacionadas
+
+- [Introducción a C#](../../getting-started/index.md)
+
+- [Guía de programación de C#](../../programming-guide/index.md)
+
+- [Referencia de C#](../../language-reference/index.md)
+
+- [Ejemplos y tutoriales](../../../samples-and-tutorials/index.md)
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)

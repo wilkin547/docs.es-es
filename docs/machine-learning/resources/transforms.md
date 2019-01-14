@@ -4,12 +4,12 @@ description: Explore los componentes de ingeniería de características que se a
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451097"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249130"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Transformaciones de datos de aprendizaje automático: ML.NET
 
@@ -103,7 +103,6 @@ Las tablas siguientes contienen información sobre todas las transformaciones de
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Quita los valores que faltan de las columnas. |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Crea una columna de salida booleana con el mismo número de ranuras que la columna de entrada, donde el valor de salida es true si falta el valor en la columna de entrada. |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Controla los valores que faltan y los sustituye por el valor predeterminado o el valor medio, mínimo o máximo (solo para las columnas que no sean de texto). |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Crea una columna de salida booleana con el mismo número de ranuras que la columna de entrada, donde el valor de salida es true si falta el valor en la columna de entrada. |
 
 ## <a name="normalization"></a>Normalización
 

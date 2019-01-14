@@ -3,15 +3,15 @@ title: 'Agrupación de flores de iris mediante un aprendiz de agrupación en cl�
 description: Obtenga información sobre cómo usar ML.NET en un escenario de agrupación en clústeres
 author: pkulikov
 ms.author: johalex
-ms.date: 12/17/2018
+ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 012cea471c69f66ad9a61db858b4575606b31f74
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656328"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249078"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Agrupación de flores de iris mediante un aprendiz de agrupación en clústeres con ML.NET
 
@@ -56,7 +56,7 @@ Como no se sabe a qué grupo pertenece cada flor, seleccione la tarea de [aprend
 
 ## <a name="prepare-the-data"></a>Preparar los datos
 
-1. Descargue el conjunto de datos [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) y guárdelo en la carpeta *Datos* que ha creado en el paso anterior. Para obtener más información sobre el conjunto de datos de iris, vea la página de Wikipedia [Conjunto de datos de flor de Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) y la página [Iris Data Set](http://archive.ics.uci.edu/ml/datasets/Iris) (Conjunto de datos Iris), que es el origen del conjunto de datos.
+1. Descargue el conjunto de datos [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) y guárdelo en la carpeta *Datos* que ha creado en el paso anterior. Para obtener más información sobre el conjunto de datos de iris, vea la página de Wikipedia [Conjunto de datos de flor de Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) y la página [Iris Data Set](https://archive.ics.uci.edu/ml/datasets/Iris) (Conjunto de datos Iris), que es el origen del conjunto de datos.
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo *iris.data* y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** por **Copiar si es posterior**.
 
@@ -84,9 +84,9 @@ Quite la definición de clase existente y agregue el código siguiente, que defi
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` es la clase de datos de entrada y tiene definiciones para cada una de las características del conjunto de datos. Use el atributo [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) para especificar los índices de las columnas de origen en el archivo de conjunto de datos.
+`IrisData` es la clase de datos de entrada y tiene definiciones para cada una de las características del conjunto de datos. Use el atributo [Column](xref:Microsoft.ML.Data.ColumnAttribute) para especificar los índices de las columnas de origen en el archivo de conjunto de datos.
 
-La clase `ClusterPrediction` representa el resultado del modelo de agrupación en clústeres aplicado a una instancia de `IrisData`. Use el atributo [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) para enlazar los campos `PredictedClusterId` y `Distances` a las columnas **PredictedLabel** y **Score** respectivamente. En el caso de la tarea de agrupación en clústeres, esas columnas tienen el significado siguiente:
+La clase `ClusterPrediction` representa el resultado del modelo de agrupación en clústeres aplicado a una instancia de `IrisData`. Use el atributo [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) para enlazar los campos `PredictedClusterId` y `Distances` a las columnas **PredictedLabel** y **Score** respectivamente. En el caso de la tarea de agrupación en clústeres, esas columnas tienen el significado siguiente:
 
 - La columna **PredictedLabel** contiene el identificador del clúster previsto.
 - La columna **Score** contiene una matriz con las distancias euclidianas cuadradas a los centroides de clúster. La longitud de la matriz es igual al número de clústeres.
@@ -127,9 +127,9 @@ Agregue el código siguiente al método `Main` para configurar la manera de carg
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Observe que los nombres de columna y los índices coinciden con el esquema definido por la clase `IrisData`. El valor <xref:Microsoft.ML.Runtime.Data.DataKind.R4?displayProperty=nameWithType> especifica el tipo `float`.
+Observe que los nombres de columna y los índices coinciden con el esquema definido por la clase `IrisData`. El valor <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> especifica el tipo `float`.
 
-Use una instancia de <xref:Microsoft.ML.Runtime.Data.TextLoader> para crear una instancia de <xref:Microsoft.ML.Runtime.Data.IDataView>, que representa el origen de datos para el conjunto de datos de entrenamiento:
+Use una instancia de <xref:Microsoft.ML.Data.TextLoader> para crear una instancia de <xref:Microsoft.ML.Data.IDataView>, que representa el origen de datos para el conjunto de datos de entrenamiento:
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
@@ -160,7 +160,7 @@ En este punto, tiene un modelo que se puede integrar en cualquiera de las aplica
 
 ## <a name="use-the-model-for-predictions"></a>Usar el modelo para las predicciones
 
-Para realizar predicciones, use la clase <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602>, que toma instancias del tipo de entrada a través de la canalización de transformador y genera instancias del tipo de salida. Agregue la línea siguiente al método `Main` para crear una instancia de esa clase:
+Para realizar predicciones, use la clase <xref:Microsoft.ML.PredictionEngine%602>, que toma instancias del tipo de entrada a través de la canalización de transformador y genera instancias del tipo de salida. Agregue la línea siguiente al método `Main` para crear una instancia de esa clase:
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 

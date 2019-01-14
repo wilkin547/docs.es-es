@@ -140,7 +140,7 @@ En la lista siguiente se muestran algunas reglas orientativas que se deben tener
 
 ## <a name="contributor-license-agreement"></a>Contrato de licencia del colaborador
 
-Debe firmar el [contrato de licencia de colaboración (CLA) de .NET Foundation](https://cla.dotnetfoundation.org) antes de que la PR se combine. Se trata de un requisito único para los proyectos de .NET Foundation. Puede obtener más información sobre los [contratos de licencia de colaboración (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) en Wikipedia.
+Debe firmar el [contrato de licencia de colaboración (CLA) de .NET Foundation](https://cla.dotnetfoundation.org) antes de que la PR se combine. Se trata de un requisito único para los proyectos de .NET Foundation. Puede obtener más información sobre los [contratos de licencia de colaboración (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) en Wikipedia.
 
 El contrato: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

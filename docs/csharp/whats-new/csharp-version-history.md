@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245605"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186233"
 ---
 # <a name="the-history-of-c"></a>Historia de C# #
 
@@ -28,7 +28,7 @@ Las herramientas de compilación de C# consideran que la última versión princi
 
 ## <a name="c-version-10"></a>C# versión 1.0
 
-Al echar la vista atrás, la versión 1.0 de C# se parecía mucho a Java. Como [parte de sus objetivos de diseño indicados para ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), intentaba ser un "lenguaje orientado a objetos que fuera sencillo, moderno y para fines generales".  En aquel momento, parecerse a Java significaba que conseguía esos primeros objetivos de diseño.
+Al echar la vista atrás, la versión 1.0 de C# se parecía mucho a Java. Como [parte de sus objetivos de diseño indicados para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), intentaba ser un "lenguaje orientado a objetos que fuera sencillo, moderno y para fines generales".  En aquel momento, parecerse a Java significaba que conseguía esos primeros objetivos de diseño.
 
 Pero si volvemos a echarle un vistazo a C# 1.0 ahora, no lo verá tan claro. Carecía de capacidades asincrónicas integradas y de algunas funcionalidades útiles de genéricos que se dan por sentado. De hecho, carecía por completo de genéricos.  ¿Y [LINQ](../linq/index.md)? Aún no estaba disponible. Esas características tardarían unos años más en agregarse.
 
@@ -142,7 +142,7 @@ Con las versiones 3.0 y 5.0, C# había agregado nuevas características destacab
 - [Propagador de null](./csharp-6.md#null-conditional-operators)
 - [Interpolación de cadenas](./csharp-6.md#string-interpolation)
 - [operador nameof](./csharp-6.md#the-nameof-expression)
-- [Inicializadores de índice](csharp-6.md#index-initializers)
+- [Inicializadores de índice](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Entre las otras características nuevas se incluyen estas:
 
@@ -168,7 +168,6 @@ Otras características incluidas:
 
 - [Descartes](./csharp-7.md#discards)
 - [Literales binarios y separadores de dígitos](./csharp-7.md#numeric-literal-syntax-improvements)
-- [Valores devueltos y variables locales](./csharp-7.md#ref-locals-and-returns)
 - [Expresiones throw](./csharp-7.md#throw-expressions)
 
 Todas estas características ofrecen capacidades nuevas e interesantes para los desarrolladores y la posibilidad de escribir un código de manera más clara que nunca. De manera destacada, condensan la declaración de variables que se van a usar con la palabra clave `out` y permiten varios valores devueltos a través de tuplas.

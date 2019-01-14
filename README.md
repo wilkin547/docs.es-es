@@ -10,7 +10,7 @@ En esta sección se hace un seguimiento de los problemas y de las tareas de esos
 
 Agradecemos la colaboración de los usuarios para mejorar y completar la documentación de .NET. Si quiere colaborar, vea [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35) (Proyectos para colaboradores de la comunidad de .NET) para obtener ideas. La [guía de colaboración](CONTRIBUTING.md) contiene instrucciones sobre los procedimientos que seguimos. También puede consultar la [lista de problemas](https://github.com/dotnet/docs/issues) para ver tareas que le pueden resultar interesantes.
 
-Prevemos que [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) y [Unity](http://docs.unity3d.com/Manual/index.html) también usarán esta documentación.
+Prevemos que [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) y [Unity](https://docs.unity3d.com/Manual/index.html) también usarán esta documentación.
 
 Este proyecto ha adoptado el Código de conducta convenido para contribuyentes con el fin de establecer el comportamiento que se espera en nuestra comunidad.
 Para obtener más información, consulte el [Código de conducta de .NET Foundation](https://dotnetfoundation.org/code-of-conduct).

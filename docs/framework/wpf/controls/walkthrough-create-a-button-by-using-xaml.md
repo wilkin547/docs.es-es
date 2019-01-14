@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525356"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249156"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Tutorial: Crear un botón mediante el uso de XAML
 Es el objetivo de este tutorial aprender a crear un botón animado para su uso en una aplicación de Windows Presentation Foundation (WPF). En este tutorial usa los estilos y una plantilla para crear un recurso de botón personalizado que permite la reutilización del código y la separación de lógica de botón de la declaración del botón. Este tutorial está escrito completamente en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -28,9 +28,9 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
 1.  Inicie Visual Studio.  
   
-2.  **Cree un nuevo proyecto WPF:** en el **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**. Buscar el **aplicación de Windows (WPF)** plantilla y el nombre del proyecto "AnimatedButton". Esto creará el esqueleto de la aplicación.  
+2.  **Cree un nuevo proyecto WPF:** En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**. Buscar el **aplicación de Windows (WPF)** plantilla y el nombre del proyecto "AnimatedButton". Esto creará el esqueleto de la aplicación.  
   
-3.  **Agregar botones básicos predeterminados:** todos los archivos que necesita para este tutorial se proporcionan la plantilla. Abra el archivo Window1.xaml haciendo doble clic en el Explorador de soluciones. De forma predeterminada, hay un <xref:System.Windows.Controls.Grid> elemento en Window1.xaml. Quitar el <xref:System.Windows.Controls.Grid> elemento y agregar algunos botones a la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] página escribiendo o copiando y pegando el siguiente código resaltado en Window1.xaml:  
+3.  **Agregue botones básicos predeterminados:** Todos los archivos que necesita para este tutorial se proporcionan mediante la plantilla. Abra el archivo Window1.xaml haciendo doble clic en el Explorador de soluciones. De forma predeterminada, hay un <xref:System.Windows.Controls.Grid> elemento en Window1.xaml. Quitar el <xref:System.Windows.Controls.Grid> elemento y agregar algunos botones a la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] página escribiendo o copiando y pegando el siguiente código resaltado en Window1.xaml:  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -58,7 +58,7 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Usar estilos para establecer las propiedades básicas de los botones  
   
-1.  **Defina un bloque Application.Resources:** abra app.xaml y agregue el siguiente marcado resaltado si aún no está:  
+1.  **Defina un bloque Application.Resources:** Abra app.xaml y agregue el siguiente marcado resaltado si aún no está:  
   
     ```xaml  
     <Application x:Class="AnimatedButton.App"  
@@ -74,7 +74,7 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
      Ámbito de recursos viene determinada por donde se define el recurso. Definición de recursos en `Application.Resources` en app.xaml archivo permite que el recurso para su uso en cualquier lugar en la aplicación. Para más información acerca de cómo definir el ámbito de los recursos, consulte [recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-2.  **Crear un estilo y definir valores de propiedad básico con él:** agregue el marcado siguiente a la `Application.Resources` bloque. Este marcado crea un <xref:System.Windows.Style> que se aplica a todos los botones de la configuración de la aplicación, el <xref:System.Windows.FrameworkElement.Width%2A> de los botones en 90 y <xref:System.Windows.FrameworkElement.Margin%2A> a 10:  
+2.  **Crear un estilo y definir valores de propiedad básico con él:** Agregue el siguiente marcado para el `Application.Resources` bloque. Este marcado crea un <xref:System.Windows.Style> que se aplica a todos los botones de la configuración de la aplicación, el <xref:System.Windows.FrameworkElement.Width%2A> de los botones en 90 y <xref:System.Windows.FrameworkElement.Margin%2A> a 10:  
   
     ```xaml  
     <Application.Resources>  
@@ -91,7 +91,7 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
      Hay mucho más que puede hacer con los estilos, incluyendo una variedad de distintas maneras de ajustar los objetos que tienen como destino, especificando valores de propiedad complejos e incluso usar estilos como entrada para otros estilos. Para obtener más información, consulte [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-3.  **Establecer un valor de propiedad de estilo a un recurso:** recursos permiten reutilizar objetos definen habitualmente y los valores de una manera sencilla. Es especialmente útil definir valores complejos utilizando recursos para que el código más modular. Agregue el siguiente marcado resaltado en app.xaml.  
+3.  **Establecer un valor de propiedad de estilo a un recurso:** Recursos permiten reutilizar objetos definen habitualmente y los valores de una manera sencilla. Es especialmente útil definir valores complejos utilizando recursos para que el código más modular. Agregue el siguiente marcado resaltado en app.xaml.  
   
     ```xaml  
     <Application.Resources>  
@@ -121,7 +121,7 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Para usar la plantilla para definir la apariencia del botón  
   
-1.  **Configurar la plantilla:** porque los controles, como <xref:System.Windows.Controls.Button> tiene un <xref:System.Windows.Controls.Control.Template%2A> propiedad, puede definir el valor de propiedad de plantilla al igual que los demás valores de propiedad que hemos configurado en un <xref:System.Windows.Style> mediante un <xref:System.Windows.Setter>. Agregue el siguiente marcado resaltado para el estilo de botón.  
+1.  **Configurar la plantilla:** Dado que los controles, como <xref:System.Windows.Controls.Button> tiene un <xref:System.Windows.Controls.Control.Template%2A> propiedad, puede definir el valor de propiedad de plantilla al igual que los demás valores de propiedad que hemos configurado en un <xref:System.Windows.Style> mediante un <xref:System.Windows.Setter>. Agregue el siguiente marcado resaltado para el estilo de botón.  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
     </Application.Resources>  
     ```  
   
-2.  **Modificar la presentación del botón:** en este punto, tiene que definir la plantilla. Agregue el siguiente marcado resaltado. Este marcado especifica dos <xref:System.Windows.Shapes.Rectangle> elementos con las esquinas redondeadas, seguido por un <xref:System.Windows.Controls.DockPanel>. El <xref:System.Windows.Controls.DockPanel> se usa para hospedar el <xref:System.Windows.Controls.ContentPresenter> del botón. Un <xref:System.Windows.Controls.ContentPresenter> muestra el contenido del botón. En este tutorial, el contenido es texto ("Botón 1", "Button 2", "Button 3"). Todos los componentes de plantilla (los rectángulos y <xref:System.Windows.Controls.DockPanel>) se colocan dentro de un <xref:System.Windows.Controls.Grid>.  
+2.  **Modificar la presentación del botón:** En este momento, deberá definir la plantilla. Agregue el siguiente marcado resaltado. Este marcado especifica dos <xref:System.Windows.Shapes.Rectangle> elementos con las esquinas redondeadas, seguido por un <xref:System.Windows.Controls.DockPanel>. El <xref:System.Windows.Controls.DockPanel> se usa para hospedar el <xref:System.Windows.Controls.ContentPresenter> del botón. Un <xref:System.Windows.Controls.ContentPresenter> muestra el contenido del botón. En este tutorial, el contenido es texto ("Botón 1", "Button 2", "Button 3"). Todos los componentes de plantilla (los rectángulos y <xref:System.Windows.Controls.DockPanel>) se colocan dentro de un <xref:System.Windows.Controls.Grid>.  
   
     ```xaml  
     <Setter.Value>  
@@ -167,7 +167,7 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
      ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **Agregar un vidrio a la plantilla:** a continuación, agregará la luna. En primer lugar crear algunos recursos que crean un efecto de degradado de cristal. Agregar estos recursos de degradado en cualquier lugar dentro de la `Application.Resources` bloque:  
+3.  **Agregue un vidrio a la plantilla:** A continuación, se agregará la luna. En primer lugar crear algunos recursos que crean un efecto de degradado de cristal. Agregar estos recursos de degradado en cualquier lugar dentro de la `Application.Resources` bloque:  
   
     ```xaml  
     <Application.Resources>  
@@ -187,7 +187,7 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
      Estos recursos se utilizan como el <xref:System.Windows.Shapes.Shape.Fill%2A> para un rectángulo que se inserta en el <xref:System.Windows.Controls.Grid> de la plantilla de botón. Agregue el siguiente marcado resaltado a la plantilla.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"  
@@ -249,13 +249,13 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
 ## <a name="create-button-interactivity"></a>Crear interactividad del botón  
  En esta sección, creará los desencadenadores de propiedad y los desencadenadores de eventos para cambiar los valores de propiedad y ejecutar animaciones en respuesta a las acciones del usuario, como mover el puntero del mouse sobre el botón y haga clic en.  
   
- Es una manera fácil de agregar interactividad (pasar el mouse sobre, y salir del mouse, haga clic en y así sucesivamente) definir los desencadenadores dentro de la plantilla o estilo. Para crear un <xref:System.Windows.Trigger>, definirá una propiedad "condition": el botón <xref:System.Windows.UIElement.IsMouseOver%2A> es igual al valor de propiedad `true`. A continuación, defina los establecedores (acciones) que tienen lugar cuando se cumple la condición del desencadenador.  
+ Es una manera fácil de agregar interactividad (pasar el mouse sobre, y salir del mouse, haga clic en y así sucesivamente) definir los desencadenadores dentro de la plantilla o estilo. Para crear un <xref:System.Windows.Trigger>, defina una propiedad "condition" como: El botón <xref:System.Windows.UIElement.IsMouseOver%2A> es igual al valor de propiedad `true`. A continuación, defina los establecedores (acciones) que tienen lugar cuando se cumple la condición del desencadenador.  
   
 #### <a name="to-create-button-interactivity"></a>Para crear interactividad del botón  
   
-1.  **Agregar desencadenadores de plantilla:** agregue el marcado resaltado a la plantilla.  
+1.  **Agregar desencadenadores de la plantilla:** Agregue el marcado resaltado a la plantilla.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}"   
@@ -318,9 +318,9 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
     </Setter.Value>  
     ```  
   
-2.  **Agregar desencadenadores de propiedad:** agregue el marcado resaltado a la `ControlTemplate.Triggers` bloque:  
+2.  **Agregar desencadenadores de propiedad:** Agregue el marcado resaltado a la `ControlTemplate.Triggers` bloque:  
   
-    ```  
+    ```xaml
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->   <Trigger Property="IsMouseOver" Value="True">     <!-- Below are three property settings that occur when the           condition is met (user mouses over button).  -->     <!-- Change the color of the outer rectangle when user           mouses over it. -->     <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <!-- Sets the glass opacity to 1, therefore, the           glass "appears" when user mouses over it. -->     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />     <!-- Makes the text slightly blurry as though you           were looking at it through blurry glass. -->     <Setter Property="ContentPresenter.BitmapEffect"        TargetName="myContentPresenter">       <Setter.Value>         <BlurBitmapEffect Radius="1" />       </Setter.Value>     </Setter>   </Trigger>  
@@ -330,9 +330,9 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
      Presione F5 para ejecutar la aplicación y ver el efecto que se ejecute el puntero del mouse sobre los botones.  
   
-3.  **Agregar un desencadenador de foco:** a continuación, agregaremos algunos establecedores similar para controlar el caso cuando el botón tiene el foco (por ejemplo, una vez que el usuario hace clic en él).  
+3.  **Agregue un desencadenador de foco:** A continuación, agregaremos algunos establecedores similar para controlar el caso cuando el botón tiene el foco (por ejemplo, una vez que el usuario hace clic en él).  
   
-    ```  
+    ```xaml  
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->  
@@ -361,9 +361,9 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
      Presione F5 para ejecutar la aplicación y haga clic en uno de los botones. Tenga en cuenta que el botón permanece resaltado después de hacer clic en él porque aún tiene el foco. Si hace clic en otro botón, el nuevo botón recibe el foco mientras lo pierde la última de ellas.  
   
-4.  **Agregar animaciones para** <xref:System.Windows.UIElement.MouseEnter> **y** <xref:System.Windows.UIElement.MouseLeave> **:** a continuación, agregamos algunas animaciones a los desencadenadores. Agregue el siguiente marcado en cualquier lugar dentro de la `ControlTemplate.Triggers` bloque.  
+4.  **Agregar animaciones para** <xref:System.Windows.UIElement.MouseEnter> **y** <xref:System.Windows.UIElement.MouseLeave> **:  ** A continuación, agregamos algunas animaciones a los desencadenadores. Agregue el siguiente marcado en cualquier lugar dentro de la `ControlTemplate.Triggers` bloque.  
   
-    ```  
+    ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
     <EventTrigger RoutedEvent="Mouse.MouseEnter">  
       <EventTrigger.Actions>  
@@ -398,9 +398,9 @@ Es el objetivo de este tutorial aprender a crear un botón animado para su uso e
   
      El segundo desencadenador de evento (<xref:System.Windows.UIElement.MouseLeave>) simplemente se detiene la primera de ellas. Al detener una <xref:System.Windows.Media.Animation.Storyboard>, devuelven todas las propiedades animadas en sus valores predeterminados. Por lo tanto, cuando el usuario mueve el puntero del botón, el botón vuelve a la forma en que estaba antes de mover el puntero del mouse sobre el botón. Para obtener más información acerca de las animaciones, consulte [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
-5.  **Agregar una animación cuando se hace clic en el botón:** el último paso es agregar un desencadenador para cuando el usuario hace clic en el botón. Agregue el siguiente marcado en cualquier lugar dentro de la `ControlTemplate.Triggers` bloque:  
+5.  **Agregar una animación cuando se hace clic en el botón:** El último paso es agregar un desencadenador para cuando el usuario hace clic en el botón. Agregue el siguiente marcado en cualquier lugar dentro de la `ControlTemplate.Triggers` bloque:  
   
-    ```  
+    ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  
     <EventTrigger RoutedEvent="Button.Click">  
       <EventTrigger.Actions>  

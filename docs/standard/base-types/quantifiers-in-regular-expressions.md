@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4718dadddb2ad88ece05312b2f2b7232271d5b0e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580470"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221393"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
@@ -49,7 +49,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 ### <a name="match-zero-or-more-times-"></a>Coincidir cero o más veces: *  
  El cuantificador `*` coincide con el elemento anterior cero o más veces. Equivale al cuantificador `{0,}`. `*` es un cuantificador expansivo cuyo equivalente diferido es `*?`.  
   
- En el ejemplo siguiente se muestra esta expresión regular. De los nueve dígitos de la cadena de entrada, cinco coinciden con el patrón y cuatro (`95`, `929`, `9129` y `9919`) no coinciden.  
+ En el ejemplo siguiente se muestra esta expresión regular. De los nueve dígitos de la cadena de entrada, cinco coinciden con el patrón y cuatro (`95`, `929`, `9219` y `9919`) no coinciden.  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
