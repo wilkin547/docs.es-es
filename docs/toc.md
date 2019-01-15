@@ -205,7 +205,6 @@
 ### [Accesibilidad](framework/ui-automation/)
 ### [Datos y modelado](framework/data/)
 ### [Aplicaciones cliente](framework/develop-client-apps.md)
-#### [Tecnologías comunes de cliente](framework/common-client-technologies/)
 #### [Windows Presentation Foundation](framework/wpf/)
 #### [Windows Forms](framework/winforms/)
 ### [Aplicaciones orientadas a servicios con WCF](framework/wcf/)
