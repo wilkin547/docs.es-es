@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5de13fc4da371220f46a107ca9b620e1313e75d4
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999474"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307531"
 ---
 # <a name="introducing-xml-serialization"></a>Introducir la serialización XML
 
@@ -28,7 +28,7 @@ La serialización es el proceso de convertir un objeto a un formulario que pueda
 > [!NOTE]
 > La serialización XML no convierte los métodos, indizadores, campos privados ni propiedades (excepto las colecciones de solo lectura). Para serializar todos los campos y propiedades, tanto públicos como privados, de un objeto, utilice el <xref:System.Runtime.Serialization.DataContractSerializer> en vez de la serialización XML.
 
- La clase central en serialización XML es la clase <xref:System.Xml.Serialization.XmlSerializer>, y los métodos más importantes de esta clase son **Serialize** y **Deserialize**. <xref:System.Xml.Serialization.XmlSerializer> crea los archivos C# y los compila en archivos .dll para realizar esta serialización. En .NET Framework 2.0, la [herramienta Generador de serializador XML (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) está diseñada para generar de antemano estos ensamblados de serialización para implementarlos con la aplicación y mejorar el rendimiento de inicio. La secuencia XML generada por el **XmlSerializer** es compatible con el World Wide Web Consortium (W3C) [lenguaje de definición de esquemas XML (XSD) 1.0 recomendación](https://www.w3.org/TR/xslt). Además, los tipos de datos generados son conformes al documento titulado "Esquema XML parte 2: Tipos de datos."
+ La clase central en serialización XML es la clase <xref:System.Xml.Serialization.XmlSerializer>, y los métodos más importantes de esta clase son **Serialize** y **Deserialize**. <xref:System.Xml.Serialization.XmlSerializer> crea los archivos C# y los compila en archivos .dll para realizar esta serialización. En .NET Framework 2.0, la [herramienta Generador de serializador XML (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) está diseñada para generar de antemano estos ensamblados de serialización para implementarlos con la aplicación y mejorar el rendimiento de inicio. La secuencia XML generada por el **XmlSerializer** es compatible con el World Wide Web Consortium (W3C) [lenguaje de definición de esquemas XML (XSD) 1.0 recomendación](https://www.w3.org/TR/xslt). Además, los tipos de datos generados son compatibles con el documento titulado "esquema XML parte 2: Tipos de datos."
 
  Los datos de los objetos se describen mediante construcciones de lenguaje de programación, como clases, campos, propiedades, tipos primitivos, matrices e incluso XML insertado en forma de objetos **XmlElement** o **XmlAttribute**. Existe la opción de crear clases propias, anotadas con atributos, o de utilizar la herramienta de definición de esquema XML para generar las clases de acuerdo con un documento de esquema XML existente.
 
@@ -36,9 +36,9 @@ La serialización es el proceso de convertir un objeto a un formulario que pueda
 
  Los atributos controlan la secuencia XML generada por la clase **XmlSerializer**, lo que le permite establecer el espacio de nombres XML, el nombre de elemento, el nombre de atributo, etc., de la secuencia XML. Para obtener más información sobre estos atributos y la forma en que controlan la serialización XML, vea [Controlling XML Serialization Using Attributes](controlling-xml-serialization-using-attributes.md) (Controlar la serialización XML mediante atributos). Para consultar una tabla de los atributos que se usan para controlar el XML generado, vea [Attributes That Control XML Serialization](attributes-that-control-xml-serialization.md) (Atributos que controlan la serialización XML).
 
- La clase **XmlSerializer** puede serializar adicionalmente un objeto y generar una secuencia XML SOAP codificada. El XML generado cumple las normas de la sección 5 del documento de World Wide Web Consortium con título "Protocolo simple de acceso a objetos (SOAP) 1.1" (SOAP). Para obtener más información sobre este proceso, vea [How to: Serialize an Object as a SOAP-Encoded XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) (Cómo: Serializar un objeto como secuencia XML con codificación SOAP). Para consultar una tabla de los atributos que controlan el XML generado, vea [Attributes That Control Encoded SOAP Serialization](attributes-that-control-encoded-soap-serialization.md) (Atributos que controlan la serialización SOAP codificada).
+ La clase **XmlSerializer** puede serializar adicionalmente un objeto y generar una secuencia XML SOAP codificada. El XML generado cumple las normas de la sección 5 del documento de World Wide Web Consortium con título "Protocolo simple de acceso a objetos (SOAP) 1.1" (SOAP). Para obtener más información sobre este proceso, consulte [Cómo: Serializar un objeto como un Stream XML codificados en SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Para consultar una tabla de los atributos que controlan el XML generado, vea [Attributes That Control Encoded SOAP Serialization](attributes-that-control-encoded-soap-serialization.md) (Atributos que controlan la serialización SOAP codificada).
 
- La clase **XmlSerializer** genera los mensajes SOAP creados por servicios Web XML y pasados a estos. Para controlar los mensajes SOAP, puede aplicar los atributos a las clases, los valores devueltos, parámetros y campos situados en un archivo de servicio Web XML (.asmx). Puede utilizar ambos, los atributos mostrados en "atributos que controlan la serialización XML" y los “atributos que controlan la serialización de SOAP codificada” porque un servicio Web XML puede utilizar o el estilo SOAP literal o codificado. Para obtener más información sobre cómo usar atributos para controlar el XML generado por un servicio Web XML, vea [XML Serialization with XML Web Services](xml-serialization-with-xml-web-services.md) (Serialización XML con servicios Web XML). Para obtener más información sobre SOAP y servicios Web XML vea [Customizing SOAP Messages](https://msdn.microsoft.com/en-us/subscriptions/index/dkwy2d72\(v=vs.71\).aspx) (Personalizar mensajes SOAP).
+ La clase **XmlSerializer** genera los mensajes SOAP creados por servicios Web XML y pasados a estos. Para controlar los mensajes SOAP, puede aplicar los atributos a las clases, los valores devueltos, parámetros y campos situados en un archivo de servicio Web XML (.asmx). Puede utilizar ambos, los atributos mostrados en "atributos que controlan la serialización XML" y los “atributos que controlan la serialización de SOAP codificada” porque un servicio Web XML puede utilizar o el estilo SOAP literal o codificado. Para obtener más información sobre cómo usar atributos para controlar el XML generado por un servicio Web XML, vea [XML Serialization with XML Web Services](xml-serialization-with-xml-web-services.md) (Serialización XML con servicios Web XML). Para obtener más información sobre SOAP y servicios Web XML vea [Customizing SOAP Messages](https://msdn.microsoft.com/subscriptions/index/dkwy2d72\(v=vs.71\).aspx) (Personalizar mensajes SOAP).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>Consideraciones de seguridad para aplicaciones XmlSerializer
 
@@ -107,7 +107,7 @@ Los elementos siguientes se pueden serializar mediante la clase **XmLSerializer*
 
 - Los objetos **DataSet**.
 
- Para obtener más información sobre la serialización y la deserialización de objetos, vea [How to: Serialize an Object](how-to-serialize-an-object.md) (Cómo: Serializar un objeto) y [How to: Deserialize an Object](how-to-deserialize-an-object.md) (Cómo: Deserializar un objeto).
+ Para obtener más información sobre la serialización o deserialización de objetos, vea [Cómo: Serializar un objeto](how-to-serialize-an-object.md) y [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md).
 
 ## <a name="advantages-of-using-xml-serialization"></a>Ventajas de utilizar serialización XML
 
@@ -147,7 +147,7 @@ Al usar la clase **XmlSerializer**, debe tener en cuenta lo siguiente:
 
 ## <a name="xsd-data-type-mapping"></a>Asignación de tipo de datos XSD
 
-El documento del W3C titulado [XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/) especifica los tipos de datos simples que se permiten en un esquema (XSD) del lenguaje de definición de esquemas XML. Para muchos de estos (por ejemplo, **int** y **decimal**), hay un tipo de datos correspondiente en .NET Framework. Pero algunos tipos de datos XML no tienen un tipo de datos correspondiente en .NET Framework (por ejemplo, el tipo de datos **NMTOKEN**). En casos como este, si usa la [herramienta de definición de esquema XML (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md) para generar clases a partir de un esquema, se aplica un atributo adecuado a un miembro de cadena de tipo y su propiedad **DataType** se establee en el nombre del tipo de datos XML. Por ejemplo, si un esquema contiene un elemento denominado "MyToken" con el tipo de datos XML **NMTOKEN**, la clase generada podría contener un miembro, como se muestra en el ejemplo siguiente.
+El documento del W3C titulado [XML Schema Part 2: Los tipos de datos](https://www.w3.org/TR/xmlschema-2/) especifica los tipos de datos simples que se permiten en un esquema (XSD) del lenguaje de definición de esquemas XML. Para muchos de estos (por ejemplo, **int** y **decimal**), hay un tipo de datos correspondiente en .NET Framework. Pero algunos tipos de datos XML no tienen un tipo de datos correspondiente en .NET Framework (por ejemplo, el tipo de datos **NMTOKEN**). En casos como este, si usa la [herramienta de definición de esquema XML (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md) para generar clases a partir de un esquema, se aplica un atributo adecuado a un miembro de cadena de tipo y su propiedad **DataType** se establee en el nombre del tipo de datos XML. Por ejemplo, si un esquema contiene un elemento denominado "MyToken" con el tipo de datos XML **NMTOKEN**, la clase generada podría contener un miembro, como se muestra en el ejemplo siguiente.
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 42a44d66a3f70d0572484adf4c8dd946edf2297f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aa43d92270d09793d099ce34345ab82a355f90e3
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752252"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307076"
 ---
 # <a name="clear-element-for-configsections"></a>\<Borrar > (elemento) para \<configSections >
 
 Borra todas las secciones definidas anteriormente y grupos de sección.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Borrar >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,21 +40,21 @@ Borra todas las secciones definidas anteriormente y grupos de sección.
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene las declaraciones de espacio de nombres y la sección de configuración. |
+| [**\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene las declaraciones de espacio de nombres y la sección de configuración. |
 
-# <a name="child-elements"></a>Elementos secundarios
+## <a name="child-elements"></a>Elementos secundarios
 
 Ninguna
 
 ## <a name="remarks"></a>Comentarios
 
-El  **\<borrar >** elemento quita todas las secciones y grupos de secciones de la aplicación que se definieron anteriormente en el archivo de configuración actual o en un nivel superior en la jerarquía de archivos de configuración.
+El  **\<borrar >** elemento quita todas las secciones y grupos de la aplicación definidos anteriormente en el archivo de configuración actual o en un nivel superior de la jerarquía del archivo de configuración.
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo define un archivo de configuración del equipo y un archivo de configuración de aplicación y muestra cómo utilizar el  **\<borrar >** elemento en un archivo de configuración de aplicación para borrar las secciones definidas anteriormente en el archivo de configuración del equipo.
+Este ejemplo define un archivo de configuración del equipo y un archivo de configuración de aplicación y se muestra cómo usar el  **\<borrar >** elemento en un archivo de configuración de aplicación para borrar las secciones definidas anteriormente en el archivo de configuración del equipo.
 
-El siguiente código de archivo de configuración de máquina declara dos secciones,  **\<sampleSection >** y  **\<anotherSampleSection >**, que se leen antes de que la aplicación archivo de configuración:
+El siguiente código de archivo de configuración de máquina declara dos secciones,  **\<sampleSection >** y  **\<anotherSampleSection >**, que se leen antes de la aplicación archivo de configuración:
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ El siguiente código de archivo de configuración de máquina declara dos seccio
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación borra todas las secciones declaradas previamente. La aplicación no se puede utilizar ni recuperar la configuración de cualquiera de las secciones que se han declarado en el archivo de configuración del equipo. Sin embargo, se pueden utilizar los valores de  **\<anotherSection >** dado que viene después de la  **\<borrar >** elemento.
+El siguiente código de archivo de configuración de la aplicación borra todas las secciones declaradas previamente. La aplicación no se puede usar o recuperar la configuración de cualquiera de las secciones que se han declarado en el archivo de configuración del equipo. Sin embargo, se pueden utilizar los valores de  **\<anotherSection >** ya que está después del  **\<borrar >** elemento.
 
 ```xml
 <!-- Application configuration file -->
@@ -89,8 +89,8 @@ El siguiente código de archivo de configuración de la aplicación borra todas 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración de máquina (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+[Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
