@@ -66,9 +66,9 @@ Un cambio importante de archivo binario se produce al cambiar la API pública de
 
 Un cambio importante de archivo binario también puede afectar a un **ensamblado completo**. Cambiar el nombre de un ensamblado con `AssemblyName` cambiará la identidad del ensamblado, como lo hará agregar, quitar o cambiar la clave de nomenclatura segura del ensamblado. Un cambio de identidad de un ensamblado afectará a todo el código compilado que lo usa.
 
- **NO** cambie el nombre de un ensamblado.
+**NO** cambie el nombre de un ensamblado.
 
- **NO** agregue, quite o cambie la clave de nombre seguro.
+**NO** agregue, quite o cambie la clave de nombre seguro.
 
 **✔️ ES RECOMENDABLE** usar clases base abstractas en lugar de interfaces.
 

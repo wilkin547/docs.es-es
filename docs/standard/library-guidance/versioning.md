@@ -63,7 +63,7 @@ La asignación de nombres seguros junto con la versión de ensamblado permite la
 
 > AssemblyVersion se incluye en algunos mensajes informativos que se muestran al usuario, por ejemplo, el nombre del ensamblado y los nombres de tipo completos del ensamblado en los mensajes de excepción. Mantener una relación entre las versiones proporciona más información a los desarrolladores sobre qué versión están usando.
 
- **NO** tiene una AssemblyVersion fija.
+**NO** tiene una AssemblyVersion fija.
 
 > Aunque una AssemblyVersion invariable evita la necesidad de redirecciones de enlace, significa que se puede instalar solo una única versión del ensamblado en la memoria caché de ensamblados global (GAC). Además, las aplicaciones que hacen referencia al ensamblado en la memoria caché de ensamblados global se interrumpirán si otra aplicación actualiza el ensamblado de dicha memoria con cambios importantes.
 
@@ -96,7 +96,7 @@ La versión informativa de ensamblado se usa para registrar información de vers
 > [!NOTE]
 > Las versiones anteriores de Visual Studio generan una advertencia de compilación si esta versión no sigue el formato `Major.Minor.Build.Revision`. La advertencia se puede omitir sin ningún problema.
 
- **EVITE** establecer usted mismo la versión informativa del ensamblado.
+**EVITE** establecer usted mismo la versión informativa del ensamblado.
 
 > Permita que SourceLink genere automáticamente la versión que contiene los metadatos de control de código fuente y NuGet.
 
