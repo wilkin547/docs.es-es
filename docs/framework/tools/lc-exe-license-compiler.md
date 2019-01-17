@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6daa696ecd7b91c6d53edaa447f2d64bca0fd7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409083"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221211"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de licencias)
 El Compilador de licencias lee archivos de texto que contienen información sobre licencias y crea un archivo binario que se puede incrustar como recurso en un archivo ejecutable de Common Language Runtime.  
@@ -26,7 +26,7 @@ El Compilador de licencias lee archivos de texto que contienen información sobr
   
  No se admite la compilación cruzada entre 32 y 64 bits cuando se usa la herramienta Compilador de licencias al generar el proyecto. Esto se debe a que el Compilador de licencias tiene que cargar los ensamblados, y no se permite cargar ensamblados de 64 bits de una aplicación de 32 bits y viceversa. En este caso, utilice el Compilador de licencias desde la línea de comandos para compilar la licencia manualmente y especifique la arquitectura correspondiente.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -38,7 +38,7 @@ El Compilador de licencias lee archivos de texto que contienen información sobr
 /i:modules [/nologo] [/v]  
 ```  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/complist:** *filename*|Especifica el nombre de un archivo que contiene la lista de componentes con licencia que se van a incluir en el archivo .licenses. Se hace referencia a cada componente utilizando su nombre completo con un solo componente por línea.<br /><br /> Los usuarios de la línea de comandos pueden especificar un archivo independiente para cada formulario del proyecto. Lc.exe acepta varios archivos de entrada y crea un único archivo .licenses.|  
 |**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  

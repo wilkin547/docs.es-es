@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149177"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221237"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Símbolo del sistema para desarrolladores de Visual Studio
 
@@ -34,7 +34,7 @@ Es posible que tenga varios símbolos del sistema, en función de la versión de
 
 1. En el cuadro de búsqueda de la barra de tareas, comience a escribir el nombre de la herramienta, como `dev` o `developer command prompt`. Esto muestra una lista de las aplicaciones instaladas que coinciden con el patrón de búsqueda. Si busca un símbolo del sistema diferente, pruebe a escribir otro término de búsqueda, como `prompt`.
 
-2. Elija el **Símbolo del sistema para desarrolladores** (o el símbolo del sistema que quiera usar).
+2. Elija **Símbolo del sistema para desarrolladores de Visual Studio** (o el símbolo del sistema que quiera usar).
 
 ### <a name="in-windows-81"></a>En Windows 8.1
 

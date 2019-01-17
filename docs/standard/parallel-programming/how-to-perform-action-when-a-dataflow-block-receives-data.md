@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Realizar una acción cuando un bloque de flujos de datos recibe datos'
+title: Procedimiento Toma de medidas cuando un bloque de flujos de datos recibe datos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217196"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221068"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Cómo: Realizar una acción cuando un bloque de flujos de datos recibe datos
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Procedimiento Toma de medidas cuando un bloque de flujos de datos recibe datos
 Los tipos *Bloque de flujo de datos de ejecución* llaman a un delegado proporcionado por el usuario cuando reciben datos. Las clases <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> son tipos de bloques de flujo de datos de ejecución. Puede usar la palabra clave `delegate` (`Sub` en Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> o una expresión lambda cuando proporcione una función de trabajo a un bloque de flujo de datos de ejecución. Este documento describe cómo usar <xref:System.Func%602> y expresiones lambda para realizar la acción en bloques de ejecución.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,7 +34,7 @@ Los tipos *Bloque de flujo de datos de ejecución* llaman a un delegado proporci
  En la sección Resumen de tipos de delegado del documento [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) se resumen los tipos de delegado que puede proporcionar a los objetos <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> y <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. La tabla también especifica si el tipo de delegado funciona de forma sincrónica o asincrónica.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
+ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana Símbolo del sistema para desarrolladores de Visual Studio.  
   
  Visual C#  
   

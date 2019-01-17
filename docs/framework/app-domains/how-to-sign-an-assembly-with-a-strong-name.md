@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Firmar un ensamblado con un nombre seguro'
+title: Procedimiento Firma de un ensamblado con un nombre seguro
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191069"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221263"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Cómo: Firmar un ensamblado con un nombre seguro
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedimiento Firma de un ensamblado con un nombre seguro
 Existen varias formas de firmar un ensamblado con un nombre seguro:  
   
 -   Mediante la pestaña **Firma** del cuadro de diálogo **Propiedades** de un proyecto en Visual Studio. Esta es la forma más sencilla y cómoda de firmar un ensamblado con un nombre seguro.  
@@ -31,7 +31,7 @@ Existen varias formas de firmar un ensamblado con un nombre seguro:
   
 -   Mediante el uso de opciones del compilador.  
   
- Es necesario disponer de un par de claves criptográficas para firmar un ensamblado con un nombre seguro. Para más información sobre la creación de un par de claves, vea [Cómo: Crear un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
+ Es necesario disponer de un par de claves criptográficas para firmar un ensamblado con un nombre seguro. Para obtener más información sobre la creación de un par de claves, vea [Cómo: Creación de un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Para crear y firmar un ensamblado con un nombre seguro utilizando Visual Studio  
   
@@ -45,7 +45,7 @@ Existen varias formas de firmar un ensamblado con un nombre seguro:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Para crear y firmar un ensamblado con un nombre seguro utilizando la herramienta Assembly Linker  
   
--   En el [símbolo del sistema de Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), escriba el comando siguiente:  
+-   En [Símbolo del sistema para desarrolladores de Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), escriba el comando siguiente:  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -99,7 +99,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ## <a name="see-also"></a>Vea también  
 - [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Cómo: Crear un par de claves pública y privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Cómo: Creación de un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
 - [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md)  
 - [Administrar la firma de ensamblados y manifiestos](/visualstudio/ide/managing-assembly-and-manifest-signing)  

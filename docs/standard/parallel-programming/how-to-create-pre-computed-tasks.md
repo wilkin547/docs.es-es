@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear tareas precalculadas'
+title: Procedimiento Creación de tareas precalculadas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47e4c5d721b37388a4008d100f5212057477c638
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: aa95eccfa39073bb8ccb3cb9c49e099ac1f90ab1
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211663"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222110"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>Cómo: Crear tareas precalculadas
+# <a name="how-to-create-pre-computed-tasks"></a>Procedimiento Creación de tareas precalculadas
 En este documento se describe cómo utilizar el método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> para recuperar los resultados de las operaciones asincrónicas de descarga que se retienen en una memoria caché. El método <xref:System.Threading.Tasks.Task.FromResult%2A> devuelve un objeto <xref:System.Threading.Tasks.Task%601> terminado que contiene el valor proporcionado como su propiedad <xref:System.Threading.Tasks.Task%601.Result%2A>. Este método es útil cuando se realiza una operación asincrónica que devuelve un objeto <xref:System.Threading.Tasks.Task%601> y el resultado de ese objeto <xref:System.Threading.Tasks.Task%601> ya se ha calculado.  
   
 ## <a name="example"></a>Ejemplo  
@@ -29,7 +29,7 @@ En este documento se describe cómo utilizar el método <xref:System.Threading.T
  Este ejemplo calcula el tiempo necesario para descargar varias cadenas dos veces. El segundo conjunto de operaciones de descarga debe tardar menos tiempo que el primer conjunto porque los resultados se mantienen en la memoria caché. El método <xref:System.Threading.Tasks.Task.FromResult%2A> habilita el método `DownloadStringAsync` para crear objetos <xref:System.Threading.Tasks.Task%601> que contienen estos resultados precalculados.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `CachedDownloads.cs` (`CachedDownloads.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
+ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `CachedDownloads.cs` (`CachedDownloads.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana Símbolo del sistema para desarrolladores de Visual Studio.  
   
  Visual C#  
   

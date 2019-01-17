@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7e0274b1f1f0bc0ec6de7490c4602e5813e4d46f
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198489"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221614"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Herramienta de administración de certificados)
 El administrador de certificados (Certmgr.exe) es una herramienta que administra certificados, listas de certificados de confianza (CTL) y listas de revocación de certificados (CRL).  
@@ -28,9 +28,9 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
  El administrador de certificados se instala automáticamente con Visual Studio. Para iniciar la herramienta, use los [símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
->  El administrador de certificados (Certmgr.exe) es una utilidad de línea de comandos, mientras que Certificados (Certmgr.msc) es un complemento MMC (Microsoft Management Console). Dado que Certmgr.msc se encuentra normalmente en el directorio del sistema Windows, al escribir `certmgr` en la línea de comandos, es posible que se cargue el complemento MMC Certificados, incluso si ha abierto el símbolo del sistema de Visual Studio. Esto ocurre porque la ruta de acceso al complemento precede a la ruta de acceso al administrador de certificados en la variable de entorno PATH. Si se produce este problema, puede ejecutar los comandos de Certmgr.exe especificando la ruta de acceso al archivo ejecutable.  
+>  El administrador de certificados (Certmgr.exe) es una utilidad de línea de comandos, mientras que Certificados (Certmgr.msc) es un complemento MMC (Microsoft Management Console). Dado que Certmgr.msc se encuentra normalmente en el directorio del sistema Windows, al escribir `certmgr` en la línea de comandos, es posible que se cargue el complemento MMC Certificados, incluso si ha abierto Símbolo del sistema para desarrolladores de Visual Studio. Esto ocurre porque la ruta de acceso al complemento precede a la ruta de acceso al administrador de certificados en la variable de entorno PATH. Si se produce este problema, puede ejecutar los comandos de Certmgr.exe especificando la ruta de acceso al archivo ejecutable.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Para información general sobre los certificados X.509, consulte [Trabajar con certificados](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -54,7 +54,7 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
 |Opción|Descripción|  
 |------------|-----------------|  
 |**/add**|Agrega certificados, listas CTL y listas CRL a un almacén de certificados.|  
-|**/all**|Agrega todas las entradas cuando se usa con la opción **/add**. Elimina todas las entradas cuando se usa con la opción **/delete**. Muestra todas las entradas cuando se usa sin la opción /add o **/del**. La opción **/all** no se puede usar con la opción **/put**.|  
+|**/all**|Agrega todas las entradas cuando se usa con la opción **/add**. Elimina todas las entradas cuando se usa con la opción **/delete**. Muestra todas las entradas cuando se usa sin la opción **/add** o **/del**. La opción **/all** no se puede usar con la opción **/put**.|  
 |**/c**|Agrega certificados cuando se usa con la opción **/add**. Elimina certificados cuando se usa con la opción **/delete**. Guarda certificados cuando se usa con la opción **/put**. Muestra certificados cuando se usa sin la opción **/add**, **/del** o **/put**.|  
 |**/CRL**|Agrega listas CRL cuando se usa con **/add**. Elimina listas CRL cuando se usa con **/del**. Guarda listas CRL cuando se usa con **/put**. Muestra listas CRL cuando se usa sin la opción **/add**, **/del** o **/put**.|  
 |**/CTL**|Agrega listas CTL cuando se usa con **/add**. Elimina listas CTL cuando se usa con **/del**. Guarda listas CTL cuando se usa con **/put**. Muestra listas CTL cuando se usa sin la opción **/add**, **/del** o **/put**.|  

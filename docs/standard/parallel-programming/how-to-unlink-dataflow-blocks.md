@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Desvincular bloques de flujos de datos'
+title: Procedimiento Desvinculación de bloques de flujos de datos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540611"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223122"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Cómo: Desvincular bloques de flujos de datos
+# <a name="how-to-unlink-dataflow-blocks"></a>Procedimiento Desvinculación de bloques de flujos de datos
 En este documento se describe cómo desvincular un bloque de flujo de datos de destino de su origen.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -35,7 +35,7 @@ En este documento se describe cómo desvincular un bloque de flujo de datos de d
  Para habilitar las llamadas restantes a `TrySolution` para terminar una vez que una de ellas calcula un valor, el método `TrySolution` adopta un objeto <xref:System.Threading.CancellationToken> que se cancela después de llamar a las devoluciones `ReceiveFromAny(T)`. El método <xref:System.Threading.SpinWait.SpinUntil%2A> realiza la devolución cuando este objeto <xref:System.Threading.CancellationToken> se cancela.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
+ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana Símbolo del sistema para desarrolladores de Visual Studio.  
   
  Visual C#  
   

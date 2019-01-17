@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Usar BatchBlock y BatchedJoinBlock para mejorar la eficacia'
+title: 'Tutorial: Uso de BatchBlock y BatchedJoinBlock para mejorar la eficacia'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042378"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222113"
 ---
-# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Tutorial: Usar BatchBlock y BatchedJoinBlock para mejorar la eficacia
+# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Tutorial: Uso de BatchBlock y BatchedJoinBlock para mejorar la eficacia
 La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para poder recibir y almacenar en búfer datos de uno o más orígenes y después propagar esos datos almacenados en búfer como una colección. Este mecanismo por lotes es útil cuando se recopilan datos de uno o más orígenes y después se procesan varios elementos de datos como un lote. Por ejemplo, piense en una aplicación que usa flujo de datos para insertar registros en una base de datos. Esta operación puede ser más eficaz si varios elementos se insertan al mismo tiempo en lugar de insertar de uno en uno de forma secuencial. En este documento se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para mejorar la eficacia de las operaciones de inserción de la base de datos. También se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar los resultados y cualquier excepción que se produce cuando el programa lee de una base de datos.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,7 +30,7 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
 2.  Asegúrese de que tiene una copia de la base de datos Northwind, Northwind.sdf, disponible en el equipo. Este archivo se encuentra normalmente en la carpeta %Archivos de programa%\Microsoft SQL Server Compact Edition\v3.5\Ejemplos\\.  
   
     > [!IMPORTANT]
-    >  En algunas versiones de Windows, no se puede conectar a Northwind.sdf si Visual Studio se ejecuta en modo que no sea de administrador. Para conectarse a Northwind.sdf, inicie Visual Studio o un símbolo del sistema de Visual Studio en modo **Ejecutar como administrador**.  
+    >  En algunas versiones de Windows, no se puede conectar a Northwind.sdf si Visual Studio se ejecuta en modo que no sea de administrador. Para conectarse a Northwind.sdf, inicie Visual Studio o Símbolo del sistema para desarrolladores de Visual Studio en modo **Ejecutar como administrador**.  
   
  Este tutorial contiene las siguientes secciones:  
   

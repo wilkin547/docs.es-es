@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410152"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221952"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Herramienta Installer)
 La herramienta de instalación es una utilidad de la línea de comandos que le permite instalar y desinstalar recursos de servidor mediante la ejecución de los componentes del instalador en ensamblados específicos. Esta herramienta funciona junto con clases del espacio de nombres <xref:System.Configuration.Install>.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -37,17 +37,17 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |`assembly`|Nombre de archivo del ensamblado en el que se ejecutan los componentes del instalador. Omita este parámetro si desea especificar el nombre seguro del ensamblado mediante la opción `/AssemblyName`.|  
   
 <a name="options"></a>   
 ## <a name="options"></a>Opciones  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
-|`/h[elp]`<br /><br /> O bien<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
-|`/help` *assembly*<br /><br /> O bien<br /><br /> `/?` *assembly*|Muestra opciones adicionales reconocidas por instaladores individuales dentro del ensamblado especificado, junto con la sintaxis y las opciones de los comandos de InstallUtil.exe. Esta opción agrega el texto devuelto por la propiedad <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente del instalador al texto de ayuda de InstallUtil.exe.|  
+|`/h[elp]`<br /><br /> o bien<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
+|`/help` *assembly*<br /><br /> o bien<br /><br /> `/?` *assembly*|Muestra opciones adicionales reconocidas por instaladores individuales dentro del ensamblado especificado, junto con la sintaxis y las opciones de los comandos de InstallUtil.exe. Esta opción agrega el texto devuelto por la propiedad <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente del instalador al texto de ayuda de InstallUtil.exe.|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Especifica el nombre seguro de un ensamblado, que debe registrarse en la memoria caché global de ensamblados. El nombre del ensamblado debe ser completo e incluir la versión, la referencia cultural y el token de clave pública. El nombre completo debe ir entre comillas.<br /><br /> Por ejemplo, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" es un nombre de ensamblado completo.|  
 |`/InstallStateDir=[` *directoryName* `]`|Especifica el directorio del archivo .InstallState que contiene los datos usados para desinstalar el ensamblado. El directorio predeterminado es el que contiene el ensamblado.|  
 |`/LogFile=`[*filename*]|Especifica el nombre del archivo de registro donde se graba el progreso de la instalación. De forma predeterminada, si se omite la opción `/LogFile`, se crea un archivo de registro denominado *assemblyname*.InstallLog. Si se omite *filename*, no se genera ningún archivo de registro.|  

@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 998ebb76b536b04d617bafdb74a3014c68cf509d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc01cf53b4af08973009027d124c50d0733a005a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405569"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221055"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (herramienta de versión de CLR)
 La herramienta de versión de CLR (Clrver.exe) notifica todas las versiones instaladas de Common Language Runtime (CLR) en el equipo.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -29,7 +29,7 @@ clrver [option]
   
 ## <a name="options"></a>Opciones  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`-all`|Muestra todos los procesos del equipo que usan CLR.|  
 |*pid*|Muestra las versiones de CLR que utiliza el proceso con el identificador de proceso especificado (PID).|  

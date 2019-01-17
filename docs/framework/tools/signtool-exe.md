@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f0827634278f248089b105844dadf8959f953595
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196472"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221601"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica un algoritmo hash opcional que se usará al buscar un archivo en un catálogo.|  
 |`/kp`|Especifica que la comprobación debe realizarse con la directiva de firma de controladores en modo kernel.|  
 |`/ms`|Utiliza la semántica de comprobación múltiple. Este es el comportamiento predeterminado de una llamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) en [!INCLUDE[win8](../../../includes/win8-md.md)] y versiones posteriores.|  
-|`/o` *Version*|Comprueba el archivo por versión del sistema operativo. *Version* tiene el siguiente formato: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa el valor subyacente de un miembro de enumeración <xref:System.PlatformID>. **Importante:** Se recomienda el uso del modificador `/o`. Si no se especifica `/o`, SignTool.exe puede devolver resultados inesperados. Por ejemplo, si no incluye el modificador `/o`, los catálogos del sistema que se validan correctamente en un sistema operativo anterior pueden no validarse correctamente en un sistema operativo más reciente.|  
+|`/o` *Version*|Comprueba el archivo por versión del sistema operativo. *Version* tiene el formato siguiente: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa el valor subyacente de un miembro de enumeración <xref:System.PlatformID>. **Importante:**  Se recomienda el uso del modificador `/o`. Si no se especifica `/o`, SignTool.exe puede devolver resultados inesperados. Por ejemplo, si no incluye el modificador `/o`, los catálogos del sistema que se validan correctamente en un sistema operativo anterior pueden no validarse correctamente en un sistema operativo más reciente.|  
 |`/p7`|Comprueba los archivos PKCS #7. No se usa ninguna directiva existente para la validación de PKCS #7. Se comprueba la signatura y se genera una cadena para el certificado de firma.|  
 |`/pa`|Especifica que se debe usar la directiva de comprobación de Authenticode predeterminada. Si no se especifica la opción `/pa`, la herramienta Firmar utiliza la directiva de comprobación de controladores de Windows. Esta opción no se puede combinar con la opción `catdb`.|  
 |`/pg` *PolicyGUID*|Especifica una directiva de comprobación por GUID. *PolicyGUID* corresponde a la propiedad ActionID de la directiva de comprobación. Esta opción no se puede combinar con la opción `catdb`.|  

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 434d5dd002124033f6d7cf5104d87264ee9c0388
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121394"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222225"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Herramienta de exportación de metadatos de Windows Runtime)
 La Herramienta de exportación de metadatos de [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforma un módulo de .NET Framework en un archivo que contiene los metadatos de [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Aunque los ensamblados de .NET Framework y los archivos de metadatos de [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilizan el mismo formato físico, existen diferencias en el contenido de las tablas de metadatos, lo que significa que los ensamblados de .NET Framework no se pueden utilizar de forma automática como componentes de [!INCLUDE[wrt](../../../includes/wrt-md.md)]. El proceso de convertir un módulo de .NET Framework en un componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)] se denomina *exportación*. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], el archivo de metadatos de Windows resultante (.winmd) contiene metadatos y la implementación.  
   
  Cuando se utiliza la plantilla **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Component**, que se encuentra en la **Tienda Windows** para C# y Visual Basic en Visual Studio 2013 o Visual Studio 2012, el destino del compilador es un archivo .winmdobj, y en un paso de compilación subsiguiente llama a Winmdexp.exe para exportar el archivo .winmdobj a un archivo .winmd. Esta es la manera recomendada de crear un componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Utilice Winmdexp.exe directamente si desea tener más control sobre el proceso de compilación que proporciona Visual Studio.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151192"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152117"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -19,7 +19,7 @@ Como se ha mencionado anteriormente, el nivel de aplicación se puede implementa
 
 Por ejemplo, el código de nivel de aplicación del microservicio de pedidos se implementa directamente como parte del proyecto **Ordering.API** (un proyecto de API web de ASP.NET Core), como se muestra en la figura 7-23.
 
-![La vista Explorador de soluciones del microservicio Ordering.API, que muestra las subcarpetas bajo la carpeta Aplicación: Comportamientos, Comandos, DomainEventHandlers, IntegrationEvents, Modelos, Consultas y Validaciones.](./media/image20.png)
+![Vista del Explorador de soluciones del microservicio Ordering.API que muestra las subcarpetas de la carpeta Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries y Validations.](./media/image20.png)
 
 **Figura 7-23.** Nivel de aplicación en el proyecto de API web de ASP.NET Core Ordering.API
 
@@ -183,7 +183,7 @@ El patrón de comandos está intrínsecamente relacionado con el patrón CQRS qu
 
 Como se muestra en la figura 7-24, el patrón se basa en la aceptación de comandos del lado cliente, su procesamiento según las reglas del modelo de dominio y, por último, la conservación de los estados con transacciones.
 
-![La vista general del lado de escritura en CQRS: la aplicación de interfaz de usuario envía un comando a través de la API que llega a un CommandHandler, que depende del modelo de dominio y de la infraestructura para actualizar la base de datos.](./media/image21.png)
+![Vista superior del lado de escritura en CQRS: La aplicación de interfaz de usuario envía un comando a través de la API que llega a un elemento CommandHandler, que depende del modelo de dominio y de la infraestructura para actualizar la base de datos.](./media/image21.png)
 
 **Figura 7-24.** Vista general de los comandos o el "lado transaccional" en un patrón CQRS
 
@@ -397,7 +397,7 @@ Estos son los pasos adicionales que debe realizar un controlador de comandos:
 #### <a name="additional-resources"></a>Recursos adicionales
 
 - **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented** \ (En los límites, las aplicaciones no están orientadas a objetos)
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **Commands and events** \ (Comandos y eventos)
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)

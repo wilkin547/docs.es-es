@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7b3d28b7af96dde30117ec952355958ca75ae559
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122784"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223174"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generador de archivos de recursos)
 El Generador de archivos de recursos (Resgen.exe) convierte archivos de texto (.txt o .restext) y archivos recursos basados en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario o en un ensamblado satélite. (Vea [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) (Crear archivos de recursos)).  
@@ -55,7 +55,7 @@ resgen /?
   
  Si usa Resgen.exe para generar archivos .resources binarios, puede usar un compilador de lenguaje para incrustar los archivos binarios en ensamblados ejecutables, o puede usar la herramienta [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) para compilarlos en ensamblados satélite.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409794"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221768"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
 
 El Ensamblador de IL genera un archivo portable ejecutable (PE) a partir del lenguaje intermedio (IL). Para obtener información sobre IL, consulte [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md). Se puede ejecutar el archivo ejecutable resultante, que contiene IL y los metadatos requeridos, para determinar si IL se comporta de acuerdo con lo esperado.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -36,18 +36,18 @@ ilasm [options] filename [[options]filename...]
 
 #### <a name="parameters"></a>Parámetros
 
-| Argumento | Description |
+| Argumento | Descripción |
 | -------- | ----------- |
 |`filename`|El nombre del archivo de código fuente con extensión .il. Este archivo consta de directivas de declaraciones de metadatos e instrucciones simbólicas de IL. Con *Ilasm.exe* se pueden proporcionar varios argumentos de archivo de código fuente para producir un único archivo PE. **Nota:** Asegúrese de que la última línea de código del archivo de código fuente .il tiene un espacio en blanco al final o un carácter de fin de línea.|
 
-| Opción | Description |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/32bitpreferred**|Crea una imagen preferida de 32 bits (PE32).|
 |**/alignment:** `integer`|Establece FileAlignment en el valor especificado por `integer` en el encabezado NT opcional. Si se especifica la directiva IL .alignment en el archivo, esta opción la reemplaza.|
 |**/appcontainer**|Genera un archivo *.dll* o *.exe* que se ejecuta en el contenedor de la aplicación de Windows, como salida.|
 |**/arm**|Especifica Advanced RISC Machine (ARM) como procesador de destino.<br /><br /> Si no se especifican los bits de la imagen, el valor predeterminado es **/32bitpreferred**.|
 |**/base:** `integer`|Establece ImageBase en el valor especificado por `integer` en el encabezado NT opcional. Si se especifica la directiva IL .imagebase en el archivo, esta opción la reemplaza.|
-|**/clock**|Mide e informa de los siguientes tiempos de compilación en milisegundos para el archivo de código fuente .il especificado:<br /><br /> **Total Run**: tiempo total empleado en la ejecución de todas las operaciones específicas que se muestran a continuación.<br /><br /> **Startup**: carga y apertura del archivo.<br /><br /> **Emitting MD**: emisión de metadatos.<br /><br /> **Ref to Def Resolution**: resolución de referencias a definiciones del archivo.<br /><br /> **CEE File Generation**: generación de la imagen de archivo en memoria.<br /><br /> **PE File Writing**: escritura de la imagen en un archivo PE.|
+|**/clock**|Mide e informa de los siguientes tiempos de compilación en milisegundos para el archivo de código fuente .il especificado:<br /><br /> **Total Run**: Tiempo total empleado en la ejecución de todas las operaciones específicas que se muestran a continuación.<br /><br /> **Startup**: Carga y apertura del archivo.<br /><br /> **Emitting MD**: Emisión de metadatos.<br /><br /> **Ref to Def Resolution**: Resolución de referencias a definiciones del archivo.<br /><br /> **CEE File Generation**: Generación de la imagen de archivo en memoria.<br /><br /> **PE File Writing**: Escritura de la imagen en un archivo PE.|
 |**/debug**[:**IMPL**&#124;**OPT**]|Incluye información de depuración (nombres de variables locales y argumentos, y números de línea). Crea un archivo PDB.<br /><br /> **/debug** sin ningún valor adicional deshabilita la optimización JIT y usa puntos de secuencia del archivo PDB.<br /><br /> **IMPL** deshabilita la optimización JIT y usa puntos de secuencia implícitos.<br /><br /> **OPT** habilita la optimización JIT y usa puntos de secuencia implícitos.|
 |**/dll**|Genera un archivo *.dll* como archivo de salida.|
 |**/enc:** `file`|Crea deltas Editar y continuar a partir del archivo de código fuente especificado.<br /><br /> Este argumento es solo para uso académico, no se admite el uso comercial del mismo.|
@@ -65,7 +65,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Deshabilita la herencia predeterminada de <xref:System.Object> cuando no se especifica ninguna clase base.|
 |**/nocorstub**|Suprime la generación de código auxiliar de CORExeMain.|
 |**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|
-|**/output:** `file.ext`|Especifica el nombre y la extensión del archivo de salida. De forma predeterminada, el nombre del archivo de salida coincide con el nombre del primer archivo de código fuente. La extensión predeterminada es *.exe*. Si se especifica la opción **/dll**, la extensión predeterminada es *.dll*. **Nota:** El hecho de especificar **/output:** myfile.dll no implica que se establezca la opción **/dll**. Si no se especifica **/dll**, el resultado será un archivo ejecutable denominado *myfile.dll*.|
+|**/output:** `file.ext`|Especifica el nombre y la extensión del archivo de salida. De forma predeterminada, el nombre del archivo de salida coincide con el nombre del primer archivo de código fuente. La extensión predeterminada es *.exe*. Si se especifica la opción **/dll**, la extensión predeterminada es *.dll*. **Nota:** La especificación de **/output**:myfile.dll no establece la opción **/dll**. Si no se especifica **/dll**, el resultado será un archivo ejecutable denominado *myfile.dll*.|
 |**/optimize**|Optimiza las instrucciones largas en instrucciones cortas. Por ejemplo, `br` en `br.s`.|
 |**/pe64**|Crea una imagen de 64 bits (PE32+).<br /><br /> Si no se especifica un procesador de destino, el valor predeterminado es `/itanium`.|
 |**/pdb**|Crea un archivo PDB sin habilitar un seguimiento de la información de depuración.|

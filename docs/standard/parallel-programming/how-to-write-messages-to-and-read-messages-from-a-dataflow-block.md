@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Escribir y leer mensajes en un bloque de flujo de datos'
+title: Procedimiento Escritura y lectura de mensajes en un bloque de flujo de datos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47a61a1d01984eeefb2f1f09774374dc29a774d3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 638cd917bdb40fa5bbf1cb02857c71a0127d0e3f
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087814"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221159"
 ---
-# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Cómo: Escribir y leer mensajes en un bloque de flujo de datos
+# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Procedimiento Escritura y lectura de mensajes en un bloque de flujo de datos
 En este documento se describe cómo usar la biblioteca de flujos de datos TPL para escribir y leer mensajes en un bloque de flujo de datos. La biblioteca de flujos de datos TPL proporciona métodos sincrónicos y asincrónicos para escribir y leer mensajes en un bloque de flujo de datos. Este documento usa la clase <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. La clase <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> almacena mensajes en búfer y se comporta como origen y destino de los mismos.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -52,7 +52,7 @@ En este documento se describe cómo usar la biblioteca de flujos de datos TPL pa
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowReadWrite.cs` (`DataflowReadWrite.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
+ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowReadWrite.cs` (`DataflowReadWrite.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana Símbolo del sistema para desarrolladores de Visual Studio.  
   
  Visual C#  
   
@@ -63,7 +63,7 @@ En este documento se describe cómo usar la biblioteca de flujos de datos TPL pa
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- En este ejemplo se muestra cómo leer y escribir directamente en un bloque de mensajes. También puede conectar los bloques de flujo de datos para establecer *canalizaciones*, que son secuencias lineales de bloques de flujo de datos, o *redes*, que son gráficos de bloques de flujo de datos. En una canalización o red, los orígenes propagan datos de forma asincrónica en destinos a medida que esos datos están disponibles. Para obtener un ejemplo en el que se cree una canalización de flujo de datos básica, consulte [Walkthrough: Creating a Dataflow Pipeline](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md) (Tutorial: Crear una canalización de flujo de datos). Para obtener un ejemplo en el que se cree una red de flujo de datos más compleja, consulte [Walkthrough: Using Dataflow in a Windows Forms Application](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md) (Tutorial: Usar el flujo de datos en una aplicación de Windows Forms).  
+ En este ejemplo se muestra cómo leer y escribir directamente en un bloque de mensajes. También puede conectar los bloques de flujo de datos para establecer *canalizaciones*, que son secuencias lineales de bloques de flujo de datos, o *redes*, que son gráficos de bloques de flujo de datos. En una canalización o red, los orígenes propagan datos de forma asincrónica en destinos a medida que esos datos están disponibles. Para obtener un ejemplo en el que se crea una canalización de flujo de datos básica, vea [Tutorial: Creación de una canalización de flujos de datos](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Para obtener un ejemplo en el que se crea una red de flujo de datos más compleja, vea [Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Vea también
 

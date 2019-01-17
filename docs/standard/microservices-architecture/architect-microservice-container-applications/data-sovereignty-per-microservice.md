@@ -4,12 +4,12 @@ description: La soberanía de datos por microservicio es uno de los puntos clave
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126853"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144907"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Propiedad de los datos por microservicio
 
@@ -27,7 +27,7 @@ Por otro lado, el enfoque tradicional (datos monolíticos) usado en muchas aplic
 
 El enfoque de la base de datos centralizada en principio parece más sencillo y parece permitir la reutilización de entidades de diferentes subsistemas para que todo sea coherente. Pero la realidad es que se acaban teniendo tablas enormes que sirven a muchos subsistemas distintos e incluyen atributos y columnas que no se necesitan en la mayoría de los casos. Es como intentar usar el mismo mapa físico para ir de excursión un par de horas, para hacer un viaje en coche que dure todo un día y para aprender geografía.
 
-Una aplicación monolítica con una sola base de datos relacional presenta dos ventajas importantes: las [transacciones ACID](https://en.wikipedia.org/wiki/ACID) y el lenguaje SQL, que funcionan en todas las tablas y los datos relacionados con la aplicación. Este enfoque proporciona una manera sencilla de escribir una consulta que combina datos de varias tablas.
+Una aplicación monolítica que normalmente tiene una sola base de datos relacional presenta dos ventajas importantes: [Transacciones ACID](https://en.wikipedia.org/wiki/ACID) y el lenguaje SQL, ambos funcionando en todas las tablas y los datos relacionados con la aplicación. Este enfoque proporciona una manera sencilla de escribir una consulta que combina datos de varias tablas.
 
 Pero el acceso a los datos es mucho más complejo cuando se migra a una arquitectura de microservicios. Aun cuando las transacciones ACID puedan o deban usarse en un microservicio o contexto enlazado, los datos que pertenecen a cada microservicio son privados de ese microservicio y solo pueden obtenerse a través de su API de microservicio. La encapsulación de los datos garantiza que los microservicios estén acoplados de forma imprecisa y puedan evolucionar independientemente unos de otros. Si varios servicios estuvieran accediendo a los mismos datos, las actualizaciones de esquema exigirían actualizaciones coordinadas de todos los servicios. Esto interrumpiría la autonomía del ciclo de vida del microservicio. Pero las estructuras de datos distribuidas significan que no se puede realizar una única transacción ACID en microservicios. A su vez, esto significa que debe usar la coherencia final cuando un proceso empresarial abarque varios microservicios. Esto es mucho más difícil de implementar que meras combinaciones SQL, porque no se pueden crear restricciones de integridad o usar las transacciones distribuidas entre bases de datos independientes, como se explicará más adelante. De forma similar, muchas otras características de base de datos relacional no están disponibles en varios microservicios.
 
@@ -37,7 +37,7 @@ Una arquitectura con particiones de persistencia políglota para el almacenamien
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Relación entre microservicios y el patrón de contexto enlazado
 
-El concepto de microservicio deriva del [patrón de contexto enlazado](http://martinfowler.com/bliki/BoundedContext.html) en el [diseño guiado por el dominio (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD trabaja con modelos grandes al dividirlos en varios contextos enlazados y ser explícito sobre sus límites. Cada contexto enlazado debe tener su propio modelo y base de datos; del mismo modo, cada microservicio es propietario de sus datos relacionados. Además, cada contexto enlazado normalmente tiene su propio [lenguaje ubicuo](http://martinfowler.com/bliki/UbiquitousLanguage.html) para la comunicación entre desarrolladores de software y expertos de dominio.
+El concepto de microservicio deriva del [patrón de contexto enlazado](https://martinfowler.com/bliki/BoundedContext.html) en el [diseño guiado por el dominio (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD trabaja con modelos grandes al dividirlos en varios contextos enlazados y ser explícito sobre sus límites. Cada contexto enlazado debe tener su propio modelo y base de datos; del mismo modo, cada microservicio es propietario de sus datos relacionados. Además, cada contexto enlazado normalmente tiene su propio [lenguaje ubicuo](https://martinfowler.com/bliki/UbiquitousLanguage.html) para la comunicación entre desarrolladores de software y expertos de dominio.
 
 Esos términos (principalmente entidades de dominio) en el lenguaje ubicuo pueden tener otros nombres en otros contextos enlazados, incluso cuando varias entidades de dominio compartan la misma identidad (es decir, el identificador único que se usa para leer la entidad desde el almacenamiento). Por ejemplo, en un contexto enlazado de perfil de usuario, la entidad de dominio User puede compartir identidad con la entidad de dominio Buyer en el contexto enlazado Ordering.
 

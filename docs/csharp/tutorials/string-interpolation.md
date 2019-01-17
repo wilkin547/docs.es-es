@@ -3,12 +3,12 @@ title: Interpolación de cadenas en C#
 description: Obtenga información sobre cómo incluir resultados de expresión con formato en una cadena de resultado en C# con la interpolación de cadenas.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef4358ff61cde43998fc0dc4ba174dc0f06bc2bd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188643"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222498"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolación de cadenas en C# #
 
@@ -31,6 +31,8 @@ Como se ilustra en el ejemplo, para incluir una expresión en una cadena interpo
 ```
 
 En tiempo de compilación, una cadena interpolada se suele transformar en una llamada de método <xref:System.String.Format%2A?displayProperty=nameWithType>, lo que permite que todas las capacidades de la característica de [formato compuesto de cadena](../../standard/base-types/composite-formatting.md) estén disponibles para su uso también con cadenas interpoladas.
+
+El compilador podría sustituir <xref:System.String.Format%2A?displayProperty=nameWithType> por <xref:System.String.Concat%2A?displayProperty=nameWithType> si el comportamiento analizado fuera equivalente a la concatenación.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Cómo especificar una cadena de formato para una expresión interpolada
 

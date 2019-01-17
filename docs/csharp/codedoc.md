@@ -3,12 +3,12 @@ title: Documentar el código con comentarios XML
 description: Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 70da976861a9bca024d41dd329dc7be043d67c94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129674"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151012"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
 
@@ -136,7 +136,7 @@ Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
 
 ### <a name="ltparamgt"></a>&lt;param&gt;
 
-La etiqueta `<param>` se usa para describir los parámetros de un método. Aquí se muestra un ejemplo del método doble `Add`: el parámetro que la etiqueta describe se especifica en el atributo **necesario** `name`.
+La etiqueta `<param>` se usa para describir los parámetros de un método. Este es un ejemplo sobre el método doble `Add`: El parámetro que describe la etiqueta se especifica en el atributo `name` **obligatorio**.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -205,7 +205,7 @@ El atributo `id`, que se puede usar en lugar de `name`, representa el identifica
 ### <a name="user-defined-tags"></a>Etiquetas definidas por el usuario
 
 Todas las etiquetas descritas anteriormente son las que reconoce el compilador de C#, pero el usuario puede definir sus propias etiquetas.
-Las herramientas como Sandcastle proporcionan compatibilidad con etiquetas adicionales como [`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) y [`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm), e incluso permiten [documentar espacios de nombres](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Las herramientas como Sandcastle proporcionan compatibilidad con etiquetas adicionales como [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) y [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm), e incluso permiten [documentar espacios de nombres](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 También se pueden usar herramientas de generación de documentación internas o personalizadas con las etiquetas estándar y se admiten varios formatos de salida, de HTML a PDF.
 
 ## <a name="recommendations"></a>Recomendaciones

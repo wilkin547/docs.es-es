@@ -1,5 +1,5 @@
 ---
-title: 'when: Referencia de C#'
+title: when (Palabra clave contextual, Referencia de C#)
 ms.custom: seodec18
 ms.date: 03/07/2017
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 103309b5e5a121647576ce120f4353b4ceef08c4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a8f64da0ab603830972035f1c2cd3a0b1eaadaff
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235532"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221861"
 ---
- # <a name="when-c-reference"></a>when (Referencia de C#)
+# <a name="when-c-reference"></a>when (Referencia de C#)
 
 Puede usar la palabra clave contextual `when` para especificar una condición de filtro en dos contextos:
 
@@ -29,12 +29,13 @@ A partir de C# 6, puede usarse `when` en una instrucción `catch` para especific
 ```csharp
 catch (ExceptionType [e]) when (expr)
 ```
-donde *expr* es una expresión que se evalúa como un valor booleano. Si devuelve `true`, el controlador de excepciones se ejecuta; si devuelve `false`, no se ejecuta. 
+
+donde *expr* es una expresión que se evalúa como un valor booleano. Si devuelve `true`, el controlador de excepciones se ejecuta; si devuelve `false`, no se ejecuta.
 
 En el ejemplo siguiente se usa la palabra clave `when` para ejecutar condicionalmente controladores para una <xref:System.Net.Http.HttpRequestException> según el texto del mensaje de excepción.
 
- [!code-csharp[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
-  
+[!code-csharp[when-with-catch](~/samples/snippets/csharp/language-reference/keywords/when/catch.cs)]
+
 ## <a name="when-in-a-switch-statement"></a>`when` en una instrucción `switch`
 
 A partir de C# 7.0, las etiquetas `case` ya no tienen que ser mutuamente exclusivas y el orden con el que las etiquetas `case` aparecen en una instrucción `switch` puede determinar el bloque switch que se ejecuta. Puede usarse la palabra clave `when` para especificar una condición de filtro que haga que su etiqueta case asociada se cumpla únicamente si también se cumple la condición de filtro. Su sintaxis es:
@@ -42,14 +43,15 @@ A partir de C# 7.0, las etiquetas `case` ya no tienen que ser mutuamente exclusi
 ```csharp
 case (expr) when (when-condition):
 ```
-donde *expr* es un patrón de constante o un patrón de tipo que se compara con la expresión match y *when-condition* es cualquier expresión booleana. 
 
-En el ejemplo siguiente se usa la palabra clave `when` para probar objetos `Shape` que tienen un área de cero, así como para probar una serie de objetos `Shape` que tienen un área mayor que cero. 
+donde *expr* es un patrón de constante o un patrón de tipo que se compara con la expresión match y *when-condition* es cualquier expresión booleana.
 
- [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
+En el ejemplo siguiente se usa la palabra clave `when` para probar objetos `Shape` que tienen un área de cero, así como para probar una serie de objetos `Shape` que tienen un área mayor que cero.
+
+[!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
 ## <a name="see-also"></a>Vea también
 
-- [switch (Instrucción)](switch.md)  
-- [try/catch (Instrucción)](try-catch.md)  
-- [try/catch/finally (Instrucción)](try-catch-finally.md) 
+- [switch (Instrucción)](switch.md)
+- [try/catch (Instrucción)](try-catch.md)
+- [try/catch/finally (Instrucción)](try-catch-finally.md)

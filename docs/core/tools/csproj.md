@@ -3,12 +3,12 @@ title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: bc81dc5c201fea6caa752248c2b59636bd7465ec
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286577"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222069"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -62,7 +62,7 @@ Para evitar este error, puede quitar los elementos `Compile` explícitos que coi
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 </PropertyGroup>
 ```
-Al establecer esta propiedad en `false`, se invalidará la inclusión implícita y el comportamiento se revertirá a los SDK anteriores en los que tenía que especificar los globs predeterminados en el proyecto. 
+Al establecer esta propiedad en `false`, se deshabilita la inclusión implícita y se revierte el comportamiento de SDK anteriores en los que había que especificar los globs predeterminados del proyecto.
 
 Este cambio no modifica los mecanismos principales de otras inclusiones. En cambio, si quiere especificar, por ejemplo, que algunos archivos se publiquen con la aplicación, puede seguir usando los mecanismos con los que está familiarizado en *csproj* (por ejemplo, el elemento `<Content>`).
 
@@ -88,7 +88,7 @@ Si el proyecto tiene varios marcos de destino, los resultados del comando deben 
 ## <a name="additions"></a>Adiciones
 
 ### <a name="sdk-attribute"></a>Atributo Sdk 
-El elemento `<Project>` del archivo *.csproj* tiene un nuevo atributo denominado `Sdk`. `Sdk` especifica qué SDK usará el proyecto. El SDK, como se describe en el [documento sobre capas](cli-msbuild-architecture.md), es un conjunto de [tareas](/visualstudio/msbuild/msbuild-tasks) y [destinos](/visualstudio/msbuild/msbuild-targets) de MSBuild que pueden generar código de .NET Core. Se incluyen tres SDK principales con las herramientas de .NET Core:
+El elemento raíz `<Project>` del archivo *.csproj* tiene un nuevo atributo denominado `Sdk`. `Sdk` especifica qué SDK usará el proyecto. El SDK, como se describe en el [documento sobre capas](cli-msbuild-architecture.md), es un conjunto de [tareas](/visualstudio/msbuild/msbuild-tasks) y [destinos](/visualstudio/msbuild/msbuild-targets) de MSBuild que pueden generar código de .NET Core. Se incluyen tres SDK principales con las herramientas de .NET Core:
 
 1. El SDK de .NET Core con el id. de `Microsoft.NET.Sdk`
 2. El SDK web de .NET Core con el id. de `Microsoft.NET.Sdk.Web`
@@ -97,7 +97,7 @@ El elemento `<Project>` del archivo *.csproj* tiene un nuevo atributo denominado
 Debe tener el conjunto de atributos `Sdk` establecido en uno de esos id. del elemento `<Project>` para poder usar las herramientas de .NET Core y generar el código. 
 
 ### <a name="packagereference"></a>PackageReference
-Elemento que especifica una dependencia de NuGet en el proyecto. El atributo `Include` especifica el identificador del paquete. 
+Elemento `<PackageReference>` que especifica una dependencia de NuGet en el proyecto. El atributo `Include` especifica el identificador del paquete. 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
@@ -131,7 +131,7 @@ Como alternativa, el atributo puede contener:
 * `All`: se usan todos los recursos.
 
 ### <a name="dotnetclitoolreference"></a>DotnetCliToolReference
-El elemento `<DotNetCliToolReference>` especifica la herramienta de la CLI que el usuario quiere restaurar en el contexto del proyecto. Es un sustituto del nodo `tools` de *project.json*. 
+Un elemento `<DotNetCliToolReference>` especifica la herramienta de la CLI que el usuario quiere restaurar en el contexto del proyecto. Es un sustituto del nodo `tools` de *project.json*. 
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
@@ -141,21 +141,23 @@ El elemento `<DotNetCliToolReference>` especifica la herramienta de la CLI que e
 `Version` especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [versiones de NuGet](/nuget/create-packages/dependency-versions#version-ranges). El comportamiento predeterminado es una coincidencia de versión exacta. Por ejemplo, si se especifica `Version="1.2.3"`, es equivalente a la notación de NuGet `[1.2.3]` para la versión exacta 1.2.3 del paquete.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
-El elemento `<RuntimeIdentifiers>` permite especificar una lista delimitada por punto y coma de [identificadores de tiempo ejecución (RID)](../rid-catalog.md) para el proyecto. Los RID permiten publicar implementaciones autocontenidas. 
+El elemento de propiedad `<RuntimeIdentifiers>` permite especificar una lista delimitada por puntos y coma de [identificadores de tiempo ejecución (RID)](../rid-catalog.md) para el proyecto. Los RID permiten publicar implementaciones autocontenidas. 
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
-El elemento `<RuntimeIdentifier>` permite especificar solo un [identificador de tiempo ejecución (RID)](../rid-catalog.md) para el proyecto. Los RID permiten publicar una implementación autocontenida. 
+El elemento de propiedad `<RuntimeIdentifier>` permite especificar solo un [identificador de tiempo ejecución (RID)](../rid-catalog.md) para el proyecto. El RID permite publicar una implementación autocontenida.
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
+Use `<RuntimeIdentifiers>` (en plural) en su lugar si tiene que publicar para varios entornos de ejecución. `<RuntimeIdentifier>` puede proporcionar compilaciones más rápidas cuando solo se requiere un entorno de ejecución.
+
 ### <a name="packagetargetfallback"></a>PackageTargetFallback 
-El elemento `<PackageTargetFallback>` permite especificar un conjunto de destinos compatibles que se usarán al restaurar los paquetes. Está diseñado para permitir que los paquetes que usan la dotnet [TxM (destino x moniker)](/nuget/schema/target-frameworks) funcionen con paquetes que no declaran una dotnet TxM. Si el proyecto usa la dotnet TxM, todos los paquetes de los que depende también deben tener una dotnet TxM, a menos que agregue el elemento `<PackageTargetFallback>` a su proyecto a fin de permitir que las plataformas sin dotnet sean compatibles con dotnet. 
+El elemento de propiedad `<PackageTargetFallback>` permite especificar un conjunto de destinos compatibles que se van a usar al restaurar paquetes. Está diseñado para permitir que los paquetes que usan la dotnet [TxM (destino x moniker)](/nuget/schema/target-frameworks) funcionen con paquetes que no declaran una dotnet TxM. Si el proyecto usa la dotnet TxM, todos los paquetes de los que depende también deben tener una dotnet TxM, a menos que agregue el elemento `<PackageTargetFallback>` a su proyecto a fin de permitir que las plataformas sin dotnet sean compatibles con dotnet. 
 
 En el ejemplo siguiente se proporcionan los elementos Fallback para todos los destinos del proyecto: 
 

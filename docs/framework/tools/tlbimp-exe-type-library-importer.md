@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409833"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221731"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -34,11 +34,11 @@ tlbimp tlbFile [options]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*tlbFile*|Nombre de cualquier archivo que contenga una biblioteca de tipos COM.|  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/asmversion:** *númeroVersión*|Especifica el número de versión del ensamblado que se genera. Especifique *númeroVersión* con el formato *principal.secundaria.compilación.revisión*.|  
 |**/company:** `companyinformation`|Agrega información de la compañía al ensamblado de salida.|  

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 76d48b588db17a712ac698b604828520e38776a9
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084805"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223161"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 Visual Studio presenta características en C# y Visual Basic que mejoran la programación de Microsoft Office. Las características útiles de C# incluyen argumentos opcionales y con nombre, y devuelven valores de tipo `dynamic`. En la programación COM, puede omitir la palabra clave `ref` y obtener acceso a las propiedades indexadas. Las nuevas características de Visual Basic incluyen propiedades implementadas automáticamente, instrucciones de expresiones lambda e inicializadores de colección.
 
-En ambos lenguajes se puede insertar información de tipo, lo que permite la implementación de ensamblados que interactúan con componentes COM sin necesidad de implementar ensamblados de interoperabilidad primarios (PIA) en el equipo del usuario. Para obtener más información, vea [Tutorial: Incrustar los tipos de los ensamblados administrados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+En ambos lenguajes se puede insertar información de tipo, lo que permite la implementación de ensamblados que interactúan con componentes COM sin necesidad de implementar ensamblados de interoperabilidad primarios (PIA) en el equipo del usuario. Para obtener más información, vea [Tutorial: Insertar los tipos de los ensamblados administrados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
 En este tutorial se muestran estas características en el contexto de la programación de Office, pero muchas de ellas también son útiles en la programación general. En el tutorial, usa una aplicación complemento de Excel para crear un libro de Excel. Después, crea un documento de Word que contiene un vínculo al libro. Por último, ve cómo habilitar y deshabilitar la dependencia de un PIA.  
   
@@ -53,7 +53,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
   
-2.  En la pestaña **Ensamblados**, seleccione **Microsoft.Office.Interop.Excel**, versión `<version>.0.0.0` (para obtener una clave de los números de versión de productos de Office, vea [Versiones de Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalar ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  En la pestaña **Ensamblados**, seleccione **Microsoft.Office.Interop.Excel**, versión `<version>.0.0.0` (para obtener una clave de los números de versión de productos de Office, vea [Versiones de Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalación de ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Haga clic en **Aceptar**.  
   
@@ -107,7 +107,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
          No es posible crear propiedades indizadas propias. La característica solo admite el uso de las propiedades indizadas existentes.  
   
-         Para obtener más información, vea [How to: Use Indexed Properties in COM Interop Programming](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md) (Cómo: Usar propiedades indexadas en la programación de interoperabilidad COM).  
+         Para obtener más información, vea [Cómo: Uso de propiedades indexadas en la programación de interoperabilidad COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).  
   
 2.  Agregue el código siguiente al final de `DisplayInExcel` para ajustar los anchos de columna a fin de adaptarlos al contenido.  
   
@@ -157,11 +157,11 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 2.  Seleccione **Iniciar**. Busque **Microsoft Visual Studio \<versión>** y abra un símbolo del sistema del desarrollador.  
   
-3.  Escriba `ildasm` en la ventana del símbolo del sistema de Visual Studio y, después, presione ENTRAR. Aparecerá la ventana IL DASM.  
+3.  Escriba `ildasm` en la ventana Símbolo del sistema para desarrolladores de Visual Studio y, luego, presione ENTRAR. Aparecerá la ventana IL DASM.  
   
 4.  En el menú **Archivo** de la ventana de IL DASM, seleccione **Archivo** > **Abrir**. Haga doble clic en **Visual Studio \<versión>** y, después, haga doble clic en **Proyectos**. Abra la carpeta de su proyecto y, en la carpeta bin/Debug, busque *su_proyecto*.dll. Haga doble clic en *su_proyecto*.dll. Una nueva ventana muestra los atributos del proyecto, además de las referencias a otros módulos y ensamblados. Tenga en cuenta que los espacios de nombres `Microsoft.Office.Interop.Excel` y `Microsoft.Office.Interop.Word` se incluyen en el ensamblado. De manera predeterminada en Visual Studio, el compilador importa los tipos necesarios desde un PIA con referencia a su ensamblado.  
   
-     Para obtener más información, vea [Cómo: Ver el contenido de un ensamblado](../../../framework/app-domains/how-to-view-assembly-contents.md).  
+     Para obtener más información, vea [Cómo: Consulta del contenido de un ensamblado](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 5.  Haga doble clic en el icono **MANIFIESTO**. Aparecerá una ventana con una lista de ensamblados que contienen los elementos a los que hace referencia el proyecto. `Microsoft.Office.Interop.Excel` y `Microsoft.Office.Interop.Word` no están incluidos en la lista. Dado que los tipos que su proyecto necesita se han importado en el ensamblado, las referencias a un PIA no son necesarias. Esto facilita la implementación. Los PIA no tienen que estar presentes en el equipo del usuario y, puesto que una aplicación no requiere la implementación de una versión concreta de un PIA, se pueden diseñar aplicaciones que trabajen con varias versiones de Office, siempre que las API necesarias existan en todas las versiones.  
   
@@ -205,8 +205,8 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 - [Expresiones lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
 - [Expresiones lambda (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
 - [Cómo: Utilizar propiedades indizadas en la programación de interoperabilidad COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
-- [Tutorial: Incrustación de información de tipos de los ensamblados de Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
-- [Tutorial: Incrustación de los tipos de los ensamblados administrados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Tutorial: Inserción de información de tipos de los ensamblados de Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
+- [Tutorial: Inserción de tipos de ensamblados administrados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
 - [Tutorial: Creación del primer complemento VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)  
 - [Interoperabilidad](../../../csharp/programming-guide/interop/index.md)

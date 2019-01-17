@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: befc4484324fb28b0fe55ef49f038712bc81e913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71e06f8e42e4ca6da80286c9aa329ee99b02fcf4
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409598"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222147"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
@@ -24,7 +24,7 @@ El Importador de controles ActiveX convierte definiciones de tipos de una biblio
   
  Para hospedar el control ActiveX, debe generar un control contenedor que se derive de <xref:System.Windows.Forms.AxHost>. Este control contenedor contiene una instancia del control ActiveX subyacente. También sabe cómo establecer comunicación con el control ActiveX, pero aparece como un control de Windows Forms. Este control generado contiene el control ActiveX y proporciona sus propiedades, métodos y eventos como si fuesen propios.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -36,11 +36,11 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Comentarios  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*file*|Nombre del archivo de código fuente que contiene el control ActiveX que se va a convertir. Este argumento debe tener la extensión .ocx o .dll.|  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`/delaysign`|Especifica que Aximp.exe debe firmar el control resultante mediante la opción de firma retardada. Debe especificar esta opción con la opción `/keycontainer:`, `/keyfile:` o `/publickey:`. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
@@ -70,7 +70,7 @@ aximp [options]{file.dll | file.ocx}
   
  Cuando se ejecuta Aximp.exe sobre shdocvw.dll, siempre se crea otro archivo denominado shdocvw.dll en el directorio desde el que se ejecuta la herramienta. Si este archivo generado se ubica en el directorio Documents and Settings, causará problemas a Microsoft Internet Explorer y al Explorador de Windows. Cuando se reinicia el equipo, Windows busca una copia de shdocvw.dll en el directorio los Documents and Settings antes que en el directorio system32. Usará la copia que encuentre en Documents and Settings e intentará cargar los contenedores administrados. Internet Explorer y el Explorador de Windows no funcionarán correctamente, porque se basan en el motor de representación de la versión de shdocvw.dll ubicada en el directorio system32. Si se produce este problema, elimine la copia de shdocvw.dll del directorio Documents and Settings y reinicie el equipo.  
   
- Si se utiliza Aximp.exe con shdocvw.dll con el fin de crear un ensamblado .NET para utilizarlo en el desarrollo de aplicaciones, también pueden producirse problemas. En este caso, la aplicación cargará la versión del sistema de shdocvw.dll y la versión generada, por lo que la versión del sistema podría tener prioridad. En este caso, al intentar cargar una página web dentro del control ActiveX WebBrowser, es posible que a los usuarios les aparezca un cuadro de diálogo para abrir o guardar. Cuando el usuario haga clic en **Abrir**, la página web se abrirá en Internet Explorer. Esto solo ocurre en los equipos que ejecutan Internet Explorer versión 6 o una versión anterior. Para evitar este problema, use el control <xref:System.Windows.Forms.WebBrowser> administrado o Visual Studio para generar el control shdocvw.dll administrado, como se describe en [Cómo: Agregar referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
+ Si se utiliza Aximp.exe con shdocvw.dll con el fin de crear un ensamblado .NET para utilizarlo en el desarrollo de aplicaciones, también pueden producirse problemas. En este caso, la aplicación cargará la versión del sistema de shdocvw.dll y la versión generada, por lo que la versión del sistema podría tener prioridad. En este caso, al intentar cargar una página web dentro del control ActiveX WebBrowser, es posible que a los usuarios les aparezca un cuadro de diálogo para abrir o guardar. Cuando el usuario haga clic en **Abrir**, la página web se abrirá en Internet Explorer. Esto solo ocurre en los equipos que ejecutan Internet Explorer versión 6 o una versión anterior. Para evitar este problema, use el control <xref:System.Windows.Forms.WebBrowser> administrado o Visual Studio para generar el elemento shdocvw.dll administrado como se describe en [Cómo: Adición de referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Ejemplo  
  El comando siguiente genera los archivos MediaPlayer.dll y AxMediaPlayer.dll para el control de Media Player `msdxm.ocx`.  

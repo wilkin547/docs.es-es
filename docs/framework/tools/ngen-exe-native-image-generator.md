@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49400481"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222173"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el rendimiento de las aplicaciones administradas. Ngen.exe crea imágenes nativas, que son archivos que contienen código máquina compilado específicamente para un procesador, e instala estas imágenes en la memoria caché de imágenes nativas del equipo local. El runtime puede usar imágenes nativas de la memoria caché en lugar de usar el compilador Just-In-Time (JIT) para compilar el ensamblado original.  
@@ -55,7 +55,7 @@ El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el re
 > [!NOTE]
 >  Puede encontrar información sobre la sintaxis de Ngen.exe para las versiones 1.0 y 1.1 de .NET Framework en [Sintaxis heredada del generador de imágenes nativas (Ngen.exe)](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -75,10 +75,10 @@ ngen /? | /help
 |Acción|Descripción|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera imágenes nativas para un ensamblado y sus dependencias e instala las imágenes en la memoria caché de imágenes nativas.<br /><br /> Si se especifica `/queue`, la acción se pone en la cola del servicio de imágenes nativas. La prioridad predeterminada es 3. Consulte la tabla [Niveles de prioridad](#PriorityTable).|  
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina las imágenes nativas de un ensamblado y sus dependencias de la memoria caché de imágenes nativas.<br /><br /> Para desinstalar una imagen y sus dependencias, use los mismos argumentos de la línea de comandos que usó para instalar la imagen. **Nota:** A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], ya no se admite la acción `uninstall` *.|  
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina las imágenes nativas de un ensamblado y sus dependencias de la memoria caché de imágenes nativas.<br /><br /> Para desinstalar una imagen y sus dependencias, use los mismos argumentos de la línea de comandos que usó para instalar la imagen. **Nota:**  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], ya no se admite la acción `uninstall` *.|  
 |`update` [`/queue`]|Actualiza las imágenes nativas que han dejado de ser válidas.<br /><br /> Si se especifica `/queue`, las actualizaciones se ponen en la cola del servicio de imágenes nativas. Las actualizaciones siempre se programan con una prioridad de 3, por lo que se ejecutan cuando el equipo se encuentra inactivo.|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|Muestra el estado de las imágenes nativas para un ensamblado y sus dependencias.<br /><br /> Si no se proporciona ningún argumento, se muestra todo el contenido de la memoria caché de imágenes nativas.|  
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> O bien<br /><br /> `eqi` [1&#124;2&#124;3]|Ejecuta los trabajos de compilación en cola.<br /><br /> Si se especifica una prioridad, se ejecutan los trabajos de compilación con una prioridad mayor o igual a la especificada. Si no se especifica ninguna prioridad, se ejecutan todos los trabajos de compilación en cola.|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> o bien<br /><br /> `eqi` [1&#124;2&#124;3]|Ejecuta los trabajos de compilación en cola.<br /><br /> Si se especifica una prioridad, se ejecutan los trabajos de compilación con una prioridad mayor o igual a la especificada. Si no se especifica ninguna prioridad, se ejecutan todos los trabajos de compilación en cola.|  
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Pausa el servicio de imágenes nativas, permite la reanudación del servicio en pausa o consulta el estado del servicio.|  
   
 <a name="ArgumentTable"></a>   
@@ -86,7 +86,7 @@ ngen /? | /help
   
 |Argumento|Descripción|  
 |--------------|-----------------|  
-|`assemblyName`|El nombre para mostrar completo del ensamblado. Por ejemplo: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Nota:** Puede proporcionar un nombre de ensamblado parcial, como `myAssembly`, para las acciones `display` y `uninstall`. <br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|  
+|`assemblyName`|El nombre para mostrar completo del ensamblado. Por ejemplo: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Nota:**  Puede proporcionar un nombre de ensamblado parcial, como `myAssembly`, para las acciones `display` y `uninstall`. <br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|  
 |`assemblyPath`|La ruta de acceso explícita del ensamblado. Se puede especificar una ruta de acceso completa o relativa.<br /><br /> Si se especifica un nombre de archivo sin una ruta de acceso, el ensamblado deberá estar ubicado en el directorio actual.<br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|  
   
 <a name="PriorityTable"></a>   
@@ -122,7 +122,7 @@ ngen /? | /help
 |------------|-----------------|  
 |`/nologo`|Suprime la presentación de la pancarta de inicio de Microsoft.|  
 |`/silent`|Suprime la presentación de mensajes de operaciones correctas.|  
-|`/verbose`|Muestra información detallada para la depuración. **Nota:** Debido a las limitaciones de los sistemas operativos, esta opción no muestra tanta información adicional en Windows 98 y Windows Millennium Edition.|  
+|`/verbose`|Muestra información detallada para la depuración. **Nota:**  Debido a las limitaciones de los sistemas operativos, esta opción no muestra tanta información adicional en Windows 98 y Windows Millennium Edition.|  
 |`/help`, `/?`|Muestra las opciones y la sintaxis de los comandos de la versión actual.|  
   
 ## <a name="remarks"></a>Comentarios  

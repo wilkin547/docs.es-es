@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b69544b2d8041a3aa4cb566867b6c14b29f0f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409115"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221744"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
 El Desensamblador de IL es una herramienta complementaria del Ensamblador de IL (*Ilasm.exe*). A partir de un archivo portable ejecutable (PE) que contiene código de lenguaje intermedio (IL), *Ildasm.exe* crea un archivo de texto que se puede usar como entrada para *Ilasm.exe*.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -36,7 +36,7 @@ ildasm [options] [PEfilename] [options]
 
 Las siguientes opciones se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.lib* y *.winmd*.
 
-| Opción | Description |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/out=** `filename`|Crea un archivo de salida con el `filename` especificado, en lugar de mostrar los resultados en una interfaz gráfica de usuario.|
 |**/rtf**|Genera la salida en formato de texto enriquecido. Esta opción no es válida si se usa junto con la opción **/text**.|
@@ -46,7 +46,7 @@ Las siguientes opciones se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.li
 
 Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y *.winmd*.
 
-| Opción | Description |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/bytes**|Muestra bytes reales, en formato hexadecimal, como comentarios de instrucciones.|
 |**/caverbal**|Genera objetos binarios de atributos personalizados en formato verbal. El valor predeterminado es el formato binario.|
@@ -63,7 +63,7 @@ Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y
 
 Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Description |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/all**|Especifica una combinación de las opciones **/header**, **/bytes**, **/stats**, **/classlist** y **/tokens**.|
 |**/classlist**|Incluye una lista de las clases definidas en el módulo.|
@@ -78,13 +78,13 @@ Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* pa
 
 Las opciones siguientes se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.lib* y *.winmd* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Description |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Muestra metadatos, donde `specifier` es:<br /><br /> **MDHEADER**: muestra la información y los tamaños del encabezado de metadatos.<br /><br /> **HEX**: muestra información tanto en hexadecimal como en palabras.<br /><br /> **CSV**: muestra el número de registros y los tamaños de los montones.<br /><br /> **UNREX**: muestra externos sin resolver.<br /><br /> **SCHEMA**: muestra información del esquema y del encabezado de metadatos.<br /><br /> **RAW**: muestra las tablas de metadatos sin formato.<br /><br /> **HEAPS**: muestra los montones sin formato.<br /><br /> **VALIDATE**: valida la coherencia de los metadatos.<br /><br /> Puede especificar **/metadata** varias veces con valores diferentes para `specifier`.|
 
 Las siguientes opciones se pueden usar con archivos *.lib* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Description |
+| Opción | Descripción |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Muestra los metadatos de un único archivo objeto en la biblioteca especificada.|
 
