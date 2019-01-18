@@ -4,12 +4,12 @@ description: Descubra cuáles son los desafíos y soluciones de la administraci�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151036"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145996"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -53,7 +53,7 @@ Pero en una aplicación basada en microservicios, las tablas Productos y Cesta p
 
 **Figura 4-9**. Un microservicio no puede acceder directamente a una tabla en otro microservicio
 
-El microservicio de catálogo no debe actualizar directamente la tabla Cesta, dado que esta pertenece al microservicio de cesta. Para realizar una actualización en el microservicio de cesta, el microservicio de catálogo debe usar coherencia final probablemente basada en la comunicación asincrónica como eventos de integración (comunicación basada en mensajes y eventos). Así es como la aplicación de referencia [eShopOnContainers](http://aka.ms/eshoponcontainers) lleva a cabo este tipo de coherencia entre microservicios.
+El microservicio de catálogo no debe actualizar directamente la tabla Cesta, dado que esta pertenece al microservicio de cesta. Para realizar una actualización en el microservicio de cesta, el microservicio de catálogo debe usar coherencia final probablemente basada en la comunicación asincrónica como eventos de integración (comunicación basada en mensajes y eventos). Así es como la aplicación de referencia [eShopOnContainers](https://aka.ms/eshoponcontainers) lleva a cabo este tipo de coherencia entre microservicios.
 
 Como indica el [teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem), debe elegir entre disponibilidad y coherencia ACID. La mayoría de los escenarios basados en microservicios exigen disponibilidad y escalabilidad elevada en lugar de coherencia fuerte. Las aplicaciones críticas deben permanecer activas y en ejecución, y los desarrolladores pueden solucionar el problema de coherencia mediante el uso de técnicas de trabajo con coherencia débil o eventual. Este es el enfoque adoptado por la mayoría de las arquitecturas basadas en microservicios.
 
@@ -100,8 +100,8 @@ El uso de comunicación asincrónica se explica con más detalle más adelante e
 - **Patrón Materialized View** \
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
-- **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing** \ (BASE: el cambio del pH del procesamiento de transacciones de bases de datos)
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+- **Charles Row. ACID vs. BASE: el cambio del pH del procesamiento de transacciones de bases de datos** \
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **Patrón Compensating Transaction** \ (Transacción de compensación)
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
