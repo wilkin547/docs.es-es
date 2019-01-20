@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Modificar datos en una base de datos usando LINQ (Visual Basic)'
+title: Procedimiento Modificar datos en una base de datos usando LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 02aaf2924c6230615d7d1cbcceac72265419b541
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520693"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415213"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Cómo: Modificar datos en una base de datos usando LINQ (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Procedimiento Modificar datos en una base de datos usando LINQ (Visual Basic)
 Language Integrated Query de Query (LINQ) facilitan el acceso a la información de la base de datos y modificar los valores de la base de datos.  
   
  El ejemplo siguiente muestra cómo crear una nueva aplicación que recupera y actualiza la información en una base de datos de SQL Server.  
@@ -122,7 +122,10 @@ Language Integrated Query de Query (LINQ) facilitan el acceso a la información 
       Dim updateCust = (From cust In db.Customers   
                         Where cust.CustomerID = "JILLF").ToList()(0)  
   
-      updateCust.ContactName = "Jill Shrader"  
+      updateCust.ContactName = "Jill Shrader"
+      updateCust.Country = "Wales"
+      updateCust.CompanyName = "Red Yonder Airlines"
+      updateCust.City = "Cardiff"
   
       Try  
         db.SubmitChanges()  

@@ -2,12 +2,12 @@
 title: F#instrucciones de diseño del componente
 description: Obtenga información sobre las directrices para escribir en él F# componentes pensados para su uso por otros llamadores.
 ms.date: 05/14/2018
-ms.openlocfilehash: bc8d4908912c4630f649ba30593d43a557278efa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145678"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415642"
 ---
 # <a name="f-component-design-guidelines"></a>F#instrucciones de diseño del componente
 
@@ -47,7 +47,7 @@ Documentación XML en las API públicas Asegúrese de que los usuarios pueden ob
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 Puede usar los comentarios XML de forma abreviada (`/// comment`), o los comentarios XML estándar (`///<summary>comment</summary>`).
@@ -75,11 +75,11 @@ La siguiente tabla sigue las convenciones de mayúsculas y minúsculas y nomencl
 | Tipos concretos | PascalCase | Sustantivo o adjetivo | Lista, Double, complejo | Tipos concretos son clases, structs, enumeraciones, delegados, registros y uniones. Aunque los nombres de tipo son tradicionalmente en minúsculas en OCaml, F# ha adoptado el esquema de nomenclatura .NET para los tipos.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
 | Etiquetas de unión     | PascalCase | Sustantivo | Algunos, agregar, correcto | No use un prefijo en las API públicas. Utilizar opcionalmente un prefijo cuando interno, como `Escriba equipos = TAlpha | TBeta | TDelta.` |
-| evento          | PascalCase | Verbo | ValueChanged / ValueChanging |  |
+| evento          | PascalCase | Verb | ValueChanged / ValueChanging |  |
 | Excepciones     | PascalCase |      | WebException | Nombre debe terminar con "Exception". |
 | Campo          | PascalCase | Sustantivo | CurrentName  | |
 | Tipos de interfaz |  PascalCase | Sustantivo o adjetivo | IDisposable | Nombre debe comenzar por "I". |
-| Método |  PascalCase |  Verbo | ToString | |
+| Método |  PascalCase |  Verb | ToString | |
 | Espacio de nombres | PascalCase | | Microsoft.FSharp.Core | Generalmente se utiliza `<Organization>.<Technology>[.<Subnamespace>]`, drop aunque la organización si la tecnología es independiente de la organización. |
 | Parámetros | camelCase | Sustantivo |  typeName, transformación, intervalo | |
 | permitir que los valores (internos) | camelCase o PascalCase | Sustantivo o verbo |  getValue, myTable |
@@ -191,16 +191,16 @@ Usar tipos de interfaz para representar un conjunto de operaciones. Esto es pref
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 En el lugar para:
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,13 +243,13 @@ Uso excesivo de `[<AutoOpen>]` clientes potenciales a contaminado espacios de no
 A veces clases se utilizan para modelar matemáticas construcciones como vectores. Cuando el dominio que se está modelando tiene operadores conocidos, que definirlas como miembros intrínsecos a la clase es útil.
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
@@ -306,7 +306,7 @@ En F#, rara vez se usa la herencia de la implementación. Además, las jerarquí
 Este es un buen ejemplo del uso de una tupla en un tipo de valor devuelto:
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 Para devolver tipos que contengan muchos componentes, o donde los componentes están relacionados con una sola entidad identificable, plantéese el uso de un tipo con nombre en lugar de una tupla.
@@ -317,9 +317,9 @@ Si hay una operación sincrónica correspondiente denominada `Operation` que dev
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -508,8 +508,8 @@ F#:
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
 C#:
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -596,7 +596,7 @@ Sin embargo, a pesar de esto, los métodos que devuelven tareas son la represent
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,7 +606,7 @@ Con frecuencia tendrá también desea aceptar un token de cancelación explícit
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
@@ -617,14 +617,14 @@ Aquí "F# tipos de función" significa "flecha" tipos como `int -> int`.
 En lugar de esto:
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 Haga lo siguiente:
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
@@ -639,18 +639,18 @@ Patrones comunes de uso de la F# tipo de opción en las API son mejores implemen
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>Usar la interfaz de colección .NET tipos IEnumerable\<T\> e IDictionary\<clave, valor\> para los parámetros y valores devueltos
@@ -660,14 +660,14 @@ Evite el uso de tipos de colección concretos, como matrices .NET `T[]`, F# tipo
 En lugar de F# muestra:
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
 Use F# secuencias:
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,13 +678,13 @@ Evitar otros usos del tipo de unidad. Estas son buenas:
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 Esto es incorrecto:
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>Comprobar si hay valores null en los límites de API de .NET básica

@@ -1,23 +1,22 @@
 ---
-title: 'Cómo: Invalidar la serialización XML SOAP codificada'
+title: Procedimiento Invalidar la serialización XML SOAP codificada
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7deec91f605555cff94fa882c887a4adf97db58a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003781"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415070"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>Cómo: Invalidar la serialización XML SOAP codificada
-[Ejemplo de código](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>Procedimiento Invalidar la serialización XML SOAP codificada
   
- El proceso para invalidar serialización XML de objetos como los mensajes SOAP es similar al proceso para invalidar la serialización XML estándar. Para obtener más información sobre la invalidación de la serialización XML estándar, vea [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
+ El proceso para invalidar serialización XML de objetos como los mensajes SOAP es similar al proceso para invalidar la serialización XML estándar. Para obtener información sobre cómo invalidar la serialización XML estándar, vea [Cómo: Especifique un nombre de elemento alternativo para un Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a>Para invalidar serialización de objetos como mensajes SOAP  
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Para invalidar serialización de objetos como mensajes SOAP  
   
 1.  Cree una instancia de la clase <xref:System.Xml.Serialization.SoapAttributeOverrides>.  
   
@@ -285,4 +284,4 @@ public class Run
 - [Serialización XML con servicios web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
 - [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
 - [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Cómo: Serializar un objeto como un Stream XML con codificación SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

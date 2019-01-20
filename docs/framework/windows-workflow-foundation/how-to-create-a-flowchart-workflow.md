@@ -1,25 +1,25 @@
 ---
-title: Crear un flujo de trabajo de diagrama de flujo
+title: Procedimiento Crear un flujo de trabajo de diagrama de flujo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502156"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415252"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Crear un flujo de trabajo de diagrama de flujo
-Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema le ayudará a crear un flujo de trabajo que usa tanto las actividades integradas, como el <xref:System.Activities.Statements.Flowchart> actividad y las actividades personalizadas del anterior [Cómo: crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números.  
+# <a name="how-to-create-a-flowchart-workflow"></a>Procedimiento Crear un flujo de trabajo de diagrama de flujo
+Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema le ayudará a crear un flujo de trabajo que usa tanto las actividades integradas, como el <xref:System.Activities.Statements.Flowchart> actividad y las actividades personalizadas del anterior [Cómo: Crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números.  
   
 > [!NOTE]
->  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe completar [Cómo: crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe completar [Cómo: Crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Para descargar una versión completada del tutorial, consulte [Windows Workflow Foundation (WF45): Tutorial de introducción](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Para descargar una versión completa del tutorial, consulte [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45): tutorial introductorio)](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow"></a>Para crear el flujo de trabajo  
   
@@ -67,7 +67,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 1.  Arrastre un **asignar** actividad desde la **primitivas** sección de la **cuadro de herramientas** y mantenga el mouse sobre el **iniciar** nodo, que es la parte superior de la diagrama de flujo. Cuando el **asignar** actividad es a través de la **iniciar** nodo, aparecerán tres triángulos alrededor del **iniciar** nodo. Quitar el **asignar** actividad en el triángulo que está justo debajo del **iniciar** nodo. Esto vinculará los dos elementos juntos y designa la **asignar** actividad como la primera actividad en el diagrama de flujo.  
   
     > [!NOTE]
-    >  Las actividades también se pueden indicar como actividad de inicio en el flujo de trabajo si se vinculan manualmente al nodo de inicio. Para ello, mantenga el mouse sobre el **iniciar** nodo, haga clic en uno de los rectángulos que aparecen cuando el mouse se sitúa sobre el **iniciar** nodo y arrastre la conexión de línea hacia abajo hasta la actividad deseada y colóquela en uno de los rectángulos que aparecen. También puede designar y la actividad como la actividad de inicio haciendo clic en la TI y elegir **establecer como nodo inicial**.  
+    >  Las actividades también se pueden indicar como actividad de inicio en el flujo de trabajo si se vinculan manualmente al nodo de inicio. Para ello, mantenga el mouse sobre el **iniciar** nodo, haga clic en uno de los rectángulos que aparecen cuando el mouse se sitúa sobre el **iniciar** nodo y arrastre la conexión de línea hacia abajo hasta la actividad deseada y colóquela en uno de los rectángulos que aparecen. También puede designar una actividad como la actividad de inicio haciendo clic en la TI y elegir **establecer como nodo inicial**.  
   
 2.  Tipo `Target` en el **a** cuadro y la siguiente expresión en el **escriba una expresión de C#** o **escriba una expresión de VB** cuadro.  
   
@@ -148,7 +148,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 1.  Presione Ctrl+MAYÚS+B para compilar la solución.  
   
-     Para obtener instrucciones sobre cómo ejecutar el flujo de trabajo, vea el tema siguiente, [Cómo: ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Si ya ha completado la [Cómo: ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) paso con un estilo diferente de flujo de trabajo y desea ejecutarlo mediante el flujo de trabajo de diagrama de flujo de este paso, vaya a la [para compilar y ejecutar la aplicación](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)sección de [Cómo: ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Para obtener instrucciones sobre cómo ejecutar el flujo de trabajo, vea el tema siguiente, [Cómo: Ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Si ya ha completado la [Cómo: Ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) paso con un estilo diferente de flujo de trabajo y desea ejecutarlo mediante el flujo de trabajo de diagrama de flujo de este paso, vaya a la [para compilar y ejecutar la aplicación](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) sección de [Cómo: Ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Activities.Statements.Flowchart>  
@@ -156,5 +156,5 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
  [Programación de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [Diseño de flujos de trabajo](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Cómo crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Cómo ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+ [Cómo: Crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Cómo: Ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

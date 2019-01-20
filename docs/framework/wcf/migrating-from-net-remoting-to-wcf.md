@@ -2,12 +2,12 @@
 title: Migración de .NET Remoting a WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245683"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415980"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migración de .NET Remoting a WCF
 En este artículo se describe el procedimiento para migrar una aplicación que usa .NET Remoting para que use Windows Communication Foundation (WCF). Se comparan conceptos similares entre estos productos y se describe cómo llevar a cabo varios escenarios comunes de comunicación remota en WCF.  
@@ -23,7 +23,7 @@ En este artículo se describe el procedimiento para migrar una aplicación que u
 |Operaciones de servicio|Métodos públicos en el tipo de servidor|Marcar con el atributo [OperationContract]|  
 |Serialización|ISerializable o [Serializable]|DataContractSerializer o XmlSerializer|  
 |Objetos pasados|Por valor o por referencia|Solo por valor|  
-|Errores y excepciones|Cualquier excepción serializable|FaultContract\<TDetail >|  
+|Errores y excepciones|Cualquier excepción serializable|FaultContract\<TDetail>|  
 |Objetos proxy de cliente|Los servidores proxy transparentes fuertemente tipados se crean automáticamente desde MarshalByRefObjects|Los proxy fuertemente tipados se generan a petición con ChannelFactory\<TChannel >|  
 |Plataforma necesaria|Tanto el cliente como el servidor deben usar Microsoft OS y .NET|Multiplataforma|  
 |Formato del mensaje|Privado|Estándares del sector (SOAP, WS-*, etc.)|  
@@ -101,7 +101,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Existen muchas formas de configurar y hospedar los servicios WCF. Este es solo un ejemplo, conocido como "autohospedado". Para obtener más información, vea los temas siguientes:  
   
--   [Procedimiento: Definir un contrato de servicio](how-to-define-a-wcf-service-contract.md)  
+-   [Cómo: Definir un contrato de servicio](how-to-define-a-wcf-service-contract.md)  
   
 -   [Configuración de servicios mediante archivos de configuración](configuring-services-using-configuration-files.md)  
   
@@ -144,7 +144,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
 -   [Programación de nivel de canal de cliente](./extending/client-channel-level-programming.md)  
   
--   [Procedimiento: Agregar, actualizar o quitar una referencia de servicio](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [Cómo: Agregar, actualizar o quitar una referencia de servicio](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Uso de la serialización  
  Tanto .NET Remoting como WCF usan la serialización para enviar objetos entre el cliente y el servidor, pero se diferencian en estos aspectos importantes:  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  Una vez migrada la aplicación de Remoting a WCF, es importante quitar las dependencias de .NET Remoting. Esto garantiza que se quitan las vulnerabilidades de Remoting de la aplicación. Estos pasos son los siguientes:  
   
--   **Suspender el uso de MarshalByRefObject.** El tipo MarshalByRefObject solo existe para Remoting y WCF no lo usa. Se debe quitar o cambiar cualquier tipo de aplicación que subclasifique MarshalByRefObject. El tipo MarshalByRefObject solo existe para Remoting y WCF no lo usa. Se debe quitar o cambiar cualquier tipo de aplicación que subclasifique MarshalByRefObject.  
+-   **Suspender el uso de MarshalByRefObject.** El tipo MarshalByRefObject solo existe para Remoting y WCF no lo usa. Se debe quitar o cambiar cualquier tipo de aplicación que subclasifique MarshalByRefObject.  
   
--   **Interrumpa el uso de [Serializable] e ISerializable.** El atributo [Serializable] y la interfaz ISerializable se diseñaron originalmente para serializar los tipos dentro de entornos de confianza y Remoting los usa. La serialización de WCF se basa en los tipos marcados con [DataContract] y [DataMember]. Los tipos de datos que usa una aplicación se deben modificar para usar [DataContract] y no para usar ISerializable o [Serializable]. El atributo [Serializable] y la interfaz ISerializable se diseñaron originalmente para serializar los tipos dentro de entornos de confianza y Remoting los usa. La serialización de WCF se basa en los tipos marcados con [DataContract] y [DataMember]. Los tipos de datos que usa una aplicación se deben modificar para usar [DataContract] y no para usar ISerializable o [Serializable].  
+-   **Interrumpa el uso de [Serializable] e ISerializable.** El atributo [Serializable] y la interfaz ISerializable se diseñaron originalmente para serializar los tipos dentro de entornos de confianza y Remoting los usa. La serialización de WCF se basa en los tipos marcados con [DataContract] y [DataMember]. Los tipos de datos que usa una aplicación se deben modificar para usar [DataContract] y no para usar ISerializable o [Serializable].  
   
 ### <a name="migration-scenarios"></a>Escenarios de migración  
  Ahora veamos cómo conseguir los siguientes escenarios comunes de Remoting en WCF:  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c7415920d34fc231bf82dd00199c7e01eec7a73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23aa619d666f2e0b9eb67ab4cf8d4f92761865d3
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408117"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415330"
 ---
 # <a name="debugging-structures"></a>Estructuras de depuración
 En esta sección se describen las estructuras no administradas que utiliza la API de depuración.  
@@ -35,7 +35,7 @@ En esta sección se describen las estructuras no administradas que utiliza la AP
  Representa información del marco de pila de un objeto de excepción.  
   
  [CorDebugExceptionObjectStackFrame (estructura)](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Se asigna un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID para el correspondiente [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) objeto.  
+ Se asigna un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID correspondiente [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) objeto.  
   
  COR_ACTIVE_FUNCTION  
  Contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso.  
@@ -77,7 +77,14 @@ En esta sección se describen las estructuras no administradas que utiliza la AP
  Almacena la versión estándar en cuatro partes de Common Language Runtime.  
   
  [StackTrace_SimpleContext (estructura)](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
- Proporciona un contexto simple que se puede usar en lugar de una estructura `CONTEXT` completa.  
+ Proporciona un contexto simple que se puede usar en lugar de una estructura `CONTEXT` completa.
+
+ [Estructura CLRDATA_ADDRESS_RANGE](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) define un intervalo de direcciones.
+ 
+ [Estructura CLRDATA_IL_ADDRESS_MAP](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) define un IL para asignación de direcciones
+ 
+ [Estructura DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) define el contenedor para una solicitud de dirección del módulo.
+
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Coclases para la depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

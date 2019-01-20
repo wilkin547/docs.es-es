@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b81e7c2ffabdee78af34d00c48fb29c7525dea08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410473"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415954"
 ---
 # <a name="debugging-enumerations"></a>Enumeraciones de depuración
 En esta sección se describen las enumeraciones no administradas que utiliza la API de depuración.  
@@ -23,7 +23,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Proporciona valores que se usan por el [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) método.  
   
  [CLRDataEnumMemoryFlags (enumeración)](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- Indica qué regiones de memoria en una llamada a la [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) debe incluir el método.  
+ Indica qué regiones de memoria de una llamada a la [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) debe incluir el método.  
   
  [COR_PUB_ENUMPROCESS (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
  Identifica el tipo de proceso que se va a enumerar.  
@@ -44,7 +44,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Proporciona opciones de depuración adicionales que pueden usarse en una llamada a la [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) método.  
   
  [CorDebugDebugEventKind (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- Indica el tipo de evento cuya información se descodifica por la [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) método.  
+ Indica el tipo de evento cuya información se descodifica mediante la [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) método.  
   
  [CorDebugDecodeEventFlagsWindows (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  Proporciona información extra sobre los eventos de depuración en la plataforma Windows.  
@@ -95,7 +95,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Proporciona un valor que determina si un depurador carga imágenes nativas (NGen) desde la caché de imágenes nativas.  
   
  [CorDebugPlatform (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- Proporciona valores de plataforma de destino que usan el [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) método.  
+ Proporciona valores de plataforma de destino que se usan por el [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) método.  
   
  [CorDebugRecordFormat (enumeración)](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  Describe el formato de los datos de una matriz de bytes que contiene información sobre un evento de depuración de excepción nativo.  
@@ -134,11 +134,13 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Indica la operación que se realizó en un conmutador de depuración/seguimiento.  
   
  [VariableLocationType (enumeración)](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- Indica el tipo de ubicación nativo de una variable.  
+ Indica el tipo de ubicación nativa de una variable.  
   
  [WriteableMetadataUpdateMode (enumeración)](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- Proporciona valores que especifican si las actualizaciones en memoria de los metadatos son visibles para un depurador.  
-  
+ Proporciona valores que especifican si las actualizaciones en memoria de los metadatos son visibles para un depurador. 
+
+ [Enumeración ClrDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) proporciona valores que son usados por la estructura CLRDATA_IL_ADDRESS_MAP.
+
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Coclases para la depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   

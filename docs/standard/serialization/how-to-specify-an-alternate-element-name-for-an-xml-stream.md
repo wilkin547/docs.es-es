@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Especificar un nombre de elemento alternativo para una secuencia XML'
+title: Procedimiento Especifique un nombre de elemento alternativo para un Stream XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,18 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f2dd56111bbc0ace76c2b71d208f1b753a2119b8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582379"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415096"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Cómo: Especificar un nombre de elemento alternativo para una secuencia XML
-[Ejemplo de código](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedimiento Especifique un nombre de elemento alternativo para un Stream XML
   
- Usando[XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), se puede generar más de una secuencia XML con el mismo conjunto de clases. Puede que desee proceder de esta forma ya que dos servicios Web XML diferentes requieren la misma información básica, con solo ligeras diferencias. Por ejemplo, imagine dos servicios Web XML que procesan órdenes para los libros y así ambos requieren los números de ISBN. Un servicio usa la etiqueta \<ISBN> mientras el segundo usa la etiqueta \<BookID>. Tiene una clase denominada `Book` que contiene un campo denominado `ISBN`. Cuando se serializa una instancia de la clase `Book`, utilizará, de forma predeterminada, el nombre de miembro (ISBN) como el nombre de elemento de etiqueta. Para el primer servicio Web XML, esto es como esperado. Pero para enviar la secuencia XML al segundo servicio Web XML, debe invalidar la serialización para que el nombre de elemento de la etiqueta sea `BookID`.  
+Usando[XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), se puede generar más de una secuencia XML con el mismo conjunto de clases. Puede que desee proceder de esta forma ya que dos servicios Web XML diferentes requieren la misma información básica, con solo ligeras diferencias. Por ejemplo, imagine dos servicios Web XML que procesan órdenes para los libros y así ambos requieren los números de ISBN. Un servicio usa la etiqueta \<ISBN> mientras el segundo usa la etiqueta \<BookID>. Tiene una clase denominada `Book` que contiene un campo denominado `ISBN`. Cuando se serializa una instancia de la clase `Book`, utilizará, de forma predeterminada, el nombre de miembro (ISBN) como el nombre de elemento de etiqueta. Para el primer servicio Web XML, esto es como esperado. Pero para enviar la secuencia XML al segundo servicio Web XML, debe invalidar la serialización para que el nombre de elemento de la etiqueta sea `BookID`.  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Para crear una secuencia XML con un nombre de elemento alternativo  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Para crear una secuencia XML con un nombre de elemento alternativo  
   
 1.  Cree una instancia de la clase <xref:System.Xml.Serialization.XmlElementAttribute>.  
   
