@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201023"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54416032"
 ---
 # Novedades de .NET Framework <a name="introduction"></a>
 
@@ -242,9 +242,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 La [inserción de dependencias (DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) desacopla los objetos y sus dependencias para que ya no sea necesario cambiar el código de un objeto solo porque haya cambiado una dependencia. Al desarrollar aplicaciones de ASP.NET que tienen como destino .NET Framework 4.7.2, se puede:
 
-- Usar la inserción basada en establecedores, interfaces y constructores en [controladores y módulos](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [instancias de Page](xref:System.Web.UI.Page) y [controles de usuario](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) de proyectos de aplicación web ASP.NET.
+- Usar la inserción basada en establecedores, interfaces y constructores en [controladores y módulos](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [instancias de Page](xref:System.Web.UI.Page) y [controles de usuario](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de proyectos de aplicación web ASP.NET.
 
-- Usar la inserción basada en establecedores, e interfaces en [controladores y módulos](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [instancias de Page](xref:System.Web.UI.Page) y [controles de usuario](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) de proyectos de sitio web ASP.NET.
+- Usar la inserción basada en establecedores, e interfaces en [controladores y módulos](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [instancias de Page](xref:System.Web.UI.Page) y [controles de usuario](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de proyectos de sitio web ASP.NET.
 
 - Conectar otros marcos de inserción de dependencias.
 
@@ -1096,7 +1096,7 @@ Para obtener más información sobre [!INCLUDE[net_v461](../../../includes/net-v
 
 <a name="Crypto" />
 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Cifrado: compatibilidad con certificados X509 que contienen ECDSA
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Criptografía: Compatibilidad con certificados X509 que contienen ECDSA
  La versión 4.6 de .NET Framework agrega compatibilidad con RSACng para certificados X509. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] agrega compatibilidad para certificados X509 ECDSA (Elliptic Curve Digital Signature Algorithm).
 
  ECDSA ofrece un mejor rendimiento y es un algoritmo de cifrado más seguro que RSA, lo que lo convierte en una excelente elección cuando están en juego la escalabilidad y el rendimiento de la seguridad de capa de transporte (TLS). La implementación de .NET Framework encapsula las llamadas en funciones de Windows existentes.
@@ -1176,7 +1176,7 @@ Ahora SqlClient proporciona de forma automática conexiones más rápidas a un g
 
 <a name="WWF461" />
 
-### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: transacciones
+### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: Transacciones
  El método <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> ahora puede usar un administrador de transacciones distribuidas que no sea MSDTC para promocionar la transacción. Para ello, especifique un identificador GUID de promoción de transacción a la nueva sobrecarga <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType>. Si esta operación se realiza correctamente, hay limitaciones de las capacidades de la transacción. Una vez que se activa un promotor de transacciones que no sea MSDTC, los métodos siguientes inician una <xref:System.Transactions.TransactionPromotionException> porque estos métodos requieren promoción a MSDTC:
 
 - <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>
@@ -1641,7 +1641,7 @@ La API de generación de perfiles no administrada se ha mejorado de la siguiente
 
     - Puede usar las API de Windows en tiempo de ejecución en bibliotecas portables cuyo destino sea Windows 8.1, Windows Phone 8.1 y Windows Phone Silverlight 8.1.
 
-    - Puede incluir XAML (tipos de Windows.UI.XAML) en las bibliotecas portables cuyo destino es Windows 8.1 o Windows Phone 8.1. Se admiten las siguientes plantillas de XAML: página en blanco, diccionario de recursos, control basado en modelo y control de usuario.
+    - Puede incluir XAML (tipos de Windows.UI.XAML) en las bibliotecas portables cuyo destino es Windows 8.1 o Windows Phone 8.1. Se admiten las siguientes plantillas de XAML:  Página en blanco, Diccionario de recursos, Control basado en modelo y Control de usuario.
 
     - Se puede crear un componente de Windows en tiempo de ejecución portable (archivo .winmd) para usarlo en aplicaciones de la Tienda que tengan como destino Windows 8.1 y Windows Phone 8.1.
 
