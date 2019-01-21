@@ -3,12 +3,12 @@ title: 'Glosario de aprendizaje automático: ML.NET'
 description: Un glosario de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760398"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415382"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
@@ -17,8 +17,6 @@ La lista siguiente es una compilación de los términos importantes sobre aprend
 ## <a name="accuracy"></a>Exactitud
 
 En [clasificación](#classification), la exactitud es el número de elementos correctamente clasificados dividido entre el número total de elementos en el conjunto de pruebas. Va desde 0 (el menos preciso) a 1 (el más preciso). La exactitud es una de las métricas de evaluación del rendimiento de su modelo. Trátela junto con el valor de [precisión](#precision), el de [recuperación](#recall) y la [puntuación F](#f-score).
-
-API de ML.NET relacionada: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Área bajo la curva (AUC)
 
@@ -87,8 +85,6 @@ Todas las operaciones necesarias para ajustar un modelo a un conjunto de datos. 
 ## <a name="precision"></a>Precisión
 
 En [clasificación](#classification), la precisión de una clase es el número de elementos con una predicción correcta en cuando a pertenencia a esa clase dividido entre el número total de elementos cuya predicción señalaba la pertenencia a esa clase.
-
-API de ML.NET relacionada:<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Recuperación
 

@@ -1,15 +1,15 @@
 ---
 title: Uso de ML.NET en un escenario de clasificación binaria de análisis de sentimiento
 description: Descubra cómo usar ML.NET en un escenario de clasificación binaria para aprender a usar la predicción de sentimientos a fin de tomar las medidas oportunas.
-ms.date: 12/20/2018
+ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6ef4da7f429b92591c90daa3fb06f367d8a578a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: bf4e5f00371cba1e6546903a1d27e833b0e57271
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030170"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362904"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Uso de ML.NET en un escenario de clasificación binaria de análisis de sentimiento
 
@@ -122,7 +122,7 @@ Debe crear tres campos globales para contener las rutas de acceso a los archivos
 * `_trainDataPath` tiene la ruta de acceso al conjunto de datos utilizado para entrenar el modelo.
 * `_testDataPath` tiene la ruta de acceso al conjunto de datos utilizado para evaluar el modelo.
 * `_modelPath` tiene la ruta de acceso donde se guarda el modelo entrenado.
-* `_textLoader` es el <xref:Microsoft.ML.Runtime.Data.TextLoader> utilizado para cargar y transformar los conjuntos de datos.
+* `_textLoader` es el <xref:Microsoft.ML.Data.TextLoader> utilizado para cargar y transformar los conjuntos de datos.
 
 Agregue el código siguiente a la línea justo encima del método `Main` para especificar esas rutas de acceso y la variable `_textLoader`:
 
@@ -152,10 +152,10 @@ Cree una variable denominada `mlContext` e inicialícela con una nueva instancia
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-A continuación, para realizar la configuración para la carga de datos, inicialice la variable global `_textLoader` con el fin de volver a usarla.  Tenga en cuenta que usa una variable `TextReader`. Cuando crea `TextLoader` mediante `TextReader`, se pasa en el contexto necesario y la clase <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments> que habilita la personalización.
+A continuación, para realizar la configuración para la carga de datos, inicialice la variable global `_textLoader` con el fin de volver a usarla.  Tenga en cuenta que usa una variable `TextReader`. Cuando crea `TextLoader` mediante `TextReader`, se pasa en el contexto necesario y la clase <xref:Microsoft.ML.Data.TextLoader.Arguments> que habilita la personalización.
 
- Especifique el esquema de datos, pasando una matriz de objetos <xref:Microsoft.ML.Runtime.Data.TextLoader.Column> al cargador que contiene todos los nombres de columna y sus tipos. Definió el esquema de datos anteriormente al crear nuestra clase `SentimentData`. Para nuestro esquema, la primera columna (Label) es <xref:System.Boolean> (la opinión) y la segunda columna (SentimentText) es la característica de tipo texto o cadena utilizada para predecir la opinión.
-La clase `TextReader` devuelve la variable <xref:Microsoft.ML.Runtime.Data.TextLoader> totalmente inicializada.  
+ Especifique el esquema de datos, pasando una matriz de objetos <xref:Microsoft.ML.Data.TextLoader.Column> al cargador que contiene todos los nombres de columna y sus tipos. Definió el esquema de datos anteriormente al crear nuestra clase `SentimentData`. Para nuestro esquema, la primera columna (Label) es <xref:System.Boolean> (la opinión) y la segunda columna (SentimentText) es la característica de tipo texto o cadena utilizada para predecir la opinión.
+La clase `TextReader` devuelve la variable <xref:Microsoft.ML.Data.TextLoader> totalmente inicializada.  
 
 Para inicializar la variable global `_textLoader` con el fin de volver a usarla para los conjuntos de datos necesarios, agregue el código siguiente después de la inicialización de `mlContext`:
 
@@ -186,7 +186,7 @@ Tenga en cuenta que se pasan dos parámetros al método Train: `MLContext` para 
 
 ## <a name="load-the-data"></a>Carga de los datos
 
-Cargará los datos mediante la variable global `_textLoader` con el parámetro `dataPath`. Devuelve <xref:Microsoft.ML.Runtime.Data.IDataView>. Como la entrada y salida de `Transforms`, `DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
+Cargará los datos mediante la variable global `_textLoader` con el parámetro `dataPath`. Devuelve <xref:Microsoft.ML.Data.IDataView>. Como la entrada y salida de `Transforms`, `DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
 
 En ML.NET, los datos son similares a una vista SQL. Se evalúan lentamente, se esquematizan y son heterogéneos. El objeto es la primera parte de la canalización y carga los datos. Para este tutorial, carga un conjunto de datos con comentarios y opiniones tóxicas o no tóxicas correspondiente. Esto se usa para crear el modelo y entrenarlo.
 
@@ -200,7 +200,7 @@ El procesamiento previo y la limpieza de datos son tareas importantes que se pro
 
 Las canalizaciones de transformación de ML.NET crean un conjunto personalizado de transformaciones que se aplican a los datos antes del entrenamiento o la prueba. El propósito principal de las transformaciones es la [caracterización](../resources/glossary.md#feature-engineering) de datos. Los algoritmos de aprendizaje automático comprenden los datos [caracterizados](../resources/glossary.md#feature), por lo que el paso siguiente es transformar nuestro datos textuales en un formato que reconozcan nuestros algoritmos de ML. Ese formato es un [vector numérico](../resources/glossary.md#numerical-feature-vector).
 
-Después, llame a `mlContext.Transforms.Text.FeaturizeText` que caracteriza la columna de texto (`SentimentText`) en un vector numérico llamado `Features` utilizado por el algoritmo de aprendizaje automático. Se trata de una llamada de contenedor que devuelve <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601> que eficazmente será una canalización. Asigne un nombre a `pipeline`, ya que luego anexará el entrenador a `EstimatorChain`. Agregue esto como la siguiente línea de código:
+Después, llame a `mlContext.Transforms.Text.FeaturizeText` que caracteriza la columna de texto (`SentimentText`) en un vector numérico llamado `Features` utilizado por el algoritmo de aprendizaje automático. Se trata de una llamada de contenedor que devuelve <xref:Microsoft.ML.Data.EstimatorChain%601> que eficazmente será una canalización. Asigne un nombre a `pipeline`, ya que luego anexará el entrenador a `EstimatorChain`. Agregue esto como la siguiente línea de código:
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
 
@@ -216,7 +216,7 @@ Agregue el código siguiente al método `Train`:
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
-Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain%601>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, entrenará el modelo mediante <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> proporcionando al mismo tiempo los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según la `DataView` que se pasa. El experimento no se ejecuta hasta que esto suceda.
+Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain%601>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, entrenará el modelo mediante <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*> proporcionando al mismo tiempo los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según la `DataView` que se pasa. El experimento no se ejecuta hasta que esto suceda.
 
 Agregue el código siguiente al método `Train`:
 
@@ -268,7 +268,7 @@ Utilice el código siguiente para mostrar las métricas, compartir los resultado
 
 [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Display selected metrics")]
 
-Para guardar el modelo en un archivo .zip antes de devolverlo, agregue el siguiente código para llamar al método `SaveModelAsFile` como la línea siguiente en `TrainFinalModel`:
+Para guardar el modelo en un archivo .zip antes de devolverlo, agregue el siguiente código para llamar al método `SaveModelAsFile` como la línea siguiente en `Evaluate`:
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#23 "Save the model")]
 
@@ -287,7 +287,7 @@ El método `SaveModelAsFile` ejecuta las tareas siguientes:
 
 * Guarda el modelo como un archivo .zip.
 
-A continuación, cree un método para guardar el modelo para que se pueda volver a usar y consumir en otras aplicaciones. `ITransformer` tiene un método <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)> que toma el campo global `_modelPath` y <xref:System.IO.Stream>. Para guardar esto como un archivo ZIP, creará `FileStream` inmediatamente antes de llamar al método `SaveTo`. Agregue el siguiente código al método `SaveModelAsFile` como la siguiente línea:
+A continuación, cree un método para guardar el modelo para que se pueda volver a usar y consumir en otras aplicaciones. `ITransformer` tiene un método <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> que toma el campo global `_modelPath` y <xref:System.IO.Stream>. Para guardar esto como un archivo ZIP, creará `FileStream` inmediatamente antes de llamar al método `SaveTo`. Agregue el siguiente código al método `SaveModelAsFile` como la siguiente línea:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
 
@@ -319,16 +319,16 @@ Agregue una llamada al método nuevo desde el método `Main`, justo debajo de la
 
 [!code-csharp[CallPredict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Call the Predict method")]
 
-Mientras `model` es `transformer` que opera en muchas filas de datos, un escenario muy común de producción es necesario para las predicciones con los ejemplos individuales. <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> es un contenedor que se devuelve del método `MakePredictionFunction`. Vamos a agregar el código siguiente para crear PredictionFunction como la primera línea en el método `Predict`:
+Mientras `model` es `transformer` que opera en muchas filas de datos, un escenario muy común de producción es necesario para las predicciones con los ejemplos individuales. <xref:Microsoft.ML.PredictionEngine%602> es un contenedor que se devuelve del método `CreatePredictionEngine`. Vamos a agregar el código siguiente para crear `PredictionFunction` como la primera línea en el método `Predict`:
 
-[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
   
 Agregue un comentario para probar la predicción del modelo entrenado en el método `Predict` mediante la creación de una instancia de `SentimentData`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
 
 
- Puede usar eso para predecir la opinión tóxica o no tóxica de una única instancia de los datos de comentario. Para obtener una predicción, use <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> en los datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales.
+ Puede usar eso para predecir la opinión tóxica o no tóxica de una única instancia de los datos de comentario. Para obtener una predicción, use <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> en los datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
@@ -368,7 +368,7 @@ Cargue el modelo
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-Ahora que tiene un modelo, puede utilizarlo para predecir la opinión tóxica o no tóxica de los datos de comentarios con el método <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)>. Para obtener una predicción, use `Predict` en los nuevos datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales. Agregue el código siguiente al método `PredictWithModelLoadedFromFile` para las predicciones:
+Ahora que tiene un modelo, puede utilizarlo para predecir la opinión tóxica o no tóxica de los datos de comentarios con el método <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)>. Para obtener una predicción, use `Predict` en los nuevos datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales. Agregue el código siguiente al método `PredictWithModelLoadedFromFile` para las predicciones:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
@@ -413,7 +413,7 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 
 The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
 
-=============== Prediction Test of loaded model with a multiple samples ===============
+=============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
 Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
