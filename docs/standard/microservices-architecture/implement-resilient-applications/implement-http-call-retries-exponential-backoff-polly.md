@@ -1,15 +1,15 @@
 ---
 title: Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly
-description: Obtenga información sobre cómo controlar los errores HTTP con Polly y HttpClientFactory
+description: Obtenga información sobre cómo controlar los errores HTTP con Polly y HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/10/2018
-ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143992"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362761"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementación de reintentos de llamada HTTP con retroceso exponencial con HttpClientFactory y las directivas de Polly
 
@@ -38,7 +38,7 @@ services.AddHttpClient<IBasketService, BasketService>()
 
 El método **AddPolicyHandler()** es el que agrega las directivas a los objetos `HttpClient` que se van a usar. En este caso, se agrega una directiva de Polly para reintentos HTTP con retroceso exponencial.
 
-Para tener un enfoque más modular, la directiva de reintentos HTTP se puede definir en un método independiente dentro del método ConfigureServices(), como en el código siguiente.
+Para tener un enfoque más modular, la directiva de reintentos HTTP se puede definir en un método independiente dentro del archivo `Startup.cs`, como se muestra en el código siguiente:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -55,7 +55,7 @@ Con Polly, se puede definir una directiva de reintentos con el número de reinte
 
 Por tanto, lo intentará seis veces y los segundos entre cada reintento serán exponenciales, a partir de dos segundos.
 
-### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Agregar una estrategia de vibración a la directiva de reintentos
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Agregar una estrategia de vibración a la directiva de reintentos
 
 Una directiva de reintentos normal puede afectar a su sistema en casos de escalabilidad y simultaneidad altas y de gran contención. Para gestionar los picos de reintentos similares procedentes de diferentes clientes en caso de interrupciones parciales, una buena solución es agregar una estrategia de vibración a la directiva o algoritmo de reintento. Esto puede mejorar el rendimiento general del sistema de un extremo a otro añadiendo aleatoriedad al retroceso exponencial. De esta forma, cuando surgen problemas, los picos se reparten. Al usar una directiva de Polly sin formato, el código para implementar la vibración podría parecerse al ejemplo siguiente:
 
@@ -71,19 +71,17 @@ Policy
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Retry pattern (Patrón de reintento)**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- **Retry pattern (Patrón de reintento)**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
 
--   **Polly y HttpClientFactory**
-    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+- **Polly y HttpClientFactory**\
+  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
--   **Polly (.NET resilience and transient-fault-handling library) (Polly [Biblioteca de control de errores transitorios y resistencia de .NET])**
+- **Polly (.NET resilience and transient-fault-handling library) (Polly [Biblioteca de control de errores transitorios y resistencia de .NET])**\
+  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
-
--   **Marc Brooker. Jitter: Making Things Better With Randomness** (Vibración: hacer mejor las cosas gracias a la aleatoriedad)
-
-    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+- **Marc Brooker. Jitter: Making Things Better With Randomness**\ (Vibración: hacer mejor las cosas gracias a la aleatoriedad)
+  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Anterior](explore-custom-http-call-retries-exponential-backoff.md)

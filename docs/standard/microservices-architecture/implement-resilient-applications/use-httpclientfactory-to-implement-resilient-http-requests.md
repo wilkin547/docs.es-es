@@ -1,27 +1,27 @@
 ---
 title: Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
-description: HttpClientFactory es una fábrica bien fundamentada, disponible desde .NET Core 2.1, para crear instancias de `HttpClient` con el fin de usarlas en las aplicaciones.
+description: Aprenda a utilizar HttpClientFactory, disponible desde .NET Core 2.1, para crear instancias de `HttpClient`, lo que le facilita su uso en sus aplicaciones.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 0d08346dc59b6f6227e719658909c174e67d4a61
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 10/16/2018
+ms.openlocfilehash: 6af30ae3b5111e026be6ec89d266338b88cf22b2
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030365"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362646"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
 
-`HttpClientFactory` es una fábrica bien fundamentada, disponible desde .NET Core 2.1, para crear instancias de `HttpClient` con el fin de usarlas en las aplicaciones. 
+`HttpClientFactory` es una fábrica bien fundamentada, disponible desde .NET Core 2.1, para crear instancias de <xref:System.Net.Http.HttpClient> con el fin de usarlas en las aplicaciones.
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>Problemas con la clase HttpClient original disponible en .NET Core
 
-La clase [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) original y bien conocida se puede usar fácilmente pero, en algunos casos, muchos desarrolladores no la usan de forma correcta. 
+La clase [HttpClient](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0) original y bien conocida se puede usar fácilmente pero, en algunos casos, muchos desarrolladores no la usan de forma correcta. 
 
 Como primer problema, aunque esta clase es descartable, usarla con la instrucción `using` no es la mejor opción porque incluso cuando se descarta el objeto `HttpClient`, el socket subyacente no se libera de forma inmediata y puede causar un problema grave denominado "agotamiento de socket". Para obtener más información sobre este problema, vea la entrada de blog [You're using HttpClient wrong and it is destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) (Está usando HttpClient mal y eso desestabiliza el software).
 
-Por tanto, `HttpClient` está diseñado para que se cree una instancia una vez y se reutilice durante la vida de una aplicación. Crear una instancia de una clase `HttpClient` para cada solicitud agotará el número de sockets disponibles bajo cargas pesadas. Ese problema generará errores `SocketException`. Los enfoques posibles para solucionar ese problema se basan en la creación del objeto `HttpClient` como singleton o estático, como se explica en este [artículo de Microsoft sobre el uso de HttpClient](../../../csharp/tutorials/console-webapiclient.md). 
+Por tanto, `HttpClient` está diseñado para que se cree una instancia una vez y se reutilice durante la vida de una aplicación. Crear una instancia de una clase `HttpClient` para cada solicitud agotará el número de sockets disponibles bajo cargas pesadas. Ese problema generará errores `SocketException`. Los enfoques posibles para solucionar ese problema se basan en la creación del objeto `HttpClient` como singleton o estático, como se explica en este [artículo de Microsoft sobre el uso de HttpClient](/dotnet/csharp/tutorials/console-webapiclient). 
 
 Pero hay un segundo problema con `HttpClient` que puede aparecer cuando se usa como objeto singleton o estático. En este caso, un `HttpClient` singleton o estático no respeta los cambios de DNS, como se explica en este [problema en el repositorio de .NET Core de GitHub](https://github.com/dotnet/corefx/issues/11224). 
 
@@ -45,17 +45,19 @@ Hay varias formas de usar `HttpClientFactory` en la aplicación:
 - Usar clientes con tipo.
 - Usar clientes generados.
 
-Por brevedad, en esta guía se muestra la manera más estructurada de usar `HttpClientFactory`, que consiste en utilizar Clientes con tipo (el modelo de agente de servicio), pero todas las opciones se documentan y se enumeran actualmente en este [artículo sobre el uso de HttpClientFactory ](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?#consumption-patterns).  
+Por brevedad, en esta guía se muestra la manera más estructurada de usar `HttpClientFactory`, que consiste en utilizar Clientes con tipo (el modelo de agente de servicio), pero todas las opciones se documentan y se enumeran actualmente en este [artículo sobre el uso de HttpClientFactory](/aspnet/core/fundamentals/http-requests?#consumption-patterns).  
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>Cómo usar clientes con tipo con HttpClientFactory
 
-En el diagrama siguiente se muestra cómo se usan los clientes con tipo con HttpClientFactory.
+Así pues, ¿qué es un "Cliente con tipo"? Se trata sencillamente de un cliente `HttpClient` configurado por `DefaultHttpClientFactory` tras la inserción.
 
-![Diagrama con un controlador de MVC en el que se usa un ClientService insertado, que internamente usa un HttpClient configurado por HttpClientFactory y las directivas de Polly](./media/image3.5.png)
+En el diagrama siguiente se muestra cómo se usan los clientes con tipo con `HttpClientFactory`:
 
-**Figura 10-4**. Uso de `HttpClientFactory` con clases de cliente con tipo.
+![Un servicio ClientService (usado por un controlador o código de cliente) utiliza un cliente HttpClient creado por la fábrica IHttpClientFactory registrada. Esta fábrica asigna al cliente HttpClient un controlador HttpMessageHandler a partir de un grupo que administra. El cliente HttpClient se puede configurar con las directivas de Polly al registrar la fábrica IHttpClientFactory en el contenedor de inserción de dependencias con el método de extensión AddHttpClient.](./media/image3.5.png)
 
-En primer lugar, configure `HttpClientFactory` en la aplicación. Agregue una referencia al paquete `Microsoft.Extensions.Http` que incluye el método de extensión `AddHttpClient()` para `IServiceCollection`. Este método de extensión registra el `DefaultHttpClientFactory` que se va a usar como singleton para la interfaz `IHttpClientFactory`. Define una configuración transitoria para `HttpMessageHandlerBuilder`. Este controlador de mensajes (el objeto `HttpMessageHandler`), tomado de un grupo, lo usa el `HttpClient` devuelto desde la fábrica.
+**Figura 8-4**. Uso de HttpClientFactory con clases de cliente con tipo.
+
+Primero, configure `HttpClientFactory` en su aplicación, agregando una referencia al paquete `Microsoft.Extensions.Http` que incluye el método de extensión `AddHttpClient()` para `IServiceCollection`. Este método de extensión registra el `DefaultHttpClientFactory` que se va a usar como singleton para la interfaz `IHttpClientFactory`. Define una configuración transitoria para `HttpMessageHandlerBuilder`. Este controlador de mensajes (el objeto `HttpMessageHandler`), tomado de un grupo, lo usa el `HttpClient` devuelto desde la fábrica.
 
 En el código siguiente, puede ver cómo se puede `AddHttpClient()` utilizar para registrar clientes con tipo (agentes de servicio) que necesitan usar `HttpClient`.
 
@@ -67,15 +69,17 @@ services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
 ```
 
-Al agregar las clases de cliente con tipo mediante AddHttpClient(), siempre que se use el objeto `HttpClient` que se va a insertar en la clase a través de su constructor, ese objeto `HttpClient` usará toda la configuración y directivas proporcionadas. En las secciones siguientes, se verán esas directivas, como los reintentos o los interruptores de Polly.
+Al registrarse los servicios cliente como se muestra en el código anterior, la fábrica `DefaultClientFactory` crea un cliente `HttpClient` configurado específicamente para cada servicio, como explicaremos en el párrafo siguiente.
+
+Solo registrando su clase de servicio cliente con `AddHttpClient()`, el objeto `HttpClient` que se insertará en su clase usará la configuración y las directivas proporcionadas tras el registro. En las secciones siguientes, se verán esas directivas, como los reintentos o los interruptores de Polly.
 
 ### <a name="httpclient-lifetimes"></a>Duraciones de HttpClient
 
-Cada vez que se obtiene un objeto `HttpClient` de IHttpClientFactory, se devuelve una nueva instancia de `HttpClient`. Habrá una instancia de **HttpMessageHandler** por cada cliente con nombre o tipo. `IHttpClientFactory` agrupará las instancias de HttpMessageHandler creadas por la fábrica para reducir el consumo de recursos. Se puede reutilizar una instancia de HttpMessageHandler del grupo al crear una instancia de `HttpClient` si su duración aún no ha expirado.
+Cada vez que se obtiene un objeto `HttpClient` de `IHttpClientFactory`, se devuelve una nueva instancia. Pero cada cliente `HttpClient` usa un controlador `HttpMessageHandler` que `IHttpClientFactory` agrupa y vuelve a usar para reducir el consumo de recursos, siempre y cuando la vigencia de `HttpMessageHandler`no haya expirado.
 
 La agrupación de controladores es conveniente porque cada controlador suele administrar sus propias conexiones HTTP subyacentes. Crear más controladores de lo necesario puede provocar retrasos en la conexión. Además, algunos controladores dejan las conexiones abiertas de forma indefinida, lo que puede ser un obstáculo a la hora de reaccionar ante los cambios de DNS.
 
-Los objetos HttpMessageHandler del grupo tienen una duración que es el período de tiempo que se puede reutilizar una instancia de HttpMessageHandler en el grupo. El valor predeterminado es de dos minutos, pero se puede invalidar por cada cliente con nombre o tipo. Para invalidarlo, se llama a SetHandlerLifetime() en la interfaz IHttpClientBuilder que se devuelve al crear al cliente, como se muestra en el código siguiente.
+Los objetos `HttpMessageHandler` del grupo tienen una duración que es el período de tiempo que se puede reutilizar una instancia de `HttpMessageHandler` en el grupo. El valor predeterminado es de dos minutos, pero se puede invalidar por cada cliente con tipo. Para ello, llame a `SetHandlerLifetime()` en el `IHttpClientBuilder` que se devuelve cuando se crea el cliente, como se muestra en el siguiente código:
 
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
@@ -83,7 +87,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
                  .SetHandlerLifetime(TimeSpan.FromMinutes(5));  
 ```
 
-Cada cliente con tipo o nombre puede tener configurado su propio valor de duración de controlador. Establecer la duración en InfiniteTimeSpan para deshabilitar la expiración del controlador.
+Cada cliente con tipo puede tener configurado su propio valor de duración de controlador. Establezca la duración en `InfiniteTimeSpan` para deshabilitar la expiración del controlador.
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Implementar las clases de cliente con tipo que usan el HttpClient insertado y configurado
 
@@ -151,16 +155,13 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 Hasta el momento, el código que se ha mostrado solo realiza solicitudes HTTP convencionales, pero la "magia" aparecerá en las secciones siguientes donde, con tan solo agregar directivas y controladores de delegación a los clientes con tipo registrados, todas las solicitudes HTTP que `HttpClient` va a realizar se comportarán teniendo en cuenta las directivas de resistencia como los reintentos con retroceso exponencial, los interruptores o cualquier otro controlador de delegación personalizado para implementar características de seguridad adicionales, como el uso de tokens de autenticación, o bien cualquier otra característica personalizada. 
 
-
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Uso de HttpClientFactory en .NET Core 2.1**
-    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+- **Uso de HttpClientFactory en .NET Core 2.1**\
+  [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
-
--   **Repositorio de HttpClientFactory en GitHub**
-
-    [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
+- **Repositorio de HttpClientFactory en GitHub**\
+  [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
 
 >[!div class="step-by-step"]
 >[Anterior](explore-custom-http-call-retries-exponential-backoff.md)

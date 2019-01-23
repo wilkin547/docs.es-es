@@ -4,12 +4,12 @@ description: Descubra las opciones para orquestar microservicios y aplicaciones 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152736"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307440"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -17,7 +17,7 @@ La utilización de orquestadores para aplicaciones listas para producción es fu
 
 La figura 4-23 ilustra la implementación en un clúster de una aplicación formada por varios microservicios (contenedores).
 
-![Aplicaciones de Docker compuestas en un clúster: use un contenedor para cada instancia del servicio. Los contenedores de Docker son "unidades de implementación" y un contenedor es una instancia de un Docker. Un host controla muchos contenedores](./media/image23.png)
+![Aplicaciones compuestas de Docker en un clúster: use un contenedor para cada instancia de servicio. Los contenedores de Docker son "unidades de implementación" y un contenedor es una instancia de un Docker. Un host controla muchos contenedores](./media/image23.png)
 
 **Figura 4-23**. Un clúster de contenedores
 

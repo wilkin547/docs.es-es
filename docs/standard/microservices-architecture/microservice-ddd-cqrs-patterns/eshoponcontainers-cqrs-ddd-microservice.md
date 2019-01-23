@@ -4,18 +4,20 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143641"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362852"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicación de enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 
 El diseño del microservicio Ordering de la aplicación de referencia eShopOnContainers se basa en los principios CQRS. Pero usa el enfoque más sencillo, que consiste simplemente en separar las consultas de los comandos y usar la misma base de datos para ambas acciones.
 
-La esencia de esos patrones y el punto importante es que las consultas son idempotentes: el estado del sistema no cambia independientemente de las veces que se consulte a ese sistema. Incluso se podría usar un modelo de datos de "lectura" distinto al modelo de dominio de "escritura" de lógica transaccional, aunque los microservicios Ordering usen la misma base de datos. Por lo tanto, se trata de un enfoque CQRS simplificado.
+La esencia de esos patrones y el punto importante es que las consultas son idempotentes: el estado del sistema no cambia independientemente de las veces que se consulte a ese sistema. Es decir, las consultas no sufren efectos secundarios.
+
+Por lo tanto, podría usar un modelo de datos de "lectura" distinto al modelo de dominio de "escritura" de lógica transaccional, aunque los microservicios Ordering usen la misma base de datos. Por lo tanto, se trata de un enfoque CQRS simplificado.
 
 Por otro lado, los comandos, que producen transacciones y actualizaciones de datos, cambian el estado del sistema. Debe tener cuidado con los comandos cuando trabaje con la complejidad y las reglas de negocio cambiantes. Ahí es donde se prefieren aplicar técnicas DDD para tener un sistema mejor modelado.
 

@@ -3,21 +3,21 @@ title: Exploración de reintentos de llamada HTTP personalizados con retroceso e
 description: Obtenga información sobre cómo podría implementar, desde el principio, los reintentos de llamada HTTP con retroceso exponencial para controlar posibles escenarios de error de HTTP.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145103"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362254"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Exploración de reintentos de llamada HTTP personalizados con retroceso exponencial
 
 Para crear microservicios resistentes, debe controlar los posibles escenarios de error HTTP. Una manera de controlar esos errores, aunque no se recomienda, consiste en crear una implementación de reintentos propia con retroceso exponencial.
 
-**Nota importante:** En esta sección se muestra cómo se puede crear código personalizado propio para implementar los reintentos de llamada HTTP. Pero no se recomienda hacerlo por su cuenta, sino usar mecanismos más eficaces y confiables, aunque más sencillos, como `HttpClientFactory` con Polly, disponible desde .NET Core 2.1. Esos enfoques recomendados se explican en las secciones siguientes. 
+**Nota importante:** En esta sección se muestra cómo se puede crear código personalizado propio para implementar los reintentos de llamada HTTP. Pero no se recomienda hacerlo por su cuenta, sino usar mecanismos más eficaces y confiables, aunque más sencillos, como `HttpClientFactory` con Polly, disponible desde .NET Core 2.1. Esos enfoques recomendados se explican en las secciones siguientes.
 
-Como exploración inicial, se podría implementar código propio con una clase de utilidad para retroceso exponencial como en [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), junto con código similar al siguiente (que también está disponible en este [repositorio de GitHub](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)).
+Como exploración inicial, podría implementar su propio código con una clase de utilidad para retroceso exponencial como [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), junto con código similar al siguiente.
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,8 +113,7 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-Recuerde que este código solo es adecuado como prueba de concepto. En las secciones siguientes se explica cómo usar enfoques más sofisticados, aunque más sencillos, con HttpClientFactory.
-HttpClientFactory está disponible desde .NET Core 2.1, con bibliotecas de resistencia de eficacia probada, como Polly. 
+Recuerde que este código solo es adecuado como prueba de concepto. En las secciones siguientes se explica cómo usar enfoques más sofisticados, aunque más sencillos, con HttpClientFactory. HttpClientFactory está disponible desde .NET Core 2.1, con bibliotecas de resistencia de eficacia probada, como Polly.
 
 >[!div class="step-by-step"]
 >[Anterior](implement-resilient-entity-framework-core-sql-connections.md)

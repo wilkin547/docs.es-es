@@ -1,15 +1,15 @@
 ---
 title: Implementación del patrón de interruptor
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Implementación del patrón de interruptor como sistema complementario para los reintentos HTTP
+description: Aprenda a implementar el patrón de interruptor como un sistema complementario en los reintentos HTTP.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: ca35214332b5ae0851a35d34aa329775206c2b66
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147273"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362813"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
@@ -38,14 +38,15 @@ En este caso, lo único que se agrega al código que se usa para los reintentos 
 ```csharp
 //ConfigureServices()  - Startup.cs
 services.AddHttpClient<IBasketService, BasketService>()
-        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to 5 minutes
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
         .AddPolicyHandler(GetRetryPolicy())
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-El método `AddPolicyHandler()` es el que agrega las directivas a los objetos HttpClient que se van a usar. En este caso, se agrega una directiva de Polly para un interruptor.
+El método `AddPolicyHandler()` es el que agrega las directivas a los objetos `HttpClient` que se van a usar. En este caso, se agrega una directiva de Polly para un interruptor.
 
-Para tener un enfoque más modular, la directiva de interruptor se define en un método independiente denominado GetCircuitBreakerPolicy(), como se muestra en el código siguiente.
+Para tener un enfoque más modular, la directiva de interruptor se define en un método independiente denominado `GetCircuitBreakerPolicy()`, como se muestra en el código siguiente:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -56,7 +57,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-En el ejemplo de código anterior, la directiva de interruptor se configura para que interrumpa o abra el circuito cuando se hayan producido cinco fallos consecutivos al reintentar las solicitudes HTTP. Cuando esto ocurre, el circuito se interrumpirá durante 30 segundos. En ese período, las llamadas no se podrán realizar debido al interruptor del circuito.  La directiva interpreta automáticamente las [excepciones relevantes y los códigos de estado HTTP](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) como errores.  
+En el ejemplo de código anterior, la directiva de interruptor se configura para que interrumpa o abra el circuito cuando se hayan producido cinco fallos consecutivos al reintentar las solicitudes HTTP. Cuando esto ocurre, el circuito se interrumpirá durante 30 segundos. En ese período, las llamadas no se podrán realizar debido al interruptor del circuito.  La directiva interpreta automáticamente las [excepciones relevantes y los códigos de estado HTTP](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) como errores.  
 
 Los interruptores también se deben usar para redirigir las solicitudes a una infraestructura de reserva siempre que haya tenido problemas en un recurso concreto implementado en otro entorno que no sea el de la aplicación cliente o del servicio que realiza la llamada HTTP. De este modo, si se produce una interrupción en el centro de datos que afecta solo a los microservicios de back-end, pero no a las aplicaciones cliente, estas aplicaciones pueden redirigir a los servicios de reserva. Polly está creando una directiva nueva para automatizar este escenario de [directiva de conmutación por error](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy). 
 
@@ -64,43 +65,40 @@ Todas estas características sirven para los casos en los que se administra la c
 
 Desde un punto de vista del uso, al utilizar HttpClient no hay necesidad de agregar nada nuevo aquí porque el código es el mismo que cuando se usa HttpClient con HttpClientFactory, como se mostró en las secciones anteriores. 
 
-## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Prueba de reintentos HTTP e interruptores en eShopOnContainers
+## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Prueba de reintentos HTTP e interruptores en eShopOnContainers
 
-Cada vez que inicie la solución eShopOnContainers en un host Docker, debe iniciar varios contenedores. Algunos de los contenedores tardan más en iniciarse e inicializarse, como el contenedor de SQL Server. Esto sucede especialmente la primera vez que implementa la aplicación eShopOnContainers en Docker, porque las imágenes y la base de datos se tienen que configurar. El hecho de que algunos contenedores se inicien más lentamente que otros puede provocar que el resto de servicios lancen inicialmente excepciones HTTP, aunque configure las dependencias entre contenedores en el nivel de Docker Compose, como se ha explicado en las secciones anteriores. Las dependencias de Docker Compose entre contenedores solo se dan en el nivel de proceso. El proceso de punto de entrada del contenedor se puede iniciar, pero podría ser que SQL Server no estuviera listo para las consultas. El resultado puede ser una cascada de errores y la aplicación puede obtener una excepción al intentar utilizar dicho contenedor. 
+Cada vez que inicie la solución eShopOnContainers en un host Docker, debe iniciar varios contenedores. Algunos de los contenedores tardan más en iniciarse e inicializarse, como el contenedor de SQL Server. Esto sucede especialmente la primera vez que implementa la aplicación eShopOnContainers en Docker, porque las imágenes y la base de datos se tienen que configurar. El hecho de que algunos contenedores se inicien más lentamente que otros puede provocar que el resto de servicios lancen inicialmente excepciones HTTP, aunque configure las dependencias entre contenedores en el nivel de Docker Compose, como se ha explicado en las secciones anteriores. Las dependencias de Docker Compose entre contenedores solo se dan en el nivel de proceso. El proceso de punto de entrada del contenedor se puede iniciar, pero podría ser que SQL Server no estuviera listo para las consultas. El resultado puede ser una cascada de errores y la aplicación puede obtener una excepción al intentar utilizar dicho contenedor.
 
 Este tipo de error también puede darse en el inicio, cuando la aplicación se está implementando en la nube. En ese caso, podría ser que los orquestadores movieran los contenedores de un nodo o máquina virtual a otro (iniciando así nuevas instancias) al repartir equitativamente los contenedores entre los nodos de clúster.
 
 La forma en que estos problemas se solucionan al iniciar todos los contenedores en "eShopOnContainers" es mediante el patrón de reintento mostrado anteriormente. 
 
-### <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Prueba del interruptor en eShopOnContainers
+### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>Prueba del interruptor en eShopOnContainers
 
 Hay varias formas de interrumpir y abrir el circuito, y probarlo con eShopOnContainers.
 
 Una opción es reducir el número permitido de reintentos a 1 en la directiva del interruptor y volver a implementar la solución completa en Docker. Con un solo reintento, hay una gran probabilidad de que una solicitud HTTP falle durante la implementación, el interruptor se abra y se produzca un error.
 
-Otra opción consiste en usar software intermedio personalizado que se implemente en el microservicio Basket. Al habilitar este middleware, detecta todas las solicitudes HTTP y devuelve el código de estado 500. Para habilitar el middleware, envíe una solicitud GET al URI que falla, de forma similar a esta:
+Otra opción consiste en usar middleware personalizado que se implemente en el microservicio **Basket**. Al habilitar este middleware, detecta todas las solicitudes HTTP y devuelve el código de estado 500. Para habilitar el middleware, envíe una solicitud GET al URI que falla, de forma similar a esta:
 
-- `GET http://localhost:5103/failing`
+- `GET http://localhost:5103/failing`\
+  Esta solicitud devuelve el estado actual del middleware. Si el middleware está habilitado, la solicitud devuelve el código de estado 500. Si el middleware está deshabilitado, no se emite ninguna respuesta.
 
-Esta solicitud devuelve el estado actual del middleware. Si el middleware está habilitado, la solicitud devuelve el código de estado 500. Si el middleware está deshabilitado, no se emite ninguna respuesta. 
+- `GET http://localhost:5103/failing?enable`\
+  Esta solicitud habilita el middleware.
 
-- `GET http://localhost:5103/failing?enable`
-
-Esta solicitud habilita el middleware. 
-
-- `GET http://localhost:5103/failing?disable`
-
-Esta solicitud deshabilita el middleware. 
+- `GET http://localhost:5103/failing?disable`\
+  Esta solicitud deshabilita el middleware.
 
 Por ejemplo, cuando la aplicación se está ejecutando, puede habilitar el middleware realizando una solicitud con el siguiente URI en cualquier explorador. Tenga en cuenta que el microservicio de ordenación utiliza el puerto 5103.
 
 `http://localhost:5103/failing?enable` 
 
-Después, puede comprobar el estado mediante el URI `http://localhost:5103/failing`, como se muestra en la Figura 10-4.
+Después, puede comprobar el estado mediante el URI `http://localhost:5103/failing`, como se muestra en la Figura 8-5.
 
-![](./media/image4.png)
+![Vista de Browser del resultado de la comprobación del estado de la simulación de middleware con errores](./media/image4.png)
 
-**Figura 10-4**. Comprobación del estado del middleware ASP.NET "Error": en este caso, deshabilitado 
+**Figura 8-5**. Comprobación del estado del middleware ASP.NET "Error": en este caso, deshabilitado
 
 En este punto, el microservicio de la cesta responde con el código de estado 500 siempre que su llamada lo invoque.
 
@@ -115,7 +113,7 @@ public class CartController : Controller
     public async Task<IActionResult> Index()
     {
         try
-        {          
+        {
             var user = _appUserParser.Parse(HttpContext.User);
             //Http requests using the Typed Client (Service Agent)
             var vm = await _basketSvc.GetBasket(user);
@@ -123,11 +121,11 @@ public class CartController : Controller
         }
         catch (BrokenCircuitException)
         {
-            // Catches error when Basket.api is in circuit-opened mode                 
+            // Catches error when Basket.api is in circuit-opened mode
             HandleBrokenCircuitException();
         }
         return View();
-    }       
+    }
 
     private void HandleBrokenCircuitException()
     {
@@ -136,11 +134,11 @@ public class CartController : Controller
 }
 ```
 
-Aquí tiene un resumen. La directiva de reintentos intenta realizar la solicitud HTTP varias veces y obtiene errores HTTP. Cuando el número de reintentos alcanza el número máximo establecido para la directiva del interruptor (en este caso, 5), la aplicación genera una excepción BrokenCircuitException. El resultado es un mensaje descriptivo, como el que se muestra en la Figura 10-5.
+Aquí tiene un resumen. La directiva de reintentos intenta realizar la solicitud HTTP varias veces y obtiene errores HTTP. Cuando el número de reintentos alcanza el número máximo establecido para la directiva del interruptor (en este caso, 5), la aplicación genera una excepción BrokenCircuitException. El resultado es un mensaje descriptivo, como el que se muestra en la Figura 8-6.
 
-![](./media/image5.png)
+![Vista de Browser de la aplicación web MVC que muestra un mensaje "basket service inoperative" (servicio de cesta no operativo) desencadenado por la directiva de interruptores](./media/image5.png)
 
-**Figura 10-5**. Interruptor que devuelve un error en la interfaz de usuario
+**Figura 8-6**. Interruptor que devuelve un error en la interfaz de usuario
 
 Puede implementar otra lógica que indique cuándo se debe abrir o interrumpir el circuito. También puede probar una solicitud HTTP en un microservicio de back-end distinto si se dispone de un centro de datos de reserva o un sistema back-end redundante. 
 
@@ -148,8 +146,8 @@ Por último, otra posibilidad para `CircuitBreakerPolicy` consiste en usar `Isol
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Circuit Breaker pattern (Patrón de interruptor)**
-    [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- **Circuit Breaker pattern (Patrón de interruptor)**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[Anterior](implement-http-call-retries-exponential-backoff-polly.md)

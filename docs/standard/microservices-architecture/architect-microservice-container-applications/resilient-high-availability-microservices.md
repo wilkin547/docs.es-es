@@ -4,12 +4,12 @@ description: Con el objetivo de ofrecer una alta disponibilidad, los microservic
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745334"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362241"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resistencia y alta disponibilidad en microservicios
 
@@ -29,12 +29,12 @@ Puede parecer obvio, y a menudo se pasa por alto, pero un microservicio debe not
 
 El estado es diferente del diagnóstico. El estado trata de cuando el microservicio informa sobre su estado actual para que se tomen las medidas oportunas. Un buen ejemplo es trabajar con los mecanismos de actualización e implementación para mantener la disponibilidad. Aunque un servicio podría actualmente estar en mal estado debido a un bloqueo de proceso o un reinicio de la máquina, puede que el servicio siga siendo operativo. Lo último que debe hacer es realizar una actualización que empeore esta situación. El mejor método consiste en realizar una investigación en primer lugar o dar tiempo a que el microservicio se recupere. Los eventos de estado de un microservicio nos ayudan a tomar decisiones informadas y, en efecto, ayudan a crear servicios de reparación automática.
 
-En la sección [Implementación de comprobaciones de estado en servicios de ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) de esta guía se explica cómo usar una nueva biblioteca de ASP.NET HealthChecks en sus microservicios para que puedan informar sobre su estado a un servicio de supervisión para que se tomen las medidas oportunas.
+En la sección [Implementación de comprobaciones de estado en servicios de ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) de esta guía se explica cómo usar una nueva biblioteca de ASP.NET HealthChecks en sus microservicios para que puedan informar sobre su estado a un servicio de supervisión para que se tomen las medidas oportunas.
 
 También tiene la opción de usar una biblioteca de código abierto excelente llamada Beat Pulse, que está disponible en [GitHub](https://github.com/Xabaril/BeatPulse) y como [paquete NuGet](https://www.nuget.org/packages/BeatPulse/). Además, la biblioteca realiza comprobaciones de estado, concretamente de dos tipos:
 
 - **Ejecución**: comprueba si el microservicio se está ejecutando, es decir, si puede aceptar solicitudes y responder a estas. 
-- **Preparación**: comprueba si las dependencias del microservicio, como la base de datos o los servicios, están listas, de modo que el microservicio pueda funcionar como debería. 
+- **Preparación**: comprueba si las dependencias del microservicio, como la base de datos o los servicios de cola, están listas, de modo que el microservicio pueda funcionar como debería. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Utilización de secuencias de eventos de diagnóstico y registro
 
@@ -70,7 +70,7 @@ Distintos orquestadores podrían parecer similares, pero las comprobaciones de d
 - **Conexión de equipos Windows al servicio Log Analytics de Azure** \
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
-- **Logging What You Mean: Using the Semantic Logging Application Block (Registrar lo importante: usar el bloque de aplicación de registro semántico)** \
+- **Registrar lo importante: usar el bloque de aplicación de registro semántico** \
   [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 - Sitio oficial de **Splunk**. \

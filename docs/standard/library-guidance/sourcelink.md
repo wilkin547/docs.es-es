@@ -3,13 +3,13 @@ title: SourceLink y bibliotecas de .NET
 description: Prácticas recomendadas para el uso de SourceLink para mejorar la depuración de las bibliotecas de .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128937"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333543"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ Puede usar [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGe
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> indica al depurador que recorra el código en lugar de ejecutarlo paso a paso.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> controla si se muestra un miembro en las ventanas de variables del depurador.
 
-**✔️ ES RECOMENDABLE** incluir los archivos de símbolos (`*.pdb`) en el paquete NuGet.
+**✔️ CONSIDERE LA POSIBILIDAD DE** publicar archivos de símbolos (`*.pdb`).
 
-> Normalmente, publicaría los archivos de símbolos en un [paquete de símbolos](./nuget.md#symbol-packages). Actualmente el host público principal para paquetes de símbolos no es compatible con los archivos de símbolos portátiles (`*.pdb`) creados por los proyectos estilo de SDK, y los paquetes de símbolos no son útiles.
+> Para más información sobre los archivos de símbolos y los paquetes de símbolos, consulte [Paquetes de símbolos](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Anterior](dependencies.md)
