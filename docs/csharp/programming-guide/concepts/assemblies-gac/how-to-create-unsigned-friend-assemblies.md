@@ -1,22 +1,22 @@
 ---
-title: 'Cómo: Crear ensamblados de confianza sin firmar(C#)'
+title: Procedimiento Crear ensamblados de confianza sin firmar (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211806"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362150"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Cómo: Crear ensamblados de confianza sin firmar(C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Procedimiento Crear ensamblados de confianza sin firmar (C#)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Para crear un ensamblado y un ensamblado de confianza  
   
 1.  Abra un símbolo del sistema.  
   
-2.  Cree un archivo de C# denominado `friend_signed_A.` que incluya el siguiente código. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
+2.  Cree un archivo de C# denominado `friend_unsigned_A.` que incluya el siguiente código. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_unsigned_B como un ensamblado de confianza.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,7 +46,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
     }  
     ```  
   
-3.  Compile y firme friend_signed_A mediante el siguiente comando.  
+3.  Compile y firme friend_unsigned_A mediante el siguiente comando.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
@@ -75,7 +75,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
     }  
     ```  
   
-5.  Compile friend_signed_B mediante el siguiente comando.  
+5.  Compile friend_unsigned_B mediante el siguiente comando.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
   
      El nombre del ensamblado que genera el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida (.exe o .dll) mediante la opción `/out` del compilador. Para obtener más información, consulte [/out (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Ejecute el archivo friend_signed_B.exe.  
+6.  Ejecute el archivo friend_unsigned_B.exe.  
   
      El programa imprime dos cadenas: "Class1.Test" y "Class2.Test".  
   
@@ -95,5 +95,5 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
 - [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
 - [Ensamblados de confianza (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
-- [Cómo: Crear ensamblados de confianza con signo (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [Cómo: Crear ensamblados de confianza firmados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
 - [Guía de programación de C#](../../../../csharp/programming-guide/index.md)

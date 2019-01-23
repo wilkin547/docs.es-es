@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general sobre las nuevas características que entran en la próxima versión 7 del lenguaje C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155293"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415733"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
@@ -105,7 +105,7 @@ Puede especificar nombres para los campos a la izquierda y la derecha de la asig
 
 La línea anterior genera una advertencia, `CS8123`, que indica que los nombres a la derecha de la asignación, `Alpha` y `Beta`, se omiten porque entran en conflicto con los nombres a la izquierda, `First` y `Second`.
 
-Los ejemplos anteriores muestran la sintaxis básica para declarar tuplas. Las tuplas resultan más útiles como tipos de valor devuelto para los métodos `private` y `internal`. Las tuplas ofrecen una sintaxis sencilla para que dichos métodos devuelvan varios valores discretos: Se ahorra el trabajo de crear un `class` o un `struct` que defina el tipo devuelto. No hay necesidad de crear otra tupla.
+Los ejemplos anteriores muestran la sintaxis básica para declarar tuplas. Las tuplas resultan más útiles como tipos de valor devuelto para los métodos `private` y `internal`. Las tuplas proporcionan una sintaxis sencilla para que esos métodos devuelvan varios valores discretos: Se ahorra el trabajo de crear un `class` o un `struct` que defina el tipo devuelto. No hay necesidad de crear otra tupla.
 
 La creación de tuplas resulta más eficiente y productiva.
 Se trata de una sintaxis ligera y más sencilla para definir una estructura de datos que incluya más de un valor. El siguiente método de ejemplo devuelve los valores mínimos y máximos de una secuencia de enteros:
@@ -168,7 +168,7 @@ La coincidencia de patrones admite expresiones `is` y `switch`. Cada una de ella
 
 ### <a name="is-expression"></a>Expresión `is`
 
-Las expresiones de patrón `is` extienden el conocido operador `is` para consultar un objeto más allá de su tipo.
+La expresión de patrón `is` extiende el conocido [operador `is`](../language-reference/keywords/is.md#pattern-matching-with-is) para consultar un objeto más allá de su tipo.
 
 Comencemos por un escenario sencillo. Agregaremos funciones a este escenario que muestren cómo las expresiones de coincidencia de patrones crean algoritmos que funcionan fácilmente con tipos no relacionados. Empezaremos por un método que calcule la suma de varias tiradas de dados:
 
@@ -329,7 +329,7 @@ En C# 6 se presentaron los [miembros con forma de expresión](csharp-6.md#expres
 > [!NOTE]
 > En este ejemplo no se requiere un finalizador, pero se muestra para demostrar la sintaxis. No debe implementar un finalizador en la clase salvo que sea necesario para liberar recursos no administrados. También debe plantearse el uso de la clase <xref:System.Runtime.InteropServices.SafeHandle> en lugar de administrar directamente los recursos no administrados.
 
-Estas nuevas ubicaciones de miembros con forma de expresión representan un hito importante en el lenguaje C#: estas características las han implementado miembros de la comunidad que trabajan en el proyecto de código abierto [Roslyn](https://github.com/dotnet/Roslyn).
+Estas nuevas ubicaciones para los miembros con forma de expresión representan un hito importante para el lenguaje C#: miembros de la comunidad que trabajan en el proyecto [Roslyn](https://github.com/dotnet/Roslyn) de código abierto implementaron estas características.
 
 Cambiar un método a un miembro con cuerpo de expresión es un [cambio compatible con un elemento binario](version-update-considerations.md#binary-compatible-changes).
 

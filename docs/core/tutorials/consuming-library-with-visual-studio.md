@@ -1,5 +1,5 @@
 ---
-title: Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
+title: Consumo de una biblioteca de .NET Standard en Visual Studio 2017
 description: Cree una aplicación de .NET Core que llame a los miembros de otra biblioteca de clases con Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
@@ -8,14 +8,14 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168908"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362397"
 ---
-# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
+# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Consumo de una biblioteca de .NET Standard en Visual Studio 2017
 
 Una vez que haya creado una biblioteca de clases de .NET Standard siguiendo los pasos de [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Creación de una biblioteca de clases de C# con .NET Core en Visual Studio 2017) o [Building a Visual Basic class library with .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Creación de una biblioteca de clases de Visual Basic con .NET Core en Visual Studio 2017), pruébela en [Testing a class library with .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) (Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017), y compile una versión de lanzamiento de la biblioteca; el paso siguiente consiste en hacer que esté disponible para los autores de llamadas. Existen dos maneras de hacerlo:
 

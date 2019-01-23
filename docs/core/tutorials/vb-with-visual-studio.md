@@ -7,14 +7,14 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170033"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362267"
 ---
-# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Compilación de una aplicación Hola mundo de .NET Core con Visual Basic en Visual Studio 2017
+# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilación de una aplicación "Hola mundo" de Visual Basic con el SDK de .NET Core en Visual Studio 2017
 
 En este tema se proporciona una introducción detallada para compilar, depurar y publicar una sencilla aplicación de consola .NET Core con Visual Basic en Visual Studio 2017. Visual Studio 2017 proporciona un entorno de desarrollo completo para la compilación de aplicaciones .NET Core. Siempre que la aplicación no tenga dependencias específicas de la plataforma, la aplicación puede ejecutarse en cualquier plataforma que tenga como destino .NET Core y en cualquier sistema que tenga instalado .NET Core.
 
@@ -78,9 +78,9 @@ Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la f
 
 Ha creado y ejecutado la aplicación. Para desarrollar una aplicación profesional, realice algunos pasos adicionales para preparar el lanzamiento de la aplicación:
 
-- Para obtener información sobre la depuración de la aplicación, vea [Depuración de la aplicación Hola a todos en C# con Visual Studio 2017](debugging-with-visual-studio.md).
+- Para depurar la aplicación, consulte [Depuración de la aplicación Hola mundo de .NET Core con Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Para obtener información sobre el desarrollo y publicación de una versión de distribución de la aplicación, vea [Publicación de la aplicación Hola a todos en C# con Visual Studio 2017](publishing-with-visual-studio.md).
+- Para publicar una versión de distribución de la aplicación, consulte [Publicación de la aplicación Hola mundo de .NET Core con Visual Studio 2017](publishing-with-visual-studio.md).
 
 <!--
 ## Related topics

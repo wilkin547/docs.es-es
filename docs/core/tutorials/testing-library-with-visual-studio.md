@@ -1,5 +1,5 @@
 ---
-title: Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017
+title: Prueba de una biblioteca de clases de .NET Standard con .NET Core en Visual Studio 2017
 description: Cree un proyecto de prueba unitaria para la biblioteca de clases .NET Core. Compruebe que la biblioteca de clases de .NET Core funciona correctamente con pruebas unitarias.
 author: BillWagner
 ms.author: wiwagn
@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170800"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362696"
 ---
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Prueba de una biblioteca de .NET Standard con .NET Core en Visual Studio 2017
 
-En [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017) o [Building a class library with Visual Basic and .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017), ha creado una biblioteca de clases simple que agrega un método de extensión a la clase <xref:System.String>. Ahora, creará una prueba unitaria para asegurarse de que funciona según lo esperado. Agregará su proyecto de prueba unitaria a la solución que ha creado en el tema anterior.
+En [Creación de una biblioteca de .NET Standard con C# y .NET Core en Visual Studio 2017](library-with-visual-studio.md) o [Creación de una biblioteca de .NET Standard con Visual Basic y .NET Core en Visual Studio 2017](vb-library-with-visual-studio.md), ha creado una biblioteca de clases simple que agrega un método de extensión a la clase <xref:System.String>. Ahora, creará una prueba unitaria para asegurarse de que funciona según lo esperado. Agregará su proyecto de prueba unitaria a la solución que ha creado en el artículo anterior.
 
 ## <a name="creating-a-unit-test-project"></a>Creación de un proyecto de prueba unitaria
 

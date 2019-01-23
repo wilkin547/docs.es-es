@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156673"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415551"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>Novedades de .NET Core 3.0 (versión preliminar 1)
 
@@ -30,15 +30,12 @@ Para obtener más información, consulte el [anuncio sobre la versión prelimina
 
 ## <a name="default-executables"></a>Archivos ejecutables predeterminados
 
-.NET Core compilará ahora los archivos ejecutables de forma predeterminada. Se trata de una novedad en las aplicaciones que usan una versión de .NET Core instalada de forma global. Hasta ahora, solo las [implementaciones autocontenidas](../deploying/index.md#self-contained-deployments-scd) tenían los archivos ejecutables.
+.NET Core compilará ahora los [archivos ejecutables dependientes de marco de trabajo](../deploying/index.md#framework-dependent-executables-fde) de forma predeterminada. Se trata de una novedad en las aplicaciones que usan una versión de .NET Core instalada de forma global. Hasta ahora, solo las [implementaciones autocontenidas](../deploying/index.md#self-contained-deployments-scd) producirían un archivo ejecutable.
 
 Durante `dotnet build` o `dotnet publish`, se crea un archivo ejecutable siempre que coincida con el entorno y la plataforma del SDK que usa. Estos ejecutables funcionan de la misma forma que los ejecutables nativos:
 
 * Haga doble clic en el archivo ejecutable.
 * También puede iniciar la aplicación desde un símbolo del sistema directamente, como `myapp.exe` en Windows y `./myapp` en Linux y macOS.
-
-> [!NOTE]
-> No se permite especificar un entorno de ejecución específico con argumentos `dotnet publish -r` o `dotnet build -r` para otros entornos de ejecución.
 
 ## <a name="build-copies-dependencies"></a>Compilación de dependencias de copias
 

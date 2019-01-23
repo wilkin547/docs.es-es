@@ -8,19 +8,21 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 927640b63773d24be93cc90427668f9568a39652
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236822"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362735"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Operadores de conversión (Guía de programación de C#)
+
 C# permite a los programadores declarar conversiones en clases o structs, de manera que las clases o structs puedan convertirse a o desde otras clases o structs, o tipos básicos. Las conversiones se definen como los operadores y se denominan por el tipo al que se convierten. El tipo del argumento que se va a convertir o el tipo del resultado de la conversión, pero no ambos, debe ser el tipo contenedor.  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## <a name="conversion-operators-overview"></a>Información general sobre operadores de conversión  
+## <a name="conversion-operators-overview"></a>Información general sobre operadores de conversión
+
  Los operadores de conversión tienen las propiedades siguientes:  
   
 -   Las conversiones declaradas como `implicit` se producen automáticamente cuando se necesita.  
@@ -29,7 +31,8 @@ C# permite a los programadores declarar conversiones en clases o structs, de man
   
 -   Todas las conversiones se deben declarar como `static`.  
   
-## <a name="related-sections"></a>Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas
+
  Para obtener más información:  
   
 -   [Utilizar operadores de conversión](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  

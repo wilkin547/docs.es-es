@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127139"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415941"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core 
 
@@ -172,7 +172,7 @@ Por ejemplo, en el ejemplo de código OrderAggregate anterior, hay varios campos
   [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
 - **Julie Lerman. Programación para un diseño guiado por el dominio: sugerencias para los desarrolladores enfocados en datos** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
 
 - **Udi Dahan. How to create fully encapsulated Domain Models** \ (Cómo crear modelos de dominio totalmente encapsulados)
   [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Insertar tipos de ensamblados administrados en Visual Studio (C#)'
+title: 'Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004330"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415720"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Tutorial: Insertar tipos de ensamblados administrados en Visual Studio (C#)
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)
 Si inserta información de tipos de un ensamblado administrado con nombre seguro, puede acoplar tipos holgadamente en una aplicación para lograr independencia de versiones. Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca administrada sin tener que volver a compilarse para cada versión.  
   
  La inserción de tipos se usa a menudo con interoperabilidad COM, como, por ejemplo, una aplicación que use objetos de automatización de Microsoft Office. La inserción de información de tipos permite que la misma versión de un programa funcione con distintas versiones de Microsoft Office en equipos diferentes. Pero la inserción de tipos también se puede usar con una solución totalmente administrada.  
@@ -136,7 +136,7 @@ Si inserta información de tipos de un ensamblado administrado con nombre seguro
                 p_UserInput = Console.ReadLine();  
             }  
         }  
-    )  
+    }  
     ```  
   
 9. Guarde el proyecto.  

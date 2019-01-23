@@ -3,15 +3,15 @@ title: Predicción de las tarifas de taxi de Nueva York mediante un aprendiz de 
 description: Prediga las tarifas mediante un aprendiz de regresión con ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 11/06/2018
+ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 630cbcac954b9fcda67eef38f54241a81b831fc3
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030261"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333790"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Tutorial: Predicción de las tarifas de taxi de Nueva York mediante un aprendiz de regresión con ML.NET
 
@@ -90,9 +90,9 @@ Quite la definición de clase existente y agregue el código siguiente, que tien
 
 [!code-csharp[DefineTaxiTrip](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` es la clase de datos de entrada y tiene definiciones para cada una de las columnas del conjunto de datos. Use el atributo <xref:Microsoft.ML.Runtime.Api.ColumnAttribute> para especificar los índices de las columnas de origen en el conjunto de datos.
+`TaxiTrip` es la clase de datos de entrada y tiene definiciones para cada una de las columnas del conjunto de datos. Use el atributo <xref:Microsoft.ML.Data.ColumnAttribute> para especificar los índices de las columnas de origen en el conjunto de datos.
 
-La clase `TaxiTripFarePrediction` representa los resultados predichos. Tiene un único campo flotante, `FareAmount`, con un atributo `Score` <xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute> aplicado. En el caso de la tarea de regresión, la columna **Score** contiene valores de etiqueta predichos.
+La clase `TaxiTripFarePrediction` representa los resultados predichos. Tiene un único campo flotante, `FareAmount`, con un atributo `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> aplicado. En el caso de la tarea de regresión, la columna **Score** contiene valores de etiqueta predichos.
 
 > [!NOTE]
 > Use el tipo `float` para representar los valores de punto flotante en las clases de entrada y predicción de datos.
@@ -108,7 +108,7 @@ Deberá crear tres campos que contengan las rutas de acceso a los archivos con l
 * `_trainDataPath` contiene la ruta de acceso al archivo con el conjunto de datos utilizado para entrenar el modelo.
 * `_testDataPath` contiene la ruta de acceso al archivo con el conjunto de datos utilizado para evaluar el modelo.
 * `_modelPath` contiene la ruta de acceso al archivo en el que se almacena el modelo entrenado.
-* `_textLoader` es el <xref:Microsoft.ML.Runtime.Data.TextLoader> utilizado para cargar y transformar los conjuntos de datos.
+* `_textLoader` es el <xref:Microsoft.ML.Data.TextLoader> utilizado para cargar y transformar los conjuntos de datos.
 
 Agregue el código siguiente justo encima del método `Main` para especificar esas rutas de acceso y la variable `_textLoader`:
 
@@ -122,9 +122,9 @@ Cree una variable denominada `mlContext` e inicialícela con una nueva instancia
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-A continuación, para realizar la configuración para la carga de datos, inicialice la variable global `_textLoader` con el fin de volver a usarla.  Tenga en cuenta que se está usando `TextReader`. Cuando crea `TextLoader` mediante `TextReader`, se pasa en el contexto necesario y la clase <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments> que habilita la personalización. Especifique el esquema de datos, pasando una matriz de objetos <xref:Microsoft.ML.Runtime.Data.TextLoader.Column> a `TextReader` que contiene todos los nombres de columna y sus tipos. Definimos el esquema de datos anteriormente al crear nuestra clase `TaxiTrip`.
+A continuación, para realizar la configuración para la carga de datos, inicialice la variable global `_textLoader` con el fin de volver a usarla.  Tenga en cuenta que se está usando `TextReader`. Cuando crea `TextLoader` mediante `TextReader`, se pasa en el contexto necesario y la clase <xref:Microsoft.ML.Data.TextLoader.Arguments> que habilita la personalización. Especifique el esquema de datos, pasando una matriz de objetos <xref:Microsoft.ML.Data.TextLoader.Column> a `TextReader` que contiene todos los nombres de columna y sus tipos. Definimos el esquema de datos anteriormente al crear nuestra clase `TaxiTrip`.
 
-La clase `TextReader` devuelve la variable <xref:Microsoft.ML.Runtime.Data.TextLoader> totalmente inicializada.  
+La clase `TextReader` devuelve la variable <xref:Microsoft.ML.Data.TextLoader> totalmente inicializada.  
 
 Para inicializar la variable global `_textLoader` con el fin de volver a usarla para los conjuntos de datos necesarios, agregue el código siguiente después de la inicialización de `mlContext`:
 
@@ -155,7 +155,7 @@ Pasamos dos parámetros al método `Train`; `MLContext` para el contexto (`mlCon
 
 ## <a name="load-and-transform-data"></a>Cargar y transformar datos
 
-Cargaremos los datos mediante la variable global `_textLoader` con el parámetro `dataPath`. Devuelve <xref:Microsoft.ML.Runtime.Data.IDataView>. Como la entrada y salida de Transforms,`DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
+Cargaremos los datos mediante la variable global `_textLoader` con el parámetro `dataPath`. Devuelve <xref:Microsoft.ML.Data.IDataView>. Como la entrada y salida de Transforms,`DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
 
 En ML.NET, los datos son similares a una vista SQL. Se evalúan lentamente, se esquematizan y son heterogéneos. El objeto es la primera parte de la canalización y carga los datos. Para este tutorial, carga un conjunto de datos con información sobre los viajes en taxi que resulta útil para predecir las tarifas. Esto se usa para crear el modelo y entrenarlo.
 
@@ -189,7 +189,7 @@ Agregue el código siguiente al método `Train` para agregar `FastTreeRegression
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
-El último paso es entrenar el modelo. Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, se entrena el modelo mediante <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> y, al mismo tiempo, se proporcionan los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según la `DataView` que se pasa. El experimento no se ejecuta hasta que esto suceda.
+El último paso es entrenar el modelo. Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, se entrena el modelo mediante <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> y, al mismo tiempo, se proporcionan los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según la `DataView` que se pasa. El experimento no se ejecuta hasta que esto suceda.
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
@@ -216,7 +216,7 @@ El método `SaveModelAsFile` ejecuta las tareas siguientes:
 
 * Guarda el modelo como un archivo ZIP.
 
-Es necesario crear un método para guardar el modelo para que se pueda volver a usar y consumir en otras aplicaciones. `ITransformer` tiene un método <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)> que toma el campo global `_modelPath` y <xref:System.IO.Stream>. Como queremos guardar esto como archivo ZIP, vamos a crear `FileStream` inmediatamente antes de llamar al método `SaveTo`. Agregue el siguiente código al método `SaveModelAsFile` como la siguiente línea:
+Es necesario crear un método para guardar el modelo para que se pueda volver a usar y consumir en otras aplicaciones. `ITransformer` tiene un método <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> que toma el campo global `_modelPath` y <xref:System.IO.Stream>. Como queremos guardar esto como archivo ZIP, vamos a crear `FileStream` inmediatamente antes de llamar al método `SaveTo`. Agregue el siguiente código al método `SaveModelAsFile` como la siguiente línea:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#13 "Add the SaveTo Method")]
 
@@ -257,7 +257,7 @@ A continuación, se usará el parámetro `model` de aprendizaje automático (un 
 
 [!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
-El método `RegressionContext.Evaluate` calcula las métricas de calidad para `PredictionModel` mediante el conjunto de datos especificado. Devuelve un objeto <xref:Microsoft.ML.Runtime.Data.RegressionEvaluator.Result> que contiene las métricas totales calculadas por evaluadores de regresión. Para mostrar estos elementos a fin de determinar la calidad del modelo, debe obtener primero las métricas. Agregue el siguiente código como la siguiente línea en el método `Evaluate`:
+El método `RegressionContext.Evaluate` calcula las métricas de calidad para `PredictionModel` mediante el conjunto de datos especificado. Devuelve un objeto <xref:Microsoft.ML.Data.RegressionMetrics> que contiene las métricas totales calculadas por evaluadores de regresión. Para mostrar estos elementos a fin de determinar la calidad del modelo, debe obtener primero las métricas. Agregue el siguiente código como la siguiente línea en el método `Evaluate`:
 
 [!code-csharp[ComputeMetrics](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Compute Metrics")]
 
@@ -307,15 +307,15 @@ Como queremos cargar el modelo desde el archivo ZIP que guardamos, crearemos `Fi
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#21 "Load the model")]
 
-Mientras `model` es `transformer` que opera en muchas filas de datos, un escenario muy común de producción es necesario para las predicciones con los ejemplos individuales. <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> es un contenedor que se devuelve del método `MakePredictionFunction`. Vamos a agregar el código siguiente para crear `PredictionFunction` como la primera línea en el método `Predict`:
+Mientras `model` es `transformer` que opera en muchas filas de datos, un escenario muy común de producción es necesario para las predicciones con los ejemplos individuales. <xref:Microsoft.ML.PredictionEngine%602> es un contenedor que se devuelve del método `CreatePredictionEngine`. Vamos a agregar el código siguiente para crear `PredictionEngine` como la primera línea en el método `Predict`:
 
-[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
+[!code-csharp[MakePredictionEngine](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
 En este tutorial se utiliza un viaje de prueba en esta clase. Más adelante, puede agregar otros escenarios para experimentar con el modelo. Agregue un viaje para probar la predicción de costo del modelo entrenado en el método `Predict` mediante la creación de una instancia de `TaxiTrip`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- Podemos usarlo para predecir la tarifa en función de una instancia única de los datos del viaje en taxi. Para obtener una predicción, use <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> en los datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales.
+ Podemos usarlo para predecir la tarifa en función de una instancia única de los datos del viaje en taxi. Para obtener una predicción, use <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> en los datos. Tenga en cuenta que los datos de entrada son una cadena y el modelo incluye la caracterización. La canalización está sincronizada durante el entrenamiento y la predicción. No fue necesario escribir el código de preprocesamiento o caracterización específicamente para las predicciones, y la misma API se encarga de las predicciones por lotes y puntuales.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 

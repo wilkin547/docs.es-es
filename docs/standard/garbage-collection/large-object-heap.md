@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202912"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415538"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Montón de objetos grandes en sistemas Windows
 
@@ -144,7 +144,7 @@ Puede usar las siguientes herramientas para recopilar datos sobre el rendimiento
 
 ### <a name="net-clr-memory-performance-counters"></a>Contadores de rendimiento de memoria de .NET CLR
 
-Estos contadores de rendimiento suelen ser un buen punto de partida para investigar los problemas de rendimiento (aunque se recomienda usar [eventos ETW](#etw)). Para configurar el Monitor de rendimiento, hay que agregar los contadores que se quiera, como se muestra en la figura 4. Los que son relevantes para el montón de objetos grandes son:
+Estos contadores de rendimiento suelen ser un buen punto de partida para investigar los problemas de rendimiento (aunque se recomienda usar [eventos ETW](#etw-events)). Para configurar el Monitor de rendimiento, hay que agregar los contadores que se quiera, como se muestra en la figura 4. Los que son relevantes para el montón de objetos grandes son:
 
 - **Número de colecciones de gen. 2**
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: c7200f9d99eea8364d290b54efc514217f2b2dad
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8753e977007e46ea4227c8c0072671a2e9298645
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245472"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362137"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
 
@@ -36,7 +36,8 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 -   **Conversiones con clases del asistente**: para realizar conversiones entre tipos no compatibles, como enteros y objetos <xref:System.DateTime?displayProperty=nameWithType>, o cadenas hexadecimales y matrices de bytes puede usar la clase <xref:System.BitConverter?displayProperty=nameWithType>, la clase <xref:System.Convert?displayProperty=nameWithType> y los métodos `Parse` de los tipos numéricos integrados, como <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Para obtener más información, vea [Cómo: Convertir una matriz de bytes en un valor int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Cómo: Convertir una cadena en un número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) y [Cómo: Convertir cadenas hexadecimales en tipos numéricos](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
-## <a name="implicit-conversions"></a>Conversiones implícitas  
+## <a name="implicit-conversions"></a>Conversiones implícitas
+
  Para los tipos numéricos integrados, se puede realizar una conversión implícita cuando el valor que se va a almacenar se puede encajar en la variable sin truncarse ni redondearse. Por ejemplo, una variable de tipo [long](../../../csharp/language-reference/keywords/long.md) (entero de 64 bits) puede almacenar cualquier valor que un tipo [int](../../../csharp/language-reference/keywords/int.md) (entero de 32 bits) pueda almacenar. En el ejemplo siguiente, el compilador convierte de forma implícita el valor de `num` en la parte derecha a un tipo `long` antes de asignarlo a `bigNum`.  
   
  [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
@@ -50,7 +51,8 @@ Derived d = new Derived();
 Base b = d; // Always OK.  
 ```  
   
-## <a name="explicit-conversions"></a>Conversiones explícitas  
+## <a name="explicit-conversions"></a>Conversiones explícitas
+
  Pero si no se puede realizar una conversión sin riesgo de perder información, el compilador requiere que se realice una conversión explícita, que se denomina *conversión*. Una conversión de tipos es una manera de informar explícitamente al compilador de que se pretende realizar la conversión y se es consciente de que se puede producir pérdida de datos. Para realizar una conversión, especifique el tipo al que se va a convertir entre paréntesis delante del valor o la variable que se va a convertir. El siguiente programa convierte un tipo [double](../../../csharp/language-reference/keywords/double.md) en un tipo [int](../../../csharp/language-reference/keywords/int.md). El programa no se compilará sin la conversión.  
   
  [!code-csharp[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
@@ -73,16 +75,18 @@ Animal a = g;
 Giraffe g2 = (Giraffe) a;  
 ```  
   
- Una operación de conversión entre tipos de referencia no cambia el tipo en tiempo de ejecución del objeto subyacente. Solo cambia el tipo del valor que se usa como referencia a ese objeto. Para obtener más información, vea [Poliformismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Una operación de conversión entre tipos de referencia no cambia el tipo en tiempo de ejecución del objeto subyacente. Solo cambia el tipo del valor que se usa como referencia a ese objeto. Para obtener más información, vea [Polimorfismo ](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
-## <a name="type-conversion-exceptions-at-run-time"></a>Excepciones de conversión de tipos en tiempo de ejecución  
+## <a name="type-conversion-exceptions-at-run-time"></a>Excepciones de conversión de tipos en tiempo de ejecución
+
  En algunas conversiones de tipos de referencia, el compilador no puede determinar si una conversión será válida. Es posible que una operación de conversión que se compile correctamente produzca un error en tiempo de ejecución. Como se muestra en el ejemplo siguiente, una conversión de tipo que produce un error en tiempo de ejecución produce una excepción <xref:System.InvalidCastException>.  
   
  [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
  C# proporciona los operadores [is](../../../csharp/language-reference/keywords/is.md) y [as](../../../csharp/language-reference/keywords/as.md) para permitir probar la compatibilidad antes de realizar una conversión. Para obtener más información, vea [Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
 ## <a name="see-also"></a>Vea también

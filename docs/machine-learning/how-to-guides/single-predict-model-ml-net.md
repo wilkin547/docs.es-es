@@ -1,22 +1,22 @@
 ---
-title: 'Uso de PredictionFunction para realizar una predicción cada vez: ML.NET'
-description: Información sobre cómo usar PredictionFunction de ML.NET para hacer una predicción a la vez
-ms.date: 11/07/2018
+title: 'Uso de PredictionEngine para realizar una predicción cada vez: ML.NET'
+description: Información sobre cómo usar PredictionEngine de ML.NET para hacer una predicción cada vez
+ms.date: 01/15/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9e34c1357e5ac241abd628289cd694bcd6b9cbb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0b3f60038fe7f49ffbff3c63fd2862ba67adb506
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131669"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333647"
 ---
-# <a name="use-the-predictionfunction-to-make-one-prediction-at-a-time---mlnet"></a>Uso de PredictionFunction para realizar una predicción cada vez: ML.NET 
+# <a name="use-the-predictionengine-to-make-one-prediction-at-a-time---mlnet"></a>Uso de PredictionEngine para realizar una predicción cada vez: ML.NET 
 
 Dado que todo modelo de ML.NET es un transformador, puede usar `model.Transform` para aplicar el modelo a `DataView` con el fin de hacer predicciones. 
 
 Sin embargo, un caso más típico es cuando no quiere hacer una predicción sobre un "conjunto de datos", sino que, en su lugar, recibe un ejemplo a la vez. Por ejemplo, puede ejecutar el modelo como parte del sitio web de ASP.NET y debe hacer una predicción respecto de una solicitud HTTP entrante.
 
-`PredictionFunction` ejecuta un ejemplo a la vez a través de la canalización de predicción.
+`PredictionEngine` ejecuta un ejemplo a la vez a través de la canalización de predicción.
 
 Este es el ejemplo completo con un modelo de datos de predicción de Iris creado previamente:
 
@@ -27,7 +27,7 @@ var mlContext = new MLContext();
 
 // Step one: read the data as an IDataView.
 // First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.TextReader(new TextLoader.Arguments
+var reader = mlContext.Data.CreateTextReader(new TextLoader.Arguments
 {
     Column = new[] {
         new TextLoader.Column("SepalLength", DataKind.R4, 0),
@@ -89,13 +89,13 @@ var mlContext = new MLContext();
 
 // Use the model for one-time prediction.
 // Make the prediction function object. Note that, on average, this call takes around 200x longer
-// than one prediction, so you might want to cache and reuse the prediction function, instead of
+// than one prediction, so you might want to cache and reuse the prediction engine, instead of
 // creating one per prediction.
-var predictionFunc = model.MakePredictionFunction<IrisInput, IrisPrediction>(mlContext);
+var predictionEngine = model.CreatePredictionEngine<IrisInput, IrisPrediction>(mlContext);
 
 // Obtain the prediction. Remember that 'Predict' is not reentrant. If you want to use multiple threads
-// for simultaneous prediction, make sure each thread is using its own PredictionFunction.
-var prediction = predictionFunc.Predict(new IrisInput
+// for simultaneous prediction, make sure each thread is using its own PredictionEngine.
+var prediction = predictionEngine.Predict(new IrisInput
 {
     SepalLength = 4.1f,
     SepalWidth = 0.1f,

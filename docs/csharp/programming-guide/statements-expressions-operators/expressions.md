@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239295"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362319"
 ---
 # <a name="expressions-c-programming-guide"></a>Expresiones (Guía de programación de C#)
 Una *expresión* es una secuencia de uno o más operandos y cero o más operadores que se pueden evaluar como un valor, objeto, método o espacio de nombres único. Las expresiones pueden constar de un valor literal, una invocación de método, un operador y sus operandos o un *nombre simple*. Los nombres simples pueden ser el nombre de una variable, el miembro de un tipo, el parámetro de un método, un espacio de nombres o un tipo.  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>Valores de expresión  
- En la mayoría de los contextos donde se usan expresiones, por ejemplo en instrucciones o parámetros de método, se espera que la expresión se evalúe como algún valor. Si x e y son enteros, la expresión `x + y` se evalúa como un valor numérico. La expresión `new MyClass()` se evalúa como una referencia a una nueva instancia de un objeto `MyClass`. La expresión `myClass.ToString()` se evalúa como una cadena porque este es el tipo de valor devuelto del método. En cambio, aunque un nombre de espacio de nombres se clasifique como una expresión, no se evalúa como un valor y por tanto nunca puede ser el resultado final de una expresión. No puede pasar un nombre de espacio de nombres a un parámetro de método, usarlo en una nueva expresión ni asignarlo a una variable. Solo puede usarlo como una subexpresión en una expresión mayor. Lo mismo sucede con los tipos (a diferencia de los objetos <xref:System.Type?displayProperty=nameWithType>), los nombres de grupo de métodos (a diferencia de los métodos específicos) y los descriptores de acceso [add](../../../csharp/language-reference/keywords/add.md) y [remove](../../../csharp/language-reference/keywords/remove.md) de eventos.  
+ En la mayoría de los contextos donde se usan expresiones, por ejemplo en instrucciones o parámetros de método, se espera que la expresión se evalúe como algún valor. Si x e y son enteros, la expresión `x + y` se evalúa como un valor numérico. La expresión `new MyClass()` se evalúa como una referencia a una nueva instancia de una clase `MyClass`. La expresión `myClass.ToString()` se evalúa como una cadena porque este es el tipo de valor devuelto del método. En cambio, aunque un nombre de espacio de nombres se clasifique como una expresión, no se evalúa como un valor y por tanto nunca puede ser el resultado final de una expresión. No puede pasar un nombre de espacio de nombres a un parámetro de método, usarlo en una nueva expresión ni asignarlo a una variable. Solo puede usarlo como una subexpresión en una expresión mayor. Lo mismo sucede con los tipos (a diferencia de los objetos <xref:System.Type?displayProperty=nameWithType>), los nombres de grupo de métodos (a diferencia de los métodos específicos) y los descriptores de acceso [add](../../../csharp/language-reference/keywords/add.md) y [remove](../../../csharp/language-reference/keywords/remove.md) de eventos.  
   
  Todos los valores tienen un tipo asociado. Por ejemplo, si x e y son variables de tipo `int`, el valor de la expresión `x + y` también es de tipo `int`. Si el valor se asigna a una variable de un tipo diferente, o si x e y son de tipos diferentes, se aplican las reglas de conversión de tipos. Para obtener más información sobre el funcionamiento de estas conversiones, vea [Conversiones de tipos (Guía de programación de C#)](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   

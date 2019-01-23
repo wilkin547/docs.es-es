@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194142"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415902"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -56,7 +56,7 @@ Puede formular preguntas sobre este documento en el tema de GitHub [Procedimient
 
 Para las aplicaciones ASP.NET, inspeccione el elemento `<system.web><httpRuntime targetFramework>` de _web.config_ para comprobar que está utilizando la versión deseada de .NET Framework.
 
-Para Windows Forms y otras aplicaciones, consulte [Cómo: Usar como destino una versión de .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+Para Windows Forms y otras aplicaciones, consulte [Cómo: usar una versión de .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 Consulte las siguientes secciones para comprobar que no está utilizando una versión específica de TLS o SSL.
 
@@ -150,7 +150,7 @@ Los conmutadores tienen el mismo efecto si utiliza redes de HTTP (<xref:System.N
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-Un valor de `false` para `Switch.System.Net.DontEnableSchUseStrongCrypto` hace que la aplicación utilice una criptografía robusta. Un valor de `false` para `DontEnableSchUseStrongCrypto` utiliza protocolos de red más seguros(TLS 1.2, TLS 1.1 y TLS 1.0) y bloquea los protocolos que no son seguros. Para obtener más información, consulte [La marca SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag). Un valor de `true` deshabilita la criptografía robusta para la aplicación.
+Un valor de `false` para `Switch.System.Net.DontEnableSchUseStrongCrypto` hace que la aplicación utilice una criptografía robusta. Un valor de `false` para `DontEnableSchUseStrongCrypto` utiliza protocolos de red más seguros(TLS 1.2, TLS 1.1 y TLS 1.0) y bloquea los protocolos que no son seguros. Para obtener más información, consulte [La marca SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag). Un valor de `true` deshabilita la criptografía robusta para la aplicación.
 
 Si la aplicación tiene como destino .NET Framework 4.6 o versiones posteriores, el conmutador se establece de manera predeterminada en `false`. Este es un valor predeterminado seguro, así que lo recomendamos. Si la aplicación se ejecuta en .NET Framework 4.6, pero tiene como destino una versión anterior, el modificador se establece de manera predeterminada en `true`. En ese caso, debe establecerlo explícitamente en `false`.
 
@@ -191,7 +191,7 @@ Todas las claves del Registro descritas a continuación tienen el mismo efecto s
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-La clave del Registro `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` tiene un valor de tipo DWORD. Un valor de 1 hace que la aplicación utilice una criptografía robusta. La criptografía robusta utiliza protocolos de red más seguros(TLS 1.2, TLS 1.1 y TLS 1.0) y bloquea los protocolos que no son seguros. Un valor de 0 deshabilita la criptografía robusta. Para obtener más información, consulte [La marca SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag).
+La clave del Registro `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` tiene un valor de tipo DWORD. Un valor de 1 hace que la aplicación utilice una criptografía robusta. La criptografía robusta utiliza protocolos de red más seguros(TLS 1.2, TLS 1.1 y TLS 1.0) y bloquea los protocolos que no son seguros. Un valor de 0 deshabilita la criptografía robusta. Para obtener más información, consulte [La marca SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag).
 
 Si la aplicación tiene como destino .NET Framework 4.6 o versiones posteriores, la clave se establece de manera predeterminada en un valor de 1. Este es un valor predeterminado seguro, así que lo recomendamos. Si la aplicación se ejecuta en .NET Framework 4.6, pero tiene como destino una versión anterior, la clave se establece de manera predeterminada en 0. En ese caso, debe establecer su valor explícitamente en 1.
 
@@ -258,7 +258,7 @@ Para actualizar .NET Framework a fin de permitir que el sistema operativo elija 
 Vea también:
 
 - [Versiones y dependencias de .NET Framework](../migration-guide/versions-and-dependencies.md)
-- [Cómo: Determinar qué versiones de .NET Framework están instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Cómo: Determinar qué versiones de .NET Framework están instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="support-for-tls-12"></a>Compatibilidad con TLS 1.2
 

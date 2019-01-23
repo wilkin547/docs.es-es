@@ -1,18 +1,18 @@
 ---
-title: Creación de una biblioteca de clases de .NET Standard con C# en Visual Studio 2017
+title: Creación de una biblioteca de .NET Standard con C# con Visual Studio 2017
 description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard escrita en C# con Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6228cd93b275a059da63a8b8e3408032d78c5e39
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168941"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362020"
 ---
-# <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Creación de una biblioteca de clases de .NET Standard con C# y el SDK de .NET Core en Visual Studio 2017
+# <a name="build-a-net-standard-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Creación de una biblioteca de .NET Standard con C# y el SDK de .NET Core en Visual Studio 2017
 
 Una *biblioteca de clases* define los tipos y los métodos que se llaman desde una aplicación. Una biblioteca de clases que tiene como destino .NET Standard 2.0, lo que permite que cualquier implementación .NET que admita esa versión de .NET Standard pueda llamar a su biblioteca. Cuando termine la biblioteca de clases, puede decidir si quiere distribuirla como un componente de terceros o si la quiere incluir como un componente empaquetado con una o varias aplicaciones.
 

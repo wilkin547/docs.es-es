@@ -3,12 +3,12 @@ title: Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 description: El Visualizador de sintaxis proporciona una herramienta visual para explorar los modelos que genera el SDK de .NET Compiler Platform para el código.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143572"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307206"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 
@@ -80,11 +80,11 @@ Este es el diseño de acoplamiento que se usa con la ventana del visualizador y 
 
 Otra opción consiste en colocar la ventana del gráfico de sintaxis en un segundo monitor, en una configuración de monitor dual.
 
-# <a name="inspecting-semantics"></a>Semántica de inspección
+## <a name="inspecting-semantics"></a>Semántica de inspección
 
 El Visualizador de sintaxis permite realizar una inspección rudimentaria de símbolos e información semántica. Escriba `double x = 1 + 1;` dentro de Main() en el ejemplo de C#. Después, seleccione la expresión `1 + 1` en la ventana del editor de código. El visualizador resalta el nodo **AddExpression** en el visualizador. Haga clic con el botón derecho en **AddExpression** y elija **View Symbol (if any)** [Ver símbolo (si existe)]. Tenga en cuenta que la mayoría de los elementos de menú tienen el calificador "si existe". El Visualizador de sintaxis inspecciona las propiedades de un nodo, incluidas las propiedades que es posible que no estén presentes para todos los nodos. 
 
-La cuadrícula de propiedades en el visualizador se actualiza como se muestra en esta imagen: el símbolo de la expresión es **SynthesizedIntrinsicOperatorSymbol** con **Variante = Método**.
+La cuadrícula de propiedades del visualizador se actualiza tal como se muestra en la figura siguiente: El símbolo de la expresión es un símbolo **SynthesizedIntrinsicOperatorSymbol** con **Kind = Method**.
 
 ![Propiedades de símbolo](media/syntax-visualizer/symbol-properties.png)
 

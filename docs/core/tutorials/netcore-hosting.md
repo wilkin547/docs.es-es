@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d6ad3bc1b8f1795bfa3d83fbb83cb07120758f11
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: deeda8b166d8a22aac88be313d2555e4b9fa5a1c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249104"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415525"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -90,7 +90,7 @@ A diferencia de la API de hospedaje mscoree.h (que se describe a continuación),
 
 ### <a name="step-5---run-managed-code"></a>Paso 5: Ejecutar el código administrado
 
-Con el entorno de ejecución iniciado, el host puede llamar al código administrado. Esta operación se puede realizar de diferentes maneras. El código de ejemplo vinculado a este tutorial usa la función `coreclr_create_delegate` para crear un delegado para un método administrado estático. Esta API toma el nombre del ensamblado, el nombre de tipo calificado por el espacio de nombres y el nombre del método como entradas y devuelve un delegado que puede usarse para invocar al método.
+Con el entorno de ejecución iniciado, el host puede llamar al código administrado. Esta operación se puede realizar de diferentes maneras. El código de ejemplo vinculado a este tutorial usa la función `coreclr_create_delegate` para crear un delegado para un método administrado estático. Esta API toma el [nombre del ensamblado](../../framework/app-domains/assembly-names.md), el nombre de tipo calificado por el espacio de nombres y el nombre del método como entradas y devuelve un delegado que puede usarse para invocar al método.
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -184,7 +184,7 @@ Con un AppDomain en funcionamiento, ahora el host puede comenzar a ejecutar el c
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-Otra opción, si `ExecuteAssembly` no satisface las necesidades del host, es usar `CreateDelegate` para crear un puntero de función a un método administrado estático. Esto requiere que el host conozca la firma del método al que está llamando (para crear el tipo de puntero de función), pero permite a los hosts tener flexibilidad para invocar código que no sea el punto de entrada del ensamblado.
+Otra opción, si `ExecuteAssembly` no satisface las necesidades del host, es usar `CreateDelegate` para crear un puntero de función a un método administrado estático. Esto requiere que el host conozca la firma del método al que está llamando (para crear el tipo de puntero de función), pero permite a los hosts tener flexibilidad para invocar código que no sea el punto de entrada del ensamblado. El nombre del ensamblado proporcionado en el segundo parámetro es el [nombre del ensamblado administrado completo](../../framework/app-domains/assembly-names.md) de la biblioteca que se va a cargar.
 
 ```C++
 void *pfnDelegate = NULL;
