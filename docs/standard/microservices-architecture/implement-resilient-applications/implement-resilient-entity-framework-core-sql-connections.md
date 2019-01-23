@@ -1,21 +1,21 @@
 ---
 title: Implementación de conexiones SQL resistentes de Entity Framework Core
-description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Implementación de conexiones SQL resistentes de Entity Framework Core. Esta técnica es especialmente importante cuando se usa Azure SQL Database en la nube.
+description: Aprenda a implementar conexiones SQL resistentes de Entity Framework Core. Esta técnica es especialmente importante cuando se usa Azure SQL Database en la nube.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: 0df375737c0e079baba426f3c97b95edcb9aca75
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 28428654ea3176aea960e2711c83499a16d2dd4b
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127191"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362683"
 ---
-# <a name="implement-resilient-entity-framework-core-sql-connections"></a><span data-ttu-id="a8943-104">Implementación de conexiones SQL resistentes de Entity Framework Core</span><span class="sxs-lookup"><span data-stu-id="a8943-104">Implement resilient Entity Framework Core SQL connections</span></span>
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a><span data-ttu-id="cba9a-104">Implementación de conexiones SQL resistentes de Entity Framework Core</span><span class="sxs-lookup"><span data-stu-id="cba9a-104">Implement resilient Entity Framework Core SQL connections</span></span>
 
-<span data-ttu-id="a8943-105">Para Azure SQL DB, Entity Framework Core ya proporciona la lógica de reintento y resistencia de conexión de base de datos interna.</span><span class="sxs-lookup"><span data-stu-id="a8943-105">For Azure SQL DB, Entity Framework Core already provides internal database connection resiliency and retry logic.</span></span> <span data-ttu-id="a8943-106">Pero debe habilitar la estrategia de ejecución de Entity Framework para cada conexión de DbContext si quiere tener [conexiones resistentes de EF Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency).</span><span class="sxs-lookup"><span data-stu-id="a8943-106">But you need to enable the Entity Framework execution strategy for each DbContext connection if you want to have [resilient EF Core connections](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency).</span></span>
+<span data-ttu-id="cba9a-105">Para Azure SQL DB, Entity Framework (EF) Core ya proporciona la lógica de reintento y resistencia de conexión de base de datos interna.</span><span class="sxs-lookup"><span data-stu-id="cba9a-105">For Azure SQL DB, Entity Framework (EF) Core already provides internal database connection resiliency and retry logic.</span></span> <span data-ttu-id="cba9a-106">Pero debe habilitar la estrategia de ejecución de Entity Framework para cada conexión de <xref:Microsoft.EntityFrameworkCore.DbContext> si quiere tener [conexiones resistentes de EF Core](/ef/core/miscellaneous/connection-resiliency).</span><span class="sxs-lookup"><span data-stu-id="cba9a-106">But you need to enable the Entity Framework execution strategy for each <xref:Microsoft.EntityFrameworkCore.DbContext> connection if you want to have [resilient EF Core connections](/ef/core/miscellaneous/connection-resiliency).</span></span>
 
-<span data-ttu-id="a8943-107">Por ejemplo, el código siguiente en el nivel de conexión de EF Core permite conexiones resistentes de SQL que se vuelven a intentar si se produce un error en la conexión.</span><span class="sxs-lookup"><span data-stu-id="a8943-107">For instance, the following code at the EF Core connection level enables resilient SQL connections that are retried if the connection fails.</span></span>
+<span data-ttu-id="cba9a-107">Por ejemplo, el código siguiente en el nivel de conexión de EF Core permite conexiones resistentes de SQL que se vuelven a intentar si se produce un error en la conexión.</span><span class="sxs-lookup"><span data-stu-id="cba9a-107">For instance, the following code at the EF Core connection level enables resilient SQL connections that are retried if the connection fails.</span></span>
 
 ```csharp
 // Startup.cs from any ASP.NET Core Web API
@@ -41,61 +41,120 @@ public class Startup
 }
 ```
 
-## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a><span data-ttu-id="a8943-108">Estrategias de ejecución y transacciones explícitas mediante BeginTransaction y varios DbContexts</span><span class="sxs-lookup"><span data-stu-id="a8943-108">Execution strategies and explicit transactions using BeginTransaction and multiple DbContexts</span></span>
+## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a><span data-ttu-id="cba9a-108">Estrategias de ejecución y transacciones explícitas mediante BeginTransaction y varios DbContexts</span><span class="sxs-lookup"><span data-stu-id="cba9a-108">Execution strategies and explicit transactions using BeginTransaction and multiple DbContexts</span></span>
 
-<span data-ttu-id="a8943-109">Cuando se habilitan los reintentos en las conexiones de EF Core, cada operación que se realiza mediante EF Core se convierte en su propia operación que se puede reintentar.</span><span class="sxs-lookup"><span data-stu-id="a8943-109">When retries are enabled in EF Core connections, each operation you perform using EF Core becomes its own retryable operation.</span></span> <span data-ttu-id="a8943-110">Cada consulta y cada llamada a SaveChanges se reintentará como una unidad si se produce un error transitorio.</span><span class="sxs-lookup"><span data-stu-id="a8943-110">Each query and each call to SaveChanges will be retried as a unit if a transient failure occurs.</span></span>
+<span data-ttu-id="cba9a-109">Cuando se habilitan los reintentos en las conexiones de EF Core, cada operación que se realiza mediante EF Core se convierte en su propia operación que se puede reintentar.</span><span class="sxs-lookup"><span data-stu-id="cba9a-109">When retries are enabled in EF Core connections, each operation you perform using EF Core becomes its own retriable operation.</span></span> <span data-ttu-id="cba9a-110">Cada consulta y cada llamada a `SaveChanges` se reintentará como una unidad si se produce un error transitorio.</span><span class="sxs-lookup"><span data-stu-id="cba9a-110">Each query and each call to `SaveChanges` will be retried as a unit if a transient failure occurs.</span></span>
 
-<span data-ttu-id="a8943-111">Sin embargo, si el código inicia una transacción con BeginTransaction, va a definir su propio grupo de operaciones que se deben tratar como una unidad: todo dentro de la transacción se debe revertir si se produce un error.</span><span class="sxs-lookup"><span data-stu-id="a8943-111">However, if your code initiates a transaction using BeginTransaction, you are defining your own group of operations that need to be treated as a unit—everything inside the transaction has be rolled back if a failure occurs.</span></span> <span data-ttu-id="a8943-112">Verá una excepción similar a la siguiente si intenta ejecutar esa transacción cuando usa una estrategia de ejecución de EF (directiva de reintentos) e incluye varias llamadas de SaveChanges desde varios DbContexts en la transacción.</span><span class="sxs-lookup"><span data-stu-id="a8943-112">You will see an exception like the following if you attempt to execute that transaction when using an EF execution strategy (retry policy) and you include several SaveChanges calls from multiple DbContexts in the transaction.</span></span>
+<span data-ttu-id="cba9a-111">Sin embargo, si su código inicia una transición con `BeginTransaction`, define su propio grupo de operaciones que deben tratarse como unidad.</span><span class="sxs-lookup"><span data-stu-id="cba9a-111">However, if your code initiates a transaction using `BeginTransaction`, you're defining your own group of operations that need to be treated as a unit.</span></span> <span data-ttu-id="cba9a-112">Todo el contenido de la transacción debe revertirse si se produce un error.</span><span class="sxs-lookup"><span data-stu-id="cba9a-112">Everything inside the transaction has to be rolled back if a failure occurs.</span></span>
 
-> <span data-ttu-id="a8943-113">System.InvalidOperationException: la estrategia de ejecución configurada "SqlServerRetryingExecutionStrategy" no es compatible con las transacciones que el usuario inicie.</span><span class="sxs-lookup"><span data-stu-id="a8943-113">System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user initiated transactions.</span></span> <span data-ttu-id="a8943-114">Use la estrategia de ejecución que devuelve "DbContext.Database.CreateExecutionStrategy()" para ejecutar todas las operaciones en la transacción como una unidad que se puede reintentar.</span><span class="sxs-lookup"><span data-stu-id="a8943-114">Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.</span></span>
+<span data-ttu-id="cba9a-113">Si intenta ejecutar esa transacción cuando se usa una estrategia de ejecución de EF (directiva de reintentos) y llama a `SaveChanges` de varios DbContext, obtendrá una excepción como esta:</span><span class="sxs-lookup"><span data-stu-id="cba9a-113">If you try to execute that transaction when using an EF execution strategy (retry policy) and you call `SaveChanges` from multiple DbContexts, you'll get an exception like this one:</span></span>
 
-<span data-ttu-id="a8943-115">La solución consiste en invocar manualmente la estrategia de ejecución de EF con un delegado que representa a todos los elementos que se deben ejecutar.</span><span class="sxs-lookup"><span data-stu-id="a8943-115">The solution is to manually invoke the EF execution strategy with a delegate representing everything that needs to be executed.</span></span> <span data-ttu-id="a8943-116">Si se produce un error transitorio, la estrategia de ejecución vuelve a invocar al delegado.</span><span class="sxs-lookup"><span data-stu-id="a8943-116">If a transient failure occurs, the execution strategy will invoke the delegate again.</span></span> <span data-ttu-id="a8943-117">Por ejemplo, el código siguiente muestra cómo se implementa en eShopOnContainers con dos DbContexts múltiples (\_catalogContext y el IntegrationEventLogContext) al actualizar un producto y, después, guardar el objeto ProductPriceChangedIntegrationEvent, que debe usar un DbContext diferente.</span><span class="sxs-lookup"><span data-stu-id="a8943-117">For example, the following code show how it is implemented in eShopOnContainers with two multiple DbContexts (\_catalogContext and the IntegrationEventLogContext) when updating a product and then saving the ProductPriceChangedIntegrationEvent object, which needs to use a different DbContext.</span></span>
+> <span data-ttu-id="cba9a-114">System.InvalidOperationException: la estrategia de ejecución configurada "SqlServerRetryingExecutionStrategy" no es compatible con las transacciones que el usuario inicie.</span><span class="sxs-lookup"><span data-stu-id="cba9a-114">System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user initiated transactions.</span></span> <span data-ttu-id="cba9a-115">Use la estrategia de ejecución que devuelve "DbContext.Database.CreateExecutionStrategy()" para ejecutar todas las operaciones en la transacción como una unidad que se puede reintentar.</span><span class="sxs-lookup"><span data-stu-id="cba9a-115">Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.</span></span>
+
+<span data-ttu-id="cba9a-116">La solución consiste en invocar manualmente la estrategia de ejecución de EF con un delegado que representa a todos los elementos que se deben ejecutar.</span><span class="sxs-lookup"><span data-stu-id="cba9a-116">The solution is to manually invoke the EF execution strategy with a delegate representing everything that needs to be executed.</span></span> <span data-ttu-id="cba9a-117">Si se produce un error transitorio, la estrategia de ejecución vuelve a invocar al delegado.</span><span class="sxs-lookup"><span data-stu-id="cba9a-117">If a transient failure occurs, the execution strategy will invoke the delegate again.</span></span> <span data-ttu-id="cba9a-118">Por ejemplo, el código siguiente muestra cómo se implementa en eShopOnContainers con dos DbContexts múltiples (\_catalogContext y el IntegrationEventLogContext) al actualizar un producto y, después, guardar el objeto ProductPriceChangedIntegrationEvent, que debe usar un DbContext diferente.</span><span class="sxs-lookup"><span data-stu-id="cba9a-118">For example, the following code show how it's implemented in eShopOnContainers with two multiple DbContexts (\_catalogContext and the IntegrationEventLogContext) when updating a product and then saving the ProductPriceChangedIntegrationEvent object, which needs to use a different DbContext.</span></span>
 
 ```csharp
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
-    productToUpdate)
+public async Task<IActionResult> UpdateProduct(
+    [FromBody]CatalogItem productToUpdate)
 {
     // Other code ...
+
+    var oldPrice = catalogItem.Price;
+    var raiseProductPriceChangedEvent = oldPrice != productToUpdate.Price;
+
     // Update current product
     catalogItem = productToUpdate;
 
-    // Use of an EF Core resiliency strategy when using multiple DbContexts
-    // within an explicit transaction
-    // See:
-    // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
-    var strategy = _catalogContext.Database.CreateExecutionStrategy();
-    await strategy.ExecuteAsync(async () =>
+    // Save product's data and publish integration event through the Event Bus
+    // if price has changed
+    if (raiseProductPriceChangedEvent)
     {
-        // Achieving atomicity between original Catalog database operation and the
-        // IntegrationEventLog thanks to a local transaction
-        using (var transaction = _catalogContext.Database.BeginTransaction())
-        {
-            _catalogContext.CatalogItems.Update(catalogItem);
-            await _catalogContext.SaveChangesAsync();
-            // Save to EventLog only if product price changed
-            if (raiseProductPriceChangedEvent)
-            await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
-            transaction.Commit();
-        }
-    });
+        //Create Integration Event to be published through the Event Bus
+        var priceChangedEvent = new ProductPriceChangedIntegrationEvent(
+          catalogItem.Id, productToUpdate.Price, oldPrice);
+
+       // Achieving atomicity between original Catalog database operation and the
+       // IntegrationEventLog thanks to a local transaction
+       await _catalogIntegrationEventService.SaveEventAndCatalogContextChangesAsync(
+           priceChangedEvent);
+
+       // Publish through the Event Bus and mark the saved event as published
+       await _catalogIntegrationEventService.PublishThroughEventBusAsync(
+           priceChangedEvent);
+    }
+    // Just save the updated product because the Product's Price hasn't changed.
+    else
+    {
+        await _catalogContext.SaveChangesAsync();
+    }
 }
 ```
 
-<span data-ttu-id="a8943-118">El primer DbContext es \_catalogContext y el segundo DbContext está dentro del objeto \_integrationEventLogService.</span><span class="sxs-lookup"><span data-stu-id="a8943-118">The first DbContext is \_catalogContext and the second DbContext is within the \_integrationEventLogService object.</span></span> <span data-ttu-id="a8943-119">La acción Commit se realiza a través de varios DbContexts mediante una estrategia de ejecución de EF.</span><span class="sxs-lookup"><span data-stu-id="a8943-119">The Commit action is performed across multiple DbContexts using an EF execution strategy.</span></span>
+<span data-ttu-id="cba9a-119">El primer contexto <xref:Microsoft.EntityFrameworkCore.DbContext> es `_catalogContext` y el segundo contexto `DbContext` está dentro del objeto `_integrationEventLogService`.</span><span class="sxs-lookup"><span data-stu-id="cba9a-119">The first <xref:Microsoft.EntityFrameworkCore.DbContext> is `_catalogContext` and the second `DbContext` is within the `_integrationEventLogService` object.</span></span> <span data-ttu-id="cba9a-120">La acción Commit se realiza a través de todos los objetos `DbContext` mediante una estrategia de ejecución de EF.</span><span class="sxs-lookup"><span data-stu-id="cba9a-120">The Commit action is performed across all `DbContext` objects using an EF execution strategy.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="a8943-120">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="a8943-120">Additional resources</span></span>
+<span data-ttu-id="cba9a-121">Para lograr esta confirmación `DbContext` múltiple, el elemento `SaveEventAndCatalogContextChangesAsync` usa una clase `ResilientTransaction`, como se muestra en el siguiente código:</span><span class="sxs-lookup"><span data-stu-id="cba9a-121">To achieve this multiple `DbContext` commit, the `SaveEventAndCatalogContextChangesAsync` uses a `ResilientTransaction` class, as shown in the following code:</span></span>
 
--   <span data-ttu-id="a8943-121">**EF Connection Resiliency** (Entity Framework Core) (Resistencia de las conexiones de EF [Entity Framework Core])[*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)</span><span class="sxs-lookup"><span data-stu-id="a8943-121">**EF Connection Resiliency** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)</span></span>
+```csharp
+public class CatalogIntegrationEventService : ICatalogIntegrationEventService
+{
+    //…
+    public async Task SaveEventAndCatalogContextChangesAsync(
+        IntegrationEvent evt)
+    {
+        // Use of an EF Core resiliency strategy when using multiple DbContexts
+        // within an explicit BeginTransaction():
+        // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
+        await ResilientTransaction.New(_catalogContext).ExecuteAsync(async () =>
+        {
+            // Achieving atomicity between original catalog database 
+            // operation and the IntegrationEventLog thanks to a local transaction
+            await _catalogContext.SaveChangesAsync();
+            await _eventLogService.SaveEventAsync(evt,
+                _catalogContext.Database.CurrentTransaction.GetDbTransaction());
+        });
+    }
+}
+```
 
--   <span data-ttu-id="a8943-122">**Connection Resiliency and Command Interception with the Entity Framework (Resistencia de la conexión e intercepción de comandos con Entity Framework)**
-    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)</span><span class="sxs-lookup"><span data-stu-id="a8943-122">**Connection Resiliency and Command Interception with the Entity Framework**
-[*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)</span></span>
+<span data-ttu-id="cba9a-122">El método `ResilientTransaction.ExecuteAsync` básicamente comienza una transacción desde el contexto `DbContext` pasado (`_catalogContext`) y, a continuación, hace que el servicio `EventLogService` use dicha transacción para guardar los cambios del contexto `IntegrationEventLogContext` y, después, confirma toda la transacción.</span><span class="sxs-lookup"><span data-stu-id="cba9a-122">The `ResilientTransaction.ExecuteAsync` method basically begins a transaction from the passed `DbContext` (`_catalogContext`) and then makes the `EventLogService` use that transaction to save changes from the `IntegrationEventLogContext` and then commits the whole transaction.</span></span>
 
--   <span data-ttu-id="a8943-123">**Cesar de la Torre. Using Resilient Entity Framework Core Sql Connections and Transactions (Usar conexiones y transacciones SQL resistentes de Entity Framework Core)**
-    <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/></span><span class="sxs-lookup"><span data-stu-id="a8943-123">**Cesar de la Torre. Using Resilient Entity Framework Core Sql Connections and Transactions**
-<https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/></span></span>
+```csharp
+public class ResilientTransaction
+{
+    private DbContext _context;
+    private ResilientTransaction(DbContext context) =>
+        _context = context ?? throw new ArgumentNullException(nameof(context));
+
+    public static ResilientTransaction New (DbContext context) =>
+        new ResilientTransaction(context);
+
+    public async Task ExecuteAsync(Func<Task> action)
+    {
+        // Use of an EF Core resiliency strategy when using multiple DbContexts 
+        // within an explicit BeginTransaction():
+        // https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency
+        var strategy = _context.Database.CreateExecutionStrategy();
+        await strategy.ExecuteAsync(async () =>
+        {
+            using (var transaction = _context.Database.BeginTransaction())
+            {
+                await action();
+                transaction.Commit();
+            }
+        });
+    }
+}
+```
+
+## <a name="additional-resources"></a><span data-ttu-id="cba9a-123">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="cba9a-123">Additional resources</span></span>
+
+- <span data-ttu-id="cba9a-124">**Connection Resiliency and Command Interception with EF in an ASP.NET MVC Application (Resistencia de la conexión e intercepción de comandos con EF en una aplicación de ASP.NET MVC)** \\</span><span class="sxs-lookup"><span data-stu-id="cba9a-124">**Connection Resiliency and Command Interception with EF in an ASP.NET MVC Application** \\</span></span>
+  [*https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application*](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
+
+- <span data-ttu-id="cba9a-125">**Cesar de la Torre. Using Resilient Entity Framework Core SQL Connections and Transactions (Usar conexiones y transacciones SQL resistentes de Entity Framework Core)** \\</span><span class="sxs-lookup"><span data-stu-id="cba9a-125">**Cesar de la Torre. Using Resilient Entity Framework Core SQL Connections and Transactions** \\</span></span>
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/)
 
 >[!div class="step-by-step"]
-><span data-ttu-id="a8943-124">[Anterior](implement-retries-exponential-backoff.md)
->[Siguiente](explore-custom-http-call-retries-exponential-backoff.md)</span><span class="sxs-lookup"><span data-stu-id="a8943-124">[Previous](implement-retries-exponential-backoff.md)
+><span data-ttu-id="cba9a-126">[Anterior](implement-retries-exponential-backoff.md)
+>[Siguiente](explore-custom-http-call-retries-exponential-backoff.md)</span><span class="sxs-lookup"><span data-stu-id="cba9a-126">[Previous](implement-retries-exponential-backoff.md)
 [Next](explore-custom-http-call-retries-exponential-backoff.md)</span></span>
