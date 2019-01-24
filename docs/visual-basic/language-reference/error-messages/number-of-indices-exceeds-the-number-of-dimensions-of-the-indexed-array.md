@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: d40a19aefdca65773d3d8e37a43d99178586fb1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b113860366ccbe47fed8ef13abb90a540dc88b33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710656"
 ---
-# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="40b10-102">El número de índices sobrepasa el número de dimensiones de la matriz indizada</span><span class="sxs-lookup"><span data-stu-id="40b10-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
-<span data-ttu-id="40b10-103">El número de índices usado para obtener acceso a un elemento de matriz debe ser exactamente igual al rango de la matriz, es decir, el número de dimensiones que tiene declaradas.</span><span class="sxs-lookup"><span data-stu-id="40b10-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  
+# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="f7bb9-102">El número de índices sobrepasa el número de dimensiones de la matriz indizada</span><span class="sxs-lookup"><span data-stu-id="f7bb9-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
+<span data-ttu-id="f7bb9-103">El número de índices usado para obtener acceso a un elemento de matriz debe ser exactamente igual al rango de la matriz, es decir, el número de dimensiones que tiene declaradas.</span><span class="sxs-lookup"><span data-stu-id="f7bb9-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  
   
- <span data-ttu-id="40b10-104">**Id. de error:** BC30106</span><span class="sxs-lookup"><span data-stu-id="40b10-104">**Error ID:** BC30106</span></span>  
+ <span data-ttu-id="f7bb9-104">**Identificador de error:** BC30106</span><span class="sxs-lookup"><span data-stu-id="f7bb9-104">**Error ID:** BC30106</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="40b10-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="40b10-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f7bb9-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="f7bb9-105">To correct this error</span></span>  
   
--   <span data-ttu-id="40b10-106">Quite subíndices de la referencia de la matriz hasta que el número total de subíndices sea igual al rango de la matriz.</span><span class="sxs-lookup"><span data-stu-id="40b10-106">Remove subscripts from the array reference until the total number of subscripts equals the rank of the array.</span></span> <span data-ttu-id="40b10-107">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="40b10-107">For example:</span></span>  
+-   <span data-ttu-id="f7bb9-106">Quite los subíndices de la referencia de la matriz hasta que el número total de subíndices sea igual al rango de la matriz.</span><span class="sxs-lookup"><span data-stu-id="f7bb9-106">Remove subscripts from the array reference until the total number of subscripts equals the rank of the array.</span></span> <span data-ttu-id="f7bb9-107">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="f7bb9-107">For example:</span></span>  
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -35,5 +35,5 @@ ms.locfileid: "33593441"
     gameBoard(1, 0) = "O"  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="40b10-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="40b10-108">See Also</span></span>  
- [<span data-ttu-id="40b10-109">Matrices</span><span class="sxs-lookup"><span data-stu-id="40b10-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="f7bb9-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="f7bb9-108">See also</span></span>
+- [<span data-ttu-id="f7bb9-109">Matrices</span><span class="sxs-lookup"><span data-stu-id="f7bb9-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

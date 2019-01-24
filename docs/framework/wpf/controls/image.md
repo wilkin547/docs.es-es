@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: 0e5fc4e97457858cfbf517726a6f2904a282727d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8a7e9adb8ca7d9e21bbc30a346b12d8b584067a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695804"
 ---
-# <a name="image"></a><span data-ttu-id="9000f-102">Imagen</span><span class="sxs-lookup"><span data-stu-id="9000f-102">Image</span></span>
-<span data-ttu-id="9000f-103">El <xref:System.Windows.Controls.Image> elemento se utiliza para mostrar imágenes de mapa de bits en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="9000f-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="6195c-102">Imagen</span><span class="sxs-lookup"><span data-stu-id="6195c-102">Image</span></span>
+<span data-ttu-id="6195c-103">El <xref:System.Windows.Controls.Image> elemento se usa para mostrar imágenes de mapa de bits en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="6195c-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9000f-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="9000f-104">In This Section</span></span>  
- [<span data-ttu-id="9000f-105">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="9000f-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6195c-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="6195c-104">In This Section</span></span>  
+ [<span data-ttu-id="6195c-105">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="6195c-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="9000f-106">Referencia</span><span class="sxs-lookup"><span data-stu-id="9000f-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6195c-106">Referencia</span><span class="sxs-lookup"><span data-stu-id="6195c-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="9000f-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="9000f-107">See Also</span></span>  
- [<span data-ttu-id="9000f-108">Información general sobre imágenes</span><span class="sxs-lookup"><span data-stu-id="9000f-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="9000f-109">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="9000f-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="6195c-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="6195c-107">See also</span></span>
+- [<span data-ttu-id="6195c-108">Información general sobre imágenes</span><span class="sxs-lookup"><span data-stu-id="6195c-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="6195c-109">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="6195c-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
