@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f4947a9b6c0e3fd87ee474111f143d273c1d7b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 30cecaa1832ba9d45782b164ee65a2f39f28a8f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605411"
 ---
-# <a name="icordebugregisterset2-interface"></a><span data-ttu-id="d6cd6-102">ICorDebugRegisterSet2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="d6cd6-102">ICorDebugRegisterSet2 Interface</span></span>
-<span data-ttu-id="d6cd6-103">Amplía las capacidades de la [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interfaz para plataformas de hardware que tienen más de 64 registros.</span><span class="sxs-lookup"><span data-stu-id="d6cd6-103">Extends the capabilities of the [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interface for hardware platforms that have more than 64 registers.</span></span>  
+# <a name="icordebugregisterset2-interface"></a><span data-ttu-id="ed0c6-102">ICorDebugRegisterSet2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ed0c6-102">ICorDebugRegisterSet2 Interface</span></span>
+<span data-ttu-id="ed0c6-103">Amplía las capacidades de la [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interfaz para las plataformas de hardware que tienen más de 64 registros.</span><span class="sxs-lookup"><span data-stu-id="ed0c6-103">Extends the capabilities of the [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interface for hardware platforms that have more than 64 registers.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d6cd6-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="d6cd6-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ed0c6-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="ed0c6-104">Methods</span></span>  
   
-|<span data-ttu-id="d6cd6-105">Método</span><span class="sxs-lookup"><span data-stu-id="d6cd6-105">Method</span></span>|<span data-ttu-id="d6cd6-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="d6cd6-106">Description</span></span>|  
+|<span data-ttu-id="ed0c6-105">Método</span><span class="sxs-lookup"><span data-stu-id="ed0c6-105">Method</span></span>|<span data-ttu-id="ed0c6-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="ed0c6-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d6cd6-107">GetRegisters (método)</span><span class="sxs-lookup"><span data-stu-id="d6cd6-107">GetRegisters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregisters-method.md)|<span data-ttu-id="d6cd6-108">Obtiene el valor de cada registro (en el equipo que está ejecutando el código) especificado por la máscara de bits.</span><span class="sxs-lookup"><span data-stu-id="d6cd6-108">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>|  
-|[<span data-ttu-id="d6cd6-109">GetRegistersAvailable (método)</span><span class="sxs-lookup"><span data-stu-id="d6cd6-109">GetRegistersAvailable Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregistersavailable-method.md)|<span data-ttu-id="d6cd6-110">Obtiene una matriz de bytes que proporciona un mapa de bits de los registros disponibles.</span><span class="sxs-lookup"><span data-stu-id="d6cd6-110">Gets an array of bytes that provides a bitmap of the available registers.</span></span>|  
-|[<span data-ttu-id="d6cd6-111">SetRegisters (método)</span><span class="sxs-lookup"><span data-stu-id="d6cd6-111">SetRegisters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-setregisters-method.md)|<span data-ttu-id="d6cd6-112">No se implementa en la versión 2.0 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d6cd6-112">Not implemented in the .NET Framework version 2.0.</span></span>|  
+|[<span data-ttu-id="ed0c6-107">GetRegisters (método)</span><span class="sxs-lookup"><span data-stu-id="ed0c6-107">GetRegisters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregisters-method.md)|<span data-ttu-id="ed0c6-108">Obtiene el valor de cada registro (en el equipo que está ejecutando el código) especificado por la máscara de bits.</span><span class="sxs-lookup"><span data-stu-id="ed0c6-108">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>|  
+|[<span data-ttu-id="ed0c6-109">GetRegistersAvailable (método)</span><span class="sxs-lookup"><span data-stu-id="ed0c6-109">GetRegistersAvailable Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregistersavailable-method.md)|<span data-ttu-id="ed0c6-110">Obtiene una matriz de bytes que proporciona un mapa de bits de los registros disponibles.</span><span class="sxs-lookup"><span data-stu-id="ed0c6-110">Gets an array of bytes that provides a bitmap of the available registers.</span></span>|  
+|[<span data-ttu-id="ed0c6-111">SetRegisters (método)</span><span class="sxs-lookup"><span data-stu-id="ed0c6-111">SetRegisters Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-setregisters-method.md)|<span data-ttu-id="ed0c6-112">No se implementa en la versión 2.0 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ed0c6-112">Not implemented in the .NET Framework version 2.0.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d6cd6-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d6cd6-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed0c6-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ed0c6-113">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d6cd6-114">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="d6cd6-114">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="ed0c6-114">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="ed0c6-114">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6cd6-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d6cd6-115">Requirements</span></span>  
- <span data-ttu-id="d6cd6-116">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d6cd6-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed0c6-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ed0c6-115">Requirements</span></span>  
+ <span data-ttu-id="ed0c6-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed0c6-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d6cd6-117">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d6cd6-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ed0c6-117">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ed0c6-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d6cd6-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d6cd6-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ed0c6-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed0c6-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d6cd6-119">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6cd6-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ed0c6-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed0c6-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6cd6-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="d6cd6-120">See Also</span></span>  
- [<span data-ttu-id="d6cd6-121">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="d6cd6-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="d6cd6-122">ICorDebugRegisterSet (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d6cd6-122">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ed0c6-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="ed0c6-120">See also</span></span>
+- [<span data-ttu-id="ed0c6-121">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="ed0c6-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ed0c6-122">ICorDebugRegisterSet (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ed0c6-122">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
