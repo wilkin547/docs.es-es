@@ -1,19 +1,19 @@
 ---
-title: '&lt;NET.TCP&gt;'
+title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 2a75a33eac61d85a0dab4732cb3b0de7f4703fa7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7df24d816b4eed8ceed542e14261413fbe7651a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728731"
 ---
-# <a name="ltnettcpgt"></a>&lt;NET.TCP&gt;
+# <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Especifica la configuración del servicio de uso compartido de puertos NET.TCP, que permite que varios procesos compartan el mismo puerto TCP.  
   
- \<system.serviceModel.activation >  
-\<NET.TCP >  
+ \<system.serviceModel.activation>  
+\<net.tcp>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ Especifica la configuración del servicio de uso compartido de puertos NET.TCP, 
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Una colección de elementos de configuración que contienen un `securityIdentifier` atributo para especificar las cuentas de usuario para los procesos que hospedan servicios WCF y tienen concedidos acceso de conexión al servicio de uso compartido.|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Una colección de elementos de configuración que contienen un `securityIdentifier` atributo para especificar las cuentas de usuario para los procesos que hospedan servicios WCF y tienen concedidos acceso de conexión al servicio de uso compartido.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -73,7 +73,7 @@ Especifica la configuración del servicio de uso compartido de puertos NET.TCP, 
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre el uso compartido de puertos, consulte [uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Para comprender cómo configurar el puerto de servicio de uso compartido, consulte [configurar el servicio de uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- [Configuración del servicio de uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
+- [Uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
+- [Configuración del servicio de uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

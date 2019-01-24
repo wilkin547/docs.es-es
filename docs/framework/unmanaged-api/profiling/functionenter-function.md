@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77de59de8fcf3797237245ce42c7f0eaa96d3d24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: be144ac8250adf803ddb1f20ea55be09cb3e81d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687393"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (Función)
-Notifica al generador de perfiles que se pasan a una función de control.  
+Notifica al generador de perfiles que se pasa a una función de control.  
   
 > [!NOTE]
->  El `FunctionEnter` función está desusada en la versión 2.0 de .NET Framework y su uso, le cobrará una reducción del rendimiento. Use la [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) funcione en su lugar.  
+>  El `FunctionEnter` función está en desuso en la versión 2.0 de .NET Framework, y su uso se incurrirá en una penalización de rendimiento. Use la [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) funcione en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,30 +42,30 @@ void __stdcall FunctionEnter (
  [in] El identificador de la función a la que se pasa el control.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FunctionEnter` función es una devolución de llamada; debe implementar. La implementación debe utilizar el `__declspec`(`naked`) el atributo de clase de almacenamiento.  
+ El `FunctionEnter` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.  
   
- El motor de ejecución no guardan los registros antes de llamar a esta función.  
+ El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
 -   En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
   
--   Al salir, debe restablecer la pila desactivando todos los parámetros que se han insertados por el llamador.  
+-   En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
   
- La implementación de `FunctionEnter` no debe bloquearse porque retrasará la recolección de elementos. La implementación no debería intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionEnter` devuelve.  
+ La implementación de `FunctionEnter` no debe bloquearse porque retrasará la recolección de elementos. La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionEnter` devuelve.  
   
- Además, la `FunctionEnter` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ Además, el `FunctionEnter` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl  
+ **Encabezado**: CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>Vea también  
- [FunctionEnter2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- [FunctionLeave2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- [FunctionTailcall2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- [SetEnterLeaveFunctionHooks2 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)  
- [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [FunctionEnter2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [FunctionLeave2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [FunctionTailcall2 (Función)](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Funciones estáticas globales para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

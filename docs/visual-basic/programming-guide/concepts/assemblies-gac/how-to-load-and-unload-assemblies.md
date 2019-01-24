@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: cargar y descargar ensamblados (Visual Basic)'
+title: Procedimiento Cargar y descargar ensamblados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
-ms.openlocfilehash: 1cec7a7e15843874b65cf5d2f3a23b8e644a26d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adfe23c2c70b1f49e23fb7c3866c8dac5c9c09ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549709"
 ---
-# <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Cómo: cargar y descargar ensamblados (Visual Basic)
+# <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Procedimiento Cargar y descargar ensamblados (Visual Basic)
 Los ensamblados a los que hace referencia el programa se cargarán automáticamente en tiempo de compilación, pero también es posible cargar ensamblados específicos en el dominio de aplicación actual en tiempo de ejecución. Para obtener más información, vea [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
   
  No existe ninguna forma de descargar un ensamblado individual sin descargar todos los dominios de aplicación que lo contienen. Aunque el ensamblado esté fuera de ámbito, el archivo de ensamblado actual permanecerá cargado hasta que se descarguen todos los dominios de aplicación que lo contienen.  
@@ -24,7 +24,7 @@ Los ensamblados a los que hace referencia el programa se cargarán automáticame
   
 1.  No existe ninguna forma de descargar un ensamblado individual sin descargar todos los dominios de aplicación que lo contienen. Utilice el método `Unload` de <xref:System.AppDomain> para descargar los dominios de aplicación. Para obtener más información, vea [Cómo: Descargar un dominio de aplicación](../../../../framework/app-domains/how-to-unload-an-application-domain.md).  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

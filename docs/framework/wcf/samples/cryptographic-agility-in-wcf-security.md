@@ -2,12 +2,12 @@
 title: Agilidad criptográfica en la seguridad de WCF
 ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-ms.openlocfilehash: 9f7c1157c9bf4f2e0baf7dcbafbcc9fca4aee89d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a97f0b908d3c4d2e14fb55ec21371322dc740e47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668904"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>Agilidad criptográfica en la seguridad de WCF
 En este ejemplo se muestra cómo especificar un algoritmo estándar o personalizado para proporcionar una implementación criptográfica agile en un cliente de Windows Communication Foundation (WCF) y el servicio. El ejemplo consta de los proyectos siguientes:
@@ -35,5 +35,5 @@ En este ejemplo se muestra cómo especificar un algoritmo estándar o personaliz
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Vea también
+- [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)

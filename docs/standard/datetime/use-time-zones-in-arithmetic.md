@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: utilizar zonas horarias en fecha y hora aritmético'
+title: Procedimiento Usar zonas horarias en fecha y hora aritmético
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682698"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Cómo: utilizar zonas horarias en fecha y hora aritmético
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedimiento Usar zonas horarias en fecha y hora aritmético
 
 Normalmente, al realizar la fecha y hora aritmético mediante <xref:System.DateTime> o <xref:System.DateTimeOffset> valores, el resultado no refleja las reglas de ajuste de zona horaria. Esto es cierto incluso cuando la zona horaria del valor de fecha y hora es claramente identificable (por ejemplo, cuando el <xref:System.DateTime.Kind%2A> propiedad está establecida en <xref:System.DateTimeKind.Local>). En este tema se muestra cómo realizar operaciones aritméticas en valores de fecha y hora que pertenecen a una zona horaria determinada. Los resultados de las operaciones aritméticas reflejarán las reglas de ajuste de la zona horaria.
 
@@ -66,5 +66,5 @@ Para este ejemplo se necesita:
 
 ## <a name="see-also"></a>Vea también
 
-* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
-* [Efectuar operaciones aritméticas con fechas y horas](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+- [Efectuar operaciones aritméticas con fechas y horas](../../../docs/standard/datetime/performing-arithmetic-operations.md)

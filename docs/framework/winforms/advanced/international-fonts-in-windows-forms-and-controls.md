@@ -1,5 +1,5 @@
 ---
-title: Fuentes internacionales en formularios Windows Forms y controles
+title: Fuentes internacionales en Windows Forms y controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], international
@@ -13,22 +13,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: b2738f174c9837a2ba83c1306f4617f39ce17de1
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f9afd575e2de04e0b11556ad34436839e13d968
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693245"
 ---
-# <a name="international-fonts-in-windows-forms-and-controls"></a>Fuentes internacionales en formularios Windows Forms y controles
+# <a name="international-fonts-in-windows-forms-and-controls"></a>Fuentes internacionales en Windows Forms y controles
 
-En aplicaciones internacionales, el método recomendado para seleccionar fuentes es usar la reserva de fuentes siempre que sea posible. Reserva de fuentes significa que el sistema determina a qué script el carácter pertenece.
+En aplicaciones internacionales, el método recomendado para seleccionar fuentes es usar la reserva de fuentes siempre que sea posible. Reserva de fuentes significa que el sistema determina qué script el carácter pertenece.
 
 ## <a name="using-font-fallback"></a>Uso de reserva de fuentes
 
-Para aprovechar las ventajas de esta característica, no establece la <xref:System.Drawing.Font> propiedad para el formulario o cualquier otro elemento. La aplicación usará automáticamente la fuente predeterminada del sistema, que es diferente del idioma del sistema operativo a otro. Cuando se ejecuta la aplicación, el sistema proporciona automáticamente la fuente correcta para la referencia cultural seleccionada en el sistema operativo.
+Para aprovechar las ventajas de esta característica, no establezca la <xref:System.Drawing.Font> propiedad para el formulario o cualquier otro elemento. La aplicación usará automáticamente la fuente predeterminada del sistema, que es diferente del idioma del sistema operativo a otro. Cuando se ejecuta la aplicación, el sistema proporcionará automáticamente la fuente correcta para la referencia cultural seleccionada en el sistema operativo.
 
-Hay una excepción a la regla de no establecer la fuente, que es para cambiar el estilo de fuente. Esto podría ser importante para una aplicación en el que el usuario hace clic en un botón para que el texto en un cuadro de texto aparecen en negrita. Para ello, escribiría una función para cambiar el estilo de fuente del cuadro de texto en negrita, en función de la fuente del formulario es. Es importante llamar a esta función en dos lugares: en el botón <xref:System.Windows.Forms.Control.Click> controlador de eventos y en el <xref:System.Windows.Forms.Control.FontChanged> controlador de eventos. Si se llama a la función solo en el <xref:System.Windows.Forms.Control.Click> controlador de eventos y alguna otra parte de código cambia la familia de fuentes de todo el formulario, el cuadro de texto no cambia con el resto del formulario.
+Hay una excepción a la regla de no establecer la fuente, que es para cambiar el estilo de fuente. Esto podría ser importante para una aplicación en el que el usuario hace clic en un botón para crear el texto en un cuadro de texto aparecen en negrita. Para ello, escribiría una función para cambiar el estilo de fuente del cuadro de texto en negrita, en función de cualquier fuente del formulario. Es importante llamar a esta función en dos lugares: en el botón <xref:System.Windows.Forms.Control.Click> controlador de eventos y en el <xref:System.Windows.Forms.Control.FontChanged> controlador de eventos. Si se llama a la función solo en el <xref:System.Windows.Forms.Control.Click> controlador de eventos y algún otro elemento de código cambia la familia de fuentes de todo el formulario, el cuadro de texto no cambia con el resto del formulario.
 
 ```vb
 Private Sub MakeBold()
@@ -74,7 +74,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }
 ```
 
-Sin embargo, al localizar la aplicación, la fuente en negrita puede mostrarse incorrectamente en algunos idiomas. Si se trata de un problema, desea que los localizadores tengan la posibilidad de cambiar la fuente de negrita a texto normal. Dado que los localizadores normalmente no son programadores y no tienen acceso al código fuente, solo a los archivos de recursos, esta opción debe establecerse en los archivos de recursos. Para ello, debe establecer el <xref:System.Drawing.Font.Bold%2A> propiedad `true`. Esto da como resultado el valor de fuente que se escribe en los archivos de recursos, donde pueden editar los localizadores. A continuación, escribir código después de la `InitializeComponent` método para restablecer la fuente basada en la fuente del formulario, pero usando el estilo de fuente especificado en el archivo de recursos.
+Sin embargo, al localizar la aplicación, la fuente en negrita puede mostrar incorrectamente en algunos idiomas. Si se trata de un problema, desea que los localizadores tienen la opción de cambiar la fuente de negrita al texto normal. Dado que los localizadores no suelen ser los desarrolladores y no tienen acceso al código fuente, solo a los archivos de recursos, esta opción debe establecerse en los archivos de recursos. Para ello, establecería el <xref:System.Drawing.Font.Bold%2A> propiedad `true`. Esto da como resultado la configuración de fuente que se escriben en los archivos de recursos, donde pueden editar los localizadores. A continuación, escribir código después de la `InitializeComponent` método para restablecer la fuente basada en cualquier fuente del formulario, pero usando el estilo de fuente especificado en el archivo de recursos.
 
 ```vb
 TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
@@ -86,5 +86,5 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
   
 ## <a name="see-also"></a>Vea también
 
-[Globalizar aplicaciones de Windows Forms](globalizing-windows-forms.md)  
-[Utilizar fuentes y texto](using-fonts-and-text.md)
+- [Globalizar aplicaciones de Windows Forms](globalizing-windows-forms.md)
+- [Utilizar fuentes y texto](using-fonts-and-text.md)

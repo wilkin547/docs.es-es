@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9812fa4248533ccb898c98082e42e288c091f776
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf70d8665d3984c379da9d9058cd97315def7b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677685"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next (Método)
-Obtiene el número de instancias de "ICorDebugType" especificada por `celt` de la enumeración, comenzando en la posición actual.  
+Obtiene el número de instancias de "ICorDebugType" especificado por `celt` de la enumeración, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,19 +43,19 @@ HRESULT Next (
  [in] El número de `ICorDebugType` instancias va a recuperar.  
   
  `values`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un `ICorDebugType` objeto.  
+ [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugType` objeto.  
   
  `pceltFetched`  
- [out] Puntero al número de `ICorDebugType` instancias realmente devueltos. Este valor puede ser null si `celt` es uno.  
+ [out] Puntero al número de `ICorDebugType` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- 
+## <a name="see-also"></a>Vea también
+

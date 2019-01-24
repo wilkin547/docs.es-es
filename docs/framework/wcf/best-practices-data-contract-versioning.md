@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos recomendados: Creación de versiones de contratos de datos'
+title: 'Procedimientos recomendados: Versiones de contratos de datos'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738357"
 ---
-# <a name="best-practices-data-contract-versioning"></a>Procedimientos recomendados: Creación de versiones de contratos de datos
-En este tema se enumeran los procedimientos recomendados para crear contratos de datos que pueden evolucionar con facilidad con el tiempo. Para obtener más información acerca de los contratos de datos, vea los temas de [usar contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+# <a name="best-practices-data-contract-versioning"></a>Procedimientos recomendados: Versiones de contratos de datos
+En este tema se enumeran los procedimientos recomendados para crear contratos de datos que pueden evolucionar con facilidad con el tiempo. Para obtener más información acerca de los contratos de datos, vea los temas de [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Aviso en validación del esquema  
- Tratar las versiones de contratos de datos, es importante tener en cuenta que el esquema de contrato de datos exportado por Windows Communication Foundation (WCF) no tiene ninguna compatibilidad de control de versiones, aparte del hecho de que los elementos se marcan como opcionales de forma predeterminada.  
+ Tratar las versiones de contratos de datos, es importante tener en cuenta que el esquema de contrato de datos exportado por Windows Communication Foundation (WCF) no tiene ninguna compatibilidad de versiones, aparte del hecho de que los elementos se marcan como opcionales de forma predeterminada.  
   
  Esto significa que no se puede implementar ni siquiera el escenario de versión más común, como agregar un nuevo miembro de datos, de un modo uniforme con respecto a un esquema determinado. Las versiones más recientes de un contrato de datos (con un nuevo miembro de datos, por ejemplo) no se validan mediante el esquema anterior.  
   
- Sin embargo, hay muchos escenarios en los cuales no se requiere compatibilidad de esquema estricta. Muchas plataformas de servicios Web, incluidos WCF y servicios Web XML creados con ASP.NET, no realizan validación de esquema de forma predeterminada y, por tanto, toleran elementos adicionales que no se describen en el esquema. Cuando se trabaja con estas plataformas, muchos escenarios de versión son más fáciles de implementar.  
+ Sin embargo, hay muchos escenarios en los cuales no se requiere compatibilidad de esquema estricta. Muchas plataformas de servicios Web, incluidos WCF y servicios Web XML creados con ASP.NET, no realizar la validación de esquema de forma predeterminada y, por tanto, toleran elementos adicionales que no se describen en el esquema. Cuando se trabaja con estas plataformas, muchos escenarios de versión son más fáciles de implementar.  
   
  De este modo, hay dos conjuntos de instrucciones de versión de contrato de datos: uno establecido para escenarios donde la validez estricta del esquema es importante, y otro conjunto para los escenarios cuando no lo es.  
   
@@ -35,9 +35,9 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
   
  Aunque en estos nombres de ejemplos se cambian (anexando un "2"), la recomendación es cambiar los espacios de nombres en lugar de los nombres anexando los nuevos espacios de nombres con un número de versión o una fecha. Por ejemplo, el contrato de datos `http://schemas.contoso.com/2005/05/21/PurchaseOrder` cambiaría al contrato de datos `http://schemas.contoso.com/2005/10/14/PurchaseOrder`.  
   
- Para obtener más información, vea prácticas recomendadas: [versiones del servicio](../../../docs/framework/wcf/service-versioning.md).  
+ Para obtener más información, consulte los procedimientos recomendados: [Versión del servicio](../../../docs/framework/wcf/service-versioning.md).  
   
- En algunos casos, debe garantizar la compatibilidad estricta del esquema para los mensajes enviados por su aplicación, pero no puede confiar en que los mensajes entrantes sean estrictamente conformes al esquema. En este caso, existe el peligro de que un mensaje entrante pueda contener datos extraños. Los valores extraños se almacenan y devueltos por WCF y, por tanto, da lugar a mensajes de esquema no válida que se envían. Para evitar este problema, la característica de ida y vuelta debería estar desactivada. Existen dos formas de lograr esto.  
+ En algunos casos, debe garantizar la compatibilidad estricta del esquema para los mensajes enviados por su aplicación, pero no puede confiar en que los mensajes entrantes sean estrictamente conformes al esquema. En este caso, existe el peligro de que un mensaje entrante pueda contener datos extraños. Los valores extraños se almacenan y devueltos por WCF y, por tanto, los resultados en el envío de mensajes de esquema no válida. Para evitar este problema, la característica de ida y vuelta debería estar desactivada. Existen dos formas de lograr esto.  
   
 -   No implemente la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject> en ninguno de sus tipos.  
   
@@ -46,7 +46,7 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
  Para obtener más información acerca de ida y vuelta, vea [contratos de datos compatibles con el reenvío](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Controlar versiones cuando se requiere la validación del esquema  
- En raras ocasiones se requiere compatibilidad estricta de esquema. Muchas plataformas toleran elementos adicionales no descritos por un esquema. Esto es tolerado, siempre y cuando el conjunto completo de características se describe en [versiones de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) y [contratos de datos compatibles con el reenvío](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) puede utilizarse. A continuación se indican algunas instrucciones recomendadas:  
+ En raras ocasiones se requiere compatibilidad estricta de esquema. Muchas plataformas toleran elementos adicionales no descritos por un esquema. Siempre que se tolere, se describe el conjunto completo de características en [versiones de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) y [contratos de datos compatibles con el reenvío](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) se puede usar. A continuación se indican algunas instrucciones recomendadas:  
   
  Algunas de las instrucciones se deben seguir con exactitud para enviar nuevas versiones de un tipo cuando se espera uno anterior o enviar uno anterior cuando se espera el nuevo. No se requieren otras instrucciones estrictamente, pero se enumeran aquí porque el futuro de versión del esquema puede afectar a.  
   
@@ -56,7 +56,7 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
   
 3.  Iniciándose con la primera versión de un contrato de datos, siempre implemente <xref:System.Runtime.Serialization.IExtensibleDataObject> para habilitar alrededor tropezando. Para obtener más información, vea [Forward-Compatible Data Contracts](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) (Contratos de datos compatibles con el reenvío). Si ha soltado una o más versiones de un tipo sin implementar esta interfaz, impleméntela en la versión siguiente del tipo.  
   
-4.  En versiones posteriores, no cambie el nombre de contrato de datos o espacio de nombres. Si cambia el nombre o espacio de nombres del tipo subyacente al contrato de datos, asegúrese de conservar el nombre de contrato de datos y espacio de nombres utilizando los mecanismos adecuados, como la propiedad <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> de <xref:System.Runtime.Serialization.DataContractAttribute>. Para obtener más información sobre la nomenclatura de, consulte [nombres de contrato de datos](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  En versiones posteriores, no cambie el nombre de contrato de datos o espacio de nombres. Si cambia el nombre o espacio de nombres del tipo subyacente al contrato de datos, asegúrese de conservar el nombre de contrato de datos y espacio de nombres utilizando los mecanismos adecuados, como la propiedad <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> de <xref:System.Runtime.Serialization.DataContractAttribute>. Para obtener más información sobre la nomenclatura, consulte [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
 5.  En versiones posteriores, no cambie los nombres de ningún miembro de datos. Si cambia el nombre del campo, propiedad o evento subyacente al miembro de datos, utilice la propiedad `Name` de <xref:System.Runtime.Serialization.DataMemberAttribute> para conservar el nombre del miembro de datos existente.  
   
@@ -70,7 +70,7 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
   
     2.  Si el miembro no acepta el valor predeterminado `null` o cero, se debería proporcionar un método de devolución de llamada mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> para proporcionar un valor predeterminado razonable en caso de que el miembro no se encuentre en la secuencia de entrada. Para obtener más información acerca de la devolución de llamada, vea [devoluciones de llamada de serialización tolerante a versiones](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  La propiedad `Order` en `DataMemberAttribute` se debería utilizar para asegurarse de que todos los miembros de datos recientemente agregados aparecen después de los miembros de datos existentes. Para hacerlo, se recomienda lo siguiente: Ninguno de los miembros de datos en la primera versión del contrato de datos debería tener su propiedad `Order` establecida. Todos los miembros de datos agregados en la versión 2 del contrato de datos deberían tener su propiedad `Order` establecida en 2. Todos los miembros de datos agregados en la versión 3 del contrato de datos deberían tener su propiedad `Order` establecida en 3, etc. Se permite tener más de un miembro de datos establecido en el mismo número de `Order`.  
+    3.  La propiedad `Order` en `DataMemberAttribute` se debería utilizar para asegurarse de que todos los miembros de datos recientemente agregados aparecen después de los miembros de datos existentes. La manera recomendada de hacerlo es como sigue: Ninguno de los miembros de datos en la primera versión del contrato de datos debe tener su `Order` conjunto de propiedades. Todos los miembros de datos agregados en la versión 2 del contrato de datos deberían tener su propiedad `Order` establecida en 2. Todos los miembros de datos agregados en la versión 3 del contrato de datos deberían tener su propiedad `Order` establecida en 3, etc. Se permite tener más de un miembro de datos establecido en el mismo número de `Order`.  
   
 9. No quite los miembros de datos en versiones posteriores, ni siquiera si la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> se dejó en su propiedad predeterminada de `false` en versiones anteriores.  
   
@@ -86,22 +86,22 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
   
 14. No debería agregar o quitar los miembros de enumeración entre las versiones. Tampoco debería cambiar el nombre de los miembros de la enumeración, a menos que use la propiedad Name en el atributo `EnumMemberAttribute` para mantener iguales sus nombres en el modelo del contrato de datos.  
   
-15. Las colecciones son intercambiables en el modelo de contrato de datos, como se describe en [tipos de colección en contratos de datos](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Esto permite un gran grado de flexibilidad. Sin embargo, asegúrese de que no cambia inadvertidamente un tipo de colección de una manera no intercambiable entre versiones. Por ejemplo, no cambie de una colección no personalizada (es decir, sin el atributo `CollectionDataContractAttribute` ) a una personalizada o una colección personalizada a una no personalizada. Tampoco cambie las propiedades de `CollectionDataContractAttribute` entre las versiones. El único cambio permitido es agregar una propiedad Name o Namespace si el nombre del tipo de colección subyacente o el espacio de nombres ha cambiado y necesita cambiar su nombre de contrato de datos y espacio de nombres al mismo nombre que en una versión anterior.  
+15. Las colecciones son intercambiables en el modelo de contrato de datos, como se describe en [tipos de colección de contratos de datos](../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Esto permite un gran grado de flexibilidad. Sin embargo, asegúrese de que no cambia inadvertidamente un tipo de colección de una manera no intercambiable entre versiones. Por ejemplo, no cambie de una colección no personalizada (es decir, sin el atributo `CollectionDataContractAttribute` ) a una personalizada o una colección personalizada a una no personalizada. Tampoco cambie las propiedades de `CollectionDataContractAttribute` entre las versiones. El único cambio permitido es agregar una propiedad Name o Namespace si el nombre del tipo de colección subyacente o el espacio de nombres ha cambiado y necesita cambiar su nombre de contrato de datos y espacio de nombres al mismo nombre que en una versión anterior.  
   
  Se pueden omitir algunas de las instrucciones enumeradas aquí sin ningún riesgo cuando se aplican circunstancias especiales. Asegúrese de que entiende totalmente la serialización, deserialización y mecanismos de esquema implicados en caso de no cumplir las instrucciones.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- [Utilización de contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Versiones de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Nombres de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Contratos de datos compatibles con el reenvío](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [Devoluciones de llamadas en la serialización tolerante a versiones](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- [Utilización de contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Versiones de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Nombres de contratos de datos](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Contratos de datos compatibles con el reenvío](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Devoluciones de llamadas en la serialización tolerante a versiones](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

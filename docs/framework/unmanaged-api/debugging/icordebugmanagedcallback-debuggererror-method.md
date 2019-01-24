@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436be84ad91bb20bfd88a51f2d6c2b760c4a4c3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 31a554fc57611f4abd5322fdc0c147e5dc110fb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654950"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError (Método)
 Notifica al depurador que se ha producido un error al intentar controlar un evento de common language runtime (CLR).  
@@ -39,7 +39,7 @@ HRESULT DebuggerError (
   
 #### <a name="parameters"></a>Parámetros  
  `pProcess`  
- [in] Un puntero a un objeto de "ICorDebugProcess" que representa el proceso en el que se produjo el evento.  
+ [in] Un puntero a un objeto "ICorDebugProcess" que representa el proceso en el que se produjo el evento.  
   
  `errorHR`  
  [in] El valor HRESULT que se devolvió desde el controlador de eventos.  
@@ -48,18 +48,18 @@ HRESULT DebuggerError (
  [in] Un entero que especifica el error CLR.  
   
 ## <a name="remarks"></a>Comentarios  
- El proceso se puede colocar en el modo de acceso directo, dependiendo de la naturaleza del error.  
+ El proceso puede colocarse en modo paso a través, según la naturaleza del error.  
   
- El `DebugError` devolución de llamada indica que los servicios de depuración se han deshabilitado debido a un error, por lo que los depuradores deben hacer que el mensaje de error disponible para el usuario. [ICorDebugProcess:: GetId](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) sea segura para la llamada, pero todos los demás métodos, incluidos los [ICorDebug:: Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), no debe llamarse. El depurador debe utilizar funciones del sistema operativo para finalizar los procesos.  
+ El `DebugError` devolución de llamada indica que se han deshabilitado los servicios de depuración debido a un error, por lo que los depuradores deben hacer que el mensaje de error disponible para el usuario. [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) sea segura para la llamada, pero todos los demás métodos, incluidos [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), no debe llamarse. El depurador debe usar las funciones del sistema operativo para terminar procesos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

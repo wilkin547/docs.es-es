@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643395"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter (Método)
-Define un único parámetro del método actual. El tipo de parámetro se toma de la posición del parámetro (secuencia) dentro de la firma del método.  
+Define un único parámetro del método actual. El tipo de parámetro procede de la posición del parámetro (secuencia) dentro de la firma del método.  
   
- Si los parámetros se definen en los metadatos de un método determinado, no tiene que volver a definirlos mediante este método. Los lectores de símbolos deben comprobar los metadatos para los parámetros normales antes de comprobar el almacén de símbolos.  
+ Si los parámetros se definen en los metadatos de un método determinado, no tiene que definir de nuevo mediante el uso de este método. Los lectores de símbolos deben comprobar los metadatos para los parámetros normales antes de comprobar el almacén de símbolos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,19 +56,19 @@ HRESULT DefineParameter(
  [in] El tipo de dirección.  
   
  `addr1`  
- [in] La primera dirección para la especificación de parámetros.  
+ [in] La primera dirección de la especificación de parámetro.  
   
  `addr2`  
- [in] La segunda dirección para la especificación de parámetros.  
+ [in] La segunda dirección de la especificación de parámetro.  
   
  `addr3`  
- [in] La tercera dirección de la especificación de parámetros.  
+ [in] Tercera dirección de la especificación de parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Aplicar transformaciones a texto'
+title: Procedimiento Aplicar transformaciones a texto
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], rotated text
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: 531537013ab3bbfba278ca63e14155341eefc826
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7737a2e01ddfe2a639426bbced643d8f78961207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740555"
 ---
-# <a name="how-to-apply-transforms-to-text"></a>Cómo: Aplicar transformaciones a texto
-Las transformaciones pueden modificar la presentación del texto en la aplicación. Los ejemplos siguientes usan diferentes tipos de representación de las transformaciones que afectan a la presentación del texto de un <xref:System.Windows.Controls.TextBlock> control.  
+# <a name="how-to-apply-transforms-to-text"></a>Procedimiento Aplicar transformaciones a texto
+Las transformaciones pueden modificar la presentación del texto en la aplicación. Los ejemplos siguientes usan diferentes tipos de transformaciones de representación para influir en la presentación del texto en un <xref:System.Windows.Controls.TextBlock> control.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra el texto girado sobre un punto especificado en el plano x-y bidimensional.  
@@ -37,10 +37,10 @@ Ejemplo de texto girado 90 grados
   
  En el ejemplo siguiente se muestra la segunda línea de texto escalada al 150 % a lo largo del eje X y la tercera línea de texto escalada al 150 % a lo largo del eje Y.  
   
- ![Texto con escala ajustada usando ScaleTransform](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")  
+ ![Texto escalado mediante ScaleTransform](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")  
 Ejemplo de texto escalado  
   
- El siguiente ejemplo de código utiliza un <xref:System.Windows.Media.ScaleTransform> al texto de la escala de su tamaño original.  
+ El siguiente ejemplo de código utiliza un <xref:System.Windows.Media.ScaleTransform> para escalar el texto de su tamaño original.  
   
  [!code-xaml[TextTransformSample#TextTransformSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
@@ -66,7 +66,7 @@ Ejemplo de texto trasladado
  [!code-xaml[TextTransformSample#TextTransformSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  El <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> proporciona un amplio conjunto de características para ofrecer efectos de sombra. Para obtener más información, consulte [crear texto con una sombra](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md).  
+>  El <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> proporciona un amplio conjunto de características para ofrecer efectos de sombra. Para obtener más información, consulte [crear texto con sombreado](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md).  
   
-## <a name="see-also"></a>Vea también  
- [Aplicar animaciones a texto](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)
+## <a name="see-also"></a>Vea también
+- [Aplicar animaciones a texto](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)

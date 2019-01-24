@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641335"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType (Enumeración)
 Proporciona valores que indican el tipo vinculado en código nativo.  
@@ -44,21 +44,21 @@ typedef enum
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`nltNone`|Indica que no se especifica ninguna de las palabras clave.|  
-|`nltAnsi`|Indica que se ha especificado una palabra clave ANSI.|  
-|`nltUnicode`|Indica que se ha especificado una palabra clave Unicode|  
-|`nltAuto`|Indica que se ha especificado una palabra clave auto.|  
-|`nltOle`|Indica que se ha especificado una palabra clave OLE.|  
-|`nltMaxValue`|No usado.|  
+|`nltNone`|Indica que se especifica ninguna de las palabras clave.|  
+|`nltAnsi`|Indica que se especifica una palabra clave ANSI.|  
+|`nltUnicode`|Indica que se especifica una palabra clave de Unicode|  
+|`nltAuto`|Indica que se especifica una palabra clave auto.|  
+|`nltOle`|Indica que se especifica una palabra clave OLE.|  
+|`nltMaxValue`|No se utiliza.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 911d0d1444e2cf3cb8241eeeff63a5a86b4ab806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bcf1dca8799ac082c025e602e5d82c99d42650d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659610"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps (Método)
-Obtiene el conjunto de propiedades para el ensamblado con la firma de metadatos especificados.  
+Obtiene el conjunto de propiedades para el ensamblado con la firma de metadatos especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +45,7 @@ HRESULT GetAssemblyProps (
   
 #### <a name="parameters"></a>Parámetros  
  `mda`  
- [in]. El `mdAssembly` símbolo (token) de metadatos que representa el ensamblado para el que se va a obtener las propiedades.  
+ [in]. El `mdAssembly` token de metadatos que representa el ensamblado que se va a obtener las propiedades.  
   
  `ppbPublicKey`  
  [out] Un puntero a la clave pública o el token de metadatos.  
@@ -54,10 +54,10 @@ HRESULT GetAssemblyProps (
  [out] El número de bytes de la clave pública devuelta.  
   
  `pulHashAlgId`  
- [out] Un puntero al algoritmo utilizado para resumir los archivos en el ensamblado.  
+ [out] Un puntero para el algoritmo de hash de los archivos en el ensamblado.  
   
  `szName`  
- [out] El nombre simple del ensamblado.  
+ [out] El nombre sencillo del ensamblado.  
   
  `cchName`  
  [in] El tamaño, en caracteres anchos, de `szName`.  
@@ -72,13 +72,13 @@ HRESULT GetAssemblyProps (
  [out] Marcas que describen los metadatos aplicados a un ensamblado. Este valor es una combinación de uno o varios [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

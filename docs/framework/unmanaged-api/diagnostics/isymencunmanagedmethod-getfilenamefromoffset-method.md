@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db3e9cfa73672920ff70d9128541a8f513fca00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0582714c157de69293eb1e8dfa40e0cd2f44cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621203"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset (Método)
 Obtiene el nombre de archivo de la línea asociada con un desplazamiento.  
@@ -43,7 +43,7 @@ HRESULT GetFileNameFromOffset(
  [in] Un `ULONG32` que contiene el desplazamiento.  
   
  `cchName`  
- [in] A `ULONG32` que indica el tamaño de la `szName` búfer.  
+ [in] Un `ULONG32` que indica el tamaño de la `szName` búfer.  
   
  `pcchName`  
  [out] Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener los nombres de archivo.  
@@ -52,10 +52,10 @@ HRESULT GetFileNameFromOffset(
  [out] Búfer que contiene los nombres de archivo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

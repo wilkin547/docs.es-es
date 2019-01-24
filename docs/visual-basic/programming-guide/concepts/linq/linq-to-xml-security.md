@@ -2,12 +2,12 @@
 title: LINQ to XML seguridad (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
-ms.openlocfilehash: 3f75377502b30b03090bb2a5fe720faf4e12a028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d15c6f88f0fb511e401a0896f92c894e3742061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505830"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML seguridad (Visual Basic)
 Este tema describe los problemas de seguridad asociados a LINQ to XML. Además, proporciona algunas indicaciones para reducir la exposición a esos problemas de seguridad.  
@@ -99,5 +99,5 @@ Este tema describe los problemas de seguridad asociados a LINQ to XML. Además, 
   
  Common Language Runtime (CLR) proporciona cierta seguridad. Por ejemplo, un componente que no incluye una clase privada no puede tener acceso a anotaciones con claves creadas por esa clase. No obstante, las anotaciones pueden ser eliminadas por componentes que no las leen. Esto se podría usar como ataque de manipulación.  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+- [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

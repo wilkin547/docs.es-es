@@ -9,28 +9,28 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 00ae32ff394b1ce2acb38fb237527e934934b935
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d215d4b8adcf3e4892c00be1629f92b657496780
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705315"
 ---
 # <a name="data-contract-known-types"></a>Tipos conocidos de contratos de datos
 La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite especificar, de antemano, los tipos que deberían tenerse en cuenta durante la deserialización. Para ver un ejemplo ilustrativo, consulte el ejemplo [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
   
  Normalmente, al pasar parámetros y valores devueltos entre un cliente y un servicio, ambos extremos comparten todos los contratos de datos de los datos que se van a transmitir. Sin embargo, éste no es el caso en las siguientes circunstancias:  
   
--   El contrato de datos enviados se deriva del contrato de datos esperados. Para obtener más información, vea la sección acerca de la herencia en [equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). En ese caso, los datos transmitidos no tienen el mismo contrato de datos que espera el extremo receptor.  
+-   El contrato de datos enviados se deriva del contrato de datos esperados. Para obtener más información, vea la sección sobre herencia en [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). En ese caso, los datos transmitidos no tienen el mismo contrato de datos que espera el extremo receptor.  
   
 -   El tipo declarado de la información que se va a transmitir es una interfaz, en lugar de una clase, estructura o enumeración. En consecuencia, no se puede saber por adelantado qué tipo que implementa la interfaz se envía realmente y, por consiguiente, el extremo receptor no puede determinar de antemano el contrato de datos para los datos transmitidos.  
   
--   El tipo declarado de la información que se va a transmitir es <xref:System.Object>. Puesto que cada tipo hereda de <xref:System.Object>, y no se puede conocer de antemano qué tipo se envía realmente, el extremo receptor no puede determinar de antemano el contrato de datos para los datos transmitidos. Éste es un caso especial del primer elemento: cada contrato de datos se deriva del valor predeterminado, un contrato de datos en blanco que se genera para <xref:System.Object>.  
+-   El tipo declarado de la información que se va a transmitir es <xref:System.Object>. Puesto que cada tipo hereda de <xref:System.Object>, y no se puede conocer de antemano qué tipo se envía realmente, el extremo receptor no puede determinar de antemano el contrato de datos para los datos transmitidos. Este es un caso especial del primer elemento: Cada contrato de datos se deriva del valor predeterminado, un contrato de datos en blanco que se genera para <xref:System.Object>.  
   
 -   Algunos tipos, entre los que se incluyen los tipos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , tienen miembros que se encuentran en una de las tres categorías anteriores. Por ejemplo, <xref:System.Collections.Hashtable> utiliza <xref:System.Object> para almacenar los objetos reales en la tabla hash. Al serializar estos tipos, el lado receptor no puede determinar de antemano el contrato de datos de estos miembros.  
   
 ## <a name="the-knowntypeattribute-class"></a>La clase KnownTypeAttribute  
- Cuando los datos llegan a un extremo receptor, el tiempo de ejecución WCF intenta deserializar los datos en una instancia de un tipo de common language runtime (CLR). El tipo del que se crea una instancia para la deserialización se elige inspeccionando primero el mensaje entrante para determinar el contrato de datos al que se ajusta el contenido del mensaje. El motor de deserialización intenta a continuación encontrar un tipo CLR que implemente un contrato de datos compatible con el contenido del mensaje. El conjunto de tipos de candidatos que admite el motor de deserialización durante este proceso se conoce como el conjunto del deserializador de "tipos conocidos."  
+ Cuando llegan datos a un extremo receptor, el tiempo de ejecución WCF intenta deserializar los datos en una instancia de un tipo de common language runtime (CLR). El tipo del que se crea una instancia para la deserialización se elige inspeccionando primero el mensaje entrante para determinar el contrato de datos al que se ajusta el contenido del mensaje. El motor de deserialización intenta a continuación encontrar un tipo CLR que implemente un contrato de datos compatible con el contenido del mensaje. El conjunto de tipos de candidatos que admite el motor de deserialización durante este proceso se conoce como el conjunto del deserializador de "tipos conocidos."  
   
  Una manera de permitir al motor de deserialización saber sobre un tipo consiste en utilizar el <xref:System.Runtime.Serialization.KnownTypeAttribute>. El atributo no se puede aplicar a miembros de datos individuales, solo a tipos de contrato de datos enteros. El atributo se aplica a un *tipo exterior* que puede ser una clase o una estructura. En su uso más básico, al aplicar el atributo, se especifica un tipo como "tipo conocido". Esto hace que el tipo conocido forme parte del conjunto de tipos conocidos siempre que se deserialice un objeto del tipo exterior o cualquier objeto al que se hace referencia a través de sus miembros. Se puede aplicar más de un atributo <xref:System.Runtime.Serialization.KnownTypeAttribute> al mismo tipo.  
   
@@ -100,7 +100,7 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
 ## <a name="known-types-using-open-generic-methods"></a>Tipos conocidos utilizando métodos genéricos abiertos  
  Puede que sea necesario agregar un tipo genérico como un tipo conocido. Sin embargo, un tipo genérico abierto no se puede pasar como un parámetro al atributo `KnownTypeAttribute` .  
   
- Este problema se puede resolver utilizando un mecanismo alternativo: Escriba un método que devuelva una lista de tipos que se han de agregar a la colección de tipos conocidos. El nombre del método se especifica a continuación como un argumento de cadena al atributo `KnownTypeAttribute` debido a algunas restricciones.  
+ Este problema puede resolverse mediante el uso de un mecanismo alternativo: Escribir un método que devuelve una lista de tipos para agregar a la colección de tipos conocidos. El nombre del método se especifica a continuación como un argumento de cadena al atributo `KnownTypeAttribute` debido a algunas restricciones.  
   
  El método debe existir en el tipo al que se aplica el atributo `KnownTypeAttribute` , debe ser estático, no debe aceptar parámetros y debe devolver un objeto que se pueda asignar a <xref:System.Collections.IEnumerable> de <xref:System.Type>.  
   
@@ -131,7 +131,7 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>Maneras adicionales de agregar tipos conocidos  
- Además, los tipos conocidos se pueden agregar a través de un archivo de configuración. Esto es útil cuando no se controla el tipo que requiere tipos conocidos para la correcta deserialización, como cuando se usan aplicaciones de terceros tipos bibliotecas con Windows Communication Foundation (WCF).  
+ Además, los tipos conocidos se pueden agregar a través de un archivo de configuración. Esto es útil cuando no pueda controlar el tipo que requiere tipos conocidos para la correcta deserialización, como cuando con terceros escriba bibliotecas con Windows Communication Foundation (WCF).  
   
  En el archivo de configuración siguiente se observa cómo se especifica un tipo conocido en un archivo de configuración.  
   
@@ -167,12 +167,12 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
   
  En el archivo de configuración anterior, se declara que un tipo de contrato de datos denominado `MyCompany.Library.Shape` tiene `MyCompany.Library.Circle` como tipo conocido.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.KnownTypeAttribute>  
- <xref:System.Collections.Hashtable>  
- <xref:System.Object>  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>  
- [Tipos conocidos](../../../../docs/framework/wcf/samples/known-types.md)  
- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Diseño de contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.KnownTypeAttribute>
+- <xref:System.Collections.Hashtable>
+- <xref:System.Object>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
+- [Tipos conocidos](../../../../docs/framework/wcf/samples/known-types.md)
+- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Diseño de contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md)

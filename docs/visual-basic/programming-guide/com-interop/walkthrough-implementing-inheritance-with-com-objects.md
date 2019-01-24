@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: e99deb2ea5e8acd5e1e07adffe29d35e2624b27e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648211"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Tutorial: Implementar la herencia mediante objetos COM (Visual Basic)
 Puede derivar clases de Visual Basic desde `Public` clases de objetos COM, incluso los creados en versiones anteriores de Visual Basic. Las propiedades y métodos de clases que heredan de los objetos COM pueden ser invalidados o sobrecargados solo como propiedades y métodos de cualquier otra clase base pueden ser invalidados o sobrecargados. Herencia de objetos COM resulta útil cuando tiene una biblioteca de clases que no desea volver a compilar.  
@@ -129,7 +129,7 @@ Puede derivar clases de Visual Basic desde `Public` clases de objetos COM, inclu
   
 -   Las propiedades que usan `ByRef` no se puede invalidar los parámetros.  
   
-## <a name="see-also"></a>Vea también  
- [Interoperabilidad COM en aplicaciones .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [Short (tipo de datos)](../../../visual-basic/language-reference/data-types/short-data-type.md)
+## <a name="see-also"></a>Vea también
+- [Interoperabilidad COM en aplicaciones .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Short (tipo de datos)](../../../visual-basic/language-reference/data-types/short-data-type.md)

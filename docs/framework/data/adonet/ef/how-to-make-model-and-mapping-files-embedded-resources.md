@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Hacer que los archivos de asignación y de modelo sean recursos incrustados'
+title: Procedimiento Asegúrese de modelo y asignación de los recursos incrustados de archivos
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 35507f92d0ba9f434156773c8dc5621ed3c423c0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0fd7e4fe751fd05a8b48f3dee79d374f669917fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660351"
 ---
-# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Cómo: Hacer que los archivos de asignación y de modelo sean recursos incrustados
+# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Procedimiento Asegúrese de modelo y asignación de los recursos incrustados de archivos
 El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite implementar los archivos de asignación y modelo como recursos incrustados de una aplicación. El ensamblado con los archivos de asignación y de modelo incrustados se debe cargar en el mismo dominio de aplicación que la conexión de entidad. Para más información, consulte [Cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md). De forma predeterminada, las herramientas de [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] incrustan los archivos de asignación y de modelo. Cuando defina los archivos de asignación y de modelo manualmente, use este procedimiento para asegurarse de que dichos archivos se implementan como recursos incrustados junto con una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
@@ -38,8 +38,8 @@ El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite imp
   
   
   
-## <a name="see-also"></a>Vea también  
- [Modelado y asignación](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
- [Definición de la cadena de conexión](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
- [Compilación de una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
- [Herramientas de Entity Data Model de ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>Vea también
+- [Modelado y asignación](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [Cómo: Definir la cadena de conexión](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
+- [Cómo: Compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
+- [Herramientas de Entity Data Model de ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
