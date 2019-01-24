@@ -2,20 +2,20 @@
 title: System.ServiceModel.CommunicationObjectOpened
 ms.date: 03/30/2017
 ms.assetid: 431ccb35-b593-4157-8e4d-f20e579630fd
-ms.openlocfilehash: e011fd6992e1975e56c2168c79cf5f11001974ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c614f41e46463a088b4332b16eb842b9056d7f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33479283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585099"
 ---
-# <a name="systemservicemodelcommunicationobjectopened"></a><span data-ttu-id="3d5b3-102">System.ServiceModel.CommunicationObjectOpened</span><span class="sxs-lookup"><span data-stu-id="3d5b3-102">System.ServiceModel.CommunicationObjectOpened</span></span>
-<span data-ttu-id="3d5b3-103">System.ServiceModel.CommunicationObjectOpened</span><span class="sxs-lookup"><span data-stu-id="3d5b3-103">System.ServiceModel.CommunicationObjectOpened</span></span>  
+# <a name="systemservicemodelcommunicationobjectopened"></a><span data-ttu-id="9e22c-102">System.ServiceModel.CommunicationObjectOpened</span><span class="sxs-lookup"><span data-stu-id="9e22c-102">System.ServiceModel.CommunicationObjectOpened</span></span>
+<span data-ttu-id="9e22c-103">System.ServiceModel.CommunicationObjectOpened</span><span class="sxs-lookup"><span data-stu-id="9e22c-103">System.ServiceModel.CommunicationObjectOpened</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3d5b3-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="3d5b3-104">Description</span></span>  
- <span data-ttu-id="3d5b3-105">Se abrió un objeto de comunicación.</span><span class="sxs-lookup"><span data-stu-id="3d5b3-105">A communication object was opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="9e22c-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="9e22c-104">Description</span></span>  
+ <span data-ttu-id="9e22c-105">Se abrió un objeto de comunicación.</span><span class="sxs-lookup"><span data-stu-id="9e22c-105">A communication object was opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d5b3-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="3d5b3-106">See Also</span></span>  
- [<span data-ttu-id="3d5b3-107">Traza</span><span class="sxs-lookup"><span data-stu-id="3d5b3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="3d5b3-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="3d5b3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="3d5b3-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="3d5b3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9e22c-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9e22c-106">See also</span></span>
+- [<span data-ttu-id="9e22c-107">Traza</span><span class="sxs-lookup"><span data-stu-id="9e22c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="9e22c-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="9e22c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="9e22c-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="9e22c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
