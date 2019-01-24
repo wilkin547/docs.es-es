@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Habilitar la técnica de arrastrar y colocar en un control de usuario'
+title: 'Tutorial: Lo que permite arrastrar y colocar en un Control de usuario'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600679"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Tutorial: Habilitar la técnica de arrastrar y colocar en un control de usuario
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Tutorial: Lo que permite arrastrar y colocar en un Control de usuario
 
 En este tutorial se muestra cómo crear un control de usuario personalizado que pueda participar en la transferencia de datos de arrastrar y colocar en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 
@@ -38,7 +38,7 @@ Necesita Visual Studio para completar este tutorial.
 ## <a name="create-the-application-project"></a>Crear el proyecto de aplicación
  En esta sección, creará la infraestructura de aplicación, que incluye una página principal con dos paneles y un <xref:System.Windows.Controls.TextBox>.
 
-1.  Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `DragDropExample`. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
+1.  Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `DragDropExample`. Para obtener más información, vea [Cómo: Cree un nuevo proyecto de aplicación de WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
 
 2.  Abra MainWindow.xaml.
 

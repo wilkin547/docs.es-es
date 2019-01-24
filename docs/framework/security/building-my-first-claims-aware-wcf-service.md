@@ -3,12 +3,12 @@ title: Compilación del primer servicio WCF para notificaciones
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: e6324087afa62f276766c733284dc69e425b89bc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599210"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Compilación del primer servicio WCF para notificaciones
 ## <a name="applies-to"></a>Se aplica a  
@@ -38,7 +38,7 @@ ms.locfileid: "48836238"
   
  AD FS 2.0 forma parte de Windows Server R2 y se puede usar como STS para escenarios locales. El control de acceso de Active Directory de Azure (también conocido como Servicio de control de acceso o ACS) es un servicio en la nube que se ofrece como parte de Microsoft Azure. Con fines de pruebas o educativos, también pueden usarse otros STS para compilar las aplicaciones compatibles con notificaciones. Por ejemplo, puede usar el STS de desarrollo Local que forma parte de la [Identity and Access Tool para Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) que está disponible de forma gratuita en línea.  
   
- Para crear su primer servicio WCF para notificaciones mediante WIF, consulte [How To: habilitar WIF para una aplicación de servicio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Para crear su primer servicio WCF para notificaciones mediante WIF, consulte [How To: Habilitar WIF para una aplicación de servicio Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
-## <a name="see-also"></a>Vea también  
- [Introducción a WIF](../../../docs/framework/security/getting-started-with-wif.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a WIF](../../../docs/framework/security/getting-started-with-wif.md)

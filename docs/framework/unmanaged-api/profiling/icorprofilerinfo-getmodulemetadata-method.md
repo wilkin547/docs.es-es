@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2491b700e8fac512f0d782a42e30ae3114e93c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1663a36ab36980af709a861b3fb0666be6fecdfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607480"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData (Método)
 Obtiene una instancia de la interfaz de metadatos que se asigna para el módulo especificado.  
@@ -45,24 +45,24 @@ HRESULT GetModuleMetaData(
  [in] Un valor de la [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeración que especifica el modo de abrir archivos de manifiesto. Solo el `ofRead`, `ofWrite` y `ofNoTransform` bits son válidos.  
   
  `riid`  
- [in] La referencia del identificador (GUID) de la interfaz de metadatos cuya instancia se va a recuperar. Vea [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) para obtener una lista de las interfaces.  
+ [in] La referencia de identificador (GUID) de la interfaz de metadatos cuya instancia se va a recuperar. Consulte [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) para obtener una lista de las interfaces.  
   
  `ppOut`  
  [out] Un puntero a la dirección de la instancia de la interfaz de metadatos.  
   
 ## <a name="remarks"></a>Comentarios  
- Se puede pedir a los metadatos que se abrirá en modo de lectura/escritura, pero esto dará como resultado de una ejecución más lenta de metadatos del programa, porque los cambios realizan en los metadatos no se puede optimizar como si fueran del compilador.  
+ Puede solicitar los metadatos que se abrirá en modo de lectura/escritura, pero esto dará como resultado una ejecución más lenta de los metadatos del programa, porque los cambios realizan en los metadatos no se puede optimizar como si fueran del compilador.  
   
  Algunos módulos (por ejemplo, los módulos de recursos) no tienen metadatos. En esos casos, `GetModuleMetaData` devolverá un valor HRESULT de S_FALSE y un valor null en *`ppOut`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

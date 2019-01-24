@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf92749e1139a85ea2f49fb5d5caff69ce39c24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4383bf8b7369f5906fe4664056f1cd938f04584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607545"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 (Método)
-Notifica al generador de perfiles acerca de las referencias de raíz después de que se ha producido una colección de elementos no utilizados. Este método es una extensión de la [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) método.  
+Notifica al generador de perfiles sobre las referencias de raíz después de que se ha producido una recolección de elementos. Este método es una extensión de la [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ HRESULT RootReferences2(
  [in] El número de elementos de la `rootRefIds`, `rootKinds`, `rootFlags`, y `rootIds` matrices.  
   
  `rootRefIds`  
- [in] Una matriz de identificadores de objeto, cada uno de los cuales hace referencia a un objeto estático o un objeto en la pila. Elementos de la `rootKinds` matriz proporcionan información para clasificar los elementos correspondientes de la `rootRefIds` matriz.  
+ [in] Una matriz de identificadores de objeto, cada uno de los cuales hace referencia a un objeto estático o un objeto en la pila. Elementos de la `rootKinds` matriz proporcionan información para clasificar los elementos correspondientes en el `rootRefIds` matriz.  
   
  `rootKinds`  
  [in] Una matriz de [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) valores que indican el tipo de la raíz de la colección de elementos no utilizados.  
@@ -52,28 +52,28 @@ HRESULT RootReferences2(
  [in] Una matriz de [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) valores que describen las propiedades de una raíz de la colección de elementos no utilizados.  
   
  `rootIds`  
- [in] Una matriz de UINT_PTR valores que señalan a un entero que contiene información adicional sobre la raíz de la colección de elementos no utilizados, dependiendo del valor de la `rootKinds` parámetro.  
+ [in] Matriz de UINT_PTR valores que señalan a un entero que contiene información adicional acerca de la raíz de la colección de elementos no utilizados, dependiendo del valor de la `rootKinds` parámetro.  
   
- Si el tipo de la raíz es una pila, el identificador de la raíz es para la función que contiene la variable. Si ese identificador de raíz es 0, la función es una función sin nombre que es interna al CLR. Si el tipo de la raíz es un identificador, el identificador de la raíz es para el identificador de la colección de elementos no utilizados. Para los demás tipos de raíz, el identificador es un valor opaco y debe omitirse.  
+ Si el tipo de la raíz es una pila, es el identificador de la raíz de la función que contiene la variable. Si ese identificador de la raíz es 0, la función es una función sin nombre que es interna al CLR. Si el tipo de la raíz es un identificador, el identificador de la raíz es para el identificador de la colección de elementos no utilizados. Para los tipos de raíz, el identificador es un valor opaco y debe omitirse.  
   
 ## <a name="remarks"></a>Comentarios  
  El `rootRefIds`, `rootKinds`, `rootFlags`, y `rootIds` son matrices paralelas. Es decir, `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, y `rootIds[i]` hacen referencia a la misma raíz.  
   
- Ambos `RootReferences` y `RootReferences2` se llama para notificar al generador de perfiles. Los generadores de perfiles normalmente implementará un método o el otro, pero no a ambos, porque la información que se pasa en `RootReferences2` es un supraconjunto de la que se pasan en `RootReferences`.  
+ Ambos `RootReferences` y `RootReferences2` se llama para notificar al generador de perfiles. Los generadores de perfiles normalmente implementarán un método o la otra, pero no ambos, porque la información pasada `RootReferences2` es un superconjunto de las que pasa `RootReferences`.  
   
  Es posible que las entradas de `rootRefIds` sea cero, lo que implica que la referencia de raíz correspondiente es null y no hace referencia a un objeto en el montón administrado.  
   
- Los identificadores de objeto devuelven por `RootReferences2` no son válidos durante la devolución de llamada, porque la colección de elementos no utilizados puede estar en el proceso de mover objetos de direcciones antiguas a nuevas direcciones. Por lo tanto, los generadores de perfiles no deben intentar inspeccionar objetos durante una llamada a `RootReferences2`. Cuando [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) es llama, todos los objetos que se han movido a sus nuevas ubicaciones y se puede inspeccionar con seguridad.  
+ Los identificadores de objeto devuelven por `RootReferences2` no son válidos durante la devolución de llamada, porque podría ser la recolección de elementos en medio de mover objetos de direcciones antiguas a nuevas direcciones. Por lo tanto, los generadores de perfiles no deben intentar inspeccionar objetos durante una llamada a `RootReferences2`. Cuando [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) es llamado, todos los objetos se han movido a sus nuevas ubicaciones y se pueden inspeccionar de manera segura.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

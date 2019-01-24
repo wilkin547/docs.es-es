@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604410"
 ---
 # <a name="principal-and-identity-objects"></a>Objetos Principal e Identity
 Código administrado puede detectar la identidad o el rol de una entidad de seguridad a través de un <xref:System.Security.Principal.IPrincipal> objeto, que contiene una referencia a un <xref:System.Security.Principal.IIdentity> objeto. La comparación de objetos Identity y Principal puede resultar útil en conceptos familiares, como cuentas de usuario y de grupo. En la mayoría de los entornos de red, las cuentas de usuario representan a personas o programas, mientras que las cuentas de grupo representan a ciertas categorías de usuarios y los derechos que poseen. De forma similar, los objetos Identity de .NET Framework representan a usuarios, mientras que los roles representan pertenencias y contextos de seguridad. En .NET Framework, el objeto Principal encapsula un objeto Identity y un rol. Las aplicaciones .NET Framework conceden derechos a la entidad de seguridad basándose en su identidad o, lo que es más normal, en su pertenencia a un rol.  
@@ -44,9 +44,9 @@ Código administrado puede detectar la identidad o el rol de una entidad de segu
   
 ## <a name="see-also"></a>Vea también
 
-- [Crear un objeto WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [Crear objetos GenericPrincipal y GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [Reemplazar un objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [Suplantar y revertir](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [Seguridad basada en roles](../../../docs/standard/security/role-based-security.md)  
+- [Cómo: Crear un objeto WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [Cómo: Crear objetos GenericPrincipal y GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [Reemplazar un objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)
+- [Suplantar y revertir](../../../docs/standard/security/impersonating-and-reverting.md)
+- [Seguridad basada en roles](../../../docs/standard/security/role-based-security.md)
 - [Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md)
