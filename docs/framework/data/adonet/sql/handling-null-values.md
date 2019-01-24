@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 039a6f5aab2f1b857f98803f8b3d6425cc549877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554691"
 ---
 # <a name="handling-null-values"></a>Controlar valores Null
 Los valores NULL se utilizan en bases de datos relacionales cuando el valor de una columna se desconoce o falta. Un NULL no es ni una cadena vacía (en los tipos de datos de caracteres o de fecha y hora) ni un valor cero (en los tipos de datos numéricos). La especificación ANSI SQL-92 afirma que un NULL debe ser igual en todos los tipos de datos; por lo tanto, todos los NULL se tratan de forma coherente. El espacio de nombres <xref:System.Data.SqlTypes> proporciona semántica para valores NULL mediante la implementación de la interfaz <xref:System.Data.SqlTypes.INullable>. Cada uno de los tipos de datos de <xref:System.Data.SqlTypes> tiene su propia propiedad  `IsNull` y un valor `Null` que se puede asignar a una instancia de ese tipo de datos.  
@@ -32,7 +32,7 @@ Los valores NULL se utilizan en bases de datos relacionales cuando el valor de u
 ## <a name="nulls-and-sqlboolean"></a>Valores NULL y SqlBoolean  
  La comparación entre cualquier <xref:System.Data.SqlTypes> devolverá un <xref:System.Data.SqlTypes.SqlBoolean>. La función `IsNull` de cada `SqlType` devuelve un <xref:System.Data.SqlTypes.SqlBoolean> y se puede utilizar para comprobar si hay valores NULL. En las siguientes tablas de tipo truth se muestra cómo funcionan los operadores AND, OR y NOT en presencia de un valor NULL. (T=true, F=false y U=unknown, o NULL.)  
   
- ![Tabla Truth](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Descripción de la opción ANSI_NULLS  
  <xref:System.Data.SqlTypes> proporciona la misma semántica que cuando se establece la opción ANSI_NULLS en ON en SQL Server. Todos los operadores aritméticos (+, -, *, /, %), operadores bit a bit (~ &, &#124;), y la mayoría de las funciones devuelve null si alguno de los operandos o argumentos es null, excepto la propiedad `IsNull`.  
@@ -141,6 +141,6 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Tipos de datos de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

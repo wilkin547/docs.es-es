@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565025"
 ---
 # <a name="end-of-statement-expected"></a>Se esperaba el fin de instrucción
 La instrucción es sintácticamente completa, pero un elemento de programación adicional sigue al elemento que se complete la instrucción. Falta un terminador de línea al final de cada instrucción.
@@ -27,6 +27,6 @@ La instrucción es sintácticamente completa, pero un elemento de programación 
   
 2.  Insertar un terminador de línea después del elemento que se complete la instrucción.
   
-## <a name="see-also"></a>Vea también  
- [Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
- [Instrucciones](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Instrucciones](../../../visual-basic/programming-guide/language-features/statements.md)

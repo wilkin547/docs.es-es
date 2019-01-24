@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: e8026cc7c122d37c135db28813353f7e37f200e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27cbacacefb64d3a9c0257011a188397e83b9186
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582050"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Todos los anchos de campo, excepto el último elemento, deben ser mayores que cero.
 Todos los anchos de campo, excepto el último elemento, deben ser mayores que cero. Un ancho de campo menor o igual que cero en el último elemento indica que el último campo es de longitud variable.  
@@ -20,8 +20,8 @@ Todos los anchos de campo, excepto el último elemento, deben ser mayores que ce
   
 -   Establezca el ancho de campo en la longitud correcta.  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths>  
- [Leer archivos de texto de ancho fijo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
- [TextFieldParser (objeto)](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths>
+- [Cómo: Leer archivos de texto de ancho fijo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [TextFieldParser (objeto)](../../visual-basic/language-reference/objects/textfieldparser-object.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Representar manualmente gráficos almacenados en búfer'
+title: Procedimiento Representar manualmente gráficos almacenados en búfer
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: ab0868e31ac8b010c662c04a7670e1ead19cebe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f901350b1cb63f385eba52665785c8d0f7fd7e5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636357"
 ---
-# <a name="how-to-manually-render-buffered-graphics"></a>Cómo: Representar manualmente gráficos almacenados en búfer
+# <a name="how-to-manually-render-buffered-graphics"></a>Procedimiento Representar manualmente gráficos almacenados en búfer
 Si administra sus propios gráficos almacenados en búfer, deberá poder crear y representar búferes de gráficos. Puede crear instancias de la clase <xref:System.Drawing.BufferedGraphics> que está asociada con las superficies de dibujo en pantalla mediante llamadas al método <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>. Este método crea una instancia <xref:System.Drawing.BufferedGraphics> que está asociada a una superficie de representación determinada, como un formulario o un control. Después de crear una instancia de <xref:System.Drawing.BufferedGraphics>, puede dibujar gráficos en el búfer que se representan mediante la propiedad <xref:System.Drawing.BufferedGraphics.Graphics%2A>. Después de haber realizado todas las operaciones de gráficos, puede copiar el contenido del búfer en la pantalla llamando al método <xref:System.Drawing.BufferedGraphics.Render%2A>.  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ Si administra sus propios gráficos almacenados en búfer, deberá poder crear y
   
 ### <a name="to-manually-display-buffered-graphics"></a>Para mostrar manualmente los gráficos almacenados en búfer  
   
-1.  Obtenga una referencia a una instancia de la clase <xref:System.Drawing.BufferedGraphicsContext>. Para obtener más información, consulte [Cómo: Manually Manage Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+1.  Obtenga una referencia a una instancia de la clase <xref:System.Drawing.BufferedGraphicsContext>. Para obtener más información, vea [Cómo: Administrar manualmente gráficos almacenados en búfer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
   
 2.  Cree una instancia de la clase <xref:System.Drawing.BufferedGraphics> llamando al método <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>, tal y como se muestra en el ejemplo de código siguiente.  
   
@@ -45,8 +45,8 @@ Si administra sus propios gráficos almacenados en búfer, deberá poder crear y
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#24)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#24)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Drawing.BufferedGraphicsContext>  
- <xref:System.Drawing.BufferedGraphics>  
- [Gráficos de doble búfer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- [Administrar manualmente gráficos almacenados en búfer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Drawing.BufferedGraphicsContext>
+- <xref:System.Drawing.BufferedGraphics>
+- [Gráficos de doble búfer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)
+- [Cómo: Administrar manualmente gráficos almacenados en búfer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)

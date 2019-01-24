@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bae646b0b1cdd451e01d55ed5b218f3660bb5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac0b6ac09db452eb06c633027e9596bda6627005
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509394"
 ---
 # <a name="getcachepath-function"></a>GetCachePath (Función)
 Obtiene la ruta de acceso al ensamblado almacenado en caché, con las marcas especificadas.  
@@ -43,18 +43,18 @@ HRESULT GetCachePath (
  [in] Un [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) valor que indica el origen del ensamblado almacenado en caché.  
   
  `pwzCachePath`  
- [out] El puntero devuelto a la ruta de acceso.  
+ [out] El puntero devuelto para la ruta de acceso.  
   
  `pcchPath`  
- [entrada, salida] La longitud máxima solicitada de `pwzCachePath`y tras la devolución, la longitud real de `pwzCachePath`.  
+ [in, out] La longitud máxima solicitada de `pwzCachePath`y cuando se devuelve, la longitud real de `pwzCachePath`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado**: Fusion.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ASM_CACHE_FLAGS (enumeración)](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)  
- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [ASM_CACHE_FLAGS (enumeración)](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
+- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

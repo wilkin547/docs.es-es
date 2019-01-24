@@ -2,21 +2,21 @@
 title: '&lt;reliableSession&gt;'
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 56cc48cd93020f37ac73b7f6b89130fdd1a3f7db
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0768cbce237b2d119be719eab1de9da4a551e5ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509810"
 ---
 # <a name="ltreliablesessiongt"></a>&lt;reliableSession&gt;
 Define el valor para los mensajes de confianza de WS. Cuando este elemento se agrega a un enlace personalizado, el canal resultante puede admitir las convicciones de la entrega exactamente una vez.  
   
  \<system.serviceModel>  
-\<enlaces >  
-\<customBinding >  
-\<enlace >  
-\<reliableSession >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<reliableSession>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -54,7 +54,7 @@ Define el valor para los mensajes de confianza de WS. Cuando este elemento se ag
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Las sesiones fiables proporcionan las características para la mensajería y las sesiones de confianza. La mensajería de confianza reintenta la comunicación en caso de error y permite especificar garantías de entrega, como la llegada en orden de los mensajes. Las sesiones mantienen el estado de los clientes entre llamadas. Este elemento también proporciona, de manera opcional, la entrega ordenada de mensajes. Esta sesión implementada puede cruzar SOAP y los intermediarios de transporte.  
@@ -119,12 +119,12 @@ Define el valor para los mensajes de confianza de WS. Cuando este elemento se ag
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.ReliableSessionElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>  
- [Sesiones de confianza](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.ReliableSessionElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
+- [Sesiones de confianza](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

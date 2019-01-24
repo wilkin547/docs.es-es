@@ -1,39 +1,39 @@
 ---
-title: 'Cómo: Utilizar el proveedor de pertenencia de ASP.NET'
+title: Procedimiento Usar el proveedor de pertenencia ASP.NET
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: d71e3679f4bf395b240c330fc573d6f613d1be07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4653a4b4ae90f391eac559210deb611e2a83d0f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634511"
 ---
-# <a name="how-to-use-the-aspnet-membership-provider"></a>Cómo: Utilizar el proveedor de pertenencia de ASP.NET
+# <a name="how-to-use-the-aspnet-membership-provider"></a>Procedimiento Usar el proveedor de pertenencia ASP.NET
 El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] es una característica que permite a los programadores de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] crear sitios web que permiten a los usuarios crear combinaciones únicas de nombre de usuario y contraseña. Con esta función, cualquier usuario puede establecer una cuenta en el sitio e iniciar sesión para obtener acceso exclusivo al sitio y a sus servicios. Esto contrasta con la seguridad de Windows, que exige a los usuarios que tengan cuentas en un dominio de Windows. En su lugar, cualquier usuario que proporcione sus credenciales (la combinación de nombre de usuario/contraseña) puede utilizar el sitio y sus servicios.  
   
- Para una aplicación de ejemplo, vea [proveedor de pertenencia y rol](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obtener información sobre el uso de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] característica de proveedor de roles, consulte [Cómo: utilizar el proveedor de funciones de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Para una aplicación de ejemplo, vea [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obtener información sobre el uso de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] característica de proveedor de roles, consulte [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
  La característica de pertenencia requiere el uso de una base de datos de SQL Server para almacenar la información de usuario. La característica también incluye métodos para realizar una pregunta a cualquier usuario que haya olvidado su contraseña.  
   
- Los desarrolladores de Windows Communication Foundation (WCF) pueden aprovechar las ventajas de estas características por motivos de seguridad. Cuando se integra en una aplicación de WCF, los usuarios deben proporcionar una combinación de nombre y contraseña de usuario a la aplicación de cliente WCF. Para transferir los datos al servicio de WCF, utilice un enlace que admita las credenciales de nombre y contraseña de usuario, como el <xref:System.ServiceModel.WSHttpBinding> (en la configuración, la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) y establecer el tipo de credencial a cliente`UserName`. En el servicio, seguridad de WCF autenticará al usuario basándose en el nombre de usuario y contraseña y también asigna la función especificada por el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol.  
+ Los desarrolladores de Windows Communication Foundation (WCF) pueden aprovecharse de estas características por motivos de seguridad. Cuando se integra en una aplicación de WCF, los usuarios deben proporcionar una combinación de nombre y contraseña de usuario a la aplicación de cliente WCF. Para transferir los datos al servicio WCF, utilice un enlace que admita las credenciales de nombre y contraseña de usuario, como el <xref:System.ServiceModel.WSHttpBinding> (en configuración, el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) y establezca el cliente de tipo de credencial para `UserName`. En el servicio, la seguridad de WCF autentica al usuario según el nombre de usuario y la contraseña y también asigna el rol especificado por el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] rol.  
   
 > [!NOTE]
->  WCF no proporciona métodos para rellenar la base de datos con combinaciones de nombre y contraseña de usuario u otra información de usuario.  
+>  WCF no proporciona métodos para rellenar la base de datos con combinaciones de nombre/contraseña de usuario u otra información de usuario.  
   
 ### <a name="to-configure-the-membership-provider"></a>Para configurar el proveedor de pertenencia  
   
-1.  En el archivo Web.config, en el <`system.web`> elemento, crear una <`membership`> elemento.  
+1.  En el archivo Web.config, bajo el <`system.web`> elemento, cree un <`membership`> elemento.  
   
 2.  Bajo el elemento `<membership>`, cree un elemento `<providers>`.  
   
 3.  Como elemento secundario de la <`providers`> elemento, agregue un `<clear />` elemento para vaciar la colección de proveedores.  
   
-4.  En el `<clear />` elemento, crear una <`add`> elemento con los siguientes atributos se establece en valores adecuados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, y `passwordFormat`. El atributo `name` se utiliza más adelante como un valor en el archivo de configuración. El siguiente ejemplo lo define en `SqlMembershipProvider`.  
+4.  En el `<clear />` elemento, cree un <`add`> elemento con los siguientes atributos se establecen en los valores adecuados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, y `passwordFormat`. El atributo `name` se utiliza más adelante como un valor en el archivo de configuración. El siguiente ejemplo lo define en `SqlMembershipProvider`.  
   
      En el ejemplo siguiente se muestra la sección de configuración.  
   
@@ -58,13 +58,13 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Para configurar la seguridad de servicio con el fin de que acepte la combinación de nombre de usuario y contraseña  
   
-1.  En el archivo de configuración, en la [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, agregue un [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
+1.  En el archivo de configuración en el [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, agregue un [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-2.  Agregar un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) a la sección de enlaces. Para obtener más información acerca de cómo crear un elemento de enlace de WCF, vea [Cómo: especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Agregar un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) a la sección de enlaces. Para obtener más información acerca de cómo crear un elemento de enlace de WCF, vea [Cómo: Especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Establezca el atributo `mode` del elemento `<security>` en `Message`:  
   
-4.  Establecer el `clientCredentialType` atributo de la <`message`> elemento `UserName`. Esto especifica que un par de nombre de usuario y contraseña se utilizará como credencial del cliente.  
+4.  Establecer el `clientCredentialType` atributo de la <`message`> elemento para `UserName`. Esto especifica que un par de nombre de usuario y contraseña se utilizará como credencial del cliente.  
   
      El siguiente ejemplo muestra el código de configuración para el enlace.  
   
@@ -89,7 +89,7 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
   
 2.  Agregar un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) a la <`behaviors`> elemento.  
   
-3.  Agregar un [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) y establezca el `name` de atributo en un valor adecuado.  
+3.  Agregar un [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) y establezca el `name` atributo en un valor adecuado.  
   
 4.  Agregar un [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) a la <`behavior`> elemento.  
   
@@ -154,6 +154,6 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Uso del proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Proveedor de pertenencia y roles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Proveedor de pertenencia y roles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

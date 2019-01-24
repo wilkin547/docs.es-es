@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 28016763b2cef2e8b8954f486bbbdb6930b5364c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e7fb55cac1de747c620ea44f320ec9185bfbd3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612156"
 ---
 # <a name="namespace-statement"></a>Namespace (Instrucción)
 Declara el nombre de un espacio de nombres y hace que el código fuente que sigue a la declaración se compile dentro de ese espacio de nombres.  
@@ -35,7 +35,7 @@ End Namespace
  Opcional. Permite definir un espacio de nombres del espacio de nombres raíz del proyecto. Consulte [espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Requerido. Un nombre único que identifica el espacio de nombres. Debe ser un identificador válido de Visual Basic. Para obtener más información, consulte [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Obligatorio. Un nombre único que identifica el espacio de nombres. Debe ser un identificador válido de Visual Basic. Para obtener más información, consulte [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
  Opcional. Elementos que componen el espacio de nombres. Estas incluyen, pero no se limitan a, enumeraciones, estructuras, interfaces, clases, módulos, delegados y otros espacios de nombres.  
@@ -102,7 +102,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a>Vea también
+- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

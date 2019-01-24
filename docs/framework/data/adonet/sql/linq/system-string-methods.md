@@ -2,12 +2,12 @@
 title: System.String (Métodos)
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: a6a8ce897cc6ac15f3452d2ba98b1b12bee544c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618141"
 ---
 # <a name="systemstring-methods"></a>System.String (Métodos)
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los métodos <xref:System.String> siguientes.  
@@ -15,7 +15,7 @@ ms.locfileid: "33360075"
 ## <a name="unsupported-systemstring-methods-in-general"></a>Métodos System.String no admitidos en general  
  Métodos <xref:System.String> no admitidos en general:  
   
--   Sobrecargas que reconocen la referencia cultural (métodos que toman una `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+-   Sobrecargas que reconocen la referencia cultural (métodos que toman un `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
   
 -   Métodos que utilizan o generan una matriz `char`.  
   
@@ -55,5 +55,5 @@ ms.locfileid: "33360075"
   
 -   Dado que muchos métodos, como `Replace`, `ToLower`, `ToUpper`, y el indizador de carácter, no tienen ningún equivalente válido para las columnas `TEXT` o `NTEXT` y XML, se producirán `SqlExceptions` si se convierten de la forma habitual. Este comportamiento se considera que es aceptable para estos tipos. Sin embargo, todas las operaciones de cadena deben coincidir con la semántica de Common Language Runtime (CLR) para `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` y `NVARCHAR(max)`.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

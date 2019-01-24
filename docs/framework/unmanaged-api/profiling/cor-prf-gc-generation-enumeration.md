@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8283139566050b1858a003316dc46581822a9bbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15bd3ed8f1642e44ecf9c4df49feebd72eeac8c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590138"
 ---
 # <a name="corprfgcgeneration-enumeration"></a>COR_PRF_GC_GENERATION (Enumeración)
-Identifica la generación de una colección de elementos no utilizados.  
+Identifica una colección de elementos no utilizados de generación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,20 +47,20 @@ typedef enum {
 |`COR_PRF_GC_LARGE_OBJECT_HEAP`|El objeto se almacena en el montón de objetos grandes.|  
   
 ## <a name="remarks"></a>Comentarios  
- El recolector de elementos no utilizados mejora el rendimiento de la administración de memoria dividiendo los objetos en las generaciones según la edad. El recolector de elementos no utilizados utiliza actualmente tres generaciones numeradas de 0, 1 y 2, además de un segmento de montón especial que se utiliza para los objetos grandes. Los objetos cuyo tamaño es mayor que un valor determinado se almacenan en el montón de objetos grandes. Otros objetos asignados empiezan perteneciendo a la generación 0. Todos los objetos que existen después de recolección de elementos no utilizados se produce en la generación 0 se promueven a la generación 1. Mueven los objetos que existen después de que se realiza una recolección de la generación 1 a la generación 2.  
+ El recolector de elementos no utilizados mejora el rendimiento de la administración de memoria dividiendo los objetos en las generaciones según la edad. El recolector de elementos no utilizados utiliza actualmente tres generaciones, numeradas de 0, 1 y 2, además de un segmento de montón especial que se usa para los objetos grandes. Los objetos cuyo tamaño es mayor que un valor determinado se almacenan en el montón de objetos grandes. Para empezar otros objetos asignados que pertenecen a la generación 0. Todos los objetos que existen después de que se produce una recolección en la generación 0 se promueven a la generación 1. Mueven los objetos que existen después de que se produce una recolección de generación 1 a la generación 2.  
   
- El uso de generaciones significa que el recolector de elementos no utilizados tiene que trabajar con solo un subconjunto de los objetos asignados en cualquier momento.  
+ El uso de las generaciones significa que el recolector de elementos no utilizados tiene que trabajar con solo un subconjunto de los objetos asignados en cualquier momento.  
   
- El `COR_PRF_GC_GENERATION` enumeración es utilizada por la [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) estructura.  
+ El `COR_PRF_GC_GENERATION` enumeración la utiliza el [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) estructura.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

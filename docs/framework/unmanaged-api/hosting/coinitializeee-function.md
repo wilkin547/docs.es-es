@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bbd25909e70826f8cd29076c1eb62a4da6779cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36a603bf1badebd2454601780179a8435f33bc70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525188"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE (Función)
-Garantiza que el motor de ejecución de common language runtime se carga en un proceso. Esta función está desusada en la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Use la [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método en su lugar.  
+Garantiza que el motor de ejecución de common language runtime se carga en un proceso. Esta función está en desuso en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Use la [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ HRESULT CoInitializeEE (
  [in] Uno de los [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) constantes de enumeración.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve los códigos de error COM estándar definidos en Winerror.h y los valores en la tabla siguiente.  
+ Este método devuelve códigos de error COM estándar, tal como se define en Winerror.h y los valores en la tabla siguiente.  
   
 |Código devuelto|Descripción|  
 |-----------------|-----------------|  
@@ -48,16 +48,16 @@ HRESULT CoInitializeEE (
 |E_FAIL|No se pudo cargar el motor de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este método carga el motor de ejecución si no se ha cargado previamente.  
+ Este método carga el motor de ejecución si no se ha cargado anteriormente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

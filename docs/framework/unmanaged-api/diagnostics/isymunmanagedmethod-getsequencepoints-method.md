@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623630"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints (Método)
 Obtiene todos los puntos de secuencia dentro de este método.  
@@ -43,13 +43,13 @@ HRESULT GetSequencePoints(
   
 #### <a name="parameters"></a>Parámetros  
  `cPoints`  
- [in] A `ULONG32` que recibe el tamaño de la `offsets`, `documents`, `lines`, `columns`, `endLines`, y `endColumns` matrices.  
+ [in] Un `ULONG32` que recibe el tamaño de la `offsets`, `documents`, `lines`, `columns`, `endLines`, y `endColumns` matrices.  
   
  `pcPoints`  
  [out] Un puntero a un `ULONG32` que recibe la longitud del búfer necesario para contener los puntos de secuencia.  
   
  `offsets`  
- [in] Una matriz en la que se va a almacenar el Microsoft intermedio desplazamientos del lenguaje (MSIL) desde el principio del método para los puntos de secuencia.  
+ [in] Una matriz de desplazamientos en los que se va a almacenar el intermedio de Microsoft desde el principio del método para los puntos de secuencia del lenguaje (MSIL).  
   
  `documents`  
  [in] Matriz en la que se va a almacenar los documentos en el que se ubican los puntos de secuencia.  
@@ -58,7 +58,7 @@ HRESULT GetSequencePoints(
  [in] Matriz en la que se almacenan las líneas de los documentos en el que se ubican los puntos de secuencia.  
   
  `columns`  
- [in] Matriz en la que se almacenan las columnas de los documentos en el que se ubican los puntos de secuencia.  
+ [in] Matriz en la que se va a almacenar las columnas en los documentos en el que se ubican los puntos de secuencia.  
   
  `endLines`  
  [in] Matriz de líneas de los documentos en las que la secuencia de puntos finales.  
@@ -67,10 +67,10 @@ HRESULT GetSequencePoints(
  [in] Matriz de columnas de los documentos en las que la secuencia de puntos finales.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

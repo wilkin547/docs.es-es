@@ -1,20 +1,20 @@
 ---
-title: '&lt;BackupList&gt;'
+title: '&lt;backupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1a6a7ac42b379dd8fb2ba80cf6a3a38998c26a59
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c11fd38e7c40f740d4c1c36ab87c44744ed0daab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627997"
 ---
-# <a name="ltbackuplistgt"></a>&lt;BackupList&gt;
+# <a name="ltbackuplistgt"></a>&lt;backupList&gt;
 Representa una sección de configuración para definir una lista de reserva que enumera un conjunto de puntos de conexión que desea que el servicio de enrutamiento use en caso de que no se puede alcanzar el punto de conexión principal. Si el primer punto de conexión en la lista está desconectado, el servicio de enrutamiento realizará automáticamente una conmutación por error al siguiente de la lista.  De este modo, dispone de una forma rápida de agregar confiabilidad a la aplicación sin tener que enseñar a la aplicación cliente cómo controlar modelos complejos o dónde implementar todos sus servicios.  
   
  \<system.serviceModel>  
-\<enrutamiento >  
-\<backupLists >  
+\<routing>  
+\<backupLists>  
 \<backupList >  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,7 +48,7 @@ Representa una sección de configuración para definir una lista de reserva que 
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Lista de puntos de conexión auxiliares.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Lista de puntos de conexión auxiliares.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta sección contiene una colección ordenada de puntos de conexión a los que se transmitirá un mensaje en caso de que se produzca una excepción de comunicaciones cuando se envíe al punto de conexión primario.  
@@ -73,5 +73,5 @@ Representa una sección de configuración para definir una lista de reserva que 
 </backupLists>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

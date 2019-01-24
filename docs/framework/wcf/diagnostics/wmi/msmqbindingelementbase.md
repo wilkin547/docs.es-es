@@ -2,12 +2,12 @@
 title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-ms.openlocfilehash: e7f4cf41168bd1e5483524195e20541d896a6569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0e2ac250da3837b41134d3a04a21579a2fe923a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569042"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
@@ -40,77 +40,77 @@ class MsmqBindingElementBase : TransportBindingElement
 ### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un URI que contiene la ubicación de la cola de mensajes no enviados de cada aplicación, donde se colocan los mensajes que han expirado o cuya transferencia o envío han fallado.  
   
 ### <a name="deadletterqueue"></a>DeadLetterQueue  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor de enumeración que indica el tipo de cola de mensajes no enviados que se ha de usar.  
   
 ### <a name="durable"></a>Durable  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor que indica si los mensajes procesados por este enlace son duraderos o volátiles.  
   
 ### <a name="exactlyonce"></a>ExactlyOnce  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor booleano que indica si los mensajes procesados por este enlace se reciben solo una vez.  
   
 ### <a name="maxretrycycles"></a>MaxRetryCycles  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de ciclos de reintento de entrega de mensajes a la aplicación receptora.  
   
 ### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Los valores para el control de mensajes dudosos.  
   
 ### <a name="receiveretrycount"></a>ReceiveRetryCount  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de intentos de reintento inmediato en un mensaje que se lee desde la cola de la aplicación.  
   
 ### <a name="retrycycledelay"></a>RetryCycleDelay  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor que indica el tiempo de retardo entre los ciclos de reintento al intentar entregar un mensaje que no se pudo entregar inmediatamente.  
   
 ### <a name="timetolive"></a>TimeToLive  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El intervalo de tiempo que indica cuánto tiempo pueden estar en la cola los mensajes procesados por este enlace antes de expirar.  
   
 ### <a name="usemsmqtracing"></a>UseMsmqTracing  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor booleano que indica si los mensajes procesados por este enlace se deberían seguir paso a paso.  
   
 ### <a name="usesourcejournal"></a>UseSourceJournal  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor booleano que indica si las copias de mensajes procesados por este enlace deberían almacenarse en la cola de diario de origen.  
   
@@ -120,6 +120,6 @@ class MsmqBindingElementBase : TransportBindingElement
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.NetMsmqBinding>  
- <xref:System.ServiceModel.MsmqBindingBase>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.NetMsmqBinding>
+- <xref:System.ServiceModel.MsmqBindingBase>

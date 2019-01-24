@@ -1,20 +1,20 @@
 ---
-title: Introducción a los literales XML de Visual Basic2
+title: Introducción a los literales XML en Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: bac0a4a297dcecce5465e5a1a1c02e4cbc9848a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624033"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introducción a los literales XML de Visual Basic
-Esta sección proporciona información acerca de cómo crear árboles XML en Visual Basic.  
+Esta sección proporciona información sobre cómo crear árboles XML en Visual Basic.  
   
- Para obtener información sobre el uso de los resultados de las consultas LINQ como el contenido de un árbol XML, vea [construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Para obtener información sobre el uso de los resultados de las consultas LINQ como contenido de un árbol XML, vea [construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Para obtener más información sobre los literales XML en Visual Basic, consulte [información general de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Para obtener más información sobre los literales XML en Visual Basic, vea [información general de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Crear árboles XML  
  El siguiente ejemplo muestra cómo crear un <xref:System.Xml.Linq.XElement>; en este caso, `contacts`:  
@@ -195,5 +195,5 @@ Child1 was cloned
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>Vea también
+- [Crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 52692bf165927ba50ab55e4c0f8bbc92b23d2272
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632925"
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
 En las aplicaciones, es posible que los controladores que están conectados a orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que adjuntó el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta un patrón de diseño que se puede usar para resolver este problema, que proporciona una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
@@ -130,8 +130,8 @@ En las aplicaciones, es posible que los controladores que están conectados a or
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.WeakEventManager>  
- <xref:System.Windows.IWeakEventListener>  
- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.WeakEventManager>
+- <xref:System.Windows.IWeakEventListener>
+- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)

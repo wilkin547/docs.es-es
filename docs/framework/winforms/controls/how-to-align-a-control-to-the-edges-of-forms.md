@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Alinear un control con los bordes de los formularios'
+title: Procedimiento Alinear un Control con los bordes de formularios
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: a8571f668de2714511a8732772443a8897043cf2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba5e9fc92f2805206f6c3796689898f3ff845896
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610414"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Cómo: Alinear un control con los bordes de los formularios
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Procedimiento Alinear un Control con los bordes de formularios
 Puede alinear el control con el borde de los formularios estableciendo la propiedad <xref:System.Windows.Forms.Control.Dock%2A>. Esta propiedad designa el lugar en el que se encuentra el control en el formulario. La propiedad <xref:System.Windows.Forms.Control.Dock%2A> puede establecerse en los valores siguientes:  
   
 |Parámetro|Efecto en el control|  
@@ -49,10 +49,10 @@ Puede alinear el control con el borde de los formularios estableciendo la propie
     UserControl1.Dock = DockStyle.Top;  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
- [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Delimitar y acoplar controles secundarios en un control FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
- [Delimitar y acoplar controles secundarios en un control TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [Información general sobre la propiedad AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
+- [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Cómo: Delimitar y acoplar controles secundarios en un Control FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Cómo: Delimitar y acoplar controles secundarios en un Control TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Información general sobre la propiedad AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)

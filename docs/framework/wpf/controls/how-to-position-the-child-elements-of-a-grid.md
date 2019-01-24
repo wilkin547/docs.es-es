@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Situar los elementos secundarios de un control Grid'
+title: Procedimiento Situar los elementos secundarios de un control Grid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 5ccdcb3d166e1b703faff1dc8046e61ee213d12a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a1b567356588d6798bae5d73d3d410882d087986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538682"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a>Cómo: Situar los elementos secundarios de un control Grid
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>Procedimiento Situar los elementos secundarios de un control Grid
 En este ejemplo se muestra cómo utilizar get y los métodos set que se definen en <xref:System.Windows.Controls.Grid> para situar elementos secundarios.  
   
 ## <a name="example"></a>Ejemplo  
@@ -30,6 +30,6 @@ En este ejemplo se muestra cómo utilizar get y los métodos set que se definen 
  
  ![una captura de pantalla muestra una interfaz de usuario WPF con dos columnas, la derecha tiene una cuadrícula de 3 x 3 y la izquierda tiene botones para mover un rectángulo de color entre las columnas y filas de la cuadrícula](./media/grid-methods-sample.png) 
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.Grid>  
- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Controls.Grid>
+- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)

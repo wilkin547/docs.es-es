@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 5856e710ad5a70fd740a5bb99ff241b8d9f2037a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625632"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Consideraciones sobre el diseño del elemento WindowsFormsHost
 Este tema se describe cómo el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento interactúa con el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de diseño.  
@@ -31,7 +31,7 @@ Este tema se describe cómo el <xref:System.Windows.Forms.Integration.WindowsFor
 |Característica de diseño|Descripción|  
 |--------------------|-----------------|  
 |Cambiar el tamaño automáticamente|Algunos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles cambian de tamaño para mostrar su contenido correctamente. Para obtener más información, consulte [AutoSize Property Overview](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
-|Delimitar y acoplar|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] los controles permiten la colocación y tamaño basada en el contenedor primario. Para obtener más información, consulte <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
+|Delimitar y acoplar|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] los controles permiten la colocación y tamaño basada en el contenedor primario. Para obtener más información, vea <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
 |Escalado automático|Cambiar el tamaño de controles del contenedor a sí mismos y sus elementos secundarios en función de la resolución del dispositivo de salida o el tamaño, en píxeles, de la fuente predeterminada del contenedor. Para obtener más información, consulte [el escalado automático en Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
 |Contenedores de diseño|El <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel> controles organiza sus controles secundarios y ajustan su tamaño según su contenido.|  
   
@@ -98,10 +98,10 @@ Este tema se describe cómo el <xref:System.Windows.Forms.Integration.WindowsFor
   
 -   Si el <xref:System.Windows.Forms.Control.Size%2A> propiedad devuelve un tamaño menor que la restricción especificada, <xref:System.Windows.Forms.Integration.WindowsFormsHost> acepta este valor de tamaño y devuelve el valor para el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de diseño.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Tutorial: Organizar controles de formularios Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  
- [Organización de Windows Forms en WPF ejemplo](https://go.microsoft.com/fwlink/?LinkID=159971)  
- [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Tutorial: Organización de Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Organización de Windows Forms en WPF ejemplo](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232851"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415928"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -64,7 +64,7 @@ Cuando el bloque `using` se completa, el entorno de ejecución .NET llama autom�
 Para obtener más información, consulte los siguientes temas:
 
 * Para C#, vea el tema [using (Instrucción, Referencia de C#)](../csharp/language-reference/keywords/using-statement.md).
-* Para F#, vea [Resource Management: The use Keyword](../fsharp/language-reference/resource-management-the-use-keyword.md) (Administración de recursos: palabra clave use).
+* En F#, consulte [Administración de recursos: la palabra clave use](../fsharp/language-reference/resource-management-the-use-keyword.md).
 * Para VB, vea el tema [Using Statement (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) [using (Instrucción, Visual Basic)].
 
 ## <a name="type-safety"></a>Seguridad de tipos
@@ -125,7 +125,7 @@ La manera principal de crear interoperabilidad nativa es a través de la "invoca
 
 La mayoría de la compatibilidad de interoperabilidad de Mono (y, por tanto, de Xamarin) para Java y Objective-C se compila de forma similar, es decir, usan los mismos principios.
 
-Obtenga más información sobre la interoperabilidad nativa en el tema [Interoperabilidad nativa](native-interop.md).
+Para obtener más información sobre la interoperabilidad nativa, consulte el artículo [Interoperabilidad nativa](native-interop/index.md).
 
 ## <a name="unsafe-code"></a>Código no seguro
 

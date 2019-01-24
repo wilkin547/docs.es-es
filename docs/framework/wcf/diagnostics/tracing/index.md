@@ -2,17 +2,11 @@
 title: Traza
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 6f427425b1bbf19ecd8b30fb1498634a7a3d5fa9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809321"
 ---
 # <a name="tracing"></a>Traza
-Windows Communication Foundation (WCF) proporciona instrumentación de aplicaciones y datos de diagnóstico para la supervisión de los errores y el análisis. Puede utilizar el seguimiento en lugar de un depurador para entender cómo se está comportando una aplicación o por qué genera errores. También puede correlacionar los errores y el procesamiento en los componentes para proporcionar una experiencia de extremo a extremo.  
+Windows Communication Foundation (WCF) proporciona instrumentación de aplicaciones y datos de diagnóstico para análisis y supervisión de los errores. Puede utilizar el seguimiento en lugar de un depurador para entender cómo se está comportando una aplicación o por qué genera errores. También puede correlacionar los errores y el procesamiento en los componentes para proporcionar una experiencia de extremo a extremo.  
   
- WCF genera los datos siguientes para el seguimiento de diagnóstico:  
+ WCF genera los siguientes datos para el seguimiento de diagnóstico:  
   
 -   Trazas para los hitos del proceso en todos los componentes de las aplicaciones, como llamadas de la operación, excepciones de código, advertencias y otros eventos de procesamiento significativos.”  
   
@@ -37,7 +31,7 @@ Windows Communication Foundation (WCF) proporciona instrumentación de aplicacio
   
  [Referencias del seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- Este tema enumeran todos los rastros generados por WCF.  
+ En este tema se enumera todos los seguimientos generados por WCF.  
   
-## <a name="see-also"></a>Vea también  
- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>Vea también
+- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

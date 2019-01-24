@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a89c706ece0949ffa3c182d53b57221acf81b18d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515080"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange (Método)
 Devuelve el intervalo especificado de código fuente incrustado en el búfer especificado. El búfer debe ser suficientemente grande como para contener el código fuente.  
@@ -43,13 +43,13 @@ HRESULT GetSourceRange(
   
 #### <a name="parameters"></a>Parámetros  
  `startLine`  
- [in] Línea inicial del documento actual.  
+ [in] La línea inicial del documento actual.  
   
  `startColumn`  
  [in] La columna inicial del documento actual.  
   
  `endLine`  
- [in] La línea final del documento actual.  
+ [in] La última línea del documento actual.  
   
  `endColumn`  
  [in] La columna final del documento actual.  
@@ -58,7 +58,7 @@ HRESULT GetSourceRange(
  [in] El tamaño de la fuente, en bytes.  
   
  `pcSourceBytes`  
- [out] Un puntero a una variable que recibe el tamaño de fuente.  
+ [out] Un puntero a una variable que recibe el tamaño del origen.  
   
  `source`  
  [out] El tamaño y la longitud del intervalo especificado del documento de origen, en bytes.  
@@ -66,5 +66,5 @@ HRESULT GetSourceRange(
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método tiene éxito.  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedDocument (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedDocument (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

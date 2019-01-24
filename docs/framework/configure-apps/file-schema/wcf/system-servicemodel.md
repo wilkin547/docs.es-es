@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: c2f4a0787f6027d7f57891d4e219758c4a7054ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2cd1dadb2284a8e8dd3fad5d6101334706418782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565961"
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
 Esta sección de configuración contiene todos los elementos de configuración de ServiceModel de Windows Communication Foundation (WCF).  
@@ -61,19 +61,19 @@ Esta sección de configuración contiene todos los elementos de configuración d
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamientos >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|Esta sección define dos colecciones secundarias denominadas `endpointBehaviors` y `serviceBehaviors`.  Cada colección define los elementos de comportamiento utilizados respectivamente por extremos y servicios. Su atributo de `name` único identifica cada elemento de comportamiento.|  
-|[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esta sección contiene una colección de enlaces estándar y personalizados. Su `name` único identifica cada entrada. Los servicios usan los enlaces vinculándose a ellos mediante `name`.|  
-|[\<cliente >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Esta sección contiene una lista de puntos de conexión que usa un cliente para conectarse a un servicio.|  
-|[\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Esta sección define contratos COM habilitados para WCF e interoperabilidad COM.|  
-|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Esta sección solo se puede definir en el archivo machine.config. Define dos colecciones secundarias denominadas `endpointBehaviors` y `serviceBehaviors`.  Cada colección define elementos de comportamiento utilizados respectivamente por todos los extremos WCF y servicios en el equipo.  Si se define un comportamiento en las `<commonBehaviors>` y `<behaviors>` secciones, el comportamiento en el \<comportamientos > sección tendrá preferencia.|  
-|[\<diagnóstico >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Esta sección contiene la configuración para las características de diagnóstico de WCF. El usuario puede habilitar/deshabilitar el seguimiento, contadores de rendimiento y el proveedor de WMI, y puede agregar filtros de mensajes personalizados.|  
-|[\<Extensiones >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Esta sección contiene una colección de extensiones, que permiten al usuario crear los enlaces definidos por el usuario, comportamientos y otros aspectos de las extensiones.|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|En esta sección se define un conjunto de asignación de protocolo predeterminado entre los esquemas de protocolos de transporte (por ejemplo, http, net.tcp, net.pipe, etc.) y enlaces WCF.|  
-|[\<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|En esta sección define un conjunto de filtros de enrutamiento que determinan el tipo de Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> que se usará al evaluar los mensajes entrantes, así como el enrutamiento de las tablas que definen los puntos de conexión de destino para enviar mensajes cuando un coincide con el filtro.|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Esta sección define para qué tipo el entorno de host de servicio crea instancias de un transporte determinado. Si esta sección está vacía, se usa el tipo predeterminado.|  
-|[\<Services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Esta sección contiene una colección de servicios. Para cada servicio definido en el ensamblado, este elemento contiene un elemento `service` que especifica la configuración del servicio.|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Esta sección define una colección de puntos de conexión estándar, que son los puntos de conexión preconfigurados reutilizables. Un extremo estándar tendrá uno o más atributos de la dirección, el enlace y el contrato establecidos en un valor fijo. Por ejemplo, en el extremo de la detección el contrato es fijo. También puede usar los puntos de conexión estándar para extender el punto de conexión de servicio con nuevas propiedades similares a la definición de enlaces personalizados.|
-|[\<seguimiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|En esta sección define la configuración de seguimiento para un servicio de flujo de trabajo.|
+|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|Esta sección define dos colecciones secundarias denominadas `endpointBehaviors` y `serviceBehaviors`.  Cada colección define los elementos de comportamiento utilizados respectivamente por extremos y servicios. Su atributo de `name` único identifica cada elemento de comportamiento.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esta sección contiene una colección de enlaces estándar y personalizados. Su `name` único identifica cada entrada. Los servicios usan los enlaces vinculándose a ellos mediante `name`.|  
+|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Esta sección contiene una lista de puntos de conexión que usa un cliente para conectarse a un servicio.|  
+|[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Esta sección define contratos COM habilitados para WCF e interoperabilidad COM.|  
+|[\<commonBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Esta sección solo se puede definir en el archivo machine.config. Define dos colecciones secundarias denominadas `endpointBehaviors` y `serviceBehaviors`.  Cada colección define elementos de comportamiento utilizados respectivamente por todos los extremos WCF y servicios en el equipo.  Si se define un comportamiento en las `<commonBehaviors>` y `<behaviors>` secciones, el comportamiento en el \<comportamientos > sección tendrá preferencia.|  
+|[\<diagnostics>](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Esta sección contiene la configuración para las características de diagnóstico de WCF. El usuario puede habilitar/deshabilitar el seguimiento, contadores de rendimiento y el proveedor de WMI, y puede agregar filtros de mensajes personalizados.|  
+|[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Esta sección contiene una colección de extensiones, que permiten al usuario crear los enlaces definidos por el usuario, comportamientos y otros aspectos de las extensiones.|  
+|[\<protocolMapping>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|En esta sección se define un conjunto de asignación de protocolo predeterminado entre los esquemas de protocolos de transporte (por ejemplo, http, net.tcp, net.pipe, etc.) y enlaces WCF.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|En esta sección define un conjunto de filtros de enrutamiento que determinan el tipo de Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> que se usará al evaluar los mensajes entrantes, así como el enrutamiento de las tablas que definen los puntos de conexión de destino para enviar mensajes cuando un coincide con el filtro.|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Esta sección define para qué tipo el entorno de host de servicio crea instancias de un transporte determinado. Si esta sección está vacía, se usa el tipo predeterminado.|  
+|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Esta sección contiene una colección de servicios. Para cada servicio definido en el ensamblado, este elemento contiene un elemento `service` que especifica la configuración del servicio.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Esta sección define una colección de puntos de conexión estándar, que son los puntos de conexión preconfigurados reutilizables. Un extremo estándar tendrá uno o más atributos de la dirección, el enlace y el contrato establecidos en un valor fijo. Por ejemplo, en el extremo de la detección el contrato es fijo. También puede usar los puntos de conexión estándar para extender el punto de conexión de servicio con nuevas propiedades similares a la definición de enlaces personalizados.|
+|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|En esta sección define la configuración de seguimiento para un servicio de flujo de trabajo.|
 
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -127,5 +127,5 @@ Esta sección de configuración contiene todos los elementos de configuración d
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.ServiceModelSectionGroup>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.ServiceModelSectionGroup>

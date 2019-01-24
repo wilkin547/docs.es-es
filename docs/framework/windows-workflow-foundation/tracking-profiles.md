@@ -2,12 +2,12 @@
 title: Perfiles de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 95f14cff9c60158f0ce188d031a94870c0b0ac5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559260"
 ---
 # <a name="tracking-profiles"></a>Perfiles de seguimiento
 Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución.  
@@ -380,7 +380,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 </trackingProfile>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Seguimiento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Vea también
+- [Seguimiento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

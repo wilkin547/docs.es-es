@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Transformar XML usando LINQ (Visual Basic)'
+title: Procedimiento Transformar XML usando LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 628af13a4cdea41ade943b69e326ec2d9abcbf1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536352"
 ---
-# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Cómo: Transformar XML usando LINQ (Visual Basic)
+# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Procedimiento Transformar XML usando LINQ (Visual Basic)
 [Literales XML](../../../../visual-basic/language-reference/xml-literals/index.md) facilitan la tarea leer XML de un origen y lo transforma en un nuevo formato XML. Puede aprovechar las ventajas de las consultas LINQ para recuperar el contenido para transformar o cambiar el contenido de un documento existente a un nuevo formato XML.  
   
  El ejemplo de este tema transforma el contenido de un documento de origen XML en HTML para verse en un explorador.  
@@ -57,7 +57,7 @@ ms.locfileid: "42924914"
         </Catalog>  
     ```  
   
-     [Cómo: cargar XML desde un archivo, cadena o Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
+     [Cómo: Cargar XML desde un archivo, cadena o Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
   
 3.  Después del código para crear el documento XML de origen, agregue el código siguiente para recuperar todos los \<Book > elementos del objeto y transformarlos en un documento HTML. La lista de \<Book > elementos se crea mediante una consulta LINQ que devuelve una colección de <xref:System.Xml.Linq.XElement> objetos que contienen el HTML transformado. Puede utilizar expresiones incrustadas para colocar los valores del documento de origen en el nuevo formato XML.  
   
@@ -155,10 +155,10 @@ ms.locfileid: "42924914"
     </html>  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Literales XML](../../../../visual-basic/language-reference/xml-literals/index.md)  
- [Manipular XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Cargar XML desde un archivo, cadena o secuencia](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Vea también
+- [Literales XML](../../../../visual-basic/language-reference/xml-literals/index.md)
+- [Manipular XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Cómo: Cargar XML desde un archivo, cadena o Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

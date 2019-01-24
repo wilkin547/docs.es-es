@@ -2,12 +2,12 @@
 title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: c374261ad3702294f5720edb7881e21ba79d85bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e66a09276f40ab6d9ff7c11bb160385b4c1efb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542566"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 Navega por la relación establecida entre entidades.  
@@ -50,7 +50,7 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o  
 ```  
   
- Donde OrderCustomer es el valor de `relationship`, y Customer y Order son los valores de `to-end` (cliente) y `from-end` (pedido) de la relación. Si OrderCustomer es una relación de n: 1, el tipo de resultado de la expresión navigate es Ref\<Customer >.  
+ Donde OrderCustomer es el valor de `relationship`, y Customer y Order son los valores de `to-end` (cliente) y `from-end` (pedido) de la relación. Si OrderCustomer es una relación de n a 1, entonces el tipo de resultado de la expresión navigate es Ref\<Customer >.  
   
  Lo forma más simple de esta expresión es la siguiente:  
   
@@ -77,6 +77,6 @@ From LOB.Customers as c
   
  [!code-csharp[DP EntityServices Concepts 2#NAVIGATE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#navigate)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Cómo: navegar por relaciones con el operador Navigate](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Cómo: Navegar por relaciones con el operador Navigate](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)

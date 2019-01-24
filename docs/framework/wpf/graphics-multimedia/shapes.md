@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c39be1bdcc9c91f4822b7e168f16cb51c51d6c60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580829"
 ---
 # <a name="shapes"></a>Formas
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona compatibilidad para dibujar formas básicas mediante la <xref:System.Windows.Shapes.Shape> clase. Objetos de forma que se derivan de <xref:System.Windows.FrameworkElement> y por lo tanto, participar en el sistema de diseño y se pueden dibujar simplemente mediante [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona compatibilidad para dibujar formas básicas mediante el <xref:System.Windows.Shapes.Shape> clase. Los objetos de forma que se derivan de <xref:System.Windows.FrameworkElement> y por lo tanto, participar en el sistema de diseño y se pueden dibujar usando simplemente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Shapes.Shape>  
- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Shapes.Shape>
+- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 14ba24b414de0732be418210ec44613f840136d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639125"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView (Control, formularios Windows Forms)
 El control `DataGridView` proporciona una forma eficaz y flexible de mostrar datos en formato de tabla. Puede usar el control `DataGridView` para mostrar vistas de solo lectura de una pequeña cantidad de datos, o puede ampliarlo para mostrar vistas editables de conjuntos de datos muy grandes.  
   
  Puede ampliar el control `DataGridView` de varias maneras para construir comportamientos personalizados en sus aplicaciones. Por ejemplo, puede especificar mediante programación sus propios algoritmos de ordenación y puede crear sus propios tipos de celdas. Puede personalizar fácilmente la apariencia del control `DataGridView` eligiendo entre varias propiedades. Se pueden usar muchos tipos de almacenes de datos como origen de datos, o el control `DataGridView` puede funcionar sin ningún origen de datos enlazado a él.  
   
- En los temas de esta sección se describen los conceptos y las técnicas que puede usar para compilar características de `DataGridView` en sus aplicaciones.  
+ En los temas de esta sección se describen los conceptos y técnicas que puede usar para crear características `DataGridView` en sus aplicaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
@@ -82,5 +82,5 @@ El control `DataGridView` proporciona una forma eficaz y flexible de mostrar dat
  <xref:System.Windows.Forms.BindingSource>  
  Proporciona documentación de referencia para el componente <xref:System.Windows.Forms.BindingSource>. El control <xref:System.Windows.Forms.DataGridView> y el componente <xref:System.Windows.Forms.BindingSource> están diseñados para funcionar en estrecha colaboración.  
   
-## <a name="see-also"></a>Vea también  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

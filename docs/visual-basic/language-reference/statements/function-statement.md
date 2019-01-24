@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: b370e92aaab88a7f0d49f1de60b50fa6bbf1e161
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39323019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565909"
 ---
 # <a name="function-statement-visual-basic"></a>Function (Instrucción, Visual Basic)
 Declara el nombre, parámetros y código que definen un `Function` procedimiento.  
@@ -69,9 +69,9 @@ End Function
   
     -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [Private protegida](../../language-reference/modifiers/private-protected.md)  
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)  
   
-     Consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `proceduremodifiers`  
   
@@ -109,7 +109,7 @@ End Function
   
 -   `name`  
   
-     Requerido. Nombre del procedimiento. Consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Obligatorio. Nombre del procedimiento. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `typeparamlist`  
   
@@ -139,8 +139,8 @@ End Function
   
     |Parte|Descripción|  
     |---|---|  
-    |`interface`|Requerido. Nombre de una interfaz implementada por este procedimiento contenedora de clase o estructura.|  
-    |`definedname`|Requerido. Nombre por el que se define el procedimiento en `interface`.|  
+    |`interface`|Obligatorio. Nombre de una interfaz implementada por este procedimiento contenedora de clase o estructura.|  
+    |`definedname`|Obligatorio. Nombre por el que se define el procedimiento en `interface`.|  
   
 -   `Handles`  
   
@@ -158,8 +158,8 @@ End Function
   
     |Parte|Descripción|  
     |---|---|  
-    |`eventvariable`|Requerido. Variable de objeto declarada con el tipo de datos de la clase o estructura que provoca el evento.|  
-    |`event`|Requerido. Nombre del evento que controla este procedimiento.|  
+    |`eventvariable`|Obligatorio. Variable de objeto declarada con el tipo de datos de la clase o estructura que provoca el evento.|  
+    |`event`|Obligatorio. Nombre del evento que controla este procedimiento.|  
   
 -   `statements`  
   
@@ -254,15 +254,15 @@ End Function
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Sub (instrucción)](sub-statement.md)  
- [Procedimientos de función](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [Lista de parámetros](parameter-list.md)  
- [Dim (instrucción)](dim-statement.md)  
- [Call (instrucción)](call-statement.md)  
- [Of](of-clause.md)  
- [Matrices de parámetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Utilizar una clase genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Solución de problemas de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Expresión de función](../../../visual-basic/language-reference/operators/function-expression.md)
+## <a name="see-also"></a>Vea también
+- [Sub (instrucción)](sub-statement.md)
+- [Procedimientos de función](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
+- [Lista de parámetros](parameter-list.md)
+- [Dim (instrucción)](dim-statement.md)
+- [Call (instrucción)](call-statement.md)
+- [Of](of-clause.md)
+- [Matrices de parámetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [Cómo: Utilizar una clase genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Solución de problemas de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Expresión de función](../../../visual-basic/language-reference/operators/function-expression.md)

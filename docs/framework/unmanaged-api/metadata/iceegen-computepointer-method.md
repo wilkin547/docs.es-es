@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1239546072192d6ff9497013ad7b7140ea13085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522419"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer (Método)
-Determina el búfer para la sección de código especificada.  
+Determina el búfer para la sección de códigos especificada.  
   
  Este método está obsoleto y no debe usarse.  
   
@@ -41,22 +41,22 @@ HRESULT ComputePointer (
   
 #### <a name="parameters"></a>Parámetros  
  `section`  
- [in] La sección de código para el que se va a devolver el búfer.  
+ [in] La sección de código que se va a devolver el búfer.  
   
  `RVA`  
- [in] La dirección virtual relativa del método para el que se va a obtener un puntero.  
+ [in] La dirección virtual relativa del método para que se va a obtener un puntero.  
   
  `lpBuffer`  
  [out] Un puntero al búfer devuelto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

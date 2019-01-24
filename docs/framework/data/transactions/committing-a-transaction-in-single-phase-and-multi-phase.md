@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: ad0b639aec60fc1dc9b594ff774232699001db5d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589524"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Confirmar una transacción en fase única y múltiple
 Un administrador de recursos (RM) administra cada recurso utilizado, cuyas acciones coordina un administrador de transacciones (TM). El [dar de alta recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) tema explica cómo pueden inscribirse en una transacción de un recurso (o varios recursos). En este tema se trata cómo la confirmación de la transacción se puede coordinar entre los recursos inscritos.  
@@ -109,6 +109,6 @@ public void InDoubt (Enlistment enlistment)
 ## <a name="single-phase-commit-optimization"></a>Optimización de confirmación de fase única  
  La fase única el protocolo de confirmación es más eficaz en el tiempo de ejecución porque todas las actualizaciones se hacen sin ninguna coordinación explícita. Para obtener más información sobre este protocolo, consulte [optimización con la confirmación de fase única y fase única Promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
-## <a name="see-also"></a>Vea también  
- [Optimización mediante el uso de la confirmación de fase única y de la inscripción de fase única promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Inscribir recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+## <a name="see-also"></a>Vea también
+- [Optimización mediante el uso de la confirmación de fase única y de la inscripción de fase única promovible](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+- [Inscribir recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

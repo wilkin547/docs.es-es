@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 39b8a44629af42e358d550e0dd7eb6a8895de0ed
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524889"
 ---
 # <a name="securing-services"></a>Seguridad de servicios
 Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de dos requisitos principales: seguridad y autorización de transferencia. (Un tercer requisito, la auditoría de eventos de seguridad, se describe en [auditoría](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Resumiendo, la seguridad de la transferencia incluye la autenticación (comprobar la identidad del servicio y del cliente), la confidencialidad (cifrado de mensajes) y la integridad (firma digital para detectar la modificación). La autorización es el control del acceso a los recursos, por ejemplo, permitiendo la lectura de un archivo solo a usuarios privilegiados. Uso de características de WCF, se implementan fácilmente los dos requisitos primarios.  
@@ -38,13 +38,13 @@ Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de
  La infraestructura de WCF está diseñada para usar estos mecanismos de seguridad de Windows. Por lo tanto, si está creando un servicio que se implementa en una intranet, y sus clientes están restringidos a los miembros del dominio de Windows, la seguridad se implementará fácilmente. Solo los usuarios válidos pueden iniciar sesión en el dominio. Después de que los usuarios inicien la sesión, el controlador de Kerberos permite a cada uno de ellos establecer contextos seguros con cualquier otro equipo o aplicación. En un equipo local, los grupos pueden crearse fácilmente y al proteger carpetas específicas, pueden utilizarse esos grupos para asignar los privilegios de acceso al equipo.  
   
 ## <a name="implementing-windows-security-on-intranet-services"></a>Implementación de la seguridad de Windows en servicios de la intranet  
- Para proteger una aplicación que se ejecuta exclusivamente en un dominio de Windows, puede utilizar la configuración de seguridad predeterminada de <xref:System.ServiceModel.WSHttpBinding> , o el enlace <xref:System.ServiceModel.NetTcpBinding> . De forma predeterminada, cualquier persona en el mismo dominio de Windows puede tener acceso a los servicios WCF. Dado que esos usuarios han iniciado sesión en la red, son de confianza. Los mensajes entre un servicio y un cliente se cifran para la confidencialidad y se firman para integridad. Para obtener más información acerca de cómo crear un servicio que utiliza la seguridad de Windows, consulte [Cómo: proteger un servicio con credenciales de Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+ Para proteger una aplicación que se ejecuta exclusivamente en un dominio de Windows, puede utilizar la configuración de seguridad predeterminada de <xref:System.ServiceModel.WSHttpBinding> , o el enlace <xref:System.ServiceModel.NetTcpBinding> . De forma predeterminada, cualquier persona en el mismo dominio de Windows puede tener acceso a los servicios WCF. Dado que esos usuarios han iniciado sesión en la red, son de confianza. Los mensajes entre un servicio y un cliente se cifran para la confidencialidad y se firman para integridad. Para obtener más información acerca de cómo crear un servicio que utiliza la seguridad de Windows, vea [Cómo: Proteger un servicio con credenciales de Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>Autorización utilizando la clase PrincipalPermissionAttribute  
- Si necesita restringir el acceso de recursos de un equipo, la manera más sencilla es utilizar la clase <xref:System.Security.Permissions.PrincipalPermissionAttribute> . Este atributo permite restringir la invocación de operaciones del servicio exigiendo que el usuario pertenezca a un grupo o función de Windows específico, o bien ser un usuario concreto. Para obtener más información, consulte [Cómo: restringir el acceso con la clase PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
+ Si necesita restringir el acceso de recursos de un equipo, la manera más sencilla es utilizar la clase <xref:System.Security.Permissions.PrincipalPermissionAttribute> . Este atributo permite restringir la invocación de operaciones del servicio exigiendo que el usuario pertenezca a un grupo o función de Windows específico, o bien ser un usuario concreto. Para obtener más información, vea [Cómo: Restringir el acceso con la clase PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
   
 ### <a name="impersonation"></a>Suplantación  
- La suplantación es otro mecanismo que puede utilizarse para controlar el acceso a los recursos. De forma predeterminada, un servicio hospedado por IIS se ejecutará bajo la identidad de la cuenta ASPNET. La cuenta ASPNET solo puede tener acceso a los recursos para los que tiene permiso. Sin embargo, es posible establecer la ACL para que una carpeta excluya la cuenta de servicio ASPNET, pero permitir que otras identidades tengan acceso a la carpeta. La cuestión entonces es cómo permitir a esos usuarios tener acceso a la carpeta si la cuenta ASPNET no está autorizada a hacerlo. La respuesta es utilizar la suplantación, con lo que el servicio está autorizado a utilizar las credenciales del cliente para tener acceso a un recurso determinado. Otro ejemplo es el acceso a una base de datos de SQL Server para la que solo ciertos usuarios tienen permiso. Para obtener más información sobre cómo usar la suplantación, vea [Cómo: representar al cliente en un servicio](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) y [delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ La suplantación es otro mecanismo que puede utilizarse para controlar el acceso a los recursos. De forma predeterminada, un servicio hospedado por IIS se ejecutará bajo la identidad de la cuenta ASPNET. La cuenta ASPNET solo puede tener acceso a los recursos para los que tiene permiso. Sin embargo, es posible establecer la ACL para que una carpeta excluya la cuenta de servicio ASPNET, pero permitir que otras identidades tengan acceso a la carpeta. La cuestión entonces es cómo permitir a esos usuarios tener acceso a la carpeta si la cuenta ASPNET no está autorizada a hacerlo. La respuesta es utilizar la suplantación, con lo que el servicio está autorizado a utilizar las credenciales del cliente para tener acceso a un recurso determinado. Otro ejemplo es el acceso a una base de datos de SQL Server para la que solo ciertos usuarios tienen permiso. Para obtener más información sobre cómo usar la suplantación, vea [Cómo: Suplantar un cliente en un servicio](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) y [delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="security-on-the-internet"></a>Seguridad en Internet  
  La seguridad en Internet se basa en los mismos requisitos que la seguridad en una intranet. Un servicio necesita presentar sus credenciales para demostrar su autenticidad, y los clientes necesitan demostrar su identidad al servicio. Una vez demostrada la identidad de un cliente, el servicio puede controlar qué tipo de acceso a los recursos posee el cliente. No obstante, debido a la naturaleza heterogénea de Internet, las credenciales presentadas difieren de las utilizadas en un dominio de Windows. Si bien un controlador de Kerberos administra la autenticación de usuarios en un dominio mediante vales para las credenciales, en Internet, los servicios y clientes confían en cualquiera de las distintas maneras de presentar credenciales. El objetivo de este tema, sin embargo, es presentar un enfoque común que le permite crear un servicio WCF que sea accesible en Internet.  
@@ -65,7 +65,7 @@ Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de
   
  Un tercer modo, que combina la semántica de los dos modos principales, es el *modo de transporte con credenciales de mensaje*.  
   
- El modo de seguridad determina la protección de los mensajes, y cada elección presenta ventajas y desventajas, como se indica a continuación. Para obtener más información acerca de cómo establecer el modo de seguridad, consulte [Cómo: establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+ El modo de seguridad determina la protección de los mensajes, y cada elección presenta ventajas y desventajas, como se indica a continuación. Para obtener más información acerca de cómo establecer el modo de seguridad, vea [Cómo: Establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 #### <a name="transport-mode"></a>modo de transporte  
  Existen varias capas entre la red y la aplicación. Uno de ellas es la capa de *transporte* ,*que* administra la transferencia de mensajes entre los extremos. Para el propósito que nos ocupa, solo es necesario que comprenda que WCF usa varios protocolos de transporte, cada uno de los cuales puede proteger la transferencia de mensajes. (Para obtener más información acerca de los transportes, consulte [transportes](../../../docs/framework/wcf/feature-details/transports.md).)  
@@ -85,34 +85,34 @@ Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de
   
  Si está creando un servicio que requiere la autenticación del cliente, la elección de un tipo de credencial de cliente depende del transporte y el modo seleccionados. Por ejemplo, si utiliza el transporte HTTP y opta por el modo de transporte, podrá elegir entre varias opciones, como Básica, Implícita, y otras. (Para obtener más información acerca de estos tipos de credenciales, vea [descripción de la autenticación HTTP](../../../docs/framework/wcf/feature-details/understanding-http-authentication.md).)  
   
- Si crea un servicio en un dominio de Windows que solo estará disponible para otros usuarios de la red, el más fácil de utilizar es el tipo de credencial de cliente de Windows. Sin embargo, también puede que tenga que proporcionar un certificado al servicio. Esto se muestra en [How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Si crea un servicio en un dominio de Windows que solo estará disponible para otros usuarios de la red, el más fácil de utilizar es el tipo de credencial de cliente de Windows. Sin embargo, también puede que tenga que proporcionar un certificado al servicio. Esto se muestra en [Cómo: Especificar los valores de credencial de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="credential-values"></a>Valores de credencial  
  Un *valor de credencial* es la credencial real utilizada por el servicio. Cuando se especifica un tipo de credencial, también puede ser necesario configurar el servicio con las credenciales reales. Si se selecciona Windows (y el servicio se ejecutará en un dominio de Windows), no será necesario especificar un valor de credencial real.  
   
 ## <a name="identity"></a>identidad  
- En WCF, el término *identidad* tiene significados diferentes para el servidor y el cliente. Resumiendo, al ejecutar un servicio, se asigna una identidad al contexto de seguridad después de la autenticación. Para ver la identidad real, compruebe las propiedades <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> y <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> de la clase <xref:System.ServiceModel.ServiceSecurityContext> . Para obtener más información, consulte [Cómo: examinar el contexto de seguridad](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
+ En WCF, el término *identidad* tiene significados diferentes para el servidor y el cliente. Resumiendo, al ejecutar un servicio, se asigna una identidad al contexto de seguridad después de la autenticación. Para ver la identidad real, compruebe las propiedades <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> y <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> de la clase <xref:System.ServiceModel.ServiceSecurityContext> . Para obtener más información, vea [Cómo: Examine el contexto de seguridad](../../../docs/framework/wcf/how-to-examine-the-security-context.md).  
   
  Por el contrario, en el cliente, la identidad se utiliza para validar el servicio. En tiempo de diseño, un desarrollador de cliente puede establecer el [ \<identidad >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento a un valor que se obtiene del servicio. Durante la ejecución, el cliente contrasta el valor del elemento con la identidad real del servicio. Si se produce un error en la comprobación, el cliente finaliza la comunicación. El valor puede ser un nombre principal del usuario (UPN), si el servicio se ejecuta bajo la identidad de un usuario determinado, o un nombre de entidad de seguridad de servicio (SPN) si el servicio se ejecuta bajo una cuenta de equipo. Para obtener más información, consulte [autenticación e identidad de servicio](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md). La credencial también puede ser un certificado, o un campo de un certificado que identifica a éste último.  
   
 ## <a name="protection-levels"></a>Niveles de protección  
- La propiedad `ProtectionLevel` se encuentra en varias clases de atributos (como las clases <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> ). El nivel de protección es un valor que especifica si los mensajes (o partes del mensaje) que soportan un servicio están firmados, firmados y cifrados, o si se envían sin firmar o cifrar. Para obtener más información acerca de la propiedad, vea [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md)y ejemplos de programación, vea [Cómo: establecer la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Para obtener más información sobre cómo diseñar un contrato de servicio con el `ProtectionLevel` en contexto, vea [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
+ La propiedad `ProtectionLevel` se encuentra en varias clases de atributos (como las clases <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> ). El nivel de protección es un valor que especifica si los mensajes (o partes del mensaje) que soportan un servicio están firmados, firmados y cifrados, o si se envían sin firmar o cifrar. Para obtener más información acerca de la propiedad, vea [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md)y ejemplos de programación, vea [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Para obtener más información sobre cómo diseñar un contrato de servicio con el `ProtectionLevel` en contexto, vea [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Descripción de los niveles de protección](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Diseño de contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Seguridad](../../../docs/framework/wcf/feature-details/security.md)  
- [Información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Cómo establecerla propiedad ProtectionLevel Property](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Cómo proteger un servicio con credenciales de Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Cómo establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Cómo especificar el tipo de credencial de cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
- [Cómo restringir el acceso con la clase PrincipalPermissionAttribute Class](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Cómo suplantar a un cliente en un servicio](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Cómo examinar el contexto de seguridad](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Descripción de los niveles de protección](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Diseño de contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Seguridad](../../../docs/framework/wcf/feature-details/security.md)
+- [Información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Cómo: Proteger un servicio con credenciales de Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Cómo: Establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Cómo: Especifique el tipo de credencial de cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Cómo: Restringir el acceso con la clase PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Cómo: Suplantar a un cliente en un servicio](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Cómo: Examine el contexto de seguridad](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

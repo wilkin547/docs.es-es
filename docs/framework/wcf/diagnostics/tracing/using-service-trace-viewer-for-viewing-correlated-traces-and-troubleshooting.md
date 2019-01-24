@@ -2,12 +2,12 @@
 title: Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594816"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas
 En este tema se describe el formato de datos de seguimiento, cómo verlo y enfoques sobre el uso de Service Trace Viewer para solucionar problemas de la aplicación.  
@@ -119,7 +119,7 @@ En este tema se describe el formato de datos de seguimiento, cómo verlo y enfoq
   
 -   Procesó la acción Agregar.  
   
--   Configuró la sesión segura (esto OCURRIÓ en la primera solicitud) y procesó tres mensajes de respuesta de la infraestructura de seguridad: RST, RSTR, SCT (Mensaje de proceso 1, 2, 3).  
+-   Configurar la sesión segura (Esto OCURRIÓ en la primera solicitud) y la infraestructura de seguridad procesado de tres mensajes de respuesta: RST, RSTR, SCT (mensaje de proceso 1, 2, 3).  
   
 -   Procesó las solicitudes de sustracción, multiplicación y división.  
   
@@ -138,7 +138,7 @@ Lista de actividades del cliente WCF por hora de creación (panel izquierdo) y s
  Si hacemos doble clic en la actividad procesar acción Agregar en el panel izquierdo, podemos ver una representación gráfica de las actividades de cliente WCF relacionadas con agregar. La primera actividad de la izquierda es la actividad raíz (0000), que es la actividad predeterminada. WCF se transfiere fuera de la actividad ambiente. Si no está definido, WCF se transfiere fuera de 0000. Aquí, la segunda actividad, Procesar acción Agregar, transfiere fuera de 0. A continuación, vemos Configurar sesión segura.  
   
  ![Mediante el Visor de seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Vista gráfica de las actividades de cliente de WCF: actividad ambiente (aquí 0), Procesar acción y Configurar sesión segura.  
+Vista de gráfico de las actividades de cliente WCF: Ambiente (aquí 0) de la actividad procesar acción y configurar sesión segura  
   
  En el panel superior derecho, podemos ver todos los seguimientos relacionados con la actividad Procesar acción Agregar. Específicamente, hemos enviado el mensaje de solicitud ("Envía un mensaje sobre un canal") y hemos recibido la respuesta ("Se envió un mensaje a través de un canal") en la misma actividad. Esto se muestra en el siguiente gráfico. Para ofrecer claridad, la actividad Configurar sesión segura se contrae en el gráfico.  
   
@@ -198,7 +198,7 @@ Expansión de actividades para llegar hasta la causa raíz de un problema
  ![Mediante el Visor de seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 Para iniciar la solución de problemas, también puede escoger un seguimiento de mensaje rojo o amarillo y hacer doble clic en él para llegar hasta la causa raíz.  
   
-## <a name="see-also"></a>Vea también  
- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Vea también
+- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

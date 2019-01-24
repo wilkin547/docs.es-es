@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592437"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configuración de la compatibilidad con WS-Atomic Transaction
 En este tema se describe cómo puede configurar WS-AtomicTransaction (WS-AT) admiten utilizando la WS-AT Utilidad de configuración.  
@@ -54,7 +54,7 @@ En este tema se describe cómo puede configurar WS-AtomicTransaction (WS-AT) adm
 ### <a name="creating-and-exporting-certificates"></a>Crear y exportar Certificados  
  Este procedimiento requiere el Complemento de Certificados MMC. Se puede tener acceso al complemento abriendo el menú Inicio/Ejecutar, escribiendo "mmc" en el cuadro de entrada y presionando Aceptar. A continuación, en el **Consola1** ventana, vaya a **el archivo/agregar o quitar** complemento, haga clic en Agregar y elija **certificados** desde el **disponible de forma independiente Complementos** lista. Por último, seleccione **cuenta de equipo** para administrar y haga clic en **Aceptar**. El **certificados** nodo aparece en la consola de complemento.  
   
- En este momento, poseerá los certificados necesarios para establecer la confianza. Para obtener información sobre cómo crear e instalar nuevos certificados antes de los siguientes pasos, consulte [Cómo: crear e instalar certificados de cliente temporales en WCF durante el desarrollo](https://go.microsoft.com/fwlink/?LinkId=158925).  
+ En este momento, poseerá los certificados necesarios para establecer la confianza. Para obtener información sobre cómo crear e instalar nuevos certificados antes de los pasos siguientes, vea [Cómo: Crear e instalar certificados de cliente temporales en WCF durante el desarrollo](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
 1.  En el equipo A, usando el complemento de los certificados MMC, importe el certificado existente (certA) en el almacén LocalMachine\MY (Nodo Personal) y LocalMachine\ROOT (nodo de entidad de certificación raíz de confianza). Para importar un certificado a un nodo específico, haga clic en el nodo y elija **todas las tareas/importar**.  
   
@@ -118,6 +118,6 @@ En este tema se describe cómo puede configurar WS-AtomicTransaction (WS-AT) adm
   
 -   31: detallado  
   
-## <a name="see-also"></a>Vea también  
- [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [Complemento MMC de configuración de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>Vea también
+- [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Complemento MMC de configuración de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

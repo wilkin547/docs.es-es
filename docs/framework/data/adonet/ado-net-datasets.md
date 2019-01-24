@@ -2,12 +2,12 @@
 title: Objetos DataSet de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: e4f2aeca72404379a9cebbfacda77f98a9e85bf3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f9821f07aae8a761a3890e93347f9cf727f8bdd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569432"
 ---
 # <a name="adonet-datasets"></a>Objetos DataSet de ADO.NET
 El objeto <xref:System.Data.DataSet> es esencial para la compatibilidad con escenarios de datos distribuidos desconectados con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. El **DataSet** es una representación residente en memoria de datos que proporciona un modelo de programación relacional coherente independientemente del origen de datos. Se puede utilizar con muchos y distintos orígenes de datos, con datos XML o para administrar datos locales de la aplicación. El **DataSet** representa un conjunto completo de datos, incluidas las tablas relacionadas, restricciones y relaciones entre las tablas. La siguiente ilustración muestra el **DataSet** modelo de objetos.  
@@ -45,8 +45,8 @@ Modelo de objetos DataSet
   
  Para más información, vea [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

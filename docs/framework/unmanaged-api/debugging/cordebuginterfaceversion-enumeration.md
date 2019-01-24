@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bc72b9c5687654c17a01ee9b4fa9d31dcf50b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556121"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion (Enumeración)
 Especifica una interfaz, una versión de .NET Framework, o la versión de .NET Framework en la que se incorporó una interfaz.  
@@ -204,7 +204,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugCode2`|[ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)|2.0|  
 |`ver_ICorDebugClass2`|"ICorDebugClass2"|2.0|  
 |`ver_ICorDebugValue2`|"ICorDebugValue2"|2.0|  
-|`ver_ICorDebugEval2`|El "ICorDebugEval2".|2.0|  
+|`ver_ICorDebugEval2`|"ICorDebugEval2".|2.0|  
 |`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2.0|  
 |`ver_ICorDebugThread3`|[ICorDebugThread3](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)|4|  
@@ -222,7 +222,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|La versión de .NET Framework, incluidos todos sus Service Packs, es la última versión.|-|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede usar un depurador el `CorDebugInterfaceVersion` en la enumeración de la [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) función para especificar la versión más reciente de .NET Framework que admite el depurador.  
+ Puede usar un depurador el `CorDebugInterfaceVersion` enumeración en el [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) función para especificar la versión más alta de .NET Framework que admite el depurador.  
   
 ## <a name="interface-names"></a>Nombres de interfaz  
  El número que aparece al final de los nombres de interfaz en la API de depuración (por ejemplo, "3" en `ICorDebugThread3`) especifica la versión de la interfaz, no la versión de .NET Framework. Todos los nombres de interfaz en la API de depuración incluyen números de versión, excepto las interfaces que se incorporaron en .NET Framework versión 1. Cualquier correspondencia entre los números de versión de las interfaces y los números de versión de .NET Framework es pura coincidencia.  
@@ -238,13 +238,13 @@ typedef enum CorDebugInterfaceVersion {
 -   El [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] incorpora una mezcla de versiones de la interfaz. Por ejemplo, tanto `ICorDebugThread3` como `ICorDebugThread4` aparecen como la tercera y cuarta versión de la interfaz `ICorDebugThread`. El [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] también presenta la primera versión de la `ICorDebugStackWalk` interfaz y la segunda versión de la `ICorDebugNativeFrame` interfaz (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

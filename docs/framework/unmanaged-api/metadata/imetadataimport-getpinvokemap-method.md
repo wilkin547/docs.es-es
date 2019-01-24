@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2174537e9605ad35e4f6f878954e318c7032b080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2aed3367e20e32a387c8a1c58ead2899fbf0dcb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521444"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap (Método)
 Obtiene un token ModuleRef para representar el ensamblado de destino de una llamada PInvoke.  
@@ -42,32 +42,32 @@ HRESULT GetPinvokeMap (
   
 #### <a name="parameters"></a>Parámetros  
  `tk`  
- [in] Símbolo (token) de FieldDef o de MethodDef para obtener los metadatos de asignación de PInvoke.  
+ [in] Un token de FieldDef o MethodDef para obtener los metadatos de asignación de PInvoke.  
   
  `pdwMappingFlags`  
- [out] Un puntero a los indicadores que se utilizan para la asignación. Este valor es una máscara de bits de la [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeración.  
+ [out] Un puntero a los marcadores utilizados para la asignación. Este valor es una máscara de bits desde el [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeración.  
   
  `szImportName`  
- [out] El nombre de la DLL no administrada de destino.  
+ [out] El nombre de la DLL de destino no administrado.  
   
  `cchImportName`  
  [in] El tamaño en caracteres anchos de `szImportName`.  
   
  `pchImportName`  
- [out] El número de caracteres anchos devueltos en `szImportName`.  
+ [out] El número de caracteres anchos que se devuelven en `szImportName`.  
   
  `pmrImportDLL`  
- [out] Un puntero a un símbolo (token) de ModuleRef que representa la biblioteca de objetos de destino no administrada.  
+ [out] Un puntero a un token ModuleRef que representa la biblioteca de objetos de destino no administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

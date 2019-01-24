@@ -2,21 +2,21 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cefd46d7810149264f9c431a212da0f3f51f8186
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577651"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 Especifica que la resolución de PNRP (Protocolo de resolución de nombres de mismo nivel) será utilizada como resolución. Este elemento es opcional porque PNRP es la resolución predeterminada.  
   
  \<system.serviceModel>  
-\<enlaces >  
-\<customBinding >  
-\<enlace >  
-\<pnrpResolver >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<pnrpResolver>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ Especifica que la resolución de PNRP (Protocolo de resolución de nombres de mi
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -48,12 +48,12 @@ Especifica que la resolución de PNRP (Protocolo de resolución de nombres de mi
 <pnrpResolver resolverType="String" />
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>  
- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Resoluciones del mismo nivel](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>
+- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Resoluciones del mismo nivel](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

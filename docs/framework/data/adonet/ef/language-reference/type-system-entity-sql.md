@@ -2,12 +2,12 @@
 title: Sistema de tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 270b0981214e674d220025ad52c7c94ee3a66224
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1831028f9e659dab90ca3c8689d7ff2d5c0ee36a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554340"
 ---
 # <a name="type-system-entity-sql"></a>Sistema de tipos (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite varios tipos:  
@@ -48,8 +48,8 @@ from (select ref(o) as r from LOB.Orders as o) as o2
   
  Si el valor de referencia es NULL o si el destino de la referencia no existe, el resultado es NULL.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)  
- [Especificaciones CSDL, SSDL MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)
+- [Especificaciones CSDL, SSDL MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

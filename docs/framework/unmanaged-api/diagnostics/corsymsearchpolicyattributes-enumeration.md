@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c3aedea4cc8ce2d8fb8c0c0bf3fead727dcf64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561626"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes (Enumeración)
-Especifica la directiva que se utilizará al realizar una búsqueda de un lector de símbolos. Estas constantes se utilizan por la [ISymUnmanagedBinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) y [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) métodos.  
+Especifica la directiva que se usará al realizar una búsqueda de un lector de símbolos. Estas constantes se utilizan por el [ISymUnmanagedBinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) y [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) métodos.  
   
 > [!IMPORTANT]
 >  Es un riesgo de seguridad para abrir un archivo de programa (PDB) de la base de datos desde un origen de confianza.  
@@ -45,13 +45,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Consulta el registro de las rutas de acceso de búsqueda de símbolos.|  
+|`AllowRegistryAccess`|Consulta el registro para las rutas de búsqueda de símbolos.|  
 |`AllowSymbolServerAccess`|Tiene acceso a un servidor de símbolos.|  
 |`AllowOriginalPathAccess`|Busca la ruta de acceso especificada en el directorio de depuración.|  
 |`AllowReferencePathAccess`|Busca el archivo PDB en el lugar donde está el archivo .exe.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -2,12 +2,12 @@
 title: Plantillas de Visual Studio para WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 73d2645977381602ef028d091675a22fb933d60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a7529b14c3c83f0df7b41581ef18e5192209bc5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624943"
 ---
 # <a name="wcf-visual-studio-templates"></a>Plantillas de Visual Studio para WCF
 Las plantillas de Visual Studio de Windows Communication Foundation (WCF) son predefinida proyecto y plantillas de elemento que puede usar en Visual Studio para compilar rápidamente servicios WCF y aplicaciones que lo rodea.  
@@ -80,8 +80,8 @@ Las plantillas de Visual Studio de Windows Communication Foundation (WCF) son pr
  Para obtener acceso a esta plantilla, haga clic en un proyecto de aplicación Web o sitio Web en **el Explorador de soluciones**, haga clic en **agregar un nuevo elemento**y haga clic en **servicio WCF habilitado para Silverlight**.  
   
 > [!NOTE]
->  El servicio WCF habilitado para Silverlight expone un extremo `basicHttpBinding` sin habilitar ninguna configuración de seguridad. Por lo tanto, todos los clientes que se conectan a este servicio pueden obtener información sobre el mismo. Los mensajes que se intercambian entre el servicio y el cliente tampoco están firmados ni cifrados. Para proteger el punto de conexión correctamente, debería usar la autenticación de ASP.NET, HTTPS u otros mecanismos.  
+>  El servicio WCF habilitado para Silverlight expone un punto de conexión `basicHttpBinding` sin habilitar ninguna configuración de seguridad. Por lo tanto, todos los clientes que se conectan a este servicio pueden obtener información sobre el mismo. Los mensajes que se intercambian entre el servicio y el cliente tampoco están firmados ni cifrados. Para proteger el punto de conexión correctamente, debería usar la autenticación de ASP.NET, HTTPS u otros mecanismos.  
   
-## <a name="see-also"></a>Vea también  
- [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
- [Cliente de prueba de WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Vea también
+- [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Cliente de prueba de WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

@@ -2,12 +2,12 @@
 title: Arquitectura de activación de WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557112"
 ---
 # <a name="was-activation-architecture"></a>Arquitectura de activación de WAS
 Este tema detalla y discute los componentes de Windows Process Activation Service (también conocido como WAS).  
@@ -85,6 +85,6 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Características de hospedaje de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Vea también
+- [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

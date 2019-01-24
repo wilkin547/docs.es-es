@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: 903be68e71ad590b4b669545afd077175534ef4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c57f431350d4f63507ee7374616b62ca32151c86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639411"
 ---
 # <a name="bad-file-name-or-number"></a>Número o nombre de archivo incorrecto
 Se produjo un error al intentar obtener acceso al archivo especificado. Entre las posibles causas de este error son:  
   
--   Una instrucción hace referencia a un archivo con un nombre de archivo o un número que no se especificó en el `FileOpen` instrucción o que se especificó en un `FileOpen` instrucción pero era posteriormente cerrado.  
+-   La instrucción hace referencia a un archivo con un nombre de archivo o un número que no se especificó en el `FileOpen` instrucción o que se especificó en un `FileOpen` instrucción pero era posteriormente cerrado.  
   
 -   Una instrucción hace referencia a un archivo con un número que está fuera del intervalo del número de archivos.  
   
@@ -22,12 +22,12 @@ Se produjo un error al intentar obtener acceso al archivo especificado. Entre la
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Asegúrese de que se especifica el nombre de archivo en un `FileOpen` instrucción. Tenga en cuenta que si invoca el `FileClose` instrucción sin argumentos, puede haber accidentalmente cerrado todos los archivos abiertos.  
+1.  Asegúrese de que se especifica el nombre de archivo en un `FileOpen` instrucción. Tenga en cuenta que si se ha invocado el `FileClose` instrucción sin argumentos, puede haber accidentalmente cerrado todos los archivos abiertos.  
   
-2.  Si el código está generando números de los archivos de forma algorítmica, asegúrese de que los números son válidos.  
+2.  Si el código genera números de archivo de forma algorítmica, asegúrese de que los números son válidos.  
   
 3.  Compruebe los nombres de archivo para asegurarse de que se ajusten a las convenciones del sistema operativo.  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>  
- [Convenciones de nomenclatura de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
+- [Convenciones de nomenclatura de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

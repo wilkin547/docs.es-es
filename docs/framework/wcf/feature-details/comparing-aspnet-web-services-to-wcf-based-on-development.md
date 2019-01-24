@@ -2,12 +2,12 @@
 title: Comparación de los servicios web ASP.NET con el WCF basado en desarrollo
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6bf9743410d3138efd5f3ea151b58f61e46ef683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496798"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Comparación de los servicios web ASP.NET con el WCF basado en desarrollo
 Windows Communication Foundation (WCF) tiene una opción de modo de compatibilidad ASP.NET para habilitar aplicaciones de WCF para programar y configurar como servicios Web ASP.NET e imitar su comportamiento. Las secciones siguientes comparan los servicios Web ASP.NET y WCF se basa en lo que se necesita para desarrollar aplicaciones mediante ambas tecnologías.  
@@ -750,5 +750,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>Globalización  
  El lenguaje de configuración de ASP.NET permite especificar una referencia cultural para los servicios individuales. WCF no admite ese valor de configuración, excepto en el modo de compatibilidad ASP.NET. Para localizar un servicio WCF que no utiliza el modo de compatibilidad ASP.NET, compile el tipo de servicio en los ensamblados específicos de la referencia cultural y tiene puntos de conexión específicas de referencias culturales independientes para cada ensamblado específico de la referencia cultural.  
   
-## <a name="see-also"></a>Vea también  
- [Comparación de los servicios web ASP.NET con WCF basado en el propósito y las normas utilizadas](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>Vea también
+- [Comparación de los servicios web ASP.NET con WCF basado en el propósito y las normas utilizadas](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

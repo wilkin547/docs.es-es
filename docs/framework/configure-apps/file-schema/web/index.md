@@ -2,21 +2,15 @@
 title: Esquema de configuración web
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Web.config configuration file [ASP.NET]
-- ASP.NET configuration system, Web settings schema
-- schema Web settings
-- Web settings, schema [ASP.NET]
-- configuration files [ASP.NET]
-- configuration schema [.NET Framework], Web settings
+  - 'Web.config configuration file [ASP.NET]'
+  - 'ASP.NET configuration system, Web settings schema'
+  - schema Web settings
+  - 'Web settings, schema [ASP.NET]'
+  - 'configuration files [ASP.NET]'
+  - 'configuration schema [.NET Framework], Web settings'
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 461043dbb57043c5c18ea703d45f8b3ae487d271
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401490"
 ---
 # <a name="web-settings-schema"></a>Esquema de configuración web
 La configuración web especifica la configuración de la CPU y de ASP.NET de nivel de ejecución que se aplica al comportamiento de todo el proceso administrado por el nivel de hospedaje de ASP.NET. Esta configuración difiere de la del tipo de dominio de la aplicación que se especifica en el archivo Web.config de una aplicación ASP.NET.  
@@ -38,5 +32,5 @@ La configuración web especifica la configuración de la CPU y de ASP.NET de niv
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Contiene información usada por el nivel de hospedaje de ASP.NET.|  
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Especifica la configuración de la CPU y de ASP.NET de nivel de ejecución que se aplica al comportamiento de todo el proceso, administrado por el nivel de hospedaje de ASP.NET.|  
   
-## <a name="see-also"></a>Vea también  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>Vea también
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
