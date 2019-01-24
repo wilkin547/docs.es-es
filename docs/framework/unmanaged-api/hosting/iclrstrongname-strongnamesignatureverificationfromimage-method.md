@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdbf2126d3da152ce68b6dbb47f5772e3b13d2c6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b8c2151494a2ddfc200edc9c6c6cc3f7639bcf19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728887"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a><span data-ttu-id="b2c90-102">ICLRStrongName::StrongNameSignatureVerificationFromImage (Método)</span><span class="sxs-lookup"><span data-stu-id="b2c90-102">ICLRStrongName::StrongNameSignatureVerificationFromImage Method</span></span>
-<span data-ttu-id="b2c90-103">Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.</span><span class="sxs-lookup"><span data-stu-id="b2c90-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a><span data-ttu-id="c052b-102">ICLRStrongName::StrongNameSignatureVerificationFromImage (Método)</span><span class="sxs-lookup"><span data-stu-id="c052b-102">ICLRStrongName::StrongNameSignatureVerificationFromImage Method</span></span>
+<span data-ttu-id="c052b-103">Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.</span><span class="sxs-lookup"><span data-stu-id="c052b-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2c90-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b2c90-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c052b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c052b-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerificationFromImage (  
@@ -38,44 +38,44 @@ HRESULT StrongNameSignatureVerificationFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b2c90-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b2c90-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c052b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c052b-105">Parameters</span></span>  
  `pbBase`  
- <span data-ttu-id="b2c90-106">[in] La dirección virtual relativa del manifiesto del ensamblado asignado.</span><span class="sxs-lookup"><span data-stu-id="b2c90-106">[in] The relative virtual address of the mapped assembly manifest.</span></span>  
+ <span data-ttu-id="c052b-106">[in] La dirección virtual relativa del manifiesto del ensamblado asignado.</span><span class="sxs-lookup"><span data-stu-id="c052b-106">[in] The relative virtual address of the mapped assembly manifest.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="b2c90-107">[in] El tamaño, en bytes, de la imagen asignada.</span><span class="sxs-lookup"><span data-stu-id="b2c90-107">[in] The size, in bytes, of the mapped image.</span></span>  
+ <span data-ttu-id="c052b-107">[in] El tamaño, en bytes, de la imagen asignada.</span><span class="sxs-lookup"><span data-stu-id="c052b-107">[in] The size, in bytes, of the mapped image.</span></span>  
   
  `dwInFlags`  
- <span data-ttu-id="b2c90-108">[in] Marcas que influyen en el comportamiento de la comprobación.</span><span class="sxs-lookup"><span data-stu-id="b2c90-108">[in] Flags that influence verification behavior.</span></span> <span data-ttu-id="b2c90-109">Se admiten los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="b2c90-109">The following values are supported:</span></span>  
+ <span data-ttu-id="c052b-108">[in] Marcas que influyen en el comportamiento de la comprobación.</span><span class="sxs-lookup"><span data-stu-id="c052b-108">[in] Flags that influence verification behavior.</span></span> <span data-ttu-id="c052b-109">Se admiten los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="c052b-109">The following values are supported:</span></span>  
   
--   <span data-ttu-id="b2c90-110">`SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación incluso si es necesario invalidar la configuración del registro.</span><span class="sxs-lookup"><span data-stu-id="b2c90-110">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
+-   <span data-ttu-id="c052b-110">`SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación incluso si es necesario invalidar la configuración del registro.</span><span class="sxs-lookup"><span data-stu-id="c052b-110">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
   
--   <span data-ttu-id="b2c90-111">`SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera comprobación realizada en esta imagen.</span><span class="sxs-lookup"><span data-stu-id="b2c90-111">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first verification performed on this image.</span></span>  
+-   <span data-ttu-id="c052b-111">`SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera comprobación realizada en esta imagen.</span><span class="sxs-lookup"><span data-stu-id="c052b-111">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first verification performed on this image.</span></span>  
   
--   <span data-ttu-id="b2c90-112">`SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.</span><span class="sxs-lookup"><span data-stu-id="b2c90-112">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
+-   <span data-ttu-id="c052b-112">`SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.</span><span class="sxs-lookup"><span data-stu-id="c052b-112">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
   
--   <span data-ttu-id="b2c90-113">`SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado será accesible solo para el usuario actual.</span><span class="sxs-lookup"><span data-stu-id="b2c90-113">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
+-   <span data-ttu-id="c052b-113">`SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado será accesible solo para el usuario actual.</span><span class="sxs-lookup"><span data-stu-id="c052b-113">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
   
--   <span data-ttu-id="b2c90-114">`SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.</span><span class="sxs-lookup"><span data-stu-id="b2c90-114">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
+-   <span data-ttu-id="c052b-114">`SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.</span><span class="sxs-lookup"><span data-stu-id="c052b-114">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
   
--   <span data-ttu-id="b2c90-115">`SN_INFLAG_RUNTIME` (0 x 80000000): reservado para la depuración interna.</span><span class="sxs-lookup"><span data-stu-id="b2c90-115">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
+-   <span data-ttu-id="c052b-115">`SN_INFLAG_RUNTIME` (0 x 80000000): reservado para la depuración interna.</span><span class="sxs-lookup"><span data-stu-id="c052b-115">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
   
  `pdwOutFlags`  
- <span data-ttu-id="b2c90-116">[out] Una marca para obtener información de salida adicional.</span><span class="sxs-lookup"><span data-stu-id="b2c90-116">[out] A flag for additional output information.</span></span> <span data-ttu-id="b2c90-117">Se admite el siguiente valor:</span><span class="sxs-lookup"><span data-stu-id="b2c90-117">The following value is supported:</span></span>  
+ <span data-ttu-id="c052b-116">[out] Una marca para obtener información de salida adicional.</span><span class="sxs-lookup"><span data-stu-id="c052b-116">[out] A flag for additional output information.</span></span> <span data-ttu-id="c052b-117">Se admite el siguiente valor:</span><span class="sxs-lookup"><span data-stu-id="c052b-117">The following value is supported:</span></span>  
   
--   <span data-ttu-id="b2c90-118">`SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.</span><span class="sxs-lookup"><span data-stu-id="b2c90-118">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
+-   <span data-ttu-id="c052b-118">`SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.</span><span class="sxs-lookup"><span data-stu-id="c052b-118">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b2c90-119">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="b2c90-119">Return Value</span></span>  
- <span data-ttu-id="b2c90-120">`S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).</span><span class="sxs-lookup"><span data-stu-id="b2c90-120">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c052b-119">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c052b-119">Return Value</span></span>  
+ <span data-ttu-id="c052b-120">`S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).</span><span class="sxs-lookup"><span data-stu-id="c052b-120">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2c90-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b2c90-121">Requirements</span></span>  
- <span data-ttu-id="b2c90-122">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2c90-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c052b-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c052b-121">Requirements</span></span>  
+ <span data-ttu-id="c052b-122">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c052b-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2c90-123">**Encabezado:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="b2c90-123">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="c052b-123">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="c052b-123">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="b2c90-124">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b2c90-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c052b-124">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c052b-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b2c90-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2c90-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c052b-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c052b-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2c90-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="b2c90-126">See Also</span></span>  
- [<span data-ttu-id="b2c90-127">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b2c90-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c052b-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="c052b-126">See also</span></span>
+- [<span data-ttu-id="c052b-127">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c052b-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
