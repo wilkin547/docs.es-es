@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Realizar llamadas seguras para subprocesos en controles de formularios Windows Forms'
+title: Procedimiento Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710474"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Cómo: Realizar llamadas seguras para subprocesos en controles de formularios Windows Forms
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procedimiento Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
 
 Si utiliza multithreading para mejorar el rendimiento de las aplicaciones de Windows Forms, asegúrese de que realiza llamadas a los controles de una manera segura para subprocesos.
 
@@ -406,7 +406,7 @@ private:
  El siguiente ejemplo de código es una aplicación de Windows Forms completa que consta de un formulario con tres botones y un cuadro de texto. El primer botón muestra el acceso no seguro entre subprocesos, el segundo botón muestra el acceso seguro mediante el uso de <xref:System.Windows.Forms.Control.Invoke%2A>y el tercer botón muestra el acceso seguro mediante el uso de <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Para obtener instrucciones acerca de cómo ejecutar el ejemplo, consulte [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Este ejemplo requiere referencias a los ensamblados System.Drawing y System.Windows.Forms.
+> Para obtener instrucciones sobre cómo ejecutar el ejemplo, vea [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Este ejemplo requiere referencias a los ensamblados System.Drawing y System.Windows.Forms.
 
 ```csharp
 using System;
@@ -1046,12 +1046,12 @@ Al ejecutar la aplicación y hacer clic en el botón **Unsafe Call** , inmediata
 ## <a name="robust-programming"></a>Programación sólida
 
 > [!CAUTION]
-> Si usa multithreading de cualquier tipo, corre el riesgo de que se produzcan errores graves y complejos en el código. Para obtener más información, consulte [Procedimientos recomendados para el subprocesamiento administrado](../../../../docs/standard/threading/managed-threading-best-practices.md) antes de implementar cualquier solución que use multithreading.
+> Si usa multithreading de cualquier tipo, corre el riesgo de que se produzcan errores graves y complejos en el código. Para obtener más información, consulte [Managed Threading Best Practices](../../../../docs/standard/threading/managed-threading-best-practices.md) antes de implementar cualquier solución que use multithreading.
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Cómo: Ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Aplicaciones de Windows Forms y aplicaciones no administradas](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

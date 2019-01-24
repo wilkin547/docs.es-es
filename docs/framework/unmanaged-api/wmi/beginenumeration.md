@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695730"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration (función)
 Restablece el enumerador al principio de la enumeración.  
@@ -54,9 +54,9 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | La combinación de marcas en `lEnumFlags` no es válido o no válido se ha especificado el argumento. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | La combinación de marcas en `lEnumFlags` no es válido o no válido se ha especificado el argumento. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Una segunda llamada a `BeginEnumeration` se realizó sin una llamada intermedia a [ `EndEnumeration` ](endenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -76,33 +76,33 @@ Las marcas que se pueden pasar como el `lEnumFlags` argumento se definen en el *
 
 Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Limitar la enumeración de propiedades del sistema solo. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Limitar la enumeración de propiedades del sistema solo. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Incluir propiedades locales y propagadas pero excluir propiedades del sistema de la enumeración. |
 
 Las clases:
 
 Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0 x 100 | Limitar la enumeración de propiedades que se reemplaza en la definición de clase. |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0 x 100 | Limitar la enumeración a las propiedades que se reemplaza en la definición de clase actual y a las nuevas propiedades definidas en la clase. |
-| `WBEM_MASK_CLASS_CONDITION` | 0 x 300 | Una máscara (en lugar de una marca) se aplican a un `lEnumFlags` valor para comprobar si `WBEM_FLAG_CLASS_OVERRIDES_ONLY` o `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` está establecido. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Limitar la enumeración de las propiedades que se definen o se modifica en la propia clase. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Limitar la enumeración de propiedades que se heredan de clases base. |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Limitar la enumeración de propiedades que se reemplaza en la definición de clase. |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Limitar la enumeración a las propiedades que se reemplaza en la definición de clase actual y a las nuevas propiedades definidas en la clase. |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Una máscara (en lugar de una marca) se aplican a un `lEnumFlags` valor para comprobar si `WBEM_FLAG_CLASS_OVERRIDES_ONLY` o `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` está establecido. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitar la enumeración de las propiedades que se definen o se modifica en la propia clase. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitar la enumeración de propiedades que se heredan de clases base. |
 
 Para las instancias:
 
 Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Limitar la enumeración de las propiedades que se definen o se modifica en la propia clase. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Limitar la enumeración de propiedades que se heredan de clases base. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitar la enumeración de las propiedades que se definen o se modifica en la propia clase. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitar la enumeración de propiedades que se heredan de clases base. |
 
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

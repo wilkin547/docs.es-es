@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb97c545d2d57ef589b5a7a5b3618eaa2b6f364f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687003"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity (Interfaz)
 Representa la firma única del código que define la aplicación en el ámbito actual.  
@@ -30,17 +30,17 @@ Representa la firma única del código que define la aplicación en el ámbito a
   
 |Método|Descripción|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|Obtiene un puntero de interfaz a una nueva `IDefinitionIdentity` objeto que es idéntico a `IDefinitionIdentity`, excepto para los cambios de atributo especificado.|  
-|`IDefinitionIdentity::EnumAttributes`|Obtiene un puntero de interfaz a una [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) objeto que contiene los atributos asociados a este `IDefinitionIdentity`.|  
+|`IDefinitionIdentity::Clone`|Obtiene un puntero de interfaz a una nueva `IDefinitionIdentity` objeto que es idéntica a esta `IDefinitionIdentity`, excepto los cambios de atributo especificado.|  
+|`IDefinitionIdentity::EnumAttributes`|Obtiene un puntero de interfaz a un [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) objeto que contiene los atributos asociados con este `IDefinitionIdentity`.|  
 |`IDefinitionIdentity::GetAttribute`|Obtiene el valor del atributo con el nombre especificado en el espacio de nombres especificado.|  
 |`IDefinitionIdentity::SetAttribute`|Establece el atributo que tiene el nombre especificado en el espacio de nombres especificado en el valor especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Isolation.h  
+ **Encabezado**: Isolation.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

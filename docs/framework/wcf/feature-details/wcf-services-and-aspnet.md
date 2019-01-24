@@ -2,12 +2,12 @@
 title: Servicios WCF y ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: c4d747787529ce6755a25cbd791886cf1999b699
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58b5a09f63b6efb3c48fb3836da63c24650c5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712290"
 ---
 # <a name="wcf-services-and-aspnet"></a>Servicios WCF y ASP.NET
 En este tema se describe hospedaje Windows Communication Foundation (WCF) servicios side-by-side con ASP.NET y hospedarlas en modo de compatibilidad ASP.NET.  
@@ -29,13 +29,13 @@ En este tema se describe hospedaje Windows Communication Foundation (WCF) servic
   
     -   HttpContext: <xref:System.Web.HttpContext.Current%2A> siempre `null` al acceder desde dentro de un servicio WCF. Use <!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>--> `RequestContext` en su lugar.  
   
-    -   Autorización basada en el archivo: modelo de seguridad de la WCF no permite la lista de control de acceso (ACL) que se aplica al archivo .svc del servicio de hora de decidir si se autoriza una solicitud de servicio.  
+    -   Autorización basada en archivo: El modelo de seguridad WCF no permite la lista de control de acceso (ACL) que se aplica al archivo .svc del servicio de hora de decidir si se autoriza una solicitud de servicio.  
   
-    -   Autorización de URL basada en la configuración: de forma similar, el modelo de seguridad WCF no se adhiere a ninguna regla de autorización basada en la dirección URL especificada en de System.Web \<autorización > elemento de configuración. Estos valores se omiten para las solicitudes WCF si un servicio reside en un espacio de direcciones URL protegido por ASP. Reglas de autorización de dirección URL de la red.  
+    -   Autorización de URL basada en la configuración: De forma similar, el modelo de seguridad WCF no se adhiere a ninguna regla de autorización basada en la dirección URL especificada en de System.Web \<autorización > elemento de configuración. Estos valores se omiten para las solicitudes WCF si un servicio reside en un espacio de direcciones URL protegido por ASP. Reglas de autorización de dirección URL de la red.  
   
-    -   Extensibilidad de HttpModule: intercepta la infraestructura de hospedaje de WCF The WCF solicita cuando el <xref:System.Web.HttpApplication.PostAuthenticateRequest> se provoca el evento y no devuelve el procesamiento a la canalización HTTP de ASP.NET. Los módulos que están codificados para interceptar las solicitudes en las fases posteriores de la canalización no interceptan las solicitudes WCF.  
+    -   Extensibilidad de HttpModule: La infraestructura de hospedaje de WCF intercepta WCF solicita cuando el <xref:System.Web.HttpApplication.PostAuthenticateRequest> se provoca el evento y no devuelve el procesamiento a la canalización HTTP de ASP.NET. Los módulos que están codificados para interceptar las solicitudes en las fases posteriores de la canalización no interceptan las solicitudes WCF.  
   
-    -   Suplantación de ASP.NET: de forma predeterminada, WCF solicita siempre se ejecuta como IIS identidad de proceso, aun cuando ASP.NET se configura para permitir la suplantación mediante de System.Web \<identity impersonate = "true" / > opción de configuración.  
+    -   Suplantación de ASP.NET: De forma predeterminada, WCF solicita siempre se ejecuta como IIS identidad de proceso, aun cuando ASP.NET se configura para permitir la suplantación mediante de System.Web \<identity impersonate = "true" / > opción de configuración.  
   
  Estas restricciones se aplican sólo a los servicios WCF hospedados en la aplicación de IIS. El comportamiento del contenido de ASP.NET no se ve afectado por la presencia de WCF.  
   
@@ -56,15 +56,15 @@ En este tema se describe hospedaje Windows Communication Foundation (WCF) servic
   
  A diferencia de la configuración predeterminada en paralelo, donde la infraestructura de hospedaje de WCF intercepta los mensajes WCF y los enruta fuera de la canalización HTTP, los servicios WCF que se ejecuta en modo de compatibilidad de ASP.NET participan totalmente en el ciclo de vida de la solicitud HTTP de ASP.NET. En el modo de compatibilidad, los servicios de WCF utilizan la canalización HTTP a través de un <xref:System.Web.IHttpHandler> implementación, similar a las solicitudes de manera para las páginas ASPX y servicios Web ASMX se administran. Como resultado, WCF se comporta de forma idéntica a ASMX con respecto a las siguientes características ASP.NET:  
   
--   <xref:System.Web.HttpContext>: Pueden tener acceso servicios WCF que se ejecutan en modo de compatibilidad ASP.NET <xref:System.Web.HttpContext.Current%2A> y su estado asociado.  
+-   <xref:System.Web.HttpContext>: Pueden tener acceso los servicios WCF que se ejecuta en modo de compatibilidad ASP.NET <xref:System.Web.HttpContext.Current%2A> y su estado asociado.  
   
--   Autorización basada en el archivo: servicios WCF que se ejecuta en modo de compatibilidad ASP.NET pueden ser seguros mediante la asociación de listas de control de acceso (ACL) de archivos del sistema para el archivo .svc del servicio.  
+-   Autorización basada en archivo: Los servicios WCF que se ejecuta en modo de compatibilidad ASP.NET pueden ser seguros mediante la asociación de listas de control de acceso (ACL) de archivos del sistema para el archivo .svc del servicio.  
   
 -   Autorización de URL configurable: ASP. Cuando el servicio WCF se ejecuta en modo de compatibilidad de ASP.NET, se aplican las reglas de autorización de dirección URL de la red para las solicitudes WCF.  
   
--   <xref:System.Web.HttpModuleCollection> extensibilidad: servicios de WCF dado que se ejecuta en modo de compatibilidad ASP.NET participan totalmente en el ciclo de vida de la solicitud HTTP de ASP.NET, cualquier módulo HTTP configurado en la canalización HTTP es capaz de funcionar en las solicitudes WCF, tanto antes como después de la invocación del servicio.  
+-   <xref:System.Web.HttpModuleCollection> extensibilidad: Dado que los servicios WCF que se ejecuta en modo de compatibilidad de ASP.NET participan totalmente en el ciclo de vida de la solicitud HTTP de ASP.NET, cualquier módulo HTTP configurado en la canalización HTTP es capaz de funcionar en las solicitudes WCF, tanto antes como después de la invocación del servicio.  
   
--   Suplantación de ASP.NET: Ejecutar utilizando la identidad actual de ASP.NET de servicios WCF suplantar subproceso, que puede ser diferente de la identidad del proceso IIS si se ha habilitado la suplantación de ASP.NET para la aplicación. Si la suplantación de ASP.NET y la suplantación de WCF están habilitadas para una operación de servicio determinado, la implementación del servicio se ejecuta finalmente utilizando la identidad obtenida de WCF.  
+-   Suplantación de ASP.NET: Se ejecutan con la identidad actual de ASP.NET los servicios WCF suplantar subproceso, que puede ser diferente de la identidad del proceso IIS si se ha habilitado la suplantación de ASP.NET para la aplicación. Si la suplantación de ASP.NET y la suplantación de WCF están habilitadas para una operación de servicio determinado, la implementación del servicio se ejecuta finalmente utilizando la identidad obtenida de WCF.  
   
  Modo de compatibilidad ASP.NET de WCF está habilitado en el nivel de aplicación a través de la configuración siguiente (que se encuentra en el archivo Web.config de la aplicación):  
   
@@ -100,6 +100,6 @@ En este tema se describe hospedaje Windows Communication Foundation (WCF) servic
   
  Para obtener más información acerca de cómo habilitar el modo de compatibilidad ASP.NET para los servicios WCF, vea <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> y [compatibilidad de ASP.NET](../../../../docs/framework/wcf/samples/aspnet-compatibility.md) ejemplo.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
- [Características de hospedaje de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
+- [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

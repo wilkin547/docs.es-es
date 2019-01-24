@@ -2,12 +2,12 @@
 title: System.Object (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 5397fca0-689e-443e-802f-e1cbdc866427
-ms.openlocfilehash: bd4b30a65e7ad9391d9b867884d1c909491344bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cae06286b77e23718facfc5be2b0ac2d27381ad3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713423"
 ---
 # <a name="systemobject-methods"></a>System.Object (Métodos)
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite las siguientes <xref:System.Object> métodos.  
@@ -28,5 +28,5 @@ ms.locfileid: "33355180"
 ## <a name="differences-from-net"></a>Diferencias respecto a .NET  
  La salida de <xref:System.Object.ToString?displayProperty=nameWithType> para double utiliza SQL `CONVERT`(nvarchar (30), @x, 2) en SQL. SQL siempre utiliza 16 dígitos y notación científica (por ejemplo, "0.000000000000000e+000" para 0). En consecuencia, la conversión del método <xref:System.Object.ToString?displayProperty=nameWithType> no produce la misma cadena que <xref:System.Convert.ToString%2A?displayProperty=nameWithType> de .NET Framework.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

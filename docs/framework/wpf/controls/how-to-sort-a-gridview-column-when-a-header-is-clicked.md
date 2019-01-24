@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Ordenar una columna de GridView cuando se hace clic en un encabezado'
+title: Procedimiento Ordenar una columna de GridView cuando se hace clic en un encabezado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694092"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Cómo: Ordenar una columna de GridView cuando se hace clic en un encabezado
-Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView> Ver modo y ordena los datos de contenido cuando un usuario hace clic en un encabezado de columna.  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procedimiento Ordenar una columna de GridView cuando se hace clic en un encabezado
+En este ejemplo se muestra cómo crear un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView> Ver modo y ordena los datos de contenido cuando un usuario hace clic en un encabezado de columna.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se define un <xref:System.Windows.Controls.GridView> con tres columnas que se enlazan a la <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, y <xref:System.DateTime.Day%2A>, propiedades de la <xref:System.DateTime> estructura.  
+ En el ejemplo siguiente se define un <xref:System.Windows.Controls.GridView> con tres columnas que se enlazan a la <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, y <xref:System.DateTime.Day%2A>, las propiedades de la <xref:System.DateTime> estructura.  
   
 ```xaml  
 <GridView>  
@@ -69,7 +69,7 @@ Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.ListView> cont
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Para ordenar los datos según el contenido de una columna, en el ejemplo se define un controlador de eventos para controlar la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento que tiene lugar cuando se presiona el botón de encabezado de columna. En el ejemplo siguiente se muestra cómo especificar un controlador de eventos para el <xref:System.Windows.Controls.GridViewColumnHeader> control.  
+ Para ordenar los datos según el contenido de una columna, el ejemplo define un controlador de eventos para controlar la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento que tiene lugar cuando se presiona el botón del encabezado de columna. El ejemplo siguiente muestra cómo especificar un controlador de eventos para el <xref:System.Windows.Controls.GridViewColumnHeader> control.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

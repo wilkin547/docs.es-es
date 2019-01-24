@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693615"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
@@ -52,12 +52,12 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
 -   Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, use el almacén del **usuario actual**.  
   
 ### <a name="accessing-stores"></a>Obtención de acceso a almacenes  
- Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio alojado por Internet Information Services (IIS), el proceso [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se ejecuta bajo la cuenta [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso con la herramienta WinHttpCertConfig.exe, vea [Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obtener más información sobre cómo usar certificados de cliente con IIS, vea [Cómo llamar a un servicio web con un certificado de cliente para la autenticación en una aplicación web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio alojado por Internet Information Services (IIS), el proceso [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se ejecuta bajo la cuenta [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso mediante la herramienta WinHttpCertConfig.exe, vea [Cómo: Crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obtener más información sobre cómo usar certificados de cliente con IIS, vea [Cómo llamar a un servicio web con un certificado de cliente para la autenticación en una aplicación web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Confianza de cadena y entidades de certificación  
  Los certificados se crean en una jerarquía en la que cada certificado individual se vincula a la CA que emite el certificado. Este vínculo va al certificado de la CA. De la entidad emisora de certificados, a continuación, vínculos a la entidad de certificación que emitió el certificado de CA original. Este proceso se repite hasta que se llegue al certificado de la CA raíz. Se confía intrínsecamente en el certificado de la CA raíz.  
   
- Los certificados digitales se usan para autenticar una entidad confiando en esta jerarquía, que también se denomina *cadena de confianza*. Puede ver la cadena de cualquier certificado mediante el complemento MMC si hace doble clic en cualquier certificado y, después, hace clic en la pestaña **Ruta de acceso de certificado**. Para obtener más información sobre la importación de cadenas de certificados para una entidad de certificación, vea [Cómo: Especificar la cadena de certificados de la entidad de certificación utilizada para comprobar las firmas (WCF)](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Los certificados digitales se usan para autenticar una entidad confiando en esta jerarquía, que también se denomina *cadena de confianza*. Puede ver la cadena de cualquier certificado mediante el complemento MMC si hace doble clic en cualquier certificado y, después, hace clic en la pestaña **Ruta de acceso de certificado**. Para obtener más información sobre cómo importar cadenas de certificados para una entidad de certificación, consulte [Cómo: Especifique la cadena de certificados de entidad de certificado utilizada para comprobar las firmas](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
 >  A cualquier emisor se le puede designar una entidad emisora raíz de confianza colocando el certificado del emisor en el almacén de certificados de la entidad emisora raíz de confianza.  
@@ -96,7 +96,7 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
   
 3.  Importe el certificado de la entidad emisora raíz en el almacén Entidades emisoras de certificados raíz de confianza.  
   
-4.  Para obtener instrucciones paso a paso, vea [Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4.  Para obtener instrucciones detalladas, consulte [Cómo: Crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>¿Qué certificado utilizar?  
  Las preguntas más comunes sobre certificados son qué certificados utilizar y por qué. La respuesta depende de si está programando un cliente o servicio. La siguiente información proporciona una directriz general y no es una respuesta exhaustiva a estas preguntas.  
@@ -170,9 +170,9 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
   
  En la primera versión de WCF, la asignación se realiza sin consultar la directiva de dominio. Por consiguiente, es posible que las aplicaciones anteriores que solían funcionar al ejecutarse bajo la primera publicación, provoquen un error si se habilita la asignación y el certificado X.509 no cumple la directiva de dominio.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

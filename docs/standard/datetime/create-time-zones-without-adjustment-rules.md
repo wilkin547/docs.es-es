@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: crear zonas horarias sin reglas de ajuste'
+title: Procedimiento Crear zonas horarias sin reglas de ajuste
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e06232a4e262b13439516114e65c81c07ba24ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681721"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Cómo: crear zonas horarias sin reglas de ajuste
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Procedimiento Crear zonas horarias sin reglas de ajuste
 
 La información de zona horaria exacta requerida por una aplicación puede no encontrarse en un sistema determinado por varias razones:
 
@@ -34,7 +34,7 @@ En estos casos, puede llamar a la <xref:System.TimeZoneInfo.CreateCustomTimeZone
 > [!IMPORTANT]
 > Zonas horarias personalizadas creadas mediante una llamada a la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método no se agregan al registro. En su lugar, puede obtenerse únicamente a través de la referencia de objeto devuelta por la <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> llamada al método.
 
-En este tema se muestra cómo crear una zona horaria sin reglas de ajuste. Para crear una zona horaria que es compatible con las reglas de ajuste al horario de verano, vea [Cómo: crear zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+En este tema se muestra cómo crear una zona horaria sin reglas de ajuste. Para crear una zona horaria que es compatible con las reglas de ajuste al horario de verano, vea [Cómo: Creación de zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-without-adjustment-rules"></a>Para crear una zona horaria sin reglas de ajuste
 
@@ -72,6 +72,6 @@ Para este ejemplo se necesita:
 
 ## <a name="see-also"></a>Vea también
 
-* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
-* [Información general sobre zonas horarias](../../../docs/standard/datetime/time-zone-overview.md)
-* [Creación de zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+- [Información general sobre zonas horarias](../../../docs/standard/datetime/time-zone-overview.md)
+- [Cómo: Creación de zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)

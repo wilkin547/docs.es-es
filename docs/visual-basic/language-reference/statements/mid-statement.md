@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 47034b3699f4dfee67d36e72d4b22898d469c900
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700304"
 ---
 # <a name="mid-statement"></a>Mid (Instrucción)
 Reemplaza un número especificado de caracteres de un `String` variable por los caracteres de otra cadena.  
@@ -32,16 +32,16 @@ Mid( _
   
 ## <a name="parts"></a>Elementos  
  `Target`  
- Requerido. Nombre de la `String` variable va a modificar.  
+ Obligatorio. Nombre de la `String` variable va a modificar.  
   
  `Start`  
- Requerido. `Integer` expresión. Posición de carácter de `Target` donde comienza la sustitución de texto. `Start` utiliza un índice basado en uno.  
+ Obligatorio. `Integer` expresión. Posición de carácter de `Target` donde comienza la sustitución de texto. `Start` utiliza un índice basado en uno.  
   
  `Length`  
  Opcional. `Integer` expresión. Número de caracteres que se va a reemplazar. Si omite todos `String` se utiliza.  
   
  `StringExpression`  
- Requerido. `String` Expresión que reemplaza parte de `Target`.  
+ Obligatorio. `String` Expresión que reemplaza parte de `Target`.  
   
 ## <a name="exceptions"></a>Excepciones  
   
@@ -63,13 +63,13 @@ Mid( _
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Espacio de nombres**: [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Módulo:** `Strings`  
   
  **Ensamblado:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [Cadenas](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [Introducción a las cadenas en Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- [Cadenas](../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Introducción a las cadenas en Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

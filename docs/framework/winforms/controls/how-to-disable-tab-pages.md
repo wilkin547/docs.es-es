@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Deshabilitar páginas de ficha'
+title: Procedimiento Deshabilitar páginas de fichas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: 94d8522a71fcd565ae8f994d73ffe4c46fcf7ce3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1071b2ded2761d64e57484a9aea9bddb254a9a7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554418"
 ---
-# <a name="how-to-disable-tab-pages"></a>Cómo: Deshabilitar páginas de ficha
-En algunas ocasiones, deseará restringir el acceso a datos que están disponibles dentro de la aplicación de formularios Windows Forms. Un ejemplo de esto podría ser cuando tiene datos que se muestran en las fichas de un control de pestaña; los administradores podrían tener información sobre una página de ficha que desee para impedir que invitados o los usuarios de nivel inferior.  
+# <a name="how-to-disable-tab-pages"></a>Procedimiento Deshabilitar páginas de fichas
+En algunas ocasiones, deseará restringir el acceso a datos que están disponibles dentro de la aplicación de Windows Forms. Un ejemplo de esto podría ser si tiene datos que se muestran en las páginas de fichas de un control de ficha; los administradores podrían tener información sobre una página de ficha que desee restringir invitados o de los usuarios de nivel inferior.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>Para deshabilitar páginas de fichas mediante programación  
   
-1.  Escribir código para controlar el control de ficha <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> eventos. Éste es el evento que se desencadena cuando el usuario cambia de una pestaña a otra.  
+1.  Escribir código para controlar el control de ficha <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> eventos. Este es el evento que se desencadena cuando el usuario cambia de una ficha a la siguiente.  
   
-2.  Compruebe las credenciales. Dependiendo de la información presentada, puede comprobar el usuario ha iniciado sesión con el nombre de usuario o alguna otra forma de credenciales antes de permitir al usuario ver la pestaña.  
+2.  Compruebe las credenciales. Dependiendo de la información presentada, es posible que desee comprobar el usuario haya iniciado sesión con el nombre de usuario o alguna otra forma de credenciales antes de permitir al usuario ver la pestaña.  
   
-3.  Si el usuario tiene las credenciales apropiadas, muestre la ficha que se hizo clic. Si el usuario no tiene las credenciales adecuadas, mostrar un cuadro de mensaje u otra interfaz de usuario que indica no tendrá acceso y vuelva a la pestaña inicial.  
+3.  Si el usuario tiene las credenciales adecuadas, muestre la ficha que se hizo clic. Si el usuario no tiene las credenciales adecuadas, mostrar un cuadro de mensaje u otra interfaz de usuario que indica que no tiene acceso y vuelva a la pestaña inicial.  
   
     > [!NOTE]
-    >  Al implementar esta funcionalidad en las aplicaciones de producción, puede realizar esta comprobación de credenciales durante el formulario <xref:System.Windows.Forms.Form.Load> eventos. Esto le permitirá ocultar la ficha antes de que se muestra ninguna interfaz de usuario, que es un método más apropiado para la programación. La metodología utilizada a continuación (comprobación de credenciales y deshabilitación de la ficha durante el <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> evento) es para fines ilustrativos.  
+    >  Al implementar esta funcionalidad en sus aplicaciones de producción, puede realizar esta comprobación de credenciales durante el formulario <xref:System.Windows.Forms.Form.Load> eventos. Esto le permitirá ocultar la ficha antes de que se muestra ninguna interfaz de usuario, que es un enfoque mucho más limpio a la programación. La metodología utilizada a continuación (comprobación de credenciales y deshabilitación de la ficha durante el <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> evento) es para fines ilustrativos.  
   
-4.  Opcionalmente, si tiene más de dos páginas de fichas, mostrar una página de fichas diferente del original.  
+4.  Opcionalmente, si tiene más de dos páginas de fichas, muestre una página diferente del original.  
   
-     En el ejemplo siguiente, un <xref:System.Windows.Forms.CheckBox> control se utiliza en lugar de comprobar las credenciales, como los criterios para el acceso a la ficha varían por aplicación. Cuando el <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> se genera el evento, si la comprobación de credenciales es true (es decir, se activa la casilla de verificación) y la ficha seleccionada es `TabPage2` (la pestaña con la información confidencial, en este ejemplo), a continuación, `TabPage2` se muestra. En caso contrario, `TabPage3` se muestra y se muestra un cuadro de mensaje para el usuario, que indica que no tenía privilegios de acceso necesarios. El código siguiente supone un formulario con un <xref:System.Windows.Forms.CheckBox> control (`CredentialCheck`) y un <xref:System.Windows.Forms.TabControl> control con tres páginas de fichas.  
+     En el ejemplo siguiente, un <xref:System.Windows.Forms.CheckBox> control se usa en lugar de comprobar las credenciales, como los criterios para el acceso a la pestaña variará por aplicación. Cuando el <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> se genera el evento, si la comprobación de credenciales es true (es decir, se activa la casilla de verificación) y la pestaña seleccionada es `TabPage2` (la ficha con la información confidencial, en este ejemplo), a continuación, `TabPage2` se muestra. En caso contrario, `TabPage3` se muestra y se muestra un cuadro de mensaje para el usuario, que indica que no tiene privilegios de acceso adecuados. El código siguiente supone un formulario con un <xref:System.Windows.Forms.CheckBox> control (`CredentialCheck`) y un <xref:System.Windows.Forms.TabControl> control con tres páginas de ficha.  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
@@ -101,8 +101,8 @@ En algunas ocasiones, deseará restringir el acceso a datos que están disponibl
        gcnew System::EventHandler(this, &Form1::tabControl1_SelectedIndexChanged);  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general del control TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [Agregar un control a una página de fichas](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [Agregar y quitar fichas con el control TabControl de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
- [Cambiar la apariencia del control TabControl de Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a>Vea también
+- [Información general del control TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
+- [Cómo: Agregar un Control a una página de ficha](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
+- [Cómo: Agregar y quitar fichas con el control TabControl de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Cómo: Cambiar la apariencia del control TabControl de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

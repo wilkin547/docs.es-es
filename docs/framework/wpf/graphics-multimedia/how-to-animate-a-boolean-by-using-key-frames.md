@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Animar un objeto Boolean mediante fotogramas clave'
+title: Procedimiento Animar un objeto Boolean mediante fotogramas clave
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 0142748a5c8e9a4375802d1b48beec0501d37e7c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3752378d280708ffd40eaac160589af4674467e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689109"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Cómo: Animar un objeto Boolean mediante fotogramas clave
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Procedimiento Animar un objeto Boolean mediante fotogramas clave
 En este ejemplo se muestra cómo animar el valor de propiedad booleana de una <xref:System.Windows.Controls.Button> control mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  
@@ -28,9 +28,9 @@ En este ejemplo se muestra cómo animar el valor de propiedad booleana de una <x
   
  Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
- <xref:System.Windows.UIElement.IsEnabled%2A>  
- <xref:System.Windows.Controls.Button>  
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>
+- <xref:System.Windows.UIElement.IsEnabled%2A>
+- <xref:System.Windows.Controls.Button>
+- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

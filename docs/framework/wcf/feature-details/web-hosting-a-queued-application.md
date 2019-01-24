@@ -2,12 +2,12 @@
 title: Alojamiento web de una aplicación en cola
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700213"
 ---
 # <a name="web-hosting-a-queued-application"></a>Alojamiento web de una aplicación en cola
 El servicio de activación de procesos de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen aplicaciones que hospedar servicios de Windows Communication Foundation (WCF). El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios WCF usar HTTP y protocolos no HTTP, como net.msmq y msmq.formatname, en un entorno de hospedaje que admite la activación basada en mensajes y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
@@ -41,6 +41,6 @@ El servicio de activación de procesos de Windows (WAS) administra la activació
 ### <a name="subqueue-and-system-queue-caveat"></a>Subcola y advertencia de cola de sistema  
  Una aplicación hospedada en WAS no se puede activar basándose en mensajes en una cola de sistema, como la cola de mensajes no enviados para todo el sistema o subcolas, como subcolas dudosas. Esto supone una limitación para esta versión del producto.  
   
-## <a name="see-also"></a>Vea también  
- [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Puntos de conexión de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+## <a name="see-also"></a>Vea también
+- [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Puntos de conexión de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

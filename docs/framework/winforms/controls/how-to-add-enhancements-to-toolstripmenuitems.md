@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Agregar mejoras a ToolStripMenuItems'
+title: Procedimiento Agregar mejoras a ToolStripMenuItems
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: eb55796480bea896383da479fe23a5d8967a52e3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 621b96805543abb92bc73f734f1a090d9cdb7319
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685094"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Cómo: Agregar mejoras a ToolStripMenuItems
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Procedimiento Agregar mejoras a ToolStripMenuItems
 Puede mejorar la facilidad de uso <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.ContextMenuStrip> controles de las maneras siguientes:  
   
 -   Agregar marcas de verificación para designar si una característica está activada o desactivada, por ejemplo, si se muestra una regla a lo largo del margen de una aplicación de procesamiento de texto, o para indicar qué archivo en una lista de archivos se muestra, como en un **ventana** menú.  
@@ -113,7 +113,7 @@ Puede mejorar la facilidad de uso <xref:System.Windows.Forms.MenuStrip> y <xref:
     this.exitToolStripMenuItem});  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

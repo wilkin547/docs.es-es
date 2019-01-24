@@ -2,20 +2,20 @@
 title: Elemento &lt;add&gt; de &lt;filters&gt;
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: fe9ce8bc2a0efb9e20800189cd9f948d5e6a2232
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 43898485ea5730e958cbc4e9968d25c0e7f0d951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709460"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>Elemento &lt;add&gt; de &lt;filters&gt;
 Filtro de XPath que especifica el tipo de mensaje que se va a registrar.  
   
  \<system.ServiceModel>  
-\<diagnóstico >  
-\<messageLogging >  
-\<filtros >  
+\<diagnostic>  
+\<messageLogging>  
+\<filters>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<filtros >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Contiene una colección de filtros de XPath que se utilizan para controlar qué tipo de mensaje se registra.|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Contiene una colección de filtros de XPath que se utilizan para controlar qué tipo de mensaje se registra.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los filtros sólo se aplican en el nivel de transporte, el especificado por `logMessagesAtTransportLevel` es `true`. El nivel de servicio y el registro de mensajes incorrectos no se ven afectados por los filtros.  
@@ -70,14 +70,14 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>  
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>  
- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>  
- [Configuración del registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
- [Configuración del registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
- [\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
+- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
+- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
+- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
+- [Configuración del registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [Configuración del registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)

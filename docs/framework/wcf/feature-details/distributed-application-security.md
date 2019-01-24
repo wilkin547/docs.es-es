@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709434"
 ---
 # <a name="distributed-application-security"></a>Seguridad distribuida de aplicaciones
 Seguridad de Windows Communication Foundation (WCF) se divide en tres áreas funcionales principales: seguridad, control de acceso y auditoría de transferencia. La seguridad de transferencia proporciona integridad, confidencialidad y autenticación. La seguridad de transferencia la proporciona uno de los siguientes elementos: seguridad de transporte, seguridad de mensajes o `TransportWithMessageCredential`.  
@@ -65,8 +65,8 @@ Seguridad de Windows Communication Foundation (WCF) se divide en tres áreas fun
 |Parámetro|Descripción|  
 |-------------|-----------------|  
 |Ninguna|Especifica que el cliente no necesita presentar ningún credencial. Realiza una conversión a un cliente anónimo.|  
-|Básico|Especifica la autenticación básica.  Para obtener más información, vea RFC2617, "[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313)."|  
-|Implícita|Especifica la autenticación implícita.  Para obtener más información, vea RFC2617, "[HTTP Authentication: Basic and Digest Authentication](https://go.microsoft.com/fwlink/?LinkId=88313)."|  
+|Básico|Especifica la autenticación básica.  Para obtener más información, vea RFC2617, "[autenticación HTTP: Básica y autenticación implícita](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
+|Implícita|Especifica la autenticación implícita.  Para obtener más información, vea RFC2617, "[autenticación HTTP: Básica y autenticación implícita](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
 |Ntlm|Especifica autenticación de Windows mediante negociación SSPI en un dominio de Windows.<br /><br /> La negociación SSPI resulta en el uso del protocolo Kerberos o NT LanMan (NTLM).|  
 |Windows|Especifica autenticación de Windows utilizando SSPI en un dominio de Windows. SSPI escoge del protocolo Kerberos o NTLM como servicio de autenticación.<br /><br /> SSPI prueba primero el protocolo Kerberos; si eso falla, utiliza NTLM.|  
 |Certificado|Realiza la autenticación de cliente utilizando un certificado, normalmente X.509.|  
@@ -94,8 +94,8 @@ Seguridad de Windows Communication Foundation (WCF) se divide en tres áreas fun
   
  El modo de seguridad de mensajes también permite aplicar la seguridad de transferencia para que la credencial del servicio se intercambie con el cliente como parte de una negociación inicial. Para habilitar la negociación, establezca la propiedad <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> en `true`.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vea también
+- [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

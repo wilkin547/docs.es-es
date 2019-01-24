@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690415"
 ---
 # <a name="trees-in-wpf"></a>Árboles en WPF
 En muchas tecnologías, los elementos y componentes se organizan en una estructura de árbol en la que los desarrolladores manipulan directamente los nodos de objeto en el árbol para modificar la representación o el comportamiento de una aplicación. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también usa varias metáforas de la estructura de árbol para definir las relaciones entre los elementos de programa. En su mayor parte, los desarrolladores de WPF pueden crear una aplicación en código o definir partes de la aplicación en código XAML mientras piensan conceptualmente en la metáfora de árbol de objetos, pero estarán llamando a una API concreta o usando un marcado concreto para llamarla, en lugar de usar una API de manipulación de árbol de objetos general como se usaría en DOM XML. WPF expone dos clases auxiliares que proporcionan una vista de metáfora de árbol, <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>. Los términos árbol visual y árbol lógico también se usan en la documentación de WPF porque estos mismos árboles son útiles para entender el comportamiento de ciertas características clave de WPF. En este tema define lo que representan el árbol visual y árbol lógico, se describe cómo se relacionan estos árboles con un concepto de árbol de objetos general y presenta <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -57,7 +57,7 @@ En muchas tecnologías, los elementos y componentes se organizan en una estructu
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>Herencia de valores de propiedad  
- La herencia de valores de propiedad funciona a través de un árbol híbrido. Los metadatos reales que contienen el <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> propiedad que habilita la herencia de propiedad es el nivel de marco de WPF <xref:System.Windows.FrameworkPropertyMetadata> clase. Por lo tanto, el elemento primario que contiene el valor original y el objeto secundario que hereda ese valor deben ser <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, y deben formar parte de un árbol lógico. Pero para las propiedades de WPF existentes que admiten la herencia de propiedades, la herencia del valor de propiedad puede perpetuarse a través de un objeto intermedio que no está en el árbol lógico. Esto es especialmente pertinente para hacer que los elementos de plantilla usen cualquier valor de propiedad heredado establecido en la instancia basada en una plantilla o en los niveles aun más altos de composición de página y, por tanto, superiores en el árbol lógico. Para que la herencia del valor de propiedad funcione de forma coherente a través de un límite de este tipo, la propiedad que hereda se debe registrar como una propiedad adjunta y se debe seguir este patrón si se piensa definir una propiedad de dependencia personalizada con un comportamiento de herencia de propiedades. El árbol exacto que se usa para la herencia de propiedades no se puede prever completamente mediante un método de utilidad de clase auxiliar, ni siquiera en tiempo de ejecución. Para más información, vea [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+ La herencia de valores de propiedad funciona a través de un árbol híbrido. Los metadatos reales que contienen el <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> propiedad que habilita la herencia de propiedad es el nivel de marco de WPF <xref:System.Windows.FrameworkPropertyMetadata> clase. Por lo tanto, el elemento primario que contiene el valor original y el objeto secundario que hereda ese valor deben ser <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, y deben formar parte de un árbol lógico. Pero para las propiedades de WPF existentes que admiten la herencia de propiedades, la herencia del valor de propiedad puede perpetuarse a través de un objeto intermedio que no está en el árbol lógico. Esto es especialmente pertinente para hacer que los elementos de plantilla usen cualquier valor de propiedad heredado establecido en la instancia basada en una plantilla o en los niveles aun más altos de composición de página y, por tanto, superiores en el árbol lógico. Para que la herencia del valor de propiedad funcione de forma coherente a través de un límite de este tipo, la propiedad que hereda se debe registrar como una propiedad adjunta y se debe seguir este patrón si se piensa definir una propiedad de dependencia personalizada con un comportamiento de herencia de propiedades. El árbol exacto que se usa para la herencia de propiedades no se puede prever completamente mediante un método de utilidad de clase del asistente, ni siquiera en tiempo de ejecución. Para más información, vea [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
   
 <a name="two_trees"></a>   
 ## <a name="the-visual-tree"></a>El árbol visual  
@@ -78,7 +78,7 @@ En muchas tecnologías, los elementos y componentes se organizan en una estructu
   
 <a name="routes"></a>   
 ## <a name="routes-for-routed-events-as-a-tree"></a>Rutas para los eventos enrutados como un "árbol"  
- Como se ha mencionado antes, la ruta de cualquier evento enrutado determinado recorre una sola ruta de acceso predeterminada de un árbol, que es un híbrido de las representaciones del árbol visual y del árbol lógico. La ruta de evento puede recorrer el árbol hacia arriba o hacia abajo en función de si es un evento enrutado de tunelización o de propagación. El concepto de ruta de evento no tiene ninguna clase auxiliar que lo respalde directamente y que se pueda usar para "recorrer" la ruta de evento con independencia de que se genere un evento que se enrute realmente. Hay una clase que representa la ruta, <xref:System.Windows.EventRoute>, pero los métodos de esa clase suelen ser solo para uso interno.  
+ Como se ha mencionado antes, la ruta de cualquier evento enrutado determinado recorre una sola ruta de acceso predeterminada de un árbol, que es un híbrido de las representaciones del árbol visual y del árbol lógico. La ruta de evento puede recorrer el árbol hacia arriba o hacia abajo en función de si es un evento enrutado de tunelización o de propagación. El concepto de ruta de evento no tiene ninguna clase del asistente que lo respalde directamente y que se pueda usar para "recorrer" la ruta de evento con independencia de que se genere un evento que se enrute realmente. Hay una clase que representa la ruta, <xref:System.Windows.EventRoute>, pero los métodos de esa clase suelen ser solo para uso interno.  
   
 <a name="resourcesandtrees"></a>   
 ## <a name="resource-dictionaries-and-trees"></a>Diccionarios de recursos y árboles  
@@ -86,9 +86,9 @@ En muchas tecnologías, los elementos y componentes se organizan en una estructu
   
  Pero la búsqueda de recursos también se puede extender más allá del árbol lógico inmediato. Para el marcado de la aplicación, la búsqueda de recursos puede continuar con los diccionarios de recursos de nivel de aplicación y, después, con los valores de compatibilidad y sistema de tema a los que se hace referencia como propiedades estáticas o claves. Los propios temas también pueden hacer referencia a valores del sistema situados fuera del árbol lógico del tema si las referencias de recurso son dinámicas. Para más información sobre los diccionarios de recursos y la lógica de búsqueda, vea [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Inicialización de elementos de objeto no incluidos en un árbol de objetos](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Arquitectura de WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Inicialización de elementos de objeto no incluidos en un árbol de objetos](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [Arquitectura de WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-ms.openlocfilehash: 72febe4e161ee4c19f07816445757a730cec6edf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a617c9f2982fe251ff95426938b9800b201df53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718300"
 ---
 # <a name="object-required-visual-basic"></a>Se requiere un objeto (Visual Basic)
 Las referencias a propiedades y métodos a menudo requieren un calificador de objeto explícito. Se trata de un caso de este tipo.  
@@ -18,11 +18,11 @@ Las referencias a propiedades y métodos a menudo requieren un calificador de ob
   
 1.  Compruebe que las referencias a una propiedad de objeto o método tienen el calificador de objeto válido. Especifique un calificador de objeto si no ha proporcionado ninguno.  
   
-2.  Compruebe la ortografía del calificador de objeto y asegúrese de que el objeto está visible en la parte del programa en el que se hace referencia a él.  
+2.  Compruebe la ortografía del calificador de objeto y asegúrese de que el objeto está visible en la parte del programa en la que hacen referencia a ella.  
   
-3.  Si no se proporciona una ruta de acceso a una aplicación host **abrir archivo** comando, compruebe que los argumentos son correctos.  
+3.  Si se proporciona una ruta de acceso a una aplicación host **abrir archivo** de comando, compruebe que los argumentos son correctos.  
   
 4.  Compruebe la documentación del objeto y asegúrese de que la acción es válida.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)

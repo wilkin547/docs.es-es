@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Crear un control enlazado y aplicar formato a los datos mostrados'
+title: Procedimiento Crear un Control enlazado y dar formato a los datos mostrados
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689736"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Cómo: Crear un control enlazado y aplicar formato a los datos mostrados
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedimiento Crear un Control enlazado y dar formato a los datos mostrados
 Con el enlace de datos de Windows Forms, puede dar formato a los datos mostrados en un control enlazado a datos mediante el uso de la **formato y enlace avanzada** cuadro de diálogo.  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Con el enlace de datos de Windows Forms, puede dar formato a los datos mostrados
     |Moneda|Especifique el número de posiciones decimales mediante **decimales** control de flechas.|  
     |Fecha Hora|Seleccione cómo se deben mostrar la fecha y hora seleccionando uno de los elementos en el **tipo** cuadro de selección.|  
     |Científica|Especifique el número de posiciones decimales mediante **decimales** control de flechas.|  
-    |Personalizados|Especifique una cadena de formato personalizado using.<br /><br /> Para obtener más información, consulte [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md). **Nota:** cadenas de formato personalizado no se garantiza que correctamente ida y vuelta entre el origen de datos y el control enlazado. En su lugar, controle el evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> del enlace y aplique el formato personalizado en el código de control de eventos.|  
+    |Personalizados|Especifique una cadena de formato personalizado using.<br /><br /> Para obtener más información, consulte [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md). **Nota:**  No se garantiza que las cadenas de formato personalizado realicen correctamente el recorrido de ida y vuelta entre el origen de datos y el control enlazado. En su lugar, controle el evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> del enlace y aplique el formato personalizado en el código de control de eventos.|  
   
 8.  Haga clic en **Aceptar** para cerrar el **formato y enlace de datos avanzado** cuadro de diálogo y volver a la ventana Propiedades.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un control con enlace simple en Windows Forms](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Validación de los datos proporcionados por el usuario Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Crear un Control con enlace Simple en un formulario de Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Validación de los datos proporcionados por el usuario Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

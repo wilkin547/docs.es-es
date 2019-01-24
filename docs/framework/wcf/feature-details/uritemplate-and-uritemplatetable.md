@@ -2,12 +2,12 @@
 title: UriTemplate y UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722613"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate y UriTemplateTable
 Los desarrolladores web necesitan poder describir la forma y el diseño de los URI a los que sus servicios responden. Windows Communication Foundation (WCF) agrega dos nuevas clases para proporcionar a los desarrolladores control sobre sus URI. <xref:System.UriTemplate> y <xref:System.UriTemplateTable> forman la base del motor de distribución basado en URI en WCF. Estas clases también se pueden usar en su propios, lo que permite a los desarrolladores aprovechar las ventajas de las plantillas y el URI del mecanismo de asignación sin necesidad de implementar un servicio WCF.  
@@ -83,17 +83,17 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
   
 - "{zapato} / {barco} /bed/ {tejido}"  
   
-- "zapato / {barco}"  
+- "shoe/{boat}"  
   
 - "zapato / {barco} /\*"  
   
-- "zapato/barco? x = 2"  
+- "shoe/boat?x=2"  
   
-- "zapato / {barco}? x = {cama}"  
+- "shoe/{boat}?x={bed}"  
   
 - "zapato/{barco}?x={cama}&y=banda"  
   
-- "? x = {zapato}"  
+- "?x={shoe}"  
   
 - "zapato?x=3&y={var}  
   
@@ -129,7 +129,7 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
 - /{zapato}{barco}: las variables deben estar separadas por un literal.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmentos de ruta de acceso coincidentes y compuestos  
- Los segmentos de ruta de acceso permiten definir un UriTemplate que tenga varias variables en un solo segmento de ruta de acceso. Por ejemplo, en la siguiente cadena de plantilla: "direcciones / {estado}. {Ciudad} "se definen dos variables (estado y ciudad) en el mismo segmento. Esta plantilla coincidiría con una dirección URL como `http://example.com/Washington.Redmond` pero también coincide con una dirección URL como `http://example.com/Washington.Redmond.Microsoft`. En el último caso, la variable de estado contendrá a "Washington" y la variable de ciudad contendrá "Redmond.Microsoft". En este caso, cualquier texto (salvo ‘/’) coincidirá con la variable {ciudad}. Si desea una plantilla que no coincida con el texto "extra", coloque la variable en un segmento de plantilla independiente, por ejemplo: "direcciones / {estado} / {ciudad}.  
+ Los segmentos de ruta de acceso permiten definir un UriTemplate que tenga varias variables en un solo segmento de ruta de acceso. Por ejemplo, en la siguiente cadena de plantilla: "Direcciones / {state}. {Ciudad} "se definen dos variables (estado y ciudad) en el mismo segmento. Esta plantilla coincidiría con una dirección URL como `http://example.com/Washington.Redmond` pero también coincide con una dirección URL como `http://example.com/Washington.Redmond.Microsoft`. En el último caso, la variable de estado contendrá a "Washington" y la variable de ciudad contendrá "Redmond.Microsoft". En este caso, cualquier texto (salvo ‘/’) coincidirá con la variable {ciudad}. Si desea que una plantilla que no coincida con el texto "extra", coloque la variable en un segmento de plantilla independiente, por ejemplo: "Direcciones / {estado} / {ciudad}.  
   
 ### <a name="named-wildcard-segments"></a>Segmentos de carácter comodín con nombre  
  Un segmento de carácter comodín con nombre es cualquier segmento de la variable de ruta de acceso cuyo nombre de variable comienza con el carácter comodín '\*'. La cadena de plantilla siguiente contiene un segmento de carácter comodín con nombre denominado "zapato".  
@@ -328,9 +328,9 @@ Cuando se proporciona a una variable un valor predeterminado de `null`, hay algu
 > [!NOTE]
 > Se considera que los caracteres á y Á son diferentes cuando aparecen como parte de una ruta URI o literal de segmento de ruta <xref:System.UriTemplate> (pero los caracteres a y A se considera que son iguales). Se considera que los caracteres á y Á son caracteres diferentes cuando aparecen como parte de una <xref:System.UriTemplate> {variableName} o una cadena de consulta (y también se considera que a y A son los mismos caracteres).  
   
-## <a name="see-also"></a>Vea también  
- [Información general del modelo de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [Tabla UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [Distribuidor de tabla UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Vea también
+- [Información general del modelo de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [Tabla UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [Distribuidor de tabla UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

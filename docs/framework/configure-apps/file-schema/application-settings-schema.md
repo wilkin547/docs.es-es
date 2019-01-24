@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701916"
 ---
 # <a name="application-settings-schema"></a>Esquema de configuración de aplicación
 
@@ -26,9 +26,9 @@ Configuración de la aplicación define los siguientes elementos como parte de l
 
 | Elemento                    | Descripción                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | Todos los contiene  **\<configuración >** etiquetas específicas para la aplicación.                         |
-| **\<userSettings >**        | Todos los contiene  **\<configuración >** etiquetas específicas para el usuario actual.                        |
-| **\<Configuración >**             | Define un valor de configuración. Elemento secundario de  **\<applicationSettings >** o  **\<userSettings >**. |
+| **\<applicationSettings>** | Todos los contiene  **\<configuración >** etiquetas específicas para la aplicación.                         |
+| **\<userSettings>**        | Todos los contiene  **\<configuración >** etiquetas específicas para el usuario actual.                        |
+| **\<setting>**             | Define un valor de configuración. Elemento secundario de  **\<applicationSettings >** o  **\<userSettings >**. |
 | **\<value>**               | Define un valor de configuración. Elemento secundario de  **\<configuración >**.                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > elemento
@@ -45,8 +45,8 @@ Este elemento define una configuración. Tiene los siguientes atributos.
 
 | Atributo        | Descripción |
 | ---------------- | ----------- |
-| **name**         | Requerido. El identificador único de la configuración. La configuración creada a través de Visual Studio se guarda con el nombre `ProjectName.Properties.Settings`. |
-| **serializedAs** | Requerido. El formato que se usará para serializar el valor en texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena con un <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. El valor se serializa utilizando serialización XML.<br>- `binary`. El valor se serializa como texto codificado binario utiliza la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y lo deserializa. |
+| **name**         | Obligatorio. El identificador único de la configuración. La configuración creada a través de Visual Studio se guarda con el nombre `ProjectName.Properties.Settings`. |
+| **serializedAs** | Obligatorio. El formato que se usará para serializar el valor en texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena con un <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. El valor se serializa utilizando serialización XML.<br>- `binary`. El valor se serializa como texto codificado binario utiliza la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y lo deserializa. |
 
 ## <a name="value-element"></a>\<valor > elemento
 
@@ -92,5 +92,5 @@ El ejemplo siguiente muestra un archivo de configuración de aplicación que def
 
 ## <a name="see-also"></a>Vea también
 
-[Introducción a la configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[Arquitectura de configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Introducción a la configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [Arquitectura de configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-architecture.md)

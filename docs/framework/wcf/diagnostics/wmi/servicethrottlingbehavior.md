@@ -2,12 +2,12 @@
 title: ServiceThrottlingBehavior
 ms.date: 03/30/2017
 ms.assetid: 37b9e517-1f1f-4ec4-9fcb-2b8016794f5b
-ms.openlocfilehash: edc154fcce0058455f1376a2a45807c92f7f2457
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 98e8a720e92547ca0a893dd988b91cb7907660b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689856"
 ---
 # <a name="servicethrottlingbehavior"></a>ServiceThrottlingBehavior
 ServiceThrottlingBehavior  
@@ -32,21 +32,21 @@ class ServiceThrottlingBehavior : Behavior
 ### <a name="maxconcurrentcalls"></a>MaxConcurrentCalls  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de mensajes que se procesan activamente en todos los objetos de distribuidor en un ServiceHost.  
   
 ### <a name="maxconcurrentinstances"></a>MaxConcurrentInstances  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de objetos de servicio que se pueden ejecutar simultáneamente.  
   
 ### <a name="maxconcurrentsessions"></a>MaxConcurrentSessions  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de sesiones que un host puede aceptar al mismo tiempo.  
   
@@ -56,5 +56,5 @@ class ServiceThrottlingBehavior : Behavior
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>

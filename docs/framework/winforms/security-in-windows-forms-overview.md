@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a19e6d2ed39c21301b3409cdeb55a569f0d2eff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703385"
 ---
 # <a name="security-in-windows-forms-overview"></a>Información general sobre la seguridad en formularios Windows Forms
 Antes del lanzamiento de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], todo el código que se ejecutaba en el equipo de un usuario tenía los mismos derechos o permisos de acceso a los recursos que los que tenía un usuario del equipo. Por ejemplo, si el usuario tenía acceso al sistema de archivos, el código también tenía acceso al sistema de archivos; si el usuario tenía acceso a una base de datos, el código también tenía acceso a esa base de datos. Aunque estos derechos o permisos pueden ser aceptables para el código de los ejecutables que el usuario ha instalado explícitamente en el equipo local, no pueden ser aceptables para el código potencialmente malintencionado procedente de Internet o de una intranet local. Este código no debe tener acceso a los recursos del equipo del usuario sin permiso.  
@@ -75,17 +75,17 @@ Antes del lanzamiento de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md
   
  La tecnología elegida dependerá de su entorno de implementación. Para más información, consulte el artículo [Elegir una estrategia de implementación de ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- De forma predeterminada, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] las aplicaciones implementadas mediante Visual Studio o el [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] herramientas del SDK (Mage.exe y MageUI.exe) están configuradas para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con Visual Studio o el [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] herramienta MageUI.exe cuando configure la implementación del SDK. Para obtener más información acerca de cómo usar MageUI.exe, vea el tutorial sobre implementación de una aplicación ClickOnce desde la línea de comandos.  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ De forma predeterminada, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] las aplicaciones implementadas mediante Visual Studio o el [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] herramientas del SDK (Mage.exe y MageUI.exe) están configuradas para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con Visual Studio o el [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] herramienta MageUI.exe cuando configure la implementación del SDK. Para obtener más información sobre cómo usar MageUI.exe, consulte el tutorial: Implementar una aplicación ClickOnce desde la línea de comandos.  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Para más información acerca de los aspectos de seguridad de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y la elevación de permisos, consulte [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Para más información sobre la implementación de aplicaciones de confianza, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Probar la aplicación  
- Si ha implementado la aplicación de Windows Forms con Visual Studio, puede habilitar la depuración en confianza parcial o un conjunto del entorno de desarrollo de permisos restringido.  Consulte también [Cómo: depurar una aplicación ClickOnce con permisos restringidos](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) o [Cómo: depurar una aplicación ClickOnce con permisos restringidos](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Si ha implementado la aplicación de Windows Forms con Visual Studio, puede habilitar la depuración en confianza parcial o un conjunto del entorno de desarrollo de permisos restringido.  Consulte también [Cómo: Depurar una aplicación ClickOnce con permisos restringidos](https://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) o [Cómo: Depuración de una aplicación ClickOnce con permisos restringidos](https://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
-## <a name="see-also"></a>Vea también  
- [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)  
- [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)  
- [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview)  
- [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>Vea también
+- [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)
+- [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)
+- [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview)
+- [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

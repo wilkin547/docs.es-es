@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Dividir una ventana horizontalmente'
+title: Procedimiento Dividir una ventana horizontalmente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 1e097ce5623fab4c3c8c1d59d9bc8c9206abee2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 651e265b337b106779aeefdfa49decd3725f1a53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701461"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>Cómo: Dividir una ventana horizontalmente
-En el ejemplo de código siguiente se realiza la división que divide el <xref:System.Windows.Forms.SplitContainer> horizontal del control.  
+# <a name="how-to-split-a-window-horizontally"></a>Procedimiento Dividir una ventana horizontalmente
+El ejemplo de código siguiente hace que el divisor que divide el <xref:System.Windows.Forms.SplitContainer> horizontal del control.  
   
 > [!NOTE]
 >  El <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad de la <xref:System.Windows.Forms.SplitContainer> control determina la dirección del divisor, no del propio control.  
   
 ### <a name="to-split-a-window-horizontally"></a>Para dividir una ventana horizontalmente  
   
-1.  Dentro de un procedimiento, establezca la <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad de la <xref:System.Windows.Forms.SplitContainer> el control a <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1.  Dentro de un procedimiento, establecer el <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad de la <xref:System.Windows.Forms.SplitContainer> control <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -55,6 +55,6 @@ En el ejemplo de código siguiente se realiza la división que divide el <xref:S
     }  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer (control)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer (control)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

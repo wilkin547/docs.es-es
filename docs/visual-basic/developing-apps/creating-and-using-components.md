@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: b48fb59f0927056c8dba75211b4fffa6f25c5c52
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551926"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Crear y utilizar componentes en Visual Basic
 Un *componente* es una clase que implementa la interfaz <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o que deriva directa o indirectamente de una clase que implementa <xref:System.ComponentModel.IComponent>. Un componente de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] es un objeto que se puede reutilizar, puede interactuar con otros objetos y proporciona control sobre recursos externos y sobre la compatibilidad en tiempo de diseño.  
@@ -62,6 +62,6 @@ Un *componente* es una clase que implementa la interfaz <xref:System.ComponentMo
  [Solución de problemas relacionados con la creación de controles y componentes](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Se explica cómo solucionar problemas comunes.  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Obtener acceso a las funciones en tiempo de diseño de formularios Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- 
+## <a name="see-also"></a>Vea también
+- [Cómo: Compatibilidad de tiempo de diseño de acceso en Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+

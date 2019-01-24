@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un segmento de línea en una clase PathGeometry'
+title: Procedimiento Crear un segmento de línea en una clase PathGeometry
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 61425a68d83c8078b8420be01e0e59d3cba6a4e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9aa17a361e8e0ca5b43b2646c38926e0123818c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712134"
 ---
-# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Cómo: Crear un segmento de línea en una clase PathGeometry
+# <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>Procedimiento Crear un segmento de línea en una clase PathGeometry
 En este ejemplo se muestra cómo crear un segmento de línea. Para crear un segmento de línea, use el <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, y <xref:System.Windows.Media.LineSegment> clases.  
   
 ## <a name="example"></a>Ejemplo  
@@ -101,9 +101,9 @@ Dim myPathFigure As New PathFigure()
   
  Este ejemplo forma parte de un ejemplo más extenso; para obtener el ejemplo completo, vea [Ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.PathFigure>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.GeometryDrawing>  
- <xref:System.Windows.Shapes.Path>  
- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.PathFigure>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.GeometryDrawing>
+- <xref:System.Windows.Shapes.Path>
+- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

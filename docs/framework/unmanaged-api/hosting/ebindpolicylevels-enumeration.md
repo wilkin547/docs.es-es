@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431128"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704217"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels (Enumeración)
-Proporciona las marcas que especifican el nivel en el que se va a aplicar o modificar la directiva de ensamblado.  
+Proporciona marcas para especificar el nivel en el que se va a aplicar o modificar la directiva de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,27 +45,27 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|Especifica que la directiva debe aplicarse en el nivel de administrador.|  
-|`ePolicyLevelApp`|Especifica que la directiva debe aplicarse en el nivel de aplicación.|  
-|`ePolicyLevelHost`|Especifica que la directiva debe aplicarse en el nivel de host.|  
+|`ePolicyLevelAdmin`|Especifica que debe aplicarse la directiva en el nivel de administrador.|  
+|`ePolicyLevelApp`|Especifica que debe aplicarse la directiva en el nivel de aplicación.|  
+|`ePolicyLevelHost`|Especifica que debe aplicarse la directiva a nivel de host.|  
 |`ePolicyLevelNone`|No especifica ningún indicador de nivel de directiva.|  
-|`ePolicyLevelPublisher`|Especifica que la directiva debe aplicarse en el nivel del Editor.|  
+|`ePolicyLevelPublisher`|Especifica que debe aplicarse la directiva en el nivel de publicador.|  
 |`ePolicyLevelRetargetable`|Especifica que Directiva debe aplicarse en niveles variables.|  
-|`ePolicyPortability`|Especifica que la directiva debe admitir portabilidad entre las implementaciones de un ensamblado de .NET Framework. Consulte la [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) elemento de archivo de configuración.|  
-|`ePolicyUnifiedToCLR`|Especifica que la directiva debe unificarse a la de common language runtime (CLR).|  
+|`ePolicyPortability`|Especifica que Directiva debe admitir la portabilidad entre las implementaciones de un ensamblado de .NET Framework. Consulte la [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) elemento del archivo de configuración.|  
+|`ePolicyUnifiedToCLR`|Especifica que la directiva debe unificarse para que el de common language runtime (CLR).|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta enumeración se pasa a métodos de la [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interfaz para especificar los cambios en la directiva de aplicación.  
+ Esta enumeración se pasa a los métodos de la [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interfaz para especificar los cambios en la directiva de aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRAssemblyIdentityManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [ICLRAssemblyIdentityManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

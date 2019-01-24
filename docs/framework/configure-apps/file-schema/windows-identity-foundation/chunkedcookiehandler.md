@@ -3,20 +3,20 @@ title: '&lt;chunkedCookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: f5592e0fd02d34b2882182196e0aa9425672a8fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1726d4ade9405543bdfdb4e4803f87f258de791e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691286"
 ---
 # <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
 Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Este elemento solo puede estar presente si el `mode` atributo de la `<cookieHandler>` elemento es "Default" o "Fragmentada".  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<cookieHandler >  
-\<chunkedCookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
+\<chunkedCookieHandler>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Este ele
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|ChunkSize|El tamaño máximo, en caracteres, de los datos de cookies HTTP para una cookie HTTP. Debe tener cuidado cuando ajuste el tamaño del fragmento. Los exploradores Web tienen distintos límites en el tamaño de las cookies y el número permitido por dominio. Por ejemplo, la especificación de Netscape original estipulada estos límites: total de 300 cookies, 4096 bytes por encabezado de cookie (incluidos los metadatos, no solo el valor de cookie) y 20 cookies por dominio. El valor predeterminado es 2000. Requerido.|  
+|chunkSize|El tamaño máximo, en caracteres, de los datos de cookies HTTP para una cookie HTTP. Debe tener cuidado cuando ajuste el tamaño del fragmento. Los exploradores Web tienen distintos límites en el tamaño de las cookies y el número permitido por dominio. Por ejemplo, la especificación de Netscape original había estipulada estos límites: total de 300 cookies 4096 bytes por encabezado de cookie (incluidos los metadatos, no solo el valor de cookie) y 20 cookies por dominio. El valor predeterminado es 2000. Obligatorio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -47,7 +47,7 @@ Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Este ele
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Configura el <xref:System.IdentityModel.Services.CookieHandler> que el <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) se usa para leer y escribir cookies.|  
+|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Configura el <xref:System.IdentityModel.Services.CookieHandler> que el <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) se usa para leer y escribir cookies.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se especifica un <xref:System.IdentityModel.Services.ChunkedCookieHandler> estableciendo el `mode` atributo de la `<cookieHandler>` elemento va a "Default" o "Chunked", puede especificar el tamaño del fragmento que usa el controlador de cookies para leer y escribir las cookies mediante la inclusión de un `<chunkedCookieHandler>` elemento secundario y establecer su `chunkSize` atributo. Si el `<chunkedCookieHandler>` elemento no está presente, se utiliza el tamaño del fragmento predeterminado de 2000 bytes. Este elemento no puede ser que se especificó cuando la `mode` atributo está establecido en "Custom".  
@@ -63,5 +63,5 @@ Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Este ele
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IdentityModel.Services.ChunkedCookieHandler>
+## <a name="see-also"></a>Vea también
+- <xref:System.IdentityModel.Services.ChunkedCookieHandler>

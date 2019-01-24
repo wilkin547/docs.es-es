@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Control de versiones del servicio'
+title: Cómo Control de versiones del servicio
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 5f79382eb121472ffa32d969cfaeee0e83d3375d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b02031493df1a63f62b4bdab80b56b1fb220aa92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700603"
 ---
-# <a name="how-to-service-versioning"></a>Cómo: Control de versiones del servicio
+# <a name="how-to-service-versioning"></a>Cómo Control de versiones del servicio
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
   
 > [!WARNING]
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>Implementación de versiones del servicio  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio. En el siguiente ejemplo, se define un extremo de servicio único que se utilizará para recibir mensajes. También se definen los extremos del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` (v1) y `regularCalc` (v2).  
+1.  Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio. En el siguiente ejemplo, se define un extremo de servicio único que se utilizará para recibir mensajes. También se definen los puntos de conexión del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` (v1) y `regularCalc` (v2).  
   
     ```xml  
     <services>  
@@ -324,5 +324,5 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Vea también
+- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716783"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType (Enumeración)
 Especifica el tipo de un módulo.  
@@ -50,17 +50,17 @@ typedef enum
 |`ValidatorModuleTypePE`|El módulo es un archivo ejecutable portable (PE).|  
 |`ValidatorModuleTypeObj`|El módulo es un archivo .obj.|  
 |`ValidatorModuleTypeEnc`|El módulo es una sesión del depurador de editar y continuar.|  
-|`ValidatorModuleTypeIncr`|El módulo es aquel que se ha generado de forma incremental.|  
+|`ValidatorModuleTypeIncr`|El módulo es aquella que se ha compilado de forma incremental.|  
 |`ValidatorModuleTypeMax`|El valor máximo de la `CorValidatorModuleType` enum.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

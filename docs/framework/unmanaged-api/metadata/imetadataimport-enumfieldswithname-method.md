@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ed8bbbd9699fe707d638bb8d07064e508b6f2fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58c6e6685cc5c268d9313457469369d9df25e13b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564151"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName (Método)
 Enumera los tokens de FieldDef del tipo especificado con el nombre especificado.  
@@ -42,16 +42,16 @@ HRESULT EnumFieldsWithName (
   
 #### <a name="parameters"></a>Parámetros  
  `phEnum`  
- [entrada, salida] Un puntero para el enumerador.  
+ [in, out] Un puntero en el enumerador.  
   
  `cl`  
- [in] El token de tipo cuyos campos se van a enumerar.  
+ [in] El token del tipo cuyos campos se van a enumerar.  
   
  `szName`  
  [in] El nombre del campo que limita el ámbito de la enumeración.  
   
  `rFields`  
- [out] Matriz que se utiliza para almacenar los tokens de FieldDef.  
+ [out] Matriz utilizada para almacenar los tokens de FieldDef.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rFields`.  
@@ -60,7 +60,7 @@ HRESULT EnumFieldsWithName (
  [out] El número real de los tokens de FieldDef devueltos en `rFields`.  
   
 ## <a name="remarks"></a>Comentarios  
- A diferencia de [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` descarta todos los tokens de campo que no tiene el nombre especificado.  
+ A diferencia de [EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` descarta todos los tokens de campo que no tienen el nombre especificado.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
@@ -70,14 +70,14 @@ HRESULT EnumFieldsWithName (
 |`S_FALSE`|No hay ningún campo para enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

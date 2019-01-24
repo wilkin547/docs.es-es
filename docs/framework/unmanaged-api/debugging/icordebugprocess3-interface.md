@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95c2218aadd62902ff9bc7f2e6a190aa2ce241ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75dc379baf8d92b9b27bdb58ccab930c2d4f91e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709174"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 (Interfaz)
 Controla las notificaciones del depurador personalizadas.  
@@ -30,7 +30,7 @@ Controla las notificaciones del depurador personalizadas.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[SetEnableCustomNotification (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Habilita y deshabilita notificaciones del depurador personalizadas del tipo especificado.|  
+|[SetEnableCustomNotification (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Habilita y deshabilita las notificaciones del depurador personalizados del tipo especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta interfaz extiende lógicamente las interfaces ICorDebugProcess y ICorDebugProcess2.  
@@ -39,14 +39,14 @@ Controla las notificaciones del depurador personalizadas.
 >  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

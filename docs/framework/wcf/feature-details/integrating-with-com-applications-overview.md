@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710237"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración con la información general de las aplicaciones COM
-Windows Communication Foundation (WCF) proporciona al desarrollador del código administrado con un entorno rico para crear aplicaciones conectadas. Sin embargo, si tiene una inversión sustancial en código basado en COM no administrado y no desea migrar, aún podrá integrar servicios Web de WCF directamente en el código existente mediante el moniker de servicio WCF. El moniker de servicio se puede utilizar a partir de una gama amplia de entornos de desarrollo basados en COM, como Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
+Windows Communication Foundation (WCF) proporciona al desarrollador del código administrado con un entorno rico para crear aplicaciones conectadas. Sin embargo, si tiene una inversión sustancial en código basado en COM no administrado y no desea migrar, puede seguir integrar servicios Web WCF directamente en el código existente mediante el moniker de servicio WCF. El moniker de servicio se puede utilizar a partir de una gama amplia de entornos de desarrollo basados en COM, como Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
   
 > [!NOTE]
->  El moniker de servicio utiliza un canal de comunicación de WCF para todas las comunicaciones. Los mecanismos de identidad y seguridad para ese canal difieren de aquéllos utilizados en los proxies COM y DCOM estándar. Además, dado que el moniker de servicio utiliza un canal de comunicación de WCF, el período de tiempo de espera predeterminado es un minuto para todas las llamadas.  
+>  El moniker de servicio utiliza un canal de comunicación de WCF para todas las comunicaciones. Los mecanismos de identidad y seguridad para ese canal difieren de aquéllos utilizados en los proxies COM y DCOM estándar. Además, dado que el moniker de servicio usa un canal de comunicación de WCF, el período de tiempo de espera predeterminado es un minuto para todas las llamadas.  
   
- El moniker de servicio se utiliza con la `GetObject` función para proporcionar a los programadores no administrados con un enfoque fuertemente tipado, específico de COM para llamar a servicios Web de WCF. Esto requiere un local, visible para COM definición del contrato del servicio Web de WCF y el enlace que se va a usar. Al igual que otros clientes WCF, el moniker de servicio debe construir un canal con tipo para el servicio, aunque esta construcción del canal se produce de forma transparente para el programador COM en la primera llamada de método.  
+ Se utiliza el moniker de servicio con el `GetObject` función para ofrecer al desarrollador no administrado con un enfoque fuertemente tipado, específico de COM para llamar a servicios Web WCF. Esto requiere un local, visible para COM definición del contrato del servicio Web de WCF y el enlace que se va a usar. Al igual que otros clientes WCF, el moniker de servicio debe construir un canal con tipo para el servicio, aunque esta construcción del canal ocurre de manera transparente para los programadores de COM en la primera llamada de método.  
   
- Al igual que otros clientes WCF, al utilizar el moniker, las aplicaciones especificar la dirección, enlace y contrato para comunicarse con un servicio. El contrato se puede especificar de una de las maneras siguientes:  
+ En común con otros clientes WCF, al utilizar el moniker, las aplicaciones especificar la dirección, enlace y contrato para comunicarse con un servicio. El contrato se puede especificar de una de las maneras siguientes:  
   
 -   Contrato con tipo: el contrato se registra como un tipo visible COM en el equipo cliente.  
   
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) proporciona al desarrollador del código 
 |`serializer`|Especifique el uso de "xml" o serializador de "datacontract."|  
   
 > [!NOTE]
->  Incluso cuando se utiliza con clientes completamente basados en COM, requiere el moniker de servicio WCF y .NET Framework 2.0 compatible esté instalado en el equipo cliente. También es fundamental que las aplicaciones cliente que utilizan el moniker de servicio carguen la versión adecuada del tiempo de ejecución de .NET Framework. Al utilizar el moniker en aplicaciones de Office, es posible que sea necesario un archivo de configuración para asegurarse de que se carga la versión de marco correcta. Por ejemplo, con Excel, el texto siguiente debería colocarse en un archivo denominado Excel.exe.config en el mismo directorio que el archivo Excel.exe:  
+>  Incluso cuando se utiliza con clientes completamente basados en COM, requiere el moniker de servicio WCF y .NET Framework 2.0 compatible para instalarse en el equipo cliente. También es fundamental que las aplicaciones cliente que utilizan el moniker de servicio carguen la versión adecuada del tiempo de ejecución de .NET Framework. Al utilizar el moniker en aplicaciones de Office, es posible que sea necesario un archivo de configuración para asegurarse de que se carga la versión de marco correcta. Por ejemplo, con Excel, el texto siguiente debería colocarse en un archivo denominado Excel.exe.config en el mismo directorio que el archivo Excel.exe:  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   
@@ -65,5 +65,5 @@ Windows Communication Foundation (WCF) proporciona al desarrollador del código 
 >   
 >  `</configuration>`  
   
-## <a name="see-also"></a>Vea también  
- [Registro y configuración de un moniker de servicio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Registrar y configurar un Moniker de servicio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

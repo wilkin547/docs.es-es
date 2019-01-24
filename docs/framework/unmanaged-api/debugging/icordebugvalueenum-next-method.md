@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 433e387365834498203e444ed2f85889f8adde06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 020df45f7f18a029f8c098fcc4dea1c131da017c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706922"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next (Método)
 Obtiene el número especificado de instancias de "ICorDebugValue" de la enumeración, comenzando en la posición actual.  
@@ -43,20 +43,20 @@ HRESULT Next (
  [in] El número de `ICorDebugValue` instancias va a recuperar.  
   
  `values`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un `ICorDebugValue` objeto.  
+ [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugValue` objeto.  
   
  `pceltFetched`  
- [out] Puntero al número de `ICorDebugValue` instancias realmente devueltos. Este valor puede ser null si `celt` es uno.  
+ [out] Puntero al número de `ICorDebugValue` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
-    
- 
+## <a name="see-also"></a>Vea también
+
+

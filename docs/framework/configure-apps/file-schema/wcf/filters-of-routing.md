@@ -2,20 +2,20 @@
 title: '&lt;filters&gt; de &lt;routing&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 4a6a079264c54ac481c3a8996b74ac924c33bdc7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 468c10bc06b60f80ce93cf413c02582fe3861f70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704438"
 ---
 # <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;filters&gt; de &lt;routing&gt;
 
 Representa una sección de configuración para definir un conjunto de filtros de enrutamiento, que determinan el tipo de Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> que se usará al evaluar los mensajes entrantes.
 
-[**\<system.serviceModel >**](system-servicemodel.md)   
+[**\<system.serviceModel>**](system-servicemodel.md)   
 &nbsp;&nbsp;[**\<enrutamiento >**](routing.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<filtros >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ Ninguna
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<Filtro >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Contiene un filtro de enrutamiento que determina el tipo de Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> se usará al evaluar los mensajes entrantes. |
+| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Contiene un filtro de enrutamiento que determina el tipo de Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> se usará al evaluar los mensajes entrantes. |
 
 ### <a name="parent-elements"></a>Elementos primarios
 
@@ -54,4 +54,4 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

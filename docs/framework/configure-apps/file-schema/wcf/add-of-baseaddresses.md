@@ -2,22 +2,22 @@
 title: '&lt;add&gt; de &lt;baseAddresses&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: ce476c2d40758cf52eada813873d061d0e441bce
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 31edf570a7374a4b4fe31760d35ec196ecfcb3c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553573"
 ---
 # <a name="ltaddgt-of-ltbaseaddressesgt"></a>&lt;add&gt; de &lt;baseAddresses&gt;
 Representa un elemento de configuración que especifica las direcciones base usadas por el host de servicio.  
   
  \<system.ServiceModel>  
-\<cliente >  
-\<punto de conexión >  
+\<client>  
+\<endpoint>  
 \<host >  
-\<baseAddresses >  
-\<baseAddress >  
+\<baseAddresses>  
+\<baseAddress>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,10 +44,10 @@ Representa un elemento de configuración que especifica las direcciones base usa
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<baseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Una colección de elementos de `baseAddress`.|  
+|[\<baseAddresses>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Una colección de elementos de `baseAddress`.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.HostElement>  
- <xref:System.ServiceModel.ServiceHost>  
- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>  
- [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.HostElement>
+- <xref:System.ServiceModel.ServiceHost>
+- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
+- [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)

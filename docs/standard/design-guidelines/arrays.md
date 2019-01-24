@@ -8,12 +8,12 @@ helpviewer_keywords:
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: KrzysztofCwalina
-ms.openlocfilehash: d0332591be7659aafb5b3169f92c81d47d519dc2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd30cdee0440553a9f955f0b3f4ee420e938b9ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698809"
 ---
 # <a name="arrays"></a>Matrices
 **✓ DO** prefieren usar colecciones sobre matrices en las API públicas. El [colecciones](../../../docs/standard/design-guidelines/guidelines-for-collections.md) sección proporcionan detalles sobre cómo elegir entre las colecciones y matrices.  
@@ -30,6 +30,6 @@ ms.locfileid: "53127568"
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Array>  
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- <xref:System.Array>
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instrucciones de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)
