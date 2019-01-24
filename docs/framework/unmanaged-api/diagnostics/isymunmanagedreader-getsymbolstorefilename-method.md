@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b36f4007f286938169cc5d583908493916b9e6f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6199a0d0444f07c57e88d0369f192684755d301c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705276"
 ---
-# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="080a1-102">ISymUnmanagedReader::GetSymbolStoreFileName (Método)</span><span class="sxs-lookup"><span data-stu-id="080a1-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
-<span data-ttu-id="080a1-103">Proporciona el nombre de archivo en disco del almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="080a1-103">Provides the on-disk file name of the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="701df-102">ISymUnmanagedReader::GetSymbolStoreFileName (Método)</span><span class="sxs-lookup"><span data-stu-id="701df-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
+<span data-ttu-id="701df-103">Proporciona el nombre de archivo en el disco del almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="701df-103">Provides the on-disk file name of the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="080a1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="080a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="701df-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="701df-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSymbolStoreFileName (  
@@ -37,21 +37,21 @@ HRESULT GetSymbolStoreFileName (
         length_is (*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="080a1-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="080a1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="701df-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="701df-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="080a1-106">[in] El tamaño de la `szName` búfer.</span><span class="sxs-lookup"><span data-stu-id="080a1-106">[in] The size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="701df-106">[in] El tamaño de la `szName` búfer.</span><span class="sxs-lookup"><span data-stu-id="701df-106">[in] The size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="080a1-107">[out] Un puntero a la variable que recibe la longitud del nombre devuelto en `szName`, incluida la terminación null.</span><span class="sxs-lookup"><span data-stu-id="080a1-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
+ <span data-ttu-id="701df-107">[out] Un puntero a la variable que recibe la longitud del nombre devuelto en `szName`, incluida la terminación null.</span><span class="sxs-lookup"><span data-stu-id="701df-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="080a1-108">[out] Un puntero a la variable que recibe el nombre de archivo del almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="080a1-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
+ <span data-ttu-id="701df-108">[out] Un puntero a la variable que recibe el nombre de archivo del almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="701df-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="080a1-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="080a1-109">Return Value</span></span>  
- <span data-ttu-id="080a1-110">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="080a1-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="701df-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="701df-109">Return Value</span></span>  
+ <span data-ttu-id="701df-110">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="701df-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="080a1-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="080a1-111">Requirements</span></span>  
- <span data-ttu-id="080a1-112">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="080a1-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="701df-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="701df-111">Requirements</span></span>  
+ <span data-ttu-id="701df-112">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="701df-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="080a1-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="080a1-113">See Also</span></span>  
- [<span data-ttu-id="080a1-114">ISymUnmanagedReader (interfaz)</span><span class="sxs-lookup"><span data-stu-id="080a1-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="701df-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="701df-113">See also</span></span>
+- [<span data-ttu-id="701df-114">ISymUnmanagedReader (interfaz)</span><span class="sxs-lookup"><span data-stu-id="701df-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

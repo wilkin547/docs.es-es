@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ee21861ed3911303d4661721b65e9e147c6953a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 330501e67e3f19fbdb24c200deacad68de1b6c03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710299"
 ---
-# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="5eacb-102">ICLRDebugManager::SetSymbolReadingPolicy (Método)</span><span class="sxs-lookup"><span data-stu-id="5eacb-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
-<span data-ttu-id="5eacb-103">Establece la directiva para leer los archivos de programa (PDB) de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="5eacb-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="5eacb-104">La directiva determina si se incluye información sobre los números de línea y los archivos en las pilas de llamadas.</span><span class="sxs-lookup"><span data-stu-id="5eacb-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
+# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="b54ac-102">ICLRDebugManager::SetSymbolReadingPolicy (Método)</span><span class="sxs-lookup"><span data-stu-id="b54ac-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
+<span data-ttu-id="b54ac-103">Establece la directiva para leer los archivos de programa (PDB) de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="b54ac-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="b54ac-104">La directiva determina si se incluye información sobre archivos y números de línea en las pilas de llamadas.</span><span class="sxs-lookup"><span data-stu-id="b54ac-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5eacb-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5eacb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b54ac-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b54ac-105">Syntax</span></span>  
   
 ```  
 HRESULT SetSymbolReadingPolicy (  
@@ -36,26 +36,26 @@ HRESULT SetSymbolReadingPolicy (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5eacb-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5eacb-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b54ac-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b54ac-106">Parameters</span></span>  
  `policy`  
- <span data-ttu-id="5eacb-107">[in] Un miembro de la [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeración.</span><span class="sxs-lookup"><span data-stu-id="5eacb-107">[in] A member of the [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="b54ac-107">[in] Un miembro de la [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeración.</span><span class="sxs-lookup"><span data-stu-id="b54ac-107">[in] A member of the [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5eacb-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5eacb-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b54ac-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="b54ac-108">Return Value</span></span>  
   
-|<span data-ttu-id="5eacb-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5eacb-109">HRESULT</span></span>|<span data-ttu-id="5eacb-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="5eacb-110">Description</span></span>|  
+|<span data-ttu-id="b54ac-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b54ac-109">HRESULT</span></span>|<span data-ttu-id="b54ac-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="b54ac-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5eacb-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="5eacb-111">S_OK</span></span>|<span data-ttu-id="5eacb-112">`SetSymbolReadingPolicy` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="5eacb-112">`SetSymbolReadingPolicy` returned successfully.</span></span>|  
-|<span data-ttu-id="5eacb-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5eacb-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5eacb-114">Common language runtime (CLR) no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="5eacb-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="5eacb-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5eacb-115">E_FAIL</span></span>|<span data-ttu-id="5eacb-116">Se ha producido un error catastrófico desconocido.</span><span class="sxs-lookup"><span data-stu-id="5eacb-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5eacb-117">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="5eacb-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5eacb-118">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5eacb-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b54ac-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b54ac-111">S_OK</span></span>|<span data-ttu-id="b54ac-112">`SetSymbolReadingPolicy` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="b54ac-112">`SetSymbolReadingPolicy` returned successfully.</span></span>|  
+|<span data-ttu-id="b54ac-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b54ac-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b54ac-114">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="b54ac-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b54ac-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b54ac-115">E_FAIL</span></span>|<span data-ttu-id="b54ac-116">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="b54ac-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b54ac-117">Después de un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="b54ac-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b54ac-118">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="b54ac-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5eacb-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5eacb-119">Requirements</span></span>  
- <span data-ttu-id="5eacb-120">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5eacb-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b54ac-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b54ac-119">Requirements</span></span>  
+ <span data-ttu-id="b54ac-120">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b54ac-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5eacb-121">**Encabezado:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5eacb-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b54ac-121">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b54ac-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5eacb-122">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5eacb-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b54ac-122">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b54ac-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5eacb-123">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5eacb-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b54ac-123">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b54ac-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5eacb-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="5eacb-124">See Also</span></span>  
- [<span data-ttu-id="5eacb-125">ICLRDebugManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5eacb-125">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b54ac-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="b54ac-124">See also</span></span>
+- [<span data-ttu-id="b54ac-125">ICLRDebugManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b54ac-125">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)

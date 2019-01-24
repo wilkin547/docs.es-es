@@ -2,37 +2,37 @@
 title: '&gt;= (Mayor o igual que) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: 1a1b75991ab97eefec67f2499bad4beb2234ea61
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34326072f4772e74a45e0ffb6ea1e35f1596b206
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697155"
 ---
-# <a name="gt-greater-than-or-equal-to-entity-sql"></a><span data-ttu-id="d52e2-102">&gt;= (Mayor o igual que) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d52e2-102">&gt;= (Greater Than or Equal To) (Entity SQL)</span></span>
-<span data-ttu-id="d52e2-103">Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor igual o mayor que el de la expresión de la derecha.</span><span class="sxs-lookup"><span data-stu-id="d52e2-103">Compares two expressions to determine whether the left expression has a value greater than or equal to the right expression.</span></span>  
+# <a name="gt-greater-than-or-equal-to-entity-sql"></a><span data-ttu-id="80efc-102">&gt;= (Mayor o igual que) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="80efc-102">&gt;= (Greater Than or Equal To) (Entity SQL)</span></span>
+<span data-ttu-id="80efc-103">Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor igual o mayor que el de la expresión de la derecha.</span><span class="sxs-lookup"><span data-stu-id="80efc-103">Compares two expressions to determine whether the left expression has a value greater than or equal to the right expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d52e2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d52e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80efc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="80efc-104">Syntax</span></span>  
   
 ```  
 expression >= expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="d52e2-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="d52e2-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="80efc-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="80efc-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="d52e2-106">Cualquier expresión válida.</span><span class="sxs-lookup"><span data-stu-id="d52e2-106">Any valid expression.</span></span> <span data-ttu-id="d52e2-107">Ambas expresiones deben tener tipos de datos convertibles implícitamente.</span><span class="sxs-lookup"><span data-stu-id="d52e2-107">Both expressions must have implicitly convertible data types.</span></span>  
+ <span data-ttu-id="80efc-106">Cualquier expresión válida.</span><span class="sxs-lookup"><span data-stu-id="80efc-106">Any valid expression.</span></span> <span data-ttu-id="80efc-107">Ambas expresiones deben tener tipos de datos convertibles implícitamente.</span><span class="sxs-lookup"><span data-stu-id="80efc-107">Both expressions must have implicitly convertible data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="d52e2-108">Tipos de resultado</span><span class="sxs-lookup"><span data-stu-id="d52e2-108">Result Types</span></span>  
- <span data-ttu-id="d52e2-109">`true` si la expresión izquierda tiene un valor igual o mayor que el de la expresión derecha; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="d52e2-109">`true` if the left expression has a value greater than or equal to the right expression; otherwise, `false`.</span></span>  
+## <a name="result-types"></a><span data-ttu-id="80efc-108">Tipos de resultado</span><span class="sxs-lookup"><span data-stu-id="80efc-108">Result Types</span></span>  
+ <span data-ttu-id="80efc-109">`true` si la expresión izquierda tiene un valor igual o mayor que el de la expresión derecha; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="80efc-109">`true` if the left expression has a value greater than or equal to the right expression; otherwise, `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d52e2-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d52e2-110">Example</span></span>  
- <span data-ttu-id="d52e2-111">La consulta de Entity SQL siguiente utiliza el operador de comparación >= para comparar dos expresiones con el fin de determinar si la expresión izquierda tiene un valor igual o mayor que el de la expresión derecha.</span><span class="sxs-lookup"><span data-stu-id="d52e2-111">The following Entity SQL query uses >= comparison operator to compare two expressions to determine whether the left expression has a value greater than or equal to the right expression.</span></span> <span data-ttu-id="d52e2-112">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="d52e2-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="d52e2-113">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="d52e2-113">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="80efc-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="80efc-110">Example</span></span>  
+ <span data-ttu-id="80efc-111">La consulta de Entity SQL siguiente utiliza el operador de comparación >= para comparar dos expresiones con el fin de determinar si la expresión izquierda tiene un valor igual o mayor que el de la expresión derecha.</span><span class="sxs-lookup"><span data-stu-id="80efc-111">The following Entity SQL query uses >= comparison operator to compare two expressions to determine whether the left expression has a value greater than or equal to the right expression.</span></span> <span data-ttu-id="80efc-112">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="80efc-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="80efc-113">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="80efc-113">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="d52e2-114">Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="d52e2-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="80efc-114">Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="80efc-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="d52e2-115">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="d52e2-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="80efc-115">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="80efc-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#GREATER_OR_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater_or_equals)]  
   
-## <a name="see-also"></a><span data-ttu-id="d52e2-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="d52e2-116">See Also</span></span>  
- [<span data-ttu-id="d52e2-117">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="d52e2-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="80efc-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="80efc-116">See also</span></span>
+- [<span data-ttu-id="80efc-117">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="80efc-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
