@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1beb76012d5f0351ee644c8dea89cabdbe2c8970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555029"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes (Método)
-Enumera los tipos exportados al que hace referencia en el manifiesto del ensamblado en el ámbito de metadatos actual.  
+Enumera los tipos exportados hace referencia en el manifiesto del ensamblado en el ámbito de metadatos actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ HRESULT EnumExportedTypes (
   
 #### <a name="parameters"></a>Parámetros  
  `phEnum`  
- [entrada, salida] Un puntero para el enumerador. Debe ser un valor null valor cuando el `EnumExportedTypes` método se llama por primera vez.  
+ [in, out] Un puntero en el enumerador. Esto debe ser un valor null valor cuando el `EnumExportedTypes` se llama al método por primera vez.  
   
  `rExportedTypes`  
  [out] La enumeración de `mdExportedType` los tokens de metadatos.  
@@ -49,23 +49,23 @@ HRESULT EnumExportedTypes (
  [in] El número máximo de `mdExportedType` tokens que se pueden colocar en el `rExportedTypes` matriz.  
   
  `pcTokens`  
- [out] El número de `mdExportedType` tokens realmente se colocan en `rExportedTypes`.  
+ [out] El número de `mdExportedType` tokens realmente están colocan en `rExportedTypes`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |`S_OK`|`EnumExportedTypes` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún tokens para enumerar. En este caso, `pcTokens` se establece en cero.|  
+|`S_FALSE`|No hay ningún token para enumerar. En este caso, `pcTokens` se establece en cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

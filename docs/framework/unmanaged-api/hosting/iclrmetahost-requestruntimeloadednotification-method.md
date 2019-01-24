@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519130"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification (Método)
-Proporciona una función de devolución de llamada que se garantiza que se llama cuando una versión de common language runtime (CLR) se carga por primera vez, pero aún no se ha iniciado. Este método reemplaza a la [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) función.  
+Proporciona una función de devolución de llamada que se garantiza que se llama cuando una versión de common language runtime (CLR) se carga por primera vez, pero aún no se ha iniciado. Este método reemplaza el [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,13 +49,13 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="remarks"></a>Comentarios  
  La devolución de llamada funciona de la manera siguiente:  
   
--   La devolución de llamada se invoca cuando un tiempo de ejecución se carga por primera vez.  
+-   La devolución de llamada se invoca sólo cuando se carga un tiempo de ejecución por primera vez.  
   
 -   No se invoca la devolución de llamada para las cargas reentrantes del mismo runtime.  
   
--   Para las cargas en tiempo de ejecución no reentrante, llamadas a la función de devolución de llamada se serializan.  
+-   Para las cargas no reentrante en tiempo de ejecución, se serializan las llamadas a la función de devolución de llamada.  
   
- La función de devolución de llamada tiene el prototipo siguiente:  
+ La función de devolución de llamada tiene el siguiente prototipo:  
   
 ```  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -78,26 +78,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Si el host intenta cargar o producir otro tiempo de ejecución debe cargarse de manera reentrante, la `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` parámetros que se proporcionan en la devolución de llamada de función debe usarse de la manera siguiente:  
+ Si el host intenta cargar o producir otro tiempo de ejecución que se cargue en un modo reentrante, la `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` parámetros que se proporcionan en la devolución de llamada de función debe usarse en la siguiente manera:  
   
--   `pfnCallbackThreadSet` debe llamarse desde el subproceso que podría provocar una carga en tiempo de ejecución antes de que se intenta realizar una carga de este tipo.  
+-   `pfnCallbackThreadSet` debe llamarse por el subproceso que podría causar una carga en tiempo de ejecución antes de intenta una carga de este tipo.  
   
--   `pfnCallbackThreadUnset` se debe llamar cuando el subproceso ya no hará que estos una carga en tiempo de ejecución (y antes de volver de la devolución de llamada inicial).  
+-   `pfnCallbackThreadUnset` se debe llamar cuando el subproceso ya no hará que la carga de tiempo de ejecución (y antes de abandonar la devolución de llamada inicial).  
   
--   `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` son no reentrante.  
+-   `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` son ambos no reentrante.  
   
 > [!NOTE]
->  Hospedar aplicaciones no deben llamar a `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` fuera del ámbito de la `pCallbackFunction` parámetro.  
+>  No deben llamar las aplicaciones host `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` fuera del ámbito de la `pCallbackFunction` parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MetaHost.h  
+ **Encabezado**: MetaHost.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRMetaHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vea también
+- [ICLRMetaHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -3,19 +3,19 @@ title: '&lt;wsFederation&gt;'
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 66596bbc7171a33318b835a552b7fb364d6833f7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fced46560263a030430c04bd550c9ad66f2e1972
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521910"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Proporciona la configuración de la <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
   
-\<system.identityModel.services >  
-\<federationConfiguration >  
-\<wsFederation >  
+\<system.identityModel.services>  
+\<federationConfiguration>  
+\<wsFederation>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,20 +51,20 @@ Proporciona la configuración de la <xref:System.IdentityModel.Services.WSFedera
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |authenticationType|Un URI que especifica el tipo de autenticación. Establece el parámetro wauth de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wauth no está incluido en la solicitud.|  
-|índice de actualización|La antigüedad máxima deseada de las solicitudes de autenticación, en minutos. Establece el parámetro wfresh de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es cero. Opcional. **Advertencia:** en la próxima versión de .NET Framework 4.5, el `freshness` será el atributo de tipo `xs:string` y su valor predeterminado será `null`.|  
+|índice de actualización|La antigüedad máxima deseada de las solicitudes de autenticación, en minutos. Establece el parámetro wfresh de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es cero. Opcional. **Advertencia:**  En la próxima versión de .NET Framework 4.5, el `freshness` será el atributo de tipo `xs:string` y su valor predeterminado será `null`.|  
 |homeRealm|El dominio de inicio del proveedor de identidades (IP) que se usará para la autenticación. Establece el parámetro whr de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro whr no está incluido en la solicitud.|  
 |issuer|El URI del emisor del token previsto. Establece las solicitudes de inicio de sesión de dirección URL de WS-Federation base y las solicitudes de cierre de sesión necesarias.|  
 |persistentCookiesOnPassiveRedirects|Especifica si se emiten cookies persistentes en la autenticación. Opcional. El valor predeterminado es "false", no se emiten cookies.|  
 |passiveRedirectEnabled|Especifica si está habilitado el WSFAM redirigir automáticamente las solicitudes no autorizadas a un STS. Opcional. El valor predeterminado es "true", las solicitudes no autorizadas se redirigen automáticamente.|  
 |de excepción no controlada|Una dirección URL que especifica la ubicación de la directiva correspondiente para usar en las solicitudes de inicio de sesión. El valor predeterminado es una cadena vacía. Establece el parámetro wp de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wp no está incluido en la solicitud.|  
-|realm|El URI del dominio Kerberos solicitante. (Un URI que identifica el usuario de confianza (RP) para el servicio de token de seguridad (STS).) Establece el parámetro de solicitud de solicitud wtrealm inicio de sesión de WS-Federation. Requerido.|  
+|realm|El URI del dominio Kerberos solicitante. (Un URI que identifica el usuario de confianza (RP) para el servicio de token de seguridad (STS).) Establece el parámetro de solicitud de solicitud wtrealm inicio de sesión de WS-Federation. Obligatorio.|  
 |reply|Una dirección URL que identifica la dirección a la que la aplicación de confianza (RP) de usuario de confianza le gustaría recibir las respuestas desde el servicio de Token de seguridad (STS). Establece el parámetro wreply de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wreply no está incluido en la solicitud.|  
 |request|La solicitud de emisión de tokens. Establece el parámetro wreq de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wreq no está incluido en la solicitud. No incluya el wreq o el parámetro wreqptr en la solicitud implica que el STS conoce qué tipo de token que se va a emitir.|  
 |requestPtr|Una dirección URL que especifica la ubicación de la solicitud de emisión de tokens. Establece el parámetro wreqptr de solicitud. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wreqptr no está incluido en la solicitud. No incluya el wreq o el parámetro wreqptr en la solicitud implica que el STS conoce qué tipo de token que se va a emitir.|  
 |requireHttps|Especifica si la comunicación con el servicio de token de seguridad (STS) debe utilizar el protocolo HTTPS. Opcional. El valor predeterminado es "true", se debe usar HTTPS.|  
 |recurso|Un URI que identifica el recurso que se obtiene acceso, el usuario de confianza (RP), a la que el servicio de token de seguridad (STS). Opcional. Establece el parámetro wres de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wres no está incluido en la solicitud. **Nota:** wres es un parámetro heredado. Especifique el `realm` atributo que se usará en su lugar el parámetro wtrealm.|  
-|signInQueryString|Proporciona un punto de extensibilidad para especificar parámetros de consulta de aplicación definida en la dirección URL de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que no se debe incluir ningún parámetro adicional en la solicitud. Los parámetros se especifican como un fragmento de cadena de consulta con el formato siguiente: `"param1=value1&param2=value2&param3=value3"` y así sucesivamente. **Nota:** en un archivo de configuración de la "&" se debe especificar el carácter de la cadena de consulta con su referencia de entidad, `&`.|  
-|signOutQueryString|Proporciona un punto de extensibilidad para especificar parámetros de consulta de aplicación definida en la dirección URL de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que no se debe incluir ningún parámetro adicional en la solicitud. Los parámetros se especifican como un fragmento de cadena de consulta con el formato siguiente: `"param1=value1&param2=value2&param3=value3"` y así sucesivamente. **Nota:** en un archivo de configuración de la "&" se debe especificar el carácter de la cadena de consulta con su referencia de entidad, `&`.|  
+|signInQueryString|Proporciona un punto de extensibilidad para especificar parámetros de consulta de aplicación definida en la dirección URL de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que no se debe incluir ningún parámetro adicional en la solicitud. Los parámetros se especifican como un fragmento de cadena de consulta con el formato siguiente: `"param1=value1&param2=value2&param3=value3"` y así sucesivamente. **Nota:**  En un archivo de configuración de la "&" se debe especificar el carácter de la cadena de consulta con su referencia de entidad, `&`.|  
+|signOutQueryString|Proporciona un punto de extensibilidad para especificar parámetros de consulta de aplicación definida en la dirección URL de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que no se debe incluir ningún parámetro adicional en la solicitud. Los parámetros se especifican como un fragmento de cadena de consulta con el formato siguiente: `"param1=value1&param2=value2&param3=value3"` y así sucesivamente. **Nota:**  En un archivo de configuración de la "&" se debe especificar el carácter de la cadena de consulta con su referencia de entidad, `&`.|  
 |signOutReply|Especifica la dirección URL a la que el cliente debe redirigir al servicio de token de seguridad (STS) durante el cierre de sesión a través del protocolo WS-Federation pasivo. Establece el parámetro wreply en una solicitud de cierre de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que no se debe incluir ningún parámetro adicional en la solicitud.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -98,6 +98,6 @@ Proporciona la configuración de la <xref:System.IdentityModel.Services.WSFedera
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Vea también
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

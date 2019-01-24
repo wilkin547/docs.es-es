@@ -2,12 +2,12 @@
 title: Propiedades indizadas
 description: Obtenga información sobre las propiedades indizadas en F#, que permiten obtener acceso a la forma de matriz a los datos ordenados.
 ms.date: 10/17/2018
-ms.openlocfilehash: 3817290505339803814e981cd5408cd4df6bd283
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a092da753acacf80807d145051a719df2d3e1520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550973"
 ---
 # <a name="indexed-properties"></a>Propiedades indizadas
 
@@ -58,13 +58,29 @@ ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth
 ```
 
-## <a name="indexed-properties-with-multiple-index-variables"></a>Propiedades indizadas con varias Variables de índice
+## <a name="indexed-properties-with-multiple-index-values"></a>Propiedades indizadas con varios valores de índice
 
-Las propiedades indizadas pueden tener más de una variable de índice. En ese caso, las variables están separadas por comas, cuando se usa la propiedad. El método set de esta propiedad debe tener dos argumentos currificados, el primero de los cuales es una tupla que contiene las claves y el segundo de los cuales es el valor que se va a establecer.
+Las propiedades indizadas pueden tener más de un valor de índice. En ese caso, los valores están separados por comas cuando se usa la propiedad. El método set de esta propiedad debe tener dos argumentos currificados, el primero de los cuales es una tupla que contiene las claves y el segundo de los cuales es el valor que se va a establecer.
 
-El código siguiente muestra el uso de una propiedad indizada con varias variables de índice.
+El código siguiente muestra el uso de una propiedad indizada con varios valores de índice.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
+```fsharp
+open System.Collections.Generic
+
+/// Basic implementation of a sparse matrix basedon a dictionary
+type SparseMatrix() =
+    let table = new Dictionary<(int * int), float>()
+    member __.Item
+        // Because the key is comprised of two values, 'get' has two index values
+        with get(key1, key2) = table.[(key1, key2)]
+
+        // 'set' has two index values and a new value to place in the key's position
+        and set (key1, key2) value = table.[(key1, key2)] <- value
+
+let sm = new SparseMatrix()
+for i in 1..1000 do
+    sm.[i, i] <- float i * float i
+```
 
 ## <a name="see-also"></a>Vea también
 

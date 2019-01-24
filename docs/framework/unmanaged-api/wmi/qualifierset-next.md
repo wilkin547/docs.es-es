@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 35ab5b64b3c7e364e0dd11c002b87a0a413f4335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532440"
 ---
-# <a name="qualifiersetnext-function"></a>Función QualifierSet_Next
-Recupera el siguiente calificador en una enumeración que se inició con una llamada a la [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) función.   
+# <a name="qualifiersetnext-function"></a>QualifierSet_Next function
+Recupera el siguiente calificador en una enumeración que se inició con una llamada a la función [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -67,9 +67,9 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | El llamador no llamó a [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | No hay más calificadores se mantienen en la enumeración. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
@@ -82,11 +82,11 @@ Se llama a la `QualifierSet_Next` función varias veces para enumerar todos los 
 El orden de los calificadores que ha devuelto durante la enumeración es indefinido.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

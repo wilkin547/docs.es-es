@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: ca9aea526d1039c09883696ed2a35ed930c92872
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 46122eaa7ca54679c9a52b939f9100c9a0747e7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550362"
 ---
 # <a name="-resource-visual-basic"></a>-resource (Visual Basic)
 Inserta un recurso administrado en un ensamblado.  
@@ -31,7 +31,7 @@ Inserta un recurso administrado en un ensamblado.
   
 |Término|Definición|  
 |---|---|  
-|`filename`|Requerido. El nombre del archivo de recursos para insertar en el archivo de salida. De forma predeterminada, `filename` es público en el ensamblado. Ponga el nombre de archivo entre comillas ("") si contiene un espacio.|  
+|`filename`|Obligatorio. El nombre del archivo de recursos para insertar en el archivo de salida. De forma predeterminada, `filename` es público en el ensamblado. Ponga el nombre de archivo entre comillas ("") si contiene un espacio.|  
 |`identifier`|Opcional. El nombre lógico del recurso; el nombre utilizado para cargarlo. El valor predeterminado es el nombre del archivo. Si lo desea, puede especificar si el recurso es público o privado en el manifiesto del ensamblado, al igual que con los siguientes: `-res:filename.res, myname.res, public`|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -52,8 +52,8 @@ vbc -res:rf.resource in.vb
   
 ## <a name="see-also"></a>Vea también
 
-- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)  
-- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)  
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
+- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

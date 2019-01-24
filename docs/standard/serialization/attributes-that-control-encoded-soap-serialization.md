@@ -8,18 +8,18 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 7b5a48003ff9bfb398c05c8d70a9076d49ad83d6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2961d9abc6c32e78b5a61e8f2bbea5cfcf6677bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547207"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Atributos que controlan la serialización SOAP codificada
 
 El documento de World Wide Web Consortium (W3C) denominado [protocolo de acceso de objeto Simple (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) contiene una sección opcional (sección 5) que describe cómo se pueden codificar los parámetros SOAP. Para ajustarse a la sección 5 de la especificación, debe usar un conjunto especial de atributos que se encuentra en el espacio de nombres <xref:System.Xml.Serialization>. Aplique según corresponda esos atributos a las clases y miembros de clases y, a continuación, utilice <xref:System.Xml.Serialization.XmlSerializer> para serializar instancias de la clase o clases.
 
-La tabla siguiente muestra los atributos, donde se pueden aplicar, y lo que hacen. Para más información sobre el uso de estos atributos para controlar la serialización XML, vea [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) y [Cómo: Invalidar la serialización XML SOAP codificada](how-to-override-encoded-soap-xml-serialization.md).
+La tabla siguiente muestra los atributos, donde se pueden aplicar, y lo que hacen. Para obtener más información sobre el uso de estos atributos para controlar la serialización XML, vea [Cómo: Serializar un objeto como un Stream XML codificados en SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) y [Cómo: Invalidar la serialización XML SOAP codificada](how-to-override-encoded-soap-xml-serialization.md).
 
 Para obtener más información sobre atributos, vea [Atributos](../../../docs/standard/attributes/index.md).
 
@@ -34,10 +34,10 @@ Para obtener más información sobre atributos, vea [Atributos](../../../docs/st
 
 ## <a name="see-also"></a>Vea también
 
-- [Serialización SOAP y XML](xml-and-soap-serialization.md)  
-- [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-- [Cómo: Invalidar la serialización XML SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)  
-- [Atributos](../../../docs/standard/attributes/index.md)  
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)  
+- [Serialización SOAP y XML](xml-and-soap-serialization.md)
+- [Cómo: Serializar un objeto como un Stream XML con codificación SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Cómo: Invalidar la serialización XML SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)
+- [Atributos](../../../docs/standard/attributes/index.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)
 - [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)

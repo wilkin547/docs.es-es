@@ -2,12 +2,12 @@
 title: Almacén de instancias de flujo de trabajo de SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6af42fa8ae119ba8fbc08e00cd5b3800521943a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538302"
 ---
 # <a name="sql-workflow-instance-store"></a>Almacén de instancias de flujo de trabajo de SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] se distribuye con el almacén de instancias de flujo de trabajo de SQL, que permite a los flujos de trabajo conservar información de estado sobre las instancias de flujo de trabajo en una base de datos de SQL Server 2005 o SQL Server 2008. Esta característica se implementa principalmente en el formulario de la clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, que deriva de la clase <xref:System.Runtime.DurableInstancing.InstanceStore> abstracta del marco de persistencia. La característica Almacén de instancias de flujo de trabajo de SQL constituye un proveedor de persistencia de SQL, que es una implementación concreta de la API de persistencia que un host usa para enviar los comandos de persistencia al almacén.  
@@ -24,7 +24,7 @@ ms.locfileid: "49453023"
   
 -   [Propiedades del almacén de instancias de flujo de trabajo de SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
--   [Cómo habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Cómo: Habilitar la persistencia de SQL para flujos de trabajo y los servicios de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Activación de instancias](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
   
@@ -36,5 +36,5 @@ ms.locfileid: "49453023"
   
 -   [Base de datos de persistencia de SQL Server](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia](https://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a>Vea también
+- [Ejemplos de persistencia](https://go.microsoft.com/fwlink/?LinkID=177735)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619333"
 ---
 # <a name="xstatic-markup-extension"></a>Extensiones de marcado x:Static
 Hace referencia a cualquier entidad de código por valor estático que se define en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: método compatible. La propiedad estática que se hace referencia puede usarse para proporcionar el valor de una propiedad en XAML.  
@@ -31,8 +31,8 @@ Hace referencia a cualquier entidad de código por valor estático que se define
 | | |  
 |-|-|  
 |`prefix`|Opcional. Un prefijo que se hace referencia a un espacio de nombres XAML asignada, no predeterminado. `prefix` se muestra explícitamente en el uso porque rara vez hacen referencia a propiedades estáticas que proceden de un espacio de nombres XAML predeterminado. Vea la sección Comentarios.|  
-|`typeName`|Requerido. El nombre del tipo que define al miembro estático deseado.|  
-|`staticMemberName`|Requerido. El nombre del miembro de valor estático deseado (una constante, una propiedad estática, un campo o un valor de enumeración).|  
+|`typeName`|Obligatorio. El nombre del tipo que define al miembro estático deseado.|  
+|`staticMemberName`|Obligatorio. El nombre del miembro de valor estático deseado (una constante, una propiedad estática, un campo o un valor de enumeración).|  
   
 ## <a name="remarks"></a>Comentarios  
 
@@ -82,6 +82,6 @@ En la implementación de servicios XAML de .NET Framework, el control para esta 
   
  Para obtener más información sobre cómo usar los prefijos y espacios de nombres XAML para WPF, vea [los espacios de nombres XAML y Namespace Mapping for WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
-## <a name="see-also"></a>Vea también  
- [x:Type (extensión de marcado)](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Tipos migrados de WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Vea también
+- [x:Type (extensión de marcado)](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Tipos migrados de WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

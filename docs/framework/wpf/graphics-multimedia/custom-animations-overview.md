@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: a18898f340c68b7890c56b586c87870c50fd4686
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527645"
 ---
 # <a name="custom-animations-overview"></a>Información general sobre animaciones personalizadas
 En este tema se describe cómo y cuándo extender el sistema de animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogramas clave personalizados o clases de animación, o utilizando la devolución de llamada por fotograma para omitirlo.  
@@ -123,13 +123,13 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
   
  Para obtener más información, consulte la <xref:System.Windows.Media.CompositionTarget.Rendering> página.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Animation.AnimationTimeline>  
- <xref:System.Windows.Media.Animation.IKeyFrame>  
- [Información general sobre técnicas de animación de propiedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Información general sobre animaciones en trazados ](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Información general sobre sistemas de control de tiempo y animación ](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Ejemplo de animación personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Animation.AnimationTimeline>
+- <xref:System.Windows.Media.Animation.IKeyFrame>
+- [Información general sobre técnicas de animación de propiedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Información general sobre animaciones en trazados ](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Información general sobre sistemas de control de tiempo y animación ](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Ejemplo de animación personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)

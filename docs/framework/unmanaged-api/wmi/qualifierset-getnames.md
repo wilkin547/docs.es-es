@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2da6bc87a175851aa7b23b67075ce61e39f0b937
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555107"
 ---
 # <a name="qualifiersetgetnames-function"></a>Función QualifierSet_GetNames
 Recupera los nombres de todos los calificadores o de ciertos calificadores que están disponibles en el objeto actual o la propiedad. 
@@ -53,8 +53,8 @@ HRESULT QualifierSet_GetNames (
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |  | 0 | Devuelve los nombres de todos los calificadores. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Devolver solo los nombres de los calificadores específicos que el objeto o propiedad actual. <br/> Para una propiedad: devolver solo los calificadores específicos a la propiedad (incluidas las invalidaciones) y no los calificadores se propagan desde la definición de clase. <br/> Para una instancia: devolver solo los nombres de calificador específicos de la instancia. <br/> Para una clase: devolver solo los calificadores específica el beiong de la clase derivada.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0 x 20 | Si la devolución propagan los nombres de los calificadores de otro objeto. <br/> Para una propiedad: devuelven solo los calificadores se propagan a esta propiedad desde la definición de clase y no los de la propiedad propiamente dicha. <br/> Para una instancia: devolución propagan solo esos calificadores de la definición de clase. <br/> Para una clase: sólo los nombres de calificador heredados de las clases principales de retorno. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Devolver solo los nombres de los calificadores específicos que el objeto o propiedad actual. <br/> Para una propiedad: Devolver solo los calificadores específicos de la propiedad (incluidas las invalidaciones) y no los calificadores propagados desde la definición de clase. <br/> Para una instancia: Devolver solo los nombres de calificador específicos de la instancia. <br/> Para una clase: Devolver solo los calificadores específica el beiong de la clase derivada.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Si la devolución propagan los nombres de los calificadores de otro objeto. <br/> Para una propiedad: Si la devolución solo los calificadores se propagan a esta propiedad desde la definición de clase y no los de la propiedad propiamente dicha. <br/> Para una instancia: Si la devolución solo esos calificadores se propagan desde la definición de clase. <br/> Para una clase: Si la devolución solo esos nombres calificador heredados de las clases principales. |
 
 `pstrNames` [out] Un nuevo `SAFEARRAY` que contiene los nombres solicitados. La matriz puede tener 0 elementos. Si se produce un error, un nuevo `SAFEARRAY` no se devuelve.
 
@@ -64,8 +64,8 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
-|`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -77,11 +77,11 @@ Una vez que haya recuperado los nombres de calificador, puede acceder a cada cal
 No es un error para un objeto determinado tener calificadores de cero, por lo que el número de cadenas en `pstrNames` en el valor devuelto puede ser 0, aunque la función devuelve `WBEM_S_NO_ERROR`.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

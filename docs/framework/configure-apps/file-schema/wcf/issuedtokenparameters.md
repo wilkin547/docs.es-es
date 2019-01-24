@@ -1,23 +1,23 @@
 ---
-title: '&lt;IssuedTokenParameters&gt;'
+title: '&lt;issuedTokenParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 2060f98e94cec9e656420ac073204a82bc592b92
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d3770764e75b3bfd1345ac6a44761861595309d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627465"
 ---
-# <a name="ltissuedtokenparametersgt"></a>&lt;IssuedTokenParameters&gt;
+# <a name="ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt;
 Especifica los parámetros para un token de seguridad emitido en un escenario de seguridad aliado.  
   
  \<system.serviceModel>  
-\<enlaces >  
-\<customBinding >  
-\<enlace >  
-\<seguridad >  
-\<issuedTokenParameters >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<security>  
+\<issuedTokenParameters>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,30 +58,30 @@ Especifica los parámetros para un token de seguridad emitido en un escenario de
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<additionalRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Una colección de elementos de configuración que especifican los parámetros de solicitud adicionales.|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de notificación requeridos.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
-|[\<emisor >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|Un elemento de configuración que especifica el punto de conexión que emite el token actual.|  
+|[\<additionalRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Una colección de elementos de configuración que especifican los parámetros de solicitud adicionales.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de notificación requeridos.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|Un elemento de configuración que especifica el punto de conexión que emite el token actual.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|Un elemento de configuración que especifica la dirección del punto de conexión de los metadatos del emisor del token.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica los valores predeterminados usados para iniciar un servicio de conversación seguro.|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica los valores predeterminados usados para iniciar un servicio de conversación seguro.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>  
- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)  
- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Funcionalidades de seguridad con enlaces personalizados](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
+- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Funcionalidades de seguridad con enlaces personalizados](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

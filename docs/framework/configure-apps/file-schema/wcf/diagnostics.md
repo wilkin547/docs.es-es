@@ -2,18 +2,18 @@
 title: '&lt;Diagnósticos&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524602"
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;Diagnósticos&gt;
 El elemento `diagnostics` define valores que pueden ser utilizados por un administrador para la inspección y control en tiempo de ejecución.  
   
  \<system.ServiceModel>  
-\<diagnóstico >  
+\<diagnostics>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,15 +47,15 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |etwProviderId|Cadena que especifica el identificador del proveedor de la traza de eventos, que escribe los eventos en las sesiones de ETW.|  
-|performanceCounters|Especifica si se habilitan los contadores de rendimiento para el ensamblado. Los valores válidos son<br /><br /> -Off: Los contadores de rendimiento están deshabilitados.<br />-ServiceOnly: Solo los contadores de rendimiento relevantes para este servicio están habilitados.<br />-Todo: Los contadores de rendimiento se pueden ver en tiempo de ejecución.<br />-Default: Se crea un _WCF_Admin de instancia de contador de rendimiento único. Esta instancia se utiliza para habilitar la colección de datos de SQM usados por la infraestructura. Ninguno de los valores de contador para esta instancia está actualizado y por consiguiente permanecerá a cero. Éste es el valor predeterminado si ninguna configuración está presente para WCF.|  
+|performanceCounters|Especifica si se habilitan los contadores de rendimiento para el ensamblado. Los valores válidos son<br /><br /> -Off: Los contadores de rendimiento están deshabilitados.<br />-   ServiceOnly: Solo los contadores de rendimiento relevantes para este servicio están habilitados.<br />-Todo: Los contadores de rendimiento se pueden ver en tiempo de ejecución.<br />-Default: Se crea un _WCF_Admin de instancia de contador de rendimiento único. Esta instancia se utiliza para habilitar la colección de datos de SQM usados por la infraestructura. Ninguno de los valores de contador para esta instancia está actualizado y por consiguiente permanecerá a cero. Éste es el valor predeterminado si ninguna configuración está presente para WCF.|  
 |wmiProviderEnabled|Un valor booleano que especifica si el proveedor de WMI para el ensamblado está habilitado. El proveedor de WMI se requiere para que el usuario obtenga acceso en tiempo de ejecución a las características de control e inspección de Windows Communication Foundation (WCF). De manera predeterminada, es `false`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Elemento de configuración que le permite habilitar y deshabilitar aspectos diferentes de traza de un punto de conexión a otro durante el funcionamiento de una aplicación de servicio.|  
-|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Describe los valores para el registro de mensajes WCF.|  
+|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Elemento de configuración que le permite habilitar y deshabilitar aspectos diferentes de traza de un punto de conexión a otro durante el funcionamiento de una aplicación de servicio.|  
+|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Describe los valores para el registro de mensajes WCF.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -84,6 +84,6 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>

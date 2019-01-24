@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: a0a42f72d94adf1c10865374017fa61e833df40f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d4b2f73f8955b103e70e240e714e2b31d6198438
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535545"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Vs basado en cero. Acceso basado en una cadena en Visual Basic
 Este tema compara cómo Visual Basic y [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] proporcionan acceso a los caracteres de una cadena. El [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] siempre proporciona acceso basado en cero para los caracteres en una cadena, mientras que Visual Basic proporciona acceso basado en cero y basado en uno, dependiendo de la función.  
@@ -20,9 +20,9 @@ Este tema compara cómo Visual Basic y [!INCLUDE[dnprdnshort](~/includes/dnprdns
 ## <a name="zero-based"></a>Basado en cero  
  Para obtener un ejemplo de una función de Visual Basic basado en cero, considere la `Split` función. Divide una cadena y devuelve una matriz que contiene las subcadenas. El [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.String.Split%2A?displayProperty=nameWithType> método también divide una cadena y devuelve una matriz que contiene las subcadenas. Dado que el `Split` función y <xref:System.String.Split%2A> devuelto del método [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] matrices, deben ser basado en cero.  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- <xref:Microsoft.VisualBasic.Strings.Split%2A>  
- <xref:System.String.Substring%2A>  
- <xref:System.String.Split%2A>  
- [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- <xref:Microsoft.VisualBasic.Strings.Split%2A>
+- <xref:System.String.Substring%2A>
+- <xref:System.String.Split%2A>
+- [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

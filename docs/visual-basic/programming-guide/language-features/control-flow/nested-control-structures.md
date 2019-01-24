@@ -10,18 +10,18 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: ec3d4d477290480cdfa0f5b1c88aa82c81040d11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520469"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estructuras de control anidadas (Visual Basic)
-Puede colocar instrucciones de control dentro de otras instrucciones de control, por ejemplo un `If...Then...Else` bloquear dentro de un `For...Next` bucle. Cuando una instrucción de control que se coloca dentro de otra instrucción de control se dice *anidada*.  
+Puede colocar las instrucciones de control dentro de otras instrucciones de control, por ejemplo un `If...Then...Else` bloquear dentro de un `For...Next` bucle. Una instrucción de control que se coloca dentro de otra instrucción de control se dice que *anidada*.  
   
 ## <a name="nesting-levels"></a>Niveles de anidamiento  
- Estructuras de control en Visual Basic se pueden anidar a tantos niveles como desee. Es una práctica habitual que las estructuras anidadas sean más legibles aplicar sangría al cuerpo de cada uno de ellos. El editor de desarrollo integrado (IDE) de entorno lo hace automáticamente.  
+ Estructuras de control en Visual Basic se pueden anidar a tantos niveles como desee. Es una práctica común para facilitar la lectura de estructuras anidadas aplicar sangría al cuerpo de cada uno de ellos. El editor de desarrollo integrado (IDE) de entorno hace automáticamente.  
   
  En el ejemplo siguiente, el procedimiento `sumRows` suma los elementos positivos de cada fila de la matriz.  
   
@@ -39,7 +39,7 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- En el ejemplo anterior, la primera `Next` instrucción cierra interna `For` bucle y el último `Next` instrucción cierra el exterior `For` bucle.  
+ En el ejemplo anterior, la primera `Next` instrucción cierra interno `For` bucle y la última `Next` instrucción cierra externo `For` bucle.  
   
  Del mismo modo, en anidados `If` instrucciones, el `End If` instrucciones se aplican automáticamente al más cercano antes `If` instrucción. Anidar `Do` bucles funcionan de manera similar, con la más interna `Loop` instrucción coincidencia interior `Do` instrucción.  
   
@@ -47,7 +47,7 @@ End Sub
 >  Para muchas de las estructuras de control, al hacer clic en una palabra clave, se resaltan todas las palabras clave en la estructura. Por ejemplo, al hacer clic en `If` en un `If...Then...Else` construcción, todas las instancias de `If`, `Then`, `ElseIf`, `Else`, y `End If` se resaltan en la construcción. Para mover a la palabra clave resaltada siguiente o anterior, presione CTRL + MAYÚS + flecha abajo o CTRL + MAYÚS + flecha arriba.  
   
 ## <a name="nesting-different-kinds-of-control-structures"></a>Anidar diferentes tipos de estructuras de Control  
- Puede anidar un tipo de estructura de control dentro de otro tipo. En el ejemplo siguiente se usa un `With` bloquear dentro de un `For Each` bucle y anidar `If` bloques dentro de la `With` bloque.  
+ Puede anidar un tipo de estructura de control dentro de otro tipo. En el ejemplo siguiente se usa un `With` bloquear dentro de un `For Each` bucle y anidar `If` bloquea dentro de la `With` bloque.  
   
 ```  
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -65,15 +65,15 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>Estructuras de Control superpuestas  
- No se puede superponer estructuras de control. Esto significa que cualquier estructura anidada debe estar completamente dentro de la siguiente estructura más interna. Por ejemplo, la organización siguiente no es válida porque la `For` bucle finaliza antes interna `With` finaliza el bloque.  
+ No se pueden superponer las estructuras de control. Esto significa que cualquier estructura anidada debe estar contenido completamente dentro de la siguiente estructura más interna. Por ejemplo, la organización siguiente no es válida porque la `For` bucle finaliza antes de interno `With` finaliza el bloque.  
   
  ![Diagrama gráfico de anidación no válida](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-Anidamiento no válido de estructuras For y With  
+Anidamiento no válido de para y con las estructuras  
   
- El compilador de Visual Basic detecta estas estructuras de control superpuestas y señala un error en tiempo de compilación.  
+ El compilador de Visual Basic detecta estas estructuras de control que se superponen y señala un error de tiempo de compilación.  
   
-## <a name="see-also"></a>Vea también  
- [Flujo de control](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Estructuras de decisión](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Estructuras de bucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Estructuras de control adicionales](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+## <a name="see-also"></a>Vea también
+- [Flujo de control](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Estructuras de decisión](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Estructuras de bucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Estructuras de control adicionales](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

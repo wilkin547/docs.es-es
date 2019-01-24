@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a69ca889e226168adb1b84ab64dc0f882c27606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520543"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr (Enumeración)
 Contiene valores que describen las características de un método.  
@@ -69,22 +69,22 @@ typedef enum CorMethodAttr {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`mdMemberAccessMask`|Especifica el acceso a miembros.|  
-|`mdPrivateScope`|Especifica que el miembro no puede hacer referencia.|  
-|`mdPrivate`|Especifica que el miembro solo es accesible para el tipo de elemento primario.|  
-|`mdFamANDAssem`|Especifica que el miembro está accesible para los subtipos solo en este ensamblado.|  
+|`mdPrivateScope`|Especifica que no se pueden hacer referencia a los miembros.|  
+|`mdPrivate`|Especifica que el miembro es accesible solo para el tipo primario.|  
+|`mdFamANDAssem`|Especifica que el miembro es accesible para los subtipos sólo en este ensamblado.|  
 |`mdAssem`|Especifica que el miembro es accesible por cualquier usuario en el ensamblado.|  
 |`mdFamily`|Especifica que el miembro es accesible sólo mediante tipos y subtipos.|  
-|`mdFamORAssem`|Especifica que el miembro es accesible para las clases derivadas y para otros tipos de su ensamblado.|  
-|`mdPublic`|Especifica que el miembro está accesible para todos los tipos con acceso al ámbito.|  
-|`mdStatic`|Especifica que el miembro está definido como parte del tipo en lugar de como un miembro de una instancia.|  
+|`mdFamORAssem`|Especifica que el miembro es accesible para las clases derivadas y para otros tipos en su ensamblado.|  
+|`mdPublic`|Especifica que el miembro es accesible para todos los tipos con acceso al ámbito.|  
+|`mdStatic`|Especifica que el miembro está definido como parte del tipo en lugar de un miembro de una instancia.|  
 |`mdFinal`|Especifica que no se puede invalidar el método.|  
-|`mdVirtual`|Especifica que el método se puede reemplazar.|  
+|`mdVirtual`|Especifica que se puede invalidar el método.|  
 |`mdHideBySig`|Especifica que el método oculta por nombre y firma, en lugar de simplemente por su nombre.|  
 |`mdVtableLayoutMask`|Especifica el diseño de la tabla virtual.|  
-|`mdReuseSlot`|Especifica que la ranura usada para este método en la tabla virtual volverá a utilizar. Este es el valor predeterminado.|  
+|`mdReuseSlot`|Especifica que se debe reutilizar el espacio utilizado para este método en la tabla virtual. Este es el valor predeterminado.|  
 |`mdNewSlot`|Especifica que el método siempre obtiene una nueva ranura en la tabla virtual.|  
 |`mdCheckAccessOnOverride`|Especifica que el método puede reemplazarse por los mismos tipos a la que está visible.|  
-|`mdAbstract`|Especifica que el método no está implementado.|  
+|`mdAbstract`|Especifica que no se implementa el método.|  
 |`mdSpecialName`|Especifica que el método es especial y que su nombre describe cómo.|  
 |`mdPinvokeImpl`|Especifica que la implementación del método se reenvía mediante PInvoke.|  
 |`mdUnmanagedExport`|Especifica que el método es un método administrado exportado a código no administrado.|  
@@ -94,11 +94,11 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|Especifica que el método llama a otro método que contiene código de seguridad.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

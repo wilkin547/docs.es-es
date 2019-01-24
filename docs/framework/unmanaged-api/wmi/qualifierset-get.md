@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 357182d6157b63f1bccf47cb43f0c78dec5875cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625945"
 ---
 # <a name="qualifiersetget-function"></a>Función QualifierSet_Get
 Obtiene el calificador con nombre especificado.  
@@ -67,7 +67,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | El calificador especificado no existe. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
@@ -76,11 +76,11 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 Esta función contiene una llamada a la [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

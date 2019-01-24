@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ec1c227196e9118f9174feb103a3ecbf5bcb7c4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b4cfec6dd1b732729f32abd65c6e69ca53e2ad82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547498"
 ---
 # <a name="typography-in-wpf"></a>Tipografía en WPF
 En este tema se presentan las características tipográficas principales de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estas características incluyen la mejora de la calidad y el rendimiento de la representación de texto, la compatibilidad con tipografía [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], el texto internacional mejorado, la compatibilidad mejorada con fuentes y nuevas interfaces de programación de aplicaciones (API) de texto.  
@@ -167,12 +167,12 @@ Interacción entre la aplicación y TextFormatter
   
  Para obtener más información sobre la creación de un diseño de texto personalizado, vea [Formato de texto avanzado](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.FormattedText>  
- <xref:System.Windows.Media.TextFormatting.TextFormatter>  
- [Información general sobre ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [Características de las fuentes OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Dibujar texto con formato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [Formato de texto avanzado](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Tipografía de Microsoft](https://www.microsoft.com/typography/default.mspx)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.FormattedText>
+- <xref:System.Windows.Media.TextFormatting.TextFormatter>
+- [Información general sobre ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [Características de las fuentes OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [Dibujar texto con formato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+- [Formato de texto avanzado](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)
+- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Tipografía de Microsoft](https://www.microsoft.com/typography/default.mspx)

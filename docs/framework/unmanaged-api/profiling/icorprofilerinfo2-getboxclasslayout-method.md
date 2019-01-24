@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f046fb51753bfa79d333d465e8850794ecc73973
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b9d775d5c386abeb100604250008ebf1bf377e8b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550817"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout (Método)
-Obtiene información sobre dónde se encuentra el tipo de valor especificado cuando se adquirió en caja.  
+Obtiene información sobre dónde se encuentra el tipo de valor especificado al que se aplica.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,23 +37,23 @@ HRESULT GetBoxClassLayout(
   
 #### <a name="parameters"></a>Parámetros  
  `classId`  
- [in] El identificador de la clase que describe el tipo de valor que es una conversión boxing.  
+ [in] El identificador de la clase que describe el tipo de valor que se aplica.  
   
  `pBufferOffset`  
- [out] Un entero que es el desplazamiento, en relación con el puntero de identificador de objeto sometido a conversión boxing del tipo de valor.  
+ [out] Un entero que es el desplazamiento, en relación con el puntero de identificador de objeto empaquetado del tipo de valor.  
   
 ## <a name="remarks"></a>Comentarios  
- El `pBufferOffset` valor es la ubicación del tipo de valor dentro de un cuadro. Después de `pBufferOffset` se aplica a un objeto sometido a conversión boxing, diseño de la clase del tipo de valor puede usarse para interpretar el valor del objeto.  
+ El `pBufferOffset` valor es la ubicación del tipo de valor dentro de un cuadro. Después de `pBufferOffset` se aplica a un objeto sometido a conversión boxing, el diseño de clase del tipo de valor puede usarse para interpretar el valor del objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

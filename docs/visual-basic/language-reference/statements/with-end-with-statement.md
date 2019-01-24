@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 9c50d03454860979e3475cb381fefc2acc07cece
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3762e3bf0978feeb1155f8cc8249a77f0a497df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535274"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With (Instrucción, Visual Basic)
 Ejecuta una serie de instrucciones que hacen referencia repetidamente a un único objeto o estructura, por lo que las instrucciones pueden utilizar una sintaxis simplificada al acceder a los miembros del objeto o estructura.  Cuando use una estructura, sola podrá leer los valores de los miembros o invocar métodos, y recibirá un error si intenta asignar valores a los miembros de una estructura utilizada en una instrucción `With...End With`.  
@@ -37,9 +37,9 @@ End With
   
 |Término|Definición|  
 |---|---|  
-|`objectExpression`|Requerido. Una expresión que se evalúa como un objeto. La expresión puede ser arbitrariamente compleja y se evalúa solo una vez. La expresión se puede evaluar como cualquier tipo de datos, incluidos los tipos elementales.|  
+|`objectExpression`|Obligatorio. Una expresión que se evalúa como un objeto. La expresión puede ser arbitrariamente compleja y se evalúa solo una vez. La expresión se puede evaluar como cualquier tipo de datos, incluidos los tipos elementales.|  
 |`statements`|Opcional. Una o varias instrucciones entre `With` y `End With` que pueden hacer referencia a los miembros de un objeto generado por la evaluación de `objectExpression`.|  
-|`End With`|Requerido. Termina la definición del bloque `With`.|  
+|`End With`|Obligatorio. Termina la definición del bloque `With`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Con `With...End With`, puede ejecutar una serie de instrucciones en un objeto especificado sin necesidad especificar el nombre del objeto varias veces. En un bloque de instrucciones `With`, puede especificar un miembro del objeto que comience por un punto, como si el objeto de la instrucción `With` lo precediera.  
@@ -65,7 +65,7 @@ End With
  A menos que el bloque contenga un bucle, las instrucciones se ejecutan una sola vez. Puede anidar diferentes tipos de estructuras de control. Para obtener más información, consulte [estructuras de Control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
->  La palabra clave `With` también se puede usar en inicializadores de objeto. Para obtener más información y ejemplos, vea [inicializadores de objeto: tipos con nombre y anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) y [tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+>  La palabra clave `With` también se puede usar en inicializadores de objeto. Para obtener más información y ejemplos, vea [inicializadores de objeto: Tipos con nombre y anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) y [tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
 >   
 >  Si usa un bloque `With` solo para inicializar las propiedades o campos de un objeto del que acaba de crear instancias, considere la posibilidad de utilizar en su lugar un inicializador de objetos.  
   
@@ -79,8 +79,8 @@ End With
   
  [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Generic.List%601>  
- [Estructuras de control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Collections.Generic.List%601>
+- [Estructuras de control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

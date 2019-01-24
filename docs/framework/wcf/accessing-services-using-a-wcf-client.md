@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620205"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Acceso a los servicios mediante un cliente WCF
 
@@ -52,7 +52,7 @@ Svcutil.exe <file1 [,file2]>
  Si se proporciona solo uno nombre de archivo, ése será el nombre del archivo de salida. Si se proporcionan dos nombres de archivo, entonces el primer archivo es un archivo de configuración de entrada cuyo contenido está combinado con la configuración generada y que se escribe en el segundo archivo. Para obtener más información acerca de la configuración, consulte [configurar enlaces para los servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
 
 > [!IMPORTANT]
-> Las solicitudes de metadatos que no son seguras plantean ciertos riesgos, al igual que cualquier solicitud de una red no segura: si no está seguro de que el punto de conexión con el que se está comunicando es el que dice ser, es posible que la información que recupere sean metadatos de un servicio malintencionado.
+> Las solicitudes de metadatos no seguras plantean ciertos riesgos en la misma forma que cualquier solicitud de red no segura: Si no está seguro de que se comunican con el punto de conexión es quien dice ser, la información que recupere posible los metadatos de un servicio malintencionado.
 
 ## <a name="add-service-reference-in-visual-studio"></a>Agregar referencia de servicio en Visual Studio
 
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Muchas de las excepciones iniciadas por un cliente WCF están provocados por una excepción en el servicio. Estos son algunos ejemplos:
 
--   <xref:System.Net.Sockets.SocketException>: el host remoto forzó el cierre de la conexión existente.
+-   <xref:System.Net.Sockets.SocketException>: El host remoto cerró fuerza una conexión existente.
 
--   <xref:System.ServiceModel.CommunicationException>: la conexión ha terminado de forma inesperada.
+-   <xref:System.ServiceModel.CommunicationException>: La conexión subyacente se cerró inesperadamente.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: se anuló la conexión de socket. La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.
+-   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Se anuló la conexión de socket. La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.
 
 Cuando se producen estos tipos de excepciones, la mejor manera de resolver el problema es activar el seguimiento en el lado del servicio y determinar qué excepción se produjo allí. Para obtener más información acerca del seguimiento, vea [seguimiento](../../../docs/framework/wcf/diagnostics/tracing/index.md) y [utilizando seguimiento de la solución de problemas de la aplicación](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Acceso a los servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Llamada a operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Acceso a los servicios con contratos unidireccionales y de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Acceso a un servicio WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Cómo: Crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Cómo: Servicios de Access con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Cómo: Obtener acceso a servicios con unidireccional y contratos de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Cómo: Obtener acceso a un WSE 3.0 servicio](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Información sobre códigos de cliente generado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Mejora del tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Cómo: Mejorar el inicio de tiempo de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [Especificación del comportamiento de tiempo de ejecución del cliente](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Configuración de los comportamientos del cliente](../../../docs/framework/wcf/configuring-client-behaviors.md)

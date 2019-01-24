@@ -2,12 +2,12 @@
 title: Ordenar datos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f52000d37df45c97754463de1e81cd523806e9c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e36ccc72689e756105f51c988d4cafd06d4d8da5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520131"
 ---
 # <a name="sorting-data-visual-basic"></a>Ordenar datos (Visual Basic)
 Una operación de ordenación ordena los elementos de una secuencia según uno o varios atributos. El primer criterio de ordenación realiza una ordenación primaria de los elementos. Al especificar un segundo criterio de ordenación, se pueden ordenar los elementos dentro de cada grupo de ordenación primaria.  
@@ -20,7 +20,7 @@ Una operación de ordenación ordena los elementos de una secuencia según uno o
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Sintaxis de expresiones de consulta de Visual Basic|Más información|  
+|Nombre del método|Descripción|Sintaxis de expresión de consulta de Visual Basic|Más información|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |OrderBy|Ordena valores en orden ascendente.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Ordena valores en orden descendente.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -142,9 +142,9 @@ MsgBox(sb.ToString())
 ' brown  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq>  
- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Order By (cláusula)](../../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Cómo: Ordenar los resultados de una consulta](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
- [Cómo: ordenar o filtrar los datos de texto por palabra o campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Linq>
+- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Order By (cláusula)](../../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Cómo: Ordenar resultados de consulta](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [Cómo: Ordenar o filtrar los datos de texto por palabra o campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

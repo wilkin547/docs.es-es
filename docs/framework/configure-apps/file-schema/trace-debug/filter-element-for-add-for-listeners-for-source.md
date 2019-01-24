@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 044d446b97f0899b9575085a15c3faa399ce776e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624618"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;filtro&gt; (elemento) para &lt;agregar&gt; para &lt;los agentes de escucha&gt; para &lt;origen&gt;
 Agrega un filtro a un agente de escucha en la colección `Listeners` para un origen de seguimiento.  
   
  \<configuration>  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<orígenes >  
-\<origen >  
-\<los agentes de escucha >  
+\<source>  
+\<listeners>  
 \<add>  
-\<Filtro >  
+\<filter>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -92,9 +92,9 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.TraceFilter>  
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.TraceFilter>
+- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

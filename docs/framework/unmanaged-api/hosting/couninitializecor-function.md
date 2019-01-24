@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 305a8d7b5a800c46ed814b1e654947859dc9bd03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349f6922c18a7745c8eff05b1786dc649f8bb70a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520989"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor (Función)
 `CoUninitializeCor` está obsoleto.  
@@ -35,5 +35,5 @@ STDAPI_(void) CoUninitializeCor(void);
 ## <a name="remarks"></a>Comentarios  
  Common language runtime no se puede descargar desde un proceso. Para quitar completamente el tiempo de ejecución de un proceso en ejecución, debe cerrar el proceso.  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

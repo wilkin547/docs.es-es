@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f37bbe7d9e76d76bfe4c0f80b6f2343a5598bbfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec7e303e5145e16f4c17074d557410ffe4521c20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549842"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException (Método)
 Obtiene el depósito de Watson para la excepción actual en el subproceso que realiza la llamada.  
   
- A *depósito* es una colección de datos de error que está relacionado con el mismo defecto de código. *Watson* hace referencia a un conjunto de tecnologías destinadas a recopilar y analizar los datos que está asociados a una excepción.  
+ Un *depósito* es una colección de datos de error que está relacionado con el mismo defecto de código. *Watson* hace referencia a un conjunto de tecnologías para recopilar y analizar los datos que está asociados con una excepción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,13 +42,13 @@ HRESULT GetBucketParametersForCurrentException(
  [out] Un puntero a un [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) estructura que contiene datos de error para la excepción.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRErrorReportingManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICLRErrorReportingManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

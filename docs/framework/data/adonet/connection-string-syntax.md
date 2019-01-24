@@ -2,12 +2,12 @@
 title: Sintaxis de cadenas de conexión
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524551"
 ---
 # <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda de la clase <xref:System.Data.Common.DbConnection>, así como una propiedad <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica del proveedor. La sintaxis de la cadena de conexión específica de cada proveedor se indica en su propiedad `ConnectionString`. En la tabla siguiente se muestran los cuatro proveedores de datos que se incluyen en .NET Framework.  
@@ -194,7 +194,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  Para obtener más información acerca de la sintaxis de cadena de conexión ODBC, vea <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
-## <a name="see-also"></a>Vea también  
- [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

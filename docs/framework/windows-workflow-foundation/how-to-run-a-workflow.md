@@ -1,29 +1,29 @@
 ---
-title: 'Cómo: Ejecutar un flujo de trabajo'
+title: Procedimiento Ejecutar un flujo de trabajo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3b2081cee307e80396a9af4b9cfdbdea001113e6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530407"
 ---
-# <a name="how-to-run-a-workflow"></a>Cómo: Ejecutar un flujo de trabajo
-Este tema es una continuación del tutorial introductorio de Windows Workflow Foundation y explica cómo crear un host de flujo de trabajo y ejecutar el flujo de trabajo definido en el tema [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) anterior.
+# <a name="how-to-run-a-workflow"></a>Procedimiento Ejecutar un flujo de trabajo
+En este tema es una continuación de Windows Workflow Foundation tutorial de introducción y se explica cómo crear un host de flujo de trabajo y ejecutar el flujo de trabajo definido en el anterior [Cómo: Crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) tema.
 
 > [!NOTE]
->  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe finalizar [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) y [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
+>  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe finalizar [Cómo: Crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) y [Cómo: crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
 
 > [!NOTE]
->  Para descargar una versión completada del tutorial, consulte [Windows Workflow Foundation (WF45): Tutorial de introducción](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Para descargar una versión completa del tutorial, consulte [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45): tutorial introductorio)](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow-host-project"></a>Para crear el proyecto de host de flujo de trabajo  
   
-1.  Abra la solución del anterior [Cómo: crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tema mediante el uso de Visual Studio 2012.  
+1.  Abra la solución del anterior [Cómo: Crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tema mediante el uso de Visual Studio 2012.  
   
 2.  Haga clic con el botón secundario en la solución **WF45GettingStartedTutorial** en el **Explorador de soluciones** y seleccione **Agregar**, **Nuevo proyecto**.  
   
@@ -77,7 +77,7 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
      Reemplace las líneas de código que usan <xref:System.Activities.WorkflowInvoker> por el siguiente código básico de hospedaje <xref:System.Activities.WorkflowApplication> . Este código de hospedaje de ejemplo muestra los pasos básicos para hospedar e invocar un flujo de trabajo, pero no contiene, sin embargo, la funcionalidad necesaria para ejecutar correctamente el flujo de trabajo en este tema. En los pasos que figuran a continuación, el código básico se modifica y se agregan características adicionales hasta completar la aplicación.
 
     > [!NOTE]
-    >  Reemplace `Workflow1` en estos ejemplos por `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`o `StateMachineNumberGuessWorkflow`, en función del flujo de trabajo que completara en el paso [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) anterior. Si no reemplaza `Workflow1` , se producirán errores de compilación cuando intente compilar o ejecutar el flujo de trabajo.
+    >  Reemplace `Workflow1` en estos ejemplos con `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, o `StateMachineNumberGuessWorkflow`, en función de flujo de trabajo completara en el anterior [Cómo: Crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) paso. Si no reemplaza `Workflow1` , se producirán errores de compilación cuando intente compilar o ejecutar el flujo de trabajo.
 
      [!code-csharp[CFX_WF_GettingStarted#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/extrasnippets.cs#4)]
      [!code-vb[CFX_WF_GettingStarted#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/extrasnippets.vb#4)]
@@ -94,7 +94,7 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
 2.  Reemplace la línea de código que crea el nuevo <xref:System.Activities.WorkflowApplication> con el siguiente código que crea y pasa un diccionario de parámetros al flujo de trabajo cuando se crea.
 
     > [!NOTE]
-    >  Reemplace `Workflow1` en estos ejemplos por `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`o `StateMachineNumberGuessWorkflow`, en función del flujo de trabajo que completara en el paso [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) anterior. Si no reemplaza `Workflow1` , se producirán errores de compilación cuando intente compilar o ejecutar el flujo de trabajo.
+    >  Reemplace `Workflow1` en estos ejemplos con `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, o `StateMachineNumberGuessWorkflow`, en función de flujo de trabajo completara en el anterior [Cómo: Crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) paso. Si no reemplaza `Workflow1` , se producirán errores de compilación cuando intente compilar o ejecutar el flujo de trabajo.
 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
@@ -148,13 +148,13 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     Para obtener instrucciones sobre cómo agregar la persistencia a una aplicación de flujo de trabajo, consulte el siguiente tema: [How to: Create and Run a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md).
+     Para obtener instrucciones sobre cómo agregar la persistencia a una aplicación de flujo de trabajo, vea el tema siguiente, [Cómo: Crear y ejecutar una larga ejecución de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md).
 
 ## <a name="example"></a>Ejemplo
  En el ejemplo siguiente se muestra la lista de código completa del método `Main` .
 
 > [!NOTE]
->  Reemplace `Workflow1` en estos ejemplos por `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`o `StateMachineNumberGuessWorkflow`, en función del flujo de trabajo que completara en el paso [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) anterior. Si no reemplaza `Workflow1` , se producirán errores de compilación cuando intente compilar o ejecutar el flujo de trabajo.
+>  Reemplace `Workflow1` en estos ejemplos con `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, o `StateMachineNumberGuessWorkflow`, en función de flujo de trabajo completara en el anterior [Cómo: Crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) paso. Si no reemplaza `Workflow1` , se producirán errores de compilación cuando intente compilar o ejecutar el flujo de trabajo.
 
  [!code-csharp[CFX_WF_GettingStarted#12](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
@@ -165,7 +165,7 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
 - <xref:System.Activities.Bookmark>
 - [Programación de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
 - [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Cómo crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [Cómo crear y ejecutar un flujo de trabajo de larga ejecución](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
+- [Cómo: Crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
+- [Cómo: Crear y ejecutar una larga ejecución de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
 - [Espera de la entrada en un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)
 - [Hospedaje de flujos de trabajo](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)

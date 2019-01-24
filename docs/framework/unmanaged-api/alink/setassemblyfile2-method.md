@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade568889d1c0203115f160d855de8c598798196
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3882998d3155b49251fbe091b72ef11022ebfd2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540213"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 (Método)
-Establece el nombre y las opciones para un nuevo ensamblado. No llame a este método cuando se crean módulos no enlazados.  
+Establece el nombre y las opciones para un nuevo ensamblado. No llame a este método cuando se crean los módulos no enlazados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +45,7 @@ HRESULT SetAssemblyFile2(
  [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfaz para este archivo.  
   
  `afFlags`  
- Opciones representadas por [AssemblyFlags (enumeración)](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
+ Opciones representados por [AssemblyFlags (enumeración)](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
  Recibe el identificador único para el ensamblado que se está construyendo.  
@@ -56,7 +56,7 @@ HRESULT SetAssemblyFile2(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h.  
   
-## <a name="see-also"></a>Vea también  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

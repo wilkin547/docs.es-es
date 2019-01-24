@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Establecer vínculos con un objeto o página Web mediante el control LinkLabel de formularios Windows Forms'
+title: Procedimiento Vincular a un objeto o página con el Control LinkLabel de formularios Windows Forms Web
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 9957eae7e15c99ec259574b435402420c6bcf5f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd397f9a6462ad9da06b1cc258a51b3cccf5d21c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628453"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Cómo: Establecer vínculos con un objeto o página Web mediante el control LinkLabel de formularios Windows Forms
-Los formularios Windows Forms <xref:System.Windows.Forms.LinkLabel> control le permite crear vínculos de estilo Web en el formulario. Cuando se hace clic en el vínculo, puede cambiar su color para indicar que se ha visitado el vínculo. Para obtener más información acerca de cómo cambiar el color, vea [Cómo: cambiar la apariencia del LinkLabel Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Procedimiento Vincular a un objeto o página con el Control LinkLabel de formularios Windows Forms Web
+Los formularios de Windows <xref:System.Windows.Forms.LinkLabel> control le permite crear vínculos de estilo Web en el formulario. Cuando se hace clic en el vínculo, puede cambiar su color para indicar que se ha visitado el vínculo. Para obtener más información acerca de cómo cambiar el color, vea [Cómo: Cambiar la apariencia del Control LinkLabel de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
   
 ## <a name="linking-to-another-form"></a>Vincular a otro formulario  
   
@@ -31,7 +31,7 @@ Los formularios Windows Forms <xref:System.Windows.Forms.LinkLabel> control le p
   
 1.  Establecer el <xref:System.Windows.Forms.LinkLabel.Text%2A> propiedad título apropiado.  
   
-2.  Establecer el <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propiedad para determinar qué parte del título se indicará como un vínculo. ¿Cómo se indica depende de las propiedades relacionadas con la apariencia de la etiqueta del vínculo. El <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valor está representado por un <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> objeto que contiene dos números, la posición de carácter inicial y el número de caracteres. El <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propiedad puede establecerse en la ventana Propiedades o en el código de una manera similar al siguiente:  
+2.  Establecer el <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propiedad para determinar qué parte de la leyenda se indicará como un vínculo. ¿Cómo se indica depende de las propiedades relacionadas con la apariencia de la etiqueta del vínculo. El <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valor está representado por un <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> objeto que contiene dos números, la posición del carácter inicial y el número de caracteres. El <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propiedad puede establecerse en la ventana Propiedades o en el código de forma similar al siguiente:  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -57,7 +57,7 @@ Los formularios Windows Forms <xref:System.Windows.Forms.LinkLabel> control le p
 3.  En el <xref:System.Windows.Forms.LinkLabel.LinkClicked> controlador de eventos, invocar el <xref:System.Windows.Forms.Form.Show%2A> método para abrir otro formulario en el proyecto y establecer el <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propiedad `true`.  
   
     > [!NOTE]
-    >  Una instancia de la <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> clase incluye una referencia a la <xref:System.Windows.Forms.LinkLabel> control que se hizo clic, por lo que no es necesario convertir el `sender` objeto.  
+    >  Una instancia de la <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> clase lleva una referencia a la <xref:System.Windows.Forms.LinkLabel> control que se hizo clic, por lo que no es necesario convertir el `sender` objeto.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -93,18 +93,18 @@ Los formularios Windows Forms <xref:System.Windows.Forms.LinkLabel> control le p
     ```  
   
 ## <a name="linking-to-a-web-page"></a>Vincular a una página Web  
- El <xref:System.Windows.Forms.LinkLabel> control también puede utilizarse para mostrar una página Web con el explorador predeterminado.  
+ El <xref:System.Windows.Forms.LinkLabel> control también puede usarse para mostrar una página Web con el explorador predeterminado.  
   
 #### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Para iniciar Internet Explorer y vínculo a una página Web con un control LinkLabel  
   
 1.  Establecer el <xref:System.Windows.Forms.LinkLabel.Text%2A> propiedad título apropiado.  
   
-2.  Establecer el <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propiedad para determinar qué parte del título se indicará como un vínculo.  
+2.  Establecer el <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propiedad para determinar qué parte de la leyenda se indicará como un vínculo.  
   
-3.  En el <xref:System.Windows.Forms.LinkLabel.LinkClicked> controlador de eventos, en medio de un bloque de control de excepciones, llame a un segundo procedimiento que establece el <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propiedad `true` y usa el <xref:System.Diagnostics.Process.Start%2A> método para iniciar el explorador predeterminado con una dirección URL. Para usar el <xref:System.Diagnostics.Process.Start%2A> método debe agregar una referencia a la <xref:System.Diagnostics?displayProperty=nameWithType> espacio de nombres.  
+3.  En el <xref:System.Windows.Forms.LinkLabel.LinkClicked> controlador de eventos, en medio de un bloque de control de excepciones, llame a un segundo procedimiento que establece el <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propiedad `true` y usa el <xref:System.Diagnostics.Process.Start%2A> método para iniciar el explorador predeterminado con una dirección URL. Para usar el <xref:System.Diagnostics.Process.Start%2A> método tiene que agregar una referencia a la <xref:System.Diagnostics?displayProperty=nameWithType> espacio de nombres.  
   
     > [!IMPORTANT]
-    >  Si el código siguiente se ejecuta en un entorno de confianza parcial (como en una unidad compartida), el compilador JIT produce un error cuando el `VisitLink` se llama al método. El `System.Diagnostics.Process.Start` instrucción hace una petición de vínculo que se produce un error. Al capturar la excepción cuando el `VisitLink` se llama al método, el código siguiente garantiza que, si se produce un error en el compilador JIT, el error se controla correctamente.  
+    >  Si el código siguiente se ejecuta en un entorno de confianza parcial (como en una unidad compartida), el compilador JIT se produce un error cuando el `VisitLink` se llama al método. El `System.Diagnostics.Process.Start` instrucción provoca una petición de vínculo que se produce un error. Al capturar la excepción cuando el `VisitLink` se llama al método, el código siguiente asegura que si se produce un error en el compilador JIT, el error se controlen correctamente.  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -178,8 +178,8 @@ Los formularios Windows Forms <xref:System.Windows.Forms.LinkLabel> control le p
        }  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
- [Información general sobre el control LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- [Cambiar la apariencia del control LinkLabel de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
- [LinkLabel (control)](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
+- [Información general sobre el control LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
+- [Cómo: Cambiar la apariencia del Control LinkLabel de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [LinkLabel (control)](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

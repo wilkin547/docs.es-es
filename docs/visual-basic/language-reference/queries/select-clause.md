@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 7d959c0717a3ef44dfc23c90d99ec7b83421efaa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519013"
 ---
 # <a name="select-clause-visual-basic"></a>Select (Cláusula, Visual Basic)
 Define el resultado de una consulta.  
@@ -29,7 +29,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  Opcional. Un alias que se puede usar para hacer referencia a los resultados de la expresión de columna.  
   
  `fieldName1`  
- Requerido. El nombre del campo para devolver resultados de la consulta.  
+ Obligatorio. El nombre del campo para devolver resultados de la consulta.  
   
 ## <a name="remarks"></a>Comentarios  
  Puede usar el `Select` cláusula para definir los resultados se devuelven desde una consulta. Esto le permite definir los miembros de un nuevo tipo anónimo creado por una consulta, o a los miembros de un tipo con nombre devuelto por una consulta de destino. El `Select` cláusula no es necesaria para una consulta. Si no hay ningún `Select` cláusula se especifica, la consulta devolverá un tipo basado en todos los miembros de las variables de rango identificadas para el ámbito actual. Para más información, vea [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Cuando una consulta crea un tipo con nombre, devolverá un resultado de tipo <xref:System.Collections.Generic.IEnumerable%601> donde `T` es el tipo creado.  
@@ -51,10 +51,10 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

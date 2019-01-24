@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: enumerar zonas horarias presentes en un equipo'
+title: Procedimiento Enumerar zonas horarias presentes en un equipo
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c012b10f43a45699605e2d87a5b4a814c7dae28
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518415"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Cómo: enumerar zonas horarias presentes en un equipo
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Procedimiento Enumerar zonas horarias presentes en un equipo
 
 Para trabajar correctamente con una zona horaria designada, es necesario que la información sobre esa zona horaria esté a disposición del sistema. Los sistemas operativos Windows XP y Windows Vista almacenar esta información en el registro. Pero aunque el número total de zonas horarias que existe en el mundo es elevado, el Registro contiene información sobre solo un subconjunto de ellas. Además, el propio Registro es una estructura dinámica cuyo contenido está sujeto a cambios intencionados y accidentales. Como resultado, una aplicación no siempre puede suponer que una zona horaria determinada esté definida y disponible en un sistema. El primer paso para muchas aplicaciones que usan aplicaciones de información de zona horaria es determinar si las zonas horarias necesarias están disponibles en el sistema local o proporcionar al usuario una lista de zonas horarias entre las que seleccionar. Esto exige que una aplicación enumere las zonas horarias definidas en un sistema local.
 
 > [!NOTE]
-> Si una aplicación se basa en la presencia de una zona horaria determinada que no se pueden definir en un sistema local, la aplicación puede garantizar su presencia si serializar y deserializar la información sobre la zona horaria. La zona horaria, a continuación, se pueden agregar a un control de lista para que el usuario de la aplicación puede seleccionarla. Para obtener más información, consulte [Cómo: guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+> Si una aplicación se basa en la presencia de una zona horaria determinada que no se pueden definir en un sistema local, la aplicación puede garantizar su presencia si serializar y deserializar la información sobre la zona horaria. La zona horaria, a continuación, se pueden agregar a un control de lista para que el usuario de la aplicación puede seleccionarla. Para obtener más información, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Para enumerar las zonas horarias presentes en el sistema local
 
@@ -73,6 +73,6 @@ Para este ejemplo se necesita:
 
 ## <a name="see-also"></a>Vea también
 
-* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
-* [Guardado de zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
-* [Restauración de zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+- [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

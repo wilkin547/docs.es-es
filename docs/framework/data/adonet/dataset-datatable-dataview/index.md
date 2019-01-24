@@ -1,13 +1,7 @@
 ---
-title: Objetos DataSet, DataTable y DataView
+title: 'Objetos DataSet, DataTable y DataView'
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 0f537ad8ff468de54adc8bc820a060eaca357be9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506254"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Objetos DataSet, DataTable y DataView
 El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residente en memoria que proporciona un modelo de programación relacional coherente independientemente del origen de datos que contiene. Un <xref:System.Data.DataSet> representa un conjunto completo de datos, incluyendo las tablas que contienen, ordenan y restringen los datos, así como las relaciones entre las tablas.  
@@ -36,7 +30,7 @@ El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residen
  Describe cómo se utilizan las relaciones entre tablas en un <xref:System.Data.DataSet> para devolver la filas secundarias o primarias de una relación primaria-secundaria.  
   
  [Combinar contenido de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
- Describe cómo se combina el contenido de una matriz de <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o <xref:System.Data.DataRow> con otro <xref:System.Data.DataSet>.  
+ Describe cómo se fusiona mediante combinación el contenido de una matriz de <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o <xref:System.Data.DataRow> con otro <xref:System.Data.DataSet>.  
   
  [Copiar el contenido de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/copying-dataset-contents.md)  
  Describe cómo se crea una copia de un <xref:System.Data.DataSet> que puede contener datos de esquema y datos especificados.  
@@ -78,6 +72,6 @@ El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residen
  [Agregar restricciones existentes a un conjunto de datos](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Describe cómo se rellena un objeto **DataSet** con información de clave principal de un origen de datos.  
   
-## <a name="see-also"></a>Vea también  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename1&gt; &#39; y &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename2&gt;&#39;
+title: Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename1&gt; &#39; y &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518649"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename1&gt; &#39; y &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename2&gt;&#39;
-Una interfaz hereda de dos interfaces, cada uno de los cuales declara una propiedad predeterminada con el mismo nombre. El compilador no puede resolver un acceso a esta propiedad predeterminada sin calificación. Esto se ilustra en el siguiente ejemplo:  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename1&gt; &#39; y &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename2&gt;&#39;
+Una interfaz hereda de dos interfaces, cada una de las cuales declara una propiedad predeterminada con el mismo nombre. El compilador no puede resolver un acceso a esta propiedad predeterminada sin calificación. Esto se ilustra en el siguiente ejemplo:  
   
 ```  
 Public Interface Iface1  
@@ -35,21 +35,21 @@ Public Class testClass
 End Class  
 ```  
   
- Cuando se especifica `testObj(1)`, el compilador intenta resolver en la propiedad predeterminada. Sin embargo, hay dos propiedades predeterminadas posibles debido a las interfaces heredadas, por lo que el compilador señala este error.  
+ Cuando se especifica `testObj(1)`, el compilador intenta solucionarlo a la propiedad predeterminada. Sin embargo, hay dos propiedades predeterminadas posibles debido a las interfaces heredadas, por lo que el compilador señala este error.  
   
- **Id. de error:** BC30686  
+ **Identificador de error:** BC30686  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Evite heredar a miembros con el mismo nombre. En el ejemplo anterior, si `testObj` no necesita ninguno de los miembros de, por ejemplo, `Iface2`, declárelo como sigue:  
+-   Evite heredar a miembros con el mismo nombre. En el ejemplo anterior, si `testObj` no necesita ninguno de los miembros de, digamos, `Iface2`, declárelo como sigue:  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     -o bien-  
+     O bien  
   
--   Implemente la interfaz que hereda de una clase. A continuación, puede implementar cada una de las propiedades heredadas con nombres diferentes. Sin embargo, sólo uno de ellos puede ser la propiedad predeterminada de la clase de implementación. Esto se ilustra en el siguiente ejemplo:  
+-   Implementar la interfaz que hereda de una clase. A continuación, puede implementar cada una de las propiedades heredadas con nombres diferentes. Sin embargo, solo uno de ellos puede ser la propiedad predeterminada de la clase de implementación. Esto se ilustra en el siguiente ejemplo:  
   
     ```  
     Public Class useIface3  
@@ -63,5 +63,5 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -2,12 +2,12 @@
 title: Controlar la reentrada en aplicaciones asincrónicas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 3cbdd5ddc6f742846542e508d1dc0165cd6fde22
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6187b3a519da2930136aab8df9451f757079c2a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535624"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Controlar la reentrada en aplicaciones asincrónicas (Visual Basic)
 Cuando se incluye código asincrónico en una aplicación, hay que tener en cuenta (y posiblemente evitar) la reentrada, que significa volver a especificar una operación asincrónica antes de que finalice. Si no se identifican ni controlan las posibilidades de reentrada, pueden producirse resultados inesperados.  
@@ -104,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a> Deshabilitar el botón de inicio  
  Puede bloquear el botón **Start** mientras se ejecuta una operación si lo deshabilita en la parte superior del controlador de eventos `StartButton_Click`. A continuación, cuando finalice la operación, puede habilitar de nuevo el botón desde un bloque `Finally` de modo que los usuarios puedan volver a ejecutar la aplicación.  
   
- El código siguiente muestra estos cambios marcados con asteriscos. Puede agregar los cambios al código al final de este tema, o puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre del proyecto es DisableStartButton.  
+ El código siguiente muestra estos cambios marcados con asteriscos. Puede agregar los cambios en el código al final de este tema, o puede descargar la aplicación finalizada de [ejemplos de Async: Reentrada en aplicaciones de escritorio de .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). El nombre del proyecto es DisableStartButton.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -134,7 +134,7 @@ End Sub
   
  Para obtener más información sobre la cancelación, vea [ajustar una aplicación asincrónica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Para configurar este escenario, haga los cambios siguientes en el código básico que se proporciona en [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample). También puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre de este proyecto es CancelAndRestart.  
+ Para configurar este escenario, haga los cambios siguientes en el código básico que se proporciona en [Revisión y ejecución de la aplicación de ejemplo](#BKMD_SettingUpTheExample). También puede descargar la aplicación finalizada de [ejemplos de Async: Reentrada en aplicaciones de escritorio de .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). El nombre de este proyecto es CancelAndRestart.  
   
 1.  Declare una variable de <xref:System.Threading.CancellationTokenSource>, `cts`, que esté en el ámbito de todos los métodos.  
   
@@ -535,7 +535,7 @@ End Function
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Descargar la aplicación  
   
-1.  Descargue el archivo comprimido de [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET).  
+1.  Descargue el archivo comprimido de [ejemplos de Async: Reentrada en aplicaciones de escritorio de .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
 2.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
   
@@ -678,5 +678,5 @@ End Function
   
 ## <a name="see-also"></a>Vea también
 
-- [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [Visual Basic])  
+- [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef5888c33e9532e5fc132fe571d59699d6f80c49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 531ed9a6d8805e22408f112c9e617705057468ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624228"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion (Método)
-Obtiene un método del lector de símbolos, dado un token de método y un número de versión de editar y copiar. Números de versión empiezan en 1 y se incrementan cada vez que se cambia el método como resultado de una operación de editar y copiar.  
+Obtiene un método del lector de símbolos, dado un token de método y un número de versión de editar y copiar. Números de versión empiezan en 1 y se incrementan cada vez que cambia el método como resultado de una operación de copia y edición.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,10 +47,10 @@ HRESULT GetMethodByVersion (
  [out] Un puntero a la interfaz devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

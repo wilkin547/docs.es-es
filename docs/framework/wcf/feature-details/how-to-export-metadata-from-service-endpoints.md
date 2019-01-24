@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Exportar metadatos desde puntos de conexión de servicio'
+title: Procedimiento Exportar metadatos desde puntos de conexión de servicio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 9235498956f53d69b3024d1db023f3eb0908d2aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530001"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>Cómo: Exportar metadatos desde puntos de conexión de servicio
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Procedimiento Exportar metadatos desde puntos de conexión de servicio
 En este tema se explica cómo exportar los metadatos desde los puntos de conexión de servicio.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Exportar metadatos desde extremos de servicio  
@@ -55,7 +55,7 @@ En este tema se explica cómo exportar los metadatos desde los puntos de conexi�
 ## <a name="compiling-the-code"></a>Compilar el código  
  Al compilar Program.cs, haga referencia a System.ServiceModel.dll.  
   
-## <a name="see-also"></a>Vea también  
- [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Puntos de conexión: direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>Vea también
+- [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

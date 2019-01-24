@@ -2,12 +2,12 @@
 title: Pasos habituales para usar LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: e45f53b8fdea877bb3921b77d485abcab4393df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32e81d08010f67b8eac19777a40826b18c440f83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548016"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Pasos habituales para usar LINQ to SQL
 Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], debe seguir los pasos que se describen más adelante en este tema. Observe que muchos pasos son opcionales. Es muy posible que pueda utilizar su modelo de objetos en su estado predeterminado.  
@@ -15,7 +15,7 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
  Para agilizar el proceso, utilice el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para crear su modelo de objetos y poder empezar a codificar sus consultas.  
   
 ## <a name="creating-the-object-model"></a>Crear el modelo de objetos  
- El primer paso es crear un modelo de objetos a partir de los metadatos de una base de datos relacional existente. El modelo de objetos representa la base de datos según el lenguaje de programación del desarrollador. Para obtener más información, consulte [el modelo de LINQ to SQL objeto](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
+ El primer paso es crear un modelo de objetos a partir de los metadatos de una base de datos relacional existente. El modelo de objetos representa la base de datos según el lenguaje de programación del desarrollador. Para obtener más información, consulte [el modelo LINQ to SQL objeto](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
   
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Seleccionar una herramienta para crear el modelo  
  Tres herramientas están disponibles para crear el modelo.  
@@ -30,17 +30,17 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
   
 -   Editor de código  
   
-     Puede escribir su propio código con el editor de código de Visual Studio u otro editor. No recomendamos este enfoque, que puede ser susceptible a errores, cuando se tiene una base de datos existente y se puede utilizar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] o la herramienta SQLMetal. Sin embargo, el editor de código puede ser muy útil para perfeccionar o modificar el código ya generado con otras herramientas. Para obtener más información, consulte [Cómo: personalizar clases de entidad mediante el Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Puede escribir su propio código utilizando el editor de código de Visual Studio u otro editor. No recomendamos este enfoque, que puede ser susceptible a errores, cuando se tiene una base de datos existente y se puede utilizar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] o la herramienta SQLMetal. Sin embargo, el editor de código puede ser muy útil para perfeccionar o modificar el código ya generado con otras herramientas. Para obtener más información, vea [Cómo: Personalizar las clases de entidad mediante el Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Seleccionar el tipo de código que se desea generar  
   
--   Una C# o Visual Basic archivo de código fuente para la asignación basada en atributos.  
+-   Un C# o archivo de código fuente de Visual Basic para la asignación basada en atributos.  
   
-     A continuación, incluir este archivo de código en el proyecto de Visual Studio. Para obtener más información, consulte [asignación basada en el atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     Después, incluirá este archivo de código en el proyecto de Visual Studio. Para obtener más información, consulte [asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 -   Un archivo XML para la asignación externa.  
   
-     Con este enfoque puede mantener los metadatos de la asignación fuera del código de aplicación. Para obtener más información, consulte [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+     Con este enfoque puede mantener los metadatos de la asignación fuera del código de aplicación. Para obtener más información, consulte [asignaciones externas](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
     >  El [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] no admite la generación de archivos de asignación externos. Debe utilizar la herramienta SQLMetal para implementar esta característica.  
@@ -59,7 +59,7 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
   
  Ahora que tiene un modelo de objetos, debe describir las solicitudes de información y manipular los datos dentro de ese modelo. Debe pensar en términos de los objetos y las propiedades del modelo de objetos, y no en términos de las filas y columnas de la base de datos. No tratará directamente con la base de datos.  
   
- Al indicar a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que ejecute una consulta que ha descrito o llamada `SubmitChanges()` en los datos que han manipulado, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se comunica con la base de datos en el idioma de la base de datos.  
+ Al indicar a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que ejecute una consulta que ha descrito o una llamada `SubmitChanges()` en los datos que se ha manipulado, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se comunica con la base de datos en el idioma de la base de datos.  
   
  A continuación, se presentan los pasos típicos para utilizar el modelo de objetos creado.  
   
@@ -67,10 +67,10 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
  Para obtener más información, consulte [conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md) y [ejemplos de consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md).  
   
 ### <a name="2-override-default-behaviors-for-insert-update-and-delete"></a>2. Invalidar los comportamientos predeterminados de Insert, Update y Delete  
- Este paso es opcional. Para obtener más información, consulte [personalizar operaciones de inserción, actualización y eliminar](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+ Este paso es opcional. Para obtener más información, consulte [personalizar Insert, Update y las operaciones de eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
 ### <a name="3-set-appropriate-options-to-detect-and-report-concurrency-conflicts"></a>3. Establecer las opciones adecuadas para detectar y notificar conflictos de simultaneidad  
- Puede mantener la configuración de administración de conflictos de simultaneidad predeterminada del modelo o puede cambiarla para ajustarla sus fines concretos. Para obtener más información, consulte [Cómo: especificar que los miembros se comprueba si hay conflictos de simultaneidad](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) y [Cómo: especificar si las excepciones de simultaneidad se producen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+ Puede mantener la configuración de administración de conflictos de simultaneidad predeterminada del modelo o puede cambiarla para ajustarla sus fines concretos. Para obtener más información, vea [Cómo: Especificar qué miembros se comprueban los conflictos de simultaneidad](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) y [Cómo: Especificar las excepciones de simultaneidad cuando se inician](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
 ### <a name="4-establish-an-inheritance-hierarchy"></a>4. Establecer una jerarquía de herencia  
  Este paso es opcional. Para obtener más información, consulte [compatibilidad de herencia](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).  
@@ -79,9 +79,9 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
  Este paso es opcional y depende de cómo se vaya a utilizar la aplicación.  
   
 ### <a name="6-debug-and-test-your-application"></a>6. Depurar y probar la aplicación  
- Para obtener más información, consulte [capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
+ Para obtener más información, consulte [compatibilidad con depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
-## <a name="see-also"></a>Vea también  
- [Introducción](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>Vea también
+- [Introducción](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

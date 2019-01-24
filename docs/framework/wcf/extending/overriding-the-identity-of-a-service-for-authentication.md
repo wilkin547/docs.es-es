@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: c6810009e4cda0b493a5f215d966cb37fc6fb090
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554470"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Invalidación de la identidad de un servicio para la autenticación
 Normalmente, no tiene que establecer la identidad en un servicio porque la selección de un tipo de credencial de cliente dicta el tipo de identidad expuesto en los metadatos del servicio. Por ejemplo, el código de configuración siguiente utiliza el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento y establece el `clientCredentialType` atribuir a Windows.  
@@ -65,6 +65,6 @@ Normalmente, no tiene que establecer la identidad en un servicio porque la selec
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Vea también  
- [Creación de un comprobador de identidad de cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Crear un comprobador de identidad de cliente personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

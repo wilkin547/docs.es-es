@@ -2,12 +2,12 @@
 title: Arquitectura de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623188"
 ---
 # <a name="adonet-architecture"></a>Arquitectura de ADO.NET
 Tradicionalmente, el procesamiento de datos ha dependido principalmente de un modelo de dos niveles basado en una conexión. A medida que aumenta el uso que hace el procesamiento de datos de arquitecturas de varios niveles, los programadores están pasando a un enfoque sin conexión con el fin de proporcionar una mejor escalabilidad a sus aplicaciones.  
@@ -49,13 +49,13 @@ Arquitectura de ADO.NET
  ADO.NET Entity Framework está diseñado para permitir que los desarrolladores creen aplicaciones de acceso a los datos programando en un modelo de aplicación conceptual en lugar de programar directamente en un esquema de almacenamiento relacional. El objetivo es reducir la cantidad de código y mantenimiento que se necesita para las aplicaciones orientadas a datos. Para obtener más información, consulte [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
 ## <a name="wcf-data-services"></a>Servicios de datos de WCF  
- Describe cómo se usa [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para implementar servicios de datos en web o en una intranet. Los datos se estructuran como entidades y relaciones de acuerdo a las especificaciones de Entity Data Model. Los datos implementados en este modelo se pueden direccionar mediante el protocolo HTTP estándar. Para obtener más información, consulte [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
+ Describe cómo se usa [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para implementar servicios de datos en web o en una intranet. Los datos se estructuran como entidades y relaciones de acuerdo a las especificaciones de Entity Data Model. Los datos implementados en este modelo se pueden direccionar mediante el protocolo HTTP estándar. Para obtener más información, vea [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML y ADO.NET  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] aprovecha la eficacia de XML para proporcionar acceso a datos sin conexión. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] fue diseñado teniendo en cuenta las clases de XML incluidas en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; ambos son componentes de una única arquitectura.  
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] y las clases de XML incluidas en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] convergen en el objeto `DataSet`. `DataSet` se puede rellenar con datos procedentes de un origen XML, ya sea éste un archivo o una secuencia XML. `DataSet` se puede escribir como XML conforme al consorcio World Wide Web (W3C), que incluye su esquema como esquema lenguaje de definición de esquemas XML, independientemente del origen de los datos incluidos en `DataSet`. Puesto que el formato nativo de serialización del `DataSet` es XML, es un medio excelente para mover datos de un nivel a otro, por lo que `DataSet` es idóneo para usar datos y contextos de esquemas de interacción remota desde y hacia un servicio Web XML. Para obtener más información, vea [XML Documents and Data](../../../../docs/standard/data/xml/index.md) (Documentos y datos XML).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

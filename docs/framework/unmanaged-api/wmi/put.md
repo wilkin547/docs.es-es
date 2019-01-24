@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625775"
 ---
 # <a name="put-function"></a>Función Put
-Establece una propiedad con nombre en un nuevo valor.
+Establece una propiedad con nombre en un valor nuevo.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -68,11 +68,11 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Ha habido un error general. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Uno o más parámetros no son válidos. |
+|`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | No se reconoce el tipo de propiedad. Este valor se devuelve cuando se crean instancias de clase si la clase ya existe. |
-|`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
-| `WBEM_E_TYPE_MISMATCH` | 0 x 80041005. | Para las instancias: indica que `pVal` apunta a un `VARIANT` de un tipo incorrecto para la propiedad. <br/> Para obtener definiciones de clase: la propiedad ya existe en la clase primaria y el nuevo tipo de COM es diferente del tipo COM antiguo. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Para las instancias: Indica que `pVal` apunta a un `VARIANT` de un tipo incorrecto para la propiedad. <br/> Para obtener definiciones de clase: La propiedad ya existe en la clase primaria y el nuevo tipo de COM es diferente del tipo COM antiguo. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta. |
   
 ## <a name="remarks"></a>Comentarios
@@ -94,11 +94,11 @@ Use la `vtType` parámetro solo cuando crea nuevas propiedades en una definició
 Para obtener un ejemplo, vea el [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

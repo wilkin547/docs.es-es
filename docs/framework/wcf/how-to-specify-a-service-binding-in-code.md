@@ -1,23 +1,23 @@
 ---
-title: 'Cómo: Especificar un enlace de servicio en el código'
+title: Procedimiento Especificar un enlace de servicio en el código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: ad8986537d0132bf61fe9eb2da2a13f8789ee4ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f39b9d7bfdc1a5d8bf33c20f047738be1e41f226
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531218"
 ---
-# <a name="how-to-specify-a-service-binding-in-code"></a>Cómo: Especificar un enlace de servicio en el código
-En este ejemplo, se define un contrato de `ICalculator` para un servicio de la calculadora, el servicio se implementa en la clase `CalculatorService` y a continuación, su extremo se define mediante código, donde se especifica que el servicio debe utilizar la clase <xref:System.ServiceModel.BasicHttpBinding>.  
+# <a name="how-to-specify-a-service-binding-in-code"></a>Procedimiento Especificar un enlace de servicio en el código
+En este ejemplo, se define un contrato de `ICalculator` para un servicio de la calculadora, el servicio se implementa en la clase `CalculatorService` y a continuación, su punto de conexión se define mediante código, donde se especifica que el servicio debe utilizar la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código. Normalmente, no resulta muy práctico definir los extremos en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.  
   
- Para obtener una descripción de cómo configurar este servicio mediante elementos de configuración en lugar de código, vea [Cómo: especificar un enlace de servicio en la configuración](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+ Para obtener una descripción de cómo configurar este servicio utilizando elementos de configuración en lugar de código, vea [Cómo: Especificar un enlace de servicio en la configuración](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 ### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>Para especificar mediante código que se use BasicHttpBinding para el servicio  
   
@@ -48,6 +48,6 @@ En este ejemplo, se define un contrato de `ICalculator` para un servicio de la c
      [!code-csharp[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#5)]
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Vea también  
- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Especificación de una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+## <a name="see-also"></a>Vea también
+- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Especificación de una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

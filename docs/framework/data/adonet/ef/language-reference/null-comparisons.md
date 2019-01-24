@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f4d4f6cdbb5ac6bae3af66d46599ec65aaae22f4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521408"
 ---
 # <a name="null-comparisons"></a>Comparaciones NULL
 Un valor `null` en el origen de datos indica que el valor es desconocido. En las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], puede comprobar si ha valores NULL para que ciertos cálculos o comparaciones solo se realicen en las filas que tengan datos válidos, que no sean NULL. Sin embargo, la semántica de NULL de CLR puede diferir de la del origen de datos. La mayoría de las bases de datos utilizan una versión de lógica con tres valores para tratar las comparaciones de NULL. Es decir, una comparación con un valor null no se evalúa como `true` o `false`, se evalúa como `unknown`. A menudo ésta es una implementación de los valores NULL ANSI, pero este no es siempre el caso.  
@@ -33,7 +33,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
 ## <a name="key-selectors"></a>Selectores de clave  
- A *del selector de claves* es una función utilizada en los operadores de consulta estándar para extraer una clave a partir de un elemento. En la función de selector de clave, una expresión se puede comparar con una constante. La semántica de NULL del CLR se exhibe si una expresión se compara con una constante NULL o si se comparan dos constantes NULL. La semántica de NULL del almacén se exhibe si se comparan dos columnas con valores NULL del origen de datos. Los selectores de clave se encuentran en muchos de los operadores de consulta estándar de agrupamiento y ordenación, como <xref:System.Linq.Queryable.GroupBy%2A>, y se utilizan para seleccionar las claves por las que ordenar o agrupar los resultados de una consulta.  
+ Un *selector de claves* es una función utilizada en los operadores de consulta estándar para extraer una clave de un elemento. En la función de selector de clave, una expresión se puede comparar con una constante. La semántica de NULL del CLR se exhibe si una expresión se compara con una constante NULL o si se comparan dos constantes NULL. La semántica de NULL del almacén se exhibe si se comparan dos columnas con valores NULL del origen de datos. Los selectores de clave se encuentran en muchos de los operadores de consulta estándar de agrupamiento y ordenación, como <xref:System.Linq.Queryable.GroupBy%2A>, y se utilizan para seleccionar las claves por las que ordenar o agrupar los resultados de una consulta.  
   
 ## <a name="null-property-on-a-null-object"></a>Propiedad NULL en un objeto NULL  
  En el [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)], las propiedades de un objeto NULL son NULL. Al intentar hacer referencia a una propiedad de un objeto NULL en el CLR, recibirá <xref:System.NullReferenceException>. Cuando una consulta de LINQ implica una propiedad de un objeto NULL, puede provocarse un comportamiento incoherente.  
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Pasar colecciones NULL a funciones de agregado  
- En [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], al pasar una colección que admite `IQueryable` a una función de agregado, se realizan las operaciones de agregado en la base de datos. Puede haber diferencias en los resultados de una consulta que se realizó en memoria y una consulta que se realiza en la base de datos. Con una consulta en la memoria, si no hay ninguna coincidencia, la consulta devuelve cero. En la base de datos, la misma consulta devuelve `null`. Si un `null` valor se pasa a una función de agregado de LINQ, se producirá una excepción. Para aceptar posible `null` valores, convierta los tipos y las propiedades de los tipos que reciben los resultados de la consulta a los tipos que aceptan valores NULL.  
+ En [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], al pasar una colección que admita `IQueryable` a una función de agregado, se realizan las operaciones de agregado en la base de datos. Puede haber diferencias en los resultados de una consulta que se realizó en memoria y una consulta que se realizó en la base de datos. Con una consulta en memoria, si no hay ninguna coincidencia, la consulta devuelve cero. En la base de datos, la misma consulta devuelve `null`. Si un `null` valor se pasa a una función de agregado de LINQ, se producirá una excepción. Para aceptar posible `null` valores, convierta los tipos y las propiedades de los tipos que reciben los resultados de la consulta a tipos que aceptan valores NULL.  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>Vea también
+- [Expresiones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

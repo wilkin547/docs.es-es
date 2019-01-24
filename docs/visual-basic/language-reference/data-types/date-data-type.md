@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 528e63e6b7d978b3bbdfcb78e4260b4590db6d7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520027"
 ---
 # <a name="date-data-type-visual-basic"></a>Date (Tipo de datos, Visual Basic)
 Contiene los valores IEEE de 64 bits (8 bytes) que representan fechas comprendidas entre el 1 de enero del año 0001 hasta el 31 de diciembre del año 9999, y las horas comprendidas entre las 00:00:00 (medianoche) y las 23:59:59.9999999. Cada incremento representa 100 nanosegundos de tiempo transcurrido desde el comienzo del 1 de enero del año 1 del calendario gregoriano. El valor máximo representa 100 nanosegundos antes del comienzo del 1 de enero del año 10000.  
@@ -74,11 +74,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.DateTime?displayProperty=nameWithType>  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
- [Cadenas con formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md)  
- [Cadenas con formato de fecha y hora personalizado](../../../standard/base-types/custom-date-and-time-format-strings.md)  
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.DateTime?displayProperty=nameWithType>
+- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
+- [Standard Date and Time Format Strings](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

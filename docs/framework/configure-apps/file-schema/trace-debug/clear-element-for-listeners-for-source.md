@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0d1db0e3d2a423c4ba21311b6b9deb0d2565c103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523160"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Borrar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;origen&gt;
 Borra la colección `Listeners` de un origen de seguimiento.  
   
  \<configuration>  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<orígenes >  
-\<origen >  
-\<los agentes de escucha >  
-\<Borrar >  
+\<source>  
+\<listeners>  
+\<clear>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -86,8 +86,8 @@ Borra la colección `Listeners` de un origen de seguimiento.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Agentes de escucha de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Agentes de escucha de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

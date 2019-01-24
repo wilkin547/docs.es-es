@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Power Packs, deploying
 ms.assetid: f2230f53-a745-4731-89e6-033943faa209
-ms.openlocfilehash: bd235bc0b4a7f9978333931ae1dce012c0950374
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 3fd46a6e8aad61d2f8ce5a230c856470f913d0bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551779"
 ---
 # <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a>Implementación de aplicaciones que hacen referencia a controles Power Packs (Visual Studio)
 Si desea implementar una aplicación que hace referencia a los controles Power Packs (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, o <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), los controles deben instalarse en el equipo de destino.  
@@ -28,6 +28,6 @@ Si desea implementar una aplicación que hace referencia a los controles Power P
   
  Como alternativa al arranque, puede implementar los controles Power Packs previamente mediante un sistema de distribución electrónica de software como Microsoft Systems Management Server.  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Instalar requisitos previos mediante una aplicación ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [Controles de Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Instalación de requisitos previos con una aplicación ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [Controles de Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)

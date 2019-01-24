@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Ejecutar una operación en segundo plano'
+title: 'Tutorial: Ejecución de una operación en segundo plano'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 24c5a58d0064756b60596907178578f98b557d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540226"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>Tutorial: Ejecutar una operación en segundo plano
+# <a name="walkthrough-running-an-operation-in-the-background"></a>Tutorial: Ejecución de una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
   
- Para obtener una lista completa del código utilizado en este ejemplo, vea [Cómo: ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ Para obtener una lista completa del código utilizado en este ejemplo, vea [Cómo: Ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -34,14 +34,14 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
   
     |Botón|nombre|Texto|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Start**|  
+    |`button1`|`startBtn`|**Iniciar**|  
     |`button2`|`cancelBtn`|**Cancelar**|  
   
 2.  Abra el **cuadro de herramientas**, haga clic en el **componentes** pestaña y, a continuación, arrastre el <xref:System.ComponentModel.BackgroundWorker> componente al formulario.  
   
      El `backgroundWorker1` componente aparecerá en el **Bandeja de componentes**.  
   
-3.  En el **propiedades** ventana, establezca el <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> propiedad `true`.  
+3.  En la ventana **Propiedades** , establezca la propiedad <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> en `true`.  
   
 4.  En el **propiedades** ventana, haga clic en el **eventos** botón y, a continuación, haga doble clic en el <xref:System.ComponentModel.BackgroundWorker.DoWork> y <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para crear controladores de eventos.  
   
@@ -96,13 +96,13 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   Implementar un formulario que informa del progreso mientras se realiza una operación asincrónica. Para obtener más información, consulte [Cómo: implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+-   Implementar un formulario que informa del progreso mientras se realiza una operación asincrónica. Para obtener más información, vea [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 -   Implemente una clase que admita el modelo asincrónico para componentes. Para obtener más información, consulte [implementar el modelo asincrónico basado en eventos](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ComponentModel.BackgroundWorker>  
- <xref:System.ComponentModel.DoWorkEventArgs>  
- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [Componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ComponentModel.BackgroundWorker>
+- <xref:System.ComponentModel.DoWorkEventArgs>
+- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Cómo: Ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

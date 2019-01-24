@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523251"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention (Enumeración)
 Contiene valores que describen los tipos de convenciones de llamada que se realizan en código administrado.  
@@ -60,20 +60,20 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indica que la llamada es a un método local.|  
 |`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indica que la llamada es a una propiedad.|  
 |`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indica que la llamada no administrada.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indica la creación de una instancia de método genérico.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indica la creación de instancias de un método genérico.|  
 |`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indica una llamada PInvoke de 64 bits a un método que toma un número variable de parámetros.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|Describe un valor de 4 bits no válido.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Indica que la convención de llamada es descrita por los cuatro bits inferiores.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indica que la convención de llamada se describe en los cuatro bits inferiores.|  
 |`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indica que el bit superior describe un `this` parámetro.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica que un `this` parámetro está descrito explícitamente en la firma.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica una firma de método genérico con un número de argumentos de tipo explícito. Esto precede a un recuento de parámetros ordinario.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica que un `this` es describir explícitamente en la firma del parámetro.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica una firma de método genérico con un número de argumentos de tipo explícito. Esto precede a un número de parámetros ordinarios.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: e0bf8b32595f656d3bff424610f193bd84d0f5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0eab5fe5c9455badb7f538307cb827391b254a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626932"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Tutorial: Manipular datos (Visual Basic)
 Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos. Utilizará una copia de la base de datos de ejemplo Northwind para agregar un cliente, cambiar el nombre de un cliente y eliminar un pedido.  
@@ -31,7 +31,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
      Puede generar este archivo mediante el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta SQLMetal. Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:  
   
-     **SqlMetal /code:"c:\linqtest2\northwind.vb": Language: VB "C:\linqtest2\northwnd.mdf" / plural**  
+     **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
      Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
@@ -51,7 +51,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 -   Enviar estos cambios a la base de datos Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
- En esta primera tarea, se creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
+ En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
@@ -102,9 +102,9 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 2.  Presione F5 para probar la aplicación en este punto.  
   
-     A **consola** abre la ventana.  
+     Un **consola** abre la ventana.  
   
-     Cierre la aplicación presionando ENTRAR en el **consola** ventana, o haga clic en **Detener depuración** en Visual Studio **depurar** menú.  
+     Cierre la aplicación, presione ENTRAR en el **consola** ventana, o haga clic en **Detener depuración** en Visual Studio **depurar** menú.  
   
 ## <a name="creating-a-new-entity"></a>Crear una nueva entidad  
  Crear entidades es sencillo. Puede crear objetos (como `Customer`) mediante la palabra clave `New`.  
@@ -186,5 +186,5 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 > [!NOTE]
 >  Después de haber agregado el nuevo cliente al enviar los cambios, no puede ejecutar de nuevo esta solución tal como está, porque no puede agregar el mismo cliente de nuevo tal como está. Para ejecutar de nuevo la solución, cambie el valor del identificador de cliente que se debe agregar.  
   
-## <a name="see-also"></a>Vea también  
- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vea también
+- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

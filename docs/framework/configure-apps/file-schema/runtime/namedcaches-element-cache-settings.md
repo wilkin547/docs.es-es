@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d6f741f4ecd3ea52dacc9f981024690a0031a533
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a824e958a2b75b28aa66a15212e0276d6c127739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536534"
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; elemento (configuración de caché)
 Especifica una colección de valores de configuración para la instancia con nombre <xref:System.Runtime.Caching.MemoryCache> instancias. El <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> propiedad hace referencia a la colección de valores de configuración de uno o varios `namedCaches` elementos del archivo de configuración.  
   
  \<configuration>  
-\< System.Runtime.Caching >  
-\<memoryCache >  
-\<namedCaches >  
+\< system.runtime.caching>  
+\<memoryCache>  
+\<namedCaches>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -89,5 +89,5 @@ Especifica una colección de valores de configuración para la instancia con nom
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 - [\<memoryCache > elemento (configuración de caché)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

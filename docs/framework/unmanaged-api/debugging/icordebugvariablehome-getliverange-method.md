@@ -1,5 +1,5 @@
 ---
-title: IcorDebugVariableHome::GetLiveRange (método)
+title: Método IcorDebugVariableHome::GetLiveRange
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0f9c586a9e95fc2e57c4956601f6dce2b988159
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 894629b7cc1c48eb6c1820c65a0a2a41332a8080
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549696"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange (método)
-Obtiene el rango nativo durante el cual esta variable es en vivo.  
+# <a name="icordebugvariablehomegetliverange-method"></a>Método IcorDebugVariableHome::GetLiveRange
+Obtiene el intervalo nativo a través de la que esta variable está activa.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,13 +44,13 @@ HRESULT GetLiveRange(
  [out] El desplazamiento lógico inmediatamente después del punto en el que la variable es el última en vivo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugVariableHome (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugVariableHome (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

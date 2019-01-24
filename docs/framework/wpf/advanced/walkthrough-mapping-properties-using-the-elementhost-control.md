@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Asignar propiedades mediante el uso del control ElementHost'
+title: 'Tutorial: Asignar propiedades mediante el uso del Control ElementHost'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bb418b725afd0c38a39e42e50511147d0f616059
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623227"
 ---
-# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Tutorial: Asignar propiedades mediante el uso del control ElementHost
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Tutorial: Asignar propiedades mediante el uso del Control ElementHost
 
 En este tutorial se muestra cómo usar el <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> propiedad para la asignación [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propiedades a las propiedades correspondientes en una hospedada [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elemento.
 
@@ -62,7 +62,7 @@ Necesita los componentes siguientes para completar este tutorial:
 
 4.  Abra `Form1` en el Diseñador de Windows Forms. Haga doble clic en el formulario para agregar un controlador de eventos para el <xref:System.Windows.Forms.Form.Load> eventos.
 
-5.  Vuelva al diseñador de Windows Forms y agregue un controlador de eventos para el formulario <xref:System.Windows.Forms.Control.Resize> eventos. Para obtener más información, consulte [Cómo: crear controladores de eventos mediante el diseñador](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
+5.  Vuelva al diseñador de Windows Forms y agregue un controlador de eventos para el formulario <xref:System.Windows.Forms.Control.Resize> eventos. Para obtener más información, vea [Cómo: Crear controladores de eventos mediante el diseñador](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
 
 6.  Declarar un <xref:System.Windows.Forms.Integration.ElementHost> campo el `Form1` clase.
 
@@ -147,4 +147,4 @@ Puede usar una asignación de propiedades predeterminada y extenderla con su pro
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Tutorial: Hospedar un Control compuesto de WPF en Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

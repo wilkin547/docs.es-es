@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 ms.date: 03/30/2017
 ms.assetid: d75d39da-7502-4a6a-91b9-eaa05b8e24d5
-ms.openlocfilehash: 7e7bd48d206456af6a5a8662516c4d9c82b3ed2f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ade49ceb86a401cd27a9381b1ea5d0c1ad624548
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623097"
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a>System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 No puede mover o eliminar el mensaje.  
@@ -19,7 +19,7 @@ No puede mover o eliminar el mensaje.
   
  Este seguimiento no indica un error general del sistema. Sin embargo, indica que la disposición del mensaje dudoso escogida produjo un error en un mensaje. Consulte [de mensajes dudosos](https://go.microsoft.com/fwlink/?LinkID=99546) para obtener más detalles sobre cuándo los mensajes en dudosos y cómo configurar el servicio para controlarlos adecuadamente.  
   
-## <a name="see-also"></a>Vea también  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Vea también
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

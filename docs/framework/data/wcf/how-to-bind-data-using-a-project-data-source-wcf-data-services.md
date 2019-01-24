@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)'
+title: Procedimiento Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540759"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Cómo: Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedimiento Enlazar datos mediante un origen de datos del proyecto (WCF Data Services)
 
 Puede crear orígenes de datos que se basan en los objetos de datos generados en una aplicación de cliente de WCF Data Services. Cuando agrega una referencia a un servicio de datos mediante el uso de la **Add Service Reference** cuadro de diálogo, se crea un origen de datos del proyecto junto con las clases de datos de cliente generadas. Para cada conjunto de entidades expuesto por el servicio de datos se crea un origen de datos. Puede crear formularios que muestren los datos del servicio arrastrando estos elementos de origen de datos desde el **orígenes de datos** ventana hasta el diseñador. Estos elementos se convierten en controles enlazados al origen de datos. Durante la ejecución, este origen de datos se enlaza a una instancia de la <xref:System.Data.Services.Client.DataServiceCollection%601> (clase), que se rellena con los objetos devueltos por una consulta al servicio de datos. Para obtener más información, consulte [enlazar datos a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
 
@@ -23,7 +23,7 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Usar un origen de datos de proyecto en una ventana de WPF
 
-1.  En Visual Studio, en un proyecto de WPF, agregue una referencia al servicio de datos Northwind. Para obtener más información, consulte [Cómo: agregar una referencia de servicio de datos](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1.  En Visual Studio, en un proyecto de WPF, agregue una referencia al servicio de datos Northwind. Para obtener más información, vea [Cómo: Agregar una referencia de servicio de datos](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
 2.  En el **orígenes de datos** ventana, expanda el `Customers` nodo en el **NorthwindEntities** origen de datos del proyecto.
 
@@ -120,4 +120,4 @@ Puede crear orígenes de datos que se basan en los objetos de datos generados en
 ## <a name="see-also"></a>Vea también
 
 - [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Cómo: enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Cómo: Enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

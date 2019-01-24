@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: determinar si un archivo es un ensamblado (Visual Basic)'
+title: Procedimiento Determinar si un archivo es un ensamblado (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520100"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Cómo: determinar si un archivo es un ensamblado (Visual Basic)
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Procedimiento Determinar si un archivo es un ensamblado (Visual Basic)
 Un archivo es un ensamblado únicamente si está administrado y contiene una entrada de ensamblado en sus metadatos. Para más información sobre ensamblados y metadatos, vea el tema [Manifiesto del ensamblado](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Cómo determinar manualmente si un archivo es un ensamblado  
@@ -18,7 +18,7 @@ Un archivo es un ensamblado únicamente si está administrado y contiene una ent
   
 2.  Cargue el archivo que quiere probar.  
   
-3.  Si **ILDASM** notifica que el archivo no es un archivo ejecutable portable (PE), entonces no es un ensamblado. Para obtener más información, vea el tema [Cómo: Ver el contenido de un ensamblado](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Si **ILDASM** notifica que el archivo no es un archivo ejecutable portable (PE), entonces no es un ensamblado. Para obtener más información, vea el tema [Cómo: Consulta del contenido de un ensamblado](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Cómo determinar mediante programación si un archivo es un ensamblado  
   
@@ -54,6 +54,6 @@ End Module
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Reflection.AssemblyName>  
-- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Ensamblados y caché global de ensamblados (Visual Basic)](index.md)

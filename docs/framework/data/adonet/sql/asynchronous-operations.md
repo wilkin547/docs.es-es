@@ -2,12 +2,12 @@
 title: Operaciones asincrónicas
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538666"
 ---
 # <a name="asynchronous-operations"></a>Operaciones asincrónicas
 Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden tardar bastante tiempo en completarse. En estos casos, las aplicaciones de un único subproceso deben bloquear otras operaciones y esperar a que el comando termine antes de poder continuar sus propias operaciones. En contraposición, la posibilidad de asignar la operación cuya ejecución tiene una larga duración a un subproceso en segundo plano permite que el subproceso en primer plano permanezca activo durante toda la operación. En las aplicaciones Windows, por ejemplo, delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano permite que el subproceso de interfaz de usuario permanezca alerta mientras se ejecuta la operación.  
@@ -29,7 +29,7 @@ Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden t
  [Sondeo de aplicaciones de consola](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Proporciona un ejemplo en el que se muestra el uso del sondeo para esperar a que se complete la ejecución de un comando asincrónico desde una aplicación de consola. Esta técnica también es válida en una biblioteca de clases u otra aplicación sin una interfaz de usuario.  
   
-## <a name="see-also"></a>Vea también  
- [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Llamada a métodos sincrónicos de forma asincrónica](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Llamada a métodos sincrónicos de forma asincrónica](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a3d7d3bb05a878f4d9832cf39a8e8863929c4e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bba34b7f0956e602de690b8aa30d955acc526e8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529494"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes (Método)
 Recupera atributos personalizados de nivel de ensamblado.  
@@ -61,7 +61,7 @@ HRESULT EnumCustomAttributes(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h  
   
-## <a name="see-also"></a>Vea también  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

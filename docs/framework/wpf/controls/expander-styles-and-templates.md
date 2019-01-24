@@ -9,21 +9,21 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: f2c06918752de55941671c860055295d55cac5cb
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 99d11b599d79c9f0d998f49cc0f12fee9c83c39a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551974"
 ---
 # <a name="expander-styles-and-templates"></a>Estilos y plantillas de Expander
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Expander> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Expander> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="expander-parts"></a>Partes de Expander  
- El <xref:System.Windows.Controls.Expander> control no tiene los elementos con nombre.  
+ El <xref:System.Windows.Controls.Expander> control no tiene elementos con nombre.  
   
-## <a name="expander-states"></a>Estados de Expander  
- La tabla siguiente enumera los estados visuales para el <xref:System.Windows.Controls.Expander> control.  
+## <a name="expander-states"></a>Estados del botón de expansión  
+ En la tabla siguiente se enumera los estados visuales para el <xref:System.Windows.Controls.Expander> control.  
   
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
 |-|-|-|  
@@ -33,17 +33,17 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 |Con foco|FocusStates|El control tiene el foco.|  
 |Sin foco|FocusStates|El control no tiene el foco.|  
 |Expandido|ExpansionStates|El control está expandido.|  
-|Collapsed|ExpansionStates|El control no está expandido.|  
+|Collapsed|ExpansionStates|No se expande el control.|  
 |ExpandDown|ExpandDirectionStates|El control se expande hacia abajo.|  
-|ExpandUp|ExpandDirectionStates|El control se expande una.|  
+|ExpandUp|ExpandDirectionStates|Se expande el control de seguridad.|  
 |ExpandLeft|ExpandDirectionStates|El control se expande izquierda.|  
-|ExpandRight|ExpandDirectionStates|El control se expande derecha.|  
-|Válido|ValidationStates|El control usa la <xref:System.Windows.Controls.Validation> clase y la <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
+|ExpandRight|ExpandDirectionStates|El control se expande directamente.|  
+|Válido|ValidationStates|El control utiliza el <xref:System.Windows.Controls.Validation> clase y el <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
 |InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
 |InvalidUnfocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.|  
   
 ## <a name="expander-controltemplate-example"></a>Ejemplo de ControlTemplate de Expander  
- En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.Expander> control.  
+ El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.Expander> control.  
   
  [!code-xaml[ControlTemplateExamples#Expander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/expander.xaml#expander)]  
   
@@ -53,10 +53,10 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
   
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)  
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)
+- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

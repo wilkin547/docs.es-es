@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06bdc3605d981acad68a97901627f361da4061c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: efc46a0128a4fb9a0edaa86ad20689fda0c2710b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521782"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx (Método)
 Inicia un proceso en un equipo remoto en el depurador.  
@@ -49,7 +49,7 @@ HRESULT CreateProcessEx (
   
 #### <a name="parameters"></a>Parámetros  
  `pRemoteTarget`  
- [in] Puntero a un [ICorDebugRemoteTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Se utiliza para determinar el equipo remoto en el que se va a iniciar el proceso.  
+ [in] Puntero a un [ICorDebugRemoteTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Se usa para determinar el equipo remoto en el que se iniciará el proceso.  
   
  `lpApplicationName`  
  [in] Puntero a una cadena terminada en null que especifica el módulo que va a ejecutar el proceso iniciado. El módulo se ejecuta en el contexto de seguridad del proceso que realiza la llamada.  
@@ -73,7 +73,7 @@ HRESULT CreateProcessEx (
  [in] Puntero a un bloque de entorno para el nuevo proceso.  
   
  `lpCurrentDirectory`  
- [in] Puntero a una cadena terminada en null que especifica la ruta de acceso completa al directorio actual para el proceso. Si este parámetro es null, el nuevo proceso tendrá la misma unidad y directorio actuales que el proceso que realiza la llamada.  
+ [in] Puntero a una cadena terminada en null que especifica la ruta de acceso completa al directorio actual para el proceso. Si este parámetro es null, el nuevo proceso tendrá la misma unidad actual y el directorio que el proceso que realiza la llamada.  
   
  `lpStartupInfo`  
  [in] No se utiliza para la depuración remota.  
@@ -85,29 +85,29 @@ HRESULT CreateProcessEx (
  [in] No se utiliza para la depuración remota.  
   
  `ppProcess`  
- [out] Un puntero a la dirección de un objeto de "ICorDebugProcess (interfaz)" que representa el proceso.  
+ [out] Un puntero a la dirección de un objeto "ICorDebugProcess (interfaz)" que representa el proceso.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
- Iniciar correctamente el proceso en el equipo remoto y devuelve un "ICorDebugProcess (interfaz)" para la depuración.  
+ Se inició correctamente el proceso en el equipo remoto y devuelve un "ICorDebugProcess (interfaz)" para la depuración.  
   
  E_FAIL (u otros códigos devueltos de E_)  
- No se puede iniciar el proceso en el equipo remoto y devolver un "ICorDebugProcess (interfaz)" para la depuración.  
+ No se puede iniciar el proceso en el equipo remoto y devolver una "interfaz ICorDebugProcess" para la depuración.  
   
 ## <a name="remarks"></a>Comentarios  
  No se admite la depuración en modo mixto en Silverlight.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl  
+ **Encabezado**: CorDebug.idl  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET framework:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugRemote (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugRemote (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

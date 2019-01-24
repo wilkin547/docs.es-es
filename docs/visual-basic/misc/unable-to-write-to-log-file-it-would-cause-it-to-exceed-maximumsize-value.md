@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_FileExceedsMaximumSize
 ms.assetid: 61747a9c-e460-424b-a365-73cdba9dd428
-ms.openlocfilehash: dabd9559864f9c04d7e4647f1e7da24adc679b24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 170612dfc294f3d2326ad34216f699cf4af6cdb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554665"
 ---
 # <a name="unable-to-write-to-log-file-because-writing-to-it-would-cause-it-to-exceed-maximumsize-value"></a>No se puede escribir en el archivo de registro porque se superaría el valor de MaximumSize
 La clase <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> no pudo escribir en el archivo de registro porque:  
@@ -28,9 +28,9 @@ La clase <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> no pudo escri
   
 3.  Establezca la propiedad <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> en <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages> para descartar los mensajes sin advertir si el registro es demasiado grande.  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A>  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>  
- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>
+- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A>
+- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

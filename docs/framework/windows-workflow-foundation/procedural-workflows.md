@@ -2,12 +2,12 @@
 title: Flujos de trabajo de procedimiento
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: 5cd97c8ccaae74e4275f809502ac0a4d3c2f042a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29fc6f5ebd6bf1984f287c3d407d2564249c65f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500543"
 ---
 # <a name="procedural-workflows"></a>Flujos de trabajo de procedimiento
 Los flujos de trabajo de procedimiento usan métodos de control de flujo similares a los que se encuentren en lenguajes de procedimiento. Estas construcciones incluyen `While` y `If`. Estos flujos de trabajo se pueden crear libremente con otras actividades de control de flujo como <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Sequence>.  
@@ -31,10 +31,10 @@ Los flujos de trabajo de procedimiento usan métodos de control de flujo similar
   
 -   <xref:System.Activities.Statements.Pick>  
   
- Para usar las actividades de control de flujo, arrastrar y colocar desde el **actividad** cuadro de herramientas en una actividad compuesta dentro de la ventana del diseñador.  
+ Para usar actividades de flujo de control, arrastrar y colocar desde el **actividad** cuadro de herramientas en una actividad compuesta dentro de la ventana del diseñador.  
   
 > [!NOTE]
 >  Si se usa [!INCLUDE[dublin](../../../includes/dublin-md.md)] para hospedar flujos de trabajo en una granja de servidores web, AppFabric moverá instancias entre diferentes servidores de AppFabric. Esto necesita que los recursos se puedan compartir entre todos los nodos.  Ninguna de las actividades de flujo de trabajo predeterminadas de .NET 4 contiene ninguna operación que tenga acceso a recursos locales. Puesto que AppFabric no ofrece ningún mecanismo para marcar un flujo de trabajo como inamovible, un desarrollador no debe crear actividades personalizadas que produzcan errores cuando se mueva un flujo de trabajo.  
   
-## <a name="see-also"></a>Vea también  
- [Flujos de trabajo del diagrama de flujo](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
+## <a name="see-also"></a>Vea también
+- [Flujos de trabajo del diagrama de flujo](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)

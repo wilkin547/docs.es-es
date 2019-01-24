@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 815f2e2f695837c973210a21ab3631ef307c23d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2d3624d130c005f9ed9109863b052e3272797ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496824"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName (Método)
-Obtiene la ruta de acceso completa del archivo ejecutable del proceso que hace referencia esta [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
+Obtiene la ruta de acceso completa del archivo ejecutable para el proceso que hace referencia esta [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,19 +43,19 @@ HRESULT GetDisplayName (
  [in] Tamaño de la matriz `szName`.  
   
  `pcchName`  
- [out] El número de caracteres anchos devueltos en la `szName` matriz.  
+ [out] El número de caracteres anchos que se devuelven en el `szName` matriz.  
   
  `szName`  
- [out] Una matriz para almacenar el nombre, incluida la ruta de acceso completa del archivo ejecutable. El nombre está terminada en null.  
+ [out] Una matriz para almacenar el nombre, incluida la ruta de acceso completa del archivo ejecutable. El nombre termina en null.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cordebug.idl, CorPub.h  
+ **Encabezado**: CorPub.idl, CorPub.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorPublishProcess (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorPublishProcess (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

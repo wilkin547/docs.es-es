@@ -2,12 +2,12 @@
 title: Inspectores de mensaje
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 99886ef112a74bb86346208c5c24b09349ba4027
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552858"
 ---
 # <a name="message-inspectors"></a>Inspectores de mensaje
 Este ejemplo muestra cómo implementar y configurar los inspectores de mensaje de cliente y servicio.  
@@ -82,7 +82,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  El inspector de mensaje de cliente es muy similar. Los dos métodos que se deben implementar de <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> son <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> y <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>.  
   
- Se invoca <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> cuando el mensaje se ha creado o por la aplicación cliente o por el formateador de la operación. Como con los inspectores de mensaje de distribuidor, el mensaje se puede simplemente inspeccionar o reemplazarlo por completo. En este ejemplo, el inspector delega al mismo método de ayudante `ValidateMessageBody` local que también se utiliza para los inspectores de mensaje de envío.  
+ Se invoca <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> cuando el mensaje se ha creado o por la aplicación cliente o por el formateador de la operación. Como con los inspectores de mensaje de distribuidor, el mensaje se puede simplemente inspeccionar o reemplazarlo por completo. En este ejemplo, el inspector delega al mismo método del asistente `ValidateMessageBody` local que también se utiliza para los inspectores de mensaje de envío.  
   
  La diferencia en el comportamiento entre la validación del cliente y la del servicio (tal y como se especifica en el constructor) es que la validación del cliente produce excepciones locales que se colocan en el código de usuario porque suceden localmente y no debido a un error del servicio. Generalmente, la regla es que los inspectores de distribuidor de servicio inician errores y los inspectores del cliente inician excepciones.  
   
@@ -297,7 +297,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  La clase `<schemaValidator>` respalda el elemento `SchemaValidationBehaviorExtensionElement` que configura el inspector de mensaje. La clase expone dos propiedades públicas booleanas denominadas `ValidateRequest` y `ValidateReply`. Ambos están marcados con un <xref:System.Configuration.ConfigurationPropertyAttribute>. Este atributo constituye el vínculo entre las propiedades de código y los atributos XML que se pueden ver en el elemento de configuración XML anterior. La clase también tiene una propiedad `Schemas` que se marca además con <xref:System.Configuration.ConfigurationCollectionAttribute> y es del tipo `SchemaCollection`, que también forma parte de este ejemplo pero se omitió en este documento por cuestiones de brevedad. Esta propiedad, junto con la colección y la clase de colección de elemento `SchemaConfigElement` respalda el elemento `<schemas>` en el fragmento de código de configuración anterior y permite agregar una colección de esquemas a la validación establecida.  
   
- El método `CreateBehavior` invalidado convierte los datos de configuración en un objeto de comportamiento cuando el tiempo de ejecución evalúa los datos de configuración cuando genera un cliente o un extremo.  
+ El método `CreateBehavior` invalidado convierte los datos de configuración en un objeto de comportamiento cuando el tiempo de ejecución evalúa los datos de configuración cuando genera un cliente o un punto de conexión.  
   
 ```  
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  

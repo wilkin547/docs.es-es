@@ -12,11 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15957ce03925d75021d88bc81d12809c3fe31c2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e20502cfd64e7e4e40bee0b815729e914c3dd4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553716"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>MDA de streamWriterBufferedDataLost
 El Asistente para la depuración administrada (MDA) `streamWriterBufferedDataLost` se activa cuando se escribe un <xref:System.IO.StreamWriter>, pero después no se llama al método <xref:System.IO.StreamWriter.Flush%2A> o <xref:System.IO.StreamWriter.Close%2A> antes de que se destruya la instancia del <xref:System.IO.StreamWriter>. Cuando este MDA está habilitado, el tiempo de ejecución determina si los datos almacenados en búfer todavía existen en <xref:System.IO.StreamWriter>. Si existen datos almacenados en búfer, se activa el MDA. Llamar a los métodos <xref:System.GC.Collect%2A> y <xref:System.GC.WaitForPendingFinalizers%2A> puede forzar la ejecución de los finalizadores. En caso contrario, los finalizadores se ejecutarán en momentos aparentemente arbitrarios y posiblemente no lo hagan en la salida del proceso. La ejecución explícita de los finalizadores con este MDA habilitado ayudará a reproducir este tipo de problema de forma más confiable.  
@@ -103,6 +104,6 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO.StreamWriter>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.IO.StreamWriter>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

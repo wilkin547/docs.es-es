@@ -2,12 +2,12 @@
 title: Información del llamador (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619018"
 ---
 # <a name="caller-information-visual-basic"></a>Información del llamador (Visual Basic)
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea en el código fuente y el nombre de miembro del llamador. Esta información resulta útil para el seguimiento y la depuración, así como para crear herramientas de diagnóstico.  
@@ -74,8 +74,8 @@ End Sub
 |Constructor de atributo|Nombre del miembro al que se aplica el atributo. Si el atributo es cualquier elemento dentro de un miembro (como un parámetro, un valor devuelto o un parámetro de tipo genérico), el resultado es el nombre del miembro asociado a este elemento.|  
 |Ningún miembro contenedor (por ejemplo, nivel de ensamblado o atributos que se aplican a tipos)|El valor predeterminado del parámetro opcional.|  
   
-## <a name="see-also"></a>Vea también  
- [Atributos (Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Atributos comunes [Visual Basic])  
- [Parámetros opcionales](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md) (Conceptos de programación (Visual Basic))
+## <a name="see-also"></a>Vea también
+- [Atributos (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Atributos comunes [Visual Basic])
+- [Parámetros opcionales](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md) (Conceptos de programación (Visual Basic))

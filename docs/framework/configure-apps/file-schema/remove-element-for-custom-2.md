@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 61f1c98d3f12b5aa1d25595ca28328602683b073
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ece76f06f5ecbf47302b62a5e546cc13298106bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535585"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Quitar > (elemento) para NameValueSectionHandler y DictionarySectionHandler
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Quitar > elemento para NameValueSectionHandler y DictionarySectionHandler
 
 Quita un valor definido anteriormente.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Quitar >**
+&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,7 +40,7 @@ Quita un valor definido anteriormente.
 
 | Elemento | Descripción |
 | ------- | ------------|
-| [**\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Define los valores de las secciones de configuración personalizada que utilizan el <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> clases. |
+| [**\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Define los valores de las secciones de configuración personalizada que utilicen el <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> clases. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -48,11 +48,11 @@ Ninguna
 
 ## <a name="remarks"></a>Comentarios
 
-Puede usar el  **\<quitar >** elemento que se va a quitar la configuración de la aplicación que se han definido en un nivel superior en la jerarquía de archivos de configuración.
+Puede usar el  **\<quitar >** elemento para quitar la configuración de la aplicación que se han definido en un nivel superior de la jerarquía del archivo de configuración.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar el  **\<quitar >** elemento en un archivo de configuración de aplicación para quitar los valores definidos anteriormente en el archivo de configuración del equipo.
+El ejemplo siguiente muestra cómo usar el  **\<quitar >** elemento en un archivo de configuración de aplicación para quitar los valores definidos anteriormente en el archivo de configuración del equipo.
 
 El siguiente código de archivo de configuración del equipo declara la sección  **\<mySection >** y agrega dos configuraciones, `key1` y `key2`, a él:
 
@@ -69,7 +69,7 @@ El siguiente código de archivo de configuración del equipo declara la sección
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación quita el `key2` de  **\<mySection >**:
+El siguiente código de archivo de configuración de la aplicación se quita la `key2` de  **\<mySection >**:
 
 ```xml
 <!--Application configuration file -->
@@ -82,8 +82,8 @@ El siguiente código de archivo de configuración de la aplicación quita el `ke
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración de máquina (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

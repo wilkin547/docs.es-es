@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Garantizar que la fila seleccionada de una tabla secundaria conserva la posición correcta'
+title: Procedimiento Asegúrese de que la fila seleccionada en una tabla secundaria permanece en la posición correcta
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547636"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Cómo: Garantizar que la fila seleccionada de una tabla secundaria conserva la posición correcta
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedimiento Asegúrese de que la fila seleccionada en una tabla secundaria permanece en la posición correcta
 A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se muestran en lo que se denomina una vista primaria/secundaria o una vista maestra/detalles. Esto hace referencia a un escenario de enlace de datos donde los datos del mismo origen se muestran en dos controles. Al cambiar la selección en un control, los datos mostrados en el segundo control cambiarán. Por ejemplo, el primer control puede contener una lista de clientes y el segundo de una lista de pedidos relacionados con el cliente seleccionado en el primer control.  
   
  A partir de .NET Framework versión 2.0, cuando se muestran datos en una vista primaria/secundaria, quizás tenga que realizar algunos pasos adicionales para asegurarse de que la fila seleccionada actualmente en la tabla secundaria no se restablece a la primera fila de la tabla. Para ello, tendrá que almacenar en caché la posición de la tabla secundaria y restablecerla después de que cambie la tabla primaria. Normalmente, el restablecimiento del elemento secundario se produce la primera vez que cambia un campo en una fila de la tabla primaria.  
@@ -81,9 +81,9 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se m
   
 -   Referencias a los ensamblados System, System.Data, System.Drawing, System.Windows.Forms y System.XML.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [compilación de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [compilación de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vea también  
- [Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [Componente BindingSource](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
+- [Componente BindingSource](../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

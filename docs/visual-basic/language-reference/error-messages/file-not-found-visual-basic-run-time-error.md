@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: b8c4471222f2353e6303d43ad319031ac4491a2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 008630686256790fdf673d2b8e1830cb48061bff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626555"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)
-No se encontró el archivo cuando se especifique. El error tiene las siguientes causas posibles:  
+No se encontró el archivo que se especifique. El error tiene las siguientes causas posibles:  
   
--   Una instrucción hace referencia a un archivo que no existe.  
+-   La instrucción hace referencia a un archivo que no existe.  
   
--   Se intentó llamar a un procedimiento en una biblioteca de vínculos dinámicos (DLL), pero la biblioteca especificada en el `Lib` cláusula de la `Declare` no se encuentra la instrucción.  
+-   Se ha intentado llamar a un procedimiento en una biblioteca de vínculos dinámicos (DLL), pero la biblioteca especificada en el `Lib` cláusula de la `Declare` no se encuentra la instrucción.  
   
 -   Se intentó abrir un proyecto o cargar un archivo de texto que no existe.  
   
@@ -24,5 +24,5 @@ No se encontró el archivo cuando se especifique. El error tiene las siguientes 
   
 1.  Compruebe la ortografía del nombre de archivo y la especificación de ruta de acceso.  
   
-## <a name="see-also"></a>Vea también  
- [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a>Vea también
+- [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)

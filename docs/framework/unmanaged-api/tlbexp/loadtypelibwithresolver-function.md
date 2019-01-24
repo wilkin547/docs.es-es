@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527377"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver (Función)
 Carga una biblioteca de tipos y utiliza proporcionado [ITypeLibResolver (interfaz)](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) para resolver las bibliotecas de tipos internamente que se hace referencia.  
@@ -47,7 +47,7 @@ HRESULT LoadTypeLibWithResolver(
   
 -   `REGKIND_REGISTER`: Registre esta biblioteca de tipos.  
   
--   `REGKIND_NONE`: No registra esta biblioteca de tipos.  
+-   `REGKIND_NONE`: No registre esta biblioteca de tipos.  
   
  `pTlbResolver`  
  [in] Un puntero a la implementación de la [ITypeLibResolver (interfaz)](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  
@@ -85,14 +85,14 @@ HRESULT LoadTypeLibWithResolver(
  Si se llama a `LoadTypeLibWithResolver` directamente, debe proporcionar su propia [ITypeLibResolver (interfaz)](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) implementación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** TlbRef.h  
+ **Encabezado**: TlbRef.h  
   
  **Biblioteca:** TlbRef.lib  
   
- **Versión de .NET framework:** 3.5, 3.0 y 2.0  
+ **Versión de .NET framework:** 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>Vea también  
- [Funciones auxiliares Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx de la función](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>Vea también
+- [Funciones del asistente Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx de la función](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

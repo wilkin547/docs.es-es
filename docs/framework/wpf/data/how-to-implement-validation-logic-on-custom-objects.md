@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar lógica de validación en objetos personalizados'
+title: Procedimiento Implementar lógica de validación en objetos personalizados
 ms.date: 08/02/2018
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: dbeddb5eb6996d5758717ddd2d4d5af0b6f57f3c
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: e2b77ef65c92ae596c5620c9122dcf3db0bf9462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33555969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525994"
 ---
-# <a name="how-to-implement-validation-logic-on-custom-objects"></a>Cómo: Implementar lógica de validación en objetos personalizados
+# <a name="how-to-implement-validation-logic-on-custom-objects"></a>Procedimiento Implementar lógica de validación en objetos personalizados
 En este ejemplo se muestra cómo implementar la lógica de validación en un objeto personalizado y, a continuación, enlazar a él.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,7 +32,7 @@ En este ejemplo se muestra cómo implementar la lógica de validación en un obj
   
  Como alternativa, en lugar de usar el <xref:System.Windows.Controls.DataErrorValidationRule>, puede establecer el <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> propiedad `true`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.ExceptionValidationRule>  
- [Implementar la validación de enlaces](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Controls.ExceptionValidationRule>
+- [Implementar la validación de enlaces](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

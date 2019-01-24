@@ -2,12 +2,12 @@
 title: '&lt;participants&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-ms.openlocfilehash: 341e5492f7a45ca89c18d478766b8ebd369dbdf2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 892392454b9969e0c63e0ad7eb15f788466ad963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630975"
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>&lt;participants&gt; de WCF
 Configure una lista de participantes de seguimiento que escuchen los registros de seguimiento que se emiten desde el tiempo de ejecución directamente y los procesan del modo en que cada uno esté configurado. Esto incluye la escritura en un resultado concreto (p. ej., un archivo, la consola o ETW), procesar o agregar los registros, o cualquier otra combinación que pueda resultar necesaria.  
@@ -15,8 +15,8 @@ Configure una lista de participantes de seguimiento que escuchen los registros d
  Para obtener más información de seguimiento de flujo de trabajo y los participantes de seguimiento, vea [seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
   
  \<system.serviceModel>  
-\<seguimiento >  
-\<los participantes >  
+\<tracking>  
+\<participants>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +46,7 @@ Configure una lista de participantes de seguimiento que escuchen los registros d
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguimiento >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.|  
+|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los participantes de seguimiento se usan para obtener los datos de seguimiento emitidos del flujo de trabajo y almacenarlos en los distintos medios. Del mismo modo, cualquier procesamiento posterior en los Registros de seguimiento también puede realizarse dentro del participante de seguimiento.  
@@ -85,8 +85,8 @@ Configure una lista de participantes de seguimiento que escuchen los registros d
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: ffeecc1dfe52f1703fc201ef196644afbcc4708c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976aff327a5212c181d455bab1cdc84f98d75a2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540924"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Proporcionar información de accesibilidad de controles en Windows Forms
 Las ayudas de accesibilidad son programas y dispositivos especializados que ayudan a las personas con discapacidades a usar los equipos de forma más eficaz. Algunos ejemplos son los lectores de pantalla para invidentes y las utilidades de entrada de voz para las personas que usan comandos verbales en lugar del mouse o el teclado. Estas ayudas de accesibilidad interactúan con las propiedades de accesibilidad que exponen los controles de Windows Forms. Dichas propiedades son:  
@@ -88,11 +88,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.AccessibleObject>  
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.AccessibleRole>
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.AccessibleObject>
+- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.AccessibleRole>

@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Implementar un servicio reconocible que se registra con el proxy de detección'
+title: Procedimiento Implementar un servicio reconocible que se registra con el Proxy de detección
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30cf098b97b1e0188f264bee2ce3dbcdcdb8921b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623695"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Cómo: Implementar un servicio reconocible que se registra con el proxy de detección
-Este tema es el segundo de cuatro temas que describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), implementa un proxy de detección. En este tema, creará un servicio WCF que envía mensajes de anuncio (`Hello` y `Bye`) al proxy de detección, haciendo que se va a registrar y anular el registro de sí mismo con el proxy de detección.  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedimiento Implementar un servicio reconocible que se registra con el Proxy de detección
+Este tema es el segundo de cuatro temas que describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: Implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), implementa un proxy de detección. En este tema, creará un servicio WCF que envía mensajes de anuncio (`Hello` y `Bye`) al proxy de detección, provocando que registrar y anular el registro de sí mismo con el proxy de detección.  
   
 ### <a name="to-define-the-service-contract"></a>Para definir el contrato de servicio  
   
@@ -154,7 +154,7 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
     }  
     ```  
   
- Ha completado la implementación de un servicio que se puede detectar. Ir a [Cómo: implementar una aplicación de cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ Ha completado la implementación de un servicio que se puede detectar. Continúe con [Cómo: Implementar una aplicación cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
   
 ## <a name="example"></a>Ejemplo  
  Esta es la lista completa del código empleado en este tema.  
@@ -284,7 +284,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>Vea también  
- [Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Implementación de un proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Implementación de una aplicación cliente que utiliza el proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a>Vea también
+- [Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Cómo: Implementar a un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Cómo: Implementar una aplicación cliente que utiliza al Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

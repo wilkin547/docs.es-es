@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 071466858c79fdb74d9055fed09990cdb02a88b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624354"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType (Método)
 Crea una estructura `ExportedType` que contiene los metadatos para el tipo exportado especificado y devuelve el token de metadatos asociado.  
@@ -41,7 +41,7 @@ HRESULT DefineExportedType (
   
 #### <a name="parameters"></a>Parámetros  
  `szName`  
- [in] El nombre de tipo que se exportarán. Para la versión 1.1 de common language runtime, el nombre del tipo exportado debe coincidir exactamente con el nombre proporcionado en el `TypeDef` para el tipo.  
+ [in] Nombre del tipo que se exportarán. Para la versión 1.1 de common language runtime, el nombre del tipo exportado debe coincidir exactamente con el nombre proporcionado en el `TypeDef` para el tipo.  
   
  `tkImplementation`  
  [in] Un token que especifica donde se implementa el tipo exportado. Los valores válidos y sus significados asociados son:  
@@ -55,7 +55,7 @@ HRESULT DefineExportedType (
 -   `mdFileNil` El tipo está en el mismo archivo que el manifiesto y no es un tipo anidado.  
   
  `tkTypeDef`  
- [in] Un token de los metadatos que especifica el tipo que se exportarán. Este valor se introduce en el `TypeDef` tabla en el archivo que implementa el tipo y solo es pertinente si ese archivo está en este ensamblado.  
+ [in] Un token de los metadatos que especifica el tipo que se exportarán. Este valor se introduce en el `TypeDef` tabla en el archivo que implementa el tipo y solo es pertinente si ese archivo se encuentra en este ensamblado.  
   
  `dwExportedTypeFlags`  
  [in] Una combinación bit a bit de [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) valores de enumeración que definen los valores de propiedad para el tipo exportado.  
@@ -64,16 +64,16 @@ HRESULT DefineExportedType (
  [out] Un puntero al token de metadatos devuelto que indica el tipo exportado.  
   
 ## <a name="remarks"></a>Comentarios  
- Un `ExportedType` estructura de los metadatos se debe definir para cada tipo que está expuesto por este ensamblado y que se implementa en un módulo distinto del que contiene el manifiesto.  
+ Un `ExportedType` estructura de los metadatos debe definirse para cada tipo que está expuesto por este ensamblado y que se implementa en un módulo distinto del que contiene el manifiesto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

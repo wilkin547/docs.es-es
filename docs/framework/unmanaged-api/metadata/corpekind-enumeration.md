@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5869eb16bd768d58a6f27a83f2d8d51914a8aed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ab94bf7c55d4c19a4f3672ed86808575b8a2239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536924"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind (Enumeración)
 Contiene valores que describen un archivo ejecutable portable (PE), tal como lo devuelve una llamada a [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
@@ -50,17 +50,17 @@ typedef enum CorPEKind {
 |`pe32BitRequired`|Indica que este archivo PE efectúa llamadas a Win32.|  
 |`pe32Plus`|Indica que este archivo PE se ejecuta en una plataforma de 64 bits.|  
 |`pe32Unmanaged`|Indica que este archivo PE es código nativo.|  
-|pe32BitPreferred|Indica que este archivo PE es independiente de la plataforma y prefiere que se va a cargar en un entorno de 32 bits.|  
+|pe32BitPreferred|Indica que este archivo PE es independiente de la plataforma y prefiere que se cargue en un entorno de 32 bits.|  
   
 ## <a name="remarks"></a>Comentarios  
- Estos valores pueden utilizarse en combinaciones bit a bit.  
+ Estos valores se pueden usar en combinaciones bit a bit.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -2,12 +2,12 @@
 title: PeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 36882183-13a3-443f-8aae-62a7825d5633
-ms.openlocfilehash: 39945e77dd5650a587b2b5ea6ccabe5185e2c79a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9007b8f74b66ae126c1b0446da8f6275c06f73cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625140"
 ---
 # <a name="peerresolverbindingelement"></a>PeerResolverBindingElement
 PeerResolverBindingElement  
@@ -30,7 +30,7 @@ class PeerResolverBindingElement : BindingElement
 ### <a name="referralpolicy"></a>ReferralPolicy  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Determina cómo se comparten las referencias entre iguales.  
   
@@ -40,5 +40,5 @@ class PeerResolverBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>

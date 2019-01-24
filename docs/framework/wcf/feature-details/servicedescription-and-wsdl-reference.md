@@ -2,18 +2,18 @@
 title: ServiceDescription y referencias WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544333"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription y referencias WSDL
-Este tema describe cómo Windows Communication Foundation (WCF) asigna los documentos de lenguaje de descripción de servicios Web (WSDL) hacia y desde <xref:System.ServiceModel.Description.ServiceDescription> instancias.  
+Este tema describe cómo Windows Communication Foundation (WCF) asigna los documentos de lenguaje de descripción de servicios Web (WSDL) a y desde <xref:System.ServiceModel.Description.ServiceDescription> instancias.  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>Asignaciones de ServiceDescription a WSDL 1.1  
- Puede usar WCF para exportar los documentos WSDL desde un <xref:System.ServiceModel.Description.ServiceDescription> instancia para el servicio. Los documentos WSDL se generan automáticamente para su servicio al publicar los puntos de conexión de metadatos.  
+ Puede usar WCF para exportar documentos WSDL desde un <xref:System.ServiceModel.Description.ServiceDescription> instancia para el servicio. Los documentos WSDL se generan automáticamente para su servicio al publicar los puntos de conexión de metadatos.  
   
  Además, puede importar instancias <xref:System.ServiceModel.Description.ServiceEndpoint>, instancias <xref:System.ServiceModel.Description.ContractDescription>, e instancias <xref:System.ServiceModel.Channels.Binding> desde documentos WSDL mediante el tipo `WsdlImporter`.  
   
@@ -36,13 +36,13 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 |Propiedades|Asignación WSDL|  
 |----------------|------------------|  
 |`Name`|El `wsdl:port` /@name valor para el punto de conexión y la `wsdl:binding` /@name valor para el enlace de punto de conexión.|  
-|`Address`|La dirección para la definición `wsdl:port` del extremo.<br /><br /> El transporte del punto de conexión determina el formato de la dirección. Por ejemplo, para los transportes admitidos por WCF podría ser una dirección de SOAP o una referencia de extremo.|  
-|`Binding`|La definición `wsdl:binding` del extremo.<br /><br /> A diferencia de `wsdl:binding` definiciones, los enlaces de WCF no están asociadas con un contrato.|  
-|`Contract`|La definición `wsdl:portType` del extremo.|  
+|`Address`|La dirección para la definición `wsdl:port` del punto de conexión.<br /><br /> El transporte del punto de conexión determina el formato de la dirección. Por ejemplo, para los transportes admitidos por WCF podría ser una dirección SOAP o una referencia del extremo.|  
+|`Binding`|La definición `wsdl:binding` del punto de conexión.<br /><br /> A diferencia de `wsdl:binding` definiciones, enlaces de WCF no están asociadas con un contrato.|  
+|`Contract`|La definición `wsdl:portType` del punto de conexión.|  
 |`Behaviors`|Los comportamientos del extremo que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar `wsdl:port` del extremo.|  
   
 ### <a name="bindings"></a>Enlaces  
- La instancia de enlace para una instancia `ServiceEndpoint` se asigna a una definición `wsdl:binding`. A diferencia de `wsdl:binding` las definiciones, que deben estar asociadas con un valor concreto `wsdl:portType` definición, los enlaces de WCF son independientes de cualquier contrato.  
+ La instancia de enlace para una instancia `ServiceEndpoint` se asigna a una definición `wsdl:binding`. A diferencia de `wsdl:binding` definiciones, que deben asociarse con un valor concreto `wsdl:portType` definición, los enlaces de WCF son independientes de cualquier contrato.  
   
  Un enlace se compone de una colección de elementos de enlace. Cada elemento describe algún aspecto de cómo el extremo se comunica con los clientes. Además, un enlace tiene una <xref:System.ServiceModel.Channels.MessageVersion> que indica la <xref:System.ServiceModel.EnvelopeVersion> y la <xref:System.ServiceModel.Channels.AddressingVersion> del extremo.  
   
@@ -59,7 +59,7 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
  <xref:System.ServiceModel.Channels.TransportBindingElement> del enlace determina la dirección URI del transporte de un enlace SOAP.  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- `AddressingVersion` en un enlace se asigna a la versión de direccionamiento usada en `wsd:port`. WCF admite SOAP 1.1 y SOAP 1.2 direcciones y WS-Addressing 08/2004 y referencias de extremo de WS-Addressing 1.0.  
+ `AddressingVersion` en un enlace se asigna a la versión de direccionamiento usada en `wsd:port`. WCF es compatible con SOAP 1.1 y SOAP 1.2 direcciones y WS-Addressing 2004/08 y referencias de extremo de WS-Addressing 1.0.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
  `EnvelopeVersion` en un enlace se asigna a la versión de SOAP usada en `wsdl:binding`. WCF admite enlaces SOAP 1.1 y SOAP 1.2.  
@@ -104,7 +104,7 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 |`XmlSerializerFormatAttribute`|El `Style` propiedad para este atributo se asigna a la `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style valor para la operación.<br /><br /> El `Use` propiedad para este atributo se asigna a la `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use valores para todos los mensajes en la operación.|  
   
 ### <a name="messages"></a>Mensajes  
- A `MessageDescription` instancia se asigna a un `wsdl:message` al que hace referencia un `wsdl:portType` / `wsdl:operation` / `wsdl:input` o un `wsdl:portType` / `wsdl:operation` / `wsdl:output`mensaje en una operación. `MessageDescription` posee un cuerpo y encabezados.  
+ Un `MessageDescription` instancia se asigna a un `wsdl:message` que hace referencia un `wsdl:portType` / `wsdl:operation` / `wsdl:input` o un `wsdl:portType` / `wsdl:operation` / `wsdl:output`mensaje en una operación. `MessageDescription` posee un cuerpo y encabezados.  
   
 |Propiedades|Asignación WSDL|  
 |----------------|------------------|  
@@ -113,10 +113,10 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 |`ProtectionLevel`|Aserciones de protección de la directiva de seguridad adjuntas a las definiciones `wsdl:message` de este mensaje.|  
 |`Body`|El cuerpo del mensaje.|  
 |`Headers`|Los encabezados del mensaje.|  
-|`ContractDescription.Name`, `OperationContract.Name`|Durante la exportación, que se usa para derivar el `wsdl:message` /@name valor.|  
+|`ContractDescription.Name`, `OperationContract.Name`|Al exportar, se usa para derivar el `wsdl:message` /@name valor.|  
   
 #### <a name="message-body"></a>Cuerpo del mensaje  
- A `MessageBodyDescription` instancia se asigna a la `wsdl:message` / `wsdl:part` definiciones para el cuerpo de un mensaje. El cuerpo del mensaje puede ser de estilo ajustado o sencillo.  
+ Un `MessageBodyDescription` instancia se asigna a la `wsdl:message` / `wsdl:part` definiciones para el cuerpo de un mensaje. El cuerpo del mensaje puede ser de estilo ajustado o sencillo.  
   
 |Propiedades|Asignación WSDL|  
 |----------------|------------------|  
@@ -126,7 +126,7 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 |`ReturnValue`|El elemento secundario del elemento contenedor, si un elemento contenedor existe (Documente con estilo ajustado o estilo RPC), de lo contrario, la primera `wsdl:message` / `wsdl:part` en el mensaje.|  
   
 #### <a name="message-parts"></a>Partes del mensaje  
- A `MessagePartDescription` instancia se asigna a un `wsdl:message` / `wsdl:part` y el tipo de esquema XML o el elemento al que apunta la parte del mensaje.  
+ Un `MessagePartDescription` instancia se asigna a un `wsdl:message` / `wsdl:part` y el tipo de esquema XML o el elemento al que apunta la parte del mensaje.  
   
 |Propiedades|Asignación WSDL|  
 |----------------|------------------|  
@@ -140,7 +140,7 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
  Una instancia `MessageHeaderDescription` es una parte de un mensaje que también se asigna a un enlace `soap:header` de la parte del mensaje.  
   
 ### <a name="faults"></a>Errores  
- A `FaultDescription` instancia se asigna a un `wsdl:portType` / `wsdl:operation` / `wsdl:fault` definición y sus asociados `wsdl:message` definición. Se agrega `wsdl:message` al mismo espacio de nombres de destino que su tipo de puerto WSDL asociado. `wsdl:message` tiene una única parte del mensaje denominada "detalle" que señala al elemento de esquema XML que corresponde al valor de propiedad `DefaultType` para la instancia `FaultDescription`.  
+ Un `FaultDescription` instancia se asigna a un `wsdl:portType` / `wsdl:operation` / `wsdl:fault` definición y sus asociados `wsdl:message` definición. Se agrega `wsdl:message` al mismo espacio de nombres de destino que su tipo de puerto WSDL asociado. `wsdl:message` tiene una única parte del mensaje denominada "detalle" que señala al elemento de esquema XML que corresponde al valor de propiedad `DefaultType` para la instancia `FaultDescription`.  
   
 |Propiedades|Asignación WSDL|  
 |----------------|------------------|  
@@ -149,7 +149,7 @@ Este tema describe cómo Windows Communication Foundation (WCF) asigna los docum
 |`Action`|La acción de SOAP o de WS-Addressing para el error.|  
 |`ProtectionLevel`|Aserciones de protección de la directiva de seguridad adjuntas a la definición `wsdl:message` de este error.|  
 |`DetailType`|El tipo de esquema XML del elemento al que señala la parte del mensaje de información.|  
-|`Name, ContractDescription.Name, OperationDescription.Name,`|Usar para derivar el `wsdl:message` /@name valor para el mensaje de error.|  
+|`Name, ContractDescription.Name, OperationDescription.Name,`|Utilizado para derivar el `wsdl:message` /@name valor para el mensaje de error.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Description>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Description>

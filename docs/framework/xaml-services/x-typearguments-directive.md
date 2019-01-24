@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520183"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments (Directiva)
 Pasa restringir los argumentos de un elemento genérico para el constructor del tipo genérico de tipo.  
@@ -42,7 +42,7 @@ Pasa restringir los argumentos de un elemento genérico para el constructor del 
   
  Tenga en cuenta que esta definición de `x:TypeArguments` es específico de servicios XAML de .NET Framework y el uso de respaldo de CLR. Una definición de nivel de lenguaje puede encontrarse en [ \[MS-XAML\] sección 5.3.11](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-## <a name="usage-examples"></a>Ejemplos de uso  
+## <a name="usage-examples"></a>Usage Examples  
  Para estos ejemplos, suponga que se declaran las siguientes definiciones de espacio de nombres XAML:  
   
 ```  
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  En WPF y cuando el destino es [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar las características de XAML 2009 junto con `x:TypeArguments` pero solo para XAML flexible (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009. Si se necesita compilación de marcado el XAML, debe funcionar en las restricciones que se indican en la sección "XAML 2006 y WPF genérica XAML usos".  
   
-## <a name="see-also"></a>Vea también  
- [x:Class (Directiva)](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x:Type (extensión de marcado)](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Tipos integrados para primitivas comunes en el lenguaje XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [Elementos genéricos en XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>Vea también
+- [x:Class (Directiva)](../../../docs/framework/xaml-services/x-class-directive.md)
+- [x:Type (extensión de marcado)](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Tipos integrados para primitivas comunes en el lenguaje XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [Elementos genéricos en XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)

@@ -2,37 +2,37 @@
 title: Generación de código en LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 0345e48061132626fb714f00e44cb5637879f94a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01ba89f2161430b046eb6f3151bc33dbd659b0d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627973"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generación de código en LINQ to SQL
 Puede generar código para representar una base de datos utilizando el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta de línea de comandos SQLMetal. En cualquier caso, la generación de código de un extremo a otro se produce en tres etapas:  
   
 1.  El *Extractor de DBML* extrae información de esquema de la base de datos y vuelve a ensamblar la información en un archivo DBML con formato XML.  
   
-2.  Examina el archivo DBML el *validador de DBML* si hay errores.  
+2.  Examina el archivo DBML el *validador de DBML* errores.  
   
 3.  Si no aparece ningún error de validación, el archivo se pasa al Generador de código.  
   
- Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Los desarrolladores que utilizan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para generar el código. Vea [LINQ a las herramientas SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Los desarrolladores que usan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para generar el código. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>Extractor de DBML  
- El Extractor de DBML es un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] componente que toma los metadatos de base de datos como entrada y genera un archivo DBML como resultado.  
+ El Extractor de DBML es un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] componente que toma los metadatos de la base de datos como entrada y genera un archivo DBML como resultado.  
   
 ## <a name="code-generator"></a>Generador de código  
- El generador de código es un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] componente que traduce DBML archivos a los archivos de asignación de Visual Basic, C# o XML.  
+ El generador de código es un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] componente que traduce archivos DBML a Visual Basic, C#, o archivos de asignación XML.  
   
 ## <a name="xml-schema-definition-file"></a>Archivo de definición de esquema XML  
  El archivo DBML debe ser válido, según la siguiente definición de esquema, como archivo XSD.  
   
- Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo de asignación externa. Para obtener más información, consulte [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
+ Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo de asignación externa. Para obtener más información, consulte [asignaciones externas](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  Usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo de esquemas XML como "DbmlSchema.xsd". Para usar correctamente el archivo XSD para validar un archivo DBML, consulte [Cómo: validar archivos DBML y externos de asignación](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Los usuarios de Visual Studio también encontrarán este archivo XSD en el cuadro de diálogo esquemas XML como "DbmlSchema.xsd". Para utilizar correctamente el archivo XSD para validar un archivo DBML, vea [Cómo: Validar archivos DBML y asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>Archivo DBML de ejemplo  
- El código siguiente es un fragmento del archivo DBML creado a partir de la base de datos de ejemplo Northwind. Puede generar el archivo entero mediante SQLMetal con la **/xml** opción. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ El código siguiente es un fragmento del archivo DBML creado a partir de la base de datos de ejemplo Northwind. Puede generar el archivo entero utilizando SQLMetal con la **/xml** opción. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -269,9 +269,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Generación del modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
- [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>Vea también
+- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Cómo: Generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

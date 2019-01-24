@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6713fdb822babf607752c1823a32dae43a7d567e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f21e25c077ae6ca837a41d3e2227d12dd517d95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555510"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize (Método)
 Obtiene el tamaño de los datos personalizados que el host pretende anexar a las solicitudes de E/S.  
@@ -44,35 +44,35 @@ HRESULT GetHostOverlappedSize (
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|`GetHostOverlappedSize` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
+|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra esperó en él.|  
-|E_FAIL|Se ha producido un error catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
+|E_FAIL|Se ha producido un error irrecuperable desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Todas las llamadas de E/S asincrónicas a las API de plataforma de Windows toman Win32 `OVERLAPPED` object, que proporciona información como la posición del puntero de archivo. Para mantener el estado, las aplicaciones que hacen llamadas de E/S asincrónicas normalmente agregan datos personalizados a la estructura. `GetHostOverlappedSize` y [IHostIoCompletionManager:: InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) proporcionan una oportunidad para que el host de incluir dichos datos personalizados.  
+ Todas las llamadas de E/S asincrónicas a las API de plataforma de Windows tome Win32 `OVERLAPPED` object, que proporciona información como la posición del puntero de archivo. Para mantener el estado, las aplicaciones que realizan llamadas de E/S asincrónicas suelen agregan datos personalizados a la estructura. `GetHostOverlappedSize` y [IHostIoCompletionManager:: InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) proporcionan una oportunidad para que el host incluir dichos datos personalizados.  
   
- CLR llama el `GetHostOverlappedSize` método para determinar el tamaño de los datos personalizados que el host pretende anexar a la `OVERLAPPED` objeto.  
+ CLR llama a la `GetHostOverlappedSize` método para determinar el tamaño de los datos personalizados que el host pretende anexar a la `OVERLAPPED` objeto.  
   
 > [!NOTE]
->  `GetHostOverlappedSize` se llama solo una vez. Datos personalizados del host deben tener el mismo tamaño para cada solicitud de E/S.  
+>  `GetHostOverlappedSize` se llama solo una vez. Datos personalizados del host deben ser el mismo tamaño para cada solicitud de E/S.  
   
 > [!IMPORTANT]
 >  El tamaño de la `OVERLAPPED` propio objeto no se incluye en el valor de `pcbSize`.  
   
- Para obtener más información sobre la `OVERLAPPED` de la estructura, consulte la documentación de la plataforma de Windows.  
+ Para obtener más información sobre la `OVERLAPPED` estructura, vea la documentación de la plataforma de Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.NativeOverlapped>  
- [ICLRIoCompletionManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- [IHostIoCompletionManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Threading.NativeOverlapped>
+- [ICLRIoCompletionManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [IHostIoCompletionManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

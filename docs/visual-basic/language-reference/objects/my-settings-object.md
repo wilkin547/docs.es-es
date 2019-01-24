@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 293e7cd6449b8a35b5e42b4823a4412e0d6a3f14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628167"
 ---
 # <a name="mysettings-object"></a>My.Settings (Objeto)
 Proporciona propiedades y métodos para acceder a la configuración de la aplicación.  
@@ -48,9 +48,9 @@ Proporciona propiedades y métodos para acceder a la configuración de la aplica
 |En|Vea|  
 |---|---|  
 |Leer la configuración de la aplicación|[Cómo: Leer la configuración de la aplicación en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Cambiar una configuración de usuario|[Cómo: Cambiar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Cambiar una configuración de usuario|[Cómo: Cambiar la configuración de usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Conservar la configuración del usuario|[Cómo: Conservar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Crear una cuadrícula de propiedades de configuración de usuario|[Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Crear una cuadrícula de propiedades de configuración de usuario|[Cómo: Crear cuadrículas de propiedades para la configuración de usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra el valor de la configuración `Nickname`.  
@@ -59,10 +59,10 @@ Proporciona propiedades y métodos para acceder a la configuración de la aplica
   
  Para que este ejemplo funcione, la aplicación debe tener una configuración `Nickname` de tipo `String`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Configuration.ApplicationSettingsBase>  
- [Cómo: Leer la configuración de la aplicación en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [Cómo: Cambiar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
- [Cómo: Conservar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
- [Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>Vea también
+- <xref:System.Configuration.ApplicationSettingsBase>
+- [Cómo: Leer la configuración de la aplicación en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [Cómo: Cambiar la configuración de usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [Cómo: Conservar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [Cómo: Crear cuadrículas de propiedades para la configuración de usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

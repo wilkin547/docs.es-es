@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6be40ecbb801348ad73fb929741b5a8e8407a7ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ece5173ce2a80ceb46d535eb8cbc6eb18e18fd1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621885"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly (Método)
 Desinstala el ensamblado especificado de la caché global de ensamblados.  
@@ -46,10 +46,10 @@ HRESULT UninstallAssembly (
  [in] El nombre del ensamblado que se va a desinstalar.  
   
  `pRefData`  
- [in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) estructura que contiene los datos de instalación para el ensamblado.  
+ [in] Un [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) estructura que contiene los datos de instalación para el ensamblado.  
   
  `pulDisposition`  
- [out, optional] Uno de los valores de disposición definidos en Fusion.idl. Los valores posibles son los siguientes:  
+ [out, optional] Uno de los valores de disposición definidos en Fusion.idl. Los valores posibles incluyen lo siguiente:  
   
 -   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
@@ -64,11 +64,11 @@ HRESULT UninstallAssembly (
 -   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado**: Fusion.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IAssemblyCache (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>Vea también
+- [IAssemblyCache (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

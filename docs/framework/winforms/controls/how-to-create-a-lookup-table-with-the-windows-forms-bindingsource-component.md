@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms'
+title: Procedimiento Crear una tabla de búsqueda con el componente BindingSource de formularios de Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539901"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Cómo: Crear una tabla de búsqueda con el componente BindingSource de formularios Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedimiento Crear una tabla de búsqueda con el componente BindingSource de formularios de Windows
 Una tabla de búsqueda es una tabla de datos con una columna que muestra los datos de los registros de una tabla relacionada. En los procedimientos siguientes se usa un control <xref:System.Windows.Forms.ComboBox> para mostrar el campo con la relación de clave externa desde la tabla primaria a la tabla secundaria.  
   
  Aquí se ofrece un ejemplo de una tabla primaria y una tabla secundaria para ayudar a visualizar estas dos tablas y su relación:  
@@ -91,8 +91,8 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
 8.  Enlace otros controles, aparte de <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.BindingNavigator>, a los campos de detalles del <xref:System.Windows.Forms.BindingSource> de la tabla secundaria (por ejemplo, `OrdersBindingSource`) que quiera mostrar.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.BindingSource>  
- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [ComboBox (control)](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [Enlazar controles a los datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.BindingSource>
+- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [ComboBox (control)](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Enlazar controles a los datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 7a6059a5ebf1ae05fee8e49235f31808909adc6f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3f4befab1945d985d517bc3385868b5f4ac18dc9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532388"
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 Define un enlace seguro, de confianza e interoperable que es apropiado para contratos de servicios dúplex o comunicación a través de los intermediarios de SOAP.  
   
  \<system.ServiceModel>  
-\<enlaces >  
+\<bindings>  
 \<wsDualHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -72,7 +72,7 @@ Define un enlace seguro, de confianza e interoperable que es apropiado para cont
 |proxyAddress|Un URI que especifica la dirección del proxy HTTP. Si `useDefaultWebProxy` es `true`, este valor debe ser `null`. De manera predeterminada, es `null`.|  
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|textEncoding|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son los siguientes:<br /><br /> -BigEndianUnicode: Codificación Unicode BigEndian.<br />-Unicode: codificación de 16 bits.<br />-UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|  
+|textEncoding|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son los siguientes:<br /><br /> -   BigEndianUnicode: Codificación Unicode BigEndian.<br />-Unicode: codificación de 16 bits.<br />-   UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|  
 |transactionFlow|Valor booleano que especifica si el enlace admite las transacciones WS del flujo. De manera predeterminada, es `false`.|  
 |useDefaultWebProxy|Valor de tipo booleano que indica si se utiliza el proxy HTTP del sistema configurado automáticamente. La dirección de proxy debe ser `null` (es decir, sin establecer) si este atributo es `true`. De manera predeterminada, es `true`.|  
   
@@ -80,7 +80,7 @@ Define un enlace seguro, de confianza e interoperable que es apropiado para cont
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement>.|  
 |[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[reliableSession](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Especifica si se establecen sesiones confiables entre los puntos de conexión del canal.|  
   
@@ -88,7 +88,7 @@ Define un enlace seguro, de confianza e interoperable que es apropiado para cont
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
  `WSDualHttpBinding` proporciona la misma compatibilidad para los protocolos de servicio Web que `WSHttpBinding`, pero para el uso con contratos dúplex. `WSDualHttpBinding` solo admite la seguridad de SOAP y requiere mensajería de confianza. Este enlace requiere que el cliente tenga un URI público que proporciona un extremo de devolución de llamada para el servicio. Lo proporciona el atributo `clientBaseAddress`. Un enlace dual expone la dirección IP del cliente al servicio. El cliente debería utilizar la seguridad para asegurarse de que sólo se conecta a servicios de confianza.  
@@ -131,10 +131,10 @@ Define un enlace seguro, de confianza e interoperable que es apropiado para cont
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

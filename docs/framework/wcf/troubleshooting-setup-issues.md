@@ -2,12 +2,12 @@
 title: Solución de problemas de instalación
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532557"
 ---
 # <a name="troubleshooting-setup-issues"></a>Solución de problemas de instalación
 Este tema describe cómo solucionar problemas de configuración de problemas de Windows Communication Foundation (WCF).  
@@ -38,15 +38,15 @@ Este tema describe cómo solucionar problemas de configuración de problemas de 
   
 4.  Una excepción como una de las siguientes puede mostrarse en el registro de eventos o en el archivo de registro de traza de la instalación:  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException: Resultado inesperado 3 al ejecutar E:\WINDOWS\system32\wbem\mofcomp.exe con "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
+     ServiceModelReg [11:09:59:046]: System.ApplicationException: Resultado inesperado 3 al ejecutar E:\WINDOWS\system32\wbem\mofcomp.exe con "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication foundation\servicemodel. MOF"  
   
      O bien  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: El inicializador de tipo para 'System.Management.ManagementPath' produjo una excepción. ---> System.Runtime.InteropServices.COMException (0x80040154): No se pudo recuperar el generador de clases COM para el componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} debido al error siguiente: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: El inicializador de tipo para 'System.Management.ManagementPath' produjo una excepción. ---> System.Runtime.InteropServices.COMException (0 x 80040154): Recuperar el generador de clases COM para el componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} debido al error siguiente: 80040154.  
   
      O bien  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: No pudo cargar el archivo ni ensamblado 'C:\WINDOWS\system32\wbem\mofcomp.exe' o uno de sus dependencias. El sistema no puede encontrar el archivo especificado.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: No se pudo cargar el archivo o ensamblado 'C:\WINDOWS\system32\wbem\mofcomp.exe' o uno de sus dependencias. El sistema no puede encontrar el archivo especificado.  
   
      Nombre del archivo: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
@@ -73,5 +73,5 @@ Este tema describe cómo solucionar problemas de configuración de problemas de 
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de instalación](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>Vea también
+- [Instrucciones de instalación](../../../docs/framework/wcf/samples/set-up-instructions.md)

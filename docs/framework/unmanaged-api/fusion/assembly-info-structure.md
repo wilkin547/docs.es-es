@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519754"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO (Estructura)
 Contiene información sobre un ensamblado que está registrado en la caché global de ensamblados.  
@@ -43,18 +43,18 @@ typedef struct _ASSEMBLY_INFO {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|El tamaño, en bytes, de la estructura. Este campo está reservado para extensibilidad futura.|  
-|`dwAssemblyFlags`|Marcadores que indican los detalles sobre el ensamblado de la instalación. Se admiten los siguientes valores:<br /><br /> -El valor ASSEMBLYINFO_FLAG_INSTALLED, que indica que el ensamblado está instalado. La versión actual de .NET Framework siempre establece `dwAssemblyFlags` en este valor.<br />-El valor ASSEMBLYINFO_FLAG_PAYLOADRESIDENT, que indica que el ensamblado es un residente de carga. La versión actual de .NET Framework nunca establece `dwAssemblyFlags` en este valor.|  
+|`dwAssemblyFlags`|Marcadores que indican los detalles sobre el ensamblado de la instalación. Se admiten los siguientes valores:<br /><br /> -El valor ASSEMBLYINFO_FLAG_INSTALLED, que indica que el ensamblado está instalado. La versión actual de .NET Framework siempre establece `dwAssemblyFlags` a este valor.<br />-El valor ASSEMBLYINFO_FLAG_PAYLOADRESIDENT, que indica que el ensamblado es un residente de carga. La versión actual de .NET Framework no establece nunca `dwAssemblyFlags` a este valor.|  
 |`uliAssemblySizeInKB`|El tamaño total, en kilobytes, de los archivos que contiene el ensamblado.|  
 |`pszCurrentAssemblyPathBuf`|Un puntero a un búfer de cadena que contiene la ruta de acceso actual al archivo de manifiesto. La ruta de acceso debe terminar con un carácter nulo.|  
 |`cchBuf`|El número de caracteres anchos, incluido el terminador nulo, que `pszCurrentAssemblyPathBuf` contiene.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado**: Fusion.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [Caché global de ensamblados](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>Vea también
+- [Estructuras de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Caché global de ensamblados](../../../../docs/framework/app-domains/gac.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccebe01c853677f7c78731e757ef7a5f090d6919
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2086b12cac75af1c75a13997784e04113630c4f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496171"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL (Método)
-Obtiene un valor que indica si este "ICorDebugCode" representa el código que se compiló en lenguaje intermedio de Microsoft (MSIL).  
+Obtiene un valor que indica si esta instancia de "ICorDebugCode" representa el código que se compila en lenguaje intermedio de Microsoft (MSIL).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,16 +37,16 @@ HRESULT IsIL (
   
 #### <a name="parameters"></a>Parámetros  
  `pbIL`  
- [out] `true` si `ICorDebugCode` representa el código que se ha compilado en MSIL; en caso contrario, `false`.  
+ [out] `true` si este `ICorDebugCode` representa el código que se compila en MSIL; en caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- 
+## <a name="see-also"></a>Vea también
+

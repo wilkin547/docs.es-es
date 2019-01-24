@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7f41a61fe929bb3eaf691deb75749777c0880aea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530701"
 ---
 # <a name="decrypting-data"></a>Descifrar datos
 El descifrado es la operación inversa del cifrado. Para el cifrado de clave secreta, debe conocer la clave y el IV que se usaron para cifrar los datos. Para el cifrado de clave pública, debe conocer la clave pública (si los datos se cifraron mediante la clave privada) o la clave privada (si los datos se cifran mediante la clave pública).  
@@ -174,7 +174,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>Descifrado asimétrico  
  Normalmente, una parte (parte A) genera tanto una clave pública como privada y la almacena en memoria o en un contenedor de claves criptográficas.  A continuación, la parte A envía la clave pública a otra parte (parte B).  Con la clave pública, la parte B cifra los datos y envía los datos de vuelta a la parte A. Después de recibir los datos, la parte A los descifra con la clave privada correspondiente.  El descifrado será correcto solo si la parte A usa la clave privada que corresponde a la clave pública que la parte B usó para cifrar los datos.  
   
- Para obtener información sobre cómo almacenar una clave asimétrica en un contenedor de claves criptográficas seguro y cómo recuperar posteriormente la clave asimétrica, consulte [Cómo: Almacenar claves asimétricas en un contenedor de claves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Para obtener información sobre cómo almacenar una clave asimétrica en un contenedor de claves criptográficas seguro y cómo recuperar posteriormente la clave asimétrica, consulte [Cómo: Store claves asimétricas en un contenedor de claves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
  En el ejemplo siguiente se muestra el descifrado de dos matrices de bytes que representan una clave simétrica y un IV.  Para obtener información sobre cómo extraer la clave pública asimétrica del objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> en un formato que se pueda enviar fácilmente a un tercero, consulte [Encrypting Data](../../../docs/standard/security/encrypting-data.md).  
   
@@ -204,6 +204,6 @@ SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);
   
 ## <a name="see-also"></a>Vea también
 
-- [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Cifrar datos](../../../docs/standard/security/encrypting-data.md)  
+- [Generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Cifrar datos](../../../docs/standard/security/encrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

@@ -1,18 +1,18 @@
 ---
-title: Cómo habilitar la transmisión
+title: Procedimiento Habilitar el Streaming
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: b28764c4bad88511096ab09fd71cc2a73c735096
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627660"
 ---
-# <a name="how-to-enable-streaming"></a>Cómo habilitar la transmisión
+# <a name="how-to-enable-streaming"></a>Procedimiento Habilitar el Streaming
 Windows Communication Foundation (WCF) puede enviar mensajes mediante transferencias almacenadas en búfer o transmitidas. En el modo de transferencia almacenado en búfer (predeterminado), se debe entregar completamente un mensaje antes de que un receptor pueda leerlo. En modo de transferencia de transmisión por secuencias, el receptor puede empezar a procesar el mensaje antes de se entregue completamente. El modo de transmisión por secuencias es útil cuando la información que se pasa es larga y puede procesarse en serie. El modo de transmisión por secuencias también es útil cuando el mensaje es demasiado grande para que se almacene en búfer completamente.  
   
  Para habilitar la transmisión por secuencias, defina apropiadamente `OperationContract` y habilite la transmisión por secuencias en el nivel de transporte.  
@@ -74,6 +74,6 @@ Windows Communication Foundation (WCF) puede enviar mensajes mediante transferen
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
-## <a name="see-also"></a>Vea también  
- [Grandes datos y streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
- [Secuencia](../../../../docs/framework/wcf/samples/stream.md)
+## <a name="see-also"></a>Vea también
+- [Grandes datos y streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [Secuencia](../../../../docs/framework/wcf/samples/stream.md)

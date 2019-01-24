@@ -2,22 +2,22 @@
 title: Elemento &lt;transport&gt; de &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 8416701ce4e787a49ee0a4bdd4829c6592cde94c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7372b94bde8325ec00116ee7022739f1b17a1ac9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555497"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>Elemento &lt;transport&gt; de &lt;netTcpBinding&gt;
 Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo configurado con el [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  
-\<enlaces >  
-\<netTcpBinding >  
-\<enlace >  
-\<seguridad >  
-\<transporte >  
+\<bindings>  
+\<netTcpBinding>  
+\<binding>  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,18 +74,18 @@ Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo co
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Especifica las capacidades de seguridad de la [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Especifica las capacidades de seguridad de la [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
   
 ## <a name="remarks"></a>Comentarios  
  Utilice la seguridad de transporte para la integridad y confidencialidad del mensaje SOAP y para la autenticación mutua. Si este modo de seguridad está seleccionado en un enlace, la pila del canal se configura utilizando un transporte seguro y los mensajes SOAP se protegen utilizando la seguridad de transporte, como Windows (Negotiate) o SSL sobre TCP.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.TcpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.TcpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

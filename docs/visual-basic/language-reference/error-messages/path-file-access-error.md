@@ -1,28 +1,28 @@
 ---
-title: Error de acceso al archivo de la ruta de acceso
+title: Error de acceso de archivo de la ruta de acceso
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: 83ce8615b173a6f5835347ebc561a793655ec8f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53f021faa9e4ae69a71d825ca823e1180421afc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522484"
 ---
 # <a name="pathfile-access-error"></a>Error de acceso a la ruta o al archivo
-Durante una operación de acceso a archivos o acceso al disco, el sistema operativo no pudo realizar una conexión entre la ruta de acceso y el nombre de archivo.  
+Durante una operación de acceso a archivos o acceso a disco, el sistema operativo no se pudo realizar una conexión entre la ruta de acceso y el nombre de archivo.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Asegúrese de que la especificación de archivo tiene el formato correcto. Un nombre de archivo puede contener un acceso completa (absoluta) o relativa ruta de acceso. Ruta de acceso completa se inicia con el nombre de unidad (si la ruta de acceso está en otra unidad) y muestra la ruta de acceso explícita desde la raíz en el archivo. Cualquier ruta de acceso que no es un nombre completo es relativa a la unidad actual y el directorio.  
+1.  Asegúrese de que la especificación de archivo tiene el formato correcto. Un nombre de archivo puede contener una relativa o completa (absoluta) ruta de acceso. Una ruta de acceso completa se inicia con el nombre de unidad (si la ruta de acceso está en otra unidad) y muestra la ruta de acceso explícita desde la raíz en el archivo. Cualquier ruta de acceso que no es un nombre completo es relativa a la unidad actual y el directorio.  
   
-2.  Asegúrese de que no ha intentado guardar un archivo que reemplaza un archivo de sólo lectura existente. Si este es el caso, cambie el atributo de sólo lectura del archivo de destino o guarde el archivo con un nombre de archivo diferente.  
+2.  Asegúrese de que no ha intentado guardar un archivo que desea reemplazar un archivo de solo lectura existente. Si este es el caso, cambie el atributo de sólo lectura del archivo de destino o guarde el archivo con un nombre de archivo diferente.  
   
-3.  Asegúrese de que no ha intentado abrir un archivo de solo lectura en secuencial `Output` o `Append` modo. Si este es el caso, abra el archivo en `Input` modo o cambiar el atributo de sólo lectura del archivo.  
+3.  Asegúrese de que no intentó abrir un archivo de solo lectura en secuencial `Output` o `Append` modo. Si este es el caso, abra el archivo en `Input` modo o cambiar el atributo de sólo lectura del archivo.  
   
-4.  Asegúrese de que no intentó cambiar un proyecto de Visual Basic dentro de una base de datos o el documento.  
+4.  Asegúrese de que no ha intentado cambiar un proyecto de Visual Basic dentro de una base de datos o documento.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)

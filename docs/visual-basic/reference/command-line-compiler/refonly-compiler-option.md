@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: b22fb9ae24a04d9fe530811bf764352199c31813
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 047b8b148e616c8ad94f55844f8bc4063a9e5cd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528932"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
@@ -37,6 +37,6 @@ Los ensamblados de referencia incluyen un nivel de ensamblado [ReferenceAssembly
 Las opciones `-refonly` y [`-refout`](refout-compiler-option.md) son mutuamente excluyentes.
 
 ## <a name="see-also"></a>Vea también
-[-refout](refout-compiler-option.md)   
-[Compilador de línea de comandos de Visual Basic](index.md)  
-[Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)   
+- [/refout](refout-compiler-option.md)
+- [Compilador de línea de comandos de Visual Basic](index.md)
+- [Líneas de comandos de compilación de ejemplo](sample-compilation-command-lines.md)

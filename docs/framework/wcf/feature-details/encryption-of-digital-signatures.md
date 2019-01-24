@@ -6,12 +6,12 @@ helpviewer_keywords:
 - digital signatures [WCF], encryption
 - digital signatures [WCF]
 ms.assetid: 0868866d-40b4-4341-8e42-eee3b7f15b69
-ms.openlocfilehash: 1a44e3e6110a2c03e4aa71947227485938c12180
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3d780ce823c42874f001b0adcfc36b018e32a2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529794"
 ---
 # <a name="encryption-of-digital-signatures"></a>Cifrado de firmas digitales
 De forma predeterminada, un mensaje se cifra y se firma y la firma se cifra digitalmente. Puede controlar esto creando un enlace personalizado con una instancia de <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> y estableciendo la propiedad `MessageProtectionOrder` de cualquier clase en un valor de enumeración <xref:System.ServiceModel.Security.MessageProtectionOrder>. De manera predeterminada, es <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Este proceso tarda entre un 10 y un 40 por ciento más que la simple firma y cifrado. Deshabilitar el cifrado de la firma, sin embargo, puede permitir a un atacante adivinar el contenido del mensaje. Esto es posible porque el elemento de firma contiene el código hash del texto sin formato de cada parte del mensaje firmada. Por ejemplo, aunque se cifra el cuerpo del mensaje de forma predeterminada, la firma no cifrada contiene el código hash del cuerpo del mensaje. Si el mensaje es pequeño, un atacante podría ser capaz de deducir el contenido. Cifrar la firma reduce o elimina esta posibilidad.  
@@ -20,18 +20,18 @@ De forma predeterminada, un mensaje se cifra y se firma y la firma se cifra digi
   
 ### <a name="to-disable-digital-signing"></a>Para deshabilitar la firma digital  
   
-1.  Creará un control <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información, consulte [Cómo: crear un personalizado de enlace con SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+1.  Creará un control <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información, vea [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 2.  Agregue <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> a la colección de enlaces.  
   
 3.  Establezca la propiedad <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> o establezca la propiedad <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
   
- Para obtener más información acerca de cómo crear enlaces personalizados, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Para obtener más información acerca de cómo crear un enlace personalizado para un modo de autenticación específico, consulte [Cómo: crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Para obtener más información acerca de cómo crear enlaces personalizados, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Para obtener más información acerca de cómo crear un enlace personalizado para un modo de autenticación específicos, vea [Cómo: Crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Security.MessageProtectionOrder>  
- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
- [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Creación de enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  
- [Creación de un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Security.MessageProtectionOrder>
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Creación de enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+- [Cómo: Crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

@@ -1,24 +1,24 @@
 ---
-title: 'Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)'
+title: Procedimiento Rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638826"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Procedimiento Rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)
 
 En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una secuencia de tipos nuevos.
 
 > [!NOTE]
-> No intente combinar datos en memoria o datos del sistema de archivos con datos que aún está en una base de datos. Dichas combinaciones entre dominios pueden producir resultados indefinidos porque hay diferentes maneras de definir las operaciones de combinación para las consultas de base de datos y otros tipos de orígenes. Además, existe el riesgo de que esta operación produzca una excepción de memoria insuficiente si la cantidad de datos existente en la base de datos es considerable. Para combinar datos de una base de datos con datos en memoria, primero debe llamar a `ToList` o a `ToArray` en la base de datos de consulta y, luego, debe efectuar la combinación en la colección devuelta.
+> No intente unir datos en memoria o datos del sistema de archivos con datos que todavía están en una base de datos. Dichas combinaciones entre dominios pueden producir resultados indefinidos porque hay diferentes maneras de definir las operaciones de combinación para las consultas de base de datos y otros tipos de orígenes. Además, existe el riesgo de que esta operación produzca una excepción de memoria insuficiente si la cantidad de datos existente en la base de datos es considerable. Para combinar datos de una base de datos con datos en memoria, primero debe llamar a `ToList` o a `ToArray` en la base de datos de consulta y, luego, debe efectuar la combinación en la colección devuelta.
 
 ## <a name="to-create-the-data-file"></a>Para crear el archivo de datos
 
-- Copie los archivos names.csv y scores.csv en la carpeta del proyecto, como se describe en [Cómo: combinar contenido de archivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copie los archivos names.csv y scores.csv en la carpeta del proyecto, como se describe en [Cómo: Combinar contenido de archivos no similares (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -100,9 +100,9 @@ End Class
 ' The average score of Tucker Michael is 92
 ```
 
-En el [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md) cláusula, un inicializador de objeto se utiliza para crear instancias de cada nuevo `Student` objeto mediante el uso de los datos de los dos orígenes.
+En el [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md) cláusula, un inicializador de objeto se usa para crear instancias de cada nuevo `Student` objeto mediante el uso de los datos de los dos orígenes.
 
-Si no tiene que almacenar los resultados de una consulta, tipos anónimos pueden ser más conveniente que tipos con nombre. Los tipos con nombre son necesarios si pasa los resultados de la consulta fuera del método en el que se ejecuta la consulta. En el ejemplo siguiente se lleva a cabo la misma tarea que en el ejemplo anterior, con la diferencia de que se usan tipos anónimos en lugar de tipos con nombre:
+Si no tiene que almacenar los resultados de una consulta, los tipos anónimos pueden ser más convenientes que los tipos con nombre. Los tipos con nombre son necesarios si pasa los resultados de la consulta fuera del método en el que se ejecuta la consulta. En el ejemplo siguiente se lleva a cabo la misma tarea que en el ejemplo anterior, con la diferencia de que se usan tipos anónimos en lugar de tipos con nombre:
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -130,12 +130,12 @@ Next
 
 ## <a name="compiling-the-code"></a>Compilación del código
 
-Crear y compilar un proyecto destinado a una de las siguientes opciones:
+Cree y compile un proyecto cuyo destino sea una de las opciones siguientes:
 
-- .NET framework versión 3.5 con una referencia a System.Core.dll.
-- .NET framework versión 4.0 o posterior.
-- Versión de .NET core 1.0 o superior.
+- Versión 3.5 de .NET Framework 5 con una referencia a System.Core.dll.
+- .NET Framework versión 4.0 o posterior.
+- .NET Core versión 1.0 o posterior.
 
 ## <a name="see-also"></a>Vea también
 
-[LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

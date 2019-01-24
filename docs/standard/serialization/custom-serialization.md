@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 0193112812aeccb7365526240b8e81d81abcd8a4
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628004"
 ---
 # <a name="custom-serialization"></a>Serialización personalizada
 La serialización personalizada es el proceso de controlar la serialización y deserialización de un tipo. Controlando la serialización, es posible asegurarse compatibilidad de la serialización, que es la capacidad para serializar y deserializar entre las versiones de un tipo sin interrumpir la función básica del tipo. En la primera versión de un tipo, puede haber por ejemplo, solo dos campos. En la versión siguiente de un tipo, se agregan varios campos más. Todavía la segunda versión de una aplicación debe poder serializar y deserializar ambos tipos. En las secciones siguientes se describe cómo controlar la serialización.
@@ -181,6 +181,6 @@ End Class
   
 ## <a name="see-also"></a>Vea también
 
-- [Serialización binaria](binary-serialization.md)  
-- [Serialización SOAP y XML](xml-and-soap-serialization.md)  
+- [Serialización binaria](binary-serialization.md)
+- [Serialización SOAP y XML](xml-and-soap-serialization.md)
 - [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)

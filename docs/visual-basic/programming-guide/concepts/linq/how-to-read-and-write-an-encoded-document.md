@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: leer y escribir un documento codificado (Visual Basic)'
+title: Procedimiento Leer y escribir un documento codificado (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 6e768f26313da93076807f5fabe18a26333ebab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52360b465e40a015e2cddee62ed4197d827bc560
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538705"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Cómo: leer y escribir un documento codificado (Visual Basic)
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Procedimiento Leer y escribir un documento codificado (Visual Basic)
 Para crear un documento XML codificado, se agrega un <xref:System.Xml.Linq.XDeclaration> al árbol XML, estableciendo la codificación en el nombre de página de códigos deseado.  
   
  Los valores devueltos por <xref:System.Text.Encoding.WebName%2A> son valores válidos.  
@@ -76,6 +76,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
- [Avanzada de LINQ to XML programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
+- [Avanzada de LINQ to XML (Visual Basic) de programación](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

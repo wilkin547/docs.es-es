@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622603"
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden registrar los eventos de seguridad (ya sea correcto, error o ambos) con la característica de auditoría. Los eventos se escriben al registro de eventos del sistema de Windows y se pueden examinar utilizando el Visor de eventos.  
@@ -98,12 +98,12 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 |Administración de la directiva de auditoría|No es aplicable.|La directiva de la autoridad de seguridad local (LSA) controla el registro de Seguridad, además de la configuración. También se ha de habilitar la categoría “Acceso a objetos de auditoría”.|  
 |Experiencia de usuario predeterminada|Todos los usuarios autenticados pueden escribir en el registro de aplicaciones, por lo que no es necesario ningún paso de permiso adicional para los procesos de aplicación.|El proceso de aplicación (contexto) debe tener `SeAuditPrivilege`.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Cómo: Auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
- [\<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Cómo: Auditar eventos de seguridad](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

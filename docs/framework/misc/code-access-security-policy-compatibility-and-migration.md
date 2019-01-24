@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5007e07340621fa76dc37a48eaf8c17bc048339
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 219b511662a2e59fb6e0e55b6630bd54015fcc79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620102"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidad con la directiva de seguridad de acceso del código y migración
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- La parte de la directiva de seguridad de acceso del código (CAS) se ha quedado obsoleta en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Como resultado, puede encontrar advertencias de compilación y excepciones en tiempo de ejecución si se llama a los tipos obsoletos de la directiva y miembros [explícitamente](#explicit_use) o [implícitamente](#implicit_use) (a través de otros tipos y miembros).  
+ La parte de la directiva de seguridad de acceso del código (CAS) se ha quedado obsoleta en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Como resultado, puede encontrar advertencias de compilación y excepciones en tiempo de ejecución si llama a los tipos obsoletos de la directiva y miembros [explícitamente](#explicit_use) o [implícitamente](#implicit_use) (a través de otros tipos y miembros).  
   
  Para los errores y advertencias:  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33393252"
   
      \- o -  
   
--   Mediante el [elemento de configuración < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) para participar en el comportamiento de directiva CAS heredada.  
+-   Mediante el [elemento de configuración < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) para participar en el comportamiento de la directiva CAS heredado.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33393252"
   
 -   [Migración: Reemplazo para las llamadas obsoletas](#migration)  
   
--   [Compatibilidad: Usar la opción de directiva CAS heredada](#compatibility)  
+-   [Compatibilidad: Con la opción de directiva CAS heredada](#compatibility)  
   
 <a name="explicit_use"></a>   
 ## <a name="explicit-use"></a>Uso explícito  
@@ -102,7 +102,7 @@ ms.locfileid: "33393252"
  <xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`  
   
 <a name="migration"></a>   
-## <a name="migration-replacement-for-obsolete-calls"></a>Migración: reemplazo para las llamadas obsoletas  
+## <a name="migration-replacement-for-obsolete-calls"></a>Migración: Reemplazo para las llamadas obsoletas  
   
 ### <a name="determining-an-assemblys-trust-level"></a>Determinar el nivel de confianza de un ensamblado  
  La directiva CAS suele usarse para determinar el nivel de confianza o el conjunto de permisos concedidos a un ensamblado o dominio de aplicación. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone las siguientes propiedades útiles que no necesitan resolver la directiva de seguridad:  
@@ -116,19 +116,19 @@ ms.locfileid: "33393252"
 -   <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>  
   
 ### <a name="application-domain-sandboxing"></a>Espacio aislado del dominio de aplicación  
- El método <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> suele usarse para hospedar en un espacio aislado los ensamblados de un dominio de aplicación. El [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone miembros que no tienen que usar <xref:System.Security.Policy.PolicyLevel> para este propósito. Para obtener más información, consulte [Cómo: ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ El método <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> suele usarse para hospedar en un espacio aislado los ensamblados de un dominio de aplicación. El [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone miembros que no es necesario usar <xref:System.Security.Policy.PolicyLevel> para este propósito. Para obtener más información, vea [Cómo: Ejecutar código de confianza parcial en un recinto](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Determinar el conjunto de permisos seguro o razonable para código de confianza parcial  
- Los hosts suelen necesitar determinar los permisos adecuados para el código hospedado en espacio aislado. Antes de la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la directiva CAS proporcionaba una manera de hacerlo con el <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> método. Como reemplazo, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] proporciona el <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> método, que devuelve un prueba de errores estándar conjunto de permisos para la evidencia proporcionada.  
+ Los hosts suelen necesitar determinar los permisos adecuados para el código hospedado en espacio aislado. Antes de la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la directiva CAS proporcionaba una manera de hacerlo con el <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> método. Como reemplazo, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] proporciona el <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> método, que devuelve un conjunto para la evidencia proporcionada de permisos estándar y seguro.  
   
-### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Escenarios sin espacio aislado: sobrecargas para cargas de ensamblado  
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Escenarios sin espacio aislado: Sobrecargas para cargas de ensamblado  
  La razón para usar una sobrecarga de carga de ensamblado puede ser usar parámetros que de otra forma no están disponibles, en lugar de hospedar el ensamblado en un espacio aislado. A partir de la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], las sobrecargas de carga de ensamblado que no requieren un <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> objeto como parámetro, por ejemplo, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, habilitar este escenario.  
   
  Si quiere hospedar un ensamblado en un espacio aislado, use la sobrecarga <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>.  
   
 <a name="compatibility"></a>   
-## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilidad: usar la opción de directiva CAS heredada  
- El [elemento de configuración < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) permite especificar que un proceso o una biblioteca usa la directiva CAS heredada. Cuando se habilita este elemento, las sobrecargas de directiva y de evidencia funcionarán igual que en versiones anteriores de Framework.  
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilidad: Con la opción de directiva CAS heredada  
+ El [elemento de configuración < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) le permite especificar que un proceso o la biblioteca usa la directiva CAS heredada. Cuando se habilita este elemento, las sobrecargas de directiva y de evidencia funcionarán igual que en versiones anteriores de Framework.  
   
 > [!NOTE]
 >  El comportamiento de la directiva CAS es específico de cada versión del tiempo de ejecución y por lo tanto, modificar la directiva CAS para una versión del tiempo de ejecución no afecta a la directiva CAS de otra versión.  
@@ -141,6 +141,6 @@ ms.locfileid: "33393252"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
- [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

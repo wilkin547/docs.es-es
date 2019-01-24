@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63f6ea4a348b3035a1f0b1d3e00f61f689915fa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13740920e8db5d44b71cd3c324742945c64b3e59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498965"
 ---
 # <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON (Enumeración)
 Indica el motivo por el que se está produciendo la recolección de elementos no utilizados.  
@@ -39,17 +39,17 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|La colección de elementos no utilizados se inducida por un <xref:System.GC.Collect%2A> método.|  
-|`COR_PRF_GC_OTHER`|La razón no está especificada.|  
+|`COR_PRF_GC_INDUCED`|Indujo la recolección de elementos mediante un <xref:System.GC.Collect%2A> método.|  
+|`COR_PRF_GC_OTHER`|No se especifica el motivo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

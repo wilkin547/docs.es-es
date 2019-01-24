@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61bc7783823408164ae2b073e097a0e85e193be6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3c145bae61922894f4893d532923319ccf16f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499017"
 ---
 # <a name="importfile2-method"></a>ImportFile2 (Método)
-Importa ensamblados y módulos no enlazados. Este método es similar a [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), pero funciona incluso si el archivo que se va a importar no existe en el disco.  
+Importa ensamblados y módulos no enlazados. Este método es similar a [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), pero funciona incluso si no existe el archivo que se importa en el disco.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +45,7 @@ HRESULT ImportFile2(
  Nombre del archivo que desea importar.  
   
  `pszTargetName`  
- Nombre de archivo de salida opcionales que puede usarse para cambiar el nombre del archivo cuando se vincule al ensamblado.  
+ Nombre de archivo de salida opcionales que puede usarse para cambiar el nombre del archivo porque está vinculado en el ensamblado.  
   
  `pAssemblyScopeIn`  
  Ámbito opcional [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaz.  
@@ -54,10 +54,10 @@ HRESULT ImportFile2(
  Si es TRUE, se utiliza ImportTypes, en caso contrario, la importación debe realizarse manualmente.  
   
  `pImportToken`  
- Recibe el identificador para el archivo o ensamblado.  
+ Recibe el Id. del archivo o ensamblado.  
   
  `ppAssemblyScope`  
- Recibe la [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaz. Es NULL si el archivo no es un ensamblado.  
+ Recibe el [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaz. Es NULL si el archivo no es un ensamblado.  
   
  `pdwCountOfScopes`  
  Recibe el número de archivos y/o ámbitos importados.  
@@ -68,7 +68,7 @@ HRESULT ImportFile2(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h.  
   
-## <a name="see-also"></a>Vea también  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

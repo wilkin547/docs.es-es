@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16d91156427c2ef7bdabd5ab11b01894fbced64c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bd29f6a0b0dfc0b7ab5b57bb61a3540d5caf66d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639658"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>ICLRDataEnumMemoryRegions::EnumMemoryRegions (Método)
-Enumera áreas específicas de la memoria.  
+Enumera las áreas especificadas de la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,12 +39,12 @@ HRESULT EnumMemoryRegions (
   
 #### <a name="parameters"></a>Parámetros  
  `callback`  
- [in] Un puntero a un [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) instancia que llama a este método para cada región de memoria que se va a enumerar para notificar al depurador el resultado.  
+ [in] Un puntero a un [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) instancia que se llama a este método para cada región de memoria que se va a enumerar para notificar al depurador el resultado.  
   
- La enumeración de regiones de memoria continúa incluso si la devolución de llamada indica un error.  
+ La enumeración de áreas de memoria continúa incluso si la devolución de llamada indica un error.  
   
  `miniDumpFlags`  
- [in] No usado.  
+ [in] No se utiliza.  
   
  `clrFlags`  
  [in] Un valor de la [CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md) enumeración que especifica las regiones de memoria que se van a enumerar.  
@@ -53,13 +53,13 @@ HRESULT EnumMemoryRegions (
  Este método usa especificado [ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md) instancia para notificar al llamador de resultados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** ClrData.idl, ClrData.h  
+ **Encabezado**: ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRDataEnumMemoryRegions (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICLRDataEnumMemoryRegions (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 7718edaefbad18afa11b3e3680fac39da585a610
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1246ce5056c17641e10bb96f79b60090d6f43b89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525058"
 ---
 # <a name="configuring-services"></a>Configuración de servicios
 Cuando haya diseñado e implementado su contrato de servicios, usted está listo para configurar su servicio. En este momento define y personaliza cómo se expone su servicio a los clientes, además de especificar la dirección donde se puede encontrar, el transporte y codificación de mensajes que utiliza para enviar y recibir mensajes y el tipo de seguridad que requiere.  
@@ -18,19 +18,19 @@ Cuando haya diseñado e implementado su contrato de servicios, usted está listo
   
 ## <a name="in-this-section"></a>En esta sección  
  [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
- A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de WCF. Si no proporciona ninguna configuración de WCF para un servicio concreto, el tiempo de ejecución configurará automáticamente con comportamientos, enlaces y extremos predeterminados.  
+ A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de WCF. Si no proporciona ninguna configuración de WCF para un servicio determinado, el tiempo de ejecución configura automáticamente el servicio con los comportamientos, enlaces y puntos de conexión predeterminados.  
   
  [Configuración de servicios mediante archivos de configuración](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Un servicio de Windows Communication Foundation (WCF) es que puede configurar mediante la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tecnología de configuración. Normalmente, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar los datos, como las direcciones de punto de conexión (las direcciones reales utilizadas para comunicarse con el servicio) en una base equipo por equipo.  
+ Un servicio de Windows Communication Foundation (WCF) es configurable utilizando el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tecnología de configuración. Normalmente, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar los datos, como las direcciones de punto de conexión (las direcciones reales utilizadas para comunicarse con el servicio) en una base equipo por equipo.  
   
  [Enlaces](../../../docs/framework/wcf/bindings.md)  
- Además, WCF incluye varias configuraciones comunes proporcionadas por el sistema en forma de enlaces que le permiten seleccionar rápidamente las características más básicas para la comunicación entre un cliente y servicio, como los transportes, seguridad y utilizan codificaciones de mensaje.  
+ Además, WCF incluye varias configuraciones comunes proporcionadas por el sistema en forma de los enlaces que le permiten seleccionar rápidamente las características más básicas para la comunicación entre un cliente y servicio, como los transportes, seguridad y utilizan codificaciones de mensaje.  
   
  [Puntos de conexión](../../../docs/framework/wcf/endpoints.md)  
- Toda la comunicación con un servicio WCF se produce a través de la *extremos* del servicio. Los puntos de conexión contienen el contrato, la información de configuración que se especifica en los enlaces, y las direcciones que indican dónde encontrar el servicio o dónde obtener información sobre el servicio.  
+ Se produce toda la comunicación con un servicio WCF a través de la *extremos* del servicio. Los puntos de conexión contienen el contrato, la información de configuración que se especifica en los enlaces, y las direcciones que indican dónde encontrar el servicio o dónde obtener información sobre el servicio.  
   
  [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)  
- Uso de WCF y que existe mecanismos de seguridad, puede implementar confidencialidad, integridad, autenticación y autorización en cualquier servicio. También puede revisar los éxitos de seguridad y errores.  
+ Con WCF y existente mecanismos de seguridad, puede implementar confidencialidad, integridad, autenticación y autorización en cualquier servicio. También puede revisar los éxitos de seguridad y errores.  
   
  [Creación de servicios interoperables de WS-I Basic Profile 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Los requisitos para implementar un servicio interoperable con servicios y clientes en cualquier otra plataforma o sistema operativo se describen en la especificación WS-I Basic Profile 1.1.  
@@ -55,7 +55,7 @@ Cuando haya diseñado e implementado su contrato de servicios, usted está listo
   
  [Administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md)  
   
-## <a name="see-also"></a>Vea también  
- [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)  
- [Detalles de las características de WCF](../../../docs/framework/wcf/feature-details/index.md)
+## <a name="see-also"></a>Vea también
+- [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)
+- [Detalles de las características de WCF](../../../docs/framework/wcf/feature-details/index.md)

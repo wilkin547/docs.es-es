@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 7ba774bfcd629a7518602d4b971e86a690b2dd83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 367cbd373df2a38a56e5362f66bedd5c0ec24efb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522770"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (Modificador genérico) (Visual Basic)
 Para los parámetros de tipo genérico, la `Out` palabra clave especifica que el tipo es covariante.  
@@ -34,11 +34,11 @@ Para los parámetros de tipo genérico, la `Out` palabra clave especifica que el
   
 -   El parámetro de tipo no se usa como restricción genérica para los métodos de interfaz.  
   
- En un delegado genérico, un parámetro de tipo se puede declarar covariante si se usa solo como un tipo de valor devuelto del método y no se usan para los argumentos de método.  
+ En un delegado genérico, un parámetro de tipo puede se puede declarar como covariante si se usa solo como un tipo de valor devuelto del método y no se usan para los argumentos de método.  
   
  La covarianza y la contravarianza son compatibles con los tipos de referencia, pero no lo son con los tipos de valor.  
   
- En Visual Basic, no puede declarar eventos en las interfaces covariantes sin especificar el tipo de delegado. Además, no pueden tener anidadas interfaces covariantes clases, enumeraciones o estructuras, pero puede haber interfaces anidadas.  
+ En Visual Basic, no puede declarar eventos en las interfaces covariantes sin especificar el tipo de delegado. Además, no pueden tener anidadas interfaces covariante clases, enumeraciones o estructuras, pero puede haber interfaces anidadas.  
   
 ## <a name="behavior"></a>Comportamiento  
  Una interfaz con un parámetro de tipo covariante permite que sus métodos devuelvan tipos más derivados que los especificados por el parámetro de tipo. Por ejemplo, dado que en .NET Framework 4, en <xref:System.Collections.Generic.IEnumerable%601>, el tipo T es covariante, puede asignar un objeto del tipo `IEnumerabe(Of String)` a otro objeto del tipo `IEnumerable(Of Object)` sin usar ningún método de conversión especial.  
@@ -51,10 +51,10 @@ Para los parámetros de tipo genérico, la `Out` palabra clave especifica que el
  [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante. También muestra cómo puede usar la conversión implícita de tipos de delegado.  
+ En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante. También se muestra cómo usar la conversión implícita de tipos de delegado.  
   
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Varianza en interfaces genéricas](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+## <a name="see-also"></a>Vea también
+- [Varianza en interfaces genéricas](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

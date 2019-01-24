@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Controlar una animación mediante From, To y By'
+title: Procedimiento Controlar una animación mediante From, To y By
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], From/to/by
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dda8cdb6159cc6d8e6da5b7d430ebf76aaa100b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530316"
 ---
-# <a name="how-to-control-an-animation-using-from-to-and-by"></a>Cómo: Controlar una animación mediante From, To y By
+# <a name="how-to-control-an-animation-using-from-to-and-by"></a>Procedimiento Controlar una animación mediante From, To y By
 Un "From/To/By" o "animación básica" crea una transición entre dos valores de destino (consulte [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) para obtener una introducción a distintos tipos de animaciones). Para establecer los valores de destino de una animación básica, use su <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, y <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedades.  La tabla siguiente resume cómo el <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, y <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> propiedades pueden usarse conjuntamente o por separado los valores determinar el destino de una animación.  
   
 |Propiedades especificadas|Comportamiento resultante|  
@@ -37,7 +37,7 @@ Un "From/To/By" o "animación básica" crea una transición entre dos valores de
 ## <a name="example"></a>Ejemplo  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Ejemplo de valores de destino de animación From, To y By](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>Vea también
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Ejemplo de valores de destino de animación From, To y By](https://go.microsoft.com/fwlink/?LinkID=159988)

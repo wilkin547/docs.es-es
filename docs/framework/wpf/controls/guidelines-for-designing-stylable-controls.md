@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545035"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Instrucciones para el diseño de controles con estilos
 En este documento se resume un conjunto de procedimientos recomendados que se deben tener en cuenta al diseñar un control con el que pretende crear estilos y plantillas con facilidad. Este conjunto de procedimientos se obtiene de una gran serie de pruebas y errores al trabajar con estilos de control de temas para el conjunto de controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] integrado. Se ha observado que una aplicación de estilos correcta es tanto una función de un modelo de objeto bien diseñado como del propio estilo. Este documento está destinado a los autores de controles, y no a los autores de estilos.  
@@ -30,10 +30,10 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
  Para obtener una introducción a los estilos y plantillas, vea [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
-## <a name="before-you-start-understanding-your-control"></a>Antes de empezar: conocer los propios controles  
+## <a name="before-you-start-understanding-your-control"></a>Antes de empezar: Introducción al Control  
  Antes de empezar con estas instrucciones, es importante conocer y definir el uso común de un control propio. La aplicación de estilos brinda un conjunto de posibilidades que suele ser difícil de controlar. Los controles escritos para un uso general (es decir, en muchas aplicaciones y por parte de muchos desarrolladores) se enfrentan al desafío de que la aplicación de estilo puede utilizarse para realizar cambios de gran alcance en el aspecto visual del control. De hecho, el control con estilo puede no asemejarse ni siquiera a las intenciones del autor del control. Habida cuenta de que la aplicación de estilo suele ofrecer una flexibilidad sin límites, puede basarse en la idea del uso común para ayudar a definir el ámbito de sus decisiones.  
   
- Para entender el uso común del control, es conveniente pensar en la propuesta de valor del control. ¿Qué aporta este control a la tabla que no puede ofrecer ningún otro control? El uso común no conlleva ningún aspecto visual concreto, sino más bien la filosofía del control y un conjunto razonable de expectativas sobre su uso. Este conocimiento permite realizar algunas suposiciones sobre el modelo de composición y los comportamientos definidos por el estilo del control en el caso habitual. En el caso de <xref:System.Windows.Controls.ComboBox>, por ejemplo, entender el uso común no obtendrá ninguna información sobre si un determinado <xref:System.Windows.Controls.ComboBox> tiene esquinas redondeadas, pero se le ofrecerá una visión sobre el hecho de que el <xref:System.Windows.Controls.ComboBox> probablemente necesita una ventana emergente y alguna manera de alternancia si está abierto.  
+ Para entender el uso común del control, es conveniente pensar en la propuesta de valor del control. ¿Qué aporta este control a la tabla que no puede ofrecer ningún otro control? El uso común no conlleva ningún aspecto visual concreto, sino más bien la filosofía del control y un conjunto razonable de expectativas sobre su uso. Este conocimiento permite realizar algunas suposiciones sobre el modelo de composición y los comportamientos definidos por el estilo del control en el caso habitual. En el caso de <xref:System.Windows.Controls.ComboBox>, por ejemplo, conocer el uso común no aporta ninguna información sobre si un determinado <xref:System.Windows.Controls.ComboBox> tiene esquinas redondeadas, pero le proporcionará información sobre el hecho de que el <xref:System.Windows.Controls.ComboBox> probablemente necesita una ventana emergente y cierto nivel de alternancia si está abierto.  
   
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>Instrucciones generales  
@@ -46,20 +46,20 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
   
     -   No lance excepciones cuando no se respeta cualquier aspecto de un contrato de plantilla. En este sentido, los paneles no deben iniciar excepciones si tienen demasiados o muy pocos elementos secundarios.  
   
--   **Funcionalidad periférica de factor en elementos auxiliares de plantilla.** Cada control debe centrarse en su funcionalidad principal y en su propuesta de valor verdadero, cuya definición debe realizarse según el uso común del control. Para ello, use los elementos de redacción y auxiliares dentro de la plantilla, a fin de habilitar las visualizaciones y los comportamientos periféricos, es decir, aquellos comportamientos y visualizaciones que no contribuyen a la funcionalidad principal del control. Los elementos auxiliares se dividen en tres categorías:  
+-   **Funcionalidad periférica de factor en elementos del asistente con plantillas.** Cada control debe centrarse en su funcionalidad principal y en su propuesta de valor verdadero, cuya definición debe realizarse según el uso común del control. Para ello, use los elementos de redacción y del asistente dentro de la plantilla, a fin de habilitar las visualizaciones y los comportamientos periféricos, es decir, aquellos comportamientos y visualizaciones que no contribuyen a la funcionalidad principal del control. Los elementos del asistente se dividen en tres categorías:  
   
-    -   Los tipos auxiliares **independientes** son controles públicos y reutilizables o primitivos que se usan de forma "anónima" en una plantilla, lo que significa que ni el elemento auxiliar ni el control con estilo tienen constancia del otro. Técnicamente, cualquier elemento puede ser un tipo anónimo, pero en este contexto, el término describe los tipos que encapsulan la funcionalidad especializada para habilitar escenarios concretos.  
+    -   Los tipos del asistente **independientes** son controles públicos y reutilizables o primitivos que se usan de forma "anónima" en una plantilla, lo que significa que ni el elemento del asistente ni el control con estilo tienen constancia del otro. Técnicamente, cualquier elemento puede ser un tipo anónimo, pero en este contexto, el término describe los tipos que encapsulan la funcionalidad especializada para habilitar escenarios concretos.  
   
-    -   Los elementos auxiliares **basados en tipos** son nuevos tipos que encapsulan la funcionalidad especializada. Estos elementos se suelen diseñar con un intervalo de funcionalidad menor que los controles comunes o primitivos. A diferencia de los elementos auxiliares independientes, los elementos auxiliares basados en tipos son conscientes del contexto en el que se utilizan y normalmente deben compartir los datos con el control a cuya plantilla pertenecen.  
+    -   Los elementos del asistente **basados en tipos** son nuevos tipos que encapsulan la funcionalidad especializada. Estos elementos se suelen diseñar con un intervalo de funcionalidad menor que los controles comunes o primitivos. A diferencia de los elementos del asistente independientes, los elementos del asistente basados en tipos son conscientes del contexto en el que se utilizan y normalmente deben compartir los datos con el control a cuya plantilla pertenecen.  
   
-    -   Los elementos auxiliares **con nombre** son controles comunes o primitivos que un control espera encontrar por su nombre dentro de su plantilla. A estos elementos se les asigna un nombre conocido en la plantilla, de tal manera que se permite a un control encontrar el elemento e interactuar con él mediante programación. En cualquier plantilla solo puede haber un elemento con un nombre determinado.  
+    -   Los elementos del asistente **con nombre** son controles comunes o primitivos que un control espera encontrar por su nombre dentro de su plantilla. A estos elementos se les asigna un nombre conocido en la plantilla, de tal manera que se permite a un control encontrar el elemento e interactuar con él mediante programación. En cualquier plantilla solo puede haber un elemento con un nombre determinado.  
   
-     En la tabla siguiente se muestran los elementos auxiliares que hoy emplean los estilos del control, aunque no se trata de una lista exhaustiva:  
+     En la tabla siguiente se muestran los elementos del asistente que hoy emplean los estilos del control, aunque no se trata de una lista exhaustiva:  
   
     |Elemento|Tipo|Utilizada por|  
     |-------------|----------|-------------|  
-    |<xref:System.Windows.Controls.ContentPresenter>|Basado en tipos|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>, y así sucesivamente (todos los <xref:System.Windows.Controls.ContentControl> tipos)|  
-    |<xref:System.Windows.Controls.ItemsPresenter>|Basado en tipos|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>, y así sucesivamente (todos los <xref:System.Windows.Controls.ItemsControl> tipos)|  
+    |<xref:System.Windows.Controls.ContentPresenter>|Basado en tipos|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>, etc. (todos los <xref:System.Windows.Controls.ContentControl> tipos)|  
+    |<xref:System.Windows.Controls.ItemsPresenter>|Basado en tipos|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>, etc. (todos los <xref:System.Windows.Controls.ItemsControl> tipos)|  
     |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Con nombre|<xref:System.Windows.Controls.ToolBar>|  
     |<xref:System.Windows.Controls.Primitives.Popup>|Independiente|<xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolTip>, etc.|  
     |<xref:System.Windows.Controls.Primitives.RepeatButton>|Con nombre|<xref:System.Windows.Controls.Slider>, <xref:System.Windows.Controls.Primitives.ScrollBar>, etc.|  
@@ -69,13 +69,13 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
     |<xref:System.Windows.Controls.TextBox>|Con nombre|<xref:System.Windows.Controls.ComboBox>|  
     |<xref:System.Windows.Controls.Primitives.TickBar>|Basado en tipos|<xref:System.Windows.Controls.Slider>|  
   
--   **Minimizar las configuraciones de propiedad o los enlaces especificados por el usuario necesarios en los elementos auxiliares**. Es habitual que un elemento auxiliar requiera determinados enlaces o configuraciones de propiedad para poder funcionar correctamente en una plantilla de control. En la medida de lo posible, el elemento auxiliar y el control con plantilla deben establecer esta configuración. Al establecer propiedades o enlaces, hay que tener precaución de no invalidar los valores establecidos por el usuario. Los procedimientos recomendados específicos son los siguientes:  
+-   **Minimizar las configuraciones de propiedad o los enlaces especificados por el usuario necesarios en los elementos del asistente**. Es habitual que un elemento del asistente requiera determinados enlaces o configuraciones de propiedad para poder funcionar correctamente en una plantilla de control. En la medida de lo posible, el elemento del asistente y el control con plantilla deben establecer esta configuración. Al establecer propiedades o enlaces, hay que tener precaución de no invalidar los valores establecidos por el usuario. Los procedimientos recomendados específicos son los siguientes:  
   
-    -   Los elementos auxiliares con nombre deben identificarse mediante el elemento primario, y este último debe establecer la configuración necesaria en el elemento auxiliar.  
+    -   Los elementos del asistente con nombre deben identificarse mediante el elemento primario, y este último debe establecer la configuración necesaria en el elemento del asistente.  
   
-    -   Los elementos auxiliares basados en tipos deben establecer directamente en ellos mismos la configuración requerida. Para ello, es posible que el elemento auxiliar deba consultar información del contexto en que se usa, incluido su `TemplatedParent` (el tipo de control de la plantilla en que se usa). Por ejemplo, <xref:System.Windows.Controls.ContentPresenter> enlaza automáticamente la `Content` propiedad de su `TemplatedParent` a su <xref:System.Windows.Controls.ContentPresenter.Content%2A> propiedad cuando se usa en un <xref:System.Windows.Controls.ContentControl> tipo derivado.  
+    -   Los elementos del asistente basados en tipos deben establecer directamente en ellos mismos la configuración requerida. Para ello, es posible que el elemento del asistente deba consultar información del contexto en que se usa, incluido su `TemplatedParent` (el tipo de control de la plantilla en que se usa). Por ejemplo, <xref:System.Windows.Controls.ContentPresenter> enlaza automáticamente la `Content` propiedad de su `TemplatedParent` a su <xref:System.Windows.Controls.ContentPresenter.Content%2A> propiedad cuando se usa en un <xref:System.Windows.Controls.ContentControl> tipo derivado.  
   
-    -   No se pueden optimizar de esta forma los elementos auxiliares independientes porque, por definición, ni el elemento auxiliar ni el primario saben nada el uno del otro.  
+    -   No se pueden optimizar de esta forma los elementos del asistente independientes porque, por definición, ni el elemento del asistente ni el primario saben nada el uno del otro.  
   
 -   **Usar la propiedad Name para marcar los elementos dentro de una plantilla**. Un control que necesita buscar un elemento en su estilo para tener acceso a él mediante programación debe hacerlo mediante la propiedad `Name` y el paradigma `FindName`. Un control no debería producir una excepción cuando no se encuentra un elemento, pero de forma silenciosa y sencilla debe deshabilitar la funcionalidad que requiere ese elemento.  
   
@@ -83,23 +83,23 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
   
     1.  Enlace de propiedades. Ejemplo: enlace entre <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
-    2.  Animaciones de propiedades o cambios de propiedades desencadenados. Ejemplo: el estado de activación de un <xref:System.Windows.Controls.Button>.  
+    2.  Animaciones de propiedades o cambios de propiedades desencadenados. Ejemplo: el estado de desplazamiento de un <xref:System.Windows.Controls.Button>.  
   
     3.  Comando. Ejemplo: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> en <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
-    4.  Elementos auxiliares independientes. Ejemplo: <xref:System.Windows.Controls.Primitives.TabPanel> en <xref:System.Windows.Controls.TabControl>.  
+    4.  Elementos del asistente independientes. Ejemplo: <xref:System.Windows.Controls.Primitives.TabPanel> en <xref:System.Windows.Controls.TabControl>.  
   
-    5.  Tipos auxiliares basados en tipos. Ejemplo: <xref:System.Windows.Controls.ContentPresenter> en <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Primitives.TickBar> en <xref:System.Windows.Controls.Slider>.  
+    5.  Tipos del asistente basados en tipos. Ejemplo: <xref:System.Windows.Controls.ContentPresenter> en <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Primitives.TickBar> en <xref:System.Windows.Controls.Slider>.  
   
-    6.  Elementos auxiliares con nombre. Ejemplo: <xref:System.Windows.Controls.TextBox> en <xref:System.Windows.Controls.ComboBox>.  
+    6.  Elementos del asistente con nombre. Ejemplo: <xref:System.Windows.Controls.TextBox> en <xref:System.Windows.Controls.ComboBox>.  
   
-    7.  Eventos traspasados desde los tipos auxiliares con nombre. Si realiza escuchas de eventos traspasados desde un elemento de estilo, debe requerir que el elemento que genera el evento se pueda identificar de manera exclusiva. Ejemplo: <xref:System.Windows.Controls.Primitives.Thumb> en <xref:System.Windows.Controls.ToolBar>.  
+    7.  Eventos traspasados desde los tipos del asistente con nombre. Si realiza escuchas de eventos traspasados desde un elemento de estilo, debe requerir que el elemento que genera el evento se pueda identificar de manera exclusiva. Ejemplo: <xref:System.Windows.Controls.Primitives.Thumb> en <xref:System.Windows.Controls.ToolBar>.  
   
     8.  Comportamiento personalizado de `OnRender`. Ejemplo: <xref:Microsoft.Windows.Themes.ButtonChrome> en <xref:System.Windows.Controls.Button>.  
   
 -   **Usar desencadenadores de estilo (a diferencia de los desencadenadores de plantilla) con moderación**. Los desencadenadores que afectan a las propiedades de elementos en la plantilla se deben declarar en la plantilla. Los desencadenadores que afectan a las propiedades del control (no `TargetName`) se pueden declarar en el estilo, a menos que sepa que el cambio de la plantilla también destruye el desencadenador.  
   
--   **Ser coherente con los patrones de estilo existentes.** Muchas veces, hay varias formas de resolver un problema. Debe conocer los patrones de aplicación de estilos de control existentes y, cuando sea posible, mantener la coherencia con ellos. Esto es especialmente importante para los controles que se derivan del mismo tipo base (por ejemplo, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, y así sucesivamente).  
+-   **Ser coherente con los patrones de estilo existentes.** Muchas veces, hay varias formas de resolver un problema. Debe conocer los patrones de aplicación de estilos de control existentes y, cuando sea posible, mantener la coherencia con ellos. Esto es especialmente importante para los controles que derivan del mismo tipo base (por ejemplo, <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>, y así sucesivamente).  
   
 -   **Exponer propiedades para habilitar escenarios de personalización comunes sin volver a crear plantillas**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admite partes acoplables/personalizables, por lo que un usuario de control solo puede usar dos métodos de personalización: configurar propiedades directamente o configurar propiedades con estilos. Habida cuenta de lo anterior, resulta conveniente exponer un número limitado de propiedades orientadas a escenarios de personalización muy comunes y de alta prioridad, ya que, de lo contrario, sería necesario volver a crear plantillas. A continuación se presentan procedimientos recomendados para saber cuándo y cómo habilitar escenarios de personalización:  
   
@@ -118,6 +118,6 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
   
 -   **Los estilos de temas no necesitan tener una semántica de "diseño" coherente en todos los temas**. Por ejemplo, el estilo predeterminado no necesita garantizar que un control puede ocupar el mismo tamaño en todos los temas o garantizar que un control tendrá los mismos márgenes de contenido o espaciado interno en todos los temas.  
   
-## <a name="see-also"></a>Vea también  
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Información general sobre la creación de controles](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a>Vea también
+- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Información general sobre la creación de controles](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

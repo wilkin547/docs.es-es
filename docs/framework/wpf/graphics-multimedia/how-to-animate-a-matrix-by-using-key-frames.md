@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Animar un objeto Matrix mediante fotogramas clave'
+title: Procedimiento Animar un objeto Matrix mediante fotogramas clave
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], Matrix properties with key frames
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 8f58b43a870f2c85ae4349965f586a33e2f75a2a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fff550a5a3a85575fe86c5290aa604ab00f1437f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518519"
 ---
-# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Cómo: Animar un objeto Matrix mediante fotogramas clave
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Procedimiento Animar un objeto Matrix mediante fotogramas clave
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propiedad de un <xref:System.Windows.Media.MatrixTransform> mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,8 +34,8 @@ En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.MatrixTran
   
  Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>  
- <xref:System.Windows.Media.MatrixTransform>  
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>
+- <xref:System.Windows.Media.MatrixTransform>
+- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

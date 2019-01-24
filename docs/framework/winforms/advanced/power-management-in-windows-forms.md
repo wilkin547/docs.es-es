@@ -8,32 +8,32 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 845cc9c910d63dfc7460bba0d5368b5b1e63efcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 172472cf9a2e1bc7bb81448dc8793a4eaeb12da4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546561"
 ---
 # <a name="power-management-in-windows-forms"></a>Administración de energía en formularios Windows Forms
-Las aplicaciones de formularios Windows Forms pueden aprovechar las ventajas de las características de administración de energía en el sistema operativo Windows. Las aplicaciones pueden supervisar el estado de energía de un equipo y realizar una acción cuando se produce un cambio de estado. Por ejemplo, si la aplicación se ejecuta en un equipo portátil, puede deshabilitar determinadas características de la aplicación cuando la carga de la batería del equipo se encuentra en un nivel determinado.  
+Las aplicaciones de Windows Forms pueden aprovechar las ventajas de las características de administración de energía en el sistema operativo de Windows. Las aplicaciones pueden supervisar el estado de alimentación de un equipo y actuar cuando se produce un cambio de estado. Por ejemplo, si la aplicación se ejecuta en un equipo portátil, es posible que desee deshabilitar determinadas características de la aplicación cuando la carga de batería del equipo cae por debajo de un nivel determinado.  
   
- El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona un <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> evento que tiene lugar siempre que hay un cambio en el estado de energía, como cuando un usuario suspende o reanuda el sistema operativo, o cuando cambia el estado de alimentación de CA o el estado de la batería. El <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> propiedad de la <xref:System.Windows.Forms.SystemInformation> clase puede ser usado para consultar el estado actual, tal como se muestra en el ejemplo de código siguiente.  
+ El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona un <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> evento que tiene lugar siempre que haya un cambio en el estado de energía, como cuando un usuario suspende o reanuda el sistema operativo, o cuando cambia el estado de alimentación de CA o el estado de la batería. El <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> propiedad de la <xref:System.Windows.Forms.SystemInformation> puede ser la clase se usa para consultar el estado actual, tal como se muestra en el ejemplo de código siguiente.  
   
  [!code-csharp[PowerMode#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
  [!code-vb[PowerMode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  
   
  Además el <xref:System.Windows.Forms.BatteryChargeStatus> enumeraciones, el <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> propiedad también contiene enumeraciones para determinar la capacidad de la batería (<xref:System.Windows.Forms.PowerStatus.BatteryFullLifetime%2A>) y porcentaje de carga de batería (<xref:System.Windows.Forms.PowerStatus.BatteryLifePercent%2A>, <xref:System.Windows.Forms.PowerStatus.BatteryLifeRemaining%2A>).  
   
- Puede usar el <xref:System.Windows.Forms.Application.SetSuspendState%2A> método de la <xref:System.Windows.Forms.Application> para poner un equipo en hibernación o modo de suspensión. Si el `force` argumento está establecido en `false`, el sistema operativo difundirá un evento a todas las aplicaciones que solicite permiso para suspender. Si el `disableWakeEvent` argumento está establecido en `true`, el sistema operativo deshabilita todos los eventos de activación.  
+ Puede usar el <xref:System.Windows.Forms.Application.SetSuspendState%2A> método de la <xref:System.Windows.Forms.Application> para poner un equipo en hibernación o modo de suspensión. Si el `force` argumento está establecido en `false`, el sistema operativo difundirá a todas las aplicaciones que solicite permiso para suspender un evento. Si el `disableWakeEvent` argumento está establecido en `true`, el sistema operativo deshabilita todos los eventos de activación.  
   
- En el ejemplo de código siguiente se muestra cómo poner un equipo en hibernación.  
+ El ejemplo de código siguiente muestra cómo poner un equipo en hibernación.  
   
  [!code-csharp[PowerMode#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
  [!code-vb[PowerMode#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>  
- <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>  
- <xref:System.Windows.Forms.Application.SetSuspendState%2A>  
- <xref:Microsoft.Win32.SystemEvents.SessionSwitch>
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>
+- <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>
+- <xref:System.Windows.Forms.Application.SetSuspendState%2A>
+- <xref:Microsoft.Win32.SystemEvents.SessionSwitch>

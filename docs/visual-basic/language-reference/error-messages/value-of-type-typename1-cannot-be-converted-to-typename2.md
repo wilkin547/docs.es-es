@@ -1,5 +1,5 @@
 ---
-title: Valor de tipo &#39; &lt;typename1&gt; &#39; no se puede convertir a &#39; &lt;nombredetipo2&gt;&#39;
+title: Valor de tipo &#39; &lt;typename1&gt; &#39; no se puede convertir a &#39; &lt;typename2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30955
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 9b3c029ed7bf73ff92dba65438d797b27fa135f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00ce143eecefbdf2f1b9e204ae2005be4bb81e39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627608"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Valor de tipo &#39; &lt;typename1&gt; &#39; no se puede convertir a &#39; &lt;nombredetipo2&gt;&#39;
-Valor de tipo '\<NombreTipo1 >' no se puede convertir a '\<nombredetipo2 >'. Error de coincidencia de tipo podría ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '\<assemblyname >'. Intente reemplazar la referencia de archivo a '\<filepath >' en el proyecto '\<projectname1 >' con una referencia de proyecto a '\<projectname2 >'.  
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Valor de tipo &#39; &lt;typename1&gt; &#39; no se puede convertir a &#39; &lt;typename2&gt;&#39;
+Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >'. Discordancia de tipos podría ser debido a la mezcla de una referencia de archivo con una referencia de proyecto al ensamblado '\<assemblyname >'. Intente reemplazar la referencia de archivo a '\<filepath >' en el proyecto '\<projectname1 >' con una referencia de proyecto a '\<projectname2 >'.  
   
  En una situación donde un proyecto hace una referencia de proyecto y una referencia de archivo, el compilador no puede garantizar que se puede convertir un tipo a otro.  
   
@@ -47,19 +47,19 @@ Valor de tipo '\<NombreTipo1 >' no se puede convertir a '\<nombredetipo2 >'. Err
   
  `End Class`  
   
- Proyecto `P1` hace una referencia de proyecto indirecta a través del proyecto `P2` al proyecto `P3`y también una referencia de archivo directa a `P3`. La declaración de `commonObject` utiliza la referencia de archivo a `P3`, mientras que la llamada a `P2.getCommonClass` usa la referencia al proyecto `P3`.  
+ Proyecto `P1` hace una referencia de proyecto indirecta a través del proyecto `P2` al proyecto `P3`y también una referencia de archivos directas a `P3`. La declaración de `commonObject` usa la referencia de archivo a `P3`, mientras que la llamada a `P2.getCommonClass` usa la referencia al proyecto `P3`.  
   
- El problema en esta situación es que la referencia de archivo especifica una ruta de acceso y nombre del archivo de salida de `P3` (generalmente p3.dll tanto), mientras que las referencias de proyecto identifican el proyecto de origen (`P3`) por nombre de proyecto. Por este motivo, el compilador no puede garantizar que el tipo `P3.commonClass` proceden del mismo código fuente a través de las dos referencias diferentes.  
+ El problema en esta situación es que la referencia de archivo especifica una ruta de acceso y nombre del archivo de salida de `P3` (generalmente p3.dll tanto), mientras que las referencias de proyecto identifican el proyecto de origen (`P3`) por el nombre del proyecto. Por este motivo, el compilador no puede garantizar que el tipo `P3.commonClass` procede del mismo código fuente a través de las dos referencias diferentes.  
   
- Esta situación se produce normalmente cuando las referencias de proyecto y se mezclan las referencias de archivo. En la ilustración anterior, el problema no se producirían si `P1` realiza una referencia de proyecto directa `P3` en lugar de una referencia de archivo.  
+ Esta situación se produce normalmente cuando las referencias de proyecto y se mezclan las referencias de archivo. En la ilustración anterior, el problema no ocurriría si `P1` realiza una referencia al proyecto directo `P3` en lugar de una referencia de archivo.  
   
- **Id. de error:** BC30955  
+ **Identificador de error:** BC30955  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
 -   Cambiar la referencia de archivo a una referencia de proyecto.  
   
-## <a name="see-also"></a>Vea también  
- [Conversiones de tipos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)  
- 
+## <a name="see-also"></a>Vea también
+- [Conversiones de tipos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)
+

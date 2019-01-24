@@ -2,12 +2,12 @@
 title: Acceso seguro a datos
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494644"
 ---
 # <a name="secure-data-access"></a>Acceso seguro a datos
 Para escribir código de ADO.NET seguro, debe comprender los mecanismos de seguridad disponibles en el almacén de datos subyacente o en la base de datos. También debe tener en cuenta las implicaciones en la seguridad de otras características o componentes que pudieran incluirse en la aplicación.  
@@ -87,10 +87,10 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
 |[Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)|Contiene temas que describen cómo exponer componentes COM a .NET Framework y cómo exponer componentes de .NET Framework a COM.|
 |[Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contiene temas avanzados como, por ejemplo, los ensamblados de interoperabilidad principal, los subprocesos y la serialización personalizada.|
 
-## <a name="see-also"></a>Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Recomendaciones de estrategias de acceso a datos](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [Recomendaciones de estrategias de acceso a datos](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

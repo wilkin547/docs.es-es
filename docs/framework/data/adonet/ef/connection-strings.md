@@ -2,17 +2,17 @@
 title: Cadenas de conexión de ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497464"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Cadenas de conexión de ADO.NET Entity Framework
 Una cadena de conexión contiene información de inicialización que se transfiere como un parámetro desde un proveedor de datos a un origen de datos. La sintaxis depende del proveedor de datos y la cadena de conexión se analiza mientras se intenta abrir una conexión. Las cadenas de conexión que usa Entity Framework contienen la información que se emplea para conectar con el proveedor de datos ADO.NET subyacente que Entity Framework admite. También contienen información sobre los archivos del modelo y de asignación necesarios.  
   
- El proveedor de EntityClient utiliza la cadena de conexión al obtener acceso a los metadatos del modelo y de asignación y al conectar con el origen de datos. Se puede obtener acceso a la cadena de conexión o establecerse a través de la propiedad <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder> se puede utilizar para construir mediante programación los parámetros de la cadena de conexión o tener acceso a ellos. Para obtener más información, consulte [Cómo: compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ El proveedor de EntityClient utiliza la cadena de conexión al obtener acceso a los metadatos del modelo y de asignación y al conectar con el origen de datos. Se puede obtener acceso a la cadena de conexión o establecerse a través de la propiedad <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder> se puede utilizar para construir mediante programación los parámetros de la cadena de conexión o tener acceso a ellos. Para obtener más información, vea [Cómo: Compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  El [herramientas de Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) generan una cadena de conexión que se almacena en el archivo de configuración de la aplicación. <xref:System.Data.Objects.ObjectContext> recupera esta información de conexión automáticamente al crear consultas de objetos. Se puede tener acceso al elemento  <xref:System.Data.EntityClient.EntityConnection> que usa una instancia de <xref:System.Data.Objects.ObjectContext> desde la propiedad <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obtener más información, consulte [administrar conexiones y transacciones](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Opción|Descripción|  
 |-|-|  
-|`assemblyFullName`|Nombre completo de un ensamblado con el recurso incrustado. El nombre incluye el nombre sencillo, nombre de la versión, referencia cultural admitida y clave pública, como se indica a continuación:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Los recursos se pueden incrustar en cualquier ensamblado al que la aplicación pueda tener acceso.<br /><br /> Si especifica un carácter comodín (\*) para `assemblyFullName`, el tiempo de ejecución de Entity Framework buscará los recursos en las siguientes ubicaciones, en este orden:<br /><br /> 1.  El ensamblado que realiza la llamada.<br />2.  Los ensamblados a los que se hace referencia.<br />3.  Los ensamblados en el directorio bin de una aplicación.<br /><br /> Si los archivos no están en ninguna de estas ubicaciones, se lanzará una excepción. **Nota:** cuando se usa el carácter comodín (*), Entity Framework tiene que buscar a través de todos los ensamblados de recursos con el nombre correcto. Para mejorar el rendimiento, especifique el nombre de ensamblado en lugar del carácter comodín.|  
+|`assemblyFullName`|Nombre completo de un ensamblado con el recurso incrustado. El nombre incluye el nombre sencillo, nombre de la versión, referencia cultural admitida y clave pública, como se indica a continuación:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Los recursos se pueden incrustar en cualquier ensamblado al que la aplicación pueda tener acceso.<br /><br /> Si especifica un carácter comodín (\*) para `assemblyFullName`, el tiempo de ejecución de Entity Framework buscará los recursos en las siguientes ubicaciones, en este orden:<br /><br /> 1.  El ensamblado que realiza la llamada.<br />2.  Los ensamblados a los que se hace referencia.<br />3.  Los ensamblados en el directorio bin de una aplicación.<br /><br /> Si los archivos no están en ninguna de estas ubicaciones, se lanzará una excepción. **Nota:**  Al utilizar el carácter comodín (*), Entity Framework tiene que buscar a través de todos los ensamblados los recursos con el nombre correcto. Para mejorar el rendimiento, especifique el nombre de ensamblado en lugar del carácter comodín.|  
 |`resourceName`|Nombre del recurso incluido, como AdvendtureWorksModel.csdl. Los servicios de metadatos sólo buscarán los archivos o recursos con una de las extensiones siguientes: .csdl, .ssdl o .msl. Si no se especifica `resourceName`, se cargarán todos los recursos de metadatos. Los recursos deberían tener nombres únicos dentro de un ensamblado. Si varios archivos con el mismo nombre se definen en directorios diferentes en el ensamblado, la información de `resourceName` debe incluir la estructura de carpetas antes del nombre del recurso, por ejemplo nombreDeCarpeta.nombreDeArchivo.csdl.<br /><br /> `resourceName` no se requiere al especificar un carácter comodín (*) para `assemblyFullName`.|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  La resolución de la cadena de sustitución `DataDirectory` y el operador ~ no es recursiva. Por ejemplo, cuando `DataDirectory` incluye el carácter `~`, se lanza una excepción. De esta forma se evita una recursividad infinita.  
   
-## <a name="see-also"></a>Vea también  
- [Trabajo con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [Consideraciones de implementación](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Administrar conexiones y transacciones](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Cadenas de conexión](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>Vea también
+- [Trabajo con proveedores de datos](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Consideraciones de implementación](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Administrar conexiones y transacciones](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Cadenas de conexión](../../../../../docs/framework/data/adonet/connection-strings.md)

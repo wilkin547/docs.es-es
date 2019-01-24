@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Cifrar elementos XML con claves asimétricas'
+title: Procedimiento Cifrar elementos XML con claves asimétricas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61984d4778e42abf378a1369a86ba599d78980af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 4a38c2264bac92e9c2c0627718bf53539e6bec72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518272"
 ---
-# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Cómo: Cifrar elementos XML con claves asimétricas
+# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Procedimiento Cifrar elementos XML con claves asimétricas
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, vea la especificación de World Wide Web Consortium (W3C) para cifrado XML ubicado en <https://www.w3.org/TR/xmldsig-core/>.  
   
  Puede usar el cifrado de XML para reemplazar cualquier elemento o documento XML con un elemento <`EncryptedData`> que contenga los datos XML cifrados.  El elemento <`EncryptedData`> también puede contener subelementos con información sobre las claves y los procesos usados durante el cifrado.  El cifrado XML permite que un documento contenga varios elementos cifrados y permite cifrar varias veces un elemento.  En el ejemplo de código de este procedimiento se muestra cómo crear un elemento <`EncryptedData`> junto con otros subelementos que se pueden usar durante el posterior descifrado.  
   
  En este ejemplo se cifra un elemento XML mediante dos claves.  Genera un par de claves públicas/privadas RSA y lo guarda en un contenedor de claves seguras.  Después, el ejemplo crea una clave de sesión independiente mediante el algoritmo AES (Estándar de cifrado avanzado), también llamado algoritmo de Rijndael.  El ejemplo usa la clave de sesión AES para cifrar el documento XML y usa la clave pública RSA para cifrar la clave de sesión AES.  Por último, el ejemplo guarda la clave de sesión AES cifrada y los datos XML cifrados en el documento XML dentro de un nuevo elemento <`EncryptedData`>.  
   
- Para descifrar el elemento XML, recupere la clave privada RSA del contenedor de claves, úsela para descifrar la clave de sesión y, posteriormente, descifrar el documento.  Para obtener más información acerca de cómo descifrar un elemento XML cifrado mediante este procedimiento, consulte [Cómo: descifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
+ Para descifrar el elemento XML, recupere la clave privada RSA del contenedor de claves, úsela para descifrar la clave de sesión y, posteriormente, descifrar el documento.  Para obtener más información acerca de cómo descifrar un elemento XML cifrado mediante este procedimiento, consulte [Cómo: Descifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
  Este ejemplo resulta adecuado en aquellas situaciones en las que varias aplicaciones tienen que compartir datos cifrados o en las que una aplicación tiene que guardar datos cifrados entre los intervalos en los que se ejecuta.  
   
@@ -144,5 +144,5 @@ Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptograph
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Descifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Cómo: Descifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

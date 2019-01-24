@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 9fa123e5532e4c721af5f3ece4feeea92356d1fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 320d0ab4f90c446632225f3d3aabbfc2767f19a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526969"
 ---
 # <a name="exporting-schemas-from-classes"></a>Exportación de esquemas desde las clases
 Para generar esquemas (XSD) de lenguaje de definición de esquemas XML a partir de las clases utilizadas en el modelo de contrato de datos, utilice la clase <xref:System.Runtime.Serialization.XsdDataContractExporter> . En este tema se describe el proceso para crear los esquemas.  
@@ -43,12 +43,12 @@ Para generar esquemas (XSD) de lenguaje de definición de esquemas XML a partir 
 ## <a name="export-options"></a>Exportar opciones.  
  Puede establecer la propiedad <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> de <xref:System.Runtime.Serialization.XsdDataContractExporter> a una instancia de <xref:System.Runtime.Serialization.ExportOptions> para administrar varios aspectos del proceso de exportación. En concreto, puede establecer las opciones siguientes:  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Esta colección de `Type` representa los tipos conocidos para los tipos que se van a exportar. (Para obtener más información, consulte [tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Estos tipos conocidos se exportan en cada llamada `Export` además de los tipos pasados al método `Export`.  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Esta colección de `Type` representa los tipos conocidos para los tipos que se van a exportar. (Para obtener más información, consulte [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Estos tipos conocidos se exportan en cada llamada `Export` además de los tipos pasados al método `Export`.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. <xref:System.Runtime.Serialization.IDataContractSurrogate> se puede proporcionar a través de esta propiedad que personalizará el proceso de exportación. Para obtener más información, consulte [suplentes del contrato de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). De forma predeterminada, no se utiliza ningún suplente.  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. <xref:System.Runtime.Serialization.IDataContractSurrogate> se puede proporcionar a través de esta propiedad que personalizará el proceso de exportación. Para obtener más información, consulte [suplentes de contratos de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). De forma predeterminada, no se utiliza ningún suplente.  
   
-## <a name="helper-methods"></a>Métodos auxiliares  
- Además de su función primaria de exportar el esquema, `XsdDataContractExporter` proporciona varios métodos auxiliares útiles que proporcionan información sobre los tipos. Se incluyen los siguientes:  
+## <a name="helper-methods"></a>métodos del asistente  
+ Además de su función primaria de exportar el esquema, `XsdDataContractExporter` proporciona varios métodos del asistente útiles que proporcionan información sobre los tipos. Se incluyen los siguientes:  
   
 -   Método<xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> . Este método toma `Type` y devuelve <xref:System.Xml.XmlQualifiedName> que representa el nombre del elemento raíz y espacio de nombres que se utilizarían si este tipo se serializara como objeto raíz.  
   
@@ -58,9 +58,9 @@ Para generar esquemas (XSD) de lenguaje de definición de esquemas XML a partir 
   
  Las opciones de exportación afectan a todos estos métodos.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- [Importación y exportación de esquemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [Importación del esquema para generar clases](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- [Importación y exportación de esquemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Importación del esquema para generar clases](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

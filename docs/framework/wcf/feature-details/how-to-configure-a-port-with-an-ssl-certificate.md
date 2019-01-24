@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Configurar un puerto con un certificado SSL'
+title: Procedimiento Configurar un puerto con un certificado SSL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0a2ac22bfb5f84235d34a554df8cc1ad43ddc489
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521726"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Cómo: Configurar un puerto con un certificado SSL
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedimiento Configurar un puerto con un certificado SSL
 Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí mismos con el <xref:System.ServiceModel.WSHttpBinding> que utiliza seguridad de transporte de clase, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  La herramienta que se usa para configurar un puerto depende del sistema operativo que se esté ejecutando en el equipo.  
@@ -57,7 +57,7 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
   
 1.  Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. Para obtener más información, vea [Cómo: Ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Obtenga acceso a la huella digital del certificado. Para obtener más información, consulte [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Obtenga acceso a la huella digital del certificado. Para obtener más información, vea [Cómo: Recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Copie la huella digital del certificado en un editor de texto, como por ejemplo Bloc de notas.  
   
@@ -129,5 +129,5 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Vea también  
-* [Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>Vea también
+- [Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

@@ -8,35 +8,35 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: fb1af7d748faac78b26177af453a0e858f9e97c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496954"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
-Representa el valor predeterminado de cualquier tipo de datos. Para los tipos de referencia, el valor predeterminado es el `null` referencia. Para los tipos de valor, el valor predeterminado depende de si el tipo de valor es que aceptan valores NULL.  
+Representa el valor predeterminado de cualquier tipo de datos. Tipos de referencia, el valor predeterminado es el `null` referencia. Para los tipos de valor, el valor predeterminado depende de si el tipo de valor es que acepta valores NULL.  
   
 > [!NOTE]
->  Para los tipos de valor no acepta valores NULL, `Nothing` en Visual Basic difiere de `null` en C#. En Visual Basic, si establece una variable de un tipo de valor no acepta valores NULL a `Nothing`, la variable se establece en el valor predeterminado de su tipo declarado. En C#, si asigna una variable de un tipo de valor no acepta valores NULL a `null`, se produce un error en tiempo de compilación.  
+>  Para los tipos de valor distinto de null, `Nothing` en Visual Basic difiere `null` en C#. En Visual Basic, si establece una variable de un tipo de valor distinto de NULL para `Nothing`, la variable se establece en el valor predeterminado de su tipo declarado. En C#, si asigna una variable de un tipo de valor distinto de NULL en `null`, se produce un error de tiempo de compilación.  
   
 ## <a name="remarks"></a>Comentarios  
  `Nothing` representa el valor predeterminado de un tipo de datos. El valor predeterminado depende de si la variable es de un tipo de valor o de un tipo de referencia.  
   
- Una variable de un *tipo de valor* contiene directamente su valor. Tipos de valor incluyen todos los tipos de datos numéricos, `Boolean`, `Char`, `Date`, todas las estructuras y todas las enumeraciones. Una variable de un *tipo de referencia* almacena una referencia a una instancia del objeto en la memoria. Tipos de referencia incluyen clases, matrices, delegados y cadenas. Para obtener más información, consulta [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+ Una variable de un *tipo de valor* contiene directamente su valor. Tipos de valor incluyen todos los tipos de datos numéricos, `Boolean`, `Char`, `Date`, todas las estructuras y todas las enumeraciones. Una variable de un *tipo de referencia* almacena una referencia a una instancia del objeto en memoria. Tipos de referencia incluyen clases, delegados, matrices y cadenas. Para obtener más información, consulta [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
- Si una variable es de un valor de tipo, el comportamiento de `Nothing` depende de si la variable es de un tipo de datos que aceptan valores NULL. Para representar un tipo de valor que aceptan valores NULL, agregue un `?` modificador al nombre de tipo. Asignar `Nothing` a una variable que acepta valores NULL, Establece el valor en `null`. Para obtener más información y ejemplos, vea [tipos de valor que aceptan valores NULL](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
+ Si una variable es de un valor de tipo, el comportamiento de `Nothing` depende de si la variable es de tipo de datos que acepta valores NULL. Para representar un tipo de valor que acepta valores NULL, agregue un `?` modificador para el nombre de tipo. Asignar `Nothing` a una variable que acepta valores NULL, Establece el valor en `null`. Para obtener más información y ejemplos, vea [los tipos de valor que acepta valores NULL](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
   
- Si una variable es de un tipo de valor que no acepta valores NULL, asignando `Nothing` a establece en el valor predeterminado para su tipo declarado. Si ese tipo contiene a miembros de variables, están establecidos en sus valores predeterminados. En el ejemplo siguiente se muestra esto para tipos escalares.  
+ Si una variable es de un tipo de valor que no acepta valores NULL, asignando `Nothing` para lo establece en el valor predeterminado de su tipo declarado. Si ese tipo contiene a miembros de variable, están establecidos en sus valores predeterminados. El ejemplo siguiente muestra para tipos escalares.  
   
  [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
- Si una variable es de un tipo de referencia, asignando `Nothing` a la variable lo establece en un `null` referencia de tipo de la variable. Una variable que se establece en un `null` referencia no está asociada a ningún objeto. En el siguiente ejemplo se muestra cómo hacerlo.  
+ Si una variable es de un tipo de referencia, asignando `Nothing` a la variable lo establece en un `null` referencia del tipo de variable. Una variable que se establece en un `null` referencia no está asociada con ningún objeto. En el siguiente ejemplo se muestra cómo hacerlo.  
   
  [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
- Al comprobar si una referencia (o tipo de valor que aceptan valores NULL) es variable `null`, no use `= Nothing` o `<> Nothing`. Utilice siempre `Is Nothing` o `IsNot Nothing`.  
+ Al comprobar si una referencia (o el tipo de valor que acepta valores NULL) es la variable `null`, no use `= Nothing` o `<> Nothing`. Utilice siempre `Is Nothing` o `IsNot Nothing`.  
   
  Para las cadenas en Visual Basic, la cadena vacía es igual a `Nothing`. Por lo tanto, `"" = Nothing` es true.  
   
@@ -44,16 +44,16 @@ Representa el valor predeterminado de cualquier tipo de datos. Para los tipos de
   
  [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
- Si se declara una variable sin utilizar un `As` cláusula y establézcalo en `Nothing`, la variable tiene un tipo de `Object`. Un ejemplo de esto es `Dim something = Nothing`. En este caso se produce un error de tiempo de compilación cuando `Option Strict` se encuentra en y `Option Infer` está desactivada.  
+ Si declara una variable sin usar un `As` cláusula y establézcalo en `Nothing`, la variable tiene un tipo de `Object`. Un ejemplo de esto es `Dim something = Nothing`. En este caso se produce un error de tiempo de compilación cuando `Option Strict` está activado y `Option Infer` está desactivada.  
   
- Al asignar `Nothing` a una variable de objeto, ya no hace referencia a cualquier instancia de objeto. Si la variable anteriormente hacía referencia a una instancia, si se establece en `Nothing` no termina con la propia instancia. Finaliza la instancia y se liberan los recursos de memoria y del sistema asociados a él, solo una vez que el recolector de elementos no utilizados (GC) detecta que no hay quedan referencias activas.  
+ Al asignar `Nothing` a una variable de objeto, ya no hace referencia a cualquier instancia de objeto. Si la variable anteriormente hacía referencia a una instancia, si se establece en `Nothing` no finaliza la instancia de sí mismo. Finaliza la instancia y se liberan los recursos de memoria y el sistema asociados con él, solo una vez que el recolector de elementos no utilizados (GC) detecta que no hay quedan referencias activas.  
   
- `Nothing` difiere de la <xref:System.DBNull> objeto, que representa una variante no inicializada o una columna de base de datos no existe.  
+ `Nothing` difiere de la <xref:System.DBNull> objeto, que representa una variante no inicializada o una columna de base de datos que no existe.  
   
-## <a name="see-also"></a>Vea también  
- [Dim (instrucción)](../../visual-basic/language-reference/statements/dim-statement.md)  
- [Duración de los objetos: cómo se crean y destruyen](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
- [Duración en Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Is (operador)](../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot (operador)](../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Tipos de valor que aceptan valores NULL](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>Vea también
+- [Dim (instrucción)](../../visual-basic/language-reference/statements/dim-statement.md)
+- [Duración del objeto: ¿Cómo se crean y destruyen objetos](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Duración en Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Is (operador)](../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot (operador)](../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Tipos de valor que aceptan valores NULL](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

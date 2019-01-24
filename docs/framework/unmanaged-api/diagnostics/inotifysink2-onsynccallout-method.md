@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a38c35f0acd47c9183c043e1c436413a309b138
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 925edf6226ed955d097821a42a79425d076c208b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621287"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut (Método)
 Se invoca cuando una llamada está inactiva.  
@@ -40,7 +40,7 @@ HRESULT OnSyncCallOut
   
 #### <a name="parameters"></a>Parámetros  
  `in_CallID`  
- [in] Identificador de la llamada que está inactiva. Vea [CALL_ID (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] Identificador de la llamada que está inactiva. Consulte [CALL_ID (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `out_ppBuffer`  
  [out] Búfer de la llamada.  
@@ -52,9 +52,9 @@ HRESULT OnSyncCallOut
  S_OK si el método tiene éxito.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** ProtocolNotify2.idl  
+ **Encabezado**: ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Vea también  
- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Vea también
+- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

@@ -2,12 +2,12 @@
 title: Definición del esquema de DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 60e7f6a13bd7fd10398d300690bd73c3abc0d700
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: aa275e0a9cbd4f8fb3e851865b9de49eca327727
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545389"
 ---
 # <a name="datatable-schema-definition"></a>Definición del esquema de DataTable
 El esquema, o estructura, de una tabla se representa con columnas y restricciones. El esquema de una <xref:System.Data.DataTable> se define mediante objetos <xref:System.Data.DataColumn>, <xref:System.Data.ForeignKeyConstraint> y <xref:System.Data.UniqueConstraint>. Las columnas de una tabla se pueden asignar a columnas de un origen de datos, pueden contener valores calculados de expresiones, aumentar sus valores automáticamente o contener valores de clave principal.  
@@ -35,6 +35,6 @@ El esquema, o estructura, de una tabla se representa con columnas y restriccione
  [Restricciones de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  Describe cómo se define una clave externa y restricciones UNIQUE para las columnas de una tabla.  
   
-## <a name="see-also"></a>Vea también  
- [Objetos DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Objetos DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

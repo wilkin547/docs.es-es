@@ -9,12 +9,12 @@ helpviewer_keywords:
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
-ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525487"
 ---
 # <a name="events-and-callbacks"></a>Eventos y devoluciones de llamada
 Las devoluciones de llamada son puntos de extensibilidad que permiten un marco de trabajo para volver a llamar al código de usuario a través de un delegado. Estos delegados se pasan normalmente en el marco de trabajo a través de un parámetro de un método.  
@@ -45,5 +45,5 @@ Las devoluciones de llamada son puntos de extensibilidad que permiten un marco d
   
 ## <a name="see-also"></a>Vea también
 
-- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

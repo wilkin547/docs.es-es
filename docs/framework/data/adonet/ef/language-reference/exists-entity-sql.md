@@ -2,12 +2,12 @@
 title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: d42b1c227362b13124f4bb21e55b6fda07f9c5ff
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e6668fa2f978ddb785c4dac950c32d3caa2979af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552546"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
 Determina si una colección está vacía.  
@@ -40,5 +40,5 @@ Determina si una colección está vacía.
   
  [!code-csharp[DP EntityServices Concepts 2#EXISTS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#exists)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

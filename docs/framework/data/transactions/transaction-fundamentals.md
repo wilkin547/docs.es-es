@@ -2,12 +2,12 @@
 title: Principios de la transacción
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: 20bce37bb5d5aa1460570b1d39b54c2cb8a3362f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb5123cbee9245178cac43cfd2388cce3f5d356f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620518"
 ---
 # <a name="transaction-fundamentals"></a>Principios de la transacción
 Las transacciones enlazan varias tareas. Por ejemplo, imagine que una aplicación realiza dos tareas. Primero, crea una nueva tabla en una base de datos. Luego, llama un objeto especializado para recoger, dar formato e insertar los datos en la nueva tabla. Estas dos tareas están relacionadas e incluso son interdependientes, de tal manera que se desea evitar crear una nueva tabla a menos que pueda llenarse de datos. La ejecución de ambas tareas dentro del ámbito de una única transacción refuerzan la conexión entre ellas. En caso de error en la segunda tarea, la primera vuelve al punto anterior a la creación de la nueva tabla.  
@@ -24,5 +24,5 @@ Las transacciones enlazan varias tareas. Por ejemplo, imagine que una aplicació
   
  Se pueden crear transacciones utilizando ADO.NET, <xref:System.EnterpriseServices>, o el modelo de programación transaccional proporcionado por el <xref:System.Transactions> espacio de nombres. El [características proporcionadas por System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) tema describe las características que puede usar para escribir una aplicación transaccional utilizando el <xref:System.Transactions> espacio de nombres.  
   
-## <a name="see-also"></a>Vea también  
- [Características proporcionadas por System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)
+## <a name="see-also"></a>Vea también
+- [Características proporcionadas por System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 130b5338b14bc7c1f36feb620d549295867ef64e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527775"
 ---
 # <a name="table-valued-parameters"></a>Parámetros con valores de tabla
 Los parámetros con valores de tabla proporcionan un método sencillo para calcular las referencias de varias filas de datos procedentes de una aplicación cliente en SQL Server sin necesidad de efectuar viajes de ida y vuelta (round trip) ni de crear lógica especial de servidor para procesar los datos. Puede usar los parámetros con valores de tabla para encapsular las filas de datos de una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos de entrada se almacenan en una variable de tabla en la que se puede operar usando [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -272,9 +272,9 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Comandos y parámetros](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Parámetros de DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Operaciones de datos de SQL Server en ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Configuración de parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Comandos y parámetros](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Parámetros de DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [Operaciones de datos de SQL Server en ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

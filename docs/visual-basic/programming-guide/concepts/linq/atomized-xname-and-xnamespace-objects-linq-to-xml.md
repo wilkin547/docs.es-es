@@ -1,16 +1,16 @@
 ---
-title: Subdividida objetos XName y XNamespace (LINQ to XML) (Visual Basic)
+title: Objetos XName y XNamespace Atomizados (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: e311de901a9a54bd4fc6ee56d425cc16b4978e8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adf766dcb69477fbad8581b075a7c0ee8a82f728
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623682"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Subdividida objetos XName y XNamespace (LINQ to XML) (Visual Basic)
-Los objetos <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> se *atomizan*; es decir, si contienen el mismo nombre completo, hacen referencia al mismo objeto. De esta forma, se incrementan los beneficios de rendimiento de las consultas: cuando compare la igualdad de dos nombres atomizados, el lenguaje intermedio subyacente solo debe determinar si los dos puntos de referencia apuntan al mismo objeto. El código subyacente no debe hacer comparaciones de cadenas, ya que sería un proceso muy lento.  
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Objetos XName y XNamespace Atomizados (LINQ to XML) (Visual Basic)
+Los objetos <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> se *atomizan*; es decir, si contienen el mismo nombre completo, hacen referencia al mismo objeto. Esto da como resultado mejoras de rendimiento de consultas: Cuando se comparan la igualdad de dos nombres atomizados, el lenguaje intermedio subyacente solo debe determinar si las dos referencias apuntan al mismo objeto. El código subyacente no debe hacer comparaciones de cadenas, ya que sería un proceso muy lento.  
   
 ## <a name="atomization-semantics"></a>Semántica de atomización  
  Atomización significa que si dos objetos <xref:System.Xml.Linq.XName> tienen el mismo nombre local y se encuentran en el mismo espacio de nombres, comparten la misma instancia. De igual forma, si dos objetos <xref:System.Xml.Linq.XNamespace> tienen el mismo URI de espacio de nombres, comparten la misma instancia.  
@@ -69,5 +69,5 @@ Next
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Rendimiento (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+- [Rendimiento (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

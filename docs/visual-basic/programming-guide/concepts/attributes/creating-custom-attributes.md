@@ -2,12 +2,12 @@
 title: Crear atributos personalizados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 9af0832e04308bf1942fc955afe5a67161096465
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc60e20d163c6aec231152940f548fcb58442f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526358"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Crear atributos personalizados (Visual Basic)
 Para crear sus propios atributos personalizados, defina una clase de atributo derivada directa o indirectamente de <xref:System.Attribute>, que agiliza y facilita la identificación de las definiciones de atributos en los metadatos. Imagínese que desea etiquetar tipos con el nombre del programador que los escribió. Puede definir una clase de atributos `Author` personalizada:  
@@ -62,11 +62,11 @@ End Class
 > [!NOTE]
 >  Si la clase de atributo contiene una propiedad, dicha propiedad debe ser de lectura y escritura.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Reflection>  
- [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Escribir atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)  
- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])  
- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Reflection>
+- [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Escribir atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)
+- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])
+- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

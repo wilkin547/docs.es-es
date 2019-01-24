@@ -2,15 +2,15 @@
 title: Excepciones
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: cfeefcd29dc05ed5e325950194d9f0775b1fa9fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50e1afa9b1d264a4577bcfe62e939ee669f8ba0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523979"
 ---
 # <a name="exceptions"></a>Excepciones
-Los flujos de trabajo pueden usar la actividad <xref:System.Activities.Statements.TryCatch> para controlar excepciones que se producen durante la ejecución de un flujo de trabajo. Se pueden controlar estas excepciones o se pueden volver a producir usando la actividad <xref:System.Activities.Statements.Rethrow>. Las actividades de la sección <xref:System.Activities.Statements.TryCatch.Finally%2A> se ejecutan cuando la sección <xref:System.Activities.Statements.TryCatch.Try%2A> o la sección <xref:System.Activities.Statements.TryCatch.Catches%2A> se hayan completado. Los flujos de trabajo hospedan por un <xref:System.Activities.WorkflowApplication> también puede usar la instancia de la <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> controlador de eventos para controlar las excepciones no controladas por un <xref:System.Activities.Statements.TryCatch> actividad.  
+Los flujos de trabajo pueden usar la actividad <xref:System.Activities.Statements.TryCatch> para controlar excepciones que se producen durante la ejecución de un flujo de trabajo. Se pueden controlar estas excepciones o se pueden volver a producir usando la actividad <xref:System.Activities.Statements.Rethrow>. Las actividades de la sección <xref:System.Activities.Statements.TryCatch.Finally%2A> se ejecutan cuando la sección <xref:System.Activities.Statements.TryCatch.Try%2A> o la sección <xref:System.Activities.Statements.TryCatch.Catches%2A> se hayan completado. Los flujos de trabajo hospedan por un <xref:System.Activities.WorkflowApplication> instancia también puede usar el <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> controlador de eventos para controlar las excepciones no controladas por un <xref:System.Activities.Statements.TryCatch> actividad.  
   
 ## <a name="causes-of-exceptions"></a>Causas de excepciones  
  En un flujo de trabajo, las excepciones se pueden generar de las maneras siguientes:  
@@ -28,9 +28,9 @@ Los flujos de trabajo pueden usar la actividad <xref:System.Activities.Statement
   
 -   **Cancelar** -una instancia de flujo de trabajo cancelada es una salida correcta de una ejecución de bifurcación. Puede modelar el comportamiento de cancelación (por ejemplo, con una actividad CancellationScope). Se invoca el controlador Completed cuando el proceso de cancelación se completa. Un flujo de trabajo cancelado está en estado Cancelled.  
   
--   **Terminar** -no se puede reanudar ni reiniciar una instancia de flujo de trabajo finalizado.  Esto desencadena el evento Completed en el que puede proporcionar una excepción como razón por la que finalizó. Se invoca el controlador Terminated cuando el proceso de finalización se completa. Un flujo de trabajo finalizado está en el estado Faulted.  
+-   **Finalizar** -no se puede reanudar ni reiniciar una instancia de flujo de trabajo finalizado.  Esto desencadena el evento Completed en el que puede proporcionar una excepción como razón por la que finalizó. Se invoca el controlador Terminated cuando el proceso de finalización se completa. Un flujo de trabajo finalizado está en el estado Faulted.  
   
--   **Anular** -se puede reanudar una instancia de flujo de trabajo anulado solo si se ha configurado para ser persistentes.  Sin persistencia, un flujo de trabajo no se puede reanudar.  En el punto en que se anula un flujo de trabajo, se perderá todo el trabajo realizado (en memoria) desde el último punto de persistencia. Para un flujo de trabajo anulado, se invoca el controlador Aborted usando la excepción como motivo cuando se completa el proceso de anulación. Sin embargo, a diferencia de Cancelled y Terminated, no se invoca el controlador Completed. Un flujo de trabajo anulado está en un estado Aborted.  
+-   **Anular** -se puede reanudar una instancia de flujo de trabajo anulado solo si se ha configurado para ser persistente.  Sin persistencia, un flujo de trabajo no se puede reanudar.  En el punto en que se anula un flujo de trabajo, se perderá todo el trabajo realizado (en memoria) desde el último punto de persistencia. Para un flujo de trabajo anulado, se invoca el controlador Aborted usando la excepción como motivo cuando se completa el proceso de anulación. Sin embargo, a diferencia de Cancelled y Terminated, no se invoca el controlador Completed. Un flujo de trabajo anulado está en un estado Aborted.  
   
  En el ejemplo siguiente se invoca un flujo de trabajo que produce una excepción. El flujo de trabajo no controla la excepción y se invoca el controlador de la propiedad <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>. El objeto <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> se inspecciona para proporcionar información acerca de la excepción y se termina el flujo de trabajo.  
   
@@ -45,12 +45,12 @@ Los flujos de trabajo pueden usar la actividad <xref:System.Activities.Statement
   
 -   La excepción es detectada por una actividad <xref:System.Activities.Statements.TryCatch> de mayor nivel en el flujo de trabajo, independientemente de si se vuelven a producir desde <xref:System.Activities.Statements.TryCatch> de mayor nivel.  
   
--   La excepción no la controla un <xref:System.Activities.Statements.TryCatch> de mayor nivel, se escapa la raíz del flujo de trabajo, y el flujo de trabajo se configura para cancelarse en lugar de finalizarse o anularse. Los flujos de trabajo hospedados mediante <xref:System.Activities.WorkflowApplication> pueden configurar esto controlando <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> y devolviendo <xref:System.Activities.UnhandledExceptionAction.Cancel>. Un ejemplo de cómo administrar <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> se proporciona anteriormente en este tema. Los servicios de flujo de trabajo pueden configurar esto mediante <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> y especificando <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Para obtener un ejemplo de configuración de <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, consulte [extensibilidad de Host de servicio de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+-   La excepción no la controla un <xref:System.Activities.Statements.TryCatch> de mayor nivel, se escapa la raíz del flujo de trabajo, y el flujo de trabajo se configura para cancelarse en lugar de finalizarse o anularse. Los flujos de trabajo hospedados mediante <xref:System.Activities.WorkflowApplication> pueden configurar esto controlando <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> y devolviendo <xref:System.Activities.UnhandledExceptionAction.Cancel>. Un ejemplo de cómo administrar <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> se proporciona anteriormente en este tema. Los servicios de flujo de trabajo pueden configurar esto mediante <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> y especificando <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Para obtener un ejemplo de configuración de <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, consulte [Workflow Service Host Extensibility](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Control de excepciones contra compensación  
  La diferencia entre el control de excepciones y la compensación es que el primero se produce durante la ejecución de una actividad. La compensación, sin embargo, se produce después de que una actividad se haya completado correctamente. El control de excepciones proporciona una oportunidad para limpiar después de que la actividad produzca la excepción, mientras la compensación proporciona un mecanismo por el que se puede deshacer el trabajo terminado correctamente de una actividad completada previamente. Para obtener más información, consulte [compensación](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Activities.Statements.TryCatch>  
- <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>  
- <xref:System.Activities.Statements.CompensableActivity>
+## <a name="see-also"></a>Vea también
+- <xref:System.Activities.Statements.TryCatch>
+- <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
+- <xref:System.Activities.Statements.CompensableActivity>

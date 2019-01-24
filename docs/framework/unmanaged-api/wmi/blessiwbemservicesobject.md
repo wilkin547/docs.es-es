@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a561c5af868968624ee9ee81050d87b17c4591be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624423"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject (función)
 Indica si las credenciales de usuario permiten el acceso a un determinado [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto.   
@@ -64,18 +64,18 @@ Los siguientes valores devueltos por esta función se definen en el *WinError.h*
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0 x 80070057 | Uno o más argumentos no son válidos. |
-| `E_POINTER` | 0 x 80004003 | El valor de `pIWbemServices` es `null`. | 
+| `E_INVALIDARG` | 0x80070057 | Uno o más argumentos no son válidos. |
+| `E_POINTER` | 0x80004003 | El valor de `pIWbemServices` es `null`. | 
 | `E_FAIL` | 0x80000008 | Se ha producido un error no especificado. |
 | `E_OUTOFMEMORY` | 0x80000002 | No hay memoria suficiente está disponible para realizar la operación. | 
 | `S_OK` | 0 | La llamada de función fue correcta. | 
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

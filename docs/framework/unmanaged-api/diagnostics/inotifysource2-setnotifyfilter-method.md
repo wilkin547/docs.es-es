@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7a2391527a7912c5def593438a71ed006955e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2c46f2636d397f7f71cf3c119b177f721c6fc091
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620950"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter (Método)
 Asigna un filtro de notificación para su uso con este origen.  
@@ -48,9 +48,9 @@ HRESULT SetNotifyFilter
  S_OK si el método tiene éxito.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** ProtocolNotify2.idl  
+ **Encabezado**: ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Vea también  
- [INotifySource2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+## <a name="see-also"></a>Vea también
+- [INotifySource2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

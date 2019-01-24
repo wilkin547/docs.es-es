@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534425"
 ---
 # <a name="using-message-contracts"></a>Usar contratos de mensaje
 Normalmente, al compilar aplicaciones de Windows Communication Foundation (WCF), los desarrolladores prestan especial atención a los problemas de serialización y estructuras de datos y no es necesario preocuparse de la estructura de los mensajes en el que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. (Para obtener más información, consulte [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -447,6 +447,6 @@ public class OperationDetails
   
  Si desea recibir el objeto del mensaje como propiedad `Result` y que los valores devueltos sean propiedades de ese objeto, utilice la opción de comando `/messageContract`. Esto genera una firma que devuelve el mensaje de respuesta como la propiedad `Result` del objeto <xref:System.EventArgs>. Todos los valores de devolución internos se convierten, pues, en propiedades del objeto de mensaje de respuesta.  
   
-## <a name="see-also"></a>Vea también  
- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Diseño e implementación de servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+## <a name="see-also"></a>Vea también
+- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Diseño e implementación de servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md)

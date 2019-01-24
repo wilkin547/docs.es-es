@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms'
+title: Procedimiento Crear un cuadro de texto de contraseña con el Control TextBox de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: 41bfb2bc1a1ead5bb289264c44145b88721efe49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6fe0e615cc5bbd0f549505ed9e6add8d7a51433
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523995"
 ---
-# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms
-Un cuadro de contraseña es un cuadro de texto de formularios Windows Forms que muestra caracteres marcadores mientras el usuario escribe una cadena.  
+# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Procedimiento Crear un cuadro de texto de contraseña con el Control TextBox de Windows Forms
+Un cuadro de contraseña es un cuadro de texto de Windows Forms que muestra los caracteres de marcador de posición mientras un usuario escribe una cadena.  
   
 ### <a name="to-create-a-password-text-box"></a>Para crear un cuadro de texto de contraseña  
   
@@ -28,12 +28,12 @@ Un cuadro de contraseña es un cuadro de texto de formularios Windows Forms que 
   
      El <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propiedad especifica el carácter que se muestra en el cuadro de texto. Por ejemplo, si desea que se muestren asteriscos en el cuadro de contraseña, especifique * para la <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propiedad en la ventana Propiedades. A continuación, independientemente del carácter que un usuario escribe en el cuadro de texto, se muestra un asterisco.  
   
-2.  (Opcional) Establecer el <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> propiedad. La propiedad determina cuántos caracteres se pueden escribir en el cuadro de texto. Si se supera la longitud máxima, el sistema emite un sonido y el cuadro de texto no acepta cualquier más caracteres. Tenga en cuenta que puede que no desee hacer esto como la longitud máxima de una contraseña puede resultar útiles a los piratas informáticos que intenten adivinar la contraseña.  
+2.  (Opcional) Establecer el <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> propiedad. La propiedad determina cuántos caracteres se pueden escribir en el cuadro de texto. Si se supera la longitud máxima, el sistema emite un bip y el cuadro de texto no acepta caracteres más. Tenga en cuenta que es posible que no desea hacer esto como la longitud máxima de una contraseña puede resultar útil para los hackers que intentan adivinar la contraseña.  
   
-     En el ejemplo de código siguiente se muestra cómo inicializar un cuadro de texto que acepta una cadena de hasta 14 caracteres y muestra asteriscos en lugar de la cadena. El `InitializeMyControl` procedimiento no se ejecutará automáticamente; debe llamarse.  
+     El ejemplo de código siguiente muestra cómo inicializar un cuadro de texto que se aceptan una cadena de hasta 14 caracteres y se muestran asteriscos en lugar de la cadena. El `InitializeMyControl` procedimiento no se ejecutará automáticamente; debe llamarse.  
   
     > [!IMPORTANT]
-    >  Mediante el <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propiedad en un cuadro de texto puede ayudar a garantizar que otras personas no podrán determinar la contraseña de un usuario si ven al usuario cuando escriba. Esta medida de seguridad no cubre a cualquier tipo de almacenamiento o la transmisión de la contraseña que se puede producir debido a la lógica de aplicación. Porque no se cifra el texto escrito en absoluto, debes tratarla como lo haría con cualquier otro dato confidencial. Aunque no aparece como tal, la contraseña que se trata todavía como una cadena de texto sin formato (a menos que haya implementado alguna medida de seguridad adicional).  
+    >  Mediante el <xref:System.Windows.Forms.TextBox.PasswordChar%2A> propiedad en un cuadro de texto puede ayudar a garantizar que otras personas no podrán determinar la contraseña de un usuario si ven cuando el usuario escribe. Esta medida de seguridad no cubre a cualquier tipo de almacenamiento o transmisión de la contraseña que se puede producir debido a la lógica de aplicación. Dado que no se cifra el texto escrito en cualquier forma, debe tratar como lo haría con cualquier otro dato confidencial. Aunque no aparezcan como tal, la contraseña es todavía se tratan como una cadena de texto sin formato (a menos que haya implementado alguna medida de seguridad adicional).  
   
     ```vb  
     Private Sub InitializeMyControl()  
@@ -71,12 +71,12 @@ Un cuadro de contraseña es un cuadro de texto de formularios Windows Forms que 
        }  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.TextBox>  
- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Controlar el punto de inserción en un control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Seleccionar texto en el control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Ver múltiples líneas en el control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [Control TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.TextBox>
+- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Cómo: Controlar el punto de inserción en un Control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Cómo: Crear un cuadro de texto de solo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Cómo: Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Cómo: Seleccionar texto en el Control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Cómo: Ver múltiples líneas en el Control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Control TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

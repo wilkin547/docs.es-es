@@ -2,21 +2,21 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 3202b5055d16f0daa1bd829aa53ff6662a687b5d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 91fe14c22dce45a89b91d9d4c20e30928acd60c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630702"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Especifica valores que habilitan la auditoría de eventos de seguridad durante las operaciones del servicio.  
   
  \<system.ServiceModel>  
 \<comportamientos >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportamiento >  
-\<serviceSecurityAudit >  
+\<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,8 +36,8 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
 |---------------|-----------------|  
 |auditLogLocation|Especifica la ubicación del registro de auditoría. Los valores válidos son los siguientes:<br /><br /> -Default: Eventos de seguridad se escriben en el registro de aplicaciones en Windows XP y en el registro de eventos en Windows Server 2003 y Windows Vista.<br />-Aplicación: Eventos de auditoría se escriben en el registro de eventos de aplicación.<br />-Security: Eventos de auditoría se escriben en el registro de eventos de seguridad.<br /><br /> El valor predeterminado es Default. Para obtener más información, consulta <xref:System.ServiceModel.AuditLogLocation>.|  
 |suppressAuditFailure|Un valor booleano que especifica el comportamiento para suprimir errores al escribir en el registro de auditoría.<br /><br /> Se debería notificar a las aplicaciones de los errores de escritura en el registro de auditoría. Si su aplicación no está diseñada para administrar errores de auditoría, debería usar este atributo para suprimir errores de escritura en el registro de auditoría.<br /><br /> Si este atributo es `true`, el sistema administra excepciones distintas de OutOfMemoryException, StackOverFlowException, ThreadAbortException y ArgumentException que son el resultado de los intentos de escribir los eventos de auditoría y no se propagan a la aplicación. Si este atributo es `false`, todas las excepciones que son el resultado de los intentos por escribir los eventos de auditoría se pasan a la aplicación.<br /><br /> De manera predeterminada, es `true`.|  
-|serviceAuthorizationAuditLevel|Especifica los tipos de eventos de autorización que se graban en el registro de auditoría. Los valores válidos son los siguientes:<br /><br /> -None: Se realiza ninguna auditoría de eventos de autorización de servicio.<br />-Correcto: Solo los eventos de autorización de servicio correcta se auditan.<br />-Error: Solo los eventos de error servicio autorización se auditan.<br />-SuccessOrFailure: Se auditan los eventos de autorización de servicio correctos y erróneos.<br /><br /> El valor predeterminado es None. Para obtener más información, consulta <xref:System.ServiceModel.AuditLevel>.|  
-|messageAuthenticationAuditLevel|Especifica el tipo de eventos de auditoría de autenticación de mensajes registrados. Los valores válidos son los siguientes:<br /><br /> -None: Se genera ningún evento de auditoría.<br />-Correcto: Solo los eventos de seguridad correctos (validación completa incluida la validación de firma de mensajes, cifrado y validación del token) se registran.<br />-Error: Solo los eventos de error se registran.<br />-SuccessOrFailure: Se registran los eventos correctos y erróneos.<br /><br /> El valor predeterminado es None. Para obtener más información, consulta <xref:System.ServiceModel.AuditLevel>.|  
+|serviceAuthorizationAuditLevel|Especifica los tipos de eventos de autorización que se graban en el registro de auditoría. Los valores válidos son los siguientes:<br /><br /> -None: Se realiza ninguna auditoría de eventos de autorización de servicio.<br />-Correcto: Solo los eventos de autorización de servicio correcta se auditan.<br />-Error: Solo los eventos de error servicio autorización se auditan.<br />-   SuccessOrFailure: Se auditan los eventos de autorización de servicio correctos y erróneos.<br /><br /> El valor predeterminado es None. Para obtener más información, consulta <xref:System.ServiceModel.AuditLevel>.|  
+|messageAuthenticationAuditLevel|Especifica el tipo de eventos de auditoría de autenticación de mensajes registrados. Los valores válidos son los siguientes:<br /><br /> -None: Se genera ningún evento de auditoría.<br />-Correcto: Solo los eventos de seguridad correctos (validación completa incluida la validación de firma de mensajes, cifrado y validación del token) se registran.<br />-Error: Solo los eventos de error se registran.<br />-   SuccessOrFailure: Se registran los eventos correctos y erróneos.<br /><br /> El valor predeterminado es None. Para obtener más información, consulta <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -46,7 +46,7 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento de configuración se utiliza para auditar los eventos de autenticación de Windows Communication Foundation (WCF). Cuando la auditoría está habilitada, se pueden auditar intentos de autenticación correctos (o ambos) o fallidos. Los eventos se escriben en uno de tres registros de eventos: aplicación, seguridad o registro predeterminado para la versión de sistema operativo. Los registros de eventos  se pueden ver utilizando el Visor de eventos de Windows.  
@@ -78,10 +78,10 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Auditoría](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Cómo: Auditar eventos de seguridad](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
- [Comportamiento de auditoría de servicio](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Auditoría](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Cómo: Auditar eventos de seguridad](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Comportamiento de auditoría de servicio](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

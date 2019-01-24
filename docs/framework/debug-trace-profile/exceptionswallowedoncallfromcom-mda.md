@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4c1cbf075ef96073061679b6d062075490f5e4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aebcd2d2f2387f478c36e84dad82d90d4d70d68e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554678"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>MDA de exceptionSwallowedOnCallFromCom
 El asistente para la depuración administrada (MDA, por sus siglas en inglés) `exceptionSwallowedOnCallFromCOM` se activa cuando se produce una excepción del código de Common Language Runtime (CLR) llamado desde COM a través de un método que no tiene un tipo de resultado HRESULT sin administrar.  
@@ -46,7 +46,7 @@ El asistente para la depuración administrada (MDA, por sus siglas en inglés) `
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

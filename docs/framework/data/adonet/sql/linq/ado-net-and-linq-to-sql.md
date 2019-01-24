@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: b2be963862b6bd7a0cd5643245606763907a5b72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbcdd544e79197c9cb35d13bd09cffde9962030d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553677"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET y LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] forma parte de la [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] familia de tecnologías. Se basa en los servicios proporcionados por el modelo de proveedor [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. Por lo tanto, puede mezclar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código existente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] aplicaciones y migrar actual [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] soluciones a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. La ilustración siguiente proporciona una visión de alto nivel de la relación.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] forma parte de la [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] familia de tecnologías. Se basa en los servicios proporcionados por el modelo de proveedor [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]. Por lo tanto, puede mezclar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código con existente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] aplicaciones y migrar actual [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] soluciones a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. La ilustración siguiente proporciona una visión de alto nivel de la relación.  
   
  ![LINQ to SQL y ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>Conexiones  
- Puede proporcionar una existente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] conexión cuando se crea un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>. Todas las operaciones contra el <xref:System.Data.Linq.DataContext> (incluidas las consultas) Utilice esta conexión proporcionada. Si la conexión ya está abierta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deja como estaba cuando haya terminado con él.  
+ Puede proporcionar una existente [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] conexión cuando se crea un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>. Todas las operaciones en el <xref:System.Data.Linq.DataContext> (incluidas las consultas) Utilice esta conexión proporcionada. Si la conexión ya está abierta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deja como estaba cuando haya terminado con él.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  
@@ -46,7 +46,7 @@ ms.locfileid: "33363654"
  [!code-csharp[DLinqAdoNet#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#3)]
  [!code-vb[DLinqAdoNet#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#3)]  
   
- Siempre y cuando los nombres de columna en los resultados tabulares coincidan con las propiedades de columna de la clase de entidad, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea objetos a partir de cualquier consulta SQL.  
+ Siempre que los nombres de columna en los resultados tabulares coincidan con las propiedades de columna de la clase de entidad, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea objetos a partir de cualquier consulta SQL.  
   
 ### <a name="parameters"></a>Parámetros  
  El método <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> acepta parámetros: El código siguiente ejecuta una consulta parametrizada:  
@@ -57,6 +57,6 @@ ms.locfileid: "33363654"
 > [!NOTE]
 >  Los parámetros se expresan en el texto de la consulta con la misma notación con llaves que `Console.WriteLine()` y `String.Format()`. `String.Format()` toma la cadena de consulta proporcionada y sustituye los parámetros entre llaves por nombres de parámetros generados, como `@p0`, `@p1` …, `@p(n)`.  
   
-## <a name="see-also"></a>Vea también  
- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Reutilización de una conexión entre un comando de ADO.NET y un objeto DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+## <a name="see-also"></a>Vea también
+- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Cómo: Reutilizar una conexión entre un comando de ADO.NET y un objeto DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

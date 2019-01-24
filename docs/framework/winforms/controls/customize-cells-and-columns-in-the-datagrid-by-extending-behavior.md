@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Personalizar celdas y columnas en el control DataGridView de formularios Windows Forms ampliando su comportamiento y apariencia'
+title: Procedimiento Personalizar celdas y columnas en el Control DataGridView de Windows Forms ampliando su comportamiento y apariencia
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: c183cb03535832dce9b2c3ed97eb4d68fab19796
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2be1e4be9f9cd3dc0d8f4f5c406c98932cb48238
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629766"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Cómo: Personalizar celdas y columnas en el control DataGridView de formularios Windows Forms ampliando su comportamiento y apariencia
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procedimiento Personalizar celdas y columnas en el Control DataGridView de Windows Forms ampliando su comportamiento y apariencia
 El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de personalizar su apariencia y comportamiento mediante propiedades, eventos y clases complementarias. Ocasionalmente podría tener requisitos para sus celdas que van más allá de lo que pueden proporcionar estas características. Puede crear su propia clase <xref:System.Windows.Forms.DataGridViewCell> personalizado para proporcionar una funcionalidad ampliada.  
   
  Puede crear una clase <xref:System.Windows.Forms.DataGridViewCell> derivando de la clase base <xref:System.Windows.Forms.DataGridViewCell> o de una de sus clases derivadas. Aunque puede mostrar cualquier tipo de celda en cualquier tipo de columna, normalmente también creará una clase <xref:System.Windows.Forms.DataGridViewColumn> personalizado especializada para mostrar el tipo de celda. Las clases de columna derivan de <xref:System.Windows.Forms.DataGridViewColumn> o de uno de sus tipos derivados.  
@@ -42,7 +42,7 @@ El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de per
     [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#202](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#202)]
     [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#202](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#202)]  
   
-2.  Invalide el método <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> en la clase `DataGridViewRolloverCell`. En la invalidación, llame primero a la implementación de la clase base, que controla la funcionalidad del cuadro de texto hospedado. Después, use el método <xref:System.Windows.Forms.Control.PointToClient%2A> del control para transformar la posición del cursor (en coordenadas de pantalla) en las coordenadas de área de cliente de <xref:System.Windows.Forms.DataGridView>. Si las coordenadas del mouse se encuentran dentro de los límites de la celda, dibuje el rectángulo de bajorrelieve.  
+2.  Invalide el método <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> en la clase `DataGridViewRolloverCell` . En la invalidación, llame primero a la implementación de la clase base, que controla la funcionalidad del cuadro de texto hospedado. Después, use el método <xref:System.Windows.Forms.Control.PointToClient%2A> del control para transformar la posición del cursor (en coordenadas de pantalla) en las coordenadas de área de cliente de <xref:System.Windows.Forms.DataGridView>. Si las coordenadas del mouse se encuentran dentro de los límites de la celda, dibuje el rectángulo de bajorrelieve.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#210](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#210)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#210](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#210)]  
@@ -68,13 +68,13 @@ El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de per
   
 -   Referencias a los ensamblados System, System.Windows.Forms y System.Drawing.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewCell>  
- <xref:System.Windows.Forms.DataGridViewColumn>  
- [Personalizar el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- [Arquitectura del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
- [Tipos de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
- [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewCell>
+- <xref:System.Windows.Forms.DataGridViewColumn>
+- [Personalizar el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [Arquitectura del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)
+- [Tipos de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+- [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)

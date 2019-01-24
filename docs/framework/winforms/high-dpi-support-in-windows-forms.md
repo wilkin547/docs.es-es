@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con alta de PPP en Windows Forms
+title: Compatibilidad con valores alto de PPP en Windows Forms
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -9,30 +9,30 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbf2d7b61b34a2cd4641a77ee1f2fcdff7f3c3fe
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 2c591aa19a13af2f5b38c46a886b8e0ee2f76c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540655"
 ---
-# <a name="high-dpi-support-in-windows-forms"></a>Compatibilidad con alta de PPP en Windows Forms
+# <a name="high-dpi-support-in-windows-forms"></a>Compatibilidad con valores alto de PPP en Windows Forms
 
-A partir de la 4.7 de .NET Framework, Windows Forms incluye mejoras para una resolución alta comunes y escenarios de PPP dinámicos. Se incluyen los siguientes: 
+A partir de .NET Framework 4.7, Windows Forms incluye mejoras para los valores altos de PPP comunes y escenarios de PPP dinámicos. Se incluyen los siguientes: 
 
-- Mejoras en el ajuste de escala y el diseño de una serie de formularios Windows Forms controles, como el <xref:System.Windows.Forms.MonthCalendar> control y el <xref:System.Windows.Forms.CheckedListBox> control. 
+- Controles de mejoras en la escala y el diseño de una serie de formularios de Windows, como el <xref:System.Windows.Forms.MonthCalendar> control y el <xref:System.Windows.Forms.CheckedListBox> control. 
 
-- Paso único ajuste de escala.  En .NET Framework 4.6 y versiones anteriores, el ajuste de escala se realizó a través de varios supera, lo que provocó algunos controles escalar más que era necesario.
+- Paso único ajuste de escala.  En .NET Framework 4.6 y versiones anteriores, el escalado se realizó a través de varias pasadas, lo que provocó algunos controles escalar más que era necesario.
 
-- Compatibilidad con escenarios de PPP dinámicos en el que el usuario cambia el factor de escala o PPP después de que se ha iniciado una aplicación de formularios Windows Forms.
+- Compatibilidad con escenarios de PPP dinámicos en el que el usuario cambia el factor de escala o PPP después de que se ha iniciado una aplicación de Windows Forms.
 
-En las versiones de .NET Framework a partir de la 4.7 de .NET Framework, compatibilidad mejorada de PPP alta es una característica opcional. Debe configurar la aplicación para aprovechar las ventajas del mismo.
+En las versiones de .NET Framework a partir de .NET Framework 4.7, mayor compatibilidad con PPP elevado es una característica opcional. Debe configurar la aplicación para aprovechar sus ventajas.
 
-## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Configuración de la aplicación de formularios Windows Forms para compatibilidad con alta de PPP
+## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Configuración de la aplicación de Windows Forms para la compatibilidad con PPP elevado
 
-Las nuevas características de Windows Forms que admiten reconocimiento de PPP alta solo están disponibles en las aplicaciones destinadas a la 4.7 de .NET Framework y se ejecutan en sistemas operativos de Windows a partir de la actualización de los creadores de Windows 10. 
+Las nuevas características de Windows Forms que admiten reconocimiento de PPP alta solo están disponibles en las aplicaciones que tienen como destino .NET Framework 4.7 y que se ejecutan en sistemas operativos de Windows a partir de Windows 10 Creators Update. 
 
-Además, para configurar la compatibilidad con alta de PPP en la aplicación de formularios Windows Forms, debe hacer lo siguiente:
+Además, para configurar la compatibilidad con PPP elevado en su aplicación de Windows Forms, debe hacer lo siguiente:
 
 - Declarar la compatibilidad con Windows 10.
 
@@ -47,9 +47,9 @@ Además, para configurar la compatibilidad con alta de PPP en la aplicación de 
   </compatibility>
   ```
 
-- Habilitar el reconocimiento de PPP del monitor en el *app.config* archivo.
+- Habilitar el reconocimiento de PPP por monitor en el *app.config* archivo.
 
-  Introduce un nuevo Windows Forms [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) elemento para admitir nuevas características y las personalizaciones que agregado a partir de la 4.7 de .NET Framework. Para aprovechar las ventajas de las nuevas características que admiten valores altos de PPP, agregue lo siguiente al archivo de configuración de la aplicación.   
+  Windows Forms presenta un nuevo [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) elemento para admitir las nuevas características y personalizaciones agregadas a partir de .NET Framework 4.7. Para aprovechar las ventajas de las nuevas características que admiten valores altos de PPP, agregue lo siguiente al archivo de configuración de la aplicación.   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -58,11 +58,11 @@ Además, para configurar la compatibilidad con alta de PPP en la aplicación de 
   ```
    
   > [!IMPORTANT]
-  > En versiones anteriores de .NET Framework, se usa el manifiesto para agregar compatibilidad con alta de PPP. Ya no se recomienda este enfoque, ya que reemplaza la configuración definida en el archivo app.config.
+  > En versiones anteriores de .NET Framework, ha utilizado el manifiesto para agregar compatibilidad con PPP elevado. Ya no se recomienda este enfoque, ya que reemplaza la configuración definida en el archivo app.config.
    
-- Llame el método estático <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método.
+- Llamar a estático <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método.
    
-  Debe ser la primera llamada de método en el punto de entrada de la aplicación. Por ejemplo:
+  Debe ser la primera llamada al método en el punto de entrada de la aplicación. Por ejemplo:
    
   ```csharp
   static void Main()
@@ -73,9 +73,9 @@ Además, para configurar la compatibilidad con alta de PPP en la aplicación de 
   }
   ```
 
-## <a name="opting-out-of-individual-high-dpi-features"></a>No participar en de características individuales de PPP alta
+## <a name="opting-out-of-individual-high-dpi-features"></a>Dejar de participar en características individuales de PPP alta
 
-Establecer el `DpiAwareness` valor `PerMonitorV2` permite altos todas las características de reconocimiento de PPP compatibles con versiones de .NET Framework a partir de la 4.7 de .NET Framework. Normalmente, esto es adecuado para la mayoría de las aplicaciones de Windows Forms. Sin embargo, puede que desee para no participar en una o más características individuales. La razón más importante para hacer esto es que el código de aplicación existente ya controla esa característica.  Por ejemplo, si la aplicación controla el escalado automático, puede deshabilitar la característica cambiar automáticamente el tamaño como sigue:
+Establecer el `DpiAwareness` valor `PerMonitorV2` habilita altos todas las características de reconocimiento de PPP compatibles con las versiones de .NET Framework a partir de .NET Framework 4.7. Normalmente, esto es adecuado para la mayoría de las aplicaciones de Windows Forms. Sin embargo, desea dejar de participar en una o varias características individuales. La razón para hacerlo más importante es que el código de aplicación existente ya controla esa característica.  Por ejemplo, si la aplicación controla el escalado automático, es posible que desea deshabilitar la característica cambiar automáticamente el tamaño como sigue:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,31 +84,31 @@ Establecer el `DpiAwareness` valor `PerMonitorV2` permite altos todas las caract
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-Para obtener una lista de las claves individuales y sus valores, vea [elemento de configuración Add de Windows Forms](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Para obtener una lista de las claves individuales y sus valores, vea [elemento de configuración agregar Windows Forms](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
 ## <a name="new-dpi-change-events"></a>Nuevos eventos de cambio de PPP
 
-A partir de la 4.7 de .NET Framework, tres nuevos eventos le permiten controlar mediante programación los cambios dinámicos de PPP:
+A partir de .NET Framework 4.7, tres nuevos eventos le permiten controlar mediante programación los cambios de PPP dinámicos:
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, que se desencadena cuando el valor de PPP para un control se cambia mediante programación después de un evento de cambio de PPP para su control primario o se ha producido el formulario.
-- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, que se desencadena cuando el valor de PPP para un control se cambia mediante programación antes de un evento de cambio de PPP para su control primario o se ha producido el formulario.
-- <xref:System.Windows.Forms.Form.DpiChanged>, que se desencadena cuando cambia el valor de PPP en el dispositivo de pantalla que actualmente se muestra el formulario.
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, que se desencadena cuando se ha producido el formulario o cambia la configuración de PPP para un control mediante programación después de un evento de cambio de PPP para su control primario.
+- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, que se desencadena cuando se ha producido el formulario o cambia la configuración de PPP para un control mediante programación antes de un evento de cambio de PPP para su control principal.
+- <xref:System.Windows.Forms.Form.DpiChanged>, que se desencadena cuando cambia el valor de PPP de la pantalla donde se muestra actualmente el formulario.
 
-## <a name="new-helper-methods-and-properties"></a>Propiedades y métodos auxiliares nueva
+## <a name="new-helper-methods-and-properties"></a>Las propiedades y los nuevos métodos auxiliares
 
-El 4.7 de .NET Framework también agrega una serie de nuevos métodos auxiliares y propiedades que proporcionan información sobre la escala de PPP y permiten realizar el ajuste de escala de PPP. Se incluyen los siguientes:
+.NET Framework 4.7 también agrega un número de propiedades que proporcionan información sobre la escala de PPP y permiten realizar el ajuste de PPP y nuevos métodos auxiliares. Se incluyen los siguientes:
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, que convierte un valor de coordenadas lógicas en píxeles del dispositivo.
 
-- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, que amplía una imagen de mapa de bits para el valor de PPP lógico para un dispositivo.
+- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, que escala una imagen de mapa de bits para el valor de PPP lógico para un dispositivo.
 
 - <xref:System.Windows.Forms.Control.DeviceDpi%2A>, que devuelve el valor de PPP para el dispositivo actual.
 
 ## <a name="versioning-considerations"></a>Consideraciones de control de versiones
 
-Además de ejecutar en .NET Framework 4.7 y creadores de actualización de Windows 10, la aplicación también puede ejecutarse en un entorno en el que no es compatible con mejoras de PPP alta. En este caso, necesitará desarrollar una reserva para la aplicación. Puede hacerlo para realizar [dibujo personalizado](./controls/user-drawn-controls.md) para controlar el ajuste de escala.
+Además de que se ejecutan en .NET Framework 4.7 y Windows 10 Creators Update, también puede ejecutar la aplicación en un entorno en el que no es compatible con las mejoras de PPP alta. En este caso, necesitará desarrollar una reserva para su aplicación. Puede hacerlo para realizar [dibujo personalizado](./controls/user-drawn-controls.md) para controlar el escalado.
 
-Para ello, también debe determinar el sistema operativo en el que se ejecuta la aplicación. Puede hacerlo mediante código similar al siguiente:
+Para ello, también deberá determinar el sistema operativo en el que se ejecuta la aplicación. Puede hacerlo con código similar al siguiente:
 
 ```csharp
 // Create a reference to the OS version of Windows 10 Creators Update.
@@ -122,7 +122,7 @@ Console.WriteLine(Environment.OSVersion.VersionString);
 Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 ```
 
-Tenga en cuenta que la aplicación no detecte correctamente 10 de Windows si no se muestran como un sistema operativo compatible en el manifiesto de aplicación.
+Tenga en cuenta que la aplicación no detecte correctamente Windows 10 si no aparece como un sistema operativo compatible en el manifiesto de aplicación.
 
 También puede comprobar la versión de .NET Framework que se compiló la aplicación:
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>Vea también
 
-[Formularios Windows Forms Agregar elemento de configuración](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)  
-[Ajustar el tamaño y la escala de Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Forms Agregar elemento de configuración](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Ajustar el tamaño y la escala de Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)

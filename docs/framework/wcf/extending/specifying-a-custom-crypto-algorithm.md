@@ -2,12 +2,12 @@
 title: Especificar un algoritmo criptográfico personalizado
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537691"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Especificar un algoritmo criptográfico personalizado
 WCF permite especificar un algoritmo criptográfico personalizado para usarlo cuando se cifren datos o se calculen firmas digitales. Para ello, se siguen estos pasos:  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- La sección en la <`cryptoClasses`> elemento crea la asignación entre el SHA256CryptoServiceProvider y el alias "SHA256CSP". El <`nameEntry`> elemento crea la asignación entre el alias "SHA256CSP" y la dirección URL especificada (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ La sección en el <`cryptoClasses`> elemento crea la asignación entre el SHA256CryptoServiceProvider y el alias "SHA256CSP". El <`nameEntry`> elemento crea la asignación entre el alias "SHA256CSP" y la dirección URL especificada (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Use el método <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> para registrar el algoritmo personalizado en código. Este método crea ambas asignaciones. En el ejemplo siguiente se muestra cómo llamar a este método:  
   
@@ -125,8 +125,8 @@ WSHttpBinding binding = new WSHttpBinding();
   
  Para obtener un ejemplo de código completo, vea el [agilidad criptográfica en la seguridad de WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) ejemplo.  
   
-## <a name="see-also"></a>Vea también  
- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a>Vea también
+- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)
+- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)

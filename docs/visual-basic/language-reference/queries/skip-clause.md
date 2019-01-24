@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 615f98bf36d29c1f269d6866b1232ad33a5ae2f2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 53fc47c7dd26142d2ead49178afefe2775a96580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543151"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip (Cláusula, Visual Basic)
 Omite un número especificado de elementos de una colección y, a continuación, devuelve los elementos restantes.  
@@ -26,7 +26,7 @@ Skip count
   
 ## <a name="parts"></a>Elementos  
  `count`  
- Requerido. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a omitir.  
+ Obligatorio. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a omitir.  
   
 ## <a name="remarks"></a>Comentarios  
  El `Skip` cláusula hace una consulta para omitir los elementos al principio de una lista de resultados y devolver los elementos restantes. Identifica el número de elementos para omitir la `count` parámetro.  
@@ -42,11 +42,11 @@ Skip count
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Skip While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Skip While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)

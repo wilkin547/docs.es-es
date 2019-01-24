@@ -2,12 +2,12 @@
 title: Recuperar y modificar datos en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556436"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperar y modificar datos en ADO.NET
 La principal función de cualquier aplicación de base de datos es conectarse a un origen de datos y recuperar los datos que contiene. Los proveedores de datos de .NET Framework de ADO.NET sirven como puente entre una aplicación y un origen de datos, permitiéndole ejecutar comandos y recuperar datos mediante un **DataReader** o un **DataAdapter** . Una función clave de cualquier aplicación de base de datos es la capacidad de actualizar los datos almacenados en la misma. En ADO.NET, actualización de datos implica el uso de la **DataAdapter** y <xref:System.Data.DataSet>, y **comando** objetos; y es posible que también implican el uso de transacciones.  
@@ -58,9 +58,9 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
  [Compatibilidad de streaming de SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Describe cómo escribir aplicaciones que transmitir datos desde SQL Server sin tener que totalmente cargada en memoria.  
   
-## <a name="see-also"></a>Vea también  
- [Asignaciones de tipos de datos en ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Asignaciones de tipos de datos en ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

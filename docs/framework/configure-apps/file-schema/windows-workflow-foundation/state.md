@@ -3,12 +3,12 @@ title: '&lt;state&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 327a5e98a9ecf6ba23eaf47c3d6d73bfb7852ee7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8e381671d9282218a4e5bf0ae979bec79c7cfe78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523056"
 ---
 # <a name="ltstategt"></a>&lt;state&gt;
 Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.  
@@ -16,13 +16,13 @@ Representa una colección de estados suscritos de la instancia de flujo de traba
  Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<seguimiento >  
-\<trackingProfile >  
+\<tracking>  
+\<trackingProfile>  
 \<flujo de trabajo >  
-\<workflowInstanceQueries >  
-\<workflowInstanceQuery >  
-\<Estados >  
-\<estado >  
+\<workflowInstanceQueries>  
+\<workflowInstanceQuery>  
+\<states>  
+\<state>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,7 +58,7 @@ Representa una colección de estados suscritos de la instancia de flujo de traba
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los registros devueltos se filtran por los estados de esta colección.  
@@ -94,9 +94,9 @@ Representa una colección de estados suscritos de la instancia de flujo de traba
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>      
- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

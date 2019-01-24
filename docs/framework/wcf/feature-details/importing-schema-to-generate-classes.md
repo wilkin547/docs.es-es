@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620531"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importación del esquema para generar clases
 Para generar clases de esquemas que se pueden usar con Windows Communication Foundation (WCF), use el <xref:System.Runtime.Serialization.XsdDataContractImporter> clase. En este tema se describen el proceso y variaciones.  
@@ -42,9 +42,9 @@ Para generar clases de esquemas que se pueden usar con Windows Communication Fou
     > [!NOTE]
     > Si se produce un error durante la importación, `CodeCompileUnit` estará en un estado imprevisible. Si utiliza `CodeCompileUnit` como resultado de una importación en la que se ha producido un error, podría exponerse a vulnerabilidades de seguridad.  
   
-5. Obtenga acceso a `CodeCompileUnit` a través de la propiedad <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A>.  
+5. Obtenga acceso a `CodeCompileUnit` a través de la propiedad <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> .  
   
-### <a name="import-options-customizing-the-generated-types"></a>Importar opciones: Personalizar los tipos generados  
+### <a name="import-options-customizing-the-generated-types"></a>Opciones de importación: Personalizar los tipos generados  
  Puede establecer la propiedad <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> de <xref:System.Runtime.Serialization.XsdDataContractImporter> a una instancia de la clase <xref:System.Runtime.Serialization.ImportOptions> para administrar varios aspectos del proceso de importación. Hay varias opciones influyen directamente en los tipos generados.  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>Controlar el nivel de acceso (GenerateInternal o el modificador /interno)  
@@ -179,13 +179,13 @@ Para generar clases de esquemas que se pueden usar con Windows Communication Fou
   
 -   Propiedad <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Se puede especificar una implementación <xref:System.Runtime.Serialization.IDataContractSurrogate> con esta propiedad. <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza el proceso de importación. Para obtener más información, consulte [suplentes de contratos de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). De forma predeterminada, no se utiliza ningún suplente.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- <xref:System.Runtime.Serialization.ImportOptions>  
- [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Suplentes de contratos de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [Importación y exportación de esquemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [Exportación de esquemas desde las clases](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
- [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- <xref:System.Runtime.Serialization.ImportOptions>
+- [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Suplentes de contratos de datos](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
+- [Importación y exportación de esquemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Exportación de esquemas desde las clases](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

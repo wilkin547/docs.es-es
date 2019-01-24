@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d74e1f7aaaa22d68c49f4e40ca557511a48e0554
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525032"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod (operador) (Visual Basic)
 Divide dos números y devuelve solo el resto.  
@@ -30,10 +30,10 @@ number1 Mod number2
   
 ## <a name="parts"></a>Elementos  
  `number1`  
- Requerido. Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
  `number2`  
- Requerido. Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
 ## <a name="supported-types"></a>Tipos admitidos  
  todos los tipos numéricos. Esto incluye los tipos sin signo y de punto flotante y `Decimal`.  
@@ -100,12 +100,12 @@ End Module
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [\ (Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.Conversion.Int%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
+- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [\ (Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

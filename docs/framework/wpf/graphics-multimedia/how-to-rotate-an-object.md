@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Girar un objeto'
+title: Procedimiento Girar un objeto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: b5a954158388e8b85589042e9d1f3b82c1747e30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b44ce71f91962806704eb05a9cbec53638856b3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525435"
 ---
-# <a name="how-to-rotate-an-object"></a>Cómo: Girar un objeto
+# <a name="how-to-rotate-an-object"></a>Procedimiento Girar un objeto
 Este ejemplo muestra cómo girar un objeto. El ejemplo crea primero un <xref:System.Windows.Media.RotateTransform> y, a continuación, especifica su <xref:System.Windows.Media.RotateTransform.Angle%2A> en grados.  
   
  En el ejemplo siguiente se gira un <xref:System.Windows.Shapes.Polyline> objeto 45 grados sobre su esquina superior izquierda.  
@@ -44,7 +44,7 @@ Dos objetos que se giran 45 grados desde distintos centros de giro
   
  Para ver el ejemplo completo, consulte [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Transform>  
- [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Transform>
+- [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

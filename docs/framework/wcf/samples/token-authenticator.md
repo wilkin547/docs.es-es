@@ -2,12 +2,12 @@
 title: Autenticador de tokens
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: fbd036001e3b39c7df27e2388bc2ac4b803f0de3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619550"
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
 Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens de Windows Communication Foundation (WCF) se utiliza para validar el token utilizado con el mensaje, comprobando que es coherente y autenticar la identidad asociada al token.

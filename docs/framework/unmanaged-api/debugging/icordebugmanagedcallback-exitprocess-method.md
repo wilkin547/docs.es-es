@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42330296defe90980dd431ce39765a549057b82a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4e7b62b7eb038d553b28fbd6422175d511df88d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540551"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess (Método)
 Notifica al depurador que un proceso ha terminado.  
@@ -40,20 +40,20 @@ HRESULT ExitProcess (
  [in] Un puntero a un objeto ICorDebugProcess que representa el proceso.  
   
 ## <a name="remarks"></a>Comentarios  
- No puede continuar desde un `ExitProcess` eventos. Este evento se puede activar de forma asincrónica a otros eventos mientras el proceso parece estar detenido. Esto puede ocurrir si el proceso finaliza mientras está detenido, normalmente debido a alguna causa externa.  
+ No puede continuar desde un `ExitProcess` eventos. Este evento puede desencadenar de forma asincrónica a otros eventos mientras el proceso parece estar detenido. Esto puede ocurrir si el proceso finaliza mientras está detenido, normalmente debido a algún factor externo.  
   
- Si common language runtime (CLR) que ya está ejecutando una devolución de llamada administrada, este evento se retrasará hasta después de esa devolución de llamada ha devuelto.  
+ Si common language runtime (CLR) que ya está ejecutando una devolución de llamada administrada, este evento se retrasará hasta después de que devuelva esa devolución de llamada.  
   
- El `ExitProcess` evento es el único evento de salida/descarga que se garantiza que se llama al apagar el equipo.  
+ El `ExitProcess` eventos es el único evento de salida o descarga que se garantiza que se llama a cerrar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

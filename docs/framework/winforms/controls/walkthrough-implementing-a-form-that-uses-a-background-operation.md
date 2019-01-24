@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543531"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Tutorial: Implementar un formulario que utiliza una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse, y no desea la interfaz de usuario (UI) deje de responder o "bloquee", puede usar el <xref:System.ComponentModel.BackgroundWorker> clase para ejecutar la operación en otro subproceso.  
@@ -37,7 +37,7 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
   
 -   Agregar informes de progreso y compatibilidad con la cancelación  
   
- Para ver una lista completa del código utilizado en este ejemplo, consulte [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+ Para obtener una lista completa del código utilizado en este ejemplo, vea [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -57,7 +57,7 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
   
 5.  Cambiar el nombre de la primera <xref:System.Windows.Forms.Button> control `startAsyncButton` y establezca el <xref:System.Windows.Forms.Control.Text%2A> propiedad `Start Async`. Cambiar el nombre de la segunda <xref:System.Windows.Forms.Button> control `cancelAsyncButton`y establezca el <xref:System.Windows.Forms.Control.Text%2A> propiedad `Cancel Async`. Establezca su <xref:System.Windows.Forms.Control.Enabled%2A> propiedad `false`.  
   
-6.  Crear un controlador de eventos para ambos el <xref:System.Windows.Forms.Button> los controles <xref:System.Windows.Forms.Control.Click> eventos. Para ver detalles, consulte [Cómo: Crear controladores de eventos mediante el diseñador](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Crear un controlador de eventos para ambos el <xref:System.Windows.Forms.Button> los controles <xref:System.Windows.Forms.Control.Click> eventos. Para obtener más información, vea [Cómo: Crear controladores de eventos mediante el diseñador](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 7.  Arrastre un <xref:System.Windows.Forms.Label> controlar desde la **cuadro de herramientas** hasta el formulario y cambie su nombre `resultLabel`.  
   
@@ -75,7 +75,7 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Para implementar controladores de eventos asincrónicos  
   
-1.  En el **propiedades** ventana, con el <xref:System.ComponentModel.BackgroundWorker> componente aún seleccionado, haga clic en el **eventos** botón. Haga doble clic en el <xref:System.ComponentModel.BackgroundWorker.DoWork> y <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para crear controladores de eventos. Para más información sobre cómo utilizar controladores de eventos, consulte [Cómo: Crear controladores de eventos mediante el diseñador](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  En el **propiedades** ventana, con el <xref:System.ComponentModel.BackgroundWorker> componente aún seleccionado, haga clic en el **eventos** botón. Haga doble clic en el <xref:System.ComponentModel.BackgroundWorker.DoWork> y <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para crear controladores de eventos. Para obtener más información sobre cómo usar controladores de eventos, vea [Cómo: Crear controladores de eventos mediante el diseñador](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 2.  Cree un método llamado `ComputeFibonacci` en el formulario. Este método realiza el trabajo en sí y se ejecutará en segundo plano. Este código muestra la implementación recursiva del algoritmo de Fibonacci, que es notablemente ineficaz y tarda exponencialmente más tiempo en completarse para los números más elevados. Se usa aquí a modo de ilustración, para mostrar una operación que puede suponer grandes retrasos en su aplicación.  
   
@@ -156,7 +156,7 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
   
 -   Usar varios <xref:System.ComponentModel.BackgroundWorker> objetos para varias operaciones simultáneas.  
   
--   Para depurar su aplicación multiproceso, consulte [Cómo: Utilizar la ventana Subprocesos](/visualstudio/debugger/how-to-use-the-threads-window).  
+-   Para depurar su aplicación multiproceso, consulte [Cómo: Utilice la ventana subprocesos](/visualstudio/debugger/how-to-use-the-threads-window).  
   
 -   Implemente su propio componente que admita el modelo de programación asincrónica. Para más información, consulte [Event-based Asynchronous Pattern Overview](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Introducción al patrón asincrónico basado en eventos).  
   
@@ -169,6 +169,6 @@ Si tiene una operación que tarda mucho tiempo en completarse, y no desea la int
 - [Subprocesamiento administrado](../../../../docs/standard/threading/index.md)
 - [Procedimientos recomendados para el subprocesamiento administrado](../../../../docs/standard/threading/managed-threading-best-practices.md)
 - [Información general sobre el modelo asincrónico basado en eventos](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)  
-- [Tutorial: Ejecutar una operación en segundo plano](walkthrough-running-an-operation-in-the-background.md)
+- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Tutorial: Ejecución de una operación en segundo plano](walkthrough-running-an-operation-in-the-background.md)
 - [Componente BackgroundWorker](backgroundworker-component.md)

@@ -2,12 +2,12 @@
 title: '&lt;states&gt; de WCF, &lt;workflowInstanceQuery&gt;'
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: d67f4143619b72826f8fef4adbf66ff8782e4a34
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 56e3c6ce5c86e468c9a4dd63021264703ab75b02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540824"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>&lt;states&gt; de WCF, &lt;workflowInstanceQuery&gt;
 
@@ -15,13 +15,13 @@ Representa una colección de estados suscritos de la instancia de flujo de traba
   
 Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel > \<seguimiento >  
-\<perfiles de >  
-\<trackingProfile >  
+\<system.serviceModel> \<tracking>  
+\<profiles>  
+\<trackingProfile>  
 \<flujo de trabajo >  
-\<workflowInstanceQueries >  
-\<workflowInstanceQuery >  
-\<Estados >  
+\<workflowInstanceQueries>  
+\<workflowInstanceQuery>  
+\<states>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,13 +55,13 @@ Ninguno.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Estados >](state-of-wcf-workflowinstancequery.md)|Un estado suscrito de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crea el registro del seguimiento.|  
+|[\<states>](state-of-wcf-workflowinstancequery.md)|Un estado suscrito de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crea el registro del seguimiento.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Una consulta que realiza el seguimiento de los cambios del ciclo de vida de la instancia de flujo de trabajo, como por ejemplo, un evento iniciado o completado.|  
+|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Una consulta que realiza el seguimiento de los cambios del ciclo de vida de la instancia de flujo de trabajo, como por ejemplo, un evento iniciado o completado.|  
   
 ## <a name="remarks"></a>Comentarios
 
@@ -99,10 +99,10 @@ La siguiente configuración se suscribe a los registros de seguimiento de nivel 
 </workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
-- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

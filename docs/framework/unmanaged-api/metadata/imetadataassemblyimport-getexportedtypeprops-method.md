@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544645"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps (Método)
-Obtiene el conjunto de propiedades del tipo exportado con la firma de metadatos especificados.  
+Obtiene el conjunto de propiedades del tipo exportado con la firma de metadatos especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ HRESULT GetExportedTypeProps (
   
 #### <a name="parameters"></a>Parámetros  
  `mdct`  
- [in] Un `mdExportedType` símbolo (token) de metadatos que representa el tipo exportado.  
+ [in] Un `mdExportedType` token de metadatos que representa el tipo exportado.  
   
  `szName`  
  [out] El nombre del tipo exportado.  
@@ -55,22 +55,22 @@ HRESULT GetExportedTypeProps (
  [out] El número de caracteres anchos realmente devueltos en `szName`  
   
  `ptkImplementation`  
- [out] Un `mdFile`, `mdAssemblyRef`, o `mdExportedType` símbolo (token) de metadatos que contiene o permite el acceso a las propiedades del tipo exportado.  
+ [out] Un `mdFile`, `mdAssemblyRef`, o `mdExportedType` token de metadatos que contiene o permite el acceso a las propiedades del tipo exportado.  
   
  `ptkTypeDef`  
- [out] Un puntero a un `mdTypeDef` símbolo (token) que representa un tipo en el archivo.  
+ [out] Un puntero a un `mdTypeDef` token que representa un tipo en el archivo.  
   
  `pdwExportedTypeFlags`  
- [out] Un puntero a las marcas que describen los metadatos aplicados al tipo exportado. El valor de marcas puede ser uno o más [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) valores.  
+ [out] Un puntero a los marcadores que describen los metadatos aplicados al tipo exportado. El valor de marcas puede ser uno o más [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) valores.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -1,28 +1,28 @@
 ---
-title: '&lt;argumento&gt;'
+title: '&lt;argument&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7144d53-8023-4e90-971f-895e016fd58a
-ms.openlocfilehash: 8172093f36bd09ea33b1a447ee61dc36afb1b358
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3744781f844d4a1728ba1e9846b2b8c56c0ad8fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554613"
 ---
-# <a name="ltargumentgt"></a>&lt;argumento&gt;
+# <a name="ltargumentgt"></a>&lt;argument&gt;
 Un elemento de configuración que representa un argumento asociado a una consulta de estado de actividad.  
   
  Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<seguimiento >  
-\<trackingProfile >  
+\<tracking>  
+\<trackingProfile>  
 \<flujo de trabajo >  
-\<activityStateQueries >  
-\<activityStateQuery >  
-\<argumentos >  
-\<argumento >  
+\<activityStateQueries>  
+\<activityStateQuery>  
+\<arguments>  
+\<argument>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,7 +57,7 @@ Un elemento de configuración que representa un argumento asociado a una consult
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<argumentos >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Una colección de argumentos asociada a esta consulta de actividad.|  
+|[\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Una colección de argumentos asociada a esta consulta de actividad.|  
   
 ## <a name="remarks"></a>Comentarios  
  Una característica única de ActivityStateQuery es la capacidad de extraer los datos al realizar el seguimiento de la ejecución de un flujo de trabajo. Esto proporciona contexto adicional al tener acceso a los registros de seguimiento tras la ejecución. Puede usar el [ \<argumentos >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<Estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) y [ \<Estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) para extraer cualquier variable o argumento de cualquier actividad de un flujo de trabajo. El siguiente ejemplo muestra una consulta de estado de actividad que extrae variables y argumentos cuando se emite el registro de seguimiento de la actividad `Closed`. Variables y argumentos se pueden extraer con ActivityStateRecord y, por tanto, se suscriben dentro de un seguimiento de generar perfiles usando [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
@@ -76,8 +76,8 @@ Un elemento de configuración que representa un argumento asociado a una consult
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Proteger un argumento de procedimiento para que no se realicen cambios de valor (Visual Basic)'
+title: Procedimiento Proteger un argumento de procedimiento contra cambios de valor (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 393127353a020c1db5df3011b2a97b1c53097f27
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 42015e2a024ece75a920deb414d326c88f31249e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50225339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528893"
 ---
-# <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Cómo: Proteger un argumento de procedimiento para que no se realicen cambios de valor (Visual Basic)
+# <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Procedimiento Proteger un argumento de procedimiento contra cambios de valor (Visual Basic)
 Si un procedimiento declara un parámetro como [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic proporciona el código del procedimiento una referencia directa al elemento de programación subyacente del argumento en el código de llamada. Esto permite que el procedimiento para cambiar el valor subyacente del argumento en el código de llamada. En algunos casos es posible que desee el código de llamada para protegerse frente a este cambio.  
   
- Siempre puede proteger un argumento de cambio al declarar el parámetro correspondiente [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) en el procedimiento. Si desea poder cambiar un determinado argumento en algunos casos, pero no otros, puede declararlo `ByRef` y permitir que el código que realiza la llamada a determinar el mecanismo de paso en cada llamada. Para ello, incluya el argumento correspondiente entre paréntesis para pasarlo por valor o déjelo sin paréntesis para pasarlo por referencia. Para obtener más información, consulte [Cómo: forzar un argumento para pasar por valor](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Siempre puede proteger un argumento de cambio al declarar el parámetro correspondiente [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) en el procedimiento. Si desea poder cambiar un determinado argumento en algunos casos, pero no otros, puede declararlo `ByRef` y permitir que el código que realiza la llamada a determinar el mecanismo de paso en cada llamada. Para ello, incluya el argumento correspondiente entre paréntesis para pasarlo por valor o déjelo sin paréntesis para pasarlo por referencia. Para obtener más información, vea [Cómo: Forzar un argumento para pasar por valor](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra dos procedimientos que toman una variable de matriz y operan en sus elementos. El `increase` procedimiento simplemente agrega uno a cada elemento. El `replace` procedimiento asigna una nueva matriz al parámetro `a()` y, a continuación, agrega uno a cada elemento. Sin embargo, la reasignación no afecta a la variable de matriz subyacente en el código de llamada.  
@@ -42,14 +42,14 @@ Si un procedimiento declara un parámetro como [ByRef](../../../../visual-basic/
 ## <a name="compiling-the-code"></a>Compilar el código  
  El valor predeterminado en Visual Basic consiste en pasar argumentos por valor. Sin embargo, es buena práctica para incluir cualquiera de programación la [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palabra clave con cada parámetro declarado. Esto hace que el código más fácil de leer.  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos](./index.md)  
- [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)  
- [Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)  
- [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)  
- [Diferencias entre argumentos modificables y no modificables](./differences-between-modifiable-and-nonmodifiable-arguments.md)  
- [Diferencias entre pasar un argumento por valor y por referencia](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
- [Cambiar el valor de un argumento de procedimiento](./how-to-change-the-value-of-a-procedure-argument.md)  
- [Forzar un argumento para que pase como un valor](./how-to-force-an-argument-to-be-passed-by-value.md)  
- [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)  
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Vea también
+- [Procedimientos](./index.md)
+- [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
+- [Cómo: Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)
+- [Paso de argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
+- [Diferencias entre argumentos modificables y no modificables](./differences-between-modifiable-and-nonmodifiable-arguments.md)
+- [Diferencias entre pasar un argumento por valor y por referencia](./differences-between-passing-an-argument-by-value-and-by-reference.md)
+- [Cómo: Cambie el valor de un argumento de procedimiento](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Cómo: Forzar un argumento para pasar por valor](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
