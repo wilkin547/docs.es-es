@@ -1,20 +1,14 @@
 ---
-title: Palabras clave de C#
+title: 'Palabras clave de C#'
 ms.date: 03/07/2017
 f1_keywords:
-- cs.keywords
+  - cs.keywords
 helpviewer_keywords:
-- keywords [C#]
-- C# language, keywords
-- Visual C#, keywords
-- '@ keyword'
+  - 'keywords [C#]'
+  - 'C# language, keywords'
+  - 'Visual C#, keywords'
+  - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 4e4cc7b3a0249836e6c0960208c0158962088c11
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861938"
 ---
 # <a name="c-keywords"></a>Palabras clave de C#
 Las palabras clave son identificadores reservados predefinidos que tienen un significado especial para el compilador. No podrá utilizarlos como identificadores en el programa a no ser que incluyan `@` como prefijo. Por ejemplo, `@if` es un identificador válido, pero `if` no lo es, porque `if` es una palabra clave.  
@@ -62,5 +56,5 @@ Las palabras clave son identificadores reservados predefinidos que tienen un sig
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Referencia de C#](../../../csharp/language-reference/index.md)
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)

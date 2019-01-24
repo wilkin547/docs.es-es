@@ -2,15 +2,9 @@
 title: Programar en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- programming [Visual Basic], Visual Basic
-- programming
+  - 'programming [Visual Basic], Visual Basic'
+  - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990029"
 ---
 # <a name="programming-in-visual-basic"></a>Programar en Visual Basic
 En esta sección se describen las tareas de programación sobre las que necesitará obtener información adicional a medida que crea la aplicación de Visual Basic.  
@@ -37,8 +31,8 @@ En esta sección se describen las tareas de programación sobre las que necesita
  [Procesar unidades, directorios y archivos](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
  Contiene documentación sobre cómo acceder al sistema de archivos mediante el objeto `My.Computer.FileSystem`.  
   
-## <a name="see-also"></a>Vea también  
- [Características del lenguaje Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)  
- [Conceptos de programación](../../../visual-basic/programming-guide/concepts/index.md)  
- [Colecciones](../../../visual-basic/programming-guide/concepts/collections.md)  
- [Desarrollo de aplicaciones con Visual Basic](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>Vea también
+- [Características del lenguaje Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
+- [Conceptos de programación](../../../visual-basic/programming-guide/concepts/index.md)
+- [Colecciones](../../../visual-basic/programming-guide/concepts/collections.md)
+- [Desarrollo de aplicaciones con Visual Basic](../../../visual-basic/developing-apps/index.md)

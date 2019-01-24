@@ -2,23 +2,17 @@
 title: Recursos en aplicaciones .NET
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524734"
 ---
 # <a name="resources-in-net-apps"></a>Recursos en aplicaciones .NET
 Casi todas las aplicaciones de calidad de producción tienen que utilizar recursos. Un recurso es cualquier dato no ejecutable que se implemente lógicamente con una aplicación. Los recursos pueden mostrarse en una aplicación como mensajes de error o como parte de la interfaz de usuario. Los recursos pueden contener datos con varios formatos, como objetos almacenados, cadenas e imágenes. (Para poder escribir objetos almacenados en un archivo de recursos, los objetos deben ser serializables). Si los datos se almacenan en un archivo de recursos, es posible modificarlos sin volver a compilar toda la aplicación. Esto también permite almacenar los datos en una sola ubicación y elimina la necesidad de confiar en los datos codificados de forma rígida almacenados en varias ubicaciones.  
@@ -60,11 +54,11 @@ Casi todas las aplicaciones de calidad de producción tienen que utilizar recurs
   
 -   La clase <xref:System.Resources.ResXResourceSet>, que permite cargar en la memoria todos los elementos de un archivo de recursos XML.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Globalization.CultureInfo>  
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
- [Elementos esenciales de aplicaciones](../../../docs/standard/application-essentials.md)  
- [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [Recuperar recursos](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Globalization.CultureInfo>
+- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
+- [Elementos esenciales de aplicaciones](../../../docs/standard/application-essentials.md)
+- [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Recuperar recursos](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)

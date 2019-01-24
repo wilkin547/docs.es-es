@@ -4,13 +4,8 @@ description: En este artículo se le enseña cómo se crean versiones del entorn
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334813"
 ---
+
 # <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
 
 .NET Core se refiere al runtime y el SDK de .NET Core, que contiene las herramientas que necesita para desarrollar aplicaciones. Los SDK de .NET Core están diseñados para funcionar con cualquier versión anteriores del runtime de .NET Core. En este artículo se explican el runtime y la estrategia de la versión del SDK. En el artículo [.NET Standard](../../standard/net-standard.md#net-implementation-support) se ofrece una explicación de los números de versión de .NET Standard.
@@ -106,8 +101,8 @@ Cada versión de .NET Core implementa una versión de .NET Standard. Implementar
 
 ## <a name="see-also"></a>Vea también
 
-* [Marcos de trabajo de destino](../../standard/frameworks.md)  
-* [Empaquetado de distribución de .NET Core](../build/distribution-packaging.md)  
-* [Hoja de información sobre el ciclo de vida de compatibilidad de .NET Core](https://www.microsoft.com/net/core/support)  
-* [.NET Core 2+ Version Binding (Enlace de versión de .NET Core 2+)](https://github.com/dotnet/designs/issues/3)  
-* [Imágenes de Docker para .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Marcos de trabajo de destino](../../standard/frameworks.md)
+- [Empaquetado de distribución de .NET Core](../build/distribution-packaging.md)
+- [Hoja de información sobre el ciclo de vida de compatibilidad de .NET Core](https://www.microsoft.com/net/core/support)
+- [.NET Core 2+ Version Binding (Enlace de versión de .NET Core 2+)](https://github.com/dotnet/designs/issues/3)
+- [Imágenes de Docker para .NET Core](https://hub.docker.com/r/microsoft/dotnet/)

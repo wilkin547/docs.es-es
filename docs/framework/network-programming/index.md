@@ -2,17 +2,11 @@
 title: Programación para redes en .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Networking
-- Internet
-- Internet, .NET Framework Internet services
-- Network Resources
+  - Networking
+  - Internet
+  - 'Internet, .NET Framework Internet services'
+  - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188084"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programación para redes en .NET Framework
 Microsoft .NET Framework proporciona una implementación por capas, extensible y administrada de servicios de Internet que se puede integrar rápida y fácilmente en las aplicaciones. Las aplicaciones de red se pueden basar en protocolos conectables para poder usar automáticamente los nuevos protocolos de Internet, o pueden utilizar una implementación administrada de la interfaz de Windows Socket para operar con la red en el nivel de socket.  
@@ -90,7 +84,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  Proporciona una interfaz de programación sencilla para muchos de los protocolos que se utilizan en las redes actuales. Las clases <xref:System.Net.WebRequest?displayProperty=nameWithType> y <xref:System.Net.WebResponse?displayProperty=nameWithType> de este espacio de nombres son la base para los protocolos conectables.  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
- Define los tipos y las enumeraciones utilizadas para definir las directivas de caché de los recursos obtenidos mediante las clases <xref:System.Net.WebRequest?displayProperty=nameWithType> y <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>.  
+ Define los tipos y las enumeraciones utilizadas para definir las directivas de caché de los recursos obtenidos mediante las clases <xref:System.Net.WebRequest?displayProperty=nameWithType> y <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> .  
   
  <xref:System.Net.Configuration?displayProperty=nameWithType>  
  Clases que utilizan las aplicaciones para acceder y actualizar la configuración de los espacios de nombres System.Net mediante programación.  
@@ -134,10 +128,10 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Proporciona compatibilidad con la configuración de la autenticación mediante la protección extendida de las aplicaciones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
- [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework](../../../docs/framework/network-programming/tls.md)  
- [Temas de procedimientos de programación de redes](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Ejemplos de red para .NET en la galería de código de MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [Ejemplo de HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework](../../../docs/framework/network-programming/tls.md)
+- [Temas de procedimientos de programación de redes](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
+- [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Ejemplos de red para .NET en la galería de código de MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [Ejemplo de HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)

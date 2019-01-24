@@ -4,13 +4,8 @@ description: Obtenga información sobre cómo compilar .NET Core y la CLI de .NE
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170072"
 ---
+
 # <a name="build-net-core-from-source"></a>Compilación de .NET Core a partir del código fuente
 
 La capacidad de compilar .NET Core a partir de su código fuente es importante en varios sentidos: facilita la portabilidad de .NET Core a nuevas plataformas, permite contribuciones y correcciones del producto y permite crear versiones personalizadas de .NET.
@@ -101,6 +96,6 @@ Use el ejecutable `dotnet` de *artifacts/{os}-{arch}/stage2* para probar la CLI 
 
 ## <a name="see-also"></a>Vea también
 
-* [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md) [Common Language Runtime de .NET Core (CoreCLR)]
-* [.NET Core CLI Developer Guide](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md) (Guía para desarrolladores de la CLI de .NET Core)
-* [Empaquetado de distribución de .NET Core](./distribution-packaging.md)
+- [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md) [Common Language Runtime de .NET Core (CoreCLR)]
+- [.NET Core CLI Developer Guide](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md) (Guía para desarrolladores de la CLI de .NET Core)
+- [Empaquetado de distribución de .NET Core](./distribution-packaging.md)
