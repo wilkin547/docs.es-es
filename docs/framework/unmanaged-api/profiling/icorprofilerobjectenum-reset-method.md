@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98b54359e2ad659d0268d05d26c7a05759b1e775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fe72361d91e0f162b5585d2c8b4920adf5adb3e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539121"
 ---
-# <a name="icorprofilerobjectenumreset-method"></a><span data-ttu-id="3aa7b-102">ICorProfilerObjectEnum::Reset (Método)</span><span class="sxs-lookup"><span data-stu-id="3aa7b-102">ICorProfilerObjectEnum::Reset Method</span></span>
-<span data-ttu-id="3aa7b-103">Mueve el cursor de este enumerador a la posición inicial de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="3aa7b-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerobjectenumreset-method"></a><span data-ttu-id="45228-102">ICorProfilerObjectEnum::Reset (Método)</span><span class="sxs-lookup"><span data-stu-id="45228-102">ICorProfilerObjectEnum::Reset Method</span></span>
+<span data-ttu-id="45228-103">Cursor de este enumerador se mueve a la posición inicial de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="45228-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3aa7b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3aa7b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="45228-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="45228-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="3aa7b-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3aa7b-105">Requirements</span></span>  
- <span data-ttu-id="3aa7b-106">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3aa7b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="45228-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="45228-105">Requirements</span></span>  
+ <span data-ttu-id="45228-106">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="45228-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3aa7b-107">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3aa7b-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="45228-107">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="45228-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3aa7b-108">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3aa7b-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="45228-108">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="45228-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3aa7b-109">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3aa7b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="45228-109">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="45228-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3aa7b-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="3aa7b-110">See Also</span></span>  
- [<span data-ttu-id="3aa7b-111">ICorProfilerObjectEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="3aa7b-111">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="45228-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="45228-110">See also</span></span>
+- [<span data-ttu-id="45228-111">ICorProfilerObjectEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="45228-111">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

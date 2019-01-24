@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 815f2e2f695837c973210a21ab3631ef307c23d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2d3624d130c005f9ed9109863b052e3272797ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496824"
 ---
-# <a name="icorpublishprocessgetdisplayname-method"></a><span data-ttu-id="70732-102">ICorPublishProcess::GetDisplayName (Método)</span><span class="sxs-lookup"><span data-stu-id="70732-102">ICorPublishProcess::GetDisplayName Method</span></span>
-<span data-ttu-id="70732-103">Obtiene la ruta de acceso completa del archivo ejecutable del proceso que hace referencia esta [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span><span class="sxs-lookup"><span data-stu-id="70732-103">Gets the full path of the executable for the process referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span></span>  
+# <a name="icorpublishprocessgetdisplayname-method"></a><span data-ttu-id="a12d3-102">ICorPublishProcess::GetDisplayName (Método)</span><span class="sxs-lookup"><span data-stu-id="a12d3-102">ICorPublishProcess::GetDisplayName Method</span></span>
+<span data-ttu-id="a12d3-103">Obtiene la ruta de acceso completa del archivo ejecutable para el proceso que hace referencia esta [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span><span class="sxs-lookup"><span data-stu-id="a12d3-103">Gets the full path of the executable for the process referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70732-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="70732-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a12d3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a12d3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDisplayName (  
@@ -38,24 +38,24 @@ HRESULT GetDisplayName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="70732-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="70732-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a12d3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a12d3-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="70732-106">[in] Tamaño de la matriz `szName`.</span><span class="sxs-lookup"><span data-stu-id="70732-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="a12d3-106">[in] Tamaño de la matriz `szName`.</span><span class="sxs-lookup"><span data-stu-id="a12d3-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="70732-107">[out] El número de caracteres anchos devueltos en la `szName` matriz.</span><span class="sxs-lookup"><span data-stu-id="70732-107">[out] The number of wide characters returned in the `szName` array.</span></span>  
+ <span data-ttu-id="a12d3-107">[out] El número de caracteres anchos que se devuelven en el `szName` matriz.</span><span class="sxs-lookup"><span data-stu-id="a12d3-107">[out] The number of wide characters returned in the `szName` array.</span></span>  
   
  `szName`  
- <span data-ttu-id="70732-108">[out] Una matriz para almacenar el nombre, incluida la ruta de acceso completa del archivo ejecutable.</span><span class="sxs-lookup"><span data-stu-id="70732-108">[out] An array to store the name, including the full path, of the executable.</span></span> <span data-ttu-id="70732-109">El nombre está terminada en null.</span><span class="sxs-lookup"><span data-stu-id="70732-109">The name is null-terminated.</span></span>  
+ <span data-ttu-id="a12d3-108">[out] Una matriz para almacenar el nombre, incluida la ruta de acceso completa del archivo ejecutable.</span><span class="sxs-lookup"><span data-stu-id="a12d3-108">[out] An array to store the name, including the full path, of the executable.</span></span> <span data-ttu-id="a12d3-109">El nombre termina en null.</span><span class="sxs-lookup"><span data-stu-id="a12d3-109">The name is null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="70732-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="70732-110">Requirements</span></span>  
- <span data-ttu-id="70732-111">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70732-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a12d3-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a12d3-110">Requirements</span></span>  
+ <span data-ttu-id="a12d3-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a12d3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70732-112">**Encabezado:** Cordebug.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="70732-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="a12d3-112">**Encabezado**: CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="a12d3-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="70732-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70732-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a12d3-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a12d3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="70732-114">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70732-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a12d3-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a12d3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70732-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="70732-115">See Also</span></span>  
- [<span data-ttu-id="70732-116">ICorPublishProcess (interfaz)</span><span class="sxs-lookup"><span data-stu-id="70732-116">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a12d3-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="a12d3-115">See also</span></span>
+- [<span data-ttu-id="a12d3-116">ICorPublishProcess (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a12d3-116">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

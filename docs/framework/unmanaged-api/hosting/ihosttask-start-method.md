@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1d931a7e0b6816841170b33ed6d17f05441d609
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec781a4b51b425225339c08ec8fa194da1972462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625710"
 ---
-# <a name="ihosttaskstart-method"></a><span data-ttu-id="9da9d-102">IHostTask::Start (Método)</span><span class="sxs-lookup"><span data-stu-id="9da9d-102">IHostTask::Start Method</span></span>
-<span data-ttu-id="9da9d-103">Solicita que el host mueva la tarea representada por el actual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia de suspendido al estado activo, en el que se puede ejecutar código.</span><span class="sxs-lookup"><span data-stu-id="9da9d-103">Requests that the host move the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance from a suspended to a live state, in which code can be executed.</span></span>  
+# <a name="ihosttaskstart-method"></a><span data-ttu-id="8a150-102">IHostTask::Start (Método)</span><span class="sxs-lookup"><span data-stu-id="8a150-102">IHostTask::Start Method</span></span>
+<span data-ttu-id="8a150-103">Solicita que el host mueva la tarea representada por el actual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia de suspendido al estado activo, en el que se puede ejecutar el código.</span><span class="sxs-lookup"><span data-stu-id="8a150-103">Requests that the host move the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance from a suspended to a live state, in which code can be executed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9da9d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9da9d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a150-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8a150-104">Syntax</span></span>  
   
 ```  
 HRESULT Start ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="9da9d-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="9da9d-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8a150-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="8a150-105">Return Value</span></span>  
   
-|<span data-ttu-id="9da9d-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9da9d-106">HRESULT</span></span>|<span data-ttu-id="9da9d-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="9da9d-107">Description</span></span>|  
+|<span data-ttu-id="8a150-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8a150-106">HRESULT</span></span>|<span data-ttu-id="8a150-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="8a150-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9da9d-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="9da9d-108">S_OK</span></span>|<span data-ttu-id="9da9d-109">Start se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="9da9d-109">Start returned successfully.</span></span>|  
-|<span data-ttu-id="9da9d-110">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9da9d-110">E_FAIL</span></span>|<span data-ttu-id="9da9d-111">Se ha producido un error catastrófico desconocido.</span><span class="sxs-lookup"><span data-stu-id="9da9d-111">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9da9d-112">Cuando un método devuelve E_FAIL, common language runtime (CLR) ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="9da9d-112">When a method returns E_FAIL, the common language runtime (CLR) is no longer usable within the process.</span></span> <span data-ttu-id="9da9d-113">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="9da9d-113">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="8a150-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="8a150-108">S_OK</span></span>|<span data-ttu-id="8a150-109">Start se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="8a150-109">Start returned successfully.</span></span>|  
+|<span data-ttu-id="8a150-110">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8a150-110">E_FAIL</span></span>|<span data-ttu-id="8a150-111">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="8a150-111">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8a150-112">Cuando un método devuelve E_FAIL, common language runtime (CLR) ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="8a150-112">When a method returns E_FAIL, the common language runtime (CLR) is no longer usable within the process.</span></span> <span data-ttu-id="8a150-113">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="8a150-113">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9da9d-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9da9d-114">Remarks</span></span>  
- <span data-ttu-id="9da9d-115">`Start` siempre devuelve un valor HRESULT de S_OK, excepto en casos donde se ha producido un error catastrófico.</span><span class="sxs-lookup"><span data-stu-id="9da9d-115">`Start` always returns an HRESULT value of S_OK, except in cases where a catastrophic failure has occurred.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a150-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8a150-114">Remarks</span></span>  
+ <span data-ttu-id="8a150-115">`Start` siempre devuelve un valor HRESULT de S_OK, excepto en casos donde se ha producido un error catastrófico.</span><span class="sxs-lookup"><span data-stu-id="8a150-115">`Start` always returns an HRESULT value of S_OK, except in cases where a catastrophic failure has occurred.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9da9d-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9da9d-116">Requirements</span></span>  
- <span data-ttu-id="9da9d-117">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9da9d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a150-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8a150-116">Requirements</span></span>  
+ <span data-ttu-id="8a150-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a150-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9da9d-118">**Encabezado:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9da9d-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8a150-118">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8a150-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9da9d-119">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9da9d-119">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8a150-119">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8a150-119">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9da9d-120">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9da9d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8a150-120">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a150-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9da9d-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="9da9d-121">See Also</span></span>  
- [<span data-ttu-id="9da9d-122">ICLRTask (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9da9d-122">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [<span data-ttu-id="9da9d-123">ICLRTaskManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9da9d-123">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [<span data-ttu-id="9da9d-124">IHostTask (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9da9d-124">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [<span data-ttu-id="9da9d-125">IHostTaskManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9da9d-125">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8a150-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="8a150-121">See also</span></span>
+- [<span data-ttu-id="8a150-122">ICLRTask (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8a150-122">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="8a150-123">ICLRTaskManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8a150-123">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="8a150-124">IHostTask (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8a150-124">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="8a150-125">IHostTaskManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8a150-125">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

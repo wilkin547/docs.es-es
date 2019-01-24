@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3358150754fd039d6e6107efd61c8d950fd02f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aec3ddc8b2a0fd527a5cf9b48286f0e8bca14636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618992"
 ---
-# <a name="icorprofilercallbackexceptionthrown-method"></a><span data-ttu-id="59297-102">ICorProfilerCallback::ExceptionThrown (Método)</span><span class="sxs-lookup"><span data-stu-id="59297-102">ICorProfilerCallback::ExceptionThrown Method</span></span>
-<span data-ttu-id="59297-103">Notifica al generador de perfiles que se ha producido una excepción.</span><span class="sxs-lookup"><span data-stu-id="59297-103">Notifies the profiler that an exception has been thrown.</span></span>  
+# <a name="icorprofilercallbackexceptionthrown-method"></a><span data-ttu-id="9aa1b-102">ICorProfilerCallback::ExceptionThrown (Método)</span><span class="sxs-lookup"><span data-stu-id="9aa1b-102">ICorProfilerCallback::ExceptionThrown Method</span></span>
+<span data-ttu-id="9aa1b-103">Notifica al generador de perfiles que se ha producido una excepción.</span><span class="sxs-lookup"><span data-stu-id="9aa1b-103">Notifies the profiler that an exception has been thrown.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="59297-104">Esta función se invoca únicamente si la excepción alcanza el código administrado.</span><span class="sxs-lookup"><span data-stu-id="59297-104">This function is called only if the exception reaches managed code.</span></span>  
+>  <span data-ttu-id="9aa1b-104">Esta función se invoca sólo si la excepción llega a código administrado.</span><span class="sxs-lookup"><span data-stu-id="9aa1b-104">This function is called only if the exception reaches managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59297-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="59297-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9aa1b-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9aa1b-105">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionThrown(  
     [in] ObjectID thrownObjectId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="59297-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="59297-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9aa1b-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9aa1b-106">Parameters</span></span>  
  `thrownObjectId`  
- <span data-ttu-id="59297-107">[in] El identificador del objeto que provocó la excepción.</span><span class="sxs-lookup"><span data-stu-id="59297-107">[in] The ID of the object that caused the exception to be thrown.</span></span>  
+ <span data-ttu-id="9aa1b-107">[in] El identificador del objeto que produjo la excepción que se produzca.</span><span class="sxs-lookup"><span data-stu-id="9aa1b-107">[in] The ID of the object that caused the exception to be thrown.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="59297-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="59297-108">Remarks</span></span>  
- <span data-ttu-id="59297-109">El generador de perfiles no debe bloquearse en su implementación de este método porque la pila no puede estar en un estado que permita la recopilación de elementos no utilizados y, por lo tanto, no se puede habilitar la colección de elementos no utilizados preferente.</span><span class="sxs-lookup"><span data-stu-id="59297-109">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="59297-110">Si el generador de perfiles se bloquea aquí y se intenta realizar la recolección de elementos, el tiempo de ejecución se bloqueará hasta que devuelve esta devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="59297-110">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9aa1b-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9aa1b-108">Remarks</span></span>  
+ <span data-ttu-id="9aa1b-109">El generador de perfiles no debe bloquearse en su implementación de este método porque la pila no puede estar en un estado que permita la recolección de elementos y, por lo tanto, no se puede habilitar la recolección preferente.</span><span class="sxs-lookup"><span data-stu-id="9aa1b-109">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="9aa1b-110">Si el generador de perfiles se bloquea aquí y se intenta realizar la recolección de elementos, el tiempo de ejecución se bloqueará hasta que devuelve esta devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="9aa1b-110">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="59297-111">Implementación del generador de perfiles de este método no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.</span><span class="sxs-lookup"><span data-stu-id="59297-111">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="9aa1b-111">Implementación del generador de perfiles de este método no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.</span><span class="sxs-lookup"><span data-stu-id="9aa1b-111">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59297-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="59297-112">Requirements</span></span>  
- <span data-ttu-id="59297-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59297-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9aa1b-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9aa1b-112">Requirements</span></span>  
+ <span data-ttu-id="9aa1b-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9aa1b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59297-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="59297-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9aa1b-114">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9aa1b-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="59297-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="59297-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9aa1b-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9aa1b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="59297-116">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59297-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9aa1b-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9aa1b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59297-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="59297-117">See Also</span></span>  
- [<span data-ttu-id="59297-118">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="59297-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9aa1b-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="9aa1b-117">See also</span></span>
+- [<span data-ttu-id="9aa1b-118">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9aa1b-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
