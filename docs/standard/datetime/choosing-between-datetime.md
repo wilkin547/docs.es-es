@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54392ce12ca93d3a7979b1d0bbc78132773f88ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600120"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo
 
@@ -47,7 +47,7 @@ Las aplicaciones de .NET que usan la información de fecha y hora son muy divers
 
 ## <a name="the-datetime-structure"></a>DateTime (estructura)
 
-Un valor <xref:System.DateTime> define una fecha y hora concretas. Incluye un <xref:System.DateTime.Kind%2A> propiedad que proporciona información limitada sobre la zona horaria a la que esa fecha y hora pertenece. El <xref:System.DateTimeKind> valor devuelto por la <xref:System.DateTime.Kind%2A> propiedad indica si el <xref:System.DateTime> valor representa la hora local (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), hora Universal coordinada (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), o una hora no especificada (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+Un valor <xref:System.DateTime> define una fecha y hora concretas. Incluye un <xref:System.DateTime.Kind%2A> propiedad que proporciona información limitada sobre la zona horaria a la que esa fecha y hora pertenece. El valor <xref:System.DateTimeKind> devuelto por la propiedad <xref:System.DateTime.Kind%2A> indica si el valor <xref:System.DateTime> representa la hora local (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), la hora universal coordinada (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) o una hora no especificada (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
 La estructura <xref:System.DateTime> es adecuada para aplicaciones que hacen lo siguiente:
 
@@ -122,4 +122,4 @@ Aprovechar la compatibilidad de zona horaria en .NET solo es posible si se conoc
 
 ## <a name="see-also"></a>Vea también
 
-* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)

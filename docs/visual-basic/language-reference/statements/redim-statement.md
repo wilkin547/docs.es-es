@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617331"
 ---
 # <a name="redim-statement-visual-basic"></a>Instrucción ReDim (Visual Basic)
 Reasigna espacio de almacenamiento a una variable de matriz.  
@@ -47,8 +47,8 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |Término|Definición|  
 |----------|----------------|  
 |`Preserve`|Opcional. Modificador usado para mantener los datos en la matriz existente cuando cambia el tamaño solamente de la última dimensión.|  
-|`name`|Requerido. Nombre de la variable de matriz. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Requerido. Lista de límites de cada dimensión de la matriz redefinida.|  
+|`name`|Obligatorio. Nombre de la variable de matriz. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Obligatorio. Lista de límites de cada dimensión de la matriz redefinida.|  
   
 ## <a name="remarks"></a>Comentarios  
  Puede utilizar la instrucción `ReDim` para cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado. Si tiene una matriz grande y ya no necesita algunos de sus elementos, `ReDim` puede liberar memoria al reducir el tamaño de la matriz. Por otro lado, si la matriz necesita más elementos, `ReDim` puede agregarlos.  
@@ -61,17 +61,17 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Varias Variables.** Puede cambiar el tamaño de varias variables de matriz en la misma instrucción de declaración y especificar las partes `name` y `boundlist` para cada variable. Las variables se separan con comas.  
   
--   **Límites de la matriz.** Cada entrada de `boundlist` puede especificar los límites inferior y superior de esa dimensión. El límite inferior es siempre 0 (cero). El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión (que es el límite superior más uno). El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
+-   **Límites de matriz.** Cada entrada de `boundlist` puede especificar los límites inferior y superior de esa dimensión. El límite inferior es siempre 0 (cero). El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión (que es el límite superior más uno). El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
   
      El número de dimensiones de `boundlist` debe coincidir con el número de dimensiones (rango) de la matriz original.  
   
 -   **Tipos de datos.** La instrucción `ReDim` no puede cambiar el tipo de datos de una variable de matriz o de sus elementos.  
   
--   **inicialización.** La instrucción `ReDim` no puede proporcionar nuevos valores de inicialización para los elementos de la matriz.  
+-   **Inicialización.** La instrucción `ReDim` no puede proporcionar nuevos valores de inicialización para los elementos de la matriz.  
   
 -   **Rango.** La instrucción `ReDim` no puede cambiar el rango (el número de dimensiones) de la matriz.  
   
--   **Cambiar el tamaño con Preserve.** Si usa `Preserve`, puede cambiar el tamaño únicamente de la última dimensión de la matriz. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
+-   **Cambio de tamaño con Preserve.** Si usa `Preserve`, puede cambiar el tamaño únicamente de la última dimensión de la matriz. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
   
      Por ejemplo, si su matriz tiene solo una dimensión, puede cambiar el tamaño de esa dimensión y conservar todo el contenido de la matriz, ya que es la última y única dimensión. Sin embargo, si su matriz tiene dos o más dimensiones, puede cambiar solamente el tamaño de la última dimensión si utiliza `Preserve`.  
   
@@ -98,12 +98,12 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  El tercer `ReDim` crea otra nueva matriz y quita otras cinco columnas del final de cada fila en cada capa. Esta vez no copia los elementos existentes. Esta instrucción revierte la matriz a su tamaño original. Dado que la instrucción no incluye el modificador `Preserve`, establece todos los elementos de matriz con sus valores predeterminados originales.  
   
- Para obtener ejemplos adicionales, vea [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Para obtener ejemplos adicionales, consulte [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IndexOutOfRangeException>  
- [Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Erase (instrucción)](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.IndexOutOfRangeException>
+- [Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Erase (instrucción)](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)

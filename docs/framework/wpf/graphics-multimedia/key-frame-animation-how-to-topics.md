@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510434"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Temas "Cómo..." de animaciones de fotogramas clave
-Los temas de esta sección muestran cómo usar animaciones de fotogramas clave para animar más de dos valores de propiedad y controlar la interpolación.  
+Los temas de esta sección muestran cómo usar animaciones de fotogramas clave para animar a más de dos valores de propiedad y controlar la interpolación.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Animar un objeto mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
@@ -37,7 +37,7 @@ Los temas de esta sección muestran cómo usar animaciones de fotogramas clave p
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>Vea también  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>Vea también
+- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
