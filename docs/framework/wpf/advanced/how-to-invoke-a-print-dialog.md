@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Invocar un cuadro de diálogo de impresión'
+title: Procedimiento Invocar un cuadro de diálogo de impresión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 271652fe9e98f9a381da5655bd313e12f8ee917d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 92a4cd6e29e37478981aad32286c181a412a6bfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735836"
 ---
-# <a name="how-to-invoke-a-print-dialog"></a>Cómo: Invocar un cuadro de diálogo de impresión
+# <a name="how-to-invoke-a-print-dialog"></a>Procedimiento Invocar un cuadro de diálogo de impresión
 Para proporcionar la capacidad de imprimir desde la aplicación, simplemente puede crear y abrir un <xref:System.Windows.Controls.PrintDialog> objeto.  
   
 ## <a name="example"></a>Ejemplo  
@@ -31,8 +31,8 @@ Para proporcionar la capacidad de imprimir desde la aplicación, simplemente pue
   
  En realidad, puede usar el <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> método sin siquiera abrir el cuadro de diálogo. En ese sentido, el control puede usarse como un componente de impresión oculto. Pero por motivos de rendimiento, sería mejor usar ya sea el <xref:System.Printing.PrintQueue.AddJob%2A> método o a uno de los muchos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> y <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos de la <xref:System.Windows.Xps.XpsDocumentWriter>. Para obtener más información acerca de esto, consulte [impresión de archivos XPS mediante programación](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md) y.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.PrintDialog>  
- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Escritor de documentos XPS de Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Controls.PrintDialog>
+- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Escritor de documentos XPS de Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: c164490464d839dacefaf570c8956bf15caeb7de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743041"
 ---
 # <a name="enabling-query-notifications"></a>Habilitar notificaciones de consulta
 Las aplicaciones que consumen notificaciones de consulta poseen un conjunto común de requisitos. El origen de datos se debe configurar correctamente para que admita notificaciones de consulta SQL y el usuario debe contar con los permisos adecuados en el cliente y el servidor.  
@@ -84,6 +84,6 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqlnotificationrequest"></a>Utilizar SqlNotificationRequest  
  Por el contrario, <xref:System.Data.Sql.SqlNotificationRequest> exige que implemente usted mismo toda la infraestructura de escucha. Además, es necesario definir todos los objetos de Service Broker compatibles, como la cola, los servicios y los tipos de mensajes que admite la cola. Este enfoque manual resulta de utilidad si la aplicación necesita mensajes o comportamientos de notificación especiales, o si la aplicación forma parte de una aplicación de Service Broker más grande.  
   
-## <a name="see-also"></a>Vea también  
- [Notificaciones de consulta en SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Notificaciones de consulta en SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

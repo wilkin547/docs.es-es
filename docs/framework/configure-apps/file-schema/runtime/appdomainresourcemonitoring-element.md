@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc507d0cf81bf2bc11edfc0b5efb08c462726b88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727877"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;appDomainResourceMonitoring&gt; elemento
 Indica el runtime para recopilar estadísticas de todos los dominios de aplicación en el proceso mientras dura este.  
   
  \<configuration>  
-\<en tiempo de ejecución >  
-\<appDomainResourceMonitoring >  
+\<runtime>  
+\<appDomainResourceMonitoring>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -72,7 +72,7 @@ Indica el runtime para recopilar estadísticas de todos los dominios de aplicaci
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Vea también
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

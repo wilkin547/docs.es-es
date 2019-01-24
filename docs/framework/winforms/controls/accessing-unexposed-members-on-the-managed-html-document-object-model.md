@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 8767ef0fb484d43ffad4888affebb9d6bb74cc3a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1de8afcd7167406f10c4d541e95a0fa68be16611
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658957"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Acceso a miembros no expuestos en el Modelo de objetos de documento HTML administrado
 Administrado HTML Document Object Model (DOM) contiene una clase denominada <xref:System.Windows.Forms.HtmlElement> que expone las propiedades, métodos y eventos que sean comunes a todos los elementos HTML. A veces, sin embargo, necesitará tener acceso a miembros que no exponen directamente a la interfaz administrada. En este tema se describen dos formas para tener acceso a miembros no expuestos, así como [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] y funciones de VBScript definidas dentro de una página Web.  
@@ -71,5 +71,5 @@ Administrado HTML Document Object Model (DOM) contiene una clase denominada <xre
   
  Puede llamar a cualquier funciones de secuencia de comandos que se definen en una página HTML mediante la <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> método. Si el método de script devuelve un elemento HTML, puede usar una conversión de tipos para convertir este resultado devuelto para un <xref:System.Windows.Forms.HtmlElement>. Para obtener información detallada y código de ejemplo, vea <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
-## <a name="see-also"></a>Vea también  
- [Utilizar el Modelo de objetos de documento HTML administrado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>Vea también
+- [Utilizar el Modelo de objetos de documento HTML administrado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

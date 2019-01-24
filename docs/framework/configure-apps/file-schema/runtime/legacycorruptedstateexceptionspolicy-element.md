@@ -1,5 +1,5 @@
 ---
-title: '&lt;legacyCorruptedStateExceptionsPolicy&gt; elemento'
+title: '&lt;legacyCorruptedStateExceptionsPolicy&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf2e69b307d55f778a5cb54f8cc77bc3c69a185
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 14b8940fa0c5c7ceb4a14fdd0f40867c7be9f65e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737720"
 ---
-# <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt; elemento
+# <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt; Element
 Especifica si common language runtime permite código administrado para detectar infracciones de acceso y otras excepciones de estado dañado.  
   
  \<configuration>  
-\<en tiempo de ejecución >  
-\<legacyCorruptedStateExceptionsPolicy >  
+\<runtime>  
+\<legacyCorruptedStateExceptionsPolicy>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -77,7 +77,7 @@ Especifica si common language runtime permite código administrado para detectar
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

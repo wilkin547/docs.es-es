@@ -1,5 +1,5 @@
 ---
-title: ICorDebugChain Interfaz1
+title: ICorDebugChain (Interfaz1)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChain
@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32889a8e8867fc42b48413463095dda423f26b85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0bb716f1ad4087642a76dc84266ec6d3f46c1ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571209"
 ---
-# <a name="icordebugchain-interface1"></a>ICorDebugChain Interfaz1
+# <a name="icordebugchain-interface1"></a>ICorDebugChain (Interfaz1)
 Representa un segmento de una pila de llamadas física o lógica.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumerateFrames (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|Obtiene un enumerador que contiene todos los marcos de pila administrados de la cadena, comenzando por el marco más reciente.|  
+|[EnumerateFrames (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|Obtiene un enumerador que contiene todos los marcos de pila administrados de la cadena, empezando por el marco más reciente.|  
 |[GetActiveFrame (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|Obtiene el activo (es decir, más reciente) marco en la cadena.|  
-|[GetCallee (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|Obtiene la cadena que se llama a esta cadena.|  
-|[GetCaller (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|Obtiene la cadena que ha llamado a esta cadena.|  
+|[GetCallee (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|Obtiene la cadena que se llamó por esta cadena.|  
+|[GetCaller (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|Obtiene la cadena que llamó esta cadena.|  
 |[GetContext (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcontext-method.md)|Sin implementar.|  
-|[GetNext (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|Obtiene la siguiente cadena de marcos para el subproceso.|  
-|[GetPrevious (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|Obtiene la cadena anterior de marcos para el subproceso.|  
+|[GetNext (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|Obtiene la siguiente cadena de marcos del subproceso.|  
+|[GetPrevious (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|Obtiene la cadena anterior de marcos del subproceso.|  
 |[GetReason (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|Obtiene la razón para la génesis de esta cadena de llamada.|  
 |[GetRegisterSet (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|Obtiene el conjunto de registros para la parte activa de esta cadena.|  
 |[GetStackRange (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getstackrange-method.md)|Obtiene el intervalo de direcciones del segmento de pila para esta cadena.|  
@@ -44,19 +44,19 @@ Representa un segmento de una pila de llamadas física o lógica.
 |[IsManaged (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|Obtiene un valor que indica si esta cadena ejecuta código administrado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los marcos de pila en una cadena ocupan espacio de pila contiguo y comparten el mismo subproceso y contexto. Una cadena puede representar cualquier cadenas de código no administrado o no administrado. Vacío `ICorDebugChain` instancia representa una cadena de código no administrado.  
+ Los marcos de pila en una cadena ocupan espacio de pila contiguo y comparten el mismo subproceso y contexto. Una cadena puede representar cualquier cadenas de código administrado o no administrado. Un valor vacío `ICorDebugChain` instancia representa una cadena de código no administrado.  
   
 > [!NOTE]
 >  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

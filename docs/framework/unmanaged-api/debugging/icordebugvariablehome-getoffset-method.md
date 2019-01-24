@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetOffset (método)
+title: Método ICorDebugVariableHome::GetOffset
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a2ea7273fec62654c168d6786d3644b184ff7f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 687c3bb441c2a12529c873b4fa5f9283b9326a40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659074"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset (método)
+# <a name="icordebugvariablehomegetoffset-method"></a>Método ICorDebugVariableHome::GetOffset
 Obtiene el desplazamiento desde el registro de base de una variable.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,10 +37,10 @@ HRESULT GetOffset(
   
 #### <a name="parameters"></a>Parámetros  
  `pOffset`  
- [out] Desplazamiento desde el registro de base.  
+ [out] El desplazamiento desde el registro de base.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El método devuelve los siguientes valores:  
+ El método devuelve los valores siguientes:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -48,13 +48,13 @@ HRESULT GetOffset(
 |`E_FAIL`|La variable no está en una ubicación de memoria relativa del registro.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugVariableHome (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugVariableHome (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

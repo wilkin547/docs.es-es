@@ -6,12 +6,12 @@ helpviewer_keywords:
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-ms.openlocfilehash: 50664c271e4d6e1f13d7705299e2ba756b2d242f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73db0a9b0d8c56af48f7a5f7c717b5f88dfdf9b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667172"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>Resumen de entrada y salida (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
@@ -31,6 +31,6 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Establecer la posición de lectura/escritura en un archivo.|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
 |Escribir en un archivo.|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
   
-## <a name="see-also"></a>Vea también  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)  
- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Vea también
+- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
+- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

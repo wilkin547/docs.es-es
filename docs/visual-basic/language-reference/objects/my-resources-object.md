@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 41b6eaa39abfab6cda943162c5c10d1cbeaa9e49
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571826"
 ---
 # <a name="myresources-object"></a>My.Resources (Objeto)
 Proporciona propiedades y clases para tener acceso a recursos de la aplicación.  
@@ -77,7 +77,7 @@ Proporciona propiedades y clases para tener acceso a recursos de la aplicación.
   
  [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Administrar los recursos de la aplicación (.NET)](/visualstudio/ide/managing-application-resources-dotnet)  
- [Recursos de aplicaciones de escritorio](../../../framework/resources/index.md)  
+## <a name="see-also"></a>Vea también
+- [Administrar los recursos de la aplicación (.NET)](/visualstudio/ide/managing-application-resources-dotnet)
+- [Recursos de aplicaciones de escritorio](../../../framework/resources/index.md)
 

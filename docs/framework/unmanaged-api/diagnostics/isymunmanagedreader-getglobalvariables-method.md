@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6574c4d30b963ce571343d1a584bfccb48ffd195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61dd9f8a668904bb9b9e0b6b4d1d84d1ed07045d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737889"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables (Método)
 Devuelve todas las variables globales.  
@@ -39,7 +39,7 @@ HRESULT GetGlobalVariables(
   
 #### <a name="parameters"></a>Parámetros  
  `cVars`  
- [in] La longitud del búfer que señala `pcVars`.  
+ [in] La longitud del búfer que apunta `pcVars`.  
   
  `pcVars`  
  [out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener las variables.  
@@ -48,10 +48,10 @@ HRESULT GetGlobalVariables(
  [out] Un búfer que contiene las variables.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

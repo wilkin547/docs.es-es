@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1536a89d0e85480d3829939c40cd986fe65883df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf35715564e58f1811618b6859a860008e9660c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655405"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName (Método)
 Devuelve el nombre de dominio completo o la dirección IPv4 del equipo de destino de depuración remota. IPV6 no se admite en este momento.  
@@ -55,17 +55,17 @@ HRESULT GetHostName (
  No se puede devolver el nombre de host o la dirección IP.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método lo implementa el programador del depurador. Debe seguir el paradigma de varias llamadas: en la primera llamada, el llamador pasa NULL a `cchHostName` y `szHostName`, y `pcchHostName` devuelve el tamaño del búfer requerido. En la segunda llamada, el tamaño devuelto previamente se pasa en `cchHostName`, y un búfer del tamaño adecuado se pasa en `szHostName`.  
+ Este método lo implementa el programador del depurador. Debe seguir el paradigma de varias llamadas: En la primera llamada, el llamador pasa null a `cchHostName` y `szHostName`, y `pcchHostName` devuelve el tamaño del búfer necesario. En la segunda llamada, el tamaño devuelto previamente se pasa en `cchHostName`, y un búfer del tamaño adecuado se pasa en `szHostName`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl  
+ **Encabezado**: CorDebug.idl  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET framework:** 3.5 SP1  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugRemoteTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugRemoteTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5605f7b2ad9ba42a340906559838de22ac79f789
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa9e168b36c8408583ca23dee070fc36b2cb076c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572999"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue (Método)
-Obtiene el valor de un argumento o una variable local, de los cuales los bytes menos significativos y menos significativos se almacenan en la ubicación de memoria y el registro especifican, respectivamente, para este marco nativo.  
+Obtiene el valor de un argumento o una variable local, de los cuales la baja y menos significativos se almacenan en la ubicación de memoria y el registro especifican, respectivamente, para este marco nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,19 +50,19 @@ HRESULT GetLocalRegisterMemoryValue (
  [in] Un entero que especifica el tamaño de la firma de metadatos binaria que hace referencia el `pvSigBlob` parámetro.  
   
  `pvSigBlob`  
- [in] Un `PCCOR_SIGNATURE` valor que señala a la firma de metadatos binaria del tipo de valor.  
+ [in] Un `PCCOR_SIGNATURE` valor al que apunta a la firma de metadatos binaria del tipo de valor.  
   
  `ppValue`  
- [out] Un puntero a la dirección de un objeto de "ICorDebugValue" que representa el valor recuperado que se almacena en la ubicación de registro y la memoria especificada.  
+ [out] Un puntero a la dirección de un objeto de "ICorDebugValue" que representa el valor recuperado que se almacena en la ubicación especificada del registro y la memoria.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- 
+## <a name="see-also"></a>Vea también
+

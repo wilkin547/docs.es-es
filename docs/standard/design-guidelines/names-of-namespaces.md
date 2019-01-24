@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665141"
 ---
 # <a name="names-of-namespaces"></a>Nombres de espacios de nombres
 Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los espacios de nombres está creando una mayor claridad suficiente para los programadores que utilizan el marco de trabajo saber inmediatamente lo que es probable que sea el contenido del espacio de nombres. La plantilla siguiente especifica la regla general para asignar nombres a los espacios de nombres:  
@@ -36,7 +36,7 @@ Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los
   
  **✓ CONSIDER** recurriendo plural espacios de nombres en su caso.  
   
- Por ejemplo, usar `System.Collections` en lugar de `System.Collection`. Nombres y acrónimos son excepciones a esta regla, sin embargo. Por ejemplo, usar `System.IO` en lugar de `System.IOs`.  
+ Por ejemplo, use `System.Collections` en lugar de `System.Collection`. Nombres y acrónimos son excepciones a esta regla, sin embargo. Por ejemplo, use `System.IO` en lugar de `System.IOs`.  
   
  **X DO NOT** usar el mismo nombre para un espacio de nombres y un tipo en ese espacio de nombres.  
   
@@ -86,5 +86,5 @@ Como con otras directrices de nomenclatura, el objetivo al asignar nombres a los
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

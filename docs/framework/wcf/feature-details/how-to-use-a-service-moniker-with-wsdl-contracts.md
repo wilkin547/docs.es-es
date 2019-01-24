@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Utilizar un moniker de servicio con contratos WSDL'
+title: Procedimiento Utilizar un Moniker de servicio con contratos WSDL
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726577"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Cómo: Utilizar un moniker de servicio con contratos WSDL
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procedimiento Utilizar un Moniker de servicio con contratos WSDL
 Hay situaciones en las que usted querrá tener un cliente de Interoperabilidad COM completamente autónomo. Puede que el servicio que quiere llamar no exponga un extremo MEX y puede que la DLL cliente de WCF no se registre para la interoperabilidad COM. En estos casos, puede crear un archivo WSDL que describe el servicio y lo pasa en el moniker del servicio WCF. Este tema describe cómo llamar al ejemplo de WCF Introducción utilizando un moniker WSDL de WCF.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>Utilizar el moniker de servicio WSDL  
@@ -56,6 +56,6 @@ Hay situaciones en las que usted querrá tener un cliente de Interoperabilidad C
   
 7.  Ejecutar aplicación de Visual Basic Se mostrará un cuadro de mensaje con los resultados de llamar a Subtract (145, 76.54).  
   
-## <a name="see-also"></a>Vea también  
- [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Vea también
+- [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

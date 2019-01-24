@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c51ddae6aa62552bac9990b57a173c28f73bae5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b10ec088f087c45b8a75805e326bc543bb64b3d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665089"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>ICorRuntimeHost::GetConfiguration (Método)
 Obtiene un objeto que permite al host especificar la configuración de devolución de llamada de common language runtime (CLR).  
@@ -37,19 +37,19 @@ HRESULT GetConfiguration(
   
 #### <a name="parameters"></a>Parámetros  
  `pConfiguration`  
- [out] Un puntero a la dirección de un [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) objeto que puede usar para configurar el CLR.  
+ [out] Un puntero a la dirección de un [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) objeto que se puede usar para configurar el CLR.  
   
 ## <a name="remarks"></a>Comentarios  
  El CLR debe configurarse antes de su inicialización; en caso contrario, el `GetConfiguration` método devuelve un HRESULT que indica un error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
  **Versiones de .NET framework:** 1.0, 1.1  
   
-## <a name="see-also"></a>Vea también  
- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

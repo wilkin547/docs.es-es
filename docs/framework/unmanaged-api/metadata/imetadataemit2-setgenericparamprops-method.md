@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d74ee7512f640ab906f1119f61e4998b5e882eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c998d70fa5dd41ab4c1656f129bb77767a8ab97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574630"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps (Método)
-Establece los valores de propiedad para la definición de parámetro genérico al que hace referencia el token especificado.  
+Establece los valores de propiedad de la definición de parámetro genérico al que hace referencia el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ HRESULT SetGenericParamProps (
  [in] Un valor de la [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeración que describe el tipo del parámetro genérico.  
   
  `szName`  
- [in] Opcional. El nombre del parámetro para el que se va a establecer los valores.  
+ [in] Opcional. El nombre del parámetro que se va a establecer los valores.  
   
  `reserved`  
  [in] Reservado para extensibilidad futura.  
@@ -56,14 +56,14 @@ HRESULT SetGenericParamProps (
  [in] Opcional. Una matriz terminada en cero de restricciones de tipo. Miembros de la matriz deben ser un `mdTypeDef`, `mdTypeRef`, o `mdTypeSpec` token de metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

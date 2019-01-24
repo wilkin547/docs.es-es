@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76ff2e502859bff27ee29a280e0d247ca1bbf1e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60d1fafc1d5e718467b944276fc708ab34ddd782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727838"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize (Método)
-Devuelve el tamaño acumulado de los parámetros en la pila en x86 sistemas operativos.  
+Devuelve el tamaño acumulado de los parámetros de la pila en x86 los sistemas operativos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El tamaño de pila se devolvió correctamente.|  
-|S_FALSE|`GetStackParameterSize` se llamó en una plataforma no x86.|  
+|S_FALSE|`GetStackParameterSize` se llamó en una plataforma que no sean x86.|  
 |E_FAIL|`The size of the parameters could not be returned`.|  
 |E_INVALIDARG|`pSize` es `null`.|  
   
@@ -53,15 +53,15 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
  El [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) métodos no ajustan el puntero de pila para los parámetros que se insertan en la pila. En su lugar, puede usar el valor devuelto por `GetStackParameterSize` para ajustar el puntero de pila para inicializar un desenredador nativo, que ajusta los parámetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugNativeFrame2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugNativeFrame2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

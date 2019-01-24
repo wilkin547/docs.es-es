@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736538"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType (Enumeración)
-Identifica el tipo de marco de pila. Esta enumeración se usa en la [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) método.  
+Identifica el tipo de marco de pila. Esta enumeración se utiliza en el [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,23 +52,23 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_NONE`|Un valor cero. El `ICorDebugInternalFrame::GetFrameType` método nunca devuelve este valor.|  
 |`STUBFRAME_M2U`|Un marco de código auxiliar a administrado.|  
 |`STUBFRAME_U2M`|Un marco de código auxiliar no administrado a administrado.|  
-|`STUBFRAME_APPDOMAIN_TRANSITION`|Una transición entre dominios de aplicación.|  
+|`STUBFRAME_APPDOMAIN_TRANSITION`|Una transición entre los dominios de aplicación.|  
 |`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Una llamada de método ligero.|  
-|`STUBFRAME_FUNC_EVAL`|El inicio de la evaluación de función.|  
+|`STUBFRAME_FUNC_EVAL`|Inicio de la evaluación de función.|  
 |`STUBFRAME_INTERNALCALL`|Una llamada interna en common language runtime.|  
-|`STUBFRAME_CLASS_INIT`|El inicio de la inicialización de una clase.|  
+|`STUBFRAME_CLASS_INIT`|Inicio de la inicialización de una clase.|  
 |`STUBFRAME_EXCEPTION`|Una excepción que se produce.|  
-|`STUBFRAME_SECURITY`|Un marco en el que se usa para la seguridad de acceso del código.|  
+|`STUBFRAME_SECURITY`|Un marco que se usa para la seguridad de acceso del código.|  
 |`STUBFRAME_JIT_COMPILATION`|El tiempo de ejecución es un método de compilación JIT.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

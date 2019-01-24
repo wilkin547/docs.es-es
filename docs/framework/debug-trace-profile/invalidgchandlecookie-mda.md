@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f1542cf9d0568fe2ec35c046c358b7249231d42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3908663a12f0e4edd8024c7f53f21b2e82bb8dbd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392910"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665401"
 ---
 # <a name="invalidgchandlecookie-mda"></a>MDA de invalidGCHandleCookie
 El Asistente para la depuración administrada (MDA) `invalidGCHandleCookie` se activa cuando se intenta realizar la conversión de una cookie <xref:System.IntPtr> no válida a un <xref:System.Runtime.InteropServices.GCHandle>.  
@@ -45,7 +45,7 @@ El Asistente para la depuración administrada (MDA) `invalidGCHandleCookie` se a
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>  
- <xref:System.Runtime.InteropServices.GCHandle>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
+- <xref:System.Runtime.InteropServices.GCHandle>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

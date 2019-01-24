@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b7e339764e5baee93ccac64cb41d7fba43438476
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660364"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Especifica los elementos devueltos por una consulta.  
@@ -32,7 +32,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  Solo permite que se especifique un elemento y no agrega un contenedor de filas.  
   
  `topSubclause`  
- Cualquier expresión válida que indica el número de primeros resultados para devolver la consulta, del formulario `top(expr)`.  
+ Cualquier expresión válida que indique el número de primeros resultados que ha de devolver la consulta, del tipo `top(expr)`.  
   
  El parámetro de límite de la [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) operador también le permite seleccionar los primeros n elementos del conjunto de resultados.  
   
@@ -94,13 +94,13 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador SELECT para especificar los elementos que ha de devolver una consulta. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1.  Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a>Vea también
+- [Expresiones de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

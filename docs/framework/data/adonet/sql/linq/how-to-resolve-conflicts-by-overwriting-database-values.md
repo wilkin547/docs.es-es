@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Resolver conflictos de simultaneidad sobrescribiendo valores de base de datos'
+title: Procedimiento Resolver conflictos de simultaneidad sobrescribiendo valores de la base de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 2e15f69e724365ea01d53c4c329511dcbebb3a4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38129996949bcfbd938038743897d1db5910fdfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653913"
 ---
-# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Cómo: Resolver conflictos de simultaneidad sobrescribiendo valores de base de datos
-Para resolver las diferencias existentes entre los valores de base de datos esperados y reales antes de intentar reenviar los cambios, puede utilizar <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> para sobrescribir los valores de base de datos. Para obtener más información, consulte [simultaneidad optimista: información general sobre](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procedimiento Resolver conflictos de simultaneidad sobrescribiendo valores de la base de datos
+Para conciliar las diferencias existentes entre los valores de base de datos esperados y reales antes de intentar reenviar los cambios, puede utilizar <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> para sobrescribir los valores de base de datos. Para obtener más información, consulte [simultaneidad optimista: Información general sobre](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 >  En todos los casos, al recuperar los datos actualizados de la base de datos se actualiza en primer lugar el registro en el cliente. Esta acción garantiza que el siguiente intento de actualización no producirá errores en las mismas comprobaciones de simultaneidad.  
@@ -40,5 +40,5 @@ Para resolver las diferencias existentes entre los valores de base de datos espe
  [!code-csharp[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#2)]
  [!code-vb[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Vea también  
- [Administración de conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

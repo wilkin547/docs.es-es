@@ -11,33 +11,33 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587559"
 ---
 # <a name="new-operator-visual-basic"></a>New (Operador, Visual Basic)
-Presenta un `New` cláusula para crear una nueva instancia de objeto, especifica una restricción de constructor en un parámetro de tipo o identifica un `Sub` procedimiento como un constructor de clase.  
+Presenta un `New` cláusula para crear una nueva instancia de objeto, especifica una restricción de constructor en un parámetro de tipo, o identifica una `Sub` procedimiento como un constructor de clase.  
   
 ## <a name="remarks"></a>Comentarios  
- En una declaración o instrucción de asignación, una `New` cláusula debe especificar una clase definida desde el que se puede crear la instancia. Esto significa que la clase debe exponer uno o más constructores que pueda tener acceso el código que realiza la llamada.  
+ En una declaración o instrucción de asignación, un `New` cláusula debe especificar una clase definida desde la que se puede crear la instancia. Esto significa que la clase debe exponer uno o más constructores que puede tener acceso el código de llamada.  
   
- Puede usar un `New` cláusula en una instrucción de declaración o una instrucción de asignación. Cuando se ejecuta la instrucción, llama al constructor adecuado de la clase especificada, pasa los argumentos que ha proporcionado. En el ejemplo siguiente se muestra cómo hacerlo mediante la creación de instancias de un `Customer` clase que tiene dos constructores, uno que no toma ningún parámetro y otro que toma un parámetro de cadena.  
+ Puede usar un `New` cláusula en una instrucción de declaración o en una instrucción de asignación. Cuando se ejecuta la instrucción, llama al constructor apropiado de la clase especificada, pasando los argumentos que hayan proporcionado. El ejemplo siguiente muestra mediante la creación de instancias de un `Customer` clase que tiene dos constructores, uno que no toma ningún parámetro y otro que toma un parámetro de cadena.  
   
  [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
- Puesto que las matrices son clases, `New` puede crear una nueva instancia de matriz, como se muestra en los ejemplos siguientes.  
+ Dado que las matrices son clases, `New` puede crear una nueva instancia de matriz, como se muestra en los ejemplos siguientes.  
   
  [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
- Common language runtime (CLR) produce un <xref:System.OutOfMemoryException> error si no hay memoria suficiente para crear la nueva instancia.  
+ Common language runtime (CLR) produce una <xref:System.OutOfMemoryException> error si no hay memoria suficiente para crear la nueva instancia.  
   
 > [!NOTE]
->  El `New` palabra clave también se utiliza en las listas de parámetros de tipo para especificar que el tipo proporcionado debe exponer un constructor sin parámetros accesible. Para obtener más información sobre los parámetros de tipo y restricciones, consulte [lista de tipo](../../../visual-basic/language-reference/statements/type-list.md).  
+>  El `New` palabra clave también se usa en las listas de parámetros de tipo para especificar que el tipo proporcionado debe exponer un constructor sin parámetros accesible. Para obtener más información sobre los parámetros de tipo y restricciones, vea [lista tipo](../../../visual-basic/language-reference/statements/type-list.md).  
   
- Para crear un procedimiento de constructor para una clase, establezca el nombre de un `Sub` procedimiento para la `New` palabra clave. Para obtener más información, consulte [duración de los objetos: cómo los objetos son crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Para crear un procedimiento de constructor para una clase, establezca el nombre de un `Sub` procedimiento a la `New` palabra clave. Para obtener más información, consulte [duración del objeto: ¿Cómo se crean y destruyen objetos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
  La palabra clave `New` se puede usar en los siguientes contextos:  
   
@@ -47,9 +47,9 @@ Presenta un `New` cláusula para crear una nueva instancia de objeto, especifica
   
  [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.OutOfMemoryException>  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)  
- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)  
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Duración de los objetos: cómo se crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.OutOfMemoryException>
+- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
+- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Duración del objeto: ¿Cómo se crean y destruyen objetos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

@@ -2,12 +2,12 @@
 title: Usar múltiples esquemas de autenticación con WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8aa593803354628354e5ed3bf02cbcea44505e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521704"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593815"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Usar múltiples esquemas de autenticación con WCF
 WCF permite ahora especificar varios esquemas de autenticación en un único punto de conexión. Además los servicios hospedados en web pueden heredar sus valores de autenticación directamente de IIS. Los servicios autohospedados pueden especificar los esquemas de autenticación que se pueden usar. Para obtener más información acerca de cómo establecer la configuración de autenticación en IIS, consulte [autenticación IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Puntos de conexión: direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Funcionalidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Vea también
+- [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Funcionalidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)

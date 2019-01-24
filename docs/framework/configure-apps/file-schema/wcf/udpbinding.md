@@ -2,19 +2,19 @@
 title: '&lt;udpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 4b5fca2fbcece8c5a1641d4cea7700f12de11782
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c8e77eae52352a4ed5167a43386ec933afffa1fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592424"
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Un elemento de configuración usado para configurar el enlace <xref:System.ServiceModel.UdpBinding>.  
   
  \<system.ServiceModel>  
-\<enlaces >  
-\<udpBinding >  
+\<bindings>  
+\<udpBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ Un elemento de configuración usado para configurar el enlace <xref:System.Servi
 |`openTimeout`|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |`receiveTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  
 |`sendTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|`textEncoding`|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son los siguientes:<br /><br /> -BigEndianUnicode: Codificación Unicode BigEndian.<br />-Unicode: codificación de 16 bits.<br />-UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|  
+|`textEncoding`|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son los siguientes:<br /><br /> -   BigEndianUnicode: Codificación Unicode BigEndian.<br />-Unicode: codificación de 16 bits.<br />-   UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|  
 |`timeToLive`|Valor timespan que especifica el período de vida para el enlace.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -75,7 +75,7 @@ Un elemento de configuración usado para configurar el enlace <xref:System.Servi
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
  El UdpBinding permite que los servicios de WCF se comuniquen sobre el transporte UDP. Permite intercambios de mensajes "desencadenar y omitir" donde un cliente envía un mensaje a un servicio y no espera ninguna respuesta.  
@@ -103,12 +103,12 @@ Un elemento de configuración usado para configurar el enlace <xref:System.Servi
 </udpBinding>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73d4cc609694610aead2a3bfaeed1f5cca5f33fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24fd642b8eaba19a8bfb32d2dc61a87595cb3c61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643733"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants (Método)
 Obtiene las constantes locales definidas en este ámbito.  
@@ -49,10 +49,10 @@ HRESULT GetConstants(
  [out] El búfer que almacena las constantes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedScope2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedScope2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: f163b71d7a33aa115a2a4600cac08b7e4b2e80e7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5891887ea0df4addc828dd617c9fce63bb9096ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661599"
 ---
 # <a name="key-frame-animations-overview"></a>Información general sobre animaciones de fotogramas clave
 Este tema es una introducción a las animaciones de fotogramas clave. Las animaciones de fotogramas clave le permiten realizar animaciones con más de dos valores de destino y controlan el método de interpolación de una animación.  
@@ -283,13 +283,13 @@ Una curva spline clave con los puntos de control (0.25, 0.5) y (0.75, 1.0)
   
 8.  Ordene los fotogramas clave en tiempo de resolución (clave principal) y el orden de declaración (clave secundaria), es decir, utilice un orden estable basado en el fotograma clave resueltos <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Animation.KeyTime>  
- <xref:System.Windows.Media.Animation.KeySpline>  
- <xref:System.Windows.Media.Animation.Timeline>  
- [Ejemplo de animación de curva Spline clave](https://go.microsoft.com/fwlink/?LinkID=160011)  
- [Ejemplo de animación de fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012)  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Información general sobre objetos Storyboard ](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [Información general sobre comportamientos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Animation.KeyTime>
+- <xref:System.Windows.Media.Animation.KeySpline>
+- <xref:System.Windows.Media.Animation.Timeline>
+- [Ejemplo de animación de curva Spline clave](https://go.microsoft.com/fwlink/?LinkID=160011)
+- [Ejemplo de animación de fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Información general sobre objetos Storyboard ](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Información general sobre comportamientos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

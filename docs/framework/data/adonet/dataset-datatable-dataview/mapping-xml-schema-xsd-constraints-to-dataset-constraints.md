@@ -2,12 +2,12 @@
 title: Asignar restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: c9cd97535a0165b82f0823c1f17f621491d4255c
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 8addcf564bda969d404694171a2af3dd277ff22b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657342"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos
 El lenguaje de definición de esquemas XML (XSD) permite especificar restricciones para los elementos y atributos que define. Al asignar un esquema XML al esquema relacional de un <xref:System.Data.DataSet>, restricciones de esquema XML se asignan a las restricciones relacionales apropiadas en las tablas y columnas dentro de la **DataSet**.  
@@ -43,5 +43,5 @@ El lenguaje de definición de esquemas XML (XSD) permite especificar restriccion
  [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  Describe los elementos de esquema XML utilizados para crear relaciones entre columnas de tabla en un **DataSet**.  
   
-## <a name="see-also"></a>Vea también  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

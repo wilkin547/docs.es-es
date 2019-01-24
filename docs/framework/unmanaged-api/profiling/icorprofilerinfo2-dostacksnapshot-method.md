@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727279"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot (Método)
 Recorre los marcos administrados en la pila para el subproceso especificado y envía información al generador de perfiles a través de una devolución de llamada.  
@@ -100,14 +100,14 @@ HRESULT DoStackSnapshot(
  Hay también un riesgo de interbloqueo si llama a `DoStackSnapshot` desde un subproceso que ha creado el generador de perfiles para que pueda recorrer la pila de un subproceso de destino diferente. La primera vez que el subproceso que creó entra en ciertos `ICorProfilerInfo*` métodos (incluidos `DoStackSnapshot`), el CLR llevará a cabo por el subproceso, la inicialización específica de CLR en ese subproceso. Si el generador de perfiles ha suspendido el subproceso de destino cuya pila se está intentando recorrer y si ese subproceso de destino que ha ocurrido con su propio bloqueo es necesario para realizar esta inicialización por subproceso, se producirá un interbloqueo. Para evitar este interbloqueo, realice una llamada inicial a `DoStackSnapshot` desde tu subproceso creado por el generador de perfiles para recorrer otro subproceso de destino, pero no suspender el subproceso de destino en primer lugar. Esta llamada inicial garantiza que se puede completar la inicialización por subproceso sin interbloqueo. Si `DoStackSnapshot` se realiza correctamente y notifica al menos un fotograma, después de ese punto, estará seguro de ese subproceso creado por el generador de perfiles para suspender cualquier subproceso de destino y la llamada `DoStackSnapshot` para recorrer la pila del subproceso de destino.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5ab9fafeb6c836f1561752a8e2bdfddb97296399
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 10cc81bee24fb757e4d826eb42d4ccf2324e6dab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659532"
 ---
 # <a name="ltruntimegt-element"></a>&lt;en tiempo de ejecución&gt; elemento
 Proporciona información de common language runtime usada para configurar las aplicaciones.  
   
  \<configuration>  
-\<en tiempo de ejecución >  
+\<runtime>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -68,7 +68,7 @@ Proporciona información de common language runtime usada para configurar las ap
 |[<NetFx40_LegacySecurityPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.|  
 |[<NetFx40_PInvokeStackResilience>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.|  
 |[<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Especifica si el runtime usa una cantidad de memoria fija para calcular los códigos hash para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> .|  
-|[\<PreferComInsteadOfRemoting >](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Especifica que el runtime usará interoperabilidad COM en lugar de comunicación remota entre límites de dominio de aplicación.|  
+|[\<PreferComInsteadOfRemoting>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Especifica que el runtime usará interoperabilidad COM en lugar de comunicación remota entre límites de dominio de aplicación.|  
 |[\<relativeBindForResources>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|Optimiza el sondeo de ensamblados satélite.|  
 |[\<shadowCopyVerifyByTimeStamp>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Especifica si la creación de instantáneas usa el comportamiento de inicio predeterminado especificado en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o se revierte el comportamiento de inicio de versiones anteriores de .NET Framework.|  
 |[\<supportPortability>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos implementaciones diferentes de .NET Framework, deshabilitando el comportamiento predeterminado que trata los ensamblados como equivalentes para los propósitos de portabilidad de aplicación.|  
@@ -91,6 +91,6 @@ Proporciona información de common language runtime usada para configurar las ap
   
  Los elementos de la [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección lee automáticamente common language runtime al iniciarse la aplicación. También puede definir el archivo de configuración para un dominio de aplicación no predeterminado proporcionando su nombre a la <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propiedad; su configuración se lee de forma automática cuando se carga el dominio de aplicación. Debe rara vez, si alguna vez, tiene una necesidad de leer directamente la configuración en el [ \<en tiempo de ejecución >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sección en el archivo de configuración de la aplicación.  
   
-## <a name="see-also"></a>Vea también  
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Vea también
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

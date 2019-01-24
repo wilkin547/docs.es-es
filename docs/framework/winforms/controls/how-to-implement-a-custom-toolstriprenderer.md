@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar un control ToolStripRenderer personalizado'
+title: Procedimiento Implementar un control ToolStripRenderer personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-ms.openlocfilehash: 91c04ba41a02c7c620c2f6c621505a19e0302c19
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e99ffc45f3762ee816583a5294d56be30dfbff1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577352"
 ---
-# <a name="how-to-implement-a-custom-toolstriprenderer"></a>Cómo: Implementar un control ToolStripRenderer personalizado
+# <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procedimiento Implementar un control ToolStripRenderer personalizado
 Puede personalizar la apariencia de un control <xref:System.Windows.Forms.ToolStrip> implementando una clase que deriva de <xref:System.Windows.Forms.ToolStripRenderer>. Esta opción le da flexibilidad para crear un aspecto diferente al que proporcionan las clases <xref:System.Windows.Forms.ToolStripProfessionalRenderer> y <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente, se muestra cómo implementar una clase <xref:System.Windows.Forms.ToolStripRenderer> personalizada. En este ejemplo, el control `GridStrip` implementa un rompecabezas de mosaicos deslizantes que permite al usuario trasladar mosaicos en un diseño de tabla para formar una imagen. Un control <xref:System.Windows.Forms.ToolStrip> personalizado organiza sus controles <xref:System.Windows.Forms.ToolStripButton> en un diseño de cuadrícula. El diseño contiene una celda vacía en la que el usuario puede deslizar un mosaico adyacente mediante una operación de arrastrar y colocar. Se resaltan los mosaicos que el usuario puede mover.  
+ En el ejemplo de código siguiente, se muestra cómo implementar una clase <xref:System.Windows.Forms.ToolStripRenderer> personalizada. En este ejemplo, el control `GridStrip` implementa un rompecabezas de mosaicos deslizantes que permite al usuario trasladar mosaicos en un diseño de tabla para formar una imagen. Un control <xref:System.Windows.Forms.ToolStrip> personalizado organiza sus controles <xref:System.Windows.Forms.ToolStripButton> en un diseño de cuadrícula.  El diseño contiene una celda vacía en la que el usuario puede deslizar un mosaico adyacente mediante una operación de arrastrar y colocar. Se resaltan los mosaicos que el usuario puede mover.  
   
  La clase `GridStripRenderer` personaliza tres aspectos del aspecto del control `GridStrip`:  
   
@@ -37,13 +37,13 @@ Puede personalizar la apariencia de un control <xref:System.Windows.Forms.ToolSt
   
 -   Referencias a los ensamblados System.Drawing y System.Windows.Forms.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripRenderer>  
- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
- <xref:System.Windows.Forms.ToolStripSystemRenderer>  
- <xref:System.Windows.Forms.StatusStrip>  
- [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripRenderer>
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
+- <xref:System.Windows.Forms.ToolStripSystemRenderer>
+- <xref:System.Windows.Forms.StatusStrip>
+- [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

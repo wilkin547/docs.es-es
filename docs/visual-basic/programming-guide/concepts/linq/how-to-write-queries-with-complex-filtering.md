@@ -1,23 +1,23 @@
 ---
-title: 'Cómo: escribir consultas con filtrado complejo (Visual Basic)'
+title: Procedimiento Escribir consultas con filtrado complejo (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 500cd9cdc62252eff3addc26006c4ce815ae1b4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9636e67b32107378a46c00338cb4c2bea20fc1d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646690"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Cómo: escribir consultas con filtrado complejo (Visual Basic)
+# <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Procedimiento Escribir consultas con filtrado complejo (Visual Basic)
 Es posible que desee escribir consultas LINQ to XML con filtros complejos. Por ejemplo, quizás debe buscar todos los elementos que tienen un elemento secundario con un valor y un nombre específicos. En este tema se proporciona un ejemplo de escritura de una consulta con un filtrado complejo.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo buscar todos los elementos `PurchaseOrder` que tienen un elemento `Address` secundario que tiene un atributo `Type` igual a "Shipping" (envío) y un elemento `State` secundario igual a "NY". Utiliza una consulta anidada en la cláusula `Where` y el operador `Any` devuelve `True` si la colección tiene elementos en ella.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Para obtener más información sobre la `Any` (operador), consulte [operaciones cuantificadoras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+ Para obtener más información sobre la `Any` operador, consulte [operaciones cuantificadoras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -45,7 +45,7 @@ Next
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra en un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -76,12 +76,12 @@ End Module
 99505  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Propiedad del eje secundario XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [Propiedad del eje de atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)  
- [Propiedad de valor XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)  
- [Operaciones de proyección (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
- [Operaciones cuantificadoras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Propiedad del eje secundario XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [Propiedad del eje de atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Propiedad de valor XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [Operaciones de proyección (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Operaciones cuantificadoras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)

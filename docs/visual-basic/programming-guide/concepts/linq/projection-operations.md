@@ -2,12 +2,12 @@
 title: Operaciones de proyección (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: f4d1f7531ee69ebdbfb4ccd283f9f5dcb2f000af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d92405d9f3da69df4fa3964468599d6549480cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740971"
 ---
 # <a name="projection-operations-visual-basic"></a>Operaciones de proyección (Visual Basic)
 El término "proyección" hace referencia a la operación de transformar un objeto en una nueva forma que, a menudo, consta solo de aquellas propiedades que se usarán posteriormente. Utilizando la proyección, puede construir un tipo nuevo creado a partir de cada objeto. Se puede proyectar una propiedad y realizar una función matemática en ella. También puede proyectar el objeto original sin cambiarlo.  
@@ -16,7 +16,7 @@ El término "proyección" hace referencia a la operación de transformar un obje
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Sintaxis de expresiones de consulta de Visual Basic|Más información|  
+|Nombre del método|Descripción|Sintaxis de expresión de consulta de Visual Basic|Más información|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Seleccionar|Proyecta valores basados en una función de transformación.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|Proyecta secuencias de valores que se basan en una función de transformación y después los convierte en una secuencia.|Use varias cláusulas `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
@@ -49,7 +49,7 @@ MsgBox(sb.ToString())
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
- En el ejemplo siguiente se usa varios `From` cláusulas para proyectar cada palabra de cada cadena en una lista de cadenas.  
+ El ejemplo siguiente usa varios `From` cláusulas para proyectar cada palabra de cada cadena de una lista de cadenas.  
   
 ```vb  
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}  
@@ -170,11 +170,11 @@ Sub SelectVsSelectMany()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq>  
- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Select (cláusula)](../../../../visual-basic/language-reference/queries/select-clause.md)  
- [Cómo: Combinar datos con cláusulas Join](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)  
- [Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
- [Devolver el resultado de una consulta con LINQ como tipo específico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
- [Cómo: dividir un archivo en todos los archivos mediante el uso de grupos (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Linq>
+- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Select (cláusula)](../../../../visual-basic/language-reference/queries/select-clause.md)
+- [Cómo: Combinar datos con cláusulas JOIN](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Cómo: Devolver un resultado de consulta LINQ como un tipo específico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
+- [Cómo: Dividir un archivo en varios mediante el uso de grupos (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

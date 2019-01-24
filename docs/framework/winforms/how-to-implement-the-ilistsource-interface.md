@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar la interfaz IListSource'
+title: Procedimiento Implementar la interfaz IListSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: 3b580208e003a1706cca8e9fdff4ab374b7193ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 331abebf3336d8444559c117f5747597bc3b0122
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728218"
 ---
-# <a name="how-to-implement-the-ilistsource-interface"></a>Cómo: Implementar la interfaz IListSource
-Implementar la <xref:System.ComponentModel.IListSource> interfaz para crear una clase enlazable que no implementa <xref:System.Collections.IList> sino que proporciona una lista de otra ubicación.  
+# <a name="how-to-implement-the-ilistsource-interface"></a>Procedimiento Implementar la interfaz IListSource
+Implementar el <xref:System.ComponentModel.IListSource> interfaz para crear una clase enlazable que no implementa <xref:System.Collections.IList> sino que proporciona una lista desde otra ubicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se muestra cómo implementar el <xref:System.ComponentModel.IListSource> interfaz. Un componente denominado `EmployeeListSource` expone un <xref:System.Collections.IList> enlace de datos mediante la implementación de la <xref:System.ComponentModel.IListSource.GetList%2A> método.  
+ En el ejemplo de código siguiente se muestra cómo implementar el <xref:System.ComponentModel.IListSource> interfaz. Un componente denominado `EmployeeListSource` expone un <xref:System.Collections.IList> para el enlace de datos mediante la implementación de la <xref:System.ComponentModel.IListSource.GetList%2A> método.  
   
  [!code-csharp[System.ComponentModel.IListSource#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IListSource/CS/EmployeeListSource.cs#1)]
  [!code-vb[System.ComponentModel.IListSource#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IListSource/VB/EmployeeListSource.vb#1)]  
@@ -38,9 +38,9 @@ Implementar la <xref:System.ComponentModel.IListSource> interfaz para crear una 
   
 -   Referencias a los ensamblados System.Drawing y System.Windows.Forms.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ComponentModel.IListSource>  
- <xref:System.ComponentModel.ITypedList>  
- <xref:System.ComponentModel.BindingList%601>  
- <xref:System.ComponentModel.IBindingList>  
- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ComponentModel.IListSource>
+- <xref:System.ComponentModel.ITypedList>
+- <xref:System.ComponentModel.BindingList%601>
+- <xref:System.ComponentModel.IBindingList>
+- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

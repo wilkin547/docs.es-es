@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730235"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps (Método)
-Obtiene el conjunto de propiedades para la referencia de ensamblado con la firma de metadatos especificados.  
+Obtiene el conjunto de propiedades para la referencia de ensamblado con la firma de metadatos especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,16 +46,16 @@ HRESULT GetAssemblyRefProps (
   
 #### <a name="parameters"></a>Parámetros  
  `mdar`  
- [in] El `mdAssemblyRef` símbolo (token) de metadatos que representa la referencia de ensamblado para el que se va a obtener las propiedades.  
+ [in] El `mdAssemblyRef` token de metadatos que representa la referencia de ensamblado para el que se va a obtener las propiedades.  
   
  `ppbPublicKeyOrToken`  
  [out] Un puntero a la clave pública o el token de metadatos.  
   
  `pcbPublicKeyOrToken`  
- [out] El número de bytes de la clave pública devuelta o símbolo (token).  
+ [out] El número de bytes de la clave pública devuelta o token.  
   
  `szName`  
- [out] El nombre simple del ensamblado.  
+ [out] El nombre sencillo del ensamblado.  
   
  `cchName`  
  [in] El tamaño, en caracteres anchos, de `szName`.  
@@ -67,25 +67,25 @@ HRESULT GetAssemblyRefProps (
  [out] Un puntero a una estructura ASSEMBLYMETADATA que contiene los metadatos del ensamblado.  
   
  `ppbHashValue`  
- [out] Un puntero con el valor hash. Este es el valor hash, utilizando el algoritmo SHA-1, de la `PublicKey` propiedad del ensamblado al que hace referencia, a menos que marca el arfFullOriginator de la [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) se establece la enumeración.  
+ [out] Un puntero con el valor hash. Este es el valor de hash, utilizando el algoritmo SHA-1, de la `PublicKey` propiedad del ensamblado que se hace referencia a menos que marca el arfFullOriginator de la [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) se establece la enumeración.  
   
  `pcbHashValue`  
  [out] El número de caracteres anchos en el valor hash devuelto.  
   
  `pdwAssemblyRefFlags`  
- [out] Un puntero a marcas que describen los metadatos aplicados a un ensamblado. El valor de flags es una combinación de uno o varios [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores.  
+ [out] Un puntero a las marcas que describen los metadatos aplicados a un ensamblado. El valor de marcas es una combinación de uno o varios [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve S_OK si se realiza correctamente; en caso contrario, devuelve uno de los códigos de error definidos en el archivo de encabezado Winerror.h.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 47a795fa63c4d143689804cd5b3d36ac34d141be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d0e67ed0ce106de291e1e47b7d72e06560342
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655964"
 ---
 # <a name="wpf-brushes-overview"></a>Información general sobre pinceles de WPF
 Todo lo visible en la pantalla está visible porque lo ha pintado por un pincel. Por ejemplo, se usa un pincel para el fondo de un botón, el primer plano del texto y el relleno de una forma de describir. Este tema presentan los conceptos de pintar con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceles y proporciona ejemplos. Los pinceles permiten pintar objetos [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con cualquier cosa, desde colores simples y sólidos hasta conjuntos complejos de patrones e imágenes.  
@@ -160,14 +160,14 @@ Rectángulo pintado mediante VisualBrush
   
  Para obtener más información sobre por qué <xref:System.Windows.Media.VisualBrush> no pueden ser objetos inmovilizados, consulte la <xref:System.Windows.Media.VisualBrush> página tipo.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Brushes>  
- [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Ejemplo de pinceles](https://go.microsoft.com/fwlink/?LinkID=159973)  
- [Ejemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [Ejemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Otras recomendaciones de rendimiento](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Brushes>
+- [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Ejemplo de pinceles](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [Ejemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Ejemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Otras recomendaciones de rendimiento](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

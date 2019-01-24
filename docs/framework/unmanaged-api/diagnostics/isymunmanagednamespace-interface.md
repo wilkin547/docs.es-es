@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9408a56b7a1e8cbad94014b55ec5d830e1734810
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb5a833f7d6ed8f681f1f8d7ae79ac6113b8f2bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744380"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace (Interfaz)
 Representa un espacio de nombres.  
@@ -35,7 +35,7 @@ Representa un espacio de nombres.
 |[GetVariables (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

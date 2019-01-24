@@ -2,15 +2,15 @@
 title: Transferencia de mensajes por secuencias
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643824"
 ---
 # <a name="streaming-message-transfer"></a>Transferencia de mensajes por secuencias
-Los transportes de Windows Communication Foundation (WCF) que admiten dos modos para transferir los mensajes:  
+Los transportes de Windows Communication Foundation (WCF) admiten dos modos de transferencia de mensajes:  
   
 -   Las transferencias almacenadas en búfer contienen el mensaje completo en un búfer de memoria hasta que la transferencia haya finalizado. Un mensaje almacenado en búfer debe entregarse por completo antes de que un receptor pueda leerlo.  
   
@@ -27,10 +27,10 @@ Los transportes de Windows Communication Foundation (WCF) que admiten dos modos 
   
  La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. En los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar una clase de cliente para un servicio, debe modificar el archivo de configuración de los servicios pensados para ser utilizados con transferencias por secuencias para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  
   
- Para obtener ejemplos de código, vea [Cómo: habilitar la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
+ Para obtener ejemplos de código, vea [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
   
 ## <a name="enabling-asynchronous-streaming"></a>Habilitar la transmisión de datos asincrónica  
- Para habilitar el streaming asincrónico, agregue el comportamiento de extremo <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`.  
+ Para habilitar el streaming asincrónico, agregue el comportamiento de punto de conexión <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`.  
   
  Esta versión de WCF también agrega la capacidad de auténtica transmisión de datos asincrónica en el lado de envío. Esto mejora la escalabilidad del servicio en escenarios donde transmite por secuencias mensajes para varios clientes, algunos de los cuales son lentos en la lectura; posiblemente debido a la congestión de red o que no leen en absoluto. En estos escenarios WCF ya bloquea los subprocesos individuales en el servicio por cliente. Esto garantiza que el servicio pueda procesar muchos más clientes, mejorando así la escalabilidad del servicio.  
   
@@ -46,5 +46,5 @@ Los transportes de Windows Communication Foundation (WCF) que admiten dos modos 
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Diferencias entre las transferencias almacenadas en búfer y las transferencias por secuencias  
  Si se cambia el modo de transferencia de almacenado en búfer a por secuencias, también se cambia la forma del canal nativo de transportes de canalización con nombre y TCP. Para transferencias almacenadas en búfer, la forma del canal nativo es <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Para las transferencias por secuencias, los canales nativos son <xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>. Al cambiar el modo de transferencia en una aplicación existente que utiliza estos transportes directamente (es decir, no a través de un contrato de servicios), requiere el cambio de la forma del canal esperada para los generadores de canales y agentes de escucha.  
   
-## <a name="see-also"></a>Vea también  
- [Habilitar el streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

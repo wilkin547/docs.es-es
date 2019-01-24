@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Configurar un cliente WCF para interoperar con los servicios WSE3.0'
+title: Procedimiento Configurar un cliente de WCF para interoperar con los servicios WSE3.0
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 5cbe982049d1df6e2c714ca0b63de0db7577452e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 52793b6d077f1da33d2d675be3284ce134beb2d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730963"
 ---
-# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Cómo: Configurar un cliente WCF para interoperar con los servicios WSE3.0
+# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Procedimiento Configurar un cliente de WCF para interoperar con los servicios WSE3.0
 Los clientes de Windows Communication Foundation (WCF) son compatibles con el nivel de conexión con Web Services Enhancements 3.0 para servicios de Microsoft .NET (WSE) cuando los clientes de WCF se configuran para usar la versión de agosto de 2004 de la especificación WS-Addressing.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>Configuración de un cliente WCF para interoperar con un servicio web WSE 3.0  
@@ -21,7 +21,7 @@ Los clientes de Windows Communication Foundation (WCF) son compatibles con el ni
   
      Para un servicio Web de WSE, se crea una clase de cliente WCF.  
   
-     Para obtener más información acerca de cómo crear un cliente de WCF, vea el [Cómo: crear un cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Para obtener más información acerca de cómo crear un cliente de WCF, vea el [Cómo: Crear un cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Cree una clase que represente un enlace que puede comunicarse con los servicios Web WSE 3.0.  
   
@@ -62,6 +62,6 @@ Los clientes de Windows Communication Foundation (WCF) son compatibles con el ni
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.Binding>  
- [Interoperar con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.Binding>
+- [Interoperar con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

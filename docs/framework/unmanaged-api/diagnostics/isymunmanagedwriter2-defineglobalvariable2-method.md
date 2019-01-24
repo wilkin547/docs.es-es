@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f35e3c9327a3945e6ddce85be52b757294b39aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a6e4b323f9e06f2c5dc336af772bdade0db3dea7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657446"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 (Método)
 Define una única variable global.  
@@ -54,20 +54,20 @@ HRESULT DefineGlobalVariable2(
  [in] El tipo de dirección.  
   
  `addr1`  
- [in] La primera dirección para la especificación de parámetros.  
+ [in] La primera dirección de la especificación de parámetro.  
   
  `addr2`  
- [in] La segunda dirección para la especificación de parámetros.  
+ [in] La segunda dirección de la especificación de parámetro.  
   
  `addr3`  
- [in] La tercera dirección de la especificación de parámetros.  
+ [in] Tercera dirección de la especificación de parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl  
+ **Encabezado**: CorSym.idl  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [DefineGlobalVariable (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [DefineGlobalVariable (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)

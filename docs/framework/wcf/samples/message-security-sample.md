@@ -2,12 +2,12 @@
 title: Ejemplo de seguridad de mensaje
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: 8982e896f6ac383a1fd850bc5814bf99e5c3961d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a6a8fe40cfbd2297b8bd56b8b23db19216c9a72e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655797"
 ---
 # <a name="message-security-sample"></a>Ejemplo de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBinding` y seguridad de mensaje. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
@@ -29,7 +29,8 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBin
                bindingConfiguration="Binding1"   
                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
     </service>  
-  </services>   …  
+  </services>  
+  ...  
 </system.serviceModel>  
 ```  
   
@@ -167,7 +168,7 @@ Press <ENTER> to terminate client.
 -   Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  Este script no quita los certificados del servicio en un cliente cuando se ejecuta este ejemplo en los equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Este script no quita los certificados del servicio en un cliente cuando se ejecuta este ejemplo en los equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

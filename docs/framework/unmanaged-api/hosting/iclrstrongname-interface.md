@@ -16,58 +16,58 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92ae4c2f4a6fb126f5d86cee216e5b2bb6170e66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3254b449c06ad54bca438905ec1c413338f87e69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737012"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName (Interfaz)
-Proporciona funciones estáticas globales para básicas para firmar los ensamblados con nombres seguros. Todos los `ICLRStrongName` métodos devuelven resultados HRESULT COM estándar.  
+Proporciona funciones estáticas globales para básicas para firmar los ensamblados con nombres seguros. Todos los `ICLRStrongName` métodos devuelven valores HRESULT de COM estándar.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetHashFromAssemblyFile (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)|Obtiene un valor hash del archivo de ensamblado especificado, utilizando el algoritmo hash especificado.|  
-|[GetHashFromAssemblyFileW (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)|Obtiene un valor hash del archivo de ensamblado especificado como una cadena Unicode, mediante el algoritmo hash especificado.|  
-|[GetHashFromBlob (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)|Obtiene un valor hash del ensamblado en la dirección de memoria especificada, utilizando el algoritmo hash especificado.|  
-|[GetHashFromFile (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)|Genera un hash sobre el contenido del archivo especificado.|  
-|[GetHashFromFileW (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)|Genera un hash sobre el contenido del archivo especificado por una cadena Unicode.|  
-|[GetHashFromHandle (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)|Genera un hash sobre el contenido del archivo con el identificador de archivo especificado, utilizando el algoritmo hash especificado.|  
-|[StrongNameCompareAssemblies (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)|Determina si dos ensamblados difieren solo en sus firmas de nombre seguro.|  
+|[GetHashFromAssemblyFile (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)|Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto.|  
+|[GetHashFromAssemblyFileW (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)|Obtiene un hash del archivo de ensamblado especificado como cadena Unicode mediante un algoritmo hash concreto.|  
+|[GetHashFromBlob (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)|Obtiene un hash del ensamblado en la dirección de memoria especificada mediante un algoritmo hash concreto.|  
+|[GetHashFromFile (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)|Genera un hash a partir del contenido del archivo especificado.|  
+|[GetHashFromFileW (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)|Genera un hash a partir del contenido del archivo especificado por una cadena Unicode.|  
+|[GetHashFromHandle (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)|Genera un hash a partir del contenido del archivo con el identificador de archivos especificado mediante un algoritmo hash concreto.|  
+|[StrongNameCompareAssemblies (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)|Determina si dos ensamblados presentan diferencias solo mediante sus firmas de nombres seguros.|  
 |[StrongNameFreeBuffer (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Libera la memoria que se asignó con una llamada anterior a un método de nombre seguro como [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), o [StrongNameSignatureGeneration ](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).|  
 |[StrongNameGetBlob (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)|Llena el búfer especificado con la representación binaria del archivo ejecutable en la dirección especificada.|  
 |[StrongNameGetBlobFromImage (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)|Obtiene una representación binaria de la imagen de ensamblado en la dirección de memoria especificada.|  
 |[StrongNameGetPublicKey (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)|Obtiene la clave pública de un par de claves pública y privada.|  
-|[StrongNameHashSize (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)|Obtiene el tamaño de búfer requerido para un hash mediante el algoritmo hash especificado.|  
+|[StrongNameHashSize (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)|Obtiene el tamaño de búfer necesario para un hash mediante el algoritmo hash especificado.|  
 |[StrongNameKeyDelete (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)|Elimina el contenedor de claves especificado.|  
-|[StrongNameKeyGen (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)|Crea un nuevo par de claves pública y privada para su uso de nombre seguro.|  
-|[StrongNameKeyGenEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)|Genera un nuevo par de claves pública/privada con el tamaño de clave especificado para su uso de nombre seguro.|  
-|[StrongNameKeyInstall (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)|Importa un par de claves pública/privada en un contenedor.|  
-|[StrongNameSignatureGeneration (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)|Genera una firma de nombre seguro para el ensamblado especificado.|  
-|[StrongNameSignatureGenerationEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)|Genera una firma de nombre seguro para el ensamblado especificado, en función de las marcas especificadas.|  
+|[StrongNameKeyGen (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)|Crea un par de claves pública y privada para su uso en nombres seguros.|  
+|[StrongNameKeyGenEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)|Genera un par de claves pública y privada con el tamaño de clave especificado para su uso en nombres seguros.|  
+|[StrongNameKeyInstall (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)|Importa un par de claves pública y privada a un contenedor.|  
+|[StrongNameSignatureGeneration (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)|Genera una firma de nombres seguros para el ensamblado especificado.|  
+|[StrongNameSignatureGenerationEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)|Genera una firma de nombre seguro para el ensamblado especificado en función de las marcas indicadas.|  
 |[StrongNameSignatureSize (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)|Devuelve el tamaño de la firma de nombre seguro.|  
-|[StrongNameSignatureVerification (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)|Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba según los marcadores especificados.|  
+|[StrongNameSignatureVerification (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)|Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba según las marcas indicadas.|  
 |[StrongNameSignatureVerificationEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)|Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro.|  
-|[StrongNameSignatureVerificationFromImage (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)|Comprueba que un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.|  
-|[StrongNameTokenFromAssembly (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)|Crea un token de nombre seguro del archivo de ensamblado especificado.|  
-|[StrongNameTokenFromAssemblyEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)|Crea un token de nombre seguro del archivo de ensamblado especificado y devuelve la clave pública.|  
+|[StrongNameSignatureVerificationFromImage (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)|Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.|  
+|[StrongNameTokenFromAssembly (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)|Crea un token de nombre seguro desde el archivo de ensamblado especificado.|  
+|[StrongNameTokenFromAssemblyEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)|Crea un token de nombre seguro desde el archivo de ensamblado especificado y devuelve la clave pública.|  
 |[StrongNameTokenFromPublicKey (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)|Obtiene un token que representa una clave pública.|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede obtener una instancia de la `ICLRStrongName` mediante una llamada a la [ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) método mediante `CLSID_CLRStrongName` y `IID_ICLRStrongName` como parámetros.  
+ Puede obtener una instancia de la `ICLRStrongName` mediante una llamada a la [ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) utilizando el método `CLSID_CLRStrongName` y `IID_ICLRStrongName` como parámetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MetaHost.h  
+ **Encabezado**: MetaHost.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)

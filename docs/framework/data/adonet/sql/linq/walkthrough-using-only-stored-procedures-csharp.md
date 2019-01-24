@@ -2,22 +2,22 @@
 title: 'Tutorial: Usar solo procedimientos almacenados (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 223c93a790e610414aa48c2aea8e884b9d841666
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5234b4a2743effa4282fb8c211c42511c6432dfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650842"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Tutorial: Usar solo procedimientos almacenados (C#)
 Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos ejecutando procedimientos almacenados solamente. Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.  
   
 > [!NOTE]
->  También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, consulte [personalizar operaciones de inserción, actualización y eliminar](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+>  También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, consulte [personalizar Insert, Update y las operaciones de eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
- En este tutorial, utilizará dos métodos asignados a procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para crear un archivo de C#. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
+ Para fines de este tutorial, utilizará dos métodos que se han asignado a los procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para crear un archivo de C#. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
   
- En este tutorial no se utiliza el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Los desarrolladores que utilizan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar la funcionalidad de procedimiento almacenado. Vea [LINQ a las herramientas SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ En este tutorial no se utiliza el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Los desarrolladores que usan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar la funcionalidad de procedimiento almacenado. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -36,7 +36,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      Este tutorial se escribió utilizando la herramienta SqlMetal con la línea de comandos siguiente:  
   
-     **SqlMetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions / plural**  
+     **sqlmetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions /pluralize**  
   
      Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
@@ -56,19 +56,19 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 -   Ejecutar y probar la aplicación.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
- En esta primera tarea, se creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
+ En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
 1.  En Visual Studio **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**.  
   
-2.  En el **tipos de proyecto** panel en el **nuevo proyecto** cuadro de diálogo, haga clic en **Visual C#**.  
+2.  En el **tipos de proyecto** panel en el **nuevo proyecto** cuadro de diálogo, haga clic en **Visual C#** .  
   
 3.  En el panel **Plantillas** , haga clic en **Aplicación de Windows Forms**.  
   
 4.  En el **nombre** , escriba **SprocOnlyApp**.  
   
-5.  En el **ubicación** cuadro, compruebe dónde desea almacenar los archivos de proyecto.  
+5.  En el **ubicación** Compruebe dónde desea almacenar los archivos de proyecto.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -112,34 +112,34 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 #### <a name="to-set-up-the-user-interface"></a>Para configurar la interfaz de usuario  
   
-1.  Volver a las ventanas de diseñador de formularios (**Form1.cs [Diseño]**).  
+1.  Diseñador de vuelta a la Windows Forms (**Form1.cs [Diseño]**).  
   
 2.  En el menú **Ver** , haga clic en **Cuadro de herramientas**.  
   
      Se abrirá el cuadro de herramientas.  
   
     > [!NOTE]
-    >  Haga clic en el **Ocultar automáticamente** PIN para mantener abierto el cuadro de herramientas mientras realiza los demás pasos de esta sección.  
+    >  Haga clic en el **Ocultar automáticamente** chincheta para mantener el cuadro de herramientas abierto mientras realiza los demás pasos de esta sección.  
   
-3.  Arrastre dos botones, dos cuadros de texto y dos etiquetas desde el cuadro de herramientas en **Form1**.  
+3.  Arrastre dos etiquetas, dos cuadros de texto y dos botones del cuadro de herramientas **Form1**.  
   
-     Organice los controles como en la ilustración anexa. Expanda **Form1** para que los controles tengan el espacio necesario.  
+     Organice los controles como en la ilustración anexa. Expanda **Form1** para que los controles se ajustan fácilmente.  
   
 4.  Haga clic en **label1**y, a continuación, haga clic en **propiedades**.  
   
-5.  Cambiar el **texto** propiedad de **label1** a **Enter OrderID:**.  
+5.  Cambiar el **texto** propiedad desde **label1** a **Enter OrderID:**.  
   
-6.  En la misma manera para **label2**, cambie la **texto** propiedad de **label2** a **Enter CustomerID:**.  
+6.  En la misma manera para **label2**, cambie el **texto** propiedad desde **label2** a **Enter CustomerID:**.  
   
-7.  En la misma manera, cambie la **texto** propiedad **button1** a **Order Details**.  
+7.  En la misma manera, cambie el **texto** propiedad **button1** a **Order Details**.  
   
-8.  Cambiar el **texto** propiedad **button2** a **el historial de pedidos**.  
+8.  Cambiar el **texto** propiedad **button2** a **historial de pedidos**.  
   
      Amplíe los controles de botón para que todo el texto esté visible.  
   
 #### <a name="to-handle-button-clicks"></a>Para administrar los clics de botón  
   
-1.  Haga doble clic en **Order Details** en **Form1** para abrir el controlador de eventos de button1 en el editor de código.  
+1.  Haga doble clic en **Order Details** en **Form1** para abrir el controlador de eventos button1 en el editor de código.  
   
 2.  Escriba el código siguiente en el controlador `button1`:  
   
@@ -166,7 +166,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
   
-3.  En el **Enter CustomerID** , escriba `ALFKI`y, a continuación, haga clic en **el historial de pedidos**.  
+3.  En el **Enter CustomerID** , escriba `ALFKI`y, a continuación, haga clic en **historial de pedidos**.  
   
      Aparece un cuadro de mensaje con el historial de pedidos del cliente ALFKI.  
   
@@ -182,11 +182,11 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      La sesión de depuración se cierra.  
   
-6.  Cuando termine de experimentar, haga clic en **cerrar proyecto** en el **archivo** menú y guarde el proyecto cuando se le pida.  
+6.  Si ha terminado de experimentar, haga clic en **cerrar proyecto** en el **archivo** menú y guarde el proyecto cuando se le pida.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Puede mejorar este proyecto realizando algunos cambios. Por ejemplo, podría enumerar los procedimientos almacenados disponibles en un cuadro de lista y permitir que el usuario seleccione qué procedimientos debe ejecutar. También podría transmitir el resultado de los informes a un archivo de texto.  
   
-## <a name="see-also"></a>Vea también  
- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>Vea también
+- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

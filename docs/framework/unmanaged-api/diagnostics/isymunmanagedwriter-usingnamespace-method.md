@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a5ff52a95fd6ebaec05439cbc702d5513d0cc78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca9f3488c9fb2280d2ceb99c87a54d99c1a33b6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587731"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace (Método)
-Especifica que el nombre completo del espacio de nombres especificado se utiliza dentro del ámbito léxico abierto. El espacio de nombres se utilizará en todos los ámbitos que heredan del ámbito abierto actualmente. Cerrar el ámbito actual, también se detendrá el uso del espacio de nombres.  
+Especifica que se utiliza el nombre completo del espacio de nombres determinado dentro del ámbito léxico abierto actualmente. El espacio de nombres se utilizará en todos los ámbitos que se heredan del ámbito abierto actualmente. Al cerrar el ámbito actual, también se detendrá el uso del espacio de nombres.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,10 +39,10 @@ HRESULT UsingNamespace(
  [in] Un puntero al nombre completo del espacio de nombres.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

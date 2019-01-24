@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35bd458eb6046f57d37764e0a8e58616f2c2c3a1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 52edc72e3714ceaf8cc92f272da6a374eb324dad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661651"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject (función)
 Realiza una copia lógica de un enumerador conservando su posición actual en una enumeración.  
@@ -70,9 +70,9 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Ha habido un error general. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
-| `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible completar la operación. |
+| `WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible completar la operación. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Error en el vínculo de procedimiento remoto (RPC) de la llamada entre el proceso actual y WMI. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
@@ -89,11 +89,11 @@ Si se produce un error en la llamada de función, puede obtener información de 
 Para obtener un ejemplo, vea el [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

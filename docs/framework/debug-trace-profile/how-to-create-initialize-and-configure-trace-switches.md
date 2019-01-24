@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear, inicializar y configurar modificadores de seguimiento'
+title: Procedimiento Crear, inicializar y configurar modificadores de seguimiento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739620"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Cómo: Crear, inicializar y configurar modificadores de seguimiento
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedimiento Crear, inicializar y configurar modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento.  
   
 <a name="create"></a>   
@@ -75,11 +75,11 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
 2.  Si el proyecto no contiene un archivo de configuración (app.config o Web.config), en el menú **Proyecto** seleccione **Agregar nuevo elemento**.  
   
-    -   **Visual Basic:** en el cuadro de diálogo **Agregar nuevo elemento**, elija **Archivo de configuración de aplicaciones**.  
+    -   **Visual Basic:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo de configuración de aplicación**.  
   
          El archivo de configuración de la aplicación se creará y se abrirá. Se trata de un documento XML cuyo elemento raíz es `<configuration>.`  
   
-    -   **Visual C#:** en el cuadro de diálogo **Agregar nuevo elemento** elija **Archivo XML**. Asigne el nombre **app.config** a este archivo. En el editor XML, después de la declaración de XML, agregue el siguiente código XML:  
+    -   **Visual C#:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo XML**. Asigne el nombre **app.config** a este archivo. En el editor XML, después de la declaración de XML, agregue el siguiente código XML:  
   
         ```xml  
         <configuration>  
@@ -125,8 +125,8 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Adición de instrucciones de seguimiento al código de la aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Esquema de la configuración de seguimiento y depuración](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Vea también
+- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Esquema de la configuración de seguimiento y depuración](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

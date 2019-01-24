@@ -1,23 +1,23 @@
 ---
-title: 'Cómo: Configurar el comportamiento inactivo con WorkflowServiceHost'
+title: Procedimiento Configurar el comportamiento inactivo con WorkflowServiceHost
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: 11992d5e262a23e8f3f29d535e615cfcf57cdc68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dff9145954084d0f299edc1e3f2f6c0d7ea1a80e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727396"
 ---
-# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Cómo: Configurar el comportamiento inactivo con WorkflowServiceHost
+# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Procedimiento Configurar el comportamiento inactivo con WorkflowServiceHost
 Los flujos de trabajo pasan a estar inactivos cuando encuentran un marcador que se debe reanudar mediante algún estímulo externo, por ejemplo cuando la instancia de flujo de trabajo está esperando la entrega de un mensaje usando una actividad <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> es un comportamiento que le permite especificar el tiempo transcurrido desde que una instancia de servicio pasa a estado inactivo hasta que la instancia se guarda o se descarga. Contiene dos propiedades que permiten establecer estas duraciones. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> especifica el período de tiempo entre el momento en el que una instancia de servicio del flujo de trabajo se inactiva y el momento en el que dicha instancia se guarda. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> especifica el intervalo de tiempo entre el momento en el que una instancia de servicio del flujo de trabajo se inactiva y el momento en el que dicha instancia se descarga, donde la descarga significa guardar la instancia en el almacén de instancia y eliminarla de la memoria. En este tema, se explica cómo configurar la clase <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> en un archivo de configuración.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Para configurar WorkflowIdleBehavior  
   
-1.  Agregar un <`workflowIdle`> elemento a la <`behavior`> elemento dentro de la <`serviceBehaviors`> elemento tal como se muestra en el ejemplo siguiente.  
+1.  Agregue un elemento <`workflowIdle`> al elemento <`behavior`> dentro del elemento <`serviceBehaviors`> como se muestra en el siguiente ejemplo.  
   
     ```xml  
     <behaviors>  
@@ -29,10 +29,10 @@ Los flujos de trabajo pasan a estar inactivos cuando encuentran un marcador que 
     </behaviors>  
     ```  
   
-     El atributo `timeToUnload` especifica el período de tiempo entre el momento en el que una instancia de servicio del flujo de trabajo se inactiva y el momento en el que dicho servicio se descarga. El atributo `timeToPersist` especifica el período de tiempo entre el momento en el que una instancia de servicio del flujo de trabajo se inactiva y el momento en el que dicha instancia se guarda. El valor predeterminado de `timeToUnload` es 1 minuto. El valor predeterminado de `timeToPersist` es <xref:System.TimeSpan.MaxValue>. Si desea conservar las instancias inactivas en memoria pero hacer que persistan por integridad, establezca los valores de modo que `timeToPersist` < `timeToUnload`. Si desea impedir que las instancias inactivas se carguen, establezca `timeToUnload` en <xref:System.TimeSpan.MaxValue>. Para obtener más información acerca de <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>, consulte [extensibilidad de Host de servicio de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+     El atributo `timeToUnload` especifica el período de tiempo entre el momento en el que una instancia de servicio del flujo de trabajo se inactiva y el momento en el que dicho servicio se descarga. El atributo `timeToPersist` especifica el período de tiempo entre el momento en el que una instancia de servicio del flujo de trabajo se inactiva y el momento en el que dicha instancia se guarda. El valor predeterminado de `timeToUnload` es 1 minuto. El valor predeterminado de `timeToPersist` es <xref:System.TimeSpan.MaxValue>. Si desea conservar las instancias inactivas en memoria pero hacer que persistan por integridad, establezca los valores de modo que `timeToPersist` < `timeToUnload`. Si desea impedir que las instancias inactivas se carguen, establezca `timeToUnload` en <xref:System.TimeSpan.MaxValue>. Para obtener más información acerca de <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>, consulte [Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
   
     > [!NOTE]
-    >  En el ejemplo de configuración anterior, se usa la configuración simplificada. Para obtener más información, consulte [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md).  
+    >  En el ejemplo de configuración anterior, se usa la configuración simplificada. Para obtener más información, consulte [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md).  
   
 ### <a name="to-change-idle-behavior-in-code"></a>Para cambiar el comportamiento inactivo en el código  
   
@@ -41,7 +41,7 @@ Los flujos de trabajo pasan a estar inactivos cuando encuentran un marcador que 
      [!code-csharp[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/wf_svchost_idle_persist/cs/source.cs#1)]
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- [Extensibilidad de host de servicio de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
- [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md)  
- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+## <a name="see-also"></a>Vea también
+- [Extensibilidad de host de servicio de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+- [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md)
+- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)

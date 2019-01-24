@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13498c58c7625edfa4954b8da8837f1bd60c976d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b5800890a5dfaef40225616f1d661a8e37ed4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661105"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID (Método)
 Convierte un identificador de tipo en un valor de ICorDebugType.  
@@ -38,23 +38,23 @@ HRESULT GetTypeForTypeID(
   
 #### <a name="parameters"></a>Parámetros  
  `id`  
- [in] El identificador de tipo.  
+ [in] Identificador de tipo.  
   
  `ppType`  
  [out] Un puntero a la dirección de un objeto ICorDebugType.  
   
 ## <a name="remarks"></a>Comentarios  
- En algunos casos, los métodos que devuelven un identificador de tipo pueden devolver un valor null `COR_TYPEID` valor. Si este valor se pasa como el `id` argumento, el `GetTypeForTypeID` método se producirá un error y devolverá `E_FAIL`.  
+ En algunos casos, los métodos que devuelven un identificador de tipo pueden devolver un valor null `COR_TYPEID` valor. Si este valor se pasa como el `id` argumento, el `GetTypeForTypeID` método producirá un error y devolverá `E_FAIL`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugProcess5 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugProcess5 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

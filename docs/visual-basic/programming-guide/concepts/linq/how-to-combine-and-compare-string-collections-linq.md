@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)'
+title: Procedimiento Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 0e8df8e6e324b2a575fb6232c54a223cb35a4ef2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9948cdb4aa40ca12f7dd058fe12ffcd6462cdaae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732666"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedimiento Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar el proyecto y los archivos de texto  
@@ -165,6 +165,6 @@ End Class
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Vea también
+- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

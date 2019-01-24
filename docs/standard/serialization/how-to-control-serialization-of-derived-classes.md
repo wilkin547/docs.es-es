@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Controlar la serialización de clases derivadas'
+title: Procedimiento Controlar la serialización de clases derivadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 00eb4ba1f5f84c60f1ca51871f604b6ee27798c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728848"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Cómo: Controlar la serialización de clases derivadas
+# <a name="how-to-control-serialization-of-derived-classes"></a>Procedimiento Controlar la serialización de clases derivadas
 El uso del atributo **XmlElementAttribute** para cambiar el nombre de un elemento XML no es la única manera de personalizar la serialización de objeto. También puede personalizar la secuencia XML derivando de una clase existente e indicando a la instancia <xref:System.Xml.Serialization.XmlSerializer> cómo serializar la nueva clase.  
   
  Por ejemplo, dada una clase `Book`, puede derivar de él y crear una clase `ExpandedBook` que tiene más propiedades. Pero debe indicarle a **XmlSerializer** que acepte el tipo derivado al serializar o deserializar. Para ello, cree una instancia <xref:System.Xml.Serialization.XmlElementAttribute> y establezca su propiedad **Type** en el tipo de clase derivada. Agregue **XmlElementAttribute** a una instancia <xref:System.Xml.Serialization.XmlAttributes>. Después, agregue **XmlAttributes** a una instancia <xref:System.Xml.Serialization.XmlAttributeOverrides>. Para ello, especifique el tipo que se invalida y el nombre del miembro que acepta la clase derivada. Esta implementación se muestra en el ejemplo siguiente.  
@@ -234,10 +234,10 @@ public class Run
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- <xref:System.Xml.Serialization.XmlElementAttribute>  
-- <xref:System.Xml.Serialization.XmlAttributes>  
-- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.Xml.Serialization.XmlElementAttribute>
+- <xref:System.Xml.Serialization.XmlAttributes>
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>
+- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Cómo: Especifique un nombre de elemento alternativo para un Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

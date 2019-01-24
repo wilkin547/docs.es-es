@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: buscar archivos duplicados en un árbol de directorios (LINQ) (Visual Basic)'
+title: Procedimiento Buscar archivos duplicados en un árbol de directorios (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: c9243d98c73571fcde009cddb2d5435365f20760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cfa86aa3750b7a102bfe6787bf589b5662efa15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667185"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Cómo: buscar archivos duplicados en un árbol de directorios (LINQ) (Visual Basic)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Procedimiento Buscar archivos duplicados en un árbol de directorios (LINQ) (Visual Basic)
 A veces, los archivos que tienen el mismo nombre pueden estar en más de una carpeta. Por ejemplo, en la carpeta de instalación de Visual Studio, hay varias carpetas que tienen un archivo readme.htm. En este ejemplo se muestra cómo buscar estos nombres de archivos duplicados en una carpeta raíz especificada. En el segundo ejemplo se muestra cómo buscar archivos cuyo tamaño y fecha de creación también coinciden.  
   
 ## <a name="example"></a>Ejemplo  
@@ -103,6 +103,6 @@ End Module
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Vea también
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569012"
 ---
 # <a name="claims-and-tokens"></a>Notificaciones y tokens
 En este tema se describe los distintos tipos de notificación que Windows Communication Foundation (WCF) crea a partir de los tokens predeterminados que admite.  
@@ -64,9 +64,9 @@ En este tema se describe los distintos tipos de notificación que Windows Commun
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Notificaciones de identidad y ServiceSecurityContext.IsAnonymous  
  Si ninguno de los `ClaimSet` los objetos resultantes de las credenciales del cliente contienen una notificación con un `Right` de `Identity,` el <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> propiedad devuelve `true`. Si una o más de esas notificaciones están presentes, la propiedad `IsAnonymous` devuelve `false`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IdentityModel.Claims.ClaimSet>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims.ClaimTypes>  
- [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.IdentityModel.Claims.ClaimSet>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims.ClaimTypes>
+- [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

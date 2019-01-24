@@ -2,20 +2,20 @@
 title: Refactorizar utilizando una función pura (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: fe1ad3b189891a1655e014dc49dac00c79507a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3adaede7bce206d6018f1eb624d9ce04f53c04b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728286"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactorizar utilizando una función pura (Visual Basic)
-En el ejemplo siguiente se refactoriza el ejemplo anterior, [refactorizando mediante un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)para usar una función pura en este ejemplo, el código para buscar el texto de un párrafo se mueve al método estático puro `ParagraphText`.  
+En el siguiente ejemplo refactoriza el ejemplo anterior, [refactorizar mediante un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar una función pura en este ejemplo, el código para buscar el texto de un párrafo se pasa al método estático puro `ParagraphText`.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, recuperando los nodos de párrafo a partir de dicho documento. También identifica el estilo de cada uno de los párrafos. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. En los comentarios del siguiente código se menciona dónde se encuentra el código refactorizado.  
   
- Para obtener instrucciones para crear el documento de origen para este ejemplo, vea [crear el origen de Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obtener instrucciones para crear el documento de origen para este ejemplo, consulte [crear the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -170,9 +170,9 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Pasos siguientes  
  El siguiente ejemplo muestra cómo proyectar un XML con un aspecto diferente:  
   
--   [Proyectando XML de una forma diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [Proyectar XML en una forma distinta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Refactorizar utilizando un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
- [Refactorizar en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Vea también
+- [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactorizar mediante un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [Refactorizar en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

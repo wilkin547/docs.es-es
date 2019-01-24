@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657979"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Tutorial: Llamar a las API de Windows (Visual Basic)
 API de Windows son bibliotecas de vínculos dinámicos (DLL) que forman parte del sistema operativo Windows. Usarlos para realizar tareas cuando resulta difícil escribir procedimientos equivalentes. Por ejemplo, Windows proporcionan una función denominada `FlashWindowEx` que permite que la barra de título de una aplicación alterne entre claro y oscuro.  
@@ -147,12 +147,12 @@ API de Windows son bibliotecas de vínculos dinámicos (DLL) que forman parte de
   
 12. Haga clic en **Button2**. Si se puede mover el archivo, se muestra el mensaje "el archivo se ha movido correctamente".  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Crear prototipos en código administrado](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [Serialización de un delegado como un método de devolución de llamada](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Crear prototipos en código administrado](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [Serialización de un delegado como un método de devolución de llamada](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

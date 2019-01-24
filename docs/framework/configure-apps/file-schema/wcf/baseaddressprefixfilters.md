@@ -2,12 +2,12 @@
 title: '&lt;baseAddressPrefixFilters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 04579980201b397e7ed92f55ffcb19e54de18aaa
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 21a926d07aa818ce4ff5c2b85a04167fdd531047
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667250"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
 Representa una colección de configuración de elementos que especifican pasan a través de filtros, que proporcionan un mecanismo para escoger los enlaces adecuados de Internet Information Services (IIS) al hospedar la aplicación de Windows Communication Foundation (WCF) en IIS.  
@@ -16,7 +16,7 @@ Representa una colección de configuración de elementos que especifican pasan a
 >  \<baseAddressPrefixFilters > no reconoce el "localhost", use el nombre de equipo completo en su lugar.  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
+\<ServiceHostingEnvironment>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ Representa una colección de configuración de elementos que especifican pasan a
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Define el tipo del que el entorno host del servicio crea instancias para un transporte determinado.|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Define el tipo del que el entorno host del servicio crea instancias para un transporte determinado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un filtro de prefijo proporciona un método para que los proveedores de host compartido especifiquen qué identificadores URI va a utiliza el servicio. Permite a los host compartidos hospedar varias aplicaciones con direcciones base diferentes para el mismo esquema en el mismo sitio.  
@@ -80,8 +80,8 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  El filtro no admite ningún carácter comodín. Además, las direcciones base proporcionadas por IIS pueden tener direcciones enlazadas a otros esquemas no presentes en la lista `baseAddressPrefixFilters`. Estas direcciones no se filtran.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)

@@ -2,12 +2,12 @@
 title: Inferir columnas
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 56de4b4d6cf704473ec46957625ad1c376f595c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f3edd09b1fb8169e8f609514de38b3c37574079b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655236"
 ---
 # <a name="inferring-columns"></a>Inferir columnas
 Una vez que ADO.NET determina a partir de un documento XML los elementos que se van a inferir como tablas para un <xref:System.Data.DataSet>, se deducen las columnas para dichas tablas. ADO.NET 2.0 incorporó un nuevo motor de inferencia de esquemas que deduce un tipo de datos fuertemente tipado para cada **simpleType** elemento. En versiones anteriores, el tipo de datos de un deducido **simpleType** elemento siempre ha sido **xsd: String**.  
@@ -35,7 +35,7 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
   
  El proceso de inferencia producirá una tabla denominada **Element1** con dos columnas, **attr1** y **attr2**. El **ColumnMapping** propiedad de ambas columnas se establecerá en **MappingType.Attribute**.  
   
- **Conjunto de datos:** DocumentElement  
+ **DataSet:** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -57,7 +57,7 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
   
  El proceso de inferencia producirá una tabla denominada **Element1** con dos columnas, **ChildElement1** y **ChildElement2**. El **ColumnMapping** propiedad de ambas columnas se establecerá en **MappingType.Element**.  
   
- **Conjunto de datos:** DocumentElement  
+ **DataSet:** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -65,10 +65,10 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
 |-------------------|-------------------|  
 |Text1|Text2|  
   
-## <a name="see-also"></a>Vea también  
- [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Carga de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Carga de información del esquema de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Carga de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Carga de información del esquema de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

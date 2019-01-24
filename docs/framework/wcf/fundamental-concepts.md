@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664036"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceptos básicos de Windows Communication Foundation
 Este documento proporciona una visión general de la arquitectura de Windows Communication Foundation (WCF). Pretende explicar los conceptos clave y cómo encajan entre ellos. Para ver un tutorial sobre la creación de la versión más simple de un servicio WCF y un cliente, consulte [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md). Para obtener información sobre la programación de WCF, vea [programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -51,7 +51,7 @@ Este documento proporciona una visión general de la arquitectura de Windows Com
  message  
  Unidad autónoma de datos que puede constar de varias partes, incluyendo un cuerpo y encabezados.  
   
- servicio  
+ service  
  Construcción que expone uno o más puntos de conexión, y en la que cada punto de conexión expone una o más operaciones de servicio.  
   
  punto de conexión  
@@ -65,7 +65,7 @@ Este documento proporciona una visión general de la arquitectura de Windows Com
  extremo de infraestructura  
  Un extremo que expone la infraestructura para facilitar la funcionalidad necesaria o proporcionada por el servicio que no se relaciona con un contrato de servicios. Por ejemplo, un servicio podría tener un extremo de la infraestructura que proporciona información de metadatos.  
   
- address  
+ dirección  
  Especifica la ubicación donde se reciben los mensajes. Se especifica como un identificador uniforme de recursos (URI). La parte del esquema URI nombra el mecanismo de transporte que se ha de utilizar para alcanzar la dirección, por ejemplo HTTP y TCP. La parte jerárquica del URI contiene una ubicación única cuyo formato depende del mecanismo de transporte.  
   
  La dirección del punto de conexión le permite crear direcciones únicas de puntos de conexión para cada punto de conexión de un servicio o, bajo ciertas condiciones, compartir una dirección en los puntos de conexión. El siguiente ejemplo muestra una dirección que utiliza el protocolo HTTPS con un puerto no predeterminado:  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  Modo abreviado para el creciente conjunto de especificaciones de servicios Web (WS) que se implementan en WCF, tales como WS-Security, WS-ReliableMessaging, etc.  
   
-## <a name="see-also"></a>Vea también  
- [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)  
- [Arquitectura de Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- [Arquitectura de seguridad](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Vea también
+- [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
+- [Arquitectura de Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
+- [Arquitectura de seguridad](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f92667191cad163998d233e1110365de65c0340c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f61f6ed5712f3c98f06f5fa76657f3fa7b70fe84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666337"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx (Método)
 Establece el tamaño del segmento y el tamaño máximo para la generación 0.  
@@ -44,16 +44,16 @@ HRESULT SetGCStartupLimitsEx (
  [in] El tamaño máximo para la generación 0.  
   
 ## <a name="remarks"></a>Comentarios  
- Los valores que `SetGCStartupLimitsEx` se pueden especificar conjuntos sólo antes de que se inicie el host. Estos valores no se puede cambiar más adelante.  
+ Los valores que `SetGCStartupLimitsEx` se pueden especificar conjuntos antes de iniciar el host. No se puede cambiar estos valores más adelante.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** GCHost.idl, GCHost.h  
+ **Encabezado**: GCHost.idl, GCHost.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IGCHost2 (interfaz)](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IGCHost2 (interfaz)](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)

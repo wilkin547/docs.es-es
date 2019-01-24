@@ -2,12 +2,12 @@
 title: Interceptador de mensajes personalizados
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 5a72a964c571cf68d4b215f4029ff95c52cba0e2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3b24535c67c1d16da63ec3b282d456e65ff8dd95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733277"
 ---
 # <a name="custom-message-interceptor"></a>Interceptador de mensajes personalizados
 Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particular, muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución. El ejemplo también incluye un cliente y un servidor que muestran el uso de estos generadores personalizados.  
@@ -68,7 +68,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
 ## <a name="adding-policy"></a>Adición de directivas  
  Para integrar con nuestro sistema de directivas, `InterceptingBindingElement` implementa IPolicyExportExtension para señalar que deberíamos participar en la generación de directivas. Para permitir importar la directiva en un cliente generado, el usuario puede registrar una clase derivada de `InterceptingBindingElementImporter` e invalidar `CreateMessageInterceptor`() para generar su clase `ChannelMessageInterceptor` habilitada por la directiva.  
   
-## <a name="example-droppable-message-inspector"></a>Ejemplo: inspector de mensajes que pueden quitarse  
+## <a name="example-droppable-message-inspector"></a>Ejemplo: Inspector de mensajes que pueden quitarse  
  En este ejemplo se incluye una implementación de ejemplo de `ChannelMessageInspector` que quita mensajes.  
   
 ```  

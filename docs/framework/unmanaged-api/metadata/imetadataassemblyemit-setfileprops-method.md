@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8017f816632cffc42676761a367e980d1cafe088
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 203c31129218be585960e771b1d7e669defd8cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743301"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps (Método)
 Modifica la estructura de metadatos `File` especificada.  
@@ -40,10 +40,10 @@ HRESULT SetFileProps (
   
 #### <a name="parameters"></a>Parámetros  
  `file`  
- [in] El token de metadatos que especifica el `File` estructura de metadatos que puede modificar.  
+ [in] El token de metadatos que especifica el `File` estructura de metadatos que se puede modificar.  
   
  `pbHashValue`  
- [in] Un puntero a los datos hash asociados al archivo.  
+ [in] Un puntero a los hash de los datos asociados con el archivo.  
   
  `cbHashValue`  
  [in] El tamaño en bytes de `pbHashValue`.  
@@ -52,16 +52,16 @@ HRESULT SetFileProps (
  [in] Una combinación bit a bit de [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valores que especifican distintos atributos del archivo.  
   
 ## <a name="remarks"></a>Comentarios  
- Para crear un `File` estructura de los metadatos, use la [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) método.  
+ Para crear un `File` estructura de los metadatos, use el [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

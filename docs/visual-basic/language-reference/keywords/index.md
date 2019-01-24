@@ -2,23 +2,17 @@
 title: Palabras clave de Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- reserved keywords, Visual Basic
-- keywords [Visual Basic]
-- Members [Visual Basic], Visual Basic run-time
-- Visual Basic code, keywords
-- Visual Basic, language reference
-- reserved words, Visual Basic keywords
-- Visual Basic, keywords
+  - 'reserved keywords, Visual Basic'
+  - 'keywords [Visual Basic]'
+  - 'Members [Visual Basic], Visual Basic run-time'
+  - 'Visual Basic code, keywords'
+  - 'Visual Basic, language reference'
+  - 'reserved words, Visual Basic keywords'
+  - 'Visual Basic, keywords'
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605321"
 ---
 # <a name="keywords-visual-basic"></a>Palabras clave de Visual Basic
-Las tablas siguientes enumeran todas las palabras clave del lenguaje Visual Basic.  
+Las siguientes tablas enumeran todas las palabras clave del lenguaje Visual Basic.  
   
 ## <a name="reserved-keywords"></a>Palabras clave reservadas  
  Las palabras clave siguientes están *reservadas*, lo que significa que no se pueden usar como nombres para elementos de programación, como variables o procedimientos. Para omitir esta restricción, incluya el nombre entre corchetes (`[]`). Para obtener más información, vea "Escaped Names" (Nombres con carácter de escape) en [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Nombres de elementos declarados).  
@@ -51,7 +45,7 @@ Las tablas siguientes enumeran todas las palabras clave del lenguaje Visual Basi
 |[IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)|[Let](../../../visual-basic/language-reference/queries/let-clause.md)|[Lib](../../../visual-basic/language-reference/statements/declare-statement.md)|[Like](../../../visual-basic/language-reference/operators/like-operator.md)|  
 |[Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|[Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |[Módulo](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Module (instrucción)](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Espacio de nombres](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
 |[New Constraint](../../../visual-basic/language-reference/statements/type-list.md)|[New (operador)](../../../visual-basic/language-reference/operators/new-operator.md)|[Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Next (en Resume)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Not](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
 |[Objeto](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
@@ -77,7 +71,7 @@ Las tablas siguientes enumeran todas las palabras clave del lenguaje Visual Basi
 |[Operador >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[Operador >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant`, y `Wend` se conservan como palabras clave reservadas, aunque ya no se utilizan en Visual Basic. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../../../visual-basic/language-reference/queries/let-clause.md) (Cláusula Let).  
+>  `EndIf`, `GoSub`, `Variant`, y `Wend` se conservan como palabras clave reservadas, aunque ya no se usan en Visual Basic. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../../../visual-basic/language-reference/queries/let-clause.md) (Cláusula Let).  
   
 ## <a name="unreserved-keywords"></a>Palabras clave no reservadas  
  Las palabras clave siguientes no están reservadas, lo que significa que puede usarlas como nombres para los elementos de programación. Aun así, no se recomienda que lo haga, ya que puede hacer que el código sea complicado de leer y producir pequeños errores difíciles de detectar.  
@@ -117,5 +111,5 @@ Las tablas siguientes enumeran todas las palabras clave del lenguaje Visual Basi
 |[Resumen del Registro](../../../visual-basic/language-reference/keywords/registry-summary.md)|Enumera las funciones que se usan para leer, guardar y eliminar la configuración del programa.|  
 |[Resumen de manipulación de cadenas](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Enumera las funciones que se usan para manipular cadenas.|  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Vea también
+- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -2,24 +2,24 @@
 title: Crear Interfaces genéricas variantes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6afddf018b4608418f82fa851d018f2c3e1d0fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663263"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Crear Interfaces genéricas variantes (Visual Basic)
 Puede declarar parámetros de tipo genérico en las interfaces como covariantes o contravariantes. La *covarianza* permite que los métodos de interfaz tengan tipos de valor devuelto más derivados que los que se definen en los parámetros de tipo genérico. La *contravarianza* permite que los métodos de interfaz tengan tipos de argumento menos derivados que los que se especifican en los parámetros genéricos. Las interfaces genéricas que tienen parámetros de tipo genérico covariantes o contravariantes se llaman *variantes*.  
   
 > [!NOTE]
->  En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes. Para obtener la lista de las interfaces variantes en .NET Framework, vea [varianza en Interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+>  En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes. Para obtener la lista de interfaces variantes en .NET Framework, vea [varianza en Interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
 ## <a name="declaring-variant-generic-interfaces"></a>Declarar interfaces genéricas variantes  
  Puede declarar interfaces genéricas variantes mediante las palabras clave `in` y `out` para los parámetros de tipo genérico.  
   
 > [!IMPORTANT]
->  `ByRef` parámetros en Visual Basic no pueden ser variantes. Los tipos de valor tampoco admiten la varianza.  
+>  `ByRef` los parámetros en Visual Basic no pueden ser variantes. Los tipos de valor tampoco admiten la varianza.  
   
  Puede declarar un parámetro de tipo genérico covariante mediante la palabra clave `out`. El tipo covariante debe cumplir las siguientes condiciones:  
   
@@ -33,7 +33,7 @@ Puede declarar parámetros de tipo genérico en las interfaces como covariantes 
     End Interface  
     ```  
   
-     Hay una excepción para esta regla. Si tiene un delegado genérico contravariante como parámetro de método, puede usar el tipo como parámetro de tipo genérico para el delegado. Esto se muestra en el siguiente ejemplo con el tipo `R`. Para obtener más información, consulte [varianza en delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) y [Using Variance for Func y Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+     Hay una excepción para esta regla. Si tiene un delegado genérico contravariante como parámetro de método, puede usar el tipo como parámetro de tipo genérico para el delegado. Esto se muestra en el siguiente ejemplo con el tipo `R`. Para obtener más información, consulte [varianza en delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) y [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -73,7 +73,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- En Visual Basic, no puede declarar eventos en interfaces variantes sin especificar el tipo de delegado. Además, una interfaz variante no puede tener clases, enumeraciones o estructuras anidadas, pero pueden interfaces anidadas. Esto se muestra en el siguiente código.  
+ En Visual Basic, no puede declarar eventos en interfaces variantes sin especificar el tipo de delegado. Además, una interfaz de varianza no puede tener anidadas clases, enumeraciones o estructuras, pero puede tener interfaces anidadas. Esto se muestra en el siguiente código.  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -145,7 +145,7 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- En el `Invariant(Of T)` de la interfaz, el parámetro de tipo genérico `T` es invariable, mientras que en `IExtCovariant (Of Out T)`el parámetro de tipo es covariante, aunque ambas interfaces extienden la misma interfaz. La misma regla se aplica a los parámetros de tipo genérico contravariantes.  
+ En el `Invariant(Of T)` interfaz, el parámetro de tipo genérico `T` es invariable, mientras que en `IExtCovariant (Of Out T)`el parámetro de tipo es covariante, aunque ambas interfaces extienden la misma interfaz. La misma regla se aplica a los parámetros de tipo genérico contravariantes.  
   
  Puede crear una interfaz que extienda la interfaz donde el parámetro de tipo genérico `T` es covariante y la interfaz donde es contravariante si, en la interfaz que va a extender, el parámetro de tipo genérico `T` es invariable. Esto se muestra en el siguiente código de ejemplo.  
   
@@ -179,7 +179,7 @@ End Interface
  Por ejemplo, si implementa explícitamente en una clase la misma interfaz genérica variante con distintos parámetros de tipo genérico, puede crear ambigüedad. El compilador no genera ningún error en este caso, pero no se especifica la implementación de interfaz que se elegirá en tiempo de ejecución. Esto podría provocar errores imperceptibles en el código. Observe el siguiente ejemplo de código.  
   
 > [!NOTE]
->  Con `Option Strict Off`, Visual Basic genera una advertencia de compilador cuando hay una implementación de interfaz ambigua. Con `Option Strict On`, Visual Basic genera un error del compilador.  
+>  Con `Option Strict Off`, Visual Basic genera una advertencia del compilador cuando hay una implementación de interfaz ambigua. Con `Option Strict On`, Visual Basic genera un error del compilador.  
   
 ```vb  
 ' Simple class hierarchy.  
@@ -225,6 +225,6 @@ End Sub
   
  En este ejemplo no se especifica cómo elige el método `pets.GetEnumerator` entre `Cat` y `Dog`. Esto podría producir problemas en el código.  
   
-## <a name="see-also"></a>Vea también  
- [Varianza en interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Usar la varianza para los delegados genéricos Func y Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>Vea también
+- [Varianza en interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Usar la varianza para los delegados genéricos Func y Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

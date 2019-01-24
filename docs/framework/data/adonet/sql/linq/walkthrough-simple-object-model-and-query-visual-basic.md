@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: f2df0dfa039fa37fd9d9b471d28b2a03f06b3037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724179"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Tutorial: Modelo de objetos simple y consultas (Visual Basic)
 Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] básico, con las mínimas dificultades. Creará una clase de entidad que modela la tabla Customers de la base de datos de ejemplo Northwind. Después creará una consulta simple para enumerar los clientes que se encuentran en Londres.  
@@ -29,7 +29,7 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
 ## <a name="overview"></a>Información general  
  Este tutorial se compone de seis tareas principales:  
   
--   Crear un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
+-   Creación de un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
   
 -   Asignar una clase a una tabla de base de datos.  
   
@@ -42,7 +42,7 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
 -   Ejecutar la consulta y observar los resultados.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
- En esta primera tarea, se creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
+ En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
@@ -113,7 +113,7 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
      [!code-vb[DLinqWalk1VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#4)]  
   
 ## <a name="creating-a-simple-query"></a>Crear una consulta simple  
- En este paso, creará una consulta para buscar los clientes de la tabla de base de datos Customers que se encuentran en Londres. En este paso, el código de la consulta simplemente la describe. No la ejecuta. Este enfoque se conoce como *ejecución diferida*. Para obtener más información, vea [Introduction to LINQ queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].  
+ En este paso, creará una consulta para buscar los clientes de la tabla de base de datos Customers que se encuentran en Londres. En este paso, el código de la consulta simplemente la describe. No la ejecuta. Este enfoque se conoce como *ejecución aplazada*. Para obtener más información, vea [Introduction to LINQ queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].  
   
  También generará un resultado de registro para mostrar los comandos SQL que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera. Esta característica de registro (que utiliza <xref:System.Data.Linq.DataContext.Log%2A>) es útil para la depuración, así como para determinar que los comandos que se envían a la base de datos representan la consulta de manera precisa.  
   
@@ -143,14 +143,14 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
   
      La aplicación se cierra.  
   
-4.  En el **archivo** menú, haga clic en **guardar todo**.  
+4.  En el menú **Archivo**, haga clic en **Guardar todo**.  
   
      Necesitará esta aplicación si va a continuar con el tutorial siguiente.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- El [Tutorial: realizar consultas en varias relaciones (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) tema continúa donde finaliza este tutorial. El tutorial realizar consultas en varias relaciones muestra cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede realizar consultas entre tablas, de forma similar a *combinaciones* en una base de datos relacional.  
+ El [Tutorial: Realizar consultas en varias relaciones (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) tema continúa donde finaliza este tutorial. El tutorial realizar consultas en varias relaciones muestra cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede realizar consultas entre tablas, similar a *combinaciones* en una base de datos relacional.  
   
  Si desea seguir los pasos del tutorial Realizar consultas en varias relaciones, no olvide guardar la solución del tutorial que acaba de completar, que es un requisito previo.  
   
-## <a name="see-also"></a>Vea también  
- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vea también
+- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

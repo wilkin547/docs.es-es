@@ -2,12 +2,12 @@
 title: Especificación del manifiesto del proveedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 592d435dd0da3a66fb3bbd278a53facb6cf08cb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734057"
 ---
 # <a name="provider-manifest-specification"></a>Especificación del manifiesto del proveedor
 En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.  
@@ -77,7 +77,7 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
 ## <a name="provider-manifest-programming-model"></a>Modelo de programación del manifiesto del proveedor  
  Los proveedores se derivan de <xref:System.Data.Common.DbXmlEnabledProviderManifest>, lo que les permite especificar sus manifiestos mediante declaración. La siguiente ilustración muestra la jerarquía de clases de un proveedor:  
   
- ![Ninguno](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>API de detectabilidad  
  El cargador Metadatos de almacenamiento (StoreItemCollection) carga el manifiesto de proveedor, bien mediante una conexión al almacén de datos o utilizando un token de manifiesto del proveedor.  
@@ -264,7 +264,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |BuiltIn|Boolean|No|True|True si la función está integrada en el almacén de datos|  
 |StoreFunctionName|String|No|\<Nombre >|Nombre de la función en el almacén de datos.  Permite un nivel de redirección de nombres de función.|  
 |NiladicFunction|Boolean|No|False|True si la función no requiere parámetros y se invoca sin ningún parámetro|  
-|ParameterType<br /><br /> Semántica|ParameterSemantics|No|AllowImplicit<br /><br /> Conversión|Opción de cómo la canalización de la consulta debe tratar la sustitución de tipos de parámetro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|ParameterType<br /><br /> Semántica|ParameterSemantics|No|AllowImplicit<br /><br /> Conversión|Opción de cómo la canalización de la consulta debe tratar la sustitución de tipos de parámetro:<br /><br /> -ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
  **Nodo de parámetros**  
   
@@ -277,7 +277,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Modo|Parámetro<br /><br /> Dirección|Sí|no disponible|Dirección del parámetro:<br /><br /> -en<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Atributo Namespace  
- Cada proveedor de almacén de datos debe definir un espacio de nombres o un grupo de espacios de nombres para la información definida en el manifiesto. Este espacio de nombres se puede utilizar en consultas de Entity SQL para resolver nombres de funciones y tipos. Por ejemplo: SqlServer. Ese espacio de nombres debe ser distinto del espacio de nombres canónico, EDM, definido por Servicios de entidad para que las consultas de Entity SQL admitan las funciones estándar.  
+ Cada proveedor de almacén de datos debe definir un espacio de nombres o un grupo de espacios de nombres para la información definida en el manifiesto. Este espacio de nombres se puede utilizar en consultas de Entity SQL para resolver nombres de funciones y tipos. Por ejemplo: SQL Server. Ese espacio de nombres debe ser distinto del espacio de nombres canónico, EDM, definido por Servicios de entidad para que las consultas de Entity SQL admitan las funciones estándar.  
   
-## <a name="see-also"></a>Vea también  
- [Escritura de un proveedor de datos de Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Vea también
+- [Escritura de un proveedor de datos de Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

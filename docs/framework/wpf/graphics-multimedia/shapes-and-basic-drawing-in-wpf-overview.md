@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665908"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Información general sobre formas y dibujo básico en WPF
 En este tema proporciona información general sobre cómo dibujar con <xref:System.Windows.Shapes.Shape> objetos. Un <xref:System.Windows.Shapes.Shape> es un tipo de <xref:System.Windows.UIElement> que le permite dibujar una forma a la pantalla. Dado que son elementos de interfaz de usuario, <xref:System.Windows.Shapes.Shape> objetos pueden usarse dentro de <xref:System.Windows.Controls.Panel> elementos y la mayoría de los controles.  
@@ -214,9 +214,9 @@ myPolygon.StrokeThickness = 2;
   
  En los ejemplos anteriores, se aplicó una única transformación a cada objeto de forma. Para aplicar varias transformaciones a una forma (o cualquier otro elemento de interfaz de usuario), use un <xref:System.Windows.Media.TransformGroup>.  
   
-## <a name="see-also"></a>Vea también  
- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Vea también
+- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

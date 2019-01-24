@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45650003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584917"
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -66,9 +66,9 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
 -   System.ServiceModel.Activation.  
   
--   System.IO.Log: Registro para la interfaz .NET Framework al Sistema de archivos de registro comunes (CLFS).  
+-   System.IO.Log: Registro para la interfaz de .NET Framework para el sistema de archivos de registro comunes (CLFS).  
   
--   System.Runtime.Serialization: Se registra cuando los objetos se leen o escriben.  
+-   System.Runtime.Serialization: Se registra cuando se leen o escritos los objetos.  
   
 -   CardSpace.  
   
@@ -142,7 +142,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  Puede configurar una escucha de seguimiento personalizada para enviar las trazas en la conexión, por ejemplo, a una base de datos remota. Como un implementador de la aplicación, debería exigir un control de acceso apropiado en los registros de seguimiento en el equipo remoto.  
   
- También puede configurar mediante programación una escucha de seguimiento. Para obtener más información, consulte [Cómo: crear e inicializar agentes de escucha de seguimiento](https://go.microsoft.com/fwlink/?LinkId=94648) y [creando un TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239).  
+ También puede configurar mediante programación una escucha de seguimiento. Para obtener más información, vea [Cómo: Crear e inicializar agentes de escucha de seguimiento](https://go.microsoft.com/fwlink/?LinkId=94648) y [Creating a Custom TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Puesto que `System.Diagnostics.XmlWriterTraceListener` no es seguro para subprocesos, el origen de seguimiento puede bloquear los recursos de forma exclusiva al generar trazas. Cuando muchos subprocesos generan trazas para un origen de seguimiento configurado para utilizar esta escucha, puede producirse una contención de recursos, que genera un problema de rendimiento importante. Para solucionar este problema, debería implementar una escucha personalizada que sea segura para subprocesos.  
@@ -153,7 +153,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 |Nivel de seguimiento|Naturaleza de los eventos seguidos|Contenido de los eventos seguidos|Eventos de los que se realiza un seguimiento|Destino del usuario|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Desactivado|N/D|N/D|No se emiten seguimientos.|N/D|  
-|Crítico|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.||Se registran las excepciones no controladas, incluidas las siguientes:<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (el CLR invoca a cualquier ThreadAbortExceptionHandler)<br />-StackOverflowException (no se puede detectar)<br />-ConfigurationErrorsException<br />-SEHException<br />-Errores de inicio la aplicación<br />-Eventos Failfast<br />-El sistema se bloquea<br />-Mensajes dudosos: seguimientos que provocan un error de la aplicación de mensajes.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
+|Crítico|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.||Se registran las excepciones no controladas, incluidas las siguientes:<br /><br /> -   OutOfMemoryException<br />-ThreadAbortException (el CLR invoca a cualquier ThreadAbortExceptionHandler)<br />-StackOverflowException (no se puede detectar)<br />-ConfigurationErrorsException<br />-SEHException<br />-Errores de inicio la aplicación<br />-Eventos Failfast<br />-El sistema se bloquea<br />-Mensajes dudosos: seguimientos que provocan un error de la aplicación de mensajes.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Error|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.|Se ha producido un procesamiento inesperado. La aplicación no pudo realizar una tarea como se esperaba. Sin embargo, la aplicación todavía está en funcionamiento y ejecutándose.|Se registran todas las excepciones.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Advertencia|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.|Se ha producido o puede producirse un posible problema, pero la aplicación todavía funciona correctamente. Sin embargo, puede no continuar funcionando correctamente.|-La aplicación está recibiendo más solicitudes de permitir que su configuración de límites.<br />-La cola receptora está cerca de su capacidad máxima configurada.<br />-El tiempo de espera superado.<br />-Se rechazan credentials.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Información|Eventos "Positivos": eventos que marcan hitos correctos|Hitos importantes y correctos de ejecución de la aplicación, independientemente de si la aplicación funciona correctamente o no.|En general, se generan mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o el perfil. Puede usar esta información para la planeación de la capacidad y la administración del rendimiento:<br /><br /> -Se crean los canales.<br />-Se crean los agentes de escucha punto de conexión.<br />-Mensaje entra/abandona el transporte.<br />-Se recupera el token de seguridad.<br />-Se lee el valor de configuration.|Administradores<br /><br /> Desarrolladores de aplicaciones<br /><br /> Desarrolladores de productos.|  
@@ -167,12 +167,12 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 >  Los niveles de Información, Detallado, y ActivityTracing generan muchas trazas, lo que puede afectar negativamente al rendimiento de los mensajes si ha agotado todos los recursos disponibles en el equipo.  
   
 ## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Configurar el seguimiento de actividad y la propagación para la correlación  
- El valor `activityTracing` especificado para el atributo `switchValue` se utiliza para habilitar el seguimiento de actividad, que emite las trazas para los límites de actividad y las transferencias dentro de los extremos.  
+ El valor `activityTracing` especificado para el atributo `switchValue` se utiliza para habilitar el seguimiento de actividad, que emite las trazas para los límites de actividad y las transferencias dentro de los puntos de conexión.  
   
 > [!NOTE]
 >  Al usar ciertas características de extensibilidad de WCF, podría obtener un <xref:System.NullReferenceException> cuando está habilitado el seguimiento de la actividad. Para solucionar este problema, compruebe el archivo de configuración de la aplicación y asegúrese de que el atributo `switchValue` para el origen de seguimiento de traza no está establecido en `activityTracing`.  
   
- El atributo `propagateActivity` indica si la actividad se debería propagar a otros extremos que participan en el intercambio de mensajes. Estableciendo este valor en `true`, puede coger archivos de seguimiento generados por dos extremos cualesquiera y observar cómo un conjunto de trazas en un extremo fluyó a un conjunto de rastros de otro extremo.  
+ El atributo `propagateActivity` indica si la actividad se debería propagar a otros extremos que participan en el intercambio de mensajes. Estableciendo este valor en `true`, puede coger archivos de seguimiento generados por dos puntos de conexión cualesquiera y observar cómo un conjunto de trazas en un punto de conexión fluyó a un conjunto de rastros de otro punto de conexión.  
   
  Para obtener más información acerca del seguimiento de actividad y propagación, vea [propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
@@ -180,8 +180,8 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  No puede utilizar el atributo `propagateActivity` con orígenes de seguimiento definidos por el usuario. Para la propagación del identificador de actividad de código de usuario, asegúrese de no establecer ServiceModel `ActivityTracing`, mientras todavía tenga el atributo ServiceModel `propagateActivity` establecido en `true`.  
   
-## <a name="see-also"></a>Vea también  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Creación e inicialización de agentes de escucha de seguimiento](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [Creación de un TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>Vea también
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Cómo: Crear e inicializar agentes de escucha de seguimiento](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Creación de un TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239)

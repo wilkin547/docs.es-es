@@ -2,25 +2,25 @@
 title: Varios puntos de conexión en un ListenUri único
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 45963bcf03a6734b85a1213c99facd9023711bf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbf636acf5e2cf4ef0f417b6b50a93d3e25c3ea6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643473"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Varios puntos de conexión en un ListenUri único
-Este ejemplo muestra un servicio que hospeda varios extremos en un `ListenUri`único. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
+Este ejemplo muestra un servicio que hospeda varios puntos de conexión en un `ListenUri`único. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- Como se muestra en el [varios puntos de conexión](../../../../docs/framework/wcf/samples/multiple-endpoints.md) ejemplo, un servicio puede hospedar varios extremos, cada uno con direcciones diferentes y posiblemente también enlaces diferentes. Este ejemplo muestra que es posible hospedar varios puntos de conexión en la misma dirección. Este ejemplo también muestra las diferencias entre los dos tipos de direcciones que un extremo de servicio tiene: `EndpointAddress` y `ListenUri`.  
+ Como se muestra en el [varios puntos de conexión](../../../../docs/framework/wcf/samples/multiple-endpoints.md) ejemplo, un servicio puede hospedar varios extremos, cada uno con direcciones diferentes y posiblemente también enlaces diferentes. Este ejemplo muestra que es posible hospedar varios puntos de conexión en la misma dirección. Este ejemplo también muestra las diferencias entre los dos tipos de direcciones que un punto de conexión de servicio tiene: `EndpointAddress` y `ListenUri`.  
   
  `EndpointAddress` es la dirección lógica de un servicio. Es la dirección a la que se direccionan los mensajes SOAP. `ListenUri` es la dirección física del servicio. Tiene el puerto y direcciona la información hacia donde el extremo del servicio realmente realiza escuchas para los mensajes en el equipo actual. En la mayoría de los casos, no es necesario que estas direcciones difieran; cuando no se especifica `ListenUri` explícitamente, tiene como valor predeterminado el URI de `EndpointAddress` del extremo. En unos casos, es útil para distinguirlos, como al configurar un enrutador, que podría aceptar los mensajes enviado a varios servicios diferentes.  
   
 ## <a name="service"></a>web de Office  
- El servicio en este ejemplo tiene dos contratos, `ICalculator` e `IEcho`. Además del extremo `IMetadataExchange` de costumbre, hay tres extremos de la aplicación, tal y como se muestra en el código siguiente.  
+ El servicio en este ejemplo tiene dos contratos, `ICalculator` e `IEcho`. Además del punto de conexión `IMetadataExchange` de costumbre, hay tres puntos de conexión de la aplicación, tal y como se muestra en el código siguiente.  
   
 ```xml  
 <endpoint address="urn:Stuff"  
@@ -37,7 +37,7 @@ Este ejemplo muestra un servicio que hospeda varios extremos en un `ListenUri`ú
         listenUri="http://localhost/servicemodelsamples/service.svc" />  
 ```  
   
- Los tres extremos se hospedan en el mismo `ListenUri` y utilizan el mismo `binding`, los extremos en el mismo `ListenUri` deben tener el mismo enlace, porque están compartiendo una pila de canal única que realiza escuchas para los mensajes en esa dirección física en el equipo. La`address` de cada extremo es un URN; aunque normalmente las direcciones representan las ubicaciones físicas, de hecho la dirección puede ser cualquier tipo de URI, porque la dirección se utiliza para coincidir y filtrar los propósitos como se muestra en este ejemplo.  
+ Los tres puntos de conexión se hospedan en el mismo `ListenUri` y utilizan el mismo `binding`, los puntos de conexión en el mismo `ListenUri` deben tener el mismo enlace, porque están compartiendo una pila de canal única que realiza escuchas para los mensajes en esa dirección física en el equipo. La`address` de cada punto de conexión es un URN; aunque normalmente las direcciones representan las ubicaciones físicas, de hecho la dirección puede ser cualquier tipo de URI, porque la dirección se utiliza para coincidir y filtrar los propósitos como se muestra en este ejemplo.  
   
  Dado que los tres extremos comparten el mismo `ListenUri`, cuando llega un mensaje, Windows Communication Foundation (WCF) debe decidir qué punto de conexión que el mensaje está destinado. Cada punto de conexión tiene un filtro de mensajes que se compone de dos partes: el filtro de la dirección y el filtro del contrato. El filtro de la dirección coincide con `To` del mensaje SOAP a la dirección del extremo de servicio. Por ejemplo, solo los mensajes direccionados `To "Urn:OtherEcho"` son candidatos para el tercer extremo de este servicio. El filtro del contrato coincide con las Acciones asociadas a las operaciones de un contrato determinado. Por ejemplo, los mensajes con la acción de `IEcho`. `Echo` coincide con los filtros de contrato del segundo y tercer extremos de este servicio, porque ambos de esos extremos hospedan el contrato `IEcho`.  
   

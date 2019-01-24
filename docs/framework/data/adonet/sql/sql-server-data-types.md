@@ -2,12 +2,12 @@
 title: Tipos de datos de SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: e519dc82fac7b8755155dcf40696030f2a1d266c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 14a3c8b2f520efce96667b2028405ca36ed17a28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741514"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de datos de SQL Server y ADO.NET
 SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo que puede dar lugar a posibles pérdidas de datos. Para conservar la integridad de los datos, el proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>) proporciona métodos de descriptor de acceso con tipo para trabajar con datos de SQL Server. Puede usar las enumeraciones de las clases <xref:System.Data.SqlDbType> para especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  
@@ -54,9 +54,9 @@ SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo qu
  <xref:System.Data.DbType>  
  Describe la enumeración `DbType`, así como todos sus miembros.  
   
-## <a name="see-also"></a>Vea también  
- [Asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Configuración de parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Parámetros con valores de tabla](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
- [Datos binarios y datos de valores grandes de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Configuración de parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Parámetros con valores de tabla](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
+- [Datos binarios y datos de valores grandes de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

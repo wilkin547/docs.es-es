@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 6040401ce3e98c835677be3c4cc7698013348f37
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 3b8d13e606f28896cae88162d572470e49af3739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730287"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Propiedad de eje descendiente XML Visual Basic)
 Proporciona acceso a los descendientes de los siguientes valores: una <xref:System.Xml.Linq.XElement> objeto, un <xref:System.Xml.Linq.XDocument> (objeto), una colección de <xref:System.Xml.Linq.XElement> objetos o una colección de <xref:System.Xml.Linq.XDocument> objetos.  
@@ -28,21 +28,21 @@ object...<descendant>
   
 ## <a name="parts"></a>Elementos  
  `object`  
- Requerido. Un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.  
+ Obligatorio. Un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.  
   
  ...<  
- Requerido. Denota el inicio de una propiedad de eje descendiente.  
+ Obligatorio. Denota el inicio de una propiedad de eje descendiente.  
   
  `descendant`  
- Requerido. Nombre de los nodos descendientes para tener acceso a la forma [`prefix``:`]`name`.  
+ Obligatorio. Nombre de los nodos descendientes para tener acceso a la forma [`prefix``:`]`name`.  
   
 |Parte|Descripción|  
 |----------|-----------------|  
 |`prefix`|Opcional. Prefijo de espacio de nombres XML para el nodo descendiente. Debe ser un espacio de nombres XML global que se define utilizando un `Imports` instrucción.|  
-|`name`|Requerido. Nombre local del nodo descendiente. Consulte [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`name`|Obligatorio. Nombre local del nodo descendiente. Consulte [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Requerido. Denota el final de una propiedad de eje descendiente.  
+ Obligatorio. Denota el final de una propiedad de eje descendiente.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Una colección de objetos <xref:System.Xml.Linq.XElement>.  
@@ -75,9 +75,9 @@ object...<descendant>
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement>  
- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Xml.Linq.XElement>
+- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ToolBar [WPF], styles and templates
 - templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-ms.openlocfilehash: 593968d0f9107ac608978d33032e6dd1c6c61262
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 022581c6ef154874e563513a719fc8590a13b30a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655691"
 ---
 # <a name="toolbar-styles-and-templates"></a>Estilos y plantillas de ToolBar
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ToolBar> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ToolBar> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="toolbar-parts"></a>Partes de la barra de herramientas  
  En la tabla siguiente se enumera los elementos con nombre para el <xref:System.Windows.Controls.ToolBar> control.  
@@ -27,19 +27,19 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|El objeto que contiene los controles en el <xref:System.Windows.Controls.ToolBar>.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|El objeto que contiene los controles que se encuentran en el área de desbordamiento de la <xref:System.Windows.Controls.ToolBar>.|  
   
- Cuando se crea un <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.ToolBar>, la plantilla podría contener una <xref:System.Windows.Controls.ItemsPresenter> dentro de un <xref:System.Windows.Controls.ScrollViewer>. (El <xref:System.Windows.Controls.ItemsPresenter> muestra cada elemento de la <xref:System.Windows.Controls.ToolBar>; el <xref:System.Windows.Controls.ScrollViewer> habilita el desplazamiento en el control).  Si el <xref:System.Windows.Controls.ItemsPresenter> no es el elemento secundario directo de la <xref:System.Windows.Controls.ScrollViewer>, debe asignar a la <xref:System.Windows.Controls.ItemsPresenter> el nombre `ItemsPresenter`.  
+ Cuando creas un <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.ToolBar>, la plantilla podría contener un <xref:System.Windows.Controls.ItemsPresenter> dentro de un <xref:System.Windows.Controls.ScrollViewer>. (El <xref:System.Windows.Controls.ItemsPresenter> muestra cada elemento en el <xref:System.Windows.Controls.ToolBar>; el <xref:System.Windows.Controls.ScrollViewer> habilita el desplazamiento dentro del control).  Si el <xref:System.Windows.Controls.ItemsPresenter> no es el elemento secundario directo de la <xref:System.Windows.Controls.ScrollViewer>, debe proporcionar el <xref:System.Windows.Controls.ItemsPresenter> el nombre, `ItemsPresenter`.  
   
 ## <a name="toolbar-states"></a>Estados de la barra de herramientas  
- La tabla siguiente enumera los estados visuales para el <xref:System.Windows.Controls.ToolBar> control.  
+ En la tabla siguiente se enumera los estados visuales para el <xref:System.Windows.Controls.ToolBar> control.  
   
 |Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
 |-|-|-|  
-|Válido|ValidationStates|El control usa la <xref:System.Windows.Controls.Validation> clase y la <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
+|Válido|ValidationStates|El control utiliza el <xref:System.Windows.Controls.Validation> clase y el <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.|  
 |InvalidFocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.|  
 |InvalidUnfocused|ValidationStates|El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.|  
   
 ## <a name="toolbar-controltemplate-example"></a>Ejemplo de ControlTemplate de barra de herramientas  
- En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.ToolBar> control.  
+ El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.ToolBar> control.  
   
  [!code-xaml[ControlTemplateExamples#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/toolbar.xaml#toolbar)]  
   
@@ -49,10 +49,10 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
   
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)  
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)
+- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)'
+title: Procedimiento Combinar contenido de archivos no similares (LINQ) (Visual Basic)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655470"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedimiento Combinar contenido de archivos no similares (LINQ) (Visual Basic)
 
 En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por comas que comparten un valor común que se usa como clave coincidente. Esta técnica puede ser útil si tiene que combinar datos de dos hojas de cálculo o si tiene que combinar en un archivo nuevo datos procedentes de una hoja de cálculo y de un archivo que tiene otro formato. Puede modificar el ejemplo para adaptarlo a cualquier tipo de texto estructurado.  
   
@@ -123,13 +123,13 @@ End Class
 
 ## <a name="compiling-the-code"></a>Compilación del código
 
-Crear y compilar un proyecto destinado a una de las siguientes opciones:
+Cree y compile un proyecto cuyo destino sea una de las opciones siguientes:
 
-- .NET framework versión 3.5 con una referencia a System.Core.dll.
-- .NET framework versión 4.0 o posterior.
-- Versión de .NET core 1.0 o superior.
+- Versión 3.5 de .NET Framework 5 con una referencia a System.Core.dll.
+- .NET Framework versión 4.0 o posterior.
+- .NET Core versión 1.0 o posterior.
   
 ## <a name="see-also"></a>Vea también
 
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

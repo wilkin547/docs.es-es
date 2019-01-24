@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: detectar errores (Visual Basic) de análisis'
+title: Procedimiento Detectar errores (Visual Basic) de análisis
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: aa72b914d4640410a4d47ba49e774dcee31a54c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f438a247866fdea8935be2b881a77f97c152b98f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667094"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Cómo: detectar errores (Visual Basic) de análisis
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Procedimiento Detectar errores (Visual Basic) de análisis
 En este tema se describe cómo detectar XML no válido o mal formado.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] se implementa con <xref:System.Xml.XmlReader>. Si se pasa XML no válido o mal formado a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], la clase <xref:System.Xml.XmlReader> subyacente iniciará una excepción. Los diferentes métodos que analizan XML, como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType> no detectan la excepción; la excepción se propaga de forma que la aplicación pueda detectarla.  
@@ -41,5 +41,5 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  Para obtener información acerca de las excepciones que puede esperar que devuelva los métodos <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> y <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, vea la documentación de <xref:System.Xml.XmlReader>.  
   
-## <a name="see-also"></a>Vea también  
- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Vea también
+- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: e286b900d7647bcd5bc99b78164e6820c1417a63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93ec81d94d8133fc5a6d71d7f1b57b2e9a6aad21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659636"
 ---
 # <a name="data-member-order"></a>Orden de los miembros de datos
 En algunas aplicaciones, es útil conocer el orden en el que se envían los datos de los distintos miembros de datos o en el que se espera recibir (como el orden en el que los datos aparecen en el XML serializado). A veces puede ser necesario cambiar este orden. En este tema se explican las reglas de la clasificación.  
@@ -62,7 +62,7 @@ En algunas aplicaciones, es útil conocer el orden en el que se envían los dato
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

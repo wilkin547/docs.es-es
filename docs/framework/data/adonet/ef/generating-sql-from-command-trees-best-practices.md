@@ -2,12 +2,12 @@
 title: 'Generar SQL a partir de árboles de comandos: procedimientos recomendados'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659100"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generar SQL a partir de árboles de comandos: procedimientos recomendados
 Los árboles de comandos de consulta de salida crean modelos muy similares a consultas expresables en SQL. Sin embargo, hay ciertos retos comunes para los programadores de proveedores a la hora de generar SQL a partir de un árbol de comandos de salida. En este tema se describen estos retos. En el tema siguiente, el proveedor de ejemplo muestra cómo actuar ante estos retos.  
@@ -136,7 +136,7 @@ ON b.y = d.z
  Las expresiones se pueden reutilizar en el árbol de comandos de consulta pasado por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. No suponga que cada expresión aparece una sola vez en el árbol de comandos de consulta.  
   
 ## <a name="mapping-primitive-types"></a>Asignar tipos primitivos  
- Al asignar tipos conceptuales (EDM) a los tipos de proveedor, debe asignar al tipo más ancho (Int32) para que quepan todos los valores posibles. Evite además la asignación a tipos que no se puede utilizar para muchas operaciones, como los tipos BLOB (por ejemplo, `ntext` en SQL Server).  
+ Al asignar tipos conceptuales (EDM) a los tipos de proveedor, debe asignar al tipo más ancho (Int32) para que quepan todos los valores posibles. Evite además la asignación a tipos que no se puede usar para muchas operaciones, como los tipos BLOB (por ejemplo, `ntext` en SQL Server).  
   
-## <a name="see-also"></a>Vea también  
- [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Vea también
+- [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

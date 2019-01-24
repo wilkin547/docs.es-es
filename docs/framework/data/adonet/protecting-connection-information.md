@@ -2,12 +2,12 @@
 title: Proteger la información de conexión
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 6cd27f2bce1879301e80c7a8ec689971705a45b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4c96861afc47c67c8e8c1f3721b09672ca3f48ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662223"
 ---
 # <a name="protecting-connection-information"></a>Proteger la información de conexión
 La protección del acceso al origen de datos es uno de los objetivos más importantes a la hora de proteger una aplicación. Las cadenas de conexión presentan una posible vulnerabilidad si no se protegen. El almacenamiento de la información de conexión en texto sin formato o en la memoria ponen en riesgo el sistema completo. Cadenas de conexión incrustadas en el código fuente se pueden leer utilizando el [Ildasm.exe (Desensamblador de IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver lenguaje intermedio de Microsoft (MSIL) en un ensamblado compilado.  
@@ -39,8 +39,8 @@ La protección del acceso al origen de datos es uno de los objetivos más import
 ## <a name="encrypt-configuration-files"></a>Cifrar archivos de configuración  
  Las cadenas de conexión también se pueden almacenar en archivos de configuración, lo que elimina la necesidad de incrustarlas en el código de la aplicación. Los archivos de configuración son archivos XML estándar para los que .NET Framework ha definido un conjunto común de elementos. Las cadenas de conexión en archivos de configuración se almacenan normalmente en el  **\<connectionStrings >** elemento en el **app.config** para una aplicación de Windows, o el  **Web.config** archivo para una aplicación ASP.NET. Para obtener más información sobre los conceptos básicos de almacenar, recuperar y cifrar cadenas de conexión de archivos de configuración, consulte [las cadenas de conexión y archivos de configuración](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
-## <a name="see-also"></a>Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Cifrar información de configuración mediante una configuración protegida](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [PAVE Seguridad del código nativo y del código de .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Cifrar información de configuración mediante una configuración protegida](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)
+- [PAVE Seguridad del código nativo y del código de .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

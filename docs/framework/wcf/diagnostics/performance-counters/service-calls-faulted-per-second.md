@@ -1,15 +1,15 @@
 ---
-title: 'Servicio: Errores en las llamadas por segundo'
+title: 'Servicio: Errores de llamadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
-ms.openlocfilehash: b4a8a1eeec13195e4f8fe088da14dff7c06ecdb3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c9af93c7cc0f07ced4435c98fd307e7a7976687f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580088"
 ---
-# <a name="service-calls-faulted-per-second"></a>Servicio: Errores en las llamadas por segundo
+# <a name="service-calls-faulted-per-second"></a>Servicio: Errores de llamadas por segundo
 Nombre del contador: Errores de llamadas por segundo.  
   
 ## <a name="description"></a>Descripción  
@@ -21,5 +21,5 @@ Nombre del contador: Errores de llamadas por segundo.
   
  En las aplicaciones de Windows Communication Foundation (WCF), los métodos de servicio comunican información de errores de procesamiento mediante mensajes de error SOAP. Los errores SOAP son tipos de mensaje que se incluyen en los metadatos de una operación del servicio y, por consiguiente, crean un contrato de error que los clientes pueden utilizar para que su ejecución sea más sólida o interactiva. Dado que los errores SOAP se muestran a los clientes en formato XML, son sumamente interoperativos.  
   
-## <a name="see-also"></a>Vea también  
- [Especificación y gestión de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Vea también
+- [Especificación y gestión de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

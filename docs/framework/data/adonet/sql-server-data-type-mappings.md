@@ -2,12 +2,12 @@
 title: Asignaciones de tipos de datos de SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6a718421e7a9b77bcea6b0c4ad502e8335984e27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584956"
 ---
 # <a name="sql-server-data-type-mappings"></a>Asignaciones de tipos de datos de SQL Server
 SQL Server y .NET Framework se basan en sistemas de tipos distintos. Por ejemplo, la estructura <xref:System.Decimal> de .NET Framework tiene una escala máxima de 28, mientras que los tipos de datos decimal y numérico de SQL Server tienen una escala máxima de 38. Para mantener la integridad de los datos al leer y escribir datos, <xref:System.Data.SqlClient.SqlDataReader> expone métodos de descriptores de acceso con tipo específicos de SQL Server que devuelven objetos de <xref:System.Data.SqlTypes> así como métodos de descriptores de acceso que devuelven tipos de .NET Framework. Los tipos de SQL Server y los de .NET Framework se representan también mediante enumeraciones en las clases <xref:System.Data.DbType> y <xref:System.Data.SqlDbType>, que puede usar al especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  
@@ -56,9 +56,9 @@ SQL Server y .NET Framework se basan en sistemas de tipos distintos. Por ejemplo
 
 Para obtener más información acerca de los tipos de datos de SQL Server, vea [tipos de datos (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos de SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Datos binarios y datos de valores grandes de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Asignaciones de tipos de datos en ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Configuración de parámetros y tipos de datos de parámetros](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Tipos de datos de SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Datos binarios y datos de valores grandes de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Asignaciones de tipos de datos en ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [Configuración de parámetros y tipos de datos de parámetros](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

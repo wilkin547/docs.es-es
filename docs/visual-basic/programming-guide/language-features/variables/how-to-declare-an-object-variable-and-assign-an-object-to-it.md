@@ -1,29 +1,29 @@
 ---
-title: 'Cómo: Declarar una variable de objeto y asignarle un objeto en Visual Basic'
+title: Procedimiento Declarar una Variable de objeto y asignarle un objeto en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-ms.openlocfilehash: 1f38c90f0571b3fc73c4c89812092cdada936d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86037499b44d17f2ba83fd6cd0dad83ceb14e6b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730092"
 ---
-# <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Cómo: Declarar una variable de objeto y asignarle un objeto en Visual Basic
-Declare una variable de la [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) especificando `As Object` en un [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md). Asignar un objeto a este tipo de variable colocando el objeto después del signo igual (`=`) en una cláusula de inicialización o de instrucción de asignación.  
+# <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Procedimiento Declarar una Variable de objeto y asignarle un objeto en Visual Basic
+Declare una variable de la [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) especificando `As Object` en un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Asignar un objeto a este tipo de variable colocando el objeto después del signo igual (`=`) en una cláusula de instrucción o la inicialización de la asignación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se declara un `Object` variable y asigna la actual instancia.  
+ En el ejemplo siguiente se declara un `Object` variable y asigna la instancia actual a él.  
   
 ```  
       Dim thisObject As Object  
 thisObject = "This is an Object"  
 ```  
   
- Puede combinar la declaración y la asignación inicializando la variable como parte de su declaración. En el ejemplo siguiente es equivalente al ejemplo anterior.  
+ Puede combinar la declaración y asignación, inicialice la variable como parte de su declaración. El ejemplo siguiente es equivalente al ejemplo anterior.  
   
 ```  
 Dim thisObject As Object= "This is an Object"  
@@ -38,11 +38,11 @@ Dim thisObject As Object= "This is an Object"
   
 -   Un procedimiento en el que se va a colocar la instrucción de asignación.  
   
-## <a name="see-also"></a>Vea también  
- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Vea también
+- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

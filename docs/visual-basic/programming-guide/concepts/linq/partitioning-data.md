@@ -2,12 +2,12 @@
 title: Creación de particiones de datos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 17e929d3c95e079a0a73b8e8cadf51d3ece6f5f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afbbd479d3dadd69b81cdd6aead0a4263b92dfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728273"
 ---
 # <a name="partitioning-data-visual-basic"></a>Creación de particiones de datos (Visual Basic)
 Partición en LINQ es la operación de dividir una secuencia de entrada en dos secciones, sin reorganizar los elementos, y devolver después una de las secciones.  
@@ -20,7 +20,7 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
   
 ## <a name="operators"></a>Operadores  
   
-|Nombre de operador|Descripción|Sintaxis de expresiones de consulta de Visual Basic|Más información|  
+|Nombre de operador|Descripción|Sintaxis de expresión de consulta de Visual Basic|Más información|  
 |-------------------|-----------------|------------------------------------------|----------------------|  
 |Skip|Omite los elementos hasta una determinada posición de una secuencia.|`Skip`|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Omite los elementos según una función de predicado hasta que un elemento no satisface la condición.|`Skip While`|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
@@ -30,29 +30,29 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
 ## <a name="query-expression-syntax-examples"></a>Ejemplos de sintaxis de expresiones de consulta  
   
 ### <a name="skip"></a>Skip  
- El siguiente ejemplo de código utiliza el `Skip` cadenas en Visual Basic que omita las primeras cuatro cadenas en una matriz de cadenas antes de devolver el resto de la matriz.  
+ El siguiente ejemplo de código utiliza el `Skip` cadenas en Visual Basic para omitir las cuatro primeras cadenas de una matriz de cadenas antes de devolver el resto de la matriz.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- El siguiente ejemplo de código utiliza el `Skip While` cláusula en Visual Basic que omita las cadenas en una matriz mientras la primera letra de la cadena es "a". Se devuelven las cadenas restantes de la matriz.  
+ El siguiente ejemplo de código utiliza el `Skip While` cláusula en Visual Basic para omitir las cadenas en una matriz mientras la primera letra de la cadena es "a". Se devuelven las cadenas restantes de la matriz.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- El siguiente ejemplo de código utiliza el `Take` cláusula en Visual Basic para devolver el primero de dos cadenas en una matriz de cadenas.  
+ El siguiente ejemplo de código utiliza el `Take` cláusula en Visual Basic para devolver las primeras dos cadenas en una matriz de cadenas.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- El siguiente ejemplo de código utiliza el `Take While` cláusula en Visual Basic para devolver las cadenas de una matriz mientras la longitud de la cadena es cinco o menos.  
+ El siguiente ejemplo de código utiliza el `Take While` cláusula en Visual Basic para devolver las cadenas de una matriz, mientras que la longitud de la cadena es cinco o menos.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq>  
- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Skip (cláusula)](../../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Skip While (cláusula)](../../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take (cláusula)](../../../../visual-basic/language-reference/queries/take-clause.md)  
- [Take While (cláusula)](../../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Linq>
+- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Skip (cláusula)](../../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Skip While (cláusula)](../../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take (cláusula)](../../../../visual-basic/language-reference/queries/take-clause.md)
+- [Take While (cláusula)](../../../../visual-basic/language-reference/queries/take-while-clause.md)

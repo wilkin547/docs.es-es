@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 048c7234fcb2592ea0dade135a32341a6e0f404f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b2b7559c203e5d357dd6921ea6862fbb5ec90a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576192"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName (Método)
 Obtiene un puntero a un tipo exportado, dados su nombre y el tipo envolvente.  
@@ -42,23 +42,23 @@ HRESULT FindExportedTypeByName (
  [in] El nombre del tipo exportado.  
   
  `mdtExportedType`  
- [in] El token de metadatos para la clase envolvente del tipo exportado. Este valor es `mdExportedTypeNil` si exportado solicitado tipo no es un tipo anidado.  
+ [in] El token de metadatos para la clase envolvente del tipo exportado. Este valor es `mdExportedTypeNil` si exporta solicitado tipo no es un tipo anidado.  
   
  `ptkExportedType`  
- [out] Un puntero a la `mdExportedType` símbolo (token) que representa el tipo exportado.  
+ [out] Un puntero a la `mdExportedType` token que representa el tipo exportado.  
   
 ## <a name="remarks"></a>Comentarios  
  El `FindExportedTypeByName` método usa las reglas estándares empleadas por common language runtime para resolver las referencias.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

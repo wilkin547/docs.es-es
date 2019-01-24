@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 902414ca96d9b4bf888608bd9ad267777da92e32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742320"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle (función)
 Devuelve un controlador único que identifica una propiedad.
@@ -64,8 +64,8 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | No se encontró el nombre de propiedad especificado. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100C | La propiedad solicitada es de tipo son `CIM_OBJECT` o `CIM_ARRAY`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | La propiedad solicitada es de tipo son `CIM_OBJECT` o `CIM_ARRAY`. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -77,11 +77,11 @@ Puede usar este identificador para identificar las propiedades cuando se usa [IW
 Identificadores se pueden recuperar de las propiedades de todos los tipos de datos distinto `CIM_OBJECT` y `CIM_ARRAY`. Devuelve el trabajo de identificadores en todas las instancias de una clase.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

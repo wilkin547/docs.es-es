@@ -2,12 +2,12 @@
 title: '&gt; (Mayor que) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
-ms.openlocfilehash: b9cf4d5445060bbd013ae2d769c407e7f9ee9314
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1449af09022a9e11be1f3627023318270adf0121
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736934"
 ---
 # <a name="gt-greater-than-entity-sql"></a>&gt; (Mayor que) (Entity SQL)
 Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor mayor que el de la expresión de la derecha.  
@@ -34,5 +34,5 @@ expression > expression
   
  [!code-csharp[DP EntityServices Concepts 2#GREATER](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

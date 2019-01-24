@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Hospedar contenido de WPF en Win32'
+title: 'Tutorial: Hospedar contenido WPF en Win32'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 692105d464c005109cbf1ff704045efa7d1e9173
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c56ef33d1a44b263466a293b06aa988885b2008d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725602"
 ---
-# <a name="walkthrough-hosting-wpf-content-in-win32"></a>Tutorial: Hospedar contenido de WPF en Win32
+# <a name="walkthrough-hosting-wpf-content-in-win32"></a>Tutorial: Hospedar contenido WPF en Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un entorno rico para crear aplicaciones. Sin embargo, si se tiene una inversión sustancial en código [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], quizá sea más eficaz agregar funcionalidad de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a la aplicación en lugar de reescribir el código original. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona un mecanismo sencillo para hospedar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido en un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ventana.  
   
  Este tutorial describe cómo escribir una aplicación de ejemplo, [hospedar contenido WPF en un ejemplo de ventana de Win32](https://go.microsoft.com/fwlink/?LinkID=160004), que hosts [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido en un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ventana. Puede extender este ejemplo para hospedar cualquier ventana de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Dado que implica combinar código administrado y no administrado, la aplicación se escribe en [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)].  
@@ -180,7 +180,7 @@ ms.locfileid: "48842806"
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>Diseño
- El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido constan de cinco <xref:System.Windows.Controls.TextBox> controla, con asociados <xref:System.Windows.Controls.Label> controles: nombre, dirección, ciudad, estado y Zip. Hay dos <xref:System.Windows.Controls.Button> controles, **Aceptar** y **Cancelar**
+ El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido constan de cinco <xref:System.Windows.Controls.TextBox> controla, con asociados <xref:System.Windows.Controls.Label> controles: Nombre, dirección, ciudad, estado y Zip. Hay dos <xref:System.Windows.Controls.Button> controles, **Aceptar** y **Cancelar**
 
  El contenido [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se implementa en la clase `WPFPage`. El diseño se controla con un elemento de diseño <xref:System.Windows.Controls.Grid>. La clase hereda de <xref:System.Windows.Controls.Grid>, lo que lo convierte en el elemento raíz del contenido [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 

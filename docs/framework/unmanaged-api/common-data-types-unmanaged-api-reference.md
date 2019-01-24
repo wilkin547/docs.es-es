@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0d3a9039c6dc5d72ca740d6eaaf8a4d565e2647
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e5a6d69b121827c3ee4f55714dcf3d4628706ce2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737902"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipos de datos comunes (Referencia de la API no administrada)
 En este tema se enumeran los tipos de datos que usan las API no administradas de .NET Framework y que se definen mediante instrucciones `typedef` de C/C++. Normalmente, estos tipos de datos son alias de tipos de datos primitivos de C/C++. Normalmente, los valores de estos tipos de datos son opacos; es decir, son devueltos por una función o un método determinados para que se puedan pasar a otras funciones o métodos sin modificar.  
@@ -37,5 +37,5 @@ En este tema se enumeran los tipos de datos que usan las API no administradas de
 |TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|El identificador de un [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instancia.|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Identificador de un subproceso administrado.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 - [Referencia de API no administrada](../../../docs/framework/unmanaged-api/index.md)

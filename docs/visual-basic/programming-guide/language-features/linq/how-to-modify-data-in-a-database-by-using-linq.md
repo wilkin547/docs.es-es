@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: bcc56e1f7a36c705aec6750b76a4ad5d99fe7101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658421"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Procedimiento Modificar datos en una base de datos usando LINQ (Visual Basic)
 Language Integrated Query de Query (LINQ) facilitan el acceso a la información de la base de datos y modificar los valores de la base de datos.  
@@ -160,9 +160,9 @@ Language Integrated Query de Query (LINQ) facilitan el acceso a la información 
   
 7.  Presione F5 para ejecutar el proyecto. Haga clic en **agregar** para agregar un nuevo registro. Haga clic en **actualización** para modificar el nuevo registro. Haga clic en **eliminar** para eliminar el nuevo registro.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Consultas](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a>Vea también
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Consultas](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

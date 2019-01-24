@@ -2,12 +2,12 @@
 title: Tokens auxiliares
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: e71fd48cbed4201e5946ff0aea991b7602131f94
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 0214479c40e41da64c1cd2ea59837008ffecdb04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656549"
 ---
 # <a name="supporting-tokens"></a>Tokens auxiliares
 El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a un mensaje que utiliza WS-Security. El ejemplo agrega un token de seguridad binario de X.509 además de un token de seguridad del nombre de usuario. El token se pasa en un encabezado de mensaje de WS-Security desde el cliente al servicio y parte del mensaje se firma con una clave privada asociada con el token de seguridad de X.509 para demostrar la posesión del certificado X.509 al receptor. Esto es útil cuando es un requisito tener varias solicitudes asociadas con un mensaje para autenticar o autorizar el remitente. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.

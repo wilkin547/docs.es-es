@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 9f69b64088093bbdd46239a26f16aeea50b6dee7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 11002ea61d53b16817714a4b03481383311b7c4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733251"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Ordenar con DataView (LINQ to DataSet)
 La capacidad de ordenar datos basándose en criterios específicos y, a continuación, presentarlos a un cliente mediante un control de interfaz de usuario es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de ordenar datos y devolver filas de datos ordenados según criterios de ordenación específicos. Además de basada en cadena capacidades, de ordenación <xref:System.Data.DataView> también le permite usar [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] expresiones para los criterios de ordenación. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] las expresiones que se permiten para las operaciones de ordenación más complejas y eficaces que la ordenación basada en cadena. En este tema se describen ambos enfoques de ordenación utilizando <xref:System.Data.DataView>.  
@@ -81,7 +81,7 @@ La capacidad de ordenar datos basándose en criterios específicos y, a continua
  [!code-csharp[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearsort2)]
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
   
-## <a name="see-also"></a>Vea también  
- [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- [Filtrado con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Ordenación de datos](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+## <a name="see-also"></a>Vea también
+- [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Filtrado con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Ordenación de datos](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)

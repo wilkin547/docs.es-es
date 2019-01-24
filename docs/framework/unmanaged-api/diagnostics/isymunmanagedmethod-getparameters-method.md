@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fbedb7b1c10dcc2b9b9940db10aae7e4101436b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0fc5fd29b8b423ddd3a659ee2fc8a339eea0105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733888"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters (Método)
 Obtiene los parámetros de este método. Los parámetros se devuelven en el orden en que se definen dentro de la firma del método.  
@@ -42,16 +42,16 @@ HRESULT GetParameters(
  [in] Tamaño de la matriz `params`.  
   
  `pcParams`  
- [in] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los parámetros.  
+ [in] Un puntero a un `ULONG32` que recibe el tamaño del búfer que es necesario para contener los parámetros.  
   
  `params`  
  [out] Un puntero al búfer que recibe los parámetros.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

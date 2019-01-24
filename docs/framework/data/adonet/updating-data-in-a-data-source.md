@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 088dc9507f073553f8a857bd11ecd016f0d94244
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730885"
 ---
 # <a name="updating-data-in-a-data-source"></a>Actualizar datos de un origen de datos
 Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelven filas, crear un **comando** objeto con el comando SQL adecuado y un **conexión**, las que se requiere incluidas **parámetros**. Ejecute el comando con el **ExecuteNonQuery** método de la **comando** objeto.  
@@ -91,8 +91,8 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Uso de comandos para modificar datos](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Uso de comandos para modificar datos](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

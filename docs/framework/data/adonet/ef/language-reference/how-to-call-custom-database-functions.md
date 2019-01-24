@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Llamar a funciones de base de datos personalizadas'
+title: Procedimiento Llamar a funciones de base de datos personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 4e7c94dce5b50fe93f00aaaa72206be3394faf62
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ea558e23b6b0c191244031560c0fcf4738604e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731106"
 ---
-# <a name="how-to-call-custom-database-functions"></a>Cómo: Llamar a funciones de base de datos personalizadas
+# <a name="how-to-call-custom-database-functions"></a>Procedimiento Llamar a funciones de base de datos personalizada
 En este tema se describe cómo llamar a las funciones personalizadas definidas en la base de datos desde consultas LINQ to Entities.  
   
  Las funciones de base de datos llamadas desde LINQ to Entities se ejecutan en la base de datos. La ejecución de funciones en la base de datos puede mejorar el rendimiento de la aplicación.  
@@ -60,6 +60,6 @@ En este tema se describe cómo llamar a las funciones personalizadas definidas e
  [!code-csharp[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#4)]
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
-## <a name="see-also"></a>Vea también  
- [Introducción al archivo .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Vea también
+- [Introducción al archivo .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

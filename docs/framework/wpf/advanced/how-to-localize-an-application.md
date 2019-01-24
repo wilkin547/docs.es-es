@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Localizar una aplicación'
+title: Procedimiento Localizar una aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725552"
 ---
-# <a name="how-to-localize-an-application"></a>Cómo: Localizar una aplicación
+# <a name="how-to-localize-an-application"></a>Procedimiento Localizar una aplicación
 En este tutorial se explica cómo crear una aplicación localizada mediante la herramienta LocBaml.  
   
 > [!NOTE]
@@ -46,11 +46,11 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 3.  Agregue UID a sus archivos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Los UID se usan para realizar un seguimiento de los cambios en los archivos y para identificar los elementos que se deben traducir. Para agregar los UID a los archivos, ejecute **updateuid** en el archivo de proyecto:  
   
-     **MSBuild - t: updateuid helloapp.csproj**  
+     **msbuild -t:updateuid helloapp.csproj**  
   
      Para comprobar que se no faltan UID ni están duplicados, ejecute **checkuid**:  
   
-     **MSBuild - t: checkuid helloapp.csproj**  
+     **msbuild -t:checkuid helloapp.csproj**  
   
      Después de ejecutar **updateuid**, los archivos deberían contener los UID. Por ejemplo, en el archivo Pane1.xaml de HelloApp, busque lo siguiente:  
   
@@ -91,21 +91,21 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 4.  Las opciones que puede especificar al ejecutar LocBaml son las siguientes:  
   
-    -   **analizar** o **-p:** analiza Baml, recursos, o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] archivos para generar un archivo .csv o. txt.  
+    -   **analizar** o **-p:** Analiza Baml, recursos, o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] archivos para generar un archivo .csv o. txt.  
   
-    -   **generar** o **-g:** genera un archivo binario localizado utilizando un archivo traducido.  
+    -   **generar** o **-g:** Genera un archivo binario localizado utilizando un archivo traducido.  
   
-    -   **out** o **-o** {*filedirectory*] **:** nombre de archivo de salida.  
+    -   **out** o **-o** {*filedirectory*] **:** Nombre de archivo de salida.  
   
-    -   **referencia cultural** o **- cul** {*referencia cultural*] **:** configuración regional de ensamblados de salida.  
+    -   **referencia cultural** o **- cul** {*referencia cultural*] **:** Configuración regional de ensamblados de salida.  
   
-    -   **traducción** o **- trans** {*translation.csv*] **:** archivo traducido o localizado.  
+    -   **traducción** o **- trans** {*translation.csv*] **:** Archivo traducido o localizado.  
   
-    -   **asmpath** o **- asmpath:** {*filedirectory*] **:** si su [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] código contiene controles personalizados, debe proporcionar el  **asmpath** al ensamblado del control personalizado.  
+    -   **asmpath** o **- asmpath:** {*filedirectory*] **:** Si su [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] código contiene controles personalizados, debe proporcionar el **asmpath** al ensamblado del control personalizado.  
   
-    -   **nologo:** no se muestra ningún logotipo ni la información de copyright.  
+    -   **nologo:** Se muestra ningún logotipo ni información de copyright.  
   
-    -   **verbose:** se muestra información en modo detallado.  
+    -   **verbose:** Muestra información en modo detallado.  
   
     > [!NOTE]
     >  Si necesita una lista de las opciones cuando se ejecuta la herramienta, escriba **LocBaml.exe** y presione ENTRAR.  
@@ -180,7 +180,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 4.  Para traducir a una referencia cultural diferente, use la referencia cultural del idioma al que va a traducir. En el ejemplo siguiente se muestra cómo traducir al francés canadiense:  
   
-     **LocBaml.exe / generar HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c: \ /cul:fr-CA**  
+     **LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**  
   
 5.  En el mismo ensamblado que el ensamblado de aplicación principal, cree una nueva carpeta específica de la referencia cultural para alojar el nuevo ensamblado satélite. Para el francés canadiense, la carpeta sería fr-CA.  
   
@@ -209,6 +209,6 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
 ## <a name="whats-next"></a>Pasos adicionales  
  Ahora que ya tiene un conocimiento básico de cómo usar la herramienta LocBaml,  será capaz de crear un archivo que contenga UID. Al usar la herramienta LocBaml, podrá analizar un archivo para extraer el contenido localizable y, después de traducir el contenido, podrá generar un archivo .resources.dll en el que se combine el contenido traducido. En este tema no incluyen todos los detalles posibles, pero ahora ya dispone de los conocimientos necesarios para usar LocBaml en la localización de aplicaciones.  
   
-## <a name="see-also"></a>Vea también  
- [Globalización de WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Información general sobre el uso del diseño automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+## <a name="see-also"></a>Vea también
+- [Globalización de WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Información general sobre el uso del diseño automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

@@ -7,16 +7,16 @@ dev_langs:
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 09dbbcd4ef3bd36a4aa2578a0dc22449ab1d3dfc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9ff9e1b842caeb81cd2c0f26ea9f733cf2fa9a78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662353"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Obtener detalles de atributos de texto diversos mediante UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  En este tema se muestra cómo usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para obtener detalles de atributos de texto de un intervalo de texto que abarca varios valores de atributo. Un intervalo de texto puede corresponder a la ubicación actual del símbolo de intercalación (o selección degenerada) dentro de un documento, una selección contigua de texto, una colección de selecciones de textos inconexos o todo el contenido textual de un documento.  
   
@@ -28,10 +28,10 @@ ms.locfileid: "50201403"
   
  El patrón de control <xref:System.Windows.Automation.TextPattern> , junto con la clase <xref:System.Windows.Automation.Text.TextPatternRange> , admite atributos de texto básicos, propiedades y métodos. Para la funcionalidad específica del control que no es compatible con <xref:System.Windows.Automation.TextPattern> ni <xref:System.Windows.Automation.Text.TextPatternRange>, la clase <xref:System.Windows.Automation.AutomationElement> ofrece métodos para que un cliente de Automatización de la interfaz de usuario acceda al modelo de objeto nativo correspondiente.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Obtención de atributos de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Obtención de atributos de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)

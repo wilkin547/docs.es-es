@@ -2,19 +2,19 @@
 title: '&lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: e0b8c75d8c3407e48d177a8085f601174b18a211
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c94674daa48069c1783e6378f913960d49bf7606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575481"
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Define un enlace en cola adecuado para la comunicación del equipo de cruce.  
   
  \<system.ServiceModel>  
-\<enlaces >  
-\<netMsmqBinding >  
+\<bindings>  
+\<netMsmqBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -92,13 +92,13 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
  El enlace `netMsmqBinding` proporciona compatibilidad para poner en cola aprovechando Microsoft Message Queuing (MSMQ) como transporte y proporcionando compatibilidad para aplicaciones acopladas flexiblemente, aislamiento de errores, equilibrio de carga y operaciones desconectadas. Para obtener una explicación de estas características, consulte [colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
@@ -137,11 +137,11 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.NetMsmqBinding>  
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.NetMsmqBinding>
+- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

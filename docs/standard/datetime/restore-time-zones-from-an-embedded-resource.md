@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: restaurar zonas horarias de un recurso incrustado'
+title: Procedimiento Restaurar zonas horarias de un recurso incrustado
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d38b336b5e655dd1c96682eec90c5fbe8469d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656810"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Cómo: restaurar zonas horarias de un recurso incrustado
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procedimiento Restaurar zonas horarias de un recurso incrustado
 
-Este tema describe cómo restaurar zonas horarias que se han guardado en un archivo de recursos. Para obtener información e instrucciones acerca de cómo guardar zonas horarias, consulte [Cómo: guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
+Este tema describe cómo restaurar zonas horarias que se han guardado en un archivo de recursos. Para obtener información e instrucciones acerca de cómo guardar zonas horarias, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>Para deserializar un objeto TimeZoneInfo de un recurso incrustado
 
@@ -60,6 +60,6 @@ Para este ejemplo se necesita:
 
 ## <a name="see-also"></a>Vea también
 
-* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
-* [Información general sobre zonas horarias](../../../docs/standard/datetime/time-zone-overview.md)
-* [Guardado de zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+- [Información general sobre zonas horarias](../../../docs/standard/datetime/time-zone-overview.md)
+- [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

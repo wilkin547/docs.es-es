@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Reproducir medios con animaciones'
+title: Procedimiento Reproducir medios con animaciones
 ms.date: 03/30/2017
 helpviewer_keywords:
 - multimedia [WPF], playback with animations
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - animation [WPF], media playback with
 - media [WPF], playback with animations
 ms.assetid: 8982b7b7-1c6c-4b24-8801-b328862975f5
-ms.openlocfilehash: 21c9b35828dca03c05def11cff22f1f1e33d45cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6a011b1fa6f3551c3570370247fbae262b20e4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594257"
 ---
-# <a name="how-to-play-media-with-animations"></a>Cómo: Reproducir medios con animaciones
-Este ejemplo muestra cómo reproducir animaciones y multimedia al mismo tiempo mediante el <xref:System.Windows.Media.MediaTimeline> y <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> clases en el mismo <xref:System.Windows.Media.Animation.Storyboard>.  
+# <a name="how-to-play-media-with-animations"></a>Procedimiento Reproducir medios con animaciones
+En este ejemplo se muestra cómo reproducir archivos multimedia y animaciones al mismo tiempo mediante la <xref:System.Windows.Media.MediaTimeline> y <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> clases en el mismo <xref:System.Windows.Media.Animation.Storyboard>.  
   
 ## <a name="example"></a>Ejemplo  
- Puede usar uno o varios <xref:System.Windows.Media.MediaTimeline> objetos en un <xref:System.Windows.Media.Animation.Storyboard> junto con otros usuarios <xref:System.Windows.Media.Animation.Timeline> objetos, como las animaciones.  
+ Puede usar uno o varios <xref:System.Windows.Media.MediaTimeline> objetos en un <xref:System.Windows.Media.Animation.Storyboard> junto con otros usuarios <xref:System.Windows.Media.Animation.Timeline> objetos, como animaciones.  
   
- El ejemplo siguiente se establece la <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A> propiedad de la <xref:System.Windows.Media.Animation.Storyboard> en un valor de `Slip`, que especifica que la animación no avanza hasta que progresa el medio (vídeo en este ejemplo). Esta funcionalidad puede ser necesaria si se retrasa la reproducción multimedia debido al tiempo de carga.  
+ El ejemplo siguiente se establece la <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A> propiedad de la <xref:System.Windows.Media.Animation.Storyboard> en un valor de `Slip`, que especifica que la animación no avanza hasta que avanza la multimedia (el vídeo en este ejemplo). Esta funcionalidad puede ser necesaria si se retrasa la reproducción multimedia debido al tiempo de carga.  
   
  [!code-xaml[MediaGallery_snippet#MediaTimelinePlusAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/MediaTimelinePlusAnimationExample.xaml#mediatimelineplusanimationexamplewholepage)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.MediaTimeline>  
- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
- <xref:System.Windows.Media.Animation.Storyboard>  
- <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
- [Información general sobre objetos Storyboard ](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.MediaTimeline>
+- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
+- <xref:System.Windows.Media.Animation.Storyboard>
+- <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+- [Información general sobre objetos Storyboard ](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

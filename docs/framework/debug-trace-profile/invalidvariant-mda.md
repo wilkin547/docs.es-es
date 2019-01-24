@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 426b9df449b12d2f34fa70fc721cc050fa3e4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d29d3f3638b3dae4381524fcaf55e1afeddc9f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730807"
 ---
 # <a name="invalidvariant-mda"></a>MDA de invalidVariant
 El asistente para la depuración administrada (MDA) de `invalidVariant` se activa cuando se encuentra una estructura `VARIANT` no válida durante una llamada de código nativo o no administrado a un código administrado.  
@@ -24,7 +24,7 @@ El asistente para la depuración administrada (MDA) de `invalidVariant` se activ
  Comportamiento inesperado durante una transición entre código nativo y administrado que implica el cálculo de referencias de `VARIANT` a un objeto.  
   
 ## <a name="cause"></a>Motivo  
- El código nativo está pasando una estructura `VARIANT` incorrecta al código administrado.  El motor en tiempo de ejecución intenta calcular las referencias de `VARIANT` a un objeto y activa el MDA si `VARIANT` no es válido. Los ejemplos de `VARIANT` no válidas incluyen `VARIANT` con `VARTYPE` VT_EMPTY &#124; VT_BYREF o `VARIANT` con `VARTYPE` VT_VARIANT.  
+ El código nativo está pasando una estructura `VARIANT` incorrecta al código administrado.   El motor en tiempo de ejecución intenta serializar `VARIANT` a un objeto y activa el MDA si `VARIANT` no es válido. Los ejemplos de `VARIANT` no válidas incluyen `VARIANT` con `VARTYPE` VT_EMPTY &#124; VT_BYREF o `VARIANT` con `VARTYPE` VT_VARIANT.  
   
 ## <a name="resolution"></a>Resolución  
  El paso de `VARIANT` por parte del código nativo o no administrado debe garantizar que `VARIANT` se forme e inicialice correctamente.  
@@ -45,7 +45,7 @@ El asistente para la depuración administrada (MDA) de `invalidVariant` se activ
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

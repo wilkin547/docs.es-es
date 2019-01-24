@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a905840c471a268c6b106c5e25baca9c36f485d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731067"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo (Función)
 Obtiene el último código de error generado por una de las funciones de nombres seguros.  
@@ -45,13 +45,13 @@ HRESULT StrongNameErrorInfo ();
  La mayoría de los métodos de nombre seguro devuelven una sencilla `true` o `false` indicación de una realización correcta. Use el `StrongNameErrorInfo` función para recuperar un valor HRESULT que especifica el último error generado por las funciones de nombre seguro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** StrongName.h  
+ **Encabezado**: StrongName.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estáticas globales para nombres seguros](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+## <a name="see-also"></a>Vea también
+- [Funciones estáticas globales para nombres seguros](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

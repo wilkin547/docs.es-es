@@ -2,12 +2,12 @@
 title: Seguridad de SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 418dbd3e677619721b841736f5b4c1b423ada94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33ec28536115f8571bfda47266ed3b5cad1442bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650592"
 ---
 # <a name="sql-server-security"></a>Seguridad de SQL Server
 SQL Server incluye diferentes características que admiten la creación de aplicaciones de base de datos seguras.  
@@ -33,12 +33,12 @@ SQL Server incluye diferentes características que admiten la creación de aplic
  Describe las consideraciones de seguridad para SQL Server Express.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
-[Centro de seguridad para el motor de base de datos SQL Server y base de datos SQL Azure](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
-Describe las consideraciones de seguridad para SQL Server y base de datos de SQL Azure.
+[Centro de seguridad para el motor de base de datos SQL Server y Azure SQL Database](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+Describe las consideraciones de seguridad para SQL Server y Azure SQL Database.
 
 [Consideraciones de seguridad para una instalación de SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
-Describe cuestiones de seguridad a tener en cuenta antes de instalar SQL Server.
+Se describen cuestiones de seguridad a tener en cuenta antes de instalar SQL Server.
 
-## <a name="see-also"></a>Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
+## <a name="see-also"></a>Vea también
+- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

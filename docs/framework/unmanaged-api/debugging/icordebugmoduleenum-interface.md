@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleEnum Interfaz1
+title: ICorDebugModuleEnum (Interfaz1)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleEnum
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6391c06900d5cafc1bfde23bd12c22ee0c77a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6086d0a6e915915e8df115dc8b4c4218e77da601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582336"
 ---
-# <a name="icordebugmoduleenum-interface1"></a>ICorDebugModuleEnum Interfaz1
-Implementa los métodos ICorDebugEnum y enumera las matrices de ICorDebugModule.  
+# <a name="icordebugmoduleenum-interface1"></a>ICorDebugModuleEnum (Interfaz1)
+Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugModule.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -38,13 +38,13 @@ Implementa los métodos ICorDebugEnum y enumera las matrices de ICorDebugModule.
 >  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

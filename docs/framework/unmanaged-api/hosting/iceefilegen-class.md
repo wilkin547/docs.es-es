@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576439"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen (Clase)
-Proporciona funcionalidad para crear un archivo ejecutable portable (PE) nativo. La interfaz se utilizará normalmente por los compiladores para generar su resultado compilado ejecutable.  
+Proporciona funcionalidad para crear un archivo ejecutable portable (PE) nativo. La interfaz se usará normalmente los compiladores para generar su resultado compilado ejecutable.  
   
 > [!NOTE]
->  `ICeeFileGen` admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.  
+>  `ICeeFileGen` admite la infraestructura de .NET Framework y no está pensado para utilizarse directamente desde el código.  
   
- Esta interfaz ha quedado desusada y se quitará en futuras versiones.  
+ Esta interfaz está desusada y se quitará en futuras versiones.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -237,11 +237,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** ICeeFileGen.h  
+ **Encabezado**: ICeeFileGen.h  
   
  **Versión de .NET framework:** 1.0  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

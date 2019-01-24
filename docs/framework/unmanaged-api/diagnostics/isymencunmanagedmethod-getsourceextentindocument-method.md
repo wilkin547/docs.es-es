@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc3a986326f9b47194558ca86bcbeabb61dbaeb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 832746b911e74790de246b00a364aaec4bda8f67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739986"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument (Método)
-Obtiene el valor más pequeño inicia línea y más grande de fin de línea para el método en un documento específico.  
+Obtiene el valor más pequeño inicia línea y más grande fin de línea para el método en un documento específico.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,13 +44,13 @@ HRESULT GetSourceExtentInDocument(
  [out] Un puntero a un `ULONG32` que recibe la línea de inicio.  
   
  `pendLine`  
- [out] Un puntero a un `ULONG32` que recibe la línea de finalización.  
+ [out] Un puntero a un `ULONG32` que recibe la línea final.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

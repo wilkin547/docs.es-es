@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: KrzysztofCwalina
-ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587139"
 ---
 # <a name="guidelines-for-collections"></a>Instrucciones para colecciones
 Cualquier tipo que se ha diseñado específicamente para manipular un grupo de objetos que tienen alguna característica común puede considerarse una colección. Casi siempre es adecuado para estos tipos implementar <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, por lo que en esta sección se considere sólo tipos que implementan una o ambas de estas interfaces para ser colecciones.  
@@ -130,5 +130,5 @@ Cualquier tipo que se ha diseñado específicamente para manipular un grupo de o
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instrucciones de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)

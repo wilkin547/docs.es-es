@@ -2,21 +2,21 @@
 title: '&lt;useRequestHeadersForMetadataAddress&gt;'
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: bcbf1c633e0796c6056759dfbb55014838e0e293
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6c03057fca23b037702c702b9a574045ebb302b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656642"
 ---
 # <a name="ltuserequestheadersformetadataaddressgt"></a>&lt;useRequestHeadersForMetadataAddress&gt;
 Habilita la recuperación de información de direcciones de metadatos de los encabezados de mensajes de solicitud.  
   
 \<system.ServiceModel>  
 \<comportamientos >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportamiento >  
-\<useRequestHeadersForMetadataAddress >  
+\<useRequestHeadersForMetadataAddress>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,13 +39,13 @@ Habilita la recuperación de información de direcciones de metadatos de los enc
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.|  
+|[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>
