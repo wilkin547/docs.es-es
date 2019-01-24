@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679402"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs de carpeta conocidos para lugares comunes de cuadros de diálogo de archivos
-Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] carpeta conocida cuando agregue carpetas a un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> colección. GUIDs de carpetas no distinguen mayúsculas de minúsculas y se definen en el archivo KnownFolders.h conocidos el [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] carpeta conocida cuando agregue carpetas a un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> colección. GUIDs de carpeta no distinguen mayúsculas de minúsculas y se definen en el archivo KnownFolders.h en conocidos el [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
   
 > [!NOTE]
->  En algunos casos, se agrega una carpeta conocida a la <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> no se mostrará en el **vínculos favoritos** área. Por ejemplo, si la carpeta conocida especificada no está presente en el equipo que ejecuta la aplicación, no se muestra la carpeta conocida.  
+>  En algunos casos, se agrega una carpeta conocida a la <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> no se mostrarán en el **vínculos favoritos** área. Por ejemplo, si la carpeta conocida especificado no está presente en el equipo que ejecuta la aplicación, no se muestra la carpeta conocida.  
   
 ## <a name="list-of-guids"></a>Lista de GUID  
- La siguiente tabla se recogen [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] carpetas conocidas y sus asociado <xref:System.Guid>.  
+ La siguiente tabla enumera [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] carpetas conocidas y sus asociados <xref:System.Guid>.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -118,7 +118,7 @@ Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../i
  Música  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
- Entorno de red  
+ NetHood  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
  Red  
@@ -139,7 +139,7 @@ Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../i
  Impresoras  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
- Recent  
+ PrintHood  
  9274BD8D-CFD1-41C3-B35E-B13F55A758F4  
   
  Perfil  
@@ -193,7 +193,7 @@ Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../i
  PublicVideos  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- Inicio rápido  
+ QuickLaunch  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  Reciente  
@@ -223,10 +223,10 @@ Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../i
  SampleVideos  
  859EAD94-2E85-48AD-A71A-0969CB56A6CD  
   
- Juegos guardados  
+ SavedGames  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- savedSearches  
+ SavedSearches  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -247,7 +247,7 @@ Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../i
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- Menú Inicio  
+ StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Inicio  
@@ -265,7 +265,7 @@ Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../i
  Sistema  
  1AC14E77-02E7-4E5D-B744-2EB1AE5198B7  
   
- Sistema x 86  
+ SystemX86  
  D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27  
   
  Plantillas  
@@ -286,6 +286,6 @@ Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../i
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [Agregar un lugar común a un cuadro de diálogo de archivos](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [Cómo: Agregar un lugar común a un cuadro de diálogo de archivos](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

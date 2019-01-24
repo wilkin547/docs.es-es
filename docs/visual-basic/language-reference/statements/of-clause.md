@@ -17,18 +17,18 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4c6c5cb8c041f1f0dfb3a9a3f858850d67d1c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698246"
 ---
 # <a name="of-clause-visual-basic"></a>Of (Cláusula, Visual Basic)
-Presenta un `Of` cláusula, que identifica un *parámetro de tipo* en un *genérico* clase, estructura, interfaz, delegado o procedimiento. Para obtener información sobre los tipos genéricos, vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Presenta un `Of` cláusula que identifica un *parámetro de tipo* en un *genérico* clase, estructura, interfaz, delegado o procedimiento. Para obtener información sobre los tipos genéricos, vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="using-the-of-keyword"></a>Mediante la palabra clave  
- El siguiente ejemplo de código utiliza la `Of` (palabra clave) para definir el contorno de una clase que toma dos parámetros de tipo. Se *restringe* el `keyType` parámetro por la <xref:System.IComparable> interfaz, lo que significa que el código utilizado debe proporcionar un argumento de tipo que implementa <xref:System.IComparable>. Esto es necesario para que la `add` procedimiento puede llamar a la <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> método. Para obtener más información sobre las restricciones, vea [lista de tipo](../../../visual-basic/language-reference/statements/type-list.md).  
+ El siguiente ejemplo de código utiliza el `Of` palabra clave para definir el contorno de una clase que toma dos parámetros de tipo. Lo *restringe* el `keyType` parámetro por el <xref:System.IComparable> interfaz, lo que significa que el código usado debe proporcionar un argumento de tipo que implementa <xref:System.IComparable>. Esto es necesario para que la `add` procedimiento puede llamar a la <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> método. Para más información sobre las restricciones, vea [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
   
 ```  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,9 +42,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Si completa la definición de clase anterior, puede construir una variedad de `dictionary` clases de él. Los tipos que se pasan al `entryType` y `keyType` determinar qué tipo de entrada de la clase contiene y qué tipo de clave se asocia a cada entrada. Debido a la restricción, debe proporcionar al `keyType` un tipo que implementa <xref:System.IComparable>.  
+ Si completa la definición de clase anterior, puede construir una variedad de `dictionary` clases a partir de él. Los tipos que proporciona a `entryType` y `keyType` determinar qué tipo de entrada de la clase contiene y qué tipo de clave se asocia a cada entrada. Debido a la restricción, debe proporcionar al `keyType` un tipo que implementa <xref:System.IComparable>.  
   
- En el ejemplo de código siguiente se crea un objeto que contiene `String` entradas y asocia un `Integer` clave con cada uno de ellos. `Integer` implementa <xref:System.IComparable> y por consiguiente satisface la restricción en `keyType`.  
+ En el ejemplo de código siguiente se crea un objeto que contiene `String` entradas y asocia un `Integer` clave con cada uno de ellos. `Integer` implementa <xref:System.IComparable> y, por tanto, cumple la restricción en `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  
@@ -64,9 +64,9 @@ Dim d As New dictionary(Of String, Integer)
   
  [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IComparable>  
- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)  
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.IComparable>
+- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 2094ba308ba384feb8542e896cb1eafcf645947c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eb6e2c0e59ae0c29937fb5542e3b4638dd2b7b8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671452"
 ---
 # <a name="await-operator-visual-basic"></a>Await (Operador) (Visual Basic)
 El operador `Await` se aplica a un operando de un método asincrónico o a una expresión lambda para suspender la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.  
@@ -24,7 +24,7 @@ El operador `Await` se aplica a un operando de un método asincrónico o a una e
   
  Normalmente, la tarea a la que se aplican los `Await` operador es el valor devuelto de una llamada a un método que implementa el [Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=204847), es decir, un <xref:System.Threading.Tasks.Task> o un <xref:System.Threading.Tasks.Task%601>.  
   
- En el código siguiente, el método <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> devuelve `getContentsTask`, un tipo `Task(Of Byte())`. La tarea garantiza que la matriz de bytes real se generará cuando finalice la operación. El operador `Await` se aplica a `getContentsTask` para suspender la ejecución en `SumPageSizesAsync` hasta que se complete `getContentsTask`. Mientras tanto, el control vuelve al llamador de `SumPageSizesAsync`. Cuando `getContentsTask` haya finalizado, la expresión `Await` se evalúa como una matriz de bytes.  
+ En el código siguiente, el método <xref:System.Net.Http.HttpClient><xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> devuelve `getContentsTask`, un tipo `Task(Of Byte())`. La tarea garantiza que la matriz de bytes real se generará cuando finalice la operación. El operador `Await` se aplica a `getContentsTask` para suspender la ejecución en `SumPageSizesAsync` hasta que se complete `getContentsTask`. Mientras tanto, el control vuelve al llamador de `SumPageSizesAsync`. Cuando `getContentsTask` haya finalizado, la expresión `Await` se evalúa como una matriz de bytes.  
   
 ```vb  
 Private Async Function SumPageSizesAsync() As Task  
@@ -43,7 +43,7 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  Para obtener el ejemplo completo, vea [Walkthrough: Accessing the Web by Using Async and Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a la web usando Async y Await). Puede descargar el ejemplo desde [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) en el sitio web de Microsoft. El ejemplo está en el proyecto AsyncWalkthrough_HttpClient.  
+>  Para obtener el ejemplo completo, consulte [Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede descargar el ejemplo desde [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) en el sitio web de Microsoft. El ejemplo está en el proyecto AsyncWalkthrough_HttpClient.  
   
  Si `Await` se aplica al resultado de una llamada al método que devuelve `Task(Of TResult)`, el tipo de la expresión `Await` será TResult. Si `Await` se aplica al resultado de una llamada al método que devuelve `Task`, la expresión `Await` no devuelve un valor. En el siguiente ejemplo se ilustra la diferencia.  
   
@@ -103,7 +103,7 @@ Public Async Function WaitSynchronously() As Task(Of String)
 End Function  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Tutorial: Acceso a Web mediante Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async](../../../visual-basic/language-reference/modifiers/async.md)
+## <a name="see-also"></a>Vea también
+- [Programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async](../../../visual-basic/language-reference/modifiers/async.md)

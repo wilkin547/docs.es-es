@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 546a26306a1faaeceb1337b79bd2d27970d9f5be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a4615200bce3aa11401abc9e9c264ab8d8e797b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720020"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>ICLRRuntimeInfo::GetDefaultStartupFlags (Método)
-Obtiene las marcas de inicio y el archivo de configuración de host que se usarán para iniciar el tiempo de ejecución.  
+Obtiene las marcas de inicio y el archivo de configuración de host que se usará para iniciar el tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,13 +38,13 @@ HRESULT GetDefaultStartupFlags(
   
 #### <a name="parameters"></a>Parámetros  
  `pdwStartupFlags`  
- [out] Un puntero a los marcadores de inicio de host que están establecidas actualmente.  
+ [out] Un puntero a las marcas de inicio del host que están establecidas actualmente.  
   
  `pwzHostConfigFile`  
  [out] Un puntero a la ruta del directorio del archivo de configuración de host actual.  
   
  `pcchHostConfigFile`  
- [entrada, salida] En la entrada, el tamaño de `pwzHostConfigFile`, para evitar saturaciones del búfer. Si `pwzHostConfigFile` es null, el método devuelve el tamaño necesario de `pwzHostConfigFile` para preasignación.  
+ [in, out] En la entrada, el tamaño de `pwzHostConfigFile`, para evitar saturaciones de búfer. Si `pwzHostConfigFile` es null, el método devuelve el tamaño necesario de `pwzHostConfigFile` para la asignación previa.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos, así como los errores HRESULT que indican un error del método.  
@@ -54,18 +54,18 @@ HRESULT GetDefaultStartupFlags(
 |S_OK|El método se completó correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este método devuelve los valores de marca predeterminados (`STARTUP_CONCURRENT_GC` y `NULL`), o los valores proporcionados por una llamada anterior a la [ICLRRuntimeInfo:: SetDefaultStartupFlags (método)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), o los valores establecidos por cualquiera de los `CorBind*` métodos si están enlazados a este tiempo de ejecución.  
+ Este método devuelve los valores de marca predeterminada (`STARTUP_CONCURRENT_GC` y `NULL`), o los valores proporcionados por una llamada anterior a la [SetDefaultStartupFlags (método)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), o los valores establecidos por cualquiera de los `CorBind*` métodos si están enlazados a este entorno de ejecución.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MetaHost.h  
+ **Encabezado**: MetaHost.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRRuntimeInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vea también
+- [ICLRRuntimeInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)

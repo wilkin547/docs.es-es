@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f6afb850b16493bab79dd368ba1ff126305f96aa
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 23e8631fb19d3fd8fafe0ba2523e7c2dbc971ee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592265"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementar el patrón de control Invoke de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>y se incluye información sobre eventos y propiedades. Al final del tema se ofrecen vínculos a referencias adicionales.  
+ En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>, incluida la información sobre eventos y propiedades. Al final del tema se ofrecen vínculos a referencias adicionales.  
   
  El patrón de control <xref:System.Windows.Automation.InvokePattern> se utiliza para admitir controles que no mantienen el estado cuando se activan, sino que inician o realizan una única acción inequívoca. Los controles que mantienen el estado, como las casillas y los botones de radio, deben implementar en su lugar <xref:System.Windows.Automation.Provider.IToggleProvider> y <xref:System.Windows.Automation.Provider.ISelectionItemProvider> , respectivamente. Para obtener ejemplos de controles que implementan el patrón de control Invoke, vea [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
@@ -68,10 +68,10 @@ ms.locfileid: "48033524"
 |--------------------|---------------|  
 |<xref:System.Windows.Automation.ElementNotEnabledException>|Si el control no está habilitado.|  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Invocación de un control mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Invocación de un control mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
+- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

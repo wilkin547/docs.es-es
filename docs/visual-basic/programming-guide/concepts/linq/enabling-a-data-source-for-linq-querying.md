@@ -2,12 +2,12 @@
 title: Habilitar un origen de datos para LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 6d2601e807a00ce2a6f8c342a565f5542ffc8f5b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676502"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitar un origen de datos para realizar consultas LINQ
 
@@ -29,7 +29,7 @@ En este tema se analizan estas opciones.
  Hay dos maneras de habilitar las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para datos en memoria. Si los datos son de un tipo que implementa <xref:System.Collections.Generic.IEnumerable%601>, puede consultar los datos utilizando [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects. Si no tiene sentido habilitar la enumeración de su tipo implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601>, puede definir métodos de operador de consulta estándar de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en ese tipo o crear métodos de operador de consulta estándar de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que extiendan el tipo. Las implementaciones personalizadas de los operadores de consulta estándar deberían utilizar ejecución diferida para devolver los resultados.
 
 ### <a name="remote-data"></a>Datos remotos
- La mejor opción para permitir las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para un origen de datos remoto consiste en implementar la interfaz <xref:System.Linq.IQueryable%601>. Sin embargo, esto es diferente de extender un proveedor como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para un origen de datos. No hay modelos de proveedor para extender existente [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tecnologías, como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], a otros tipos de origen de datos están disponibles en Visual Studio 2008.
+ La mejor opción para permitir las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para un origen de datos remoto consiste en implementar la interfaz <xref:System.Linq.IQueryable%601>. Sin embargo, esto es diferente de extender un proveedor como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para un origen de datos. En Visual Studio 2008, no existen modelos de proveedor para extender tecnologías de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existentes, como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], a otros tipos de origen de datos.
 
 ## <a name="iqueryable-linq-providers"></a>Proveedores LINQ de IQueryable
  Los proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que implementan <xref:System.Linq.IQueryable%601> pueden variar ampliamente en su complejidad. En esta sección se analizan los diferentes niveles de complejidad.

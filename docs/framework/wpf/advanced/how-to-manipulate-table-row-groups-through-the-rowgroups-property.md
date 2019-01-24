@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: manipular una tabla&#39;s grupos de filas a través de la propiedad de grupos de filas'
+title: Procedimiento Manipular una tabla&#39;s grupos de filas mediante la propiedad RowGroups
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: 8cdf3b74fa5bf5a566c541ba035a1c7da7dd6949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 233ae0e76d175f4ce20a573aa2aa29d39106562e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700470"
 ---
-# <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Cómo: manipular una tabla&#39;s grupos de filas a través de la propiedad de grupos de filas
-Este ejemplo muestra algunas de las operaciones más comunes que se pueden realizar en grupos de filas de una tabla a través de la <xref:System.Windows.Documents.Table.RowGroups%2A> propiedad.  
+# <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Procedimiento Manipular una tabla&#39;s grupos de filas mediante la propiedad RowGroups
+En este ejemplo muestra algunas de las operaciones más comunes que se pueden realizar en grupos de filas de una tabla mediante el <xref:System.Windows.Documents.Table.RowGroups%2A> propiedad.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea una nueva tabla y, a continuación, usa el <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> método para agregar columnas a la tabla <xref:System.Windows.Documents.Table.RowGroups%2A> colección.  
+ El ejemplo siguiente se crea una nueva tabla y, a continuación, usa el <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> método para agregar columnas a la tabla <xref:System.Windows.Documents.Table.RowGroups%2A> colección.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Add](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_add)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Add](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_add)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se inserta un nuevo <xref:System.Windows.Documents.TableRowGroup>.  La nueva columna se inserta en la posición de índice 0, lo que la primera fila nuevo grupo en la tabla.  
+ El ejemplo siguiente inserta un nuevo <xref:System.Windows.Documents.TableRowGroup>.  La nueva columna se inserta en la posición de índice 0, lo que la primera fila nueva en la tabla.  
   
 > [!NOTE]
 >  El <xref:System.Windows.Documents.TableRowGroupCollection> colección utiliza la indización de base cero estándar.  
@@ -36,54 +36,54 @@ Este ejemplo muestra algunas de las operaciones más comunes que se pueden reali
  [!code-vb[TableSnippets2#_Table_RowGroups_Insert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_insert)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se agrega varias filas a una determinada <xref:System.Windows.Documents.TableRowGroup> (especificado por el índice) en la tabla.  
+ El ejemplo siguiente agrega varias filas a un determinado <xref:System.Windows.Documents.TableRowGroup> (especificado por índice) en la tabla.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddRows](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addrows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddRows](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addrows)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se obtiene acceso a algunas propiedades arbitrarias en las filas en el primer grupo de filas en la tabla.  
+ El ejemplo siguiente se obtiene acceso a algunas propiedades arbitrarias en las filas del primer grupo de filas en la tabla.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipRows](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_maniprows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipRows](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_maniprows)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se agrega varias celdas a un determinado <xref:System.Windows.Documents.TableRow> (especificado por el índice) en la tabla.  
+ El ejemplo siguiente agrega varias celdas en un determinado <xref:System.Windows.Documents.TableRow> (especificado por índice) en la tabla.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddCells](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddCells](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addcells)]  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo tener acceso a algunos métodos y propiedades arbitrarios en las celdas de la primera fila del primer grupo de filas.  
+ En el siguiente ejemplo tener acceso a algunos métodos y propiedades arbitrarios en la primera fila del primer grupo de filas de las celdas.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipCells](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_manipcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipCells](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_manipcells)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se devuelve el número de <xref:System.Windows.Documents.TableRowGroup> elementos hospedados por la tabla.  
+ El ejemplo siguiente devuelve el número de <xref:System.Windows.Documents.TableRowGroup> elementos hospedados por la tabla.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Count](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_count)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Count](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_count)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita un grupo de filas determinado por referencia.  
+ El ejemplo siguiente quita un grupo de filas determinado por referencia.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_DelRef](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_delref)]
  [!code-vb[TableSnippets2#_Table_RowGroups_DelRef](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delref)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita un grupo de filas determinado por su índice.  
+ El ejemplo siguiente quita un grupo de filas determinado por su índice.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_DelIndex](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_delindex)]
  [!code-vb[TableSnippets2#_Table_RowGroups_DelIndex](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delindex)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita todos los grupos de filas de la colección de grupos de filas de la tabla.  
+ El ejemplo siguiente quita todos los grupos de filas de la colección de grupos de filas de la tabla.  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Clear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_clear)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Manipular elementos de contenido dinámico mediante la propiedad elementos incorporados](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Manipular un objeto FlowDocument mediante la propiedad Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Manipular las columnas de una tabla mediante la propiedad Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Manipular elementos de contenido dinámico mediante la propiedad Inlines](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Manipular un objeto FlowDocument mediante la propiedad Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [Manipular las columnas de una tabla mediante la propiedad Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)

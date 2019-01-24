@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008514e3637a980f3722d0c9896a17be33d54c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8608a5438b31cad64bb27d2866109f479dad441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739503"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory (Función)
-Devuelve el directorio de instalación de common language runtime (CLR) que se carga en el proceso. El directorio de instalación está completo, por ejemplo, "c:\windows\microsoft.net\framework\v1.0.3705".  
+Devuelve el directorio de instalación de common language runtime (CLR) que se carga en el proceso. El directorio de instalación se completa, por ejemplo, "c:\windows\microsoft.net\framework\v1.0.3705".  
   
- Esta función está desusada. Sustituida por la [ICLRRuntimeInfo:: GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) método proporcionado en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Esta función está en desuso. Sustituida por la [GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) método proporcionado en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,13 +55,13 @@ HRESULT GetCORSystemDirectory (
 >  No use esta función en procesos que se ejecutan la versión 4 de CLR. Si está instalada una versión anterior de CLR en el equipo, esta función devuelve el directorio de instalación de esa versión.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

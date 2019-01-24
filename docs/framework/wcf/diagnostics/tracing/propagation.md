@@ -2,12 +2,12 @@
 title: Propagación
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686340"
 ---
 # <a name="propagation"></a>Propagación
 Este tema describe la propagación de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF).  
@@ -76,8 +76,8 @@ Este tema describe la propagación de actividad en el modelo de seguimiento de W
 ## <a name="synchronization"></a>Sincronización  
  Para sincronizar los eventos a través de los extremos que se ejecutan en distintos equipos, CorrelationId se agrega al encabezado de ActivityId que se propaga en los mensajes. Las herramientas pueden utilizar este id. para sincronizar eventos entre equipos con discrepancia de reloj. En concreto, la herramienta Service Trace Viewer utiliza este identificador para mostrar los flujos de mensaje entre los puntos de conexión.  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>Vea también
+- [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

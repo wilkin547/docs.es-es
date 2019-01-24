@@ -2,12 +2,12 @@
 title: '&lt;Comportamientos&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
-ms.openlocfilehash: 4396aefd982dd29c6a9c9f2be9f2af43d00671b2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a6786efb289ee66da3f0635e1a86e23f9b7302d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528438"
 ---
 # <a name="ltbehaviorsgt"></a>&lt;Comportamientos&gt;
 Este elemento define dos colecciones secundarias denominadas `endpointBehaviors` y `serviceBehaviors`.  Cada colección define los elementos de comportamiento utilizados respectivamente por extremos y servicios. Su atributo de `name` único identifica cada elemento de comportamiento. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -35,8 +35,8 @@ Este elemento define dos colecciones secundarias denominadas `endpointBehaviors`
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<endpointBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|Esta sección de configuración representa todos los comportamientos definidos para un punto de conexión concreto.|  
-|[\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|Esta sección de configuración representa todos los comportamientos definidos para un servicio concreto.|  
+|[\<endpointBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|Esta sección de configuración representa todos los comportamientos definidos para un punto de conexión concreto.|  
+|[\<serviceBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|Esta sección de configuración representa todos los comportamientos definidos para un servicio concreto.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -47,14 +47,14 @@ Este elemento define dos colecciones secundarias denominadas `endpointBehaviors`
 ## <a name="remarks"></a>Comentarios  
  Puede usar el elemento `<remove>` para quitar un comportamiento determinado de la colección. Para ello, basta con proporcionar el nombre del comportamiento que se desea quitar en el atributo `name` del elemento `<remove>`.  También puede usar el elemento `<clear>` para asegurarse de que una colección de comportamientos se inicie vacía borrando todo el contenido de la colección.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.BehaviorsSection>  
- <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>  
- <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>  
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [Configuración y extensión del tiempo de ejecución con comportamientos](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
- [Configuración de los comportamientos del cliente](../../../../../docs/framework/wcf/configuring-client-behaviors.md)  
- [Especificación del comportamiento de tiempo de ejecución del cliente](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [Especificación del comportamiento en tiempo de ejecución del servicio](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)  
- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.BehaviorsSection>
+- <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>
+- <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>
+- <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
+- [Configuración y extensión del tiempo de ejecución con comportamientos](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Configuración de los comportamientos del cliente](../../../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [Especificación del comportamiento de tiempo de ejecución del cliente](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Especificación del comportamiento en tiempo de ejecución del servicio](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

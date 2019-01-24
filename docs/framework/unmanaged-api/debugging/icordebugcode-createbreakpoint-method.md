@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1173091a5f2d8814747c93f827150afe39b8b309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20e718d425d0300aed8cc7ccf064126ee8384704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608302"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint (Método)
 Crea un punto de interrupción en este segmento de código en el desplazamiento especificado.  
@@ -41,21 +41,21 @@ HRESULT CreateBreakpoint (
  [in] Desplazamiento en el que se va a crear el punto de interrupción.  
   
  `ppBreakpoint`  
- [out] Un puntero a la dirección de un objeto de "ICorDebugFunctionBreakpoint" que representa el punto de interrupción.  
+ [out] Un puntero a la dirección de un objeto "ICorDebugFunctionBreakpoint" que representa el punto de interrupción.  
   
 ## <a name="remarks"></a>Comentarios  
- Antes de que el punto de interrupción está activo, se debe agregar al objeto de proceso.  
+ Antes de que el punto de interrupción está activo, se debe agregar al objeto del proceso.  
   
- Si este código es código de lenguaje intermedio (MSIL) de Microsoft y no hay un just-in-time (JIT)-versión nativa compilada del código, el punto de interrupción se aplicará en el código compilado JIT. (El mismo es verdadero si el código compilado JIT más adelante).  
+ Si este código es código de lenguaje intermedio (MSIL) de Microsoft, y hay un just-in-time (JIT)-se aplicará la versión nativa compilada del código, el punto de interrupción en el código compilado JIT. (El mismo es true si el código compilado JIT más adelante).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- 
+## <a name="see-also"></a>Vea también
+

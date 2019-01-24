@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46532592057f4fa6d9883d46dcef2f8f9e5f7228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d9fc894cdd12e58689fb6b010820bb24d14a9541
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543752"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual (Método)
 Llamado por los servicios de acceso a datos de common language runtime (CLR) para asignar memoria en el espacio de direcciones de este proceso de destino.  
@@ -41,16 +41,16 @@ HRESULT AllocVirtual(
   
 #### <a name="parameters"></a>Parámetros  
  `addr`  
- [in] Un `CLRDATA_ADDRESS` valor que especifica la dirección inicial solicitada de la memoria que se va a asignar.  
+ [in] Un `CLRDATA_ADDRESS` valor que especifica la dirección inicial solicitada de la asignación de memoria.  
   
  `size`  
- [in] El tamaño, en bytes, de la memoria que se va a asignar.  
+ [in] El tamaño, en bytes, de la asignación de memoria.  
   
  `typeFlags`  
- [in] Marcas que controlan la asignación de memoria. Vea el Win32 `VirtualAlloc` función.  
+ [in] Marcas que controlan la asignación de memoria. Consulte Win32 `VirtualAlloc` función.  
   
  `protectFlags`  
- [in] Los atributos de protección de la memoria asignada. Vea el Win32 `VirtualAlloc` función.  
+ [in] Los atributos de protección de la memoria asignada. Consulte Win32 `VirtualAlloc` función.  
   
  `virt`  
  [out] Un puntero a un `CLRDATA_ADDRESS` valor que especifica la dirección inicial real de la memoria asignada.  
@@ -61,14 +61,14 @@ HRESULT AllocVirtual(
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** ClrData.idl, ClrData.h  
+ **Encabezado**: ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRDataTarget2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [FreeVirtual (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)
+## <a name="see-also"></a>Vea también
+- [ICLRDataTarget2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [FreeVirtual (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 17a30ba5132673af70860e4f5f1a87f861c97386
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679076"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Información general acerca de los patrones de control de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Esta introducción presenta los patrones de control de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Los patrones de control proporcionan una manera de categorizar y exponer la funcionalidad de un control independientemente de su tipo o apariencia.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47193650"
   
  Los clientes de Automatización de la interfaz de usuario acceden a métodos y propiedades de clases de patrones de control [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y los usan para obtener información sobre [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]o para manipular [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Estas clases de patrones de control se encuentran en el espacio de nombres <xref:System.Windows.Automation> (por ejemplo, <xref:System.Windows.Automation.InvokePattern> y <xref:System.Windows.Automation.SelectionPattern>).  
   
- Los clientes usan <xref:System.Windows.Automation.AutomationElement> métodos (como <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> o <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) o el [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] descriptores de acceso para acceder a la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propiedades en un patrón. Cada clase de patrón de control tiene un miembro de campo (por ejemplo, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>'' o <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) que identifica ese patrón de control y se puede pasar como parámetro a <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> o <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar ese patrón para un <xref:System.Windows.Automation.AutomationElement>.  
+ Los clientes utilizan métodos <xref:System.Windows.Automation.AutomationElement> (como <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> o <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) o los descriptores de acceso de [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] para obtener acceso a las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de un patrón. Cada clase de patrón de control tiene un miembro de campo (por ejemplo, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>'' o <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) que identifica ese patrón de control y se puede pasar como parámetro a <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> o <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar ese patrón para un <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Patrones de control dinámicos  
@@ -74,9 +74,9 @@ ms.locfileid: "47193650"
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Permite que los clientes obtengan o establezcan un valor en los controles que no admiten un intervalo de valores. Por ejemplo, un selector de fecha y hora.|  
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expone información concreta de ventanas, un concepto fundamental para el sistema operativo [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Como ejemplos de controles que son ventanas se pueden mencionar las ventanas de aplicación de nivel superior ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)], etc.), las ventanas secundarias de [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] y los cuadros de diálogo.|  
   
-## <a name="see-also"></a>Vea también  
- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [Propiedades de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [Eventos de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+## <a name="see-also"></a>Vea también
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Propiedades de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [Eventos de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

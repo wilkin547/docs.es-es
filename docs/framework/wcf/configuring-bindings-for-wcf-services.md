@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 7b5a91091a0902928eb2b72bdf69612f2e3f2f48
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704048"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configuración de enlaces para servicios Windows Communication Foundation
 Con frecuencia al crear una aplicación desea delegar las decisiones al administrador tras la implementación de la aplicación. Por ejemplo, a menudo no hay manera de conocer de antemano qué será una dirección de servicio o un URI. En lugar de incluir una dirección en el código, es preferible permitir a un administrador hacerlo después de crear un servicio. Esta flexibilidad se logra a través de la configuración.  
@@ -161,8 +161,8 @@ Con frecuencia al crear una aplicación desea delegar las decisiones al administ
 </bindings>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
- [Enlaces proporcionados por el sistema](../../../docs/framework/wcf/system-provided-bindings.md)  
- [Información general sobre la creación de puntos finales](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Vea también
+- [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)
+- [Enlaces proporcionados por el sistema](../../../docs/framework/wcf/system-provided-bindings.md)
+- [Información general sobre la creación de puntos finales](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

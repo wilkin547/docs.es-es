@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 9bc1f33231cc4f29fabd100a695843beb334aeaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c1ec0bf1aa4b6dbf885294c680b3bfe8897eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565714"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Esta aplicación de una sola instancia no pudo conectar con la instancia original
 Esta aplicación de una sola instancia no pudo conectar con la instancia original. Algunas de las posibles causas de este problema son:  
@@ -32,6 +32,6 @@ Esta aplicación de una sola instancia no pudo conectar con la instancia origina
   
 5.  Anote las circunstancias en las que se produjo el error y llame a los Servicios de soporte técnico de Microsoft.  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos básicos del depurador](/visualstudio/debugger/debugger-basics)  
+## <a name="see-also"></a>Vea también
+- [Conceptos básicos del depurador](/visualstudio/debugger/debugger-basics)
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: d5a9b08188e346fdea5b155149dee1ef8368c2a0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679323"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acceso más seguro a archivos y datos en formularios Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permisos para proteger los recursos y los datos. Los lugares donde puede leer o escribir datos la aplicación dependen de los permisos concedidos a esa aplicación. Si la aplicación se ejecuta en un entorno de confianza parcial, puede que no tenga acceso a los datos o que deba cambiar la forma de acceder a los datos.  
@@ -358,10 +358,10 @@ public void Write()
   
  Dado que no puede acceder al Registro con confianza parcial, puede que tenga que dar con otros métodos para almacenar los datos. Al almacenar la configuración de la aplicación, utilice almacenamiento aislado en lugar del Registro. El almacenamiento aislado también puede utilizarse para almacenar otros archivos específicos de la aplicación. También puede almacenar información global de la aplicación sobre el servidor o el sitio de origen porque, de forma predeterminada, a las aplicaciones se les concede el derecho a acceder a su sitio de origen.  
   
-## <a name="see-also"></a>Vea también  
- [Impresión más segura en Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Consideraciones de seguridad adicionales en Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- [Información general sobre la seguridad en Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)  
- [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>Vea también
+- [Impresión más segura en Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
+- [Consideraciones de seguridad adicionales en Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
+- [Información general sobre la seguridad en Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
+- [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)
+- [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

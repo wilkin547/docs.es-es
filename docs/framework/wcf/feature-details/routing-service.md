@@ -2,12 +2,12 @@
 title: Servicio de enrutamiento
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495310"
 ---
 # <a name="routing-service"></a>Servicio de enrutamiento
 El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como un enrutador de mensajes. La funcionalidad principal del servicio de enrutamiento es la capacidad de enrutar mensajes según su contenido, lo que permite reenviar un mensaje a un punto de conexión de cliente en función de un valor dentro del propio mensaje, en el encabezado o el cuerpo del mensaje.  
@@ -62,7 +62,7 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
  Mediante el enrutamiento basado en contenido, puede exponer un extremo que recibe los mensajes de las aplicaciones cliente externas y, a continuación, enruta cada mensaje al extremo interno adecuado en función de un valor del mensaje. Esto es útil para proporcionar un extremo concreto para diversas aplicaciones back-end y también presentar un extremo de la aplicación a los clientes mientras factoriza su aplicación en diversos servicios.  
   
 ### <a name="service-versioning"></a>Control de versiones del servicio  
- Cuando migra a una nueva versión de la solución, puede que tenga que mantener la versión antigua en paralelo para servir a los clientes existentes. A menudo, esto requiere que los clientes que se conectan a la versión más reciente usen una dirección diferente al comunicarse con la solución. El servicio de enrutamiento le permite exponer un punto de conexión de servicio que sirve a ambas versiones de la solución enrutando los mensajes a la solución adecuada en función de la información específica de la versión contenida en el mensaje. Para obtener un ejemplo de este tipo de implementación, consulte [How To: control de versiones del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Cuando migra a una nueva versión de la solución, puede que tenga que mantener la versión antigua en paralelo para servir a los clientes existentes. A menudo, esto requiere que los clientes que se conectan a la versión más reciente usen una dirección diferente al comunicarse con la solución. El servicio de enrutamiento le permite exponer un punto de conexión de servicio que sirve a ambas versiones de la solución enrutando los mensajes a la solución adecuada en función de la información específica de la versión contenida en el mensaje. Para obtener un ejemplo de este tipo de implementación, consulte [How To: Versión del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ### <a name="priority-routing"></a>Enrutamiento de prioridad  
  Al proporcionar un servicio para varios clientes, puede tener un contrato de nivel de servicio con algunos socios que requiere que todos los datos de estos socios se procesen por separado de los de otros clientes. Mediante un filtro que busca la información específica del cliente incluida en el mensaje, puede enrutar con facilidad los mensajes de socios concretos a un extremo creado para cumplir los requisitos de su contrato de nivel de servicio.  
@@ -85,7 +85,7 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
 ## <a name="error-handling"></a>Control de errores  
  En un sistema compuesto de servicios distribuidos que confían en las comunicaciones por red, es importante asegurarse de que las comunicaciones dentro del sistema son resistentes a los errores de red transitorios.  El servicio de enrutamiento implementa un control de errores que le permite administrar muchos casos de fallos de comunicación que, de otro modo, podrían producir una interrupción del suministro del servicio.  
   
- Si el servicio de enrutamiento encuentra una clase <xref:System.ServiceModel.CommunicationException> mientras intenta enviar un mensaje, se activará el control de errores.  Estas excepciones indican normalmente que se encontró un problema al intentar establecer comunicación con el extremo de cliente definido, como <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>.  El código de control de errores también detectará e intentará volver a realizar el envío cuando un **TimeoutException** se produce, que es otro tipo habitual de excepción que no se deriva **CommunicationException**.  
+ Si el servicio de enrutamiento encuentra una clase <xref:System.ServiceModel.CommunicationException> mientras intenta enviar un mensaje, se activará el control de errores.  Estas excepciones indican normalmente que se encontró un problema al intentar establecer comunicación con el punto de conexión de cliente definido, como <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>.  El código de control de errores también detectará e intentará volver a realizar el envío cuando un **TimeoutException** se produce, que es otro tipo habitual de excepción que no se deriva **CommunicationException**.  
   
  Para obtener más información sobre el control de errores, vea [Introducción enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
@@ -105,7 +105,7 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
   
 -   Configuración dinámica  
   
-## <a name="see-also"></a>Vea también  
- [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [Enrutamiento de contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md)
+## <a name="see-also"></a>Vea también
+- [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Enrutamiento de contratos](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [Filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md)

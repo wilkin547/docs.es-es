@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: fcef506f6be21b0c11a1c160ef6891a7ee53a5ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83f044f403fe6d4d9c77c5b4d2045d58b50b97a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700668"
 ---
 # <a name="controls"></a>Controles
 <a name="introduction"></a>
@@ -98,13 +98,13 @@ ms.locfileid: "50189672"
   
  Para obtener más información acerca de estas clases base, vea [modelo de contenido de WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
-## <a name="see-also"></a>Vea también  
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Agrupar controles por categoría](../../../../docs/framework/wpf/controls/controls-by-category.md)  
- [Biblioteca de controles](../../../../docs/framework/wpf/controls/control-library.md)  
- [Información general sobre plantillas de datos](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Entrada](../../../../docs/framework/wpf/advanced/input-wpf.md)  
- [Habilitar un comando](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [Tutoriales: Crear un botón animado personalizado](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)
+## <a name="see-also"></a>Vea también
+- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Agrupar controles por categoría](../../../../docs/framework/wpf/controls/controls-by-category.md)
+- [Biblioteca de controles](../../../../docs/framework/wpf/controls/control-library.md)
+- [Información general sobre plantillas de datos](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Entrada](../../../../docs/framework/wpf/advanced/input-wpf.md)
+- [Habilitar un comando](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)
+- [Tutoriales: Crear un botón animado personalizado](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)
+- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Determinar las propiedades de página mediante el componente PageSetupDialog'
+title: Procedimiento Determinar las propiedades de página mediante el componente PageSetupDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 4b1acef216e4f8eca078d47a8cde87fb8f95ee0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713543"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Cómo: Determinar las propiedades de página mediante el componente PageSetupDialog
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Procedimiento Determinar las propiedades de página mediante el componente PageSetupDialog
 El componente [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) presenta al usuario un diseño, un tamaño de papel y otras opciones de diseño de página para un documento.  
   
  Debe especificar una instancia de la clase <xref:System.Drawing.Printing.PrintDocument> (el documento que se va a imprimir). Además, los usuarios deben tener una impresora instalada en su equipo, ya sea de forma local o a través de una red, ya que en parte así es como determina el componente <xref:System.Windows.Forms.PageSetupDialog> las opciones de formato de página que se presentan al usuario.  
@@ -87,7 +87,7 @@ El componente [PageSetupDialog](../../../../docs/framework/winforms/controls/pag
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.PageSetupDialog>  
- [Crear trabajos de impresión estándar de formularios Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
- [PageSetupDialog (componente)](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.PageSetupDialog>
+- [Cómo: Crear trabajos de impresión estándar de Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog (componente)](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)

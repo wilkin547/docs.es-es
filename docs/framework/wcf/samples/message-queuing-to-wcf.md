@@ -2,12 +2,12 @@
 title: Message Queuing a Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: cbbbab700a6602fa02160733c383a0fcaa84297b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: fa8bb6036b38456066922c0c2991a4893a22c117
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676658"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing a Windows Communication Foundation
 Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio de Windows Communication Foundation (WCF). El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
@@ -153,7 +153,7 @@ Console.ReadLine();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
-## <a name="see-also"></a>Vea también  
- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Intercambio de mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Message Queue Server](https://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a>Vea también
+- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Cómo: Intercambiar mensajes con puntos de conexión WCF y Message Queue Server de las aplicaciones](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Message Queue Server](https://go.microsoft.com/fwlink/?LinkId=94968)

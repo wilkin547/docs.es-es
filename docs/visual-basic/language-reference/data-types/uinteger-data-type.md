@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 929197d8e8f9ab031e72e7d332422b388a22ea95
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a79162c6171c764d4c4610fd10f14a5dac6ff1a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499004"
 ---
 # <a name="uinteger-data-type"></a>UInteger (tipo de datos)
 
@@ -78,10 +78,10 @@ Dim number = &H_0FAC_14D7ui
   
 -   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt32?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.UInt32>  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.UInt32>
+- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
+- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -2,15 +2,15 @@
 title: Ejemplo de serialización JSON débilmente tipada
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 07166b89729fed7911cb842313269e420ae401b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 212a5ea362600e833303711b750d1c7a0f7252b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676060"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Ejemplo de serialización JSON débilmente tipada
-Al serializar un tipo definido por el usuario en un formato de conexión determinado o deserializar un formato de conexión en un tipo definido por el usuario, el tipo definido por el usuario determinado debe estar disponible en el servicio y en el cliente. Normalmente, para lograr esto, se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a estos tipos definidos por el usuario y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se aplica a sus miembros. Este mecanismo también se aplica al trabajar con los objetos JSON (JavaScript Object Notation), tal y como se describe en el tema [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+Al serializar un tipo definido por el usuario en un formato de conexión determinado o deserializar un formato de conexión en un tipo definido por el usuario, el tipo definido por el usuario determinado debe estar disponible en el servicio y en el cliente. Normalmente, para lograr esto, se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a estos tipos definidos por el usuario y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se aplica a sus miembros. Este mecanismo también se aplica cuando se trabaja con objetos de JavaScript Object Notation (JSON), como se describe en el tema [Cómo: Serializar y deserializar datos JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  En algunos escenarios, un servicio de Windows Communication Foundation (WCF) o el cliente debe tener acceso a los objetos JSON generados por un servicio o cliente que está fuera del control del desarrollador. Como más servicios Web exponen públicamente las API de JSON, puede resultar práctico para el desarrollador WCF construir los tipos locales definidos por el usuario en el que se va a deserializar objetos JSON arbitrarios. Este ejemplo proporciona un mecanismo que permite a los desarrolladores WCF trabajar con objetos JSON deserializados y arbitrarios, sin crear tipos definidos por el usuario. Esto se conoce como *serialización débilmente tipada* de objetos JSON, porque no se conoce el tipo en el que un objeto JSON se deserializa en el momento de la compilación.  
   

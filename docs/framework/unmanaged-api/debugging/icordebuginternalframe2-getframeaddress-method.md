@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d088aaaaa80ee3513a37ea0345d720832504c005
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab729bafdd8987a7c5a03145e02f5c8e5d441a3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711621"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress (Método)
-Devuelve la dirección de la pila del marco interno.  
+Devuelve la dirección de pila del marco interno.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,18 +47,18 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |E_INVALIDARG|El valor de `pAddress` es `null`.|  
   
 ## <a name="remarks"></a>Comentarios  
- El valor devuelto en `pAddress` puede utilizarse para determinar la ubicación del marco interno en relación con otros marcos de la pila. Incluso en equipos basados en IA-64, el marco interno se mantiene en la pila solo y no hay ningún puntero correspondiente a un almacén de copia de seguridad.  
+ El valor devuelto en `pAddress` puede usarse para determinar la ubicación del marco interno en relación con otros marcos de la pila. Incluso en equipos basados en IA-64, el marco interno se encuentra en la pila solo y no hay ningún puntero correspondiente a un almacén de respaldo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugInternalFrame2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugInternalFrame2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

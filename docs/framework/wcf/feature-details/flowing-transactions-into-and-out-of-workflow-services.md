@@ -2,12 +2,12 @@
 title: Flujo de las transacciones en los servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: f53bfa3c745a0d487a8daf23f399c1420e36c8ec
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4a5cde045c6c676c2efc694c67fd049b6eb611b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708641"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Flujo de las transacciones en los servicios de flujo de trabajo
 Los servicios y clientes de flujo de trabajo pueden participar en las transacciones.  Para que una operación de servicio se convierta en parte de una transacción de ambiente, coloque una actividad de <xref:System.ServiceModel.Activities.Receive> dentro de una actividad de <xref:System.ServiceModel.Activities.TransactedReceiveScope>. En cualquier llamada realizada por un objeto <xref:System.ServiceModel.Activities.Send> o una actividad de <xref:System.ServiceModel.Activities.SendReply> dentro de <xref:System.ServiceModel.Activities.TransactedReceiveScope> también se realizará dentro de la transacción de ambiente. Una aplicación cliente del flujo de trabajo puede crear una transacción de ambiente utilizando la actividad de <xref:System.Activities.Statements.TransactionScope> y operaciones de servicio de llamada que usen la transacción de ambiente. Este tema sirve de guía para crear un servicio de flujo de trabajo y un cliente de flujo de trabajo que participan en transacciones.  
@@ -117,8 +117,8 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
     |Actividad|Valor|  
     |--------------|-----------|  
-    |Primera propiedad WriteLine|"Servicio: recepción completada"|  
-    |Segunda propiedad WriteLine|"Servicio: recibido = " + requestMessage|  
+    |Primera propiedad WriteLine|"Servicio: Recepción completada"|  
+    |Segunda propiedad WriteLine|"Servicio: Recibido = "+ requestMessage|  
   
      El flujo de trabajo ahora debería ser similar a este:  
   
@@ -133,9 +133,9 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
     |Property|Valor|  
     |--------------|-----------|  
     |En|replyMessage|  
-    |Valor|"Servicio: enviando respuesta."|  
+    |Valor|"Servicio: Enviar respuesta".|  
   
-11. Arrastre y coloque una actividad de <xref:System.Activities.Statements.WriteLine> después de la actividad de <xref:System.Activities.Statements.Assign> y establezca su propiedad <xref:System.Activities.Statements.WriteLine.Text%2A> en "Servicio: iniciar respuesta".  
+11. Arrastrar y colocar un <xref:System.Activities.Statements.WriteLine> actividad después de la <xref:System.Activities.Statements.Assign> actividad y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "servicio: Iniciar respuesta".  
   
      El flujo de trabajo ahora debería ser similar a este:  
   
@@ -145,9 +145,9 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
      ![Configuración de mensajes de respuesta](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
-13. Arrastre y coloque un <xref:System.Activities.Statements.WriteLine> actividad después de la `SendReplyToReceive` actividad y el conjunto tiene <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "servicio: respuesta enviada."  
+13. Arrastre y coloque un <xref:System.Activities.Statements.WriteLine> actividad después de la `SendReplyToReceive` actividad y el conjunto tiene <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "servicio: Respuesta enviada".  
   
-14. Arrastre y coloque una actividad de <xref:System.Activities.Statements.WriteLine> en la parte inferior del flujo de trabajo y establezca su propiedad <xref:System.Activities.Statements.WriteLine.Text%2A> en "Servicio: el flujo de trabajo finaliza, presione Entrar para salir".  
+14. Arrastre y coloque un <xref:System.Activities.Statements.WriteLine> actividad en la parte inferior del flujo de trabajo y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "servicio: Flujo de trabajo finaliza, presione ENTRAR para salir."  
   
      El flujo de trabajo del servicio completado debería ser similar a:  
   
@@ -173,7 +173,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 6.  Arrastre y coloque una actividad de `PrintTransactionInfo` dentro de <xref:System.Activities.Statements.Sequence>.  
   
-7.  Arrastre y coloque un <xref:System.Activities.Statements.WriteLine> actividad después de la `PrintTransactionInfo` actividad y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "Cliente: comenzando envío". El flujo de trabajo ahora debería ser similar a este:  
+7.  Arrastrar y colocar un <xref:System.Activities.Statements.WriteLine> actividad después de la `PrintTransactionInfo` actividad y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "cliente: A partir de envío". El flujo de trabajo ahora debería ser similar a este:  
   
      ![Adición de actividades](../../../../docs/framework/wcf/feature-details/media/clientaddcbswriteline.JPG "ClientAddCBSWriteLine")  
   
@@ -199,9 +199,9 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
      ![Establecer la configuración de mensajes ReceiveForSend](../../../../docs/framework/wcf/feature-details/media/clientreplymessagesettings.JPG "ClientReplyMessageSettings")  
   
-12. Arrastre y coloque una actividad de <xref:System.Activities.Statements.WriteLine> entre las actividades de <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.ReceiveReply>, y establezca su propiedad <xref:System.Activities.Statements.WriteLine.Text%2A> en "Cliente: envío completado".  
+12. Arrastrar y colocar un <xref:System.Activities.Statements.WriteLine> actividad entre el <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.ReceiveReply> actividades y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad en "cliente: Envío completado".  
   
-13. Arrastre y coloque una actividad de <xref:System.Activities.Statements.WriteLine> después de la actividad de <xref:System.ServiceModel.Activities.ReceiveReply> y establezca su propiedad <xref:System.Activities.Statements.WriteLine.Text%2A> en "Cliente: respuesta recibida = " + replyMessage  
+13. Arrastre y coloque un <xref:System.Activities.Statements.WriteLine> actividad después de la <xref:System.ServiceModel.Activities.ReceiveReply> actividad y establezca su <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad a "del lado cliente: Respuesta recibida = "+ replyMessage  
   
 14. Arrastre y coloque una actividad de `PrintTransactionInfo` después de la actividad de <xref:System.Activities.Statements.WriteLine>.  
   
@@ -312,7 +312,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
         }  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
-- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Información general sobre las transacciones de Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

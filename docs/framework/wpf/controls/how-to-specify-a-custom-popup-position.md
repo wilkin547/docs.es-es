@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Especificar una posición emergente personalizada'
+title: Procedimiento Especificar una posición emergente personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: e6e81a6e0819ba3eb39a1c568e6872414e671544
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b61ab6ab02d65d0549941b0055f7aef480d7d644
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726798"
 ---
-# <a name="how-to-specify-a-custom-popup-position"></a>Cómo: Especificar una posición emergente personalizada
+# <a name="how-to-specify-a-custom-popup-position"></a>Procedimiento Especificar una posición emergente personalizada
 En este ejemplo se muestra cómo especificar una posición personalizada para un <xref:System.Windows.Controls.Primitives.Popup> controlar cuándo el <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propiedad está establecida en <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,7 +32,7 @@ En este ejemplo se muestra cómo especificar una posición personalizada para un
   
  Para obtener un ejemplo completo, vea [Popup Placement Sample](https://go.microsoft.com/fwlink/?LinkID=160032).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.Primitives.Popup>  
- [Información general sobre el control Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Controls.Primitives.Popup>
+- [Información general sobre el control Popup](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

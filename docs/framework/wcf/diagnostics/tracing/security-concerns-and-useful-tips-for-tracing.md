@@ -2,12 +2,12 @@
 title: Riesgos de seguridad y sugerencias útiles para el seguimiento
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580400"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Riesgos de seguridad y sugerencias útiles para el seguimiento
 Este tema describe cómo puede proteger información confidencial de ser expuesta, así como sugerencias útiles al utilizar WebHost.  
@@ -90,5 +90,5 @@ Este tema describe cómo puede proteger información confidencial de ser expuest
   
  Además, la dirección IP del remitente del mensaje se registra una vez por conexión para transportes orientados a la conexión y una vez por mensaje enviado de otro modo. Esto se hace sin el consentimiento del remitente. Sin embargo, este registro solo se produce en los niveles de traza Información o Detallado, que no son los niveles de traza predeterminados o recomendados en la producción, salvo para la depuración activa.  
   
-## <a name="see-also"></a>Vea también  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Vea también
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

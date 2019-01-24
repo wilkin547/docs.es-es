@@ -2,20 +2,20 @@
 title: Atributos ServiceModel y referencia ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b1b10f34e300d77943a93d180b5be9e4a3366c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726632"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atributos ServiceModel y referencia ServiceDescription
-El *árbol de descripción* es la jerarquía de tipos (comenzando por el <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> clase) que juntos describen cada aspecto de un servicio. Windows Communication Foundation (WCF) usa un árbol de descripción para crear un servicio válido en tiempo de ejecución, para publicar el lenguaje de descripción de servicios Web (WSDL), lenguaje de definición de esquemas XML (XSD) y las aserciones de directiva (metadatos) sobre el servicio que los clientes pueden usar para conectarse a y usar el servicio y para generar varias representaciones de archivo de código y la configuración de los valores de descripción del árbol.  
+El *árbol de descripción* es la jerarquía de tipos (a partir de la <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> clase) que juntos describen cada aspecto de un servicio. Windows Communication Foundation (WCF) usa un árbol de descripción para crear un servicio válido en tiempo de ejecución, para publicar en Web Services Description Language (WSDL), lenguaje de definición de esquemas XML (XSD) y las aserciones de directiva (metadatos) sobre el servicio que los clientes pueden usar para conectarse a y usar el servicio y para generar varias representaciones de archivo de código y la configuración de los valores de árbol de descripción.  
   
- En este tema se describe cómo las propiedades relacionadas con contrato se obtienen del contrato de servicios, y cómo se implementan y agregan al árbol de descripción. En algunos casos, los valores de atributo se convierten en propiedades del comportamiento y el comportamiento se inserta en el árbol de descripción. Para obtener más información sobre cómo se convierten los valores del árbol de descripción en metadatos, vea [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ En este tema se describe cómo las propiedades relacionadas con contrato se obtienen del contrato de servicios, y cómo se implementan y agregan al árbol de descripción. En algunos casos, los valores de atributo se convierten en propiedades del comportamiento y el comportamiento se inserta en el árbol de descripción. Para obtener más información acerca de cómo se convierten los valores de árbol de descripción en metadatos, vea [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Asignación de operaciones al árbol de descripción  
- En aplicaciones de WCF, los contratos de servicio se modelan mediante interfaces (o clases) que utilizan atributos para marcar la interfaz o clase y sus métodos como un agrupamiento de operaciones. Cuando se abre una clase <xref:System.ServiceModel.ServiceHost>, las implementaciones y contratos de servicios se reflejan y combinan con información de configuración en un árbol de descripción.  
+ En las aplicaciones de WCF, los contratos de servicio se modelan mediante interfaces (o clases) que utilizan atributos para marcar la interfaz o clase y sus métodos como un agrupamiento de operaciones. Cuando se abre una clase <xref:System.ServiceModel.ServiceHost>, las implementaciones y contratos de servicios se reflejan y combinan con información de configuración en un árbol de descripción.  
   
  Hay dos tipos de modelos de operaciones: el *parámetro* modelo y la *contrato de mensaje* modelo. El modelo de parámetro usa métodos administrados que no tienen un parámetro o tipo de valor devuelto que esté marcado por la clase <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. En este modelo, los desarrolladores controlan la serialización de parámetros y valores devuelven, pero WCF genera los valores que se usan para rellenar el árbol de descripción para el servicio y su contrato.  
   
@@ -33,7 +33,7 @@ El *árbol de descripción* es la jerarquía de tipos (comenzando por el <xref:S
 |---------------------------------------|-------------------------------------|  
 |CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> agregó a todas las operaciones <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> y posiblemente niveles secundarios de protección. Para obtener más información acerca de la jerarquía de nivel de protección, consulte [nivel de protección descripción](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> y posiblemente niveles secundarios de protección. Para obtener más información acerca de la jerarquía de nivel de protección, consulte [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |Valor ServiceKnownTypesAttribute|Valor del árbol de descripción afectado|  
@@ -48,7 +48,7 @@ El *árbol de descripción* es la jerarquía de tipos (comenzando por el <xref:S
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |nombre|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> y posiblemente niveles secundarios de protección. Para obtener más información acerca de la jerarquía de nivel de protección, consulte [nivel de protección descripción](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> y posiblemente niveles secundarios de protección. Para obtener más información acerca de la jerarquía de nivel de protección, consulte [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> para el mensaje de salida o de entrada, dependiendo del contrato/contrato de devolución de llamada.|  
   
 |Valor FaultContractAttribute|Valor del árbol de descripción afectado|  
@@ -111,7 +111,7 @@ El *árbol de descripción* es la jerarquía de tipos (comenzando por el <xref:S
 |-------------------------------------|-------------------------------------|  
 |nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para el elemento correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
- Para obtener más información sobre cómo se convierten los valores del árbol de descripción en metadatos, vea [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ Para obtener más información acerca de cómo se convierten los valores de árbol de descripción en metadatos, vea [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
-## <a name="see-also"></a>Vea también  
- [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+## <a name="see-also"></a>Vea también
+- [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

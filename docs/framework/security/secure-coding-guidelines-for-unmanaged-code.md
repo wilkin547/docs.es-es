@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408156"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711978"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Instrucciones de programación segura para código sin administrar
 El código de algunas bibliotecas necesita llamar a código no administrado (por ejemplo, las API de código nativo, como Win32). Como esto implica salir del perímetro de seguridad del código administrado, se requiere mucha precaución. Si el código es neutro en cuanto a seguridad, tanto su código como cualquier otro código que lo llame deberán tener permiso de código no administrado (<xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificada).  
@@ -51,5 +51,5 @@ El código de algunas bibliotecas necesita llamar a código no administrado (por
 |**native**|Neutro en cuanto a seguridad: es decir, código no administrado que requiere permiso para llamar a código no administrado. Se comprueba la seguridad, lo que detiene a los llamadores no autorizados.|  
 |**unsafe**|Punto de entrada de código no administrado potencialmente peligroso sin seguridad. Los desarrolladores deben extremar las precauciones cuando utilicen este tipo de código no administrado, y asegurarse de aplicar otras protecciones para evitar vulnerabilidades de seguridad. Los desarrolladores deben actuar con responsabilidad, ya que esta palabra clave invalida el sistema de seguridad.|  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vea también
+- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)

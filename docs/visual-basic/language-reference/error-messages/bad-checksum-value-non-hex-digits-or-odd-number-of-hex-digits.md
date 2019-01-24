@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: e682c2c23dd6fe80aee87d2a86b3df2dae66b802
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 211f07e7c9dbc7e0583272d46c493ad99628d283
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724114"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Valor de suma de comprobación incorrecto; no tiene dígitos hexadecimales o el número de dígitos hexadecimales es impar
 Un valor de suma de comprobación contiene dígitos hexadecimales no válidos o un número impar de dígitos.  
   
  Cuando ASP.NET genera un archivo de origen de Visual Basic (extensión .vb), calcula una suma de comprobación y la coloca en un archivo se origen oculto que se identifica por medio de `#externalchecksum`. Un usuario también puede generar un archivo .vb con el mismo fin, aunque lo más conveniente es dejar este proceso para uso interno.  
   
- De forma predeterminada, este mensaje es una advertencia. Para obtener información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identificador de error:** BC42033  
   
@@ -33,5 +33,5 @@ Un valor de suma de comprobación contiene dígitos hexadecimales no válidos o 
   
 ## <a name="see-also"></a>Vea también
 
-- [ASP.NET Overview](/aspnet/overview) (Información general de ASP.NET)  
+- [ASP.NET Overview](/aspnet/overview) (Información general de ASP.NET)
 - [Hable con nosotros](/visualstudio/ide/talk-to-us)

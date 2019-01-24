@@ -8,31 +8,31 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: f566b5139f839ae37b90c4ea30a4bdfafa696ede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688221"
 ---
 # <a name="graphics-how-to-topics"></a>Temas "Cómo..." de gráficos
-Los temas siguientes muestran cómo usar las capacidades de gráficos de la [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Los temas siguientes muestran cómo usar las capacidades gráficas de la [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Animar un rectángulo](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
  [Animar la posición de un objeto mediante PointAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Transformar puntos y vectores](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
  [Ampliar el marco de vidrio en una aplicación de WPF](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [Mejorar el rendimiento de la representación mediante el almacenamiento en caché de un elemento](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Usar un elemento almacenado en caché como pincel](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [Cómo: Mejorar el rendimiento al almacenar en caché un elemento de la representación](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Cómo: Usar un elemento almacenado en caché como pincel](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Shapes.Shape>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Media.Geometry>  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Effects.BitmapEffect>  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Shapes.Shape>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Media.Geometry>
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Effects.BitmapEffect>
+- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

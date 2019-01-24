@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: 2c6436e77753322733580acba5a20d6bb220f29c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 02adffef32dcd58eedc11309ae272b72818a563f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683208"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Introducción a los controles HScrollBar y VScrollBar (formularios Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> controles se usan para proporcionar la fácil navegación a través de una larga lista de elementos o una gran cantidad de información, ya sea horizontal o verticalmente dentro de una aplicación o control. Las barras de desplazamiento son un elemento común de la interfaz de Windows, por lo que la <xref:System.Windows.Forms.ScrollBar> control suele utilizarse con controles que no se derivan de la <xref:System.Windows.Forms.ScrollableControl> clase. De forma similar, muchos programadores eligen incorporar el <xref:System.Windows.Forms.ScrollBar> controlar al crear sus propios controles de usuario.  
@@ -35,8 +35,8 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> controles se usan para propo
   
  Cuando el usuario presiona uno de la flecha de claves o hace clic en uno de los botones de barra de desplazamiento, el <xref:System.Windows.Forms.ScrollBar.Value%2A> los cambios de propiedad según el valor establecido en el <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> propiedad.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.HScrollBar>  
- <xref:System.Windows.Forms.VScrollBar>  
- [Adiciones a Windows Forms para .NET Framework 2.0](https://msdn.microsoft.com/library/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.HScrollBar>
+- <xref:System.Windows.Forms.VScrollBar>
+- [Adiciones a Windows Forms para .NET Framework 2.0](https://msdn.microsoft.com/library/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)
+- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

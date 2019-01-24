@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: bcf1cab9386d9d9503af6258c1bb39f8744c073b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54942386bb4fb88e72a86b5e25f12cee4776a126
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625645"
 ---
 # <a name="ajax-integration-and-json-support"></a>Integración de AJAX y compatibilidad de JSON
 La compatibilidad de Windows Communication Foundation (WCF) para ASP.NET Asynchronous JavaScript y XML (AJAX) y el formato de datos JavaScript Object Notation (JSON) permiten a los servicios WCF exponer las operaciones a los clientes de AJAX. Los clientes de AJAX son páginas Web que ejecutan código JavaScript y obtener acceso a estos servicios WCF mediante solicitudes HTTP. Los temas de esta sección proporcionan información sobre esta compatibilidad y sobre cómo implementarla.  
@@ -26,9 +26,9 @@ La compatibilidad de Windows Communication Foundation (WCF) para ASP.NET Asynchr
  [Compatibilidad con JSON y otros formatos de transferencia de datos](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
  Describe la compatibilidad del formato de JSON utilizada normalmente (en lugar de XML) para la mensajería con servicios de AJAX de ASP.NET.  
   
- [Migración de servicios web de ASP.NET con AJAX habilitado a WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
+ [Cómo: Migrar los servicios Web de ASP.NET con AJAX habilitado a WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
  Describe cómo migrar un servicio Web de ASP.NET con AJAX habilitado a un servicio Web WCF.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>  
- [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>
+- [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

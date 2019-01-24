@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 25bdfaef300b001d1c052aeea4e1ad3547a6d3d7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683695"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilizar expresiones regulares con el control MaskedTextBox en Visual Basic
 En este ejemplo se muestra cómo convertir las expresiones regulares simples para trabajar con el <xref:System.Windows.Forms.MaskedTextBox> control.  
@@ -23,12 +23,12 @@ En este ejemplo se muestra cómo convertir las expresiones regulares simples par
 |Elemento de enmascaramiento|Descripción|Elemento de expresión regular|  
 |---------------------|-----------------|--------------------------------|  
 |0|Cualquier dígito comprendido entre 0 y 9. Entrada requerida.|\d|  
-|9|Dígito o espacio. Entrada opcional.|¿[\d]?|  
-|#|Dígito o espacio. Entrada opcional. Si esta posición se deja en blanco en la máscara, se representará como un espacio. Signo más (+) y menos (-) se permiten signos.|¿[\d+-]?|  
+|9|Dígito o espacio. Entrada opcional.|[ \d]?|  
+|#|Dígito o espacio. Entrada opcional. Si esta posición se deja en blanco en la máscara, se representará como un espacio. Signo más (+) y menos (-) se permiten signos.|[ \d+-]?|  
 |L|Letra ASCII. Entrada requerida.|[a-zA-Z]|  
 |?|Letra ASCII. Entrada opcional.|¿[a-zA-Z]?|  
 |&|Carácter. Entrada requerida.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|Carácter. Entrada opcional.|¿[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|C|Carácter. Entrada opcional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |A|Alfanumérico. Entrada opcional.|\W|  
 |.|Marcador de posición decimal adecuado para la referencia cultural.|No está disponible.|  
 |,|Marcador de posición miles adecuado para la referencia cultural.|No está disponible.|  
@@ -55,8 +55,8 @@ En este ejemplo se muestra cómo convertir las expresiones regulares simples par
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Número de teléfono de Estados Unidos, código de área opcional. Si el usuario no desea escribir los caracteres opcionales, puede escribir espacios o colocar el puntero del mouse directamente en la posición de la máscara representada por el primer 0.|  
 |`$\d{6}.00`|`$999,999.00`|Un valor de moneda en el intervalo de 0 a 999999. La moneda, milésima de segundo y caracteres decimales se reemplazará en tiempo de ejecución con sus equivalentes específicos de la referencia cultural.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [Validar cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [MaskedTextBox (control)](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [Validar cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [MaskedTextBox (control)](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbe94aa67c9cf9ac587b7fca9f5cbeca4870506b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83a1c03c209d68035b3615c83ec0ee13b94eb549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719955"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits (Método)
 Establece el tamaño del segmento y el tamaño máximo para la generación 0.  
   
 > [!IMPORTANT]
->  A partir de la [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], puede establecer un tamaño de segmento y mayor que los valores de tamaño máximo de generación 0 a `DWORD` mediante el uso de la [igchost2:: Setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) método.  
+>  A partir de la [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], puede establecer el tamaño de segmento y mayor que los valores de tamaño máximo de generación 0 a `DWORD` utilizando el [Igchost2](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,16 +47,16 @@ HRESULT SetGCStartupLimits (
  [in] El tamaño máximo para la generación 0.  
   
 ## <a name="remarks"></a>Comentarios  
- El `SetGCStartupLimits` sólo una vez puede llamar al método. Estos valores no se puede cambiar más adelante.  
+ El `SetGCStartupLimits` puede llamar al método una sola vez. No se puede cambiar estos valores más adelante.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** GCHost.idl, GCHost.h  
+ **Encabezado**: GCHost.idl, GCHost.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IGCHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>Vea también
+- [IGCHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

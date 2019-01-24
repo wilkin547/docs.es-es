@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715563"
 ---
 # <a name="spawnderivedclass-function"></a>Función SpawnDerivedClass
-Crea un objeto de clase recién derivada de un objeto especificado.    
+Crea un objeto de clase recién derivado a partir de un objeto específico.    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -58,11 +58,11 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Ha habido un error general. |
+| `WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Se solicitó una operación no válida, como la creación de una clase a partir de una instancia. |
 | `WBEM_E_INCOMPLETE_CLASS` | La clase de origen completamente no se ha definido o registrado con la administración de Windows, por lo que no se permite una nueva clase derivada. |
-| `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | El valor de `ppNewClass` es `null`. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | El valor de `ppNewClass` es `null`. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -74,11 +74,11 @@ Esta función contiene una llamada a la [IWbemClassObject::SpawnDerivedClass](/w
 El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una subclase del objeto actual. No se puede invalidar este comportamiento. No hay ningún otro método que se pueden crear subclases (clases derivadas).
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 45db49cc2d8948becf86ce6953f15e752e0b96c1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4c7896cb8472ddf7037532707974380bf77e3b93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733134"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Acceso a objetos incrustados mediante la UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  En este tema se muestra cómo puede utilizarse [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para exponer objetos incrustados en el contenido de un control de texto.  
   
@@ -54,9 +54,9 @@ Un ejemplo de documento con contenido textual, ("Sabía que?" ...) y dos objetos
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [Búsqueda y resaltado de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)

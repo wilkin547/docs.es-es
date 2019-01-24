@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497297"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Información general sobre SplitContainer (Control, formularios Windows Forms)
 El control <xref:System.Windows.Forms.SplitContainer> de Windows Forms puede considerarse como una composición de dos paneles separados por una barra móvil. Cuando el puntero del mouse está sobre la barra, el puntero cambia de forma para mostrar que se puede mover.  
@@ -46,10 +46,10 @@ El control <xref:System.Windows.Forms.SplitContainer> de Windows Forms puede con
 |Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distancia en píxeles desde el borde izquierdo o superior a la barra de división movible.|  
 |Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distancia mínima en píxeles, que el usuario puede mover el divisor.|  
 |Propiedad <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Determina el grosor, en píxeles, del divisor.|  
-|Evento <xref:System.Windows.Forms.SplitContainer.SplitterMoving>|Se produce cuando se mueve el divisor.|  
-|Evento <xref:System.Windows.Forms.SplitContainer.SplitterMoved>|Se produce cuando se ha movido el divisor.|  
+|Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoving> |Se produce cuando se mueve el divisor.|  
+|Evento<xref:System.Windows.Forms.SplitContainer.SplitterMoved> |Se produce cuando se ha movido el divisor.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer (control)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Ejemplo SplitContainer (Control)](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer (control)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Ejemplo SplitContainer (Control)](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

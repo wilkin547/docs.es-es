@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bb92f9ba8ff0aed1c6eb1fa44fb4d7c9abc186a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714239"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO (Estructura)
 Representa los argumentos de una función, ordenados de izquierda a derecha.  
@@ -40,25 +40,25 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`numRanges`|El número de bloques de argumentos. Es decir, este valor es el número de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) las estructuras de los `ranges` matriz.|  
+|`numRanges`|El número de bloques de argumentos. Es decir, este valor es el número de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estructuras en el `ranges` matriz.|  
 |`totalArgumentSize`|El tamaño total de todos los argumentos. En otras palabras, este valor es la suma de las longitudes de argumento.|  
 |`ranges`|Una matriz de `COR_PRF_FUNCTION_ARGUMENT_RANGE` estructuras, cada uno de los cuales representa un bloque de argumentos de función.|  
   
 ## <a name="remarks"></a>Comentarios  
- Una función puede tener muchos argumentos. Los argumentos no podrían almacenarse de forma contigua en la memoria. Podría tener un bloque de tres argumentos en un solo lugar, un bloque de dos argumentos en otro lugar y un bloque final de un argumento en un lugar diferente. Estos argumentos son todos para la misma función; simplemente se almacenan en distintos lugares.  
+ Una función puede tener muchos argumentos. Estos argumentos no podrían almacenarse de forma contigua en la memoria. Podría tener un bloque de tres argumentos en un solo lugar, un bloque de dos argumentos en otro lugar y un bloque final de un argumento en un lugar diferente. Estos argumentos son todas de la misma función; simplemente se almacenan en distintos lugares.  
   
- El `COR_PRF_FUNCTION_ARGUMENT_INFO` estructura representa todos los argumentos de una función única. Utiliza una matriz para hacer referencia a todos los bloques de argumentos de función. Por lo tanto, para una única función, tiene un único `COR_PRF_FUNCTION_ARGUMENT_INFO` estructura, que hace referencia a varios `COR_PRF_FUNCTION_ARGUMENT_RANGE` estructuras, cada uno de los cuales señala a uno o más argumentos de función.  
+ El `COR_PRF_FUNCTION_ARGUMENT_INFO` estructura representa todos los argumentos de una sola función. Usa una matriz para hacer referencia a todos los bloques de argumentos de función. Por lo tanto, para una sola función, tiene una sola `COR_PRF_FUNCTION_ARGUMENT_INFO` estructura, que hace referencia a varios `COR_PRF_FUNCTION_ARGUMENT_RANGE` estructuras, cada uno de los cuales señala a uno o más argumentos de función.  
   
- Argumentos que se almacenan en los registros se vuelcan en la memoria para compilar las estructuras.  
+ Argumentos que se almacenan en los registros se vuelcan en la memoria para crear las estructuras.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl  
+ **Encabezado**: CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Vea también
+- [Estructuras para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: b46c763e7cddfc7617c9a6a23428f83a54955ba0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1cd6962a02a50ecd9f9b634148eeb38ad0a45e05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664049"
 ---
 # <a name="sql-xml-column-values"></a>Valores de columna de SQL XML
 SQL Server admite la `xml` tipo de datos, y los programadores pueden recuperar conjuntos de resultados que incluyan este tipo mediante el comportamiento estándar de la <xref:System.Data.SqlClient.SqlCommand> clase. Las columnas `xml` se pueden recuperar como se recupera cualquier columna (por ejemplo, en un <xref:System.Data.SqlClient.SqlDataReader>) pero si desea trabajar con el contenido de la columna en XML, deberá utilizar un <xref:System.Xml.XmlReader>.  
@@ -24,7 +24,7 @@ SQL Server admite la `xml` tipo de datos, y los programadores pueden recuperar c
  [!code-csharp[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Data.SqlTypes.SqlXml>  
- [Datos XML en SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- <xref:System.Data.SqlTypes.SqlXml>
+- [Datos XML en SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

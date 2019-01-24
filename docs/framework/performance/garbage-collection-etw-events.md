@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685222"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados
 <a name="top"></a> Estos eventos recopilan información sobre la recolección de elementos no utilizados. Ayudan en el diagnóstico y depuración, así como en la determinación de cuántas veces se realizó la recolección de elementos no utilizados, cuánta memoria se liberó durante la recolección de elementos no utilizados, etc.  
@@ -366,5 +366,5 @@ ms.locfileid: "33396940"
   
  Sin datos del evento.  
   
-## <a name="see-also"></a>Vea también  
- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vea también
+- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)

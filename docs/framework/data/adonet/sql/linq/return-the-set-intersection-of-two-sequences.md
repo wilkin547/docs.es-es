@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d09c344e-3548-4944-a3ed-051880e3f5b8
-ms.openlocfilehash: 9fd2a5dc435829d08594ea3c2f1c129328386250
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb1785b12df2e8a835ba49ae59d0448fbebf794c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506828"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a>Devolver la intersección de conjuntos de dos secuencias
 Utilice el operador <xref:System.Linq.Queryable.Intersect%2A> para devolver la intersección de conjuntos de dos secuencias.  
@@ -23,6 +23,6 @@ Utilice el operador <xref:System.Linq.Queryable.Intersect%2A> para devolver la i
   
  En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la operación <xref:System.Linq.Queryable.Intersect%2A> se define correctamente sólo en conjuntos. La semántica de conjuntos múltiples no está definida.  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Traslación del operador de consulta estándar](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>Vea también
+- [Ejemplos de consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Traslación del operador de consulta estándar](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

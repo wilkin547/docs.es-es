@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 449bc1a7f9d74ba9b38d70ef36303e0ff399c187
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f4394afe81b03e44ea98514c15fb4bacafa49c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707588"
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt; elemento
 Especifica los atributos de versión del compilador para un proveedor de lenguaje.  
   
  \<Elemento de configuración >  
-\<Elemento System.CodeDom >  
+\<system.codedom Element>  
 \<Elemento compilers >  
 \<compilador > elemento  
 \<providerOption > elemento  
@@ -53,7 +53,7 @@ Especifica los atributos de versión del compilador para un proveedor de lenguaj
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Elemento raíz necesario en cada archivo de configuración utilizado por Common Language Runtime y las aplicaciones de .NET Framework.|  
-|[\<System.CodeDom > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|  
 |[\<los compiladores > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Contenedor para los elementos de configuración de compilador; contiene cero o más `<compiler>` elementos.|  
 |[Elemento \<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Especifica los atributos de configuración del compilador para un proveedor de lenguaje.|  
   
@@ -91,10 +91,10 @@ Especifica los atributos de versión del compilador para un proveedor de lenguaj
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [\<los compiladores > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
-- [Especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
+## <a name="see-also"></a>Vea también
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<los compiladores > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
+- [Especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
 - [Elemento Compiler aplicado a compilers para compilation (esquema de configuración de ASP.NET)](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

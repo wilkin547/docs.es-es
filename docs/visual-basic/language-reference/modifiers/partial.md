@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f8e7e992ce312f7f7bf2c9dbad4d14fbb095de1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690714"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indica que una declaración de tipo es una definición parcial del tipo.  
@@ -45,17 +45,17 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Término|Definición|  
 |---|---|  
-|`attrlist`|Opcional. Lista de atributos que se aplican a este tipo. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) corchetes angulares (`< >`).|  
-|`accessmodifier`|Opcional. Especifica qué código puede tener acceso a este tipo. Vea [tener acceso a niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcional. Vea [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Opcional. Vea [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Opcional. Vea [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`name`|Requerido. Nombre de este tipo. Debe coincidir con el nombre definido en el resto de las declaraciones parciales del mismo tipo.|  
-|`Of`|Opcional. Especifica que se trata de un tipo genérico. Vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|Es obligatorio si se utiliza [de](../../../visual-basic/language-reference/statements/of-clause.md). Vea [escriba lista](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Opcional. Vea [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`attrlist`|Opcional. Lista de atributos que se aplican a este tipo. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) en corchetes angulares (`< >`).|  
+|`accessmodifier`|Opcional. Especifica qué código puede tener acceso a este tipo. Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Opcional. Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|Opcional. Consulte [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Opcional. Consulte [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`name`|Obligatorio. Nombre de este tipo. Debe coincidir con el nombre definido en el resto de las declaraciones parciales del mismo tipo.|  
+|`Of`|Opcional. Especifica que se trata de un tipo genérico. Consulte [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
+|`typelist`|Es necesario si se usan [de](../../../visual-basic/language-reference/statements/of-clause.md). Consulte [escriba lista](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Opcional. Consulte [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Obligatorio si se usa `Inherits`. El nombre de la clase o la interfaz de la que se deriva esta clase.|  
-|`Implements`|Opcional. Vea [implementa instrucción](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Opcional. Consulte [implementa instrucción](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Obligatorio si se usa `Implements`. Los nombres de las interfaces que implementa este tipo.|  
 |`variabledeclarations`|Opcional. Instrucciones que declaran variables adicionales y eventos para el tipo.|  
 |`proceduredeclarations`|Opcional. Instrucciones que declaran y definen procedimientos adicionales para el tipo.|  
@@ -76,7 +76,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 -   **Unión de declaraciones.** El compilador trata el tipo como la unión de todas sus declaraciones parciales. Todos los modificadores de todas las definiciones parciales se aplican a todo el tipo; además, todos los miembros de todas las definiciones parciales están disponibles para todo el tipo.  
   
--   **Promoción de tipos no permitida para tipos parciales en módulos.** Si una definición parcial está dentro de un módulo, se rechaza automáticamente la promoción de tipos de ese tipo. En este caso, un conjunto de definiciones parciales puede producir resultados inesperados e incluso errores del compilador. Para obtener más información, consulte [la promoción de tipos](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+-   **Promoción de tipos no permitida para los tipos parciales en módulos.** Si una definición parcial está dentro de un módulo, se rechaza automáticamente la promoción de tipos de ese tipo. En este caso, un conjunto de definiciones parciales puede producir resultados inesperados e incluso errores del compilador. Para obtener más información, consulte [promoción de tipos](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
      El compilador solo combina las definiciones parciales cuando sus rutas de acceso completas son idénticas.  
   
@@ -93,10 +93,10 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  Las dos definiciones parciales del ejemplo anterior podrían estar en el mismo archivo de origen o en dos archivos distintos.  
   
-## <a name="see-also"></a>Vea también  
- [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Promoción de tipos](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Métodos Partial](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>Vea también
+- [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Promoción de tipos](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Métodos Partial](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

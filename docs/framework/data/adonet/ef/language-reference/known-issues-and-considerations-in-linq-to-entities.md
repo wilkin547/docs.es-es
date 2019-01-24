@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 6b54f75afd52b5179693c5a92ebce2e8aa02f122
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717972"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemas conocidos y consideraciones en LINQ to Entities
 En esta sección se ofrece información sobre los problemas conocidos relacionados con las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
--   [Consultas LINQ que no pueden almacenarse en caché](#LINQQueriesThatAreNotCached)  
+-   [Consultas LINQ que no se puede almacenar en caché](#LINQQueriesThatAreNotCached)  
   
 -   [Pérdida de información de ordenación](#OrderingInfoLost)  
   
@@ -23,7 +23,7 @@ En esta sección se ofrece información sobre los problemas conocidos relacionad
   
 -   [Errores de conversión de tipo](#TypeConversionErrors)  
   
--   [Hacer referencia a Variables no escalares no compatibles](#RefNonScalarClosures)  
+-   [Hacer referencia a Variables no escalares no admitidas](#RefNonScalarClosures)  
   
 -   [Pueden producir un error de las consultas anidadas con SQL Server 2000](#NestedQueriesSQL2000)  
   
@@ -42,7 +42,7 @@ En esta sección se ofrece información sobre los problemas conocidos relacionad
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Enteros sin signo no admitidos  
- La especificación de un tipo entero sin signo en una consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] no se admite porque [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] no admite enteros sin signo. Si especifica un entero sin signo, un <xref:System.ArgumentException> excepción durante la conversión de expresiones de consulta, como se muestra en el ejemplo siguiente. En este ejemplo se consulta un pedido cuyo número de identificación (Id.) es 48000.  
+ La especificación de un tipo entero sin signo en una consulta de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] no se admite porque [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] no admite enteros sin signo. Si especifica un entero sin signo, un <xref:System.ArgumentException> excepción se producirá durante la conversión de expresión de consulta, como se muestra en el ejemplo siguiente. En este ejemplo se consulta un pedido cuyo número de identificación (Id.) es 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -79,5 +79,5 @@ En esta sección se ofrece información sobre los problemas conocidos relacionad
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>Vea también
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

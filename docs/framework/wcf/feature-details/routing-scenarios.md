@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699602"
 ---
 # <a name="routing-scenarios"></a>Escenarios de enrutamiento
 Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío para diseñar una lógica de enrutamiento eficaz al crear una nueva configuración desde el principio.  Sin embargo, hay varios escenarios comunes que sigue la mayoría de las configuraciones del servicio de enrutamiento. Aunque puede que estos escenarios no se apliquen directamente a su configuración concreta, el hecho de saber cómo se puede configurar el servicio de enrutamiento para administrar estos escenarios le ayudará a entender el servicio de enrutamiento.  
@@ -34,17 +34,17 @@ Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío 
   
  Utilizando el servicio de enrutamiento, puede exponer un extremo para recibir mensajes de aplicaciones cliente y, a continuación, enrutar cada mensaje a la versión de servicio correcta en función del contenido del mensaje. La implementación más básica implica agregar un encabezado personalizado al mensaje que indica la versión del servicio con el que se procesará el mensaje. El servicio de enrutamiento puede utilizar XPathMessageFilter para inspeccionar cada mensaje con el fin de detectar la presencia del encabezado personalizado y enrutar el mensaje al punto de conexión de destino adecuado.  
   
- Para los pasos utilizados para crear una configuración de control de versiones de servicio, consulte [How To: control de versiones del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
+ Para los pasos utilizados para crear una configuración de control de versiones de servicio, consulte [How To: Versión del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Particionar datos de servicio  
  Al diseñar un entorno distribuido, a menudo es conveniente repartir la carga de procesamiento entre varios equipos para proporcionar una alta disponibilidad, disminuir la carga de procesamiento en equipos individuales o proporcionar recursos dedicados para un determinado subconjunto de mensajes. Aunque el servicio de enrutamiento no reemplaza una solución de equilibrio de carga dedicada, su capacidad de realizar un enrutamiento basado en el contenido se puede utilizar para enrutar de otro modo mensajes similares a destinos concretos. Por ejemplo, puede tener un requisito para procesar mensajes de un cliente concreto por separado de los mensajes recibidos de otros clientes.  
   
- Los pasos que se usa para crear una configuración de partición de datos de servicio, consulte [How To: creación de particiones de datos de servicio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
+ Los pasos que se usa para crear una configuración de partición de datos de servicio, consulte [How To: Creación de particiones de datos de servicio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Enrutamiento dinámico  
  A menudo, es conveniente modificar la configuración de enrutamiento para satisfacer las cambiantes necesidades empresariales, como agregar una ruta a una versión más reciente de un servicio, cambiar los criterios de enrutamiento o cambiar el extremo de destino de un mensaje determinado al que enruta el filtro. El servicio de enrutamiento le permite hacer esto a través de <xref:System.ServiceModel.Routing.RoutingExtension>, que le permite proporcionar un nuevo RoutingConfiguration durante el tiempo de ejecución. La nueva configuración surte efecto inmediatamente, pero solo afecta a cualquier sesión nueva procesada mediante el servicio de enrutamiento.  
   
- Los pasos que se usa para implementar el enrutamiento dinámico, consulte [How To: actualización dinámica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
+ Los pasos que se usa para implementar el enrutamiento dinámico, consulte [How To: Actualización dinámica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Multidifusión  
  Al enrutar mensajes, normalmente enruta cada mensaje a un extremo de destino concreto.  Sin embargo, algunas veces, puede necesitar enrutar una copia del mensaje a varios extremos de destino. Para realizar un enrutamiento de multidifusión, deben cumplirse las siguientes condiciones:  
@@ -63,16 +63,16 @@ Aunque el servicio de enrutamiento es muy personalizable, puede ser un desafío 
   
  El servicio de enrutamiento intenta solucionar este escenario proporcionando capacidades de control de errores sólidas para los mensajes que se encuentran con errores de la red o errores relacionados con la comunicación. Al crear una lista de posibles extremos de destino y asociar esta lista a cada filtro de mensajes, elimina el punto de concentración de errores que se produce cuando solo hay un destino posible. En caso de error, el servicio de enrutamiento intentará entregar el mensaje al punto de conexión siguiente de la lista hasta que se entregue el mensaje, se produzca un error no relacionado con la comunicación o se hayan agotado todos los puntos de conexión.  
   
- Para los pasos utilizados para configurar el control de errores, vea [How To: control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
+ Para los pasos utilizados para configurar el control de errores, vea [How To: Control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>En esta sección  
- [Control de versiones del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Cómo: Versiones del servicio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Partición de datos de servicio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Cómo: Particionar datos de servicio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Actualización dinámica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Cómo: Actualización dinámica](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Cómo: Control de errores](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>Vea también  
- [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>Vea también
+- [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

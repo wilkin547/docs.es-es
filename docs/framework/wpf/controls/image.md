@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: 0e5fc4e97457858cfbf517726a6f2904a282727d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8a7e9adb8ca7d9e21bbc30a346b12d8b584067a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695804"
 ---
 # <a name="image"></a>Imagen
-El <xref:System.Windows.Controls.Image> elemento se utiliza para mostrar imágenes de mapa de bits en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones.  
+El <xref:System.Windows.Controls.Image> elemento se usa para mostrar imágenes de mapa de bits en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Temas "Cómo..."](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
@@ -27,6 +27,6 @@ El <xref:System.Windows.Controls.Image> elemento se utiliza para mostrar imágen
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre imágenes](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre imágenes](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: ec9163eded7f77053b94b7cb0ff0995dca575612
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 660fb9a7f60bc95a5039cdf3bad098c330ac969e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682687"
 ---
 # <a name="ws-reliable-session"></a>Sesión de confianza de WS
 Este ejemplo muestra el uso de la sesión de confianza.  Las sesiones de confianza proporcionan compatibilidad para la mensajería y las sesiones de confianza. La mensajería de confianza reintenta la comunicación en caso de error y permite especificar garantías de entrega, como la llegada en orden de los mensajes. Las sesiones mantienen el estado de los clientes entre llamadas. El ejemplo implementa las sesiones para mantener el estado del cliente y especifica las convicciones de la entrega en orden.  
@@ -30,7 +30,7 @@ Este ejemplo muestra el uso de la sesión de confianza.  Las sesiones de confian
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El ejemplo utiliza el archivo `wsHttpBinding`. El enlace se especifica en los archivos de configuración para el cliente y el servicio. El tipo de enlace se especifica en el atributo `binding` del elemento del extremo tal y como se explica en el ejemplo siguiente de configuración.  
+ El ejemplo utiliza el archivo `wsHttpBinding`. El enlace se especifica en los archivos de configuración para el cliente y el servicio. El tipo de enlace se especifica en el atributo `binding` del elemento del punto de conexión tal y como se explica en el ejemplo siguiente de configuración.  
   
 ```xml  
 <endpoint address=""  
@@ -39,7 +39,7 @@ Este ejemplo muestra el uso de la sesión de confianza.  Las sesiones de confian
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- El extremo contiene un atributo `bindingConfiguration` que hace referencia a una configuración de enlace denominada "Binding1". La configuración de enlace permite las sesiones confiables estableciendo el `enabled` atributo de la [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) a `true`. Las convicciones de la entrega para las sesiones ordenadas se controlan estableciendo el atributo ordenado como `true` o `false`. De manera predeterminada, es `true`.  
+ El punto de conexión contiene un atributo `bindingConfiguration` que hace referencia a una configuración de enlace denominada "Binding1". La configuración de enlace permite las sesiones confiables estableciendo el `enabled` atributo de la [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) a `true`. Las convicciones de la entrega para las sesiones ordenadas se controlan estableciendo el atributo ordenado como `true` o `false`. De manera predeterminada, es `true`.  
   
 ```xml  
 <bindings>  

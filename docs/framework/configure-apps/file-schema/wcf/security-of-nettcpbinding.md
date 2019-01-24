@@ -2,21 +2,21 @@
 title: Elemento &lt;security&gt; de &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 7a457bdcdee797195ed6bdae8cd377296f914b52
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8521f1cc7100759f57da4e02287179c1302fc6c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745004"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>Elemento &lt;security&gt; de &lt;netTcpBinding&gt;
 Define la configuración de seguridad de un enlace.  
   
  \<system.ServiceModel>  
-\<enlaces >  
-\<netTcpBinding >  
-\<enlace >  
-\<seguridad >  
+\<bindings>  
+\<netTcpBinding>  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,8 +51,8 @@ Define la configuración de seguridad de un enlace.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Define la configuración de seguridad para el transporte. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
-|[\<mensaje >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|Define la configuración de seguridad del mensaje. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Define la configuración de seguridad para el transporte. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
+|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|Define la configuración de seguridad del mensaje. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -67,13 +67,13 @@ Define la configuración de seguridad de un enlace.
   
  Este elemento de configuración proporciona especificaciones de seguridad para `netTcpBinding`. Se trata de un enlace seguro, confiable y optimizado adecuado para la comunicación entre equipos. De forma predeterminada, genera una pila de comunicación en tiempo de ejecución que admite TCP para la entrega del mensaje y Seguridad de Windows para la seguridad y autenticación del mensaje, WS-ReliableMessaging para la confiabilidad, y la codificación binaria del mensaje.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.NetTcpSecurity>  
- <xref:System.ServiceModel.NetTcpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.NetTcpSecurity>
+- <xref:System.ServiceModel.NetTcpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

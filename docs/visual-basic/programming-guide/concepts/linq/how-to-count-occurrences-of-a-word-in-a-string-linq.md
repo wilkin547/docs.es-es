@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: contar las apariciones de una palabra en una cadena (LINQ) (Visual Basic)'
+title: Procedimiento Recuento de repeticiones de una palabra en una cadena (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: a2e7b59ee1d289fe794fb83705d42ac0e48fb4a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d8349db0a1c5b0cc7b69cbae7d19dd1d9d10b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716809"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Cómo: contar las apariciones de una palabra en una cadena (LINQ) (Visual Basic)
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Procedimiento Recuento de repeticiones de una palabra en una cadena (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo usar una consulta LINQ para contar las apariciones de una palabra determinada en una cadena. Observe que para realizar el recuento, primero se llama al método <xref:System.String.Split%2A> para crear una matriz de palabras. Existe un costo de rendimiento en el método <xref:System.String.Split%2A>. Si la única operación de la cadena es para contar las palabras, debe considerar la posibilidad de usar en su lugar los métodos <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>. Pero si el rendimiento no es un problema crítico, o si ya ha dividido la frase para realizar otros tipos de consultas, tiene sentido usar LINQ para además contar las palabras o frases.  
   
 ## <a name="example"></a>Ejemplo  
@@ -60,5 +60,5 @@ End Class
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Vea también
+- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

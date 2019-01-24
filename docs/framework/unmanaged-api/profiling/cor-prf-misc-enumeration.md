@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11b36fa4636dd55e539c198a260dcf93da02a237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451064"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728965"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC (Enumeración)
 Contiene valores constantes que especifican identificadores especiales.  
@@ -40,18 +40,18 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|El identificador predeterminado utilizado por [ICorProfilerInfo:: GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) para un módulo que aún no se ha adjuntado a un ensamblado.|  
-|`PROFILER_GLOBAL_CLASS`|El identificador de clase predeterminado para las constantes globales que no pertenecen a una clase.|  
-|`PROFILER_GLOBAL_MODULE`|Identificador del módulo predeterminado para los objetos globales que no pertenecen a un módulo.|  
+|`PROFILER_PARENT_UNKNOWN`|El identificador predeterminado utilizado por [GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) para un módulo que todavía no se ha asociado a un ensamblado.|  
+|`PROFILER_GLOBAL_CLASS`|El identificador de clase predeterminada para las constantes globales que no pertenecen a una clase.|  
+|`PROFILER_GLOBAL_MODULE`|El identificador de módulo predeterminado para los objetos globales que no pertenecen a un módulo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

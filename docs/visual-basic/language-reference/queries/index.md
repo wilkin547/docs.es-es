@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: abe54fe163919c6ad6b746d70baac2482e80b948
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 79ae5f1c2184f99390b1ef36a91f556cc617e51f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746783"
 ---
 # <a name="queries-visual-basic"></a>Consultas de Visual Basic
 Visual Basic le permite crear [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expresiones en el código.  
@@ -58,6 +58,6 @@ Visual Basic le permite crear [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md
  [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)  
  Describe el `Where` cláusula, que especifica una condición de filtrado para una consulta.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Vea también
+- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

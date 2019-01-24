@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: ea531c7be676e940a263b019a66cc80cf280a772
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dffc5233656257cd892f573a2f8b9f91d781c21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611896"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>No se admite la inferencia de tipos que acepten valores NULL en este contexto
-Tipos de valor y estructuras se pueden declarar que aceptan valores NULL.  
+Tipos de valor y las estructuras se pueden declarar que aceptan valores NULL.  
   
 ```vb  
 Dim a? As Integer  
@@ -30,12 +30,12 @@ Dim b As Integer?
 ' Dim d? = a  
 ```  
   
- **Id. de error:** BC36629  
+ **Identificador de error:** BC36629  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Use un `As` cláusula para declarar la variable como que acepta valores NULL.  
+-   Use un `As` cláusula para declarar la variable que acepta valores NULL.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de valor que aceptan valores NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de valor que aceptan valores NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

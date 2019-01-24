@@ -1,19 +1,19 @@
 ---
-title: '&lt;AnnouncementEndpoint&gt;'
+title: '&lt;announcementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: fe278da539af59a32edf5a626461dbec0ba3887d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8e180d53260ccf3364ab3c8d7b076f78917526d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729884"
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
+# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 Este elemento de configuración define un punto de conexión estándar con un contrato del anuncio fijo. Un servicio puede anunciar su disponibilidad opcionalmente enviando un mensaje del anuncio en línea y sin conexión cuando se abre o se cierra respectivamente. Un servicio de Windows Communication Foundation (WCF) especifica los extremos del anuncio en el [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento y utiliza AnnouncementClient para realizar los anuncios. Un cliente que desea escuchar el anuncio desde otro servicio realmente está actuando como un servicio WCF; Por tanto, tendrá que configurar los extremos del anuncio para el cliente en el [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sección.  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ Este elemento de configuración define un punto de conexión estándar con un co
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Colección de puntos de conexión estándar que son puntos de conexión predefinidos con una o más de sus propiedades (dirección, enlace, contrato) fijas.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Colección de puntos de conexión estándar que son puntos de conexión predefinidos con una o más de sus propiedades (dirección, enlace, contrato) fijas.|  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra un cliente que escucha mensajes de anuncios sobre http y peernet.  
@@ -78,5 +78,5 @@ Este elemento de configuración define un punto de conexión estándar con un co
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

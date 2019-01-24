@@ -6,18 +6,18 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745393"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Arquitectura de Windows Communication Foundation
 El siguiente gráfico ilustra las capas principales de la arquitectura de Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-architecture"></a>Arquitectura de WCF  
- ![La arquitectura WCF](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
+ ![La arquitectura de WCF](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
   
 ### <a name="contracts-and-descriptions"></a>Contratos y descripciones  
  Los contratos definen varios aspectos del sistema de mensajes. El contrato de datos describe cada parámetro que constituye cada mensaje que un servicio puede crear o utilizar. Los documentos de Lenguaje de definición de esquemas XML (XSD) definen los parámetros de mensaje, permitiendo a cualquier sistema que entienda XML procesar los documentos. El contrato del mensaje define partes específicas del mensaje utilizando los protocolos SOAP y permite el control más fino sobre las partes del mensaje, cuando la interoperabilidad exige tal precisión. El contrato de servicios especifica las firmas de método actuales del servicio y se distribuye como una interfaz en uno de los lenguajes de programación compatibles, como Visual Basic o Visual C#.  
@@ -25,12 +25,12 @@ El siguiente gráfico ilustra las capas principales de la arquitectura de Window
  Las directivas y enlaces estipulan las condiciones exigidas para comunicarse con un servicio.  Por ejemplo, el enlace debe especificar (como mínimo) el transporte utilizado (por ejemplo, HTTP o TCP) y una codificación. Las directivas incluyen los requisitos de seguridad y otras condiciones que se deben cumplir para comunicarse con un servicio.  
   
 ### <a name="service-runtime"></a>Tiempo de ejecución de servicio  
- La capa del tiempo de ejecución del servicio contiene los comportamientos que solo se producen durante la operación actual del servicio, es decir, los comportamientos en tiempo de ejecución del servicio. La limitación de peticiones controla cuántos mensajes se procesan que puede variar si la demanda para el servicio crece a un límite preestablecido. Un comportamiento de error especifica lo que sucede cuando se produce un error interno en el servicio, por ejemplo, controlando qué información se comunica al cliente. (Demasiada información puede dar ventaja a un usuario malintencionado para organizar un ataque.) El comportamiento de los metadatos rige cómo y si los metadatos se ponen a disposición del mundo externo. El comportamiento de la instancia especifica cuántas instancias del servicio se pueden ejecutar (por ejemplo, un singleton especifica solo una instancia para procesar todos los mensajes). El comportamiento de la transacción habilita la recuperación de operaciones de transacción si se produce un error. Comportamiento de la expedición es el control de cómo se procesa un mensaje por la infraestructura WCF.  
+ La capa del tiempo de ejecución del servicio contiene los comportamientos que solo se producen durante la operación actual del servicio, es decir, los comportamientos en tiempo de ejecución del servicio. La limitación de peticiones controla cuántos mensajes se procesan que puede variar si la demanda para el servicio crece a un límite preestablecido. Un comportamiento de error especifica lo que sucede cuando se produce un error interno en el servicio, por ejemplo, controlando qué información se comunica al cliente. (Demasiada información puede dar ventaja a un usuario malintencionado para organizar un ataque.) El comportamiento de los metadatos rige cómo y si los metadatos se ponen a disposición del mundo externo. El comportamiento de la instancia especifica cuántas instancias del servicio se pueden ejecutar (por ejemplo, un singleton especifica solo una instancia para procesar todos los mensajes). El comportamiento de la transacción habilita la recuperación de operaciones de transacción si se produce un error. Comportamiento de la expedición es el control de cómo se procesa un mensaje por la infraestructura de WCF.  
   
  La extensibilidad habilita la personalización de procesos en tiempo de ejecución. Por ejemplo, la inspección del mensaje es la facilidad para inspeccionar partes de un mensaje y la filtración de parámetros permite que se realicen acciones preestablecidas basándose en filtros que actúan en encabezados del mensaje.  
   
 ### <a name="messaging"></a>Mensajería  
- La capa de mensajería se compone de *canales*. Un canal es un componente que procesa un mensaje de alguna manera, por ejemplo, autenticando un mensaje. Un conjunto de canales es también conocido como un *pila del canal*. Los canales funcionan en los mensajes y encabezados del mensaje. Esto es diferente de la capa en tiempo de ejecución del servicio, que se ocupa principalmente de procesar el contenido de los cuerpos de los mensajes.  
+ La capa de mensajería se compone de *canales*. Un canal es un componente que procesa un mensaje de alguna manera, por ejemplo, autenticando un mensaje. Un conjunto de canales es también se denomina un *pila de canales*. Los canales funcionan en los mensajes y encabezados del mensaje. Esto es diferente de la capa en tiempo de ejecución del servicio, que se ocupa principalmente de procesar el contenido de los cuerpos de los mensajes.  
   
  Hay dos tipos de canales: canales de transporte y canales de protocolo.  
   
@@ -41,10 +41,10 @@ El siguiente gráfico ilustra las capas principales de la arquitectura de Window
  La capa de la mensajería muestra los posibles formatos y patrones de intercambio de los datos. WS-Security es una implementación de la especificación WS-Security que habilita la seguridad en la capa del mensaje. El canal de mensajería WS-Reliable habilita la garantía de entrega del mensaje. Los codificadores presentan una variedad de codificaciones que se pueden utilizar para satisfacer las necesidades del mensaje. El canal HTTP especifica que el Protocolo de transporte de hipertexto se utiliza para la entrega del mensaje. El canal TCP especifica de manera similar el protocolo TCP. El canal de flujo de transacciones rige los patrones de mensajes de transacción. El canal de la canalización con nombre habilita la comunicación entre procesos. El canal de MSMQ habilita la interoperación con aplicaciones MSMQ.  
   
 ### <a name="hosting-and-activation"></a>Alojamiento y activación  
- En su forma final, un servicio es un programa. Como otros programas, un servicio se debe ejecutar en un ejecutable. Esto se conoce como un *hospeda a sí mismo* servicio.  
+ En su forma final, un servicio es un programa. Como otros programas, un servicio se debe ejecutar en un ejecutable. Esto se conoce como un *autohospedado* service.  
   
- También pueden ser servicios *hospedado*, o ejecutar en un ejecutable administrado por un agente externo, como IIS o servicio de activación de Windows (WAS). Permite que las aplicaciones WCF que se debe activar automáticamente cuando se implementa en un equipo que ejecuta al era. Los servicios también se pueden ejecutar manualmente como ejecutables (archivos .exe). Un servicio también se puede ejecutar automáticamente como un servicio de Windows. Componentes COM + también se pueden hospedar como servicios WCF.  
+ Los servicios también pueden ser *hospedado*, o ejecutar en un ejecutable administrado por un agente externo, como IIS o Windows Activation Service (WAS). ERA era WCF permite a las aplicaciones que se active automáticamente cuando se implementa en un equipo que ejecuta. Los servicios también se pueden ejecutar manualmente como ejecutables (archivos .exe). Un servicio también se puede ejecutar automáticamente como un servicio de Windows. Los componentes COM + también se pueden hospedar como servicios WCF.  
   
-## <a name="see-also"></a>Vea también  
- [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)  
- [Conceptos básicos de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
+## <a name="see-also"></a>Vea también
+- [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
+- [Conceptos básicos de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

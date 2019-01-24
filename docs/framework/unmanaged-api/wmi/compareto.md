@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717654"
 ---
 # <a name="compareto-function"></a>CompareTo (función)
 Compara un objeto de administración de Windows con otro.  
@@ -60,8 +60,8 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Se ha producido un error no especificado. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
+| `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Una segunda llamada a `BeginEnumeration` se realizó sin una llamada intermedia a [ `EndEnumeration` ](endenumeration.md). |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Los objetos son diferentes. |
@@ -78,8 +78,8 @@ Las marcas que se pueden pasar como el `lEnumFlags` argumento se definen en el *
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Omitir el origen (el servidor y el espacio de nombres que proceden). |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Omitir todos los calificadores (incluidos **clave** y **dinámica**) |
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Pasar por alto los valores predeterminados de propiedades. Esta marca solo se aplica a la comparación de las clases. |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0 x 20 | Omitir los tipos de calificador. Esta marca todavía tiene calificadores en cuenta, pero omite las distinciones de modos tales como las reglas de propagación y reemplazar las restricciones. |
-| `WBEM_FLAG_IGNORE_CASE` | 0 x 10 | Omitir mayúsculas y minúsculas al comparar los valores de cadena. Esto se aplica tanto a las cadenas y valores del calificador. La comparación de los nombres de propiedades y calificadores siempre distingue mayúsculas de minúsculas, independientemente de si se establece esta marca. |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Omitir los tipos de calificador. Esta marca todavía tiene calificadores en cuenta, pero omite las distinciones de modos tales como las reglas de propagación y reemplazar las restricciones. |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Omitir mayúsculas y minúsculas al comparar los valores de cadena. Esto se aplica tanto a las cadenas y valores del calificador. La comparación de los nombres de propiedades y calificadores siempre distingue mayúsculas de minúsculas, independientemente de si se establece esta marca. |
 | `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Se supone que los objetos que se comparan son instancias de la misma clase. Por lo tanto, esta marca compara solo información relacionada con la instancia. Utilice este marcas para optimizar el rendimiento. Si los objetos no son de la misma clase, los resultados son indefinidos. |
 
 O bien, puede especificar una única marca compuesta como sigue:
@@ -89,11 +89,11 @@ O bien, puede especificar una única marca compuesta como sigue:
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Tenga en cuenta todas las características en la comparación. |
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

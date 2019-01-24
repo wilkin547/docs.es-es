@@ -2,17 +2,17 @@
 title: Árboles de expresión (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: babee41f7df48f270d0c56cb2af91e463407d5c1
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 08a22cc0528385f5e8008b80b62f2e81d89adae4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735589"
 ---
 # <a name="expression-trees-visual-basic"></a>Árboles de expresión (Visual Basic)
 Los árboles de expresión representan el código en una estructura de datos en forma de árbol donde cada nodo es una expresión, por ejemplo, una llamada a método o una operación binaria como `x < y`.  
   
- El código representado en árboles de expresión se puede compilar y ejecutar. Esto permite realizar cambios dinámicos en el código ejecutable, ejecutar consultas LINQ en varias bases de datos y crear consultas dinámicas. Para obtener más información sobre los árboles de expresión en LINQ, consulte [How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md) (Usar árboles de expresión para generar consultas dinámicas en Visual Basic).  
+ El código representado en árboles de expresión se puede compilar y ejecutar. Esto permite realizar cambios dinámicos en el código ejecutable, ejecutar consultas LINQ en varias bases de datos y crear consultas dinámicas. Para obtener más información sobre los árboles de expresión en LINQ, vea [Cómo: Usar árboles de expresión para crear consultas dinámicas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
   
  Los árboles de expresión también se usan en Dynamic Language Runtime (DLR) para proporcionar interoperabilidad entre los lenguajes dinámicos y .NET Framework y, asimismo, para permitir que los programadores de compiladores emitan árboles de expresión en lugar de Lenguaje intermedio de Microsoft (MSIL). Para obtener más información sobre el entorno DLR, vea [Dynamic Language Runtime Overview](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Información general sobre Dynamic Language Runtime).  
   
@@ -111,7 +111,7 @@ Console.WriteLine(String.Format("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>Inmutabilidad de los árboles de expresión  
- Los árboles de expresión deben ser inmutables. Esto significa que, si desea modificar un árbol de expresión, deberá construir un nuevo árbol de expresión copiando el ya existente y reemplazando los nodos que hay en él. Puede usar un visitante de árbol de expresión para recorrer el árbol de expresión existente. Para obtener más información, consulte [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md) (Cómo modificar árboles de expresión en Visual Basic).  
+ Los árboles de expresión deben ser inmutables. Esto significa que, si desea modificar un árbol de expresión, deberá construir un nuevo árbol de expresión copiando el ya existente y reemplazando los nodos que hay en él. Puede usar un visitante de árbol de expresión para recorrer el árbol de expresión existente. Para obtener más información, vea [Cómo: Modificar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
   
 ## <a name="compiling-expression-trees"></a>Compilar árboles de expresión  
  El tipo <xref:System.Linq.Expressions.Expression%601> proporciona el método <xref:System.Linq.Expressions.Expression%601.Compile%2A> que compila el código representado por un árbol de expresión en un delegado ejecutable.  
@@ -139,12 +139,12 @@ Console.WriteLine(expr.Compile()(4))
 ' Also prints True.  
 ```  
   
- Para obtener más información, consulte [How to: Execute Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md) (Cómo ejecutar árboles de expresión en Visual Basic).  
+ Para obtener más información, vea [Cómo: Ejecutar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq.Expressions>  
- [Cómo: Ejecutar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [Cómo: Modificar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
- [Expresiones lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Información general sobre Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- [Programming Concepts (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md) (Conceptos de programación (Visual Basic))
+## <a name="see-also"></a>Vea también
+- <xref:System.Linq.Expressions>
+- [Cómo: Ejecutar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Cómo: Modificar árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Expresiones lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Información general sobre Dynamic Language Runtime](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [Programming Concepts (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md) (Conceptos de programación (Visual Basic))
