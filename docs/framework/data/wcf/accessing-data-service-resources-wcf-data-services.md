@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: d4f4de1fa12418bd56f9680e5414bfe7dd0aa128
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740845"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Acceder a recursos de Data Services (Data Services de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer los datos como una fuente con recursos direccionables mediante URI. Estos recursos se representan según las convenciones de entidad-relación de la [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). En este modelo, las entidades representan unidades operacionales de datos que son tipos de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. El acceso a los datos de entidad y la modificación de los mismos se realiza usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE.  
@@ -61,7 +61,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
- Para obtener más información, consulte [OData: convenciones URI](https://go.microsoft.com/fwlink/?LinkId=185564).  
+ Para obtener más información, consulte [OData: Convenciones de URI](https://go.microsoft.com/fwlink/?LinkId=185564).  
   
 ## <a name="system-query-options"></a>Opciones de consulta del sistema  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define un conjunto de opciones de consulta del sistema que puede usar para realizar operaciones de consulta tradicionales en los recursos, como filtrado, ordenación y paginación. Por ejemplo, el siguiente URI devuelve el conjunto de todos los `Order` entidades, junto con relacionados `Order_Detail` entidades, los códigos postales de los cuales no terminan en `100`:  
@@ -79,9 +79,9 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 |`$orderby`|Define un criterio de ordenación predeterminado para las entidades de la fuente devuelta. La siguiente consulta ordena la fuente de los clientes devuelta por provincia y ciudad:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$orderby=Country,City`<br /><br /> Para obtener más información, consulte [OData: OrderBy System Query Option ($orderby)](https://go.microsoft.com/fwlink/?LinkId=186968).|  
 |`$top`|Especifica el número de entidades que se incluirán en la fuente devuelta. En el siguiente ejemplo se omiten los 10 primeros clientes y, a continuación, se devuelven los 10 siguientes:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> Para obtener más información, consulte [OData: Top System Query Option ($top)](https://go.microsoft.com/fwlink/?LinkId=186969).|  
 |`$skip`|Especifica el número de entidades que se omitirán antes de empezar a devolver las entidades en la fuente. En el siguiente ejemplo se omiten los 10 primeros clientes y, a continuación, se devuelven los 10 siguientes:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> Para obtener más información, consulte [OData: Skip System Query Option ($skip)](https://go.microsoft.com/fwlink/?LinkId=186971).|  
-|`$filter`|Define una expresión que filtra las entidades devueltas en la fuente en función de criterios concretos. Esta opción de consulta admite un conjunto de operadores de comparación lógicos, operadores aritméticos y funciones de consulta predefinidas que se utilizan para evaluar la expresión de filtro. En el siguiente ejemplo se devuelven todos los pedidos cuyo código postal no termina en 100:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')`<br /><br /> Para obtener más información, consulte [OData: Filter System Query Option ($filter)](https://go.microsoft.com/fwlink/?LinkId=186972).|  
-|`$expand`|Especifica qué entidades relacionadas devuelve la consulta. Las entidades relacionadas se incluyen como una fuente o una entrada alineada con la entidad devuelta por la consulta. En el siguiente ejemplo se devuelve el pedido del cliente 'ALFKI' junto con los detalles de artículos de cada pedido:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details`<br /><br /> Para obtener más información, consulte [OData: Expand System Query Option ($expand)](https://go.microsoft.com/fwlink/?LinkId=186973).|  
-|`$select`|Especifica una proyección que define las propiedades de la entidad devueltas en la proyección. De forma predeterminada, todas las propiedades de una entidad se devuelven en una fuente. La siguiente consulta devuelve solo tres propiedades de la entidad `Customer`:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City`<br /><br /> Para obtener más información, consulte [OData: Seleccionar opción de consulta del sistema ($select)](https://go.microsoft.com/fwlink/?LinkID=186076).|  
+|`$filter`|Define una expresión que filtra las entidades devueltas en la fuente en función de criterios concretos. Esta opción de consulta admite un conjunto de operadores de comparación lógicos, operadores aritméticos y funciones de consulta predefinidas que se utilizan para evaluar la expresión de filtro. En el siguiente ejemplo se devuelven todos los pedidos cuyo código postal no termina en 100:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')`<br /><br /> Para obtener más información, consulte [OData: Filtrar System Query Option ($filter)](https://go.microsoft.com/fwlink/?LinkId=186972).|  
+|`$expand`|Especifica qué entidades relacionadas devuelve la consulta. Las entidades relacionadas se incluyen como una fuente o una entrada alineada con la entidad devuelta por la consulta. En el siguiente ejemplo se devuelve el pedido del cliente 'ALFKI' junto con los detalles de artículos de cada pedido:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details`<br /><br /> Para obtener más información, consulte [OData: Expanda System Query Option ($expand)](https://go.microsoft.com/fwlink/?LinkId=186973).|  
+|`$select`|Especifica una proyección que define las propiedades de la entidad devueltas en la proyección. De forma predeterminada, todas las propiedades de una entidad se devuelven en una fuente. La siguiente consulta devuelve solo tres propiedades de la entidad `Customer`:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City`<br /><br /> Para obtener más información, consulte [OData: Seleccione la opción de consulta del sistema ($select)](https://go.microsoft.com/fwlink/?LinkID=186076).|  
 |`$inlinecount`|Solicita que se incluya con la fuente un recuento del número de entidades devuelto en la fuente. Para obtener más información, consulte [OData: Inlinecount System Query Option ($inlinecount)](https://go.microsoft.com/fwlink/?LinkId=186975).|  
   
 ## <a name="addressing-relationships"></a>Direccionar relaciones  
@@ -91,10 +91,10 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
- Para obtener más información, consulte [OData: Addressing Links between Entries](https://go.microsoft.com/fwlink/?LinkId=187351).  
+ Para obtener más información, consulte [OData: Direccionar vínculos entre entradas](https://go.microsoft.com/fwlink/?LinkId=187351).  
   
 ## <a name="consuming-the-returned-feed"></a>Utilizar la fuente devuelta  
  El URI de un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] recursos le permite direccionar datos de entidad expuestos por el servicio. Cuando especifique un URI en el campo de dirección de un explorador Web, un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] se devuelve la representación de fuente del recurso solicitado. Para obtener más información, consulte el [tutorial rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Aunque un explorador Web puede ser útil para probar que un recurso de servicio de datos devuelve los datos esperados, normalmente se tiene acceso a servicios de datos de producción que pueden crear, actualizar y eliminar datos también el código de aplicación o lenguajes de scripting en una página Web. Para obtener más información, consulte [mediante un servicio de datos en una aplicación cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
- [Sitio web de Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=182204)
+## <a name="see-also"></a>Vea también
+- [Sitio web de Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=182204)

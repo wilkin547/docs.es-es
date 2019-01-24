@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: 414998b4bef526060e7ba4f584fa071fbd0acaa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c128ab9982ae7ccd5fff34020f2750f703da16a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664608"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
-Especifica que Visual Basic debe calcular las referencias de cadenas según las reglas de .NET Framework basadas en el nombre externo del procedimiento externo que se declara.  
+Especifica que Visual Basic debe serializar las cadenas según las reglas de .NET Framework basadas en el nombre externo del procedimiento externo que se declara.  
   
- Cuando se llama a un procedimiento definido fuera del proyecto, el compilador de Visual Basic no tiene acceso a la información necesaria que llamar correctamente al procedimiento. Esta información incluye donde se encuentra el procedimiento, el lo identifica, su secuencia de llamada y el tipo de valor devuelto y juego de caracteres de la cadena que utiliza. El [instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
+ Cuando se llama a un procedimiento definido fuera del proyecto, el compilador de Visual Basic no tiene acceso a la información que debe tener para llamar correctamente al procedimiento. Esta información incluye dónde se encuentra el procedimiento, el cómo se identifica, su secuencia de llamada y el tipo de valor devuelto y el carácter de cadena juego que utiliza. El [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
   
- El `charsetmodifier` parte de la `Declare` instrucción proporciona la información del conjunto de caracteres para calcular referencias de cadenas durante una llamada al procedimiento externo. También afecta al modo en que Visual Basic busca el archivo externo para el nombre del procedimiento externo. El `Auto` modificador especifica que Visual Basic debe calcular las referencias de cadenas según las reglas de .NET Framework y que debe determinar el juego de la plataforma de tiempo de ejecución y, posiblemente, de caracteres base modificar el nombre del procedimiento externo si la inicial de búsqueda se produce un error. Para obtener más información, vea "Juegos de caracteres" en [instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md).  
+ El `charsetmodifier` parte en la `Declare` instrucción proporciona la información del conjunto de caracteres para la serialización de cadenas durante una llamada al procedimiento externo. También afecta a cómo Visual Basic busca el archivo externo para el nombre del procedimiento externo. El `Auto` modificador especifica que Visual Basic debe serializar las cadenas según las reglas de .NET Framework y que debe determinar el juego de la plataforma de tiempo de ejecución y, posiblemente, de caracteres base modificar el nombre del procedimiento externo si inicial de búsqueda se produce un error. Para obtener más información, vea "Juegos de caracteres" en [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md).  
   
- Si no se especifica ningún modificador de juego de caracteres, `Ansi` es el valor predeterminado.  
+ Si se especifica ningún modificador de conjunto de caracteres, `Ansi` es el valor predeterminado.  
   
 ## <a name="remarks"></a>Comentarios  
  El `Auto` modificador se puede usar en este contexto:  
   
  [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Notas de desarrollador de Smart Device  
+## <a name="smart-device-developer-notes"></a>Notas de desarrollador de dispositivos inteligentes  
  No se admite esta palabra clave.  
   
-## <a name="see-also"></a>Vea también  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también
+- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
+- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)
+- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

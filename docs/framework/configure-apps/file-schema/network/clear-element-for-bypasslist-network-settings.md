@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 5c26857496d52f9fb98ef76a72cb72fe8d852349
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 840833f2752115cb5f5639a25daf05bcbff3d452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720920"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Borrar&gt; elemento para bypasslist (configuración de red)
 Borra la lista de omisión de proxy.  
   
  \<configuration>  
-\<System.NET >  
-\<defaultProxy >  
-\<bypasslist >  
-\<Borrar >  
+\<system.net>  
+\<defaultProxy>  
+\<bypasslist>  
+\<clear>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,6 +70,6 @@ Borra la lista de omisión de proxy.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

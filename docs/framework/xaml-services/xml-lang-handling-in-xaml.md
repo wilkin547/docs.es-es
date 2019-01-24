@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 508c1151b1b196a84b7c3a576e18d10c0a706fad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692407"
 ---
 # <a name="xmllang-handling-in-xaml"></a>Control de xml:lang en XAML
 El atributo `xml:lang` es un atributo definido por [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]que declara la información de idioma y referencia cultural para un elemento en XML. Este mismo significado del atributo persiste en XAML; sin embargo, se aplican algunas consideraciones adicionales.  
@@ -27,7 +27,7 @@ El atributo `xml:lang` es un atributo definido por [!INCLUDE[TLA2#tla_xml](../..
   
 |||  
 |-|-|  
-|*rfc3066lang*|Una cadena que se deriva el [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) estándar e identifica un idioma o un idioma-región. En el caso de la segunda opción, el idioma y la región se separan con un solo guión. Para más información sobre los valores y el formato, vea <xref:System.Windows.Markup.XmlLanguage> .|  
+|*rfc3066lang*|Una cadena que se deriva del estándar [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) e identifica un idioma o un idioma-región. En el caso de la segunda opción, el idioma y la región se separan con un solo guión. Para más información sobre los valores y el formato, vea <xref:System.Windows.Markup.XmlLanguage> .|  
   
 ## <a name="remarks"></a>Comentarios  
  La definición del atributo `xml:lang` en [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] se deriva de `xml:lang` definido como un "atributo especial" por [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] para [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]. La información del idioma y de la referencia cultural se puede procesar de maneras diferentes, en función de sus implementaciones; sin embargo, no hay ningún procesamiento de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] predeterminado del atributo `xml:lang` .  
@@ -43,5 +43,5 @@ El atributo `xml:lang` es un atributo definido por [!INCLUDE[TLA2#tla_xml](../..
 ## <a name="wpf-usage-nodes"></a>Nodos de uso de WPF  
  Para los elementos que son las clases derivadas de <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, puede usar la propiedad de dependencia <xref:System.Windows.FrameworkElement.Language%2A> equivalente en lugar del atributo `xml:lang` . De forma predeterminada, la propiedad <xref:System.Windows.FrameworkElement.Language%2A> usa "en-US" si no se establece de otra manera, a través de la propiedad o mediante el procesamiento del atributo `xml:lang` .  
   
-## <a name="see-also"></a>Vea también  
- [Globalización de WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>Vea también
+- [Globalización de WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

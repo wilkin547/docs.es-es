@@ -2,12 +2,12 @@
 title: Sesiones seguras
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-ms.openlocfilehash: 1f3a1e23f7cac2540216365acfca5c23cddfce71
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63e363e90a656c918b68d3f86d8b6ad3b7a540e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715717"
 ---
 # <a name="secure-sessions"></a>Sesiones seguras
 Una característica de Windows Communication Foundation (WCF) es las sesiones fiables que garantizan que los mensajes se reciben en el orden en que fueron enviados. Los temas de esta sección discuten las implicaciones de seguridad a tener en cuenta a la hora de crear una sesión confiable. Para obtener más información acerca de las sesiones confiables, vea [mediante sesiones](../../../../docs/framework/wcf/using-sessions.md).  
@@ -34,7 +34,7 @@ Una característica de Windows Communication Foundation (WCF) es las sesiones fi
   
  [Diseño e implementación de servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Habilitar la detección de reproducción de mensajes](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Cómo: Crear un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Habilitar la detección de reproducción de mensajes](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)
+- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Cómo: Crear un servicio que requiere sesiones](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

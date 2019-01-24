@@ -2,16 +2,10 @@
 title: Personalizar proyectos y ampliar My con Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- My namespace [Visual Basic], customizing
-- My namespace
-- My namespace [Visual Basic], extending
+  - 'My namespace [Visual Basic], customizing'
+  - My namespace
+  - 'My namespace [Visual Basic], extending'
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083538"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizar proyectos y ampliar My con Visual Basic
 Puede personalizar las plantillas de proyecto para proporcionar más `My` objetos. Esto facilita encontrar y usar los objetos de otros desarrolladores.  
@@ -45,5 +39,5 @@ Puede personalizar las plantillas de proyecto para proporcionar más `My` objeto
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
  Describe la `My` objeto que proporciona propiedades, métodos y eventos relacionados con la aplicación actual.  
   
-## <a name="see-also"></a>Vea también  
- [Desarrollo de aplicaciones con Visual Basic](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>Vea también
+- [Desarrollo de aplicaciones con Visual Basic](../../../visual-basic/developing-apps/index.md)

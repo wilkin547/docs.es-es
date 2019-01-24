@@ -1,15 +1,15 @@
 ---
-title: Cómo bloquear puntos de conexión en la empresa
+title: Procedimiento Bloqueo de puntos de conexión de la empresa
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663101"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Cómo bloquear puntos de conexión en la empresa
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procedimiento Bloqueo de puntos de conexión de la empresa
 Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa. El siguiente tema describe cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones cliente de Windows Communication Foundation (WCF) instaladas en los equipos.  
   
  En este caso, el validador es un validador de cliente porque este comportamiento de punto de conexión se agrega al cliente [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección en el archivo machine.config. WCF carga los comportamientos de extremo comunes solo para las aplicaciones cliente y carga los comportamientos de servicio comunes solo para aplicaciones de servicio. Para instalar el mismo validador para las aplicaciones servicio, el validador debe ser un comportamiento de servicio. Para obtener más información, consulte el [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección.  
@@ -63,6 +63,6 @@ Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conf
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  También puede querer cifrar los elementos del archivo de configuración. Para obtener más información, vea la sección Vea también.  
   
-## <a name="see-also"></a>Vea también  
- [Cifrar los elementos del archivo de configuración mediante DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [Cifrar los elementos de archivo de configuración con RSA](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>Vea también
+- [Cifrar los elementos del archivo de configuración mediante DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Cifrar los elementos de archivo de configuración con RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

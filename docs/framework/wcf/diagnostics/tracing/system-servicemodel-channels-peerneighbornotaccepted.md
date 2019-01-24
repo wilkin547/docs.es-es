@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNeighborNotAccepted
 ms.date: 03/30/2017
 ms.assetid: 77309bf5-37ba-4b90-b31f-c00ef044db0d
-ms.openlocfilehash: 85df97f8386619d9b1799d5bc031000d1d743792
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c602014a48048b2cee0e4a22ad55997af188fa13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33479926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569237"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotaccepted"></a>System.ServiceModel.Channels.PeerNeighborNotAccepted
 Un vecino del mismo nivel no se ha aceptado.  
@@ -18,7 +18,7 @@ Un vecino del mismo nivel no se ha aceptado.
 ## <a name="troubleshooting"></a>Solución de problemas  
  Compruebe que no exista una configuración de seguridad no coincidente, que no se haya agotado el tiempo de espera, que no exista una incapacidad del vecino para aceptar una conexión o problemas de red temporales.  
   
-## <a name="see-also"></a>Vea también  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Vea también
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

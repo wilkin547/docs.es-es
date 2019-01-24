@@ -2,12 +2,12 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631277"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 Por diversas razones, Windows Communication Foundation (WCF) no es compatible con algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por lo tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como nombre de usuario/contraseña y autenticación de HTTP/HTTPS integrada al ejecutar WCF en Windows XP Home Edition.  
@@ -28,9 +28,9 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
   
 -   Se crea un token de contexto de seguridad (SCT) basado en estado (de forma predeterminada, la creación está deshabilitada).  
   
- El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) En código, el token se habilita mediante la creación de un elemento de enlace de seguridad ( <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizando el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> y estableciendo el parámetro `requireCancellation` en `false`. El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.  
+ El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, vea [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) En código, el token se habilita mediante la creación de un elemento de enlace de seguridad ( <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizando el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> y estableciendo el parámetro `requireCancellation` en `false`. El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.  
   
- Como alternativa, en configuración, el token se habilita mediante la creación de un <`customBinding`>, entonces la adición de un <`security`> elemento y la configuración de la `authenticationMode` atributo en SecureConversation y el `requireSecurityContextCancellation` atribuir a `true`.  
+ De manera alternativa, en la configuración, el token se habilita mediante la creación de un elemento <`customBinding`>, agregando después un elemento <`security`> y estableciendo el atributo `authenticationMode` en SecureConversation y el atributo `requireSecurityContextCancellation` en `true`.  
   
 > [!NOTE]
 >  Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por consiguiente, puede utilizarlo con la opción `Required` en [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -62,7 +62,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
  El cifrado AES conforme a FIPS no funciona en devoluciones de llamada dúplex bajo suplantación del nivel de identificación.  
   
 ### <a name="cngksp-certificates"></a>Certificados CNG/KSP  
- *Cryptography API: Next Generation (CNG)* es el sustituto a largo plazo de CryptoAPI. Esta API está disponible en código no administrado en [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] y versiones posteriores de Windows.  
+ *API de criptografía: Próxima generación (CNG)* es el sustituto a largo plazo de CryptoAPI. Esta API está disponible en código no administrado en [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] y versiones posteriores de Windows.  
   
  .NET framework 4.6.1 y versiones anteriores no admiten estos certificados porque usan CryptoAPI heredada para administrar los certificados CNG/KSP. El uso de estos certificados con .NET Framework 4.6.1 y versiones anteriores producirá una excepción.  
   
@@ -75,7 +75,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Se produce un error en la seguridad del mensaje si se requiere el uso de suplantación de ASP.NET y compatibilidad de ASP.NET  
  WCF no admite la siguiente combinación de valores porque pueden impedir que se produzca la autenticación cliente:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] La suplantación está habilitada. Esto se hace en el archivo Web.config estableciendo el `impersonate` atributo de la <`identity`> elemento para `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] La suplantación está habilitada. Esto se logra en el archivo Web.config estableciendo el atributo `impersonate` del elemento <`identity`> en `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidad se habilita estableciendo el `aspNetCompatibilityEnabled` atributo de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
   
@@ -108,10 +108,10 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
   
  La solución es modificar el enlace directamente en el cliente después de realizar la importación.  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Vea también
+- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
