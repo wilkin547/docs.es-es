@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95301c4a99253261721c7f524b99f79a6207feb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba1f357c0d68b5a8b5104569a95433504cc84ee6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675358"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip (Método)
 Desplaza el cursor del enumerador desde su posición actual de manera que se omita el número especificado de elementos.  
@@ -42,21 +42,21 @@ HRESULT Skip([in] ULONG celt);
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`celt` elementos omitidos.|  
-|S_FALSE|Menos de `celt` elementos omitidos, lo que indica que no hay ningún elemento más.|  
+|S_OK|`celt` se omitieron los elementos.|  
+|S_FALSE|Menos de `celt` se omitieron los elementos, lo que indica que no hay ningún elemento más.|  
   
 ## <a name="remarks"></a>Comentarios  
  La nueva posición del cursor de este enumerador es (posición actual) + `celt`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerFunctionEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerFunctionEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

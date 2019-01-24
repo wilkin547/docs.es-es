@@ -2,12 +2,12 @@
 title: Objetos LOB de Oracle
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 70928cdd1ff82e54fd8e45563bb14df6340e4a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748004"
 ---
 # <a name="oracle-lobs"></a>Objetos LOB de Oracle
 El proveedor de datos de .NET Framework para Oracle incluye la <xref:System.Data.OracleClient.OracleLob> (clase), que se usa para trabajar con Oracle **LOB** tipos de datos.  
@@ -16,8 +16,8 @@ El proveedor de datos de .NET Framework para Oracle incluye la <xref:System.Data
   
 |Tipo de datos|Descripción|  
 |---------------|-----------------|  
-|**BLOB**|Oracle **BLOB** tipo de datos que contiene datos binarios con un tamaño máximo de 4 gigabytes. Esto se asigna a un **matriz** typu **bytes**.|  
-|**CLOB**|Oracle **CLOB** tipo de datos que contiene datos de caracteres, según el carácter predeterminado se establece en el servidor, con un tamaño máximo de 4 gigabytes. Esto se asigna a **cadena**.|  
+|**Blob**|Oracle **BLOB** tipo de datos que contiene datos binarios con un tamaño máximo de 4 gigabytes. Esto se asigna a un **matriz** typu **bytes**.|  
+|**Clob**|Oracle **CLOB** tipo de datos que contiene datos de caracteres, según el carácter predeterminado se establece en el servidor, con un tamaño máximo de 4 gigabytes. Esto se asigna a **cadena**.|  
 |**NClob**|Oracle **NCLOB** tipo de datos que contiene datos de caracteres, según el juego en el servidor con un tamaño máximo de 4 gigabytes de caracteres nacional. Esto se asigna a **cadena**.|  
   
  Un **OracleLob** difiere un <xref:System.Data.OracleClient.OracleBFile> en que los datos se almacenan en el servidor en lugar de en un archivo físico en el sistema operativo. También puede ser un objeto de lectura y escritura, a diferencia de un **OracleBFile**, que siempre es de solo lectura.  
@@ -247,6 +247,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b18c89cee0c3f5088a9978e448a0d61de1b9848
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6244f01a78f08da839b233c3313f2fd6bff44b12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675085"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation (Enumeración)
-Describe el conjunto de operaciones para el que un host puede aplicar acciones de directiva.  
+Describe el conjunto de operaciones para que un host puede aplicar acciones de directiva.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,35 +44,35 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|El host puede especificar las acciones de la directiva para tener cuidado cuando un <xref:System.AppDomain> se descargan de forma no adecuada (forzada).|  
-|`OPR_AppDomainUnload`|El host puede especificar las acciones de la directiva para tener cuidado cuando un <xref:System.AppDomain> se descarga.|  
-|`OPR_FinalizerRun`|El host puede especificar acciones de directiva que se realizarán al ejecutar los finalizadores.|  
-|`OPR_ProcessExit`|El host puede especificar acciones de directiva que se realizarán cuando termina el proceso.|  
-|`OPR_ThreadAbort`|El host puede especificar acciones de directiva que se realizarán cuando se anula un subproceso.|  
-|`OPR_ThreadRudeAbortInCriticalRegion`|El host puede especificar acciones de directiva que se realizarán cuando se produce una anulación de subproceso forzada en una región crítica del código.|  
-|`OPR_ThreadRudeAbortInNonCriticalRegion`|El host puede especificar las acciones de directiva que se deben realizar cuando se produce una anulación de subproceso forzada en una región no crítica del código.|  
+|`OPR_AppDomainRudeUnload`|El host puede especificar acciones de directiva va a realizarse cuando un <xref:System.AppDomain> se descargan de forma que no sea estable (forzada).|  
+|`OPR_AppDomainUnload`|El host puede especificar acciones de directiva va a realizarse cuando un <xref:System.AppDomain> se descarga.|  
+|`OPR_FinalizerRun`|El host puede especificar acciones de directiva que se realizarán cuando ejecutan los finalizadores.|  
+|`OPR_ProcessExit`|El host puede especificar acciones de directiva que se realizará cuando se cierra el proceso.|  
+|`OPR_ThreadAbort`|El host puede especificar acciones de directiva que se realizará cuando se anula un subproceso.|  
+|`OPR_ThreadRudeAbortInCriticalRegion`|El host puede especificar acciones de directiva que se realizarán cuando se produce una anulación a la fuerza en una región crítica del código.|  
+|`OPR_ThreadRudeAbortInNonCriticalRegion`|El host puede especificar acciones de directiva que se realizará cuando se produzca una anulación a la fuerza en una región no crítica del código.|  
   
 ## <a name="remarks"></a>Comentarios  
- La infraestructura de confiabilidad de common language runtime (CLR) distingue entre las anulaciones y recursos errores de asignación que se producen en regiones críticas del código y las que se producen en regiones no críticas del código. Esta distinción está diseñada para permitir que los hosts establecer directivas distintas dependiendo de dónde se produce un error en el código.  
+ La infraestructura de confiabilidad de common language runtime (CLR) distingue entre recursos y las anulaciones de errores de asignación que se producen en regiones críticas del código y las que se producen en las regiones no críticas de código. Esta distinción está diseñada para permitir que los hosts establecer directivas distintas dependiendo de dónde se produce un error en el código.  
   
- A *región crítica del código* cualquier espacio donde el CLR no puede garantizar que si no se puede completar una solicitud de recursos afectará solo a la tarea actual o anulación de una tarea. Por ejemplo, si una tarea mantiene un bloqueo y recibe un valor HRESULT que indica un error al realizar una solicitud de asignación de memoria, es suficiente con anular la tarea para garantizar la estabilidad de la <xref:System.AppDomain>, porque el <xref:System.AppDomain> podría contener otros tareas que esperan el mismo bloqueo. Abandonar actual tarea es posible que las otras tareas deje de responder (o se bloquee) indefinidamente. En tal caso, el host necesita la capacidad de descargar todo el <xref:System.AppDomain> en lugar de riesgo potencial de inestabilidad.  
+ Un *región crítica del código* cualquier espacio que el CLR no puede garantizar que no puede completar una solicitud para los recursos afectará únicamente a la tarea actual o anulación de una tarea. Por ejemplo, si una tarea mantiene un bloqueo y recibe un valor HRESULT que indica un error al realizar una solicitud de asignación de memoria, es suficiente con anular la tarea para garantizar la estabilidad de la <xref:System.AppDomain>, porque el <xref:System.AppDomain> podría contener otros tareas en espera para el mismo bloqueo. Abandonar actual tarea es posible que las otras tareas que desee dejar de responder (o de bloqueo) indefinidamente. En tal caso, el host necesita la capacidad de descargar toda la <xref:System.AppDomain> en lugar de riesgo potencial de inestabilidad.  
   
- A *región no crítica del código*, por otro lado, es una región donde CLR puede garantizar que una anulación o un error afectará solo a la tarea en la que se produce el error.  
+ Un *región no crítica del código*, por otro lado, es una región en el CLR puede garantizar que una anulación o un error afectará únicamente a la tarea en el que se produce el error.  
   
- CLR también distingue entre anulaciones (forzadas) estable y no es correcta. En general, una anulación normal o correcta hace todo lo posible por ejecutar rutinas de control de excepciones y los finalizadores antes de anular una tarea, mientras que una anulación forzada no ofrece esas garantías.  
+ CLR también distingue entre estables y que no sea estable forzadas. En general, una anulación normal o correcta hace todo lo posible para ejecutar rutinas y los finalizadores de control de excepciones antes de anular una tarea, mientras que una anulación a la fuerza ofrece ninguna garantía de este tipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [EClrFailure (enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- [EPolicyAction (enumeración)](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
- [ICLRPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [EClrFailure (enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [EPolicyAction (enumeración)](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [ICLRPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [IHostPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

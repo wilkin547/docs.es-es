@@ -2,12 +2,12 @@
 title: Datos de gran tamaño y secuencias
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674120"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 Windows Communication Foundation (WCF) es una infraestructura de comunicaciones basado en XML. Dado que los datos XML se codifican habitualmente en el formato de texto estándar definido en el [especificación XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de la conexión (o tamaño) de los mensajes enviados a través de la red y la codificación basada en texto de XML plantea desafíos especiales para la transferencia eficaz de los datos binarios.  
@@ -238,5 +238,5 @@ public class UploadStreamMessage
 > [!NOTE]
 >  La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. Para los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores proxy y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar a un cliente WCF para un servicio, debe editar el archivo de configuración para los servicios pensados para ser utilizado con transferencias transmitidas para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

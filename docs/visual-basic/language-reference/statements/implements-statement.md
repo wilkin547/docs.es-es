@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681071"
 ---
 # <a name="implements-statement"></a>Implements (Instrucción)
 Especifica uno o más interfaces, o miembros de interfaz que deben implementarse en la clase o definición de la estructura en la que aparece.  
@@ -29,10 +29,10 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Elementos  
  `interfacename`  
- Requerido. Una interfaz cuyas propiedades, procedimientos y eventos que se van a ser implementada por los miembros correspondientes en la clase o estructura.  
+ Obligatorio. Una interfaz cuyas propiedades, procedimientos y eventos que se van a ser implementada por los miembros correspondientes en la clase o estructura.  
   
  `interfacemember`  
- Requerido. El miembro de una interfaz que se está implementando.  
+ Obligatorio. El miembro de una interfaz que se está implementando.  
   
 ## <a name="remarks"></a>Comentarios  
  Una interfaz es una colección de prototipos que representan los miembros (propiedades, procedimientos y eventos) que encapsula la interfaz. Interfaces contienen solo las declaraciones de miembros. las clases y estructuras implementan a estos miembros. Para más información, vea [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
@@ -55,7 +55,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
- [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Vea también
+- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Implementar la validación de enlaces'
+title: Procedimiento Implementar la validación de enlaces
 ms.date: 03/30/2017
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678361"
 ---
-# <a name="how-to-implement-binding-validation"></a>Cómo: Implementar la validación de enlaces
+# <a name="how-to-implement-binding-validation"></a>Procedimiento Implementar la validación de enlaces
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> y un desencadenador de estilo para proporcionar comentarios visuales para informar al usuario cuando se escribe un valor no válido, según una regla de validación personalizada.  
   
 ## <a name="example"></a>Ejemplo  
@@ -37,6 +37,6 @@ En este ejemplo se muestra cómo usar un <xref:System.Windows.Controls.Validatio
   
  Tenga en cuenta que si no proporcionas un personalizado <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> aparece de la plantilla de error predeterminada proporcionar comentarios visuales al usuario cuando hay un error de validación. Vea "Validación de datos" en [Información sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md) para obtener más información. Además, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una regla de validación incorporada que selecciona las excepciones que se producen durante la actualización de la propiedad del origen de enlace. Para obtener más información, consulta <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

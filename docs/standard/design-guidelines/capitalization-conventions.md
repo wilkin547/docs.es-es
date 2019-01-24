@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
-ms.openlocfilehash: 159635d6e3ce414c8fd45ff7f02a75fd7cbdfe7e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670178"
 ---
 # <a name="capitalization-conventions"></a>Normas referentes al uso de minúsculas y mayúsculas
 Las directrices descritas en este capítulo disponer un método sencillo para el uso de caso de que, cuando se aplica de forma coherente, asegúrese de identificadores para los tipos, miembros y parámetros fáciles de leer.  
@@ -23,9 +23,9 @@ Las directrices descritas en este capítulo disponer un método sencillo para el
 ## <a name="capitalization-rules-for-identifiers"></a>Reglas de mayúsculas y minúsculas para los identificadores  
  Para diferenciar las palabras en un identificador, poner en mayúsculas la primera letra de cada palabra en el identificador. No utilice caracteres de subrayado para diferenciar las palabras, o bien, de hecho, en cualquier lugar en los identificadores. Hay dos maneras adecuados para aprovechar los identificadores, según el uso del identificador:  
   
--   Pascal  
+-   PascalCasing  
   
--   mayúsculas intercaladas  
+-   camelCasing  
   
  La convención Pascal, usada para todos los identificadores, excepto los nombres de parámetro, se pone en mayúsculas el primer carácter de cada palabra (incluidos los acrónimos a través de dos letras de longitud), tal como se muestra en los ejemplos siguientes:  
   
@@ -106,5 +106,5 @@ Las directrices descritas en este capítulo disponer un método sencillo para el
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

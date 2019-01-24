@@ -2,12 +2,12 @@
 title: Guía de migración
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a07fac293c6e598ff60c635286f8ab808e057b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676879"
 ---
 # <a name="migration-guidance"></a>Guía de migración
 En el [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft está lanzando la segunda versión principal de Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] se lanzó en [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (incluía los tipos de los espacios de nombres System.Workflow.*; ahora se conoce como WF3) y se mejoró en [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 también es parte de la [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], aunque está presente junto con la nueva tecnología de flujo de trabajo (los tipos de System.Activities.\* espacios de nombres; conoce como WF4). A la hora de plantearse cuándo adoptar WF4, es importante reconocer primero que controla el tiempo.  
@@ -32,7 +32,7 @@ En el [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsof
  [Guía de WF: reglas](https://go.microsoft.com/fwlink/?LinkId=153854)  
  Trata sobre cómo presentar las inversiones relacionadas con las reglas en soluciones de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
- [Guía de WF: Máquina de Estados](https://go.microsoft.com/fwlink/?LinkId=153855)  
+ [Guía de WF: Equipo de estado](https://go.microsoft.com/fwlink/?LinkId=153855)  
  Trata sobre el modelado de flujo de control de WF4 en ausencia de una actividad de máquina de estados.  
   
  Tenga en cuenta que esta guía se aplica solamente a proyectos de flujo de trabajo que tienen como destino .NET Framework 4. Los flujos de trabajo de máquina de estados se agregaron en .NET 4.0.1 con el lanzamiento de la Actualización de plataforma 1, y se incluyeron como parte de .NET Framework 4.5. Para obtener más información sobre los flujos de trabajo de máquina de Estados en .NET 4.0.1 - 4.0.3 y .NET Framework 4.5, vea [actualización 4.0.1 para Microsoft .NET Framework 4 características](https://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) y [flujos de trabajo de máquina de estados](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
@@ -43,7 +43,7 @@ En el [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsof
  [Guía básica de migración de WF: Actividades personalizadas avanzadas](https://go.microsoft.com/fwlink/?LinkId=275560)  
  Proporciona una guía para rediseñar actividades personalizadas WF3 avanzadas que usan colas WF3 y programan actividades secundarias como actividades personalizadas de WF4.  
   
- [Guía básica de migración de WF: flujos de trabajo](https://go.microsoft.com/fwlink/?LinkId=153858)  
+ [Guía básica de migración de WF: Flujos de trabajo](https://go.microsoft.com/fwlink/?LinkId=153858)  
  Proporciona ejemplos e instrucciones para rediseñar flujos de trabajo de WF3 en WF4.  
   
  [Guía básica de migración de WF: Hospedaje de flujo de trabajo](https://go.microsoft.com/fwlink/?LinkId=275561)  
@@ -55,5 +55,5 @@ En el [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsof
  [Guía de WF: Servicios de flujo de trabajo](https://go.microsoft.com/fwlink/?LinkId=275564)  
  Proporciona instrucciones paso a paso basadas en ejemplos para rediseñar flujos de trabajo que implementan los servicios web de Windows Communication Foundation (más conocidos como servicios de flujo de trabajo) creados en WF3 para usar WF4, para escenarios comunes en actividades estándar.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Activities.Statements.Interop>
+## <a name="see-also"></a>Vea también
+- <xref:System.Activities.Statements.Interop>

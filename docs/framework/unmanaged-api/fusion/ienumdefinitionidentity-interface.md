@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3ff37acd9b4dffe80112f0a0ebe9c9cd86ae66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668458"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity (Interfaz)
 Actúa como el enumerador para una colección de `IDefinitionIdentity` objetos.  
@@ -56,17 +56,17 @@ IEnumDefinitionIdentity : IUnknown {
 |Método|Descripción|  
 |------------|-----------------|  
 |`IEnumDefinitionIdentity::Clone`|Obtiene un puntero de interfaz a una nueva `IEnumDefinitionIdentity` objeto que contiene los mismos miembros que esto `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Next`|Obtiene el número especificado de `IDefinitionIdentity` módulos, comenzando en la posición actual.|  
+|`IEnumDefinitionIdentity::Next`|Obtiene el número especificado de `IDefinitionIdentity` objetos, empezando en la posición actual.|  
 |`IEnumDefinitionIdentity::Reset`|Mueve el puntero de instrucción al principio de este `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Skip`|Mueve el puntero de instrucción hacia delante el número especificado de elementos, empezando en la posición actual.|  
+|`IEnumDefinitionIdentity::Skip`|Mueve el puntero de instrucción al día por el número especificado de elementos, empezando por la posición actual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Isolation.h  
+ **Encabezado**: Isolation.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IDefinitionIdentity (interfaz)](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IDefinitionIdentity (interfaz)](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

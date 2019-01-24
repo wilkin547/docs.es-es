@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Trasladar un elemento'
+title: Procedimiento Trasladar un elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 04e1e8288bcccc4a310f05abff01fbdf160cdb11
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75b8f72647b1597396fde5d21f8378d3ce586a25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672878"
 ---
-# <a name="how-to-translate-an-element"></a>Cómo: Trasladar un elemento
+# <a name="how-to-translate-an-element"></a>Procedimiento Trasladar un elemento
 En este ejemplo se muestra cómo trasladar (mover) un elemento mediante el uso de un <xref:System.Windows.Media.TranslateTransform>.  
   
  La <xref:System.Windows.Media.TranslateTransform> clase es especialmente útil para mover elementos dentro de paneles que no admiten el posicionamiento absoluto. Por ejemplo, aplicando un <xref:System.Windows.Media.TranslateTransform> a la <xref:System.Windows.UIElement.RenderTransform%2A> propiedad de un elemento, puede mover un elemento dentro de un <xref:System.Windows.Controls.StackPanel> o <xref:System.Windows.Controls.DockPanel>.  
@@ -25,5 +25,5 @@ En este ejemplo se muestra cómo trasladar (mover) un elemento mediante el uso d
   
  Para ver el ejemplo completo, consulte [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
-ms.openlocfilehash: 429f2e3821ff12ff4fc51b73c102ee3799d0228d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675267"
 ---
 # <a name="enum-design"></a>Diseño de enumeraciones
 Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumeraciones: enumeraciones simples de enumeraciones y marca.  
@@ -98,5 +98,5 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
+- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

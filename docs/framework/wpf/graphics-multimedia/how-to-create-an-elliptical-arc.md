@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Crear un arco elíptico'
+title: Procedimiento Crear un arco elíptico
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], elliptical arcs
 - elliptical arcs [WPF], creating
 - arcs [WPF], elliptical
 ms.assetid: 3dcfe502-3485-45de-99fb-d53a1367c484
-ms.openlocfilehash: 7ca7d06aa25f8dfae648d8c54c8b95cc277ffbf9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4f4461f778e2c86adb3932edf8435ca75b3b5e98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679570"
 ---
-# <a name="how-to-create-an-elliptical-arc"></a>Cómo: Crear un arco elíptico
+# <a name="how-to-create-an-elliptical-arc"></a>Procedimiento Crear un arco elíptico
 En este ejemplo se muestra cómo dibujar un arco elíptico. Para crear un arco elíptico, utilice el <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, y <xref:System.Windows.Media.ArcSegment> clases.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,6 +35,6 @@ En este ejemplo se muestra cómo dibujar un arco elíptico. Para crear un arco e
   
  Este ejemplo forma parte de un ejemplo mayor. Para obtener un ejemplo completo, vea el [ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## <a name="see-also"></a>Vea también  
- [Crear una curva Bézier cuadrática](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [Crear una curva Bézier cúbica](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a>Vea también
+- [Crear una curva Bézier cuadrática](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)
+- [Crear una curva Bézier cúbica](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

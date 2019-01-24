@@ -14,47 +14,47 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 40322dc6c5facd4167a4c9ac5c12fdf2a8831b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674198"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>Procedimientos recomendados para el control TableLayoutPanel
-El <xref:System.Windows.Forms.TableLayoutPanel> control proporciona eficaces características de diseño que se deben considerar cuidadosamente antes de usar en los formularios Windows Forms.  
+El <xref:System.Windows.Forms.TableLayoutPanel> control proporciona eficaces características de diseño que se deben considerar cuidadosamente antes de usar en los formularios de Windows.  
   
 ## <a name="recommendations"></a>Recomendaciones  
- Las siguientes recomendaciones le ayudarán a usar el <xref:System.Windows.Forms.TableLayoutPanel> control su para aprovechar al máximo.  
+ Las recomendaciones siguientes le ayudarán a usar el <xref:System.Windows.Forms.TableLayoutPanel> control sacar el máximo partido.  
   
 ### <a name="targeted-use"></a>Uso de destino  
- Use la <xref:System.Windows.Forms.TableLayoutPanel> controlar con moderación. No se debe usar en todas las situaciones que requieren un diseño de tamaño variable. En la lista siguiente describe los diseños que se beneficiarían del uso de la <xref:System.Windows.Forms.TableLayoutPanel> control:  
+ Use el <xref:System.Windows.Forms.TableLayoutPanel> controlar con moderación. No se debe usar en todas las situaciones que requieren un diseño de tamaño ajustable. La siguiente lista describe los diseños que se beneficiarían del uso de la <xref:System.Windows.Forms.TableLayoutPanel> control:  
   
--   Diseños en los que tienen varias partes del formulario que cambian el tamaño proporcionalmente entre sí.  
+-   Diseños en el que hay varias partes del formulario que cambian de tamaño proporcional entre sí.  
   
--   Diseños que se pueden modificar ni se generó dinámicamente en tiempo de ejecución, como formularios de entrada de datos que tienen campos personalizables por el usuario agrega o resta según las preferencias.  
+-   Los diseños que se modificarán o generados dinámicamente en tiempo de ejecución, como formularios de entrada de datos que tienen campos personalizables por el usuario se suma o resta según las preferencias.  
   
--   Diseños que deberían permanecer en un tamaño fijo general. Por ejemplo, puede tener un cuadro de diálogo que debería ser menor que 800 x 600, pero debe admitir las cadenas localizadas.  
+-   Diseños que deben permanecer en un tamaño fijo general. Por ejemplo, puede tener un cuadro de diálogo debería ser menor que 800 x 600, pero tiene que admitir las cadenas localizadas.  
   
- En la lista siguiente se describe diseños que no se benefician en gran medida del uso de la <xref:System.Windows.Forms.TableLayoutPanel> control:  
+ La siguiente lista describe los diseños que no se benefician enormemente de utilizando el <xref:System.Windows.Forms.TableLayoutPanel> control:  
   
--   Formularios de entrada de datos simple con una única columna de etiquetas y una única columna de áreas de entrada de texto.  
+-   Formularios de entrada de datos simple con una sola columna de etiquetas y una sola columna de áreas de entrada de texto.  
   
--   Área que debería rellenar todo el espacio disponible cuando se produce un cambio de tamaño de presentación de formularios con una sola grande. Un ejemplo de esto es un formulario que muestra una sola <xref:System.Windows.Forms.PropertyGrid> control. En este caso, utilice el anclaje, porque debería ampliar nada más cuando se cambia el tamaño del formulario.  
+-   Área que debería rellenar todo el espacio disponible cuando se produce un cambio de tamaño de presentación de formularios con una sola grande. Un ejemplo de esto es un formulario que muestra una sola <xref:System.Windows.Forms.PropertyGrid> control. En este caso, utilice el anclaje, porque nada debe expandir al tamaño del formulario.  
   
- Elija cuidadosamente qué controles deben estar en un <xref:System.Windows.Forms.TableLayoutPanel> control. Si dispone de espacio para el texto que se va a crecer en 30% con delimitación, considere el uso de la <xref:System.Windows.Forms.Control.Anchor%2A> solo para la propiedad. Si puede calcular el espacio requerido por su diseño, el uso de <xref:System.Windows.Forms.Control.Dock%2A> y <xref:System.Windows.Forms.Control.Anchor%2A> es más fácil que calcular los detalles de espacio restante y <xref:System.Windows.Forms.Control.AutoSize%2A> comportamiento.  
+ Elija cuidadosamente qué controles deben estar en un <xref:System.Windows.Forms.TableLayoutPanel> control. Si tiene espacio para el texto para crecer en un 30% con delimitación, considere el uso de la <xref:System.Windows.Forms.Control.Anchor%2A> solo para la propiedad. Si se puede calcular el espacio requerido por su diseño, el uso de <xref:System.Windows.Forms.Control.Dock%2A> y <xref:System.Windows.Forms.Control.Anchor%2A> es más fácil que calcular los detalles de espacio restante y <xref:System.Windows.Forms.Control.AutoSize%2A> comportamiento.  
   
- En general, cuando use un diseño con el <xref:System.Windows.Forms.TableLayoutPanel> controlar, mantenga el diseño más sencilla posible.  
+ En general, al diseñar el diseño con el <xref:System.Windows.Forms.TableLayoutPanel> controlar, mantenga el diseño más simple posible.  
   
 ### <a name="use-the-document-outline-window"></a>Utilice la ventana Esquema del documento  
- La ventana Esquema del documento proporciona una vista de árbol de la distribución, que puede usar para manipular las relaciones de elementos primarios y secundarios y de orden z de los controles. Desde el **menú Ver**, seleccione **otras ventanas**, a continuación, seleccione **esquema del documento**.  
+ La ventana Esquema del documento proporciona una vista de árbol de su diseño, lo que puede usar para manipular las relaciones de elementos primarios y secundarios y de orden z de los controles. Desde el **menú Ver**, seleccione **Other Windows**, a continuación, seleccione **esquema del documento**.  
   
 ### <a name="avoid-nesting"></a>Evite el anidamiento  
- Evite el anidamiento otro <xref:System.Windows.Forms.TableLayoutPanel> controla dentro de un <xref:System.Windows.Forms.TableLayoutPanel> control. Depurar los diseños anidados puede resultar difícil.  
+ Evite el anidamiento otro <xref:System.Windows.Forms.TableLayoutPanel> controla dentro de un <xref:System.Windows.Forms.TableLayoutPanel> control. Puede ser difícil de depurar los diseños anidados.  
   
 ### <a name="avoid-visual-inheritance"></a>Evite una herencia Visual  
- El <xref:System.Windows.Forms.TableLayoutPanel> control no admite la herencia visual en el Diseñador de Windows Forms. Un <xref:System.Windows.Forms.TableLayoutPanel> "bloqueada" en tiempo de diseño que aparezca el control en una clase derivada.  
+ El <xref:System.Windows.Forms.TableLayoutPanel> control no admite la herencia visual en el Diseñador de Windows Forms. Un <xref:System.Windows.Forms.TableLayoutPanel> aparezca el control en una clase derivada está "bloqueada" en tiempo de diseño.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- <xref:System.Windows.Forms.FlowLayoutPanel>
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- <xref:System.Windows.Forms.FlowLayoutPanel>

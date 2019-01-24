@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: a9c395ffe4f715b6d6ea034c848cbb277d60d560
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b52583b8089efcee2a0251564c79e931a596bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678077"
 ---
 # <a name="multiple-endpoints"></a>Varios puntos de conexión
-El ejemplo de los puntos de conexión varios muestra cómo configurar varios puntos de conexión en un servicio y cómo comunicar con cada punto de conexión de un cliente. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configuración de servicio se ha modificado para definir dos extremos que admiten el contrato `ICalculator`, pero cada uno en una dirección diferente utilizando un enlace diferente. La configuración y el código del cliente se han modificado para comunicarse con ambos de los puntos de conexión del servicio.  
+El ejemplo de los puntos de conexión varios muestra cómo configurar varios puntos de conexión en un servicio y cómo comunicar con cada punto de conexión de un cliente. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configuración de servicio se ha modificado para definir dos puntos de conexión que admiten el contrato `ICalculator`, pero cada uno en una dirección diferente utilizando un enlace diferente. La configuración y el código del cliente se han modificado para comunicarse con ambos de los puntos de conexión del servicio.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El servicio archivo Web.config se ha modificado para definir dos extremos, cada uno admitiendo el mismo contrato `ICalculator`, pero en diferentes direcciones utilizando enlaces diferentes. El primer extremo se define en la dirección base utilizando un enlace `basicHttpBinding`, que no tiene la seguridad habilitada. El segundo extremo se define en {baseaddress}/seguro utilizando un enlace`wsHttpBinding`, que es de forma predeterminada seguro, utilizando Seguridad del WS con autenticación de Windows.  
+ El servicio archivo Web.config se ha modificado para definir dos puntos de conexión, cada uno admitiendo el mismo contrato `ICalculator`, pero en diferentes direcciones utilizando enlaces diferentes. El primer punto de conexión se define en la dirección base utilizando un enlace `basicHttpBinding`, que no tiene la seguridad habilitada. El segundo extremo se define en {baseaddress}/seguro utilizando un enlace`wsHttpBinding`, que es de forma predeterminada seguro, utilizando Seguridad del WS con autenticación de Windows.  
   
 ```xml  
 <service   

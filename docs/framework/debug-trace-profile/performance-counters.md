@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c9bf5d138be250d1dfeee012368153bac96b067
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672401"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de rendimiento de .NET Framework
 En este tema se proporciona una lista de contadores de rendimiento que se puede encontrar en el [Monitor de rendimiento de Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -251,6 +251,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Profundidad del recorrido de la pila**|Muestra la profundidad de la pila durante esa última comprobación de seguridad de acceso del código en tiempo de ejecución. Las comprobaciones de seguridad de acceso del código en tiempo de ejecución se realizan recorriendo la pila. Este contador no es un promedio; solo muestra el último valor observado.|  
 |**Número total de comprobaciones en tiempo de ejecución**|Muestra el número total de comprobaciones de seguridad de acceso del código en tiempo de ejecución realizadas desde que se inició la aplicación. Las comprobaciones de seguridad de acceso del código en tiempo de ejecución se realizan cuando un llamador solicita un determinado permiso. La comprobación en tiempo de ejecución se realiza en cada llamada del llamador y examina la pila del subproceso actual del llamador. Cuando se usa con el contador de **Profundidad del recorrido de la pila**, este contador indica la disminución del rendimiento que tiene lugar para las comprobaciones de seguridad.|  
   
-## <a name="see-also"></a>Vea también  
- [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [Generar perfiles en tiempo de ejecución](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+## <a name="see-also"></a>Vea también
+- [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Generar perfiles en tiempo de ejecución](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

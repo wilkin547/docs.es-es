@@ -1,5 +1,5 @@
 ---
-title: '&lt;loadFromRemoteSources&gt; elemento'
+title: '&lt;loadFromRemoteSources&gt; Element'
 ms.date: 05/24/2018
 helpviewer_keywords:
 - loadFromRemoteSources element
@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2b2a5301defabde44c4f5a98e57bd302fe390d53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671882"
 ---
-# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
+# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; element
 Especifica si los ensamblados cargados desde orígenes remotos se deben conceder plena confianza en .NET Framework 4 y versiones posteriores.
   
 > [!NOTE]
 >  Si llega a este tema debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un error de compilación, véase [Cómo: Usar un ensamblado desde la Web en Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<configuration>  
-\<en tiempo de ejecución >  
+\<runtime>  
 \<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -117,8 +117,8 @@ El ejemplo siguiente muestra cómo conceder plena confianza a los ensamblados ca
 
 ## <a name="see-also"></a>Vea también
 
-- [Los usos más implícitos de la directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [Los usos más implícitos de la directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

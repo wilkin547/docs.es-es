@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668995"
 ---
 # <a name="xtype-markup-extension"></a>x:Type (Extensión de marcado)
 Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un tipo XAML especificado.  
@@ -41,7 +41,7 @@ Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un t
 |||  
 |-|-|  
 |`prefix`|Opcional. Un prefijo que se asigna un espacio de nombres XAML no predeterminado. Especificar un prefijo con frecuencia no es necesario. Vea la sección Comentarios.|  
-|`typeNameValue`|Requerido. Un nombre de tipo en nombres XAML predeterminado actual; o asignado especificado prefijo si `prefix` proporcionado.|  
+|`typeNameValue`|Obligatorio. Un nombre de tipo en nombres XAML predeterminado actual; o asignado especificado prefijo si `prefix` proporcionado.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `x:Type` extensión de marcado cuya función sea similar a la `typeof()` operador en C# o la `GetType` operador en Microsoft Visual Basic.  
@@ -79,8 +79,8 @@ Proporciona el CLR <xref:System.Type> objeto que es el tipo subyacente para un t
   
  En WPF, puede usar las características de XAML 2009 pero solo para XAML flexible (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Style>  
- [Aplicar estilos y plantillas](../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Información general sobre XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Extensiones de marcado y XAML de WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Style>
+- [Aplicar estilos y plantillas](../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Información general sobre XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Extensiones de marcado y XAML de WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

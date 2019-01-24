@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Exponer una fuente como Atom y RSS'
+title: Procedimiento Exponer una fuente como Atom y RSS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 6b26dabb9ed5c2c7bb2410dc1e844add6a69bdf3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681175"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Cómo: Exponer una fuente como Atom y RSS
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procedimiento Exponer una fuente como Atom y RSS
 Windows Communication Foundation (WCF) le permite crear un servicio que expone una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un extremo que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. Para obtener más información acerca de la WCF diferentes opciones de hospedaje, vea [hospedaje](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Creación de un servicio de distribución básico  
@@ -95,6 +95,6 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
 ## <a name="compiling-the-code"></a>Compilar el código  
  Al compilar el código anterior, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

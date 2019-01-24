@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms'
+title: Procedimiento Mostrar iconos de Error de validación de formularios con el componente ErrorProvider de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 237a61cc21a18805fa502c9870d8ea472ac54d71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa230e326a91853d6b23d5901317a86f628f6c72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679115"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Cómo: Mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms
-Puede utilizar un formulario Windows Forms <xref:System.Windows.Forms.ErrorProvider> componente para mostrar un icono de error cuando el usuario escriba datos no válidos. Debe tener al menos dos controles en el formulario con el fin de pestaña entre ellos y, por tanto, invocar el código de validación.  
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Procedimiento Mostrar iconos de Error de validación de formularios con el componente ErrorProvider de formularios Windows Forms
+Puede usar un formulario Windows Forms <xref:System.Windows.Forms.ErrorProvider> componente para mostrar un icono de error cuando el usuario escribe datos no válidos. Debe tener al menos dos controles del formulario con el fin de pestaña entre ellos y, por tanto, invocar el código de validación.  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Para mostrar un icono de error cuando el valor de un control no es válido  
   
-1.  Agregue dos controles: por ejemplo, los cuadros de texto, en un formulario Windows Forms.  
+1.  Agregue dos controles, por ejemplo, los cuadros de texto, a un formulario de Windows.  
   
 2.  Agregar un <xref:System.Windows.Forms.ErrorProvider> componente al formulario.  
   
-3.  Seleccione el primer control y agregue código a su <xref:System.Windows.Forms.Control.Validating> controlador de eventos. En orden para este código se ejecute correctamente, el procedimiento debe estar conectado al evento. Para obtener más información, consulte [Cómo: crear controladores de eventos en tiempo de ejecución para formularios Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+3.  Seleccione el primer control y agregue código a su <xref:System.Windows.Forms.Control.Validating> controlador de eventos. En orden para que este código se ejecute correctamente, el procedimiento debe estar conectado al evento. Para obtener más información, vea [Cómo: Crear controladores de eventos en tiempo de ejecución para Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     El código siguiente comprueba la validez de los datos escritos por el usuario; Si los datos no son válidos, el <xref:System.Windows.Forms.ErrorProvider.SetError%2A> se llama al método. El primer argumento de la <xref:System.Windows.Forms.ErrorProvider.SetError%2A> método especifica que el control a mostrar el icono junto a. El segundo argumento es el texto del error para mostrar.  
+     El código siguiente comprueba la validez de los datos escritos por el usuario; Si los datos no son válidos, el <xref:System.Windows.Forms.ErrorProvider.SetError%2A> se llama al método. El primer argumento de la <xref:System.Windows.Forms.ErrorProvider.SetError%2A> método especifica qué control para mostrar el icono junto a. El segundo argumento es el texto del error para mostrar.  
   
     ```vb  
     Private Sub TextBox1_Validating(ByVal Sender As Object, _  
@@ -90,9 +90,9 @@ Puede utilizar un formulario Windows Forms <xref:System.Windows.Forms.ErrorProvi
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4.  Ejecute el proyecto. Escribir datos no válidos (en este ejemplo, no numéricos) en el primer control y, a continuación, ficha al segundo. Cuando se muestra el icono de error, apunte al icono con el puntero del mouse para ver el texto del error.  
+4.  Ejecute el proyecto. Escriba datos no válidos (en este ejemplo, no numérico) en el primer control y, a continuación, pestaña a la segunda. Cuando aparezca el icono de error, apúntelo con el puntero del mouse para ver el texto del error.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.ErrorProvider.SetError%2A>  
- [Información general del componente ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
- [Ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
+- [Información general del componente ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)
+- [Cómo: Ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)

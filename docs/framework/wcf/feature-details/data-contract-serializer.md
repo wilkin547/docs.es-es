@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: 79f9f6eb8ced7c292e7a7c3c6fc9acbb9a34ffcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dc9119cdf4473e3923fd24d3f444eed9cae0220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676138"
 ---
 # <a name="data-contract-serializer"></a>El serializador de contratos de datos
 La infraestructura de Windows Communication Foundation (WCF) utiliza el <xref:System.Runtime.Serialization.DataContractSerializer> clase como el serializador predeterminado. Los temas en esta sección proporcionan más detalles para utilizarlo como un serializador independiente.  
@@ -37,6 +37,6 @@ La infraestructura de Windows Communication Foundation (WCF) utiliza el <xref:Sy
   
  [Transferencia y serialización de datos](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
