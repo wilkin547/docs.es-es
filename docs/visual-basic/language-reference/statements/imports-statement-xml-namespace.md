@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655990"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports (Instrucción, Espacio de nombres XML)
 Importa los prefijos de espacio de nombres XML para su uso en literales XML y propiedades de eje XML.  
@@ -30,7 +30,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  Opcional. La cadena de forma que el código XML a los elementos y atributos pueden hacer referencia a `xmlNamespaceName`. Si no hay ningún `xmlNamespacePrefix` es proporcionado, el espacio de nombres XML importado es el espacio de nombres XML predeterminado. Debe ser un identificador XML válido. Para obtener más información, consulte [atributos y los nombres de los elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
   
  `xmlNamespaceName`  
- Requerido. Cadena que identifica el espacio de nombres XML que se va a importar.  
+ Obligatorio. Cadena que identifica el espacio de nombres XML que se va a importar.  
   
 ## <a name="remarks"></a>Comentarios  
  Puede usar el `Imports` instrucción para definir los espacios de nombres XML globales que puede usar con literales XML y propiedades de eje XML o como parámetros pasados a la `GetXmlNamespace` operador. (Para obtener información sobre el uso de la `Imports` instrucción para importar un alias que se puede utilizar donde se usan los nombres de tipo en el código, consulte [instrucción Imports (tipo y Namespace. NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) La sintaxis para declarar un espacio de nombres XML mediante el uso de la `Imports` instrucción es idéntica a la sintaxis utilizada en XML. Por lo tanto, puede copiar una declaración de espacio de nombres de un archivo XML y usarlo en un `Imports` instrucción.  
@@ -88,8 +88,8 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>Vea también  
- [Literal de elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [GetXmlNamespace (operador)](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+## <a name="see-also"></a>Vea también
+- [Literal de elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [GetXmlNamespace (operador)](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

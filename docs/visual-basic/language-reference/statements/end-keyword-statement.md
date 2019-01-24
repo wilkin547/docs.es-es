@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
-ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
+ms.openlocfilehash: d65c921a1631cd38c4d0d1ab9b34db3d7e43a97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33605269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654846"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;palabra clave&gt; (instrucción, Visual Basic)
 
@@ -48,7 +48,7 @@ End With
 
 |Parte|Descripción|
 |---|---|
-|`End`|Requerido. Termina la definición del elemento de programación.|
+|`End`|Obligatorio. Termina la definición del elemento de programación.|
 |`AddHandler`|Es obligatorio para terminar una `AddHandler` comenzada por un descriptor de acceso `AddHandler` instrucción personalizada [Event (instrucción)](event-statement.md).|
 |`Class`|Es obligatorio para terminar una definición de clase comenzada por un [Class (instrucción)](class-statement.md).|
 |`Enum`|Es obligatorio para terminar una definición de enumeración que comienza por una coincidencia [Enum (instrucción)](enum-statement.md).|
@@ -85,7 +85,7 @@ Cuando está precedido por un signo de número (`#`), el `End` palabra clave fin
 
 |Parte|Descripción|
 |---|---|
-|`#End`|Requerido. Termina la definición del bloque de preprocesamiento.|
+|`#End`|Obligatorio. Termina la definición del bloque de preprocesamiento.|
 |`ExternalSource`|Es obligatorio para terminar un bloque de origen externo que comienza por un [#ExternalSource (directiva)](../directives/externalsource-directive.md).|
 |`If`|Es obligatorio para terminar un bloque de compilación condicional comenzado por una coincidencia `#If` directiva. Consulte [#If... Then... #Else directivas](../directives/if-then-else-directives.md).|
 |`Region`|Es obligatorio para terminar un bloque de regiones de origen que comienza por un [#Region (directiva)](../directives/region-directive.md).|
@@ -101,4 +101,4 @@ El `End` instrucción sin una palabra clave adicional, no se admite.
   
 ## <a name="see-also"></a>Vea también
 
-[End (instrucción)](end-statement.md)
+- [End (instrucción)](end-statement.md)

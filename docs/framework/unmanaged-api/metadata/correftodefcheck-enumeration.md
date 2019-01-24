@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657199"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck (Enumeración)
 Especifica marcas para controlar qué elementos referenciados se convierten en sus definiciones para optimizar el código.  
@@ -42,18 +42,18 @@ typedef enum CorRefToDefCheck {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Especifica que las referencias de tipos y las referencias de miembro deben convertirse en definiciones. Este es el valor predeterminado (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefDefault`|Especifica que se debe convertir a las definiciones de las referencias de tipo y miembro. Este es el valor predeterminado (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
 |`MDRefToDefAll`|Especifica que se deben convertir todos los elementos que se hace referencia a las definiciones.|  
-|`MDRefToDefNone`|Especifica que no hay elementos que se hace referencia deben convertirse en definiciones.|  
-|`MDTypeRefToDef`|Especifica que sólo las referencias de tipos se deben convertir a las definiciones de tipo.|  
-|`MDMemberRefToDef`|Especifica que sólo las referencias de miembro deben convertirse en definiciones. Es decir, las referencias de miembro deben convertirse en definiciones de método o definiciones de campo.|  
+|`MDRefToDefNone`|Especifica que no hay elementos que se hace referencia deben convertirse a las definiciones.|  
+|`MDTypeRefToDef`|Especifica que solo las referencias de tipos se deben convertir las definiciones de tipo.|  
+|`MDMemberRefToDef`|Especifica que solo las referencias de miembro deben convertirse a las definiciones. Es decir, las referencias de miembro deben convertirse en definiciones de método o definiciones de campo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

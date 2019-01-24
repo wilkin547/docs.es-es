@@ -1,27 +1,27 @@
 ---
-title: Personalización de un enlace proporcionado por el sistema
+title: Procedimiento Personalización de un enlace proporcionado por el sistema
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 04b81689d7d625d519a0a9fc8b1fa6df3df16ada
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7447830de81471c6d9e5b7812ec7a0ad1dbd2ccf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704711"
 ---
-# <a name="how-to-customize-a-system-provided-binding"></a>Personalización de un enlace proporcionado por el sistema
+# <a name="how-to-customize-a-system-provided-binding"></a>Procedimiento Personalización de un enlace proporcionado por el sistema
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que le permiten configurar algunas de las propiedades de los elementos de enlace subyacente, pero no todas las propiedades. En este tema se muestra cómo establecer las propiedades en los elementos de enlace para crear un enlace personalizado.  
   
- Para obtener más información acerca de cómo crear y configurar elementos de enlace sin usar los enlaces proporcionados por el sistema directamente, vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Para obtener más información acerca de cómo crear y configurar elementos de enlace sin utilizar los enlaces proporcionados por el sistema directamente, vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Para obtener más información sobre cómo crear y extender enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Para obtener más información sobre la creación y extensión de enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
  En WCF todos los enlaces se componen de *elementos de enlace*. Cada elemento de enlace deriva de la clase <xref:System.ServiceModel.Channels.BindingElement>. Los enlaces proporcionados por el sistema, como <xref:System.ServiceModel.BasicHttpBinding> crean y configuran sus propios elementos de enlace. En este tema se muestra cómo obtener acceso y cambiar las propiedades de estos elementos de enlace, que no se exponen directamente en el enlace; en concreto, la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Los elementos de enlace individuales se incluyen en una colección representada por la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y se agregan en este orden: flujo de la transacción, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de secuencia, codificación de mensajes y transporte. Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace. Los elementos de enlace definidos por el usuario pueden aparecer también en esta colección de elementos de enlace y deben aparecer en el orden descrito anteriormente. Por ejemplo, un transporte definido por el usuario debe ser el último elemento de la colección de elementos de enlace.  
+ Los elementos de enlace individuales se incluyen en una colección representada por el <xref:System.ServiceModel.Channels.BindingElementCollection> clase y se agregan en este orden: Flujo de transacciones, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de Stream, codificación de mensajes y transporte. Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace. Los elementos de enlace definidos por el usuario pueden aparecer también en esta colección de elementos de enlace y deben aparecer en el orden descrito anteriormente. Por ejemplo, un transporte definido por el usuario debe ser el último elemento de la colección de elementos de enlace.  
   
  La clase <xref:System.ServiceModel.BasicHttpBinding> contiene tres elementos de enlace:  
   
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
   
 3.  Un elemento de enlace del transporte requerido, o <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, o <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
   
- En este ejemplo creamos una instancia del enlace, generamos un *enlace personalizado* de él, examinamos los elementos de enlace en el enlace personalizado y cuando encontramos el elemento de enlace de HTTP, establecemos su `KeepAliveEnabled` propiedad `false`. La propiedad `KeepAliveEnabled` no se expone directamente en `BasicHttpBinding`, por lo que debemos crear un enlace personalizado para explorar hacia abajo hasta el elemento de enlace y establecer esta propiedad.  
+ En este ejemplo se crea una instancia del enlace, genere un *enlace personalizado* , examine los elementos de enlace en el enlace personalizado, y cuando encontramos el elemento de enlace de HTTP, establecemos su `KeepAliveEnabled` propiedad `false`. La propiedad `KeepAliveEnabled` no se expone directamente en `BasicHttpBinding`, por lo que debemos crear un enlace personalizado para explorar hacia abajo hasta el elemento de enlace y establecer esta propiedad.  
   
 ### <a name="to-modify-a-system-provided-binding"></a>Modificación de un enlace proporcionado por el sistema  
   
@@ -50,8 +50,8 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
      [!code-csharp[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#3)]
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)

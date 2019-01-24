@@ -1,5 +1,5 @@
 ---
-title: Métodos de &#39;System. Nullable (Of T)&#39; no se pueden utilizar como operandos de la &#39;AddressOf&#39; (operador)
+title: Métodos de &#39;System. Nullable (Of T)&#39; no se puede utilizar como operandos de la &#39;AddressOf&#39; operador
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32126
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 3a3e4fc033f47fb6a72076dff79f1eece8d01a30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3e34e79f2e91bb55bb2e053ae3e59fd42c4250c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655327"
 ---
-# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Métodos de &#39;System. Nullable (Of T)&#39; no se pueden utilizar como operandos de la &#39;AddressOf&#39; (operador)
-Una instrucción usa la `AddressOf` operador con un operando que representa un procedimiento con el <xref:System.Nullable%601> estructura.  
+# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Métodos de &#39;System. Nullable (Of T)&#39; no se puede utilizar como operandos de la &#39;AddressOf&#39; operador
+Una instrucción usa la `AddressOf` operador con un operando que representa un procedimiento de la <xref:System.Nullable%601> estructura.  
   
- **Id. de error:** BC32126  
+ **Identificador de error:** BC32126  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
 -   Reemplace el nombre del procedimiento en el `AddressOf` cláusula con un operando que no es un miembro de <xref:System.Nullable%601>.  
   
--   Escriba una clase que contiene el método de <xref:System.Nullable%601> que desea usar. En el ejemplo siguiente, la `NullableWrapper` clase define un nuevo método denominado `GetValueOrDefault`. Dado que este nuevo método no es un miembro de <xref:System.Nullable%601>, éste puede aplicarse a `nullInstance`, una instancia de un tipo que acepta valores NULL, para formar un argumento para `AddressOf`.  
+-   Escribir una clase que contiene el método de <xref:System.Nullable%601> que desea usar. En el ejemplo siguiente, la `NullableWrapper` clase define un nuevo método denominado `GetValueOrDefault`. Dado que este nuevo método no es un miembro de <xref:System.Nullable%601>, éste puede aplicarse a `nullInstance`, una instancia de un tipo que acepta valores NULL, para formar un argumento para `AddressOf`.  
   
 ```vb  
 Module Module1  
@@ -61,8 +61,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Nullable%601>  
- [AddressOf (operador)](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Tipos de valor que aceptan valores NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Nullable%601>
+- [AddressOf (operador)](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Tipos de valor que aceptan valores NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

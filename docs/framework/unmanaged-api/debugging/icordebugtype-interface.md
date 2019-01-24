@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType Interfaz1
+title: ICorDebugType (Interfaz1)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType
@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de2871b406bb9da84d20d7c526ad4a703baae409
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d29ab3c67e0788b15850b7dfb8b55914c1d1e369
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694534"
 ---
-# <a name="icordebugtype-interface1"></a>ICorDebugType Interfaz1
-Representa un tipo, básico o complejo (es decir, definido por el usuario). Si el tipo es genérico, `ICorDebugType` representa el tipo genérico con instancias.  
+# <a name="icordebugtype-interface1"></a>ICorDebugType (Interfaz1)
+Representa un tipo, básico o complejo (que es, definido por el usuario). Si el tipo es genérico, `ICorDebugType` representa el tipo genérico con instancias.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumerateTypeParameters (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|Obtiene un puntero de interfaz a ICorDebugTypeEnum que hace referencia a la interfaz genérica <xref:System.Type> parámetros de la clase que hace referencia esta `ICorDebugType`.|  
-|[GetBase (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|Obtiene un puntero de interfaz a una `ICorDebugType` que hace referencia a la clase base de la clase que hace referencia esta `ICorDebugType`, si existe uno.|  
-|[GetClass (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|Obtiene un puntero de interfaz a un ICorDebugClass que hace referencia al constructor con tipo de este `ICorDebugType`.|  
-|[GetFirstTypeParameter (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|Obtiene un puntero de interfaz a una `ICorDebugType` que hace referencia a la primera genérico <xref:System.Type> parámetro para el constructor de la clase que hace referencia esta `ICorDebugType`.|  
-|[GetRank (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|Obtiene el número de dimensiones de un tipo de matriz.|  
+|[EnumerateTypeParameters (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|Obtiene un puntero de interfaz a ICorDebugTypeEnum que hace referencia el tipo genérico <xref:System.Type> parámetros de la clase que hace referencia esta `ICorDebugType`.|  
+|[GetBase (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|Obtiene un puntero de interfaz a un `ICorDebugType` que hace referencia a la clase base de la clase que hace referencia esta `ICorDebugType`, si existe alguno.|  
+|[GetClass (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|Obtiene un puntero de interfaz a ICorDebugClass que hace referencia al constructor con tipo de este `ICorDebugType`.|  
+|[GetFirstTypeParameter (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|Obtiene un puntero de interfaz a un `ICorDebugType` que hace referencia a la primera genérica <xref:System.Type> parámetro para el constructor de la clase que hace referencia esta `ICorDebugType`.|  
+|[GetRank (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|Obtiene el número de dimensiones en un tipo de matriz.|  
 |[GetStaticFieldValue (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|Obtiene un puntero de interfaz al ICorDebugValue que contiene el valor del campo estático al que hace referencia el campo especificado token en el marco de pila especificado.|  
 |[GetType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|Obtiene un valor de CorElementType que describe el tipo nativo de common language runtime <xref:System.Type> hace referencia este `ICorDebugType`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si el tipo es genérico, `ICorDebugClass` representa el tipo sin instancias. El `ICorDebugType` interfaz representa un tipo genérico con instancias. Por ejemplo, tablas hash\<K, V > estaría representado por `ICorDebugClass`, mientras que la tabla hash\<Int32, String > estaría representado por `ICorDebugType`.  
+ Si el tipo es genérico, `ICorDebugClass` representa el tipo sin instancias. El `ICorDebugType` interfaz representa un tipo genérico con instancias. Por ejemplo, Hashtable\<K, V > se representaría mediante `ICorDebugClass`, mientras que Hashtable\<Int32, String > se representaría mediante `ICorDebugType`.  
   
  Los tipos no genéricos se representan mediante dos `ICorDebugClass` y `ICorDebugType`. La última interfaz se introdujo en la versión 2.0 de .NET Framework para tratar con la creación de instancias de tipo.  
   
@@ -47,13 +47,13 @@ Representa un tipo, básico o complejo (es decir, definido por el usuario). Si e
 >  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

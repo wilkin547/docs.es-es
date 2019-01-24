@@ -2,12 +2,12 @@
 title: Usar NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b00b4ed24d15519baf91ce38678fd91056eff521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658733"
 ---
 # <a name="using-the-nethttpbinding"></a>Usar NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> es un enlace diseñado para consumir servicios HTTP o WebSocket y usa la codificación binaria de forma predeterminada. <xref:System.ServiceModel.NetHttpBinding> detectará si se usa con un contrato de solicitud-respuesta o dúplex y cambiará su comportamiento para que coincida; usará HTTP para los contratos de solicitud-respuesta y WebSockets para los contratos dúplex. Este comportamiento puede invalidarse mediante la configuración <xref:System.ServiceModel.Channels.WebSocketTransportUsage>:  
@@ -45,7 +45,7 @@ ms.locfileid: "46696747"
         </binding>  
       </netHttpBinding>  
     </bindings>  
-    <!- ... -->   
+    ...
   </system.serviceModel>  
 ```  
   
@@ -58,8 +58,8 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de enlaces para los servicios](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Servicios dúplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>Vea también
+- [Configuración de enlaces para los servicios](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Servicios dúplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)

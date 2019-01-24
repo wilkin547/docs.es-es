@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 92cf4e7099c7880eb9bde9af765970abac698310
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4be6f3b06a0e9ab16469ad9a7f9e78799cc2e637
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513677"
 ---
 # <a name="drawing-objects-overview"></a>Información general sobre objetos Drawing
 Este tema se presentan <xref:System.Windows.Media.Drawing> objetos y se describe cómo se usan para dibujar con eficacia formas, mapas de bits, texto y multimedia. Usar <xref:System.Windows.Media.Drawing> objetos al crear imágenes prediseñadas, pintar con un <xref:System.Windows.Media.DrawingBrush>, o use <xref:System.Windows.Media.Visual> objetos.  
@@ -180,12 +180,12 @@ Orden de las operaciones de DrawingGroup
   
 |Property|Descripción|Ilustración|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Modifica la opacidad de partes seleccionadas de la <xref:System.Windows.Media.DrawingGroup> contenido. Para obtener un ejemplo, vea [How to: Control the Opacity of a Drawing](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee) (Cómo: Controlar la opacidad de un dibujo).|![DrawingGroup con una máscara de opacidad](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Cambia de manera uniforme la opacidad de la <xref:System.Windows.Media.DrawingGroup> contenido. Utilice esta propiedad para realizar un <xref:System.Windows.Media.Drawing> total o parcialmente transparentes. Para obtener un ejemplo, vea [How to: Apply an Opacity Mask to a Drawing](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f) (Cómo: Aplicar una máscara de opacidad a un dibujo).|![DrawingGroups con diferentes valores de opacidad](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Se aplica un <xref:System.Windows.Media.Effects.BitmapEffect> a la <xref:System.Windows.Media.DrawingGroup> contenido. Para obtener un ejemplo, vea [How to: Apply a BitmapEffect to a Drawing](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5) (Cómo: Aplicar un objeto BitmapEffect a un dibujo).|![DrawingGroup con BlurBitmapEffect](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Clips el <xref:System.Windows.Media.DrawingGroup> contenido en una región que se describe mediante un <xref:System.Windows.Media.Geometry>. Para obtener un ejemplo, vea [How to: Clip a Drawing](https://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058) (Cómo: Recortar un dibujo).|![DrawingGroup con una región de recorte definida](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Modifica la opacidad de partes seleccionadas de la <xref:System.Windows.Media.DrawingGroup> contenido. Como ejemplo, vea [Cómo: Controlar la opacidad de un dibujo](https://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![DrawingGroup con una máscara de opacidad](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Cambia de manera uniforme la opacidad de la <xref:System.Windows.Media.DrawingGroup> contenido. Utilice esta propiedad para realizar un <xref:System.Windows.Media.Drawing> total o parcialmente transparentes. Como ejemplo, vea [Cómo: Aplicar una máscara de opacidad a un dibujo](https://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![DrawingGroups con diferentes valores de opacidad](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Se aplica un <xref:System.Windows.Media.Effects.BitmapEffect> a la <xref:System.Windows.Media.DrawingGroup> contenido. Como ejemplo, vea [Cómo: Aplicar un objeto BitmapEffect a un dibujo](https://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5).|![DrawingGroup con BlurBitmapEffect](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Clips el <xref:System.Windows.Media.DrawingGroup> contenido en una región que se describe mediante un <xref:System.Windows.Media.Geometry>. Como ejemplo, vea [Cómo: Recortar un dibujo](https://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058) .|![DrawingGroup con una región de recorte definida](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|Ajusta los píxeles independientes del dispositivo a los píxeles del dispositivo según las directrices especificadas. Esta propiedad resulta útil para garantizar que los gráficos muy detallados se representan nítidamente en pantallas de baja resolución. Para obtener un ejemplo, vea [Apply a GuidelineSet to a Drawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md) (Aplicar un objeto GuidelineSet a un dibujo).|![DrawingGroup con y sin GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Transforma el <xref:System.Windows.Media.DrawingGroup> contenido. Para obtener un ejemplo, vea [How to: Apply a Transform to a Drawing](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd) (Cómo: Aplicar una transformación a un dibujo).|![DrawingGroup girado](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Transforma el <xref:System.Windows.Media.DrawingGroup> contenido. Como ejemplo, vea [Cómo: Aplicar una transformación a un dibujo](https://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd).|![DrawingGroup girado](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>Mostrar un dibujo como imagen  
@@ -233,13 +233,13 @@ Uso de GeometryDrawing con un objeto DrawingBrush
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.DrawingGroup>  
- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.DrawingGroup>
+- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)

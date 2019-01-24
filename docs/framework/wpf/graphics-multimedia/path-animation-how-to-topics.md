@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665856"
 ---
 # <a name="path-animation-how-to-topics"></a>Temas "Cómo..." de animación de trazado
 Los temas de esta sección muestran cómo animar un objeto a lo largo de una ruta de acceso.  
@@ -30,7 +30,7 @@ Los temas de esta sección muestran cómo animar un objeto a lo largo de una rut
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>Vea también  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>Vea también
+- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

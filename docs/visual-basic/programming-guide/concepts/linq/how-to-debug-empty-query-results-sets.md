@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Depurar conjuntos de resultados de consulta vacía (Visual Basic)'
+title: Procedimiento Depurar conjuntos de resultados de consulta vacíos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 33dcfe9b0c0ad41353ca845ed4d8e21ff77292df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715457"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Cómo: Depurar conjuntos de resultados de consulta vacía (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Procedimiento Depurar conjuntos de resultados de consulta vacíos (Visual Basic)
 Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  
   
  El primer conjunto de ejemplos de este tema muestra una forma habitual de cargar XML en un espacio de nombres predeterminado con una consulta incorrecta.  
@@ -89,5 +89,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

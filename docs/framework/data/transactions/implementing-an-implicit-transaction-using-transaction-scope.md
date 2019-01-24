@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645852"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar una transacción implícita mediante el ámbito de la transacción
 La clase <xref:System.Transactions.TransactionScope> proporciona una manera simple de marcar un bloque de código como participar en una transacción, sin exigirle que interactuara con la propia transacción. Un ámbito de la transacción puede seleccionar y administrar automáticamente la transacción ambiente. Debido a su facilidad de uso y eficacia, se recomienda que utilice la clase <xref:System.Transactions.TransactionScope> al desarrollar una aplicación de transacción.  
@@ -23,25 +23,25 @@ La clase <xref:System.Transactions.TransactionScope> proporciona una manera simp
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- El ambiente de transacción ha comenzado una vez que se ha creado un nuevo objeto <xref:System.Transactions.TransactionScope> .  Como se muestra en el ejemplo de código, se recomienda crear ámbitos con una **con** instrucción. El **con** instrucción está disponible en C# y en Visual Basic, y funciona como un **try... finally** bloque para asegurarse de que el ámbito está eliminado correctamente.  
+ El ambiente de transacción ha comenzado una vez que se ha creado un nuevo objeto <xref:System.Transactions.TransactionScope> .  Como se muestra en el ejemplo de código, se recomienda crear ámbitos con una **mediante** instrucción. El **mediante** instrucción está disponible tanto en C# y en Visual Basic y funciona como un **try... finally** bloque para asegurarse de que el ámbito se elimina correctamente.  
   
- Al crear una instancia de <xref:System.Transactions.TransactionScope>, el administrador de transacciones determina en qué transacción participar. Una vez determinado, el ámbito siempre participa en esa transacción. La Decisión se basa en dos factores: si está presente una transacción de ambiente y el valor de la **TransactionScopeOption** parámetro en el constructor. La transacción ambiente es la transacción dentro de la que su código se ejecuta. Puede obtener una referencia a la transacción ambiente llamando a la propiedad estática <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> de la clase <xref:System.Transactions.Transaction>. Para obtener más información sobre cómo se utiliza este parámetro, vea la [administrar el flujo de transacciones mediante TransactionScopeOption](#ManageTxFlow) sección de este tema.  
+ Al crear una instancia de <xref:System.Transactions.TransactionScope>, el administrador de transacciones determina en qué transacción participar. Una vez determinado, el ámbito siempre participa en esa transacción. La Decisión se basa en dos factores: si una transacción ambiente está presente y el valor de la **TransactionScopeOption** parámetro del constructor. La transacción ambiente es la transacción dentro de la que su código se ejecuta. Puede obtener una referencia a la transacción ambiente llamando a la propiedad estática <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> de la clase <xref:System.Transactions.Transaction>. Para obtener más información sobre cómo se utiliza este parámetro, vea el [administración de flujo de transacciones con TransactionScopeOption](#ManageTxFlow) sección de este tema.  
   
 ## <a name="completing-a-transaction-scope"></a>Completar un ámbito de la transacción  
- Cuando la aplicación termina todo el trabajo que tiene que llevar a cabo en una transacción, debe llamar al método <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> solo una vez para notificar al administrador de transacciones que la transacción se puede confirmar. Es muy recomendable colocar la llamada a <xref:System.Transactions.TransactionScope.Complete%2A> como la última instrucción en el **con** bloque.  
+ Cuando la aplicación termina todo el trabajo que tiene que llevar a cabo en una transacción, debe llamar al método <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> solo una vez para notificar al administrador de transacciones que la transacción se puede confirmar. Es muy recomendable colocar la llamada a <xref:System.Transactions.TransactionScope.Complete%2A> como la última instrucción del **mediante** bloque.  
   
- Error al llamar a este método, anula la transacción, porque el Administrador de transacciones interpreta esto como un error del sistema, o equivalente a una excepción que se produce dentro del ámbito de la transacción. Sin embargo, llamar a este método no garantiza que se vaya a confirmar la transacción. Es solo una manera de informar al administrador de transacciones de su estado. Después de llamar a este método<xref:System.Transactions.TransactionScope.Complete%2A> ya no podrá obtener acceso a la transacción de ambiente mediante la propiedad <xref:System.Transactions.Transaction.Current%2A> y, si intenta hacerlo, se producirá una excepción.  
+ No se puede llamar a este método, anula la transacción, porque el Administrador de transacciones interpreta esto como un error del sistema, o equivalente a una excepción producida dentro del ámbito de la transacción. Sin embargo, llamar a este método no garantiza que se vaya a confirmar la transacción. Es solo una manera de informar al administrador de transacciones de su estado. Después de llamar a este método<xref:System.Transactions.TransactionScope.Complete%2A> ya no podrá obtener acceso a la transacción de ambiente mediante la propiedad <xref:System.Transactions.Transaction.Current%2A> y, si intenta hacerlo, se producirá una excepción.  
   
- Si el <xref:System.Transactions.TransactionScope> objeto creó la transacción inicialmente, el trabajo real de confirmación de la transacción mediante el Administrador de transacciones se produce después de la última línea de código en el **con** bloque. Si no ha creado la transacción, se produce la confirmación cada vez que el propietario del objeto <xref:System.Transactions.CommittableTransaction.Commit%2A> llama al método <xref:System.Transactions.CommittableTransaction>. En ese momento en que el Administrador de transacciones llama al recurso administradores y les informa de confirmar o revertir, dependiendo de si la <xref:System.Transactions.TransactionScope.Complete%2A> método se llamó en la <xref:System.Transactions.TransactionScope> objeto.  
+ Si el <xref:System.Transactions.TransactionScope> objeto creó la transacción inicialmente, el trabajo real de confirmar la transacción por el Administrador de transacciones se produce después de la última línea de código en el **mediante** bloque. Si no ha creado la transacción, se produce la confirmación cada vez que el propietario del objeto <xref:System.Transactions.CommittableTransaction.Commit%2A> llama al método <xref:System.Transactions.CommittableTransaction>. En ese momento en que el Administrador de transacciones llama administradores de los recursos y les informa a commit o rollback, en función de si el <xref:System.Transactions.TransactionScope.Complete%2A> se llamó al método en el <xref:System.Transactions.TransactionScope> objeto.  
   
- El **con** instrucción garantiza que el <xref:System.Transactions.TransactionScope.Dispose%2A> método de la <xref:System.Transactions.TransactionScope> objeto se denomina incluso si se produce una excepción. El método <xref:System.Transactions.TransactionScope.Dispose%2A> marca el fin del ámbito de la transacción. Las excepciones que se producen después de llamar a este método quizá no afecten a la transacción. Este método también restaura la transacción de ambiente a su estado previo.  
+ El **mediante** instrucción garantiza que el <xref:System.Transactions.TransactionScope.Dispose%2A> método de la <xref:System.Transactions.TransactionScope> se denomina objeto incluso si se produce una excepción. El método <xref:System.Transactions.TransactionScope.Dispose%2A> marca el fin del ámbito de la transacción. Las excepciones que se producen después de llamar a este método quizá no afecten a la transacción. Este método también restaura la transacción de ambiente a su estado previo.  
   
  Se inicia <xref:System.Transactions.TransactionAbortedException> si el ámbito crea la transacción, y ésta se anula. Se inicia <xref:System.Transactions.TransactionInDoubtException> si el administrador de transacciones no puede llegar a una decisión de la confirmación. No se produce ninguna excepción si se confirma la transacción.  
   
 ## <a name="rolling-back-a-transaction"></a>Deshacer una transacción  
  Si desea revertir una transacción, no debería llamar al método <xref:System.Transactions.TransactionScope.Complete%2A> dentro del ámbito de la transacción. Por ejemplo, puede producir una excepción dentro del ámbito. Se deshará la transacción en la que participa.  
   
-##  <a name="ManageTxFlow"></a> Administrar el flujo de transacciones mediante TransactionScopeOption  
+##  <a name="ManageTxFlow"></a> Administración de flujo de transacciones con TransactionScopeOption  
  El ámbito de la transacción puede estar anidado al llamar a un método que utiliza desde dentro <xref:System.Transactions.TransactionScope> un método que utiliza su propio ámbito, como es el caso con el método `RootMethod` en el ejemplo siguiente,  
   
 ```csharp  
@@ -166,8 +166,8 @@ using(TransactionScope scope1 = new TransactionScope())
  Al utilizar los objetos <xref:System.Transactions.TransactionScope> anidados, todos los ámbitos anidados se deben configurar para utilizar exactamente el mismo nivel de aislamiento si desean unir la transacción ambiente. Si un objeto <xref:System.Transactions.TransactionScope> anidado intenta unir la transacción ambiente todavía especifica un nivel de aislamiento diferente, se inicia <xref:System.ArgumentException>.  
   
 ## <a name="interop-with-com"></a>Interoperabilidad con COM+  
- Al crear que una nueva instancia <xref:System.Transactions.TransactionScope>, se puede utilizar la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> en uno de los constructores para especificar cómo interactuar con COM+. Para obtener más información sobre esto, consulte [interoperabilidad con servicios empresariales y las transacciones COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ Al crear que una nueva instancia <xref:System.Transactions.TransactionScope>, se puede utilizar la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> en uno de los constructores para especificar cómo interactuar con COM+. Para obtener más información, consulte [interoperabilidad con Enterprise Services y transacciones de COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Transactions.Transaction.Clone%2A>  
- <xref:System.Transactions.TransactionScope>
+## <a name="see-also"></a>Vea también
+- <xref:System.Transactions.Transaction.Clone%2A>
+- <xref:System.Transactions.TransactionScope>

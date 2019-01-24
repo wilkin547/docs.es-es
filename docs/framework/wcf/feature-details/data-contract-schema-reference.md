@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662587"
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
@@ -38,7 +38,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 -   Se omite cualquier anotación (excepto aquellas descritas en este documento).  
   
-### <a name="xsschema-attributes"></a>\<xs: schema >: atributos  
+### <a name="xsschema-attributes"></a>\<xs:schema>: attributes  
   
 |Atributo|DataContract|  
 |---------------|------------------|  
@@ -50,13 +50,13 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`targetNamespace`|Admitido y asignado al espacio de nombres del contrato de datos. Si no se especifica este atributo, se utiliza el espacio de nombres en blanco. No puede ser el espacio de nombres reservado `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|ignorado.|  
   
-### <a name="xsschema-contents"></a>\<xs: schema >: contenido  
+### <a name="xsschema-contents"></a>\<xs:schema>: contents  
   
 |Contenido|Schema|  
 |--------------|------------|  
 |`include`|Se admite. `DataContractSerializer` admite xs:include y xs:import. Sin embargo, Svcutil.exe restringe las siguientes referencias `xs:include/@schemaLocation` y `xs:import/@location` cuando los metadatos se cargan desde un archivo local. La lista de archivos de esquema se debe pasar mediante un mecanismo fuera de banda y no mediante `include` en este caso; los documentos de esquema `include`se omiten.|  
 |`redefine`|no autorizado. El uso de `xs:redefine` se prohíbe por parte de `DataContractSerializer` por razones de seguridad: `x:redefine` requiere que se siga `schemaLocation` . En ciertas circunstancias, el uso de DataContract por parte de Svcutil.exe restringe el uso de `schemaLocation`.|  
-|`import`|Se admite. `DataContractSerializer` admite `xs:include` y `xs:import`. Sin embargo, Svcutil.exe restringe las siguientes referencias `xs:include/@schemaLocation` y `xs:import/@location` cuando los metadatos se cargan desde un archivo local. La lista de archivos de esquema se debe pasar mediante un mecanismo fuera de banda y no mediante `include` en este caso; los documentos de esquema `include` se omiten.|  
+|`import`|Se admite. `DataContractSerializer` admite `xs:include` y `xs:import`. Sin embargo, Svcutil.exe restringe las siguientes referencias `xs:include/@schemaLocation` y `xs:import/@location` cuando los metadatos se cargan desde un archivo local. La lista de archivos de esquema se debe pasar mediante un mecanismo fuera de banda y no mediante `include` en este caso; los documentos de esquema `include`se omiten.|  
 |`simpleType`|Se admite. Vea la sección `xs:simpleType` .|  
 |`complexType`|Admitido, se asigna a contratos de datos. Vea la sección `xs:complexType` .|  
 |`group`|ignorado. `DataContractSerializer` no admite el uso de `xs:group`, `xs:attributeGroup`ni `xs:attribute`. Estas declaraciones se ignoran como elementos secundarios de `xs:schema`, pero no se puede hacer referencia a ellas desde `complexType` u otras estructuras admitidas.|  
@@ -210,7 +210,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 ## <a name="simple-types---xssimpletype"></a>Tipos simples: \<xs: simpleType >  
   
-### <a name="xssimpletype-attributes"></a>\<xs: simpleType >: atributos  
+### <a name="xssimpletype-attributes"></a>\<xs:simpleType>: attributes  
   
 |Atributo|Schema|  
 |---------------|------------|  
@@ -218,7 +218,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`id`|ignorado.|  
 |`name`|Admitido, asigna al nombre de contrato de datos.|  
   
-### <a name="xssimpletype-contents"></a>\<xs: simpleType >: contenido  
+### <a name="xssimpletype-contents"></a>\<xs:simpleType>: contents  
   
 |Contenido|Schema|  
 |--------------|------------|  
@@ -226,7 +226,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`list`|Se admite. Asigna a contratos de datos de enumeración de marcas. Vea la sección de listas de `xs:simpleType` .|  
 |`union`|no autorizado.|  
   
-### <a name="xsrestriction"></a>\<xs: restriction >  
+### <a name="xsrestriction"></a>\<xs:restriction>  
   
 -   Las restricciones de tipos complejos solo se admiten para base = "`xs:anyType`".  
   
@@ -234,7 +234,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 -   El resto de restricciones de tipos simples se asignan a los tipos que restringen. Por ejemplo, una restricción de `xs:int` se asigna a un entero, como hace `xs:int` . Para obtener más información sobre la asignación de tipo primitivo, vea asignación de tipo/primitivo.  
   
-### <a name="xsrestriction-attributes"></a>\<xs: restriction >: atributos  
+### <a name="xsrestriction-attributes"></a>\<xs:restriction>: attributes  
   
 |Atributo|Schema|  
 |---------------|------------|  
@@ -328,17 +328,17 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs: List >  
+### <a name="xslist"></a>\<xs:list>  
  El`DataContractSerializer` asigna tipos de enumeración marcados con `System.FlagsAttribute` a `xs:list` derivado de `xs:string`. No se admite ninguna otra variación de `xs:list` .  
   
-### <a name="xslist-attributes"></a>\<xs: List >: atributos  
+### <a name="xslist-attributes"></a>\<xs:list>: attributes  
   
 |Atributo|Schema|  
 |---------------|------------|  
 |`itemType`|no autorizado.|  
 |`id`|ignorado.|  
   
-### <a name="xslist-contents"></a>\<xs: List >: contenido  
+### <a name="xslist-contents"></a>\<xs:list>: contents  
   
 |Contenido|Schema|  
 |--------------|------------|  
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

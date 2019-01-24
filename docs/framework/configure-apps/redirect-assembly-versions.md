@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f6e139a4e10ca10fac45510715110d156ddf82ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bc193402120780c605f6139feac6f0d60a34118e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674171"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirigir versiones de ensamblado
 
@@ -67,7 +67,7 @@ Si otro proyecto de la aplicación hace referencia a la versión 1.0.0.0 del mis
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Puede habilitar la redirección de enlace automático si su aplicación tiene como destino versiones anteriores de .NET Framework. Puede invalidar este comportamiento predeterminado al proporcionar información de redirección de enlace en el archivo app.config para cualquier ensamblado o si se desactiva la característica de redirección de enlace. Para obtener información acerca de cómo activar o desactivar esta característica, vea [Cómo: Habilitar y deshabilitar la redirección de enlace automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+Puede habilitar la redirección de enlace automático si su aplicación tiene como destino versiones anteriores de .NET Framework. Puede invalidar este comportamiento predeterminado al proporcionar información de redirección de enlace en el archivo app.config para cualquier ensamblado o si se desactiva la característica de redirección de enlace. Para obtener información acerca de cómo activar o desactivar esta característica, vea [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Omisión de la directiva de edición
