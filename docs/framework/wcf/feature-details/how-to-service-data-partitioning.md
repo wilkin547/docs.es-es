@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Particionar datos de servicio'
+title: Cómo Particionar datos de servicio
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590635"
 ---
-# <a name="how-to-service-data-partitioning"></a>Cómo: Particionar datos de servicio
-Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, los mensajes de gran importancia o los clientes "Gold" pueden deben procesarse en una prioridad más alta que los mensajes de un cliente estándar.  
+# <a name="how-to-service-data-partitioning"></a>Cómo Particionar datos de servicio
+Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, los mensajes de gran importancia o clientes "Oro" que deba procesarse con una prioridad más alta que los mensajes de un cliente estándar.  
   
  En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc. Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el punto de conexión de calculator1 procesa mensajes recibidos de los clientes importantes, y el punto de conexión de calculator2 procesa los mensajes de otros clientes.  
   
@@ -85,7 +85,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
     </filterTables>  
     ```  
   
-4.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla, debe asociar la tabla de filtros a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. En el ejemplo siguiente se muestra cómo asociar "filterTable1" a los extremos de servicio:  
+4.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla, debe asociar la tabla de filtros a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar "filterTable1" a los puntos de conexión de servicio:  
   
     ```xml  
     <behaviors>  
@@ -173,5 +173,5 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Vea también
+- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Permitir las solicitudes de metadatos durante la autorización'
+title: Cómo Permitir las solicitudes de metadatos durante la autorización
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 2f855080cf3ba4cee08470af77c52945e47a2ec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 820725e22c8f07c10212f434e377d5b039cc75e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489640"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591915"
 ---
-# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Cómo: Permitir las solicitudes de metadatos durante la autorización
+# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Cómo Permitir las solicitudes de metadatos durante la autorización
 Durante la autorización personalizada, puede ser necesario permitir una solicitud para que se procesen los metadatos. El tema siguientes describe los pasos para validar este tipo de solicitud.  
   
  Para obtener más información acerca de la autorización de Windows Communication Foundation (WCF), consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -23,11 +23,11 @@ Durante la autorización personalizada, puede ser necesario permitir una solicit
   
 1.  Cree una extensión de la clase <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
-2.  Invalide el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. El método devuelve `true` o `false` dependiendo de si se permite la autorización. La información sobre el procedimiento actual se encuentra en <xref:System.ServiceModel.OperationContext> que se pasa como un parámetro al método.  
+2.  Invalide el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> . El método devuelve `true` o `false` dependiendo de si se permite la autorización. La información sobre el procedimiento actual se encuentra en <xref:System.ServiceModel.OperationContext> que se pasa como un parámetro al método.  
   
 3.  En la invalidación, compruebe el nombre del contrato, espacio de nombres y la acción tal como se muestra en el ejemplo siguiente. Si las condiciones son válidas, devuelva `true.`  
   
-4.  Utilice el punto de extensibilidad para emplear la clase. Para obtener más información, consulte [Cómo: crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4.  Utilice el punto de extensibilidad para emplear la clase. Para obtener más información, vea [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo de código se muestra una invalidación del método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.  
@@ -35,7 +35,7 @@ Durante la autorización personalizada, puede ser necesario permitir una solicit
  [!code-csharp[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/cs/source.cs#1)]
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

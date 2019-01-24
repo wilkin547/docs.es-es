@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595323"
 ---
 # <a name="data-transfer-and-serialization"></a>Transferencia y serialización de datos
-En un sistema conectado, los servicios y clientes dependen del intercambio de datos para realizar cualquier tarea. Como desarrollador de un servicio o cliente, también debe entender la forma en que Windows Communication Foundation (WCF) controla los datos y serialización de datos para poder crear aplicaciones eficaces y fáciles de mantener.  
+En un sistema conectado, los servicios y clientes dependen del intercambio de datos para realizar cualquier tarea. Como desarrollador de un servicio o cliente, también debe entender cómo Windows Communication Foundation (WCF) controla la serialización de datos y datos con el fin de crear aplicaciones eficaces y fáciles de mantener.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -60,6 +60,6 @@ En un sistema conectado, los servicios y clientes dependen del intercambio de da
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Extensión de codificadores y serializadores](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos recomendados: creación de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Control de versiones del servicio](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>Vea también
+- [Procedimientos recomendados: Versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Control de versiones del servicio](../../../../docs/framework/wcf/service-versioning.md)

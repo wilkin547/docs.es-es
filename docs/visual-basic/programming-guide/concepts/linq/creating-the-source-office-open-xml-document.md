@@ -1,15 +1,15 @@
 ---
-title: Crear el documento XML abierto de Office de origen (Visual Basic)
+title: Crear el documento de origen Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 3db168b2c2971c3b44e54aefc24a9e08edb232d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 124f22e3a4b3e43dd454aca9389691a89debcf6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617452"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Crear el documento XML abierto de Office de origen (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Crear el documento de origen Office Open XML (Visual Basic)
 En este tema se muestra cómo crear el documento WordprocessingML XML abierto de Office que usan los otros ejemplos de este tutorial. Si sigue estas instrucciones, su resultado coincidirá con el resultado proporcionado en cada ejemplo.  
   
  No obstante, los ejemplos de este tutorial funcionarán con cualquier documento WordprocessingML válido.  
@@ -53,5 +53,5 @@ En este tema se muestra cómo crear el documento WordprocessingML XML abierto de
     > [!NOTE]
     >  Si está usando Microsoft Word 2003, seleccione **Documento de Word 2007** en la lista desplegable **Guardar como tipo**.  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Vea también
+- [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

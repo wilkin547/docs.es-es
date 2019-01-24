@@ -1,34 +1,34 @@
 ---
-title: 'Cómo: Devolver un valor de un procedimiento (Visual Basic)'
+title: Procedimiento Devolver un valor de un procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 62e8a52e488247d4dfcde2a560920447abe1c182
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38b0673f5725077eec9253021eec4216e66504a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615262"
 ---
-# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Cómo: Devolver un valor de un procedimiento (Visual Basic)
-A `Function` procedimiento devuelve un valor al código de llamada mediante la ejecución de un `Return` instrucción o encontrar una `Exit Function` o `End Function` instrucción.  
+# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Procedimiento Devolver un valor de un procedimiento (Visual Basic)
+Un `Function` procedimiento devuelve un valor al código de llamada ya sea mediante la ejecución de un `Return` instrucción o encontrando una `Exit Function` o `End Function` instrucción.  
   
 ### <a name="to-return-a-value-using-the-return-statement"></a>Para devolver un valor mediante la instrucción Return  
   
 1.  Coloque un `Return` instrucción en el punto donde se completa la tarea del procedimiento.  
   
-2.  Siga el `Return` palabra clave con una expresión que da como resultado el valor que desea devolver al código de llamada.  
+2.  Siga el `Return` palabra clave con una expresión que da como resultado el valor que desea volver al código de llamada.  
   
 3.  Puede tener más de una instrucción `Return` en el mismo procedimiento.  
   
-     El siguiente `Function` procedimiento calcula el lado o la hipotenusa de un triángulo rectángulo y lo devuelve al código de llamada.  
+     La siguiente `Function` procedimiento calcula el lado más largo o la hipotenusa de un triángulo rectángulo y lo devuelve al código de llamada.  
   
      [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
   
-     En el ejemplo siguiente se muestra una llamada típica a `hypotenuse`, que almacena el valor devuelto.  
+     El ejemplo siguiente muestra una llamada típica al `hypotenuse`, que almacena el valor devuelto.  
   
      [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
   
@@ -40,17 +40,17 @@ A `Function` procedimiento devuelve un valor al código de llamada mediante la e
   
 3.  Puede tener más de una instrucción `Exit Function` en el mismo procedimiento. Además, puede combinar instrucciones `Return` y `Exit Function` en el mismo procedimiento.  
   
-4.  Puede tener solo una `End Function` instrucción en un `Function` procedimiento.  
+4.  Puede tener sólo uno `End Function` instrucción en un `Function` procedimiento.  
   
-     Para obtener más información y un ejemplo, vea "Valor devuelto" en [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md).  
+     Para obtener más información y un ejemplo, vea "Valor devuelto" en [instrucción Function](../../../../visual-basic/language-reference/statements/function-statement.md).  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos](./index.md)  
- [Subprocedimientos](./sub-procedures.md)  
- [Procedimientos de propiedades](./property-procedures.md)  
- [Procedimientos de operadores](./operator-procedures.md)  
- [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)  
- [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Return (instrucción)](../../../../visual-basic/language-reference/statements/return-statement.md)  
- [Crear un procedimiento que devuelve un valor](./how-to-create-a-procedure-that-returns-a-value.md)  
- [Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)
+## <a name="see-also"></a>Vea también
+- [Procedimientos](./index.md)
+- [Subprocedimientos](./sub-procedures.md)
+- [Procedimientos de propiedades](./property-procedures.md)
+- [Procedimientos de operadores](./operator-procedures.md)
+- [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
+- [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Return (instrucción)](../../../../visual-basic/language-reference/statements/return-statement.md)
+- [Cómo: Crear un procedimiento que devuelve un valor](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Cómo: Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)

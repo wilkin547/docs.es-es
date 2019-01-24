@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592593"
 ---
 # <a name="input-overview"></a>Información general sobre acciones del usuario
 <a name="introduction"></a> El [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un eficaz subsistema [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obtener datos desde una variedad de dispositivos, incluido el mouse, teclado, táctil y lápiz. En este tema se describen los servicios que proporciona [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y se explica la arquitectura de los sistemas de entrada.
@@ -243,7 +243,7 @@ ms.locfileid: "48842793"
 
  Cuando hace que los objetos respondan a manipulaciones, puede hacer que parezca que el objeto tenga inercia. Esto puede hacer que los objetos simulen el mundo físico. Por ejemplo, si empuja un libro encima de una mesa con suficiente fuerza, el libro seguirá moviéndose cuando lo suelte. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le permite simular este comportamiento, ya que puede generar eventos de manipulación cuando los dedos del usuario liberan el objeto.
 
- Para obtener información sobre cómo crear una aplicación que permita al usuario mover y girar un objeto, o cambiar su tamaño, consulte [Tutorial: Crear su primera aplicación táctil](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Para obtener información sobre cómo crear una aplicación que permite al usuario mover, cambiar el tamaño y girar un objeto, vea [Tutorial: Crear su primera aplicación táctil](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
 
  El <xref:System.Windows.UIElement> define los siguientes eventos de manipulación.
 
@@ -391,4 +391,8 @@ ms.locfileid: "48842793"
  Existen recursos adicionales que explican los elementos del marco de trabajo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y el enrutamiento de eventos con más detalle. Consulte los temas siguientes para obtener más información: [Información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md), [Información general sobre el foco](../../../../docs/framework/wpf/advanced/focus-overview.md), [Información general sobre elementos base](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [Árboles en WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md) e [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
 
 ## <a name="see-also"></a>Vea también
- [Información general se centran](../../../../docs/framework/wpf/advanced/focus-overview.md) [información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md) [enruta información general sobre eventos](../../../../docs/framework/wpf/advanced/routed-events-overview.md) [información general sobre elementos de Base](../../../../docs/framework/wpf/advanced/base-elements-overview.md) [propiedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [Información general sobre el foco](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Información general sobre elementos base](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Propiedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)

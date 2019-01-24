@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595141"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depuración de errores de autenticación de Windows
 Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, la interfaz del proveedor de compatibilidad para seguridad (SSPI) controla los procesos de seguridad. Cuando se producen errores de seguridad en el nivel de SSPI, se exponen mediante Windows Communication Foundation (WCF). En este tema se proporciona un marco y conjunto de cuestiones que le ayudarán a diagnosticar los errores.  
@@ -45,13 +45,13 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
   
  Específicamente, los cuatro tipos de cuenta incluyen:  
   
--   Usuario local: perfil de usuario de solo el equipo. Por ejemplo: `MachineName\Administrator` o `MachineName\ProfileName`.  
+-   Usuario local: Perfil de usuario solo el equipo. Por ejemplo: `MachineName\Administrator` o `MachineName\ProfileName`.  
   
--   Sistema local: el SISTEMA de cuentas integrado en un equipo que no está unido a un dominio.  
+-   Sistema local: La cuenta integrada del sistema en un equipo que no está unido a un dominio.  
   
--   Usuario del dominio: una cuenta de usuario en un dominio de Windows. Por ejemplo: `DomainName\ProfileName`.  
+-   Usuario de dominio: Una cuenta de usuario en un dominio de Windows. Por ejemplo: `DomainName\ProfileName`.  
   
--   Equipo del dominio: un proceso con la identidad del equipo en ejecución en un equipo unido a un dominio de Windows. Por ejemplo: `MachineName\Network Service`.  
+-   Equipo del dominio: Un proceso con la identidad de máquina que se ejecutan en un equipo unido a un dominio de Windows. Por ejemplo: `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Se captura la credencial de servicio cuando se llama al método <xref:System.ServiceModel.ICommunicationObject.Open%2A> de la clase <xref:System.ServiceModel.ServiceHost>. Se lee la credencial del cliente siempre que el cliente envíe un mensaje.  
@@ -144,10 +144,10 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
 #### <a name="developing-and-deploying-with-different-identities"></a>Desarrollo e implementación con distintas identidades  
  Si desarrolla una aplicación en un equipo y la implementa en otro, y utiliza tipos de cuentas diferentes para autenticarse en cada equipo, el comportamiento puede ser diferente. Supongamos, por ejemplo, que desarrolla una aplicación en un equipo Windows XP Pro con el modo de autenticación `SSPI Negotiated`. Si utiliza una cuenta de usuario local para autenticarse, se utilizará el protocolo NTLM. Una vez desarrollada la aplicación, implementa el servicio en un equipo Windows Server 2003, donde se ejecuta bajo una cuenta de dominio. En este punto, el cliente no podrá autenticar el servicio, porque estará utilizando Kerberos y un controlador de dominio.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [Delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [Delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

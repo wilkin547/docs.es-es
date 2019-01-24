@@ -8,20 +8,20 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 28b4a64a6c79b226b1ff4b3bfcbf9a55b6d8df78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590908"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Información general sobre plantillas y estilos de encabezado de columna en modo GridView
-Esta información general describe el orden de prioridad para las propiedades que se usan para personalizar un encabezado de columna en la <xref:System.Windows.Controls.GridView> modo de vista de un <xref:System.Windows.Controls.ListView> control.  
+Esta introducción describe el orden de prioridad para las propiedades que usa para personalizar un encabezado de columna en la <xref:System.Windows.Controls.GridView> modo de vista de un <xref:System.Windows.Controls.ListView> control.  
   
-## <a name="customizing-a-column-header-in-a-gridview"></a>Personalizar un encabezado de columna en un control GridView  
- Las propiedades que definen el contenido, el diseño y el estilo de un encabezado de columna en un <xref:System.Windows.Controls.GridView> se encuentran en muchas clases relacionadas. Algunas de estas propiedades tienen funcionalidad similar o al mismo.  
+## <a name="customizing-a-column-header-in-a-gridview"></a>Personalización de un encabezado de columna en un control GridView  
+ Las propiedades que definen el contenido, diseño y estilo de un encabezado de columna en un <xref:System.Windows.Controls.GridView> se encuentran en muchas clases relacionadas. Algunas de estas propiedades tienen funcionalidad similar o al mismo.  
   
- Las filas en la tabla siguiente muestran los grupos de propiedades que realizan la misma función. Puede utilizar estas propiedades para personalizar los encabezados de columna en un <xref:System.Windows.Controls.GridView>. El orden de prioridad de las propiedades relacionadas es de derecha a izquierda donde la propiedad de la columna derecha más lejano tiene la prioridad más alta. Por ejemplo, si un <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> está establecido en el <xref:System.Windows.Controls.GridViewColumnHeader> objeto y el <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> está establecido en el asociado <xref:System.Windows.Controls.GridViewColumn>, el <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> tiene prioridad. En este escenario, la <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> no tiene ningún efecto.  
+ Las filas en la tabla siguiente muestran grupos de propiedades que realizan la misma función. Puede usar estas propiedades para personalizar los encabezados de columna en un <xref:System.Windows.Controls.GridView>. El orden de prioridad para las propiedades relacionadas es de derecha a izquierda, donde la propiedad en la columna derecha más lejana tiene la prioridad más alta. Por ejemplo, si un <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> se establece en el <xref:System.Windows.Controls.GridViewColumnHeader> objeto y el <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> está establecido en el asociado <xref:System.Windows.Controls.GridViewColumn>, el <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> tiene prioridad. En este escenario, la <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> no tiene ningún efecto.  
   
  **Propiedades relacionadas para los encabezados de columna en un control GridView**  
   
@@ -33,9 +33,9 @@ Esta información general describe el orden de prioridad para las propiedades qu
 |**Plantilla de encabezado**<br /><br /> **Propiedades**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
 |**Propiedades de estilo**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
- <sup>1</sup>para **propiedades de la plantilla de encabezado**, si establece la plantilla y propiedades de selector de plantilla, la propiedad de plantilla tiene prioridad. Por ejemplo, si establece tanto la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> y <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propiedades, la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propiedad tiene prioridad.  
+ <sup>1</sup>para **propiedades de la plantilla de encabezado**, si se establece la plantilla y las propiedades del selector de plantilla, la propiedad de plantilla tiene prioridad. Por ejemplo, si establece tanto la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> y <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propiedades, la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propiedad tiene prioridad.  
   
-## <a name="see-also"></a>Vea también  
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a>Vea también
+- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

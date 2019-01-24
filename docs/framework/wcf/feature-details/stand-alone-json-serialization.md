@@ -2,19 +2,19 @@
 title: Serialización independiente de JSON
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618427"
 ---
 # <a name="stand-alone-json-serialization"></a>Serialización independiente de JSON
 JSON (JavaScript Object Notation) es un formato de datos diseñado específicamente para usarse por código JavaScript que se ejecute en páginas web dentro del explorador. Es el formato de datos predeterminado utilizado por los servicios de AJAX de ASP.NET creados en Windows Communication Foundation (WCF).  
   
  Este formato también puede usarse al crear servicios de AJAX sin integrar con ASP.NET, en este caso, XML es el valor predeterminado pero se puede elegir JSON.  
   
- Finalmente, si necesita compatibilidad JSON pero no está creando un servicio de AJAX, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> permite serializar directamente los objetos .NET en datos JSON y volver a deserializar estos datos en instancias de tipos .NET. Para obtener una descripción de cómo hacerlo, consulte [Cómo: serializar y deserializar datos JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+ Finalmente, si necesita compatibilidad JSON pero no está creando un servicio de AJAX, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> permite serializar directamente los objetos .NET en datos JSON y volver a deserializar estos datos en instancias de tipos .NET. Para obtener una descripción de cómo hacerlo, vea [Cómo: Serializar y deserializar datos JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  Al trabajar con JSON, se admiten los mismos tipos .NET, con una pocas excepciones, como las compatibles con <xref:System.Runtime.Serialization.DataContractSerializer>. Para obtener una lista de los tipos admitidos, consulte [tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Entre éstos se incluyen los tipos más primitivos, la mayoría de tipos de colección y matriz, y también tipos complejos que usan <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
@@ -109,7 +109,7 @@ JSON (JavaScript Object Notation) es un formato de datos diseñado específicame
  Las características de versiones de contratos de datos, incluida la interfaz de <xref:System.Runtime.Serialization.IExtensibleDataObject>, con completamente compatible en JSON. Además, en la mayoría de los casos es posible deserializar un tipo en un formato (por ejemplo, XML) y, a continuación, serializarlo en otro formato (por ejemplo, JSON) y conservar los datos en <xref:System.Runtime.Serialization.IExtensibleDataObject>. Para obtener más información, vea [Forward-Compatible Data Contracts](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) (Contratos de datos compatibles con el reenvío). Recuerde que JSON no está ordenado por lo que se pierde la información de orden. Además, JSON no admite múltiples parejas de claves y valores con el mismo nombre de clave. Finalmente, todas las operaciones en <xref:System.Runtime.Serialization.IExtensibleDataObject> son inherentemente polimórficas, es decir, que su tipo derivado se asigna a <xref:System.Object>, el tipo base para todos los tipos.  
   
 ## <a name="json-in-urls"></a>JSON en direcciones URL  
- Al utilizar extremos AJAX de ASP.NET con el verbo HTTP GET (usando el atributo <xref:System.ServiceModel.Web.WebGetAttribute>), los parámetros de entrada aparecen en la dirección URL de solicitud en lugar del cuerpo del mensaje. JSON incluso se admite en la dirección URL de solicitud, por lo que si tiene una operación que toma un `Int` llamada "número" y un `Person` tipo complejo denominado "p", la dirección URL puede ser similar a la siguiente dirección URL.  
+ Al utilizar puntos de conexión AJAX de ASP.NET con el verbo HTTP GET (usando el atributo <xref:System.ServiceModel.Web.WebGetAttribute>), los parámetros de entrada aparecen en la dirección URL de solicitud en lugar del cuerpo del mensaje. JSON incluso se admite en la dirección URL de solicitud, por lo que si tiene una operación que toma un `Int` llamada "número" y un `Person` tipo complejo denominado "p", la dirección URL puede ser similar a la siguiente dirección URL.  
   
 ```  
 http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}  
@@ -235,7 +235,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  Todos los mecanismos de tipos conocidos usados por <xref:System.Runtime.Serialization.DataContractSerializer> también se admiten de la misma manera en <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Tanto los serializadores de leer el mismo elemento de configuración, [ \<dataContractSerializer >](../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) en [ \<system.runtime.serialization >](../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md), para descubrir tipos conocidos agregados a través de un archivo de configuración.  
   
 #### <a name="collections-assigned-to-object"></a>Colecciones asignadas a objetos  
- Las colecciones asignadas a objetos se serializan como si fueran colecciones que implementan  <xref:System.Collections.Generic.IEnumerable%601>: una matriz JSON donde cada entrada tiene una sugerencia de tipo si es un tipo complejo. Por ejemplo, un <xref:System.Collections.Generic.List%601> typu `Shape` asignado a <xref:System.Object> el siguiente aspecto.  
+ Las colecciones asignadas a objetos se serializan como si fueran colecciones que implementan <xref:System.Collections.Generic.IEnumerable%601>: una matriz JSON donde cada entrada tiene una sugerencia de tipo si es un tipo complejo. Por ejemplo, un <xref:System.Collections.Generic.List%601> typu `Shape` asignado a <xref:System.Object> el siguiente aspecto.  
   
 ```json  
 [{"__type":"Shape:#MyApp.Shapes","x":50,"y":70},  
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>Nombres de claves JSON válidos  
  El serializador XML codifica nombres de claves que no son nombres XML válidos. Por ejemplo, un miembro de datos con el nombre "123" tendría un nombre codificado como "\_x0031\_\_x0032\_\_x0033\_" porque "123" es un nombre de elemento XML no válido (empieza por un dígito). Se puede producir una situación similar con algunos juegos de caracteres internacionales no válidos en nombres de XML. Para obtener una explicación de este efecto de XML en procesamiento JSON, consulte [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
 - [Compatibilidad con JSON y otros formatos de transferencia de datos](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
