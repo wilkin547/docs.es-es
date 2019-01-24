@@ -1,25 +1,25 @@
 ---
-title: 'punto de conexión: Errores en llamadas por segundo'
+title: 'Punto de conexión: Errores de llamadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
-ms.openlocfilehash: f1b2997a0f1e16c897fc319d1833313141f5c4bf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3b5c881c4ce7772e197bfc1a5603636b0975143c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517661"
 ---
-# <a name="endpoint-calls-faulted-per-second"></a><span data-ttu-id="9345b-102">punto de conexión: Errores en llamadas por segundo</span><span class="sxs-lookup"><span data-stu-id="9345b-102">Endpoint: Calls Faulted Per Second</span></span>
-<span data-ttu-id="9345b-103">Nombre del contador: Errores de llamadas por segundo.</span><span class="sxs-lookup"><span data-stu-id="9345b-103">Counter Name: Calls Faulted Per Second.</span></span>  
+# <a name="endpoint-calls-faulted-per-second"></a><span data-ttu-id="91d29-102">Punto de conexión: Errores de llamadas por segundo</span><span class="sxs-lookup"><span data-stu-id="91d29-102">Endpoint: Calls Faulted Per Second</span></span>
+<span data-ttu-id="91d29-103">Nombre del contador: Errores de llamadas por segundo.</span><span class="sxs-lookup"><span data-stu-id="91d29-103">Counter Name: Calls Faulted Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9345b-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="9345b-104">Description</span></span>  
- <span data-ttu-id="9345b-105">Número de llamadas que han devuelto errores a este punto de conexión en un segundo.</span><span class="sxs-lookup"><span data-stu-id="9345b-105">Number of calls that have returned faults to this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="91d29-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="91d29-104">Description</span></span>  
+ <span data-ttu-id="91d29-105">Número de llamadas que han devuelto errores a este punto de conexión en un segundo.</span><span class="sxs-lookup"><span data-stu-id="91d29-105">Number of calls that have returned faults to this endpoint in a second.</span></span>  
   
- <span data-ttu-id="9345b-106">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula mediante la siguiente fórmula.</span><span class="sxs-lookup"><span data-stu-id="9345b-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="91d29-106">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula mediante la siguiente fórmula.</span><span class="sxs-lookup"><span data-stu-id="91d29-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="9345b-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="9345b-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
+ <span data-ttu-id="91d29-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="91d29-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- <span data-ttu-id="9345b-108">En las aplicaciones de Windows Communication Foundation (WCF), los métodos de servicio comunican información de errores de procesamiento mediante mensajes de error SOAP.</span><span class="sxs-lookup"><span data-stu-id="9345b-108">In Windows Communication Foundation (WCF) applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="9345b-109">Los errores SOAP son tipos de mensaje que se incluyen en los metadatos de una operación del servicio y, por consiguiente, crean un contrato de error que los clientes pueden utilizar para que su ejecución sea más sólida o interactiva.</span><span class="sxs-lookup"><span data-stu-id="9345b-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="9345b-110">Dado que los errores SOAP se muestran a los clientes en formato XML, son sumamente interoperativos.</span><span class="sxs-lookup"><span data-stu-id="9345b-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
+ <span data-ttu-id="91d29-108">En las aplicaciones de Windows Communication Foundation (WCF), los métodos de servicio comunican información de errores de procesamiento mediante mensajes de error SOAP.</span><span class="sxs-lookup"><span data-stu-id="91d29-108">In Windows Communication Foundation (WCF) applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="91d29-109">Los errores SOAP son tipos de mensaje que se incluyen en los metadatos de una operación del servicio y, por consiguiente, crean un contrato de error que los clientes pueden utilizar para que su ejecución sea más sólida o interactiva.</span><span class="sxs-lookup"><span data-stu-id="91d29-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="91d29-110">Dado que los errores SOAP se muestran a los clientes en formato XML, son sumamente interoperativos.</span><span class="sxs-lookup"><span data-stu-id="91d29-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9345b-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="9345b-111">See Also</span></span>  
- [<span data-ttu-id="9345b-112">Especificación y gestión de errores en contratos y servicios</span><span class="sxs-lookup"><span data-stu-id="9345b-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="91d29-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="91d29-111">See also</span></span>
+- [<span data-ttu-id="91d29-112">Especificación y gestión de errores en contratos y servicios</span><span class="sxs-lookup"><span data-stu-id="91d29-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

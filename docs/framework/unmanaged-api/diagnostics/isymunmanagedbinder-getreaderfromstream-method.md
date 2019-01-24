@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c5d3d1b868849d17b2068eecfcfeea0f1e598f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af4e9124140c2b311fb2c10800200f5d4d8dc679
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545769"
 ---
-# <a name="isymunmanagedbindergetreaderfromstream-method"></a><span data-ttu-id="6473e-102">ISymUnmanagedBinder::GetReaderFromStream (Método)</span><span class="sxs-lookup"><span data-stu-id="6473e-102">ISymUnmanagedBinder::GetReaderFromStream Method</span></span>
-<span data-ttu-id="6473e-103">A partir de una interfaz de metadatos y una secuencia que contiene el almacén de símbolos, devuelve el valor correcto [ISymUnmanagedReader](isymunmanagedreader-interface.md) símbolos estructura que va a leer la depuración desde el almacén de símbolos especificado.</span><span class="sxs-lookup"><span data-stu-id="6473e-103">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>  
+# <a name="isymunmanagedbindergetreaderfromstream-method"></a><span data-ttu-id="1a84a-102">ISymUnmanagedBinder::GetReaderFromStream (Método)</span><span class="sxs-lookup"><span data-stu-id="1a84a-102">ISymUnmanagedBinder::GetReaderFromStream Method</span></span>
+<span data-ttu-id="1a84a-103">Dada una interfaz de metadatos y una secuencia que contiene el almacén de símbolos, devuelve el valor correcto [ISymUnmanagedReader](isymunmanagedreader-interface.md) estructura que leerá la depuración de símbolos desde el almacén de símbolos especificado.</span><span class="sxs-lookup"><span data-stu-id="1a84a-103">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6473e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6473e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a84a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1a84a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderFromStream(  
@@ -36,21 +36,21 @@ HRESULT GetReaderFromStream(
     [out,retval] ISymUnmanagedReader **pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6473e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="6473e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1a84a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1a84a-105">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="6473e-106">[in] Un puntero a la interfaz de importación de metadatos.</span><span class="sxs-lookup"><span data-stu-id="6473e-106">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="1a84a-106">[in] Un puntero a la interfaz de importación de metadatos.</span><span class="sxs-lookup"><span data-stu-id="1a84a-106">[in] A pointer to the metadata import interface.</span></span>  
   
  `pstream`  
- <span data-ttu-id="6473e-107">[in] Un puntero a la secuencia que contiene el almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="6473e-107">[in] A pointer to the stream that contains the symbol store.</span></span>  
+ <span data-ttu-id="1a84a-107">[in] Un puntero a la secuencia que contiene el almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="1a84a-107">[in] A pointer to the stream that contains the symbol store.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="6473e-108">[out] Un puntero que se establece en el valor devuelto [ISymUnmanagedReader](isymunmanagedreader-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="6473e-108">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="1a84a-108">[out] Un puntero que se establece en el valor devuelto [ISymUnmanagedReader](isymunmanagedreader-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="1a84a-108">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6473e-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="6473e-109">Return Value</span></span>  
- <span data-ttu-id="6473e-110">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="6473e-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1a84a-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="1a84a-109">Return Value</span></span>  
+ <span data-ttu-id="1a84a-110">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="1a84a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6473e-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6473e-111">Requirements</span></span>  
- <span data-ttu-id="6473e-112">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6473e-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1a84a-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1a84a-111">Requirements</span></span>  
+ <span data-ttu-id="1a84a-112">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1a84a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6473e-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="6473e-113">See Also</span></span>  
- [<span data-ttu-id="6473e-114">ISymUnmanagedBinder (interfaz)</span><span class="sxs-lookup"><span data-stu-id="6473e-114">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1a84a-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="1a84a-113">See also</span></span>
+- [<span data-ttu-id="1a84a-114">ISymUnmanagedBinder (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1a84a-114">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)

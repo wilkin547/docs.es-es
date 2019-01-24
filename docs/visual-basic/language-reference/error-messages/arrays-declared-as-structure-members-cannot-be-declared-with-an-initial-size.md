@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-ms.openlocfilehash: 0a7424e5dbfadd78c4071ba5b76086b7f6c9b94a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06e5e36f3e0522e0449c0ef9698f3a1b01b9cb5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549072"
 ---
-# <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="8e635-102">Las matrices declaradas como miembros de estructura no se pueden declarar con un tamaño inicial</span><span class="sxs-lookup"><span data-stu-id="8e635-102">Arrays declared as structure members cannot be declared with an initial size</span></span>
-<span data-ttu-id="8e635-103">Una matriz en una estructura se declara con un tamaño inicial.</span><span class="sxs-lookup"><span data-stu-id="8e635-103">An array in a structure is declared with an initial size.</span></span> <span data-ttu-id="8e635-104">No se puede inicializar ningún elemento de estructura y declarar un tamaño de matriz es una forma de inicialización.</span><span class="sxs-lookup"><span data-stu-id="8e635-104">You cannot initialize any structure element, and declaring an array size is one form of initialization.</span></span>  
+# <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="7d8fa-102">Las matrices declaradas como miembros de estructura no se pueden declarar con un tamaño inicial</span><span class="sxs-lookup"><span data-stu-id="7d8fa-102">Arrays declared as structure members cannot be declared with an initial size</span></span>
+<span data-ttu-id="7d8fa-103">Una matriz en una estructura se declara con un tamaño inicial.</span><span class="sxs-lookup"><span data-stu-id="7d8fa-103">An array in a structure is declared with an initial size.</span></span> <span data-ttu-id="7d8fa-104">No se puede inicializar cualquier elemento de estructura y declarar un tamaño de matriz es una forma de inicialización.</span><span class="sxs-lookup"><span data-stu-id="7d8fa-104">You cannot initialize any structure element, and declaring an array size is one form of initialization.</span></span>  
   
- <span data-ttu-id="8e635-105">**Id. de error:** BC31043</span><span class="sxs-lookup"><span data-stu-id="8e635-105">**Error ID:** BC31043</span></span>  
+ <span data-ttu-id="7d8fa-105">**Identificador de error:** BC31043</span><span class="sxs-lookup"><span data-stu-id="7d8fa-105">**Error ID:** BC31043</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8e635-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="8e635-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7d8fa-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="7d8fa-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="8e635-107">Definir la matriz en la estructura como dinámico (ningún tamaño inicial).</span><span class="sxs-lookup"><span data-stu-id="8e635-107">Define the array in your structure as dynamic (no initial size).</span></span>  
+1.  <span data-ttu-id="7d8fa-107">Definir la matriz en la estructura como dinámico (ningún tamaño inicial).</span><span class="sxs-lookup"><span data-stu-id="7d8fa-107">Define the array in your structure as dynamic (no initial size).</span></span>  
   
-2.  <span data-ttu-id="8e635-108">Si necesita un determinado tamaño de matriz, puede redimensionar una matriz dinámica con un [instrucción ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) cuando se ejecuta el código.</span><span class="sxs-lookup"><span data-stu-id="8e635-108">If you require a certain size of array, you can redimension a dynamic array with a [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) when your code is running.</span></span> <span data-ttu-id="8e635-109">Esto se ilustra en el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="8e635-109">The following example illustrates this.</span></span>  
+2.  <span data-ttu-id="7d8fa-108">Si necesita un determinado tamaño de matriz, puede redimensionar una matriz dinámica con un [instrucción ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) cuando se ejecuta el código.</span><span class="sxs-lookup"><span data-stu-id="7d8fa-108">If you require a certain size of array, you can redimension a dynamic array with a [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) when your code is running.</span></span> <span data-ttu-id="7d8fa-109">Esto se ilustra en el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="7d8fa-109">The following example illustrates this.</span></span>  
   
     ```  
     Structure demoStruct  
@@ -36,6 +36,6 @@ ms.locfileid: "33585858"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="8e635-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="8e635-110">See Also</span></span>  
- [<span data-ttu-id="8e635-111">Matrices</span><span class="sxs-lookup"><span data-stu-id="8e635-111">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [<span data-ttu-id="8e635-112">Declarar una estructura</span><span class="sxs-lookup"><span data-stu-id="8e635-112">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+## <a name="see-also"></a><span data-ttu-id="7d8fa-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="7d8fa-110">See also</span></span>
+- [<span data-ttu-id="7d8fa-111">Matrices</span><span class="sxs-lookup"><span data-stu-id="7d8fa-111">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="7d8fa-112">Cómo: Declarar una estructura</span><span class="sxs-lookup"><span data-stu-id="7d8fa-112">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
