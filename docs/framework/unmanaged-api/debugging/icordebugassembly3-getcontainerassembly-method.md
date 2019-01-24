@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acb34ac2568ac88797441306820e6e762b5ac46e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9c01898bcbd76f7e6de9445d5d1f511203c100ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585190"
 ---
-# <a name="icordebugassembly3getcontainerassembly-method"></a><span data-ttu-id="30add-102">Método ICorDebugAssembly3::GetContainerAssembly</span><span class="sxs-lookup"><span data-stu-id="30add-102">ICorDebugAssembly3::GetContainerAssembly Method</span></span>
-<span data-ttu-id="30add-103">Devuelve el ensamblado de contenedor de este objeto `ICorDebugAssembly3`.</span><span class="sxs-lookup"><span data-stu-id="30add-103">Returns the container assembly of this `ICorDebugAssembly3` object.</span></span>  
+# <a name="icordebugassembly3getcontainerassembly-method"></a><span data-ttu-id="33e04-102">Método ICorDebugAssembly3::GetContainerAssembly</span><span class="sxs-lookup"><span data-stu-id="33e04-102">ICorDebugAssembly3::GetContainerAssembly Method</span></span>
+<span data-ttu-id="33e04-103">Devuelve el ensamblado de contenedor de este objeto `ICorDebugAssembly3`.</span><span class="sxs-lookup"><span data-stu-id="33e04-103">Returns the container assembly of this `ICorDebugAssembly3` object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30add-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="30add-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33e04-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="33e04-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContainerAssembly(  
@@ -22,28 +22,28 @@ HRESULT GetContainerAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="30add-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="30add-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="33e04-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="33e04-105">Parameters</span></span>  
  `ppAssembly`  
- <span data-ttu-id="30add-106">Un puntero a la dirección de un objeto ICorDebugAssembly que representa el ensamblado de contenedor o **null** si se produce un error en la llamada al método.</span><span class="sxs-lookup"><span data-stu-id="30add-106">A pointer to the address of an ICorDebugAssembly object that represents the container assembly, or **null** if the method call fails.</span></span>  
+ <span data-ttu-id="33e04-106">Un puntero a la dirección de un objeto ICorDebugAssembly que representa el ensamblado de contenedor o **null** si se produce un error en la llamada al método.</span><span class="sxs-lookup"><span data-stu-id="33e04-106">A pointer to the address of an ICorDebugAssembly object that represents the container assembly, or **null** if the method call fails.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="30add-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="30add-107">Return Value</span></span>  
- <span data-ttu-id="30add-108">`S_OK` Si la llamada al método se realiza correctamente; en caso contrario, `S_FALSE`, y `ppAssembly` es **null**.</span><span class="sxs-lookup"><span data-stu-id="30add-108">`S_OK` if the method call succeeds; otherwise, `S_FALSE`, and `ppAssembly` is **null**.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="33e04-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="33e04-107">Return Value</span></span>  
+ <span data-ttu-id="33e04-108">`S_OK` Si la llamada al método se realiza correctamente; en caso contrario, `S_FALSE`, y `ppAssembly` es **null**.</span><span class="sxs-lookup"><span data-stu-id="33e04-108">`S_OK` if the method call succeeds; otherwise, `S_FALSE`, and `ppAssembly` is **null**.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="30add-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="30add-109">Remarks</span></span>  
- <span data-ttu-id="30add-110">Si este ensamblado se ha combinado con otros dentro de un solo ensamblado de contenedor, este método devuelve el ensamblado de contenedor.</span><span class="sxs-lookup"><span data-stu-id="30add-110">If this assembly has been merged with others inside a single container assembly, this method returns the container assembly.</span></span> <span data-ttu-id="30add-111">Para obtener más información y terminología, consulte el [icordebugprocess6:: Enablevirtualmodulesplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) tema.</span><span class="sxs-lookup"><span data-stu-id="30add-111">For more information and terminology, see the [ICorDebugProcess6::EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) topic.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="33e04-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="33e04-109">Remarks</span></span>  
+ <span data-ttu-id="33e04-110">Si este ensamblado se ha combinado con otros dentro de un solo ensamblado de contenedor, este método devuelve el ensamblado de contenedor.</span><span class="sxs-lookup"><span data-stu-id="33e04-110">If this assembly has been merged with others inside a single container assembly, this method returns the container assembly.</span></span> <span data-ttu-id="33e04-111">Para obtener más información y la terminología, consulte el [icordebugprocess6:: Enablevirtualmodulesplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) tema.</span><span class="sxs-lookup"><span data-stu-id="33e04-111">For more information and terminology, see the [ICorDebugProcess6::EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) topic.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="30add-112">Este método solo está disponible con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="30add-112">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="33e04-112">Este método solo está disponible con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="33e04-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30add-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="30add-113">Requirements</span></span>  
- <span data-ttu-id="30add-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30add-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33e04-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="33e04-113">Requirements</span></span>  
+ <span data-ttu-id="33e04-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33e04-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30add-115">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30add-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="33e04-115">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="33e04-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="30add-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30add-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="33e04-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="33e04-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="30add-117">**Versiones de .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30add-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="33e04-117">**Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33e04-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30add-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="30add-118">See Also</span></span>  
- [<span data-ttu-id="30add-119">ICorDebugAssembly3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="30add-119">ICorDebugAssembly3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  
- [<span data-ttu-id="30add-120">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="30add-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="33e04-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="33e04-118">See also</span></span>
+- [<span data-ttu-id="33e04-119">ICorDebugAssembly3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="33e04-119">ICorDebugAssembly3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)
+- [<span data-ttu-id="33e04-120">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="33e04-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

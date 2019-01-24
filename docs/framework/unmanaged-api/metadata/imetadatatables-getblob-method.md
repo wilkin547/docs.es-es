@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 743fb1c77e2dd74487a7498be25ea23b4919032a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa631721965123c4427a5d1ff2e0cec2a1ab2395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637694"
 ---
-# <a name="imetadatatablesgetblob-method"></a><span data-ttu-id="1841f-102">IMetaDataTables::GetBlob (Método)</span><span class="sxs-lookup"><span data-stu-id="1841f-102">IMetaDataTables::GetBlob Method</span></span>
-<span data-ttu-id="1841f-103">Obtiene un puntero para el objeto binario grande (BLOB) en el índice de la columna especificada.</span><span class="sxs-lookup"><span data-stu-id="1841f-103">Gets a pointer to the binary large object (BLOB) at the specified column index.</span></span>  
+# <a name="imetadatatablesgetblob-method"></a><span data-ttu-id="c6056-102">IMetaDataTables::GetBlob (Método)</span><span class="sxs-lookup"><span data-stu-id="c6056-102">IMetaDataTables::GetBlob Method</span></span>
+<span data-ttu-id="c6056-103">Obtiene un puntero para el objeto binario grande (BLOB) en el índice de la columna especificada.</span><span class="sxs-lookup"><span data-stu-id="c6056-103">Gets a pointer to the binary large object (BLOB) at the specified column index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1841f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1841f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6056-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c6056-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBlob (  
@@ -37,25 +37,25 @@ HRESULT GetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1841f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1841f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c6056-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c6056-105">Parameters</span></span>  
  `ixBlob`  
- <span data-ttu-id="1841f-106">[in] La dirección de memoria del que se obtienen `ppData`.</span><span class="sxs-lookup"><span data-stu-id="1841f-106">[in] The memory address from which to get `ppData`.</span></span>  
+ <span data-ttu-id="c6056-106">[in] La dirección de memoria del que se obtienen `ppData`.</span><span class="sxs-lookup"><span data-stu-id="c6056-106">[in] The memory address from which to get `ppData`.</span></span>  
   
  `pcbData`  
- <span data-ttu-id="1841f-107">[out] Un puntero al tamaño, en bytes, de `ppData`.</span><span class="sxs-lookup"><span data-stu-id="1841f-107">[out] A pointer to the size, in bytes, of `ppData`.</span></span>  
+ <span data-ttu-id="c6056-107">[out] Un puntero al tamaño, en bytes, de `ppData`.</span><span class="sxs-lookup"><span data-stu-id="c6056-107">[out] A pointer to the size, in bytes, of `ppData`.</span></span>  
   
  `ppData`  
- <span data-ttu-id="1841f-108">[out] Recupera un puntero a un puntero a los datos binarios.</span><span class="sxs-lookup"><span data-stu-id="1841f-108">[out] A pointer to a pointer to the binary data retrieved.</span></span>  
+ <span data-ttu-id="c6056-108">[out] Recupera un puntero a un puntero a los datos binarios.</span><span class="sxs-lookup"><span data-stu-id="c6056-108">[out] A pointer to a pointer to the binary data retrieved.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1841f-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1841f-109">Requirements</span></span>  
- <span data-ttu-id="1841f-110">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1841f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6056-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c6056-109">Requirements</span></span>  
+ <span data-ttu-id="c6056-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6056-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1841f-111">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1841f-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c6056-111">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="c6056-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1841f-112">**Biblioteca:** usada como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1841f-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c6056-112">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c6056-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="1841f-113">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1841f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c6056-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6056-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1841f-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="1841f-114">See Also</span></span>  
- [<span data-ttu-id="1841f-115">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1841f-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="1841f-116">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1841f-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c6056-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="c6056-114">See also</span></span>
+- [<span data-ttu-id="c6056-115">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c6056-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="c6056-116">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c6056-116">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

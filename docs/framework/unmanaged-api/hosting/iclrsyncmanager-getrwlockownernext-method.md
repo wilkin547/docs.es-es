@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4725feff4645ec207be6e6afc7d1e1d38eca36ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d992a3eb05ae59f2dc380338531bdc38c37abfc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572112"
 ---
-# <a name="iclrsyncmanagergetrwlockownernext-method"></a><span data-ttu-id="08fe9-102">ICLRSyncManager::GetRWLockOwnerNext (Método)</span><span class="sxs-lookup"><span data-stu-id="08fe9-102">ICLRSyncManager::GetRWLockOwnerNext Method</span></span>
-<span data-ttu-id="08fe9-103">Obtiene el siguiente [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia que está bloqueado en el bloqueo de lector y escritor actual.</span><span class="sxs-lookup"><span data-stu-id="08fe9-103">Gets the next [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that is blocked on the current reader-writer lock.</span></span>  
+# <a name="iclrsyncmanagergetrwlockownernext-method"></a><span data-ttu-id="33a3c-102">ICLRSyncManager::GetRWLockOwnerNext (Método)</span><span class="sxs-lookup"><span data-stu-id="33a3c-102">ICLRSyncManager::GetRWLockOwnerNext Method</span></span>
+<span data-ttu-id="33a3c-103">Obtiene el siguiente [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia que está bloqueado en el bloqueo de lector y escritor actual.</span><span class="sxs-lookup"><span data-stu-id="33a3c-103">Gets the next [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that is blocked on the current reader-writer lock.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08fe9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="08fe9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33a3c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="33a3c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRWLockOwnerNext (  
@@ -36,39 +36,39 @@ HRESULT GetRWLockOwnerNext (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="08fe9-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="08fe9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="33a3c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="33a3c-105">Parameters</span></span>  
  `Iterator`  
- <span data-ttu-id="08fe9-106">[in] El iterador que se creó mediante una llamada a [CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span><span class="sxs-lookup"><span data-stu-id="08fe9-106">[in] The iterator that was created by using a call to [CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  
+ <span data-ttu-id="33a3c-106">[in] El iterador que se creó mediante una llamada a [CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span><span class="sxs-lookup"><span data-stu-id="33a3c-106">[in] The iterator that was created by using a call to [CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  
   
  `ppOwnerHostTask`  
- <span data-ttu-id="08fe9-107">[out] Un puntero a la siguiente `IHostTask` que está esperando el bloqueo, o null si no hay ninguna tarea está esperando.</span><span class="sxs-lookup"><span data-stu-id="08fe9-107">[out] A pointer to the next `IHostTask` that is waiting on the lock, or null if no task is waiting.</span></span>  
+ <span data-ttu-id="33a3c-107">[out] Un puntero a la siguiente `IHostTask` que está esperando el bloqueo, o null si no hay ninguna tarea está esperando.</span><span class="sxs-lookup"><span data-stu-id="33a3c-107">[out] A pointer to the next `IHostTask` that is waiting on the lock, or null if no task is waiting.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="08fe9-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="08fe9-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="33a3c-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="33a3c-108">Return Value</span></span>  
   
-|<span data-ttu-id="08fe9-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="08fe9-109">HRESULT</span></span>|<span data-ttu-id="08fe9-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="08fe9-110">Description</span></span>|  
+|<span data-ttu-id="33a3c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="33a3c-109">HRESULT</span></span>|<span data-ttu-id="33a3c-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="33a3c-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="08fe9-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="08fe9-111">S_OK</span></span>|<span data-ttu-id="08fe9-112">`GetRWLockOwnerNext` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="08fe9-112">`GetRWLockOwnerNext` returned successfully.</span></span>|  
-|<span data-ttu-id="08fe9-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="08fe9-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="08fe9-114">Common language runtime (CLR) no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="08fe9-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="08fe9-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="08fe9-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="08fe9-116">La llamada agotó el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="08fe9-116">The call timed out.</span></span>|  
-|<span data-ttu-id="08fe9-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="08fe9-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="08fe9-118">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="08fe9-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="08fe9-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="08fe9-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="08fe9-120">Se canceló un evento mientras un subproceso bloqueado o fibra esperó en él.</span><span class="sxs-lookup"><span data-stu-id="08fe9-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="08fe9-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="08fe9-121">E_FAIL</span></span>|<span data-ttu-id="08fe9-122">Se ha producido un error catastrófico desconocido.</span><span class="sxs-lookup"><span data-stu-id="08fe9-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="08fe9-123">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="08fe9-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="08fe9-124">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="08fe9-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="33a3c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="33a3c-111">S_OK</span></span>|<span data-ttu-id="33a3c-112">`GetRWLockOwnerNext` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="33a3c-112">`GetRWLockOwnerNext` returned successfully.</span></span>|  
+|<span data-ttu-id="33a3c-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="33a3c-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="33a3c-114">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="33a3c-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="33a3c-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="33a3c-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="33a3c-116">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="33a3c-116">The call timed out.</span></span>|  
+|<span data-ttu-id="33a3c-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="33a3c-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="33a3c-118">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="33a3c-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="33a3c-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="33a3c-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="33a3c-120">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="33a3c-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="33a3c-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="33a3c-121">E_FAIL</span></span>|<span data-ttu-id="33a3c-122">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="33a3c-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="33a3c-123">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="33a3c-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="33a3c-124">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="33a3c-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="08fe9-125">Comentarios</span><span class="sxs-lookup"><span data-stu-id="08fe9-125">Remarks</span></span>  
- <span data-ttu-id="08fe9-126">Si `ppOwnerHostTask` se establece en null, la iteración ha finalizado y el host debe llamar a la [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="08fe9-126">If `ppOwnerHostTask` is set to null, the iteration has terminated, and the host should call the [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="33a3c-125">Comentarios</span><span class="sxs-lookup"><span data-stu-id="33a3c-125">Remarks</span></span>  
+ <span data-ttu-id="33a3c-126">Si `ppOwnerHostTask` está establecido en null, la iteración ha finalizado y el host debe llamar a la [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="33a3c-126">If `ppOwnerHostTask` is set to null, the iteration has terminated, and the host should call the [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="08fe9-127">CLR llama `AddRef` en el `IHostTask` a la que `ppOwnerHostTask` puntos para evitar que esta tarea salga mientras el host mantiene el puntero.</span><span class="sxs-lookup"><span data-stu-id="08fe9-127">The CLR calls `AddRef` on the `IHostTask` to which `ppOwnerHostTask` points to prevent this task from exiting while the host holds the pointer.</span></span> <span data-ttu-id="08fe9-128">El host debe llamar a `Release` para reducir el recuento de referencias cuando haya finalizado.</span><span class="sxs-lookup"><span data-stu-id="08fe9-128">The host must call `Release` to decrement the reference count when it is finished.</span></span>  
+>  <span data-ttu-id="33a3c-127">CLR llama a `AddRef` en el `IHostTask` a la que `ppOwnerHostTask` puntos para evitar que salir de esta tarea mientras el host mantiene el puntero.</span><span class="sxs-lookup"><span data-stu-id="33a3c-127">The CLR calls `AddRef` on the `IHostTask` to which `ppOwnerHostTask` points to prevent this task from exiting while the host holds the pointer.</span></span> <span data-ttu-id="33a3c-128">El host debe llamar a `Release` para reducir el recuento de referencias cuando haya finalizado.</span><span class="sxs-lookup"><span data-stu-id="33a3c-128">The host must call `Release` to decrement the reference count when it is finished.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="08fe9-129">Requisitos</span><span class="sxs-lookup"><span data-stu-id="08fe9-129">Requirements</span></span>  
- <span data-ttu-id="08fe9-130">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08fe9-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33a3c-129">Requisitos</span><span class="sxs-lookup"><span data-stu-id="33a3c-129">Requirements</span></span>  
+ <span data-ttu-id="33a3c-130">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33a3c-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08fe9-131">**Encabezado:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="08fe9-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="33a3c-131">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="33a3c-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="08fe9-132">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="08fe9-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="33a3c-132">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="33a3c-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="08fe9-133">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08fe9-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="33a3c-133">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33a3c-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08fe9-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="08fe9-134">See Also</span></span>  
- [<span data-ttu-id="08fe9-135">ICLRSyncManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="08fe9-135">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [<span data-ttu-id="08fe9-136">IHostSyncManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="08fe9-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="33a3c-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="33a3c-134">See also</span></span>
+- [<span data-ttu-id="33a3c-135">ICLRSyncManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="33a3c-135">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="33a3c-136">IHostSyncManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="33a3c-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

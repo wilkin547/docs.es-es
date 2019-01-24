@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e99cafe39a030a412bf33aeb9d96d5006ca02df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d9db6853d3bd4bb7faae54b746a5a940c7dec8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561796"
 ---
-# <a name="icordebugevalnewobjectnoconstructor-method"></a><span data-ttu-id="d730d-102">ICorDebugEval::NewObjectNoConstructor (Método)</span><span class="sxs-lookup"><span data-stu-id="d730d-102">ICorDebugEval::NewObjectNoConstructor Method</span></span>
-<span data-ttu-id="d730d-103">Asigna una nueva instancia de objeto del tipo especificado, sin intentar llamar a un método de constructor.</span><span class="sxs-lookup"><span data-stu-id="d730d-103">Allocates a new object instance of the specified type, without attempting to call a constructor method.</span></span>  
+# <a name="icordebugevalnewobjectnoconstructor-method"></a><span data-ttu-id="10a63-102">ICorDebugEval::NewObjectNoConstructor (Método)</span><span class="sxs-lookup"><span data-stu-id="10a63-102">ICorDebugEval::NewObjectNoConstructor Method</span></span>
+<span data-ttu-id="10a63-103">Asigna una nueva instancia de objeto del tipo especificado, sin intentar llamar a un método de constructor.</span><span class="sxs-lookup"><span data-stu-id="10a63-103">Allocates a new object instance of the specified type, without attempting to call a constructor method.</span></span>  
   
- <span data-ttu-id="d730d-104">Este método está obsoleto en la versión 2.0 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d730d-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="d730d-105">Use [ICorDebugEval2:: NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) en su lugar.</span><span class="sxs-lookup"><span data-stu-id="d730d-105">Use [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) instead.</span></span>  
+ <span data-ttu-id="10a63-104">Este método está obsoleto en .NET Framework versión 2.0.</span><span class="sxs-lookup"><span data-stu-id="10a63-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="10a63-105">Use [ICorDebugEval2:: NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) en su lugar.</span><span class="sxs-lookup"><span data-stu-id="10a63-105">Use [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d730d-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d730d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10a63-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="10a63-106">Syntax</span></span>  
   
 ```  
 HRESULT NewObjectNoConstructor (  
@@ -37,18 +37,18 @@ HRESULT NewObjectNoConstructor (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d730d-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d730d-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="10a63-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="10a63-107">Parameters</span></span>  
  `pClass`  
- <span data-ttu-id="d730d-108">[in] Puntero a un objeto ICorDebugClass que representa el tipo de objeto que se va a crear una instancia.</span><span class="sxs-lookup"><span data-stu-id="d730d-108">[in] Pointer to an ICorDebugClass object that represents the type of object to be instantiated.</span></span>  
+ <span data-ttu-id="10a63-108">[in] Puntero a un objeto ICorDebugClass que representa el tipo de objeto que se creará una instancia.</span><span class="sxs-lookup"><span data-stu-id="10a63-108">[in] Pointer to an ICorDebugClass object that represents the type of object to be instantiated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d730d-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d730d-109">Requirements</span></span>  
- <span data-ttu-id="d730d-110">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d730d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10a63-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="10a63-109">Requirements</span></span>  
+ <span data-ttu-id="10a63-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10a63-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d730d-111">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d730d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="10a63-111">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="10a63-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d730d-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d730d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="10a63-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10a63-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d730d-113">**Versiones de .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="d730d-113">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="10a63-113">**Versiones de .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="10a63-113">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d730d-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="d730d-114">See Also</span></span>  
- [<span data-ttu-id="d730d-115">NewParameterizedObjectNoConstructor (método)</span><span class="sxs-lookup"><span data-stu-id="d730d-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)
+## <a name="see-also"></a><span data-ttu-id="10a63-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="10a63-114">See also</span></span>
+- [<span data-ttu-id="10a63-115">NewParameterizedObjectNoConstructor (método)</span><span class="sxs-lookup"><span data-stu-id="10a63-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)

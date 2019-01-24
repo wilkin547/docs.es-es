@@ -5,51 +5,51 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: dde79ca9ce6e77102c05fce7c507784457af4a4b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8334691ff5ac09c19287dbc2ec2503dbd5149f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572492"
 ---
-# <a name="-deterministic"></a><span data-ttu-id="572d7-102">-deterministic</span><span class="sxs-lookup"><span data-stu-id="572d7-102">-deterministic</span></span>
+# <a name="-deterministic"></a><span data-ttu-id="d53bc-102">-deterministic</span><span class="sxs-lookup"><span data-stu-id="d53bc-102">-deterministic</span></span>
 
-<span data-ttu-id="572d7-103">Hace que el compilador genere un ensamblado cuya salida byte a byte es idéntica en todas las compilaciones para las entradas idénticas.</span><span class="sxs-lookup"><span data-stu-id="572d7-103">Causes the compiler to produce an assembly whose byte-for-byte output is identical across compilations for identical inputs.</span></span> 
+<span data-ttu-id="d53bc-103">Hace que el compilador genere un ensamblado cuya salida byte a byte es idéntica en todas las compilaciones para las entradas idénticas.</span><span class="sxs-lookup"><span data-stu-id="d53bc-103">Causes the compiler to produce an assembly whose byte-for-byte output is identical across compilations for identical inputs.</span></span> 
 
-## <a name="syntax"></a><span data-ttu-id="572d7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="572d7-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d53bc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d53bc-104">Syntax</span></span>
 
 ```
 -deterministic
 ```
 
-## <a name="remarks"></a><span data-ttu-id="572d7-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="572d7-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d53bc-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d53bc-105">Remarks</span></span>
 
-<span data-ttu-id="572d7-106">De forma predeterminada, la salida del compilador para un conjunto determinado de entradas es única, ya que el compilador agrega una marca de tiempo y un GUID que se genera a partir de números aleatorios.</span><span class="sxs-lookup"><span data-stu-id="572d7-106">By default, compiler output from a given set of inputs is unique, since the compiler adds a timestamp and a GUID that is generated from random numbers.</span></span> <span data-ttu-id="572d7-107">Use la opción `-deterministic` para generar un *ensamblado determinista*, cuyo contenido binario es idéntico en todas las compilaciones, siempre y cuando la entrada siga siendo la misma.</span><span class="sxs-lookup"><span data-stu-id="572d7-107">You use the `-deterministic` option to produce a *deterministic assembly*, one whose binary content is identical across compilations as long as the input remains the same.</span></span>
+<span data-ttu-id="d53bc-106">De forma predeterminada, la salida del compilador para un conjunto determinado de entradas es única, ya que el compilador agrega una marca de tiempo y un GUID que se genera a partir de números aleatorios.</span><span class="sxs-lookup"><span data-stu-id="d53bc-106">By default, compiler output from a given set of inputs is unique, since the compiler adds a timestamp and a GUID that is generated from random numbers.</span></span> <span data-ttu-id="d53bc-107">Use la opción `-deterministic` para generar un *ensamblado determinista*, cuyo contenido binario es idéntico en todas las compilaciones, siempre y cuando la entrada siga siendo la misma.</span><span class="sxs-lookup"><span data-stu-id="d53bc-107">You use the `-deterministic` option to produce a *deterministic assembly*, one whose binary content is identical across compilations as long as the input remains the same.</span></span>
 
-<span data-ttu-id="572d7-108">El compilador tiene en cuenta las entradas siguientes con el fin de garantizar el determinismo:</span><span class="sxs-lookup"><span data-stu-id="572d7-108">The compiler considers the following inputs for the purpose of determinism:</span></span>
+<span data-ttu-id="d53bc-108">El compilador tiene en cuenta las entradas siguientes con el fin de garantizar el determinismo:</span><span class="sxs-lookup"><span data-stu-id="d53bc-108">The compiler considers the following inputs for the purpose of determinism:</span></span>
 
-- <span data-ttu-id="572d7-109">La secuencia de parámetros de la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="572d7-109">The sequence of command-line parameters.</span></span>
-- <span data-ttu-id="572d7-110">El contenido del archivo de respuesta .rsp del compilador.</span><span class="sxs-lookup"><span data-stu-id="572d7-110">The contents of the compiler's .rsp response file.</span></span>
-- <span data-ttu-id="572d7-111">La versión exacta del compilador que se usa y los ensamblados a los que se hace referencia.</span><span class="sxs-lookup"><span data-stu-id="572d7-111">The precise version of the compiler used, and its referenced assemblies.</span></span>
-- <span data-ttu-id="572d7-112">La ruta de acceso del directorio actual.</span><span class="sxs-lookup"><span data-stu-id="572d7-112">The current directory path.</span></span>
-- <span data-ttu-id="572d7-113">El contenido binario de todos los archivos pasados explícitamente al compilador, ya sea de manera directa o indirecta, incluidos los siguientes:</span><span class="sxs-lookup"><span data-stu-id="572d7-113">The binary contents of all files explicitly passed to the compiler either directly or indirectly, including:</span></span> 
-    - <span data-ttu-id="572d7-114">Archivos de código fuente</span><span class="sxs-lookup"><span data-stu-id="572d7-114">Source files</span></span>
-    - <span data-ttu-id="572d7-115">Ensamblados a los que se hace referencia</span><span class="sxs-lookup"><span data-stu-id="572d7-115">Referenced assemblies</span></span>
-    - <span data-ttu-id="572d7-116">Módulos a los que se hace referencia</span><span class="sxs-lookup"><span data-stu-id="572d7-116">Referenced modules</span></span>
-    - <span data-ttu-id="572d7-117">Recursos</span><span class="sxs-lookup"><span data-stu-id="572d7-117">Resources</span></span>
-    - <span data-ttu-id="572d7-118">Archivo de clave de nombre seguro</span><span class="sxs-lookup"><span data-stu-id="572d7-118">The strong name key file</span></span>
-    - <span data-ttu-id="572d7-119">Archivos de respuesta @</span><span class="sxs-lookup"><span data-stu-id="572d7-119">@ response files</span></span>
-    - <span data-ttu-id="572d7-120">Analizadores</span><span class="sxs-lookup"><span data-stu-id="572d7-120">Analyzers</span></span>
-    - <span data-ttu-id="572d7-121">Conjuntos de reglas</span><span class="sxs-lookup"><span data-stu-id="572d7-121">Rulesets</span></span>
-    - <span data-ttu-id="572d7-122">Archivos adicionales que podrían usar los analizadores</span><span class="sxs-lookup"><span data-stu-id="572d7-122">Additional files that may be used by analyzers</span></span>
-- <span data-ttu-id="572d7-123">La referencia cultural actual (para el idioma en el que se producen los diagnósticos y los mensajes de excepción).</span><span class="sxs-lookup"><span data-stu-id="572d7-123">The current culture (for the language in which diagnostics and exception messages are produced).</span></span>
-- <span data-ttu-id="572d7-124">La codificación predeterminada (o página de códigos actual) si no se especifica la codificación.</span><span class="sxs-lookup"><span data-stu-id="572d7-124">The default encoding (or the current code page) if the encoding is not specified.</span></span>
-- <span data-ttu-id="572d7-125">La existencia (o la inexistencia) de archivos y su contenido en las rutas de búsqueda del compilador (especificada, por ejemplo, mediante `/lib` o `/recurse`).</span><span class="sxs-lookup"><span data-stu-id="572d7-125">The existence, non-existence, and contents of files on the compiler's search paths (specified, for example, by `/lib` or `/recurse`).</span></span>
-- <span data-ttu-id="572d7-126">La plataforma CLR en la que se ejecuta el compilador.</span><span class="sxs-lookup"><span data-stu-id="572d7-126">The CLR platform on which the compiler is run.</span></span>
-- <span data-ttu-id="572d7-127">El valor de `%LIBPATH%`, que pueden afectar a la carga de dependencias del analizador.</span><span class="sxs-lookup"><span data-stu-id="572d7-127">The value of `%LIBPATH%`, which can affect analyzer dependency loading.</span></span>
+- <span data-ttu-id="d53bc-109">La secuencia de parámetros de la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="d53bc-109">The sequence of command-line parameters.</span></span>
+- <span data-ttu-id="d53bc-110">El contenido del archivo de respuesta .rsp del compilador.</span><span class="sxs-lookup"><span data-stu-id="d53bc-110">The contents of the compiler's .rsp response file.</span></span>
+- <span data-ttu-id="d53bc-111">La versión exacta del compilador que se usa y los ensamblados a los que se hace referencia.</span><span class="sxs-lookup"><span data-stu-id="d53bc-111">The precise version of the compiler used, and its referenced assemblies.</span></span>
+- <span data-ttu-id="d53bc-112">La ruta de acceso del directorio actual.</span><span class="sxs-lookup"><span data-stu-id="d53bc-112">The current directory path.</span></span>
+- <span data-ttu-id="d53bc-113">El contenido binario de todos los archivos pasados explícitamente al compilador, ya sea de manera directa o indirecta, incluidos los siguientes:</span><span class="sxs-lookup"><span data-stu-id="d53bc-113">The binary contents of all files explicitly passed to the compiler either directly or indirectly, including:</span></span> 
+    - <span data-ttu-id="d53bc-114">Archivos de código fuente</span><span class="sxs-lookup"><span data-stu-id="d53bc-114">Source files</span></span>
+    - <span data-ttu-id="d53bc-115">Ensamblados a los que se hace referencia</span><span class="sxs-lookup"><span data-stu-id="d53bc-115">Referenced assemblies</span></span>
+    - <span data-ttu-id="d53bc-116">Módulos a los que se hace referencia</span><span class="sxs-lookup"><span data-stu-id="d53bc-116">Referenced modules</span></span>
+    - <span data-ttu-id="d53bc-117">Recursos</span><span class="sxs-lookup"><span data-stu-id="d53bc-117">Resources</span></span>
+    - <span data-ttu-id="d53bc-118">Archivo de clave de nombre seguro</span><span class="sxs-lookup"><span data-stu-id="d53bc-118">The strong name key file</span></span>
+    - <span data-ttu-id="d53bc-119">Archivos de respuesta @</span><span class="sxs-lookup"><span data-stu-id="d53bc-119">@ response files</span></span>
+    - <span data-ttu-id="d53bc-120">Analizadores</span><span class="sxs-lookup"><span data-stu-id="d53bc-120">Analyzers</span></span>
+    - <span data-ttu-id="d53bc-121">Conjuntos de reglas</span><span class="sxs-lookup"><span data-stu-id="d53bc-121">Rulesets</span></span>
+    - <span data-ttu-id="d53bc-122">Archivos adicionales que podrían usar los analizadores</span><span class="sxs-lookup"><span data-stu-id="d53bc-122">Additional files that may be used by analyzers</span></span>
+- <span data-ttu-id="d53bc-123">La referencia cultural actual (para el idioma en el que se producen los diagnósticos y los mensajes de excepción).</span><span class="sxs-lookup"><span data-stu-id="d53bc-123">The current culture (for the language in which diagnostics and exception messages are produced).</span></span>
+- <span data-ttu-id="d53bc-124">La codificación predeterminada (o página de códigos actual) si no se especifica la codificación.</span><span class="sxs-lookup"><span data-stu-id="d53bc-124">The default encoding (or the current code page) if the encoding is not specified.</span></span>
+- <span data-ttu-id="d53bc-125">La existencia (o la inexistencia) de archivos y su contenido en las rutas de búsqueda del compilador (especificada, por ejemplo, mediante `/lib` o `/recurse`).</span><span class="sxs-lookup"><span data-stu-id="d53bc-125">The existence, non-existence, and contents of files on the compiler's search paths (specified, for example, by `/lib` or `/recurse`).</span></span>
+- <span data-ttu-id="d53bc-126">La plataforma CLR en la que se ejecuta el compilador.</span><span class="sxs-lookup"><span data-stu-id="d53bc-126">The CLR platform on which the compiler is run.</span></span>
+- <span data-ttu-id="d53bc-127">El valor de `%LIBPATH%`, que pueden afectar a la carga de dependencias del analizador.</span><span class="sxs-lookup"><span data-stu-id="d53bc-127">The value of `%LIBPATH%`, which can affect analyzer dependency loading.</span></span>
 
-<span data-ttu-id="572d7-128">Cuando los orígenes están disponibles públicamente, se puede usar la compilación determinista para establecer si un archivo binario se compila a partir de una fuente de confianza.</span><span class="sxs-lookup"><span data-stu-id="572d7-128">When sources are publicly available, deterministic compilation can be used for establishing whether a binary is compiled from a trusted source.</span></span> <span data-ttu-id="572d7-129">También puede ser útil en un sistema de compilación continua para determinar si es necesario ejecutar pasos de compilación que dependen de los cambios realizados en un archivo binario.</span><span class="sxs-lookup"><span data-stu-id="572d7-129">It can also be useful in a continuous build system for determining whether build steps that are dependent on changes to a binary need to be executed.</span></span> 
+<span data-ttu-id="d53bc-128">Cuando los orígenes están disponibles públicamente, se puede usar la compilación determinista para establecer si un archivo binario se compila a partir de una fuente de confianza.</span><span class="sxs-lookup"><span data-stu-id="d53bc-128">When sources are publicly available, deterministic compilation can be used for establishing whether a binary is compiled from a trusted source.</span></span> <span data-ttu-id="d53bc-129">También puede ser útil en un sistema de compilación continua para determinar si es necesario ejecutar pasos de compilación que dependen de los cambios realizados en un archivo binario.</span><span class="sxs-lookup"><span data-stu-id="d53bc-129">It can also be useful in a continuous build system for determining whether build steps that are dependent on changes to a binary need to be executed.</span></span> 
 
-## <a name="see-also"></a><span data-ttu-id="572d7-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="572d7-130">See Also</span></span>
-[<span data-ttu-id="572d7-131">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="572d7-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
-[<span data-ttu-id="572d7-132">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="572d7-132">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="d53bc-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="d53bc-130">See also</span></span>
+- [<span data-ttu-id="d53bc-131">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d53bc-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="d53bc-132">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="d53bc-132">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
