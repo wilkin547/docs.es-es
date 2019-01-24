@@ -3,12 +3,6 @@ title: Herramientas de la interfaz de línea de comandos (CLI) de .NET Core
 description: Introducción a las herramientas y características de la interfaz de la línea de comandos (CLI) de .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170205"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core
 
@@ -146,5 +140,5 @@ Si usó herramientas de la versión preliminar 2 para producir proyectos basados
 
 ## <a name="see-also"></a>Vea también
 
-* [dotnet/repositorio de GitHub de la CLI](https://github.com/dotnet/cli/)  
-* [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guía de instalación de .NET Core)  
+- [dotnet/repositorio de GitHub de la CLI](https://github.com/dotnet/cli/)
+- [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guía de instalación de .NET Core)

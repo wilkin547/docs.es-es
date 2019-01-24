@@ -1,4 +1,12 @@
-tion [C#]'
+---
+title: 'Especificación del lenguaje C# 6.0 (borrador)'
+ms.date: 05/22/2018
+ms.topic: language-reference
+helpviewer_keywords:
+  - 'C# language, specification'
+  - 'what''s new [C#], language specification'
+  - 'Visual C#, C# language specification'
+  - 'language specification [C#]'
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
 ---
 # <a name="c-60-draft-language-specification"></a>Especificación del lenguaje C# 6.0 (borrador)
@@ -13,8 +21,8 @@ Los problemas del borrador de especificación deben crearse en el repositorio [d
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../index.md)  
+- [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
->[Siguiente](../../../../_csharplang/spec/introduction.md)ontent\":\"C# 6.0 draft language specification\",\"linkify\":\"C# 6.0 draft language specification\",\"nodes\":[{\"content\":\"C# 6.0 draft language specification\",\"pos\":[0,35]}]},{\"content\":\"The C# language specification is the definitive source for C# syntax and usage
+>[Siguiente](../../../../_csharplang/spec/introduction.md)

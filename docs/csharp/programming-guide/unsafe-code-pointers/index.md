@@ -3,20 +3,14 @@ title: 'Código no seguro y punteros: Guía de programación de C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- security [C#], type safety
-- C# language, unsafe code
-- type safety [C#]
-- unsafe keyword [C#]
-- unsafe code [C#]
-- C# language, pointers
-- pointers [C#], about pointers
+  - 'security [C#], type safety'
+  - 'C# language, unsafe code'
+  - 'type safety [C#]'
+  - 'unsafe keyword [C#]'
+  - 'unsafe code [C#]'
+  - 'C# language, pointers'
+  - 'pointers [C#], about pointers'
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 7d7371fb29f12a766ef6b78544f82d021dd8dceb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237914"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Código no seguro y punteros (Guía de programación de C#)
 Para mantener la seguridad de tipos, C# no admite la aritmética de puntero de forma predeterminada. En cambio, mediante el uso de la palabra clave [unsafe](../../../csharp/language-reference/keywords/unsafe.md), puede definir un contexto no seguro en el que se pueden usar punteros. Para obtener más información sobre los punteros, vea [Tipos de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  

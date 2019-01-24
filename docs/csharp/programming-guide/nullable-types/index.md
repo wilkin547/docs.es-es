@@ -1,19 +1,13 @@
 ---
 title: 'Tipos que aceptan valores NULL: Guía de programación de C#'
 ms.custom: seodec18
-description: Más información sobre los tipos que aceptan valores NULL de C# y su uso
+description: 'Más información sobre los tipos que aceptan valores NULL de C# y su uso'
 ms.date: 07/30/2018
 helpviewer_keywords:
-- nullable types [C#]
-- C# language, nullable types
-- types [C#], nullable
+  - 'nullable types [C#]'
+  - 'C# language, nullable types'
+  - 'types [C#], nullable'
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245136"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que aceptan valores NULL (Guía de programación de C#)
 
@@ -57,10 +51,10 @@ Para más información, consulte los temas [Uso de tipos que aceptan valores NUL
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Nullable%601?displayProperty=nameWithType>  
-- <xref:System.Nullable?displayProperty=nameWithType>  
-- [Operador !](../../language-reference/operators/null-coalescing-operator.md)  
-- [Guía de programación de C#](../index.md)  
-- [Guía de C#](../../index.md)  
-- [Referencia de C#](../../language-reference/index.md)  
-- [Tipos de valores que aceptan valores NULL (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Nullable?displayProperty=nameWithType>
+- [Operador !](../../language-reference/operators/null-coalescing-operator.md)
+- [Guía de programación de C#](../index.md)
+- [Guía de C#](../../index.md)
+- [Referencia de C#](../../language-reference/index.md)
+- [Tipos de valores que aceptan valores NULL (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

@@ -1,18 +1,12 @@
 ---
-title: Introducción - Guía de C#
-description: Encuentre tutoriales cortos y sencillos que le permitirán obtener información sobre conceptos introductorios de C# y escribir aplicaciones de .NET Core rápidamente.
+title: 'Introducción - Guía de C#'
+description: 'Encuentre tutoriales cortos y sencillos que le permitirán obtener información sobre conceptos introductorios de C# y escribir aplicaciones de .NET Core rápidamente.'
 helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
+  - 'Visual C#, getting started'
+  - 'getting started, Visual C#'
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837898"
 ---
 # <a name="get-started-with-c"></a>Introducción a C\#
 
@@ -64,4 +58,4 @@ Los siguientes temas se encuentran disponibles:
 
 ## <a name="see-also"></a>Vea también
 
-* [Introducción a Visual C# y Visual Basic con Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Introducción a Visual C# y Visual Basic con Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
