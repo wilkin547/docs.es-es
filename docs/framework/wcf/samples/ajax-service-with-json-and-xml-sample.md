@@ -2,12 +2,12 @@
 title: Servicio AJAX con ejemplo JSON y XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 17b0fd362ac84c7fbc0c9e88fb3d318966356bc6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632301"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Servicio AJAX con ejemplo JSON y XML
 Este ejemplo muestra cómo usar Windows Communication Foundation (WCF) para crear un servicio JavaScript asincrónico y XML (AJAX) que devuelve datos JavaScript Object Notation (JSON) o XML. Puede tener acceso a un servicio de AJAX utilizando el código JavaScript de un cliente del explorador web. En este ejemplo se basa en el [servicio AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) ejemplo.  
@@ -111,5 +111,5 @@ xmlHttp.onreadystatechange=function(){
   
 3.  Vaya a `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (no abra Xmlajaxclientpage.aspx en el explorador desde el directorio del proyecto).  
   
-## <a name="see-also"></a>Vea también  
- [Servicio AJAX mediante HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)
+## <a name="see-also"></a>Vea también
+- [Servicio AJAX mediante HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

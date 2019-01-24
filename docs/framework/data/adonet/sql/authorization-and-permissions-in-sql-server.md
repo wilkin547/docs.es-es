@@ -2,12 +2,12 @@
 title: Autorización y permisos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007338"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510018"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorización y permisos en SQL Server
 Al crear objetos de base de datos, se deben conceder permisos de forma explícita para que los usuarios tengan acceso a ellos. Cada objeto susceptible de protegerse tiene permisos que se pueden otorgar a una entidad de seguridad mediante instrucciones de permiso.  
@@ -58,10 +58,10 @@ Al crear objetos de base de datos, se deben conceder permisos de forma explícit
 |--------------|-----------------|  
 |[Permisos](/sql/relational-databases/security/permissions-database-engine)|Contiene temas que describen la jerarquía de permisos, las vistas de catálogo y permisos de servidores fijos y roles de bases de datos.|
   
-## <a name="see-also"></a>Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [Roles de servidor y base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [Propiedad y separación de esquemas de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [Roles de servidor y base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
+- [Propiedad y separación de esquemas de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

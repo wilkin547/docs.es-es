@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542774"
 ---
 # <a name="transport-quotas"></a>Cuotas de transporte
 Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una conexión está utilizando recursos excesivos. Una cuota es un límite que evita una vez el uso de recursos adicionales una vez que se supera el valor de cuota. Las cuotas de transporte evitan los ataques de denegación de servicio (DoS) malintencionados o involuntarios.  
@@ -17,16 +17,16 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
  Los transportes de Windows Communication Foundation (WCF) tienen valores de cuota predeterminados que se basan en una asignación conservadora de recursos. Estos valores predeterminados son convenientes para entornos de desarrollo y pequeños escenarios de instalación. Los administradores del servicio deberían revisar las cuotas de transporte y ajustar los valores de la cuota individual si una instalación se está quedando sin recursos o si se limitan las conexiones a pesar de la disponibilidad de recursos adicionales.  
   
 ## <a name="types-of-transport-quotas"></a>Tipos de cuotas de transporte  
- Transportes WCF tienen tres tipos de cuotas:  
+ Los transportes WCF tienen tres tipos de cuotas:  
   
--   *Los tiempos de espera* mitigar de denegación de ataques de servicio que se basan en atar recursos durante un largo período de tiempo.  
+-   *Los tiempos de espera* mitigar la denegación de servicio que se basan en atar recursos durante un largo período de tiempo.  
   
--   *Límites de asignación de memoria* evitan que una conexión única del agotamiento de memoria del sistema y niegue el servicio a otras conexiones.  
+-   *Límites de asignación de memoria* evitar que una conexión única agote memoria del sistema y niegue el servicio a otras conexiones.  
   
--   *Límites de tamaño de la colección* delimitan el consumo de recursos que asignan memoria de manera indirecta o están en un suministro limitado.  
+-   *Límites de tamaño de la colección* delimitan el consumo de recursos que asignar memoria de manera indirecta o están en un suministro limitado.  
   
 ## <a name="transport-quota-descriptions"></a>Descripciones de la cuota de transporte  
- Esta sección describen las cuotas de transporte disponibles para el transporte de WCF estándar: HTTP (S), TCP/IP y canalizaciones con nombre. Los transportes personalizados pueden exponer sus propias cuotas configurables no incluidas en esta lista. Consulte la documentación de un transporte personalizado para averiguar sus cuotas.  
+ En esta sección se describe las cuotas de transporte disponibles para los transportes estándares de WCF: HTTP (S), TCP/IP y canalizaciones con nombre. Los transportes personalizados pueden exponer sus propias cuotas configurables no incluidas en esta lista. Consulte la documentación de un transporte personalizado para averiguar sus cuotas.  
   
  Cada valor de cuota tiene un tipo, valor mínimo y valor predeterminado. Su tipo limita el valor máximo de una cuota. Debido a las limitaciones de los equipos, no siempre es posible establecer una cuota en su valor máximo.  
   
@@ -35,8 +35,8 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 |`ChannelInitializationTimeout`|TimeSpan|1 tic|5 seg.|Tiempo máximo a esperar para que una conexión envíe el preámbulo durante la lectura inicial. Estos datos se reciben antes de que se produzca la autenticación. Este valor es generalmente mucho más pequeño que el valor de cuota de `ReceiveTimeout`.|  
 |`CloseTimeout`|TimeSpan|0|1 min|El tiempo máximo que se ha de esperar para que una conexión se cierre antes de que el transporte produzca una excepción.|  
 |`ConnectionBufferSize`|Integer|1|8 KB|Tamaño, en bytes, de los búfers de transmisión y recepción del transporte subyacente. Si se aumenta el tamaño de búfer, se puede mejorar el rendimiento al enviar mensajes grandes.|  
-|`IdleTimeout`|TimeSpan|0|2 min.|Tiempo máximo que una conexión agrupada puede permanecer inactiva antes de cerrarse.<br /><br /> Este ajuste solo se aplica a las conexiones agrupadas.|  
-|`LeaseTimeout`|TimeSpan|0|5 minutos|Duración máxima de una conexión agrupada activa. Después de que transcurra la hora especificada, la conexión se cierra después de que se repare la solicitud actual.<br /><br /> Este ajuste solo se aplica a las conexiones agrupadas.|  
+|`IdleTimeout`|TimeSpan|0|2 min|Tiempo máximo que una conexión agrupada puede permanecer inactiva antes de cerrarse.<br /><br /> Este ajuste solo se aplica a las conexiones agrupadas.|  
+|`LeaseTimeout`|TimeSpan|0|5 min|Duración máxima de una conexión agrupada activa. Después de que transcurra la hora especificada, la conexión se cierra después de que se repare la solicitud actual.<br /><br /> Este ajuste solo se aplica a las conexiones agrupadas.|  
 |`ListenBacklog`|Integer|1|10|Número máximo de conexiones que el agente de escucha puede tener sin atender antes de que se denieguen las conexiones adicionales a ese punto de conexión.|  
 |`MaxBufferPoolSize`|Long|0|512 KB|Memoria máxima, en bytes, que el transporte dedica a agrupar los búferes de mensajes reutilizables. Cuando el grupo no puede proporcionar un búfer de mensaje, se asigna un nuevo búfer para el uso temporal.<br /><br /> Las instalaciones que crean muchos generadores de canales o agentes de escucha pueden asignar grandes cantidades de memoria para grupos de búferes. Reducir este tamaño de búfer puede reducir en gran mediad el uso de memoria en este escenario.|  
 |`MaxBufferSize`|Integer|1|64 KB|Tamaño máximo, en bytes, de un búfer utilizado para la secuenciación de datos. Si no se establece esta cuota de transporte, o el transporte no está utilizando la transmisión por secuencias, el valor de cuota es igual que el valor de cuota `MaxReceivedMessageSize` o <xref:System.Int32.MaxValue>, lo que sea más pequeño.|  
@@ -107,10 +107,10 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 ### <a name="controlling-transport-quotas-from-configuration"></a>Control de las cuotas de transporte a partir de la configuración  
  La configuración de la aplicación puede establecer las mismas cuotas de transporte como obtener acceso directamente a las propiedades en un enlace. En archivos de configuración, el nombre de una cuota de transporte se inicia siempre con una minúscula. Por ejemplo, la propiedad `CloseTimeout` en un enlace corresponde al valor `closeTimeout` en la configuración y la propiedad `MaxConnections` en un enlace corresponde al valor `maxConnections` en la configuración.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

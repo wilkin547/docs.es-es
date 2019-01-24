@@ -2,12 +2,12 @@
 title: Emisión de trazas del código de usuario
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492669"
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 Además de habilitar el seguimiento en configuración para recopilar datos de instrumentación generados por Windows Communication Foundation (WCF), también pueden emitir trazas mediante programación en código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  
@@ -140,5 +140,5 @@ Vista del gráfico de la correlación del error
   
  La definición de actividades y la propagación de la id. de actividad permite poner directamente en correlación los errores con los puntos de conexión. De esta manera, podemos buscar más rápidamente la causa raíz de un error.  
   
-## <a name="see-also"></a>Vea también  
- [Extensión del seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+## <a name="see-also"></a>Vea también
+- [Extensión del seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md)

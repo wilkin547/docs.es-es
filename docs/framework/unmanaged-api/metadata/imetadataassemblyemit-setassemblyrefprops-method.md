@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6667812ab7f9acff2a66e458f68d77a0d670bc2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0a4f0fd100397fc52ca917c54f0276598d714640
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642849"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps (Método)
 Modifica la estructura de metadatos `AssemblyRef` especificada.  
@@ -44,7 +44,7 @@ HRESULT SetAssemblyRefProps (
   
 #### <a name="parameters"></a>Parámetros  
  `ar`  
- [in] El token de metadatos que especifica el `AssemblyRef` estructura de metadatos que puede modificar.  
+ [in] El token de metadatos que especifica el `AssemblyRef` estructura de metadatos que se puede modificar.  
   
  `pbPublicKeyOrToken`  
  [in] La clave pública del publicador del ensamblado que se hace referencia.  
@@ -59,7 +59,7 @@ HRESULT SetAssemblyRefProps (
  [in] Un puntero a una instancia ASSEMBLYMETADATA que contiene la información de versión, la plataforma y la configuración regional para el ensamblado.  
   
  `pbHashValue`  
- [in] Un puntero a los datos hash asociados al ensamblado.  
+ [in] Un puntero a los hash de los datos asociados al ensamblado.  
   
  `cbHashValue`  
  [in] El tamaño en bytes de `pbHashValue`.  
@@ -68,16 +68,16 @@ HRESULT SetAssemblyRefProps (
  [in] Una combinación bit a bit de [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) valores que especifican los atributos del ensamblado que se hace referencia.  
   
 ## <a name="remarks"></a>Comentarios  
- Para crear un `AssemblyRef` estructura de los metadatos, use la [IMetaDataAssemblyEmit:: DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) método.  
+ Para crear un `AssemblyRef` estructura de los metadatos, use el [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

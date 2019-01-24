@@ -2,12 +2,12 @@
 title: Objetos DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513664"
 ---
 # <a name="diffgrams"></a>Objetos DiffGram
 Un DiffGram es un formato XML que identifica las versiones actual y original de los elementos de datos. El <xref:System.Data.DataSet> utiliza el formato DiffGram para cargar y hacer persistente su contenido, así como para serializar su contenido con el fin de transportarlo a través de una conexión de red. Cuando un <xref:System.Data.DataSet> se escribe como un DiffGram, llena el DiffGram con toda la información necesaria para con precisión volver a crear el contenido, aunque no el esquema de la <xref:System.Data.DataSet>, incluyendo los valores de columna de ambos el **Original** y **actual** versiones de fila, información de error de fila y el orden de fila.  
@@ -70,7 +70,7 @@ Un DiffGram es un formato XML que identifica las versiones actual y original de 
  **\<**  ***DataInstance***  **>**  
  El nombre de este elemento, ***DataInstance***, se utiliza con fines explicativos en esta documentación. Un ***DataInstance*** elemento representa un <xref:System.Data.DataSet> o una fila de un <xref:System.Data.DataTable>. En lugar de *DataInstance*, el elemento contendría el nombre de la <xref:System.Data.DataSet> o <xref:System.Data.DataTable>. Este bloque del formato DiffGram contiene los datos actuales, se hayan modificado o no. Un elemento o fila, que se ha modificado se identifica con el **diffgr: HasChanges** anotación.  
   
- **\<diffgr: antes de >**  
+ **\<diffgr:before>**  
  Este bloque del formato DiffGram contiene la versión original de una fila. En este bloque se hacen coincidir con los elementos de la ***DataInstance*** bloquear mediante la **diffgr: ID** anotación.  
   
  **\<diffgr:errors>**  
@@ -85,7 +85,7 @@ Un DiffGram es un formato XML que identifica las versiones actual y original de 
 |----------------|-----------------|  
 |**identificador**|Se utiliza para emparejar los elementos de la  **\<diffgr: antes de >** y  **\<diffgr: errors >** bloques a los elementos de la **\<** ***DataInstance*** **>** bloque. Los valores con el **diffgr: ID** anotación tienen el formato *[NombreTabla] [IdentificadorFila]*. Por ejemplo: `<Customers diffgr:id="Customers1">`.|  
 |**parentId**|Identifica qué elemento de la **\<** ***DataInstance*** **>** bloque es el elemento primario del elemento actual. Los valores con el **diffgr: parentId** anotación tienen el formato *[NombreTabla] [IdentificadorFila]*. Por ejemplo: `<Orders diffgr:parentId="Customers1">`.|  
-|**hasChanges**|Identifica una fila en la **\<** ***DataInstance*** **>** bloquear como modificada. El **hasChanges** anotación puede tener uno de los dos valores siguientes:<br /><br /> **Insertar**<br /> Identifica un **Added** fila.<br /><br /> **Puede modificar**<br /> Identifica un **Modified** fila que contiene un **Original** versión de fila en la  **\<diffgr: antes de >** bloque. Tenga en cuenta que **Deleted** las filas tendrán un **Original** versión de fila en la  **\<diffgr: antes de >** bloque, pero habrá ningún elemento anotado en el **\<** ***DataInstance*** **>** bloque.|  
+|**hasChanges**|Identifica una fila en la **\<** ***DataInstance*** **>** bloquear como modificada. El **hasChanges** anotación puede tener uno de los dos valores siguientes:<br /><br /> **inserted**<br /> Identifica un **Added** fila.<br /><br /> **modified**<br /> Identifica un **Modified** fila que contiene un **Original** versión de fila en la  **\<diffgr: antes de >** bloque. Tenga en cuenta que **Deleted** las filas tendrán un **Original** versión de fila en la  **\<diffgr: antes de >** bloque, pero habrá ningún elemento anotado en el **\<** ***DataInstance*** **>** bloque.|  
 |**hasErrors**|Identifica una fila en la **\<** ***DataInstance*** **>** bloque con un **RowError**. El elemento erróneo se sitúa en el  **\<diffgr: errors >** bloque.|  
 |**Error**|Contiene el texto de la **RowError** para un elemento determinado en el  **\<diffgr: errors >** bloque.|  
   
@@ -94,7 +94,7 @@ Un DiffGram es un formato XML que identifica las versiones actual y original de 
 |Anotación|Descripción|  
 |----------------|-----------------|  
 |**RowOrder**|Conserva el orden de fila de los datos originales e identifica el índice de una fila de una <xref:System.Data.DataTable> determinada.|  
-|**Oculto**|Identifica una columna como si tuviera un **ColumnMapping** propiedad establecida en **MappingType.Hidden**. El atributo se escribe en el formato **msdata: hidden** *[ColumnName]*= "*valor*". Por ejemplo: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Hay que tener en cuenta que las columnas ocultas solo se escriben como un atributo de DiffGram si contienen datos. De lo contrario, se pasan por alto.|  
+|**Hidden**|Identifica una columna como si tuviera un **ColumnMapping** propiedad establecida en **MappingType.Hidden**. El atributo se escribe en el formato **msdata: hidden** *[ColumnName]*= "*valor*". Por ejemplo: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Hay que tener en cuenta que las columnas ocultas solo se escriben como un atributo de DiffGram si contienen datos. De lo contrario, se pasan por alto.|  
   
 ## <a name="sample-diffgram"></a>DiffGram de ejemplo  
  A continuación se muestra un ejemplo del formato DiffGram. En este ejemplo se muestra el resultado de una actualización de una fila de una tabla antes de que se hayan confirmado los cambios. La fila cuyo CustomerID es "ALFKI" se ha modificado, pero no se ha actualizado. Como resultado, hay un **actual** de fila con un **diffgr: ID** de "Customers1" en el **\<** ***DataInstance*** **>** bloque y un **Original** de fila con un **diffgr: ID** de "Customers1" en el  **\<diffgr: antes de >** bloque. La fila cuyo CustomerID es "ANATR" incluye un **RowError**, por lo que se anota con `diffgr:hasErrors="true"` y hay un elemento relacionado en el  **\<diffgr: errors >** bloque.  
@@ -131,9 +131,9 @@ Un DiffGram es un formato XML que identifica las versiones actual y original de 
 </diffgr:diffgram>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Carga de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Escritura de contenido de un conjunto de datos como datos XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Carga de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Escritura de contenido de un conjunto de datos como datos XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 23d1a11bcee2a4faae40f2683d109d5820ee5f9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d6a82331185060d6f08c3375dc5a628b65df1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506304"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;MemberName&gt; &#39; es ambiguo en las interfaces heredadas &#39; &lt;interfacename1&gt; &#39; y &#39; &lt;interfacename2&gt;&#39;
 La interfaz hereda a dos o más miembros con el mismo nombre de varias interfaces.  
   
- **Id. de error:** BC30685  
+ **Identificador de error:** BC30685  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Convierte el valor a la interfaz base que se va a utilizar; Por ejemplo:  
+-   Convierte el valor a la interfaz base que desea usar; Por ejemplo:  
   
     ```  
     Interface Left  
@@ -46,5 +46,5 @@ La interfaz hereda a dos o más miembros con el mismo nombre de varias interface
     End Module  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

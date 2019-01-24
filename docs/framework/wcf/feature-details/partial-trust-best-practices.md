@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de confianza parcial
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: fca975ff4216384b970535273511eb07cd6ded68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640113"
 ---
 # <a name="partial-trust-best-practices"></a>Procedimientos recomendados de confianza parcial
 Este tema describe los procedimientos recomendados al ejecutar Windows Communication Foundation (WCF) en un entorno de confianza parcial.  
@@ -45,26 +45,26 @@ Este tema describe los procedimientos recomendados al ejecutar Windows Communica
 -   Los métodos de instancia que implementan la interfaz <xref:System.Xml.Serialization.IXmlSerializable> deben ser `public`.  
   
 ## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>Utilizar WCF a partir de código de la plataforma de plena confianza que permite llamadas desde llamadores de confianza parcial  
- El modelo de seguridad de confianza parcial de WCF se da por supuesto que cualquier autor de llamada de un método público de WCF o una propiedad se está ejecutando en el contexto de seguridad (CAS) de acceso de código de la aplicación host. WCF también se da por supuesto ese contexto de seguridad de la solo aplicación existe para cada <xref:System.AppDomain>, y que este contexto se establece en <xref:System.AppDomain> hora de creación de un host de confianza (por ejemplo, mediante una llamada a <xref:System.AppDomain.CreateDomain%2A> o por el Administrador de aplicaciones de ASP.NET).  
+ El modelo de seguridad de confianza parcial de WCF se supone que cualquier llamador de una propiedad o método público de WCF se está ejecutando en el contexto de seguridad (CA) de acceso de código de la aplicación de hospedaje. WCF también se da por supuesto ese contexto de seguridad de la solo aplicación existe para cada <xref:System.AppDomain>, y que este contexto se establece en <xref:System.AppDomain> hora de creación de un host de confianza (por ejemplo, mediante una llamada a <xref:System.AppDomain.CreateDomain%2A> o por el Administrador de aplicaciones de ASP.NET).  
   
  Este modelo de seguridad se aplica a las aplicaciones escritas por usuarios que no pueden validar permisos CAS adicionales, como, por ejemplo, el código de usuario que se ejecuta en una aplicación ASP.NET de nivel de confianza medio. Sin embargo, el código de plataforma de plena confianza (por ejemplo, un ensamblado de terceros que se instala en la caché global de ensamblados y acepta llamadas desde código de confianza parcial) debe tener un cuidado explícito al llamar a WCF en nombre de una aplicación de confianza parcial para evitar introducir vulnerabilidades de seguridad de nivel de aplicación.  
   
  Código de plena confianza debería evitar modificar el conjunto de permisos CAS del subproceso actual (mediante una llamada a <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, o <xref:System.Security.PermissionSet.Deny%2A>) antes de llamar a las API de WCF en nombre de código de confianza parcial. Validar, denegar o crear un contexto de permiso para subprocesos que sea independiente del contexto de seguridad de aplicaciones puede provocar un comportamiento inesperado. En función de la aplicación, este comportamiento puede producir vulnerabilidades de seguridad en aplicaciones.  
   
- Código que llama a WCF mediante el uso de un contexto de permiso para subprocesos debe estar preparado para afrontar las siguientes situaciones que pueden surgir:  
+ Código que llama a WCF mediante un contexto de permiso para subprocesos debe estar preparada para controlar las siguientes situaciones que puedan surgir:  
   
 -   El contexto de seguridad específico para subprocesos no se puede mantener durante toda la operación, lo que produce excepciones de seguridad potenciales.  
   
--   El código interno de WCF, así como cualquier devolución de llamada proporcionada por el usuario puede ejecutarse en un contexto de seguridad diferente que aquel en el que se inició la llamada originariamente. Entre estos contextos se incluyen:  
+-   Código interno de WCF, así como las devoluciones de llamada proporcionada por el usuario se pueden ejecutar en un contexto de seguridad diferente que aquel bajo la que se inició originalmente la llamada. Entre estos contextos se incluyen:  
   
     -   El contexto del permiso de aplicación.  
   
-    -   Cualquier contexto de permiso para subprocesos creado previamente por otros subprocesos de usuario utilizados para llamar en WCF durante la duración de la ejecución <xref:System.AppDomain>.  
+    -   Cualquier contexto de permiso para subprocesos creado previamente por otros subprocesos de usuario que se usa para llamar a WCF durante la vigencia de la ejecución <xref:System.AppDomain>.  
   
  WCF garantiza que el código de confianza parcial no puede obtener permisos de plena confianza a menos que un componente de plena confianza antes de llamar a las API públicas de WCF valide tales permisos. Sin embargo, no garantiza que los efectos de validar la plena confianza se aíslen a un determinado subproceso, operación o acción del usuario.  
   
  A modo de procedimiento recomendado, evite crear un contexto de permiso para subprocesos llamando al método <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A> o <xref:System.Security.PermissionSet.Deny%2A>. En su lugar, conceda o deniegue el privilegio a la propia aplicación, para que no se requiera <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A> o <xref:System.Security.PermissionSet.PermitOnly%2A>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.IXmlSerializable>
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.IXmlSerializable>

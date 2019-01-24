@@ -2,12 +2,12 @@
 title: Funciones canónicas matemáticas
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3e8122806e31fc72b3d390e5e8671fada7f3a47d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492708"
 ---
 # <a name="math-canonical-functions"></a>Funciones canónicas matemáticas
 
@@ -140,5 +140,5 @@ Tipo de `value`.
   
  La funcionalidad equivalente está disponible en el proveedor administrado de Microsoft SQL Client. Para obtener más información, consulte [SqlClient para las funciones de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
-## <a name="see-also"></a>Vea también  
- [Funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

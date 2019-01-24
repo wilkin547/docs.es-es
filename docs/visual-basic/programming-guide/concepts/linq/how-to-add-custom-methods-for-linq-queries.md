@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: agregar métodos personalizados para las consultas LINQ (Visual Basic)'
+title: Procedimiento Agregar métodos personalizados para las consultas LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 6fa212ff05547e8edd3964a6e1c9f76c11cdbe08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e45dfc6b516f1e5f5e9f7f667bbbfd5768330ffa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645592"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Cómo: agregar métodos personalizados para las consultas LINQ (Visual Basic)
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Procedimiento Agregar métodos personalizados para las consultas LINQ (Visual Basic)
 Puede extender el conjunto de métodos que puede usar para consultas LINQ agregando métodos de extensión a la interfaz <xref:System.Collections.Generic.IEnumerable%601>. Por ejemplo, además de las operaciones habituales de promedio o de máximo, puede crear un método de agregación personalizado para calcular un valor a partir de una secuencia de valores. También puede crear un método que funcione como un filtro personalizado o como una transformación de datos específica para una secuencia de valores y que devuelva una secuencia nueva. Ejemplos de dichos métodos son <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Reverse%2A>.  
   
- Si extiende la interfaz <xref:System.Collections.Generic.IEnumerable%601>, puede aplicar los métodos personalizados a cualquier colección enumerable. Para más información, vea [Métodos de extensión](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Si extiende la interfaz <xref:System.Collections.Generic.IEnumerable%601>, puede aplicar los métodos personalizados a cualquier colección enumerable. Para obtener más información, vea [Métodos de extensión](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
 ## <a name="adding-an-aggregate-method"></a>Agregar un método de agregación  
  Un método de agregación calcula un valor único a partir de un conjunto de valores. LINQ proporciona varios métodos de agregación, incluidos <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> y <xref:System.Linq.Enumerable.Max%2A>. Si quiere crear su propio método de agregación, agregue un método de extensión a la interfaz <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -51,7 +51,7 @@ End Module
  Puede llamar a este método de extensión para cualquier colección enumerable de la misma manera en la que llamaría a otros métodos de agregación desde la interfaz <xref:System.Collections.Generic.IEnumerable%601>.  
   
 > [!NOTE]
->  En Visual Basic, puede usar una llamada al método o la sintaxis de consulta estándar para la `Aggregate` o `Group By` cláusula. Para obtener más información, consulte [Aggregate (cláusula)](../../../../visual-basic/language-reference/queries/aggregate-clause.md) y [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
+>  En Visual Basic, se puede usar una llamada al método o la sintaxis de consulta estándar para el `Aggregate` o `Group By` cláusula. Para obtener más información, consulte [cláusula Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) y [Group By Clause](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
  En el ejemplo de código siguiente se muestra cómo usar el método `Median` para una matriz de tipo `double`.  
   
@@ -125,7 +125,7 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function  
 ```  
   
- Ahora puede llamar al método `Median` para una secuencia de objetos de cualquier tipo. Si el tipo no tiene su propia sobrecarga de métodos, deberá pasar un parámetro de delegado. En Visual Basic, puede usar una expresión lambda para este propósito. Además, si usa el `Aggregate` o `Group By` cláusula en lugar de la llamada al método, puede pasar cualquier valor o expresión que se encuentra en el ámbito de esta cláusula.  
+ Ahora puede llamar al método `Median` para una secuencia de objetos de cualquier tipo. Si el tipo no tiene su propia sobrecarga de métodos, deberá pasar un parámetro de delegado. En Visual Basic, puede usar una expresión lambda para este propósito. Además, si usa el `Aggregate` o `Group By` cláusula en lugar de la llamada al método, puede pasar cualquier valor o expresión que está en el ámbito de esta cláusula.  
   
  En el ejemplo de código siguiente se muestra cómo llamar al método `Median` para una matriz de enteros y una matriz de cadenas. Para las cadenas, se calcula la mediana de las longitudes de las cadenas de la matriz. En el ejemplo se muestra cómo pasar el parámetro del delegado <xref:System.Func%602> al método `Median` para cada caso.  
   
@@ -197,6 +197,6 @@ Next
 ' e  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Métodos de extensión](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Métodos de extensión](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

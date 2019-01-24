@@ -1,24 +1,24 @@
 ---
-title: 'Cómo: crear y usar ensamblados desde la línea de comandos (Visual Basic)'
+title: Procedimiento Crear y usar ensamblados desde la línea de comandos (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eefb6ccfabdb7897874ae4e5a8abc8c2d9cc8e35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534779"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Cómo: crear y usar ensamblados desde la línea de comandos (Visual Basic)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Procedimiento Crear y usar ensamblados desde la línea de comandos (Visual Basic)
 Un ensamblado, o una biblioteca de vínculos dinámicos (DLL), se vincula al programa en tiempo de ejecución. Para ilustrar la creación y uso de una DLL, considere el siguiente escenario:  
   
--   `MathLibrary.DLL`: el archivo de biblioteca que contiene los métodos que se van a llamar en tiempo de ejecución. En este ejemplo, la DLL contiene dos métodos, `Add` y `Multiply`.  
+-   `MathLibrary.DLL`: El archivo de biblioteca que contiene los métodos que se llama en tiempo de ejecución. En este ejemplo, la DLL contiene dos métodos, `Add` y `Multiply`.  
   
--   `Add`: el archivo de origen que contiene el método `Add`. Devuelve la suma de sus parámetros. La clase `AddClass` que contiene el método `Add` es un miembro del espacio de nombres `UtilityMethods`.  
+-   `Add`: El archivo de origen que contiene el método `Add`. Devuelve la suma de sus parámetros. La clase `AddClass` que contiene el método `Add` es un miembro del espacio de nombres `UtilityMethods`.  
   
--   `Mult`: el código fuente que contiene el método `Multiply`. Devuelve el producto de sus parámetros. La clase `MultiplyClass` que contiene el método `Multiply` también es un miembro del espacio de nombres `UtilityMethods`.  
+-   `Mult`: El código fuente que contiene el método `Multiply`. Devuelve el producto de sus parámetros. La clase `MultiplyClass` que contiene el método `Multiply` también es un miembro del espacio de nombres `UtilityMethods`.  
   
--   `TestCode`: el archivo que contiene el método `Main`. Usa los métodos en el archivo DLL para calcular la suma y el producto de los argumentos de tiempo de ejecución.  
+-   `TestCode`: El archivo que contiene el `Main` método. Usa los métodos en el archivo DLL para calcular la suma y el producto de los argumentos de tiempo de ejecución.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -117,7 +117,7 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
   
  Para obtener más información sobre la compilación desde la línea de comandos, vea y [compilar desde la línea de comandos](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Creación de una clase para contener funciones de archivos DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Creación de una clase para contener funciones de archivos DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

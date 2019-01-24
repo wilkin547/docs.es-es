@@ -2,12 +2,12 @@
 title: Servicio de fachada confiable
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 6acea5204ae2c05483978eb6187d1de02ae1b268
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4b18f0eb4183a9dd6d0801dd022176cd3220c62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640425"
 ---
 # <a name="trusted-facade-service"></a>Servicio de fachada confiable
 Este escenario muestra cómo fluir la información de identidad del llamador de un servicio a otro mediante Windows Communication Foundation (WCF) infraestructura de seguridad.  

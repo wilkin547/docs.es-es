@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10e7da7711cd63579589fda416d0d3a4f777eefe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ad6c8bd59f62bc7b0a96e1ef5e545fe15610c91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516985"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>ICorDebugModule::GetBaseAddress (Método)
 Obtiene la dirección base del módulo.  
@@ -40,17 +40,17 @@ HRESULT GetBaseAddress(
  [out] Un `CORDB_ADDRESS` que especifica la dirección base del módulo.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el módulo es nativo de la imagen (es decir, si el módulo ha sido creado por el generador de imágenes nativas, NGen.exe), su dirección base será cero.  
+ Si el módulo es nativo de imagen (es decir, si el módulo se ha producido por el generador de imágenes nativas, NGen.exe), su dirección base será cero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
-    
- 
+## <a name="see-also"></a>Vea también
+
+

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 41dc37751e2dcf26eea887e84423179512c53614
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653520"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost (Interfaz)
 Proporciona métodos que permiten al host iniciar y detener de forma explícita, common language runtime (CLR) para crear y configurar dominios de aplicación, tener acceso al dominio de forma predeterminada y para enumerar todos los dominios que se ejecutan en el proceso.  
@@ -53,18 +53,18 @@ Proporciona métodos que permiten al host iniciar y detener de forma explícita,
 |[UnloadDomain (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|Descarga el dominio de aplicación especificado del proceso actual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
  **Versiones de .NET framework:** 1.0, 1.1  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.AppDomain>  
- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [Hosts de runtime](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CorRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.AppDomain>
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [Hosts de runtime](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)
+- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CorRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

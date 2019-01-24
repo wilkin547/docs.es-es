@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 9488cb4c15c2e0646d91bdba36e7d4e2be2efbbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d72350c472ff68d8ee623d82096bdab0c88abb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547123"
 ---
 # <a name="remote-vs-local-execution"></a>Ejecución remota o ejecución local
 Puede decidir ejecutar las consultas de manera remota (es decir, el motor de base de datos ejecuta la consulta en la base de datos) o localmente ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ejecuta la consulta en una memoria caché local).  
@@ -47,5 +47,5 @@ Puede decidir ejecutar las consultas de manera remota (es decir, el motor de bas
 ### <a name="queries-against-unordered-sets"></a>Consultas en conjuntos no ordenados  
  Tenga en cuenta la importante diferencia entre una colección local que implementa <xref:System.Collections.Generic.List%601> y una colección que proporciona consultas remotas ejecutadas en *desordenados conjuntos* en una base de datos relacional. Los métodos <xref:System.Collections.Generic.List%601>, como los que utilizan valores de índice, requieren semántica de lista, que normalmente no se puede obtener a través de una consulta remota en un conjunto no ordenado. Por esta razón, tales métodos cargan implícitamente <xref:System.Data.Linq.EntitySet%601> para permitir la ejecución local.  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

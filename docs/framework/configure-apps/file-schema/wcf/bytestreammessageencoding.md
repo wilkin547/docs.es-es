@@ -2,21 +2,21 @@
 title: '&lt;byteStreamMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 9d38f16cdeb8b769f4026ccb29f9129e93ef031c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 92ae3dc10e0ae734a3113e22f175f4d010ca55b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541864"
 ---
 # <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
 Especifica la codificación de mensajes como un flujo de bytes, con la opción especificar la codificación de caracteres.  
   
  \<system.serviceModel>  
-\<enlaces >  
-\<customBinding >  
-\<enlace >  
-\<binaryMessageEncoding >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<binaryMessageEncoding>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,16 +43,16 @@ Especifica la codificación de mensajes como un flujo de bytes, con la opción e
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>  
- [Codificación de mensajes](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [Elección de un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
+- [Codificación de mensajes](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Elección de un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

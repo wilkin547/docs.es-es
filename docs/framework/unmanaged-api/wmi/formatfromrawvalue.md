@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90af7d01d78cf74cbb304e3b987d5fe58e23f76e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 420a02d2f7757c52d6e8ff92a9ca30e44938cd18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546444"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue (función)
 Convierte un valor de datos de rendimiento sin procesar al formato especificado, o bien dos valores de datos de rendimiento sin procesar si la conversión de formato es de duración definida.   
@@ -86,11 +86,11 @@ Esta función devuelve los valores siguientes:
 Esta función contiene una llamada a la [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) función.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Biblioteca:** PerfCounter.dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Representar un elemento de estilo visual'
+title: Procedimiento Representar un elemento de estilo Visual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 284fca2d3f2b8f47b60e4d9c639df4a6bd43c701
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42e165d74628450adb8641bddcc7e8850b2af0a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526865"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Cómo: Representar un elemento de estilo visual
-El <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> expone el espacio de nombres <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementos (UI) compatibles con estilos visuales de la interfaz de objetos que representan el usuario de Windows. Este tema muestra cómo utilizar el <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> clase para representar la <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> que representa el **cerrar sesión** y **apagar** botones del menú Inicio.  
+# <a name="how-to-render-a-visual-style-element"></a>Procedimiento Representar un elemento de estilo Visual
+El <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> expone el espacio de nombres <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementos (UI) compatibles con los estilos visuales de la interfaz de objetos que representan el usuario de Windows. En este tema se muestra cómo utilizar el <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> clase para representar el <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> que representa el **cerrar sesión** y **apagar** botones del menú Inicio.  
   
 ### <a name="to-render-a-visual-style-element"></a>Para representar un elemento de estilo visual  
   
@@ -41,7 +41,7 @@ El <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> expone 
   
 -   Un <xref:System.Windows.Forms.Form> que hospeda el control personalizado.  
   
--   Las referencias a la <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, y <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> los espacios de nombres.  
+-   Las referencias a la <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, y <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> espacios de nombres.  
   
-## <a name="see-also"></a>Vea también  
- [Representar controles con estilos visuales](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)
+## <a name="see-also"></a>Vea también
+- [Representar controles con estilos visuales](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)

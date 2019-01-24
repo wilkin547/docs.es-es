@@ -3,17 +3,11 @@ title: Instrucciones de diseño de .NET Framework
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- libraries, .NET Framework class library
-- class library design guidelines [.NET Framework], about
-- class library design guidelines [.NET Framework]
+  - 'libraries, .NET Framework class library'
+  - 'class library design guidelines [.NET Framework], about'
+  - 'class library design guidelines [.NET Framework]'
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396934"
 ---
 # <a name="framework-design-guidelines"></a>Instrucciones de diseño de .NET Framework
 Esta sección proporciona directrices para diseñar bibliotecas que extenderán e interactúan con .NET Framework. El objetivo es ayudar a los diseñadores de bibliotecas a garantizar la coherencia de la API y facilidad de uso, ya que proporciona un modelo de programación unificado que es independiente del lenguaje de programación usado para el desarrollo. Se recomienda que siga estas directrices de diseño al desarrollar clases y componentes que extiendan .NET Framework. Diseño de la biblioteca incoherente negativamente afecta a la productividad del desarrollador y disuaden del adopción.  
@@ -50,6 +44,6 @@ Esta sección proporciona directrices para diseñar bibliotecas que extenderán 
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general](../../../docs/framework/get-started/overview.md)  
-- [Guía básica de .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+- [Información general](../../../docs/framework/get-started/overview.md)
+- [Guía básica de .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Guía de desarrollo](../../../docs/framework/development-guide.md)

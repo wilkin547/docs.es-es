@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Habilitar la vista en mosaico en un control ListView de formularios Windows Forms'
+title: Procedimiento Habilitar la vista en mosaico en un Control ListView de formularios de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 4eb418bbd2d399c57ce4a8235130a9939be56ce4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b51a314791180ea0f03f2eb0c5fbe8f897a0016d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629311"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Cómo: Habilitar la vista en mosaico en un control ListView de formularios Windows Forms
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Procedimiento Habilitar la vista en mosaico en un Control ListView de formularios de Windows
 Con la característica de vista de mosaico del control <xref:System.Windows.Forms.ListView>, puede proporcionar equilibrio visual entre la información gráfica y de texto. La información de texto que se muestra para un elemento en la vista de mosaico es igual que la información de columna definida para la vista de detalles. La vista de mosaico funciona en combinación con las características de marca de inserción o agrupación del control <xref:System.Windows.Forms.ListView>.  
   
  La vista de mosaico usa un icono de 32 x 32 píxeles y varias líneas de texto, tal y como se muestra en las siguientes imágenes.  
@@ -57,11 +57,11 @@ Texto e iconos de la vista de mosaico
   
 -   Un archivo de icono llamado book.ico en el mismo directorio que el archivo ejecutable.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.ListView.TileSize%2A>  
- [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- [Características de Windows XP y controles de Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.ListView.TileSize%2A>
+- [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+- [Características de Windows XP y controles de Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)

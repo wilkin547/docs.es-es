@@ -2,21 +2,21 @@
 title: Protocolo de intercambio de contexto
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a682b94b1ab659515e618e79230d94f57f140717
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c2b293f8e23f9bc43fba32551233d92666793e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494777"
 ---
 # <a name="context-exchange-protocol"></a>Protocolo de intercambio de contexto
-Esta sección describe el protocolo de intercambio de contexto introducido en la versión de Windows Communication Foundation (WCF) .NET Framework versión 3.5. Este protocolo permite al canal de cliente que acepte un contexto proporcionado por un servicio y que lo aplique a todas las solicitudes posteriores a ese servicio enviado sobre la misma instancia del canal de cliente. La implementación del protocolo de intercambio de contexto puede utilizar uno de los dos mecanismos siguientes para propagar el contexto entre el servidor y el cliente: cookies de HTTP o un encabezado SOAP.  
+En esta sección se describe el protocolo de intercambio de contexto introducido en la versión de Windows Communication Foundation (WCF) .NET Framework versión 3.5. Este protocolo permite al canal de cliente que acepte un contexto proporcionado por un servicio y que lo aplique a todas las solicitudes posteriores a ese servicio enviado sobre la misma instancia del canal de cliente. La implementación del protocolo de intercambio de contexto puede utilizar uno de los dos mecanismos siguientes para propagar el contexto entre el servidor y el cliente: Las cookies HTTP o un encabezado SOAP.  
   
  El protocolo de intercambio de contexto se implementa en una capa de canal personalizada. El canal comunica el contexto a y desde el nivel de aplicación utilizando una propiedad <xref:System.ServiceModel.Channels.ContextMessageProperty>. Para la transmisión entre extremos, el valor del contexto se serializa como un encabezado SOAP en la capa de canal o convertido a o desde las propiedades de mensaje que representan una solicitud y respuesta HTTP. En el último caso, se espera que una de las capas del canal subyacentes convierta las propiedades de mensajes de solicitud y respuesta HTTP a y desde cookies HTTP, respectivamente. La opción del mecanismo utilizado para intercambiar el contexto se realiza mediante la propiedad <xref:System.ServiceModel.Channels.ContextExchangeMechanism> en el <xref:System.ServiceModel.Channels.ContextBindingElement>. Los valores válidos son `HttpCookie` o `SoapHeader`.  
   
  En el cliente, una instancia de un canal puede funcionar de dos modos en función de los valores de la propiedad de canal, <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>.  
   
-## <a name="mode-1-channel-context-management"></a>Modo 1: administración del contexto del canal  
+## <a name="mode-1-channel-context-management"></a>Modo 1: Administración del contexto del canal  
  Éste es el modo predeterminado donde <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> está establecido en `true`. En este modo, el canal del contexto administra el contexto y lo almacena en memoria caché durante su duración. El contexto se puede recuperar desde el canal mediante la propiedad de canal `IContextManager` llamando al método `GetContext`. El canal también se puede preinicializar con contexto concreto antes de abrirse llamando al método `SetContext` en la propiedad de canal. Una vez inicializado el canal con contexto no se puede restablecer.  
   
  A continuación, se muestra una lista de invariables en este modo:  
@@ -32,7 +32,7 @@ Esta sección describe el protocolo de intercambio de contexto introducido en la
   
 -   <xref:System.ServiceModel.Channels.ContextMessageProperty> en un mensaje entrante siempre es null.  
   
-## <a name="mode-2-application-context-management"></a>Modo 2: administración de contexto de aplicación  
+## <a name="mode-2-application-context-management"></a>Modo 2: Administración de contexto de la aplicación  
  Éste es el modo cuando <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> se establece en `false`. En este modo el canal de contexto no administra contexto. Es responsabilidad de la aplicación el recuperar, administrar y aplicar el contexto utilizando la <xref:System.ServiceModel.Channels.ContextMessageProperty>. Cualquier intento de llamar al método `GetContext` o `SetContext` produce una <xref:System.InvalidOperationException>.  
   
  Independientemente del modo elegido, el generador de canales de cliente admite patrones de intercambio de mensajes <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>y <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.  
@@ -67,5 +67,5 @@ Esta sección describe el protocolo de intercambio de contexto introducido en la
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Guía de interoperabilidad de los protocolos de servicios web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+## <a name="see-also"></a>Vea también
+- [Guía de interoperabilidad de los protocolos de servicios web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

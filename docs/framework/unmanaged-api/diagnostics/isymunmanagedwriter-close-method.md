@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30747fa25528f5679264ebfb67addf401b7d01d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 780c19acd3d6980c0fb3e31d01e569a61fd04d6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647314"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>ISymUnmanagedWriter::Close (Método)
-Cierra el escritor de símbolos después de confirmar los símbolos al almacén de símbolos.  
+Cierra el escritor de símbolos después de confirmar los símbolos en el almacén de símbolos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,13 +34,13 @@ HRESULT Close();
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="remarks"></a>Comentarios  
- Después de esta llamada, el escritor de símbolos deja de ser válido para futuras actualizaciones. Para cerrar el escritor de símbolos sin confirmar los símbolos, utilice el [ISymUnmanagedWriter:: Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) método en su lugar.  
+ Después de esta llamada, el escritor de símbolos deja de ser válido para posteriores actualizaciones. Para cerrar el escritor de símbolos sin confirmar los símbolos, utilice el [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) método en su lugar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

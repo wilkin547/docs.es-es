@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8d6b16f3eeb32e41f3568e0b237f18c945a8cb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 204c2dfbf28f95c1b8c2d2c1b757730e64a8e91d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423902"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503708"
 ---
 # <a name="callid-structure"></a>CALL_ID (Estructura)
-Proporciona información a un depurador sobre una función que se está llamando. Consulte la [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfaz para obtener más información.  
+Proporciona información a un depurador sobre una función que se llama. Consulte la [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfaz para obtener más información.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,11 +49,11 @@ typedef struct tagCALL_ID
 |`pUserThread`|Identifica el subproceso que se está ejecutando la llamada.|  
 |`addrStackPointer`|Especifica la dirección de la pila de llamadas.|  
 |`szEntryPoint`|Especifica la dirección de la llamada.|  
-|`szDestinationMachine`|Identifica el equipo que va a ejecutar la llamada.|  
+|`szDestinationMachine`|Identifica el equipo que ejecutará la llamada.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** ProtocolNotify2.idl  
+ **Encabezado**: ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Vea también  
- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Estructuras de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>Vea también
+- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Estructuras de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

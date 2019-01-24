@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 77f8fc5057b8f31e684941b742f2cf696afd6b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525214"
 ---
 # <a name="panels-overview"></a>Información general sobre elementos Panel
 <xref:System.Windows.Controls.Panel> los elementos son componentes que controlan la representación de elementos, su tamaño y dimensiones, su posición y la disposición de su contenido secundario. El [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una serie de predefinidos <xref:System.Windows.Controls.Panel> elementos, así como la capacidad de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  
@@ -174,7 +174,7 @@ ms.locfileid: "47196634"
   
  La diferencia en cuanto al comportamiento de representación se puede ver en esta imagen.  
   
- ![Captura de pantalla: Comparación de StackPanel y DockPanel](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![Captura de pantalla: Comparación entre StackPanel y DockPanel](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>Definición y uso de un elemento StackPanel  
  En el ejemplo siguiente se muestra cómo usar un <xref:System.Windows.Controls.StackPanel> para crear un conjunto de botones colocados verticalmente. Para colocarlos horizontalmente, establezca el <xref:System.Windows.Controls.StackPanel.Orientation%2A> propiedad <xref:System.Windows.Controls.Orientation.Horizontal>.  
@@ -252,13 +252,13 @@ ms.locfileid: "47196634"
   
  Para información adicional sobre cómo crear aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] localizables, consulte [Información general sobre el uso del diseño automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md).  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Ejemplo WPF Layout Gallery](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)  
- [Información general sobre alineación, márgenes y relleno](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Crear un ejemplo de Panel de ajuste de contenido personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [Información general sobre propiedades asociadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Información general sobre el uso del diseño automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Vea también
+- [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Ejemplo WPF Layout Gallery](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)
+- [Información general sobre alineación, márgenes y relleno](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Crear un ejemplo de Panel de ajuste de contenido personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [Información general sobre propiedades asociadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Información general sobre el uso del diseño automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

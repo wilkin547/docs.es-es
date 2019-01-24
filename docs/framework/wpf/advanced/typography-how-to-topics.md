@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546320"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543583"
 ---
 # <a name="typography-how-to-topics"></a>Temas "Cómo..." sobre tipografía
-Los temas de esta sección describen cómo usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] admiten para la presentación de texto en las aplicaciones.  
+Los temas de esta sección describen cómo usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] admite presentación enriquecida de texto en sus aplicaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Crear una decoración de texto](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
@@ -27,7 +27,7 @@ Los temas de esta sección describen cómo usar [!INCLUDE[TLA#tla_winclient](../
  [Dibujar texto en un elemento visual](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
  [Usar caracteres especiales en XAML](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Documents.Typography>  
- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Características de las fuentes OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Documents.Typography>
+- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Características de las fuentes OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

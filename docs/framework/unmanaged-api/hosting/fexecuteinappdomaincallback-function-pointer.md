@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c3cafe3a8912702a093f9df7234112c0057b440
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e3031ce0eb6f23fdf5e5366d33ff075ea7816b0b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649549"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>puntero a la función FExecuteInAppDomainCallback
-Señala a una función que llama a common language runtime (CLR) para ejecutar código administrado.  
+Señala una función que se llama mediante common language runtime (CLR) para ejecutar código administrado.  
   
- Este puntero de función está desusada en la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Este puntero de función ha quedado obsoleto en la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +38,18 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 #### <a name="parameters"></a>Parámetros  
  `cookie`  
- [in] Un puntero a la memoria asignada por el llamador opaco que contiene el código administrado que se ejecuta.  
+ [in] Puntero a la memoria asignada por el llamador opaco que contiene el código administrado que se ejecutará.  
   
  La asignación y duración de esta memoria se controlan por el llamador (es decir, el CLR). Esto no es memoria del montón administrado de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorWks.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

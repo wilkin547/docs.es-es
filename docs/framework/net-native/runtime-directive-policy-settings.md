@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642573"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configuración de directiva de la directiva en tiempo de ejecución
 > [!NOTE]
@@ -127,6 +127,6 @@ ms.locfileid: "46000993"
 |`Required PublicAndInternal`|Habilita la directiva para miembros o tipos públicos e internos y garantiza que siempre va a haber metadatos disponibles para los miembros y tipos públicos e internos. Este parámetro difiere de `PublicAndInternal`, lo que hace que solo haya metadatos disponibles para miembros y tipos públicos e internos cuando la cadena de herramientas determine que son necesarios.|✓||  
 |`Required All`|Requiere que la cadena de herramientas conserve todos los tipos y miembros (se usen o no) y habilita la directiva para estos.|✓||  
   
-## <a name="see-also"></a>Vea también  
- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Vea también
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)

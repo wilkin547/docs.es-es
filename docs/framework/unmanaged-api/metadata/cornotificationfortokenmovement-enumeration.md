@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96ab659e6ab6cc9601c0e9a1ab511da92905c242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 745ba18fd1a36789f06bcd3dd4d183c9b28b9875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650111"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement (Enumeración)
-Especifica las notificaciones que se enviará al cliente de API de metadatos cuando se produce una reasignación de símbolo (token).  
+Especifica las notificaciones que se enviarán al cliente de API de metadatos cuando se produce una reasignación del token.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,39 +65,39 @@ typedef enum CorNotificationForTokenMovement {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDNotifyDefault`|Notificar cuando `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, o `mdFieldDef` movimiento de símbolos (tokens).|  
-|`MDNotifyAll`|Notificar cuando se mueve ningún símbolo (token).|  
-|`MDNotifyNone`|No notificar cuando se mueva de símbolos (tokens).|  
-|`MDNotifyMethodDef`|Notificar cuando un `mdMethodDef` símbolo (token) se mueve.|  
-|`MDNotifyMemberRef`|Notificar cuando un `mdMemberRef` símbolo (token) se mueve.|  
-|`MDNotifyFieldDef`|Notificar cuando un `mdFieldDef` símbolo (token) se mueve.|  
-|`MDNotifyTypeRef`|Notificar cuando un `mdTypeRef` símbolo (token) se mueve.|  
-|`MDNotifyTypeDef`|Notificar cuando un `mdTypeDef` símbolo (token) se mueve.|  
-|`MDNotifyParamDef`|Notificar cuando un `mdParamDef` símbolo (token) se mueve.|  
-|`MDNotifyInterfaceImpl`|Notificar cuando un `mdInterfaceImpl` símbolo (token) se mueve.|  
-|`MDNotifyProperty`|Notificar cuando un `mdProperty` símbolo (token) se mueve.|  
-|`MDNotifyEvent`|Notificar cuando un `mdEvent` símbolo (token) se mueve.|  
-|`MDNotifySignature`|Notificar cuando un `mdSignature` símbolo (token) se mueve.|  
-|`MDNotifyTypeSpec`|Notificar cuando un `mdTypeSpec` símbolo (token) se mueve.|  
-|`MDNotifyCustomAttribute`|Notificar cuando un `mdCustomAttribute` símbolo (token) se mueve.|  
-|`MDNotifySecurityValue`|Notificar cuando un `mdSecurityValue` símbolo (token) se mueve.|  
-|`MDNotifyPermission`|Notificar cuando un `mdPermission` símbolo (token) se mueve.|  
-|`MDNotifyModuleRef`|Notificar cuando un `mdModuleRef` símbolo (token) se mueve.|  
-|`MDNotifyNameSpace`|Notificar cuando un `mdNameSpace` símbolo (token) se mueve.|  
-|`MDNotifyAssemblyRef`|Notificar cuando un `mdAssemblyRef` símbolo (token) se mueve.|  
-|`MDNotifyFile`|Notificar cuando un `mdFile` símbolo (token) se mueve.|  
-|`MDNotifyExportedType`|Notificar cuando un `mdExportedType` símbolo (token) se mueve.|  
-|`MDNotifyResource`|Notificar cuando un `mdManifestResource` símbolo (token) se mueve.|  
+|`MDNotifyDefault`|Notificar cuando `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, o `mdFieldDef` movimiento de tokens.|  
+|`MDNotifyAll`|Notificar cuando se mueve ningún token.|  
+|`MDNotifyNone`|No informan de los tokens de mover.|  
+|`MDNotifyMethodDef`|Notificar cuando una `mdMethodDef` movimientos del token.|  
+|`MDNotifyMemberRef`|Notificar cuando una `mdMemberRef` movimientos del token.|  
+|`MDNotifyFieldDef`|Notificar cuando una `mdFieldDef` movimientos del token.|  
+|`MDNotifyTypeRef`|Notificar cuando una `mdTypeRef` movimientos del token.|  
+|`MDNotifyTypeDef`|Notificar cuando una `mdTypeDef` movimientos del token.|  
+|`MDNotifyParamDef`|Notificar cuando una `mdParamDef` movimientos del token.|  
+|`MDNotifyInterfaceImpl`|Notificar cuando una `mdInterfaceImpl` movimientos del token.|  
+|`MDNotifyProperty`|Notificar cuando una `mdProperty` movimientos del token.|  
+|`MDNotifyEvent`|Notificar cuando una `mdEvent` movimientos del token.|  
+|`MDNotifySignature`|Notificar cuando una `mdSignature` movimientos del token.|  
+|`MDNotifyTypeSpec`|Notificar cuando una `mdTypeSpec` movimientos del token.|  
+|`MDNotifyCustomAttribute`|Notificar cuando una `mdCustomAttribute` movimientos del token.|  
+|`MDNotifySecurityValue`|Notificar cuando una `mdSecurityValue` movimientos del token.|  
+|`MDNotifyPermission`|Notificar cuando una `mdPermission` movimientos del token.|  
+|`MDNotifyModuleRef`|Notificar cuando una `mdModuleRef` movimientos del token.|  
+|`MDNotifyNameSpace`|Notificar cuando una `mdNameSpace` movimientos del token.|  
+|`MDNotifyAssemblyRef`|Notificar cuando una `mdAssemblyRef` movimientos del token.|  
+|`MDNotifyFile`|Notificar cuando una `mdFile` movimientos del token.|  
+|`MDNotifyExportedType`|Notificar cuando una `mdExportedType` movimientos del token.|  
+|`MDNotifyResource`|Notificar cuando una `mdManifestResource` movimientos del token.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un símbolo (token) se puede volver a asignar (es decir, mover) durante una combinación de metadatos.  
+ Un token se puede volver a asignar (es decir, mover) durante una combinación de metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

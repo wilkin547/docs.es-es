@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84c362dca7f617aeb929f050af23e96998c4e1d5
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42754513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498300"
 ---
 # <a name="createinstanceenumwmi-function"></a>Función CreateInstanceEnumWmi
 Devuelve un enumerador que devuelve las instancias de una clase especificada que cumplen los criterios de selección especificados. 
@@ -55,11 +55,11 @@ HRESULT CreateInstanceEnumWmi (
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Si el conjunto, la función recupera los calificadores almacenados en el espacio de nombres localizado de la configuración regional de la conexión actual. <br/> Si no la función de conjunto, recupera solo los calificadores que se almacena en el espacio de nombres inmediato. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si el conjunto, la función recupera los calificadores almacenados en el espacio de nombres localizado de la configuración regional de la conexión actual. <br/> Si no la función de conjunto, recupera solo los calificadores que se almacena en el espacio de nombres inmediato. |
 | `WBEM_FLAG_DEEP` | 0 | La enumeración incluye esto y todas las subclases de la jerarquía. |
 | `WBEM_FLAG_SHALLOW` | 1 | La enumeración incluye únicamente las instancias de esta clase puras y excluye todas las instancias de subclases que proporcionan las propiedades que no se encuentran en esta clase. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | La marca provoca una llamada semisincrónica. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de sólo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten las llamadas a [clon](clone.md). |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | La marca provoca una llamada semisincrónica. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de sólo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten las llamadas a [clon](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI mantiene punteros a objetos en el enumration hasta que se publican. | 
 
 Las marcas recomendadas son `WBEM_FLAG_RETURN_IMMEDIATELY` y `WBEM_FLAG_FORWARD_ONLY` para mejorar el rendimiento.
@@ -94,10 +94,10 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver las instancias de la clase especificada. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Se ha producido un error no especificado. |
-| `WBEM_E_INVALID_CLASS` | 0 x 80041010 | `strFilter` no existe. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
-| `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
+| `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | `strFilter` no existe. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI era probablemente detenido y volver a iniciar. Llame a [ConnectServerWmi](connectserverwmi.md) nuevo. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Error en el vínculo de procedimiento remoto (RPC) de la llamada entre el proceso actual y WMI. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
@@ -111,11 +111,11 @@ Tenga en cuenta que el enumerador devuelto puede tener cero elementos.
 Si se produce un error en la llamada de función, puede obtener información de error adicional mediante una llamada a la [GetErrorInfo](geterrorinfo.md) función.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

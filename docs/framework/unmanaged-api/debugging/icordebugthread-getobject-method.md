@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2dd4cded6800ce016d821f8e3ffe01dcb6264b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4a188963273555e8b93b68c168260fd619136c00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544541"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject (Método)
 Obtiene un puntero de interfaz para el subproceso de common language runtime (CLR).  
@@ -37,16 +37,16 @@ HRESULT GetObject (
   
 #### <a name="parameters"></a>Parámetros  
  `ppObject`  
- [out] Un puntero a la dirección de un objeto de interfaz de ICorDebugValue que representa el subproceso de CLR.  
+ [out] Un puntero a la dirección de un objeto de interfaz ICorDebugValue que representa el subproceso de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Thread>
+## <a name="see-also"></a>Vea también
+- <xref:System.Threading.Thread>

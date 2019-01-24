@@ -6,14 +6,15 @@ helpviewer_keywords:
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 82a7114027451d1342e6dc0846799933ce44d968
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fffe264377474bba14f6f086b521ccf9bd04adf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534464"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
-Hace que el compilador acepte únicamente la sintaxis que se incluye en la versión de idioma de Visual Basic especificada.  
+Hace que el compilador acepta solo la sintaxis que se incluye en la versión de idioma de Visual Basic especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -23,14 +24,18 @@ Hace que el compilador acepte únicamente la sintaxis que se incluye en la versi
   
 ## <a name="arguments"></a>Argumentos  
  `version`  
- Requerido. La versión de idioma que se usarán durante la compilación. Valores aceptados son `9`, `9.0`, `10`, y `10.0`.  
+ Obligatorio. La versión de idioma que se usará durante la compilación. Valores aceptados son `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` y `latest`.
+
+ Cualquiera de los números enteros también pueden especificarse mediante `.0` como la versión secundaria, por ejemplo, `11.0`.
+
+ Puede ver la lista de todos los valores posibles mediante la especificación de `-langversion:?` en la línea de comandos.  
   
 ## <a name="remarks"></a>Comentarios  
  El `-langversion` opción especifica la sintaxis que el compilador acepta. Por ejemplo, si especifica que la versión de lenguaje es 9.0, el compilador genera errores de sintaxis que es válida únicamente en la versión 10.0 y versiones posteriores.  
   
- Puede usar esta opción para desarrollar aplicaciones destinadas a versiones diferentes de .NET Framework. Por ejemplo, si se establece como destino .NET Framework 3.5, podría utilizar esta opción para asegurarse de que no utilice la sintaxis de la versión de idioma 10.0.  
+ Puede usar esta opción para desarrollar aplicaciones destinadas a versiones diferentes de .NET Framework. Por ejemplo, si tiene como destino .NET Framework 3.5, podría usar esta opción para asegurarse de que no usan la sintaxis de la versión 10.0 del lenguaje.  
   
- Puede establecer `-langversion` directamente únicamente mediante la línea de comandos. Para obtener más información, consulte [Elegir una versión específica de .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
+ Puede establecer `-langversion` directamente utilizando la línea de comandos. Para obtener más información, consulte [Elegir una versión específica de .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código compila `sample.vb` para Visual Basic 9.0.  
@@ -39,7 +44,7 @@ Hace que el compilador acepte únicamente la sintaxis que se incluye en la versi
 vbc -langversion:9.0 sample.vb  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Elegir una versión específica de .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)
+## <a name="see-also"></a>Vea también
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Elegir una versión específica de .NET Framework](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)

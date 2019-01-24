@@ -2,12 +2,12 @@
 title: Tipos de Oracle
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 1fea43260cce2a3b284dd2297f48f43453002cb3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e849de365fa9922a9c1552f2d25b613d1df01d2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529454"
 ---
 # <a name="oracletypes"></a>Tipos de Oracle
 El proveedor de datos .NET Framework para Oracle incluye varias estructuras que se pueden utilizar para trabajar con tipos de datos de Oracle. Por ejemplo, <xref:System.Data.OracleClient.OracleNumber> y <xref:System.Data.OracleClient.OracleString>.  
@@ -115,6 +115,6 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

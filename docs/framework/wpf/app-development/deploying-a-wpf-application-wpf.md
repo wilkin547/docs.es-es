@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 800e8a1e8400a11a7eadd0c352f5bfab334c9fbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2079d4b4f6bedcc30c4826f8798729c5c9263751
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648112"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
 Una vez que se compilan aplicaciones Windows Presentation Foundation (WPF), deben implementarse. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] y .NET Framework incluye varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -90,16 +90,16 @@ Una vez que se compilan aplicaciones Windows Presentation Foundation (WPF), debe
 ### <a name="deploying-xaml-browser-applications"></a>Implementar aplicaciones de explorador XAML  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] son aplicaciones compiladas que necesitan los tres archivos siguientes para implementarse:  
   
--   *nombreDeAplicación*.exe: el archivo de aplicación del ensamblado ejecutable.  
+-   *ApplicationName*.exe: El archivo de aplicación del ensamblado ejecutable.  
   
--   *nombreDeAplicación*.xbap: el manifiesto de implementación.  
+-   *ApplicationName*.xbap: El manifiesto de implementación.  
   
--   *nombreDeAplicación*.exe.manifest: el manifiesto de la aplicación.  
+-   *ApplicationName*.exe.manifest: Manifiesto de aplicación  
   
 > [!NOTE]
 >  Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
   
- Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f). Al igual que las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado, las [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se suelen publicar en un servidor web y se ven mediante [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
+ Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de explorador WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f). Al igual que las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado, las [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se suelen publicar en un servidor web y se ven mediante [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se puede implementar en los clientes usando cualquiera de las técnicas de implementación. En cambio, se recomienda [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] porque proporciona las siguientes capacidades:  
   
@@ -123,6 +123,6 @@ Una vez que se compilan aplicaciones Windows Presentation Foundation (WPF), debe
   
  Para obtener más información, vea [Implementar .NET Framework y aplicaciones](../../../../docs/framework/deployment/index.md).  
   
-## <a name="see-also"></a>Vea también  
- [Compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Seguridad](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a>Vea también
+- [Compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [Seguridad](../../../../docs/framework/wpf/security-wpf.md)

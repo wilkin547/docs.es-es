@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Validar la configuración de la aplicación'
+title: Procedimiento Validar la configuración de la aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496291"
 ---
-# <a name="how-to-validate-application-settings"></a>Cómo: Validar la configuración de la aplicación
+# <a name="how-to-validate-application-settings"></a>Procedimiento Validar la configuración de la aplicación
 En este tema se muestra cómo validar la configuración de la aplicación antes de conservarla.  
   
- Como la configuración de la aplicación está fuertemente tipada, tiene cierta confianza en que los usuarios no puedan asignar los datos de un tipo incorrecto a una configuración especificada. Sin embargo, aún es posible que un usuario intente asignar un valor a una configuración que se encuentre fuera de los límites aceptables (por ejemplo, proporcionar una fecha de nacimiento perteneciente al futuro). <xref:System.Configuration.ApplicationSettingsBase>, la clase primaria de todas las clases de configuración de la aplicación, expone cuatro eventos para habilitar la comprobación de estos límites. Al controlarse estos eventos, se incluye todo el código de validación en una sola ubicación, en lugar de dispersarse por todo el proyecto.  
+ Como la configuración de la aplicación está fuertemente tipada, tiene cierta confianza en que los usuarios no puedan asignar los datos de un tipo incorrecto a una configuración especificada. Sin embargo, aún es posible que un usuario intente asignar un valor a una configuración que se encuentre fuera de los límites aceptables (por ejemplo, proporcionar una fecha de nacimiento perteneciente al futuro). <xref:System.Configuration.ApplicationSettingsBase>, la clase primaria de todas las clases de configuración de la aplicación, expone cuatro eventos para habilitar la comprobación de esos límites. Al controlarse estos eventos, se incluye todo el código de validación en una sola ubicación, en lugar de dispersarse por todo el proyecto.  
   
  El evento que use depende de cuándo es necesario validar la configuración, como se describe en la siguiente tabla.  
   
@@ -30,7 +30,7 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
 |<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Se produce después de cambiarse el valor de una sola propiedad de configuración.<br /><br /> Use este evento para validar una sola propiedad tras cambiarse. Este evento no suele utilizarse para la validación a menos que sea necesario un proceso de validación prolongado y asincrónico.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Se produce antes de almacenarse el grupo de propiedades de configuración.<br /><br /> Use este evento para validar los valores de todo el grupo de propiedades antes de que se conserven en el disco.|  
   
- Normalmente, no utilizará todos estos eventos dentro de la misma aplicación con fines de validación. Por ejemplo, a menudo es posible cumplir todos los requisitos de validación controlando sólo el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.  
+ Normalmente, no utilizará todos estos eventos dentro de la misma aplicación con fines de validación. Por ejemplo, a menudo es posible cumplir todos los requisitos de validación controlando solo el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.  
   
  Un controlador de eventos suele realizar una de las siguientes acciones al detectar un valor no válido:  
   
@@ -38,11 +38,11 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
 -   Vuelve a consultar al usuario del código de servidor para obtener información.  
   
--   Para los eventos producidos antes de sus acciones asociadas, como <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> y <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, usa el <xref:System.ComponentModel.CancelEventArgs> argumento para cancelar la operación.  
+-   Para los eventos generados antes de sus acciones asociadas, como <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> y <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, usa el <xref:System.ComponentModel.CancelEventArgs> argumento para cancelar la operación.  
   
  Para más información sobre el control de eventos, consulte [Información general sobre controladores de eventos](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Los procedimientos siguientes muestran cómo probar para una fecha de nacimiento válido mediante el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> o <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> eventos. Los procedimientos se han escrito partiendo de la base de que ya ha creado la configuración de la aplicación; en este ejemplo, realizaremos una comprobación de los límites en un valor de configuración denominado `DateOfBirth`. Para más información sobre la creación de la configuración, consulte [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md) (Cómo: Crear la configuración de la aplicación).  
+ Los procedimientos siguientes muestran cómo probar una fecha de nacimiento válida mediante el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> o <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> eventos. Los procedimientos se han escrito partiendo de la base de que ya ha creado la configuración de la aplicación; en este ejemplo, realizaremos una comprobación de los límites en un valor de configuración denominado `DateOfBirth`. Para obtener más información sobre la creación de configuración, vea [Cómo: Crear configuración de la aplicación](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Para obtener el objeto de configuración de la aplicación  
   
@@ -58,13 +58,13 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
         MySettings.Default   
         ```  
   
-         -o bien-  
+         O bien  
   
     -   Si es desarrollador de Visual Basic y ha creado la configuración de la aplicación mediante el Diseñador de proyectos, puede recuperar la configuración con [My.Settings (Objeto)](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         -o bien-  
+         O bien  
   
-    -   Si ha creado la configuración derivando de <xref:System.Configuration.ApplicationSettingsBase> directamente, debe crear manualmente una instancia de la clase.  
+    -   Si ha creado la configuración mediante la derivación de <xref:System.Configuration.ApplicationSettingsBase> directamente, deberá crear manualmente una instancia de la clase.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -78,9 +78,9 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Para validar la configuración de la aplicación al cambiar un valor de configuración  
   
-1.  Si es un programador de C#, en el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.  
+1.  Si es un C# developer, en el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.  
   
-     -o bien-  
+     O bien  
   
      Si es desarrollador de Visual Basic, debe declarar la variable `Settings` mediante la palabra clave `WithEvents`.  
   
@@ -160,6 +160,6 @@ En este tema se muestra cómo validar la configuración de la aplicación antes 
     End Sub  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Crear controladores de eventos en Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Cómo: Crear la configuración de la aplicación](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a>Vea también
+- [Crear controladores de eventos en Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Cómo: Crear configuración de la aplicación](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

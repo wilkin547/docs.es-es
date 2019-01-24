@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649315"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeración en contratos de datos
 Las enumeraciones se pueden expresar en el modelo del contrato de datos. En este tema se exponen varios ejemplos que explican el modelo de programación.  
@@ -81,7 +81,7 @@ Las enumeraciones se pueden expresar en el modelo del contrato de datos. En este
   
 1.  Intente buscar un miembro de enumeración (con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que asigna al valor numérico. Si lo encuentra, envíe una lista que contenga solo ese miembro.  
   
-2.  Intente desglosar el valor numérico en una suma de tal forma que haya miembros de enumeración (cada uno con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que estén asignados a cada parte de la suma. Envíe la lista de todos estos miembros. Tenga en cuenta que la *algoritmo voraz* se usa para buscar como una suma, y, por tanto, no hay ninguna garantía de que se encuentra una de esas sumas incluso si está presente. Para evitar este problema, asegúrese de que los valores numéricos de los miembros de enumeración son potencias de dos.  
+2.  Intente desglosar el valor numérico en una suma de tal forma que haya miembros de enumeración (cada uno con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que estén asignados a cada parte de la suma. Envíe la lista de todos estos miembros. Tenga en cuenta que el *algoritmo voraz* se utiliza para buscar como una suma, y, por tanto, no hay ninguna garantía de que se encuentra como una suma incluso si está presente. Para evitar este problema, asegúrese de que los valores numéricos de los miembros de enumeración son potencias de dos.  
   
 3.  Si los dos pasos anteriores fallan, y el valor numérico es distinto de cero, inicie <xref:System.Runtime.Serialization.SerializationException>. Si el valor numérico es cero, envíe la lista vacía.  
   
@@ -96,7 +96,7 @@ Las enumeraciones se pueden expresar en el modelo del contrato de datos. En este
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

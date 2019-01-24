@@ -2,12 +2,12 @@
 title: Extensión del seguimiento
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 02dfcc099883ed1d5e97b4f7b1a1f76d49b27a20
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: ff110a4b293a987ac07c29e3e4c1d52fe2d08294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653909"
 ---
 # <a name="extending-tracing"></a>Extensión del seguimiento
 Este ejemplo muestra cómo extender la característica de seguimiento de Windows Communication Foundation (WCF) mediante la escritura de seguimientos de actividad definido por el usuario en el código de cliente y servicio. Esto permite al usuario crear actividades de seguimiento y seguimientos de grupo en las unidades lógicas de trabajo. También es posible poner en correlación las actividades a través de las transferencias (dentro del mismo punto de conexión) y propagación (a través de los puntos de conexión). En este ejemplo, el seguimiento se habilita para el cliente y el servicio. Para obtener más información acerca de cómo habilitar el seguimiento en los archivos de configuración de cliente y el servicio, consulte [seguimiento y registro de mensajes](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -68,7 +68,7 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 ```  
   
 ### <a name="correlating-activities"></a>Cómo poner en correlación las actividades  
- Para poner en correlación directamente las actividades con los extremos, el atributo `propagateActivity` debe estar establecido en `true` en el origen de seguimiento `System.ServiceModel`. Además, para propagar los seguimientos sin pasar por las actividades WCF, seguimiento de actividad ServiceModel debe estar desactivado. Esto puede verse en el siguiente ejemplo de código:  
+ Para poner en correlación directamente las actividades con los puntos de conexión, el atributo `propagateActivity` debe estar establecido en `true` en el origen de seguimiento `System.ServiceModel`. Además, para propagar los seguimientos sin pasar por las actividades WCF, seguimiento de actividad ServiceModel debe estar desactivado. Esto puede verse en el siguiente ejemplo de código:  
   
 > [!NOTE]
 >  Desactivar el seguimiento de actividades de ServiceModel no es igual que tener el nivel de seguimiento, indicado por la propiedad `switchValue`, definido en desactivado.  
@@ -96,5 +96,5 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
   
 3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Vea también
+- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

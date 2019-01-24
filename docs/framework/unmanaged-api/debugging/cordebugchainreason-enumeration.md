@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e19897015a00d82da30fd670efcdd97c4d06f56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 621ae6dae32e79a26d81441841b4c6a274d86f83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497606"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason (Enumeración)
 Indica el motivo o los motivos para que se inicie una cadena de llamadas.  
@@ -55,26 +55,26 @@ typedef enum CorDebugChainReason {
 |`CHAIN_EXCEPTION_FILTER`|Un constructor inició la cadena.|  
 |`CHAIN_SECURITY`|El código que exige la seguridad inició la cadena.|  
 |`CHAIN_CONTEXT_POLICY`|Una directiva de contexto inició la cadena.|  
-|`CHAIN_INTERCEPTION`|No usado.|  
-|`CHAIN_PROCESS_START`|No usado.|  
+|`CHAIN_INTERCEPTION`|No se utiliza.|  
+|`CHAIN_PROCESS_START`|No se utiliza.|  
 |`CHAIN_THREAD_START`|El inicio de la ejecución de un subproceso inició la cadena.|  
 |`CHAIN_ENTER_MANAGED`|Una entrada en código administrado inició la cadena.|  
 |`CHAIN_ENTER_UNMANAGED`|Una entrada en código no administrado inició la cadena.|  
-|`CHAIN_DEBUGGER_EVAL`|No usado.|  
-|`CHAIN_CONTEXT_SWITCH`|No usado.|  
+|`CHAIN_DEBUGGER_EVAL`|No se utiliza.|  
+|`CHAIN_CONTEXT_SWITCH`|No se utiliza.|  
 |`CHAIN_FUNC_EVAL`|Una evaluación de función inició la cadena.|  
   
 ## <a name="remarks"></a>Comentarios  
  Use la [ICorDebugChain:: GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) método para determinar las razones para la iniciación de una cadena de llamadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

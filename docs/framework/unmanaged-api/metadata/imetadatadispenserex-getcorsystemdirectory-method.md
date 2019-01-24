@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf580f6d3fb18e729f3eca300aa817036eb61e4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3eccb42caa6fdc62b090cd60ff86ad102511883c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629168"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory (Método)
-Obtiene el directorio que contiene actual common language runtime (CLR). Este método es compatible únicamente para su uso con depuradores fuera de proceso. Si se llama desde otro componente, devolverá E_NOTIMPL.  
+Obtiene el directorio que contiene el actual common language runtime (CLR). Este método es compatible solo para su uso con los depuradores fuera de proceso. Si se llama desde otro componente, devolverá E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,14 +48,14 @@ HRESULT GetCORSystemDirectory (
  [out] El número de bytes devueltos realmente en `szBuffer`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataDispenserEx (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [IMetaDataDispenser (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataDispenserEx (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataDispenser (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

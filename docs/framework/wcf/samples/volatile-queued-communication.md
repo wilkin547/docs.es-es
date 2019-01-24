@@ -2,12 +2,12 @@
 title: Comunicación en cola volátil
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c6b72503cb90108e3ecc9a384cb8d7ad326a7c9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548305"
 ---
 # <a name="volatile-queued-communication"></a>Comunicación en cola volátil
 Este ejemplo muestra cómo realizar la comunicación en cola volátil sobre el transporte de Message Queuing (MSMQ). Este ejemplo utiliza <xref:System.ServiceModel.NetMsmqBinding>. El servicio en este caso es una aplicación de consola hospedada a sí misma que le permite observar el servicio que recibe los mensajes en cola.  

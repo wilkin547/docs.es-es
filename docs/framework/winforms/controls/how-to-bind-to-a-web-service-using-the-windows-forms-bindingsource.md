@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Enlazar a un servicio Web mediante el componente BindingSource de formularios Windows Forms'
+title: Procedimiento Enlazar a un servicio Web mediante el componente BindingSource de formularios de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 34d40cb9b0f4929330473ae0dc2f4c12dd309270
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f3bec715858f1d618957b61d3e15f9251f9fd55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840172"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639138"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Cómo: Enlazar a un servicio Web mediante el componente BindingSource de formularios Windows Forms
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procedimiento Enlazar a un servicio Web mediante el componente BindingSource de formularios de Windows
 Si quiere enlazar un control de Windows Forms a los resultados obtenidos de la llamada a un servicio Web XML, puede usar un componente <xref:System.Windows.Forms.BindingSource>. Este procedimiento es similar a enlazar un componente <xref:System.Windows.Forms.BindingSource> a un tipo. Debe crear un proxy de cliente que contenga los métodos y los tipos expuestos por el servicio Web. El proxy de cliente se genera desde el propio servicio Web (.asmx) o desde su archivo de lenguaje de descripción de servicios Web (WSDL). Además, el proxy de cliente debe exponer los campos de tipos complejos usados por el servicio Web como propiedades públicas. Después, enlace el <xref:System.Windows.Forms.BindingSource> a uno de los tipos expuestos en el proxy de servicio Web.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Para crear y enlazar a un proxy de cliente  
@@ -70,8 +70,8 @@ Si quiere enlazar un control de Windows Forms a los resultados obtenidos de la l
   
 -   Referencias a los ensamblados System, System.Drawing, System.Web.Services, System.Windows.Forms y System.Xml.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vea también  
- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Cómo: Enlazar un control de Windows Forms a un tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+## <a name="see-also"></a>Vea también
+- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Cómo: Enlazar un Control de Windows Forms a un tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

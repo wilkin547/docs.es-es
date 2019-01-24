@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646924"
 ---
 # <a name="data-contract-versioning"></a>Versiones de contratos de datos
-A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios. En este tema se explica cómo controlar las versiones de los contratos de datos. En este tema se describen los mecanismos de control de versiones de los contratos de datos. Para una información general completa y una guía preceptiva del control de versiones, vea [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios. En este tema se explica cómo controlar las versiones de los contratos de datos. En este tema se describen los mecanismos de control de versiones de los contratos de datos. Para una información general completa y una guía preceptiva del control de versiones, vea [prácticas recomendadas: Control de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>Cambios con interrupción y Cambios sin interrupción  
  Los cambios en un contrato de datos pueden ser con o sin interrupción. Cuando un contrato de datos se cambia de una manera sin interrupción, una aplicación que use la versión anterior del contrato puede comunicarse con una aplicación utilizando la versión más reciente y una aplicación que utilice la versión más reciente del contrato puede comunicarse con una aplicación que utilice la versión anterior. Por otro lado, un cambio con interrupción evita la comunicación en una o ambas direcciones.  
@@ -115,17 +115,17 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
  La mayoría de los cambios de colección son cambios sin interrupción, puesto que la mayoría de los tipos de colección son intercambiables entre sí en el modelo del contrato de datos. Sin embargo, personalizar una colección no personalizada o viceversa es un cambio con interrupción. Asimismo, cambiar la configuración de personalización de la colección es un cambio brusco; es decir, implica cambiar su espacio de nombres y nombre de contrato de datos, repitiendo el nombre del elemento, el nombre del elemento de la clave y el nombre del elemento del valor. Para obtener más información sobre la personalización de la colección, consulte [tipos de colección de contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Naturalmente, cambiar el contrato de datos del contenido de una colección (por ejemplo, cambiar de una lista de enteros a una lista de cadenas) es un cambio brusco.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.SerializationException>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [Devoluciones de llamadas en la serialización tolerante a versiones](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Procedimientos recomendados: creación de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.SerializationException>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- [Devoluciones de llamadas en la serialización tolerante a versiones](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Procedimientos recomendados: Versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

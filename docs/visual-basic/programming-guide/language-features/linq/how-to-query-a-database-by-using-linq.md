@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Consultar una base de datos usando LINQ (Visual Basic)'
+title: Procedimiento Consultar una base de datos usando LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query samples [LINQ]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: 75f3d71e76c81a016a4e2c6fac754b91db31873e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a76eb5a010c8c5f750336935f0044e8dcc4322f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514860"
 ---
-# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Cómo: Consultar una base de datos usando LINQ (Visual Basic)
+# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Procedimiento Consultar una base de datos usando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilita el acceso a la información de la base de datos y ejecutar consultas.  
   
  El ejemplo siguiente muestra cómo crear una nueva aplicación que realiza consultas en una base de datos de SQL Server.  
@@ -76,8 +76,8 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de la base
      [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
     [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Consultas](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>Vea también
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Consultas](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

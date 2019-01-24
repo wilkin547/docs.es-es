@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524058"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introducción a LINQ en Visual Basic
 Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y proporciona funcionalidades sencillas y potentes cuando se trabaja con todos los tipos de datos. En lugar de enviar una consulta a una base de datos que se procesen o trabajar con la sintaxis de consulta diferentes para cada tipo de datos que está buscando, LINQ presenta las consultas como parte del lenguaje Visual Basic. Utiliza una sintaxis unificada independientemente del tipo de datos.  
@@ -177,7 +177,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
   
  Cuando haya una conexión válida a una base de datos de SQL Server, puede agregar un **clases LINQ to SQL** plantilla de elemento al proyecto. De este modo se mostrará el Object Relational Designer (O/R Designer). El Object Relational Designer le permite arrastrar los elementos que desee tener acceso en el código desde el **Explorador de servidores**/**Database Explorer** a la superficie del diseñador. El archivo LINQ to SQL agrega un objeto <xref:System.Data.Linq.DataContext> al proyecto. Este objeto incluye propiedades y colecciones para las tablas y vistas a las que desea acceder y métodos para los procedimientos almacenados a los que desea llamar. Después de haber guardado los cambios en el archivo LINQ to SQL (.dbml), puede acceder a estos objetos en el código haciendo referencia al objeto <xref:System.Data.Linq.DataContext> definido por el O/R Designer. El nombre del objeto <xref:System.Data.Linq.DataContext> del proyecto se determina en función del nombre del archivo LINQ to SQL. Por ejemplo, un archivo LINQ to SQL denominado Northwind.dbml creará un objeto <xref:System.Data.Linq.DataContext> denominado `NorthwindDataContext`.  
   
- Para obtener ejemplos con instrucciones paso a paso, consulte [Cómo: consultar una base de datos](how-to-query-a-database-by-using-linq.md) y [Cómo: llamar a un procedimiento almacenado](how-to-call-a-stored-procedure-by-using-linq.md).  
+ Para obtener ejemplos con instrucciones paso a paso, vea [Cómo: Consultar una base de datos](how-to-query-a-database-by-using-linq.md) y [Cómo: Llamar a un procedimiento almacenado](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Características de Visual Basic que admiten LINQ  
  Visual Basic incluye otras características destacables que simplifican el uso de LINQ y reducen la cantidad de código que se debe escribir para realizar consultas LINQ. Entre ellas se incluyen las siguientes:  
@@ -228,17 +228,17 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
   
  [Cómo: Llamar a un procedimiento almacenado](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [Cómo: Modificar datos en una bases de datos](how-to-modify-data-in-a-database-by-using-linq.md)  
+ [Cómo: Modificar datos en una base de datos](how-to-modify-data-in-a-database-by-using-linq.md)  
   
- [Cómo: Combinar datos con cláusulas Join](how-to-combine-data-with-linq-by-using-joins.md)  
+ [Cómo: Combinar datos con cláusulas JOIN](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [Cómo: Ordenar los resultados de una consulta](how-to-sort-query-results-by-using-linq.md)  
+ [Cómo: Ordenar resultados de consulta](how-to-sort-query-results-by-using-linq.md)  
   
- [Cómo: Filtrar los resultados de una consulta](how-to-filter-query-results-by-using-linq.md)  
+ [Cómo: Filtrar los resultados de consulta](how-to-filter-query-results-by-using-linq.md)  
   
- [Cómo: Hacer el recuento, la suma o el promedio de datos](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [Cómo: Recuento, suma o promedio de datos](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [Cómo: Buscar los valores máximo y mínimo en el resultado de una consulta](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [Cómo: Buscar el valor mínimo o máximo en un resultado de consulta](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
@@ -247,9 +247,9 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ (Language Integrated Query)](../../concepts/linq/index.md)  
-- [Información general sobre LINQ to XML en Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [Información general de LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [Herramientas LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [LINQ (Language Integrated Query)](../../concepts/linq/index.md)
+- [Información general sobre LINQ to XML en Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Información general de LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [Herramientas LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 7144a5fd4a197fddaf1ac4132df0ff70995ad067
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 358c7a988ae95c2326a26bc048f5436e11acb340
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641595"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>El uso de una variable de iteración en una expresión lambda puede producir resultados inesperados.
 Uso de la variable de iteración en una expresión lambda puede producir resultados inesperados. En su lugar, cree una variable local dentro del bucle y asígnele el valor de la variable de iteración.  
   
- Esta advertencia aparece cuando se usa una variable de iteración de bucle en una expresión lambda que se declara dentro del bucle. Por ejemplo, en el ejemplo siguiente se hace que aparezca una advertencia.  
+ Esta advertencia aparece cuando se usa una variable de iteración de bucle en una expresión lambda que se declara dentro del bucle. Por ejemplo, en el ejemplo siguiente hace que aparezca una advertencia.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -26,7 +26,7 @@ For i As Integer = 1 To 10
 Next  
 ```  
   
- En el ejemplo siguiente se muestra que se pueden producir resultados inesperados.  
+ El ejemplo siguiente muestra los resultados inesperados que pueden producirse.  
   
 ```vb  
 Module Module1  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- El `For` bucle crea una matriz de expresiones lambda, cada una de las cuales devuelve el valor de la variable de iteración del bucle `i`. Cuando se evalúan las expresiones lambda en el `For Each` bucle, se podría espera ver 0, 1, 2, 3 y 4 muestra, los valores sucesivos de `i` en el `For` bucle. En su lugar, verá que el valor final de `i` muestra cinco veces:  
+ El `For` bucle crea una matriz de las expresiones lambda, cada una de las cuales devuelve el valor de la variable de iteración del bucle `i`. Cuando se evalúan las expresiones lambda en el `For Each` bucle, es probable que vea 0, 1, 2, 3 y 4 muestra, los valores sucesivos de `i` en el `For` bucle. En su lugar, verá que el valor final de `i` muestra cinco veces:  
   
  `5`  
   
@@ -57,9 +57,9 @@ End Module
   
  `5`  
   
- De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [configurar advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Id. de error:** BC42324  
+ **Identificador de error:** BC42324  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
@@ -83,5 +83,5 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>Vea también
+- [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

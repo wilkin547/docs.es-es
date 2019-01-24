@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectEnum Interfaz1
+title: ICorDebugObjectEnum (Interfaz1)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3674643d5590c320bddd5a0e6f1f95814e07ecf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a9f10301db488e4ca68ce5fdaf0ba767053d7d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547006"
 ---
-# <a name="icordebugobjectenum-interface1"></a>ICorDebugObjectEnum Interfaz1
+# <a name="icordebugobjectenum-interface1"></a>ICorDebugObjectEnum (Interfaz1)
 Implementa los métodos ICorDebugEnum y enumera las matrices de objetos según sus direcciones virtuales relativas (RVA).  
   
 ## <a name="methods"></a>Métodos  
@@ -38,13 +38,13 @@ Implementa los métodos ICorDebugEnum y enumera las matrices de objetos según s
 >  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

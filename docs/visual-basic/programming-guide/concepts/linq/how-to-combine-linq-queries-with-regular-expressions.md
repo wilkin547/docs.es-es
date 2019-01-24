@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Combinar consultas LINQ con expresiones regulares (Visual Basic)'
+title: Procedimiento Combinar consultas LINQ con expresiones regulares (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 8e58e2c65ad8ea0e3d3a8f454b894e556b349428
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d82b562211a9dd7fa035fe878bcdee769b8a85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652480"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Cómo: Combinar consultas LINQ con expresiones regulares (Visual Basic)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Procedimiento Combinar consultas LINQ con expresiones regulares (Visual Basic)
 En este ejemplo se muestra cómo usar la clase <xref:System.Text.RegularExpressions.Regex> para crear una expresión regular para coincidencias más complejas en cadenas de texto. Con la consulta LINQ, resulta fácil filtrar por los archivos exactos que se quieren buscar con la expresión regular y dar forma a los resultados.  
   
 ## <a name="example"></a>Ejemplo  
@@ -84,6 +84,6 @@ End Class
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Vea también
+- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

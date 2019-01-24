@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: e3ce8ff7da647120e5fd9e3b4cd44cc603eb797d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547097"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate (Cláusula, Visual Basic)
 Aplica uno o más funciones de agregado a una colección.  
@@ -33,11 +33,11 @@ Aggregate element [As type] In collection _
   
 |Término|Definición|  
 |---|---|  
-|`element`|Requerido. Variable se usa para recorrer en iteración los elementos de la colección.|  
+|`element`|Obligatorio. Variable se usa para recorrer en iteración los elementos de la colección.|  
 |`type`|Opcional. Tipo de `element`. Si se especifica ningún tipo, el tipo de `element` se deduce del `collection`.|  
-|`collection`|Requerido. Hace referencia a la colección para operar en.|  
+|`collection`|Obligatorio. Hace referencia a la colección para operar en.|  
 |`clause`|Opcional. Uno o más cláusulas de consulta, como un `Where` cláusula para refinar los resultados de consulta para aplicar la cláusula de agregado o cláusulas.|  
-|`expressionList`|Requerido. Uno o más delimitada por comas expresiones que identifican una función de agregado para aplicar a la colección. Puede aplicar un alias a una función de agregado para especificar un nombre de miembro para el resultado de la consulta. Si no se proporciona ningún alias, se usa el nombre de la función de agregado. Para obtener ejemplos, vea la sección acerca de las funciones de agregado más adelante en este tema.|  
+|`expressionList`|Obligatorio. Uno o más delimitada por comas expresiones que identifican una función de agregado para aplicar a la colección. Puede aplicar un alias a una función de agregado para especificar un nombre de miembro para el resultado de la consulta. Si no se proporciona ningún alias, se usa el nombre de la función de agregado. Para obtener ejemplos, vea la sección acerca de las funciones de agregado más adelante en este tema.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `Aggregate` cláusula puede usarse para incluir las funciones de agregado en las consultas. Las funciones de agregado realizan comprobaciones y cálculos sobre un conjunto de valores y devuelven un valor único. El valor calculado puede acceder mediante el uso de un miembro del tipo del resultado de consulta. Son las funciones de agregado estándares que puede usar el `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, y `Sum` funciones. Estas funciones son familiares para los desarrolladores familiarizados con agregados en SQL. Se describen en la sección siguiente de este tema.  
@@ -120,9 +120,9 @@ El ejemplo siguiente muestra cómo usar el `Aggregate` cláusula para aplicar fu
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
-- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
-- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
-- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)  
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Group By (cláusula)](../../../visual-basic/language-reference/queries/group-by-clause.md)

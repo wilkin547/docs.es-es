@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 857462c380ce51994e13dab5cfe3c28bba0f38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93e96e7804a3b5ecc64e9e50ce700435be83b77a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643369"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate (Método)
-Genera y obtiene una sección de código usando el nombre especificado y los valores de marca.  
+Genera y obtiene una sección de código con el nombre especificado y los valores de marca.  
   
  Este método está obsoleto y no debe usarse.  
   
@@ -44,22 +44,22 @@ HRESULT GetSectionCreate (
  [in] Un puntero a una cadena que especifica el nombre de la sección que se va a crear.  
   
  `flags`  
- [in] Marcas que especifican opciones.  
+ [in] Marcadores que especifican opciones.  
   
  `section`  
  [out] Un puntero a la sección de código recién creado.  
   
 ## <a name="remarks"></a>Comentarios  
- Llame a `GetSectionCreate` sólo si tiene requisitos de sección especiales que no se controlan mediante otros métodos.  
+ Llamar a `GetSectionCreate` sólo si tiene requisitos de sección especial que no se controlan mediante otros métodos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

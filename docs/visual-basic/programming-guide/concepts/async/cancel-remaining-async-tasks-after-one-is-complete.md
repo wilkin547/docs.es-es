@@ -2,12 +2,12 @@
 title: Cancelar las tareas asincrónicas restantes cuando se una completa (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 2f784449f6a70bccb386cc268e7c33cefe8f9a14
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0edcc969caaeae46240f048e76fbe153041873e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645813"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar las tareas asincrónicas restantes cuando se una completa (Visual Basic)
 Mediante el método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> junto con <xref:System.Threading.CancellationToken>, puede cancelar todas las tareas restantes cuando se completa una tarea. El método `WhenAny` toma un argumento que es una colección de tareas. El método inicia todas las tareas y devuelve una sola tarea. La tarea se completa cuando se complete cualquier tarea de la colección.  
@@ -18,13 +18,13 @@ Mediante el método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty
 >  Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior, instalado en el equipo.  
   
 ## <a name="downloading-the-example"></a>Descargar el ejemplo  
- Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]) y después seguir estos pasos.  
+ Puede descargar el proyecto de Windows Presentation Foundation (WPF) completo desde [ejemplo Async: Ajustar el ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) y, a continuación, siga estos pasos.  
   
 1.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
   
 2.  En la barra de menús, elija **Archivo**, **Abrir**, **Proyecto o solución**.  
   
-3.  En el **Abrir proyecto** cuadro de diálogo, abra la carpeta que contiene el código de ejemplo que descomprimió y, a continuación, abra el archivo de solución (.sln) para AsyncFineTuningVB.  
+3.  En el cuadro de diálogo **Abrir proyecto**, abra la carpeta que contiene el código de ejemplo que descomprimió y después abra el archivo de la solución (.sln) para AsyncFineTuningVB.  
   
 4.  En el **Explorador de soluciones**, abra el menú contextual del proyecto **CancelAfterOneTask** y, después, elija **Establecer como proyecto de inicio**.  
   
@@ -107,7 +107,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
   
  Observe que debe agregar una referencia para <xref:System.Net.Http>.  
   
- Puede descargar el proyecto de [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]).  
+ Puede descargar el proyecto de [ejemplo Async: Realizar ajustes en la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -234,7 +234,7 @@ End Class
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
-- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Ajuste de una aplicación asincrónica [Visual Basic])  
-- [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: ajuste de la aplicación)
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>
+- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Ajuste de una aplicación asincrónica [Visual Basic])
+- [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de async: Ajuste de la aplicación)

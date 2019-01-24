@@ -3,12 +3,12 @@ title: Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5
 ms.date: 03/30/2017
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 author: BrucePerlerMS
-ms.openlocfilehash: f3de86e19d440a43f18b3a16ad4af749a476d1dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 701a6f2c148796fedee0312e73621f4a7753a04d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529459"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5
 A partir de .NET 4.5, Windows Identity Foundation (WIF) se ha integrado por completo en .NET Framework. Esta integración ha dado lugar a cambios en los nombres y a la consolidación de los espacios de nombres y la superficie de la API de WIF. En este tema se proporcionan directrices y una asignación general entre los espacios de nombres de WIF 3.5 y los espacios de nombres de WIF 4.5. No pretende ser exhaustivo, sino proporcionar información general sobre dónde encontrar las clases conocidas de WIF 3.5 en WIF 4.5. Para obtener más información sobre las diferencias entre WIF 3.5 y WIF 4.5, vea [What's New in Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md) (Novedades de Windows Identity Foundation 4.5). Para obtener instrucciones sobre cómo migrar a WIF 4.5 una aplicación compilada con WIF 3.5, vea [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md) (Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5).  
@@ -44,6 +44,6 @@ A partir de .NET 4.5, Windows Identity Foundation (WIF) se ha integrado por comp
 |`Microsoft.IdentityModel.Web.Controls`|No se implementa en WIF 4.5.|Las clases en `Microsoft.IdentityModel.Web.Controls` implementaban el control de inicio de sesión pasivo federado, que no existe en WIF 4.5.|  
 |`Microsoft.IdentityModel.WindowsTokenService`|No se implementa en WIF 4.5.|-|  
   
-## <a name="see-also"></a>Vea también  
- [Novedades de Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
- [Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+## <a name="see-also"></a>Vea también
+- [Novedades de Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
+- [Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)

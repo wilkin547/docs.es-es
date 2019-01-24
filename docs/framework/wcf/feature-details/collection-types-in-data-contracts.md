@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516140"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de colección en contratos de datos
 Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tales listas se pueden representar utilizando matrices o una variedad de otros tipos (Lista genérica, <xref:System.ComponentModel.BindingList%601>genérica, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Por ejemplo, una colección puede albergar una lista de direcciones para un determinado cliente. Estas colecciones se denominan *colecciones de lista*, con independencia de cual sea su tipo real.  
@@ -226,7 +226,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
  De forma predeterminada, no se generan tipos para las colecciones no personalizadas en el código importado. Los miembros de datos de tipos de colección de listas se importan como matrices, y los miembros de datos de tipos de colección de diccionarios se importan como diccionario genérico.  
   
- Sin embargo, para las colecciones personalizadas, se generan tipos separados, marcados con el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute>. (Un tipo de colección personalizado en el esquema es tipo que no utiliza el espacio de nombres, el nombre, el nombre de elemento de repetición o los nombres de elementos clave/valor predeterminados.) Estos tipos son tipos vacíos que derivan de <xref:System.Collections.Generic.List%601> genérica para tipos de lista y diccionario genérico para tipos de diccionario.  
+ Sin embargo, para las colecciones personalizadas, se generan tipos separados, marcados con el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> . (Un tipo de colección personalizado en el esquema es tipo que no utiliza el espacio de nombres, el nombre, el nombre de elemento de repetición o los nombres de elementos clave/valor predeterminados.) Estos tipos son tipos vacíos que derivan de <xref:System.Collections.Generic.List%601> genérica para tipos de lista y diccionario genérico para tipos de diccionario.  
   
  Por ejemplo, puede tener los tipos siguientes en el servidor.  
   
@@ -395,5 +395,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collections-and-object-reference-preservation"></a>Preservación de colecciones y de la referencia de objetos  
  Cuando un serializador funciona en un modo donde preserva las referencias de objetos, la preservación de la referencia de objetos también se aplica a las colecciones. Específicamente, la identidad de objeto se preserva tanto para colecciones completas como para elementos individuales contenidos en colecciones. Para los diccionarios, la identidad de objeto se preserva tanto para los objetos de par clave-valor como para los objetos individuales de clave y valor.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

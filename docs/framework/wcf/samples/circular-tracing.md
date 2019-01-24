@@ -2,12 +2,12 @@
 title: Seguimiento circular
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: 1f6c5287e6a53ed26ee5c9ed477e08dafc512e3f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: eaecf2205e7618f02a66f8c35fc88ca5a59947b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646440"
 ---
 # <a name="circular-tracing"></a>Seguimiento circular
 Este ejemplo muestra la implementación de un agente de escucha de seguimiento del búfer circular. Un escenario común para los servicios de producción es tener servicios que están disponibles para largos periodos de tiempo y para tener habilitado el registro de seguimiento en un nivel bajo. Estos servicios utilizan mucho espacio en disco. Al solucionar problemas de un servicio, serán relevantes los datos más recientes que haya en el registro de seguimiento para resolver un problema. Este ejemplo muestra una implementación de un agente de escucha de seguimiento del búfer circular en el que solo los seguimientos más recientes se guardan en el disco hasta llegar a una cantidad de datos configurable. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) e incluye un agente de escucha de traza personalizada.  
@@ -59,5 +59,5 @@ Este ejemplo muestra la implementación de un agente de escucha de seguimiento d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Vea también
+- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

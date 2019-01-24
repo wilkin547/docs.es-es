@@ -1,20 +1,20 @@
 ---
-title: '&lt;DiscoveryEndpoint&gt;'
+title: '&lt;discoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: ab00a80904cdcd2844a44c154edb2e424633427b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b3254a1c3d7fa581b4f7573d693261f5a224515d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524174"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
 
 Este elemento de configuración define un punto de conexión estándar con un contrato de detección fijo. Cuando se agrega a la configuración de servicio, especifica dónde escuchar los mensajes de detección. Cuando se agrega a la configuración del cliente, especifica dónde enviar las consultas de detección.  
   
 \<system.serviceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,7 +52,7 @@ Ninguno.
 
 | Elemento | Descripción |  
 | ------- | ----------- |  
-| [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Colección de puntos de conexión estándar que son puntos de conexión predefinidos con una o más de sus propiedades (dirección, enlace, contrato) fijas. |  
+| [\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Colección de puntos de conexión estándar que son puntos de conexión predefinidos con una o más de sus propiedades (dirección, enlace, contrato) fijas. |  
   
 ## <a name="example"></a>Ejemplo
 
@@ -85,4 +85,4 @@ La configuración del extremo estándar se define por servicio y no se puede com
   
 ## <a name="see-also"></a>Vea también
 
-<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

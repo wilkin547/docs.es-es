@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 837b2142e200e224fe32c2c673be0f317633452a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3bc90a17a0469cd716c1e3e990b5c0fb2ff8bf5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647585"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal (Método)
-Obtiene un puntero al tipo nativo y no administrado del campo representado por el token de metadatos de campo especificado.  
+Obtiene un puntero al tipo nativo y no administrado del campo representado por el token de metadatos del campo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ HRESULT GetFieldMarshal (
   
 #### <a name="parameters"></a>Parámetros  
  `tk`  
- [in] El token de metadatos que representa el campo para obtener información de cálculo de referencias de interoperabilidad de.  
+ [in] El token de metadatos que representa el campo para obtener información de serialización de interoperabilidad para.  
   
  `ppvNativeType`  
  [out] Un puntero a la firma de metadatos de tipo nativo del campo.  
@@ -48,14 +48,14 @@ HRESULT GetFieldMarshal (
  [out] El tamaño en bytes de `ppvNativeType`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Usar un diccionario de recursos en el ámbito de aplicación'
+title: Procedimiento Usar un diccionario de recursos en el ámbito de aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: 081ce8d350995d5321acbb24d220bed229ff17ae
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8df357d3b366a057b2a6072fb69b47a6075df5a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492551"
 ---
-# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Cómo: Usar un diccionario de recursos en el ámbito de aplicación
+# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Procedimiento Usar un diccionario de recursos en el ámbito de aplicación
 En este ejemplo se muestra cómo definir y usar un diccionario de recursos personalizado de ámbito de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- <xref:System.Windows.Application> expone un almacén de ámbito de la aplicación para los recursos compartidos: <xref:System.Windows.Application.Resources%2A>. De forma predeterminada, el <xref:System.Windows.Application.Resources%2A> propiedad se inicializa con una instancia de la <xref:System.Windows.ResourceDictionary> tipo. Utilice esta instancia cuando obtenga y establezca las propiedades de ámbito de la aplicación mediante <xref:System.Windows.Application.Resources%2A>. Para obtener más información, consulte [Cómo: obtener y establecer un recurso de ámbito de la aplicación](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application> expone un almacén de ámbito de la aplicación para los recursos compartidos: <xref:System.Windows.Application.Resources%2A>. De forma predeterminada, el <xref:System.Windows.Application.Resources%2A> propiedad se inicializa con una instancia de la <xref:System.Windows.ResourceDictionary> tipo. Utilice esta instancia cuando obtenga y establezca las propiedades de ámbito de la aplicación mediante <xref:System.Windows.Application.Resources%2A>. Para obtener más información, vea [Cómo: Obtener y establecer un recurso de ámbito de la aplicación](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
  Si tiene varios recursos que establecen mediante <xref:System.Windows.Application.Resources%2A>, en su lugar, puede usar un diccionario de recursos personalizado para almacenar esos recursos y establecer <xref:System.Windows.Application.Resources%2A> con él en su lugar. A continuación muestra cómo declarar un diccionario de recursos personalizado mediante XAML.
   
@@ -41,8 +41,8 @@ En este ejemplo se muestra cómo definir y usar un diccionario de recursos perso
   
  Existen dos consideraciones al usar <xref:System.Windows.Application.Resources%2A>. Primero, el diccionario *clave* es un objeto, por lo que debe usar exactamente la misma instancia del objeto al establecer y obtener un valor de propiedad. (Tenga en cuenta que la clave distingue mayúsculas de minúsculas cuando se utiliza una cadena). Segundo, el diccionario *valor* es un objeto, por lo que tendrá que convertir el valor al tipo deseado al obtener un valor de propiedad.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.ResourceDictionary>  
- <xref:System.Windows.Application.Resources%2A>  
- [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Diccionarios de recursos combinados](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.ResourceDictionary>
+- <xref:System.Windows.Application.Resources%2A>
+- [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [Diccionarios de recursos combinados](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: c4c3214c4998afa23032347e08007f2f1933bba8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 601f8f3a5ea86da060b2d26796b2299d87946443
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547805"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Líneas de comandos de compilación de ejemplo (Visual Basic)
 Como alternativa a la compilación de programas de Visual Basic desde Visual Studio, puede compilar desde la línea de comandos para generar archivos ejecutables (.exe) o archivos de biblioteca de vínculos dinámicos (.dll).  
@@ -35,6 +35,6 @@ Como alternativa a la compilación de programas de Visual Basic desde Visual Stu
 > [!TIP]
 >  Cuando compila un proyecto utilizando el IDE de Visual Studio, puede mostrar información acerca de los asociados **vbc** comando con las opciones del compilador en la ventana de salida. Para mostrar esta información, abra el [cuadro de diálogo Opciones, proyectos y soluciones, compilación y ejecución](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)y, a continuación, establezca el **detalles de la salida de compilación del proyecto de MSBuild** a **Normal** o un mayor nivel de detalle.   
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>Vea también
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

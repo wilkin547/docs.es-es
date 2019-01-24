@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Pintar un área con un color sólido'
+title: Procedimiento Pintar un área con un color sólido
 ms.date: 03/30/2017
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - brushes [WPF], painting with solid colors
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-ms.openlocfilehash: 017c685139979ec3aa411be6e6b5fdf0e91657de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: db1ff6048ab30554767459863c0fd5e261851f59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647831"
 ---
-# <a name="how-to-paint-an-area-with-a-solid-color"></a>Cómo: Pintar un área con un color sólido
+# <a name="how-to-paint-an-area-with-a-solid-color"></a>Procedimiento Pintar un área con un color sólido
 Para pintar un área con un color sólido, puede usar un pincel del sistema predefinidos, como <xref:System.Windows.Media.Brushes.Red%2A> o <xref:System.Windows.Media.Brushes.Blue%2A>, o bien puede crear un nuevo <xref:System.Windows.Media.SolidColorBrush> y describir su <xref:System.Windows.Media.SolidColorBrush.Color%2A> mediante valores alfabéticos, rojos, verde y azules. En XAML, también puede pintar un área con un color sólido utilizando la notación hexadecimal.  
   
  Los ejemplos siguientes se usa cada una de estas técnicas para pintar un <xref:System.Windows.Shapes.Rectangle> azul.  
@@ -49,5 +49,5 @@ Para pintar un área con un color sólido, puede usar un pincel del sistema pred
   
  Este ejemplo de código forma parte de un ejemplo más extenso proporcionado para el <xref:System.Windows.Media.SolidColorBrush> clase. Para ver el ejemplo completo, consulte el [ejemplo de pinceles](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Brushes>
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Brushes>

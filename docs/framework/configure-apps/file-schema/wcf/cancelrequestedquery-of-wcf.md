@@ -2,12 +2,12 @@
 title: '&lt;cancelRequestedQuery&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 6b41721dcc0c489377c59bfccdd0b1a617f551b0
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 72fd23097760375738c2116b4535940873436986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498273"
 ---
 # <a name="ltcancelrequestedquerygt-of-wcf"></a>&lt;cancelRequestedQuery&gt; de WCF
 
@@ -16,12 +16,12 @@ Representa una consulta que se usa para realizar un seguimiento de las solicitud
 Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
-\<seguimiento >  
-\<perfiles de >  
-\<trackingProfile >  
+\<tracking>  
+\<profiles>  
+\<trackingProfile>  
 \<flujo de trabajo >  
-\<cancelRequestedQueries >  
-\<cancelRequestedQuery >  
+\<cancelRequestedQueries>  
+\<cancelRequestedQuery>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,9 +59,9 @@ Ninguno.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<cancelRequestedQueries >](cancelrequestedqueries-of-wcf.md)|Representa una colección de consultas que se usan para realizar el seguimiento de las solicitudes para cancelar una actividad secundaria por parte de la actividad primaria.|  
+|[\<cancelRequestedQueries>](cancelrequestedqueries-of-wcf.md)|Representa una colección de consultas que se usan para realizar el seguimiento de las solicitudes para cancelar una actividad secundaria por parte de la actividad primaria.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: Ejecución de los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535887"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Ejecución de los ejemplos de Windows Communication Foundation
 Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una configuración de equipo único o varios equipos. Tal y como se proporcionan, los ejemplos están listos para ejecutarse en un equipo único. En una configuración de equipos cruzada, es necesario modificar la configuración del archivo de configuración de un ejemplo. Los procedimientos siguientes explican cómo ejecutar un ejemplo en mismo equipo y en configuraciones de equipos cruzadas. Observe que hay variaciones en los pasos para los servicios hospedados en Internet Information Services (IIS) y los ejemplos autohospedados. La mayoría de los ejemplos se hospedan en IIS; vea la información readme del ejemplo para determinar cómo se hospeda.  
@@ -79,7 +79,7 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
   
 -   Si el servicio se hospeda en IIS por razones de seguridad, quite la definición del directorio virtual y los permisos concedidos en los pasos de instalación cuando acabe con los ejemplos.  
   
-## <a name="see-also"></a>Vea también  
- [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Ejecución de los ejemplos en un grupo de trabajo y entre los equipos](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Sugerencias para la solución de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="see-also"></a>Vea también
+- [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
+- [Ejecución de los ejemplos en un grupo de trabajo y entre los equipos](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
+- [Sugerencias para la solución de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

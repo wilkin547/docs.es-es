@@ -2,12 +2,12 @@
 title: 'Tutorial: Manipular datos (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: b9b19d4f9a1fb56ddabbf3584c1fb7bb29cd6d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637312"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Tutorial: Manipular datos (C#)
 Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos. Utilizará una copia de la base de datos de ejemplo Northwind para agregar un cliente, cambiar el nombre de un cliente y eliminar un pedido.  
@@ -29,7 +29,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
      Puede generar este archivo mediante el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta SQLMetal. Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:  
   
-     **SqlMetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" / plural**  
+     **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   
      Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
@@ -49,19 +49,19 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 -   Enviar estos cambios a la base de datos Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
- En esta primera tarea, se creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
+ En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
 1.  En Visual Studio **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**.  
   
-2.  En el **tipos de proyecto** panel en el **nuevo proyecto** cuadro de diálogo, haga clic en **Visual C#**.  
+2.  En el **tipos de proyecto** panel en el **nuevo proyecto** cuadro de diálogo, haga clic en **Visual C#** .  
   
 3.  En el panel **Plantillas**, haga clic en **Aplicación de consola**.  
   
 4.  En el **nombre** , escriba **LinqDataManipulationApp**.  
   
-5.  En el **ubicación** cuadro, compruebe dónde desea almacenar los archivos de proyecto.  
+5.  En el **ubicación** Compruebe dónde desea almacenar los archivos de proyecto.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -102,7 +102,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 2.  Presione F5 para probar la aplicación en este punto.  
   
-     A **consola** abre la ventana.  
+     Un **consola** abre la ventana.  
   
      Puede cerrar la aplicación, presione ENTRAR en el **consola** ventana, o haga clic en **Detener depuración** en Visual Studio **depurar** menú.  
   
@@ -161,5 +161,5 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 > [!NOTE]
 >  Después de haber agregado el nuevo cliente al enviar los cambios, no puede ejecutar de nuevo esta solución tal como está. Para ejecutar de nuevo la solución, cambie el nombre del cliente y el identificador de cliente que se debe agregar.  
   
-## <a name="see-also"></a>Vea también  
- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vea también
+- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

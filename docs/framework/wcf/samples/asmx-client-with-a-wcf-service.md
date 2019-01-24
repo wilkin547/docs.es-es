@@ -2,12 +2,12 @@
 title: Cliente ASMX con un servicio WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: d526bc01d7809aa2672dcfcf194ad9c7d2e7baa5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527518"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX con un servicio WCF
 Este ejemplo muestra cómo crear un servicio mediante Windows Communication Foundation (WCF) y, a continuación, tener acceso al servicio desde un cliente no WCF, como un cliente ASMX.  
@@ -138,7 +138,7 @@ Press <ENTER> to terminate client.
 3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Para obtener más información sobre cómo pasar y devolver datos complejos que consulte tipos: [enlace de datos en un cliente de Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [enlace de datos en un cliente de Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), y [datos Enlace en un cliente de ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Para obtener más información sobre cómo pasar y devolver datos complejos tipos vea: [Enlace de datos en un Windows Forms cliente](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [enlace de datos en un cliente de Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), y [enlace de datos en un cliente de ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

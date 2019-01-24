@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Crear una interfaz similar a la del Explorador de Windows en Windows Forms'
+title: Procedimiento Crear una interfaz de estilo del explorador de Windows en Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 249210d2bcb7a9ef2c5bf1aed00bcfe138193aab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0b61961aff04a089ce12f4b96637e3f05023e929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511109"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Cómo: Crear una interfaz similar a la del Explorador de Windows en Windows Forms
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procedimiento Crear una interfaz de estilo del explorador de Windows en Windows Forms
 El Explorador de Windows es una opción de interfaz de usuario común para las aplicaciones debido a su familiaridad inmediata.  
   
  El Explorador de Windows es básicamente un <xref:System.Windows.Forms.TreeView> control y un <xref:System.Windows.Forms.ListView> control en paneles independientes. Los paneles se realizan puede cambiar el tamaño por un divisor. Esta organización de los controles es muy eficaz para mostrar y explorar información.  
@@ -40,7 +40,7 @@ El Explorador de Windows es una opción de interfaz de usuario común para las a
     > [!NOTE]
     >  No utilice el **seleccionar todo** comando el **editar** menú. Si lo hace, la propiedad necesaria en el paso siguiente no aparecerá en el **propiedades** ventana.  
   
-4.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Fill>.  
+4.  En la ventana **Propiedades** , establezca la propiedad <xref:System.Windows.Forms.SplitContainer.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 5.  Presione F5 para ejecutar la aplicación.  
   
@@ -49,9 +49,9 @@ El Explorador de Windows es una opción de interfaz de usuario común para las a
     > [!NOTE]
     >  Al arrastrar el divisor, los paneles cambian de tamaño.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.SplitContainer>  
- [Crear una interfaz de usuario de varios paneles con Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- [Definir el comportamiento de cambio de tamaño y colocación de una ventana dividida](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
- [Dividir una ventana horizontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
- [SplitContainer (control)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.SplitContainer>
+- [Cómo: Crear una interfaz de usuario de varios paneles con formularios de Windows](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Cómo: Definir el cambio de tamaño y la posición de comportamiento en una ventana dividida](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Cómo: Dividir una ventana horizontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)
+- [SplitContainer (control)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

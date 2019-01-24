@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6675d50d3222a43abc8838c3c86cb825d2dad16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f82fca1d7701921a10c1feb9cce19371729ff01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493475"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef (Método)
 Crea una estructura `AssemblyRef` que contiene los metadatos para el ensamblado al que este ensamblado hace referencia y devuelve el token de metadatos asociado.  
@@ -44,7 +44,7 @@ HRESULT DefineAssemblyRef (
   
 #### <a name="parameters"></a>Parámetros  
  `pbPublicKeyOrToken`  
- [in] La clave pública del publicador del ensamblado que se hace referencia. La función auxiliar [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) puede utilizarse para obtener el hash de la clave pública que se pasará como parámetro.  
+ [in] La clave pública del publicador del ensamblado que se hace referencia. La función auxiliar [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) puede usarse para obtener el hash de la clave pública para pasar como este parámetro.  
   
  `cbPublicKeyOrToken`  
  [in] El tamaño en bytes de `pbPublicKeyOrToken`.  
@@ -56,7 +56,7 @@ HRESULT DefineAssemblyRef (
  [in] Una instancia ASSEMBLYMETADATA que contiene la información de versión, la plataforma y la configuración regional del ensamblado que se hace referencia.  
   
  `pbHashValue`  
- [in] Los datos hash asociados al ensamblado que se hace referencia. Opcional.  
+ [in] El hash de datos asociados al ensamblado que se hace referencia. Opcional.  
   
  `cbHashValue`  
  [in] El tamaño en bytes de `pbHashValue`.  
@@ -65,21 +65,21 @@ HRESULT DefineAssemblyRef (
  [in] Una combinación bit a bit de [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores que influyen en el comportamiento del motor de ejecución.  
   
  `pmdar`  
- [out] Un puntero para el valor devuelto `AssemblyRef` token de metadatos.  
+ [out] Un puntero a la devuelta `AssemblyRef` token de metadatos.  
   
 ## <a name="remarks"></a>Comentarios  
- Una `AssemblyRef` se debe definir la estructura de metadatos para cada ensamblado al que hace referencia a este ensamblado.  
+ Una `AssemblyRef` estructura de los metadatos debe definirse para cada ensamblado al que hace referencia este ensamblado.  
   
- En tiempo de ejecución, los detalles de un ensamblado de referencia se pasan a la resolución de ensamblado con un valor que indica que representan la información "como"compilada". La resolución de ensamblado, a continuación, aplica la directiva.  
+ En tiempo de ejecución, los detalles de un ensamblado de referencia se pasan a la resolución de ensamblado con un valor que indica que representan el "información"compilada. La resolución de ensamblado, a continuación, aplica la directiva.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Optimizar el rendimiento: Imágenes y gráficos 2D'
+title: 'Optimizar el rendimiento: Imágenes y gráficos GDI+'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 4e6b72dae863e89d70ec70c2cb99a5874581e9ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d138f7ebc6fe62f03cd80189185c8ba73d3a2006
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630819"
 ---
-# <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimizar el rendimiento: Imágenes y gráficos 2D
+# <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimizar el rendimiento: Imágenes y gráficos GDI+
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una amplia gama de gráficos 2D y funcionalidad de creación de imágenes que se puede optimizar para los requisitos de la aplicación. Este tema proporciona información acerca de la optimización del rendimiento en esas áreas.  
   
   
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Dibujo y formas  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona tanto <xref:System.Windows.Media.Drawing> y <xref:System.Windows.Shapes.Shape> objetos para representar el contenido de dibujo gráfica. Sin embargo, <xref:System.Windows.Media.Drawing> objetos son estructuras más sencillas que <xref:System.Windows.Shapes.Shape> objetos y proporcionar las mejores características de rendimiento.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona ambos <xref:System.Windows.Media.Drawing> y <xref:System.Windows.Shapes.Shape> objetos para representar el contenido de dibujo gráfico. Sin embargo, <xref:System.Windows.Media.Drawing> objetos son construcciones más sencillas que <xref:System.Windows.Shapes.Shape> objetos y proporcionan mejores características de rendimiento.  
   
- Un <xref:System.Windows.Shapes.Shape> permite dibujar una forma gráfica en la pantalla. Dado que se deriven de la <xref:System.Windows.FrameworkElement> (clase), <xref:System.Windows.Shapes.Shape> objetos pueden utilizarse dentro de paneles y la mayoría de los controles.  
+ Un <xref:System.Windows.Shapes.Shape> permite dibujar una forma gráfica en la pantalla. Dado que se derivan los <xref:System.Windows.FrameworkElement> (clase), <xref:System.Windows.Shapes.Shape> objetos pueden usarse dentro de paneles y la mayoría de los controles.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece varias capas de acceso a gráficos y servicios de representación. En la capa superior, <xref:System.Windows.Shapes.Shape> objetos son fáciles de utilizar y proporcionan numerosas características útiles, como diseño y control de eventos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona un número de objetos de forma listos para usar. Todos los objetos de forma que se heredan de la <xref:System.Windows.Shapes.Shape> clase. Los objetos de formas disponibles incluyen <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, y <xref:System.Windows.Shapes.Rectangle>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece varias capas de acceso a gráficos y servicios de representación. En la capa superior, <xref:System.Windows.Shapes.Shape> objetos son fáciles de usar y proporcionan numerosas características útiles, como diseño y control de eventos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona un número de objetos de forma listos para usar. Todos los objetos de forma que se heredan de la <xref:System.Windows.Shapes.Shape> clase. Objetos de forma disponibles incluyen <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, y <xref:System.Windows.Shapes.Rectangle>.  
   
  <xref:System.Windows.Media.Drawing> objetos, por otro lado, no se derivan de la <xref:System.Windows.FrameworkElement> clase y proporcionar una implementación más ligera para representar formas, imágenes y texto.  
   
@@ -39,27 +39,27 @@ ms.locfileid: "33549106"
   
 -   <xref:System.Windows.Media.ImageDrawing> Dibuja una imagen.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> Dibuja el texto.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> Dibuja texto.  
   
 -   <xref:System.Windows.Media.DrawingGroup> Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
   
- La <xref:System.Windows.Media.GeometryDrawing> objeto se usa para representar el contenido de geometría. El <xref:System.Windows.Media.Geometry> clase y las clases concretas que se derivan de él, como <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, y <xref:System.Windows.Media.PathGeometry>, proporcionan un medio para representar gráficos 2D, así como proporcionar soporte técnico de recorte y la prueba de posicionamiento. Los objetos geométricos se pueden usar para definir la región de un control, por ejemplo, o para definir la región de recorte que se aplicará a una imagen. Los objetos geométricos pueden ser regiones simples, como rectángulos y círculos, o regiones compuestas creadas a partir de dos o más objetos geométricos. Regiones de geometría más complejas se pueden crear mediante la combinación <xref:System.Windows.Media.PathSegment>-derivarse como objetos, <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, y <xref:System.Windows.Media.QuadraticBezierSegment>.  
+ La <xref:System.Windows.Media.GeometryDrawing> objeto se usa para representar contenido geométrico. El <xref:System.Windows.Media.Geometry> clase y las clases concretas que derivan de ella, como <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, y <xref:System.Windows.Media.PathGeometry>, proporcionan un medio para representar gráficos 2D, además de proporcionar soporte técnico de recorte y la prueba de posicionamiento. Los objetos geométricos se pueden usar para definir la región de un control, por ejemplo, o para definir la región de recorte que se aplicará a una imagen. Los objetos geométricos pueden ser regiones simples, como rectángulos y círculos, o regiones compuestas creadas a partir de dos o más objetos geométricos. Se pueden crear regiones geométricas más complejas mediante la combinación <xref:System.Windows.Media.PathSegment>-derivadas de los objetos, como <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, y <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
- En la superficie, el <xref:System.Windows.Media.Geometry> clase y la <xref:System.Windows.Shapes.Shape> clase son muy similares. Ambos se usan en la representación de gráficos 2D y ambos tienen similar clases concretas que derivan de ellos, por ejemplo, <xref:System.Windows.Media.EllipseGeometry> y <xref:System.Windows.Shapes.Ellipse>. Sin embargo, hay diferencias importantes entre estos dos conjuntos de clases. En primer lugar, el <xref:System.Windows.Media.Geometry> clase carece de algunas de las funciones de la <xref:System.Windows.Shapes.Shape> (clase), como la capacidad de dibujarse a sí mismo. Para dibujar un objeto geométrico, debe usarse otra clase, como la clase DrawingContext, la clase de dibujo o de trazado (merece la pena indicar que un trazado es una forma) para realizar la operación de dibujo. Las propiedades de representación como relleno, trazo y grosor del trazo, se encuentran en la clase que dibuja el objeto geométrico, mientras que un objeto de forma contiene estas propiedades. Una manera de acordarse de esta diferencia es que un objeto geométrico define una región, como un círculo, mientras que un objeto de forma define una región, define cómo es el relleno y el contorno de esa región y participa en el sistema de diseño.  
+ En la superficie, el <xref:System.Windows.Media.Geometry> clase y el <xref:System.Windows.Shapes.Shape> clase son bastante parecidas. Ambos se usan en la representación de gráficos 2D y ambos tienen clases concretas parecidas que derivan de ellos, por ejemplo, <xref:System.Windows.Media.EllipseGeometry> y <xref:System.Windows.Shapes.Ellipse>. Sin embargo, hay diferencias importantes entre estos dos conjuntos de clases. En primer lugar, el <xref:System.Windows.Media.Geometry> clase carece de algunas de las funcionalidades de la <xref:System.Windows.Shapes.Shape> (clase), como la capacidad para dibujarse a sí mismo. Para dibujar un objeto geométrico, debe usarse otra clase, como la clase DrawingContext, la clase de dibujo o de trazado (merece la pena indicar que un trazado es una forma) para realizar la operación de dibujo. Las propiedades de representación como relleno, trazo y grosor del trazo, se encuentran en la clase que dibuja el objeto geométrico, mientras que un objeto de forma contiene estas propiedades. Una manera de acordarse de esta diferencia es que un objeto geométrico define una región, como un círculo, mientras que un objeto de forma define una región, define cómo es el relleno y el contorno de esa región y participa en el sistema de diseño.  
   
- Puesto que <xref:System.Windows.Shapes.Shape> objetos que se derivan de la <xref:System.Windows.FrameworkElement> (clase), su uso puede agregar una mayor consumo de memoria en la aplicación. Si no necesita realmente el <xref:System.Windows.FrameworkElement> características para el contenido gráfico, considere el uso de la ligera <xref:System.Windows.Media.Drawing> objetos.  
+ Puesto que <xref:System.Windows.Shapes.Shape> objetos se derivan de la <xref:System.Windows.FrameworkElement> (clase), su uso puede agregar más considerablemente el consumo de memoria en la aplicación. Si no necesita realmente el <xref:System.Windows.FrameworkElement> características para el contenido gráfico, considere el uso de la ligero <xref:System.Windows.Media.Drawing> objetos.  
   
- Para obtener más información sobre <xref:System.Windows.Media.Drawing> los objetos, vea [información general de objetos de dibujo](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Para obtener más información sobre <xref:System.Windows.Media.Drawing> objetos, vea [información general sobre objetos de dibujo](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>Objetos StreamGeometry  
- El <xref:System.Windows.Media.StreamGeometry> objeto constituye una alternativa ligera a <xref:System.Windows.Media.PathGeometry> para crear formas geométricas. Use un <xref:System.Windows.Media.StreamGeometry> cuando necesite describir una geometría compleja. <xref:System.Windows.Media.StreamGeometry> está optimizado para controlar muchos <xref:System.Windows.Media.PathGeometry> objetos y funciona mejor en comparación con uso individual muchos <xref:System.Windows.Media.PathGeometry> objetos.  
+ El <xref:System.Windows.Media.StreamGeometry> objeto es una alternativa ligera a <xref:System.Windows.Media.PathGeometry> para crear formas geométricas. Use un <xref:System.Windows.Media.StreamGeometry> cuando necesite describir una geometría compleja. <xref:System.Windows.Media.StreamGeometry> está optimizado para controlar muchos <xref:System.Windows.Media.PathGeometry> objetos y funciona mejor cuando se usan muchos individuales <xref:System.Windows.Media.PathGeometry> objetos.  
   
- En el ejemplo siguiente se utiliza la sintaxis de atributo para crear una triangular <xref:System.Windows.Media.StreamGeometry> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ En el ejemplo siguiente se usa la sintaxis de atributo para crear un triangular <xref:System.Windows.Media.StreamGeometry> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
   
- Para obtener más información sobre <xref:System.Windows.Media.StreamGeometry> los objetos, vea [crear una forma utilizando StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md).  
+ Para obtener más información sobre <xref:System.Windows.Media.StreamGeometry> objetos, vea [crear una forma utilizando StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md).  
   
 <a name="DrawingVisual_Objects"></a>   
 ## <a name="drawingvisual-objects"></a>Objetos DrawingVisual  
@@ -80,33 +80,33 @@ ms.locfileid: "33549106"
 -   Para obtener más información, consulte [Información general sobre imágenes](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- Al animar la escala de un mapa de bits, el algoritmo para volver a muestrear la imagen de alta calidad predeterminada puede consumir suficientes recursos del sistema para que se produzca una degradación de la velocidad de fotogramas, lo que causa que las animaciones parpadeen. Estableciendo la <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> propiedad de la <xref:System.Windows.Media.RenderOptions> el objeto a <xref:System.Windows.Media.BitmapScalingMode.LowQuality> puede crear una animación más suavizada al escalar un mapa de bits. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> modo indica el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] motor de representación para cambiar de un algoritmo optimizado de calidad a un algoritmo optimizado de velocidad al procesar las imágenes.  
+ Al animar la escala de un mapa de bits, el algoritmo para volver a muestrear la imagen de alta calidad predeterminada puede consumir suficientes recursos del sistema para que se produzca una degradación de la velocidad de fotogramas, lo que causa que las animaciones parpadeen. Estableciendo el <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> propiedad de la <xref:System.Windows.Media.RenderOptions> objeto <xref:System.Windows.Media.BitmapScalingMode.LowQuality> puede crear una animación más fluida al escalar un mapa de bits. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> indica el modo el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] motor de representación para cambiar de un algoritmo optimizado de calidad a un algoritmo optimizado de velocidad al procesar las imágenes.  
   
- En el ejemplo siguiente se muestra cómo establecer el <xref:System.Windows.Media.BitmapScalingMode> de un objeto de imagen.  
+ El ejemplo siguiente muestra cómo establecer el <xref:System.Windows.Media.BitmapScalingMode> para un objeto de imagen.  
   
  [!code-csharp[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
  [!code-vb[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
- De forma predeterminada, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no almacena en caché el contenido representado de <xref:System.Windows.Media.TileBrush> objetos, como <xref:System.Windows.Media.DrawingBrush> y <xref:System.Windows.Media.VisualBrush>. En escenarios estáticos donde ni el contenido ni el uso de la <xref:System.Windows.Media.TileBrush> en está cambiando la escena, esto tiene sentido, ya que conserva la memoria de vídeo. No hace que sea como mucho sentido cuando un <xref:System.Windows.Media.TileBrush> con contenido estático se usa de forma no estáticos, por ejemplo, cuando una variable static <xref:System.Windows.Media.DrawingBrush> o <xref:System.Windows.Media.VisualBrush> se asigna a la superficie de un objeto 3D la rotación. El comportamiento predeterminado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es volver a representar todo el contenido de la <xref:System.Windows.Media.DrawingBrush> o <xref:System.Windows.Media.VisualBrush> para cada marco, aun cuando el contenido es invariable.  
+ De forma predeterminada, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no almacena en caché el contenido representado de <xref:System.Windows.Media.TileBrush> objetos, como <xref:System.Windows.Media.DrawingBrush> y <xref:System.Windows.Media.VisualBrush>. En escenarios estáticos donde ni el contenido ni el uso de la <xref:System.Windows.Media.TileBrush> en la escena está cambiando, esto tiene sentido, ya que ahorra memoria de vídeo. No se realiza como mucho sentido cuando un <xref:System.Windows.Media.TileBrush> con contenido estático se usa en un modo no estático, por ejemplo, cuando una variable static <xref:System.Windows.Media.DrawingBrush> o <xref:System.Windows.Media.VisualBrush> se asigna a la superficie de un objeto 3D giratorio. El comportamiento predeterminado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es volver a representar todo el contenido de la <xref:System.Windows.Media.DrawingBrush> o <xref:System.Windows.Media.VisualBrush> para cada fotograma, aun cuando el contenido es invariable.  
   
- Estableciendo la <xref:System.Windows.Media.RenderOptions.CachingHint%2A> propiedad de la <xref:System.Windows.Media.RenderOptions> el objeto a <xref:System.Windows.Media.CachingHint.Cache> se puede mejorar el rendimiento mediante el uso de versiones almacenadas en caché de los objetos de pincel en mosaico.  
+ Estableciendo el <xref:System.Windows.Media.RenderOptions.CachingHint%2A> propiedad de la <xref:System.Windows.Media.RenderOptions> objeto <xref:System.Windows.Media.CachingHint.Cache> puede aumentar el rendimiento mediante el uso de versiones en caché de los objetos de pincel en mosaico.  
   
- El <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> y <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> valores de propiedad son valores de tamaño relativo que determinan cuándo el <xref:System.Windows.Media.TileBrush> objeto debe volver a generarse debido a cambios en la escala. Por ejemplo, estableciendo la <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> propiedad a 2.0, la memoria caché para el <xref:System.Windows.Media.TileBrush> sólo necesita regenerarse cuando su tamaño supera el doble del tamaño de la memoria caché actual.  
+ El <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> y <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> los valores de propiedad son valores de tamaño relativos que determinan cuándo el <xref:System.Windows.Media.TileBrush> objeto debe volver a generarse debido a cambios en la escala. Por ejemplo, estableciendo el <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> propiedad a 2.0, la memoria caché para el <xref:System.Windows.Media.TileBrush> solo necesita regenerarse cuando su tamaño supera el doble del tamaño de la memoria caché actual.  
   
- En el ejemplo siguiente se muestra cómo utilizar la opción de sugerencia de almacenamiento en caché para un <xref:System.Windows.Media.DrawingBrush>.  
+ El ejemplo siguiente muestra cómo usar la opción de sugerencia de almacenamiento en caché para un <xref:System.Windows.Media.DrawingBrush>.  
   
  [!code-csharp[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
  [!code-vb[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
-## <a name="see-also"></a>Vea también  
- [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Planear para mejorar el rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [Aprovechar el hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [Comportamiento de objetos](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
- [Recursos de la aplicación](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Otras recomendaciones de rendimiento](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
- [Sugerencias y trucos para animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a>Vea también
+- [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Planear para mejorar el rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
+- [Aprovechar el hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
+- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Comportamiento de objetos](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
+- [Recursos de la aplicación](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Otras recomendaciones de rendimiento](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Sugerencias y trucos para animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

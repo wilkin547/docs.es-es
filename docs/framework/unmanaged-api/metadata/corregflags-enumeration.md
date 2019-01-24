@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7b935b8f59e434c9da364be1986dbed654a1efd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52b59a4e52d3e0cda7353ec1b39c5307bd7b218e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532271"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags (Enumeración)
 Proporciona valores de marca usados para el registro al instalar un módulo o una imagen compuesta.  
@@ -43,16 +43,16 @@ typedef enum
 |------------|-----------------|  
 |`regNoCopy`|Especifica que los archivos no deben copiarse en el destino.|  
 |`regConfig`|Especifica que el módulo o compuesto es una configuración.|  
-|`regHasRefs`|Especifica que el módulo o el compuesto tiene referencias de clase.|  
+|`regHasRefs`|Especifica que el módulo o compuesto tiene referencias de clase.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

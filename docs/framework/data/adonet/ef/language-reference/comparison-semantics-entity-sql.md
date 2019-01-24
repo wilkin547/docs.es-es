@@ -2,12 +2,12 @@
 title: Semántica de comparación (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 2184f86ee43f88b0c4cfc1b96e42e2486c17fe5f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 371999df0fb3177ecc90f9b1fa43d457a51bfd7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492499"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semántica de comparación (Entity SQL)
 El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguientes implica la comparación de las instancias de tipo:  
@@ -66,15 +66,15 @@ El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../incl
 ## <a name="supported-combinations"></a>Combinaciones admitidas  
  En la tabla siguiente se muestran todas las combinaciones admitidas de los operadores de comparación para cada clase de tipo:  
   
-|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ES NULL**<br /><br /> **NO ES NULO**|  
+|**Type**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ES NULL**<br /><br /> **NO ES NULL**|  
 |-|-|-|-|-|-|-|-|  
-|Tipo de entidad|Ref<sup>1</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Ref<sup>1</sup>|  
-|Tipo complejo|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|  
-|Fila|Todas las propiedades<sup>4</sup>|Todas las propiedades<sup>4</sup>|Todas las propiedades<sup>4</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Todas las propiedades<sup>4</sup>|Iniciar<sup>3</sup>|  
+|Tipo de entidad|Ref<sup>1</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Ref<sup>1</sup>|  
+|Tipo complejo|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|  
+|Fila|Todas las propiedades<sup>4</sup>|Todas las propiedades<sup>4</sup>|Todas las propiedades<sup>4</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Todas las propiedades<sup>4</sup>|Producir<sup>3</sup>|  
 |Tipo primitivo|Depende del proveedor|Depende del proveedor|Depende del proveedor|Depende del proveedor|Depende del proveedor|Depende del proveedor|Depende del proveedor|  
-|Conjunto múltiple|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|  
+|Conjunto múltiple|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|  
 |Ref|Sí<sup>5</sup>|Sí<sup>5</sup>|Sí<sup>5</sup>|Sí<sup>5</sup>|Throw|Throw|Sí<sup>5</sup>|  
-|Asociación<br /><br /> type|Iniciar<sup>3</sup>|Throw|Throw|Throw|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|Iniciar<sup>3</sup>|  
+|Asociación<br /><br /> type|Producir<sup>3</sup>|Throw|Throw|Throw|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|  
   
  <sup>1</sup>las referencias de las instancias del tipo de entidad dado se comparan implícitamente, como se muestra en el ejemplo siguiente:  
   
@@ -94,7 +94,7 @@ FROM AdventureWorksEntities.Product AS p1
 WHERE p1 != REF(p2)  
 ```  
   
- <sup>2</sup>propiedades de tipos complejos se simplifican antes de enviarse al almacén, por lo que lleguen a ser comparables (siempre que todas sus propiedades sean comparables). Consulte también <sup>4.</sup>  
+ <sup>2</sup>propiedades de tipos complejos se simplifican antes de que se envían a la tienda, por lo que lleguen a ser comparables (siempre que todas sus propiedades sean comparables). Consulte también <sup>4.</sup>  
   
  <sup>3</sup>en tiempo de ejecución de Entity Framework detecta un caso no admitido y se inicia una excepción significativa sin activar el proveedor o almacén.  
   
@@ -102,5 +102,5 @@ WHERE p1 != REF(p2)
   
  <sup>5</sup>se comparan todos los elementos individuales de las referencias (Esto incluye el nombre del conjunto de entidades y todas las propiedades claves del tipo de entidad).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

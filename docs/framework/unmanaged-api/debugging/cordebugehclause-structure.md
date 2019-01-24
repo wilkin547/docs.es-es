@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: be5d580c28a15a58cad6c5a2231d3a87e25c0e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495350"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause (Estructura)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -67,14 +67,14 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Cláusula fault (cláusula `finally` a la que se llama solo cuando se inicia una excepción).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [GetEHClauses (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a>Vea también
+- [GetEHClauses (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
+- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

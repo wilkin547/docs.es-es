@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Quitar elementos de los controles DomainUpDown de formularios Windows Forms'
+title: Procedimiento Quitar elementos de controles DomainUpDown de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: 702e5e2180148758c4b3775a5cc96a1365703166
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1cc4a26929a39e85fa6028613b0712cc76ed4f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644236"
 ---
-# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Cómo: Quitar elementos de los controles DomainUpDown de formularios Windows Forms
-Puede quitar los elementos de los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control mediante una llamada a la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método de la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> clase. El <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método quita un elemento específico, mientras que la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método quita un elemento por su posición.  
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Procedimiento Quitar elementos de controles DomainUpDown de formularios Windows Forms
+Se pueden quitar elementos de los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control mediante una llamada a la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método de la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> clase. El <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método quita un elemento específico, mientras que el <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método quita un elemento por su posición.  
   
 ### <a name="to-remove-an-item"></a>Para quitar un elemento  
   
@@ -35,9 +35,9 @@ Puede quitar los elementos de los formularios de Windows <xref:System.Windows.Fo
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     -o bien-  
+     O bien  
   
--   Use la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método para quitar un elemento por su posición.  
+-   Use el <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método para quitar un elemento por su posición.  
   
     ```vb  
     ' Removes the first item in the list.  
@@ -54,9 +54,9 @@ Puede quitar los elementos de los formularios de Windows <xref:System.Windows.Fo
     domainUpDown1->Items->RemoveAt(0);  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.DomainUpDown>  
- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>  
- [DomainUpDown (control)](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- [Información general sobre el control DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.DomainUpDown>
+- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>
+- [DomainUpDown (control)](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
+- [Información general sobre el control DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)

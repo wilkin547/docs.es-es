@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e798e1a31f771c63e71f2a85f8cbb684b237bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 330a159e056018d702eec7e4fef80c3d8e041212
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630806"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging (Método)
-Inicializa la compatibilidad con la depuración en proceso. Este método está obsoleto en la versión 2.0 de .NET Framework.  
+Inicializa la compatibilidad con la depuración en proceso. Este método está obsoleto en .NET Framework versión 2.0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +37,22 @@ HRESULT BeginInprocDebugging(
   
 #### <a name="parameters"></a>Parámetros  
  `fThisThreadOnly`  
- [in] Establezca este valor en `true` para inicializar la compatibilidad con la depuración para el actual subproceso; establézcalo en `false` para inicializar la compatibilidad con la depuración en todos los subprocesos.  
+ [in] Establezca este valor en `true` para inicializar la compatibilidad con depuración sólo el subproceso actual; establézcalo como `false` para inicializar la compatibilidad de depuración para todos los subprocesos.  
   
  `pdwProfilerContext`  
  [out] Puntero a un valor devuelto que identifica la sesión de depuración.  
   
 ## <a name="remarks"></a>Comentarios  
- Los servicios de depuración de CLR admiten la depuración en proceso limitada en las versiones 1.0 y 1.1 de .NET Framework. Un generador de perfiles usar las partes de inspección de la API de depuración habilita la depuración en curso. Sin embargo, debido a los comentarios de clientes, depuración en proceso se ha quitado de la versión 2.0 de .NET Framework y reemplazan con un conjunto de funciones que está más en línea con la API de generación de perfiles.  
+ Los servicios de depuración de CLR admiten la depuración en proceso de forma limitada en las versiones 1.0 y 1.1 de .NET Framework. Depuración en proceso habilitado un generador de perfiles usar las partes de inspección de la API de depuración. Sin embargo, debido a los comentarios de los clientes, la depuración en proceso tiene ha quitado de la versión 2.0 de .NET Framework y reemplaza con un conjunto de funciones que está más en consonancia con la API de generación de perfiles.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versión de .NET framework:** 1.0  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

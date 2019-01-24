@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7a51d1ddf7a5a65ce8713161c53c1c54a5d8861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617699"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints (Método)
-Obtiene un enumerador para una matriz de restricciones de parámetros genéricos asociada al parámetro genérico representado por el token especificado.  
+Obtiene un enumerador para una matriz de restricciones de parámetros genéricos asociados con el parámetro genérico representado por el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,19 +41,19 @@ HRESULT EnumGenericParamConstraints (
   
 #### <a name="parameters"></a>Parámetros  
  `phEnum`  
- [entrada, salida] Un puntero para el enumerador.  
+ [in, out] Un puntero en el enumerador.  
   
  `tk`  
- [in]   Un token que representa el parámetro genérico cuyas restricciones son que hay que enumerar.  
+ [in]   Un token que representa el parámetro genérico cuyos restricciones son que hay que enumerar.  
   
  `rGenericParamConstraints`  
- [out] La matriz de restricciones de parámetro genérico para enumerar.  
+ [out] Matriz de restricciones de parámetros genéricos a enumerar.  
   
  `cMax`  
- [in]   El número máximo solicitado de símbolos (tokens) para colocar en `rGenericParamConstraints`.  
+ [in]   El número máximo solicitado de tokens para colocar en `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
- [out] Un puntero al número de símbolos (tokens) se coloca en `rGenericParamConstraints`.  
+ [out] Un puntero al número de tokens se coloca en `rGenericParamConstraints`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
@@ -63,14 +63,14 @@ HRESULT EnumGenericParamConstraints (
 |`S_FALSE`|`phEnum` no tiene ningún elemento de miembro. En este caso, `pcGenericParameterConstraints` se establece en 0 (cero).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -3,18 +3,18 @@ title: '&lt;identityConfiguration&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 11ba7df79ead1693fc6828aeabde413237680737
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7c20f3d00b71eacbf8409c3f848d550445468e5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513105"
 ---
 # <a name="ltidentityconfigurationgt"></a>&lt;identityConfiguration&gt;
 Especifica los valores de identidad de nivel de servicio.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,19 +43,19 @@ Especifica los valores de identidad de nivel de servicio.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<las memorias caché >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra las memorias caché utilizadas para la detección de reproducción de tokens y los tokens de sesión. Puede especificarse en el nivel de servicio o en una colección de controladores de token de seguridad. Opcional.|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controla la configuración que los controladores de token que se usan para validar los certificados. Puede especificarse en el nivel de servicio o en una colección de controladores de token de seguridad. Opcional.|  
-|[\<claimsAuthenticationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Registra un administrador de autenticación de notificaciones para las notificaciones entrantes. Opcional.|  
-|[\<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Registra un administrador de autorización de notificaciones para las notificaciones entrantes. Opcional.|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Especifica el conjunto de notificaciones necesarias para los tokens de seguridad entrantes. Opcional.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra las memorias caché utilizadas para la detección de reproducción de tokens y los tokens de sesión. Puede especificarse en el nivel de servicio o en una colección de controladores de token de seguridad. Opcional.|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controla la configuración que los controladores de token que se usan para validar los certificados. Puede especificarse en el nivel de servicio o en una colección de controladores de token de seguridad. Opcional.|  
+|[\<claimsAuthenticationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Registra un administrador de autenticación de notificaciones para las notificaciones entrantes. Opcional.|  
+|[\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Registra un administrador de autorización de notificaciones para las notificaciones entrantes. Opcional.|  
+|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Especifica el conjunto de notificaciones necesarias para los tokens de seguridad entrantes. Opcional.|  
 |[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Especifica una colección de controladores de token de seguridad. Se pueden especificar cero o más colecciones de controladores de token de seguridad. Opcional.|  
-|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Habilita la detección de reproducción de tokens y especifica la hora de expiración de tokens. Puede especificarse en el nivel de servicio o en una colección de controladores de token de seguridad. Opcional.|  
+|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Habilita la detección de reproducción de tokens y especifica la hora de expiración de tokens. Puede especificarse en el nivel de servicio o en una colección de controladores de token de seguridad. Opcional.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<system.identityModel >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Proporciona la configuración para habilitar las opciones de Windows Identity Foundation (WIF) en las aplicaciones.|  
+|[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Proporciona la configuración para habilitar las opciones de Windows Identity Foundation (WIF) en las aplicaciones.|  
   
 ## <a name="remarks"></a>Comentarios  
  Varias identidades es posible definir configuraciones, cada uno con un nombre único. El comportamiento es como sigue:  
@@ -79,10 +79,10 @@ Especifica los valores de identidad de nivel de servicio.
 > [!IMPORTANT]
 >  Especificar los siguientes elementos como elementos secundarios de la `<identityConfiguration>` elemento en desuso, aunque todavía se admite el comportamiento para compatibilidad con versiones anteriores. Estos elementos en su lugar, deberían, se pueden especificar bajo el [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elemento.  
 >   
->  -   [\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente crea una configuración de identidad denominada "alternateConfiguration". La configuración de identidad especifica la configuración predeterminada.  
@@ -93,6 +93,6 @@ Especifica los valores de identidad de nivel de servicio.
 </system.identityModel>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
- <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>
+## <a name="see-also"></a>Vea también
+- <xref:System.IdentityModel.Configuration.IdentityConfiguration>
+- <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

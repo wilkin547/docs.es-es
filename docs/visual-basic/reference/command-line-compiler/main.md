@@ -1,19 +1,19 @@
 ---
-title: -principal
+title: -main
 ms.date: 03/13/2018
 helpviewer_keywords:
 - main compiler option [Visual Basic]
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: eb9d38a7d6f74e5d8636f862c663c0ba0990baa5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638787"
 ---
-# <a name="-main"></a>-principal
+# <a name="-main"></a>-main
 Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -24,7 +24,7 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
   
 ## <a name="arguments"></a>Argumentos  
  `location`  
- Requerido. El nombre de la clase o módulo que contiene el `Sub Main` procedimiento al que llamar cuando se inicia el programa. Esto puede ser en forma **-main: módulo** o **-main:namespace.module**.  
+ Obligatorio. El nombre de la clase o módulo que contiene el `Sub Main` procedimiento al que llamar cuando se inicia el programa. Esto puede ser en forma **-main: módulo** o **-main:namespace.module**.  
   
 ## <a name="remarks"></a>Comentarios  
  Use esta opción cuando se crea un archivo ejecutable o un programa ejecutable de Windows. Si el **-principal** opción se omite, el compilador busca válido compartido `Sub Main` en todos los módulos y las clases públicas.  
@@ -52,8 +52,8 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+## <a name="see-also"></a>Vea también
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

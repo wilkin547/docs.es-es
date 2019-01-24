@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 843236243563ce3dff82726aaab05845fa295b9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518142"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess (Función)
 Obtiene el número de versión de common language runtime (CLR) que está asociado con el identificador de proceso especificado.  
   
- Esta función está desusada en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Esta función está en desuso en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,34 +45,34 @@ HRESULT GetVersionFromProcess (
  [in] Un identificador de proceso.  
   
  `pVersion`  
- [out] Un búfer que contiene la cadena del número de versión en la realización correcta del método.  
+ [out] Un búfer que contiene la cadena de número de versión tras la finalización correcta del método.  
   
  `cchBuffer`  
  [in] La longitud del búfer de versión.  
   
  `pdwLength`  
- [out] Un puntero a la longitud de la cadena del número de versión.  
+ [out] Un puntero a la longitud de la cadena de número de versión.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve códigos de error estándar de modelo de objetos componentes (COM), como se define en WinError.h, además de los valores siguientes.  
+ Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los valores siguientes.  
   
 |Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_INVALIDARG|`pVersion` es null y `cchBuffer` no es null, o viceversa.<br /><br /> -o bien-<br /><br /> `hProcess` no es un identificador válido para un proceso.<br /><br /> -o bien-<br /><br /> El CLR no está cargado.|  
+|E_INVALIDARG|`pVersion` es null y `cchBuffer` no es null, o viceversa.<br /><br /> O bien<br /><br /> `hProcess` no es un identificador válido para un proceso.<br /><br /> O bien<br /><br /> No se carga el CLR.|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer` es nulo o menor que la longitud de la cadena de versión.|  
-|E_NOTIMPL|Este método no está disponible en el sistema operativo Microsoft Windows 95, Microsoft Windows 98 o Microsoft Windows Millennium Edition.|  
+|E_NOTIMPL|Este método no está disponible en el sistema operativo Microsoft Windows 95, Microsoft Windows 98 o Windows Millennium Edition de Microsoft.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [GetRequestedRuntimeInfo (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetRequestedRuntimeVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vea también
+- [GetRequestedRuntimeInfo (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [GetRequestedRuntimeVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear objetos Graphics para dibujar'
+title: Procedimiento Crear objetos Graphics para dibujar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 54175e27ca46431299db369f67f02051ef08d0d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497037"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Cómo: Crear objetos Graphics para dibujar
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Procedimiento Crear objetos Graphics para dibujar
 Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular imágenes con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], deberá crear un <xref:System.Drawing.Graphics> objeto. El <xref:System.Drawing.Graphics> objeto representa un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie de dibujo, y es el objeto que se usa para crear imágenes gráficas.  
   
  Trabajar con gráficos, hay dos pasos:  
@@ -165,13 +165,13 @@ Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular
   
     |Para representar|Vea|  
     |---------------|---------|  
-    |Líneas|[Dibujar una línea en Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formas|[Dibujar una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Texto|[Dibujar texto en Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |Imágenes|[Representar imágenes con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |Líneas|[Cómo: Dibujar una línea en un formulario de Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formas|[Cómo: Dibujar una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
+    |Texto|[Cómo: Dibujar texto en un formulario de Windows](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
+    |Imágenes|[Cómo: Representar imágenes con GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Representar imágenes con GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Cómo: Representar imágenes con GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

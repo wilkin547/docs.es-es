@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Agregar y quitar elementos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms'
+title: Procedimiento Agregar y quitar elementos de un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f789a0e00b1d235fe61b93190ae167250113846
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500225"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Cómo: Agregar y quitar elementos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms
-Los elementos se pueden agregar a un cuadro combinado de formularios Windows Forms, cuadro de lista, o comprueban el cuadro de lista en una variedad de formas, porque estos controles se pueden enlazar a una variedad de orígenes de datos. Sin embargo, en este tema se muestra el método más sencillo y no requiere ningún enlace de datos. Los elementos mostrados suelen ser cadenas; Sin embargo, puede utilizarse cualquier objeto. El texto que se muestra en el control es el valor devuelto por el objeto `ToString` método.  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedimiento Agregar y quitar elementos de un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)
+Los elementos se pueden agregar a un cuadro combinado de Windows Forms, cuadro de lista, o activado la casilla de lista en una variedad de formas, ya que estos controles se pueden enlazar a una variedad de orígenes de datos. Sin embargo, en este tema se muestra el método más sencillo y no requiere ningún enlace de datos. Los elementos mostrados normalmente son cadenas; Sin embargo, puede utilizarse cualquier objeto. El texto que se muestra en el control es el valor devuelto por el objeto `ToString` método.  
   
 ### <a name="to-add-items"></a>Para agregar elementos  
   
-1.  Agregue la cadena u objeto a la lista mediante el uso de la `Add` método de la `ObjectCollection` clase. Se hace referencia a la colección utilizando la `Items` propiedad:  
+1.  Agregue la cadena u objeto a la lista mediante el uso de la `Add` método de la `ObjectCollection` clase. Se hace referencia a la colección utilizando el `Items` propiedad:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ Los elementos se pueden agregar a un cuadro combinado de formularios Windows For
   
      - O  
   
-2.  Insertar la cadena u objeto en el momento deseado en la lista con el `Insert` método:  
+2.  Insertar la cadena u objeto en el punto deseado en la lista con el `Insert` método:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -136,10 +136,10 @@ Los elementos se pueden agregar a un cuadro combinado de formularios Windows For
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [Ordenar el contenido de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- [Cuándo utilizar un control ComboBox de formularios Windows Forms en lugar de un control ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- [Controles de formularios Windows Forms usados para mostrar opciones](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [Cómo: Ordenar el contenido de un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Cuándo utilizar un control ComboBox de formularios Windows Forms en lugar de un control ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [Controles de formularios Windows Forms usados para mostrar opciones](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

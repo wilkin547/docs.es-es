@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645969"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers (Método)
 Enumera los tokens de MemberDef que representan a miembros del tipo especificado.  
@@ -40,13 +41,13 @@ HRESULT EnumMembers (
   
 #### <a name="parameters"></a>Parámetros  
  `phEnum`  
- [entrada, salida] Un puntero para el enumerador.  
+ [in, out] Un puntero en el enumerador.  
   
  `cl`  
  [in] Un token de TypeDef que representa el tipo cuyos miembros se van a enumerar.  
   
  `rMembers`  
- [out] La matriz que se usa para contener los tokens de MemberDef.  
+ [out] Matriz utilizada para almacenar los tokens de MemberDef.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rMembers`.  
@@ -59,20 +60,20 @@ HRESULT EnumMembers (
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMembers` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún tokens de MemberDef que enumerar. En ese caso, `pcTokens` es cero.|  
+|`S_FALSE`|No hay ningún token MemberDef para enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="remarks"></a>Comentarios  
- Al enumerar colecciones de miembros para una clase, `EnumMembers` devuelve solo los miembros definidos directamente en la clase. No devuelve a los miembros que hereda de la clase, incluso si la clase proporciona una implementación para esos miembros heredados. Para enumerar los miembros heredados, el llamador debe recorrer explícitamente la cadena de herencia. Tenga en cuenta que las reglas de la cadena de herencia pueden variar en función del idioma o el compilador que genera los metadatos originales.  
+ Al enumerar las colecciones de miembros para una clase, `EnumMembers` devuelve solo los miembros definidos directamente en la clase. No devuelve a los miembros que hereda de la clase, incluso si la clase proporciona una implementación para esos miembros heredados. Para enumerar los miembros heredados, el llamador debe recorrer explícitamente la cadena de herencia. Tenga en cuenta que las reglas para la cadena de herencia pueden variar dependiendo del lenguaje o del compilador que genera los metadatos originales.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
