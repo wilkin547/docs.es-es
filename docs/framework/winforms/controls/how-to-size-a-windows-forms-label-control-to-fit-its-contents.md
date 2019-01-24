@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido'
+title: Procedimiento Tamaño de un Control de etiqueta de Windows Forms para ajustar su contenido
 ms.date: 03/30/2017
 helpviewer_keywords:
 - captions [Windows Forms], sizing
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - labels [Windows Forms], sizing to fit contents
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-ms.openlocfilehash: e067966b606d77ceb9d11d2784c0d5f73ad332a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74947e529a472c9e9a681fcb436ce8aff990c0af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640412"
 ---
-# <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a><span data-ttu-id="27cc6-102">Cómo: Cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido</span><span class="sxs-lookup"><span data-stu-id="27cc6-102">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>
-<span data-ttu-id="27cc6-103">Los formularios Windows Forms <xref:System.Windows.Forms.Label> control puede ser una línea o varias líneas, y ser tamaño fijo o cambiar automáticamente de tamaño para adaptarse al título.</span><span class="sxs-lookup"><span data-stu-id="27cc6-103">The Windows Forms <xref:System.Windows.Forms.Label> control can be single-line or multi-line, and it can be either fixed in size or can automatically resize itself to accommodate its caption.</span></span> <span data-ttu-id="27cc6-104">El <xref:System.Windows.Forms.Label.AutoSize%2A> propiedad ayuda a cambiar el tamaño de los controles para que se ajuste a títulos mayores o menores, lo que es especialmente útil si va a cambiar el título en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="27cc6-104">The <xref:System.Windows.Forms.Label.AutoSize%2A> property helps you size the controls to fit larger or smaller captions, which is particularly useful if the caption will change at run time.</span></span>  
+# <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a><span data-ttu-id="167fe-102">Procedimiento Tamaño de un Control de etiqueta de Windows Forms para ajustar su contenido</span><span class="sxs-lookup"><span data-stu-id="167fe-102">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>
+<span data-ttu-id="167fe-103">Los formularios de Windows <xref:System.Windows.Forms.Label> control puede ser una línea o varias líneas y se tamaño fijo o cambiar automáticamente de tamaño para adaptarse al título.</span><span class="sxs-lookup"><span data-stu-id="167fe-103">The Windows Forms <xref:System.Windows.Forms.Label> control can be single-line or multi-line, and it can be either fixed in size or can automatically resize itself to accommodate its caption.</span></span> <span data-ttu-id="167fe-104">El <xref:System.Windows.Forms.Label.AutoSize%2A> propiedad le ayuda a cambiar el tamaño de los controles para ajustarse a los títulos mayores o menores, que es especialmente útil si el título cambia en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="167fe-104">The <xref:System.Windows.Forms.Label.AutoSize%2A> property helps you size the controls to fit larger or smaller captions, which is particularly useful if the caption will change at run time.</span></span>  
   
-### <a name="to-make-a-label-control-resize-dynamically-to-fit-its-contents"></a><span data-ttu-id="27cc6-105">Para crear un control de etiqueta de tamaño dinámicamente para ajustarse a su contenido</span><span class="sxs-lookup"><span data-stu-id="27cc6-105">To make a label control resize dynamically to fit its contents</span></span>  
+### <a name="to-make-a-label-control-resize-dynamically-to-fit-its-contents"></a><span data-ttu-id="167fe-105">Para realizar un control de etiqueta de tamaño dinámicamente para ajustarse a su contenido</span><span class="sxs-lookup"><span data-stu-id="167fe-105">To make a label control resize dynamically to fit its contents</span></span>  
   
-1.  <span data-ttu-id="27cc6-106">Establecer su <xref:System.Windows.Forms.Label.AutoSize%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="27cc6-106">Set its <xref:System.Windows.Forms.Label.AutoSize%2A> property to `true`.</span></span>  
+1.  <span data-ttu-id="167fe-106">Establezca su <xref:System.Windows.Forms.Label.AutoSize%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="167fe-106">Set its <xref:System.Windows.Forms.Label.AutoSize%2A> property to `true`.</span></span>  
   
- <span data-ttu-id="27cc6-107">Si <xref:System.Windows.Forms.Label.AutoSize%2A> está establecido en `false`, las palabras especificadas en el <xref:System.Windows.Forms.Label.Text%2A> propiedad se ajustará a la línea siguiente si es posible, pero el control no crecerán.</span><span class="sxs-lookup"><span data-stu-id="27cc6-107">If <xref:System.Windows.Forms.Label.AutoSize%2A> is set to `false`, the words specified in the <xref:System.Windows.Forms.Label.Text%2A> property will wrap to the next line if possible, but the control will not grow.</span></span>  
+ <span data-ttu-id="167fe-107">Si <xref:System.Windows.Forms.Label.AutoSize%2A> está establecido en `false`, las palabras especificadas en el <xref:System.Windows.Forms.Label.Text%2A> propiedad se ajustará a la siguiente línea si es posible, pero no puede crecer el control.</span><span class="sxs-lookup"><span data-stu-id="167fe-107">If <xref:System.Windows.Forms.Label.AutoSize%2A> is set to `false`, the words specified in the <xref:System.Windows.Forms.Label.Text%2A> property will wrap to the next line if possible, but the control will not grow.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27cc6-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="27cc6-108">See Also</span></span>  
- [<span data-ttu-id="27cc6-109">Crear teclas de acceso con controles Label de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="27cc6-109">How to: Create Access Keys with Windows Forms Label Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
- [<span data-ttu-id="27cc6-110">Información general sobre el control Label</span><span class="sxs-lookup"><span data-stu-id="27cc6-110">Label Control Overview</span></span>](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- [<span data-ttu-id="27cc6-111">Etiqueta (control)</span><span class="sxs-lookup"><span data-stu-id="27cc6-111">Label Control</span></span>](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="167fe-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="167fe-108">See also</span></span>
+- [<span data-ttu-id="167fe-109">Cómo: Crear teclas de acceso con controles Label de formularios de Windows</span><span class="sxs-lookup"><span data-stu-id="167fe-109">How to: Create Access Keys with Windows Forms Label Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [<span data-ttu-id="167fe-110">Información general sobre el control Label</span><span class="sxs-lookup"><span data-stu-id="167fe-110">Label Control Overview</span></span>](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
+- [<span data-ttu-id="167fe-111">Etiqueta (control)</span><span class="sxs-lookup"><span data-stu-id="167fe-111">Label Control</span></span>](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
