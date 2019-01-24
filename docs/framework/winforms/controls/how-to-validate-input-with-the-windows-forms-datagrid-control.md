@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Validar los datos introducidos con el control DataGrid de formularios Windows Forms'
+title: Procedimiento Validar la entrada con el Control DataGrid de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: a01cb90b7cba596dafa56963dcf9c489deb3e21a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55de6fc1ef4fdf94495ddb07f3329ef9d46b5818
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609491"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Cómo: Validar los datos introducidos con el control DataGrid de formularios Windows Forms
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Procedimiento Validar la entrada con el Control DataGrid de Windows Forms
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
- Hay dos tipos de validación de entrada disponibles para los formularios Windows Forms <xref:System.Windows.Forms.DataGrid> control. Si el usuario intenta especificar un valor que es un tipo de datos aceptable para la celda, por ejemplo, una cadena en un entero, el nuevo valor no válido se sustituye con el valor antiguo. Este tipo de validación de entrada se realiza automáticamente y no se puede personalizar.  
+ Hay dos tipos de validación de entrada disponibles para los formularios de Windows <xref:System.Windows.Forms.DataGrid> control. Si el usuario intenta especificar un valor que es de un tipo de datos aceptable para la celda, por ejemplo, una cadena en un entero, el nuevo valor no válido se reemplaza con el valor anterior. Este tipo de validación de entrada se realiza automáticamente y no se pueden personalizar.  
   
- El otro tipo de validación de entrada puede utilizarse para rechazar los datos aceptables, por ejemplo, un valor 0 en un campo que debe ser mayor o igual que 1, o una cadena incorrecta. Esto se hace en el conjunto de datos mediante la escritura de un controlador de eventos para el <xref:System.Data.DataTable.ColumnChanging> o <xref:System.Data.DataTable.RowChanging> eventos. El ejemplo siguiente utiliza la <xref:System.Data.DataTable.ColumnChanging> evento porque el valor aceptable no se permite en la columna "Product" en particular. Puede usar el <xref:System.Data.DataTable.RowChanging> eventos para comprobar que el valor de una columna "End Date" es posterior a la columna "Start Date" de la misma fila.  
+ El otro tipo de validación de entrada puede utilizarse para rechazar todos los datos inaceptables, por ejemplo, un valor 0 en un campo que debe ser mayor o igual que 1 o una cadena incorrecta. Esto se hace en el conjunto de datos mediante la escritura de un controlador de eventos para el <xref:System.Data.DataTable.ColumnChanging> o <xref:System.Data.DataTable.RowChanging> eventos. El ejemplo siguiente usa el <xref:System.Data.DataTable.ColumnChanging> evento porque el valor aceptable no se permite en la columna "Product" en particular. Puede usar el <xref:System.Data.DataTable.RowChanging> eventos para comprobar que el valor de una columna "End Date" es posterior a la columna "Start Date" en la misma fila.  
   
 ### <a name="to-validate-user-input"></a>Para validar la entrada del usuario  
   
@@ -65,9 +65,9 @@ ms.locfileid: "33535898"
     }  
     ```  
   
-2.  Conectar el controlador de eventos para el evento.  
+2.  Conectar el controlador de eventos al evento.  
   
-     Lugar el siguiente código dentro del formulario <xref:System.Windows.Forms.Form.Load> eventos o en su constructor.  
+     Lugar en el siguiente código dentro de los del formulario <xref:System.Windows.Forms.Form.Load> eventos o en su constructor.  
   
     ```vb  
     ' Assumes the grid is bound to a dataset called customersDataSet1  
@@ -83,8 +83,8 @@ ms.locfileid: "33535898"
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.DataGrid>  
- <xref:System.Data.DataTable.ColumnChanging>  
- <xref:System.Data.DataRow.SetColumnError%2A>  
- [DataGrid (control)](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.DataGrid>
+- <xref:System.Data.DataTable.ColumnChanging>
+- <xref:System.Data.DataRow.SetColumnError%2A>
+- [DataGrid (control)](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

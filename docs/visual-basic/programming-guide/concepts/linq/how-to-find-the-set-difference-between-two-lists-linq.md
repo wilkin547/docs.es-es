@@ -1,20 +1,20 @@
 ---
-title: 'Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)'
+title: Procedimiento Buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 77ff74788adddcd28e23028b034cd682f2d94233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1c012dbe252c494c5f77e61b56deccbb07490fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579724"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Procedimiento Buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo usar LINQ para comparar dos listas de cadenas y generar estas líneas, que están en names1.txt pero no en names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Para crear los archivos de datos  
   
-1.  Copie names1.txt y names2.txt en la carpeta de soluciones, como se muestra en [Cómo: combinar y comparar cadena colecciones (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  Copie names1.txt y names2.txt en la carpeta de solución, como se muestra en [Cómo: Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -51,10 +51,10 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Algunos tipos de consulta operaciones en Visual Basic, como <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, y <xref:System.Linq.Enumerable.Concat%2A>, sólo se pueden expresar en sintaxis de método.  
+ Algunos tipos de operaciones de consulta en Visual Basic, como <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, y <xref:System.Linq.Enumerable.Concat%2A>, solo se puede expresar en sintaxis de método.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Vea también
+- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

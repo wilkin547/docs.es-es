@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Borrar enlaces'
+title: Procedimiento Borrar enlaces
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: f66477fc857a9e7a065e01b8cddf43789042b59c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd0f42b868c316cb9a6344134d4aaf01930519ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508437"
 ---
-# <a name="how-to-clear-bindings"></a>Cómo: Borrar enlaces
+# <a name="how-to-clear-bindings"></a>Procedimiento Borrar enlaces
 En este ejemplo se muestra cómo borrar los enlaces de un objeto.  
   
 ## <a name="example"></a>Ejemplo  
@@ -29,7 +29,7 @@ En este ejemplo se muestra cómo borrar los enlaces de un objeto.
   
  Para borrar los enlaces de todas las posibles propiedades de un objeto, utilice <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Data.BindingOperations>  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Data.BindingOperations>
+- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

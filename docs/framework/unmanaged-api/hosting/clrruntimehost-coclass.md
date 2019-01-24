@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fed7519402b4c3c1b2405ea99f8ba484781e95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e40f08a3dae6f17617e97e07a23b9d7eb611083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558636"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost (Coclase)
-Proporciona interfaces para administrar la ejecución de código en tiempo de ejecución.  
+Proporciona interfaces para administrar la ejecución de código por el tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,17 +39,17 @@ coclass CLRRuntimeHost {
   
 |Interfaz|Descripción|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Proporciona métodos para controlar la ejecución de aplicaciones en tiempo de ejecución.|  
-|[ICLRValidator (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Proporciona métodos para la validación de imágenes ejecutables portables y para los informes detallados de errores de validación.|  
+|[ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Proporciona métodos para controlar la ejecución de aplicaciones por el tiempo de ejecución.|  
+|[ICLRValidator (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Proporciona métodos para la validación de imágenes ejecutables portables y para generar informes detallados de errores de validación.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.idl  
+ **Encabezado**: MSCorEE.idl  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Coclases para el hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a>Vea también
+- [Coclases para el hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

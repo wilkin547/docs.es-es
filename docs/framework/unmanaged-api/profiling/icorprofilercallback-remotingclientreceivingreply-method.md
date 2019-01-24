@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04956fb5519c66141f4bd7330367f6c78b4e7bc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 313dd7526478377ca457d165de4b95e7e81d93f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599795"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply (Método)
-Notifica al generador de perfiles que se ha completado la parte de servidor de una llamada de comunicación remota y el cliente ahora está recibiendo y va a procesar la respuesta.  
+Notifica al generador de perfiles que se ha completado la parte del servidor de una llamada remota y el cliente ahora recibe y a procesar la respuesta.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,27 +37,27 @@ HRESULT RemotingClientReceivingReply(
   
 #### <a name="parameters"></a>Parámetros  
  `pCookie`  
- [in] Un valor que se corresponderá con el valor proporcionado en [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) en estas condiciones:  
+ [in] Un valor que se corresponde con el valor proporcionado en [RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) en estas condiciones:  
   
 -   Las cookies GUID de comunicación remota están activas.  
   
--   El canal consigue transmitir el mensaje.  
+-   El canal se realiza correctamente en la transmisión del mensaje.  
   
 -   Las cookies de GUID están activas en el proceso de servidor.  
   
- Esto permite la fácil emparejamiento de las llamadas remotas.  
+ Esto permite que simplifica el emparejamiento de las llamadas remotas.  
   
  `fIsAsync`  
  [in] Un valor que es `true` si la llamada es asincrónica; en caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

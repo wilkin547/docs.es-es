@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed9645c5111e7260010df74554825ffd8d427e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc986dc27deb08f779a9654324e6832d8420554a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587143"
 ---
 # <a name="getscope2-method"></a>GetScope2 (Método)
 Obtiene un ámbito de importación.  
@@ -39,10 +39,10 @@ HRESULT GetScope2(
   
 #### <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Identificador del ensamblado de destino.  
+ Id. del ensamblado de destino.  
   
  `FileToken`  
- Identificador del archivo desde el que se va a importar.  
+ Id. de archivo desde el que se va a importar.  
   
  `dwScope`  
  Ámbito de base cero para importar.  
@@ -56,7 +56,7 @@ HRESULT GetScope2(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h.  
   
-## <a name="see-also"></a>Vea también  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

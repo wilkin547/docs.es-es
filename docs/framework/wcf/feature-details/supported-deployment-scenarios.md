@@ -2,12 +2,12 @@
 title: Escenarios de implementación admitidos
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 605521cb91945812db178db3a82883b4d13bc636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614489"
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 El subconjunto de las características de Windows Communication Foundation (WCF) que puede usar en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, pero no todos, escenarios de uso de WCF. En el servidor, WCF cumple los requisitos de escala de Internet compartido los proveedores de hospedaje que ejecutan aplicaciones de terceros en el [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto por motivos de seguridad de permisos de nivel de confianza medio. En el cliente, la compatibilidad de confianza parcial de WCF está diseñado para cumplir los requisitos de tecnologías de implementación como [la implementación de ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]de tecnología de aplicación de explorador XAML, lo que permite la conexión directa y segura implementación de aplicaciones de escritorio de sitios de confianza.  
@@ -32,15 +32,15 @@ El subconjunto de las características de Windows Communication Foundation (WCF)
   
  Los servicios de flujo requieren permisos de plena confianza y no se pueden utilizar en aplicaciones de confianza parcial.  
   
- Para obtener más información, consulte [Cómo: uso de confianza medio en ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
+ Para obtener más información, vea [Cómo: Uso de confianza media en ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>Confianza parcial en el Cliente  
- Se deben tomar ciertas precauciones de seguridad al descargar y ejecutar código desde sitios de Internet que no sean de confianza. Ambos [la implementación de ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) y [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]de la aplicación de explorador de XAML (XBAP) aprovechar la tecnología usar de confianza parcial para conceder permisos limitados (zona de Internet) al código no seguro.  
+ Se deben tomar ciertas precauciones de seguridad al descargar y ejecutar código desde sitios de Internet que no sean de confianza. Las tecnologías de [ClickOnce Deployment](https://go.microsoft.com/fwlink/?LinkId=83712) y de la aplicación de explorador XAML (XBAP) [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]hacen uso de la confianza parcial para conceder permisos limitados (zona de Internet) al código que no sea de confianza.  
   
  Se puede usar WCF para comunicarse con servidores remotos desde dentro de aplicaciones de confianza parcial implementadas mediante [la implementación de ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) o XBAP. Incluye el conjunto de permisos de zona de Internet <xref:System.Net.WebPermission> para el host de origen, que permite a estas aplicaciones comunicarse con su servidor de origen mediante cualquiera de los enlaces WCF admitidos se describen en [Partial Trust Feature Compatibility ](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad de acceso del código](https://go.microsoft.com/fwlink/?LinkId=83717)  
- [Información general sobre aplicaciones hospedadas en Explorador de Windows Presentation Foundation](https://go.microsoft.com/fwlink/?LinkId=98397)  
- [Confianza parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- [Nivel de confianza medio de ASP.Net](https://go.microsoft.com/fwlink/?LinkId=69328)
+## <a name="see-also"></a>Vea también
+- [Seguridad de acceso del código](https://go.microsoft.com/fwlink/?LinkId=83717)
+- [Información general sobre aplicaciones hospedadas en Explorador de Windows Presentation Foundation](https://go.microsoft.com/fwlink/?LinkId=98397)
+- [Confianza parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [Nivel de confianza medio de ASP.NET](https://go.microsoft.com/fwlink/?LinkId=69328)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e8fbfd54782e601595712035827ea346d1dbf500
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572700"
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>No se puede escribir en el archivo de salida &#39; &lt;filename&gt;&#39;: &lt;error&gt;
 Se ha producido un problema al crear el archivo.  
@@ -27,7 +27,7 @@ Se ha producido un problema al crear el archivo.
   
  Esta excepción se generará aun cuando solo haya un archivo de salida del proyecto marcado como de solo lectura.  
   
- **Id. de error:** BC31019  
+ **Identificador de error:** BC31019  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
@@ -37,7 +37,7 @@ Se ha producido un problema al crear el archivo.
   
 3.  Si el error continúa, reinicie el equipo.  
   
-4.  Si el error persiste, vuelva a instalar Visual Basic.  
+4.  Si el error persiste, vuelva a Visual Basic.  
   
 5.  Si el error persiste después de la reinstalación, informe al respecto a los Servicios de soporte técnico de Microsoft.  
   
@@ -55,7 +55,7 @@ Se ha producido un problema al crear el archivo.
   
 2.  En el **atributos** sección de la **General** ficha, desactive la **de sólo lectura** cuadro.  
   
-3.  Press **OK**.  
+3.  Haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
- [Hable con nosotros](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Vea también
+- [Hable con nosotros](/visualstudio/ide/talk-to-us)

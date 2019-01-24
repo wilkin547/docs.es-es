@@ -2,12 +2,12 @@
 title: System.ServiceModel.ManualFlowThrottleLimitReached
 ms.date: 03/30/2017
 ms.assetid: 9aba851f-1830-493b-8e3e-60f454eb923e
-ms.openlocfilehash: a6b4e369d2d22d2441b3896321b7c152e21d967b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86d47ab0a83ff3e4a68bfa8ccf1349cf2b345b23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33483336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597741"
 ---
 # <a name="systemservicemodelmanualflowthrottlelimitreached"></a>System.ServiceModel.ManualFlowThrottleLimitReached
 System.ServiceModel.ManualFlowThrottleLimitReached  
@@ -17,7 +17,7 @@ System.ServiceModel.ManualFlowThrottleLimitReached
   
  Se emite este seguimiento cuando el límite del control de flujo manual se reduce inicialmente a 0. No se realiza un seguimiento de los cambios subsiguientes hasta 0. Para cada contexto se realiza un seguimiento del límite del control de flujo en el contexto de la instancia.  
   
-## <a name="see-also"></a>Vea también  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Vea también
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

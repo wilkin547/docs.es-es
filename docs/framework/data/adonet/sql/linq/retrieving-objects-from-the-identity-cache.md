@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569159"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recuperar objetos de la memoria caché de identidades
 En este tema se describen los tipos de consultas LINQ to SQL que devuelven un objeto desde la memoria caché de identidad que está administrado por el <xref:System.Data.Linq.DataContext>.  
@@ -20,7 +20,7 @@ En este tema se describen los tipos de consultas LINQ to SQL que devuelven un ob
  En general, para que una consulta LINQ to SQL devuelva un objeto desde la memoria caché de identidad, la consulta debe estar basada en la clave principal de un objeto y debe devolver un único objeto. En particular, la consulta debe estar en uno de los formatos generales indicados a continuación.  
   
 > [!NOTE]
->  Las consultas precompiladas no devolverán objetos desde la memoria caché de identidad. Para obtener más información acerca de las consultas precompiladas, consulte <xref:System.Data.Linq.CompiledQuery> y [Cómo: almacén y reutilizar consultas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
+>  Las consultas precompiladas no devolverán objetos desde la memoria caché de identidad. Para obtener más información acerca de las consultas precompiladas, vea <xref:System.Data.Linq.CompiledQuery> y [Cómo: Store y reutilizar consultas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
   
  Para recuperar un objeto de la memoria caché de identidad, una consulta debe tener uno de los formatos generales siguientes:  
   
@@ -64,8 +64,8 @@ En este tema se describen los tipos de consultas LINQ to SQL que devuelven un ob
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Identidad de objetos](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Identidad de objetos](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Identidad de objetos](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Identidad de objetos](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

@@ -1,18 +1,18 @@
 ---
-title: Cómo crear un comprobador de identidad de cliente personalizado
+title: Procedimiento Crear un comprobador de identidad de cliente personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569380"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>Cómo crear un comprobador de identidad de cliente personalizado
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>Procedimiento Crear un comprobador de identidad de cliente personalizada
 El *identidad* característica de Windows Communication Foundation (WCF) permite a un cliente especificar de antemano la identidad esperada del servicio. Siempre que un servidor se autentica al cliente, se comprueba la identidad frente a la identidad prevista. (Para obtener una explicación de la identidad y cómo funciona, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  En caso necesario, la comprobación puede personalizarse mediante un comprobador de identidad personalizado. Por ejemplo, puede realizar controles adicionales de comprobación de identidad del servicio. En este ejemplo, el comprobador de identidad personalizado controla las notificaciones adicionales del certificado X.509 devueltas desde el servidor. Para una aplicación de ejemplo, vea [ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
@@ -44,7 +44,7 @@ El *identidad* característica de Windows Communication Foundation (WCF) permite
   
 ### <a name="to-implement-the-trygetidentity-method"></a>Para implementar el método TryGetIdentity  
   
-1.  Implemente el método <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>, que determina si el cliente puede devolver una instancia de la clase <xref:System.ServiceModel.EndpointIdentity>. La infraestructura de WCF llama a la implementación de la `TryGetIdentity` método primero para recuperar la identidad del servicio del mensaje. Después, la infraestructura llama a la implementación `CheckAccess` con la `EndpointIdentity` devuelta y a <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+1.  Implemente el método <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>, que determina si el cliente puede devolver una instancia de la clase <xref:System.ServiceModel.EndpointIdentity>. La infraestructura de WCF llama a la implementación de la `TryGetIdentity` método primero para recuperar la identidad del servicio desde el mensaje. Después, la infraestructura llama a la implementación `CheckAccess` con la `EndpointIdentity` devuelta y a <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 2.  En el método `TryGetIdentity`, agregue el siguiente código:  
   
@@ -81,10 +81,10 @@ El *identidad* característica de Windows Communication Foundation (WCF) permite
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- <xref:System.ServiceModel.EndpointIdentity>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [Ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md)  
- [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- <xref:System.ServiceModel.EndpointIdentity>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [Ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md)
+- [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)

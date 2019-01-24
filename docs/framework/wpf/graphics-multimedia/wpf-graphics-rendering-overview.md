@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6323d27158855e5ded1698401835b35632bedebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603851"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Información general sobre la representación de gráficos en WPF
 En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Se centra en el rol de la <xref:System.Windows.Media.Visual> clase para representar la compatibilidad en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo.  
@@ -25,15 +25,15 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
   
  El <xref:System.Windows.Media.Visual> objeto es un núcleo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objeto, cuyo rol principal es proporcionar compatibilidad con la representación. Controles de interfaz de usuario, como <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.TextBox>, derivan de la <xref:System.Windows.Media.Visual> clase y usarla para conservar sus datos de representación. La <xref:System.Windows.Media.Visual> objeto proporciona compatibilidad para:  
   
--   Presentación de salida: representación persistente, serializa el contenido de dibujo de un objeto visual.  
+-   Presentación de salida: Representación persistente, serializa el contenido de dibujo de un objeto visual.  
   
--   Transformaciones: realizar transformaciones en un objeto visual.  
+-   Transformaciones: Realización de transformaciones en un objeto visual.  
   
--   Recorte: proporcionar soporte para una zona de recorte de un objeto visual.  
+-   Recorte: Proporcionar compatibilidad con regiones de recorte de un objeto visual.  
   
--   Pruebas de posicionamiento: determinar si una coordenada o geometría está dentro de los límites de un objeto visual.  
+-   La prueba de posicionamiento: Determinar si una coordenada o geometría está dentro de los límites de un objeto visual.  
   
--   Cálculos de rectángulo de selección: determinar el rectángulo delimitador de un objeto visual.  
+-   Los cálculos del cuadro de límite: Determinar el rectángulo delimitador de un objeto visual.  
   
  Sin embargo, la <xref:System.Windows.Media.Visual> objeto no incluye compatibilidad con características no son de representación, como:  
   
@@ -159,7 +159,7 @@ Diagrama de jerarquía de árbol visual
 Diagrama de orden de representación de árbol visual  
   
 ### <a name="root-visual"></a>Objeto visual raíz  
- El **objeto visual raíz** es el elemento de nivel superior de una jerarquía de árbol visual. En la mayoría de las aplicaciones, la clase base del objeto visual raíz es <xref:System.Windows.Window> o <xref:System.Windows.Navigation.NavigationWindow>. Sin embargo, si se hospedaran objetos visuales en una aplicación Win32, el objeto visual raíz sería el objeto visual de nivel superior que se hospeda en la ventana de Win32. Para más información, consulte [Tutorial: Hosting Visual Objects in a Win32 Application](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md) (Tutorial: hospedar objetos visuales en una aplicación Win32).  
+ El **objeto visual raíz** es el elemento de nivel superior de una jerarquía de árbol visual. En la mayoría de las aplicaciones, la clase base del objeto visual raíz es <xref:System.Windows.Window> o <xref:System.Windows.Navigation.NavigationWindow>. Sin embargo, si se hospedaran objetos visuales en una aplicación Win32, el objeto visual raíz sería el objeto visual de nivel superior que se hospeda en la ventana de Win32. Para obtener más información, consulte [Tutorial: Hospedar objetos visuales en una aplicación Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
   
 ### <a name="relationship-to-the-logical-tree"></a>Relación con el árbol lógico  
  El árbol lógico de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] representa los elementos de una aplicación en tiempo de ejecución. Aunque no manipula directamente este árbol, esta vista de la aplicación es útil para entender la herencia de propiedades y el enrutamiento de eventos. A diferencia del árbol visual, el árbol lógico puede representar objetos de datos no visuales, tales como <xref:System.Windows.Documents.ListItem>. En muchos casos, el árbol lógico se asigna muy estrechamente con las definiciones de marcación de una aplicación. El código siguiente muestra un <xref:System.Windows.Controls.DockPanel> elemento definido en el marcado.  
@@ -257,12 +257,12 @@ Gráficos y texto con diferentes configuraciones de PPP
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Realizar pruebas de posicionamiento en la capa visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [Usar objetos DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Tutorial: Hospedar objetos visuales en una aplicación Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Realizar pruebas de posicionamiento en la capa visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [Usar objetos DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+- [Tutorial: Hospedar objetos visuales en una aplicación Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

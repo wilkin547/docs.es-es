@@ -5,12 +5,12 @@ ms.date: 06/05/2018
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 6730238a73b41faa4409fdfc75af1de36f31d13e
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569613"
 ---
 # <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema
 
@@ -34,7 +34,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 
 Los enlaces siguientes vienen con WCF:
 
-|Enlaces|Elemento de configuración |Description|
+|Enlaces|Elemento de configuración |Descripción|
 |-------------|---------------------------|-----------------|
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md)|Un enlace que es útil para la comunicación con servicios web conformes con WS-Basic Profile, como, por ejemplo, servicios basados en servicios web de ASP.NET (ASMX). Este enlace utiliza HTTP como el transporte, y texto/XML como la codificación de mensajes predeterminada.|
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md)|Un enlace seguro e interoperable, adecuado para contratos de servicio que no son dúplex.|
@@ -71,25 +71,25 @@ Los enlaces siguientes vienen con WCF:
 |<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Ninguno), transporte, mensaje, mixto|(Ninguno)|(Ninguno)|N/D|Texto, (MTOM)|Sí<br />(almacenado en búfer)|
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transporte), mensaje, ninguno, mixto|(Transporte), sesión confiable, sesión de seguridad|(Ninguno), Sí|Sí|Binary|Sí<br />(almacenado en búfer)|
 |<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transporte, (mensaje), mixto|(Ninguno), sesión confiable, sesión de seguridad|(Ninguno), Sí|N/D|Texto, (MTOM)|No|
-|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Nota:** Se puede lograr la interoperabilidad mediante la implementación de la especificación estándar de SOAP-sobre-UDP que este enlace implementa.|.NET|(Ninguno)|(Ninguno)|(Ninguno)|N/D|(Texto)|No|
+|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Nota:**  Se puede lograr interoperabilidad implementando la especificación estándar de SOAP-sobre-UDP que este enlace implementa.|.NET|(Ninguno)|(Ninguno)|(Ninguno)|N/D|(Texto)|No|
 
 > [!IMPORTANT]
-> <xref:System.ServiceModel.NetHttpBinding> es un enlace diseñado para consumir servicios HTTP o WebSocket y usa la codificación binaria de forma predeterminada. <xref:System.ServiceModel.NetHttpBinding> detecta si se usa con un contrato de solicitud-respuesta o dúplex, y cambia su comportamiento para que coincida; usa HTTP para los contratos de solicitud-respuesta y WebSockets para los dúplex. Este comportamiento se puede reemplazar mediante el valor de enlace de <xref:System.ServiceModel.Channels.WebSocketTransportUsage>: WhenDuplex. Es el valor predeterminado y se comporta como se describió antes. Nunca: evita que se use WebSockets. Si se intenta usar un contrato dúplex con este valor se produce una excepción. Siempre: obliga a usar WebSockets incluso para los contratos de solicitud-respuesta. NetHttpBinding admite sesiones confiables en modo HTTP y en modo WebSocket. En el modo WebSocket, el transporte proporciona las sesiones.
+> <xref:System.ServiceModel.NetHttpBinding> es un enlace diseñado para consumir servicios HTTP o WebSocket y usa la codificación binaria de forma predeterminada. <xref:System.ServiceModel.NetHttpBinding> detecta si se usa con un contrato de solicitud-respuesta o dúplex, y cambia su comportamiento para que coincida; usa HTTP para los contratos de solicitud-respuesta y WebSockets para los dúplex. Este comportamiento puede invalidarse mediante el <xref:System.ServiceModel.Channels.WebSocketTransportUsage> de enlace: WhenDuplex: es el valor predeterminado y se comporta como se ha descrito anteriormente. Nunca: evita que se use WebSockets. Si se intenta usar un contrato dúplex con este valor se produce una excepción. Siempre: obliga a usar WebSockets incluso para los contratos de solicitud-respuesta. NetHttpBinding admite sesiones confiables en modo HTTP y en modo WebSocket. En el modo WebSocket, el transporte proporciona las sesiones.
 
  La siguiente tabla explica las características enumeradas en la tabla anterior.
 
-|Característica|Description|
+|Característica|Descripción|
 |-------------|-----------------|
 |Tipo de interoperabilidad|Nombra el protocolo o tecnología con la que el enlace asegura la interoperación.|
-|Seguridad|Especifica cómo se protege el canal:<br />- Ninguno: el mensaje SOAP no se protege y no se autentica el cliente.<br />- Transporte: los requisitos de seguridad se satisfacen en el nivel de transporte.<br />- Mensaje: los requisitos de seguridad se satisfacen en la capa del mensaje.<br />- Mixto: las notificaciones se transmiten en el mensaje; el nivel de transporte cumple los requisitos de integridad y confidencialidad.|
+|Seguridad|Especifica cómo se protege el canal:<br />-None: El mensaje SOAP no está protegido y no se autentica el cliente.<br />-Transporte: Se cumplen los requisitos de seguridad en el nivel de transporte.<br />-Mensaje: Se cumplen los requisitos de seguridad en el nivel de mensaje.<br />-Mixto: Notificaciones se incluyen en el mensaje. la capa de transporte satisface los requisitos de integridad y confidencialidad.|
 |Sesión|Especifica si este enlace admite contratos de sesión.|
 |Transacciones|Especifica si las transacciones están habilitadas.|
 |Dúplex|Especifica si se admiten los contratos dúplex. Observe que esta característica requiere que el enlace admita sesiones.|
-|Codificación|Especifica el formato de conexión del mensaje. Inclusión de valores permitida:<br />- Texto: por ejemplo, UTF-8.<br />- Binario<br />- Mecanismo de optimización de transmisión del mensaje (MTOM): método para codificar de forma eficaz elementos XML binarios dentro del contexto de un sobre SOAP.|
-|Streaming|Especifica si se admite la transmisión por secuencias para mensajes de entrada y de salida. Utilice la propiedad `TransferMode` del enlace para establecer el valor. Entre los valores permitidos se incluyen:<br />- <xref:System.ServiceModel.TransferMode.Buffered>: los mensajes de respuesta y solicitud se almacenan en búfer.<br />- <xref:System.ServiceModel.TransferMode.Streamed>: los mensajes de solicitud y respuesta se transmiten por secuencias.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>: el mensaje de solicitud se transmite por secuencias y el mensaje de respuesta se almacena en búfer.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>: el mensaje de solicitud se almacena en búfer y el mensaje de respuesta se transmite por secuencias.|
+|Codificación|Especifica el formato de conexión del mensaje. Inclusión de valores permitida:<br />- Texto: por ejemplo, UTF-8.<br />- Binario<br />-Mecanismo de optimización de transmisión de mensaje (MTOM): Un método para codificar de forma eficaz elementos XML binarios dentro del contexto de una envoltura SOAP.|
+|Streaming|Especifica si se admite la transmisión por secuencias para mensajes de entrada y de salida. Utilice la propiedad `TransferMode` del enlace para establecer el valor. Entre los valores permitidos se incluyen:<br />- <xref:System.ServiceModel.TransferMode.Buffered>: Los mensajes de solicitud y respuesta están almacenados en búfer.<br />- <xref:System.ServiceModel.TransferMode.Streamed>: Se transmiten los mensajes de solicitud y respuesta.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>: Se transmite el mensaje de solicitud y se almacena en búfer el mensaje de respuesta.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>: Se almacena en búfer el mensaje de solicitud y se transmite el mensaje de respuesta.|
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre la creación de puntos finales](endpoint-creation-overview.md)  
-[Utilización de enlaces para configurar servicios y clientes](using-bindings-to-configure-services-and-clients.md)  
-[Programación básica de WCF](basic-wcf-programming.md)  
+- [Información general sobre la creación de puntos finales](endpoint-creation-overview.md)
+- [Utilización de enlaces para configurar servicios y clientes](using-bindings-to-configure-services-and-clients.md)
+- [Programación básica de WCF](basic-wcf-programming.md)

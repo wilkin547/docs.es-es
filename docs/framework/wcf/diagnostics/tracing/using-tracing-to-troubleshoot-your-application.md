@@ -2,12 +2,12 @@
 title: Uso del seguimiento para solucionar problemas de su aplicación
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 684fd79e2aa8062ddeb183576cb449bf838aa6c3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6aa4c91014987d0d671e1fb3727cceeafa5bdd6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562874"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Uso del seguimiento para solucionar problemas de su aplicación
 Esta sección contiene varios temas que describen cómo puede utilizar el seguimiento para solucionar los problemas de su aplicación.  
@@ -26,12 +26,12 @@ Esta sección contiene varios temas que describen cómo puede utilizar el seguim
  Permite a los clientes depurar su aplicación.  
   
  [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- Describe los seguimientos que se utilizan para escenarios de WCF de E2E, por ejemplo, solicitud-respuestas wsHttp sincrónicas y solicitudes unidireccionales de TCP asincrónicas.  
+ Describe los seguimientos que se utiliza para escenarios de E2E WCF, por ejemplo, solicitud-respuestas wsHttp sincrónicas y solicitudes unidireccionales de TCP asincrónicas.  
   
  [Emisión de trazas del código de usuario](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  Describe cómo emitir seguimientos mediante programación en código de usuario, de modo que pueda crear de manera proactiva datos de instrumentación que se utilizarán más adelante para el diagnóstico, y en correlación con seguimientos de WCF.  
   
-## <a name="see-also"></a>Vea también  
- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a>Vea también
+- [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

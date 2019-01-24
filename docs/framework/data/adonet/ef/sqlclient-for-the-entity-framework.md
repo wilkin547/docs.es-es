@@ -2,12 +2,12 @@
 title: SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 430e0e143519f97802c8cef4eee658b482a81880
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c38567f77d69a894376e23b6d4ff6c669edc806
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569107"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient para Entity Framework
 En esta sección se describe el Proveedor de datos de .NET Framework para SQL Server (SqlClient), el cual permite a Entity Framework trabajar sobre Microsoft SQL Server.  
@@ -47,7 +47,7 @@ En esta sección se describe el Proveedor de datos de .NET Framework para SQL Se
   
  [Problemas conocidos en SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   
-## <a name="see-also"></a>Vea también  
- [Lenguaje Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [Referencia del lenguaje](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
- [Problemas conocidos de proveedor de SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+## <a name="see-also"></a>Vea también
+- [Lenguaje Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Referencia del lenguaje](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
+- [Problemas conocidos de proveedor de SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

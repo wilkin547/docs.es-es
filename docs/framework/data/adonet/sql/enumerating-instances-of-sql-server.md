@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c168fc2ceddde0f8d104ec5e562f92c9c9e487d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583540"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerar instancias de SQL Server (ADO.NET)
 SQL Server permite que las aplicaciones busquen instancias de SQL Server en la red actual. La clase <xref:System.Data.Sql.SqlDataSourceEnumerator> expone esta información para el programador de la aplicación, suministrando una <xref:System.Data.DataTable> que contiene información acerca de todos los servidores visibles. Esta tabla devuelta contiene una lista de instancias de servidor disponibles en la red que coincide con la lista proporcionada cuando un usuario intenta crear una nueva conexión y se expande la lista desplegable que contiene todos los servidores disponibles en el **conexión Propiedades** cuadro de diálogo. Los resultados mostrados no siempre están completos.  
@@ -45,10 +45,10 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 |Columna|Descripción|  
 |------------|-----------------|  
-|**Nombre de servidor**|Nombre del servidor.|  
-|**NombreDeInstancia**|Nombre de la instancia del servidor. Si el servidor se ejecuta como instancia predeterminada, esta columna se muestra en blanco.|  
+|**ServerName**|Nombre del servidor.|  
+|**InstanceName**|Nombre de la instancia del servidor. Si el servidor se ejecuta como instancia predeterminada, esta columna se muestra en blanco.|  
 |**IsClustered**|Indica si el servidor forma parte de un clúster.|  
-|**Versión**|Versión del servidor. Por ejemplo:<br /><br /> -9.00. x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
+|**Versión**|Versión del servidor. Por ejemplo:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Limitaciones de la enumeración  
  Es posible que en la lista no aparezcan todos los servidores disponibles. La lista puede variar dependiendo de algunos factores, como los tiempos de espera o el tráfico de la red. Como consecuencia, la lista puede ser diferente en dos llamadas consecutivas. Solo aparecerán en la lista los servidores de la misma red. Normalmente, los paquetes de difusión no recorren los enrutadores; este es el motivo de que a lo mejor no pueda ver uno de los servidores que aparecen en la lista, aunque se mantenga estable entre llamadas.  
@@ -124,6 +124,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

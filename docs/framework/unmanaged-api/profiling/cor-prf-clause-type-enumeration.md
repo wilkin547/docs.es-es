@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583761"
 ---
 # <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE (Enumeración)
 Indica el tipo de cláusula de excepción en la que el código acaba de entrar o de la que acaba de salir.  
@@ -43,17 +43,17 @@ typedef enum {
 |------------|-----------------|  
 |`COR_PRF_CLAUSE_NONE`|La cláusula de excepción no es válida.|  
 |`COR_PRF_CLAUSE_FILTER`|La cláusula de excepción es una expresión de filtro.|  
-|`COR_PRF_CLAUSE_CATCH`|La cláusula de excepción es una `catch` instrucción.|  
-|`COR_PRF_CLAUSE_FINALLY`|La cláusula de excepción es una `finally` instrucción.|  
+|`COR_PRF_CLAUSE_CATCH`|La cláusula de excepción es un `catch` instrucción.|  
+|`COR_PRF_CLAUSE_FINALLY`|La cláusula de excepción es un `finally` instrucción.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 438094d00375531752f575f1f99b3db4ddf4e2e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514808"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Miembros de la biblioteca en tiempo de ejecución de Visual Basic
-El `Microsoft.VisualBasic` espacio de nombres contiene clases, módulos, constantes y enumeraciones que constituyen la biblioteca en tiempo de ejecución de Visual Basic. Estos miembros de la biblioteca proporcionan procedimientos, propiedades y valores constantes que puede utilizar en el código. Cada módulo y clase representan una categoría determinada de funcionalidad.  
+El `Microsoft.VisualBasic` espacio de nombres contiene las clases, módulos, constantes y enumeraciones que constituyen la biblioteca en tiempo de ejecución de Visual Basic. Estos miembros de la biblioteca proporcionan los procedimientos, propiedades y valores constantes que se puede usar en el código. Cada módulo y clase representan una categoría determinada de funcionalidad.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Clase Microsoft.VisualBasic.Collection  
   
@@ -78,7 +78,7 @@ El `Microsoft.VisualBasic` espacio de nombres contiene clases, módulos, constan
 |<xref:Microsoft.VisualBasic.Conversion.ErrorToString%2A>|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>|<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|<xref:Microsoft.VisualBasic.Conversion.Str%2A>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>||  
   
-## <a name="microsoftvisualbasicdateandtime-module"></a>Módulo Microsoft.VisualBasic.DateAndTime  
+## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.VisualBasic.DateAndTime Module  
   
 |||||  
 |---|---|---|---|  
@@ -112,7 +112,7 @@ El `Microsoft.VisualBasic` espacio de nombres contiene clases, módulos, constan
 |<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|<xref:Microsoft.VisualBasic.FileSystem.SPC%2A>|<xref:Microsoft.VisualBasic.FileSystem.TAB%2A>|<xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |<xref:Microsoft.VisualBasic.FileSystem.Write%2A>|<xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|||  
   
-## <a name="microsoftvisualbasicfinancial-module"></a>Módulo Microsoft.VisualBasic.Financial  
+## <a name="microsoftvisualbasicfinancial-module"></a>Microsoft.VisualBasic.Financial Module  
   
 |||||  
 |---|---|---|---|  
@@ -127,7 +127,7 @@ El `Microsoft.VisualBasic` espacio de nombres contiene clases, módulos, constan
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|  
   
-## <a name="microsoftvisualbasichidemodulenameattribute-class"></a>Clase Microsoft.VisualBasic.HideModuleNameAttribute  
+## <a name="microsoftvisualbasichidemodulenameattribute-class"></a>Microsoft.VisualBasic.HideModuleNameAttribute Class  
   
 |||||  
 |---|---|---|---|  
@@ -184,15 +184,15 @@ El `Microsoft.VisualBasic` espacio de nombres contiene clases, módulos, constan
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute.Length%2A>||||  
   
-## <a name="microsoftvisualbasicvbmath-module"></a>Módulo Microsoft.VisualBasic.VbMath  
+## <a name="microsoftvisualbasicvbmath-module"></a>Microsoft.VisualBasic.VbMath Module  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic constantes y enumeraciones  
- El `Microsoft.VisualBasic` espacio de nombres proporciona constantes y enumeraciones como parte de la biblioteca de tiempo de ejecución de Visual Basic. Puede utilizar estos valores constantes en el código. Cada enumeración representa una categoría determinada de funcionalidad. Para obtener más información, consulte [constantes y enumeraciones](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ El `Microsoft.VisualBasic` espacio de nombres proporciona constantes y enumeraciones como parte de la biblioteca de tiempo de ejecución de Visual Basic. Puede utilizar estos valores de constantes en el código. Cada enumeración representa una categoría determinada de funcionalidad. Para obtener más información, consulte [constantes y enumeraciones](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
-## <a name="see-also"></a>Vea también  
- [Constantes y enumeraciones](../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Palabras clave](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también
+- [Constantes y enumeraciones](../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Palabras clave](../../visual-basic/language-reference/keywords/index.md)

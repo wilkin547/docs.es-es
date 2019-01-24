@@ -2,21 +2,15 @@
 title: Procedimientos en Visual Basic
 ms.date: 04/28/2017
 helpviewer_keywords:
-- procedures [Visual Basic], structured code
-- Visual Basic code, procedures
-- procedures [Visual Basic], types of
-- structured code [Visual Basic], procedures
-- procedures
+  - 'procedures [Visual Basic], structured code'
+  - 'Visual Basic code, procedures'
+  - 'procedures [Visual Basic], types of'
+  - 'structured code [Visual Basic], procedures'
+  - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: a4a168fd1fad75f5038044d49886782f391ceb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655143"
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimientos en Visual Basic
-A *procedimiento* es un bloque de instrucciones de Visual Basic delimitadas por una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y su correspondiente `End` declaración. Todas las instrucciones ejecutables en Visual Basic deben estar dentro de algún procedimiento.  
+Un *procedimiento* es un bloque de instrucciones de Visual Basic dentro de una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y una búsqueda de coincidencias `End` declaración. Todas las instrucciones ejecutables en Visual Basic deben estar dentro de algún procedimiento.  
   
 ## <a name="calling-a-procedure"></a>Llamada a un procedimiento  
  Cuando invoca un procedimiento desde otra parte del código, está realizando una *llamada a procedimiento*. Cuando el procedimiento termina de ejecutarse, devuelve el control al código que lo ha invocado, el cual se conoce como *código de llamada*. El código de llamada es una instrucción, o una expresión de una instrucción, que especifica el procedimiento por el nombre y le transfiere el control.  
@@ -34,7 +28,7 @@ A *procedimiento* es un bloque de instrucciones de Visual Basic delimitadas por 
  En la mayoría de los casos, un procedimiento necesita operar en datos diferentes cada vez que se llama. Puede pasar esta información al procedimiento como parte de la llamada a procedimiento. El procedimiento define cero o más *parámetros*, cada uno de los cuales representa un valor que espera que le pase. Cada parámetro de la definición del procedimiento tiene un *argumento* correspondiente en la llamada a procedimiento. Un argumento representa el valor que pasa al parámetro correspondiente en una llamada a procedimiento determinada.  
   
 ## <a name="types-of-procedures"></a>Tipos de procedimientos  
- Visual Basic utiliza varios tipos de procedimientos:  
+ Visual Basic usa varios tipos de procedimientos:  
   
 -   Los [procedimientos Sub](./sub-procedures.md) realizan acciones, pero no devuelven un valor al código de llamada.  
   
@@ -61,14 +55,14 @@ A *procedimiento* es un bloque de instrucciones de Visual Basic delimitadas por 
   
 -   Después de desarrollar procedimientos para su uso en un programa, se pueden usar en otros, a menudo con poca o ninguna modificación. Esto ayuda a evitar la duplicación de código.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un procedimiento](./how-to-create-a-procedure.md)  
- [Subprocedimientos](./sub-procedures.md)  
- [Procedimientos de función](./function-procedures.md)  
- [Procedimientos de propiedades](./property-procedures.md)  
- [Procedimientos de operadores](./operator-procedures.md)  
- [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)  
- [Procedimientos recursivos](./recursive-procedures.md)  
- [Sobrecarga de procedimientos](./procedure-overloading.md)  
- [Procedimientos genéricos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Crear un procedimiento](./how-to-create-a-procedure.md)
+- [Subprocedimientos](./sub-procedures.md)
+- [Procedimientos de función](./function-procedures.md)
+- [Procedimientos de propiedades](./property-procedures.md)
+- [Procedimientos de operadores](./operator-procedures.md)
+- [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
+- [Procedimientos recursivos](./recursive-procedures.md)
+- [Sobrecarga de procedimientos](./procedure-overloading.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

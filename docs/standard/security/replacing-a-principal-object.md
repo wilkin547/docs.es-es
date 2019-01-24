@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bfcd912fc16aa8d4b89a4f455d65b0294593cead
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5193756861f407315ec82e4419f1d04495c7dd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606038"
 ---
 # <a name="replacing-a-principal-object"></a>Reemplazar un objeto Principal
-Las aplicaciones que ofrecen servicios de autenticación deben poder reemplazar el objeto **Principal** (<xref:System.Security.Principal.IPrincipal>) de un subproceso determinado. Además, el sistema de seguridad debe ayudar a proteger la capacidad de reemplazar objetos **Principal** , porque un objeto **Principal** incorrecto asociado de forma malintencionada pone en peligro la seguridad de la aplicación mediante la notificación de una identidad o un rol falsos. Por lo tanto, las aplicaciones que requieren la capacidad de reemplazar **Principal** objetos deben concederse el <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> objeto para el control principal. (Tenga en cuenta que este permiso no se requiere para realizar comprobaciones de seguridad basada en roles o para crear objetos **Principal** ).  
+Las aplicaciones que ofrecen servicios de autenticación deben poder reemplazar el objeto **Principal** (<xref:System.Security.Principal.IPrincipal>) de un subproceso determinado. Además, el sistema de seguridad debe ayudar a proteger la capacidad de reemplazar objetos **Principal** , porque un objeto **Principal** incorrecto asociado de forma malintencionada pone en peligro la seguridad de la aplicación mediante la notificación de una identidad o un rol falsos. Por lo tanto, las aplicaciones que requieren la capacidad de reemplazar objetos **Principal** necesitan que se les conceda el objeto <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> para el control de la entidad de seguridad. (Tenga en cuenta que este permiso no se requiere para realizar comprobaciones de seguridad basada en roles o para crear objetos **Principal** ).  
   
  El objeto **Principal** actual se puede reemplazar realizando las tareas siguientes:  
   
@@ -36,5 +36,5 @@ Las aplicaciones que ofrecen servicios de autenticación deben poder reemplazar 
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
+- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>
 - [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)

@@ -2,22 +2,16 @@
 title: Esquema de la configuración de criptografía
 ms.date: 03/30/2017
 helpviewer_keywords:
-- configuration schema [.NET Framework], cryptography
-- elements [.NET Framework], cryptography
-- schema configuration settings
-- cryptography, settings schema
-- cryptography, mapping algorithm names
-- configuration sections [.NET Framework]
-- configuration settings [.NET Framework], cryptography
+  - 'configuration schema [.NET Framework], cryptography'
+  - 'elements [.NET Framework], cryptography'
+  - schema configuration settings
+  - 'cryptography, settings schema'
+  - 'cryptography, mapping algorithm names'
+  - 'configuration sections [.NET Framework]'
+  - 'configuration settings [.NET Framework], cryptography'
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9bf94c28522d42e1a763726469cf9b1a03ccd86e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196757"
 ---
 # <a name="cryptography-settings-schema"></a>Esquema de la configuración de criptografía
 El esquema de la configuración de criptografía contiene elementos que especifican cómo asignar nombres de algoritmo descriptivos a las clases que implementan algoritmos criptográficos.  
@@ -51,6 +45,6 @@ El esquema de la configuración de criptografía contiene elementos que especifi
 |[**\<oidEntry>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.|  
 |[**\<oidMap>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contiene asignaciones de OID ASN.1 a clases.|  
   
-## <a name="see-also"></a>Vea también  
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Vea también
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

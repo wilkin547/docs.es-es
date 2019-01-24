@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612832"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen consideraciones de seguridad que son específicas del desarrollo, implementación y ejecución de aplicaciones de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. También debe seguir las recomendaciones para crear aplicaciones de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] seguras. Para obtener más información, consulte [información general sobre seguridad](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -46,7 +46,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
 -   Utilice generadores de cadenas de conexión al crear dinámicamente las conexiones.  
   
-     Si debe construir las cadenas de conexión en tiempo de ejecución, utilice la clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Esta clase de generador de cadenas ayuda a evitar los ataques de inyección en las cadenas de conexión validando y anulando la información de entrada no válida. Para obtener más información, consulte [Cómo: compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Use también la clase de generador de cadenas adecuada para construir la cadena de conexión de origen de datos que forma parte de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cadena de conexión. Para obtener información acerca de los generadores de cadenas de conexión para proveedores de ADO.NET, vea [generadores de cadenas de conexión](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Si debe construir las cadenas de conexión en tiempo de ejecución, utilice la clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Esta clase de generador de cadenas ayuda a evitar los ataques de inyección en las cadenas de conexión validando y anulando la información de entrada no válida. Para obtener más información, vea [Cómo: Compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Use también la clase de generador de cadenas adecuada para construir la cadena de conexión de origen de datos que forma parte de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cadena de conexión. Para obtener información acerca de los generadores de cadenas de conexión para proveedores de ADO.NET, vea [generadores de cadenas de conexión](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Para más información, consulte [Proteger la información de conexión](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -75,7 +75,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
 -   Permiso para abrir una conexión de base de datos y ejecutar comandos en la base de datos, como <xref:System.Data.SqlClient.SqlClientPermission> para una base de datos de SQL Server.  
   
- Para más información, consulte [Seguridad de acceso del código y ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
+ Para obtener más información, consulta [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
 #### <a name="do-not-install-untrusted-applications"></a>No instale aplicaciones que no sean de confianza.  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] no exige ningún permiso de seguridad e invocará cualquier código de objeto de datos proporcionado por el usuario en proceso con independencia de si es de confianza o no. Asegúrese de que la autenticación y la autorización del cliente se llevan a cabo en el almacén de datos y en la aplicación.  
@@ -161,7 +161,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>No acepte objetos MetadataWorkspace de orígenes que no sean de confianza.  
  Las aplicaciones no deberían aceptar instancias de la clase <xref:System.Data.Metadata.Edm.MetadataWorkspace> de orígenes que no sean de confianza. En su lugar, debería construir y rellenar explícitamente un área de trabajo de este tipo de origen.  
   
-## <a name="see-also"></a>Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Consideraciones de implementación](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Consideraciones de migración](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>Vea también
+- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Consideraciones de implementación](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Consideraciones de migración](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2633bfadaabf208a2b86fda83375c3a136b93b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 31c18061ad5f21e26665cd0d6883b0eb26afd1d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557482"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map (Método)
 Asigna una relación entre los ensamblados utilizando firmas de metadatos.  
@@ -38,22 +38,22 @@ HRESULT Map (
   
 #### <a name="parameters"></a>Parámetros  
  `tkImp`  
- [in] El token de metadatos que representa el objeto de código importado.  
+ [in] El token de metadatos que representa el objeto de código importados.  
   
  `tkEmit`  
  [in] El token de metadatos que representa el objeto de código emitido.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando el token volver a asignar se produce durante una mezcla, el token original tiene un ámbito en el ámbito de metadatos importados (origen) y el nuevo token tiene un ámbito en el ámbito de metadatos emitido (destino).  
+ Cuando el token volver a asignar se produce durante una combinación, el token original se limita el ámbito de metadatos importados (origen) y el nuevo token se enfoca en el ámbito de metadatos emitido (destino).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMapToken (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMapToken (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

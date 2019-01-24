@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603669"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField (Método)
-Define una única variable que no está dentro de un método. Este método es usado por determinados campos en clases, campos de bits y así sucesivamente.  
+Define una única variable que no está dentro de un método. Este método es usados para ciertos campos en clases, campos de bits y así sucesivamente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ HRESULT DefineField(
   
 #### <a name="parameters"></a>Parámetros  
  `parent`  
- [in] El tipo de metadatos o el método de token.  
+ [in] El tipo de metadatos o el método token.  
   
  `name`  
  [in] El nombre del campo.  
@@ -56,25 +56,25 @@ HRESULT DefineField(
  [in] Un `ULONG32` que es el tamaño, en caracteres, del búfer necesario para contener la firma del campo.  
   
  `signature`  
- [in] La matriz de firmas de campo.  
+ [in] Matriz de firmas de campo.  
   
  `addrKind`  
  [in] El tipo de dirección.  
   
  `addr1`  
- [in] La primera dirección para la especificación de campo.  
+ [in] La primera dirección de la especificación de campo.  
   
  `addr2`  
- [in] La segunda dirección para la especificación de campo.  
+ [in] La segunda dirección de la especificación de campo.  
   
  `addr3`  
- [in] La tercera dirección para la especificación de campo.  
+ [in] Tercera dirección de la especificación de campo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

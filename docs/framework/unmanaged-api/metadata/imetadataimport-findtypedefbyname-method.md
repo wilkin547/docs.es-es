@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b4aad1cf1d3eb2dec249686f2897e6f393ab7e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b6040f21bb530ce775fc79e33b97eb14870c04f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578830"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName (Método)
 Obtiene un puntero a los metadatos de TypeDef token para el <xref:System.Type> con el nombre especificado.  
@@ -42,20 +42,20 @@ HRESULT FindTypeDefByName
  [in] El nombre del tipo para el que se va a obtener el token de la definición de tipo.  
   
  `tkEnclosingClass`  
- [in] Símbolo (token) de TypeDef o TypeRef que representa la clase envolvente. Si el tipo de búsqueda no es una clase anidada, establezca este valor en NULL.  
+ [in] Un token de TypeDef o TypeRef que representa la clase envolvente. Si el tipo de búsqueda no es una clase anidada, establezca este valor en NULL.  
   
  `ptd`  
  [out] Un puntero al token de TypeDef coincidente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

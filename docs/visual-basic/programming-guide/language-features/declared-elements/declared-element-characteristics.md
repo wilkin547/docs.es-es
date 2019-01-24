@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582271"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Características de los elementos declarados (Visual Basic)
 Un *característica* de un elemento declarado es un aspecto del elemento que afecta a cómo el código puede interactuar con él. Cada elemento declarado tiene una o varias de las siguientes características asociadas con él:  
@@ -27,9 +27,9 @@ Un *característica* de un elemento declarado es un aspecto del elemento que afe
   
 -   *Duración* : el período de tiempo de ejecución durante el cual el elemento está disponible para su uso. Para obtener más información, consulte [duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Ámbito* : el conjunto de todo el código que puede hacer referencia al elemento sin calificar su nombre. Para obtener más información, consulte [Cómo: controlar el ámbito de una Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+-   *Ámbito* : el conjunto de todo el código que puede hacer referencia al elemento sin calificar su nombre. Para obtener más información, vea [Cómo: Controlar el ámbito de una Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Nivel de acceso* : el permiso de código hacer uso del elemento. Para obtener más información, consulte [Cómo: controlar la disponibilidad de una Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+-   *Nivel de acceso* : el permiso de código hacer uso del elemento. Para obtener más información, vea [Cómo: Controlar la disponibilidad de una Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Características de los elementos  
  La siguiente tabla muestra los elementos declarados y las características que se aplican a cada uno de ellos.  
@@ -53,12 +53,12 @@ Un *característica* de un elemento declarado es un aspecto del elemento que afe
   
  <sup>1</sup> ámbito a veces se conoce como *visibilidad*.  
   
-## <a name="see-also"></a>Vea también  
- [Elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Vea también
+- [Elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
+- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

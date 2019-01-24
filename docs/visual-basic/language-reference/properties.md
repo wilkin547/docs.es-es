@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-ms.openlocfilehash: 5fd1bdb665f4e72ad4c29efa3d1c5459975f0b05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 658aa2f1cdf150db686ba78a75b44a41d361833f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634342"
 ---
 # <a name="properties-visual-basic"></a>Propiedades (Visual Basic)
 Esta página enumera las propiedades que son miembros de los módulos de Visual Basic. Otras propiedades que son miembros de determinados objetos de Visual Basic se enumeran en [objetos](../../visual-basic/language-reference/objects/index.md).  
@@ -29,6 +29,6 @@ Esta página enumera las propiedades que son miembros de los módulos de Visual 
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Devuelve o establece un `String` valor que representa la hora actual del día según el sistema.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|Devuelve o establece un `Date` valor que contiene la fecha actual según el sistema.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia del lenguaje Visual Basic](../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../visual-basic/index.md)
+## <a name="see-also"></a>Vea también
+- [Referencia del lenguaje Visual Basic](../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../visual-basic/index.md)

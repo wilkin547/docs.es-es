@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad29204e445bc61b6dc9753d594f0e4bf62930fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64e6bd57c5f16b0e7d59f6cf760030aab4c6b9f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568808"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties (Método)
 Enumera los tokens de PropertyDef que representan las propiedades del tipo al que hace referencia el token de TypeDef especificado.  
@@ -41,10 +41,10 @@ HRESULT EnumProperties (
   
 #### <a name="parameters"></a>Parámetros  
  `phEnum`  
- [entrada, salida] Un puntero para el enumerador. Esto debe ser NULL para la primera llamada de este método.  
+ [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
   
  `td`  
- [in] Un token de TypeDef que representa el tipo con propiedades para enumerar.  
+ [in] Un token de TypeDef que representa el tipo con propiedades a enumerar.  
   
  `rProperties`  
  [out] Matriz utilizada para almacenar los tokens de PropertyDef.  
@@ -60,17 +60,17 @@ HRESULT EnumProperties (
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |`S_OK`|`EnumProperties` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún tokens para enumerar. En ese caso, `pcProperties` es cero.|  
+|`S_FALSE`|No hay ningún token para enumerar. En ese caso, `pcProperties` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

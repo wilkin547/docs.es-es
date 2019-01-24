@@ -2,12 +2,12 @@
 title: Tipos de datos booleanos
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: 4879455aefbd08e3c9483870b4ac1e28df7bd02b
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: f0709b78408f348b84926a92b6b404e2be952a12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584939"
 ---
 # <a name="boolean-data-types"></a>Tipos de datos booleanos
 Los operadores booleanos funcionan tal como cabía esperar en Common Language Runtime (CLR), con la salvedad de que no hay equivalencia para el comportamiento de cortocircuito. Por ejemplo, el operador `AndAlso` de Visual Basic se comporta como el operador `And`. El operador `&&` de C# se comporta como el operador `&`.  
@@ -23,5 +23,5 @@ Los operadores booleanos funcionan tal como cabía esperar en Common Language Ru
 |[XOR (operador)](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[Operador ^](~/docs/csharp/language-reference/operators/xor-operator.md)|  
 |[NOT (operador)](~/docs/visual-basic/language-reference/operators/not-operator.md)|[Operador \!](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

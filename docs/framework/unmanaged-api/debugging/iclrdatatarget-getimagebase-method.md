@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a79133b117f3a718dd84af6c2144a6098bc79f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ef46c066512caac93f5f0cb189152d2cac6dada
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633874"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase (Método)
 Obtiene la dirección de memoria de base de la imagen especificada.  
@@ -41,19 +41,19 @@ HRESULT GetImageBase (
  [in] El nombre de archivo de la imagen, incluida su ruta de acceso.  
   
  `baseAddress`  
- [out] Un puntero a CLRDATA_ADDRESS que almacena la dirección base de la imagen.  
+ [out] Un puntero a CLRDATA_ADDRESS que almacena la dirección de la imagen base.  
   
 ## <a name="remarks"></a>Comentarios  
- El nombre de archivo de imagen puede tener o no una ruta de acceso. Si se especifica una ruta de acceso, se realiza la coincidencia en la ruta de acceso completa; en caso contrario, la coincidencia se realiza únicamente en el nombre de archivo.  
+ El nombre de archivo de imagen puede tener o no una ruta de acceso. Si se especifica una ruta de acceso, la búsqueda de coincidencias se realiza en la ruta de acceso completa; en caso contrario, la coincidencia se realiza solo en el nombre de archivo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** ClrData.idl, ClrData.h  
+ **Encabezado**: ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICLRDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

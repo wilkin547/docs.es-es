@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: c5c9b665b78c7c63c55292e38cc96ee8b2962a61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e776d3d08ff7d63b094a71e6990d87ea454a4428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638436"
 ---
 # <a name="declaration-expected"></a>Se esperaba una declaración
 Una instrucción no declarativa, como una asignación o una instrucción del bucle, se produce fuera de cualquier procedimiento. Sólo se permiten declaraciones procedimientos externos.  
   
- Como alternativa, un elemento de programación se declara sin una palabra clave de declaración como `Dim` o `Const`.  
+ Como alternativa, se declara un elemento de programación sin una palabra clave como `Dim` o `Const`.  
   
- **Id. de error:** BC30188  
+ **Identificador de error:** BC30188  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
@@ -29,6 +29,6 @@ Una instrucción no declarativa, como una asignación o una instrucción del buc
   
 -   Asegúrese de que una palabra clave no está mal escrita.  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>Vea también
+- [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)

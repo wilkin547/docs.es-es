@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc983f1f0b2405f207d69c62b800ee854fcd409
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569471"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Guardar y restaurar zonas horarias
 
@@ -72,8 +72,8 @@ Los ejemplos anteriores tiene almacenada información de zona horaria a una vari
 
 Almacenar una cadena de zona horaria serializada de esta manera, también separa la rutina de creación de la zona horaria desde la propia aplicación. Por ejemplo, puede ejecutar una rutina de creación de la zona horaria y se cree un archivo de datos que contiene información histórica de zonas horarias que puede usar una aplicación. El archivo de datos puede ser, a continuación, se puede instalar con la aplicación y se puede abrir y uno o varios de sus zonas horarias se pueden deserializar cuando la aplicación los necesita.
 
-Para obtener un ejemplo que usa un recurso incrustado para almacenar los datos serializados de zona horaria, consulte [Cómo: guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Para obtener un ejemplo que usa un recurso incrustado para almacenar los datos serializados de zona horaria, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 ## <a name="see-also"></a>Vea también
 
-* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)

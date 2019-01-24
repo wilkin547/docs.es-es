@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c888c32a0b40d2458a919613e35ca9d1d830c4f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: de267042eab8d0f3d8dc2562c13bcdd068837220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559481"
 ---
 # <a name="strongnamesignatureverification-function"></a>StrongNameSignatureVerification (Función)
-Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba según los marcadores especificados.  
+Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba según las marcas indicadas.  
   
- Esta función está desusada. Use la [ICLRStrongName:: StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) método en su lugar.  
+ Esta función está desusada. Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) método en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,25 +40,25 @@ BOOLEAN StrongNameSignatureVerification (
   
 #### <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [in] La ruta de acceso al archivo ejecutable portable (.dll o .exe) del ensamblado que debe comprobarse.  
+ [in] La ruta de acceso al archivo ejecutable portable (.dll o .exe) del ensamblado comprobar.  
   
  `dwInFlags`  
  [in] Marcas para modificar el comportamiento de comprobación. Se admiten los siguientes valores:  
   
--   `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
+-   `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación incluso si es necesario invalidar la configuración del registro.  
   
--   `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que ésta es la primera vez que se comprueba el manifiesto.  
+-   `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera vez que se comprueba el manifiesto.  
   
 -   `SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
   
--   `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado estará accesible sólo para el usuario actual.  
+-   `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado será accesible solo para el usuario actual.  
   
 -   `SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
   
--   `SN_INFLAG_RUNTIME` (0 x 80000000) - reservado para la depuración interna.  
+-   `SN_INFLAG_RUNTIME` (0 x 80000000): reservado para la depuración interna.  
   
  `pdwOutFlags`  
- [out] Marcas que indica si se ha comprobado la firma de nombre seguro. Se admite el siguiente valor:  
+ [out] Marcas que indican si se ha comprobado la firma de nombre seguro. Se admite el siguiente valor:  
   
 -   `SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
   
@@ -66,15 +66,15 @@ BOOLEAN StrongNameSignatureVerification (
  `true` Si la comprobación se realizó correctamente; en caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** StrongName.h  
+ **Encabezado**: StrongName.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [StrongNameSignatureVerification (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
- [StrongNameSignatureVerificationEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Vea también
+- [StrongNameSignatureVerification (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [StrongNameSignatureVerificationEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

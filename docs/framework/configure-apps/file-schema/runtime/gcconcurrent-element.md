@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4c83576c5c46d9a32f990d23fa20b116be36e4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612003"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; elemento
 Especifica si Common Language Runtime ejecuta la recolección de elementos no utilizados en un subproceso independiente.  
   
  \<configuration>  
-\<en tiempo de ejecución >  
-\<gcConcurrent >  
+\<runtime>  
+\<gcConcurrent>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -89,7 +89,7 @@ Especifica si Common Language Runtime ejecuta la recolección de elementos no ut
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Vea también
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Fundamentos de la recolección de elementos no utilizados](../../../../../docs/standard/garbage-collection/fundamentals.md)

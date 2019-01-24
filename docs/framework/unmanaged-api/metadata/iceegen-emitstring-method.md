@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dccb2a3a3f3aaf0f209c8f3543056ab81c562dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f51ce9a4b45bd674f53cf7b4c4d6cedb8d46858d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586428"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString (Método)
-Emite la cadena especificada en el código base.  
+Emite la cadena especificada en la base de código.  
   
  Este método está obsoleto y no debe usarse.  
   
@@ -40,19 +40,19 @@ HRESULT EmitString (
   
 #### <a name="parameters"></a>Parámetros  
  `lpString`  
- [in] Cadena que se va a emitir.  
+ [in] Cadena que se emita.  
   
  `RVA`  
  [out] La dirección virtual relativa de la cadena emitida.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

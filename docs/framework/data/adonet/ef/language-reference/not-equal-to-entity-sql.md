@@ -2,12 +2,12 @@
 title: '!= (Distinto de) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
-ms.openlocfilehash: 4ed09b0c5f10ef1ac77c4b374619508d714f1dc3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d5e59fe61dbc05a48e98f5720dca446482b9968e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568143"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (Distinto de) (Entity SQL)
 Compara dos expresiones para determinar si la expresión de la izquierda no es igual que la expresión de la derecha. El operador != (No es igual a) es funcionalmente equivalente al operador <>.  
@@ -36,5 +36,5 @@ expression <> expression
   
  [!code-csharp[DP EntityServices Concepts 2#NOT_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#not_equals)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

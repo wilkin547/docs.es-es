@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3dfb70066d88683e60f3bf4199441ab3024ef36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565116"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While (Cláusula, Visual Basic)
 Incluye los elementos de una colección siempre que el valor de una condición especificada sea `true` y, a continuación, omite los elementos restantes.  
@@ -28,7 +28,7 @@ Take While expression
   
 |Término|Definición|  
 |---|---|  
-|`expression`|Requerido. Una expresión que representa una condición para probar los elementos. La expresión debe devolver un `Boolean` valor o un equivalente funcional, como un `Integer` que debe evaluarse como un `Boolean`.|  
+|`expression`|Obligatorio. Una expresión que representa una condición para probar los elementos. La expresión debe devolver un `Boolean` valor o un equivalente funcional, como un `Integer` que debe evaluarse como un `Boolean`.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `Take While` cláusula incluye elementos desde el principio de un resultado de consulta hasta que se ha suministrado `expression` devuelve `false`. Después de la `expression` devuelve `false`, la consulta omitirá todos los elementos restantes. El `expression` se omite para los resultados restantes.  
@@ -40,11 +40,11 @@ Take While expression
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Skip While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)

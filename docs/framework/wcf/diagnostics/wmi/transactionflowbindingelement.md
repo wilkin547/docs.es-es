@@ -2,12 +2,12 @@
 title: TransactionFlowBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0a9656fe-2400-45ca-ad79-92715c8cf190
-ms.openlocfilehash: 027ace6ea9fc2a0e5ce63efa84e1a49c0ed2cd0a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0311837ebb8112d9492fb548492bcd3e10230e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514579"
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
@@ -32,21 +32,21 @@ class TransactionFlowBindingElement : BindingElement
 ### <a name="issuedtokens"></a>IssuedTokens  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica el requisito para un encabezado de token de seguridad emitido (IssuedTokens de WS-Trust).  
   
 ### <a name="transactionprotocol"></a>TransactionProtocol  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El protocolo de transacciones utilizado por el servicio para fluir las transacciones.  
   
 ### <a name="transactions"></a>Transacciones  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Indica si se admite la transacción entrante.  
   
@@ -56,5 +56,5 @@ class TransactionFlowBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

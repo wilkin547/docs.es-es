@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564086"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr (Enumeración)
 Contiene valores que describen la relación entre un método y una propiedad o evento asociados.  
@@ -48,16 +48,16 @@ typedef enum CorMethodSemanticsAttr {
 |`msSetter`|Especifica que el método es un `set` descriptor de acceso para una propiedad.|  
 |`msGetter`|Especifica que el método es un `get` descriptor de acceso para una propiedad.|  
 |`msOther`|Especifica que el método tiene una relación con una propiedad o un evento distintos de los definidos aquí.|  
-|`msAddOn`|Especifica que el método agrega métodos de controlador de un evento.|  
-|`msRemoveOn`|Especifica que el método quita los métodos de control para un evento.|  
+|`msAddOn`|Especifica que el método agrega los métodos de controlador de un evento.|  
+|`msRemoveOn`|Especifica que el método quita los métodos de controlador de un evento.|  
 |`msFire`|Especifica que el método genera un evento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

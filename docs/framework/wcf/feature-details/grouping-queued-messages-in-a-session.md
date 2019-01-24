@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 62aa269d138d436824d3c825de9f722490d3b5bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564134"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Agrupación de los mensajes en cola de una sesión
-Windows Communication Foundation (WCF) proporciona una sesión que le permite agrupar un conjunto de mensajes relacionados entre sí para su procesamiento mediante una aplicación receptora única. Los mensajes que forman parte de una sesión deben formar parte de la misma transacción. Dado que todos los mensajes forman parte de la misma transacción, si se producir un error al procesar un mensaje, se deshace la sesión completa. Las sesiones tienen comportamientos similares con respecto a las colas de mensajes no enviados y a las colas de mensajes dudosos. El conjunto de propiedades Time to Live (TTL) establecido en un enlace de cola configurado para las sesiones se aplica a la sesión como un conjunto. Si solo se envían algunos de los mensajes en la sesión antes de que el TTL expire, la sesión completa se coloca en la cola de mensajes no enviados. De manera similar, cuando se produce un error al enviar, en una sesión, los mensajes a una aplicación desde la cola de la aplicación, la sesión completa se coloca en la cola de mensajes dudosos (si está disponible).  
+Windows Communication Foundation (WCF) proporciona una sesión que le permite agrupar un conjunto de mensajes relacionados para el procesamiento por una aplicación receptora única. Los mensajes que forman parte de una sesión deben formar parte de la misma transacción. Dado que todos los mensajes forman parte de la misma transacción, si se producir un error al procesar un mensaje, se deshace la sesión completa. Las sesiones tienen comportamientos similares con respecto a las colas de mensajes no enviados y a las colas de mensajes dudosos. El conjunto de propiedades Time to Live (TTL) establecido en un enlace de cola configurado para las sesiones se aplica a la sesión como un conjunto. Si solo se envían algunos de los mensajes en la sesión antes de que el TTL expire, la sesión completa se coloca en la cola de mensajes no enviados. De manera similar, cuando se produce un error al enviar, en una sesión, los mensajes a una aplicación desde la cola de la aplicación, la sesión completa se coloca en la cola de mensajes dudosos (si está disponible).  
   
 ## <a name="message-grouping-example"></a>Ejemplo de agrupación de mensajes  
  Un ejemplo donde agrupar los mensajes es útil es al implementar una aplicación de procesamiento de pedidos como un servicio WCF. Por ejemplo, un cliente envía un pedido a esta aplicación que contiene varios elementos. Por cada elemento, el cliente realiza una llamada al servicio, que resulta en el envío de un mensaje individual. Es posible que el servidor A reciba el primer elemento y que el servidor B reciba el segundo elemento. Cada vez que se agrega un elemento, el servidor que procesa ese elemento tiene que encontrar el pedido adecuado y agregar el elemento a él, lo que es altamente ineficaz. Todavía se encuentra con tales ineficacias con un servidor único que administre todas las solicitudes, porque el servidor debe seguir todos los pedidos que se procesan actualmente y determinar a cuál de los nuevos elementos pertenece. La agrupación de todas las solicitudes en un único pedido simplifica en gran medida la implementación de este tipo de aplicaciones. La aplicación de cliente envía todos los elementos de un único pedido en una sesión, de modo que cuando el servicio procesa el pedido, procesa toda la sesión al mismo tiempo. \  
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) proporciona una sesión que le permite ag
   
 1.  Cree un ámbito de la transacción para escribir en la cola transaccional.  
   
-2.  Crear el cliente WCF mediante el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta.  
+2.  Crear el cliente WCF mediante el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta.  
   
 3.  Realice el pedido.  
   
@@ -85,6 +85,6 @@ Windows Communication Foundation (WCF) proporciona una sesión que le permite ag
   
   
   
-## <a name="see-also"></a>Vea también  
- [Sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+## <a name="see-also"></a>Vea también
+- [Sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)

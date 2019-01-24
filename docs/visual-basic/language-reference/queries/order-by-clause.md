@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: d4abb5f0b75ae4069c1dbe695a5c810b1f7aa6e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c467b46347539a3cc6c4abfabc368ce494985b95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560946"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By (Cláusula, Visual Basic)
 Especifica el criterio de ordenación para un resultado de la consulta.  
@@ -28,7 +28,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>Elementos  
  `orderExp1`  
- Requerido. Uno o varios campos del resultado de la consulta actual que identifican cómo ordenar los valores devueltos. Los nombres de campo deben estar separados por comas (,). Puede identificar cada campo ordenado en orden ascendente o descendente mediante el uso de la `Ascending` o `Descending` palabras clave. Si no hay ningún `Ascending` o `Descending` se especifica la palabra clave, el criterio de ordenación predeterminado es ascendente. Los campos del criterio de ordenación tienen precedencia de izquierda a derecha.  
+ Obligatorio. Uno o varios campos del resultado de la consulta actual que identifican cómo ordenar los valores devueltos. Los nombres de campo deben estar separados por comas (,). Puede identificar cada campo ordenado en orden ascendente o descendente mediante el uso de la `Ascending` o `Descending` palabras clave. Si no hay ningún `Ascending` o `Descending` se especifica la palabra clave, el criterio de ordenación predeterminado es ascendente. Los campos del criterio de ordenación tienen precedencia de izquierda a derecha.  
   
 ## <a name="remarks"></a>Comentarios  
  Puede usar el `Order By` cláusula para ordenar los resultados de una consulta. El `Order By` cláusula solo puede ordenar un resultado basado en la variable de rango para el ámbito actual. Por ejemplo, el `Select` cláusula presenta un nuevo ámbito en una expresión de consulta con nuevas variables de iteración para ese ámbito. Las variables definidas antes de rango un `Select` cláusula en una consulta no están disponibles después de la `Select` cláusula. Por lo tanto, si desea ordenar los resultados por un campo que no está disponible en el `Select` cláusula, debe colocar el `Order By` cláusula antes el `Select` cláusula. Un ejemplo de cuándo se tendría que hacer esto es cuando desea ordenar la consulta por campos que no se devuelven como parte del resultado.  
@@ -50,8 +50,8 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)

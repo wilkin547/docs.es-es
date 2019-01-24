@@ -2,17 +2,17 @@
 title: Codificadores personalizados
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509371"
 ---
 # <a name="custom-encoders"></a>Codificadores personalizados
 Este tema describe cómo crear codificadores personalizados.  
   
- En Windows Communication Foundation (WCF), usa un *enlace* para especificar cómo transferir datos a través de una red entre los puntos de conexión. Un enlace está formado por una secuencia de *elementos de enlace*. Un enlace incluye elementos de enlace protocolares opcionales, como seguridad, *codificador de mensajes* elemento de enlace y un elemento de enlace de transporte necesario. Un codificador de mensaje está representado por un elemento de enlace de codificación de mensaje. Se incluyen tres codificadores de mensajes en WCF: binario, Message Transmission Optimization Mechanism (MTOM) y texto.  
+ En Windows Communication Foundation (WCF), usa un *enlace* para especificar cómo transferir datos a través de una red entre los puntos de conexión. Un enlace está formado por una secuencia de *elementos de enlace*. Un enlace incluye elementos de enlace protocolares opcionales, como seguridad, *codificador de mensajes* elemento de enlace y un elemento de enlace de transporte necesario. Un codificador de mensaje está representado por un elemento de enlace de codificación de mensaje. WCF incluye tres codificadores de mensajes: Binario, mecanismo de optimización de transmisión de mensajes (MTOM) y el texto.  
   
  Un elemento de enlace de codificación de mensajes serializa un <xref:System.ServiceModel.Channels.Message> saliente y lo pasa al transporte, o recibe del transporte la forma serializada de un mensaje y lo pasa al nivel de protocolo, si está presente, o, si no lo está, a la aplicación.  
   
@@ -30,11 +30,11 @@ Este tema describe cómo crear codificadores personalizados.
   
  WCF proporciona los siguientes tipos de elementos de enlace que se deriva el <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> clase que pueda proporcionar codificación de texto, binario y Message Transmission Optimization Mechanism (MTOM):  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: el codificador más interoperable, pero el menos eficaz con mensajes XML. En general, un servicio web, o un cliente de servicios web, pueden entender XML textual. No obstante, la transmisión de grandes bloques de datos binarios en forma de texto no es eficaz.  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: El codificador más interoperable, pero el menos eficaz para los mensajes XML. En general, un servicio web, o un cliente de servicios web, pueden entender XML textual. No obstante, la transmisión de grandes bloques de datos binarios en forma de texto no es eficaz.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: representa el elemento de enlace que especifica la codificación de caracteres y el control de versiones del mensaje, utilizados con los mensajes binarios basados en XML. Esto es más eficaz de las opciones de codificación, pero la menos interoperable, porque solo es compatible con los puntos de conexión WCF.  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Representa el elemento de enlace que especifica la codificación de caracteres y control de versiones usados para los mensajes XML basados en binario. Esto es más eficaz de las opciones de codificación, pero la menos interoperable, porque solo es compatible con los puntos de conexión WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: representa el elemento de enlace que especifica la codificación de caracteres y el control de versiones del mensaje, utilizados con un mensaje codificado mediante el mecanismo de optimización de la transmisión del mensaje (MTOM). MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta equilibrar la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos en texto.  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Representa el elemento de enlace que especifica la codificación de caracteres y control de versiones de mensaje usados para un mensaje con una codificación Message Transmission Optimization Mechanism (MTOM). MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta equilibrar la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos en texto.  
   
  El elemento de enlace crea un binario, MTOM, o <xref:System.ServiceModel.Channels.MessageEncoderFactory> de texto. El generador crea un binario, MTOM o una instancia <xref:System.ServiceModel.Channels.MessageEncoderFactory> de texto. Normalmente, solo existe una instancia. No obstante, si se utilizan sesiones, puede proporcionarse un codificador diferente para cada sesión. El codificador binario utiliza este recurso para coordinar los diccionarios dinámicos (vea, Infrastructura de XML).  
   
@@ -89,12 +89,12 @@ Este tema describe cómo crear codificadores personalizados.
   
  A continuación, conecte su <xref:System.ServiceModel.Channels.MessageEncoderFactory> personalizado a la pila de elementos de enlace utilizada para configurar el servicio o el cliente, invalidando el método <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>, para devolver una instancia de este generador.  
   
- Hay dos ejemplos que ilustran este proceso con código de ejemplo proporcionados con WCF: [codificador del mensaje personalizado: codificador de texto personalizado](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) y [codificador del mensaje personalizado: codificador de compresión](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
+ Hay dos ejemplos que ilustran este proceso con código de ejemplo proporcionados con WCF: [Codificador de mensaje personalizado: Codificador de texto personalizado](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) y [codificador de mensaje personalizado: Codificador de compresión](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [Información general sobre la arquitectura de transferencia de datos](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [Elección de un codificador de mensajes](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Elección del transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [Información general sobre la arquitectura de transferencia de datos](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Elección de un codificador de mensajes](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Elección del transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

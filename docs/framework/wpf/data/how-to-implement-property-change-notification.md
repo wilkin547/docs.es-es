@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar la notificación de cambio de propiedad'
+title: Procedimiento Implementar la notificación de cambio de propiedad
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: a9c0fb433e2fa65e28db3b793e038b49f9d6353b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a8ab232019f1266095091cd4e1ce6e7fec63207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587819"
 ---
-# <a name="how-to-implement-property-change-notification"></a>Cómo: Implementar la notificación de cambio de propiedad
-Para admitir <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> de enlace para habilitar las propiedades de destino de enlace reflejar automáticamente los cambios dinámicos de origen del enlace (por ejemplo, para que el panel de vista previa que se actualizan automáticamente cuando el usuario edita un formulario), la clase debe proporcionar las notificaciones de cambio de propiedad apropiado. Este ejemplo muestra cómo crear una clase que implementa <xref:System.ComponentModel.INotifyPropertyChanged>.  
+# <a name="how-to-implement-property-change-notification"></a>Procedimiento Implementar la notificación de cambio de propiedad
+Para admitir <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> enlace para habilitar las propiedades de destino de enlace para que reflejen automáticamente los cambios dinámicos del origen del enlace (por ejemplo, para que el panel de vista previa actualizado automáticamente cuando el usuario edita un formulario), la clase debe proporcionar las notificaciones de cambio de propiedad adecuado. En este ejemplo se muestra cómo crear una clase que implementa <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
 ## <a name="example"></a>Ejemplo  
- Para implementar <xref:System.ComponentModel.INotifyPropertyChanged> deberá declarar el <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> eventos y crear el `OnPropertyChanged` método. Por lo tanto, para cada propiedad para las que desee cambiar las notificaciones, calle a `OnPropertyChanged` cuando se actualice la propiedad.  
+ Para implementar <xref:System.ComponentModel.INotifyPropertyChanged> debe declarar la <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> eventos y cree el `OnPropertyChanged` método. Por lo tanto, para cada propiedad para las que desee cambiar las notificaciones, calle a `OnPropertyChanged` cuando se actualice la propiedad.  
   
  [!code-csharp[SimpleBinding#PersonClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Person.cs#personclass)]
  [!code-vb[SimpleBinding#PersonClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Person.vb#personclass)]  
   
- Para ver un ejemplo del uso del `Person` clase puede usarse para admitir <xref:System.Windows.Data.BindingMode.TwoWay> enlace, consulte [controlar cuándo el texto de cuadro de texto actualiza el origen de](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
+ Para ver un ejemplo de cómo el `Person` clase puede usarse para admitir <xref:System.Windows.Data.BindingMode.TwoWay> enlace, vea [controlar cuándo el texto de TextBox actualiza el origen](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre orígenes de enlaces](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre orígenes de enlaces](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

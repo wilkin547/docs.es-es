@@ -2,12 +2,12 @@
 title: Solución de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586415"
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 La siguiente información expone algunos problemas que podría encontrar en sus aplicaciones de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y proporciona sugerencias para evitar o reducir el efecto de estos problemas.  
@@ -37,7 +37,7 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
   
  En caso contrario, se producirá una excepción <xref:System.Data.SqlClient.SqlException>.  
   
- Para obtener más información, consulte [Cómo: eliminar filas de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Para obtener más información, vea [Cómo: Eliminar filas de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
 ## <a name="expression-not-queryable"></a>Expresión que no se puede consultar  
  Si obtiene el error "No se puede consultar una expresión de tipo [expresión]. Compruebe que no falta ninguna referencia de ensamblado", asegúrese de lo siguiente:  
@@ -69,6 +69,6 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
 ## <a name="oncreated-partial-method"></a>Método parcial OnCreated()  
  Se llama al método generado `OnCreated()` cada vez que se llama al constructor de objeto, incluido el escenario en el que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] llama al constructor para realizar una copia para los valores originales. Tenga en cuenta este comportamiento si implementa el método `OnCreated()` en su propia clase parcial.  
   
-## <a name="see-also"></a>Vea también  
- [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- [Preguntas más frecuentes](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>Vea también
+- [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Preguntas más frecuentes](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

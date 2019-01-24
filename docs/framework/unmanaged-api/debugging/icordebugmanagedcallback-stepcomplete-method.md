@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cd6cce73a96cf522521d7cd8d0cc8024e95b93c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b50bb5312b294a3e92ab945c3f0443a4eb81d133
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634442"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete (Método)
 Notifica al depurador que se ha completado un paso.  
@@ -46,22 +46,22 @@ HRESULT StepComplete (
  [in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se ha completado el paso.  
   
  `pStepper`  
- [in] Un puntero a un objeto ICorDebugStepper que representa el paso en la ejecución de código.  
+ [in] Un puntero a un objeto ICorDebugStepper que representa el paso de ejecución de código.  
   
  `reason`  
  [in] Un valor de la enumeración CorDebugStepReason que indica el resultado de un paso individual.  
   
 ## <a name="remarks"></a>Comentarios  
- El paso a paso desencadene puede utilizarse para continuar ejecución paso a paso si lo desea, a menos que se termine la depuración.  
+ El componente puede utilizarse para continuar pasando si lo desea, a menos que se termina la depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugManagedCallback (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

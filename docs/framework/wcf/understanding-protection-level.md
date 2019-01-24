@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 157e660a8b4d3866b9ab1994c409f82f16ac8359
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564638"
 ---
 # <a name="understanding-protection-level"></a>Descripción de los niveles de protección
-La propiedad `ProtectionLevel` se encuentra en muchas clases diferentes, como las clases <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute>. La propiedad controla cómo se protege una parte de un mensaje (o todo entero). Este tema explica la característica de Windows Communication Foundation (WCF) y cómo funciona.  
+La propiedad `ProtectionLevel` se encuentra en muchas clases diferentes, como las clases <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute>. La propiedad controla cómo se protege una parte de un mensaje (o todo entero). En este tema se explica la característica de Windows Communication Foundation (WCF) y su funcionamiento.  
   
- Para obtener instrucciones acerca de cómo establecer el nivel de protección, consulte [Cómo: establecer la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
+ Para obtener instrucciones sobre cómo establecer el nivel de protección, consulte [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   
 > [!NOTE]
 >  Los niveles de protección solo se pueden establecer en el código, no en la configuración.  
@@ -34,13 +34,13 @@ La propiedad `ProtectionLevel` se encuentra en muchas clases diferentes, como la
   
     -   `EncryptAndSign`. La parte del mensaje se cifra para garantizar la confidencialidad antes de firmarse.  
   
--   Puede establecer los requisitos de protección para *datos de la aplicación* con esta característica. Por ejemplo, los encabezados de WS-Addressing son los datos de la infraestructura y, por consiguiente, no se verán afectados por `ProtectionLevel`.  
+-   Puede establecer los requisitos de protección solo para *datos de la aplicación* con esta característica. Por ejemplo, los encabezados de WS-Addressing son los datos de la infraestructura y, por consiguiente, no se verán afectados por `ProtectionLevel`.  
   
 -   Cuando el modo de seguridad está establecido como `Transport`, el mecanismo de transporte protege el mensaje completo. Por consiguiente, establecer un nivel de protección independiente para las distintas partes de un mensaje no tendrá ningún efecto.  
   
--   El `ProtectionLevel` es una manera para que el programador establezca el *nivel mínimo* que debe cumplir un enlace. Cuando se implementa un servicio, el enlace real especificado en la configuración puede admitir o no el nivel mínimo. Por ejemplo, de forma predeterminada, la clase <xref:System.ServiceModel.BasicHttpBinding> no proporciona seguridad (aunque puede estar habilitada). Por consiguiente, utilizarlo con un contrato que tiene un valor distinto de `None` producirá una excepción.  
+-   El `ProtectionLevel` es una forma para el desarrollador establecer el *nivel mínimo* que debe cumplir un enlace. Cuando se implementa un servicio, el enlace real especificado en la configuración puede admitir o no el nivel mínimo. Por ejemplo, de forma predeterminada, la clase <xref:System.ServiceModel.BasicHttpBinding> no proporciona seguridad (aunque puede estar habilitada). Por consiguiente, utilizarlo con un contrato que tiene un valor distinto de `None` producirá una excepción.  
   
--   Si el servicio requiere que el mínimo `ProtectionLevel` para todos los mensajes es `Sign`, un cliente (quizás creado por una tecnología no WCF) puede cifrar y firmar todos los mensajes (que es mayor que el mínimo requerido). En este caso, WCF no iniciará una excepción porque el cliente ha hecho más que el mínimo. Sin embargo, tenga en cuenta que las aplicaciones de WCF (servicios o clientes) no sobreprotegerán una parte del mensaje si es posible pero cumplan con el nivel mínimo. Además, tenga en cuenta que al utilizar `Transport` como modo de seguridad, el transporte puede sobreproteger la secuencia de mensajes porque no puede proteger en un nivel más específico.  
+-   Si el servicio requiere que el mínimo `ProtectionLevel` para todos los mensajes es `Sign`, un cliente (quizás creado por una tecnología no WCF) puede cifrar y firmar todos los mensajes (que es más que el mínimo requerido). En este caso, WCF no iniciará una excepción porque el cliente ha hecho más que el mínimo. Sin embargo, tenga en cuenta que las aplicaciones de WCF (servicios o clientes) no sobreprotegerán una parte de mensaje si es posible, sino que cumplirán con el nivel mínimo. Además, tenga en cuenta que al utilizar `Transport` como modo de seguridad, el transporte puede sobreproteger la secuencia de mensajes porque no puede proteger en un nivel más específico.  
   
 -   Si establece `ProtectionLevel` como `Sign` o `EncryptAndSign`, deberá usar un enlace con la seguridad habilitada o se producirá una excepción.  
   
@@ -70,13 +70,13 @@ La propiedad `ProtectionLevel` se encuentra en muchas clases diferentes, como la
  <xref:System.ServiceModel.MessageBodyMemberAttribute>  
   
 ## <a name="programming-protectionlevel"></a>Programación de ProtectionLevel  
- Para programar `ProtectionLevel` en cualquier punto de la jerarquía, basta con establecer la propiedad con un valor adecuado cuando se aplique el atributo. Para obtener ejemplos, vea [Cómo: establecer la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
+ Para programar `ProtectionLevel` en cualquier punto de la jerarquía, basta con establecer la propiedad con un valor adecuado cuando se aplique el atributo. Para obtener ejemplos, vea [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   
 > [!NOTE]
->  Establecer la propiedad en errores y contratos de mensaje exige conocer cómo funcionan esas características. Para obtener más información, consulte [Cómo: establecer la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) y [usar contratos de mensaje](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+>  Establecer la propiedad en errores y contratos de mensaje exige conocer cómo funcionan esas características. Para obtener más información, vea [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) y [mediante contratos de mensaje](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 ## <a name="ws-addressing-dependency"></a>Dependencia de WS-Addressing  
- En la mayoría de los casos, con el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generar un cliente se asegura de que los contratos de servicio y cliente sean idénticos. Sin embargo, los contratos aparentemente idénticos pueden hacer que el cliente produzca una excepción. Esto ocurre siempre que un enlace no admita la especificación de WS-Addressing y se especifiquen varios niveles de protección en el contrato. Por ejemplo, la clase <xref:System.ServiceModel.BasicHttpBinding> no admite la especificación o si crea un enlace personalizado que no admite WS-Addressing. La característica `ProtectionLevel` confía en la especificación de WS-Addressing para habilitar los niveles de protección diferentes en un contrato único. Si el enlace no admite la especificación de WS-Addressing, todos los niveles estarán establecidos en el mismo nivel de protección. El nivel de protección eficaz para todos los ámbitos del contrato estará establecido en el nivel de protección más alto utilizado en el contrato.  
+ En la mayoría de los casos, mediante el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generar un cliente garantiza que los contratos de servicio y cliente son idénticos. Sin embargo, los contratos aparentemente idénticos pueden hacer que el cliente produzca una excepción. Esto ocurre siempre que un enlace no admita la especificación de WS-Addressing y se especifiquen varios niveles de protección en el contrato. Por ejemplo, la clase <xref:System.ServiceModel.BasicHttpBinding> no admite la especificación o si crea un enlace personalizado que no admite WS-Addressing. La característica `ProtectionLevel` confía en la especificación de WS-Addressing para habilitar los niveles de protección diferentes en un contrato único. Si el enlace no admite la especificación de WS-Addressing, todos los niveles estarán establecidos en el mismo nivel de protección. El nivel de protección eficaz para todos los ámbitos del contrato estará establecido en el nivel de protección más alto utilizado en el contrato.  
   
  Esto puede producir un problema que será difícil depurar a primera vista. Es posible crear un contrato de cliente (una interfaz) que incluya los métodos para más de un servicio. Es decir, la misma interfaz se utiliza para crear un cliente que comunica con muchos servicios y la interfaz contiene los métodos para todos los servicios. El desarrollador debe tener cuidado en este escenario atípico para invocar solo aquellos métodos que son aplicables para cada servicio determinado. Si el enlace es la clase <xref:System.ServiceModel.BasicHttpBinding>, no se pueden admitir varios niveles de protección. Sin embargo, un servicio que responde al cliente podría responder a un cliente con un nivel de protección más bajo que el necesario. En este caso, el cliente producirá una excepción porque espera un nivel más alto.  
   
@@ -94,15 +94,15 @@ La propiedad `ProtectionLevel` se encuentra en muchas clases diferentes, como la
   
  Cuando el cliente llama al método `Price`, produce una excepción cuando recibe una respuesta del servicio. Esto se produce porque el cliente no especifica un `ProtectionLevel` en `ServiceContractAttribute` y, por consiguiente, el cliente utiliza el valor predeterminado (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) para todos los métodos, incluido el método `Price`. Sin embargo, el servicio devuelve el valor mediante el nivel <xref:System.Net.Security.ProtectionLevel.Sign> porque el contrato de servicios define un método único que tiene el nivel de protección definido en <xref:System.Net.Security.ProtectionLevel.Sign>. En este caso, se producirá un error en el cliente al validar la respuesta del servicio.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- <xref:System.ServiceModel.FaultContractAttribute>  
- <xref:System.ServiceModel.MessageContractAttribute>  
- <xref:System.ServiceModel.MessageHeaderAttribute>  
- <xref:System.ServiceModel.MessageBodyMemberAttribute>  
- <xref:System.Net.Security.ProtectionLevel>  
- [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)  
- [Cómo establecerla propiedad ProtectionLevel Property](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Especificación y gestión de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Uso de contratos de mensaje](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- <xref:System.ServiceModel.FaultContractAttribute>
+- <xref:System.ServiceModel.MessageContractAttribute>
+- <xref:System.ServiceModel.MessageHeaderAttribute>
+- <xref:System.ServiceModel.MessageBodyMemberAttribute>
+- <xref:System.Net.Security.ProtectionLevel>
+- [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)
+- [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Especificación y gestión de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Uso de contratos de mensaje](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

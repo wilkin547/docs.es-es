@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 34c0fd239d9e08dab4a107cb8447941e7ab3ecbe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: de7ef8aa456235b4fd3003230645db4f5a813a9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634069"
 ---
 # <a name="let-clause-visual-basic"></a>Let (Cláusula, Visual Basic)
 Calcula un valor y lo asigna a una nueva variable dentro de la consulta.  
@@ -28,8 +28,8 @@ Let variable = expression [, ...]
   
 |Término|Definición|  
 |---|---|  
-|`variable`|Requerido. Un alias que se puede usar para hacer referencia a los resultados de la expresión proporcionada.|  
-|`expression`|Requerido. Una expresión que se evalúa y se asigna a la variable especificada.|  
+|`variable`|Obligatorio. Un alias que se puede usar para hacer referencia a los resultados de la expresión proporcionada.|  
+|`expression`|Obligatorio. Una expresión que se evalúa y se asigna a la variable especificada.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `Let` cláusula permite calcular valores para cada resultado de la consulta y hacer referencia a ellos mediante un alias. El alias puede usarse en otras cláusulas, como la `Where` cláusula. El `Let` cláusula le permite crear una instrucción de consulta que es más fácil de leer porque se puede especificar un alias para una cláusula de expresión incluida en la consulta y sustituye el alias cada vez que se utiliza la cláusula de expresión.  
@@ -41,9 +41,9 @@ Let variable = expression [, ...]
   
  [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 1459484b858137836fcfdcd9db46d8e99a06e9c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a784dc57331ed4cbaeb8524dbb3b6ea9a06eca1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605596"
 ---
 # <a name="-delaysign"></a>-delaysign
 Especifica si el ensamblado estará firmado total o parcialmente.  
@@ -43,8 +43,8 @@ Especifica si el ensamblado estará firmado total o parcialmente.
   
 3.  Establezca el valor el **Retrasar firma solo** cuadro.  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Vea también
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
+- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

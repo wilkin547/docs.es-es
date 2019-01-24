@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510122"
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
 <a name="top"></a>
@@ -21,13 +21,13 @@ ms.locfileid: "33392894"
  En la seguridad participan tres partes interrelacionadas: espacio aislado, permisos y cumplimiento. Espacio aislado se refiere a la práctica de crear dominios aislados, donde una parte del código se trata como un código de plena confianza y la otra se restringe al conjunto de permisos concedidos al espacio aislado. El código de aplicación que se ejecuta en el conjunto de permisos del espacio aislado se considera transparente, es decir, no puede realizar operaciones que puedan afectar a la seguridad. El conjunto de permisos del espacio aislado se determina mediante evidencia (clase <xref:System.Security.Policy.Evidence>). La evidencia identifica los permisos específicos que los espacios aislados requieren y los tipos de espacios aislados que se pueden crear. El cumplimiento se refiere a permitir que el código transparente tan solo se ejecute dentro su conjunto de permisos.  
   
 > [!IMPORTANT]
->  La directiva de seguridad era un elemento clave en las versiones anteriores de .NET Framework, A partir de la [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], directiva de seguridad está obsoleta. La eliminación de la directiva de seguridad es independiente de la transparencia de seguridad. Para obtener información acerca de los efectos de este cambio, consulte [compatibilidad de directiva de seguridad de acceso de código y migración](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).  
+>  La directiva de seguridad era un elemento clave en las versiones anteriores de .NET Framework, A partir de la [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], directiva de seguridad está obsoleta. La eliminación de la directiva de seguridad es independiente de la transparencia de seguridad. Para obtener información acerca de los efectos de este cambio, consulte [migración y compatibilidad con la directiva de seguridad de acceso de código](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).  
   
  En este tema se describe el modelo de transparencia con más detalle. Contiene las siguientes secciones:  
   
 -   [Propósito del modelo de transparencia](#purpose)  
   
--   [Especificar el nivel de transparencia](#level)  
+-   [Especifica el nivel de transparencia](#level)  
   
 -   [Cumplimiento de la transparencia](#enforcement)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33392894"
  La transparencia se introdujo en .NET Framework 2.0 para simplificar el modelo de seguridad y para facilitar la escritura e implementación de aplicaciones y bibliotecas seguras. El código transparente también se usa en Microsoft Silverlight a fin de simplificar el desarrollo de aplicaciones de confianza parcial.  
   
 > [!NOTE]
->  Al desarrollar una aplicación de confianza parcial, hay que tener en cuenta los requisitos de permisos para los hosts de destino. Si se desarrolla una aplicación que usa recursos no permitidos por algunos hosts, la aplicación se compilará sin problemas, pero producirá error cuando se cargue en el entorno hospedado. Si ha desarrollado su aplicación con Visual Studio, puede habilitar la depuración en confianza parcial o en un conjunto de permisos restringidos desde el entorno de desarrollo. Para obtener más información, consulta [Cómo: Depurar una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La característica Calcular permisos proporcionada para aplicaciones ClickOnce también está disponible para cualquier aplicación de confianza parcial.  
+>  Al desarrollar una aplicación de confianza parcial, hay que tener en cuenta los requisitos de permisos para los hosts de destino. Si se desarrolla una aplicación que usa recursos no permitidos por algunos hosts, la aplicación se compilará sin problemas, pero producirá error cuando se cargue en el entorno hospedado. Si ha desarrollado su aplicación con Visual Studio, puede habilitar la depuración en confianza parcial o en un conjunto de permisos restringidos desde el entorno de desarrollo. Para obtener más información, vea [Cómo: Depuración de una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La característica Calcular permisos proporcionada para aplicaciones ClickOnce también está disponible para cualquier aplicación de confianza parcial.  
   
  [Volver al principio](#top)  
   
@@ -106,6 +106,6 @@ ms.locfileid: "33392894"
 ## <a name="transparency-enforcement"></a>Cumplimiento de la transparencia  
  Las reglas de transparencia no se aplican hasta que se calcula la transparencia. En ese momento, se genera una <xref:System.InvalidOperationException> si se infringe una regla de transparencia. El momento en que se calcula la transparencia depende de varios factores y no se puede predecir. Se calcula lo más tarde posible. En [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], el cálculo de transparencia de nivel de ensamblado se produce antes de que en .NET Framework 2.0. La única garantía es que el cálculo de transparencia se producirá cuando sea necesario. Esto es similar a cómo el compilador Just-In-Time (JIT) puede cambiar el punto cuando se compila un método y se detectan errores en ese método. El cálculo de transparencia es invisible si el código no tiene errores de transparencia.  
   
-## <a name="see-also"></a>Vea también  
- [Código transparente en seguridad, nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+## <a name="see-also"></a>Vea también
+- [Código transparente en seguridad, nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

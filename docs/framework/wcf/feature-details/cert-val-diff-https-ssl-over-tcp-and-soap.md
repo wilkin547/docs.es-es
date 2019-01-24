@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 978ef8f0abe3b65110864773a19c15f0c8363236
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f85b45186c7cbc299e68f6f914f591f337aa3993
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517077"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Diferencias en la validación de certificados entre HTTPS, SSL a través de TCP, y seguridad SOAP
 Puede usar certificados en Windows Communication Foundation (WCF) con seguridad de nivel de mensaje (SOAP) además de la seguridad de capa de transporte (TLS) sobre HTTP (HTTPS) o TCP. En este tema se describen las diferencias en la manera como se validan tales certificados.  
   
 ## <a name="validation-of-https-client-certificates"></a>Validación de certificados de cliente HTTPS  
- Al utilizar HTTPS para comunicarse entre un cliente y un servicio, el certificado que el cliente utiliza para autenticar al servicio debe soportar la confianza de la cadena. Es decir, debe encadenar a una entidad de certificación raíz de confianza. Si no, el nivel HTTP inicia una excepción <xref:System.Net.WebException> con el mensaje "Error en el servidor remoto: (403) Prohibido". WCF manifiesta esta excepción como un <xref:System.ServiceModel.Security.MessageSecurityException>.  
+ Al utilizar HTTPS para comunicarse entre un cliente y un servicio, el certificado que el cliente utiliza para autenticar al servicio debe soportar la confianza de la cadena. Es decir, debe encadenar a una entidad de certificación raíz de confianza. Si no, el nivel HTTP inicia una <xref:System.Net.WebException> con el mensaje "el servidor remoto devolvió un error: (403) prohibido". WCF manifiesta esta excepción como un <xref:System.ServiceModel.Security.MessageSecurityException>.  
   
 ## <a name="validation-of-https-service-certificates"></a>Validación de certificados de servicio HTTPS  
  Al utilizar HTTPS para comunicarse entre un cliente y un servicio, el certificado con el que se autentica el servidor debe soportar la confianza de la cadena. Es decir, debe encadenar a una entidad de certificación raíz de confianza. No se realiza ninguna comprobación para ver si se ha revocado el certificado. Puede invalidar este comportamiento registrando una devolución de llamada <xref:System.Net.Security.RemoteCertificateValidationCallback>, como se muestra en el código siguiente.  
@@ -47,6 +47,6 @@ Puede usar certificados en Windows Communication Foundation (WCF) con seguridad 
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Net.Security.RemoteCertificateValidationCallback>  
- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.Security.RemoteCertificateValidationCallback>
+- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

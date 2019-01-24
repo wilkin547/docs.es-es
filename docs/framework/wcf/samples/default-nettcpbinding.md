@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: d56c405fe9c46fcebaad8e5b217f44d709dc8db8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589988"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding predeterminado
 Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> . En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola.  
@@ -34,7 +34,7 @@ Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- El ejemplo anterior muestra cómo configurar un extremo para utilizar el enlace `netTcpBinding` con la configuración predeterminada. Si desea configurar el enlace `netTcpBinding`y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El extremo debe hacer referencia a la configuración de enlace por el nombre con un atributo `bindingConfiguration`. En este ejemplo, la configuración de enlace se denomina `Binding1` y se define como se muestra en el siguiente ejemplo de configuración.  
+ El ejemplo anterior muestra cómo configurar un punto de conexión para utilizar el enlace `netTcpBinding` con la configuración predeterminada. Si desea configurar el enlace `netTcpBinding`y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El extremo debe hacer referencia a la configuración de enlace por el nombre con un atributo `bindingConfiguration`. En este ejemplo, la configuración de enlace se denomina `Binding1` y se define como se muestra en el siguiente ejemplo de configuración.  
   
 ```xml  
 <services>  

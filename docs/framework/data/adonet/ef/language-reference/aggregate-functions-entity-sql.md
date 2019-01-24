@@ -2,12 +2,12 @@
 title: Funciones de agregado (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 63e366f323b38a24c4d067681b47d8a8b96125b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e606d0e355bb715cfa0536ad9e33f08f5f692951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492057"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Funciones de agregado (Entity SQL)
 Un agregado es una construcción de lenguaje que comprime una colección en una propiedad escalar como parte de una operación de grupo. Los agregados de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tienen dos formas:  
@@ -16,7 +16,7 @@ Un agregado es una construcción de lenguaje que comprime una colección en una 
   
 -   Agregados basados en grupos en expresiones de consulta que tienen una cláusula GROUP BY. Como en [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], los agregados de grupo aceptan los modificadores DISTINCT y ALL como modificadores para la entrada agregada.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primero intenta interpretar una expresión como una función de colección y, si la expresión es en el contexto de una expresión SELECT interpreta como un agregado de grupo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primero intenta interpretar una expresión como una función de la colección y si la expresión es en el contexto de una expresión SELECT interpreta como un agregado de grupo.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] define un operador agregado especial denominado [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Este operador permite obtener una referencia al conjunto de entrada agrupado. Esto permite más consultas de agrupación avanzadas, donde los resultados de la cláusula GROUP BY se pueden utilizar en lugares distintos de las funciones de colección o los agregados de grupo.  
   
@@ -42,5 +42,5 @@ Un agregado es una construcción de lenguaje que comprime una colección en una 
   
  Las expresiones usadas en la clausula GROUP BY se evalúan usando el mismo ámbito de resolución de nombres que sería visible para la expresión de la cláusula WHERE.  
   
-## <a name="see-also"></a>Vea también  
- [Funciones](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>Vea también
+- [Funciones](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

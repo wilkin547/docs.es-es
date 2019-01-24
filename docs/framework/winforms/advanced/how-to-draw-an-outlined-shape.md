@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Dibujar una forma con contorno'
+title: Procedimiento Dibujar una forma con contorno
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: b674c4d80ba6c70c0bdff6d020527a039e5c7baa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a7bd12fb1bdab6ea429a889521b7dd6c649a5e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512598"
 ---
-# <a name="how-to-draw-an-outlined-shape"></a>Cómo: Dibujar una forma con contorno
-En este ejemplo se dibuja contornos de elipses y rectángulos en un formulario.  
+# <a name="how-to-draw-an-outlined-shape"></a>Procedimiento Dibujar una forma con contorno
+En este ejemplo se dibuja elipses con contorno y rectángulos en un formulario.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-cpp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#6)]
@@ -35,15 +35,15 @@ En este ejemplo se dibuja contornos de elipses y rectángulos en un formulario.
  [!code-vb[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#6)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- No se puede llamar a este método el <xref:System.Windows.Forms.Form.Load> controlador de eventos. No se volverá a dibujar el contenido dibujado si el formulario cambia de tamaño o lo ocultan con otra forma. Para que el contenido automáticamente volver a dibujar, debe invalidar el <xref:System.Windows.Forms.Control.OnPaint%2A> método.  
+ No se puede llamar a este método el <xref:System.Windows.Forms.Form.Load> controlador de eventos. No se volverá a dibujar el contenido dibujado si el formulario cambia de tamaño u ocultado por otro formulario. Para que el contenido automáticamente volver a dibujar, se debe reemplazar el <xref:System.Windows.Forms.Control.OnPaint%2A> método.  
   
 ## <a name="robust-programming"></a>Programación sólida  
- Siempre debe llamar a <xref:System.IDisposable.Dispose%2A> en los objetos que consumen recursos del sistema, como <xref:System.Drawing.Pen> y <xref:System.Drawing.Graphics> objetos.  
+ Siempre debe llamar a <xref:System.IDisposable.Dispose%2A> en los objetos que consuman recursos del sistema, como <xref:System.Drawing.Pen> y <xref:System.Drawing.Graphics> objetos.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Drawing.Graphics.DrawEllipse%2A>  
- <xref:System.Windows.Forms.Control.OnPaint%2A>  
- <xref:System.Drawing.Graphics.DrawRectangle%2A>  
- [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Drawing.Graphics.DrawEllipse%2A>
+- <xref:System.Windows.Forms.Control.OnPaint%2A>
+- <xref:System.Drawing.Graphics.DrawRectangle%2A>
+- [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

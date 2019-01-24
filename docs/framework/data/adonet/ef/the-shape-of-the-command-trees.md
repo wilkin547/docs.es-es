@@ -2,12 +2,12 @@
 title: Forma de los árboles de comandos
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b859dfaa6350341b4b90753fd5dda3339e6bb584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573037"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forma de los árboles de comandos
 El módulo de generación de SQL es responsable de la generación de una consulta SQL back-end específica en función de una expresión determinada del árbol de comandos de consulta de entrada. En esta sección se describen las características, propiedades y estructura de los árboles de comandos de consulta.  
@@ -69,7 +69,7 @@ El módulo de generación de SQL es responsable de la generación de una consult
   
 -   Funciones definidas por el usuario.  
   
- Funciones canónicas (vea [funciones canónicas](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) para obtener más información) se especifican como parte de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], y los proveedores deben proporcionar implementaciones para las funciones canónicas en función de dichas especificaciones. Las funciones de almacén se basan en las especificaciones del manifiesto de proveedor correspondiente. Las funciones definidas por el usuario se basan en especificaciones de SSDL.  
+ Funciones canónicas (vea [funciones canónicas](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) para obtener más información) se especifican como parte de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], y los proveedores deben proporcionar implementaciones para las funciones canónicas basadas en estas especificaciones. Las funciones de almacén se basan en las especificaciones del manifiesto de proveedor correspondiente. Las funciones definidas por el usuario se basan en especificaciones de SSDL.  
   
  Además, las funciones con el atributo NiladicFunction no tienen ningún argumento y se deben traducir sin el paréntesis al final.  Es decir, a  *\<functionName >* en lugar de  *\<functionName > ()*.  
   
@@ -96,14 +96,14 @@ El módulo de generación de SQL es responsable de la generación de una consult
 #### <a name="dbscanexpression"></a>DbScanExpression  
  Cuando se utiliza en árboles de comandos de salida, DbScanExpression representa eficazmente una búsqueda en una tabla, una vista o una consulta de almacén, representadas por EnitySetBase::Target.  
   
- Si la propiedad de metadatos "Definición de consulta" del destino no es null, representa una consulta, el texto de consulta para el que se proporciona en esa propiedad de metadatos en lenguaje específico del proveedor (o dialecto) como se especifica en la definición de esquema de almacenamiento.  
+ Si la propiedad de metadatos "Definición de consulta" de destino es distinto de null, representa una consulta, el texto de consulta para el que se proporciona en esa propiedad de metadatos de lenguaje específico del proveedor (o dialecto) como se especifica en la definición de esquema del almacén.  
   
- De lo contrario, el destino representa una tabla o una vista. Su prefijo de esquema se encuentra en la propiedad de metadatos de "Schema", si no es null, en caso contrario, es el nombre de contenedor de entidades.  El nombre de tabla o vista es la propiedad de metadatos "Table", si no es null, en caso contrario la propiedad nombre de la entidad base del conjunto.  
+ De lo contrario, el destino representa una tabla o una vista. Su prefijo de esquema está en la propiedad de metadatos "Schema", si no es null, en caso contrario, es el nombre del contenedor de entidades.  El nombre de tabla o vista es tanto la propiedad de metadatos "Table", si no es null, en caso contrario, la propiedad de nombre de la entidad establecida base.  
   
  Todas estas propiedades proceden de la definición del elemento EntitySet correspondiente en el archivo de definición de esquemas de almacenamiento (SSDL).  
   
 ### <a name="using-primitive-types"></a>Usar tipos primitivos  
  Cuando se hace referencia a los tipos primitivos en los árboles de comandos de salida, normalmente se hace referencia a ellos en los tipos primitivos del modelo conceptual. Sin embargo, para ciertas expresiones, los proveedores necesitan el tipo primitivo de almacén correspondiente. Entre los ejemplos de estas expresiones se encuentran DbCastExpression y posiblemente DbNullExpression, si el proveedor necesita convertir el valor NULL al tipo correspondiente. En estos casos, los proveedores deben realizar la asignación al tipo de proveedor en función de la clase del tipo primitivo y sus facetas.  
   
-## <a name="see-also"></a>Vea también  
- [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Vea también
+- [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

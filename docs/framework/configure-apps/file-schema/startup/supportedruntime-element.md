@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600523"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; elemento
 
 Especifica qué versiones de Common Language Runtime admite la aplicación. Todas las aplicaciones compiladas con la versión 1.1 o posterior de .NET Framework deberían usar este elemento.  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-&nbsp;&nbsp;[\<Inicio >](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime >**  
+&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
 ## <a name="syntax"></a>Sintaxis
   
@@ -66,7 +66,7 @@ El `runtime` atributo especifica la versión de Common Language Runtime (CLR) qu
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0 4.7.2|"v4.0"|  
+|4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>Valores de "sku id"
@@ -110,6 +110,6 @@ Este elemento se puede utilizar en el archivo de configuración de la aplicació
 
 ## <a name="see-also"></a>Vea también
 
- [Esquema de la configuración de inicio](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Ejecución en paralelo en proceso](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [Esquema de la configuración de inicio](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Ejecución en paralelo en proceso](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

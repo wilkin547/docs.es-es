@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0a1be35a37a9f3d0fa94d13f5bc50df213bd1775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f663cd95c979ec9f2b81ccf173b4418321228f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570530"
 ---
 # <a name="transformations"></a>Transformaciones
 Las transformaciones se usan para girar, escalar, traducir o sesgar <xref:System.Windows.FrameworkElement> objetos.  
@@ -30,8 +30,8 @@ Las transformaciones se usan para girar, escalar, traducir o sesgar <xref:System
  [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Transform>  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Transform>
+- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)

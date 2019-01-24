@@ -8,21 +8,21 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: d39fdf910aaec1d0a53d68fa7c6715ec344e734d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7735aea55f03b0703ebb7b0e3c5f958b57f1238d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611311"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; elemento (configuración de red)
 Configura el directorio local de un servidor SMTP (Protocolo simple de transferencia de correo).  
   
  \<configuration>  
-\<System.NET >  
-\<mailSettings >  
-\<SMTP >  
-\<specifiedPickupDirectory >  
+\<system.net>  
+\<mailSettings>  
+\<smtp>  
+\<specifiedPickupDirectory>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,8 +70,8 @@ Configura el directorio local de un servidor SMTP (Protocolo simple de transfere
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>  
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

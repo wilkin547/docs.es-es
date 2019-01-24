@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516166"
 ---
 # <a name="denial-of-service"></a>Denegación de servicio
 La denegación de servicio se produce cuando un sistema está sobrecargado de tal manera que no se pueden procesar los mensajes, o se procesan muy lentamente.  
@@ -26,7 +26,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Cliente malintencionado envía solicitudes de licencia en exceso al servicio  
  Si un cliente malintencionado bombardea un servicio con solicitudes de licencia excesivas, puede hacer que el servidor utilice memoria en exceso.  
   
- Mitigación: use las propiedades siguientes de la clase <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>:  
+ Mitigación: Utilice las siguientes propiedades de la <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> clase:  
   
 -   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: controla el número máximo de `SecurityContextToken`s limitados por tiempo que el servidor almacena en memoria caché después de `SPNego` o negociación `SSL`.  
   
@@ -49,7 +49,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Las implementaciones no válidas de IAuthorizationPolicy pueden hacer que el servicio no responda  
  Llamar al método <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> en una implementación defectuosa de la interfaz <xref:System.IdentityModel.Policy.IAuthorizationPolicy> puede hacer que el servicio no responda.  
   
- Mitigación: utilice solamente código de confianza. Es decir, solo utilice código que haya escrito y probado, o que provenga de un proveedor confiable. No permita la conexión de extensiones que no son de confianza de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> a su código sin la debida consideración. Esto se aplica a todas las extensiones usadas en una implementación del servicio. WCF no realiza distinciones entre el código de la aplicación y el código externo que está conectado en el uso de puntos de extensibilidad.  
+ Mitigación: Use solo el código de confianza. Es decir, solo utilice código que haya escrito y probado, o que provenga de un proveedor confiable. No permita la conexión de extensiones que no son de confianza de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> a su código sin la debida consideración. Esto se aplica a todas las extensiones usadas en una implementación del servicio. WCF no realiza distinciones entre el código de la aplicación y el código externo que está conectado en el uso de puntos de extensibilidad.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Puede que el tamaño máximo del token de Kerberos necesite cambio de tamaño  
  Si un cliente pertenece a un número grande de grupos (aproximadamente 900, aunque el número real varía dependiendo de los grupos), puede producirse un problema cuando el bloque de un encabezado de mensaje supera los 64 kilobytes. En ese caso, puede aumentar el tamaño máximo de token de Kerberos, como se describe en el artículo de Microsoft Support "[la autenticación Kerberos de Internet Explorer no funciona debido a un búfer insuficiente al conectarse a IIS](https://go.microsoft.com/fwlink/?LinkId=89176)." También es posible que deba aumentar el tamaño máximo de mensaje WCF para dar cabida a token más grande de Kerberos.  
@@ -69,21 +69,21 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
 ## <a name="protect-configuration-files-with-acls"></a>Proteger los archivos de configuración con ACL  
  Puede especificar demandas necesarias y opcionales en código y archivos de configuración para los tokens emitidos [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Esto tiene como resultado que se emitan elementos correspondientes en mensajes `RequestSecurityToken` que se envían al servicio de token de seguridad. Un atacante puede modificar código o configuración para eliminar demandas necesarias u opcionales, pudiendo ganar así la posibilidad de que el servicio de token de seguridad emita un token que no permite el acceso al servicio especificado.  
   
- Para mitigar: exija el acceso al equipo para modificar el archivo de configuración. Use listas de control de acceso (ACL) de archivo para proteger los archivos de configuración. WCF requiere que el código se esté en el directorio de la aplicación o la caché global de ensamblados antes de que este código se pueda cargar desde la configuración. Utilice ACL del directorio para proteger los directorios.  
+ Para mitigar: Requerir acceso al equipo para modificar el archivo de configuración. Use listas de control de acceso (ACL) de archivo para proteger los archivos de configuración. WCF requiere que el código se esté en el directorio de la aplicación o la caché global de ensamblados antes de que este código se pueda cargar desde la configuración. Utilice ACL del directorio para proteger los directorios.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Se ha alcanzado el número máximo de sesiones seguras para un servicio  
  Cuando un servicio autentica correctamente un cliente y una sesión segura se establece con el servicio, el servicio sigue en contacto con la sesión hasta que el cliente la cancela o la sesión expira. Cada sesión establecida afecta al límite para el número máximo de sesiones simultáneas activas con un servicio. Cuando se alcanza este límite, se rechazan los clientes que intentan crear una nueva sesión con ese servicio hasta que una o más sesiones activas expiren o sean canceladas por un cliente. Un cliente puede tener varias sesiones con un servicio y cada una de esas sesiones afecta al límite.  
   
 > [!NOTE]
->  Cuando se usan sesiones con estado, el párrafo anterior no se aplica. Para obtener más información acerca de las sesiones con estado, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Cuando se usan sesiones con estado, el párrafo anterior no se aplica. Para obtener más información acerca de las sesiones con estado, vea [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Para mitigar esto, establezca el límite para el número máximo de sesiones activas y la duración máxima para una sesión estableciendo la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Vea también
+- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

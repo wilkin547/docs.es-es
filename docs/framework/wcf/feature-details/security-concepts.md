@@ -2,12 +2,12 @@
 title: Conceptos de seguridad
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: cdac8ab2ee257924327cc082a55839903c32f80c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 61e993e8491a380410ffe772baa4d9f817f8cb23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610817"
 ---
 # <a name="security-concepts"></a>Conceptos de seguridad
 En esta sección explica brevemente los conceptos asociados con la seguridad de Windows Communication Foundation (WCF).  
@@ -36,7 +36,7 @@ En esta sección explica brevemente los conceptos asociados con la seguridad de 
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Extensión de la seguridad](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vea también
+- [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)
+- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

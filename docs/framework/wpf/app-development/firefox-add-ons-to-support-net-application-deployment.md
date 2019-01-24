@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: e8f6947a0fe39998d9dc229ad7b95bfd2d426f6c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31c6313adb24cd1a2cfca319ac5e243fcdf2b6a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583264"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Complementos de Firefox para la implementación de aplicaciones .NET
 Habilitar Windows Presentation Foundation (WPF) complemento para Firefox y el Asistente de .NET Framework para Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], sueltos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]y las aplicaciones ClickOnce para que funcione con el explorador Mozilla Firefox.  
@@ -33,7 +33,7 @@ Habilitar Windows Presentation Foundation (WPF) complemento para Firefox y el As
   
  El Asistente de .NET Framework para Firefox se incluye con el [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Para obtener información acerca de cómo quitar el Asistente de .NET Framework para Firefox, consulte [cómo quitar el Asistente de .NET Framework para Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
-## <a name="see-also"></a>Vea también  
- [Implementar una aplicación WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Información general sobre las aplicaciones de explorador XAML de WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
- [Detectar si está instalado el complemento WPF para Firefox](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+## <a name="see-also"></a>Vea también
+- [Implementar una aplicación WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Información general sobre las aplicaciones de explorador XAML de WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [Detectar si está instalado el complemento WPF para Firefox](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

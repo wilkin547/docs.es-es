@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612260"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType (Enumeración)
 Contiene valores que describen los tipos nativos no administrados.  
@@ -114,7 +114,7 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_LPSTR`|Un valor de cadena LPSTR.|  
 |`NATIVE_TYPE_LPWSTR`|Un valor de cadena LPWSTR.|  
 |`NATIVE_TYPE_LPTSTR`|Un valor de cadena LPTSTR.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Un valor de cadena fijo definido por el sistema.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|Valor de cadena fija, definido por el sistema.|  
 |`NATIVE_TYPE_OBJECTREF`|Obsoleto.|  
 |`NATIVE_TYPE_IUNKNOWN`|Interoperabilidad COM.|  
 |`NATIVE_TYPE_IDISPATCH`|Interoperabilidad COM.|  
@@ -132,20 +132,20 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_FUNC`|Puntero de función.|  
 |`NATIVE_TYPE_ASANY`|Una referencia a cualquier tipo nativo.|  
 |`NATIVE_TYPE_ARRAY`|Una referencia a una matriz con los miembros de un tipo no especificado.|  
-|`NATIVE_TYPE_LPSTRUCT`|Un puntero de entero de 32 bits a una estructura.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Un tipo nativo del contador de referencias personalizado.<br /><br /> Esto debe ir seguida de una cadena con el formato siguiente: "el contador de referencias de tipo nativo/0Nombre de nombre escriba nombre/0Cookie opcional/0" o "{nativo escriba GUID} / 0Nombre contador de referencias de tipo nombre/0Cookie opcional/0"|  
+|`NATIVE_TYPE_LPSTRUCT`|Puntero a una estructura de entero de 32 bits.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Un tipo nativo del contador de referencias personalizado.<br /><br /> Esto debe ir seguido por una cadena el formato siguiente: "El contador de referencias de tipo nativo 0Nombre/nombre escriba nombre/0Cookie opcional/0" o "{nativo GUID de tipo} / tipo de contador de referencias 0Nombre nombre/0Cookie opcional/0"|  
 |`NATIVE_TYPE_ERROR`|Interoperabilidad COM.<br /><br /> Con ELEMENT_TYPE_I4 este tipo se asigna a VT_HRESULT.|  
 |`NATIVE_TYPE_IINSPECTABLE`|Nativo `IInspectable` tipo.|  
 |`NATIVE_TYPE_HSTRING`|Nativo `HString`.|  
 |`NATIVE_TYPE_MAX`|Un valor no válido.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.UnmanagedType>  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.InteropServices.UnmanagedType>
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

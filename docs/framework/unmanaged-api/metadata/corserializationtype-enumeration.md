@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446664"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637377"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType (Enumeración)
 Especifica cómo se serializa un objeto por common language runtime.  
@@ -68,8 +68,8 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_U2`|Objeto se serializa como un entero de 2 bytes sin signo.|  
 |`SERIALIZATION_TYPE_I4`|Objeto se serializa como un entero de 4 bytes con signo.|  
 |`SERIALIZATION_TYPE_U4`|Objeto se serializa como un entero de 4 bytes sin signo.|  
-|`SERIALIZATION_TYPE_I8`|Objeto se serializa como un entero de 8 bits con signo.|  
-|`SERIALIZATION_TYPE_U8`|Objeto se serializa como un entero de 8 bits sin signo.|  
+|`SERIALIZATION_TYPE_I8`|Objeto se serializa como un entero de 8 bytes con signo.|  
+|`SERIALIZATION_TYPE_U8`|Objeto se serializa como un entero de 8 bytes sin signo.|  
 |`SERIALIZATION_TYPE_R4`|Objeto se serializa como un punto flotante de 4 bytes.|  
 |`SERIALIZATION_TYPE_R8`|Objeto se serializa como un punto flotante de 8 bytes.|  
 |`SERIALIZATION_TYPE_STRING`|Objeto se serializa como un tipo System.String.|  
@@ -81,11 +81,11 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_ENUM`|Objeto se serializa como una enumeración.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

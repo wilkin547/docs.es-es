@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598820"
 ---
 # <a name="string-data-type-visual-basic"></a>String (Tipo de datos, Visual Basic)
 Contiene secuencias de puntos de código (2 bytes) de 16 bits sin signo de ese intervalo de valor comprendido entre 0 y 65535. Cada *punto de código*, o código de carácter representa un único carácter Unicode. Puede contener una cadena de 0 a dos mil millones (2 ^ 31) caracteres Unicode.  
@@ -78,11 +78,11 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la <xref:System.String?displayProperty=nameWithType> clase.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.String?displayProperty=nameWithType>  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
- [Char (tipo de datos)](../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.String?displayProperty=nameWithType>
+- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
+- [Char (tipo de datos)](../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

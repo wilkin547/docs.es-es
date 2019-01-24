@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562601"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Aplicar estilo a los controles al recibir el foco y FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona dos mecanismos paralelos para cambiar el aspecto visual de un control cuando recibe el foco de teclado. El primer mecanismo consiste en usar establecedores de propiedad para propiedades como <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dentro del estilo o plantilla que se aplica al control. El segundo mecanismo consiste en proporcionar un estilo independiente como el valor de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad; el "estilo visual de foco" crea un árbol visual independiente para un adorno que dibuja encima del control, en lugar de cambiar el árbol visual del control u otras interfaces de usuario elemento reemplazándola. En este tema se describen los escenarios en los que es apropiado cada uno de estos mecanismos.  
@@ -76,8 +76,8 @@ ms.locfileid: "43744990"
 ### <a name="other-focus-properties"></a>Otras propiedades de foco  
  Si desea que todas las posibles causas del cambio de foco para producir un comportamiento visual, debe basar un establecedor o desencadenador en el <xref:System.Windows.UIElement.IsFocused%2A> propiedad de dependencia, o bien en el <xref:System.Windows.UIElement.GotFocus> o <xref:System.Windows.UIElement.LostFocus> los eventos se usa para un <xref:System.Windows.EventSetter>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Información general sobre el foco](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
+- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Información general sobre el foco](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)

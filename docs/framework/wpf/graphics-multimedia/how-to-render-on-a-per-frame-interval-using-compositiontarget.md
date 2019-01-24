@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Representar un intervalo para cada fotograma mediante CompositionTarget'
+title: Procedimiento Representar un intervalo para cada fotograma mediante CompositionTarget
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511230"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Cómo: Representar un intervalo para cada fotograma mediante CompositionTarget
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Procedimiento Representar un intervalo para cada fotograma mediante CompositionTarget
 El motor de animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona muchas características para crear animaciones basadas en fotogramas. Sin embargo, hay escenarios de aplicación en el los que necesita un control específico sobre la representación según el fotograma. La <xref:System.Windows.Media.CompositionTarget> objeto proporciona la capacidad para crear animaciones personalizadas basándose en una devolución de llamada por fotograma.  
   
  <xref:System.Windows.Media.CompositionTarget> es una clase estática que representa la superficie de visualización en el que se va a dibujar la aplicación. El <xref:System.Windows.Media.CompositionTarget.Rendering> evento se provoca cada vez que se dibuja la escena de la aplicación. La velocidad de los fotogramas de representación es el número de veces que se dibuja la escena por segundo.  
@@ -40,6 +40,6 @@ El motor de animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
   
  Adición o eliminación de una representación <xref:System.EventHandler> delegado mientras se está activando el evento se retrasará hasta que una vez finalizado la el evento de activación. Esto es coherente con la forma <xref:System.MulticastDelegate>-basado en eventos se controlan en Common Language Runtime (CLR). Tenga en cuenta que no se garantiza que los eventos de representación se llamen en un orden determinado. Si tiene varios <xref:System.EventHandler> delegados que se basan en un orden determinado, debe registrar una sola <xref:System.Windows.Media.CompositionTarget.Rendering> eventos y multiplexado orden los delegados en el lugar correcto usted mismo.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.CompositionTarget>  
- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.CompositionTarget>
+- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

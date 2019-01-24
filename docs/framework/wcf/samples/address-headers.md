@@ -2,12 +2,12 @@
 title: Encabezados de dirección
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: d2e38c674e0a3ea10df2e8363e90f4adf7edc9da
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c4a64b80ac629c740aea3dbdec2ab270ab061c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632938"
 ---
 # <a name="address-headers"></a>Encabezados de dirección
 El ejemplo de encabezados de dirección muestra cómo los clientes pueden pasar parámetros de referencia a un servicio mediante Windows Communication Foundation (WCF).  
@@ -19,7 +19,7 @@ El ejemplo de encabezados de dirección muestra cómo los clientes pueden pasar 
   
  La parte del modelo de referencia de punto de conexión es que cada referencia puede llevar algunos parámetros de referencia que agregan información de identificación excepcional. En WCF, estos parámetros de referencia se modelan como instancias de `AddressHeader` clase.  
   
- En este ejemplo, el cliente agrega un parámetro de referencia a `EndpointAddress` del extremo del cliente. El servicio busca este parámetro de referencia y utiliza su valor en la lógica de su operación del servicio "Hola".  
+ En este ejemplo, el cliente agrega un parámetro de referencia a `EndpointAddress` del punto de conexión del cliente. El servicio busca este parámetro de referencia y utiliza su valor en la lógica de su operación del servicio "Hola".  
   
 ## <a name="client"></a>Cliente  
  Para que el cliente envíe un parámetro de referencia, debe agregar un `AddressHeader` a `EndpointAddress` de `ServiceEndpoint`. Dado que la clase `EndpointAddress` es inmutable, la modificación de una dirección del extremo se debe hacer utilizando la clase `EndpointAddressBuilder`. El código siguiente inicializa el cliente para enviar un parámetro de referencia como parte de su mensaje.  
@@ -34,7 +34,7 @@ builder.Headers.Add(header);
 client.Endpoint.Address = builder.ToEndpointAddress();  
 ```  
   
- El código crea un `EndpointAddressBuilder` utilizando el `EndpointAddress` original como un valor inicial. Agrega a continuación un encabezado de dirección creado recientemente; la llamada a `CreateAddressHeadercreates` un encabezado con un nombre determinado, espacio de nombres y valor. Aquí el valor es "John." Una vez agregado al generador el encabezado, el método `ToEndpointAddress()` convierte el generador (mutable) en una dirección del extremo (inmutable), la cual está asignada al campo de dirección del extremo del cliente.  
+ El código crea un `EndpointAddressBuilder` utilizando el `EndpointAddress` original como un valor inicial. Agrega a continuación un encabezado de dirección creado recientemente; la llamada a `CreateAddressHeadercreates` un encabezado con un nombre determinado, espacio de nombres y valor. Aquí el valor es "John." Una vez agregado al generador el encabezado, el método `ToEndpointAddress()` convierte el generador (mutable) en una dirección del punto de conexión (inmutable), la cual está asignada al campo de dirección del punto de conexión del cliente.  
   
  Ahora cuando el cliente llama a `Console.WriteLine(client.Hello());`, el servicio puede obtener el valor de este parámetro de dirección, como se ha visto en el resultado del cliente.  
   

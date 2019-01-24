@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf73f382c1da15e0285ee95be9e8bce39575ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557371"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr (Enumeración)
-Contiene valores que describen la <xref:System.Type> parámetros de tipos genéricos, como usan en las llamadas a [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
+Contiene valores que describen el <xref:System.Type> parámetros para los tipos genéricos, como las usadas en llamadas a [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,7 +49,7 @@ typedef enum CorGenericParamAttr {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`gpVarianceMask`|La varianza de parámetros solo se aplica a parámetros genéricos para las interfaces y delegados.|  
+|`gpVarianceMask`|Varianza de parámetro solo se aplica a parámetros genéricos para interfaces y delegados.|  
 |`gpNonVariant`|Indica la ausencia de varianza.|  
 |`gpCovariant`|Indica la covarianza.|  
 |`gpContravariant`|Indica la contravarianza.|  
@@ -60,11 +60,11 @@ typedef enum CorGenericParamAttr {
 |`gpDefaultConstructorConstraint`|Indica que el <xref:System.Type> parámetro debe tener un constructor público predeterminado que no toma ningún parámetro.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

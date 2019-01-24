@@ -5,17 +5,17 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 6b7c13355fe46d4b768699555bbaf522e3b49c73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d1d3530bfd8bc85d6ae2d6741cbe6d48b381f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570023"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Información general sobre las extensiones de marcado para el lenguaje XAML
 Las extensiones de marcado son una técnica XAML para obtener un valor que no es un tipo primitivo ni específico de XAML. Para el uso de atributos, las extensiones de marcado usan la secuencia de caracteres conocida de una llave de apertura `{` para entrar en el ámbito de la extensión de marcado y una llave de cierre `}` para salir. Al usar los servicios XAML de .NET Framework, puede usar algunas de las extensiones de marcado del lenguaje XAML predefinidas del ensamblado System.Xaml. También puede crear subclases de la clase <xref:System.Windows.Markup.MarkupExtension> , definida en System.Xaml, y definir sus propias extensiones de marcado. Asimismo, puede usar las extensiones de marcado definidas por un marco determinado si ya se hace referencia a dicho marco.  
   
- Cuando se accede al uso de una extensión de marcado, el escritor de objetos XAML puede proporcionar servicios a una clase <xref:System.Windows.Markup.MarkupExtension> personalizada a través de un punto de conexión de servicio en la invalidación <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType>. Los servicios pueden usarse para obtener contexto sobre el uso, las capacidades concretas del escritor de objetos, el contexto de esquema XAML, etcétera.  
+ Cuando se accede al uso de una extensión de marcado, el escritor de objetos XAML puede proporcionar servicios a una clase <xref:System.Windows.Markup.MarkupExtension> personalizada a través de un punto de conexión de servicio en la invalidación <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> . Los servicios pueden usarse para obtener contexto sobre el uso, las capacidades concretas del escritor de objetos, el contexto de esquema XAML, etcétera.  
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
 ## <a name="xaml-defined-markup-extensions"></a>Extensiones de marcado definidas por XAML  
@@ -39,8 +39,8 @@ Las extensiones de marcado son una técnica XAML para obtener un valor que no es
 ### <a name="xreference"></a>x:Reference  
  `x:Reference` forma parte de XAML 2009, una extensión del lenguaje original (2006). `x:Reference` representa una referencia a otro objeto existente en un gráfico de objetos. Dicho objeto se identifica por su `x:Name`. Para obtener más información, consulta [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md).  
   
-### <a name="other-x-constructs"></a>Otras construcciones x:  
- Existen otras construcciones `x:` que admiten características del lenguaje XAML, pero no se implementan como extensiones de marcado. Para obtener más información, consulta [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+### <a name="other-x-constructs"></a>Otros x: Construcciones  
+ Existen otras construcciones `x:` que admiten características del lenguaje XAML, pero no se implementan como extensiones de marcado. Para obtener más información, consulte [XAML Namespace (x:) Características del lenguaje](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>Clase base MarkupExtension  
@@ -116,7 +116,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="property-element-usage-of-a-markup-extension"></a>Uso de elementos de propiedad de una extensión de marcado  
  Los escenarios para los usos de la extensión de marcado suelen estar diseñados para emplear la extensión de marcado en el uso de atributos. Sin embargo, también es posible definir la clase de respaldo de modo que admita el uso de elementos de propiedad.  
   
- Para admitir el uso de elementos de propiedad de la extensión de marcado, defina un constructor predeterminado público. Debe ser un constructor de instancia, no un constructor estático. Esto es necesario porque un procesador XAML generalmente debe invocar el constructor predeterminado en todos los elementos de objeto que procesa desde el marcado, lo que incluye las clases de extensión de marcado como elementos de objeto. En el caso de escenarios avanzados, puede definir rutas de acceso de construcción no predeterminadas para las clases. (Para obtener más información, consulte [x: FactoryMethod (directiva)](../../../docs/framework/xaml-services/x-factorymethod-directive.md).) Sin embargo, no debe usar estos patrones con fines de extensión de marcado, ya que esto dificulta mucho la detección del patrón de uso, tanto a los diseñadores como a los usuarios del marcado sin formato.  
+ Para admitir el uso de elementos de propiedad de la extensión de marcado, defina un constructor predeterminado público. Debe ser un constructor de instancia, no un constructor estático. Esto es necesario porque un procesador XAML generalmente debe invocar el constructor predeterminado en todos los elementos de objeto que procesa desde el marcado, lo que incluye las clases de extensión de marcado como elementos de objeto. En el caso de escenarios avanzados, puede definir rutas de acceso de construcción no predeterminadas para las clases. (Para obtener más información, consulte [x: FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md).) Sin embargo, no debe usar estos patrones con fines de extensión de marcado, ya que esto dificulta mucho la detección del patrón de uso, tanto a los diseñadores como a los usuarios del marcado sin formato.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>Atribución para una extensión de marcado personalizada  
@@ -154,7 +154,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  Si está trabajando con un flujo de nodo XAML en la ruta de acceso de guardado, no suele haber nada en una representación del gráfico de objetos que informe de que el objeto que se va a serializar se proporcionó originalmente mediante el uso de una extensión de marcado y un resultado `ProvideValue` . Los escenarios que necesitan conservar los usos de la extensión de marcado para realizar un recorrido de ida y vuelta y, al mismo tiempo, capturar otros cambios en el gráfico de objetos deben diseñar sus propias técnicas para conservar el conocimiento del uso de una extensión de marcado a partir de la entrada XAML original. Por ejemplo, para restaurar los usos de la extensión de marcado, puede que necesite trabajar con el flujo de nodo en la ruta de acceso de guardado para restaurar los usos de la extensión de marcado, o bien realizar algún tipo de combinación entre el XAML original y el XAML de ida y vuelta. Algunos marcos que implementan XAML, como WPF, usan tipos intermedios (expresiones) para ayudar a representar casos cuando los usos de la extensión de marcado proporcionaron los valores.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Markup.MarkupExtension>  
- [Convertidores de tipos y extensiones de marcado para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [Extensiones de marcado y XAML de WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Markup.MarkupExtension>
+- [Convertidores de tipos y extensiones de marcado para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
+- [Extensiones de marcado y XAML de WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a523a58a137f8276df854da956b3ab0b75cbcec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571631"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity (Función)
 Compara dos identidades de ensamblado para determinar si son equivalentes.  
@@ -48,7 +48,7 @@ STDAPI CompareAssemblyIdentity (
  [in] Una marca booleana que indica la unificación especificada por el usuario para `pwzAssemblyIdentity1`.  
   
  `pwzAssemblyIdentity2`  
- [in] Identidad textual del segundo ensamblado de la comparación.  
+ [in] Identidad textual del segundo ensamblado en la comparación.  
   
  `fUnified2`  
  [in] Una marca booleana que indica la unificación especificada por el usuario para `pwzAssemblyIdentity2`.  
@@ -60,30 +60,30 @@ STDAPI CompareAssemblyIdentity (
  [out] Un [AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) enumeración que contiene información detallada sobre la comparación.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `pfEquivalent` Devuelve un valor booleano que indica si los dos ensamblados son equivalentes. `pResult` Devuelve uno de los `AssemblyComparisonResult` valores para dar el motivo más detallado para el valor de `pfEquivalent`.  
+ `pfEquivalent` Devuelve un valor booleano que indica si los dos ensamblados son equivalentes. `pResult` Devuelve uno de los `AssemblyComparisonResult` valores para proporcionar una razón más detallada para el valor de `pfEquivalent`.  
   
 ## <a name="remarks"></a>Comentarios  
  `CompareAssemblyIdentity` comprueba si `pwzAssemblyIdentity1` y `pwzAssemblyIdentity2` son equivalentes. `pfEquivalent` se establece en `true` en una o varias de las condiciones siguientes:  
   
--   Las dos identidades de ensamblado son equivalentes. Para los ensamblados con nombre seguro, la equivalencia requiere que el nombre del ensamblado, versión, token de clave pública y la referencia cultural para que sean idénticos. Para los ensamblados con nombres simples, equivalencia requiere a una coincidencia en el nombre del ensamblado y la referencia cultural.  
+-   Las identidades de dos ensamblado son equivalentes. Para los ensamblados con nombre seguro, la equivalencia requiere que el nombre del ensamblado, versión, token de clave pública y la referencia cultural para que sean idénticos. Para los ensamblados nombres simple, la equivalencia requiere a una coincidencia en el nombre de ensamblado y la referencia cultural.  
   
--   Ambas identidades de ensamblado hacen referencia a ensamblados que se ejecutan en .NET Framework. Esta condición devuelve `true` incluso si no coinciden los números de versión de ensamblado.  
+-   Ambas identidades de ensamblado hacen referencia a ensamblados que se ejecutan en .NET Framework. Esta condición devuelve `true` incluso si no coinciden los números de versión del ensamblado.  
   
 -   Los dos ensamblados no son ensamblados administrados, pero `fUnified1` o `fUnified2` se estableció en `true`.  
   
- El `fUnified` marca indica que todos los números de versión hasta el número de versión del ensamblado con nombre seguro se consideran equivalentes al ensamblado con nombre seguro. Por ejemplo, si el valor de `pwzAssemblyIndentity1` es "MyAssembly, versión = 3.0.0.0, culture = neutral, publicKeyToken =..." y el valor de `fUnified1` es `true`, esto indica que todas las versiones de MyAssembly desde la versión 0.0.0.0 hasta la versión 3.0.0.0 deberían se tratan como equivalentes. En tal caso, si `pwzAssemblyIndentity2` hace referencia al mismo ensamblado como `pwzAssemblyIndentity1`, salvo que tenga un número de versión menor, `pfEquivalent` está establecido en `true`. Si `pwzAssemblyIdentity2` hace referencia a un número de versión mayor, `pfEquivalent` está establecido en `true` sólo si el valor de `fUnified2` es `true`.  
+ El `fUnified` marca indica que todos los números de versión hasta el número de versión del ensamblado con nombre seguro se consideran equivalentes al ensamblado con nombre seguro. Por ejemplo, si el valor de `pwzAssemblyIndentity1` es "MyAssembly, versión = 3.0.0.0, culture = neutral, publicKeyToken =..." y el valor de `fUnified1` es `true`, esto indica que deben ser todas las versiones de MyAssembly desde la versión 0.0.0.0 hasta la versión 3.0.0.0 se tratan como equivalentes. En tal caso, si `pwzAssemblyIndentity2` hace referencia al mismo ensamblado como `pwzAssemblyIndentity1`, excepto que presenta un menor número de versión `pfEquivalent` está establecido en `true`. Si `pwzAssemblyIdentity2` hace referencia a un mayor número de versión `pfEquivalent` está establecido en `true` solo si el valor de `fUnified2` es `true`.  
   
  El `pResult` parámetro incluye información específica sobre por qué los dos ensamblados se consideran equivalentes o no equivalentes. Para obtener más información, consulte [AssemblyComparisonResult (enumeración)](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado**: Fusion.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [AssemblyComparisonResult (enumeración)](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+## <a name="see-also"></a>Vea también
+- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [AssemblyComparisonResult (enumeración)](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

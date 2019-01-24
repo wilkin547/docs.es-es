@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
-ms.openlocfilehash: 86608811d42134a27af27fc3d2dd2c6f3bfbbe98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfce3f75fc1d5492f7f7124628becf1844cebc4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491303"
 ---
 # <a name="else-statement-visual-basic"></a>Else (Instrucción, Visual Basic)
-Presenta a un grupo de instrucciones que se pueden ejecutar o compilar si se ha ejecutar ningún otro grupo condicional de instrucciones o se ha compilado.  
+Introduce a un grupo de instrucciones que se ejecute o compilar si se ejecute ningún otro grupo de instrucciones condicional o compilado.  
   
 ## <a name="remarks"></a>Comentarios  
  La palabra clave `Else` se puede usar en los siguientes contextos:  
@@ -25,5 +25,5 @@ Presenta a un grupo de instrucciones que se pueden ejecutar o compilar si se ha 
   
  [#If... Then... #Else (directiva)](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a>Vea también  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también
+- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

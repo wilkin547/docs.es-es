@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7e653101faf9e0664f41e031c7bad05523825f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5854abd97c05cf0d57bfdd9a19826fea2fd7502
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566949"
 ---
 # <a name="constrained-execution-regions"></a>regiones de ejecución restringidas
 Una región de ejecución restringida (CER) es parte de un mecanismo para crear código administrado de confianza. Una CER define un área en la que Common Language Runtime (CLR) no puede producir excepciones fuera de banda que eviten que el código del área se ejecute en su totalidad. Dentro de esa región, el código de usuario no puede ejecutar código que pueda producir excepciones fuera de banda. El método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> debe ir inmediatamente antes del bloque `try` y marca los bloques `catch`, `finally` y `fault` como regiones de ejecución restringidas. Una vez marcada como región restringida, el código solo debe llamar a otro código con contratos de fiabilidad estables y no debe asignar ni realizar llamadas virtuales a métodos no preparados o no confiables a menos que esté preparado para controlar errores. CLR retrasa las anulaciones de subprocesos del código que se está ejecutando en una CER.  
@@ -114,5 +114,5 @@ Una región de ejecución restringida (CER) es parte de un mecanismo para crear 
   
 -   Punteros de función y delegados.  
   
-## <a name="see-also"></a>Vea también  
- [Reliability Best Practices (Procedimientos recomendados para la confiabilidad)](../../../docs/framework/performance/reliability-best-practices.md)
+## <a name="see-also"></a>Vea también
+- [Reliability Best Practices (Procedimientos recomendados para la confiabilidad)](../../../docs/framework/performance/reliability-best-practices.md)

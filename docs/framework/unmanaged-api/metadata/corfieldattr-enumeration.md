@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446625"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576020"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr (Enumeración)
 Contiene valores que describen los metadatos de un campo.  
@@ -62,18 +62,18 @@ typedef enum CorFieldAttr {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Especifica información de accesibilidad.|  
+|`fdFieldAccessMask`|Especifica la información de accesibilidad.|  
 |`fdPrivateScope`|Especifica que el campo no puede hacer referencia.|  
-|`fdPrivate`|Especifica que el campo solo es accesible para su tipo primario.|  
-|`fdFamANDAssem`|Especifica que el campo está accesible para las clases derivadas de su ensamblado.|  
-|`fdAssembly`|Especifica que el campo está accesible para todos los tipos de su ensamblado.|  
-|`fdFamily`|Especifica que el campo solo es accesible para su tipo y sus clases derivadas.|  
-|`fdFamORAssem`|Especifica que el campo es accesible para las clases derivadas y para todos los tipos de su ensamblado.|  
-|`fdPublic`|Especifica que el campo está accesible para todos los tipos con visibilidad de este ámbito.|  
+|`fdPrivate`|Especifica que el campo es accesible únicamente por su tipo primario.|  
+|`fdFamANDAssem`|Especifica que el campo es accesible para las clases derivadas en su ensamblado.|  
+|`fdAssembly`|Especifica que el campo es accesible para todos los tipos en su ensamblado.|  
+|`fdFamily`|Especifica que el campo solo es accesible para su tipo y las clases derivadas.|  
+|`fdFamORAssem`|Especifica que el campo es accesible para las clases derivadas y para todos los tipos en su ensamblado.|  
+|`fdPublic`|Especifica que el campo es accesible para todos los tipos con visibilidad de este ámbito.|  
 |`fdStatic`|Especifica que el campo es un miembro de su tipo en lugar de un miembro de instancia.|  
-|`fdInitOnly`|Especifica que el campo no se puede cambiar una vez que se inicializa.|  
+|`fdInitOnly`|Especifica que el campo no se puede cambiar después de inicializarse.|  
 |`fdLiteral`|Especifica que el valor del campo es una constante de tiempo de compilación.|  
-|`fdNotSerialized`|Especifica que no se serializa el campo cuando su tipo es remoto.|  
+|`fdNotSerialized`|Especifica que el campo no se serializa cuando su tipo es remoto.|  
 |`fdSpecialName`|Especifica que el campo es especial y que su nombre describe cómo.|  
 |`fdPinvokeImpl`|Especifica que la implementación del campo se reenvía a través de PInvoke.|  
 |`fdReservedMask`|Reservado para uso interno por common language runtime.|  
@@ -83,11 +83,11 @@ typedef enum CorFieldAttr {
 |`fdHasFieldRVA`|Especifica que el campo tiene una dirección virtual relativa.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

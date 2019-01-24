@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636428"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Tipos de datos numéricos (Visual Basic)
 Visual Basic proporciona varios *tipos de datos numéricos* para controlar números en representaciones. *Entero* tipos representan sólo números enteros (positivos, negativos y cero), y *no integrales* tipos representan números con partes fraccionarias y enteras.  
@@ -78,9 +78,9 @@ Visual Basic proporciona varios *tipos de datos numéricos* para controlar núme
 ### <a name="small-fractional-numbers"></a>Números fraccionarios pequeños  
  Si no necesita la gama completa de la `Double` tipo de datos, puede usar el `Single` tipo de datos que puede contener números de punto flotante de - 3, 4028235E + 38 a 3, 4028235E + 38. Las magnitudes más pequeñas para `Single` las variables son - 1, 401298E-45 para los valores negativos y 1, 401298E-45 para los valores positivos. Si tiene un gran número de variables que contienen números de punto flotante pequeños, common language runtime puede almacenar a veces su `Single` variables de manera más eficaz y ahorrar consumo de memoria.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos básicos](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Tipos de datos de caracteres](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [Tipos de datos varios](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Llamar a una función de Windows que adopta tipos sin signo](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de datos básicos](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Tipos de datos de caracteres](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [Tipos de datos varios](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
+- [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

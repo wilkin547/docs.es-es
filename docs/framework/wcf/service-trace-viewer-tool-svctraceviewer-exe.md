@@ -2,12 +2,12 @@
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510603"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por WCF. Service Trace Viewer proporciona una manera de combinar fácilmente, ver y filtrar los mensajes de seguimiento en el registro de modo que puede diagnosticar, reparar y comprobar los problemas de servicio WCF.  
@@ -191,7 +191,7 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
 -   Mostrar seguimientos detallados sin mensaje que, cuando se desactiva, omite todos los seguimientos de nivel detallados, excepto los seguimientos de mensajes. En la mayoría de los casos, los seguimientos de nivel detallados son menos importantes para el análisis. Esta opción es útil cuando no desea analizar los seguimientos de nivel detallados y sólo desea centrarse en seguimientos más importantes.  
   
 ###### <a name="layout-mode"></a>Modo de diseño  
- El Visor tiene dos modos de diseño: **proceso** y **subprocesos**. Esta configuración define la unidad más grande de organización. El valor predeterminado es el modo de diseño **proceso**, lo que significa que las actividades se agrupan por procesos en el gráfico.  
+ El Visor tiene dos modos de diseño: **Proceso** y **subprocesos**. Esta configuración define la unidad más grande de organización. El valor predeterminado es el modo de diseño **proceso**, lo que significa que las actividades se agrupan por procesos en el gráfico.  
   
 ###### <a name="execution-list"></a>Lista de ejecución  
  Puede seleccionar qué proceso o subproceso de este menú desplegable se va a mostrar en el gráfico. Por ejemplo, si tiene abiertos los archivos de seguimiento de dos clientes (A y B) y un servicio, y sólo desea mostrar el servicio y el cliente A en el gráfico, puede anular la selección del cliente B en la lista.  
@@ -227,11 +227,11 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
 #### <a name="using-the-filter-toolbar"></a>Utilizar la barra de herramientas del filtro  
  La barra de herramientas del filtro aparece en la parte superior de la herramienta. Si no está presente, puede activarla en el **vista** menú. La barra tiene tres componentes:  
   
--   Buscar: **buscar** define el asunto que se busca en la operación de filtrado. Por ejemplo, si desea buscar todos los seguimientos que se emitieron en el contexto de proceso X, establezca este campo a X y el **buscar en** campo nombre del proceso. Este campo cambia a un control de selector DateTime cuando se selecciona un filtro basado en tiempo.  
+-   Busca: **Busque** define el asunto que se busca en la operación de filtrado. Por ejemplo, si desea buscar todos los seguimientos que se emitieron en el contexto de proceso X, establezca este campo a X y el **buscar en** campo nombre del proceso. Este campo cambia a un control de selector DateTime cuando se selecciona un filtro basado en tiempo.  
   
--   Buscar en: este campo define el tipo de filtro que se va a aplicar.  
+-   Buscar en: Este campo define el tipo de filtro para aplicar.  
   
--   Nivel: el valor de nivel define el nivel de seguimiento mínimo permitido por el filtro. Por ejemplo, si se fija el nivel en “Error y arriba”, sólo se muestran los seguimientos en el nivel error y crítico. Este filtro se combina con los criterios especificados en Buscar y Buscar en.  
+-   Nivel: La configuración del nivel define el nivel de seguimiento mínimo permitido por el filtro. Por ejemplo, si se fija el nivel en “Error y arriba”, sólo se muestran los seguimientos en el nivel error y crítico. Este filtro se combina con los criterios especificados en Buscar y Buscar en.  
   
  El **filtrar ahora** botón inicia la operación de filtrado. Algunos filtros, sobre todo cuando se aplican a un conjunto de datos grande, tardan un buen rato en terminar. Puede cancelar la operación de filtrado presionando el **detener** botón que aparece en la barra de estado en el **operaciones** menú.  
   
@@ -286,7 +286,7 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
   
 2.  Haga clic en **filtrar ahora**y observe el resultado de la operación.  
   
- Si su filtro usa varios parámetros, escríbalos mediante ';' como separador en la **buscar** campo. Por ejemplo, la cadena siguiente define tres parámetros: ‘1;findValue;text’. El Visor aplica '1' para el {0} parámetro del filtro. 'findValue' y 'text' se aplican a {1} y {2} respectivamente.  
+ Si su filtro usa varios parámetros, escríbalos mediante ';' como separador en la **buscar** campo. Por ejemplo, la cadena siguiente define 3 parámetros: '1; findValue; text'. El Visor aplica '1' para el {0} parámetro del filtro. 'findValue' y 'text' se aplican a {1} y {2} respectivamente.  
   
 ###### <a name="sharing-custom-filters"></a>Compartir filtros personalizados  
  Los filtros personalizados se pueden compartir entre sesiones diferentes y usuarios diferentes. Puede exportar los filtros a un archivo de definición e importar este archivo en otra ubicación.  
@@ -321,9 +321,9 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
   
  La barra de herramientas Buscar aparece en la parte superior del visor. Si no está presente, puede activarla en el **vista** menú. La barra tiene dos componentes:  
   
--   Buscar: le permite escribir una palabra clave de búsqueda.  
+-   Buscar: Permite especificar la palabra clave de búsqueda.  
   
--   Buscar en: le permite introducir un área de búsqueda. Puede seleccionar buscar en todas las actividades o sólo en la actividad actual.  
+-   Buscar en: Permite especificar el ámbito de búsqueda. Puede seleccionar buscar en todas las actividades o sólo en la actividad actual.  
   
  El cuadro de diálogo de la búsqueda proporciona dos opciones adicionales:  
   
@@ -335,7 +335,7 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
   
     -   La opción "Mensaje registrado" busca la palabra clave sólo en los mensajes.  
   
--   Ignorar la actividad raíz: la búsqueda ignora las trazas en la actividad "000000000000". De esta forma, se mejora el rendimiento de los archivos de seguimiento grandes cuando la actividad raíz tiene miles de trazas, la mayoría de las cuales son transferencias.  
+-   Ignorar la actividad raíz: La búsqueda ignora las trazas en la actividad "000000000000". De esta forma, se mejora el rendimiento de los archivos de seguimiento grandes cuando la actividad raíz tiene miles de trazas, la mayoría de las cuales son transferencias.  
   
 ### <a name="navigating-traces"></a>Navegar por los seguimientos  
  Dado que los seguimientos se graban paso a paso durante el tiempo de ejecución de la aplicación, navegar por los seguimientos puede ayudarle a depurar su aplicación. El visor de seguimiento de servicio proporciona varias maneras de navegar por los seguimientos.  
@@ -343,21 +343,21 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
 #### <a name="step-forward-or-backward"></a>Paso hacia delante o hacia atrás  
  Si considera cada seguimiento como una línea de código en el programa, ir hacia delante es muy similar a "Paso a paso" en el entorno de desarrollo integrado (IDE) de Visual Studio. La diferencia radica en que también puede ir hacia atrás en los seguimientos. Avanzar paso a paso significa ir a la traza siguiente de la actividad.  
   
--   Paso hacia delante: Usar el **actividad** menús o presione "F10". También puede usar tecla de dirección "abajo" en el panel de seguimiento.  
+-   Avanzar paso a paso: Use la **actividad** menús o presione "F10". También puede usar tecla de dirección "abajo" en el panel de seguimiento.  
   
--   Retroceder paso a paso: Use el **actividad** menús o presione "F9". También puede usar tecla de dirección "up" en el panel de seguimiento.  
+-   Retroceder paso a paso: Use la **actividad** menús o presione "F9". También puede usar tecla de dirección "up" en el panel de seguimiento.  
   
 > [!NOTE]
 >  Esto puede llevarlo a una actividad que se producen en un proceso diferente o incluso en un equipo diferente, porque los mensajes de WCF pueden llevar identificadores de actividad que abarcan varias máquinas.  
   
 #### <a name="follow-transfer"></a>Seguir la transferencia  
- Los seguimientos de transferencia son seguimientos especiales en el archivo de seguimiento. Una actividad puede transferir a otra actividad mediante un seguimiento de transferencia. Por ejemplo, "Actividad A" puede transferir a la "Actividad B". En este caso, hay una traza de transferencia en el icono "Actividad A" con el nombre "A: actividad" y la transferencia. Esta traza de transferencia es un vínculo entre las dos trazas. En la "Actividad B", también podría haber una traza de transferencia al final de la actividad para transferir de vuelta a la "Actividad A". Esto es similar a las llamadas de función en programas: A llama a B, a continuación, B devuelve.  
+ Los seguimientos de transferencia son seguimientos especiales en el archivo de seguimiento. Una actividad puede transferir a otra actividad mediante un seguimiento de transferencia. Por ejemplo, "Actividad A" puede transferir a la "Actividad B". En este caso, hay una traza de transferencia en la "actividad A" con el nombre "para: La actividad"y el icono de transferencia. Esta traza de transferencia es un vínculo entre las dos trazas. En la "Actividad B", también podría haber una traza de transferencia al final de la actividad para transferir de vuelta a la "Actividad A". Esto es similar a las llamadas de función en programas: Una llama a B, a continuación, B devuelve.  
   
  "Seguir a transferencia" es similar a "Ir a" en un depurador. Sigue la transferencia de A a B. No tiene ningún efecto en otras trazas.  
   
  Hay dos maneras de seguir una transferencia: con el mouse o con el teclado:  
   
--   Con el mouse: haga doble clic en el seguimiento de transferencia del panel de traza.  
+-   Con el Mouse: Haga doble clic en el seguimiento de transferencia en el panel de seguimiento.  
   
 -   Con el teclado: Seleccione una traza de transferencia y use "Seguir transferencia" en el **actividad** menús o presione "F11"  
   
@@ -367,9 +367,9 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
 #### <a name="jump-to-next-or-previous-transfer"></a>Pasar a la siguiente o anterior transferencia  
  Cuando analice la actividad actual, o las actividades seleccionadas cuando se han seleccionado varias actividades, puede que desee buscar rápidamente las actividades a las que transfiere. "Pasar a la siguiente transferencia" le permite localizar la siguiente traza de transferencia de la actividad. Una vez que encuentre la traza de transferencia, puede usar "Seguir transferencia" para ir a la siguiente actividad.  
   
--   Pasar a la siguiente transferencia: Use el **actividad** menús o presione "Ctrl + F10".  
+-   Saltar a la transferencia siguiente: Use la **actividad** menús o presione "Ctrl + F10".  
   
--   Saltar a la transferencia anterior: Use el **actividad** menús o presione "Ctrl + F9".  
+-   Saltar a la transferencia anterior: Use la **actividad** menús o presione "Ctrl + F9".  
   
 #### <a name="navigate-in-graph-view"></a>Navegar en la vista del gráfico  
  Aunque la navegación en el panel de actividad y seguimiento es similar a depurar, usar **Graph** vista proporciona una mejor experiencia de navegación. Para obtener más información, vea la sección "Vista de gráfico".  
@@ -404,41 +404,41 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
   
 |Iconos|Descripción|  
 |----------|-----------------|  
-|![Seguimiento de advertencia](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Traza de advertencia: traza que se emite en el nivel de advertencia|  
-|![Seguimiento de errores](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Seguimiento de error: un seguimiento que se emite en el nivel de error.|  
-|![Seguimiento de inicio de actividad:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Seguimiento de inicio de actividad: un seguimiento que marca el principio de una actividad. Contiene el nombre de la actividad. Como diseñador o programador de aplicaciones, debería definir un seguimiento de inicio de actividad por id. de actividad, por proceso o subproceso.<br /><br /> Si el id. de actividad se propaga por los orígenes de traza para la correlación de seguimiento, puede ver varios inicios para el mismo id. de actividad (uno por origen de traza). Se emite la traza de inicio si ActivityTracing está habilitado para el origen de traza.|  
-|![Detener traza de actividad](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Detener traza de actividad: una traza que marca el fin de una actividad. . Contiene el nombre de la actividad. Como diseñador o programador de aplicaciones, debe definir una traza de detención por identificador de actividad por origen de traza. Ningún seguimiento de un origen de traza determinado aparece después del fin de actividad emitido por ese origen de traza, excepto si la granularidad de tiempo del seguimiento no es lo bastante pequeña. Cuando eso pasa, se pueden intercalar dos seguimientos con la misma hora, incluyendo uno de fin, al mostrarlos. Si el id. de actividad se propaga por los orígenes de traza para la correlación de seguimiento, puede ver varios finales para el mismo id. de actividad (uno por origen de traza). Se emite la traza de detención si ActivityTracing está habilitado para el origen de traza.|  
-|![Seguimiento de actividad Suspend](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Seguimiento de suspensión de actividad: un seguimiento que marca la hora que se pausa una actividad. No se emite ningún rastro en una actividad suspendida hasta que se reanuda la actividad. Una actividad suspendida denota que no se está efectuando ningún procesamiento en esa actividad en el área del origen de traza. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de suspensión si ActivityTracing está habilitado para el origen de traza.|  
-|![Seguimiento de reanudación de actividad](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Seguimiento de reanudación de actividad: un seguimiento que marca la hora a la que se reanuda una actividad una vez suspendida. Se pueden volver a emitir seguimientos en esa actividad. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de reanudación si ActivityTracing está habilitado para el origen de traza.|  
-|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferencia: un seguimiento que se emite cuando el flujo de control lógico se transfiere de una actividad a otra. La actividad en la que se origina la transferencia puede continuar realizando el trabajo en paralelo a la actividad a la que va la transferencia. Se emite la traza de transferencia si ActivityTracing está habilitado para el origen de traza.|  
-|![Transferir desde](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferir de: un seguimiento que define una transferencia desde otra actividad a la actividad actual.|  
-|![Transferir a](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Transferir a: un seguimiento que define una transferencia de flujo de control lógico desde la actividad actual a otra actividad.|  
+|![Seguimiento de advertencia](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Seguimiento de advertencia: Un seguimiento que se emite en el nivel de advertencia|  
+|![Seguimiento de errores](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Seguimiento de errores: Un seguimiento que se emite en el nivel de error.|  
+|![Seguimiento de inicio de actividad:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Seguimiento de inicio de actividad: Un seguimiento que marca el principio de una actividad. Contiene el nombre de la actividad. Como diseñador o programador de aplicaciones, debería definir un seguimiento de inicio de actividad por id. de actividad, por proceso o subproceso.<br /><br /> Si el id. de actividad se propaga por los orígenes de traza para la correlación de seguimiento, puede ver varios inicios para el mismo id. de actividad (uno por origen de traza). Se emite la traza de inicio si ActivityTracing está habilitado para el origen de traza.|  
+|![Detener traza de actividad](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Detener traza de actividad: Un seguimiento que marca el final de una actividad. . Contiene el nombre de la actividad. Como diseñador o programador de aplicaciones, debe definir una traza de detención por identificador de actividad por origen de traza. Ningún seguimiento de un origen de traza determinado aparece después del fin de actividad emitido por ese origen de traza, excepto si la granularidad de tiempo del seguimiento no es lo bastante pequeña. Cuando eso pasa, se pueden intercalar dos seguimientos con la misma hora, incluyendo uno de fin, al mostrarlos. Si el id. de actividad se propaga por los orígenes de traza para la correlación de seguimiento, puede ver varios finales para el mismo id. de actividad (uno por origen de traza). Se emite la traza de detención si ActivityTracing está habilitado para el origen de traza.|  
+|![Seguimiento de actividad Suspend](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Seguimiento de suspensión de actividad: Un seguimiento que marca la hora a una actividad está en pausa. No se emite ningún rastro en una actividad suspendida hasta que se reanuda la actividad. Una actividad suspendida denota que no se está efectuando ningún procesamiento en esa actividad en el área del origen de traza. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de suspensión si ActivityTracing está habilitado para el origen de traza.|  
+|![Seguimiento de reanudación de actividad](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Seguimiento de reanudación de actividad: Un seguimiento que marca la hora a que una actividad se reanuda después de que se suspendió. Se pueden volver a emitir seguimientos en esa actividad. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de reanudación si ActivityTracing está habilitado para el origen de traza.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferencia: Un seguimiento que se genera cuando el flujo de control lógico se transfiere desde una actividad a otra. La actividad en la que se origina la transferencia puede continuar realizando el trabajo en paralelo a la actividad a la que va la transferencia. Se emite la traza de transferencia si ActivityTracing está habilitado para el origen de traza.|  
+|![Transferir desde](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferir desde: Un seguimiento que define a una transferencia desde otra actividad a la actividad actual.|  
+|![Transferir a](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Transferir a: Un seguimiento que define a una transferencia de flujo de control lógico desde la actividad actual a otra actividad.|  
   
 ### <a name="wcf-traces"></a>Seguimiento WCF  
   
 |Iconos|Descripción|  
 |----------|-----------------|  
-|![Seguimiento del registro de mensajes](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Seguimiento del registro de mensajes: un seguimiento que se genera cuando se registra un mensaje de WCF mediante la característica de registro de mensajes, cuando el `System.ServiceModel.MessageLogging` origen de seguimiento está habilitado. Al hacer clic en este seguimiento, se muestra el mensaje. Hay cuatro puntos de registro configurables para un mensaje: ServiceLevelSendRequest, TransportSend, TransportReceive y ServiceLevelReceiveRequest, que también pueden ser especificados por el atributo `messageSource` en el seguimiento del registro de mensajes.|  
-|![Seguimiento de mensajes recibidos](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Seguimiento de mensajes recibidos: un seguimiento que se genera cuando se recibe un mensaje de WCF, si el `System.ServiceModel` origen de seguimiento está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación del mensaje en la actividad **Graph** vista.|  
-|![Seguimiento de mensajes enviados](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Seguimiento de mensajes enviados: un seguimiento que se genera cuando se envía un mensaje WCF si la `System.ServiceModel` origen de seguimiento está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación del mensaje en la actividad **Graph** vista.|  
+|![Seguimiento del registro de mensajes](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Seguimiento del registro de mensajes: Un seguimiento que se genera cuando se registra un mensaje de WCF mediante la característica de registro de mensajes, cuando el `System.ServiceModel.MessageLogging` origen de seguimiento está habilitado. Al hacer clic en este seguimiento, se muestra el mensaje. Hay cuatro puntos de registro configurables para un mensaje: ServiceLevelSendRequest, TransportSend, TransportReceive y ServiceLevelReceiveRequest, que también se puede especificar el `messageSource` atributo en el seguimiento de registro de mensajes.|  
+|![Seguimiento de mensajes recibidos](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Seguimiento de mensaje recibido: Un seguimiento que se genera cuando se recibe un mensaje de WCF, si el `System.ServiceModel` origen de seguimiento está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación del mensaje en la actividad **Graph** vista.|  
+|![Seguimiento de mensajes enviados](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Seguimiento de mensajes enviados: Un seguimiento que se genera cuando se envía un mensaje WCF si la `System.ServiceModel` origen de seguimiento está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación del mensaje en la actividad **Graph** vista.|  
   
 ### <a name="activities"></a>Actividades  
   
 |Iconos|Descripción|  
 |----------|-----------------|  
-|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Actividad: indica que la actividad actual es una actividad genérica.|  
-|![Actividad raíz](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Actividad raíz: indica la actividad raíz de un proceso.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Actividad: Indica que la actividad actual es una actividad genérica.|  
+|![Actividad raíz](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Actividad raíz: Indica la actividad raíz de un proceso.|  
   
 ### <a name="wcf-activities"></a>Actividades WCF  
   
 |Iconos|Descripción|  
 |----------|-----------------|  
-|![Actividades del entorno](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Actividades del entorno: una actividad que crea, abre o cierra un cliente o host WCF. Los errores que se han producido durante estas fases aparecerán en esta actividad.|  
-|![Escuchar actividad](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Actividad de escucha: una actividad que registra los seguimientos relacionados con un agente de escucha. Dentro de esta actividad, podemos ver información del agente de escucha y solicitudes de conexión.|  
-|![Recibir actividad de Bytes](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Actividad de recepción de bytes: agrupa todos los seguimientos relacionados con la recepción de bytes de entrada en una conexión entre dos puntos de conexión. Esta actividad es esencial para ponerse en correlación con actividades de transporte que propagan su id. de actividad como http.sys. En esta actividad aparecerán errores de conexión tales como interrupciones.|  
-|![Procesar la actividad de mensaje](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Procesar la actividad de mensaje: una actividad que agrupa los seguimientos relacionados con la creación de un mensaje de WCF. En esta actividad aparecerán errores debidos a una envoltura no válida o a un mensaje incorrecto. Dentro de esta actividad, podemos inspeccionar los encabezados del mensaje para ver si un id. de actividad se propagó a partir del autor de la llamada. Si esto es verdad, cuando transferimos a la actividad de procesamiento de acción (el icono siguiente), también podemos asignar a esa actividad el id. de actividad propagado para la correlación entre el autor de la llamada y los seguimientos del destinatario.|  
-|![Seguimiento del registro de mensajes](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Procesar la actividad de acción: una actividad que agrupa todos los seguimientos relacionados con una solicitud WCF a través de dos puntos de conexión. Si `propagateActivity` está establecido en `true` en los dos extremos de la configuración, se combinan todos los seguimientos de ambos extremos en una actividad para la correlación directa. Tal actividad contendrá los errores debidos al procesamiento de seguridad o transporte, extendiéndose al límite del código de usuario y de vuelta (si existe una respuesta).|  
-|![Procesar la actividad de mensaje](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad de ejecución de código de usuario: una actividad que agrupa seguimientos de código de usuario para procesar una solicitud.|  
+|![Actividades del entorno](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Actividades del entorno: Una actividad que crea, abre o cierra un cliente o host WCF. Los errores que se han producido durante estas fases aparecerán en esta actividad.|  
+|![Escuchar actividad](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Actividad de escucha: Una actividad que registra los seguimientos relacionados con un agente de escucha. Dentro de esta actividad, podemos ver información del agente de escucha y solicitudes de conexión.|  
+|![Recibir actividad de Bytes](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Actividad de recepción de bytes: una actividad que agrupa todos los seguimientos relacionados con la recepción de bytes de entrada en una conexión entre dos extremos. Esta actividad es esencial para ponerse en correlación con actividades de transporte que propagan su identificador de actividad como http.sys. Esta actividad es esencial para ponerse en correlación con actividades de transporte que propagan su id. de actividad como http.sys. En esta actividad aparecerán errores de conexión tales como interrupciones.|  
+|![Procesar la actividad de mensaje](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad de mensaje de proceso: Una actividad que agrupa los seguimientos relacionados con la creación de un mensaje de WCF. En esta actividad aparecerán errores debidos a una envoltura no válida o a un mensaje incorrecto. Dentro de esta actividad, podemos inspeccionar los encabezados del mensaje para ver si un id. de actividad se propagó a partir del autor de la llamada. Si esto es verdad, cuando transferimos a la actividad de procesamiento de acción (el icono siguiente), también podemos asignar a esa actividad el id. de actividad propagado para la correlación entre el autor de la llamada y los seguimientos del destinatario.|  
+|![Seguimiento del registro de mensajes](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Actividad de acción de proceso: Una actividad que agrupa todos los seguimientos relacionados con una solicitud WCF a través de dos puntos de conexión. Si `propagateActivity` está establecido en `true` en los dos extremos de la configuración, se combinan todos los seguimientos de ambos extremos en una actividad para la correlación directa. Tal actividad contendrá los errores debidos al procesamiento de seguridad o transporte, extendiéndose al límite del código de usuario y de vuelta (si existe una respuesta).|  
+|![Procesar la actividad de mensaje](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Ejecute la actividad de código de usuario: Una actividad que agrupa los seguimientos del código de usuario para procesar una solicitud.|  
   
 ## <a name="troubleshooting"></a>Solución de problemas  
  Si no tiene permiso para escribir en el registro, obtendrá el siguiente mensaje de error "Microsoft Service Trace Viewer no se registró en el sistema" cuando se usa el "`svctraceviewer /register`" comando para registrar la herramienta. Si ocurre esto, debe iniciar una sesión con una cuenta que tenga acceso de escritura al registro.  
@@ -449,7 +449,7 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
   
  Si se abre un registro de seguimiento creado utilizando un sistema operativo árabe, puede observar que el filtro horario no funciona. Por ejemplo, el año 2005 corresponde al año 1427 en el calendario árabe. Sin embargo, el intervalo temporal admitido por el filtro de la herramienta del visor de seguimiento de servicio no admite una fecha anterior a 1752. Esto puede hacer que no pueda seleccionar una fecha correcta en el filtro. Para resolver este problema, puede crear un filtro personalizado (**ver/filtros personalizados**) mediante una expresión XPath para incluir un intervalo de tiempo específico.  
   
-## <a name="see-also"></a>Vea también  
- [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Configuración de la traza](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Seguimiento de la actividad y propagación para la correlación de seguimiento To-End](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+## <a name="see-also"></a>Vea también
+- [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Configuración de la traza](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Seguimiento de la actividad y propagación para la correlación de seguimiento To-End](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

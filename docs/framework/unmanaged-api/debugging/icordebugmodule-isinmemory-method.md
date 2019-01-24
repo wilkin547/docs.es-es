@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae5c16f9f508511e4a15b2eae2c28d68238f1d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7bfdcc3c8328d71146732fc4ba5664ebee9bea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574877"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory (Método)
-Obtiene un valor que indica si este módulo sólo existe en memoria.  
+Obtiene un valor que indica si este módulo solo existe en memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +37,20 @@ HRESULT IsInMemory(
   
 #### <a name="parameters"></a>Parámetros  
  `pInMemory`  
- [out] `true` si este módulo sólo existe en memoria; en caso contrario, `false`.  
+ [out] `true` si este módulo solo existe en memoria; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Common language runtime (CLR) admite la carga de módulos de secuencias de bytes sin formato. Estos módulos se denominan *módulos en memoria* y no existe en el disco.  
+ Common language runtime (CLR) admite la carga de módulos de secuencias de bytes sin formato. Estos módulos se denominan *módulos en memoria* y no existen en el disco.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
-    
- 
+## <a name="see-also"></a>Vea también
+
+

@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Convertir un objeto en otro tipo en Visual Basic'
+title: Procedimiento Convertir un objeto a otro tipo en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 81ac65ad34ad6afdfb89a750fef39b121aabd644
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611350"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Cómo: Convertir un objeto en otro tipo en Visual Basic
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Procedimiento Convertir un objeto a otro tipo en Visual Basic
 Convierte un `Object` variable a otro tipo de datos con una palabra clave de conversión como [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,13 +33,13 @@ End Sub
   
 -   Una referencia al espacio de nombres <xref:System?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Object>  
- [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Conversiones implícitas y explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Conversiones entre cadenas y otros tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Conversiones de matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)  
- [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Object>
+- [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Conversiones implícitas y explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Conversiones entre cadenas y otros tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Conversiones de matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)
+- [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

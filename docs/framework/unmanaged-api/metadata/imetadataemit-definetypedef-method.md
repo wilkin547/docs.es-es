@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54691785e3b2619b5f4a2eecc510800b4b5cee07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4a1da4015a202debe1d864f3c0135cc296ce6fce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605481"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef (Método)
-Crea una definición de tipo para un tipo de common language runtime y obtiene un símbolo (token) de metadatos para dicha definición de tipo.  
+Crea una definición de tipo para un tipo de common language runtime y obtiene un token de metadatos para esa definición de tipo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,16 +41,16 @@ HRESULT DefineTypeDef (
   
 #### <a name="parameters"></a>Parámetros  
  `szTypeDef`  
- [in] El nombre del tipo en Unicode.  
+ [in] El nombre del tipo en formato Unicode.  
   
  `dwTypeDefFlags`  
  [in] `TypeDef` atributos. Se trata de una máscara de bits de `CoreTypeAttr` valores.  
   
  `tkExtends`  
- [in] El token de la clase base. Debe ser un `mdTypeDef` o un `mdTypeRef` símbolo (token).  
+ [in] El token de la clase base. Debe ser un `mdTypeDef` o un `mdTypeRef` token.  
   
  `rtkImplements`  
- [in] Una matriz de símbolos (tokens) especifican las interfaces que implementa esta interfaz o clase.  
+ [in] Una matriz de los tokens de especificación de las interfaces que implementa esta clase o interfaz.  
   
  `ptd`  
  [out] El `mdTypeDef` token asignado.  
@@ -58,19 +58,19 @@ HRESULT DefineTypeDef (
 ## <a name="remarks"></a>Comentarios  
  Una marca en `dwTypeDefFlags` especifica si el tipo que se va a crear es un sistema tipo común tipo de referencia (clase o interfaz) o un tipo de valor de sistema de tipo común.  
   
- Dependiendo de los parámetros proporcionados, este método, como un efecto secundario, puede crear una `mdInterfaceImpl` registros para cada interfaz que es heredado o implementada por este tipo. Sin embargo, este método no devuelve cualquiera de estos `mdInterfaceImpl` símbolos (tokens). Si un cliente desea agregar más adelante o modificar un `mdInterfaceImpl` token, debe usar el `IMetaDataImport` interfaz para enumerarlas. Si desea usar la semántica de COM de la `[default]` interfaz, también debe proporcionar la interfaz predeterminada como el primer elemento en `rtkImplements`; un atributo personalizado que se establecen en la clase se indicará que la clase tiene una interfaz predeterminada (siempre que se supone que es el en primer lugar `mdInterfaceImpl` declarado de símbolo (token) de la clase).  
+ Dependiendo de los parámetros proporcionados, este método, como un efecto secundario, también puede crear una `mdInterfaceImpl` registros para cada interfaz que es heredado o implementada por este tipo. Sin embargo, este método no devuelve cualquiera de estos `mdInterfaceImpl` tokens. Si un cliente desea agregar más adelante o modificar un `mdInterfaceImpl` token, debe usar el `IMetaDataImport` interfaz para enumerarlas. Si desea usar la semántica de COM de la `[default]` interfaz, debe proporcionar la interfaz predeterminada como el primer elemento en `rtkImplements`; un atributo personalizado establecido en la clase indicará que la clase tiene una interfaz predeterminada (que siempre se supone que es el en primer lugar `mdInterfaceImpl` token declarado para la clase).  
   
- Cada elemento de la `rtkImplements` matriz contiene un `mdTypeDef` o `mdTypeRef` símbolo (token). El último elemento de la matriz debe ser `mdTokenNil`.  
+ Cada elemento de la `rtkImplements` matriz contiene un `mdTypeDef` o `mdTypeRef` token. El último elemento de la matriz debe ser `mdTokenNil`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MSCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

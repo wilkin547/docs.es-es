@@ -2,23 +2,17 @@
 title: Esquema de la configuración de seguimiento y depuración
 ms.date: 03/30/2017
 helpviewer_keywords:
-- tracing [.NET Framework], trace and debug settings schema
-- configuration schema [.NET Framework], trace and debug settings
-- configuration settings [.NET Framework], tracing
-- schema configuration settings
-- configuration settings [.NET Framework], debugging
-- trace listeners, trace and debug settings schema
-- configuration sections [.NET Framework]
-- elements [.NET Framework], trace and debug settings
+  - 'tracing [.NET Framework], trace and debug settings schema'
+  - 'configuration schema [.NET Framework], trace and debug settings'
+  - 'configuration settings [.NET Framework], tracing'
+  - schema configuration settings
+  - 'configuration settings [.NET Framework], debugging'
+  - 'trace listeners, trace and debug settings schema'
+  - 'configuration sections [.NET Framework]'
+  - 'elements [.NET Framework], trace and debug settings'
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9927ad0e853577abb19750d54ba9e852a4e7ec51
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397951"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Esquema de la configuración de seguimiento y depuración
 La configuración de seguimiento y depuración especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.  
@@ -49,8 +43,8 @@ La configuración de seguimiento y depuración especifica los agentes de escucha
 |[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.Debug>  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.Debug>
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

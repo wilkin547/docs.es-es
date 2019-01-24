@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Establecer la imagen mostrada por un control de formularios Windows Forms mediante el Diseñador'
+title: Procedimiento Establecer la imagen que muestra un Windows Forms mediante el Diseñador de Control
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0f8c2ef747a160adc292a3330a4478b7a8c432d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562315"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Cómo: Establecer la imagen mostrada por un control de formularios Windows Forms mediante el Diseñador
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Procedimiento Establecer la imagen que muestra un Windows Forms mediante el Diseñador de Control
 Varios controles de Windows Forms pueden mostrar imágenes. La imagen puede ser un icono que clarifica el propósito del control, como un icono de disco en un botón que denota el **guardar** comando. Como alternativa, el icono puede ser una imagen de fondo para proporcionar el control de la apariencia deseada.  
   
 > [!NOTE]
@@ -32,8 +32,8 @@ Varios controles de Windows Forms pueden mostrar imágenes. La imagen puede ser 
   
 2.  Seleccione la imagen que desea mostrar.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+- [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

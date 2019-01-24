@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587182"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificación del comportamiento de tiempo de ejecución del cliente
-Los clientes de Windows Communication Foundation (WCF), como los servicios de Windows Communication Foundation (WCF), se pueden configurar para modificar el comportamiento de tiempo de ejecución para adaptarlo a la aplicación cliente. Tres atributos están disponibles para especificar el comportamiento de tiempo de ejecución del cliente. Los objetos de devolución de llamada de cliente dúplex pueden utilizar <xref:System.ServiceModel.CallbackBehaviorAttribute> y los atributos <xref:System.ServiceModel.Description.CallbackDebugBehavior> para modificar su comportamiento de tiempo de ejecución. El otro atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, se puede utilizar para separar el destino lógico del destino de red inmediato. Además, los tipos de devolución de llamada de cliente dúplex pueden utilizar algunos de los comportamientos de lado del servicio. Para obtener más información, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+Los clientes de Windows Communication Foundation (WCF), como los servicios Windows Communication Foundation (WCF), pueden configurarse para modificar el comportamiento de tiempo de ejecución para que se adapte a la aplicación cliente. Tres atributos están disponibles para especificar el comportamiento de tiempo de ejecución del cliente. Los objetos de devolución de llamada de cliente dúplex pueden utilizar <xref:System.ServiceModel.CallbackBehaviorAttribute> y los atributos <xref:System.ServiceModel.Description.CallbackDebugBehavior> para modificar su comportamiento de tiempo de ejecución. El otro atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, se puede utilizar para separar el destino lógico del destino de red inmediato. Además, los tipos de devolución de llamada de cliente dúplex pueden utilizar algunos de los comportamientos de lado del servicio. Para obtener más información, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Utilizar CallbackBehaviorAttribute  
  Puede configurar o extender el comportamiento de ejecución de una implementación de contrato de devolución de llamada en una aplicación cliente utilizando la clase <xref:System.ServiceModel.CallbackBehaviorAttribute>. Este atributo realiza una función similar para la clase de devolución de llamada como la clase <xref:System.ServiceModel.ServiceBehaviorAttribute>, con la excepción de crear instancias del comportamiento y configuración de la transacción.  
@@ -36,12 +36,12 @@ Los clientes de Windows Communication Foundation (WCF), como los servicios de Wi
   
 -   lo haga solamente en escenarios de depuración controlados.  
   
- En el ejemplo de código siguiente se muestra a un cliente de archivo de configuración que se indica a WCF para devolver información de excepción administrada desde un cliente de objeto de devolución de llamada en los mensajes SOAP.  
+ El ejemplo de código siguiente muestra a un cliente de archivo de configuración que se indica a WCF para devolver información de excepción administrada desde un cliente de objeto de devolución de llamada en los mensajes SOAP.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
 ## <a name="using-the-clientviabehavior-behavior"></a>Utilizar el comportamiento de ClientViaBehavior  
  Puede utilizar el comportamiento <xref:System.ServiceModel.Description.ClientViaBehavior> para especificar el Identificador uniforme de recursos para el cual se debería crear el canal de transporte. Utilice este comportamiento cuando el destino de la red inmediato no es el procesador de impresión previsto del mensaje. Esto habilita conversaciones de varios saltos cuando la aplicación que realiza la llamada no conoce necesariamente el destino último o cuando el encabezado de destino `Via` no es una dirección.  
   
-## <a name="see-also"></a>Vea también  
- [Especificación del comportamiento en tiempo de ejecución del servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a>Vea también
+- [Especificación del comportamiento en tiempo de ejecución del servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

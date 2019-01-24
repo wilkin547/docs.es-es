@@ -2,12 +2,12 @@
 title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
-ms.openlocfilehash: 34220a3651819978f5f597fdc67d54630ec5e059
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d84184febd6db3f233aae6fe558b8e0f50a9cb82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608841"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
 OneWayBindingElement  
@@ -32,21 +32,21 @@ class OneWayBindingElement : BindingElement
 ### <a name="channelpoolsettings"></a>ChannelPoolSettings  
  Tipo de datos: ChannelPoolSettings  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  La configuración del grupo de canales.  
   
 ### <a name="maxacceptedchannels"></a>MaxAcceptedChannels  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de canales aceptados.  
   
 ### <a name="packetroutable"></a>PacketRoutable  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Valor que indica si el paquete se puede enrutar.  
   
@@ -56,5 +56,5 @@ class OneWayBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.OneWayBindingElement>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.OneWayBindingElement>

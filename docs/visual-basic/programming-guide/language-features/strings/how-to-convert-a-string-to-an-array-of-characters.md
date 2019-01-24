@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Convertir una cadena en una matriz de caracteres en Visual Basic'
+title: Procedimiento Convertir una cadena en una matriz de caracteres en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - character arrays [Visual Basic], converting strings
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-ms.openlocfilehash: cc12b70cddcb93a72b4421a8ddd93542ef84f55b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9d68e3d90c52d6a4312ccb7c0c9610968e7a4b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603760"
 ---
-# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Cómo: Convertir una cadena en una matriz de caracteres en Visual Basic
+# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Procedimiento Convertir una cadena en una matriz de caracteres en Visual Basic
 A veces resulta útil tener información sobre los caracteres de la cadena y las posiciones de los caracteres dentro de la cadena, como cuando se está analizando una cadena. En este ejemplo muestra cómo puede obtener una matriz de los caracteres en una cadena mediante una llamada a la cadena <xref:System.String.ToCharArray%2A> método.  
   
 ## <a name="example"></a>Ejemplo  
@@ -28,9 +28,9 @@ A veces resulta útil tener información sobre los caracteres de la cadena y las
   
  [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.String.Chars%2A>  
- <xref:System.Globalization.StringInfo?displayProperty=nameWithType>  
- [Obtener acceso a caracteres de cadenas](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)  
- [Conversión entre cadenas y otros tipos de datos en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- [Cadenas](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.String.Chars%2A>
+- <xref:System.Globalization.StringInfo?displayProperty=nameWithType>
+- [Cómo: Acceso a caracteres en cadenas](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)
+- [Conversión entre cadenas y otros tipos de datos en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [Cadenas](../../../../visual-basic/programming-guide/language-features/strings/index.md)

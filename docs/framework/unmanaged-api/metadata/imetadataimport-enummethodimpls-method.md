@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574773"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls (Método)
 Enumera los tokens MethodBody y MethodDeclaration que representan métodos del tipo especificado.  
@@ -42,39 +42,39 @@ HRESULT EnumMethodImpls (
   
 #### <a name="parameters"></a>Parámetros  
  `phEnum`  
- [entrada, salida] Un puntero para el enumerador. Esto debe ser NULL para la primera llamada de este método.  
+ [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
   
  `td`  
- [in] Símbolo (token) de una definición de tipo para el tipo cuyas implementaciones de método para enumerar.  
+ [in] Una definición de tipo de token para el tipo cuyas implementaciones de método para enumerar.  
   
  `rMethodBody`  
  [out] La matriz para almacenar los tokens MethodBody.  
   
  `rMethodDecl`  
- [out] La matriz para almacenar los símbolos (tokens) de MethodDeclaration.  
+ [out] La matriz para almacenar los tokens MethodDeclaration.  
   
  `cMax`  
  [in] El tamaño máximo de la `rMethodBody` y `rMethodDecl` matrices.  
   
  `pcTokens`  
- [in] El número real de métodos devueltos en `rMethodBody` y `rMethodDecl`.  
+ [in] El número real de los métodos devueltos en `rMethodBody` y `rMethodDecl`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodImpls` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún tokens de método que enumerar. En ese caso, `pcTokens` es cero.|  
+|`S_FALSE`|No hay ningún token de método para enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

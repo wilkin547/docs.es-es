@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee56a7f343de999d68a71d9eac04eed6e06b444e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568899"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters (Método)
 Obtiene el valor de cada registro (en el equipo que está ejecutando el código) especificado por la máscara de bits.  
@@ -39,7 +40,7 @@ HRESULT GetRegisters (
   
 #### <a name="parameters"></a>Parámetros  
  `mask`  
- [in] Una máscara de bits que especifica qué valores se van a recuperarse de registro. Cada bit corresponde a un registro. Si un bit se establece en uno, se recupera el valor del registro; en caso contrario, no se recupera el valor del registro.  
+ [in] Una máscara de bits que especifica qué registro son los valores van a recuperar. Cada bit corresponde a un registro. Si un bit se establece en uno, se recupera el valor del registro; en caso contrario, no se recupera el valor del registro.  
   
  `regCount`  
  [in] El número de valores de registro va a recuperar.  
@@ -48,19 +49,19 @@ HRESULT GetRegisters (
  [out] Una matriz de `CORDB_REGISTER` objetos, cada uno de los cuales recibe un valor de un registro.  
   
 ## <a name="remarks"></a>Comentarios  
- El tamaño de la matriz debe ser igual al número de bits establecidos en 1 en la máscara de bits. El `regCount` parámetro especifica el número de elementos en el búfer que recibirá los valores del registro. Si el `regCount` valor es demasiado pequeño para el número de registros indicado por la máscara, se truncarán los registros con números más alto del conjunto. Si el `regCount` valor es demasiado grande, el sin usar `regBuffer` elementos estará sin modificar.  
+ El tamaño de la matriz debe ser igual al número de bits establecidos en 1 en la máscara de bits. El `regCount` parámetro especifica el número de elementos en el búfer que recibirá los valores del registro. Si el `regCount` valor es demasiado pequeño para el número de registros indicado por la máscara, se truncarán los registros numerados más altos del conjunto. Si el `regCount` valor es demasiado grande, el sin usar `regBuffer` se modificarán los elementos.  
   
  Si la máscara de bits especifica un registro que no está disponible, `GetRegisters` devuelve un valor indeterminado para ese registro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugRegisterSet (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugRegisterSet (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

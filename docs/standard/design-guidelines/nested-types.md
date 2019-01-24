@@ -11,12 +11,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
-ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559546"
 ---
 # <a name="nested-types"></a>Tipos anidados
 Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se denomina el tipo envolvente. Un tipo anidado tiene acceso a todos los miembros de su tipo envolvente. Por ejemplo, tiene acceso a campos privados, definidos en el tipo envolvente y que va a proteger los campos definidos en todos los antecesores del tipo envolvente.  
@@ -47,5 +47,5 @@ Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se deno
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
+- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

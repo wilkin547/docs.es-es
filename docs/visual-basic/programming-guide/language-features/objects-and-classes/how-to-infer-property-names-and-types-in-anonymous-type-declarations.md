@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Deducir tipos y nombres de propiedades en declaraciones de tipos anónimos (Visual Basic)'
+title: Procedimiento Deducir tipos y nombres de propiedad en declaraciones de tipos anónimos (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 80127c05d56162397cfa421122ddd9698750b376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67cc9e85d249365a7b4b7636c99766087314622d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596868"
 ---
-# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Cómo: Deducir tipos y nombres de propiedades en declaraciones de tipos anónimos (Visual Basic)
+# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Procedimiento Deducir tipos y nombres de propiedad en declaraciones de tipos anónimos (Visual Basic)
 Los tipos anónimos no proporcionan ningún mecanismo para especificar directamente los tipos de datos de propiedades. Los tipos de todas las propiedades son inferidos. En el ejemplo siguiente, los tipos de `Name` y `Price` se infieren directamente de los valores que se usan para inicializarlos.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
@@ -120,8 +120,8 @@ Los tipos anónimos no proporcionan ningún mecanismo para especificar directame
   
      [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+## <a name="see-also"></a>Vea también
+- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Key](../../../../visual-basic/language-reference/modifiers/key.md)

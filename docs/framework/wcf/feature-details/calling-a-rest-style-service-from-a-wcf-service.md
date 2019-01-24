@@ -2,12 +2,12 @@
 title: Llamar a un servicio de estilo REST desde un servicio WCF
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df57433b01df9faf49eada8189ba8864fe7a9093
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596792"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Llamar a un servicio de estilo REST desde un servicio WCF
 Al llamar a un servicio de estilo REST desde un servicio WCF normal (basado en SOAP), el contexto de la operación en el método del servicio (que contiene información sobre la solicitud entrante) reemplaza el contexto que se debería usar en la solicitud saliente. Esto da lugar a las solicitudes HTTP GET para cambiar a solicitudes HTTP POST. Para obligar al servicio WCF a que use el contexto idóneo para llamar al servicio de estilo REST, cree un nuevo <xref:System.ServiceModel.OperationContextScope> y llame al servicio de estilo REST desde dentro del ámbito del contexto de la operación. Este tema describirá cómo crear un sencillo ejemplo que muestra esta técnica.  
@@ -233,6 +233,6 @@ public class CallingRESTSample
 }
 ```
   
-## <a name="see-also"></a>Vea también  
- [Creación de un servicio básico web HTTP de WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Crear un servicio Web HTTP de WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
+- [Modelo de objetos de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

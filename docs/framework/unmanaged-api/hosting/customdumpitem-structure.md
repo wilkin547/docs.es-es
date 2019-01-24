@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568925"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem (Estructura)
-Describe un elemento que se va a agregar a un volcado personalizado en informes de errores.  
+Describe un elemento que se agregarán a un volcado personalizado en informes de errores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,20 +41,20 @@ struct {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`itemKind`|Un [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valor que indica el tipo de elemento que se va a agregar.|  
-|`pReserved`|No se están utilizando. Los elementos agregados a la unión deben ser no mayores que el tamaño del puntero. Si un `struct` es necesario, debe asignar de forma independiente y apunte a ella.|  
+|`itemKind`|Un [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valor que indica el tipo de elemento que va a agregar.|  
+|`pReserved`|No se están utilizando. Todos los elementos agregados a la unión no deben ser superior al tamaño del puntero. Si un `struct` es necesario, debe asignarlo por separado y apunte a ella.|  
   
 ## <a name="remarks"></a>Comentarios  
  [ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) toma un parámetro de tipo `CustomDumpItem`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.idl  
+ **Encabezado**: MSCorEE.idl  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>Vea también
+- [Estructuras de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

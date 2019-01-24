@@ -2,12 +2,12 @@
 title: ClientCredentials
 ms.date: 03/30/2017
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-ms.openlocfilehash: 8b6200f84f352d49cf142d9c8b97d1c2b36149b2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 410a133ae3041db00ecb7a17677afe6538ef1f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632743"
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
@@ -37,56 +37,56 @@ class ClientCredentials : Behavior
 ### <a name="clientcertificate"></a>ClientCertificate  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El certificado X.509 que utiliza el cliente para autenticarse en el servicio.  
   
 ### <a name="httpdigest"></a>HttpDigest  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
- La credencial de Http Digest actual.  
+ La credencial de resumen Http Digest actual.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  La dirección y el enlace del punto de conexión utilizados para contactar con el servicio de tokens de seguridad local.  
   
 ### <a name="peer"></a>Del mismo nivel  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Las credenciales que el nodo del mismo nivel utiliza para autenticarse a otros nodos de la malla.  
   
 ### <a name="servicecertificate"></a>ServiceCertificate  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El certificado X.509 del servicio.  
   
 ### <a name="supportinteractive"></a>SupportInteractive  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor booleano que especifica si la credencial admite negociación interactiva.  
   
 ### <a name="username"></a>UserName  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El nombre de usuario y la contraseña que el cliente utiliza para autenticarse al servicio.  
   
 ### <a name="windows"></a>Windows  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Las credenciales de Windows que el cliente utiliza para autenticarse al servicio.  
   
@@ -96,5 +96,5 @@ class ClientCredentials : Behavior
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Description.ClientCredentials>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Description.ClientCredentials>

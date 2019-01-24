@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566988"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi (función)
 Ejecuta una consulta para recibir eventos. La llamada devuelve inmediatamente, y el llamador puede sondear el enumerador devuelto para los eventos cuando llegan. Liberar el enumerador devuelto, cancela la consulta.  
@@ -59,8 +59,8 @@ HRESULT ExecNotificationQueryWmi (
 
 | Constante | Valor  | Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | La marca provoca una llamada semisincrónica. Si no se establece esta marca, se produce un error en la llamada. Esto es porque se reciben eventos de forma continua, lo que significa que el usuario debe sondear el enumerador devuelto. Esta llamada de bloqueo indefinidamente hace sea imposible. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de sólo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten las llamadas a [clon](clone.md). |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | La marca provoca una llamada semisincrónica. Si no se establece esta marca, se produce un error en la llamada. Esto es porque se reciben eventos de forma continua, lo que significa que el usuario debe sondear el enumerador devuelto. Esta llamada de bloqueo indefinidamente hace sea imposible. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | La función devuelve un enumerador de solo avance. Normalmente, los enumeradores de sólo avance son más rápidos y usan menos memoria que los enumeradores convencionales, pero no permiten las llamadas a [clon](clone.md). |
 
 `pCtx`  
 [in] Normalmente, este valor es `null`. En caso contrario, es un puntero a un [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instancia que se puede usar el proveedor que está proporcionando los eventos solicitados. 
@@ -92,15 +92,15 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver una o varias de las clases que puede devolver la función. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Se ha producido un error no especificado. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
-| `WBEM_E_INVALID_CLASS` | 0 x 80041010 | La consulta especifica una clase que no existe. |
+| `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | La consulta especifica una clase que no existe. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Se ha solicitado demasiada precisión en la entrega de eventos. Debe especificarse una mayor tolerancia de sondeo. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0 x 80042001 | La consulta requess puede proporcionar más información de administración de Windows. Esto `HRESULT` se devuelve cuando una consulta de evento da como resultado una solicitud para sondear todos los objetos en un espacio de nombres. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | La consulta requess puede proporcionar más información de administración de Windows. Esto `HRESULT` se devuelve cuando una consulta de evento da como resultado una solicitud para sondear todos los objetos en un espacio de nombres. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | La consulta tuvo un error de sintaxis. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | No se admite el lenguaje de consulta solicitado. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | La consulta es demasiado compleja. |
-| `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI era probablemente detenido y volver a iniciar. Llame a [ConnectServerWmi](connectserverwmi.md) nuevo. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Error en el vínculo de procedimiento remoto (RPC) de la llamada entre el proceso actual y WMI. |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | No se puede analizar la consulta. |
@@ -117,11 +117,11 @@ No hay límite al número de `AND` y `OR` palabras clave que se pueden usar en l
 Si se produce un error en la llamada de función, puede obtener información de error adicional mediante una llamada a la [GetErrorInfo](geterrorinfo.md) función.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

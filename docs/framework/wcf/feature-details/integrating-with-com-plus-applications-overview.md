@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492343"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
-Windows Communication Foundation (WCF) proporciona un entorno rico para crear aplicaciones distribuidas. Si ya usa la lógica de la aplicación basada en componentes alojada en COM +, puede utilizar WCF para extender su lógica existente en lugar de tener que rescribir. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
+Windows Communication Foundation (WCF) proporciona un entorno rico para crear aplicaciones distribuidas. Si ya usa lógica de la aplicación basada en componentes alojada en COM +, puede usar WCF para extender su lógica existente en lugar de tener que rescribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
   
  Cuando una interfaz en un componente COM+ se expone como un servicio web, la especificación y contrato de estos servicios se determina por una asignación automática realizada cuando se inicia la aplicación. La lista siguiente muestra el modelo conceptual para esta asignación:  
   
@@ -40,9 +40,9 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
   
 2.  Seleccione un modo de alojamiento adecuado.  
   
-3.  Use la herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para agregar un servicio web para la interfaz. Para obtener más información sobre cómo usar ComSvcConfig.exe, consulte [Cómo: usar la herramienta COM + Service Model Configuration](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3.  Use la herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para agregar un servicio web para la interfaz. Para obtener más información sobre cómo usar ComSvcConfig.exe, vea [Cómo: Use la herramienta de configuración del modelo de servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Configure las opciones de servicio adicionales en el archivo de configuración de la aplicación. Para obtener más información sobre cómo configurar un componente, consulte [Cómo: configurar opciones de servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4.  Configure las opciones de servicio adicionales en el archivo de configuración de la aplicación. Para obtener más información sobre cómo configurar un componente, vea [Cómo: Configuración de COM + Service](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Interfaces admitidas  
  Hay algunas restricciones en el tipo de interfaces que se pueden exponer como un servicio web. No se admiten los siguientes tipos de interfaz:  
@@ -64,14 +64,14 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
 ### <a name="limited-object-reference-support"></a>Compatibilidad limitada de referencia de objeto  
  Dado que varios componentes implementados de COM+ utilizan objetos por parámetros de referencia, como devolver un objeto ADO Recordset, la integración de COM+ incluye compatibilidad limitada para los parámetros de referencia de objeto. La compatibilidad se limita a los objetos que implementan la interfaz COM `IPersistStream`. Esto incluye los objetos ADO Recordset y se puede implementar para objetos COM específicos de la aplicación.  
   
- Para habilitar esta funcionalidad, la herramienta ComSvcConfig.exe proporciona el **allowreferences** conmutador que deshabilita el parámetro de la firma de método normal y comprueba que la herramienta se ejecuta para asegurarse de que no se utilizan parámetros de referencia de objeto . Además, los tipos de objeto que pasa como parámetros se deben denominar e identificar dentro del elemento de configuración <`persistableTypes`>, que es un elemento secundario del elemento <`comContract`>.  
+ Para habilitar esta compatibilidad, la herramienta ComSvcConfig.exe proporciona el **allowreferences** switch que deshabilita el parámetro de firma de método normal y comprueba que se ejecuta la herramienta para asegurarse de que no se usan parámetros de referencia de objeto . Además, los tipos de objeto que pasa como parámetros se deben denominar e identificar dentro del elemento de configuración <`persistableTypes`>, que es un elemento secundario del elemento <`comContract`>.  
   
  Cuando se usa esta característica, el servicio de integración de COM+ utiliza la interfaz `IPersistStream` para serializar o deserializar la instancia de objeto. Si la instancia de objeto no es compatible con `IPersistStream`, se producirá una excepción.  
   
  Dentro de una aplicación de cliente, los métodos en el objeto <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> se pueden utilizar para pasar un objeto a un servicio y de igual forma recuperar un objeto.  
   
 > [!NOTE]
->  Debido a la naturaleza personalizada y específica de la plataforma del enfoque de serialización, esto es ideal para su uso entre los clientes de WCF y los servicios WCF.  
+>  Dada la naturaleza personalizada y específica de la plataforma del enfoque de serialización, esto es más adecuado para su uso entre los clientes de WCF y los servicios WCF.  
   
 ## <a name="selecting-the-hosting-mode"></a>Seleccionar el modo de hospedaje  
  COM+ expone servicios web en uno de los modos de hospedaje siguientes:  
@@ -97,9 +97,9 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
   
  Si Internet Information Server (IIS) o el Servicio de activación de procesos de Windows (WAS) utilizan transporte HTTP, la herramienta Httpcfg.exe se puede utilizar para reservar una dirección de punto de conexión de transporte. En otras configuraciones es importante proteger contra servicios maliciosos que actúan como el servicio intencional. Para evitar que un servicio malicioso se inicie en el extremo deseado, el servicio legítimo se puede configurar para que se ejecute como un servicio NT. Esto permite que el servicio legítimo exija la dirección del punto de conexión antes que cualquier servicio malicioso.  
   
- Al exponer una aplicación COM + con funciones COM + configuradas como un servicio hospedado en Web, la "cuenta iniciar el proceso de IIS" debe agregarse a uno de los roles de la aplicación. Esta cuenta, que suele tener el nombre IWAM_machinename, se debe agregar para habilitar el apagado limpio de objetos después del uso. No se le deberían otorgar permisos adicionales a esta cuenta.  
+ Al exponer una aplicación COM + con funciones COM + configuradas como un servicio hospedado en Web, la "cuenta Iniciar proceso de IIS" debe agregarse a uno de los roles de la aplicación. Esta cuenta, que suele tener el nombre IWAM_machinename, se debe agregar para habilitar el apagado limpio de objetos después del uso. No se le deberían otorgar permisos adicionales a esta cuenta.  
   
  Las características de reciclaje de proceso de COM+ no se pueden utilizar en aplicaciones integradas. Si la aplicación se configura para utilizar reciclaje de proceso y los componentes se ejecutan en un proceso hospedado por COM+, el servicio no se inicia. Este requisito no incluye servicios del modo en proceso de hospedaje en web porque no se aplica la configuración de reciclaje de proceso.  
   
-## <a name="see-also"></a>Vea también  
- [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Vea también
+- [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

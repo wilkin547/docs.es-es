@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fe5710f1be0bfa4e651668e2469c3551ad79261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bba39446d9ca5164d98337e93e83725cfa503903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515331"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason (Enumeración)
 Indica la operación que se realizó en un conmutador de depuración/seguimiento.  
@@ -40,18 +40,18 @@ typedef enum LogSwitchCallReason {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|Se creó un conmutador de depuración/seguimiento.|  
-|`SWITCH_MODIFY`|Se ha modificado un conmutador de depuración/seguimiento.|  
-|`SWITCH_DELETE`|Se eliminó un modificador de depuración o traza.|  
+|`SWITCH_CREATE`|Se creó un conmutador de depuración y seguimiento.|  
+|`SWITCH_MODIFY`|Se ha modificado un conmutador de depuración y seguimiento.|  
+|`SWITCH_DELETE`|Se ha eliminado un conmutador de depuración y seguimiento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

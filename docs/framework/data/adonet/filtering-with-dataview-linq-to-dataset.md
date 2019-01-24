@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b457eb925f636656455ef8f3f02f9d2a78558325
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c4c6c01839294e134b0961059a4c165a67c1ecf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516738"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrar con DataView (LINQ to DataSet)
-La capacidad de filtrar datos utilizando criterios específicos y después presentarlos a un cliente mediante un control de IU es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de filtrar datos y devolver subconjuntos de filas de datos que reúnan determinados criterios. Además de basado en la cadena de capacidades de filtrado <xref:System.Data.DataView> también proporciona la capacidad para usar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expresiones para los criterios de filtrado. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] las expresiones se admiten para las operaciones de filtrado más complejas y eficaces que el filtrado basado en cadena.  
+La capacidad de filtrar datos utilizando criterios específicos y después presentarlos a un cliente mediante un control de IU es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de filtrar datos y devolver subconjuntos de filas de datos que reúnan determinados criterios. Además de basado en la cadena de las capacidades de filtrado <xref:System.Data.DataView> también proporciona la capacidad de usar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expresiones para los criterios de filtrado. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] las expresiones que se permiten para las operaciones de filtrado más complejas y eficaces que el filtrado basado en cadena.  
   
  Existen dos maneras de filtrar datos utilizando <xref:System.Data.DataView>:  
   
@@ -59,14 +59,14 @@ La capacidad de filtrar datos utilizando criterios específicos y después prese
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>Utilizar la propiedad RowFilter  
- La funcionalidad de filtro basado en cadena <xref:System.Data.DataView> existente funciona también en el contexto de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Para obtener más información acerca de cadena <xref:System.Data.DataView.RowFilter%2A> filtrado, consulte [ordenar y filtrar datos](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ La funcionalidad de filtro basado en cadena <xref:System.Data.DataView> existente funciona también en el contexto de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Para obtener más información acerca de basado en cadena <xref:System.Data.DataView.RowFilter%2A> filtrado, consulte [ordenar y filtrar datos](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
  El siguiente ejemplo crea un <xref:System.Data.DataView> desde la tabla Contact y, a continuación, establece la propiedad <xref:System.Data.DataView.RowFilter%2A> para que devuelva filas cuando el apellido del contacto sea "Zhu":  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- Después de haberse creado un <xref:System.Data.DataView> desde una consulta <xref:System.Data.DataTable> o [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], se puede utilizar la propiedad <xref:System.Data.DataView.RowFilter%2A> para especificar subconjuntos de filas basados en sus valores de columna. Los filtros basados en cadena y los basados en expresión se excluyen mutuamente. Establecer el <xref:System.Data.DataView.RowFilter%2A> propiedad borrará la expresión de filtro inferida desde el [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] no se puede restablecer la consulta y la expresión de filtro.  
+ Después de haberse creado un <xref:System.Data.DataView> desde una consulta <xref:System.Data.DataTable> o [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], se puede utilizar la propiedad <xref:System.Data.DataView.RowFilter%2A> para especificar subconjuntos de filas basados en sus valores de columna. Los filtros basados en cadena y los basados en expresión se excluyen mutuamente. Establecer el <xref:System.Data.DataView.RowFilter%2A> propiedad borrará la expresión de filtro que se deduce de la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] no se puede restablecer la consulta y la expresión de filtro.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  
@@ -92,6 +92,6 @@ La capacidad de filtrar datos utilizando criterios específicos y después prese
  [!code-csharp[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearrowfilter)]
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
-## <a name="see-also"></a>Vea también  
- [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- [Ordenación con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+## <a name="see-also"></a>Vea también
+- [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Ordenación con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

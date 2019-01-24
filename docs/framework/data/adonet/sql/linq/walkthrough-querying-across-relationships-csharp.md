@@ -2,12 +2,12 @@
 title: 'Tutorial: Realizar consultas en varias relaciones (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a438b0ae83a223abfc35643915e6eedd5be068a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563670"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Tutorial: Realizar consultas en varias relaciones (C#)
 Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *asociaciones* para representar relaciones de clave externa en la base de datos.  
@@ -17,7 +17,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
  Este tutorial se escribió con la configuración de desarrollo de Visual C#.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Debe haber completado [Tutorial: modelo de objetos Simple y consultas (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Este tutorial se basa en el tutorial mencionado, incluida la presencia del archivo northwnd.mdf en c:\linqtest5.  
+ Debe haber completado [Tutorial: Modelo de objetos simple y consultas (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Este tutorial se basa en el tutorial mencionado, incluida la presencia del archivo northwnd.mdf en c:\linqtest5.  
   
 ## <a name="overview"></a>Información general  
  Este tutorial conlleva tres tareas principales:  
@@ -47,7 +47,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Crear y ejecutar una consulta en la relación Customer-Order  
- Ahora puede tener acceso a los objetos `Order` directamente desde los objetos `Customer`, o a la inversa. No es necesario un explícita *combinación* entre clientes y pedidos.  
+ Ahora puede tener acceso a los objetos `Order` directamente desde los objetos `Customer`, o a la inversa. No es necesario explícita *combinación* entre clientes y pedidos.  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Para tener acceso a los objetos Order a través de los objetos Customer  
   
@@ -86,7 +86,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
 4.  Presione Entrar en la ventana de la consola para detener la depuración.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- El siguiente tutorial ([Tutorial: manipular datos (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) se muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
+ El tutorial siguiente ([Tutorial: Manipular datos (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) se muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
   
-## <a name="see-also"></a>Vea también  
- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Vea también
+- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

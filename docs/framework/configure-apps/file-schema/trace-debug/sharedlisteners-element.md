@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3069022287d469704cc7adac40d02ef3c6997b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563059"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; elemento
 Contiene los agentes de escucha a los que puede hacer referencia cualquier origen o elemento de seguimiento.  Estos agentes de escucha no reciben los seguimientos de forma predeterminada y no es posible recuperar estos agentes de escucha en tiempo de ejecución. Los agentes de escucha identificados como agentes de escucha compartidos se pueden agregar orígenes o seguimiento por nombre.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<sharedListeners >  
+\<system.diagnostics>  
+\<sharedListeners>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -90,7 +90,7 @@ Contiene los agentes de escucha a los que puede hacer referencia cualquier orige
 </configuration></system.diagnostics>   
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.TraceListener>  
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Agentes de escucha de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Diagnostics.TraceListener>
+- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Agentes de escucha de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

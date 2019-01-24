@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28e270be8f16de9558e5d5440d621056a3114967
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636396"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace (Función)
 Proporciona una representación de texto de un seguimiento de pila administrado y una matriz de registros `CONTEXT`, uno por cada transición entre código no administrado y código administrado.  
@@ -60,20 +60,20 @@ HRESULT CALLBACK _EFN_StackTrace(
  [in] El tamaño de la estructura de contexto.  
   
  `Flags`  
- [in] Establézcala en 0 o SOS_STACKTRACE_SHOWADDRESSES (0 x 01) para mostrar el registro EBP y el puntero de pila (ESP) delante de cada `module!functionname` línea.  
+ [in] Se establece en 0 o SOS_STACKTRACE_SHOWADDRESSES (0 x 01) para mostrar el registro EBP y el puntero de pila (ESP) delante de cada `module!functionname` línea.  
   
 ## <a name="remarks"></a>Comentarios  
- El `_EFN_StackTrace` estructura puede llamarse desde una interfaz de programación WinDbg. Se usan los siguientes parámetros:  
+ El `_EFN_StackTrace` estructura puede llamarse desde una interfaz de programación WinDbg. Los parámetros se usan como sigue:  
   
--   Si `wszTextOut` es null y `puiTextLength` es no es null, la función devuelve la longitud de cadena en `puiTextLength`.  
+-   Si `wszTextOut` es null y `puiTextLength` es no nulo, la función devuelve la longitud de cadena en `puiTextLength`.  
   
--   Si `wszTextOut` es no es null, la función almacena el texto en `wszTextOut` hasta la ubicación indicada por `puiTextLength`. Devuelve un resultado correctamente si había espacio suficiente en el búfer, o devuelve E_OUTOFMEMORY si el búfer no es suficientemente larga.  
+-   Si `wszTextOut` es no nulo, la función almacena el texto en `wszTextOut` hasta la ubicación indicada por `puiTextLength`. Devuelve correctamente si había espacio suficiente en el búfer, o se devuelve E_OUTOFMEMORY si el búfer no es suficientemente larga.  
   
--   Se omite la parte de la transición de la función si `pTransitionContexts` y `puiTransitionContextCount` son null. En este caso, la función proporciona a los llamadores con salida de texto de sólo los nombres de función.  
+-   La parte de la transición de la función se omite si `pTransitionContexts` y `puiTransitionContextCount` ambos son null. En este caso, la función proporciona a los llamadores con salida de texto de sólo los nombres de función.  
   
--   Si `pTransitionContexts` es null y `puiTransitionContextCount` es no es null, la función devuelve el número necesario de entradas de contexto en `puiTransitionContextCount`.  
+-   Si `pTransitionContexts` es null y `puiTransitionContextCount` es no nulo, la función devuelve el número necesario de entradas de contexto en `puiTransitionContextCount`.  
   
--   Si `pTransitionContexts` es no es null, la función lo trata como una matriz de estructuras de longitud `puiTransitionContextCount`. El tamaño de la estructura es proporcionado por `uiSizeOfContext`, y debe tener el tamaño de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` para la arquitectura.  
+-   Si `pTransitionContexts` es no nulo, la función lo trata como una matriz de estructuras de longitud `puiTransitionContextCount`. El tamaño de la estructura viene dado por `uiSizeOfContext`, y debe ser el tamaño de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` para la arquitectura.  
   
 -   `wszTextOut` se escribe en el formato siguiente:  
   
@@ -84,9 +84,9 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   Si el desplazamiento en hexadecimal es 0 x 0, no se escribe ningún desplazamiento.  
+-   Si el desplazamiento en hexadecimal 0 x 0, no se escribe ningún desplazamiento.  
   
--   Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve SOS_E_NOMANAGEDCODE.  
+-   Si no hay ningún código administrado en el subproceso actualmente en contexto, la función devuelve SOS_E_NOMANAGEDCODE.  
   
 -   El `Flags` parámetro es 0 o SOS_STACKTRACE_SHOWADDRESSES para ver EBP y ESP delante de cada `module!functionname` línea. De forma predeterminada, es 0.  
   
@@ -95,11 +95,11 @@ HRESULT CALLBACK _EFN_StackTrace(
     ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** SOS_Stacktrace.h  
+ **Encabezado**: SOS_Stacktrace.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
