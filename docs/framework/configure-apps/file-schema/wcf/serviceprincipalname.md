@@ -2,20 +2,20 @@
 title: '&lt;servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5d65b5956491e30066ece54a48374f1d7014552e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657611"
 ---
 # <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
 Especifica la identidad de un servicio por su Nombre de entidad de seguridad de servicio (SPN).  
   
  Para obtener más información acerca de cómo establecer el SPN, consulte [autenticación e identidad de servicio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
- \<identidad >  
-\<servicePrincipalName >  
+ \<identity>  
+\<servicePrincipalName>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,15 +39,15 @@ Especifica la identidad de un servicio por su Nombre de entidad de seguridad de 
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un cliente segura de Windows Communication Foundation (WCF) que se conecta a un punto de conexión con esta identidad utiliza SPN al realizar la autenticación de SSPI con el punto de conexión.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- <xref:System.ServiceModel.SpnEndpointIdentity>  
- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- <xref:System.ServiceModel.SpnEndpointIdentity>
+- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

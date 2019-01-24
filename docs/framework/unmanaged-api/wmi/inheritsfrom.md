@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 078950b4e46ea587c2f39986963ec129f4ec1f1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618388"
 ---
 # <a name="inheritsfrom-function"></a>Función InheritsFrom
 Determina si la clase o instancia actual deriva de una clase principal especificada.
@@ -57,18 +57,18 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | El objeto actual se hereda de `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | El objeto actual no hereda de `wszAncestor`. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | El valor de `wszAncestor` es `null`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | El valor de `wszAncestor` es `null`. |
   
 ## <a name="remarks"></a>Comentarios
 
 Esta función contiene una llamada a la [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

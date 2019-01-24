@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: 41b9e51e804d88227b8812124d25eae21838fc6d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 1384103f6ca35bab02280e6019d717a5d2f333cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684728"
 ---
 # <a name="dataview-performance"></a>Rendimiento de DataView
 En este tema se abordan las ventajas del uso de los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> de la clase <xref:System.Data.DataView>, y del almacenamiento en memoria caché de <xref:System.Data.DataView> en una aplicación web.  
@@ -86,5 +86,5 @@ GridView1.DataSource = ordersView;
 GridView1.DataBind();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+## <a name="see-also"></a>Vea también
+- [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)

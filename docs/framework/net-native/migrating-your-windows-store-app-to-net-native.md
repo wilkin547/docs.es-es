@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27903899ca31166e160f32ca0175e353e54676cc
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 9b04465d9141cdf595c4055ba64eb49083c1c514
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667903"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la Tienda Windows a .NET Native
 .NET native proporciona la compilación estática de las aplicaciones en el Store de Windows o en el equipo del desarrollador. Esto difiere de la compilación dinámica para las aplicaciones de la Tienda Windows realizada por el compilador Just-in-time (JIT) o el [generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) en el dispositivo. A pesar de las diferencias, .NET Native intenta mantener la compatibilidad con la [.NET para Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). En su mayor parte, lo que funciona en las aplicaciones de .NET para Windows Store también funciona con .NET Native.  Sin embargo, en algunos casos, puede encontrar cambios de comportamiento. Este documento describe las diferencias entre las aplicaciones estándar de .NET para Windows Store y .NET Native en las áreas siguientes:  
@@ -652,8 +652,8 @@ Otras características de interoperabilidad no compatibles son:
   
  Si habilita .NET Native en una biblioteca de pruebas unitarias para un proyecto de aplicaciones de Windows Store no es compatible y el proyecto no se pueda compilar.  
   
-## <a name="see-also"></a>Vea también  
- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Información general de aplicaciones de .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)  
- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+## <a name="see-also"></a>Vea también
+- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Información general de aplicaciones de .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

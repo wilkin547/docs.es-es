@@ -2,12 +2,12 @@
 title: Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 86bc1961fb23b0b2f98a2849eaabd4eecd65cd64
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bc3863bbe6fd7c290c25056e2420107ed2d8bff3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732809"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
 El **keyref** elemento le permite establecer vínculos entre elementos dentro de un documento. Esto es similar a una relación de clave externa en una base de datos relacional. Si especifica un esquema de la **keyref** elemento, el elemento se convierte durante el proceso de asignación de esquema para una restricción de clave externa correspondiente en las columnas de las tablas de la <xref:System.Data.DataSet>. De forma predeterminada, el **keyref** elemento también genera una relación con el **ParentTable**, **ChildTable**, **ParentColumn**y  **ChildColumn** propiedades especificadas en la relación.  
@@ -16,7 +16,7 @@ El **keyref** elemento le permite establecer vínculos entre elementos dentro de
   
 |Nombre del atributo|Descripción|  
 |--------------------|-----------------|  
-|**msdata: ConstraintOnly**|Si **ConstraintOnly = "true"** se especifica en el **keyref** elemento en el esquema, se crea una restricción, pero se crea ninguna relación. Si no se especifica este atributo (o se establece en **False**), la restricción y la relación se crean en el **DataSet**.|  
+|**msdata:ConstraintOnly**|Si **ConstraintOnly = "true"** se especifica en el **keyref** elemento en el esquema, se crea una restricción, pero se crea ninguna relación. Si no se especifica este atributo (o se establece en **False**), la restricción y la relación se crean en el **DataSet**.|  
 |**msdata:ConstraintName**|Si el **ConstraintName** atributo se especifica, su valor se utiliza como el nombre de la restricción. En caso contrario, el **nombre** atributo de la **keyref** elemento en el esquema proporciona el nombre de la restricción en el **DataSet**.|  
 |**msdata:UpdateRule**|Si el **UpdateRule** atributo se especifica en el **keyref** elemento del esquema, su valor se asigna a la **UpdateRule** propiedad de restricción del  **Conjunto de datos**. En caso contrario, el **UpdateRule** propiedad está establecida en **Cascade**.|  
 |**msdata:DeleteRule**|Si el **DeleteRule** atributo se especifica en el **keyref** elemento del esquema, su valor se asigna a la **DeleteRule** propiedad de restricción del  **Conjunto de datos**. En caso contrario, el **DeleteRule** propiedad está establecida en **Cascade**.|  
@@ -109,7 +109,7 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

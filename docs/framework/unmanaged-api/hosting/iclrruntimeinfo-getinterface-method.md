@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4924f373270a30b593e27c334d383963fc4a7cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 770901d5461d2092ce5f2862624a038caf03e1f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678670"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface (Método)
 Carga el CLR en el proceso actual y devuelve punteros de interfaz en tiempo de ejecución como [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), y [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
   
- Este método reemplaza a todos los `CorBindTo`* las funciones en el [funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) sección.  
+ Este método reemplaza todos los `CorBindTo`* funciona en el [funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) sección.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +46,7 @@ HRESULT GetInterface(
  [in] El IID de solicitado `rclsid` interfaz.  
   
  `ppUnk`  
- [out] Un puntero a la interfaz consultado.  
+ [out] Un puntero a la interfaz consultada.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
@@ -56,12 +56,12 @@ HRESULT GetInterface(
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`ppUnk` es null.|  
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para atender la solicitud.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diferente ya se enlazó a la directiva de activación 2 de versión CLR heredada.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diferente ya estaba enlazado a la directiva de 2 activación de versión CLR heredada.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este método hace que el CLR debe ser cargado pero no inicializado.  
+ Este método provoca que el CLR que se cargó, pero no inicializado.  
   
- La tabla siguiente muestran las combinaciones admitidas para `rclsid` y `riid`.  
+ La siguiente tabla muestra las combinaciones admitidas de `rclsid` y `riid`.  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
@@ -75,15 +75,15 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MetaHost.h  
+ **Encabezado**: MetaHost.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRRuntimeInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Vea también
+- [ICLRRuntimeInfo (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)

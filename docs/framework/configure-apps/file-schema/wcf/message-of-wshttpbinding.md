@@ -2,22 +2,22 @@
 title: Elemento &lt;message&gt; de &lt;wsHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 28ea1cad77b5a35fa16c98b816c1c82de71bd7cb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c114c75391e3c2e56be6b711ff04eaefb3fd05fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651024"
 ---
 # <a name="ltmessagegt-of-ltwshttpbindinggt"></a>Elemento &lt;message&gt; de &lt;wsHttpBinding&gt;
 Define la configuración de seguridad de nivel de mensaje de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  \<system.ServiceModel>  
-\<enlaces >  
+\<bindings>  
 \<wsHttpBinding>  
-\<enlace >  
-\<seguridad >  
-\<mensaje >  
+\<binding>  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -81,15 +81,15 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<wsHttpBindin
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Define la configuración de seguridad para un [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Define la configuración de seguridad para un [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.WSHttpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>  
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.WSHttpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>
+- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -2,12 +2,12 @@
 title: Colecciones de esquemas de Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694469"
 ---
 # <a name="oracle-schema-collections"></a>Colecciones de esquemas de Oracle
 El proveedor de datos Microsoft .NET Framework para Oracle admite, además de las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
@@ -107,15 +107,15 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |SECONDARY|String|Si el índice es un objeto secundario creado por el método ODCIIndexCreate de Oracle9i Data Cartridge (Y&#124;N).|  
 |BUFFER_POOL|String|Nombre del grupo de búferes predeterminado que se va a utilizar en los bloques de índice.|  
 |USER_STATS|String|Si el usuario introdujo directamente las estadísticas.|  
-|DURATION|String|Indica la duración de una tabla temporal: 1)SYS$SESSION: las filas se conservan el tiempo que dura la sesión, 2) SYS$TRANSACTION: las filas se eliminan después de COMMIT, 3) NULL para la Tabla permanente.|  
+|DURATION|String|Indica la duración de una tabla temporal. (1) SYS$ SESSION: las filas se conservan durante el tiempo que dure la sesión, 2) SYS$ TRANSACTION: las filas se eliminan después de COMMIT, 3) Null para la tabla permanente.|  
 |PCT_DIRECT_ACCESS|Decimal|En un índice secundario de una tabla organizada por índice, el porcentaje de filas con estimación VALID |  
 |ITYP_OWNER|String|En un índice de dominio, el propietario del tipo de índice.|  
 |ITYP_NAME|String|En un índice de dominio, el nombre del tipo de índice.|  
 |PARAMETERS|String|En un índice de dominio, la cadena de parámetros.|  
 |GLOBAL_STATS|String|En índices particionados, indica si se recopilaron las estadísticas mediante el análisis del índice como un todo (YES) o si se estimaron a partir de las estadísticas de las particiones y subparticiones del índice subyacente (NO).|  
 |DOMIDX_STATUS|String|Refleja el estado del índice de dominio. NULL: el índice especificado no es un índice de dominio. VALID: el índice es un índice de dominio válido. IDXTYP_INVLD: el tipo de índice de este índice de dominio no es válido.|  
-|DOMIDX_OPSTATUS|String|Refleja el estado de una operación que se ha realizado en un índice de dominio: NULL: el índice especificado no es un índice de dominio. VALID: la operación transcurrió sin errores. FAILED: la operación produjo un error.|  
-|FUNCIDX_STATUS|String|Indica el estado de un índice basado en funciones: NULL: no se trata de un índice basado en funciones, ENABLED: está habilitado el índice basado en funciones, DISABLED: está deshabilitado el índice basado en funciones.|  
+|DOMIDX_OPSTATUS|String|Refleja el estado de una operación que se realizó en un índice de dominio: NULL: el índice especificado no es un índice de dominio. VALID: la operación transcurrió sin errores. FAILED: la operación produjo un error.|  
+|FUNCIDX_STATUS|String|Indica el estado de un índice basado en función: NULL: esto no es una función basándose índice habilitado: el índice basado en función está habilitado, deshabilitado: el índice basado en función está deshabilitado.|  
 |JOIN_INDEX|String|Indica si es o no un índice de combinación.|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
@@ -145,7 +145,7 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |TIMESTAMP|String|Marca de tiempo de la especificación del objeto (datos de caracteres).|  
 |STATUS|String|Estado del objeto (VALID, INVALID o N/A).|  
 |TEMPORARY|String|Si el objeto es temporal (la sesión actual solo podrá ver los datos colocados en el objeto en sí).|  
-|GENERATED|String|¿El nombre de este objeto fue generado por el sistema? (Y &AMP;#124; N).|  
+|GENERATED|String|¿El nombre de este objeto fue generado por el sistema? (Y &#124; N).|  
 |SECONDARY|String|Si se trata de un objeto secundario creado por el método ODCIIndexCreate de Oracle9i Data Cartridge (Y &#124; N).|  
 |CREATED|DateTime|Fecha en que se creó el objeto.|  
   
@@ -220,7 +220,7 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |TIMESTAMP|String|Marca de tiempo de la especificación del objeto (datos de caracteres).|  
 |STATUS|String|Estado del objeto (VALID, INVALID o N/A).|  
 |TEMPORARY|String|Si el objeto es temporal (la sesión actual solo podrá ver los datos colocados en el objeto en sí).|  
-|GENERATED|String|¿El nombre de este objeto fue generado por el sistema? (Y &AMP;#124; N).|  
+|GENERATED|String|¿El nombre de este objeto fue generado por el sistema? (Y &#124; N).|  
 |SECONDARY|String|Si se trata de un objeto secundario creado por el método ODCIIndexCreate de Oracle9i Data Cartridge (Y &#124; N).|  
   
 ## <a name="packages"></a>Paquetes  
@@ -236,7 +236,7 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |TIMESTAMP|String|Marca de tiempo de la especificación del objeto (datos de caracteres).|  
 |STATUS|String|Estado del objeto (VALID, INVALID o N/A).|  
 |TEMPORARY|String|Si el objeto es temporal (la sesión actual solo podrá ver los datos colocados en el objeto en sí).|  
-|GENERATED|String|¿El nombre de este objeto fue generado por el sistema? (Y &AMP;#124; N).|  
+|GENERATED|String|¿El nombre de este objeto fue generado por el sistema? (Y &#124; N).|  
 |SECONDARY|String|Si se trata de un objeto secundario creado por el método ODCIIndexCreate de Oracle9i Data Cartridge (Y &#124; N).|  
 |CREATED|DateTime|Fecha en que se creó el objeto.|  
   
@@ -253,7 +253,7 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |TIMESTAMP|String|Marca de tiempo de la especificación del objeto (datos de caracteres).|  
 |STATUS|String|Estado del objeto (VALID, INVALID o N/A).|  
 |TEMPORARY|String|Si el objeto es temporal (la sesión actual solo podrá ver los datos colocados en el objeto en sí).|  
-|GENERATED|String|¿El nombre de este objeto fue generado por el sistema? (Y &AMP;#124; N).|  
+|GENERATED|String|¿El nombre de este objeto fue generado por el sistema? (Y &#124; N).|  
 |SECONDARY|String|Si se trata de un objeto secundario creado por el método ODCIIndexCreate de Oracle9i Data Cartridge (Y &#124; N).|  
 |CREATED|DateTime|Fecha en que se creó el objeto.|  
   
@@ -379,5 +379,5 @@ El proveedor de datos Microsoft .NET Framework para Oracle admite, además de la
 |CHAR_LENGTH|Decimal|Límite de caracteres de los tipos de datos de cadena.|  
 |CHAR_USED|String|Indica si el límite de bytes (B) o el límite de caracteres (C) es oficial para la cadena.|  
   
-## <a name="see-also"></a>Vea también  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

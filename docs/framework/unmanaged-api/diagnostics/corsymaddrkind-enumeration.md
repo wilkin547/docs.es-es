@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744978"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind (Enumeración)
 Indica el tipo de dirección de memoria.  
@@ -54,13 +54,13 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_REGREL`|Indica que la primera dirección es un registro y la segunda dirección es un desplazamiento.|  
 |`ADDR_NATIVE_OFFSET`|Indica un desplazamiento desde una dirección base.|  
 |`ADDR_NATIVE_REGREG`|Indica que la primera dirección es la parte baja de un registro y la segunda dirección es la parte alta.|  
-|`ADDR_NATIVE_REGSTK`|Indica que la primera dirección es la parte baja de un registro, la segunda es la parte alta, y el tercero es un desplazamiento.|  
-|`ADDR_NATIVE_STKREG`|Indica que la primera dirección es un registro, el segundo es un desplazamiento, y el tercero es la parte alta del registro.|  
+|`ADDR_NATIVE_REGSTK`|Indica que la primera dirección es la parte baja de un registro, la segunda es la parte alta y el tercero es un desplazamiento.|  
+|`ADDR_NATIVE_STKREG`|Indica que la primera dirección es un registro, el segundo es un desplazamiento y el tercero es la parte alta del registro.|  
 |`ADDR_BITFIELD`|Indica que la primera dirección es el inicio de un campo y la segunda dirección es la longitud de campo.|  
 |`ADDR_NATIVE_ISECTOFFSET`|Indica que la primera dirección es la sección y la segunda dirección es un desplazamiento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
