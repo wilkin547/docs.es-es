@@ -1,20 +1,20 @@
 ---
-title: 'Cómo: Crear un procedimiento que devuelve un valor (Visual Basic)'
+title: Procedimiento Crear un procedimiento que devuelve un valor (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 472f55173a4897a23a82812a2b24bf1646c1a6ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18becfe05da27e538c5c294b26e0bb7aa19cad2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506425"
 ---
-# <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Cómo: Crear un procedimiento que devuelve un valor (Visual Basic)
-Usa un `Function` procedimiento devuelva un valor para el código de llamada.  
+# <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Procedimiento Crear un procedimiento que devuelve un valor (Visual Basic)
+Usa un `Function` procedimiento devuelva un valor al código de llamada.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Para crear un procedimiento que devuelve un valor  
   
@@ -24,24 +24,24 @@ Usa un `Function` procedimiento devuelva un valor para el código de llamada.
   
 3.  Siga los paréntesis con un `As` cláusula para especificar el tipo de datos del valor devuelto.  
   
-4.  Coloque las instrucciones de código del procedimiento entre el `Function` y `End Function` las instrucciones.  
+4.  Coloque las instrucciones de código del procedimiento entre el `Function` y `End Function` instrucciones.  
   
-5.  Use un `Return` instrucción para devolver el valor para el código de llamada.  
+5.  Use un `Return` instrucción para devolver el valor al código de llamada.  
   
-     El siguiente `Function` procedimiento calcula el lado más largo, o la hipotenusa de un triángulo rectángulo, dado los valores para los otros dos lados.  
+     La siguiente `Function` procedimiento calcula el lado más largo, o la hipotenusa de un triángulo rectángulo, dado los valores para los dos lados.  
   
      [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_1.vb)]  
   
-     En el ejemplo siguiente se muestra una llamada típica a `hypotenuse`.  
+     El ejemplo siguiente muestra una llamada típica al `hypotenuse`.  
   
      [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos](./index.md)  
- [Subprocedimientos](./sub-procedures.md)  
- [Procedimientos de propiedades](./property-procedures.md)  
- [Procedimientos de operadores](./operator-procedures.md)  
- [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)  
- [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Devolver un valor de un procedimiento](./how-to-return-a-value-from-a-procedure.md)  
- [Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)
+## <a name="see-also"></a>Vea también
+- [Procedimientos](./index.md)
+- [Subprocedimientos](./sub-procedures.md)
+- [Procedimientos de propiedades](./property-procedures.md)
+- [Procedimientos de operadores](./operator-procedures.md)
+- [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
+- [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Cómo: Devolver un valor de un procedimiento](./how-to-return-a-value-from-a-procedure.md)
+- [Cómo: Llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)

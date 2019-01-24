@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53aaf4c23861666962e5567a6cf9eb9fffc6292f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb09422872a0d9565be286c25ca1b28d1c45e08f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501703"
 ---
 # <a name="ihostmanualevent-interface"></a>IHostManualEvent (Interfaz)
 Proporciona la implementación del host de una representación de un evento de restablecimiento manual.  
@@ -31,21 +31,21 @@ Proporciona la implementación del host de una representación de un evento de r
 |Método|Descripción|  
 |------------|-----------------|  
 |[Reset (método)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Restablece el actual `IHostManualEvent` instancia a un estado no señalado.|  
-|[Set (método)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Establece la actual `IHostManualEvent` instancia en un estado señalado.|  
-|[Wait (método)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Hace que el actual `IHostManualEvent` instancia espere hasta que encuentre un propietario o una cantidad especificada de tiempo determinado.|  
+|[Set (método)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Establece el actual `IHostManualEvent` instancia en un estado señalado.|  
+|[Wait (método)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Hace que el actual `IHostManualEvent` instancia espere hasta que sea propiedad o un período de tiempo especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostAutoEvent (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- [IHostSemaphore (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
- [IHostSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostAutoEvent (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [IHostSemaphore (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [IHostSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

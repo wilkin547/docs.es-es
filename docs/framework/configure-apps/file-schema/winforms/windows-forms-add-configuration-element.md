@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507374"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Agregar elemento de configuración
 
@@ -109,6 +109,6 @@ A partir de .NET Framework 4.7, controles de formularios Windows Forms plantear 
 Escalar único o varios pass influye en la capacidad de respuesta percibida de la interfaz de usuario y la apariencia visual de elementos de la interfaz de usuario ya que se escalan. A partir de .NET Framework 4.7, Windows Forms usa escalado paso único. En versiones anteriores de .NET Framework, el escalado se realizó a través de varias pasadas, lo que provocó algunos controles escalar más que era necesario. Escalado solo pase sólo debe deshabilitarse si depende de la aplicación en el comportamiento anterior.  
 
 ## <a name="see-also"></a>Vea también
- 
-[Sección de configuración de Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[Compatibilidad con valores altos de PPP en Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Sección de configuración de Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [Compatibilidad con valores altos de PPP en Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

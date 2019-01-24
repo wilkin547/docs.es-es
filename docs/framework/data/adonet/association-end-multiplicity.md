@@ -2,23 +2,23 @@
 title: multiplicidad de extremo de asociación
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 2f70fa4b163b957ea1e43506033863c3540b0418
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6d1b31c5b5ead701fbe808b91d7191fb84dc86c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502642"
 ---
 # <a name="association-end-multiplicity"></a>multiplicidad de extremo de asociación
-*Multiplicidad de extremo de asociación* define el número de [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) instancias que pueden estar en uno de los extremos de un [asociación](../../../../docs/framework/data/adonet/association-type.md).  
+*Multiplicidad de extremo de asociación* define el número de [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) instancias que pueden estar en un extremo de un [asociación](../../../../docs/framework/data/adonet/association-type.md).  
   
  Una multiplicidad de extremo de asociación puede tener uno de los valores siguientes:  
   
--   uno (1): indica que existe exactamente una instancia de tipo de entidad en el extremo de la asociación.  
+-   uno (1): Indica que esa instancia de tipo exactamente una entidad existe en el extremo de asociación.  
   
--   cero o uno (0..1): indica que pueden existir cero o una instancia de tipo de entidad en el extremo de la asociación.  
+-   cero o uno (de 0.. 1): Indica que hay cero o una instancia de tipo de entidad en el extremo de asociación.  
   
--   varios (*): indica que pueden existir cero, una o varias instancias de tipo de entidad en el extremo de la asociación.  
+-   muchos (*): indica que el cero, uno o más instancias del tipo de entidad existen en el extremo de asociación.  
   
  Normalmente, una asociación se caracteriza por sus multiplicidades de extremo de asociación. Por ejemplo, si los extremos de una asociación tienen multiplicidades uno (1) y varios (*), la asociación se denomina una asociación uno a varios. En el ejemplo siguiente, la asociación `PublishedBy` es una asociación uno a varios (un publicador publica muchos libros y un libro solo puede ser publicado por un publicador). La asociación `WrittenBy` es una asociación varios a varios (un libro puede tener varios autores y un autor puede escribir varios libros).  
   
@@ -31,6 +31,6 @@ ms.locfileid: "32755879"
   
  [!code-xml[EDM_Example_Model#AssociationExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#associationexample)]  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

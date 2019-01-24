@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503126"
 ---
 # <a name="transforms-overview"></a>Información general sobre transformaciones
 Este tema describe cómo usar el [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> clases para girar, escalar, mover (trasladar) y sesgar <xref:System.Windows.FrameworkElement> objetos.  
@@ -36,9 +36,9 @@ Este tema describe cómo usar el [!INCLUDE[TLA#tla_2d](../../../../includes/tlas
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Valor predeterminado: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Valor predeterminado: 0.0|0.0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Valor predeterminado: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Valor predeterminado: 1.0|0.0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Valor predeterminado: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Valor predeterminado: 0.0|1.0|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Predeterminado: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Predeterminado: 0.0|0.0|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Predeterminado: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Predeterminado: 1.0|0.0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Predeterminado: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Predeterminado: 0.0|1.0|  
   
  Manipulando los valores de la matriz, puede girar, escalar, sesgar y mover (trasladar) un objeto. Por ejemplo, si cambia el valor de la primera columna de la tercera fila (el <xref:System.Windows.Media.Matrix.OffsetX%2A> valor) a 100, puede usar para mover un objeto 100 unidades a lo largo del eje x. Si cambia a 3 el valor de la segunda columna de la segunda fila, puede usarlo para triplicar el alto actual de un objeto. Si cambia ambos valores, mueve el objeto 100 unidades a lo largo del eje X y ajusta su alto a un factor de 3. Dado que Windows Presentation Foundation (WPF) solo admite transformaciones afines, los valores de la columna derecha siempre son 0, 0, 1.  
   
@@ -80,7 +80,7 @@ Este tema describe cómo usar el [!INCLUDE[TLA#tla_2d](../../../../includes/tlas
   
 <a name="transformcenter"></a>   
 ## <a name="transformations-and-coordinate-systems"></a>Transformaciones y sistemas de coordenadas  
- Al transformar un objeto, no solo transforma el objeto, se transformar el espacio de coordenadas en el que se encuentra. De forma predeterminada, una transformación tiene su centro en el origen del sistema de coordenadas del objeto de destino: (0,0). La única excepción es <xref:System.Windows.Media.TranslateTransform>; un <xref:System.Windows.Media.TranslateTransform> no tiene ninguna propiedad center establecer porque el efecto de traslación es el mismo independientemente de donde está centrado.  
+ Al transformar un objeto, no solo transforma el objeto, se transformar el espacio de coordenadas en el que se encuentra. De forma predeterminada, una transformación está centrada en el origen del sistema de coordenadas del objeto de destino: (0,0). La única excepción es <xref:System.Windows.Media.TranslateTransform>; un <xref:System.Windows.Media.TranslateTransform> no tiene ninguna propiedad center establecer porque el efecto de traslación es el mismo independientemente de donde está centrado.  
   
  En el ejemplo siguiente se usa un <xref:System.Windows.Media.RotateTransform> para girar un <xref:System.Windows.Shapes.Rectangle> elemento, un tipo de <xref:System.Windows.FrameworkElement>, 45 grados sobre su centro predeterminado, (0, 0). En la ilustración siguiente se muestra el efecto de la rotación.  
   
@@ -149,8 +149,8 @@ Propiedad LayoutTransform utilizada para girar el botón
 ## <a name="freezable-features"></a>Características de los objetos Freezable  
  Porque se hereda de la <xref:System.Windows.Freezable> (clase), el <xref:System.Windows.Media.Transform> clase proporcionan varias características especiales: <xref:System.Windows.Media.Transform> objetos se pueden declarar como [recursos](../../../../docs/framework/wpf/advanced/xaml-resources.md)compartida entre varios objetos, de sólo lectura para mejorar rendimiento, clonar y hacerse seguros para subprocesos. Para obtener más información sobre las diferentes características proporcionadas por <xref:System.Windows.Freezable> objetos, vea el [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Matrix>  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Matrix>
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

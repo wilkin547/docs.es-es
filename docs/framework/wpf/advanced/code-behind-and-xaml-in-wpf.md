@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: ee08dc22588264b25d40b3fd818ef9ee1da90319
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 39f98d11099a778a7b3915f39588138d41214af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502044"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Código subyacente y XAML en WPF
 <a name="introduction"></a> Código subyacente es un término que se usa para describir el código que se une con objetos definidos por marcado, cuando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página está compilado por marcado. En este tema se describe los requisitos para el código subyacente, así como un mecanismo de código insertado alternativo para el código en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -23,7 +23,7 @@ ms.locfileid: "44085678"
   
 -   [Código subyacente, controlador de eventos y los requisitos de la clase parcial de WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x: Code](#x_Code)  
+-   [x:Code](#x_Code)  
   
 -   [Limitaciones del código insertado](#Inline_Code_Limitations)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "44085678"
 -   Para el idioma de Microsoft Visual Basic en concreto, puede usar específico del lenguaje `Handles` palabra clave para asociar controladores a instancias y eventos en la declaración del controlador, en lugar de asociar controladores con atributos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sin embargo, esta técnica tiene algunas limitaciones porque la `Handles` palabra clave no es compatible con todas las características específicas de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de eventos, por ejemplo, determinados enruta los escenarios de eventos o eventos adjuntos. Para obtener más información, consulte [Visual Basic y control de eventos de WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
-## <a name="xcode"></a>x: Code  
+## <a name="xcode"></a>x:Code  
  [x: Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) se define un elemento de la directiva en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Un `x:Code` directiva elemento puede contener código de programación en línea. El código que se definen en línea puede interactuar con el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en la misma página. El ejemplo siguiente muestra código C# en línea. Tenga en cuenta que el código está dentro de la `x:Code` elemento y que el código debe estar entrecomillado `<CDATA[`... `]]>` para anular el contenido para [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], de modo que un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador (interpretar cualquiera el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] esquema o la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esquema) no intenta interpretar el contenido literalmente como [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
@@ -58,8 +58,8 @@ ms.locfileid: "44085678"
 ## <a name="inline-code-limitations"></a>Limitaciones del código insertado  
  Debe considerar el evitar o limitar el uso de código en línea. En términos de arquitectura y la filosofía de codificación, mantener una separación entre el marcado y código subyacente mantiene las funciones de diseñador y desarrollador distintos mucho más. En un nivel más técnico, el código que se escribe para el código insertado puede ser incómodo de escribir, porque siempre se escriben en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] clase parcial generada y solo se pueden usar las asignaciones de espacio de nombres XML predeterminado. Dado que no se puede agregar `using` instrucciones, debe calificar totalmente muchas de las [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] las llamadas que realice. El valor predeterminado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] asignaciones incluyen más pero no todos los [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espacios de nombres que se encuentran en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ensamblados; tendrá que completar llamadas a tipos y miembros contenidos en los otros espacios de nombres CLR. También se no se puede definir cualquier cosa más allá de la clase parcial en el código en línea, y todas las entidades de código de usuario que se hace referencia deben existir como un miembro o una variable dentro de la clase parcial generada. Otras características programación específica del lenguaje, como las macros o `#ifdef` frente a las variables globales o las variables de compilación, tampoco están disponibles. Para obtener más información, consulte [x: Code tipo XAML intrínseco](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [x:Code (Tipo XAML intrínseco)](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
- [Compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Code (Tipo XAML intrínseco)](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)
+- [Compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

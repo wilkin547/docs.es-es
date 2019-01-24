@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503019"
 ---
 # <a name="hosting"></a>Hospedaje
 Los temas de esta sección describen el hospedaje de servicios. Se puede hospedar un servicio de Internet Information Services (IIS), servicio de activación de proceso de Windows (WAS), Windows Server AppFabric, un servicio de Windows o una aplicación administrada, esta opción se conoce a menudo como *autohospedaje*.  
@@ -33,6 +33,6 @@ Los temas de esta sección describen el hospedaje de servicios. Se puede hospeda
  [Compatibilidad con múltiples enlaces de sitios de IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  Describe cómo especificar varias direcciones base de un servicio con el mismo esquema de URI en un único sitio web.  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md)  
- [Características de hospedaje de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Vea también
+- [Servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md)
+- [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ab3d3a0f460f1ecdf86147b14df205aaf49635
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5adf43bd68db449e465ffe3517c9eb9d41a5c18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502057"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION (Estructura)
-Contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso. Esta estructura se usa por la [ICorDebugThread2:: GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) método.  
+Contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso. Esta estructura se usa por la [Icordebugthread2](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,21 +42,21 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`pAppDomain`|Puntero para el propietario del dominio de aplicación de la `ilOffset` campo.|  
+|`pAppDomain`|Puntero en el propietario del dominio de aplicación de la `ilOffset` campo.|  
 |`pModule`|Puntero al propietario del módulo de la `ilOffset` campo.|  
 |`pFunction`|Puntero al propietario de la función de la `ilOffset` campo.|  
 |`ilOffset`|El desplazamiento de lenguaje intermedio (MSIL) de Microsoft del marco.|  
 |`flags`|Reservado para extensibilidad futura.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl  
+ **Encabezado**: CorDebug.idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
