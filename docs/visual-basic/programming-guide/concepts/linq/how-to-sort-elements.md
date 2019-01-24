@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Ordenar elementos (Visual Basic)'
+title: Procedimiento Ordenar elementos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: 868f3eb448393e5c06a37ab68431620638e9dc35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f049c4d0e8180781cb6581d4efda2297d4b7151d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746226"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Cómo: Ordenar elementos (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Procedimiento Ordenar elementos (Visual Basic)
 Este ejemplo muestra cómo escribir una consulta que ordene sus resultados.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos en un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -74,6 +74,6 @@ End Module
 89.99  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Ordenación de datos](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+- [Ordenación de datos](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

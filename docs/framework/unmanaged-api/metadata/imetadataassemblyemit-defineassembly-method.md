@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9115657c52f31d9b7b7da3c843338670343da26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d860a6518014e0232f9372a7ccbf34604096adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747887"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly (Método)
-Crea un `Assembly` de la estructura que contiene los metadatos para el ensamblado especificado y devuelve el token de metadatos asociados.  
+Crea un `Assembly` estructura que contienen metadatos para el ensamblado especificado y devuelve el token de metadatos asociado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,13 +43,13 @@ HRESULT DefineAssembly (
   
 #### <a name="parameters"></a>Parámetros  
  `pbPublicKey`  
- [in] La clave pública que identifica al Editor del ensamblado, o NULL si el ensamblado no tiene un nombre seguro.  
+ [in] La clave pública que identifica al publicador del ensamblado, o NULL si el ensamblado no tiene un nombre seguro.  
   
  `cbPublicKey`  
  [in] El tamaño en bytes de `pbPublicKey`.  
   
  `uHashAlgId`  
- [in] El identificador del algoritmo hash que se usa para cifrar los archivos en el ensamblado, o NULL para especificar el algoritmo SHA-1.  
+ [in] El identificador del algoritmo hash se utiliza para cifrar los archivos en el ensamblado, o NULL para especificar el algoritmo SHA-1.  
   
  `szName`  
  [in] El nombre de texto legible del ensamblado. Este valor no debe superar los 1024 caracteres.  
@@ -64,16 +64,16 @@ HRESULT DefineAssembly (
  [out] Un puntero al token de metadatos.  
   
 ## <a name="remarks"></a>Comentarios  
- Solo un `Assembly` estructura de metadatos puede definirse en un manifiesto.  
+ Solo un `Assembly` estructura de los metadatos se puede definir dentro de un manifiesto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -2,12 +2,12 @@
 title: Traza analítica de WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748147"
 ---
 # <a name="wcf-analytic-tracing"></a>Traza analítica de WCF
 Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secuencia de los seguimientos analíticos que Windows Communication Foundation (WCF) se escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado. En este ejemplo se muestra cómo usar el <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API para escribir los eventos que se integran con los servicios WCF.  
@@ -24,11 +24,11 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secu
   
 -   Si la aplicación no está en la raíz.  
   
-     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
 -   Si la aplicación está en la raíz.  
   
-     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
  Para los servicios autohospedados, seguimientos analíticos de WCF no rellenan el campo "HostReference". La clase `WCFUserEventProvider` de este ejemplo se comporta de forma coherente cuando se utiliza en un servicio autohospedado.  
   
@@ -117,5 +117,5 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secu
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Vea también
+- [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

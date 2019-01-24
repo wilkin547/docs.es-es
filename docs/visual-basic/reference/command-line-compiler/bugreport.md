@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e8366e1050217f3d993d510683252728aba0c3d9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7c393abe0e1ff9872de6bdf4d3bc3befa5cde0d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746187"
 ---
 # <a name="-bugreport"></a>-bugreport
 Crea un archivo que puede usar cuando se archiva un informe de errores.  
@@ -26,7 +26,7 @@ Crea un archivo que puede usar cuando se archiva un informe de errores.
   
 |Término|Definición|  
 |---|---|  
-|`file`|Requerido. El nombre del archivo que contendrá el informe de errores. Ponga el nombre de archivo entre comillas ("") si el nombre contiene un espacio.|  
+|`file`|Obligatorio. El nombre del archivo que contendrá el informe de errores. Ponga el nombre de archivo entre comillas ("") si el nombre contiene un espacio.|  
   
 ## <a name="remarks"></a>Comentarios  
  La siguiente información se agrega a `file`:  
@@ -60,9 +60,9 @@ Crea un archivo que puede usar cuando se archiva un informe de errores.
 vbc -bugreport:problem.txt t2.vb  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
- [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)  
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Elemento trustLevel para securityPolicy (esquema de configuración de ASP.NET)](https://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)
+## <a name="see-also"></a>Vea también
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
+- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Elemento trustLevel para securityPolicy (esquema de configuración de ASP.NET)](https://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)
