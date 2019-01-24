@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 495089ca33df3b36656da149da45019c30b81d39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618817"
 ---
-# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="a5ef0-102">ISymUnmanagedWriter::SetScopeRange (Método)</span><span class="sxs-lookup"><span data-stu-id="a5ef0-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
-<span data-ttu-id="a5ef0-103">Define el intervalo de desplazamiento del ámbito léxico especificado.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="a5ef0-104">El ámbito se convierte en el nuevo ámbito actual y se inserta en una pila de ámbitos.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="a5ef0-105">Los ámbitos deben formar una jerarquía.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="a5ef0-106">No se permiten que los elementos del mismo nivel se superponen.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-106">Siblings are not allowed to overlap.</span></span>  
+# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="c1c9b-102">ISymUnmanagedWriter::SetScopeRange (Método)</span><span class="sxs-lookup"><span data-stu-id="c1c9b-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
+<span data-ttu-id="c1c9b-103">Define el intervalo de desplazamiento del ámbito léxico especificado.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="c1c9b-104">El ámbito se convierte en el nuevo ámbito actual y se inserta en una pila de ámbitos.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="c1c9b-105">Los ámbitos deben formar una jerarquía.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="c1c9b-106">Elementos del mismo nivel no se pueden superponer.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-106">Siblings are not allowed to overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5ef0-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a5ef0-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1c9b-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c1c9b-107">Syntax</span></span>  
   
 ```  
 HRESULT OpenScope(  
@@ -36,24 +36,24 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a5ef0-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a5ef0-108">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c1c9b-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c1c9b-108">Parameters</span></span>  
  `scopeId`  
- <span data-ttu-id="a5ef0-109">[in] El identificador de ámbito para el ámbito.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-109">[in] The scope identifier for the scope.</span></span>  
+ <span data-ttu-id="c1c9b-109">[in] El identificador de ámbito para el ámbito.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-109">[in] The scope identifier for the scope.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="a5ef0-110">[in] El desplazamiento, en bytes, de la primera instrucción del ámbito léxico desde el principio del método.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="c1c9b-110">[in] El desplazamiento, en bytes, de la primera instrucción del ámbito léxico desde el principio del método.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="a5ef0-111">[in] El desplazamiento, en bytes, de la última instrucción del ámbito léxico desde el principio del método.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="c1c9b-111">[in] El desplazamiento, en bytes, de la última instrucción del ámbito léxico desde el principio del método.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a5ef0-112">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a5ef0-112">Return Value</span></span>  
- <span data-ttu-id="a5ef0-113">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c1c9b-112">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c1c9b-112">Return Value</span></span>  
+ <span data-ttu-id="c1c9b-113">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a5ef0-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a5ef0-114">Remarks</span></span>  
- <span data-ttu-id="a5ef0-115">[ISymUnmanagedWriter:: OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) devuelve un identificador de ámbito opaco que puede utilizarse con `ISymUnmanagedWriter::SetScopeRange` definir un ámbito de desplazamiento inicial y final en un momento posterior.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="a5ef0-116">En este caso, los desplazamientos pasados a `ISymUnmanagedWriter::OpenScope` y [ISymUnmanagedWriter:: CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) se omiten.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="a5ef0-117">Los identificadores de ámbito sólo son válidos en el método actual.</span><span class="sxs-lookup"><span data-stu-id="a5ef0-117">Scope identifiers are only valid in the current method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c1c9b-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c1c9b-114">Remarks</span></span>  
+ <span data-ttu-id="c1c9b-115">[ISymUnmanagedWriter:: OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) devuelve un identificador de ámbito opaco que puede utilizarse con `ISymUnmanagedWriter::SetScopeRange` definir un ámbito de desplazamiento inicial y final en un momento posterior.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="c1c9b-116">En este caso, los desplazamientos pasados a `ISymUnmanagedWriter::OpenScope` y [CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) se omiten.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="c1c9b-117">Los identificadores de ámbito solo son válidos en el método actual.</span><span class="sxs-lookup"><span data-stu-id="c1c9b-117">Scope identifiers are only valid in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5ef0-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a5ef0-118">Requirements</span></span>  
- <span data-ttu-id="a5ef0-119">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a5ef0-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1c9b-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c1c9b-118">Requirements</span></span>  
+ <span data-ttu-id="c1c9b-119">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c1c9b-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5ef0-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="a5ef0-120">See Also</span></span>  
- [<span data-ttu-id="a5ef0-121">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a5ef0-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c1c9b-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="c1c9b-120">See also</span></span>
+- [<span data-ttu-id="c1c9b-121">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c1c9b-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

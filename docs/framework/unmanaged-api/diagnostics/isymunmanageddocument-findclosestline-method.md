@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f31dad53f42fdd8f7ac3a0cb995b507ecc3590d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96ad0e34bf638c378f37e317f790696c2ac7cb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519702"
 ---
-# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="5ba11-102">ISymUnmanagedDocument::FindClosestLine (Método)</span><span class="sxs-lookup"><span data-stu-id="5ba11-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
-<span data-ttu-id="5ba11-103">Devuelve la línea más próxima que sea un punto de secuencia, dada una línea en este documento que puede ser o no un punto de secuencia.</span><span class="sxs-lookup"><span data-stu-id="5ba11-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
+# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="abfea-102">ISymUnmanagedDocument::FindClosestLine (Método)</span><span class="sxs-lookup"><span data-stu-id="abfea-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
+<span data-ttu-id="abfea-103">Devuelve la línea más próxima que sea un punto de secuencia, se especifica una línea en este documento que puede o no ser un punto de secuencia.</span><span class="sxs-lookup"><span data-stu-id="abfea-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5ba11-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5ba11-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="abfea-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="abfea-104">Syntax</span></span>  
   
 ```  
 HRESULT FindClosestLine(  
@@ -35,15 +35,15 @@ HRESULT FindClosestLine(
     [out, retval] ULONG32*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5ba11-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5ba11-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="abfea-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="abfea-105">Parameters</span></span>  
  `line`  
- <span data-ttu-id="5ba11-106">[in] Una línea en este documento.</span><span class="sxs-lookup"><span data-stu-id="5ba11-106">[in] A line in this document.</span></span>  
+ <span data-ttu-id="abfea-106">[in] Una línea en este documento.</span><span class="sxs-lookup"><span data-stu-id="abfea-106">[in] A line in this document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="5ba11-107">[out] Un puntero a una variable que recibe la línea.</span><span class="sxs-lookup"><span data-stu-id="5ba11-107">[out] A pointer to a variable that receives the line.</span></span>  
+ <span data-ttu-id="abfea-107">[out] Un puntero a una variable que recibe la línea.</span><span class="sxs-lookup"><span data-stu-id="abfea-107">[out] A pointer to a variable that receives the line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5ba11-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5ba11-108">Return Value</span></span>  
- <span data-ttu-id="5ba11-109">S_OK si el método tiene éxito; en caso contrario, un código de error.</span><span class="sxs-lookup"><span data-stu-id="5ba11-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="abfea-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="abfea-108">Return Value</span></span>  
+ <span data-ttu-id="abfea-109">S_OK si el método se realiza correctamente; en caso contrario, un código de error.</span><span class="sxs-lookup"><span data-stu-id="abfea-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ba11-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="5ba11-110">See Also</span></span>  
- [<span data-ttu-id="5ba11-111">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5ba11-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="abfea-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="abfea-110">See also</span></span>
+- [<span data-ttu-id="abfea-111">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="abfea-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
