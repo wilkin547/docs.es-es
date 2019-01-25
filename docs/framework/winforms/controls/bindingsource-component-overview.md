@@ -7,18 +7,18 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 047df677ade3837e167845ace2bdc6ca14738c3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fbd089cef6f014979cf8bbdf376b2f76ac9bcf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686953"
 ---
 # <a name="bindingsource-component-overview"></a>Información general sobre el componente BindingSource
 El componente <xref:System.Windows.Forms.BindingSource> está diseñado para simplificar el proceso de enlazar controles a un origen de datos subyacente. El componente <xref:System.Windows.Forms.BindingSource> actúa como canalización y como origen de datos al que se enlazarán otros controles. Proporciona una abstracción de la conexión de datos de su formulario al pasar comandos a la lista de datos subyacente. Además, puede agregar datos directamente a él para que el propio componente funcione como un origen de datos.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>Componente BindingSource como intermediario  
- El componente <xref:System.Windows.Forms.BindingSource> actúa como origen de datos para algunos o todos los controles del formulario. En Visual Studio, el <xref:System.Windows.Forms.BindingSource> se puede enlazar a un control por medio de la `DataBindings` propiedad, que es accesible desde el **propiedades** ventana. Vea también [Cómo: Enlazar controles de Windows Forms con el componente BindingSource mediante el Diseñador](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md).  
+ El componente <xref:System.Windows.Forms.BindingSource> actúa como origen de datos para algunos o todos los controles del formulario. En Visual Studio, el <xref:System.Windows.Forms.BindingSource> se puede enlazar a un control por medio de la `DataBindings` propiedad, que es accesible desde el **propiedades** ventana. Consulte también [Cómo: Enlazar controles de Windows Forms con el componente BindingSource mediante el diseñador](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md).  
   
  Puede enlazar el componente <xref:System.Windows.Forms.BindingSource> a orígenes de datos simples, como una única propiedad de un objeto o una colección básica como <xref:System.Collections.ArrayList>, y a orígenes de datos complejos, como una tabla de base de datos. El componente <xref:System.Windows.Forms.BindingSource> actúa como el intermediario que proporciona los servicios de administración de enlace y moneda. En tiempo de diseño o en tiempo de ejecución, puede enlazar un componente <xref:System.Windows.Forms.BindingSource> a un origen de datos complejo estableciendo sus propiedades <xref:System.Windows.Forms.BindingSource.DataSource%2A> y <xref:System.Windows.Forms.BindingSource.DataMember%2A> en la base de datos y en la tabla, respectivamente. En la siguiente ilustración se muestra dónde encaja el componente <xref:System.Windows.Forms.BindingSource> en la arquitectura de enlace de datos existente.  
   
@@ -57,11 +57,11 @@ El componente <xref:System.Windows.Forms.BindingSource> está diseñado para sim
 |Propiedad <xref:System.Windows.Forms.BindingSource.Sort%2A>|Si el origen de datos es una <xref:System.ComponentModel.IBindingList>, obtiene o establece el nombre de columna usado para ordenar y el criterio de ordenación. Si el origen de datos es una <xref:System.ComponentModel.IBindingListView> y admite la ordenación avanzada, obtiene varios nombres de columna usados para ordenar y el criterio de ordenación.|  
 |Propiedad <xref:System.Windows.Forms.BindingSource.Filter%2A>|Si el origen de datos es una <xref:System.ComponentModel.IBindingListView>, obtiene o establece la expresión usada para filtrar qué filas se ven.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingNavigator>  
- [Arquitectura del componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [BindingNavigator (control)](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Enlace de datos en Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.BindingNavigator>
+- [Arquitectura del componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)
+- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [BindingNavigator (control)](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [Enlace de datos en Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

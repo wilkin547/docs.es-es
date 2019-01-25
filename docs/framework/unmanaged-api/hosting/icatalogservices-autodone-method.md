@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 638ee0d02cb33b3a929d0ee43968c3ff34757ef2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 63c00755c7d39160343d25f9fc83992b27719d29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678478"
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone (Método)
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
@@ -33,5 +33,5 @@ Este método es compatible con la infraestructura de .NET Framework y no está d
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

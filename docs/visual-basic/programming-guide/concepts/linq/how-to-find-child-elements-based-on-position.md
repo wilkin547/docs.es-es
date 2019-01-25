@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: buscar elementos secundarios en función de posición (XPath-LINQ to XML) (Visual Basic)'
+title: Procedimiento Buscar elementos secundarios en función de posición (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: 9f18da12786b4c44dc21e54c8d5020f49ef9ecb6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 023ad921a5ba03adb306cd6ed93e38ad92406c20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626071"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos secundarios en función de posición (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Procedimiento Buscar elementos secundarios en función de posición (XPath-LINQ to XML) (Visual Basic)
 En ocasiones, deseará buscar elementos en función de su posición. Quizá desee buscar el segundo elemento o buscar el tercero en el quinto elemento.  
   
  La expresión XPath es:  
@@ -21,7 +21,7 @@ En ocasiones, deseará buscar elementos en función de su posición. Quizá dese
 ## <a name="example"></a>Ejemplo  
  Este ejemplo encontrará el segundo en el cuarto elemento de `Test`. El resultado es una colección de elementos.  
   
- En este ejemplo se usa el siguiente documento XML: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md) (Archivo XML de muestra: Configuración de prueba [LINQ to XML]).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Probar configuración (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -78,5 +78,5 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Vea también
+- [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

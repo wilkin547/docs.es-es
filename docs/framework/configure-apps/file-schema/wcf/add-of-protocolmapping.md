@@ -2,18 +2,18 @@
 title: '&lt;add&gt; de &lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: e21c3ca665d6a75394d70da43ec2044e00f16429
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ce970b9ef71e2a28de680926f96f83500948619b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632821"
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; de &lt;protocolMapping&gt;
 Representa una asignación de protocolo predeterminado entre un esquema de protocolo de transporte (por ejemplo, http, net.tcp, net.pipe, etc.) y un enlace de Windows Communication Foundation (WCF). Al crear puntos de conexión predeterminados en tiempo de ejecución, WCF examina las asignaciones configuradas y decide qué enlace usar para una determinada dirección base.  
   
  \<system.serviceModel>  
-\<protocolMapping >  
+\<protocolMapping>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +44,7 @@ Representa una asignación de protocolo predeterminado entre un esquema de proto
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Representa una sección de configuración para definir las asignaciones de protocolos predeterminados entre esquemas de protocolos de transporte (por ejemplo, http, net.tcp, net.pipe, etc.) y enlaces de Windows Communication Foundation (WCF).|  
+|[\<protocolMapping>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Representa una sección de configuración para definir las asignaciones de protocolos predeterminados entre esquemas de protocolos de transporte (por ejemplo, http, net.tcp, net.pipe, etc.) y enlaces de Windows Communication Foundation (WCF).|  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo de configuración se muestra la asignación de protocolo predeterminado en el archivo machine.config. Puede invalidar esta asignación predeterminada en el nivel del equipo modificando el archivo machine.config. O bien, si solo deseara invalidarlo dentro del ámbito de una aplicación, puede invalidar esta sección dentro del archivo de configuración de la aplicación y cambiar la asignación para los esquemas de protocolos individuales.  
@@ -62,6 +62,6 @@ Representa una asignación de protocolo predeterminado entre un esquema de proto
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>      
- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04be252092732296354cfec102cf8fe648ed2dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0651609e6d2597336ee42ceae752df7e561cd252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692657"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs (Método)
-Obtiene el `ClassID` de un tipo mediante el token de metadatos especificado y la `ClassID` valores de cualquier tipo de argumentos.  
+Obtiene el `ClassID` de un tipo con el token de metadatos especificado y la `ClassID` valores de cualquier tipo de argumentos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,10 +43,10 @@ HRESULT GetClassFromTokenAndTypeArgs(
  [in] El identificador del módulo en el que reside el tipo.  
   
  `typeDef`  
- [in] Un `mdTypeDef` símbolo (token) de metadatos que hace referencia al tipo.  
+ [in] Un `mdTypeDef` token de metadatos que hace referencia al tipo.  
   
  `cTypeArgs`  
- [in] El número de parámetros de tipo para el tipo dado. Este valor debe ser cero para tipos no genéricos.  
+ [in] El número de parámetros de tipo para el tipo especificado. Este valor debe ser cero para tipos no genéricos.  
   
  `typeArgs`  
  [in] Una matriz de `ClassID` valores, cada uno de los cuales es un argumento del tipo. El valor de `typeArgs` puede ser NULL si `cTypeArgs` se establece en cero.  
@@ -54,21 +55,21 @@ HRESULT GetClassFromTokenAndTypeArgs(
  [out] Un puntero a la `ClassID` del tipo especificado.  
   
 ## <a name="remarks"></a>Comentarios  
- Llamar a la `GetClassFromTokenAndTypeArgs` método con un `mdTypeRef` en lugar de un `mdTypeDef` símbolo (token) de metadatos puede tener resultados imprevisibles; los llamadores deben resolver el `mdTypeRef` para un `mdTypeDef` al pasarla.  
+ Una llamada a la `GetClassFromTokenAndTypeArgs` método con un `mdTypeRef` en lugar de un `mdTypeDef` token de metadatos puede tener resultados impredecibles; los llamadores deben resolver el `mdTypeRef` a un `mdTypeDef` al pasarlo.  
   
- Si ya no se carga el tipo, una llamada a `GetClassFromTokenAndTypeArgs` se desencadena la carga, que es una operación peligrosa en muchos contextos. Por ejemplo, llamar a este método durante la carga de módulos u otros tipos podría provocar un bucle infinito como el tiempo de ejecución intenta la carga circular.  
+ Si ya no se carga el tipo, una llamada a `GetClassFromTokenAndTypeArgs` desencadenará la carga, que es una operación peligrosa en muchos contextos. Por ejemplo, llamar a este método durante la carga de módulos u otros tipos podría provocar un bucle infinito mientras el tiempo de ejecución intenta la carga circular.  
   
- En general, uso de `GetClassFromTokenAndTypeArgs` se desaconseja. Si los generadores de perfiles están interesados en los eventos de un tipo determinado, debe almacenar el `ModuleID` y `mdTypeDef` de ese tipo y el uso [ICorProfilerInfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) para comprobar si un determinado `ClassID` es el de la tipo deseado.  
+ En general, uso de `GetClassFromTokenAndTypeArgs` es en absoluto. Si los generadores de perfiles están interesados en los eventos de un tipo determinado, debe almacenar el `ModuleID` y `mdTypeDef` de ese tipo y use [ICorProfilerInfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) para comprobar si un determinado `ClassID` es el de la tipo deseado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

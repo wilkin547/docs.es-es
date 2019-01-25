@@ -2,22 +2,22 @@
 title: '&lt;transport&gt; de &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: fe015fa308821519419a97a26bb5f57a6b4ab0cd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6f09a71a7ec7dbfae5eb6f1896f1fba68456973f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642599"
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; de &lt;ws2007HttpBinding&gt;
 Define la configuración de autenticación del transporte HTTP.  
   
  \<system.serviceModel>  
-\<enlaces >  
+\<bindings>  
 \<ws2007HttpBinding>  
-\<enlace >  
-\<seguridad >  
-\<transporte >  
+\<binding>  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,15 +70,15 @@ Define la configuración de autenticación del transporte HTTP.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Representa las funciones de seguridad de la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Representa las funciones de seguridad de la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>  
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
+- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

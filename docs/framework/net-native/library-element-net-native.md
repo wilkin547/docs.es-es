@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eabaf1dd99fce7cd4c45f80666534f904fcdfdf9
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: e6615ab30fdc0d0ab65f135e1df4e206f5548dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743795"
 ---
 # <a name="ltlibrarygt-element-net-native"></a>Elemento &lt;Library&gt; (.NET Native)
 Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución.  
@@ -58,7 +58,7 @@ Elemento \<Library>
   
  El elemento `<Library>` sirve de contenedor para definir los elementos de programa cuyos metadatos son necesarios en tiempo de ejecución. Este elemento no expresa la directiva. En tiempo de compilación, las herramientas del compilador buscan únicamente en la biblioteca designada por el elemento `<Library>` para encontrar los elementos de programa identificados por sus elementos secundarios. Por el contrario, las herramientas del compilador buscan en todas las bibliotecas (incluidas las bibliotecas principales de .NET Framework), para encontrar los elementos de programa identificados por los elementos secundarios del elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md).  
   
- Las directivas de `<Library>` se pueden usar de manera condicional. Si el nombre de la `<Library>` elemento comienza y termina con un asterisco (\*), el `<Library>` directiva tiene un efecto sólo si la aplicación al que hace referencia el ensamblado especificado entre los asteriscos. Por ejemplo, la siguiente directiva en tiempo de ejecución se aplica únicamente si la aplicación hace referencia al ensamblado Utillities.dll.  
+ Las directivas de `<Library>` se pueden usar de manera condicional. Si el nombre de la `<Library>` elemento comienza y termina con un asterisco (\*), el `<Library>` directiva tiene un efecto sólo si se hace referencia el ensamblado especificado entre los asteriscos por la aplicación. Por ejemplo, la siguiente directiva en tiempo de ejecución se aplica únicamente si la aplicación hace referencia al ensamblado Utillities.dll.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -68,8 +68,8 @@ Elemento \<Library>
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [\<Aplicación > elemento](../../../docs/framework/net-native/application-element-net-native.md)  
- [\<Directivas > elemento](../../../docs/framework/net-native/directives-element-net-native.md)  
- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Vea también
+- [\<Aplicación > elemento](../../../docs/framework/net-native/application-element-net-native.md)
+- [\<Directivas > elemento](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: 555e15110c7af501de05d1f395a72ca4b7800054
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b63fa66c9cda1e439e3917ca62377f68028fc049
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497846"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
-Identifica una propiedad como la propiedad predeterminada de su clase, estructura o interfaz.  
+Identifica una propiedad como propiedad predeterminada de su clase, estructura o interfaz.  
   
 ## <a name="remarks"></a>Comentarios  
- Una clase, estructura o interfaz puede designar al menos uno de sus propiedades como el *propiedad predeterminada*, siempre que la propiedad tiene al menos un parámetro. Si el código hace referencia a una clase o estructura sin especificar a un miembro, Visual Basic resuelve que hacen referencia a la propiedad predeterminada.  
+ Puede designar una clase, estructura o interfaz a lo sumo uno de sus propiedades como el *propiedad predeterminada*, siempre que la propiedad tiene al menos un parámetro. Si el código hace referencia a una clase o estructura sin especificar a un miembro, Visual Basic resuelve que hacen referencia a la propiedad predeterminada.  
   
- Propiedades predeterminadas pueden producir una pequeña reducción en caracteres de código fuente, pero puede hacer que el código más difícil de leer. Si el código de llamada no está familiarizado con la clase o estructura, cuando hace referencia al nombre de clase o estructura no podrá saber si esa referencia tiene acceso a la clase o estructura en Sí o una propiedad predeterminada. Esto puede conducir a errores del compilador o errores sutiles lógicos de tiempo de ejecución.  
+ Propiedades predeterminadas pueden producir una pequeña reducción en caracteres de código fuente, pero puede hacer que su código más difícil de leer. Si el código de llamada no está familiarizado con la clase o estructura, cuando realiza una referencia al nombre de clase o estructura no puede estar seguro si esa referencia tiene acceso a la clase o estructura en Sí o una propiedad predeterminada. Esto puede conducir a errores del compilador o errores sutiles tiempo de ejecución de lógica.  
   
- Algo puede reducir la posibilidad de errores de propiedades de forma predeterminada al usar siempre el [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md) para establecer el tipo de compilador comprobación `On`.  
+ Algo puede reducir la posibilidad de errores de propiedad predeterminado al usar siempre el [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) para establecer el tipo de compilador para la comprobación `On`.  
   
- Si planea usar una clase o estructura en el código, debe determinar si tiene una propiedad predeterminada y si es así, lo que su nombre es.  
+ Si va a usar una clase o estructura en el código, debe determinar si tiene una propiedad predeterminada y si es así, lo que su nombre es.  
   
- Debido a estas desventajas, considere la posibilidad de no definir propiedades predeterminadas. Para la legibilidad del código, debe tener en cuenta siempre que hace referencia a todas las propiedades de forma explícita, incluso predeterminados propiedades.  
+ Debido a estos inconvenientes, considere la posibilidad de no definir propiedades predeterminadas. Para mejorar la legibilidad de código, debe también tener en cuenta siempre referencia explícitamente a todas las propiedades, propiedades incluso predeterminadas.  
   
  El `Default` modificador se puede usar en este contexto:  
   
  [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
+- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

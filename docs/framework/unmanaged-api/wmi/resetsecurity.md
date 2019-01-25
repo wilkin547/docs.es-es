@@ -1,6 +1,6 @@
 ---
 title: Función ResetSecurity (referencia de API no administrada)
-description: La función ResetSecurity asigna un token de suplantación al subproceso actual.
+description: La función ResetSecurity asigna un token de suplantación para el subproceso actual.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f117b9807d57847d53cf00fbb4983e187798f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730859"
 ---
-# <a name="resetsecurity-function"></a>ResetSecurity (función)
+# <a name="resetsecurity-function"></a>Función ResetSecurity
 Asigna el token de suplantación proporcionado para el subproceso actual.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -48,11 +48,11 @@ Si la función se realiza correctamente, el valor devuelto es `S_OK` (0).
 Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la [GetErrorInfo](geterrorinfo.md) función.
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

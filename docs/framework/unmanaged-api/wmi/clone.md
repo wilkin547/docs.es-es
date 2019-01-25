@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b027d26292b5d810d91932bac4ec8dee4b77661d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643291"
 ---
 # <a name="clone-function"></a>Clone (función)
-Devuelve un nuevo objeto que es un clon completo del objeto actual.   
+Devuelve un objeto nuevo que es un clon completo del objeto actual.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -55,9 +55,9 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Ha habido un error general. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `null` se especificó como un parámetro, y no es válido en este uso. |
-| `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para clonar el objeto. |
+| `WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` se especificó como un parámetro, y no es válido en este uso. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para clonar el objeto. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -67,11 +67,11 @@ Esta función contiene una llamada a la [IWbemClassObject::Clone](/windows/deskt
 El objeto clonado es un objeto COM que tiene un recuento de referencias de 1.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

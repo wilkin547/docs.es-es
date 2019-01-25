@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 06c9119a2b842a0efcd4af752ba72dbfda03bf13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653871"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType (Enumeración)
 Contiene valores que indican la causa subyacente de un evento de desbordamiento de pila.  
@@ -40,21 +40,21 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`SO_ClrEngine`|El motor de ejecución produjo el desbordamiento de pila.|  
-|`SO_Managed`|Código administrado produjo el desbordamiento de pila.|  
-|`SO_Other`|Se produjo el desbordamiento de pila por código no administrado.|  
+|`SO_ClrEngine`|El desbordamiento de pila fue causado por el motor de ejecución.|  
+|`SO_Managed`|El desbordamiento de pila se debió a código administrado.|  
+|`SO_Other`|El desbordamiento de pila se debió a código no administrado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta información se pasa al host a través de una llamada a la [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) método.  
+ Esta información se pasa al host mediante una llamada a la [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

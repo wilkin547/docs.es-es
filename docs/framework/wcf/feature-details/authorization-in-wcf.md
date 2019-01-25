@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 8e7632dda1a1bd2b60b71c385ad58c23e4207534
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 51bf3c81962c6981affdb96261fc41211142e46d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645553"
 ---
 # <a name="authorization-in-wcf"></a>Autorización en WCF
 La autorización es el proceso para controlar el acceso y los derechos a los recursos, como servicios o archivos. Los temas de esta sección muestran cómo realizar esta tarea básica en Windows Communication Foundation (WCF) en una variedad de formas.  
@@ -19,13 +19,13 @@ La autorización es el proceso para controlar el acceso y los derechos a los rec
  [Mecanismos de control de acceso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
  Proporciona una descripción breve de los mecanismos de autorización en WCF y usos sugeridos.  
   
- [Cómo restringir el acceso con la clase PrincipalPermissionAttribute Class](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [Cómo: Restringir el acceso con la clase PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Muestra el proceso de restringir el acceso a un servicio con <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
   
- [Uso del proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  Abarca la configuración de un servicio para permitirle utilizar la característica de proveedor de funciones de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
- [Uso del proveedor de funciones del administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [Cómo: Usar el proveedor de roles de administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] puede usar el Administrador de autorización para administrar la autorización para un sitio web. WCF de forma similar puede aprovechar el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]combinación /Authorization Manager para la autorización de clientes.  
   
  [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
@@ -46,6 +46,6 @@ La autorización es el proceso para controlar el acceso y los derechos a los rec
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Autenticación](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vea también
+- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

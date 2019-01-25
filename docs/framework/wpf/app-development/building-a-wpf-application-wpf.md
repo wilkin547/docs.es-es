@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 89ceb39b08250bc400eed6ca8f8c24013446b453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3bae07f8b72225ccb502a32fbc03fb4651c80d63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654287"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilar una aplicación de WPF (WPF)
 Se pueden crear aplicaciones de Windows Presentation Foundation (WPF) como [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] archivos ejecutables (.exe), bibliotecas (.dll) o una combinación de ambos tipos de ensamblados. En este tema se ofrece una introducción a la compilación de aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describen los pasos clave del proceso de compilación.  
@@ -166,8 +166,8 @@ End Sub
   
 -   No se vuelve a compilar nada (si no ha cambiado nada en el proyecto).  
   
-## <a name="see-also"></a>Vea también  
- [Implementar una aplicación WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Referencia de MSBuild para WPF](/visualstudio/msbuild/wpf-msbuild-reference)  
- [Identificadores URI de paquete en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Vea también
+- [Implementar una aplicación WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Referencia de MSBuild para WPF](/visualstudio/msbuild/wpf-msbuild-reference)
+- [Identificadores URI de paquete en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

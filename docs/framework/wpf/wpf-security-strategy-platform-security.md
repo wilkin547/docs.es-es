@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640451"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estrategia de seguridad de WPF: Seguridad de plataforma
 Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de seguridad, también aprovecha las características de seguridad de la plataforma subyacente, que incluye el sistema operativo, el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], y [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Estas capas se combinan para proporcionar a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modelo de seguridad sólido y profundo que intenta evitar todos los puntos flacos, como se muestra en la ilustración siguiente:  
@@ -208,12 +208,12 @@ Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] incorpora y amplía las capacidades de seguridad de [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] como parte de un compromiso continuo con la seguridad.  
   
-## <a name="see-also"></a>Vea también  
- [Descripción de la seguridad en Microsoft Internet Explorer 6 en Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
- [Understanding and Working in Protected Mode Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)  
- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
- [Guía de seguridad de Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
- [Seguridad de acceso del código](../../../docs/framework/misc/code-access-security.md)  
- [Seguridad](../../../docs/framework/wpf/security-wpf.md)  
- [Seguridad de confianza parcial de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [Estrategia de seguridad de WPF: Ingeniería de seguridad](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a>Vea también
+- [Descripción de la seguridad en Microsoft Internet Explorer 6 en Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
+- [Understanding and Working in Protected Mode Internet Explorer](https://msdn.microsoft.com/library/bb250462.aspx)
+- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
+- [Guía de seguridad de Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
+- [Seguridad de acceso del código](../../../docs/framework/misc/code-access-security.md)
+- [Seguridad](../../../docs/framework/wpf/security-wpf.md)
+- [Seguridad de confianza parcial de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [Estrategia de seguridad de WPF: Ingeniería de seguridad](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

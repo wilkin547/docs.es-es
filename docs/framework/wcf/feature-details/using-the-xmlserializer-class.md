@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: abb679971771f6bff5bd1c84ff744e2fcbb9c45a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732861"
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilización de la clase XmlSerializer
 Windows Communication Foundation (WCF) puede usar dos tecnologías de serialización diferente para convertir los datos de la aplicación en XML que se transmite entre los clientes y servicios, un proceso llamado serialización.  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) puede usar dos tecnologías de serializac
  No se admite el atributo <xref:System.ServiceModel.MessageHeaderArrayAttribute> al utilizar <xref:System.Xml.Serialization.XmlSerializer>.  
   
 > [!NOTE]
->  En este caso, el <xref:System.Xml.Serialization.XmlSerializer> produce la excepción siguiente, que se ha lanzado antes de WCF: "no puede tener un elemento declarado en el nivel superior de un esquema `maxOccurs` > 1. Debe proporcionar un elemento contenedor para 'más' usando `XmlArray` o `XmlArrayItem` en lugar de `XmlElementAttribute`, o usando el estilo de parámetro Wrapped".  
+>  En este caso, el <xref:System.Xml.Serialization.XmlSerializer> produce la excepción siguiente, que se ha lanzado antes de WCF: "No puede tener un elemento declarado en el nivel superior de un esquema `maxOccurs` > 1. Debe proporcionar un elemento contenedor para 'más' usando `XmlArray` o `XmlArrayItem` en lugar de `XmlElementAttribute`, o usando el estilo de parámetro Wrapped".  
 >   
 >  Si recibe esta excepción, investigue si se aplica esta situación.  
   
@@ -163,7 +163,7 @@ Windows Communication Foundation (WCF) puede usar dos tecnologías de serializac
   
 -   El esquema generado no puede ser un esquema de contrato de datos válido. Por ejemplo, su método de proveedor de esquema puede generar un esquema que incluye atributos XML que no se admiten en el modelo de contrato de datos. En este caso, puede importar el esquema como tipos `IXmlSerializable`. Este modo de importación no está activada de forma predeterminada, pero fácilmente se puede habilitar: por ejemplo, con el `/importXmlTypes` conmutador de línea de comandos para el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Esto se describe en detalle en la [esquema de importación para generar clases](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md). Tenga en cuenta que debe trabajar directamente con XML para sus instancias de tipo. También puede considerar la utilización de una tecnología de serialización diferente que admita una gama más amplia de esquemas. Vea el tema acerca de la utilización del `XmlSerializer`.  
   
--   Puede desear volver a usar sus tipos `IXmlSerializable` existentes en el proxy en lugar de generar nuevos. En este caso, la característica de tipos a la cual s se hace referencia descrita en el tema Esquema de Importación para generar Tipos se puede utilizar para indicar el tipo que se reutilizará. Esto equivale a utilizar el `/reference` cambie en svcutil.exe, que especifica el ensamblado que contiene los tipos que se va a volver a usar.  
+-   Puede desear volver a usar sus tipos `IXmlSerializable` existentes en el proxy en lugar de generar nuevos. En este caso, la característica de tipos a la cual s se hace referencia descrita en el tema Esquema de Importación para generar Tipos se puede utilizar para indicar el tipo que se reutilizará. Esto se corresponde con el uso del modificador `/reference` en svcutil.exe, que especifica el ensamblado que contiene los tipos que se van a volver a usar.  
   
 ### <a name="xmlserializer-legacy-behavior"></a>Comportamiento heredado de XmlSerializer  
  En .NET Framework 4.0.0 y versiones anteriores, XmlSerializer generaba ensamblados temporales de serialización escribiendo código de C# en un archivo. El archivo se compiló en un ensamblado.  Este comportamiento tenía algunas consecuencias no deseadas como la reducción del tiempo de inicio para el serializador. En .NET Framework 4.0.5, este comportamiento se cambió para generar los ensamblados sin que sea necesario el uso del compilador. Algunos desarrolladores quizás deseen ver el código de C# generado. Puede especificar usar este comportamiento heredado mediante la siguiente configuración:  
@@ -205,11 +205,11 @@ Windows Communication Foundation (WCF) puede usar dos tecnologías de serializac
 > [!NOTE]
 >  El `<xmlSerializer useLegacySerializerGeneration="true"/>` modificador sólo funciona en un equipo que ejecuta .NET Framework 4.5 o una versión posterior. Los pasos anteriores `appSettings` enfoque funciona en todas las versiones de .NET Framework.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.DataContractFormatAttribute>  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Mejora del tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.DataContractFormatAttribute>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.ServiceModel.MessageHeaderArrayAttribute>
+- [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Cómo: Mejorar el inicio de tiempo de las aplicaciones cliente WCF mediante XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

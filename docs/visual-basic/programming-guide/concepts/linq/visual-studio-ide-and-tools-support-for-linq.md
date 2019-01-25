@@ -2,12 +2,12 @@
 title: IDE de Visual Studio y herramientas para LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: b6b6cda40da1d54a68fdf924e6bf92efd5dec7a0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 620215ae8c49642df27fdc944dd929550e870e24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728244"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>IDE de Visual Studio y herramientas para LINQ (Visual Basic)
 El entorno de desarrollo integrado (IDE) de Visual Studio proporciona las siguientes características que admiten el desarrollo de aplicaciones de LINQ:  
@@ -24,5 +24,5 @@ El entorno de desarrollo integrado (IDE) de Visual Studio proporciona las siguie
 ## <a name="visual-studio-debugger-support"></a>Compatibilidad con el depurador de Visual Studio  
  El depurador de Visual Studio admite la depuración de expresiones de consulta. Para obtener más información, vea [Depurar LINQ](/visualstudio/debugger/debugging-linq).  
   
-## <a name="see-also"></a>Vea también  
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Vea también
+- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

@@ -2,12 +2,12 @@
 title: Referencia de palabras clave
 description: Encuentre vínculos a información acerca de todos los F# palabras clave del lenguaje.
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579850"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857910"
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
 
@@ -73,7 +73,7 @@ La tabla siguiente se muestran todos los F# palabras clave en orden alfabético,
 |`return!`|[Expresiones de cálculo](computation-expressions.md)<br /><br />[Flujos de trabajo asincrónicos](asynchronous-workflows.md)|Utilizado para indicar una expresión de cálculo que, cuando se evalúa, proporciona el resultado de la expresión de cálculo que contiene.|
 |`select`|[Expresiones de consulta](query-expressions.md)|Se utiliza en expresiones de consulta para especificar qué campos o columnas para extraer. Tenga en cuenta que esto es una palabra clave contextual, lo que significa que no es realmente una palabra reservada y sólo actúa como una palabra clave en el contexto adecuado.|
 |`static`|[Miembros](members/index.md)|Se utiliza para indicar un método o propiedad que se pueda llamar sin una instancia de un tipo o un miembro value que se comparte entre todas las instancias de un tipo.|
-|`struct`|[Estructuras](structures.md)<br /><br />[Restricciones](generics/constraints.md)|Se utiliza para declarar un tipo de estructura.<br /><br />También se utiliza en las restricciones de parámetro genérico.<br /><br />Se utiliza para la compatibilidad de OCaml en las definiciones de módulo.|
+|`struct`|[Estructuras](structures.md)<br /><br /> [Tuplas](tuples.md)<br/><br/>[Restricciones](generics/constraints.md)|Se utiliza para declarar un tipo de estructura.<br /><br/>Se usa para especificar una tupla de struct.<br/><br />También se utiliza en las restricciones de parámetro genérico.<br /><br />Se utiliza para la compatibilidad de OCaml en las definiciones de módulo.|
 |`then`|[Expresiones condicionales: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Constructores](members/constructors.md)|Usar en expresiones condicionales.<br /><br />También se usa para realizar efectos después de la construcción de objetos.|
 |`to`|[Bucles: `for...to` Expresión](loops-for-to-expression.md)|Utilizado en `for` bucles para indicar un intervalo.|
 |`true`|[Tipos primitivos](primitive-types.md)|Se utiliza como un literal booleano.|

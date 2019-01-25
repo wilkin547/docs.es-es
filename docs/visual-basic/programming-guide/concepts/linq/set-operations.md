@@ -1,22 +1,22 @@
 ---
-title: Operaciones de conjunto (Visual Basic)
+title: Operaciones Set (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 2620fa02c8f1f07edbf149c3202af8ab1decc072
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741887"
 ---
-# <a name="set-operations-visual-basic"></a>Operaciones de conjunto (Visual Basic)
+# <a name="set-operations-visual-basic"></a>Operaciones Set (Visual Basic)
 Las operaciones set de LINQ se refieren a operaciones de consulta que generan un conjunto de resultados en función de la presencia o ausencia de elementos equivalentes dentro de la misma colección o en distintas colecciones (o conjuntos).  
   
  Los métodos del operador de consulta estándar que realizan operaciones set se indican en la sección siguiente.  
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Sintaxis de expresiones de consulta de Visual Basic|Más información|  
+|Nombre del método|Descripción|Sintaxis de expresión de consulta de Visual Basic|Más información|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Distinct|Quita valores duplicados de una colección.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
 |Except|Devuelve la diferencia de conjuntos, es decir, los elementos de una colección que no aparecen en una segunda colección.|No es aplicable.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
@@ -50,9 +50,9 @@ Las operaciones set de LINQ se refieren a operaciones de consulta que generan un
   
  [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq>  
- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Distinct (cláusula)](../../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
- [Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Linq>
+- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Distinct (cláusula)](../../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [Cómo: Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Cómo: Buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

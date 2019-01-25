@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f34fee19c796f65d315fcbd26d55e1d5322303a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599674"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass (Método)
 Determina si la clase especificada es una clase de matriz.  
@@ -45,22 +45,22 @@ HRESULT IsArrayClass(
  [out] Un puntero a un valor de la enumeración CorElementType que indica el tipo de los elementos de matriz.  
   
  `pBaseClassId`  
- [out] Un puntero al identificador de clase de los elementos de matriz, si está disponible.  
+ [out] Un puntero al identificador de clase de los elementos de matriz, cuando esté disponible.  
   
  `pcRank`  
  [out] Un puntero a un entero que indica el rango (es decir, el número de dimensiones) de la matriz.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la clase especificada es una clase de matriz, el `IsArrayClass` método devuelve un HRESULT de S_OK y valores para cualquier parámetro de salida distinto de null. En caso contrario, devuelve S_FALSE.  
+ Si la clase especificada es una clase de matriz, el `IsArrayClass` método devuelve S_OK HRESULT y valores para cualquier parámetro de salida distinto de null. En caso contrario, devuelve S_FALSE.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: buscar archivos con un atributo especificado o el nombre (Visual Basic)'
+title: Procedimiento Buscar archivos con un atributo especificado o el nombre (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 7a8314ba6109f25b4bc5f5952b358695844eadab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ad3ec0c18d142e8db3eddce8902b023ff00ca4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733160"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Cómo: buscar archivos con un atributo especificado o el nombre (Visual Basic)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Procedimiento Buscar archivos con un atributo especificado o el nombre (Visual Basic)
 En este ejemplo se muestra cómo encontrar todos los archivos con una determinada extensión de nombre de archivo (por ejemplo, ".txt") en un árbol de directorios especificado. También se muestra cómo devolver el archivo más reciente o más antiguo del árbol por fecha de creación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -61,8 +61,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto que tiene como destino .NET Framework versión 3.5 o superior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Crear un proyecto que tiene como destino .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Vea también
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

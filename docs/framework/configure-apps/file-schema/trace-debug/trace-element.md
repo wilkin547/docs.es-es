@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 86cd4e7db5aa79ff85e5079813844d2af1598f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642810"
 ---
 # <a name="lttracegt-element"></a>&lt;seguimiento&gt; elemento
 Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<seguimiento >  
+\<system.diagnostics>  
+\<trace>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,9 +87,9 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

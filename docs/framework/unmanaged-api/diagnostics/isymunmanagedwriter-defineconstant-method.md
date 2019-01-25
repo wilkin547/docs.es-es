@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c7cf800dafa9f3e213a012f49c73d51c78e7074
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e03339ff2c1205f66281bd31c3ef67439feea39c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726498"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant (Método)
 Define un nombre para un valor constante.  
@@ -39,7 +39,7 @@ HRESULT DefineConstant(
   
 #### <a name="parameters"></a>Parámetros  
  `name`  
- [in] Un puntero a un `WCHAR` que define el nombre de la constante.  
+ [in] Un puntero a un `WCHAR` que define el nombre de constante.  
   
  `value`  
  [in] El valor de la constante.  
@@ -48,14 +48,14 @@ HRESULT DefineConstant(
  [in] Tamaño de la matriz `signature`.  
   
  `signature`  
- [in] La firma de tipo de la constante.  
+ [in] La firma de la constante de tipo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [DefineConstant2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [DefineConstant2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)

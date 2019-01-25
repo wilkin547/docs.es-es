@@ -2,12 +2,12 @@
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 20287af1c1d93bbdcfa83d88e5790284fbbff170
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745446"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación del proceso de Windows (WAS) que se lee en una cola de mensajes. Este ejemplo se utiliza el `netMsmqBinding` y se basa en el [comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md) ejemplo. El servicio en este caso es una aplicación hospedada en web y el cliente es autohospedado y proporciona resultados a la consola para observar el estado de pedidos de compra enviados.  
@@ -18,7 +18,7 @@ Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación d
 > [!NOTE]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  \<InstallDrive >: \WF_WCF_Samples  
+>  \<InstallDrive>:\WF_WCF_Samples  
 >   
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los WCF y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
@@ -219,7 +219,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Además, debe instalar los componentes de activación no HTTP de WCF:  
   
-    1.  Desde el **iniciar** menú, elija **Panel de Control**.  
+    1.  En el menú **Inicio**, elija **Panel de control**.  
   
     2.  Seleccione **programas y características**.  
   
@@ -305,7 +305,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     >  Al ejecutar el archivo por lotes, se restablecerá DefaultAppPool para que se ejecute utilizando la versión 2.0 de .NET Framework.  
   
- De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".  
+ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, se recibe el error siguiente: "Message interno del usuario no existe el certificado de puesta en cola".  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo  
   
@@ -350,5 +350,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Vea también
+- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -2,12 +2,12 @@
 title: Riesgos de seguridad relativos al registro de mensajes
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732003"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -99,16 +99,16 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
 ## <a name="events-triggered-by-message-logging"></a>Eventos activados mediante el registro de mensajes  
  La siguiente es una lista de todos los eventos emitidos por el registro de mensajes.  
   
--   Registro de mensajes activado: se emite este evento cuando el registro de mensajes está habilitado en la configuración o a través de WMI. El contenido del evento es “Se ha activado el registro de mensajes. Puede que se registre información confidencial en texto no cifrado, incluso aunque estuviesen cifrados en la conexión, por ejemplo, los cuerpos de mensajes”.  
+-   Registro de mensajes: Este evento se genera cuando se habilita el registro de mensajes en la configuración o a través de WMI. El contenido del evento es “Se ha activado el registro de mensajes. Puede que se registre información confidencial en texto no cifrado, incluso aunque estuviesen cifrados en la conexión, por ejemplo, los cuerpos de mensajes”.  
   
--   Registro de mensajes desactivado: se emite este evento cuando el registro de mensajes se deshabilita a través de WMI. El contenido del evento es “Se ha desactivado el registro de mensajes”.  
+-   Mensaje de cierre de sesión: Este evento se genera cuando se deshabilita el registro de mensajes a través de WMI. El contenido del evento es “Se ha desactivado el registro de mensajes”.  
   
--   Registro PII conocido activado: se emite este evento cuando el registro de PII conocido está habilitado. Esto sucede cuando el `enableLoggingKnownPii` atributo en el `machineSettings` elemento del archivo Machine.config se establece en `true`y el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`.  
+-   Registrar la PII conocida: Este evento se genera cuando el registro de PII conocido está habilitado. Esto sucede cuando el `enableLoggingKnownPii` atributo en el `machineSettings` elemento del archivo Machine.config se establece en `true`y el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`.  
   
--   Registro de PII conocido no permitido: se emite este evento cuando no se permite el registro de PII conocido. Esto sucede cuando el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`, pero la `enableLoggingKnownPii` atributo el `machineSettings` elemento del archivo Machine.config se establece en `false`. No se inicia ninguna excepción.  
+-   Registro de PII conocido no permitido: Este evento se genera cuando no se permite el registro de PII conocido. Esto sucede cuando el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`, pero la `enableLoggingKnownPii` atributo el `machineSettings` elemento del archivo Machine.config se establece en `false`. No se inicia ninguna excepción.  
   
  Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información, consulte [Event Logging](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
-## <a name="see-also"></a>Vea también  
- [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Riesgos de seguridad y sugerencias útiles para el seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>Vea también
+- [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Riesgos de seguridad y sugerencias útiles para el seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

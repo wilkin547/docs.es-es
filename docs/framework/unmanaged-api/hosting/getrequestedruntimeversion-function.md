@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 977f63b58ccbc709fb9383acf64686fc92808da4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4cdcee35f92fb79177caf7d00a99027fa179334e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651534"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion (Función)
-Obtiene el número de versión de common language runtime (CLR) solicitado por la aplicación especificada. Si no está instalada esa versión, obtiene la versión más reciente que esté instalada antes de la versión solicitada.  
+Obtiene el número de versión de common language runtime (CLR) solicitado por la aplicación especificada. Si esa versión no está instalada, obtiene la versión más reciente que esté instalada antes de la versión solicitada.  
   
- Esta función está desusada en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Esta función está en desuso en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,33 +45,33 @@ HRESULT GetRequestedRuntimeVersion (
  [in] El nombre de la aplicación.  
   
  `pVersion`  
- [out] Un búfer que contiene la cadena del número de versión en la realización correcta.  
+ [out] Un búfer que contiene la cadena de número de versión tras completarse correctamente.  
   
  `cchBuffer`  
  [in] La longitud del búfer de versión.  
   
  `pdwLength`  
- [out] Un puntero a la longitud de la cadena del número de versión.  
+ [out] Un puntero a la longitud de la cadena de número de versión.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Este método devuelve códigos de error estándar de modelo de objetos componentes (COM), como se define en WinError.h, además de los valores siguientes.  
+ Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los valores siguientes.  
   
 |Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|ERROR_INSUFFICIENT_BUFFER|El búfer de versión no es lo suficientemente grande como para almacenar la cadena de versión.|  
+|ERROR_INSUFFICIENT_BUFFER|El búfer de versión no es suficientemente grande como para almacenar la cadena de versión.|  
 |E_POINTER|`pdwLength` es null.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [GetRequestedRuntimeInfo (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetVersionFromProcess (Función)](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vea también
+- [GetRequestedRuntimeInfo (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [GetVersionFromProcess (Función)](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

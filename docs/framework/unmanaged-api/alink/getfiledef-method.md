@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b772ae37baed44b90e4f5420e0f7724201a56abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c6a8a9aedc5c2b09c6e6f6014142bce44f3a8297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668605"
 ---
 # <a name="getfiledef-method"></a>GetFileDef (Método)
-Recupera el token FileDef real que se utiliza en los metadatos (en lugar del símbolo (token) asignado por ALink).  
+Recupera el token de FileDef real utilizado en los metadatos (a diferencia de lo token asignado por ALink).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,13 +38,13 @@ HRESULT GetFileDef(
   
 #### <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Identificador del ensamblado.  
+ Id. del ensamblado.  
   
  `TargetFile`  
- Símbolo (token) del archivo agregado recuperados AddFile (método) o addImport (método).  
+ Token del archivo agregado recuperados del método AddFile o AddImport (método).  
   
  `pScope`  
- Recibe el símbolo (token) de FileDef.  
+ Recibe el token FileDef.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si el método tiene éxito.  
@@ -52,7 +52,7 @@ HRESULT GetFileDef(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h  
   
-## <a name="see-also"></a>Vea también  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

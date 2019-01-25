@@ -2,15 +2,15 @@
 title: Tipos de constructores (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718590"
 ---
 # <a name="constructing-types-entity-sql"></a>Tipos de constructores (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona tres tipos de constructores: row constructores, constructores de tipos con nombre y los constructores de colecciones.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona tres tipos de constructores: los constructores row, los constructores de tipo con nombre y colección.  
   
 ## <a name="row-constructors"></a>Constructores ROW  
  Los constructores ROW de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se usan para crear registros anónimos con tipo estructural de uno o más valores. El tipo de resultado de un constructor ROW es un tipo de fila cuyos tipos de campo corresponden a los tipos de los valores que se utilizaron para crear la fila. Por ejemplo, la expresión siguiente crea un valor de tipo `Record(a int, b string, c int)`:  
@@ -63,7 +63,7 @@ ms.locfileid: "32765261"
   
  Para obtener más información, consulte [denominado Constructor de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Sistema de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Sistema de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

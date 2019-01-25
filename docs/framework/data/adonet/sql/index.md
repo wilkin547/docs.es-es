@@ -2,12 +2,12 @@
 title: SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 32fc946f46ddac63d87b7e5a3d8f7120799f7223
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c9b935e6a8c86c5c8f31a856b2bd4af04b9455fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743587"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server y ADO.NET
 En esta sección se describen características y comportamientos específicos del proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  
@@ -40,9 +40,9 @@ En esta sección se describen características y comportamientos específicos de
   
  [Libros en pantalla de SQL Server](/sql/sql-server/sql-server-technical-documentation)  
   
-## <a name="see-also"></a>Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Asignaciones de tipos de datos en ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Asignaciones de tipos de datos en ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

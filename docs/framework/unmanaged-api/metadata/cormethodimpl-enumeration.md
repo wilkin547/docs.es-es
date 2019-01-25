@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491290"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl (Enumeración)
 Contiene valores que describen las características de implementación de un método.  
@@ -63,24 +63,24 @@ typedef enum CorMethodImpl {
 |`miNative`|Especifica que la implementación del método es nativa.|  
 |`miOPTIL`|Especifica que la implementación del método es OPTIL.|  
 |`miRuntime`|Especifica que common language runtime proporciona la implementación del método.|  
-|`miManagedMask`|Marcas que indican si el código es administrado o no administrado.|  
+|`miManagedMask`|Marcadores que indican si el código es managed o unmanaged.|  
 |`miUnmanaged`|Especifica que la implementación del método es no administrada.|  
 |`miManaged`|Especifica que se administra la implementación del método.|  
-|`miForwardRef`|Especifica que se define el método. Esta marca se utiliza principalmente en escenarios de combinación.|  
-|`miPreserveSig`|Especifica que la firma del método no se puede trastocar para una conversión HRESULT.|  
+|`miForwardRef`|Especifica que el método está definido. Esta marca se utiliza principalmente en escenarios de combinación.|  
+|`miPreserveSig`|Especifica que la firma del método no se puede trastocar para una conversión de HRESULT.|  
 |`miInternalCall`|Reservado para uso interno por common language runtime.|  
 |`miSynchronized`|Especifica que el método tiene un único subproceso a través de su cuerpo.|  
 |`miNoInlining`|Especifica que el método no se puede insertar.|  
-|`miAggressiveInlining`|Especifica que el método debe ser entre línea si es posible.|  
+|`miAggressiveInlining`|Especifica que el método debe insertarse si es posible.|  
 |`miNoOptimization`|Especifica que el método no se debe optimizar.|  
-|`miMaxMethodImplVal`|El valor válido máximo para un `CorMethodImpl`.|  
+|`miMaxMethodImplVal`|El máximo valor válido para un `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

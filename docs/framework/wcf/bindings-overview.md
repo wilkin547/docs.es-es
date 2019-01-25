@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d617400fe5c07e8c9754e322960f31a350f62e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657420"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Información general de enlaces de Windows Communication Foundation
 Los enlaces son objetos que se usan para especificar los detalles de comunicación que son necesarias para conectarse al punto de conexión de un servicio de Windows Communication Foundation (WCF). Cada punto de conexión en un servicio WCF requiere un enlace esté bien especificado. En este tema se describe los tipos de datos de comunicación que definen los enlaces, los elementos de un enlace, qué enlaces están incluidos en WCF y cómo se puede especificar un enlace para un punto de conexión.  
@@ -32,13 +32,13 @@ Los enlaces son objetos que se usan para especificar los detalles de comunicaci�
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
  La información de un enlace puede ser compleja y puede que parte de su configuración no sea compatible con otros. Por este motivo, WCF incluye un conjunto de enlaces proporcionados por el sistema. Estos enlaces están diseñados para cubrir la mayoría de los requisitos de aplicación. Las clases siguientes representan algunos ejemplos de enlaces proporcionados por el sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Un enlace de protocolo HTTP adecuado para conectar a los Servicios Web que cumple con la especificación del WS-I Basic Profile (por ejemplo, servicios web ASP.NET - servicios basados).  
+-   <xref:System.ServiceModel.BasicHttpBinding>: Un protocolo HTTP enlace adecuado para conectarse a servicios Web que se ajusta a WS-I especificación del perfil básico (por ejemplo, a servicios basados en servicios Web de ASP.NET).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Un enlace interoperable adecuado para conectar a los extremos que se ajustan a WS - * protocolos.  
+-   <xref:System.ServiceModel.WSHttpBinding>: Un enlace interoperable adecuado para conectar a los puntos de conexión que cumplen con WS-* protocolos.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Utiliza el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para conectarse a otros extremos WCF en el mismo equipo.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Usa el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para conectarse a otros extremos WCF en el mismo equipo.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Utiliza el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para crear las conexiones de mensajes en cola con otros extremos WCF.  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Usa el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para crear las conexiones de mensajes en cola con otros extremos WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Este enlace ofrece un mayor rendimiento respecto enlaces HTTP y es ideal para su uso en una red local.
   
@@ -57,5 +57,5 @@ Los enlaces son objetos que se usan para especificar los detalles de comunicaci�
 ## <a name="code-and-configuration"></a>Código y configuración  
  Puede definir los enlaces de dos maneras: a través del código o a través de la configuración. Estos dos enfoques no dependen de si está utilizando un enlace proporcionado por el sistema o un enlace personalizado. En general, utilizar el código le proporciona un control total sobre la definición de un enlace y el tiempo de diseño. Con la configuración, por otro lado, permite que un administrador del sistema o el usuario de un servicio WCF o cliente cambiar los parámetros de un enlace sin tener que volver a compilar la aplicación de servicio. Esta flexibilidad es a menudo deseable porque no hay ninguna manera de predecir los requisitos específicos del equipo en el que es implementar una aplicación de WCF. Dejar fuera la información de enlace (y el direccionamiento) del código les permite cambiar sin requerir recopilación o nueva implementación de la aplicación. Tenga en cuenta que se crean enlaces definidos en código después de los enlaces especificados en la configuración, de modo que se permite a los enlaces definidos por código sobrescribir los enlaces definidos por la configuración.  
   
-## <a name="see-also"></a>Vea también  
- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Vea también
+- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

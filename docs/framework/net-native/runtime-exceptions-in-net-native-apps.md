@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb16c1e947cd832da88b53a3522a5928e77ae06
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da30ae3f32ebbfabbdf35dd939c27b8d88e7e755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501716"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696872"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET
 Es importante probar las versiones de lanzamiento de la aplicación de la Plataforma universal de Windows en las plataformas de destino, ya que las configuraciones de depuración y de lanzamiento son completamente diferentes. De forma predeterminada, la configuración de depuración utiliza el tiempo de ejecución de .NET Core para compilar la aplicación, pero la configuración de lanzamiento usa .NET Native para compilar la aplicación en código nativo.  
   
 > [!IMPORTANT]
->  Para obtener información sobre cómo tratar las excepciones [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) y [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) que pueden surgir al probar las versiones de lanzamiento de la aplicación, vea "Paso 4: Resolver manualmente los metadatos que faltan" en el tema [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md) (Introducción), así como [Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) (Reflexión y .NET Native) y [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (Referencia de archivos de configuración de directivas en tiempo de ejecución [rd.xml]).  
+>  Para obtener información sobre cómo tratar el [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), y [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) las excepciones que pueden se produce al probar las versiones de lanzamiento de la aplicación, consulte "paso 4: Resolver manualmente los metadatos que faltan: en el [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md) tema, así como [reflexión y .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) y [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Compilaciones de depuración y de lanzamiento  
  Cuando se ejecuta la compilación de depuración en el tiempo de ejecución de .NET Core, no se ha compilado en código nativo. Esto hace que todos los servicios que normalmente ofrece el tiempo de ejecución estén disponibles para su aplicación.  
@@ -59,6 +59,6 @@ Additional information: Value does not fall within the expected range.
   
  Para obtener la pila completa, ejecute la compilación de depuración en su lugar.  
   
-## <a name="see-also"></a>Vea también  
- [Depuración de aplicaciones universales de Windows nativas de .NET](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)  
- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>Vea también
+- [Depuración de aplicaciones universales de Windows nativas de .NET](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)
+- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)

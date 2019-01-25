@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 21d3b31fe19db7abf1a78d0c6d33abfbc2882089
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 4b21624ea31fd0e11e598bab435b9f3c6f6d9b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512845"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Tipo de datos UShort (Visual Basic)
 
@@ -74,10 +74,10 @@ Dim number = &H_5826us
   
 -   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt16?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.UInt16>  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.UInt16>
+- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
+- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

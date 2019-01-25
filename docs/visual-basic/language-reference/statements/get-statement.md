@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 32b89caf56c010f9e6ed7b78309ef30b56b682ea
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: ade54b2f00c540a1bf4ede311e1631b2c5d7e3ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742398"
 ---
 # <a name="get-statement"></a>Get (Instrucción)
 Declara un `Get` procedimiento de propiedad que se usa para recuperar el valor de una propiedad.  
@@ -34,9 +34,9 @@ End Get
 |Término|Definición|  
 |---|---|  
 |`attributelist`|Opcional. Consulte [lista de los atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional en al menos uno de los `Get` y `Set` instrucciones de esta propiedad. Puede ser uno de los siguientes:<br /><br /> -   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Opcional en al menos uno de los `Get` y `Set` instrucciones de esta propiedad. Puede ser uno de los siguientes:<br /><br /> -   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`statements`|Opcional. Una o varias instrucciones que se ejecutan cuando el `Get` se llama al procedimiento de propiedad.|  
-|`End Get`|Requerido. Termina la definición de la `Get` procedimiento de propiedad.|  
+|`End Get`|Obligatorio. Termina la definición de la `Get` procedimiento de propiedad.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cada propiedad debe tener un `Get` procedimiento de propiedad, a menos que la propiedad se marca `WriteOnly`. El `Get` procedimiento se utiliza para devolver el valor actual de la propiedad.  
@@ -82,9 +82,9 @@ End Get
   
  [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Set (instrucción)](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Exit (instrucción)](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Tutorial: Definir clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+## <a name="see-also"></a>Vea también
+- [Set (instrucción)](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Exit (instrucción)](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Tutorial: Definir clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

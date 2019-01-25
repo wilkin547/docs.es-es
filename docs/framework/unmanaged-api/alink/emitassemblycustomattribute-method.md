@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf2c3dcaf16e949f8770121d8324cbfe6c7d05b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b4909ae23d077ee079e062d0252dbf1ee11663c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538835"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute (Método)
-La llamada para establecer los atributos personalizados de nivel de ensamblado.  
+Llamada para establecer los atributos personalizados de nivel de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,10 +43,10 @@ HRESULT EmitAssemblyCustomAttribute(
   
 #### <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Identificador del ensamblado.  
+ Id. del ensamblado.  
   
  `FileToken`  
- Archivo que define el atributo. Puede ser NULL si `AssemblyID` no indica un archivo netmodule no enlazado.  
+ Archivo que define el atributo. Puede ser NULL si `AssemblyID` no indica un netmodule independiente.  
   
  `tkType`  
  Tipo del atributo personalizado.  
@@ -55,13 +55,13 @@ HRESULT EmitAssemblyCustomAttribute(
  Datos del valor personalizado.  
   
  `cbCustomValue`  
- Longitud de datos del valor personalizado.  
+ Longitud de datos de valor personalizado.  
   
  `bSecurity`  
- Es TRUE si el atributo personalizado está relacionado con la firma de un ensamblado.  
+ TRUE si el atributo personalizado está relacionado con la firma de ensamblados.  
   
  `bAllowMulti`  
- Es TRUE si hay varios atributos que se emitan.  
+ TRUE si deben emitirse varios atributos.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si el método tiene éxito.  
@@ -69,7 +69,7 @@ HRESULT EmitAssemblyCustomAttribute(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h  
   
-## <a name="see-also"></a>Vea también  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

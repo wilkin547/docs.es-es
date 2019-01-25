@@ -2,12 +2,12 @@
 title: Crear una actividad en el tiempo de ejecución con DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733212"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Crear una actividad en el tiempo de ejecución con DynamicActivity
 <xref:System.Activities.DynamicActivity> es una clase concreta sellada con un constructor público. <xref:System.Activities.DynamicActivity> se puede usar para ensamblar la funcionalidad de actividad en tiempo de ejecución usando un DOM de actividad.  
@@ -21,7 +21,7 @@ ms.locfileid: "48583882"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Para crear una actividad en el tiempo de ejecución usando el código imperativo  
   
-1.  Abra Visual Studio 2010.  
+1.  OpenVisual Studio 2010.  
   
 2.  Seleccione **archivo**, **nueva**, **proyecto**. Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo. Seleccione **aplicación de consola de flujo de trabajo secuenciales** en el **plantillas** ventana. Proporcione el nombre siguiente al nuevo proyecto: DynamicActivitySample.  
   

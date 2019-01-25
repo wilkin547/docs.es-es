@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0b882500b41080bc5998232b5afbce9d13157b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641558"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Clase MissingMetadataException (.NET Native)
 **.NET para aplicaciones de Windows para Windows 10, solo [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
   
  Excepción que se genera al utilizar reflexión para recuperar metadatos que no están presentes.  
   
- **Namespace:** System.Reflection  
+ **Espacio de nombres**: System.Reflection  
   
 > [!IMPORTANT]
 >  La clase `MissingMetadataException` está diseñada únicamente para uso interno en la cadena de herramientas [!INCLUDE[net_native](../../../includes/net-native-md.md)]. No está pensada para usarse en código de terceros y tampoco debe usarse para controlar la excepción en el código de la aplicación. En su lugar, elimine la excepción. Para ello, agregue entradas al [archivo de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Para obtener más información, vea la sección Comentarios.  
@@ -81,9 +81,9 @@ ms.locfileid: "53148344"
   
  La clase `MissingMetadataException` no contiene miembros únicos, sino que todos sus miembros se heredan de la clase base <xref:System.TypeAccessException>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Exception?displayProperty=nameWithType>  
- <xref:System.TypeAccessException>  
- [Clase MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [Clase MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Exception?displayProperty=nameWithType>
+- <xref:System.TypeAccessException>
+- [Clase MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
+- [Clase MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

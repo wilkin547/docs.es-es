@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f978f565dd93eb10a68942fc463f7d5cc212e6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 905ce9183d295568977eb7e216e5327d6b4ee8bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636097"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads (Método)
 Establece el número máximo de subprocesos que el host puede mantener en el grupo de subprocesos.  
@@ -44,28 +44,28 @@ HRESULT SetMaxThreads (
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|`SetMaxThreads` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra esperó en él.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
 |E_FAIL|Se ha producido un error catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_NOTIMPL|El host no proporciona una implementación de `SetMaxThreads`.|  
   
 ## <a name="remarks"></a>Comentarios  
- No es necesario para permitir que el CLR configurar el tamaño del grupo de subprocesos de un host. Algunos hosts, conviene control exclusivo sobre el grupo de subprocesos, por razones de implementación, rendimiento o escalabilidad. En este caso, un host debe devolver un valor HRESULT de E_NOTIMPL.  
+ No es necesario para permitir que el CLR configurar el tamaño del grupo de subprocesos de un host. Algunos hosts podría control exclusivo sobre el grupo de subprocesos, por motivos de implementación, rendimiento o escalabilidad. En este caso, un host debe devolver un valor HRESULT de E_NOTIMPL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.ThreadPool.SetMaxThreads%2A>  
- <xref:System.Threading.ThreadPool>  
- [GetMaxThreads (método)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)  
- [SetMinThreads (método)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)  
- [IHostThreadPoolManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Threading.ThreadPool.SetMaxThreads%2A>
+- <xref:System.Threading.ThreadPool>
+- [GetMaxThreads (método)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)
+- [SetMinThreads (método)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)
+- [IHostThreadPoolManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

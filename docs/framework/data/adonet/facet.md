@@ -2,15 +2,15 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 2b263a107eae7c75b035dcb4675725556e0f9c2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9994aff7337dd842e1d70c22ea288d2fda5648d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648237"
 ---
 # <a name="facet"></a>facet
-A *faceta* se usa para agregar detalles a una definición de propiedad de tipo primitivo. A [propiedad](../../../../docs/framework/data/adonet/property.md) definición contiene información sobre el tipo de propiedad, pero a menudo es necesario más detalle. Por ejemplo, un tipo de entidad en un modelo conceptual podría tener una propiedad de tipo `String` cuyo valor no se puede establecer en NULL. Las facetas permiten especificar este nivel de detalle.  
+Un *faceta* se usa para agregar detalles a una definición de propiedad de tipo primitivo. Un [propiedad](../../../../docs/framework/data/adonet/property.md) definición contiene información sobre el tipo de propiedad, pero a menudo es necesario con más detalle. Por ejemplo, un tipo de entidad en un modelo conceptual podría tener una propiedad de tipo `String` cuyo valor no se puede establecer en NULL. Las facetas permiten especificar este nivel de detalle.  
   
  En la siguiente tabla se describen las facetas que se admiten en EDM.  
   
@@ -34,6 +34,6 @@ A *faceta* se usa para agregar detalles a una definición de propiedad de tipo p
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

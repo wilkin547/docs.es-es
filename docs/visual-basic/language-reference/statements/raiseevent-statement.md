@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655015"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent (Instrucción)
 Desencadena un evento declarado en el nivel de módulo dentro de una clase, formulario o documento.  
@@ -75,9 +75,9 @@ RaiseEvent eventname[( argumentlist )]
 > [!NOTE]
 >  El `My.Application.DoEvents` método no procesa los eventos en la misma manera como lo hace el formulario. Para permitir que el formulario controlar los eventos directamente, puede usar multithreading. Para obtener más información, consulte [Managed Threading](../../../standard/threading/index.md).  
   
-## <a name="see-also"></a>Vea también  
- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
- [AddHandler (instrucción)](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler (instrucción)](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a>Vea también
+- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
+- [AddHandler (instrucción)](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler (instrucción)](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18733c2d643a75f9bb11159ba4acdbc8ab064c55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a3c1aad3bcd6151267671122fb21772082e15cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658785"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue (Método)
-Establece un valor en el almacenamiento local de subprocesos (TLS) del subproceso especificado en el proceso de destino. Los servicios de acceso a datos de common language runtime (CLR) llama a este método.  
+Establece un valor en el almacenamiento local de subprocesos (TLS) del subproceso especificado en el proceso de destino. Este método llama a los servicios de acceso de datos de common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +39,25 @@ HRESULT SetTLSValue (
   
 #### <a name="parameters"></a>Parámetros  
  `threadID`  
- [in] El identificador de sistema operativo de un subproceso en el proceso de destino.  
+ [in] El identificador del sistema operativo de un subproceso del proceso de destino.  
   
  `index`  
  [in] El índice de la ubicación. Este valor debe ser un índice válido en el almacén local del subproceso especificado.  
   
  `value`  
- [in] Un `CLRDATA_ADDRESS` valor que especifica el valor que se debe colocar en la ubicación de TLS dada.  
+ [in] Un `CLRDATA_ADDRESS` valor que especifica el valor se debe colocar en la ubicación especificada de TLS.  
   
 ## <a name="remarks"></a>Comentarios  
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** ClrData.idl, ClrData.h  
+ **Encabezado**: ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICLRDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
