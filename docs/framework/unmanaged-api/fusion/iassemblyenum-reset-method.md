@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de976f4241fcf1305b4c07befe8c82c99c27d210
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a51fa8504ba15b5250caed070f8b039b3b55e5ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721193"
 ---
-# <a name="iassemblyenumreset-method"></a><span data-ttu-id="a21a8-102">IAssemblyEnum::Reset (Método)</span><span class="sxs-lookup"><span data-stu-id="a21a8-102">IAssemblyEnum::Reset Method</span></span>
-<span data-ttu-id="a21a8-103">Restablece esta [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) objeto a su posición inicial.</span><span class="sxs-lookup"><span data-stu-id="a21a8-103">Resets this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object to its starting position.</span></span>  
+# <a name="iassemblyenumreset-method"></a><span data-ttu-id="2b488-102">IAssemblyEnum::Reset (Método)</span><span class="sxs-lookup"><span data-stu-id="2b488-102">IAssemblyEnum::Reset Method</span></span>
+<span data-ttu-id="2b488-103">Esto restablece [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) objeto a su posición inicial.</span><span class="sxs-lookup"><span data-stu-id="2b488-103">Resets this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object to its starting position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a21a8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a21a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b488-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2b488-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset (  
@@ -35,12 +35,12 @@ HRESULT Reset (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a21a8-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a21a8-105">Requirements</span></span>  
- <span data-ttu-id="a21a8-106">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a21a8-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b488-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2b488-105">Requirements</span></span>  
+ <span data-ttu-id="2b488-106">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b488-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a21a8-107">**Encabezado:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a21a8-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="2b488-107">**Encabezado**: Fusion.h</span><span class="sxs-lookup"><span data-stu-id="2b488-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="a21a8-108">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a21a8-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2b488-108">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b488-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a21a8-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="a21a8-109">See Also</span></span>  
- [<span data-ttu-id="a21a8-110">IAssemblyEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a21a8-110">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2b488-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="2b488-109">See also</span></span>
+- [<span data-ttu-id="2b488-110">IAssemblyEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="2b488-110">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

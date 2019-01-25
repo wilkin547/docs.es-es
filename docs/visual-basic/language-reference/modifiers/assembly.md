@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 7ee6cddefd5955ee76510ffeb23335f05460657b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6cb7e7a2520d6bb586dab4ed0af75abb04fabd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726473"
 ---
-# <a name="assembly-visual-basic"></a><span data-ttu-id="08c82-102">Assembly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08c82-102">Assembly (Visual Basic)</span></span>
-<span data-ttu-id="08c82-103">Especifica que un atributo al principio de un archivo de código fuente se aplica a todo el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="08c82-103">Specifies that an attribute at the beginning of a source file applies to the entire assembly.</span></span>  
+# <a name="assembly-visual-basic"></a><span data-ttu-id="5b6df-102">Assembly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5b6df-102">Assembly (Visual Basic)</span></span>
+<span data-ttu-id="5b6df-103">Especifica que un atributo al principio de un archivo de código fuente se aplica a todo el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="5b6df-103">Specifies that an attribute at the beginning of a source file applies to the entire assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="08c82-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="08c82-104">Remarks</span></span>  
- <span data-ttu-id="08c82-105">Muchos atributos pertenecen a un elemento de programación individual, como una clase o propiedad.</span><span class="sxs-lookup"><span data-stu-id="08c82-105">Many attributes pertain to an individual programming element, such as a class or property.</span></span> <span data-ttu-id="08c82-106">Se aplica un atributo de este tipo si se adjunta el bloque de atributos, entre corchetes angulares (`< >`), directamente a la instrucción de declaración.</span><span class="sxs-lookup"><span data-stu-id="08c82-106">You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5b6df-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5b6df-104">Remarks</span></span>  
+ <span data-ttu-id="5b6df-105">Muchos atributos pertenecen a un elemento de programación individual, como una clase o propiedad.</span><span class="sxs-lookup"><span data-stu-id="5b6df-105">Many attributes pertain to an individual programming element, such as a class or property.</span></span> <span data-ttu-id="5b6df-106">Aplicar este atributo adjuntando el bloque de atributos dentro de corchetes angulares (`< >`), directamente a la instrucción de declaración.</span><span class="sxs-lookup"><span data-stu-id="5b6df-106">You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.</span></span>  
   
- <span data-ttu-id="08c82-107">Si un atributo se aplica no solo para el siguiente elemento sino a todo el ensamblado, sitúa el bloque de atributos al principio del archivo de origen e identifique el atributo con el `Assembly` palabra clave.</span><span class="sxs-lookup"><span data-stu-id="08c82-107">If an attribute pertains not only to the following element but to the entire assembly, you place the attribute block at the beginning of the source file and identify the attribute with the `Assembly` keyword.</span></span> <span data-ttu-id="08c82-108">Si se aplica al módulo de ensamblado actual, utilice la [módulo](../../../visual-basic/language-reference/modifiers/module-keyword.md) palabra clave.</span><span class="sxs-lookup"><span data-stu-id="08c82-108">If it applies to the current assembly module, you use the [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) keyword.</span></span>  
+ <span data-ttu-id="5b6df-107">Si un atributo se aplica no solo al siguiente elemento, sino a todo el ensamblado, coloque el bloque de atributos al principio del archivo de origen e identificar el atributo con el `Assembly` palabra clave.</span><span class="sxs-lookup"><span data-stu-id="5b6df-107">If an attribute pertains not only to the following element but to the entire assembly, you place the attribute block at the beginning of the source file and identify the attribute with the `Assembly` keyword.</span></span> <span data-ttu-id="5b6df-108">Si se aplica al módulo de ensamblado actual, usa el [módulo](../../../visual-basic/language-reference/modifiers/module-keyword.md) palabra clave.</span><span class="sxs-lookup"><span data-stu-id="5b6df-108">If it applies to the current assembly module, you use the [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) keyword.</span></span>  
   
- <span data-ttu-id="08c82-109">También puede aplicar un atributo a un ensamblado en el archivo AssemblyInfo.vb, en cuyo caso no es necesario usar un bloque de atributos en el archivo de código fuente principal.</span><span class="sxs-lookup"><span data-stu-id="08c82-109">You can also apply an attribute to an assembly in the AssemblyInfo.vb file, in which case you do not have to use an attribute block in your main source-code file.</span></span>  
+ <span data-ttu-id="5b6df-109">También puede aplicar un atributo a un ensamblado en el archivo AssemblyInfo.vb, en cuyo caso no es necesario usar un bloque de atributos en el archivo de código fuente principal.</span><span class="sxs-lookup"><span data-stu-id="5b6df-109">You can also apply an attribute to an assembly in the AssemblyInfo.vb file, in which case you do not have to use an attribute block in your main source-code file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08c82-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="08c82-110">See Also</span></span>  
- [<span data-ttu-id="08c82-111">Module \<keyword></span><span class="sxs-lookup"><span data-stu-id="08c82-111">Module \<keyword></span></span>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [<span data-ttu-id="08c82-112">Información general de atributos</span><span class="sxs-lookup"><span data-stu-id="08c82-112">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="5b6df-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="5b6df-110">See also</span></span>
+- [<span data-ttu-id="5b6df-111">Module \<keyword></span><span class="sxs-lookup"><span data-stu-id="5b6df-111">Module \<keyword></span></span>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [<span data-ttu-id="5b6df-112">Información general de atributos</span><span class="sxs-lookup"><span data-stu-id="5b6df-112">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 

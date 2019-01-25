@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77cd8b7d791d11f6d40386f4747c60cd4832521a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d534ae381e0dc105731cf0a537f81afe80d87e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732744"
 ---
-# <a name="symlinedelta-structure"></a><span data-ttu-id="44095-102">SYMLINEDELTA (Estructura)</span><span class="sxs-lookup"><span data-stu-id="44095-102">SYMLINEDELTA Structure</span></span>
-<span data-ttu-id="44095-103">Proporciona información al controlador de símbolos sobre métodos que se movieron como resultado de modificaciones.</span><span class="sxs-lookup"><span data-stu-id="44095-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+# <a name="symlinedelta-structure"></a><span data-ttu-id="27f82-102">SYMLINEDELTA (Estructura)</span><span class="sxs-lookup"><span data-stu-id="27f82-102">SYMLINEDELTA Structure</span></span>
+<span data-ttu-id="27f82-103">Proporciona información al controlador de símbolos acerca de los métodos que se movieron como resultado de las modificaciones.</span><span class="sxs-lookup"><span data-stu-id="27f82-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44095-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="44095-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27f82-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="27f82-104">Syntax</span></span>  
   
 ```  
 typedef struct _SYMLINEDELTA  
@@ -36,15 +36,15 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="44095-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="44095-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="27f82-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="27f82-105">Members</span></span>  
   
-|<span data-ttu-id="44095-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="44095-106">Member</span></span>|<span data-ttu-id="44095-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="44095-107">Description</span></span>|  
+|<span data-ttu-id="27f82-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="27f82-106">Member</span></span>|<span data-ttu-id="27f82-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="27f82-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMethod`|<span data-ttu-id="44095-108">Símbolo (token) de metadatos del método.</span><span class="sxs-lookup"><span data-stu-id="44095-108">The method's metadata token.</span></span>|  
-|`delta`|<span data-ttu-id="44095-109">El número de líneas que se ha movido el método.</span><span class="sxs-lookup"><span data-stu-id="44095-109">The number of lines the method was moved.</span></span>|  
+|`mdMethod`|<span data-ttu-id="27f82-108">Token de metadatos del método.</span><span class="sxs-lookup"><span data-stu-id="27f82-108">The method's metadata token.</span></span>|  
+|`delta`|<span data-ttu-id="27f82-109">El número de líneas que se ha movido el método.</span><span class="sxs-lookup"><span data-stu-id="27f82-109">The number of lines the method was moved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="44095-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="44095-110">Requirements</span></span>  
- <span data-ttu-id="44095-111">**Encabezado:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="44095-111">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27f82-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="27f82-110">Requirements</span></span>  
+ <span data-ttu-id="27f82-111">**Encabezado**: CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="27f82-111">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44095-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="44095-112">See Also</span></span>  
- [<span data-ttu-id="44095-113">Estructuras de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="44095-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a><span data-ttu-id="27f82-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="27f82-112">See also</span></span>
+- [<span data-ttu-id="27f82-113">Estructuras de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="27f82-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
