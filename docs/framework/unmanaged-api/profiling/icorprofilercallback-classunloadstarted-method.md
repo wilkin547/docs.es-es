@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c30fb5d5576a7bed403f48504ead923df212de9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 217e0942e523b533656f4d194d2b3e3ec63c6db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683354"
 ---
-# <a name="icorprofilercallbackclassunloadstarted-method"></a><span data-ttu-id="03825-102">ICorProfilerCallback::ClassUnloadStarted (Método)</span><span class="sxs-lookup"><span data-stu-id="03825-102">ICorProfilerCallback::ClassUnloadStarted Method</span></span>
-<span data-ttu-id="03825-103">Notifica al generador de perfiles que se está descargando una clase.</span><span class="sxs-lookup"><span data-stu-id="03825-103">Notifies the profiler that a class is being unloaded.</span></span>  
+# <a name="icorprofilercallbackclassunloadstarted-method"></a><span data-ttu-id="8771a-102">ICorProfilerCallback::ClassUnloadStarted (Método)</span><span class="sxs-lookup"><span data-stu-id="8771a-102">ICorProfilerCallback::ClassUnloadStarted Method</span></span>
+<span data-ttu-id="8771a-103">Notifica al generador de perfiles que se está descargando una clase.</span><span class="sxs-lookup"><span data-stu-id="8771a-103">Notifies the profiler that a class is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03825-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="03825-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8771a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8771a-104">Syntax</span></span>  
   
 ```  
 HRESULT ClassUnloadStarted(  
     [in] ClassID classId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="03825-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="03825-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8771a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8771a-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="03825-106">[in] Identifica la clase que se está descargando.</span><span class="sxs-lookup"><span data-stu-id="03825-106">[in] Identifies the class that is being unloaded.</span></span>  
+ <span data-ttu-id="8771a-106">[in] Identifica la clase que se está descargando.</span><span class="sxs-lookup"><span data-stu-id="8771a-106">[in] Identifies the class that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="03825-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="03825-107">Remarks</span></span>  
- <span data-ttu-id="03825-108">El valor de `classId` no es válido para una solicitud de información después de la `ClassUnloadStarted` devuelve del método: se trata de última oportunidad del generador de perfiles para obtener información acerca de esta clase.</span><span class="sxs-lookup"><span data-stu-id="03825-108">The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8771a-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8771a-107">Remarks</span></span>  
+ <span data-ttu-id="8771a-108">El valor de `classId` no es válido para una solicitud de información después de la `ClassUnloadStarted` devuelve del método, se trata de la última oportunidad para obtener información acerca de esta clase del generador de perfiles.</span><span class="sxs-lookup"><span data-stu-id="8771a-108">The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03825-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="03825-109">Requirements</span></span>  
- <span data-ttu-id="03825-110">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03825-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8771a-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8771a-109">Requirements</span></span>  
+ <span data-ttu-id="8771a-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8771a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03825-111">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="03825-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8771a-111">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8771a-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="03825-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03825-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8771a-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8771a-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="03825-113">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03825-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8771a-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8771a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03825-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="03825-114">See Also</span></span>  
- [<span data-ttu-id="03825-115">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="03825-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="03825-116">ClassUnloadFinished (método)</span><span class="sxs-lookup"><span data-stu-id="03825-116">ClassUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)
+## <a name="see-also"></a><span data-ttu-id="8771a-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="8771a-114">See also</span></span>
+- [<span data-ttu-id="8771a-115">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8771a-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="8771a-116">ClassUnloadFinished (método)</span><span class="sxs-lookup"><span data-stu-id="8771a-116">ClassUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)

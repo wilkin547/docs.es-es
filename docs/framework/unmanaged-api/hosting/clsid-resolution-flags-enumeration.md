@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bec138460d508371565c26017fab3a8c22266db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bee25122920a6fcec3bbd4e9e53bbdad008d5304
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514119"
 ---
-# <a name="clsidresolutionflags-enumeration"></a><span data-ttu-id="c9bc6-102">CLSID_RESOLUTION_FLAGS (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="c9bc6-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
-<span data-ttu-id="c9bc6-103">Contiene valores que indican el modo en que common language runtime (CLR) debe resolver un `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="c9bc6-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
+# <a name="clsidresolutionflags-enumeration"></a><span data-ttu-id="cf1b3-102">CLSID_RESOLUTION_FLAGS (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="cf1b3-102">CLSID_RESOLUTION_FLAGS Enumeration</span></span>
+<span data-ttu-id="cf1b3-103">Contiene valores que indican el modo en que common language runtime (CLR) debe resolver un `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="cf1b3-103">Contains values that indicate how the common language runtime (CLR) should resolve a `CLSID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9bc6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c9bc6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cf1b3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cf1b3-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,19 +35,19 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c9bc6-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="c9bc6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cf1b3-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="cf1b3-105">Members</span></span>  
   
-|<span data-ttu-id="c9bc6-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="c9bc6-106">Member</span></span>|<span data-ttu-id="c9bc6-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="c9bc6-107">Description</span></span>|  
+|<span data-ttu-id="cf1b3-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="cf1b3-106">Member</span></span>|<span data-ttu-id="cf1b3-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="cf1b3-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="c9bc6-108">Indica el comportamiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="c9bc6-108">Indicates the default behavior.</span></span>|  
-|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="c9bc6-109">Indica que el tiempo de ejecución busca en el registro y aplica la directiva de corrección de compatibilidad.</span><span class="sxs-lookup"><span data-stu-id="c9bc6-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
+|`CLSID_RESOLUTION_DEFAULT`|<span data-ttu-id="cf1b3-108">Indica el comportamiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="cf1b3-108">Indicates the default behavior.</span></span>|  
+|`CLSID_RESOLUTION_REGISTERED`|<span data-ttu-id="cf1b3-109">Indica que el tiempo de ejecución busca en el registro y aplica la directiva de correcciones de compatibilidad.</span><span class="sxs-lookup"><span data-stu-id="cf1b3-109">Indicates that the runtime searches the registry and applies shim policy.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c9bc6-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c9bc6-110">Requirements</span></span>  
- <span data-ttu-id="c9bc6-111">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9bc6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cf1b3-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cf1b3-110">Requirements</span></span>  
+ <span data-ttu-id="cf1b3-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf1b3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9bc6-112">**Encabezado:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c9bc6-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="cf1b3-112">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cf1b3-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c9bc6-113">**Versiones de .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9bc6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="cf1b3-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf1b3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9bc6-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="c9bc6-114">See Also</span></span>  
- [<span data-ttu-id="c9bc6-115">Enumeraciones para hosts</span><span class="sxs-lookup"><span data-stu-id="c9bc6-115">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="cf1b3-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="cf1b3-114">See also</span></span>
+- [<span data-ttu-id="cf1b3-115">Enumeraciones para hosts</span><span class="sxs-lookup"><span data-stu-id="cf1b3-115">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

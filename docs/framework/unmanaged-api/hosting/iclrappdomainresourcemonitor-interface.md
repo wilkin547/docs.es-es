@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2326c72c9a1c63c4740608e120ace5dc83ebee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ee76f894d31fd65fd31011f33f7363f1b09de31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726811"
 ---
-# <a name="iclrappdomainresourcemonitor-interface"></a><span data-ttu-id="6def5-102">ICLRAppDomainResourceMonitor (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="6def5-102">ICLRAppDomainResourceMonitor Interface</span></span>
-<span data-ttu-id="6def5-103">Proporciona métodos que inspeccionan la memoria y el uso de CPU de un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="6def5-103">Provides methods that inspect an application domain's memory and CPU usage.</span></span>  
+# <a name="iclrappdomainresourcemonitor-interface"></a><span data-ttu-id="9feef-102">ICLRAppDomainResourceMonitor (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9feef-102">ICLRAppDomainResourceMonitor Interface</span></span>
+<span data-ttu-id="9feef-103">Proporciona métodos que inspeccionar memoria y uso de CPU de un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="9feef-103">Provides methods that inspect an application domain's memory and CPU usage.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6def5-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="6def5-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9feef-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="9feef-104">Methods</span></span>  
   
-|<span data-ttu-id="6def5-105">Método</span><span class="sxs-lookup"><span data-stu-id="6def5-105">Method</span></span>|<span data-ttu-id="6def5-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="6def5-106">Description</span></span>|  
+|<span data-ttu-id="9feef-105">Método</span><span class="sxs-lookup"><span data-stu-id="9feef-105">Method</span></span>|<span data-ttu-id="9feef-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="9feef-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6def5-107">GetCurrentAllocated (método)</span><span class="sxs-lookup"><span data-stu-id="6def5-107">GetCurrentAllocated Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)|<span data-ttu-id="6def5-108">Obtiene el tamaño total, en bytes, de todas las asignaciones de memoria realizadas por el dominio de aplicación desde que se creó, sin restar la memoria que se ha recopilado de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="6def5-108">Gets the total size, in bytes, of all memory allocations that have been made by the application domain since it was created, without subtracting memory that has been garbage-collected.</span></span>|  
-|[<span data-ttu-id="6def5-109">GetCurrentSurvived (método)</span><span class="sxs-lookup"><span data-stu-id="6def5-109">GetCurrentSurvived Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|<span data-ttu-id="6def5-110">Obtiene el número de bytes que sobrevivieron a la última recolección completa de bloqueo elementos no utilizados y que se hace referencia el dominio de aplicación actual.</span><span class="sxs-lookup"><span data-stu-id="6def5-110">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>|  
-|[<span data-ttu-id="6def5-111">GetCurrentCpuTime (método)</span><span class="sxs-lookup"><span data-stu-id="6def5-111">GetCurrentCpuTime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|<span data-ttu-id="6def5-112">Obtiene el tiempo de procesador total que se ha utilizado por todos los subprocesos mientras se ejecutaban en el dominio de aplicación actual, desde que se creó el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="6def5-112">Gets the total processor time that has been used by all threads while executing in the current application domain, since the application domain was created.</span></span>|  
+|[<span data-ttu-id="9feef-107">GetCurrentAllocated (método)</span><span class="sxs-lookup"><span data-stu-id="9feef-107">GetCurrentAllocated Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)|<span data-ttu-id="9feef-108">Obtiene el tamaño total, en bytes, de todas las asignaciones de memoria que el dominio de aplicación se han realizado desde que se creó, sin restar la memoria que se ha recopilado de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="9feef-108">Gets the total size, in bytes, of all memory allocations that have been made by the application domain since it was created, without subtracting memory that has been garbage-collected.</span></span>|  
+|[<span data-ttu-id="9feef-109">GetCurrentSurvived (método)</span><span class="sxs-lookup"><span data-stu-id="9feef-109">GetCurrentSurvived Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|<span data-ttu-id="9feef-110">Obtiene el número de bytes que sobrevivieron a la última completa de la recolección de elementos no utilizados de bloqueo y que se hace referencia el dominio de aplicación actual.</span><span class="sxs-lookup"><span data-stu-id="9feef-110">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>|  
+|[<span data-ttu-id="9feef-111">GetCurrentCpuTime (método)</span><span class="sxs-lookup"><span data-stu-id="9feef-111">GetCurrentCpuTime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|<span data-ttu-id="9feef-112">Obtiene el tiempo de procesador total que se ha usado por todos los subprocesos mientras se ejecutan en el dominio de aplicación actual, desde que se creó el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="9feef-112">Gets the total processor time that has been used by all threads while executing in the current application domain, since the application domain was created.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6def5-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6def5-113">Remarks</span></span>  
- <span data-ttu-id="6def5-114">El `ICLRAppDomainResourceMonitor` interfaz proporciona funciones parecidas a las siguientes propiedades administradas:</span><span class="sxs-lookup"><span data-stu-id="6def5-114">The `ICLRAppDomainResourceMonitor` interface provides functionality that is similar to the following managed properties:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9feef-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9feef-113">Remarks</span></span>  
+ <span data-ttu-id="9feef-114">El `ICLRAppDomainResourceMonitor` interfaz proporciona funcionalidad similar a las siguientes propiedades administradas:</span><span class="sxs-lookup"><span data-stu-id="9feef-114">The `ICLRAppDomainResourceMonitor` interface provides functionality that is similar to the following managed properties:</span></span>  
   
 -   <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
   
@@ -47,17 +47,17 @@ ms.locfileid: "33434875"
   
 -   <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
-## <a name="requirements"></a><span data-ttu-id="6def5-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6def5-115">Requirements</span></span>  
- <span data-ttu-id="6def5-116">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6def5-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9feef-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9feef-115">Requirements</span></span>  
+ <span data-ttu-id="9feef-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9feef-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6def5-117">**Encabezado:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="6def5-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="9feef-117">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="9feef-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="6def5-118">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6def5-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9feef-118">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9feef-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6def5-119">**Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6def5-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="9feef-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9feef-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6def5-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="6def5-120">See Also</span></span>  
- [<span data-ttu-id="6def5-121">\<appDomainResourceMonitoring > elemento</span><span class="sxs-lookup"><span data-stu-id="6def5-121">\<appDomainResourceMonitoring> Element</span></span>](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
- [<span data-ttu-id="6def5-122">Supervisión de recursos de dominio de aplicación</span><span class="sxs-lookup"><span data-stu-id="6def5-122">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)  
- [<span data-ttu-id="6def5-123">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="6def5-123">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [<span data-ttu-id="6def5-124">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="6def5-124">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="9feef-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="9feef-120">See also</span></span>
+- [<span data-ttu-id="9feef-121">\<appDomainResourceMonitoring > elemento</span><span class="sxs-lookup"><span data-stu-id="9feef-121">\<appDomainResourceMonitoring> Element</span></span>](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [<span data-ttu-id="9feef-122">Supervisión de recursos de dominio de aplicación</span><span class="sxs-lookup"><span data-stu-id="9feef-122">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [<span data-ttu-id="9feef-123">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="9feef-123">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="9feef-124">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="9feef-124">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

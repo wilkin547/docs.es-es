@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: 7d944eb2c09314be5b2e1c5c6ff69beec4888a16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4fe896214a4513bf5c7e38fcc1fcbd001933481
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530793"
 ---
-# <a name="image-how-to-topics"></a><span data-ttu-id="f2e30-102">Temas "Cómo..." del elemento Image</span><span class="sxs-lookup"><span data-stu-id="f2e30-102">Image How-to Topics</span></span>
-<span data-ttu-id="f2e30-103">Los temas de esta sección describen cómo utilizar el <xref:System.Windows.Controls.Image> elemento.</span><span class="sxs-lookup"><span data-stu-id="f2e30-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
+# <a name="image-how-to-topics"></a><span data-ttu-id="3e397-102">Temas "Cómo..." del elemento Image</span><span class="sxs-lookup"><span data-stu-id="3e397-102">Image How-to Topics</span></span>
+<span data-ttu-id="3e397-103">Los temas de esta sección describen cómo usar el <xref:System.Windows.Controls.Image> elemento.</span><span class="sxs-lookup"><span data-stu-id="3e397-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f2e30-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f2e30-104">In This Section</span></span>  
- [<span data-ttu-id="f2e30-105">Usar el elemento de imagen</span><span class="sxs-lookup"><span data-stu-id="f2e30-105">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
-  [<span data-ttu-id="f2e30-106">Convertir una imagen en escala de grises</span><span class="sxs-lookup"><span data-stu-id="f2e30-106">Convert an Image to Greyscale</span></span>](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
-  [<span data-ttu-id="f2e30-107">Recortar una imagen</span><span class="sxs-lookup"><span data-stu-id="f2e30-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
-  [<span data-ttu-id="f2e30-108">Girar una imagen</span><span class="sxs-lookup"><span data-stu-id="f2e30-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3e397-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="3e397-104">In This Section</span></span>  
+ [<span data-ttu-id="3e397-105">Usar el elemento de imagen</span><span class="sxs-lookup"><span data-stu-id="3e397-105">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
+  [<span data-ttu-id="3e397-106">Convertir una imagen en escala de grises</span><span class="sxs-lookup"><span data-stu-id="3e397-106">Convert an Image to Greyscale</span></span>](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
+  [<span data-ttu-id="3e397-107">Recortar una imagen</span><span class="sxs-lookup"><span data-stu-id="3e397-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
+  [<span data-ttu-id="3e397-108">Girar una imagen</span><span class="sxs-lookup"><span data-stu-id="3e397-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="f2e30-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="f2e30-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3e397-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="3e397-109">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="f2e30-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="f2e30-110">See Also</span></span>  
- [<span data-ttu-id="f2e30-111">Información general sobre imágenes</span><span class="sxs-lookup"><span data-stu-id="f2e30-111">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="f2e30-112">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="f2e30-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="3e397-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="3e397-110">See also</span></span>
+- [<span data-ttu-id="3e397-111">Información general sobre imágenes</span><span class="sxs-lookup"><span data-stu-id="3e397-111">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="3e397-112">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="3e397-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

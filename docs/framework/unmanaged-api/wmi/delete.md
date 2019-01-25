@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0590c639e7cc6622c2283bfa609ccb31d7ce7e2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720579"
 ---
-# <a name="delete-function"></a><span data-ttu-id="5b2e8-103">Delete (función)</span><span class="sxs-lookup"><span data-stu-id="5b2e8-103">Delete function</span></span>
-<span data-ttu-id="5b2e8-104">Elimina la propiedad especificada y todas sus calificadores de una definición de clase CIM.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-104">Deletes the specified property and all of its qualifiers from a CIM class definition.</span></span>
+# <a name="delete-function"></a><span data-ttu-id="b8466-103">Delete (función)</span><span class="sxs-lookup"><span data-stu-id="b8466-103">Delete function</span></span>
+<span data-ttu-id="b8466-104">Elimina la propiedad especificada y todas sus calificadores de una definición de clase CIM.</span><span class="sxs-lookup"><span data-stu-id="b8466-104">Deletes the specified property and all of its qualifiers from a CIM class definition.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="5b2e8-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5b2e8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8466-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b8466-105">Syntax</span></span>  
   
 ```  
 HRESULT Delete (
@@ -38,43 +38,43 @@ HRESULT Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="5b2e8-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5b2e8-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="b8466-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b8466-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="5b2e8-107">[in] Este parámetro se usa.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="b8466-107">[in] Este parámetro se usa.</span><span class="sxs-lookup"><span data-stu-id="b8466-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="5b2e8-108">[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="b8466-108">[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.</span><span class="sxs-lookup"><span data-stu-id="b8466-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszName`  
-<span data-ttu-id="5b2e8-109">[in] El nombre de la propiedad que se va a eliminar.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-109">[in] The name of the property to delete.</span></span> <span data-ttu-id="5b2e8-110">`wszName` debe ser un puntero a una `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="b8466-109">[in] El nombre de la propiedad que se va a eliminar.</span><span class="sxs-lookup"><span data-stu-id="b8466-109">[in] The name of the property to delete.</span></span> <span data-ttu-id="b8466-110">`wszName` debe ser un puntero a una `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="b8466-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="5b2e8-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5b2e8-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="b8466-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="b8466-111">Return value</span></span>
 
-<span data-ttu-id="5b2e8-112">Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:</span><span class="sxs-lookup"><span data-stu-id="5b2e8-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="b8466-112">Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:</span><span class="sxs-lookup"><span data-stu-id="b8466-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="5b2e8-113">Constante</span><span class="sxs-lookup"><span data-stu-id="5b2e8-113">Constant</span></span>  |<span data-ttu-id="5b2e8-114">Valor</span><span class="sxs-lookup"><span data-stu-id="5b2e8-114">Value</span></span>  |<span data-ttu-id="5b2e8-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="5b2e8-115">Description</span></span>  |
+|<span data-ttu-id="b8466-113">Constante</span><span class="sxs-lookup"><span data-stu-id="b8466-113">Constant</span></span>  |<span data-ttu-id="b8466-114">Valor</span><span class="sxs-lookup"><span data-stu-id="b8466-114">Value</span></span>  |<span data-ttu-id="b8466-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="b8466-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | <span data-ttu-id="5b2e8-116">0 x 80041001</span><span class="sxs-lookup"><span data-stu-id="5b2e8-116">0x80041001</span></span> | <span data-ttu-id="5b2e8-117">Se ha producido un error no especificado.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-117">An unspecified error has occurred.</span></span> |
-| `WBEM_E_INVALID_OPERATION` | <span data-ttu-id="5b2e8-118">0x80041016</span><span class="sxs-lookup"><span data-stu-id="5b2e8-118">0x80041016</span></span> | <span data-ttu-id="5b2e8-119">No se puede eliminar la propiedad.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-119">The property cannot be deleted.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="5b2e8-120">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="5b2e8-120">0x80041008</span></span> | <span data-ttu-id="5b2e8-121">`wszzName` no es válido.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-121">`wszzName` is invalid.</span></span> |
-| `WBEM_E_NOT_FOUND` | <span data-ttu-id="5b2e8-122">0x80041002</span><span class="sxs-lookup"><span data-stu-id="5b2e8-122">0x80041002</span></span> | <span data-ttu-id="5b2e8-123">La propiedad especificada no existe.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-123">The specified property does not exist.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="5b2e8-124">0 x 80041006</span><span class="sxs-lookup"><span data-stu-id="5b2e8-124">0x80041006</span></span> | <span data-ttu-id="5b2e8-125">No hay memoria suficiente para completar la operación.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-125">There is not enough memory to complete the operation.</span></span> |
-| `WBEM_E_PROPAGATED_PROPERTY` | <span data-ttu-id="5b2e8-126">0x8004101c</span><span class="sxs-lookup"><span data-stu-id="5b2e8-126">0x8004101c</span></span> | <span data-ttu-id="5b2e8-127">La propiedad se hereda de una clase base.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-127">The property is inherited from a base class.</span></span> |
-| `WBEM_E_SYSTEM_PROPERTY` | | <span data-ttu-id="5b2e8-128">La propiedad es una propiedad del sistema.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-128">The property is a system property.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="5b2e8-129">0</span><span class="sxs-lookup"><span data-stu-id="5b2e8-129">0</span></span> | <span data-ttu-id="5b2e8-130">La llamada de función fue correcta.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-130">The function call was successful.</span></span>  |
-| `WBEM_E_RESET_TO_DEFAULT` | <span data-ttu-id="5b2e8-131">0x80041030</span><span class="sxs-lookup"><span data-stu-id="5b2e8-131">0x80041030</span></span> | <span data-ttu-id="5b2e8-132">La función eliminó un valor predeterminado de invalidación de la clase actual.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-132">The function deleted an override default value for the current class.</span></span> <span data-ttu-id="5b2e8-133">El valor predeterminado para esta propiedad en la clase primaria ha sido reactiviated.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-133">The default value for this property in the parent class has been reactiviated.</span></span> | 
+| `WBEM_E_FAILED` | <span data-ttu-id="b8466-116">0x80041001</span><span class="sxs-lookup"><span data-stu-id="b8466-116">0x80041001</span></span> | <span data-ttu-id="b8466-117">Se ha producido un error no especificado.</span><span class="sxs-lookup"><span data-stu-id="b8466-117">An unspecified error has occurred.</span></span> |
+| `WBEM_E_INVALID_OPERATION` | <span data-ttu-id="b8466-118">0x80041016</span><span class="sxs-lookup"><span data-stu-id="b8466-118">0x80041016</span></span> | <span data-ttu-id="b8466-119">No se puede eliminar la propiedad.</span><span class="sxs-lookup"><span data-stu-id="b8466-119">The property cannot be deleted.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="b8466-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="b8466-120">0x80041008</span></span> | <span data-ttu-id="b8466-121">`wszzName` no es válido.</span><span class="sxs-lookup"><span data-stu-id="b8466-121">`wszzName` is invalid.</span></span> |
+| `WBEM_E_NOT_FOUND` | <span data-ttu-id="b8466-122">0x80041002</span><span class="sxs-lookup"><span data-stu-id="b8466-122">0x80041002</span></span> | <span data-ttu-id="b8466-123">La propiedad especificada no existe.</span><span class="sxs-lookup"><span data-stu-id="b8466-123">The specified property does not exist.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="b8466-124">0x80041006</span><span class="sxs-lookup"><span data-stu-id="b8466-124">0x80041006</span></span> | <span data-ttu-id="b8466-125">No hay memoria suficiente para completar la operación.</span><span class="sxs-lookup"><span data-stu-id="b8466-125">There is not enough memory to complete the operation.</span></span> |
+| `WBEM_E_PROPAGATED_PROPERTY` | <span data-ttu-id="b8466-126">0x8004101c</span><span class="sxs-lookup"><span data-stu-id="b8466-126">0x8004101c</span></span> | <span data-ttu-id="b8466-127">La propiedad se hereda de una clase base.</span><span class="sxs-lookup"><span data-stu-id="b8466-127">The property is inherited from a base class.</span></span> |
+| `WBEM_E_SYSTEM_PROPERTY` | | <span data-ttu-id="b8466-128">La propiedad es una propiedad del sistema.</span><span class="sxs-lookup"><span data-stu-id="b8466-128">The property is a system property.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="b8466-129">0</span><span class="sxs-lookup"><span data-stu-id="b8466-129">0</span></span> | <span data-ttu-id="b8466-130">La llamada de función fue correcta.</span><span class="sxs-lookup"><span data-stu-id="b8466-130">The function call was successful.</span></span>  |
+| `WBEM_E_RESET_TO_DEFAULT` | <span data-ttu-id="b8466-131">0x80041030</span><span class="sxs-lookup"><span data-stu-id="b8466-131">0x80041030</span></span> | <span data-ttu-id="b8466-132">La función eliminó un valor predeterminado de invalidación de la clase actual.</span><span class="sxs-lookup"><span data-stu-id="b8466-132">The function deleted an override default value for the current class.</span></span> <span data-ttu-id="b8466-133">El valor predeterminado para esta propiedad en la clase primaria ha sido reactiviated.</span><span class="sxs-lookup"><span data-stu-id="b8466-133">The default value for this property in the parent class has been reactiviated.</span></span> | 
 
-## <a name="remarks"></a><span data-ttu-id="5b2e8-134">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5b2e8-134">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b8466-134">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b8466-134">Remarks</span></span>
 
-<span data-ttu-id="5b2e8-135">Esta función contiene una llamada a la [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) método.</span><span class="sxs-lookup"><span data-stu-id="5b2e8-135">This function wraps a call to the [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) method.</span></span>
+<span data-ttu-id="b8466-135">Esta función contiene una llamada a la [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) método.</span><span class="sxs-lookup"><span data-stu-id="b8466-135">This function wraps a call to the [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5b2e8-136">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5b2e8-136">Requirements</span></span>  
- <span data-ttu-id="5b2e8-137">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b2e8-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b8466-136">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b8466-136">Requirements</span></span>  
+ <span data-ttu-id="b8466-137">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b8466-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b2e8-138">**Encabezado:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="5b2e8-138">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="b8466-138">**Encabezado**: WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="b8466-138">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="5b2e8-139">**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5b2e8-139">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="b8466-139">**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="b8466-139">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b2e8-140">Vea también</span><span class="sxs-lookup"><span data-stu-id="5b2e8-140">See also</span></span>  
-[<span data-ttu-id="5b2e8-141">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="5b2e8-141">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="b8466-140">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8466-140">See also</span></span>
+- [<span data-ttu-id="b8466-141">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="b8466-141">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

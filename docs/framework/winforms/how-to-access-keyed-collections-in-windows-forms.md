@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Obtener acceso a colecciones con claves en Windows Forms'
+title: Procedimiento Acceso a colecciones con claves en Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: 59e5cea29ee520b1f13f8fae98ae4042cc86fef7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0071e3cc3ae2576bed8a7111fc2a120ea3a113c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676320"
 ---
-# <a name="how-to-access-keyed-collections-in-windows-forms"></a><span data-ttu-id="4d6df-102">Cómo: Obtener acceso a colecciones con claves en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d6df-102">How to: Access Keyed Collections in Windows Forms</span></span>
--   <span data-ttu-id="4d6df-103">Puede tener acceso a elementos de colección individuales por clave.</span><span class="sxs-lookup"><span data-stu-id="4d6df-103">You can access individual collection items by key.</span></span> <span data-ttu-id="4d6df-104">Esta funcionalidad se ha agregado a muchas clases de colección que se suelen usar en aplicaciones de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="4d6df-104">This functionality has been added to many collection classes that are typically used by Windows Forms applications.</span></span> <span data-ttu-id="4d6df-105">En la lista siguiente muestra algunas de las clases de colección que tienen colecciones con claves accesibles:</span><span class="sxs-lookup"><span data-stu-id="4d6df-105">The following list shows some of the collection classes that have accessible keyed collections:</span></span>  
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a><span data-ttu-id="aa0df-102">Procedimiento Acceso a colecciones con claves en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aa0df-102">How to: Access Keyed Collections in Windows Forms</span></span>
+-   <span data-ttu-id="aa0df-103">Puede tener acceso a elementos de colección individuales por clave.</span><span class="sxs-lookup"><span data-stu-id="aa0df-103">You can access individual collection items by key.</span></span> <span data-ttu-id="aa0df-104">Esta funcionalidad se ha agregado a muchas clases de colección que se suelen usar las aplicaciones de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="aa0df-104">This functionality has been added to many collection classes that are typically used by Windows Forms applications.</span></span> <span data-ttu-id="aa0df-105">En la lista siguiente muestra algunas de las clases de colección que tienen colecciones con claves accesible:</span><span class="sxs-lookup"><span data-stu-id="aa0df-105">The following list shows some of the collection classes that have accessible keyed collections:</span></span>  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
   
@@ -28,29 +28,29 @@ ms.locfileid: "33538733"
   
 -   <xref:System.Windows.Forms.TreeNodeCollection>  
   
- <span data-ttu-id="4d6df-106">La clave asociada con un elemento de una colección normalmente es el nombre del elemento.</span><span class="sxs-lookup"><span data-stu-id="4d6df-106">The key associated with an item in a collection is typically the name of the item.</span></span> <span data-ttu-id="4d6df-107">Los procedimientos siguientes muestran cómo utilizar las clases de colección para realizar tareas comunes.</span><span class="sxs-lookup"><span data-stu-id="4d6df-107">The following procedures show you how to use collection classes to perform common tasks.</span></span>  
+ <span data-ttu-id="aa0df-106">Normalmente, la clave asociada con un elemento de una colección es el nombre del elemento.</span><span class="sxs-lookup"><span data-stu-id="aa0df-106">The key associated with an item in a collection is typically the name of the item.</span></span> <span data-ttu-id="aa0df-107">Los procedimientos siguientes muestran cómo usar las clases de colección para realizar tareas comunes.</span><span class="sxs-lookup"><span data-stu-id="aa0df-107">The following procedures show you how to use collection classes to perform common tasks.</span></span>  
   
-### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a><span data-ttu-id="4d6df-108">Para buscar y asignar el foco a un control anidado en una colección de controles</span><span class="sxs-lookup"><span data-stu-id="4d6df-108">To find and give focus to a nested control in a control collection</span></span>  
+### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a><span data-ttu-id="aa0df-108">Para buscar y asignar el foco a un control anidado en una colección de controles</span><span class="sxs-lookup"><span data-stu-id="aa0df-108">To find and give focus to a nested control in a control collection</span></span>  
   
--   <span data-ttu-id="4d6df-109">Use la <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> y <xref:System.Windows.Forms.Control.Focus%2A> métodos para especificar el nombre del control para buscar y asignar el foco a.</span><span class="sxs-lookup"><span data-stu-id="4d6df-109">Use the <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> and <xref:System.Windows.Forms.Control.Focus%2A> methods to specify the name of the control to find and give focus to.</span></span>  
+-   <span data-ttu-id="aa0df-109">Use la <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> y <xref:System.Windows.Forms.Control.Focus%2A> métodos para especificar el nombre del control para buscar y asignar el foco a.</span><span class="sxs-lookup"><span data-stu-id="aa0df-109">Use the <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> and <xref:System.Windows.Forms.Control.Focus%2A> methods to specify the name of the control to find and give focus to.</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
   
-### <a name="to-access-an-image-in-an-image-collection"></a><span data-ttu-id="4d6df-110">Para obtener acceso a una imagen en una colección de imágenes</span><span class="sxs-lookup"><span data-stu-id="4d6df-110">To access an image in an image collection</span></span>  
+### <a name="to-access-an-image-in-an-image-collection"></a><span data-ttu-id="aa0df-110">Para obtener acceso a una imagen en una colección de imágenes</span><span class="sxs-lookup"><span data-stu-id="aa0df-110">To access an image in an image collection</span></span>  
   
--   <span data-ttu-id="4d6df-111">Use la <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> propiedad para especificar el nombre de la imagen que desea tener acceso.</span><span class="sxs-lookup"><span data-stu-id="4d6df-111">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> property to specify the name of the image you want to access.</span></span>  
+-   <span data-ttu-id="aa0df-111">Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> propiedad para especificar el nombre de la imagen que desea tener acceso.</span><span class="sxs-lookup"><span data-stu-id="aa0df-111">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> property to specify the name of the image you want to access.</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
   
-### <a name="to-set-a-tab-page-as-the-selected-tab"></a><span data-ttu-id="4d6df-112">Para establecer una página de fichas como la ficha seleccionada</span><span class="sxs-lookup"><span data-stu-id="4d6df-112">To set a tab page as the selected tab</span></span>  
+### <a name="to-set-a-tab-page-as-the-selected-tab"></a><span data-ttu-id="aa0df-112">Para establecer una página de ficha como la pestaña seleccionada</span><span class="sxs-lookup"><span data-stu-id="aa0df-112">To set a tab page as the selected tab</span></span>  
   
--   <span data-ttu-id="4d6df-113">Use la <xref:System.Windows.Forms.TabControl.SelectedTab%2A> propiedad junto con la <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> propiedad para especificar el nombre de la página de fichas para establecer como la ficha seleccionada.</span><span class="sxs-lookup"><span data-stu-id="4d6df-113">Use the <xref:System.Windows.Forms.TabControl.SelectedTab%2A> property together with the <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> property to specify the name of the tab page to set as the selected tab.</span></span>  
+-   <span data-ttu-id="aa0df-113">Use la <xref:System.Windows.Forms.TabControl.SelectedTab%2A> propiedad junto con la <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> propiedad para especificar el nombre de la página de ficha para establecer como la pestaña seleccionada.</span><span class="sxs-lookup"><span data-stu-id="aa0df-113">Use the <xref:System.Windows.Forms.TabControl.SelectedTab%2A> property together with the <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> property to specify the name of the tab page to set as the selected tab.</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="4d6df-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="4d6df-114">See Also</span></span>  
- [<span data-ttu-id="4d6df-115">Introducción a los formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d6df-115">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- [<span data-ttu-id="4d6df-116">Agregar o quitar imágenes con el componente ImageList de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d6df-116">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>](../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+## <a name="see-also"></a><span data-ttu-id="aa0df-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="aa0df-114">See also</span></span>
+- [<span data-ttu-id="aa0df-115">Introducción a los formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aa0df-115">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [<span data-ttu-id="aa0df-116">Cómo: Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aa0df-116">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>](../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
