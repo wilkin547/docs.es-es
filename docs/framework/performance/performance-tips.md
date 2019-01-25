@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e0ef9baa6405a8c49674afb4208b502085dc8554
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b998240b6ecf692b00e16c2ad311c804edc0d7e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518226"
 ---
 # <a name="net-performance-tips"></a>Sugerencias para mejorar el rendimiento de .NET
 El término *rendimiento* suele hacer referencia a la velocidad de ejecución de un programa. A veces se puede aumentar la velocidad de ejecución si se siguen algunas reglas básicas en el código fuente. En algunos programas, es importante examinar el código detenidamente y usar generadores de perfiles para asegurarse de que se está ejecutando lo más rápidamente posible. En otros programas, no es necesario realizar esta optimización, ya que el código se ejecuta con una velocidad aceptable mientras se escribe. En este artículo se enumeran algunas áreas donde el rendimiento puede verse afectado y sugerencias para mejorar, así como vínculos a temas de rendimiento adicionales. Para más información sobre cómo planear y medir el rendimiento, vea [Rendimiento](../../../docs/framework/performance/index.md)  
@@ -23,16 +23,16 @@ El término *rendimiento* suele hacer referencia a la velocidad de ejecución de
  Es mejor evitar el uso de tipos de valor en situaciones en las que se debe aplicar la conversión boxing un gran número de veces, por ejemplo, en las clases de colecciones no genéricas como <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Puede evitar la conversión boxing de tipos de valor mediante el uso de colecciones genéricas como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Las conversiones boxing y unboxing son procesos que consumen muchos recursos. Cuando se aplica la conversión boxing a un tipo de valor, se debe crear un objeto completamente nuevo. Esto puede tardar hasta 20 veces más que la asignación de una referencia simple. Cuando se aplica la conversión unboxing, el proceso de conversión puede tardar cuatro veces más que una asignación. Para obtener más información, vea [Conversión boxing y unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Cadenas  
- Al concatenar un gran número de variables de cadena, por ejemplo en un bucle compacto, use <xref:System.Text.StringBuilder?displayProperty=nameWithType> en lugar del [operador +](~/docs/csharp/language-reference/operators/addition-operator.md) de C# o los [operadores de concatenación](~/docs/visual-basic/language-reference/operators/concatenation-operators.md) de Visual Basic. Para más información, vea [Cómo: Concatenar varias cadenas](../../csharp/how-to/concatenate-multiple-strings.md) y [Operadores de concatenación en Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ Al concatenar un gran número de variables de cadena, por ejemplo en un bucle compacto, use <xref:System.Text.StringBuilder?displayProperty=nameWithType> en lugar del [operador +](~/docs/csharp/language-reference/operators/addition-operator.md) de C# o los [operadores de concatenación](~/docs/visual-basic/language-reference/operators/concatenation-operators.md) de Visual Basic. Para obtener más información, vea [Cómo: Concatenar varias cadenas](../../csharp/how-to/concatenate-multiple-strings.md) y [operadores de concatenación en Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Destructores  
- No se deben utilizar destructores vacíos. Cuando una clase contiene un destructor, se crea una entrada en la cola Finalize. Cuando se llama al destructor, se invoca al recolector de elementos no utilizados para procesar la cola. Si el destructor está vacío, simplemente se produce una pérdida de rendimiento. Para más información, vea [Destructores](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) y [Duración de los objetos: cómo se crean y destruyen](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ No se deben utilizar destructores vacíos. Cuando una clase contiene un destructor, se crea una entrada en la cola Finalize. Cuando se llama al destructor, se invoca al recolector de elementos no utilizados para procesar la cola. Si el destructor está vacío, simplemente se produce una pérdida de rendimiento. Para obtener más información, consulte [destructores](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) y [duración del objeto: ¿Cómo se crean y destruyen objetos](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 ## <a name="other-resources"></a>Otros recursos  
   
--   [Writing Faster Managed Code: Know What Things Cost](https://go.microsoft.com/fwlink/?LinkId=99294) (Escribir código administrado con mayor rapidez: conocer el costo de las cosas)  
+-   [Más rápido escribir código administrado: Saber qué cuestan las cosas](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [Writing High-Performance Managed Applications: A Primer](https://go.microsoft.com/fwlink/?LinkId=99295) (Escribir aplicaciones administradas de alto rendimiento: introducción)  
+-   [Aplicaciones administradas de alto rendimiento de escritura: Un manual](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
 -   [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296) (Conceptos básicos del recolector de elementos no utilizados y sugerencias de rendimiento)  
   
@@ -42,8 +42,8 @@ El término *rendimiento* suele hacer referencia a la velocidad de ejecución de
 
 -   [Blog de Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
   
-## <a name="see-also"></a>Vea también  
- [Rendimiento](../../../docs/framework/performance/index.md)  
- [Conceptos de programación](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
- [Guía de programación en Visual Basic](../../visual-basic/programming-guide/index.md)  
- [Guía de programación de C#](../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también
+- [Rendimiento](../../../docs/framework/performance/index.md)
+- [Conceptos de programación](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)
+- [Guía de programación en Visual Basic](../../visual-basic/programming-guide/index.md)
+- [Guía de programación de C#](../../csharp/programming-guide/index.md)
