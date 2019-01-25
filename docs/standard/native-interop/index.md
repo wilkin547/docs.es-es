@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo interactuar con componentes nativo
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 85a22394c8c59f51f462bc0a2ba6a11265682db3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416063"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857624"
 ---
 # <a name="native-interoperability"></a>Interoperabilidad nativa
 
@@ -30,3 +30,4 @@ La lista anterior no cubre todas las posibles situaciones y escenarios en los qu
 
 - [Invocación de plataforma (P/Invoke)](pinvoke.md)
 - [Serialización de tipos](type-marshalling.md)
+- [Procedimientos recomendados de interoperabilidad nativa](best-practices.md)

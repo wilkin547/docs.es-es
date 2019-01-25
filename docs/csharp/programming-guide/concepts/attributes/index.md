@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573353"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -119,13 +119,13 @@ Para obtener más información, consulte:
 
 - [Crear atributos personalizados (C#)](creating-custom-attributes.md)  
 - [Acceder a atributos mediante reflexión (C#)](accessing-attributes-by-using-reflection.md)  
-- [Cómo: Crear una unión de C/C++ mediante atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Cómo: Crear una unión de C-C++ mediante atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Atributos comunes (C#)](common-attributes.md)  
 - [Información del llamador (C#)](../caller-information.md)  
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../index.md)  
-- [Reflexión (C#)](../reflection.md)  
-- [Atributos](../../../../standard/attributes/index.md)  
-- [Uso de atributos en C#](../../../tutorials/attributes.md)  
+- [Guía de programación de C#](../../index.md)
+- [Reflexión (C#)](../reflection.md)
+- [Atributos](../../../../standard/attributes/index.md)
+- [Uso de atributos en C#](../../../tutorials/attributes.md)

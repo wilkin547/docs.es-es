@@ -1,14 +1,14 @@
 ---
 title: Guía de contenido de ML.NET
 description: Obtenga información sobre cómo compilar soluciones de IA personalizadas e integrarlas en las aplicaciones .NET mediante ML.NET.
-ms.date: 11/06/2018
+ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550466"
 ---
 # <a name="mlnet-content-guide"></a>Guía de contenido de ML.NET
 
@@ -28,6 +28,8 @@ Para comprender los conceptos básicos, consulte [Conceptos básicos del entrena
 ## <a name="tutorials"></a>Tutoriales
 
 En [Análisis de opinión mediante un modelo de clasificación binario](tutorials/sentiment-analysis.md) se muestra cómo compilar una aplicación que determina si la opinión es positiva o negativa.
+
+En la [clasificación de problemas de GitHub mediante un modelo de clasificación multiclase](tutorials/github-issue-classification.md) se le muestra cómo compilar una aplicación que determina la etiqueta de área para un problema de GitHub.
 
 En [Predicción de las tarifas de taxi mediante un modelo de regresión](tutorials/taxi-fare.md) se muestra cómo compilar una aplicación predictiva que utiliza muchos factores de los datos históricos para determinar la respuesta.
 

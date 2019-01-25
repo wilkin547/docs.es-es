@@ -2,12 +2,12 @@
 title: Ensamblados y caché global de ensamblados (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 25ae3a25b825a0594d7cc9479c58e967375e61b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577053"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Ensamblados y caché global de ensamblados (C#)
 Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación basada en .NET. Los ensamblados adoptan la forma de un archivo ejecutable (.exe) o de un archivo de biblioteca de vínculos dinámicos (.dll) y son bloques de compilación de .NET Framework. Proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Puede pensar en un ensamblado como si fuera una colección de tipos y recursos que forman una unidad lógica de funcionalidad y se compilan para funcionar en conjunto.  
@@ -52,12 +52,12 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
-- [Ensamblados en Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Ensamblados de confianza (C#)](friend-assemblies.md)  
-- [Uso compartido de un ensamblado con otras aplicaciones (C#)](how-to-share-an-assembly-with-other-applications.md)  
-- [Carga y descarga de ensamblados (C#)](how-to-load-and-unload-assemblies.md)  
-- [Determinar si un archivo es un ensamblado (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
-- [Creación y uso de ensamblados con la línea de comandos (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+- [Ensamblados en Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Ensamblados de confianza (C#)](friend-assemblies.md)
+- [Cómo: Compartir un ensamblado con otras aplicaciones (C#)](how-to-share-an-assembly-with-other-applications.md)
+- [Cómo: Cargar y descargar ensamblados (C#)](how-to-load-and-unload-assemblies.md)
+- [Cómo: Determinar si un archivo es un ensamblado (C#)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Cómo: Crear y utilizar ensamblados mediante la línea de comandos (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [Tutorial: Insertar información de tipos de los ensamblados de Microsoft Office en Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

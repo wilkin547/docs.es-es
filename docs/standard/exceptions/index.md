@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707887"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Controlar y generar excepciones en .NET
 
@@ -60,13 +60,13 @@ En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las
 
 ## <a name="see-also"></a>Vea también
 
-- [Clase Exception y propiedades](exception-class-and-properties.md)  
-- [Utilizar el bloque Try/Catch para detectar excepciones](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-- [Cómo: Utilizar excepciones específicas en un bloque Catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
-- [Cómo: Iniciar excepciones explícitamente](how-to-explicitly-throw-exceptions.md)  
-- [Cómo crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md)  
-- [Utilizar controladores de excepciones filtradas por el usuario](using-user-filtered-exception-handlers.md)  
-- [Utilizar bloques Finally](how-to-use-finally-blocks.md)  
-- [Controlar excepciones de interoperabilidad COM](handling-com-interop-exceptions.md)  
-- [Procedimientos recomendados para excepciones](best-practices-for-exceptions.md)  
+- [Clase Exception y propiedades](exception-class-and-properties.md)
+- [Cómo: Utilizar el bloque Try/Catch para detectar excepciones](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Cómo: Usar excepciones específicas en un bloque Catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Cómo: Iniciar excepciones explícitamente](how-to-explicitly-throw-exceptions.md)
+- [Cómo: Crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md)
+- [Utilizar controladores de excepciones filtradas por el usuario](using-user-filtered-exception-handlers.md)
+- [Cómo: Usar bloques Finally](how-to-use-finally-blocks.md)
+- [Controlar excepciones de interoperabilidad COM](handling-com-interop-exceptions.md)
+- [Procedimientos recomendados para excepciones](best-practices-for-exceptions.md)
 - [¿Qué necesitan saber todos los desarrolladores acerca de las excepciones producidas en el runtime?](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)

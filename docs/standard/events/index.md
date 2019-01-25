@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679937"
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de delegado sigue el patrón de diseño del observador, que permite que un suscriptor se registre con un proveedor y reciba notificaciones de él. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.  
@@ -76,23 +76,23 @@ Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de de
 ## <a name="raising-multiple-events"></a>Generar múltiples eventos  
  Si la clase genera varios eventos, el compilador genera un campo por cada instancia de delegado de eventos. Si el número de eventos es alto, es posible que el costo de almacenamiento de un campo por delegado no sea aceptable. Para estos casos, .NET Framework dispone de propiedades de evento que se pueden usar con otra estructura de datos (de elección propia) para almacenar los delegados de eventos.  
   
- Las propiedades de evento están compuestas de declaraciones de evento acompañadas de descriptores de acceso de evento. Los descriptores de acceso de eventos son métodos que se definen para agregar o quitar instancias de delegados de eventos de la estructura de datos de almacenamiento. Hay que tener en cuenta que las propiedades de evento son más lentas que los campos de evento, ya que se debe recuperar cada delegado de evento antes de poder invocarlo. La memoria y la velocidad se ven afectadas. Si la clase define muchos eventos que no se provocan con frecuencia, es posible que desee implementar propiedades de evento. Para más información, consulte [Cómo: Controlar varios eventos mediante propiedades de eventos](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
+ Las propiedades de evento están compuestas de declaraciones de evento acompañadas de descriptores de acceso de evento. Los descriptores de acceso de eventos son métodos que se definen para agregar o quitar instancias de delegados de eventos de la estructura de datos de almacenamiento. Hay que tener en cuenta que las propiedades de evento son más lentas que los campos de evento, ya que se debe recuperar cada delegado de evento antes de poder invocarlo. La memoria y la velocidad se ven afectadas. Si la clase define muchos eventos que no se provocan con frecuencia, es posible que desee implementar propiedades de evento. Para obtener más información, vea [Cómo: Controlar varios eventos mediante las propiedades de evento](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
 |Title|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Provocar y utilizar eventos](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Contiene ejemplos de cómo generar y consumir eventos.|  
-|[Cómo: Controlar varios eventos mediante propiedades de eventos](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Muestra cómo utilizar propiedades de evento para controlar varios eventos.|  
+|[Cómo: Controlar varios eventos mediante las propiedades de evento](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Muestra cómo utilizar propiedades de evento para controlar varios eventos.|  
 |[Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)|Describe el patrón de diseño que permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor.|  
 |[Cómo: Consumir eventos en una aplicación de formularios Web Forms](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Muestra cómo controlar un evento generado por un control de formularios Web Forms.|  
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [Introducción a eventos y eventos enrutados (aplicaciones de UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [Eventos (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [Introducción a eventos y eventos enrutados (aplicaciones de UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Eventos (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [Eventos (Guía de programación de C#)](../../csharp/programming-guide/events/index.md)

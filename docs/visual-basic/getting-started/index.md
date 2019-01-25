@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a7e6c084c84fec1af05a38664bcfbcabc99061ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534347"
 ---
 # <a name="get-started-with-visual-basic"></a>Introducción a Visual Basic
 Esta sección de la documentación sirve como introducción al desarrollo de aplicaciones con Visual Basic.  
@@ -33,31 +33,22 @@ Muestra los cambios de esta versión que podrían impedir que una aplicación se
 Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a encontrar la solución a los problemas más comunes.  
 
 ## <a name="see-also"></a>Vea también
- [Obtener Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
- Ofrece vínculos de descarga para las versiones de Visual Studio que son compatibles con Visual Basic, incluidas las versiones gratuitas.  
+- [Obtener Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) Ofrece vínculos de descarga para las versiones de Visual Studio que son compatibles con Visual Basic, incluidas las versiones gratuitas.  
 
- [Aspectos básicos de Visual Basic para principiantes sin ninguna experiencia](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
- Curso de la Academia virtual de Microsoft que enseña los aspectos básicos de programación de Visual Basic.
+- [Visual Basic Fundamentals for Absolute Beginners (Aspectos básicos de Visual Basic para principiantes sin ninguna experiencia)](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) Curso de la Academia virtual de Microsoft que enseña los aspectos básicos de programación de Visual Basic.
 
- [Programación orientada a objetos](../programming-guide/concepts/object-oriented-programming.md)  
- Proporciona vínculos a páginas que presentan la programación orientada a objetos y describen cómo crear sus propios objetos y cómo utilizar objetos para simplificar la escritura del código.  
-  
- [Ejemplos](../../visual-basic/sample-applications.md)  
- Proporciona vínculos al código de ejemplo de Visual Basic.  
-  
- [Tutoriales](../../visual-basic/walkthroughs.md)  
- Proporciona una lista de páginas de Ayuda donde se explican aspectos del lenguaje Visual Basic.  
-  
- [Hable con nosotros](/visualstudio/ide/talk-to-us)  
- Explica cómo recibir asistencia y proporcionar información al servicio técnico.  
-  
- [Visual Studio](/visualstudio/)  
- Proporciona vínculos a la documentación de Visual Studio.  
-  
- [C#](../../csharp/index.md) Proporciona los vínculos a la documentación sobre desarrollo de aplicaciones con Visual C#.  
-  
- [Visual C++](/cpp/)  
- Proporciona vínculos a la documentación de Visual C++.  
-  
- [Desarrollo de Office y SharePoint](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)  
- Proporciona información sobre cómo usar Microsoft Office y Visual Studio como parte de una aplicación empresarial.
+- [Programación orientada a objetos](../programming-guide/concepts/object-oriented-programming.md) Proporciona vínculos a páginas que presentan la programación orientada a objetos y describen cómo crear sus propios objetos y cómo utilizar objetos para simplificar la escritura del código.  
+
+- [Ejemplos](../../visual-basic/sample-applications.md) Proporciona vínculos al código de ejemplo de Visual Basic.  
+
+- [Tutoriales](../../visual-basic/walkthroughs.md) Proporciona una lista de páginas de Ayuda donde se explican aspectos del lenguaje Visual Basic.  
+
+- [Hable con nosotros](/visualstudio/ide/talk-to-us) Explica cómo recibir asistencia y proporcionar información al servicio técnico.  
+
+- [Visual Studio](/visualstudio/) Proporciona vínculos a la documentación de Visual Studio.  
+
+- [C#](../../csharp/index.md) Proporciona los vínculos a la documentación sobre desarrollo de aplicaciones con Visual C#.  
+
+- [Visual C++](/cpp/) Proporciona vínculos a la documentación de Visual C++.  
+
+- [Desarrollo de Office y SharePoint](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio) Proporciona información sobre cómo usar Microsoft Office y Visual Studio como parte de una aplicación empresarial.
