@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear texto con contorno'
+title: Procedimiento Crear texto con contorno
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 046ce6519e55e5782db0fe8adbc2a956251e12e4
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: a06ef9adbd5740fee74be2e9d8d13a8a5bdc5b95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521483"
 ---
-# <a name="how-to-create-outlined-text"></a>Cómo: Crear texto con contorno
+# <a name="how-to-create-outlined-text"></a>Procedimiento Crear texto con contorno
 En la mayoría de los casos, cuando se agregan adorno a cadenas de texto en su [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación, que usa texto en términos de una colección de caracteres discretos, o glifos. Por ejemplo, podría crear un pincel de degradado lineal y se aplicará la <xref:System.Windows.Controls.Control.Foreground%2A> propiedad de un <xref:System.Windows.Controls.TextBox> objeto. Al mostrar o editar el cuadro de texto, el pincel de degradado lineal se aplica automáticamente al conjunto actual de caracteres de la cadena de texto.  
   
  ![Texto mostrado con un pincel de degradado lineal](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
@@ -59,5 +59,5 @@ Ejemplo de pincel de imagen aplicado al trazo y el resaltado
   
   Para el origen del objeto de control de usuario personalizado de ejemplo, vea [OutlineTextControl.cs para C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) y [OutlineTextControl.vb para Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
-## <a name="see-also"></a>Vea también  
- [Dibujar texto con formato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+## <a name="see-also"></a>Vea también
+- [Dibujar texto con formato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

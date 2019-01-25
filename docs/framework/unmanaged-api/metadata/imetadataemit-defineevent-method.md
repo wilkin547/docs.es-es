@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce94765467899ac7c906b0dfcdf0ceb78c659b5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7d42fe17af5b10d718d0e2b6a7ae33644fa4813
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730300"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent (Método)
-Crea una definición para un evento con la firma de metadatos especificada y obtiene un símbolo (token) para dicha definición de evento.  
+Crea una definición para un evento con la firma de metadatos especificados y obtiene un token para esa definición de evento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +45,7 @@ HRESULT DefineEvent (
   
 #### <a name="parameters"></a>Parámetros  
  `td`  
- [in] El token para la interfaz o clase de destino. Esto es un `mdTypeDef` o `mdTypeDefNil` símbolo (token).  
+ [in] El token para la interfaz o clase de destino. Puede ser un `mdTypeDef` o `mdTypeDefNil` token.  
   
  `szEvent`  
  [in] El nombre del evento.  
@@ -54,7 +54,7 @@ HRESULT DefineEvent (
  [in] Marcas de evento.  
   
  `tkEventType`  
- [in] El token para la clase de eventos. Se trata de un `mdTypeDef`, `mdTypeRef`, o un `mdTokenNil` símbolo (token).  
+ [in] El token para la clase de eventos. Se trata de un `mdTypeDef`, un `mdTypeRef`, o un `mdTokenNil` token.  
   
  `mdAddOn`  
  [in] El método utilizado para suscribirse al evento, o null.  
@@ -66,20 +66,20 @@ HRESULT DefineEvent (
  [in] El método utilizado (por una clase derivada) para generar el evento.  
   
  `rmdOtherMethods[]`  
- [in] Una matriz de símbolos (tokens) de otros métodos asociados al evento. La matriz termina con un `mdMethodDefNil` símbolo (token).  
+ [in] Una matriz de tokens para otros métodos asociados al evento. La matriz se termina con un `mdMethodDefNil` token.  
   
  `pmdEvent`  
  [out] El token de metadatos asignado al evento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MSCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

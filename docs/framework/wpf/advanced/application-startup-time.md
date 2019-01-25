@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527333"
 ---
 # <a name="application-startup-time"></a>Tiempo de inicio de una aplicación
 La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar en gran medida. En este tema se describen varias técnicas para reducir el tiempo de inicio percibido y real de una aplicación de Windows Presentation Foundation (WPF).  
@@ -107,9 +107,9 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
  Use la <xref:System.Resources.NeutralResourcesLanguageAttribute> para especificar la referencia cultural neutra para el <xref:System.Resources.ResourceManager>. De este modo puede evitar búsquedas de ensamblados incorrectas.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>Utilización de la clase BinaryFormatter para la serialización  
- Si debe utilizar la serialización, use la <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> clase en lugar de la <xref:System.Xml.Serialization.XmlSerializer> clase. La <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> clase está implementada en la biblioteca de clases Base (BCL) en el ensamblado mscorlib.dll. El <xref:System.Xml.Serialization.XmlSerializer> se implementa en el ensamblado System.Xml.dll, que podría ser una DLL adicional para cargar.  
+ Si debe utilizar la serialización, utilice el <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> clase en lugar de la <xref:System.Xml.Serialization.XmlSerializer> clase. La <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> clase se implementa en la biblioteca de clases Base (BCL) en el ensamblado mscorlib.dll. El <xref:System.Xml.Serialization.XmlSerializer> se implementa en el ensamblado System.Xml.dll, que podría ser una DLL adicional para cargar.  
   
- Si debe utilizar el <xref:System.Xml.Serialization.XmlSerializer> (clase), puede lograr un mejor rendimiento si pregenerar el ensamblado de serialización.  
+ Si debe utilizar el <xref:System.Xml.Serialization.XmlSerializer> (clase), puede lograr un mejor rendimiento generando previamente el ensamblado de serialización.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Configuración de ClickOnce para que compruebe las actualizaciones después del inicio  
  Si la aplicación utiliza [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], evite el acceso de red durante el inicio configurando [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] de modo que compruebe si hay actualizaciones en el sitio de implementación después de que se haya iniciado la aplicación.  
@@ -120,13 +120,13 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
  La primera aplicación de WPF que se ejecuta después de un reinicio es el servicio PresentationFontCache. El servicio almacena en memoria caché las fuentes del sistema y mejora el acceso a las fuentes, así como el rendimiento global. Iniciar el servicio consume recursos; por ello, en algunos entornos controlados puede ser conveniente configurarlo de modo que se inicie automáticamente al reiniciarse el sistema.  
   
 ## <a name="set-data-binding-programmatically"></a>Establecimiento del enlace de datos mediante programación  
- En lugar de utilizar XAML para establecer el <xref:System.Windows.FrameworkElement.DataContext%2A> mediante declaración para la ventana principal, considere la posibilidad de configurarlo mediante programación en el <xref:System.Windows.Application.OnActivated%2A> método.  
+ En lugar de usar XAML para establecer el <xref:System.Windows.FrameworkElement.DataContext%2A> mediante declaración para la ventana principal, puede establecerlo mediante programación en el <xref:System.Windows.Application.OnActivated%2A> método.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.SplashScreen>  
- <xref:System.AppDomain>  
- <xref:System.Resources.NeutralResourcesLanguageAttribute>  
- <xref:System.Resources.ResourceManager>  
- [Agregar una pantalla de presentación a una aplicación WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (Generador de imágenes nativas)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [\<generatePublisherEvidence> (Elemento)](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.SplashScreen>
+- <xref:System.AppDomain>
+- <xref:System.Resources.NeutralResourcesLanguageAttribute>
+- <xref:System.Resources.ResourceManager>
+- [Agregar una pantalla de presentación a una aplicación WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (Generador de imágenes nativas)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> (Elemento)](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 793d3996f9cbcb1a38a728ade06f775784166123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745901"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION (Enumeración)
-Contiene valores que indican que la acción de un host debe tomar si una operación solicitada por el common language runtime (CLR) bloquea.  
+Contiene valores que indican que la acción de un host debe realizar si una operación solicitada por el common language runtime (CLR) bloquea.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|Notifica al host que la tarea debe reactivarse si CLR llama a la [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) método.|  
-|`WAIT_MSGPUMP`|Notifica al host que debe suministrar los mensajes en el subproceso de sistema operativo actual si se bloquea el subproceso. El tiempo de ejecución especifica este valor solo en un <xref:System.Threading.ApartmentState.STA> subproceso.|  
-|`WAIT_NOTINDEADLOCK`|Notifica al host que la solicitud de sincronización especificada no puede dividirse por un host. Es decir, el host no puede devolver `HOST_E_DEADLOCK`.|  
+|`WAIT_ALERTABLE`|Notifica al host que la tarea debe activarse si CLR llama a la [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) método.|  
+|`WAIT_MSGPUMP`|Notifica al host que debe suministrar mensajes en el subproceso del sistema operativo actual si se bloquea el subproceso. El tiempo de ejecución especifica este valor solo en un <xref:System.Threading.ApartmentState.STA> subproceso.|  
+|`WAIT_NOTINDEADLOCK`|Notifica al host que la solicitud de sincronización especificado no puede verse interrumpida por un host. Es decir, el host no puede devolver `HOST_E_DEADLOCK`.|  
   
 ## <a name="remarks"></a>Comentarios  
- El [IHostTaskManager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) y [IHostTaskManager:: SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) ambos métodos toman un parámetro de este tipo.  
+ El [IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) y [SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) dos métodos toman un parámetro de este tipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

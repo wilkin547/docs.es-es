@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: consultar un ensamblado&#39;metadatos mediante la reflexión (LINQ) (Visual Basic)'
+title: Procedimiento Consultar un ensamblado&#39;los metadatos con reflexión (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: f465cccef2009bb9d8da1dc57c14eb09dc008f54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb46cef7eb9b4827cb5e4b7ca7366c0910fcef26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609829"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Cómo: consultar un ensamblado&#39;metadatos mediante la reflexión (LINQ) (Visual Basic)
+# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Procedimiento Consultar un ensamblado&#39;los metadatos con reflexión (LINQ) (Visual Basic)
 En el ejemplo siguiente se muestra cómo se puede usar LINQ con reflexión para recuperar metadatos concretos sobre métodos que coinciden con un criterio de búsqueda especificado. En este caso, la consulta encontrará los nombres de todos los métodos del ensamblado que devuelven tipos enumerables, como matrices.  
   
 ## <a name="example"></a>Ejemplo  
@@ -46,10 +46,10 @@ Module Module1
 End Module  
 ```  
   
- El ejemplo usa el método <xref:System.Reflection.Assembly.GetTypes%2A> para devolver una matriz de tipos en el ensamblado especificado. El [cláusula Where](../../../../visual-basic/language-reference/queries/where-clause.md) se aplica el filtro para que se devuelvan únicamente los tipos públicos. Para cada tipo público, se genera una consulta anidada con la matriz <xref:System.Reflection.MethodInfo> que se devuelve desde la llamada <xref:System.Type.GetMethods%2A>. Estos resultados se filtran para que solo devuelvan los métodos cuyo tipo de valor devuelto sea una matriz, o un tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>. Por último, estos resultados se agrupan usando el nombre de tipo como una clave.  
+ El ejemplo usa el método <xref:System.Reflection.Assembly.GetTypes%2A> para devolver una matriz de tipos en el ensamblado especificado. El [cláusula Where](../../../../visual-basic/language-reference/queries/where-clause.md) se aplica el filtro para que se devuelven solo los tipos públicos. Para cada tipo público, se genera una consulta anidada con la matriz <xref:System.Reflection.MethodInfo> que se devuelve desde la llamada <xref:System.Type.GetMethods%2A>. Estos resultados se filtran para que solo devuelvan los métodos cuyo tipo de valor devuelto sea una matriz, o un tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>. Por último, estos resultados se agrupan usando el nombre de tipo como una clave.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Vea también
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

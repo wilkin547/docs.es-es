@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd8f1adee6bbcb3b57b87a2d6c85c01c624da9ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc664d308d4db3e97597d785eda159e32255fa54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520378"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 (Interfaz)
 Proporciona métodos que comprueban las relaciones entre marcos primarios y secundarios.  
@@ -32,7 +32,7 @@ Proporciona métodos que comprueban las relaciones entre marcos primarios y secu
 |------------|-----------------|  
 |[IsChild (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Determina si el marco actual es un marco secundario.|  
 |[IsMatchingParentFrame (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Determina si el marco especificado es el elemento primario del fotograma actual.|  
-|[GetStackParameterSize (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Devuelve el tamaño acumulado de los parámetros en la pila en x86 sistemas operativos.|  
+|[GetStackParameterSize (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Devuelve el tamaño acumulado de los parámetros de la pila en x86 los sistemas operativos.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta interfaz extiende lógicamente la interfaz "ICorDebugNativeFrame".  
@@ -41,15 +41,15 @@ Proporciona métodos que comprueban las relaciones entre marcos primarios y secu
 >  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
-    
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

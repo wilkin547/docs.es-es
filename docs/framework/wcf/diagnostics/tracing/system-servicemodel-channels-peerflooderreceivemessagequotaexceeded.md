@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerFlooderReceiveMessageQuotaExceeded
 ms.date: 03/30/2017
 ms.assetid: b8371d0a-843e-440b-b86a-6996db131cb0
-ms.openlocfilehash: 5c1e6c51ffd5aeafe65a67c8989f554ebf0824d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ce6b3021f47708c222c3ec5a88d474d17106748
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33478922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500998"
 ---
 # <a name="systemservicemodelchannelspeerflooderreceivemessagequotaexceeded"></a>System.ServiceModel.Channels.PeerFlooderReceiveMessageQuotaExceeded
 La velocidad de mensajes entrantes es demasiado alta.  
@@ -18,7 +18,7 @@ La velocidad de mensajes entrantes es demasiado alta.
 ## <a name="troubleshooting"></a>Solución de problemas  
  Reduzca la velocidad a la cual se envían los mensajes dentro de la malla.  
   
-## <a name="see-also"></a>Vea también  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Vea también
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

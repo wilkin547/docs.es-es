@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: buscar el inmediatamente anterior del mismo nivel (XPath-LINQ to XML) (Visual Basic)'
+title: Procedimiento Buscar el inmediatamente anterior del mismo nivel (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: 47ba557343d0f691c2ee0f2c56102df313ecfb30
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 81113c30cae0eb29fe0cf4b783fb031156353130
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572479"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar el inmediatamente anterior del mismo nivel (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Procedimiento Buscar el inmediatamente anterior del mismo nivel (XPath-LINQ to XML) (Visual Basic)
 Es posible que en alguna ocasión desee buscar el elemento del mismo nivel inmediatamente anterior a un nodo. Debido a las diferencias de semántica de los predicados posicionales para los ejes de los elementos del mismo nivel anteriores de XPath en comparación con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], ésta es una de las comparaciones más interesantes.  
   
 ## <a name="example"></a>Ejemplo  
@@ -48,5 +48,5 @@ Results are identical
 <Child3 />  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Vea también
+- [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

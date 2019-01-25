@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0175ab1d06a8166a5bbfd0c42018085a801740f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 826e02789f6940923538f3e01744345dacf4b2ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705289"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags (Enumeración)
-Permite al host proporcionar el tiempo de ejecución con información sobre la inicialización de un dominio de aplicación.  
+Permite que el host proporcionar el tiempo de ejecución con información sobre la inicialización de un dominio de aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,21 +37,21 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`eInitializeNewDomainFlags_None`|No existen marcadores.|  
+|`eInitializeNewDomainFlags_None`|Ninguna marca.|  
 |`eInitializeNewDomainFlags_NoSecurityChanges`|Informa a common language runtime (CLR) que el host no realizará cambios en el estado de seguridad del dominio de aplicación en el <xref:System.AppDomainManager.InitializeNewDomain%2A> método.|  
   
 ## <a name="remarks"></a>Comentarios  
- El [ICLRDomainManager:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) método toma un parámetro de tipo `EInitializeNewDomainFlags`.  
+ El [ICLRDomainManager](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) método toma un parámetro de tipo `EInitializeNewDomainFlags`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
- [SetAppDomainManagerType (método)](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [SetAppDomainManagerType (método)](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 9bf2568c8c18f8f6d18c445e802cc72df18fb8c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 548d93e5447c06480629658b13b673aa3d15fc86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620375"
 ---
 # <a name="app-settings-schema"></a>Esquema de configuración de aplicaciones
 
@@ -72,5 +72,5 @@ En el ejemplo siguiente se muestra un archivo de configuración de la aplicació
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a la configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+- [Introducción a la configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-overview.md)
 - [Arquitectura de configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-architecture.md)

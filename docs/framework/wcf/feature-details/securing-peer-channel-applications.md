@@ -2,12 +2,12 @@
 title: Protección de las aplicaciones de canal del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 725e629a187261a5bc50d880f75b942734df960b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dd6d95fb151a4f06dc4f632465b38b07720a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586688"
 ---
 # <a name="securing-peer-channel-applications"></a>Protección de las aplicaciones de canal del mismo nivel
 Como otros enlaces bajo [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` tiene la seguridad habilitada de forma predeterminada y proporciona seguridad basada en mensaje y en transporte (o ambos). En este tema se tratan estos dos tipos de seguridad. La etiqueta de modo de seguridad especifica el tipo de seguridad en la especificación de enlace (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
@@ -41,6 +41,6 @@ Como otros enlaces bajo [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md
 ## <a name="peer-channel-code-examples"></a>Ejemplos de código del canal del mismo nivel  
  [Escenarios de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Vea también
+- [Seguridad del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

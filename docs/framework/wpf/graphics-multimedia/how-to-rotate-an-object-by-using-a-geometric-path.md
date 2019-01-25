@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Girar un objeto utilizando un trazado geométrico'
+title: Procedimiento Girar un objeto utilizando un trazado geométrico
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - geometric paths [WPF], rotating objects by
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
-ms.openlocfilehash: 6d6d21f3f7b609cb2933093a6990425deb39d4a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cd8aaee7563d684e70dc29f1c293b091c1e6cff9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661495"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Cómo: Girar un objeto utilizando un trazado geométrico
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Procedimiento Girar un objeto utilizando un trazado geométrico
 En este ejemplo se muestra cómo girar (pivotar) un objeto a lo largo de un trazado geométrico definido por un <xref:System.Windows.Media.PathGeometry> objeto.  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,7 +34,7 @@ En este ejemplo se muestra cómo girar (pivotar) un objeto a lo largo de un traz
   
  Para obtener un ejemplo completo, vea [ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Temas de procedimientos de animación de trazado](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Temas de procedimientos de animación de trazado](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

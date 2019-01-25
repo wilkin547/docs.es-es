@@ -3,12 +3,12 @@ title: Referencia de API de WIF
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 0cd373ae3fd5acb1650f0d8614b34c5d19cf9016
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21b294a58efcad6c3eb7c74e643a2ac3e0ea23fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663601"
 ---
 # <a name="wif-api-reference"></a>Referencia de API de WIF
 Las clases de Windows Identity Foundation (WIF) se dividen entre los siguientes ensamblados: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) y `System.ServiceModel` (System.ServiceModel.dll). Este tema proporciona vínculos a los espacios de nombres de WIF e incluye breves explicaciones de las clases que contiene cada espacio de nombres.  
@@ -46,6 +46,6 @@ Las clases de Windows Identity Foundation (WIF) se dividen entre los siguientes 
  <xref:System.ServiceModel.Security?displayProperty=nameWithType>  
  Contiene clases que representan contratos de WCF, canales, hosts de servicio y otros artefactos que se usan en escenarios activos (WS-Trust). Este espacio de nombres además contiene clases que son específicas de Windows Communication Foundation (WCF) y que WIF no usa.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de configuración de WIF](../../../docs/framework/security/wif-configuration-reference.md)  
- [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de configuración de WIF](../../../docs/framework/security/wif-configuration-reference.md)
+- [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)

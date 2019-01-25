@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573980"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Orígenes de datos compatibles con formularios Windows Forms
 Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprovechar las ventajas de los datos almacenados en bases de datos. Con el enlace de datos de Windows Forms, se puede acceder a datos de las bases de datos, así como datos de otras estructuras, como matrices y colecciones, siempre y cuando se cumplen ciertos requisitos mínimos.  
@@ -37,7 +37,7 @@ Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprov
  Windows Forms es compatible con las propiedades de control de enlace de datos a las propiedades públicas en la instancia de un objeto mediante el <xref:System.Windows.Forms.Binding> tipo. Windows Forms también admite controles de lista en función de enlace, como un <xref:System.Windows.Forms.ListControl> a un objeto de instancia cuando una <xref:System.Windows.Forms.BindingSource> se utiliza.  
   
  matriz o colección  
- Para actuar como un origen de datos, debe implementar una lista el <xref:System.Collections.IList> interfaz; un ejemplo sería una matriz que es una instancia de la <xref:System.Array> clase. Para obtener más información sobre matrices, vea [Cómo: crear una matriz de objetos (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Para actuar como un origen de datos, debe implementar una lista el <xref:System.Collections.IList> interfaz; un ejemplo sería una matriz que es una instancia de la <xref:System.Array> clase. Para obtener más información sobre matrices, vea [Cómo: Crear una matriz de objetos (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  En general, debe usar <xref:System.ComponentModel.BindingList%601> al crear listas de objetos para el enlace de datos. <xref:System.ComponentModel.BindingList%601> es una versión genérica de la <xref:System.ComponentModel.IBindingList> interfaz. El <xref:System.ComponentModel.IBindingList> interfaz extiende la <xref:System.Collections.IList> interfaz agregando propiedades, métodos y eventos necesarios para el enlace de datos bidireccional.  
   
@@ -57,7 +57,7 @@ Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprov
   
 -   <xref:System.Data.DataViewManager>. Un <xref:System.Data.DataViewManager> es una vista personalizada de todo el <xref:System.Data.DataSet>, análogo a un <xref:System.Data.DataView>, pero con las relaciones incluidas. Con un <xref:System.Data.DataViewManager.DataViewSettings%2A> colección, puede establecer filtros predeterminados y las opciones de ordenación para todas las vistas que el <xref:System.Data.DataViewManager> tiene para una tabla determinada.  
   
-## <a name="see-also"></a>Vea también  
- [Notificación de cambios en el enlace de datos de Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Vea también
+- [Notificación de cambios en el enlace de datos de Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
+- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

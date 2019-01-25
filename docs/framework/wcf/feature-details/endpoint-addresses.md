@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730950"
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección de punto de conexión se representa en el modelo de programación de Windows Communication Foundation (WCF) mediante el <xref:System.ServiceModel.EndpointAddress> (clase), que contiene un elemento opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad que habilita la autenticación del punto de conexión por otros extremos que intercambiar mensajes con él y un conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propiedades, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
@@ -34,10 +34,10 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
  Para definir un punto de conexión en un archivo de configuración, use el [ \<punto de conexión >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. Para obtener detalles y un ejemplo, vea [especificando una dirección de extremo](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="defining-an-address-in-code"></a>Definición de una dirección mediante código  
- Una dirección de extremo se puede crear mediante código con la clase <xref:System.ServiceModel.EndpointAddress>. Para obtener detalles y un ejemplo, vea [especificando una dirección de extremo](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Una dirección de punto de conexión se puede crear mediante código con la clase <xref:System.ServiceModel.EndpointAddress>. Para obtener detalles y un ejemplo, vea [especificando una dirección de extremo](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="endpoints-in-wsdl"></a>puntos de conexión en WSDL  
- Una dirección de extremo también se puede representar en WSDL como un elemento EPR de WS-Addressing dentro del elemento `wsdl:port` del extremo correspondiente. El EPR contiene la dirección del punto de conexión, así como todas las propiedades de la dirección. Para obtener detalles y un ejemplo, vea [especificando una dirección de extremo](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Una dirección de punto de conexión también se puede representar en WSDL como un elemento EPR de WS-Addressing dentro del elemento `wsdl:port` del punto de conexión correspondiente. El EPR contiene la dirección del punto de conexión, así como todas las propiedades de la dirección. Para obtener detalles y un ejemplo, vea [especificando una dirección de extremo](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-35"></a>Varios IIS compatibilidad con enlaces en .NET Framework 3.5  
  Los proveedores de acceso a Internet a menudo hospedan muchas aplicaciones en el mismo servidor y en el mismo sitio para aumentar la densidad del sitio y reducir el costo total de propiedad. Estas aplicaciones se enlazan normalmente en las diferentes direcciones base. Un sitio web de Internet Information Services (IIS) puede contener varias aplicaciones. Se puede tener acceso a las aplicaciones en un sitio a través de uno o más enlaces de IIS.  
@@ -46,9 +46,9 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  El siguiente ejemplo muestra los componentes que se pueden encontrar en un enlace de IIS:  
   
--   Protocolo de enlace: HTTP  
+-   El protocolo de enlace: HTTP  
   
--   Información de enlace: Dirección IP, puerto, encabezado de host  
+-   Información de enlace: Dirección IP, puerto, encabezado de Host  
   
  IIS puede especificar varios enlaces para cada sitio, que resulta en varias direcciones base para cada esquema. Anteriores a [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF no admitía varias direcciones para un esquema y, si se especificaron produjo una <xref:System.ArgumentException> durante la activación.  
   
@@ -82,7 +82,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
  Las direcciones base proporcionadas por IIS pueden tener direcciones enlazadas a otros esquemas no presentes en la lista `baseAddressPrefixFilters`. Estas direcciones no se filtran.  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>Compatibilidad de varios enlaces IIS en .NET Framework 4.0 y posteriores  
- A partir de .NET 4, puede habilitar la compatibilidad con varios enlaces en IIS sin tener que elegir una sola dirección base mediante el establecimiento del valor de la propiedad <xref:System.ServiceModel.ServiceHostingEnvironment> de la clase <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>  en true. Esta compatibilidad se limita a los esquemas del protocolo HTTP.  
+ A partir de .NET 4, puede habilitar la compatibilidad con varios enlaces en IIS sin tener que elegir una sola dirección base mediante el establecimiento del valor de la propiedad <xref:System.ServiceModel.ServiceHostingEnvironment> de la clase <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> en true. Esta compatibilidad se limita a los esquemas del protocolo HTTP.  
   
  El siguiente es un ejemplo de código de configuración que usa multipleSiteBindingsEnabled en [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
   
@@ -108,7 +108,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
 -   Intermediarios SOAP: un mensaje enviado por un cliente atraviesa uno o más servicios adicionales que procesan el mensaje antes de que alcance su destino final. Los intermediarios SOAP pueden realizar varias tareas, como almacenar en memoria caché, enrutar, equilibrar la carga o validar el esquema en los mensajes. Para lograr este escenario, los mensajes se envían a una dirección física independiente (`via`) que hace referencia al intermediario en lugar de simplemente a una dirección lógica (`wsa:To`) que hace referencia al destino final.  
   
--   La dirección que realiza escuchas del extremo es un URI privado y está establecida en un valor diferente del de su propiedad `listenURI`.  
+-   La dirección que realiza escuchas del punto de conexión es un URI privado y está establecida en un valor diferente del de su propiedad `listenURI`.  
   
  La dirección de transporte especificada por `via` es la ubicación a la que se debería enviar inicialmente un mensaje de camino a alguna otra dirección remota especificada por el parámetro `to` donde se encuentra el servicio. En la mayoría de los escenarios de Internet, el URI `via` es igual que la propiedad <xref:System.ServiceModel.EndpointAddress.Uri%2A> de la dirección final `to` del servicio. Estas dos direcciones solo se pueden distinguir cuando es necesario el enrutamiento manual.  
   
@@ -128,7 +128,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  Puede especificar una dirección de escuchas personalizada mediante código o configuración:  
   
--   Mediante código, especifique una dirección de escuchas personalizada agregando una clase <xref:System.ServiceModel.Description.ClientViaBehavior> a la colección de comportamientos del extremo.  
+-   Mediante código, especifique una dirección de escuchas personalizada agregando una clase <xref:System.ServiceModel.Description.ClientViaBehavior> a la colección de comportamientos del punto de conexión.  
   
 -   En configuración, especifique una dirección de escuchas personalizada con el `ListenUri` atributo del servicio [ \<punto de conexión >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
@@ -137,6 +137,6 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  En algunos escenarios, un extremo recibe todos los mensajes que llegan en el transporte subyacente y no solo aquéllos con el encabezado `To` adecuado. Para habilitar esto, el usuario puede utilizar la clase <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   
-## <a name="see-also"></a>Vea también  
- [Especificación de una dirección de punto de conexión](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Vea también
+- [Especificación de una dirección de punto de conexión](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

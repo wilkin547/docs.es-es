@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14908ae641c8539659e6014deb2c5f35a6d1cfbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655717"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction (Enumeración)
-Describe las acciones de directiva que el host puede establecer para las operaciones descritas por [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) y los errores descritos por [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
+Describe las acciones de directiva, el host puede establecer para las operaciones descritas por [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) y los errores descritos por [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,31 +47,31 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`eAbortThread`|Especifica que common language runtime (CLR) debe anular correctamente el subproceso. Una anulación correcta incluye intentar ejecutar todos los `finally` bloquea cualquier `catch` bloques relacionados con anulaciones de subprocesos y los finalizadores.|  
-|`eDisableRuntime`|Especifica que el CLR debe entrar en un estado deshabilitado. Ninguna otra se puede ejecutar código administrado en el proceso afectado, y subprocesos bloqueados entren en el CLR.|  
-|`eExitProcess`|Especifica que el CLR debe intentar una salida correcta del proceso, incluidos los finalizadores en ejecución y realizar operaciones de limpieza y el registro.|  
-|`eFastExitProcess`|Especifica que el CLR debe salir del proceso de inmediato, sin ejecutar los finalizadores ni realizar operaciones de limpieza y el registro. Embargo, la notificación se envía al depurador.|  
-|`eNoAction`|Especifica que no llevará a cabo ninguna acción.|  
-|`eRudeAbortThread`|Especifica que el CLR debe realizar una anulación de subproceso forzada. Solo los `catch` y `finally` los bloques marcados con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> se ejecutan.|  
-|`eRudeExitProcess`|Especifica que el CLR debe salir del proceso sin ejecutar los finalizadores ni las operaciones de registro.|  
-|`eRudeUnloadAppDomain`|Especifica que el CLR debe realizar una descarga forzada de la <xref:System.AppDomain>. Solo los finalizadores marcan con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> se ejecutan. De forma similar, todos los subprocesos con este <xref:System.AppDomain> en su pila reciben un `ThreadAbortException`, sino únicamente aquellas `catch` y `finally` los bloques marcados con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> se ejecutan.|  
-|`eThrowException`|Especifica que se debe producir una excepción apropiada a la condición, como memoria insuficiente, desbordamiento de búfer y así sucesivamente.|  
+|`eAbortThread`|Especifica que common language runtime (CLR) debe anular correctamente el subproceso. Una anulación correcta incluye intentos de ejecutar todo `finally` bloquea cualquier `catch` bloques relacionados con las anulaciones de subproceso y los finalizadores.|  
+|`eDisableRuntime`|Especifica que el CLR debe entrar en un estado deshabilitado. No se puede ejecutar código administrado en el proceso afectado y subprocesos se bloquean entre en CLR.|  
+|`eExitProcess`|Especifica que el CLR debe intentar una salida correcta del proceso, incluidos los finalizadores en ejecución y realizar operaciones de limpieza y registro.|  
+|`eFastExitProcess`|Especifica que el CLR debe salir del proceso inmediatamente, sin ejecutar los finalizadores ni realizar operaciones de limpieza y registro. Embargo, se envía la notificación al depurador.|  
+|`eNoAction`|Especifica que no se debe tomar ninguna acción.|  
+|`eRudeAbortThread`|Especifica que el CLR debe realizar una anulación a la fuerza. Solo los `catch` y `finally` los bloques marcados con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> se ejecutan.|  
+|`eRudeExitProcess`|Especifica que el CLR debe salir del proceso sin ejecutar los finalizadores ni registrar las operaciones.|  
+|`eRudeUnloadAppDomain`|Especifica que el CLR debe realizar una descarga forzada de la <xref:System.AppDomain>. Los finalizadores de sólo marcan con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> se ejecutan. De forma similar, todos los subprocesos con este <xref:System.AppDomain> en su pila recibir un `ThreadAbortException`, sino solamente aquello `catch` y `finally` los bloques marcados con <xref:System.EnterpriseServices.MustRunInClientContextAttribute> se ejecutan.|  
+|`eThrowException`|Especifica que debe iniciará una excepción correspondiente a la condición, por ejemplo, de memoria insuficiente, desbordamiento del búfer y así sucesivamente.|  
 |`eUnloadAppDomain`|Especifica que el <xref:System.AppDomain> debe descargarse. El CLR intenta ejecutar los finalizadores.|  
   
 ## <a name="remarks"></a>Comentarios  
- El host establece las acciones de la directiva mediante una llamada a métodos de la [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) interfaz. Para obtener información sobre las anulaciones forzadas y correctas, vea la [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) enumeración.  
+ El host establece las acciones de directiva mediante una llamada a métodos de la [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) interfaz. Para obtener información sobre las anulaciones a la fuerza y estables, consulte el [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) enumeración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [EClrFailure (enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- [ICLRPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [EClrFailure (enumeración)](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [ICLRPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [IHostPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d8e104b5d32c07c4730154ff3fc69b452a024b7
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: a7435d68635e2a1066b143c28b5662364326ac8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607243"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medir la mejora del inicio con .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] mejora considerablemente el tiempo de inicio de las aplicaciones. Esta mejora es especialmente palpable en los dispositivos portátiles de baja potencia y con aplicaciones complejas. Este tema sirve de introducción a la instrumentación básica necesaria para medir esta mejora de inicio.  
@@ -47,7 +47,7 @@ ms.locfileid: "49347908"
   
 -   Cuando la aplicación ha terminado de sincronizar nuevos casos.  
   
- Instrumentar una aplicación es sencillo: basta con llamar al método apropiado en la clase derivada. Usando `AppEventSource` del ejemplo anterior, una aplicación se puede instrumentar del siguiente modo:  
+ Instrumentar una aplicación es sencillo: Simplemente llame al método apropiado en la clase derivada. Usando `AppEventSource` del ejemplo anterior, una aplicación se puede instrumentar del siguiente modo:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -97,5 +97,5 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Si repite el procedimiento para la aplicación original y la versión que creó con la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)], puede comparar la diferencia en cuanto a rendimiento.   Las aplicaciones de [!INCLUDE[net_native](../../../includes/net-native-md.md)] se suelen iniciar más rápido que las que no son de [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Si le interesa seguir ahondando en este asunto, PerfView también es capaz identificar las partes del código que consumen más tiempo. Para obtener más información, vea los [tutoriales de PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) o lea la [entrada de blog de Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.Tracing.EventSource>
+## <a name="see-also"></a>Vea también
+- <xref:System.Diagnostics.Tracing.EventSource>

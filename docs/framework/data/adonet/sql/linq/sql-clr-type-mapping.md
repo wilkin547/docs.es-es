@@ -2,12 +2,12 @@
 title: Asignación de tipos entre CLR y SQL
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617348"
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación que prefiera. Cuando la aplicación se ejecuta, LINQ to SQL convierte las consultas integradas del lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, LINQ to SQL los vuelve a convertir en objetos con los que pueda trabajar en su propio lenguaje de programación.  
@@ -38,7 +38,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 ## <a name="default-type-mapping"></a>Asignación de tipos predeterminados  
  Puede crear automáticamente el modelo de objetos o el archivo de asignación con Object Relational Designer o la herramienta de línea de comandos SQLMetal. Las asignaciones de tipos predeterminadas de estas herramientas definen qué tipos de CLR se deben elegir para asignarlos a columnas en la base de datos SQL Server. Para obtener más información sobre el uso de estas herramientas, consulte [crear el modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
   
- También puede utilizar el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para crear una base de datos de SQL Server según la información de asignación del modelo de objetos o del archivo de asignación externo. Las asignaciones de tipos predeterminadas del método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definen qué tipo de columnas de SQL Server se deben crear para asignarlas a los tipos de CLR en el modelo de objetos. Para obtener más información, consulte [Cómo: crear dinámicamente una base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+ También puede utilizar el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para crear una base de datos de SQL Server según la información de asignación del modelo de objetos o del archivo de asignación externo. Las asignaciones de tipos predeterminadas del método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definen qué tipo de columnas de SQL Server se deben crear para asignarlas a los tipos de CLR en el modelo de objetos. Para obtener más información, vea [Cómo: Crear dinámicamente una base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Matriz de comportamiento de la asignación de tipos en tiempo de ejecución  
@@ -256,8 +256,8 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  LINQ to SQL no admite ninguna otra asignación de tipos para estos tipos varios.  Para obtener más información, consulte el [matriz de comportamiento de tiempo tipo de asignación de ejecución](#BehaviorMatrix).  
   
-## <a name="see-also"></a>Vea también  
- [Asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [Desajustes de tipos entre SQL y CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+## <a name="see-also"></a>Vea también
+- [Asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Desajustes de tipos entre SQL y CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

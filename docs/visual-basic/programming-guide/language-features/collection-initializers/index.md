@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4183d974dd39caf0ca8a14ff98ab5652c0375906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991628"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691416"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inicializadores de colección (Visual Basic)
 Los *inicializadores de colección* proporcionan una sintaxis abreviada que permite crear una colección y rellenarla con un conjunto inicial de valores. Los inicializadores de colección son útiles cuando se crea una colección a partir de un conjunto de valores conocidos, como una lista de opciones de menú o categorías, un conjunto inicial de valores numéricos, una lista estática de cadenas como nombres de días o meses, o ubicaciones geográficas como una lista de estados usada para la validación.  
@@ -54,7 +54,7 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
   
  [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]  
   
- Si la colección tiene un método `Add` que tiene parámetros que coinciden con el constructor para el objeto `Customer`, los valores de parámetro para el método `Add` se pueden anidar dentro de inicializadores de colección, como se describe en la sección siguiente. Si la colección no tiene un método `Add`, puede crear uno como un método de extensión. Para obtener un ejemplo de cómo crear un método `Add` como un método de extensión para una colección, vea [How to: Create an Add Extension Method Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md) (Cómo: Crear un método de extensión Add usado por un inicializador de colección). Para obtener un ejemplo de cómo crear una colección personalizada que pueda usarse con un inicializador de colección, vea [How to: Create a Collection Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md) (Cómo: Crear una colección usada por un inicializador de colección).  
+ Si la colección tiene un método `Add` que tiene parámetros que coinciden con el constructor para el objeto `Customer`, los valores de parámetro para el método `Add` se pueden anidar dentro de inicializadores de colección, como se describe en la sección siguiente. Si la colección no tiene un método `Add`, puede crear uno como un método de extensión. Para obtener un ejemplo de cómo crear un `Add` método como método de extensión para una colección, vea [Cómo: Crear un método de extensión utilizado por un inicializador de colección Add](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Para obtener un ejemplo de cómo crear una colección personalizada que se puede usar con un inicializador de colección, vea [Cómo: Crear una colección usada por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
 ## <a name="nesting-collection-initializers"></a>Anidar inicializadores de colección  
  Puede anidar los valores de un inicializador de colección para identificar una sobrecarga específica de un método `Add` para la colección que se va a crear. Los valores pasados al método `Add` deben separarse con comas e incluirse entre llaves (`{}`), tal como se haría en un literal de matriz o un inicializador de colección.  
@@ -73,18 +73,18 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
   
 |Título|Descripción|  
 |---|---|  
-|[Crear un método de extensión Add usado por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Muestra cómo crear un método de extensión denominado `Add` que se puede usar para rellenar una colección con los valores de un inicializador de colección.|  
-|[Crear una colección usada por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Muestra cómo habilitar el uso de un inicializador de colección mediante la inclusión de un método `Add` en una clase de colección que implementa `IEnumerable`.|  
+|[Cómo: Crear un método de extensión utilizado por un inicializador de colección Add](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Muestra cómo crear un método de extensión denominado `Add` que se puede usar para rellenar una colección con los valores de un inicializador de colección.|  
+|[Cómo: Crear una colección usada por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Muestra cómo habilitar el uso de un inicializador de colección mediante la inclusión de un método `Add` en una clase de colección que implementa `IEnumerable`.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Colecciones](../../../../visual-basic/programming-guide/concepts/collections.md)  
-- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
-- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md)  
-- [Propiedades autoimplementadas](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
-- [Cómo: Inicializar una variable de matriz en Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
-- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [Crear una lista de elementos](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Colecciones](../../../../visual-basic/programming-guide/concepts/collections.md)
+- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Propiedades autoimplementadas](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Cómo: Inicializar una Variable de matriz en Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Cómo: Crear una lista de elementos](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

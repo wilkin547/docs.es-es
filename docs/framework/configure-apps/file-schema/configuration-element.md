@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 40c0ab5f18d5aae2c99dd66747d3435f0826af8b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a81e422c2e6d8c2d342821163f860c5cb54c083
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583329"
 ---
 # <a name="configuration-element"></a>\<Configuración > elemento
 
@@ -43,7 +43,7 @@ Ninguna
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Especifica la directiva de enlace del ensamblado en el nivel de configuración.|
+| [**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Especifica la directiva de enlace del ensamblado en el nivel de configuración.|
 | [**\<Inicio >** esquema de configuración](~/docs/framework/configure-apps/file-schema/startup/index.md) | Todos los elementos en el esquema de configuración de inicio. |
 | [**\<en tiempo de ejecución >** esquema de configuración](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Todos los elementos en el esquema de configuración en tiempo de ejecución. |
 | [**\<System.Runtime.Remoting >** esquema de configuración](https://msdn.microsoft.com/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) | Todos los elementos en el esquema de configuración de comunicación remota. |
@@ -61,4 +61,4 @@ Cada archivo de configuración debe contener exactamente un  **\<configuración 
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

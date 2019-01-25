@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1055366576f45a7ca137b6d8170d1786c2ba4492
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cb3a2235325533d5bd943a530a0a8e5b77100e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519949"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs (Método)
-Devuelve una matriz de identificadores que identifican todas las recompilado con JIT versiones de la función especificada que todavía se asignarán. Esto incluye versiones recompilado con JIT de funciones que se han revertido posteriormente pero que aún no se ha liberado (por ejemplo, cuando el dominio de aplicación que contiene la función revertida aún está en uso).  
+Devuelve una matriz de identificadores que identifican todas recompilada con JIT las versiones de la función especificada que todavía se asignan. Esto incluye versiones recompilada con JIT de funciones que se han revertido posteriormente, pero aún no se ha liberado (por ejemplo, cuando el dominio de aplicación que contiene la función revertida todavía está en uso).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,30 +39,30 @@ HRESULT GetReJITIDs (
   
 #### <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El `FunctionID` de la instancia de la función para la que se va a enumerar versiones.  
+ [in] El `FunctionID` de la instancia de la función para que se enumeran las versiones.  
   
  `cReJitIds`  
- [in] El número de identificadores recompilado con JIT asignada en el `reJitIds` matriz.  
+ [in] El número de identificadores recompilada con JIT asignada en el `reJitIds` matriz.  
   
  `pcReJitIds`  
- [out] El número real de identificadores recompilado con JIT.  
+ [out] El número real de los identificadores de recompilada con JIT.  
   
  `reJitIds`  
- [out] Una matriz asignada por el llamador que contendrá los identificadores recompilado con JIT para la función especificada.  
+ [out] Una matriz asignada por el llamador que contendrá los identificadores recompilada con JIT para la función especificada.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetReJITIDs` Enumera los identificadores activos recompilado con JIT para una instancia de la función especificada. Sigue el mismo patrón de uso que otros `ICorProfilerInfo` funciones que aceptan búferes asignados al llamador.  
+ `GetReJITIDs` Enumera los identificadores de recompilada con JIT activos para una instancia de la función especificada. Sigue el mismo patrón de uso como otro `ICorProfilerInfo` funciones que aceptan los búferes asignados por el llamador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo4 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo4 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)

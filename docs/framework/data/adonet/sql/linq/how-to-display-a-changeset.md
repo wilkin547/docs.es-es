@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Mostrar un conjunto de cambios'
+title: Procedimiento Mostrar un conjunto de cambios
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: c9664c6d32f78f455aa29311f111acaecb5c7905
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773e72d52a934bc7c6fa80fe252d62e67f87a34b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596805"
 ---
-# <a name="how-to-display-a-changeset"></a>Cómo: Mostrar un conjunto de cambios
+# <a name="how-to-display-a-changeset"></a>Procedimiento Mostrar un conjunto de cambios
 Puede ver los cambios de los que <xref:System.Data.Linq.DataContext> ha realizado un seguimiento mediante <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -75,5 +75,5 @@ Puede ver los cambios de los que <xref:System.Data.Linq.DataContext> ha realizad
   
  `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
   
-## <a name="see-also"></a>Vea también  
- [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Vea también
+- [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

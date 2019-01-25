@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3bcdbfacf02d84848934e21d58ed6fff7d37d52
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610869"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Procedimiento Realizar la inicialización diferida de objetos
 La clase <xref:System.Lazy%601?displayProperty=nameWithType> simplifica el trabajo de creación de instancias e inicialización diferida de los objetos. Al inicializar los objetos de manera diferida, se puede evitar su creación en caso de que no sean necesarios o se puede aplazar su inicialización hasta el primer acceso. Para obtener más información, vea [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md).  
@@ -76,6 +76,6 @@ End Sub
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>  
- [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
+- [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md)

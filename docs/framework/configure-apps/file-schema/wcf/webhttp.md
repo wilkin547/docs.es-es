@@ -2,21 +2,21 @@
 title: '&lt;webHttp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 9ba54dc1744751efe4efad04f829cccce1244e0d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b52259af5e05de5bf5dd42a2cd0bf4b01f3e46f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597559"
 ---
 # <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
 Este elemento especifica <xref:System.ServiceModel.Description.WebHttpBehavior> en un punto de conexión a través de la configuración. Este comportamiento, cuando se usa junto con el [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) enlace estándar, permite que el modelo de programación Web para un servicio de Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  
 \<comportamientos >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<comportamiento >  
-\<webHttp >  
+\<webHttp>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,10 +44,10 @@ Este elemento especifica <xref:System.ServiceModel.Description.WebHttpBehavior> 
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica el conjunto de comportamientos del punto de conexión.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica el conjunto de comportamientos del punto de conexión.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.WebHttpElement>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [Integración de AJAX y compatibilidad de JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.WebHttpElement>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- [Integración de AJAX y compatibilidad de JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
+- [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)

@@ -2,12 +2,12 @@
 title: Modelo de objetos de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739370"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modelo de objetos de programación web HTTP de WCF
 El modelo de programación de WEB HTTP de WCF permite a los programadores exponer servicios Web de Windows Communication Foundation (WCF) a través de solicitudes HTTP básicas sin necesidad de SOAP. El modelo de programación de WEB HTTP de WCF se basa en el modelo de extensibilidad WCF existente. Define las clases siguientes:  
@@ -94,15 +94,15 @@ El modelo de programación de WEB HTTP de WCF permite a los programadores expone
  La clase <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> usa las clases <xref:System.UriTemplate> y <xref:System.UriTemplateTable> para enviar las llamadas a las operaciones del servicio.  
   
 ## <a name="compatibility"></a>Compatibilidad  
- El modelo de programación de WEB HTTP de WCF no utiliza mensajes basados en SOAP y, por tanto, no admite WS-* protocolos. No obstante, puede exponer el mismo contrato en dos puntos de conexión diferentes, uno que use SOAP y otro que no lo haga. Consulte [Cómo: exponer un contrato a clientes Web y SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obtener un ejemplo.  
+ El modelo de programación de WEB HTTP de WCF no utiliza mensajes basados en SOAP y, por tanto, no admite WS-* protocolos. No obstante, puede exponer el mismo contrato en dos puntos de conexión diferentes, uno que use SOAP y otro que no lo haga. Vea [Cómo: Exponer un contrato a clientes Web y SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obtener un ejemplo.  
   
 ## <a name="security"></a>Seguridad  
  Dado que el modelo de programación de WEB HTTP de WCF no admite WS-* protocolos es la única manera de proteger un servicio Web basado en el modelo de programación de WEB HTTP de WCF exponer el servicio mediante SSL. Para obtener más información acerca de cómo configurar SSL con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] vea [cómo implementar SSL en IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [Información general del modelo de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [Información general del modelo de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

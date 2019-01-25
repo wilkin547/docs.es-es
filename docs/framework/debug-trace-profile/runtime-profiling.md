@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491251"
 ---
 # <a name="runtime-profiling"></a>Generar perfiles en tiempo de ejecución
 La generación de perfiles es un método de recopilación de datos de rendimiento en cualquier escenario de desarrollo o implementación. Esta sección está dirigida a los desarrolladores y administradores del sistema que quieren recopilar información sobre el rendimiento de la aplicación.  
@@ -42,7 +42,7 @@ La generación de perfiles es un método de recopilación de datos de rendimient
   
 6.  En el cuadro de lista **Instancias del objeto seleccionado**, haga clic en **\<Todas las instancias>** para especificar que quiere supervisar el contador de rendimiento para Common Language Runtime globalmente (es decir, en todo el sistema).  
   
-     -o bien-  
+     O bien  
   
      En el cuadro de lista **Instancias del objeto seleccionado** , haga clic en el nombre de una aplicación para supervisar el contador de rendimiento de dicha aplicación.  
   
@@ -66,5 +66,5 @@ La generación de perfiles es un método de recopilación de datos de rendimient
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|Especifica un instalador para el componente `PerformanceCounter` .|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Especifica la fórmula para calcular el método `NextValue` para un `PerformanceCounter`.|  
   
-## <a name="see-also"></a>Vea también  
- [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md)
+## <a name="see-also"></a>Vea también
+- [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md)

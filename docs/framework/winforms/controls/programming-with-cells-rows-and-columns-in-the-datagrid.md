@@ -8,33 +8,33 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], programming with grid elements
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
-ms.openlocfilehash: f87d1e2744ffcd81f5711991880deb1fe5edd2a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d447d60286980b2364dfc828ca613f2d05f1fe8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557726"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms
 Esta sección proporciona temas que explican diversas tareas de programación relacionadas con objetos de celda, fila y columna.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ [Cómo: Agregar información sobre herramientas a celdas individuales en un Control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  Describe cómo controlar la <xref:System.Windows.Forms.DataGridView.CellFormatting> eventos para proporcionar información sobre herramientas distinta para celdas individuales.  
   
- [Llevar a cabo una acción personalizada en función de los cambios que se realicen en una celda de un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ [Cómo: Realizar una acción personalizada según los cambios en una celda de un Control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
  Describe cómo controlar la <xref:System.Windows.Forms.DataGridView.CellValueChanged> y <xref:System.Windows.Forms.DataGridView.CellStateChanged> eventos.  
   
- [Manipular bandas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ [Cómo: Manipular bandas en el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
  Describe cómo programar con objetos de tipo <xref:System.Windows.Forms.DataGridViewBand>, que es el tipo base para las filas y columnas.  
   
- [Manipular filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ [Cómo: Manipular filas en el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
  Describe cómo programar con objetos de tipo `DataGridViewRow`.  
   
- [Manipular columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ [Cómo: Manipular columnas en el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
  Describe cómo programar con objetos de tipo `DataGridViewColumn`.  
   
- [Trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [Cómo: Trabajar con columnas de imagen en el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  Describe cómo programar con la `DataGridViewImageColumn` clase.  
   
 ## <a name="reference"></a>Referencia  
@@ -54,6 +54,6 @@ Esta sección proporciona temas que explican diversas tareas de programación re
  [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Proporciona temas que describen normalmente usan las propiedades de celda, fila y columna.  
   
-## <a name="see-also"></a>Vea también  
- [DataGridView (control)](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Tipos de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vea también
+- [DataGridView (control)](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Tipos de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

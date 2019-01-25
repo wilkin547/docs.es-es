@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 70ba038a2bdf4bde092ef6beecf32ac9ad5cbba1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506906"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Manipular XML en Visual Basic
 Puede usar *literales XML* para cargar XML desde un origen externo, como una cadena, un archivo o una secuencia. A continuación, puede usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para manipular el XML y usar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] para consultar el XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cargar XML desde un archivo, cadena o secuencia](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ [Cómo: Cargar XML desde un archivo, cadena o Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
  Muestra cómo cargar un documento XML en un <xref:System.Xml.Linq.XDocument> o <xref:System.Xml.Linq.XElement> objeto desde un archivo de texto, cadena o secuencia.  
   
- [Transformar XML usando LINQ](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
+ [Cómo: Transformar XML usando LINQ](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
  Muestra cómo transformar el contenido de un <xref:System.Xml.Linq.XDocument> objeto en un nuevo documento XML.  
   
- [Modificar literales XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
+ [Cómo: Modificar literales XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
  Muestra cómo modificar los elementos, atributos y valores en un literal XML.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -42,7 +42,7 @@ Puede usar *literales XML* para cargar XML desde un origen externo, como una cad
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Proporciona vínculos a secciones que describen cómo usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en Visual Basic.  
   
-## <a name="see-also"></a>Vea también  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Vea también
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

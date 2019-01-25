@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Controlar la cantidad de datos relacionados que se recupera'
+title: Procedimiento Controlar la cantidad de datos relacionado se recupera
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 202e33f3130e8db7269af2b4669690cf5c6468cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b52e2cdefefce011be7d729569b76f919f9bb33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715613"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Cómo: Controlar la cantidad de datos relacionados que se recupera
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Procedimiento Controlar la cantidad de datos relacionado se recupera
 Utilice el método <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para especificar qué datos relacionados con el destino principal deben recuperarse al mismo tiempo. Por ejemplo, si sabe que va a necesitar información sobre los pedidos de los clientes, puede utilizar <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para asegurarse de que la información de los pedidos se va a recuperar al mismo tiempo que la información de los clientes. Con este enfoque, sólo se requiere un viaje a la base de datos para ambos conjuntos de información.  
   
 > [!NOTE]
@@ -24,5 +24,5 @@ Utilice el método <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> para espe
  [!code-csharp[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#2)]
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Vea también  
- [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a>Vea también
+- [Consulta de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

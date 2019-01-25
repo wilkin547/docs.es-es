@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Enlazar a un servicio web'
+title: Procedimiento Enlazar a un servicio web
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 84c5aee8d2bc7d31ebcfee98930d9a0847c527d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a738d52cfb01fff1cb21d0e6ebb8f1b7b28d57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695772"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>Cómo: Enlazar a un servicio web
+# <a name="how-to-bind-to-a-web-service"></a>Procedimiento Enlazar a un servicio web
 En este ejemplo se muestra cómo enlazar a los objetos devueltos por llamadas al método de servicios Web.  
   
 ## <a name="example"></a>Ejemplo  
@@ -45,7 +45,7 @@ En este ejemplo se muestra cómo enlazar a los objetos devueltos por llamadas al
   
  Para obtener información sobre la estructura de **getContentResponse**, consulte [documentación del servicio contenido](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Información general sobre orígenes de enlaces](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Hacer que los datos estén disponibles para el enlace en XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Información general sobre orígenes de enlaces](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [Hacer que los datos estén disponibles para el enlace en XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

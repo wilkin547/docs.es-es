@@ -2,12 +2,12 @@
 title: THEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: 5f0bbb0cadd736d476077685e08ba1a03b9c4001
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ea4e84ec1c09b0f315694f74f4dc9504672c3896
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714950"
 ---
 # <a name="then-entity-sql"></a>THEN (Entity SQL)
 El resultado de una cláusula WHEN cuando se evalúa como `true`.  
@@ -33,12 +33,12 @@ WHEN when_expression THEN then_expression
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa la expresión CASE para evaluar un conjunto de expresiones `Boolean` . La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1.  Siga el procedimiento de [Cómo: ejecutar una consulta que muestra los resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2.  Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
-## <a name="see-also"></a>Vea también  
- [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Vea también
+- [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
