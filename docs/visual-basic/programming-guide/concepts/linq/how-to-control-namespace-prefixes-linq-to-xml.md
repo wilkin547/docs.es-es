@@ -1,21 +1,21 @@
 ---
-title: 'Cómo: Controlar prefijos de espacio de nombres (Visual Basic) (LINQ to XML)'
+title: Procedimiento Control de los prefijos de Namespace (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: f60f90ef6742dfd725f51ff7e760436117346e85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91117307caf7e55bd8b512fbd841760616f0b2c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623747"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Cómo: Controlar prefijos de espacio de nombres (Visual Basic) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Procedimiento Control de los prefijos de Namespace (Visual Basic) (LINQ to XML)
 En este tema se describe cómo puede controlar prefijos de espacios de nombres.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Este ejemplo declara dos espacios de nombres. Especifica que la `http://www.adventure-works.com` espacio de nombres con el prefijo `aw`y que la `www.fourthcoffee.com` espacio de nombres tiene el prefijo `fc`.  
+ Este ejemplo declara dos espacios de nombres. Especifica que el `http://www.adventure-works.com` espacio de nombres tiene el prefijo `aw`y que la `www.fourthcoffee.com` espacio de nombres tiene el prefijo `fc`.  
   
 ### <a name="code"></a>Código  
   
@@ -53,5 +53,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Vea también
+- [Trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

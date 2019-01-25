@@ -8,15 +8,15 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: da1bd6d3b6746561655a82cd49aa0014563a1d40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdea071f8c41f2e707d10c96c8b6ab1fbb44bad0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733316"
 ---
 # <a name="-optionstrict"></a>-optionstrict
-Exige la semántica estricta de tipos para restringir las conversiones implícitas de tipos.  
+Exige la semántica estricta de tipos para restringir las conversiones implícitas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -27,15 +27,15 @@ Exige la semántica estricta de tipos para restringir las conversiones implícit
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Opcional. El `-optionstrict+` opción restringe la conversión de tipos implícita. El valor predeterminado para esta opción es `-optionstrict-`. El `-optionstrict+` opción es el mismo que `-optionstrict`. Puede utilizar ambos semántica de tipos permisiva.  
+ Opcional. El `-optionstrict+` opción restringe la conversión de tipos implícita. El valor predeterminado para esta opción es `-optionstrict-`. El `-optionstrict+` opción es igual a `-optionstrict`. Puede usar tanto para la semántica de tipos permisiva.  
   
  `custom`  
- Requerido. Advertir cuando no se respete la semántica estricta del lenguaje.  
+ Obligatorio. Advertir cuando no se respete la semántica estricta del lenguaje.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando `-optionstrict+` está en vigor, conversiones de tipos de ampliación solo se pueden realizar implícitamente. Conversiones de tipos, como la asignación de restricción implícitas un `Decimal` tipo object a un objeto de tipo entero, se notifican como errores.  
+ Cuando `-optionstrict+` está en vigor, se pueden realizar solo las conversiones de tipo de ampliación implícitamente. Conversiones de tipos, como la asignación de restricción implícitas un `Decimal` tipo object para un objeto de tipo entero, se notifican como errores.  
   
- Para generar advertencias para las conversiones de tipo de restricción implícitas, utilice `-optionstrict:custom`. Use `-nowarn:numberlist` para ignorar las advertencias determinadas y `-warnaserror:numberlist` para tratar determinadas advertencias como errores.  
+ Para generar advertencias para las conversiones de tipo de restricción implícitas, use `-optionstrict:custom`. Use `-nowarn:numberlist` para ignorar las advertencias determinadas y `-warnaserror:numberlist` para tratar determinadas advertencias como errores.  
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Para establecer - optionstrict en el IDE de Visual Studio  
   
@@ -45,24 +45,24 @@ Exige la semántica estricta de tipos para restringir las conversiones implícit
   
 3.  Modifique el valor en el **Option Strict** cuadro.  
   
-### <a name="to-set--optionstrict-programmatically"></a>Para establecer - optionstrict mediante programación  
+### <a name="to-set--optionstrict-programmatically"></a>Para establecer mediante programación - optionstrict  
   
--   Vea [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+-   Consulte [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código compila `Test.vb` mediante la semántica estricta de tipos.  
+ El siguiente código compila `Test.vb` utilizando la semántica estricta de tipos.  
   
 ```console
 vbc -optionstrict+ test.vb  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)  
- [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)  
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a>Vea también
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
+- [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
+- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

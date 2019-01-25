@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448679"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714274"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps (Método)
 Obtiene los metadatos asociados con el parámetro genérico representado por el token especificado.  
@@ -47,13 +47,13 @@ HRESULT GetGenericParamProps (
  [in] El token que representa el parámetro genérico para el que se va a devolver los metadatos.  
   
  `pulParamSeq`  
- [out] La posición ordinal de la `Type` parámetro en el constructor o método primario.  
+ [out] La posición ordinal de la `Type` parámetro en el método o constructor principal.  
   
  `pdwParamFlags`  
  [out] Un valor de la [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeración que describe el `Type` para el parámetro genérico.  
   
  `ptOwner`  
- [out] Token de TypeDef o MethodDef que representa el propietario del parámetro.  
+ [out] Un token de TypeDef o MethodDef que representa el propietario del parámetro.  
   
  `reserved`  
  [out] Reservado para extensibilidad futura.  
@@ -68,14 +68,14 @@ HRESULT GetGenericParamProps (
  [out] El tamaño devuelto del nombre, en caracteres anchos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1a43cabfd3ab22ad9035ecb30435b21b75040308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718798"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaración de variable en Visual Basic
 Declare una variable para especificar su nombre y las características. La instrucción de declaración de variables es el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Su ubicación y contenido determinan las características de la variable.  
@@ -73,17 +73,17 @@ Dim l, m As Long, x, y As Single
 ## <a name="characteristics-of-declared-variables"></a>Características de las Variables declaradas  
  El *duración* de una variable es el período de tiempo durante el cual está disponible para su uso. En general, existe una variable como el elemento que lo declara (por ejemplo, un procedimiento o clase) sigue existiendo. Si la variable no necesita seguir existiendo más allá de la duración de su elemento contenedor, no es necesario hacer nada especial en la declaración. Si la variable debe continuar sigue existiendo después de su elemento contenedor, puede incluir el `Static` o `Shared` palabra clave en su `Dim` instrucción. Para obtener más información, consulte [duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
- El *ámbito* de una variable es el conjunto de todo el código que puede hacer referencia sin calificar su nombre. Ámbito de una variable viene determinada por donde se declara. Código que se encuentra en una región determinada puede utilizar las variables definidas en dicha región sin tener que calificar sus nombres. Para obtener más información, consulte [ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ El *ámbito* de una variable es el conjunto de todo el código que puede hacer referencia sin calificar su nombre. Ámbito de una variable viene determinada por donde se declara. Código que se encuentra en una región determinada puede utilizar las variables definidas en dicha región sin tener que calificar sus nombres. Para obtener más información, consulta [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
  Una variable *nivel de acceso* es la extensión de código que tiene permiso para acceder a él. Esto viene determinado por el modificador de acceso (como [pública](../../../../visual-basic/language-reference/modifiers/public.md) o [privada](../../../../visual-basic/language-reference/modifiers/private.md)) que se utilizan en el `Dim` instrucción. Para obtener más información, consulte [tener acceso a los niveles en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-## <a name="see-also"></a>Vea también  
- [Crear una variable nueva](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [Introducir y extraer los datos de una variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)  
- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer (instrucción)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Crear una nueva Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Cómo: Movimiento de datos dentro y fuera de una Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer (instrucción)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

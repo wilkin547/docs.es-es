@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db4a5ee5673ef96c9fb7f39798ab32dd8c910f43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39b7bcec1196a59c47717ec2b5622ca8e0d3cdfc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592001"
 ---
 # <a name="security-and-remoting-considerations"></a>Consideraciones de seguridad y de interacción remota
 La comunicación remota permite configurar llamadas transparentes entre dominios de aplicación, procesos o equipos. Sin embargo, el recorrido de la pila de seguridad de acceso del código no puede cruzar los límites de los procesos o equipos (se aplica entre dominios de aplicación del mismo proceso).  
   
  Las clases que se pueden usar de forma remota (derivadas de una clase <xref:System.MarshalByRefObject>) deben asumir la responsabilidad de la seguridad. El código debe usarse solo en entornos cerrados donde el código llamador puede ser de confianza de forma implícita, o las llamadas remotas deben diseñarse de modo que no sometan el código protegido a entradas externas que pudieran usarlo de forma malintencionada.  
   
- Por lo general, nunca se deben exponer métodos, propiedades o eventos que estén protegidos forma declarativa [LinkDemand](../../../docs/framework/misc/link-demands.md) y <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> comprobaciones de seguridad. Con la comunicación remota, estas comprobaciones no se fuerzan. Otras comprobaciones de seguridad, como <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md), y así sucesivamente, funcionan entre dominios de aplicación dentro de un proceso, pero no funcionan en escenarios entre procesos o entre equipos.  
+ Por lo general, nunca debe exponer métodos, propiedades o eventos que están protegidos por declarativa [LinkDemand](../../../docs/framework/misc/link-demands.md) y <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> comprobaciones de seguridad. Con la comunicación remota, estas comprobaciones no se fuerzan. Otras comprobaciones de seguridad, como <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md), etc., funcionan entre dominios de aplicación dentro de un proceso, pero no funcionan en escenarios entre procesos o entre equipos.  
   
 ## <a name="protected-objects"></a>Objetos protegidos  
  Algunos objetos contienen un estado de seguridad en sí mismos. Estos objetos no se deben pasar a código que no sea de confianza, porque este adquiriría una autorización de seguridad más allá de sus propios permisos.  
@@ -37,5 +37,5 @@ La comunicación remota permite configurar llamadas transparentes entre dominios
   
  Normalmente, el dominio de aplicación predeterminado crea los dominios de aplicación secundarios con un objeto de control en cada uno de ellos. El objeto de control administra el nuevo dominio de aplicación y, en ocasiones, recibe pedidos del dominio de aplicación predeterminado, pero en realidad no puede contactar con el dominio directamente. En ocasiones, el dominio de aplicación predeterminado llama a su proxy al objeto de control. Sin embargo, puede haber casos en los que es necesario que el objeto de control devuelva la llamada al dominio de aplicación predeterminado. En estos casos, el dominio de aplicación predeterminado pasa un objeto de devolución de llamada de cálculo de referencias por referencia al constructor del objeto de control. Es responsabilidad del objeto de control proteger este proxy. Si el objeto de control coloca el proxy en un campo estático público de una clase pública o expone el proxy públicamente de cualquier otra forma, abriría un mecanismo peligroso para que otro código devuelva la llamada al dominio de aplicación predeterminado. Por este motivo, los objetos de control siempre son de confianza de forma implícita para que el proxy sea privado.  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vea también
+- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)

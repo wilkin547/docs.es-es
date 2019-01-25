@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Controlar el ámbito de una variable (Visual Basic)'
+title: Procedimiento Controlar el ámbito de una Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -12,53 +12,53 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 6e8d1178398711226b88fee7e6defd5162b91fcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521418"
 ---
-# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Cómo: Controlar el ámbito de una variable (Visual Basic)
-Normalmente, una variable consiste en *ámbito*, o como referencia, en toda la región en la que se declara está visible. En del algunos casos, la variable *nivel de acceso* puede influir en su ámbito.  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Procedimiento Controlar el ámbito de una Variable (Visual Basic)
+Normalmente, es una variable en *ámbito*, o visible como referencia, a lo largo de la región en la que se declara. En del algunos casos, la variable *nivel de acceso* puede influir en su ámbito.  
   
- Para obtener más información, consulte [ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ Para obtener más información, consulta [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
 ## <a name="scope-at-block-or-procedure-level"></a>Ámbito en el nivel de procedimiento o bloque  
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>Para hacer visible solo dentro de un bloque de una variable  
   
--   Lugar la [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md) para la variable entre el inicio y finalización de instrucciones de declaración de dicho bloque, por ejemplo entre el `For` y `Next` las instrucciones de un `For` bucle.  
+-   Colocar el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para la variable entre el inicio y finalización de instrucciones de declaración de ese bloque, por ejemplo entre el `For` y `Next` las instrucciones de un `For` bucle.  
   
-     Puede hacer referencia a la variable únicamente desde dentro del bloque.  
+     Se puede hacer referencia a la variable solo desde dentro del bloque.  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Para hacer que una variable sea visible sólo dentro de un procedimiento  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Para hacer que una variable sea visible solo dentro de un procedimiento  
   
--   Lugar la `Dim` instrucción para la variable dentro del procedimiento pero fuera de cualquier bloque (como un `With`... `End With` bloque).  
+-   Colocar el `Dim` instrucción para la variable dentro del procedimiento pero fuera de cualquier bloque (como un `With`... `End With` bloque).  
   
-     Puede hacer referencia a la variable únicamente desde dentro del procedimiento, incluso dentro de cualquier bloque contenido en el procedimiento.  
+     Se puede hacer referencia a la variable solo desde dentro del procedimiento, incluso dentro de cualquier bloque contenido en el procedimiento.  
   
 ## <a name="scope-at-module-or-namespace-level"></a>Ámbito en el nivel de módulo o Namespace  
- Para mayor comodidad, el término único *nivel de módulo* se aplica por igual a módulos, clases y estructuras. El nivel de acceso de una variable de nivel de módulo determina su ámbito. El espacio de nombres que contiene el módulo, clase o estructura también influye en el ámbito.  
+ Para mayor comodidad, el término único *nivel de módulo* se aplica igualmente a los módulos, clases y estructuras. El nivel de acceso de una variable de nivel de módulo determina su ámbito. El espacio de nombres que contiene el módulo, clase o estructura también influye en el ámbito.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Para hacer que una variable sea visible a lo largo de un módulo, clase o estructura  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Para hacer visible a lo largo de un módulo, clase o estructura de una variable  
   
-1.  Lugar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1.  Colocar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
   
 2.  Incluir el [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave en el `Dim` instrucción.  
   
 3.  Puede hacer referencia a la variable desde cualquier lugar dentro del módulo, clase o estructura, pero no desde fuera de él.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Para hacer que una variable sea visible a lo largo de un espacio de nombres  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Para hacer visible a lo largo de un espacio de nombres de variable  
   
-1.  Lugar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
+1.  Colocar el `Dim` instrucción para la variable dentro del módulo, clase o estructura, pero fuera de cualquier procedimiento.  
   
-2.  Incluir el [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [público](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave en el `Dim` instrucción.  
+2.  Incluir el [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [pública](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave en el `Dim` instrucción.  
   
 3.  Puede hacer referencia a la variable desde cualquier lugar dentro del espacio de nombres que contiene el módulo, clase o estructura.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se declara una variable en el nivel de módulo y se limita su visibilidad al código dentro del módulo.  
+ El ejemplo siguiente declara una variable en el nivel de módulo y limita la visibilidad para el código dentro del módulo.  
   
 ```  
 Module demonstrateScope  
@@ -72,24 +72,24 @@ Module demonstrateScope
 End Module  
 ```  
   
- En el ejemplo anterior, todos los procedimientos definen en el módulo `demonstrateScope` pueden hacer referencia a la `String` variable `strMsg`. Cuando el `usePrivateVariable` se llama al procedimiento, se muestra el contenido de la variable de cadena `strMsg` en un cuadro de diálogo.  
+ En el ejemplo anterior, todos los procedimientos definen en el módulo `demonstrateScope` puede hacer referencia a la `String` variable `strMsg`. Cuando el `usePrivateVariable` se llama al procedimiento, se muestra el contenido de la variable de cadena `strMsg` en un cuadro de diálogo.  
   
- Con la modificación siguiente al ejemplo anterior, la variable de cadena `strMsg` puede hacer referencia a código en cualquier lugar en el espacio de nombres de su declaración.  
+ La siguiente modificación en el ejemplo anterior, la variable de cadena `strMsg` puede hacer referencia a código en cualquier lugar en el espacio de nombres de su declaración.  
   
 ```  
 Public strMsg As String  
 ```  
   
 ## <a name="robust-programming"></a>Programación sólida  
- El ámbito más restringido el de una variable, menos posibilidades que tendrá de hacer referencia accidentalmente a ella en lugar de otra variable con el mismo nombre. También puede minimizar los problemas de concordancia de referencias.  
+ El ámbito más restringido el de una variable, menos posibilidades que tendrá de hacer referencia accidentalmente a ella en lugar de otra variable con el mismo nombre. También puede minimizar los problemas de comparación de referencias.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Más se limita el ámbito de una variable, cuanto más pequeño las posibilidades de que un código malintencionado puede hacer incorrecto usar del mismo.  
+ Más estrecha del ámbito de una variable, cuantos menos las posibilidades de que código malintencionado puede hacer incorrecto usar del mismo.  
   
-## <a name="see-also"></a>Vea también  
- [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>Vea también
+- [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Comprobar las firmas digitales de documentos XML'
+title: Procedimiento Comprobar las firmas digitales de documentos XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670165"
 ---
-# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Cómo: Comprobar las firmas digitales de documentos XML
+# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedimiento Comprobar las firmas digitales de documentos XML
 Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para comprobar datos XML firmados con una firma digital. Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos. Para obtener más información sobre el estándar XMLDSIG, consulte la especificación de World Wide Web Consortium (W3C) en <https://www.w3.org/TR/xmldsig-core/>.
   
  En el ejemplo de código de este procedimiento se muestra cómo comprobar una firma digital XML que se encuentra en un elemento <`Signature`>.  En el ejemplo se recupera una clave pública RSA de un contenedor de claves y se usa la clave para comprobar la firma.  
   
- Para obtener información acerca de cómo crear una firma digital que se pueda comprobar mediante esta técnica, consulte [Cómo: firmar documentos XML con firmas digitales](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Para obtener información acerca de cómo crear una firma digital que se pueda comprobar mediante esta técnica, consulte [Cómo: Firmar documentos XML con firmas digitales](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>Para comprobar la firma digital de un documento XML  
   
@@ -68,7 +68,7 @@ Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se supone que un archivo llamado `"test.xml"` se encuentra en el mismo directorio que el programa compilado.  El `"test.xml"` debe firmarse mediante las técnicas descritas en el archivo [Cómo: firmar documentos XML con firmas digitales](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ En este ejemplo se supone que un archivo llamado `"test.xml"` se encuentra en el mismo directorio que el programa compilado.  El `"test.xml"` debe firmarse mediante las técnicas descritas en el archivo [Cómo: Firmar documentos XML con firmas digitales](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -86,5 +86,5 @@ Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Firmar documentos XML con firmas digitales](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Cómo: Firmar documentos XML con firmas digitales](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

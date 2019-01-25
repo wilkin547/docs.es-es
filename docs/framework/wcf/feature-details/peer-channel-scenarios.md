@@ -2,12 +2,12 @@
 title: Escenarios de canal del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 42b16ea394b9375be14aed4b2792d306fcb62f2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05fe7f632b286876dfee36b7d5d22a77c0ae11e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566219"
 ---
 # <a name="peer-channel-scenarios"></a>Escenarios de canal del mismo nivel
 Las API del canal del mismo nivel admiten los escenarios de desarrollo siguientes.  
@@ -24,5 +24,5 @@ Las API del canal del mismo nivel admiten los escenarios de desarrollo siguiente
 ## <a name="gaming"></a>Juegos  
  Con el canal del mismo nivel, los desarrolladores de aplicaciones pueden crear versiones sin servidor de sus juegos, en los cuales, los movimientos se transmiten y se sincronizan con otros jugadores mediante un mecanismo p2p en vez de a través de un servidor central. Para ISVs pequeños, esto ayuda a eliminar costes operacionales asociados a la implementación, manutención y prestación de servicio de los servidores. Se pueden jugar  a los juegos diseñados con una arquitectura p2p en todo Internet, además de en redes locales (también inalámbricas). Se pueden desarrollar algunas actividades de ocio secundarias, como chat (fuera y dentro del juego), mediante una red de punto a punto.  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

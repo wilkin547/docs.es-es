@@ -2,12 +2,12 @@
 title: Procedimiento Recuperar metadatos e implementar un servicio conforme
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: dc7f5d97a5201698e8dc99e4523e3ab2925f6883
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608500"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedimiento Recuperar metadatos e implementar un servicio conforme
 A menudo, no es el mismo rol quien diseña e implementa los servicios. En entornos donde las aplicaciones que interoperan son importantes, los contratos pueden diseñarse o describirse en lenguaje de descripción de servicios Web (WSDL), y un desarrollador deberá implementar un servicio compatible con el contrato proporcionado. También puede migrar un servicio existente a Windows Communication Foundation (WCF), pero conservar el formato. Además, los contratos dúplex exigen a los autores de llamadas que también implementen un contrato de devolución de llamada.  
@@ -24,7 +24,7 @@ A menudo, no es el mismo rol quien diseña e implementa los servicios. En entorn
   
 3.  Si el WSDL no especifica una acción de respuesta para todas las operaciones, los contratos de operación generados pueden tener la propiedad <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> establecida en el carácter comodín (*). Quite este valor de propiedades. De lo contrario, al implementar los metadatos del contrato de servicios, éstos no pueden exportarse para esas operaciones.  
   
-4.  Implemente la interfaz en una clase y hospede el servicio. Para obtener un ejemplo, vea [Cómo: Implementar un contrato de servicio](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), o vea una implementación simple, a continuación, en la sección ejemplo.  
+4.  Implemente la interfaz en una clase y hospede el servicio. Como ejemplo, vea [Cómo: Implementar un contrato de servicio](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), o vea una implementación simple, a continuación, en la sección ejemplo.  
   
 5.  En la configuración del cliente de los archivos que el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genera, cambiar el [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) sección de configuración para un [ \<services >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sección de configuración. (Para obtener un ejemplo de un archivo de configuración de la aplicación generado por un cliente, vea la siguiente sección "Ejemplo").  
   
@@ -59,5 +59,5 @@ A menudo, no es el mismo rol quien diseña e implementa los servicios. En entorn
 
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
-## <a name="see-also"></a>Vea también  
- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Vea también
+- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

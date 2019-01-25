@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 70e1028042807eb77fc74b30174e1962bc00f4c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c9787d52667dc026d3fe62ac7f4b3de7e838a93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519793"
 ---
 # <a name="byte-data-type-visual-basic"></a>Tipo de datos de byte (Visual Basic)
 Contiene enteros de (1 bytes) de 8 bits sin signo que van de un valor comprendido entre 0 y 255.
@@ -66,8 +66,8 @@ Dim number As Byte = &H_6A
 
 ## <a name="see-also"></a>Vea también
 
- <xref:System.Byte?displayProperty=nameWithType>  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
+- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

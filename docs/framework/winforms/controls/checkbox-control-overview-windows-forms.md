@@ -8,24 +8,24 @@ helpviewer_keywords:
 - data binding [Windows Forms], checkbox controls
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-ms.openlocfilehash: 54a0bba3923626398fb4d1b0af753177dfaa09a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e81ac9e8830333e5aadb195563b25fdd93895c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733290"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>Información general sobre el control CheckBox (formularios Windows Forms)
 El control de Windows Forms <xref:System.Windows.Forms.CheckBox> indica si una condición determinada está activada o desactivada. Normalmente se utiliza para presentar una selección Sí/No o Verdadero/Falso al usuario. Puede utilizar de controles de casilla en grupos para mostrar múltiples opciones de entre las que el usuario puede seleccionar una o más.  
   
- El control de casilla de verificación es similar al control de botón de radio en que cada uno se utiliza para indicar una selección realizada por el usuario. Se diferencian en que se puede seleccionar solo un botón en un grupo de a la vez. Sin embargo, con el control de casilla de verificación, cualquier número de casillas de verificación puede ser seleccionado.  
+ El control de casilla de verificación es similar al control de botón de radio en que cada uno se utiliza para indicar una selección realizada por el usuario. Se diferencian en que se puede seleccionar sólo un botón en un grupo a la vez. Con el control de casilla de verificación, sin embargo, cualquier número de casillas de verificación se puede seleccionar.  
   
- Una casilla de verificación puede estar conectada a los elementos de una base de datos mediante el enlace de datos simple. También puede agrupar varias casillas de verificación medio el <xref:System.Windows.Forms.GroupBox> control. Esto es útil para la apariencia visual y también para el diseño de la interfaz de usuario, ya que los controles agrupados pueden usarse conjuntamente en el Diseñador de formularios. Para obtener más información, consulte [enlace de datos en formularios Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md) y [GroupBox Control](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md).  
+ Una casilla de verificación puede estar conectada a los elementos de una base de datos mediante el enlace de datos simple. Se puede agrupar varias casillas de verificación mediante el <xref:System.Windows.Forms.GroupBox> control. Esto es útil para la apariencia visual y también para el diseño de la interfaz de usuario, puesto que los controles agrupados se puedan mover juntos en el Diseñador de formularios. Para obtener más información, consulte [Windows Forms Data Binding](../../../../docs/framework/winforms/windows-forms-data-binding.md) y [GroupBox Control](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md).  
   
- El <xref:System.Windows.Forms.CheckBox> control tiene dos propiedades importantes, <xref:System.Windows.Forms.CheckBox.Checked%2A> y <xref:System.Windows.Forms.CheckBox.CheckState%2A>. El <xref:System.Windows.Forms.CheckBox.Checked%2A> propiedad devuelve `true` o `false`. El <xref:System.Windows.Forms.CheckBox.CheckState%2A> propiedad devuelve <xref:System.Windows.Forms.CheckState.Checked> o <xref:System.Windows.Forms.CheckState.Unchecked>; o bien, si la <xref:System.Windows.Forms.CheckBox.ThreeState%2A> propiedad está establecida en `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> también pueden devolver <xref:System.Windows.Forms.CheckState.Indeterminate>. En el estado indeterminado, el cuadro se muestra con un aspecto atenuado para indicar que la opción está disponible.  
+ El <xref:System.Windows.Forms.CheckBox> control tiene dos propiedades importantes, <xref:System.Windows.Forms.CheckBox.Checked%2A> y <xref:System.Windows.Forms.CheckBox.CheckState%2A>. El <xref:System.Windows.Forms.CheckBox.Checked%2A> propiedad devuelve `true` o `false`. El <xref:System.Windows.Forms.CheckBox.CheckState%2A> propiedad devuelve <xref:System.Windows.Forms.CheckState.Checked> o <xref:System.Windows.Forms.CheckState.Unchecked>; o bien, si la <xref:System.Windows.Forms.CheckBox.ThreeState%2A> propiedad está establecida en `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> también pueden devolver <xref:System.Windows.Forms.CheckState.Indeterminate>. En el estado indeterminado, se muestra el cuadro con un aspecto atenuado para indicar que la opción está disponible.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.CheckBox>  
- [Establecer opciones con los controles CheckBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
- [Responder a clics en casillas de Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
- [CheckBox (control)](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.CheckBox>
+- [Cómo: Establecer opciones con controles CheckBox de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Cómo: Responder a Windows Forms clics en casillas](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox (control)](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

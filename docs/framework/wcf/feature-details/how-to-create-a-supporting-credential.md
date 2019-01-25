@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Crear una credencial de apoyo'
+title: Procedimiento Crear una credencial de aprobación
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539810"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Cómo: Crear una credencial de apoyo
+# <a name="how-to-create-a-supporting-credential"></a>Procedimiento Crear una credencial de aprobación
 Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es un *credencial de apoyo*. En este tema se explica cómo implementar dichos credenciales en un cliente de Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -35,7 +35,7 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 |Firmar y cifrar|Los tokens de aprobación firmados y cifrados son tokens de aprobación firmados que también se cifran cuando aparecen en `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programar credenciales de aprobación  
- Para crear un servicio que usa los tokens auxiliares, debe crear un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obtener más información, consulte [Cómo: crear un personalizado de enlace mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Para crear un servicio que usa los tokens auxiliares, debe crear un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obtener más información, vea [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  El primer paso cuando se crea un enlace personalizado es crear un elemento de enlace de seguridad, que puede ser uno de tres tipos:  
   
@@ -80,5 +80,5 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 ### <a name="code"></a>Código  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Vea también  
- [Creación de un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

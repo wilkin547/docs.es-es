@@ -1,15 +1,15 @@
 ---
-title: Depurar árboles de expresión en Visual Studio (Visual Basic)
+title: Depuración de árboles de expresión en Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 2addba2654067eaaf6c621c927e0992308879ae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b060a65a38c4ab295a54f972678f273ada218d06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617361"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Depurar árboles de expresión en Visual Studio (Visual Basic)
+# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Depuración de árboles de expresión en Visual Studio (Visual Basic)
 Se puede analizar la estructura y el contenido de los árboles de expresión cuando se depuran las aplicaciones. Para obtener una introducción rápida de la estructura de árbol de expresión, puede usar la propiedad `DebugView`, que solo está disponible en modo de depuración. Para más información sobre la depuración, vea [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) (Depuración en Visual Studio).  
   
  Para representar mejor el contenido de árboles de expresión, la propiedad `DebugView` usa los visualizadores de Visual Studio. Para obtener más información, vea [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data) (Crear visualizadores personalizados).  
@@ -230,7 +230,7 @@ Se puede analizar la estructura y el contenido de los árboles de expresión cua
   
      `#(System.Int32)10D`  
   
-## <a name="see-also"></a>Vea también  
- [Árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
- [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data) (Crear visualizadores personalizados)
+## <a name="see-also"></a>Vea también
+- [Árboles de expresión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data) (Crear visualizadores personalizados)
