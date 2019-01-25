@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df3e14b14078a4d484dd18f3bb59f5fcfee55411
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4315d6ee5f7b63b21fcdb0f8efc5b2a693a3a2c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697470"
 ---
-# <a name="virtualcercall-mda"></a><span data-ttu-id="904a3-102">MDA de virtualCERCall</span><span class="sxs-lookup"><span data-stu-id="904a3-102">virtualCERCall MDA</span></span>
-<span data-ttu-id="904a3-103">El Asistente para la depuración administrada (MDA) `virtualCERCall` se activa como una advertencia que indica que un sitio de llamada dentro de un gráfico de llamadas de región de ejecución restringida (CER) hace referencia a un destino virtual, es decir, una llamada virtual a un método virtual no final o una llamada mediante una interfaz.</span><span class="sxs-lookup"><span data-stu-id="904a3-103">The `virtualCERCall` managed debugging assistant (MDA) is activated as a warning indicating that a call site within a constrained execution region (CER) call graph refers to a virtual target, that is, a virtual call to a non-final virtual method or a call using an interface.</span></span> <span data-ttu-id="904a3-104">El Common Language Runtime (CLR) no puede predecir el método de destino de estas llamadas solo con el lenguaje intermedio y el análisis de metadatos.</span><span class="sxs-lookup"><span data-stu-id="904a3-104">The common language runtime (CLR) cannot predict the destination method of these calls from the intermediate language and metadata analysis alone.</span></span> <span data-ttu-id="904a3-105">Como resultado, el árbol de llamadas no se puede preparar como parte del gráfico de CER y las anulaciones de subprocesos de ese subárbol no se pueden bloquear automáticamente.</span><span class="sxs-lookup"><span data-stu-id="904a3-105">As a result, the call tree cannot be prepared as part of the CER graph and thread aborts in that subtree cannot be automatically blocked.</span></span> <span data-ttu-id="904a3-106">Este MDA advierte de los casos en los que es posible que se tenga que ampliar una CER mediante llamadas explícitas al método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una vez que la información adicional necesaria para calcular el destino de la llamada se conoce en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="904a3-106">This MDA warns of cases where a CER might need to be extended by using explicit calls to the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> method once the additional information required to compute the call target is known at run time.</span></span>  
+# <a name="virtualcercall-mda"></a><span data-ttu-id="3312c-102">MDA de virtualCERCall</span><span class="sxs-lookup"><span data-stu-id="3312c-102">virtualCERCall MDA</span></span>
+<span data-ttu-id="3312c-103">El Asistente para la depuración administrada (MDA) `virtualCERCall` se activa como una advertencia que indica que un sitio de llamada dentro de un gráfico de llamadas de región de ejecución restringida (CER) hace referencia a un destino virtual, es decir, una llamada virtual a un método virtual no final o una llamada mediante una interfaz.</span><span class="sxs-lookup"><span data-stu-id="3312c-103">The `virtualCERCall` managed debugging assistant (MDA) is activated as a warning indicating that a call site within a constrained execution region (CER) call graph refers to a virtual target, that is, a virtual call to a non-final virtual method or a call using an interface.</span></span> <span data-ttu-id="3312c-104">El Common Language Runtime (CLR) no puede predecir el método de destino de estas llamadas solo con el lenguaje intermedio y el análisis de metadatos.</span><span class="sxs-lookup"><span data-stu-id="3312c-104">The common language runtime (CLR) cannot predict the destination method of these calls from the intermediate language and metadata analysis alone.</span></span> <span data-ttu-id="3312c-105">Como resultado, el árbol de llamadas no se puede preparar como parte del gráfico de CER y las anulaciones de subprocesos de ese subárbol no se pueden bloquear automáticamente.</span><span class="sxs-lookup"><span data-stu-id="3312c-105">As a result, the call tree cannot be prepared as part of the CER graph and thread aborts in that subtree cannot be automatically blocked.</span></span> <span data-ttu-id="3312c-106">Este MDA advierte de los casos en los que es posible que se tenga que ampliar una CER mediante llamadas explícitas al método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una vez que la información adicional necesaria para calcular el destino de la llamada se conoce en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="3312c-106">This MDA warns of cases where a CER might need to be extended by using explicit calls to the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> method once the additional information required to compute the call target is known at run time.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="904a3-107">Síntomas</span><span class="sxs-lookup"><span data-stu-id="904a3-107">Symptoms</span></span>  
- <span data-ttu-id="904a3-108">Las CER que no se ejecutan cuando se anula un subproceso o se descarga un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="904a3-108">CERs that do not run when a thread is aborted or an application domain is unloaded.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="3312c-107">Síntomas</span><span class="sxs-lookup"><span data-stu-id="3312c-107">Symptoms</span></span>  
+ <span data-ttu-id="3312c-108">Las CER que no se ejecutan cuando se anula un subproceso o se descarga un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="3312c-108">CERs that do not run when a thread is aborted or an application domain is unloaded.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="904a3-109">Motivo</span><span class="sxs-lookup"><span data-stu-id="904a3-109">Cause</span></span>  
- <span data-ttu-id="904a3-110">Una CER contiene una llamada a un método virtual que no se puede preparar automáticamente.</span><span class="sxs-lookup"><span data-stu-id="904a3-110">A CER contains a call to a virtual method that cannot be prepared automatically.</span></span>  
+## <a name="cause"></a><span data-ttu-id="3312c-109">Motivo</span><span class="sxs-lookup"><span data-stu-id="3312c-109">Cause</span></span>  
+ <span data-ttu-id="3312c-110">Una CER contiene una llamada a un método virtual que no se puede preparar automáticamente.</span><span class="sxs-lookup"><span data-stu-id="3312c-110">A CER contains a call to a virtual method that cannot be prepared automatically.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="904a3-111">Resolución</span><span class="sxs-lookup"><span data-stu-id="904a3-111">Resolution</span></span>  
- <span data-ttu-id="904a3-112">Llame a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> para el método virtual.</span><span class="sxs-lookup"><span data-stu-id="904a3-112">Call <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> for the virtual method.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="3312c-111">Resolución</span><span class="sxs-lookup"><span data-stu-id="3312c-111">Resolution</span></span>  
+ <span data-ttu-id="3312c-112">Llame a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> para el método virtual.</span><span class="sxs-lookup"><span data-stu-id="3312c-112">Call <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> for the virtual method.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="904a3-113">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="904a3-113">Effect on the Runtime</span></span>  
- <span data-ttu-id="904a3-114">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="904a3-114">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="3312c-113">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="3312c-113">Effect on the Runtime</span></span>  
+ <span data-ttu-id="3312c-114">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="3312c-114">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="904a3-115">Salida</span><span class="sxs-lookup"><span data-stu-id="904a3-115">Output</span></span>  
+## <a name="output"></a><span data-ttu-id="3312c-115">Salida</span><span class="sxs-lookup"><span data-stu-id="3312c-115">Output</span></span>  
   
 ```  
 Method 'MethodWithCer', while executing within a constrained execution region, makes a call  
@@ -46,7 +46,7 @@ declaringType name="VirtualCERCall+MyClass"
     callsite name="MethodWithCer" offset="0x0024"  
 ```  
   
-## <a name="configuration"></a><span data-ttu-id="904a3-116">Configuración</span><span class="sxs-lookup"><span data-stu-id="904a3-116">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="3312c-116">Configuración</span><span class="sxs-lookup"><span data-stu-id="3312c-116">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -56,7 +56,7 @@ declaringType name="VirtualCERCall+MyClass"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="904a3-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="904a3-117">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3312c-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3312c-117">Example</span></span>  
   
 ```csharp
 class MyClass  
@@ -96,7 +96,7 @@ void MethodWithCer(MyClass object)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="904a3-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="904a3-118">See Also</span></span>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="904a3-119">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="904a3-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="904a3-120">Serialización de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="904a3-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a><span data-ttu-id="3312c-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="3312c-118">See also</span></span>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [<span data-ttu-id="3312c-119">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="3312c-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="3312c-120">Serialización de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="3312c-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

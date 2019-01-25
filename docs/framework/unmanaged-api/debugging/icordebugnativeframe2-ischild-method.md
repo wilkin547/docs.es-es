@@ -17,50 +17,50 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9d613e810724b8e133b490c17a37ecc6565f09a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b330f628256f9d8b21bfb483500c878b7b90d2b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652063"
 ---
-# <a name="icordebugnativeframe2ischild-method"></a><span data-ttu-id="e3831-102">ICorDebugNativeFrame2::IsChild (Método)</span><span class="sxs-lookup"><span data-stu-id="e3831-102">ICorDebugNativeFrame2::IsChild Method</span></span>
-<span data-ttu-id="e3831-103">Determina si el marco actual es un marco secundario.</span><span class="sxs-lookup"><span data-stu-id="e3831-103">Determines whether the current frame is a child frame.</span></span>  
+# <a name="icordebugnativeframe2ischild-method"></a><span data-ttu-id="d9229-102">ICorDebugNativeFrame2::IsChild (Método)</span><span class="sxs-lookup"><span data-stu-id="d9229-102">ICorDebugNativeFrame2::IsChild Method</span></span>
+<span data-ttu-id="d9229-103">Determina si el marco actual es un marco secundario.</span><span class="sxs-lookup"><span data-stu-id="d9229-103">Determines whether the current frame is a child frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3831-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e3831-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9229-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d9229-104">Syntax</span></span>  
   
 ```  
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e3831-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e3831-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d9229-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d9229-105">Parameters</span></span>  
  `pIsChild`  
- <span data-ttu-id="e3831-106">[out] Un valor booleano que especifica si el marco actual es un marco secundario.</span><span class="sxs-lookup"><span data-stu-id="e3831-106">[out] A Boolean value that specifies whether the current frame is a child frame.</span></span>  
+ <span data-ttu-id="d9229-106">[out] Un valor booleano que especifica si el marco actual es un marco secundario.</span><span class="sxs-lookup"><span data-stu-id="d9229-106">[out] A Boolean value that specifies whether the current frame is a child frame.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e3831-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="e3831-107">Return Value</span></span>  
- <span data-ttu-id="e3831-108">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="e3831-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d9229-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="d9229-107">Return Value</span></span>  
+ <span data-ttu-id="d9229-108">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="d9229-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="e3831-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e3831-109">HRESULT</span></span>|<span data-ttu-id="e3831-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="e3831-110">Description</span></span>|  
+|<span data-ttu-id="d9229-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d9229-109">HRESULT</span></span>|<span data-ttu-id="d9229-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="d9229-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e3831-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="e3831-111">S_OK</span></span>|<span data-ttu-id="e3831-112">El estado del secundario se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="e3831-112">The child status was successfully returned.</span></span>|  
-|<span data-ttu-id="e3831-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e3831-113">E_FAIL</span></span>|<span data-ttu-id="e3831-114">No se pudo devolver el estado del secundario.</span><span class="sxs-lookup"><span data-stu-id="e3831-114">The child status could not be returned.</span></span>|  
-|<span data-ttu-id="e3831-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="e3831-115">E_INVALIDARG</span></span>|<span data-ttu-id="e3831-116">`pIsChild` es null.</span><span class="sxs-lookup"><span data-stu-id="e3831-116">`pIsChild` is null.</span></span>|  
+|<span data-ttu-id="d9229-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="d9229-111">S_OK</span></span>|<span data-ttu-id="d9229-112">El estado del secundario se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="d9229-112">The child status was successfully returned.</span></span>|  
+|<span data-ttu-id="d9229-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d9229-113">E_FAIL</span></span>|<span data-ttu-id="d9229-114">No se pudo devolver el estado del elemento secundario.</span><span class="sxs-lookup"><span data-stu-id="d9229-114">The child status could not be returned.</span></span>|  
+|<span data-ttu-id="d9229-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="d9229-115">E_INVALIDARG</span></span>|<span data-ttu-id="d9229-116">`pIsChild` es null.</span><span class="sxs-lookup"><span data-stu-id="d9229-116">`pIsChild` is null.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="e3831-117">Excepciones</span><span class="sxs-lookup"><span data-stu-id="e3831-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="d9229-117">Excepciones</span><span class="sxs-lookup"><span data-stu-id="d9229-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e3831-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e3831-118">Remarks</span></span>  
- <span data-ttu-id="e3831-119">El `IsChild` método `true` si el objeto de marco en el que se llama al método es un elemento secundario de otro marco.</span><span class="sxs-lookup"><span data-stu-id="e3831-119">The `IsChild` method returns `true` if the frame object on which you call the method is a child of another frame.</span></span> <span data-ttu-id="e3831-120">Si este es el caso, use la [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) método para comprobar si un marco es su elemento primario.</span><span class="sxs-lookup"><span data-stu-id="e3831-120">If this is the case, use the [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) method to check whether a frame is its parent.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9229-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d9229-118">Remarks</span></span>  
+ <span data-ttu-id="d9229-119">El `IsChild` devuelve del método `true` si el objeto de marco en el que se llama al método es un elemento secundario de otro marco.</span><span class="sxs-lookup"><span data-stu-id="d9229-119">The `IsChild` method returns `true` if the frame object on which you call the method is a child of another frame.</span></span> <span data-ttu-id="d9229-120">Si este es el caso, utilice el [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) método para comprobar si un marco es su elemento primario.</span><span class="sxs-lookup"><span data-stu-id="d9229-120">If this is the case, use the [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) method to check whether a frame is its parent.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e3831-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e3831-121">Requirements</span></span>  
- <span data-ttu-id="e3831-122">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3831-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9229-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d9229-121">Requirements</span></span>  
+ <span data-ttu-id="d9229-122">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9229-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3831-123">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e3831-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9229-123">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9229-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e3831-124">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3831-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9229-124">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9229-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e3831-125">**Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3831-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="d9229-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9229-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3831-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="e3831-126">See Also</span></span>  
- [<span data-ttu-id="e3831-127">ICorDebugNativeFrame2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e3831-127">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
- [<span data-ttu-id="e3831-128">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="e3831-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="e3831-129">Depuración</span><span class="sxs-lookup"><span data-stu-id="e3831-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="d9229-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="d9229-126">See also</span></span>
+- [<span data-ttu-id="d9229-127">ICorDebugNativeFrame2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d9229-127">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [<span data-ttu-id="d9229-128">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="d9229-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d9229-129">Depuración</span><span class="sxs-lookup"><span data-stu-id="d9229-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

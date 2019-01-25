@@ -11,29 +11,29 @@ helpviewer_keywords:
 - retrieving ink [WPF]
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
-ms.openlocfilehash: d3d33be5e8b5cf9dd7e32a52dfc258aa934c5c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c115e31b73afc1532973be3db8e3e184e9a4253b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492893"
 ---
-# <a name="storing-ink"></a><span data-ttu-id="919da-102">Almacenar entradas manuscritas</span><span class="sxs-lookup"><span data-stu-id="919da-102">Storing Ink</span></span>
-<span data-ttu-id="919da-103">El <xref:System.Windows.Ink.StrokeCollection.Save%2A> métodos proporcionan compatibilidad para almacenar la entrada manuscrita como formato serializado de tinta (ISF).</span><span class="sxs-lookup"><span data-stu-id="919da-103">The <xref:System.Windows.Ink.StrokeCollection.Save%2A> methods provide support for storing ink as Ink Serialized Format (ISF).</span></span> <span data-ttu-id="919da-104">Constructores para la <xref:System.Windows.Ink.StrokeCollection> clase proporcionan compatibilidad para leer los datos de tinta.</span><span class="sxs-lookup"><span data-stu-id="919da-104">Constructors for the <xref:System.Windows.Ink.StrokeCollection> class provide support for reading ink data.</span></span>  
+# <a name="storing-ink"></a><span data-ttu-id="c7508-102">Almacenar entradas manuscritas</span><span class="sxs-lookup"><span data-stu-id="c7508-102">Storing Ink</span></span>
+<span data-ttu-id="c7508-103">El <xref:System.Windows.Ink.StrokeCollection.Save%2A> métodos proporcionan compatibilidad para almacenar entradas manuscritas como formato serializado de tinta (ISF).</span><span class="sxs-lookup"><span data-stu-id="c7508-103">The <xref:System.Windows.Ink.StrokeCollection.Save%2A> methods provide support for storing ink as Ink Serialized Format (ISF).</span></span> <span data-ttu-id="c7508-104">Los constructores para la <xref:System.Windows.Ink.StrokeCollection> clase proporcionan compatibilidad para leer los datos de entrada de lápiz.</span><span class="sxs-lookup"><span data-stu-id="c7508-104">Constructors for the <xref:System.Windows.Ink.StrokeCollection> class provide support for reading ink data.</span></span>  
   
-## <a name="ink-storage-and-retrieval"></a><span data-ttu-id="919da-105">Almacenamiento de tinta y la recuperación</span><span class="sxs-lookup"><span data-stu-id="919da-105">Ink Storage and Retrieval</span></span>  
- <span data-ttu-id="919da-106">Esta sección describe cómo almacenar y recuperar entradas manuscritas en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] plataforma.</span><span class="sxs-lookup"><span data-stu-id="919da-106">This section discusses how to store and retrieve ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] platform.</span></span>  
+## <a name="ink-storage-and-retrieval"></a><span data-ttu-id="c7508-105">Almacenamiento de tinta y la recuperación</span><span class="sxs-lookup"><span data-stu-id="c7508-105">Ink Storage and Retrieval</span></span>  
+ <span data-ttu-id="c7508-106">Esta sección describe cómo almacenar y recuperar entradas manuscritas en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] plataforma.</span><span class="sxs-lookup"><span data-stu-id="c7508-106">This section discusses how to store and retrieve ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] platform.</span></span>  
   
- <span data-ttu-id="919da-107">En el ejemplo siguiente se implementa un controlador de eventos de clic de botón que presenta al usuario un cuadro de diálogo Guardar archivo y guarda la tinta de una <xref:System.Windows.Controls.InkCanvas> fuera a un archivo.</span><span class="sxs-lookup"><span data-stu-id="919da-107">The following example implements a button-click event handler that presents the user with a File Save dialog box and saves the ink from an <xref:System.Windows.Controls.InkCanvas> out to a file.</span></span>  
+ <span data-ttu-id="c7508-107">El ejemplo siguiente implementa un controlador de eventos de clic de botón que presenta al usuario un cuadro de diálogo Guardar archivo y guarda la tinta de una <xref:System.Windows.Controls.InkCanvas> fuera a un archivo.</span><span class="sxs-lookup"><span data-stu-id="c7508-107">The following example implements a button-click event handler that presents the user with a File Save dialog box and saves the ink from an <xref:System.Windows.Controls.InkCanvas> out to a file.</span></span>  
   
  [!code-csharp[DigitalInkTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#12)]
  [!code-vb[DigitalInkTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#12)]  
   
- <span data-ttu-id="919da-108">En el ejemplo siguiente se implementa un controlador de eventos de clic de botón que presenta al usuario un cuadro de diálogo Abrir archivo y lee la tinta del archivo en un <xref:System.Windows.Controls.InkCanvas> elemento.</span><span class="sxs-lookup"><span data-stu-id="919da-108">The following example implements a button-click event handler that presents the user with a File Open dialog box and reads ink from the file into an <xref:System.Windows.Controls.InkCanvas> element.</span></span>  
+ <span data-ttu-id="c7508-108">El ejemplo siguiente implementa un controlador de eventos de clic de botón que presenta al usuario un cuadro de diálogo Abrir archivo y lee la entrada de lápiz del archivo en un <xref:System.Windows.Controls.InkCanvas> elemento.</span><span class="sxs-lookup"><span data-stu-id="c7508-108">The following example implements a button-click event handler that presents the user with a File Open dialog box and reads ink from the file into an <xref:System.Windows.Controls.InkCanvas> element.</span></span>  
   
  [!code-csharp[DigitalInkTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#13)]
  [!code-vb[DigitalInkTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="919da-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="919da-109">See Also</span></span>  
- <xref:System.Windows.Controls.InkCanvas>  
- [<span data-ttu-id="919da-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="919da-110">Windows Presentation Foundation</span></span>](../../../../docs/framework/wpf/index.md)
+## <a name="see-also"></a><span data-ttu-id="c7508-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="c7508-109">See also</span></span>
+- <xref:System.Windows.Controls.InkCanvas>
+- [<span data-ttu-id="c7508-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="c7508-110">Windows Presentation Foundation</span></span>](../../../../docs/framework/wpf/index.md)

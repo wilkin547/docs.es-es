@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f3604e3c12cd4b9781876d2d412d942353061e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1c1c05918965e40801757462ce53257bc36a5d8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587718"
 ---
-# <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="06814-102">_EFN_GetManagedExcepStack (Función)</span><span class="sxs-lookup"><span data-stu-id="06814-102">_EFN_GetManagedExcepStack Function</span></span>
-<span data-ttu-id="06814-103">Dada una dirección de objeto de excepción administrado, devuelve una versión de cadena del seguimiento de pila que contiene.</span><span class="sxs-lookup"><span data-stu-id="06814-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  
+# <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="7164a-102">_EFN_GetManagedExcepStack (Función)</span><span class="sxs-lookup"><span data-stu-id="7164a-102">_EFN_GetManagedExcepStack Function</span></span>
+<span data-ttu-id="7164a-103">Dada una dirección de objeto de excepción administrado, devuelve una versión de cadena del seguimiento de pila que contiene.</span><span class="sxs-lookup"><span data-stu-id="7164a-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06814-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="06814-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7164a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7164a-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedExcepStack(  
@@ -37,28 +37,28 @@ HRESULT _EFN_GetManagedExcepStack(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="06814-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="06814-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7164a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7164a-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="06814-106">[in] El cliente que se está depurando.</span><span class="sxs-lookup"><span data-stu-id="06814-106">[in] The client being debugged.</span></span>  
+ <span data-ttu-id="7164a-106">[in] El cliente que se está depurando.</span><span class="sxs-lookup"><span data-stu-id="7164a-106">[in] The client being debugged.</span></span>  
   
  `StackObjAddr`  
- <span data-ttu-id="06814-107">[in] Un puntero de objeto administrado, derivado de <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="06814-107">[in] A managed object pointer, derived from <xref:System.Exception>.</span></span>  
+ <span data-ttu-id="7164a-107">[in] Un puntero de objeto administrado, derivado de <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="7164a-107">[in] A managed object pointer, derived from <xref:System.Exception>.</span></span>  
   
- <span data-ttu-id="06814-108">szStackString</span><span class="sxs-lookup"><span data-stu-id="06814-108">szStackString</span></span>  
- <span data-ttu-id="06814-109">[out] La cadena devuelta.</span><span class="sxs-lookup"><span data-stu-id="06814-109">[out] The returned string.</span></span>  
+ <span data-ttu-id="7164a-108">szStackString</span><span class="sxs-lookup"><span data-stu-id="7164a-108">szStackString</span></span>  
+ <span data-ttu-id="7164a-109">[out] La cadena devuelta.</span><span class="sxs-lookup"><span data-stu-id="7164a-109">[out] The returned string.</span></span>  
   
  `cbString`  
- <span data-ttu-id="06814-110">[out] El número de caracteres disponibles en el búfer de cadena.</span><span class="sxs-lookup"><span data-stu-id="06814-110">[out] The number of characters available in the string buffer.</span></span>  
+ <span data-ttu-id="7164a-110">[out] El número de caracteres disponibles en el búfer de cadena.</span><span class="sxs-lookup"><span data-stu-id="7164a-110">[out] The number of characters available in the string buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="06814-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="06814-111">Remarks</span></span>  
- <span data-ttu-id="06814-112">Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor 0xa0 y el código de error de 0 x 1000.</span><span class="sxs-lookup"><span data-stu-id="06814-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7164a-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7164a-111">Remarks</span></span>  
+ <span data-ttu-id="7164a-112">Si no hay ningún código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor 0xa0 y un código de error de 0 x 1000.</span><span class="sxs-lookup"><span data-stu-id="7164a-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="06814-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="06814-113">Requirements</span></span>  
- <span data-ttu-id="06814-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06814-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7164a-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7164a-113">Requirements</span></span>  
+ <span data-ttu-id="7164a-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7164a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06814-115">**Encabezado:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="06814-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="7164a-115">**Encabezado**: SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="7164a-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="06814-116">**Versión de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06814-116">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7164a-116">**Versión de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7164a-116">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06814-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="06814-117">See Also</span></span>  
- [<span data-ttu-id="06814-118">Funciones estáticas globales de depuración</span><span class="sxs-lookup"><span data-stu-id="06814-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="7164a-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="7164a-117">See also</span></span>
+- [<span data-ttu-id="7164a-118">Funciones estáticas globales de depuración</span><span class="sxs-lookup"><span data-stu-id="7164a-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

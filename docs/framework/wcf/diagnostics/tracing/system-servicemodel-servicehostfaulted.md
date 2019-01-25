@@ -1,34 +1,23 @@
 ---
 title: System.ServiceModel.ServiceHostFaulted
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58cf2adc-a6ef-46d8-8e73-e127287b42a2
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f0750f32b65aeae645de27eadbddc86e9cdb412
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 121f642e6607aa8328d5927b45b6265132af8330
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507127"
 ---
-# <a name="systemservicemodelservicehostfaulted"></a><span data-ttu-id="6409c-102">System.ServiceModel.ServiceHostFaulted</span><span class="sxs-lookup"><span data-stu-id="6409c-102">System.ServiceModel.ServiceHostFaulted</span></span>
-<span data-ttu-id="6409c-103">System.ServiceModel.ServiceHostFaulted</span><span class="sxs-lookup"><span data-stu-id="6409c-103">System.ServiceModel.ServiceHostFaulted</span></span>  
+# <a name="systemservicemodelservicehostfaulted"></a><span data-ttu-id="2fcfe-102">System.ServiceModel.ServiceHostFaulted</span><span class="sxs-lookup"><span data-stu-id="2fcfe-102">System.ServiceModel.ServiceHostFaulted</span></span>
+<span data-ttu-id="2fcfe-103">System.ServiceModel.ServiceHostFaulted</span><span class="sxs-lookup"><span data-stu-id="2fcfe-103">System.ServiceModel.ServiceHostFaulted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6409c-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="6409c-104">Description</span></span>  
- <span data-ttu-id="6409c-105">Error en el ServiceHost.</span><span class="sxs-lookup"><span data-stu-id="6409c-105">The ServiceHost faulted.</span></span>  
+## <a name="description"></a><span data-ttu-id="2fcfe-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="2fcfe-104">Description</span></span>  
+ <span data-ttu-id="2fcfe-105">Error en el ServiceHost.</span><span class="sxs-lookup"><span data-stu-id="2fcfe-105">The ServiceHost faulted.</span></span>  
   
- <span data-ttu-id="6409c-106">Este seguimiento indica que uno de los agentes de escucha produjo un error.</span><span class="sxs-lookup"><span data-stu-id="6409c-106">This trace indicates that one of the listeners has faulted.</span></span> <span data-ttu-id="6409c-107">Este seguimiento es útil para la depuración.</span><span class="sxs-lookup"><span data-stu-id="6409c-107">This trace is useful in debugging.</span></span>  
+ <span data-ttu-id="2fcfe-106">Este seguimiento indica que uno de los agentes de escucha produjo un error.</span><span class="sxs-lookup"><span data-stu-id="2fcfe-106">This trace indicates that one of the listeners has faulted.</span></span> <span data-ttu-id="2fcfe-107">Este seguimiento es útil para la depuración.</span><span class="sxs-lookup"><span data-stu-id="2fcfe-107">This trace is useful in debugging.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6409c-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="6409c-108">See Also</span></span>  
- [<span data-ttu-id="6409c-109">Traza</span><span class="sxs-lookup"><span data-stu-id="6409c-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="6409c-110">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="6409c-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="6409c-111">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="6409c-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="2fcfe-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="2fcfe-108">See also</span></span>
+- [<span data-ttu-id="2fcfe-109">Traza</span><span class="sxs-lookup"><span data-stu-id="2fcfe-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="2fcfe-110">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="2fcfe-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="2fcfe-111">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="2fcfe-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

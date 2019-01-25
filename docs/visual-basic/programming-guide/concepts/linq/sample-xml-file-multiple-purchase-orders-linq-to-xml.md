@@ -2,17 +2,17 @@
 title: 'Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
-ms.openlocfilehash: 62faa39f66eb3d0f7f23e298c416a0ab14f406af
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: 676592b0bd77a10fa8bb5fa01bf3b3a06af1ca46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "42754097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623487"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="91f22-102">Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="91f22-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
-<span data-ttu-id="91f22-103">El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="91f22-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="91f22-104">Este archivo contiene varios pedidos de compra.</span><span class="sxs-lookup"><span data-stu-id="91f22-104">This file contains several purchase orders.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="556a0-102">Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="556a0-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
+<span data-ttu-id="556a0-103">El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="556a0-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="556a0-104">Este archivo contiene varios pedidos de compra.</span><span class="sxs-lookup"><span data-stu-id="556a0-104">This file contains several purchase orders.</span></span>  
   
-## <a name="purchaseordersxml"></a><span data-ttu-id="91f22-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="91f22-105">PurchaseOrders.xml</span></span>  
+## <a name="purchaseordersxml"></a><span data-ttu-id="556a0-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="556a0-105">PurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -109,5 +109,5 @@ ms.locfileid: "42754097"
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="91f22-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="91f22-106">See Also</span></span>  
- [<span data-ttu-id="91f22-107">Documentos XML de ejemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="91f22-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="556a0-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="556a0-106">See also</span></span>
+- [<span data-ttu-id="556a0-107">Documentos XML de ejemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="556a0-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

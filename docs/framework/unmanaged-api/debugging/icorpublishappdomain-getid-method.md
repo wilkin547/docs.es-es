@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41b39597a5a438592d2ae07a16510f5406a91a43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a18e079f84d8adf2cc6f9bd22b35eb1445eaaf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585021"
 ---
-# <a name="icorpublishappdomaingetid-method"></a><span data-ttu-id="9d0aa-102">ICorPublishAppDomain::GetID (Método)</span><span class="sxs-lookup"><span data-stu-id="9d0aa-102">ICorPublishAppDomain::GetID Method</span></span>
-<span data-ttu-id="9d0aa-103">Obtiene el identificador único para este [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span><span class="sxs-lookup"><span data-stu-id="9d0aa-103">Gets the unique identifier for this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
+# <a name="icorpublishappdomaingetid-method"></a><span data-ttu-id="5c89e-102">ICorPublishAppDomain::GetID (Método)</span><span class="sxs-lookup"><span data-stu-id="5c89e-102">ICorPublishAppDomain::GetID Method</span></span>
+<span data-ttu-id="5c89e-103">Obtiene el identificador único para este [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span><span class="sxs-lookup"><span data-stu-id="5c89e-103">Gets the unique identifier for this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d0aa-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9d0aa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c89e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5c89e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -35,21 +35,21 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9d0aa-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9d0aa-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5c89e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5c89e-105">Parameters</span></span>  
  `puId`  
- <span data-ttu-id="9d0aa-106">[out] Un puntero al identificador del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="9d0aa-106">[out] A pointer to the identifier of the application domain.</span></span>  
+ <span data-ttu-id="5c89e-106">[out] Un puntero al identificador del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="5c89e-106">[out] A pointer to the identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9d0aa-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9d0aa-107">Remarks</span></span>  
- <span data-ttu-id="9d0aa-108">El identificador es único solo en el ámbito del proceso que lo contiene.</span><span class="sxs-lookup"><span data-stu-id="9d0aa-108">The identifier is unique only in the scope of the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5c89e-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5c89e-107">Remarks</span></span>  
+ <span data-ttu-id="5c89e-108">El identificador es único solo en el ámbito del proceso que lo contiene.</span><span class="sxs-lookup"><span data-stu-id="5c89e-108">The identifier is unique only in the scope of the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d0aa-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9d0aa-109">Requirements</span></span>  
- <span data-ttu-id="9d0aa-110">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d0aa-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c89e-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5c89e-109">Requirements</span></span>  
+ <span data-ttu-id="5c89e-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c89e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9d0aa-111">**Encabezado:** Cordebug.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="9d0aa-111">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="5c89e-111">**Encabezado**: CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="5c89e-111">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="9d0aa-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d0aa-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5c89e-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c89e-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9d0aa-113">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d0aa-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5c89e-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c89e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d0aa-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="9d0aa-114">See Also</span></span>  
- [<span data-ttu-id="9d0aa-115">ICorPublishAppDomain (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9d0aa-115">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5c89e-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="5c89e-114">See also</span></span>
+- [<span data-ttu-id="5c89e-115">ICorPublishAppDomain (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5c89e-115">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

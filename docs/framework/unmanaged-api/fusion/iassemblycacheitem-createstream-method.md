@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 58fb8e3ae0f9485399aebe81b5f77ee61ee8f3ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641101"
 ---
-# <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="9e2ca-102">IAssemblyCacheItem::CreateStream (Método)</span><span class="sxs-lookup"><span data-stu-id="9e2ca-102">IAssemblyCacheItem::CreateStream Method</span></span>
-<span data-ttu-id="9e2ca-103">Crea una secuencia con el nombre especificado y el formato.</span><span class="sxs-lookup"><span data-stu-id="9e2ca-103">Creates a stream with the specified name and format.</span></span>  
+# <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="6fe53-102">IAssemblyCacheItem::CreateStream (Método)</span><span class="sxs-lookup"><span data-stu-id="6fe53-102">IAssemblyCacheItem::CreateStream Method</span></span>
+<span data-ttu-id="6fe53-103">Crea una secuencia con el nombre especificado y el formato.</span><span class="sxs-lookup"><span data-stu-id="6fe53-103">Creates a stream with the specified name and format.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e2ca-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9e2ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6fe53-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6fe53-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStream (  
@@ -40,31 +40,31 @@ HRESULT CreateStream (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9e2ca-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9e2ca-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6fe53-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="6fe53-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="9e2ca-106">[in] Marcadores definidos en Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="9e2ca-106">[in] Flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="6fe53-106">[in] Marcadores definidos en Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="6fe53-106">[in] Flags defined in Fusion.idl.</span></span>  
   
  `pszStreamName`  
- <span data-ttu-id="9e2ca-107">[in] El nombre de la secuencia que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="9e2ca-107">[in] The name of the stream to be created.</span></span>  
+ <span data-ttu-id="6fe53-107">[in] El nombre de la secuencia que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="6fe53-107">[in] The name of the stream to be created.</span></span>  
   
  `dwFormat`  
- <span data-ttu-id="9e2ca-108">[in] El formato del archivo que se transmite por secuencias.</span><span class="sxs-lookup"><span data-stu-id="9e2ca-108">[in] The format of the file to be streamed.</span></span>  
+ <span data-ttu-id="6fe53-108">[in] El formato del archivo que se transmite por secuencias.</span><span class="sxs-lookup"><span data-stu-id="6fe53-108">[in] The format of the file to be streamed.</span></span>  
   
  `dwFormatFlags`  
- <span data-ttu-id="9e2ca-109">[in] Marcas de formato específicos definidas en Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="9e2ca-109">[in] Format-specific flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="6fe53-109">[in] Marcas de formato específicos definidas en Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="6fe53-109">[in] Format-specific flags defined in Fusion.idl.</span></span>  
   
  `ppIStream`  
- <span data-ttu-id="9e2ca-110">[out] Un puntero a la dirección de devuelto [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instancia.</span><span class="sxs-lookup"><span data-stu-id="9e2ca-110">[out] A pointer to the address of the returned [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instance.</span></span>  
+ <span data-ttu-id="6fe53-110">[out] Un puntero a la dirección de devuelto [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instancia.</span><span class="sxs-lookup"><span data-stu-id="6fe53-110">[out] A pointer to the address of the returned [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instance.</span></span>  
   
  `puliMaxSize`  
- <span data-ttu-id="9e2ca-111">[in, optional] El tamaño máximo de la secuencia al que hace referencia `ppIStream`.</span><span class="sxs-lookup"><span data-stu-id="9e2ca-111">[in, optional] The maximum size of the stream referenced by `ppIStream`.</span></span>  
+ <span data-ttu-id="6fe53-111">[in, optional] El tamaño máximo de la secuencia al que hace referencia `ppIStream`.</span><span class="sxs-lookup"><span data-stu-id="6fe53-111">[in, optional] The maximum size of the stream referenced by `ppIStream`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e2ca-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9e2ca-112">Requirements</span></span>  
- <span data-ttu-id="9e2ca-113">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e2ca-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6fe53-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6fe53-112">Requirements</span></span>  
+ <span data-ttu-id="6fe53-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6fe53-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e2ca-114">**Encabezado:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="9e2ca-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="6fe53-114">**Encabezado**: Fusion.h</span><span class="sxs-lookup"><span data-stu-id="6fe53-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="9e2ca-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e2ca-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6fe53-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fe53-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e2ca-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="9e2ca-116">See Also</span></span>  
- [<span data-ttu-id="9e2ca-117">IAssemblyCacheItem (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9e2ca-117">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6fe53-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="6fe53-116">See also</span></span>
+- [<span data-ttu-id="6fe53-117">IAssemblyCacheItem (interfaz)</span><span class="sxs-lookup"><span data-stu-id="6fe53-117">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
