@@ -8,61 +8,61 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: da1bd6d3b6746561655a82cd49aa0014563a1d40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdea071f8c41f2e707d10c96c8b6ab1fbb44bad0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733316"
 ---
-# <a name="-optionstrict"></a><span data-ttu-id="bb728-102">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="bb728-102">-optionstrict</span></span>
-<span data-ttu-id="bb728-103">Exige la semántica estricta de tipos para restringir las conversiones implícitas de tipos.</span><span class="sxs-lookup"><span data-stu-id="bb728-103">Enforces strict type semantics to restrict implicit type conversions.</span></span>  
+# <a name="-optionstrict"></a><span data-ttu-id="f6b81-102">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="f6b81-102">-optionstrict</span></span>
+<span data-ttu-id="f6b81-103">Exige la semántica estricta de tipos para restringir las conversiones implícitas.</span><span class="sxs-lookup"><span data-stu-id="f6b81-103">Enforces strict type semantics to restrict implicit type conversions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb728-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bb728-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6b81-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f6b81-104">Syntax</span></span>  
   
 ```  
 -optionstrict[+ | -]  
 -optionstrict[:custom]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="bb728-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="bb728-105">Arguments</span></span>  
- <span data-ttu-id="bb728-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="bb728-106">`+` &#124; `-`</span></span>  
- <span data-ttu-id="bb728-107">Opcional.</span><span class="sxs-lookup"><span data-stu-id="bb728-107">Optional.</span></span> <span data-ttu-id="bb728-108">El `-optionstrict+` opción restringe la conversión de tipos implícita.</span><span class="sxs-lookup"><span data-stu-id="bb728-108">The `-optionstrict+` option restricts implicit type conversion.</span></span> <span data-ttu-id="bb728-109">El valor predeterminado para esta opción es `-optionstrict-`.</span><span class="sxs-lookup"><span data-stu-id="bb728-109">The default for this option is `-optionstrict-`.</span></span> <span data-ttu-id="bb728-110">El `-optionstrict+` opción es el mismo que `-optionstrict`.</span><span class="sxs-lookup"><span data-stu-id="bb728-110">The `-optionstrict+` option is the same as `-optionstrict`.</span></span> <span data-ttu-id="bb728-111">Puede utilizar ambos semántica de tipos permisiva.</span><span class="sxs-lookup"><span data-stu-id="bb728-111">You can use both for permissive type semantics.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="f6b81-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="f6b81-105">Arguments</span></span>  
+ <span data-ttu-id="f6b81-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="f6b81-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="f6b81-107">Opcional.</span><span class="sxs-lookup"><span data-stu-id="f6b81-107">Optional.</span></span> <span data-ttu-id="f6b81-108">El `-optionstrict+` opción restringe la conversión de tipos implícita.</span><span class="sxs-lookup"><span data-stu-id="f6b81-108">The `-optionstrict+` option restricts implicit type conversion.</span></span> <span data-ttu-id="f6b81-109">El valor predeterminado para esta opción es `-optionstrict-`.</span><span class="sxs-lookup"><span data-stu-id="f6b81-109">The default for this option is `-optionstrict-`.</span></span> <span data-ttu-id="f6b81-110">El `-optionstrict+` opción es igual a `-optionstrict`.</span><span class="sxs-lookup"><span data-stu-id="f6b81-110">The `-optionstrict+` option is the same as `-optionstrict`.</span></span> <span data-ttu-id="f6b81-111">Puede usar tanto para la semántica de tipos permisiva.</span><span class="sxs-lookup"><span data-stu-id="f6b81-111">You can use both for permissive type semantics.</span></span>  
   
  `custom`  
- <span data-ttu-id="bb728-112">Requerido.</span><span class="sxs-lookup"><span data-stu-id="bb728-112">Required.</span></span> <span data-ttu-id="bb728-113">Advertir cuando no se respete la semántica estricta del lenguaje.</span><span class="sxs-lookup"><span data-stu-id="bb728-113">Warn when strict language semantics are not respected.</span></span>  
+ <span data-ttu-id="f6b81-112">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="f6b81-112">Required.</span></span> <span data-ttu-id="f6b81-113">Advertir cuando no se respete la semántica estricta del lenguaje.</span><span class="sxs-lookup"><span data-stu-id="f6b81-113">Warn when strict language semantics are not respected.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bb728-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="bb728-114">Remarks</span></span>  
- <span data-ttu-id="bb728-115">Cuando `-optionstrict+` está en vigor, conversiones de tipos de ampliación solo se pueden realizar implícitamente.</span><span class="sxs-lookup"><span data-stu-id="bb728-115">When `-optionstrict+` is in effect, only widening type conversions can be made implicitly.</span></span> <span data-ttu-id="bb728-116">Conversiones de tipos, como la asignación de restricción implícitas un `Decimal` tipo object a un objeto de tipo entero, se notifican como errores.</span><span class="sxs-lookup"><span data-stu-id="bb728-116">Implicit narrowing type conversions, such as assigning a `Decimal` type object to an integer type object, are reported as errors.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6b81-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f6b81-114">Remarks</span></span>  
+ <span data-ttu-id="f6b81-115">Cuando `-optionstrict+` está en vigor, se pueden realizar solo las conversiones de tipo de ampliación implícitamente.</span><span class="sxs-lookup"><span data-stu-id="f6b81-115">When `-optionstrict+` is in effect, only widening type conversions can be made implicitly.</span></span> <span data-ttu-id="f6b81-116">Conversiones de tipos, como la asignación de restricción implícitas un `Decimal` tipo object para un objeto de tipo entero, se notifican como errores.</span><span class="sxs-lookup"><span data-stu-id="f6b81-116">Implicit narrowing type conversions, such as assigning a `Decimal` type object to an integer type object, are reported as errors.</span></span>  
   
- <span data-ttu-id="bb728-117">Para generar advertencias para las conversiones de tipo de restricción implícitas, utilice `-optionstrict:custom`.</span><span class="sxs-lookup"><span data-stu-id="bb728-117">To generate warnings for implicit narrowing type conversions, use `-optionstrict:custom`.</span></span> <span data-ttu-id="bb728-118">Use `-nowarn:numberlist` para ignorar las advertencias determinadas y `-warnaserror:numberlist` para tratar determinadas advertencias como errores.</span><span class="sxs-lookup"><span data-stu-id="bb728-118">Use `-nowarn:numberlist` to ignore particular warnings and `-warnaserror:numberlist` to treat particular warnings as errors.</span></span>  
+ <span data-ttu-id="f6b81-117">Para generar advertencias para las conversiones de tipo de restricción implícitas, use `-optionstrict:custom`.</span><span class="sxs-lookup"><span data-stu-id="f6b81-117">To generate warnings for implicit narrowing type conversions, use `-optionstrict:custom`.</span></span> <span data-ttu-id="f6b81-118">Use `-nowarn:numberlist` para ignorar las advertencias determinadas y `-warnaserror:numberlist` para tratar determinadas advertencias como errores.</span><span class="sxs-lookup"><span data-stu-id="f6b81-118">Use `-nowarn:numberlist` to ignore particular warnings and `-warnaserror:numberlist` to treat particular warnings as errors.</span></span>  
   
-### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a><span data-ttu-id="bb728-119">Para establecer - optionstrict en el IDE de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="bb728-119">To set -optionstrict in the Visual Studio IDE</span></span>  
+### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a><span data-ttu-id="f6b81-119">Para establecer - optionstrict en el IDE de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f6b81-119">To set -optionstrict in the Visual Studio IDE</span></span>  
   
-1.  <span data-ttu-id="bb728-120">Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="bb728-120">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="bb728-121">En el **proyecto** menú, haga clic en **propiedades.**</span><span class="sxs-lookup"><span data-stu-id="bb728-121">On the **Project** menu, click **Properties.**</span></span>   
+1.  <span data-ttu-id="f6b81-120">Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="f6b81-120">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="f6b81-121">En el **proyecto** menú, haga clic en **propiedades.**</span><span class="sxs-lookup"><span data-stu-id="f6b81-121">On the **Project** menu, click **Properties.**</span></span>   
   
-2.  <span data-ttu-id="bb728-122">Haga clic en la pestaña **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="bb728-122">Click the **Compile** tab.</span></span>  
+2.  <span data-ttu-id="f6b81-122">Haga clic en la pestaña **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="f6b81-122">Click the **Compile** tab.</span></span>  
   
-3.  <span data-ttu-id="bb728-123">Modifique el valor en el **Option Strict** cuadro.</span><span class="sxs-lookup"><span data-stu-id="bb728-123">Modify the value in the **Option Strict** box.</span></span>  
+3.  <span data-ttu-id="f6b81-123">Modifique el valor en el **Option Strict** cuadro.</span><span class="sxs-lookup"><span data-stu-id="f6b81-123">Modify the value in the **Option Strict** box.</span></span>  
   
-### <a name="to-set--optionstrict-programmatically"></a><span data-ttu-id="bb728-124">Para establecer - optionstrict mediante programación</span><span class="sxs-lookup"><span data-stu-id="bb728-124">To set -optionstrict programmatically</span></span>  
+### <a name="to-set--optionstrict-programmatically"></a><span data-ttu-id="f6b81-124">Para establecer mediante programación - optionstrict</span><span class="sxs-lookup"><span data-stu-id="f6b81-124">To set -optionstrict programmatically</span></span>  
   
--   <span data-ttu-id="bb728-125">Vea [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="bb728-125">See [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span>  
+-   <span data-ttu-id="f6b81-125">Consulte [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="f6b81-125">See [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bb728-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bb728-126">Example</span></span>  
- <span data-ttu-id="bb728-127">El siguiente código compila `Test.vb` mediante la semántica estricta de tipos.</span><span class="sxs-lookup"><span data-stu-id="bb728-127">The following code compiles `Test.vb` using strict type semantics.</span></span>  
+## <a name="example"></a><span data-ttu-id="f6b81-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f6b81-126">Example</span></span>  
+ <span data-ttu-id="f6b81-127">El siguiente código compila `Test.vb` utilizando la semántica estricta de tipos.</span><span class="sxs-lookup"><span data-stu-id="f6b81-127">The following code compiles `Test.vb` using strict type semantics.</span></span>  
   
 ```console
 vbc -optionstrict+ test.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bb728-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="bb728-128">See Also</span></span>  
- [<span data-ttu-id="bb728-129">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bb728-129">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="bb728-130">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="bb728-130">-optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [<span data-ttu-id="bb728-131">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="bb728-131">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [<span data-ttu-id="bb728-132">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="bb728-132">-optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [<span data-ttu-id="bb728-133">-nowarn</span><span class="sxs-lookup"><span data-stu-id="bb728-133">-nowarn</span></span>](../../../visual-basic/reference/command-line-compiler/nowarn.md)  
- [<span data-ttu-id="bb728-134">-warnaserror (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb728-134">-warnaserror (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/warnaserror.md)  
- [<span data-ttu-id="bb728-135">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="bb728-135">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [<span data-ttu-id="bb728-136">Option Strict (instrucción)</span><span class="sxs-lookup"><span data-stu-id="bb728-136">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [<span data-ttu-id="bb728-137">Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)</span><span class="sxs-lookup"><span data-stu-id="bb728-137">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a><span data-ttu-id="f6b81-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="f6b81-128">See also</span></span>
+- [<span data-ttu-id="f6b81-129">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f6b81-129">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="f6b81-130">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="f6b81-130">-optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [<span data-ttu-id="f6b81-131">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="f6b81-131">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [<span data-ttu-id="f6b81-132">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="f6b81-132">-optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [<span data-ttu-id="f6b81-133">-nowarn</span><span class="sxs-lookup"><span data-stu-id="f6b81-133">-nowarn</span></span>](../../../visual-basic/reference/command-line-compiler/nowarn.md)
+- [<span data-ttu-id="f6b81-134">-warnaserror (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f6b81-134">-warnaserror (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
+- [<span data-ttu-id="f6b81-135">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="f6b81-135">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="f6b81-136">Option Strict (instrucción)</span><span class="sxs-lookup"><span data-stu-id="f6b81-136">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="f6b81-137">Valores predeterminados de Visual Basic, Proyectos, Opciones (Cuadro de diálogo)</span><span class="sxs-lookup"><span data-stu-id="f6b81-137">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
