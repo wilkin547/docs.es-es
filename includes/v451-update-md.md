@@ -1,1 +1,0 @@
-4.6, 4.5.2, actualización de noviembre de 2013 a 4.5.1
