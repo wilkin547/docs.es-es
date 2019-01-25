@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5d541f834e829305fa2b091c45d0dc8f387bb55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512377"
 ---
 # <a name="cordllmain-function"></a>_CorDllMain (Función)
-Inicializa common language runtime (CLR), busca el punto de entrada administrado en el encabezado CLR del ensamblado de la DLL y comienza la ejecución.  
+Inicializa common language runtime (CLR), busca el punto de entrada administrado en el encabezado CLR del ensamblado DLL y comienza la ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,10 +41,10 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  [in] El identificador de instancia del módulo cargado.  
   
  `dwReason`  
- [in] Indica por qué se llama a la función de punto de entrada DLL. Este parámetro puede ser uno de los valores siguientes: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH o DLL_PROCESS_DETACH. Para obtener descripciones de estos valores, consulte el `DllMain` documentación de Platform SDK.  
+ [in] Indica por qué se llama a la función de punto de entrada DLL. Este parámetro puede ser uno de los siguientes valores: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH o DLL_PROCESS_DETACH. Para obtener descripciones de estos valores, vea el `DllMain` documentación de Platform SDK.  
   
  `lpReserved`  
- [in] No se utiliza.  
+ [in] Sin usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve `true` para el éxito y `false` si se produce un error.  
@@ -52,20 +52,20 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 ## <a name="remarks"></a>Comentarios  
  El cargador del sistema operativo llama a esta función para los ensamblados DLL. Para los ensamblados ejecutables, el cargador llama a la [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) funcione en su lugar.  
   
- El cargador del sistema operativo llama a este método sin tener en cuenta el punto de entrada especificado en el archivo DLL.  
+ El cargador del sistema operativo llama a este método independientemente del punto de entrada especificado en el archivo DLL.  
   
- En Windows 98, Windows ME, Windows NT y Windows 2000, la `_CorDllMain` función se llama indirectamente a través de un fixupin el cargador del sistema operativo. En las demás versiones de Windows, se llama directamente por el cargador del sistema operativo.  
+ En Windows 98, Windows ME, Windows NT y Windows 2000, la `_CorDllMain` función se llama indirectamente a través de un fixupin el cargador del sistema operativo. En todas las demás versiones de Windows, se llama directamente por el cargador del sistema operativo.  
   
- Para obtener más información, vea la sección comentarios en el [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tema.  
+ Para obtener más información, vea la sección de comentarios en el [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tema.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
