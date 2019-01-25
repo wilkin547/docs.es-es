@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4d007085f74a92d75c6c9aeb704a3349a0efe35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7e6375fb3ffd10556ff530953eec3c5e74ed768f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552104"
 ---
-# <a name="itypenamebuilder-interface"></a><span data-ttu-id="9b75a-102">ITypeNameBuilder (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9b75a-102">ITypeNameBuilder Interface</span></span>
-<span data-ttu-id="9b75a-103">Proporciona métodos para crear un nombre de tipo.</span><span class="sxs-lookup"><span data-stu-id="9b75a-103">Provides methods for building a type name.</span></span>  
+# <a name="itypenamebuilder-interface"></a><span data-ttu-id="2dc6d-102">ITypeNameBuilder (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="2dc6d-102">ITypeNameBuilder Interface</span></span>
+<span data-ttu-id="2dc6d-103">Proporciona métodos para generar un nombre de tipo.</span><span class="sxs-lookup"><span data-stu-id="2dc6d-103">Provides methods for building a type name.</span></span>  
   
- <span data-ttu-id="9b75a-104">Esta interfaz es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="9b75a-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="2dc6d-104">Esta interfaz es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="2dc6d-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9b75a-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9b75a-105">Requirements</span></span>  
- <span data-ttu-id="9b75a-106">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b75a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2dc6d-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2dc6d-105">Requirements</span></span>  
+ <span data-ttu-id="2dc6d-106">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2dc6d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b75a-107">**Encabezado:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9b75a-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2dc6d-107">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2dc6d-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9b75a-108">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9b75a-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2dc6d-108">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2dc6d-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9b75a-109">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b75a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2dc6d-109">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2dc6d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b75a-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="9b75a-110">See Also</span></span>  
- [<span data-ttu-id="9b75a-111">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="9b75a-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="2dc6d-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="2dc6d-110">See also</span></span>
+- [<span data-ttu-id="2dc6d-111">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="2dc6d-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

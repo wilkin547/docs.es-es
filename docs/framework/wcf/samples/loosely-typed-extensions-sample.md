@@ -2,17 +2,17 @@
 title: Ejemplo de extensiones débilmente tipadas
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: f46cf3dfcdb60669f0a02337b54de97d4af3efdc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 19d39e4a70022304262c5872636d3ea03a3b861b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668488"
 ---
-# <a name="loosely-typed-extensions-sample"></a><span data-ttu-id="76147-102">Ejemplo de extensiones débilmente tipadas</span><span class="sxs-lookup"><span data-stu-id="76147-102">Loosely-Typed Extensions Sample</span></span>
-<span data-ttu-id="76147-103">El modelo de objetos de sindicación proporciona compatibilidad enriquecida para trabajar con datos de extensión (información que está presente en una representación XML de una fuente de sindicación pero no explícitamente expuesta por clases como <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem>.</span><span class="sxs-lookup"><span data-stu-id="76147-103">The Syndication object model provides rich support for working with extension data—information that is present in a syndication feed's XML representation but not explicitly exposed by classes such as <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem>.</span></span> <span data-ttu-id="76147-104">Este ejemplo muestra las técnicas básicas para trabajar con datos de extensión.</span><span class="sxs-lookup"><span data-stu-id="76147-104">This sample illustrates the basic techniques for working with extension data.</span></span>  
+# <a name="loosely-typed-extensions-sample"></a><span data-ttu-id="798df-102">Ejemplo de extensiones débilmente tipadas</span><span class="sxs-lookup"><span data-stu-id="798df-102">Loosely-Typed Extensions Sample</span></span>
+<span data-ttu-id="798df-103">El modelo de objetos de sindicación proporciona compatibilidad enriquecida para trabajar con datos de extensión (información que está presente en una representación XML de una fuente de sindicación pero no explícitamente expuesta por clases como <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem>.</span><span class="sxs-lookup"><span data-stu-id="798df-103">The Syndication object model provides rich support for working with extension data—information that is present in a syndication feed's XML representation but not explicitly exposed by classes such as <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem>.</span></span> <span data-ttu-id="798df-104">Este ejemplo muestra las técnicas básicas para trabajar con datos de extensión.</span><span class="sxs-lookup"><span data-stu-id="798df-104">This sample illustrates the basic techniques for working with extension data.</span></span>  
   
- <span data-ttu-id="76147-105">El ejemplo utiliza la clase <xref:System.ServiceModel.Syndication.SyndicationFeed> para el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="76147-105">The sample uses the <xref:System.ServiceModel.Syndication.SyndicationFeed> class for the purposes of the example.</span></span> <span data-ttu-id="76147-106">Sin embargo, los modelos mostrados en este ejemplo se pueden utilizar con todas las clases de sindicación que admiten datos de extensión:</span><span class="sxs-lookup"><span data-stu-id="76147-106">However, the patterns demonstrated in this sample can be used with all of the Syndication classes that support extension data:</span></span>  
+ <span data-ttu-id="798df-105">El ejemplo utiliza la clase <xref:System.ServiceModel.Syndication.SyndicationFeed> para el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="798df-105">The sample uses the <xref:System.ServiceModel.Syndication.SyndicationFeed> class for the purposes of the example.</span></span> <span data-ttu-id="798df-106">Sin embargo, los modelos mostrados en este ejemplo se pueden utilizar con todas las clases de sindicación que admiten datos de extensión:</span><span class="sxs-lookup"><span data-stu-id="798df-106">However, the patterns demonstrated in this sample can be used with all of the Syndication classes that support extension data:</span></span>  
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -24,8 +24,8 @@ ms.locfileid: "44042197"
   
  <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
-## <a name="sample-xml"></a><span data-ttu-id="76147-107">XML de ejemplo</span><span class="sxs-lookup"><span data-stu-id="76147-107">Sample XML</span></span>  
- <span data-ttu-id="76147-108">Como referencia, el siguiente documento XML se usa en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="76147-108">For reference, the following XML document is used in this sample.</span></span>  
+## <a name="sample-xml"></a><span data-ttu-id="798df-107">XML de ejemplo</span><span class="sxs-lookup"><span data-stu-id="798df-107">Sample XML</span></span>  
+ <span data-ttu-id="798df-108">Como referencia, el siguiente documento XML se usa en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="798df-108">For reference, the following XML document is used in this sample.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="IBM437"?>  
@@ -52,20 +52,20 @@ w.w3.org/2001/XMLSchema" xmlns="">
 </feed>  
 ```  
   
- <span data-ttu-id="76147-109">Este documento contiene las siguientes partes de datos de extensión:</span><span class="sxs-lookup"><span data-stu-id="76147-109">This document contains the following pieces of extension data:</span></span>  
+ <span data-ttu-id="798df-109">Este documento contiene las siguientes partes de datos de extensión:</span><span class="sxs-lookup"><span data-stu-id="798df-109">This document contains the following pieces of extension data:</span></span>  
   
--   <span data-ttu-id="76147-110">Atributo `myAttribute` del elemento `<feed>`.</span><span class="sxs-lookup"><span data-stu-id="76147-110">The `myAttribute` attribute of the `<feed>` element.</span></span>  
+-   <span data-ttu-id="798df-110">Atributo `myAttribute` del elemento `<feed>`.</span><span class="sxs-lookup"><span data-stu-id="798df-110">The `myAttribute` attribute of the `<feed>` element.</span></span>  
   
--   <span data-ttu-id="76147-111">Elemento `<simpleString>`.</span><span class="sxs-lookup"><span data-stu-id="76147-111">`<simpleString>` element.</span></span>  
+-   <span data-ttu-id="798df-111">Elemento `<simpleString>`.</span><span class="sxs-lookup"><span data-stu-id="798df-111">`<simpleString>` element.</span></span>  
   
--   <span data-ttu-id="76147-112">Elemento `<DataContractExtension>`.</span><span class="sxs-lookup"><span data-stu-id="76147-112">`<DataContractExtension>` element.</span></span>  
+-   <span data-ttu-id="798df-112">Elemento `<DataContractExtension>`.</span><span class="sxs-lookup"><span data-stu-id="798df-112">`<DataContractExtension>` element.</span></span>  
   
--   <span data-ttu-id="76147-113">Elemento `<XmlSerializerExtension>`.</span><span class="sxs-lookup"><span data-stu-id="76147-113">`<XmlSerializerExtension>` element.</span></span>  
+-   <span data-ttu-id="798df-113">Elemento `<XmlSerializerExtension>`.</span><span class="sxs-lookup"><span data-stu-id="798df-113">`<XmlSerializerExtension>` element.</span></span>  
   
--   <span data-ttu-id="76147-114">Elemento `<xElementExtension>`.</span><span class="sxs-lookup"><span data-stu-id="76147-114">`<xElementExtension>` element.</span></span>  
+-   <span data-ttu-id="798df-114">Elemento `<xElementExtension>`.</span><span class="sxs-lookup"><span data-stu-id="798df-114">`<xElementExtension>` element.</span></span>  
   
-## <a name="writing-extension-data"></a><span data-ttu-id="76147-115">Cómo escribir datos de extensión</span><span class="sxs-lookup"><span data-stu-id="76147-115">Writing Extension Data</span></span>  
- <span data-ttu-id="76147-116">Las extensiones de atributo se crean agregando entradas a la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> tal y como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="76147-116">Attribute extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection as shown in the following sample code.</span></span>  
+## <a name="writing-extension-data"></a><span data-ttu-id="798df-115">Cómo escribir datos de extensión</span><span class="sxs-lookup"><span data-stu-id="798df-115">Writing Extension Data</span></span>  
+ <span data-ttu-id="798df-116">Las extensiones de atributo se crean agregando entradas a la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> tal y como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="798df-116">Attribute extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection as shown in the following sample code.</span></span>  
   
 ```  
 //Attribute extensions are stored in a dictionary indexed by   
@@ -73,26 +73,26 @@ w.w3.org/2001/XMLSchema" xmlns="">
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
 ```  
   
- <span data-ttu-id="76147-117">Las extensiones de elemento se crean agregando entradas a la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.</span><span class="sxs-lookup"><span data-stu-id="76147-117">Element extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> collection.</span></span> <span data-ttu-id="76147-118">Estas extensiones pueden ser valores básicos como cadenas, serializaciones XML de objetos .NET Framework o nodos XML codificados a mano.</span><span class="sxs-lookup"><span data-stu-id="76147-118">These extensions can by basic values such as strings, XML serializations of .NET Framework objects, or XML nodes coded by hand.</span></span>  
+ <span data-ttu-id="798df-117">Las extensiones de elemento se crean agregando entradas a la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.</span><span class="sxs-lookup"><span data-stu-id="798df-117">Element extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> collection.</span></span> <span data-ttu-id="798df-118">Estas extensiones pueden ser valores básicos como cadenas, serializaciones XML de objetos .NET Framework o nodos XML codificados a mano.</span><span class="sxs-lookup"><span data-stu-id="798df-118">These extensions can by basic values such as strings, XML serializations of .NET Framework objects, or XML nodes coded by hand.</span></span>  
   
- <span data-ttu-id="76147-119">El código de ejemplo siguiente crea un elemento de extensión denominado `simpleString`.</span><span class="sxs-lookup"><span data-stu-id="76147-119">The following sample code creates an extension element named `simpleString`.</span></span>  
+ <span data-ttu-id="798df-119">El código de ejemplo siguiente crea un elemento de extensión denominado `simpleString`.</span><span class="sxs-lookup"><span data-stu-id="798df-119">The following sample code creates an extension element named `simpleString`.</span></span>  
   
 ```  
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
- <span data-ttu-id="76147-120">El espacio de nombres XML para este elemento es el espacio de nombres vacío ("") y su valor es un nodo de texto que contiene la cadena "Hola, mundo!".</span><span class="sxs-lookup"><span data-stu-id="76147-120">The XML namespace for this element is the empty namespace ("") and its value is a text node that contains the string "hello, world!".</span></span>  
+ <span data-ttu-id="798df-120">El espacio de nombres XML para este elemento es el espacio de nombres vacío ("") y su valor es un nodo de texto que contiene la cadena "Hola, mundo!".</span><span class="sxs-lookup"><span data-stu-id="798df-120">The XML namespace for this element is the empty namespace ("") and its value is a text node that contains the string "hello, world!".</span></span>  
   
- <span data-ttu-id="76147-121">Una manera de crear extensiones de elemento complejas que consten de muchos elementos anidados es utilizar las API de .NET Framework para la serialización (se admiten <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Xml.Serialization.XmlSerializer>) tal como se muestra en los ejemplos siguientes.</span><span class="sxs-lookup"><span data-stu-id="76147-121">One way to create complex element extensions that consist of many nested elements is to use the .NET Framework APIs for serialization (both the <xref:System.Runtime.Serialization.DataContractSerializer> and the <xref:System.Xml.Serialization.XmlSerializer> are supported) as shown in the following examples.</span></span>  
+ <span data-ttu-id="798df-121">Una manera de crear extensiones de elemento complejas que consten de muchos elementos anidados es utilizar las API de .NET Framework para la serialización (se admiten <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Xml.Serialization.XmlSerializer>) tal como se muestra en los ejemplos siguientes.</span><span class="sxs-lookup"><span data-stu-id="798df-121">One way to create complex element extensions that consist of many nested elements is to use the .NET Framework APIs for serialization (both the <xref:System.Runtime.Serialization.DataContractSerializer> and the <xref:System.Xml.Serialization.XmlSerializer> are supported) as shown in the following examples.</span></span>  
   
 ```  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
 feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );  
 ```  
   
- <span data-ttu-id="76147-122">En este ejemplo, `DataContractExtension` y `XmlSerializerExtension` son tipos personalizados escritos para su uso con un serializador.</span><span class="sxs-lookup"><span data-stu-id="76147-122">In this example, the `DataContractExtension` and `XmlSerializerExtension` are custom types written for use with a serializer.</span></span>  
+ <span data-ttu-id="798df-122">En este ejemplo, `DataContractExtension` y `XmlSerializerExtension` son tipos personalizados escritos para su uso con un serializador.</span><span class="sxs-lookup"><span data-stu-id="798df-122">In this example, the `DataContractExtension` and `XmlSerializerExtension` are custom types written for use with a serializer.</span></span>  
   
- <span data-ttu-id="76147-123">La clase <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> también se puede utilizar para crear extensiones de elemento a partir de una instancia <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="76147-123">The <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> class can also be used to create element extensions from an <xref:System.Xml.XmlReader> instance.</span></span> <span data-ttu-id="76147-124">Esto permite la fácil integración con las API de procesamiento de XML como <xref:System.Xml.Linq.XElement> tal y como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="76147-124">This allows for easy integration with XML processing APIs such as <xref:System.Xml.Linq.XElement> as shown in the following sample code.</span></span>  
+ <span data-ttu-id="798df-123">La clase <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> también se puede utilizar para crear extensiones de elemento a partir de una instancia <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="798df-123">The <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> class can also be used to create element extensions from an <xref:System.Xml.XmlReader> instance.</span></span> <span data-ttu-id="798df-124">Esto permite la fácil integración con las API de procesamiento de XML como <xref:System.Xml.Linq.XElement> tal y como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="798df-124">This allows for easy integration with XML processing APIs such as <xref:System.Xml.Linq.XElement> as shown in the following sample code.</span></span>  
   
 ```  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
@@ -101,14 +101,14 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
         "15")).CreateReader());  
 ```  
   
-## <a name="reading-extension-data"></a><span data-ttu-id="76147-125">Lectura de datos de la extensión</span><span class="sxs-lookup"><span data-stu-id="76147-125">Reading Extension Data</span></span>  
- <span data-ttu-id="76147-126">Los valores para las extensiones de atributo se pueden obtener buscando el atributo en la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> por su <xref:System.Xml.XmlQualifiedName> tal y como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="76147-126">The values for attribute extensions can be obtained by looking up the attribute in the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection by its <xref:System.Xml.XmlQualifiedName> as shown in the following sample code.</span></span>  
+## <a name="reading-extension-data"></a><span data-ttu-id="798df-125">Lectura de datos de la extensión</span><span class="sxs-lookup"><span data-stu-id="798df-125">Reading Extension Data</span></span>  
+ <span data-ttu-id="798df-126">Los valores para las extensiones de atributo se pueden obtener buscando el atributo en la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> por su <xref:System.Xml.XmlQualifiedName> tal y como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="798df-126">The values for attribute extensions can be obtained by looking up the attribute in the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection by its <xref:System.Xml.XmlQualifiedName> as shown in the following sample code.</span></span>  
   
 ```  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
 ```  
   
- <span data-ttu-id="76147-127">Se tiene acceso a las extensiones de elemento utilizando el método `ReadElementExtensions<T>`.</span><span class="sxs-lookup"><span data-stu-id="76147-127">Element extensions are accessed using the `ReadElementExtensions<T>` method.</span></span>  
+ <span data-ttu-id="798df-127">Se tiene acceso a las extensiones de elemento utilizando el método `ReadElementExtensions<T>`.</span><span class="sxs-lookup"><span data-stu-id="798df-127">Element extensions are accessed using the `ReadElementExtensions<T>` method.</span></span>  
   
 ```  
 foreach( string s in feed2.ElementExtensions.ReadElementExtensions<string>("simpleString", ""))  
@@ -128,7 +128,7 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
 }  
 ```  
   
- <span data-ttu-id="76147-128">También es posible obtener un `XmlReader` en las extensiones de elemento individuales utilizando el método <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader>.</span><span class="sxs-lookup"><span data-stu-id="76147-128">It is also possible to obtain an `XmlReader` at individual element extensions by using the <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> method.</span></span>  
+ <span data-ttu-id="798df-128">También es posible obtener un `XmlReader` en las extensiones de elemento individuales utilizando el método <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader>.</span><span class="sxs-lookup"><span data-stu-id="798df-128">It is also possible to obtain an `XmlReader` at individual element extensions by using the <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> method.</span></span>  
   
 ```  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
@@ -138,23 +138,23 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 }  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="76147-129">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="76147-129">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="798df-129">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="798df-129">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="76147-130">Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="76147-130">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="798df-130">Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="798df-130">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="76147-131">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="76147-131">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="798df-131">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="798df-131">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="76147-132">Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="76147-132">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="798df-132">Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="798df-132">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="76147-133">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="76147-133">The samples may already be installed on your machine.</span></span> <span data-ttu-id="76147-134">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="76147-134">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="798df-133">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="798df-133">The samples may already be installed on your machine.</span></span> <span data-ttu-id="798df-134">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="798df-134">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="76147-135">Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos.</span><span class="sxs-lookup"><span data-stu-id="76147-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="76147-136">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="76147-136">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="798df-135">Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos.</span><span class="sxs-lookup"><span data-stu-id="798df-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="798df-136">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="798df-136">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
-## <a name="see-also"></a><span data-ttu-id="76147-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="76147-137">See Also</span></span>  
- [<span data-ttu-id="76147-138">Extensiones fuertemente tipadas</span><span class="sxs-lookup"><span data-stu-id="76147-138">Strongly-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
- [<span data-ttu-id="76147-139">Redifusión en WCF</span><span class="sxs-lookup"><span data-stu-id="76147-139">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a><span data-ttu-id="798df-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="798df-137">See also</span></span>
+- [<span data-ttu-id="798df-138">Extensiones fuertemente tipadas</span><span class="sxs-lookup"><span data-stu-id="798df-138">Strongly-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
+- [<span data-ttu-id="798df-139">Redifusión en WCF</span><span class="sxs-lookup"><span data-stu-id="798df-139">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
