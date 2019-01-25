@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 690dbb5659ce991b7c4921fbd85c246da54eff0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eeaf44f6fc34a1d14adf7fa8254ddb15cf6897b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532076"
 ---
-# <a name="icorprofilerinfo2getthreadappdomain-method"></a><span data-ttu-id="6b048-102">ICorProfilerInfo2::GetThreadAppDomain (Método)</span><span class="sxs-lookup"><span data-stu-id="6b048-102">ICorProfilerInfo2::GetThreadAppDomain Method</span></span>
-<span data-ttu-id="6b048-103">Obtiene el identificador del dominio de aplicación en el que el subproceso especificado está ejecutando el código.</span><span class="sxs-lookup"><span data-stu-id="6b048-103">Gets the ID of the application domain in which the specified thread is currently executing code.</span></span>  
+# <a name="icorprofilerinfo2getthreadappdomain-method"></a><span data-ttu-id="764e8-102">ICorProfilerInfo2::GetThreadAppDomain (Método)</span><span class="sxs-lookup"><span data-stu-id="764e8-102">ICorProfilerInfo2::GetThreadAppDomain Method</span></span>
+<span data-ttu-id="764e8-103">Obtiene el identificador del dominio de aplicación en el que el subproceso especificado está ejecutando el código.</span><span class="sxs-lookup"><span data-stu-id="764e8-103">Gets the ID of the application domain in which the specified thread is currently executing code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b048-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6b048-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="764e8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="764e8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadAppDomain(  
@@ -35,22 +35,22 @@ HRESULT GetThreadAppDomain(
     [out] AppDomainID *pAppDomainId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6b048-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="6b048-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="764e8-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="764e8-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="6b048-106">[in] Identificador que especifica el subproceso.</span><span class="sxs-lookup"><span data-stu-id="6b048-106">[in] The ID specifying the thread.</span></span>  
+ <span data-ttu-id="764e8-106">[in] Identificador que especifica el subproceso.</span><span class="sxs-lookup"><span data-stu-id="764e8-106">[in] The ID specifying the thread.</span></span>  
   
  `pAppDomainId`  
- <span data-ttu-id="6b048-107">[out] Un puntero al identificador del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="6b048-107">[out] A pointer to the ID of the application domain.</span></span>  
+ <span data-ttu-id="764e8-107">[out] Un puntero al identificador del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="764e8-107">[out] A pointer to the ID of the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6b048-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6b048-108">Requirements</span></span>  
- <span data-ttu-id="6b048-109">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b048-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="764e8-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="764e8-108">Requirements</span></span>  
+ <span data-ttu-id="764e8-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="764e8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b048-110">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6b048-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="764e8-110">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="764e8-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6b048-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6b048-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="764e8-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="764e8-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6b048-112">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b048-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="764e8-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="764e8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b048-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="6b048-113">See Also</span></span>  
- [<span data-ttu-id="6b048-114">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="6b048-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="6b048-115">ICorProfilerInfo2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="6b048-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="764e8-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="764e8-113">See also</span></span>
+- [<span data-ttu-id="764e8-114">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="764e8-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="764e8-115">ICorProfilerInfo2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="764e8-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

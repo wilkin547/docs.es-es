@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: buscar archivos con un atributo especificado o el nombre (Visual Basic)'
+title: Procedimiento Buscar archivos con un atributo especificado o el nombre (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 7a8314ba6109f25b4bc5f5952b358695844eadab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ad3ec0c18d142e8db3eddce8902b023ff00ca4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733160"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="25d3e-102">Cómo: buscar archivos con un atributo especificado o el nombre (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25d3e-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
-<span data-ttu-id="25d3e-103">En este ejemplo se muestra cómo encontrar todos los archivos con una determinada extensión de nombre de archivo (por ejemplo, ".txt") en un árbol de directorios especificado.</span><span class="sxs-lookup"><span data-stu-id="25d3e-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="25d3e-104">También se muestra cómo devolver el archivo más reciente o más antiguo del árbol por fecha de creación.</span><span class="sxs-lookup"><span data-stu-id="25d3e-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="55552-102">Procedimiento Buscar archivos con un atributo especificado o el nombre (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55552-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="55552-103">En este ejemplo se muestra cómo encontrar todos los archivos con una determinada extensión de nombre de archivo (por ejemplo, ".txt") en un árbol de directorios especificado.</span><span class="sxs-lookup"><span data-stu-id="55552-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="55552-104">También se muestra cómo devolver el archivo más reciente o más antiguo del árbol por fecha de creación.</span><span class="sxs-lookup"><span data-stu-id="55552-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="25d3e-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="25d3e-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="55552-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="55552-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -60,9 +60,9 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="25d3e-106">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="25d3e-106">Compiling the Code</span></span>  
- <span data-ttu-id="25d3e-107">Crear un proyecto que tiene como destino .NET Framework versión 3.5 o superior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="25d3e-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="55552-106">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="55552-106">Compiling the Code</span></span>  
+ <span data-ttu-id="55552-107">Crear un proyecto que tiene como destino .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="55552-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25d3e-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="25d3e-108">See Also</span></span>  
- [<span data-ttu-id="25d3e-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25d3e-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [<span data-ttu-id="25d3e-110">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25d3e-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="55552-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="55552-108">See also</span></span>
+- [<span data-ttu-id="55552-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55552-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="55552-110">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55552-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

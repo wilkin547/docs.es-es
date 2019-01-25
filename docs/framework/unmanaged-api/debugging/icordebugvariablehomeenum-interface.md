@@ -1,5 +1,5 @@
 ---
-title: Interfaz ICorDebugVariableHomeEnum
+title: ICorDebugVariableHomeEnum (interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum
@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a80a334d1b586aec30c6cf2715d7fb841bc76929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 43f63e09c654c7aab9f1da0db7587a92bee4fb79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632041"
 ---
-# <a name="icordebugvariablehomeenum-interface"></a><span data-ttu-id="1d2ec-102">Interfaz ICorDebugVariableHomeEnum</span><span class="sxs-lookup"><span data-stu-id="1d2ec-102">ICorDebugVariableHomeEnum Interface</span></span>
-<span data-ttu-id="1d2ec-103">Proporciona un enumerador para las variables locales y argumentos en una función.</span><span class="sxs-lookup"><span data-stu-id="1d2ec-103">Provides an enumerator to the local variables and arguments in a function.</span></span>  
+# <a name="icordebugvariablehomeenum-interface"></a><span data-ttu-id="038c2-102">ICorDebugVariableHomeEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="038c2-102">ICorDebugVariableHomeEnum Interface</span></span>
+<span data-ttu-id="038c2-103">Proporciona un enumerador para los argumentos en una función y las variables locales.</span><span class="sxs-lookup"><span data-stu-id="038c2-103">Provides an enumerator to the local variables and arguments in a function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1d2ec-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="1d2ec-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="038c2-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="038c2-104">Methods</span></span>  
   
-|<span data-ttu-id="1d2ec-105">Método</span><span class="sxs-lookup"><span data-stu-id="1d2ec-105">Method</span></span>|<span data-ttu-id="1d2ec-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="1d2ec-106">Description</span></span>|  
+|<span data-ttu-id="038c2-105">Método</span><span class="sxs-lookup"><span data-stu-id="038c2-105">Method</span></span>|<span data-ttu-id="038c2-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="038c2-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1d2ec-107">Next (método)</span><span class="sxs-lookup"><span data-stu-id="1d2ec-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|<span data-ttu-id="1d2ec-108">Obtiene el número especificado de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias que contienen información sobre las variables locales y argumentos en una función.</span><span class="sxs-lookup"><span data-stu-id="1d2ec-108">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>|  
+|[<span data-ttu-id="038c2-107">Next (método)</span><span class="sxs-lookup"><span data-stu-id="038c2-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|<span data-ttu-id="038c2-108">Obtiene el número especificado de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias que contienen información sobre las variables locales y los argumentos en una función.</span><span class="sxs-lookup"><span data-stu-id="038c2-108">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1d2ec-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1d2ec-109">Remarks</span></span>  
- <span data-ttu-id="1d2ec-110">El `ICorDebugVariableHomeEnum` interfaz implementa ICorDebugEnum (interfaz).</span><span class="sxs-lookup"><span data-stu-id="1d2ec-110">The `ICorDebugVariableHomeEnum` interface implements the ICorDebugEnum interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="038c2-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="038c2-109">Remarks</span></span>  
+ <span data-ttu-id="038c2-110">El `ICorDebugVariableHomeEnum` interfaz implementa la interfaz ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="038c2-110">The `ICorDebugVariableHomeEnum` interface implements the ICorDebugEnum interface.</span></span>  
   
- <span data-ttu-id="1d2ec-111">Un `ICorDebugVariableHomeEnum` instancia se rellena con [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias mediante una llamada a la [ICorDebugCode4::EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="1d2ec-111">An `ICorDebugVariableHomeEnum` instance is populated with [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances by calling the [ICorDebugCode4::EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md) method.</span></span> <span data-ttu-id="1d2ec-112">Cada [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias de la colección representa una variable local o un argumento en una función.</span><span class="sxs-lookup"><span data-stu-id="1d2ec-112">Each [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance in the collection represents a local variable or argument in a function.</span></span> <span data-ttu-id="1d2ec-113">El [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) pueden enumerar objetos de la colección mediante una llamada a la [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="1d2ec-113">The  [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objects in the collection can be enumerated by calling the [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method.</span></span>  
+ <span data-ttu-id="038c2-111">Un `ICorDebugVariableHomeEnum` instancia se rellena con [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias mediante una llamada a la [ICorDebugCode4::EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="038c2-111">An `ICorDebugVariableHomeEnum` instance is populated with [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances by calling the [ICorDebugCode4::EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md) method.</span></span> <span data-ttu-id="038c2-112">Cada [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias de la colección representa una variable local o argumento de una función.</span><span class="sxs-lookup"><span data-stu-id="038c2-112">Each [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance in the collection represents a local variable or argument in a function.</span></span> <span data-ttu-id="038c2-113">El [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) se pueden enumerar los objetos de la colección mediante una llamada a la [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="038c2-113">The  [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objects in the collection can be enumerated by calling the [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d2ec-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1d2ec-114">Requirements</span></span>  
- <span data-ttu-id="1d2ec-115">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1d2ec-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="038c2-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="038c2-114">Requirements</span></span>  
+ <span data-ttu-id="038c2-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="038c2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d2ec-116">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1d2ec-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="038c2-116">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="038c2-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1d2ec-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1d2ec-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="038c2-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="038c2-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1d2ec-118">**Versiones de .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d2ec-118">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="038c2-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="038c2-118">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d2ec-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="1d2ec-119">See Also</span></span>  
- [<span data-ttu-id="1d2ec-120">ICorDebugVariableHome (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1d2ec-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
- [<span data-ttu-id="1d2ec-121">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="1d2ec-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="038c2-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="038c2-119">See also</span></span>
+- [<span data-ttu-id="038c2-120">ICorDebugVariableHome (interfaz)</span><span class="sxs-lookup"><span data-stu-id="038c2-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [<span data-ttu-id="038c2-121">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="038c2-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
